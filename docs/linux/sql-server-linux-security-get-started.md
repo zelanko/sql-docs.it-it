@@ -1,6 +1,6 @@
 ---
 title: Introduzione alla sicurezza di SQL Server in Linux
-description: Questo articolo descrive le azioni di sicurezza standard.
+description: Questo articolo illustra le azioni di sicurezza tipiche.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68019505"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per la funzionalità di sicurezza di SQL Server in Linux
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità di sicurezza di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Se sei un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle attività di sicurezza. Questi non sono specifiche di Linux o univoco, ma è utile per dare un'idea delle aree per analizzare ulteriormente il problema. In ogni esempio viene fornito un collegamento alla documentazione approfondita per quell'area.
+Le attività seguenti illustrano alcune delle attività di sicurezza per gli utenti Linux che non hanno familiarità con SQL Server. Queste attività non sono univoche o specifiche di Linux, ma offrono un'idea delle aree da approfondire. In ogni esempio viene fornito un collegamento alla documentazione dettagliata dell'area.
 
 > [!NOTE]
->  Gli esempi seguenti usano il **AdventureWorks2014** database di esempio. Per istruzioni su come ottenere e installare il database di esempio, vedere [ripristinare un database di SQL Server da Windows a Linux](sql-server-linux-migrate-restore-database.md).
+>  Gli esempi seguenti usano il database di esempio **AdventureWorks2014**. Per istruzioni su come ottenere e installare questo database di esempio, vedere [Ripristinare un database di SQL Server da Windows a Linux](sql-server-linux-migrate-restore-database.md).
 
 
 ## <a name="create-a-login-and-a-database-user"></a>Creare un account di accesso e un utente del database 
 
-Concedere ad altri utenti l'accesso a SQL Server mediante la creazione di un account di accesso nel database master usando il [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) istruzione. Ad esempio:
+Per concedere ad altri l'accesso a SQL Server, creare un account di accesso nel database master usando l'istruzione [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md). Esempio:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 > [!NOTE]
->  Usare sempre una password complessa al posto di un asterisco nel comando precedente.
+>  Usare sempre una password complessa al posto degli asterischi del comando precedente.
 
-Gli account di accesso possono connettersi a SQL Server e dispongono di accesso (con autorizzazioni limitate) al database master. Per connettersi a un database utente, un account di accesso richiede un'identità a livello di database, denominato un utente del database corrispondente. Gli utenti sono specifici per ogni database e devono essere creati separatamente in ogni database per concedere loro l'accesso. Nell'esempio seguente consente di passare al database AdventureWorks2014 e quindi Usa il [CREATE USER](../t-sql/statements/create-user-transact-sql.md) istruzione per creare un utente denominato Larry associato con l'account di accesso denominato Larry. Se l'account di accesso e l'utente sono correlate (mapping reciproco), sono oggetti diversi. L'account di accesso è un'entità a livello di server. L'utente è un'entità a livello di database.
+Gli account di accesso possono connettersi a SQL Server e avere accesso (con autorizzazioni limitate) al database master. Per connettersi a un database utente, un account di accesso deve avere un'identità corrispondente a livello di database, denominata utente del database. Gli utenti sono specifici di ogni database e devono essere creati separatamente in ogni database per concedere loro l'accesso. L'esempio seguente consente di passare al database AdventureWorks2014 e quindi usa l'istruzione [CREATE USER](../t-sql/statements/create-user-transact-sql.md) per creare un utente denominato Larry associato all'account di accesso denominato Larry. Nonostante l'account di accesso e l'utente siano correlati (associati l'uno all'altro), sono oggetti diversi. L'account di accesso è un'entità a livello di server. L'utente è un'entità a livello di database.
 
 ```
 USE AdventureWorks2014;
@@ -45,10 +45,10 @@ CREATE USER Larry;
 GO
 ```
 
-- Un account di amministratore di SQL Server può connettersi a qualsiasi database e possa creare più account di accesso e utenti in qualsiasi database.  
-- Quando un utente crea un database diventano il proprietario del database, in grado di connettersi a tale database. I proprietari di database possono creare altri utenti.
+- Un account amministratore di SQL Server può connettersi a qualsiasi database e può creare altri account di accesso e altri utenti in qualsiasi database.  
+- Quando un utente crea un database, diventa il proprietario del database, che può connettersi a tale database. I proprietari dei database possono creare altri utenti.
 
-In un secondo momento è possibile autorizzare altri account di accesso per creare un altro account di accesso da concedere loro il `ALTER ANY LOGIN` l'autorizzazione. All'interno di un database, è possibile autorizzare altri utenti per creare altre utenti concedendo il `ALTER ANY USER` l'autorizzazione. Ad esempio:   
+In seguito è possibile autorizzare gli altri account di accesso a creare ulteriori account di accesso concedendo loro l'autorizzazione `ALTER ANY LOGIN`. In un database è possibile autorizzare gli altri utenti a creare ulteriori utenti concedendo loro l'autorizzazione `ALTER ANY USER`. Esempio:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -60,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-L'account di accesso Larry possono ora creare ulteriori account di accesso e l'utente Jerry possono creare altri utenti.
+A questo punto, l'account di accesso Larry può creare altri account di accesso e l'utente Jerry può creare altri utenti.
 
 
 ## <a name="granting-access-with-least-privileges"></a>Concessione dell'accesso con privilegi minimi
 
-I primi utenti di connettersi a un database utente sarà l'amministratore e gli account proprietario del database. Tuttavia questi utenti hanno tutte le autorizzazioni disponibili per il database. Si tratta di autorizzazioni maggiori rispetto a quasi tutti gli utenti devono avere. 
+Le prime persone a connettersi a un database utente saranno gli account dell'amministratore e del proprietario del database. Tuttavia, questi utenti hanno tutte le autorizzazioni disponibili per il database. Si tratta di un'autorizzazione più elevata di quella della maggior parte degli utenti. 
 
-Quando sta iniziando, è possibile assegnare alcune categorie generali di autorizzazioni tramite l'oggetto incorporato *ruoli predefiniti del database*. Ad esempio, il `db_datareader` può leggere tutte le tabelle nel database del ruolo predefinito del database, ma senza apportare alcuna modifica. Concedere l'appartenenza a un ruolo predefinito del database usando il [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) istruzione. Nell'esempio seguente l'utente di aggiungere `Jerry` per il `db_datareader` ruolo predefinito del database.   
+All'inizio, è possibile assegnare alcune categorie generali di autorizzazioni usando i *ruoli predefiniti del database*. Il ruolo predefinito del database `db_datareader`, ad esempio, può leggere tutte le tabelle del database, ma non apportare modifiche. Per concedere l'appartenenza a un ruolo predefinito del database, usare l'istruzione [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md). L'esempio seguente aggiunge l'utente `Jerry` al ruolo predefinito del database `db_datareader`.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Per un elenco dei ruoli predefiniti del database, vedere [ruoli a livello di Database](../relational-databases/security/authentication-access/database-level-roles.md).
+Per un elenco dei ruoli predefiniti del database, vedere [Ruoli a livello di database](../relational-databases/security/authentication-access/database-level-roles.md).
 
-In un secondo momento, quando si è pronti per configurare l'accesso più preciso ai dati (altamente consigliati), creare ruoli database definiti dall'utente usando [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) istruzione. Quindi assegnare specifiche autorizzazioni granulari all'utente i ruoli personalizzati.
+In seguito, quando si è pronti per configurare un accesso più preciso ai dati (scelta consigliata), creare ruoli del database definiti dall'utente usando l'istruzione [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md). Assegnare quindi autorizzazioni granulari specifiche ai ruoli personalizzati.
 
-Ad esempio, le istruzioni che seguono creano un ruolo del database denominato `Sales`, concede il `Sales` raggruppare la possibilità di visualizzare, aggiornare ed eliminare righe dal `Orders` tabella e quindi aggiunge l'utente `Jerry` per il `Sales` ruolo.   
+Le istruzioni seguenti, ad esempio, creano un ruolo del database denominato `Sales`, concede al gruppo `Sales` la possibilità di visualizzare, aggiornare ed eliminare righe dalla tabella `Orders` e quindi aggiunge l'utente `Jerry` al ruolo `Sales`.   
    
 ```   
 CREATE ROLE Sales;   
@@ -135,11 +135,11 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-CREARE SalesFilter dei criteri di sicurezza   
-Aggiungi filtro PREDICATO Security.fn_securitypredicate(SalesPersonID)    
-  IN Sales. SalesOrderHeader,   
-AGGIUNGERE Security.fn_securitypredicate(SalesPersonID) PREDICATO di blocco    
-  IN Sales. SalesOrderHeader   
+CREATE SECURITY POLICY SalesFilter   
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -148,18 +148,18 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
 SELECT * FROM Sales.SalesOrderHeader;    
-RIPRISTINARE; 
+REVERT; 
  
 EXECUTE AS USER = 'Manager';   
 SELECT * FROM Sales.SalesOrderHeader;   
-RIPRISTINARE;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
 ALTER SECURITY POLICY SalesFilter   
-CON (STATE = OFF);    
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -170,19 +170,19 @@ CON (STATE = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USARE AdventureWorks2014; ALTER passare tabella Person.EmailAddress     EmailAddress colonna ALTER    
-Aggiungere MASKED WITH (funzione = ' email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-CREARE TestUser utente senza account di accesso;   
-GRANT selezionare ON Person.EmailAddress a TestUser;    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-EXECUTE AS USER = "TestUser";   
-Selezionare EmailAddressID, indirizzo di posta elettronica da Person.EmailAddress;       
-RIPRISTINARE;    
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -222,21 +222,21 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = ' * * * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-CREARE MyServerCert certificato con soggetto = 'My Database certificato della chiave DEK';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USARE AdventureWorks2014;   GO
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-CON L'ALGORITMO = AES_256  
-ENCRYPTION BY SERVER certificato MyServerCert;  
+WITH ALGORITHM = AES_256  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-SET ENCRYPTION ON.   
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -258,15 +258,15 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-Utilizzare master;   ANDARE   Crea certificato BackupEncryptCert   con l'oggetto = 'Backup del Database';   Passare il DATABASE di BACKUP [AdventureWorks2014]   sul disco = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 con  
-  COMPRESSIONE,  
+  COMPRESSION,  
   ENCRYPTION   
    (  
-   ALGORITMO = AES_256,  
-   CERTIFICATO SERVER = BackupEncryptCert  
+   ALGORITHM = AES_256,  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
-  STATISTICHE = 10  
+  STATS = 10  
 GO  
 ```
 

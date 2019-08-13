@@ -1,7 +1,7 @@
 ---
-title: Usare i widget Insight in Azure dati Studio per monitorare i server e database
+title: Usare i widget di informazioni dettagliate in Azure Data Studio per monitorare i server e i database
 titleSuffix: Azure Data Studio
-description: Informazioni su widget insight in Azure Data Studio
+description: Informazioni sui widget di informazioni dettagliate in Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959529"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di informazioni dettagliate in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-I widget di Insight trasformano le query Transact-SQL (T-SQL) utilizzate per monitorare i server e i database in visualizzazioni dettagliate.
+I widget di informazioni dettagliate acquisiscono le query Transact-SQL (T-SQL) usate per monitorare server e database e le trasformano in visualizzazioni dettagliate.
 
-Gli insight sono grafici personalizzabili da aggiungere ai dashboard di monitoraggio di server e database. Con essi è possibile visualizzare informazioni generali sui server e sui database, esaminare ulteriori dettagli ed eseguire azioni di gestione definite dall'utente.
+Le informazioni dettagliate sono rappresentate in grafici personalizzabili che vengono aggiunti ai dashboard di monitoraggio di server e database. Dopo aver visualizzato le informazioni dettagliate immediate su server e database, è possibile analizzarle più nel dettaglio e avviare le azioni di gestione prestabilite.
 
-È possibile costruire accattivanti dashboard di gestione server e database simili all'esempio seguente:
+È possibile creare eccellenti dashboard di gestione di server e database, come quello visualizzato nell'esempio seguente:
 
-![dashboard del database](media/insight-widgets/database-dashboard.png)
+![Dashboard del database](media/insight-widgets/database-dashboard.png)
 
 
-Per iniziare a comprendere e creare i tipi diversi di widget Insight, vedere le esercitazioni seguenti:
+Per iniziare a creare diversi tipi di widget di informazioni dettagliate, seguire le esercitazioni seguenti:
 
-- [Costruire un widget Insight personalizzato](tutorial-build-custom-insight-sql-server.md)
-- *Abilitare widget insight predefiniti*
-  - [Abilitare l'insight di monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
-  - [Abilitare l'insight di spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
+- [Creare un widget di informazioni dettagliate personalizzato](tutorial-build-custom-insight-sql-server.md)
+- *Abilitare i widget di informazioni dettagliate predefiniti*
+  - [Abilitare le informazioni dettagliate sul monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
+  - [Abilitare il widget sullo spazio usato dalle tabelle](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>Query SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] cerca di evitare l'introduzione di un nuovo linguaggio e di un'interfaccia complessa, lasciando spazio alla scrittura T-SQL e a configurazioni minimali basate su JSON. La configurazione dei widget Insight tramite T-SQL sfrutta le innumerevoli utili query T-SQL che possono essere convertite in widget dettagliati.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta di evitare la necessità di introdurre un'altra lingua o un'interfaccia utente complessa e prova quindi a usare quanto più possibile T-SQL con una configurazione JSON minima. La configurazione di widget di informazioni dettagliate con T-SQL sfrutta l'ingente numero di origini esistenti di utili query T-SQL che possono essere convertite in widget dettagliati.
 
-I wdget Insight sono costituiti da una o due query T-SQL:
-* La *query del widget Insight* è obbligatoria ed è la query che restituisce i dati visualizzati all'interno del widget.
-* La *query del dettaglio del widget Insight* è richiesta solo se si sta creando una pagina di dettaglio
+I widget di informazioni dettagliate sono costituiti da una o due query T-SQL:
+* *La query del widget di informazioni dettagliate* è obbligatoria ed è la query che restituisce i dati visualizzati nel widget.
+* *La query dei dettagli di informazioni dettagliate* è necessaria solo se si sta creando una pagina di dettagli di informazioni dettagliate.
 
-Una query di widget insight definisce un set di dati che viene presentata sotto forma di un numero o di un grafico. Una query di dettaglio del widget insight viene utilizzata per elencare le informazioni dettagliate rilevanti in un formato tabulare nel riquadro dei dettagli del widget. 
+Una query del widget di informazioni dettagliate definisce un set di dati che restituisce un conteggio o un grafico. Le query dei dettagli di informazioni dettagliate vengono usate invece per elencare le informazioni dettagliate rilevanti in un formato tabulare nel pannello dei dettagli di informazioni dettagliate. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue la query del widget insight ed effettua il mapping dei risultati al set dei dati del grafico, quindi ne esegue il rendering. Quando gli utenti richiedono i dettagli, esegue la query del dettaglio del widget e presenta il risultato in una visualizzazione a griglia nella finestra di dialogo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue le query del widget di informazioni dettagliate, esegue il mapping del set di risultati di ogni query al set di dati di un grafico e ne esegue il rendering. Quando un utente apre i dettagli delle informazioni dettagliate, viene eseguita la query dei dettagli e il risultato viene visualizzato in una griglia all'interno della finestra di dialogo.
 
-L'idea di base consiste pertanto nello scrivere una query T-SQL da utilizzare come set di dati di un conteggio o di un grafico. 
+L'idea di base è quella di scrivere una query T-SQL in modo che possa essere usata come set di dati di un widget di conteggio o di grafico. 
 
 ## <a name="summary"></a>Riepilogo
 
-La query T-SQL e il relativo set di risultati determinano il comportamento del widget di Insight. Scrivere una query per un particolare tipo di grafico o determinare il miglior tipo di grafico da mappare a una query esistente è la chiave per costruire un widget di Insight efficace.
+La query T-SQL e il set di risultati determinano il comportamento del widget di informazioni dettagliate. Per creare un widget di informazioni dettagliate efficace è fondamentale saper scrivere una query per un tipo di grafico o eseguire il mapping del tipo di grafico appropriato per una query esistente.
 
 
 

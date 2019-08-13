@@ -20,25 +20,34 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0480cb7b3692a5101271ea69cc8700c4ff09ada0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072267"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495465"
 ---
 # <a name="set-operators---union-transact-sql"></a>Operatori sui set - UNION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Combina i risultati di due o più query in un unico set di risultati. Questo set include tutte le righe che appartengono a tutte le query nell'operazione di unione. L'operazione UNION è diversa dall'utilizzo di join che combinano le colonne di due tabelle.  
+Concatena i risultati di due query in un unico set di risultati. È possibile controllare se il set di risultati include righe duplicate:
+
+- **UNION ALL**: include i duplicati.
+- **UNION**: esclude i duplicati.
+
+Un'operazione **UNION** è diversa da un **[JOIN](../queries/from-transact-sql.md)** :
+
+- **UNION** concatena i set di risultati di due query. **UNION** tuttavia non crea singole righe da colonne raccolte da due tabelle.
+- Un **JOIN** confronta le colonne di due tabelle, per creare righe di risultati costituite dalle colonne di due tabelle.
   
-Di seguito sono riportate le regole di base per la combinazione dei set di risultati di due query tramite l'istruzione UNION:  
+Di seguito sono riportate le regole di base per la combinazione dei set di risultati di due query tramite l'istruzione **UNION**:  
   
 -   Tutte le query devono includere lo stesso numero di colonne nello stesso ordine.  
   
 -   I tipi di dati devono essere compatibili.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +59,7 @@ Di seguito sono riportate le regole di base per la combinazione dei set di risul
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-\<query_specification> | ( \<query_expression> ) Specifica o espressione di query che restituisce dati da combinare con i dati di un'altra specifica o espressione di query. Le definizioni delle colonne di un'operazione UNION non devono essere necessariamente identiche, ma devono essere compatibili tramite una conversione implicita. Se i tipi di dati sono diversi, il tipo di dati risultante viene definito in base alle regole valide per la [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md). Quando i tipi sono gli stessi ma differiscono per precisione, scala o lunghezza, il risultato viene determinato in base alle stesse regole previste per la combinazione di espressioni. Per altre informazioni, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Specifica o espressione di query che restituisce dati da combinare con i dati di un'altra specifica o espressione di query. Le definizioni delle colonne di un'operazione UNION non devono essere necessariamente identiche, ma devono essere compatibili tramite una conversione implicita. Se i tipi di dati sono diversi, il tipo di dati risultante viene definito in base alle regole valide per la [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md). Quando i tipi sono gli stessi ma differiscono per precisione, scala o lunghezza, il risultato viene determinato in base alle stesse regole previste per la combinazione di espressioni. Per altre informazioni, vedere [Precisione, scala e lunghezza (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Le colonne con tipo di dati **xml** devono essere equivalenti. Tutte le colonne devono essere tipizzate in un XML Schema oppure senza tipo. In caso di colonne tipizzate, esse devono essere tipizzate nella stessa raccolta di XML Schema.  
   
@@ -65,7 +74,7 @@ Incorpora tutte le righe nei risultati, inclusi i duplicati. Se viene omesso, le
 ### <a name="a-using-a-simple-union"></a>A. Utilizzo di un semplice operatore UNION  
 Nell'esempio seguente il set di risultati include il contenuto delle colonne `ProductModelID` e `Name` di entrambe le tabelle `ProductModel` e `Gloves`.  
  
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -94,7 +103,7 @@ GO
 ### <a name="b-using-select-into-with-union"></a>B. Utilizzo di SELECT INTO con UNION  
 Nell'esempio seguente la clausola `INTO` nella seconda istruzione `SELECT` specifica che la tabella denominata `ProductResults` contiene il set di risultati finale ottenuto con l'unione delle colonne selezionate delle tabelle `ProductModel` e `Gloves`. La tabella `Gloves` viene creata nella prima istruzione `SELECT`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.ProductResults', 'U') IS NOT NULL  
@@ -123,13 +132,12 @@ GO
   
 SELECT ProductModelID, Name   
 FROM dbo.ProductResults;  
-  
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. Utilizzo dell'operatore UNION in due istruzioni SELECT con la clausola ORDER BY  
 L'ordine di alcuni parametri utilizzati con la clausola UNION è importante. Nell'esempio seguente vengono illustrati l'utilizzo errato e quello corretto di `UNION` in due istruzioni `SELECT` in cui una colonna deve essere rinominata nell'output.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -165,7 +173,6 @@ SELECT ProductModelID, Name
 FROM dbo.Gloves  
 ORDER BY Name;  
 GO  
-  
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. Utilizzo dell'operatore UNION in tre istruzioni SELECT per illustrare gli effetti dell'opzione ALL e delle parentesi  
@@ -173,7 +180,7 @@ Negli esempi seguenti viene utilizzato l'operatore `UNION` per combinare i risul
   
 Il terzo esempio usa `ALL` con il primo operatore `UNION` e il secondo operatore `UNION`, che non usa `ALL`, viene racchiuso tra parentesi. Il secondo operatore `UNION` viene elaborato per primo in quanto è racchiuso tra parentesi e restituisce cinque righe perché l'opzione `ALL` non viene usata e i duplicati vengono rimossi. Queste 5 righe vengono combinate con i risultati della prima istruzione `SELECT` mediante le parole chiave `UNION ALL`. Questo esempio non rimuove i duplicati tra i due set di cinque righe. Il risultato finale include 10 righe.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.EmployeeOne', 'U') IS NOT NULL  
@@ -244,7 +251,7 @@ GO
 ### <a name="e-using-a-simple-union"></a>E. Utilizzo di un semplice operatore UNION  
 Nell'esempio seguente il set di risultati include il contenuto delle colonne `CustomerKey` di entrambe le tabelle `FactInternetSales` e `DimCustomer`. Poiché la parola chiave ALL non viene usata, i duplicati vengono esclusi dai risultati.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -258,7 +265,7 @@ ORDER BY CustomerKey;
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. Utilizzo dell'operatore UNION in due istruzioni SELECT con la clausola ORDER BY  
  Quando un'istruzione SELECT in un'istruzione UNION include una clausola ORDER BY, tale clausola deve essere inserita dopo tutte le istruzioni SELECT. Nell'esempio seguente vengono illustrati l'uso errato e quello corretto di `UNION` in due istruzioni `SELECT` in cui una colonna è ordinata con ORDER BY.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT  
@@ -284,7 +291,7 @@ ORDER BY CustomerKey;
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. Uso dell'operatore UNION in due istruzioni SELECT con WHERE e ORDER BY  
 Nell'esempio seguente vengono illustrati l'uso errato e quello corretto di `UNION` in due istruzioni `SELECT` in cui sono necessarie le clausole WHERE e ORDER BY.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT   
@@ -316,7 +323,7 @@ Il primo esempio usa `UNION ALL` per visualizzare i record duplicati e restituis
   
 Il terzo esempio usa `ALL` con il primo operatore `UNION` e il secondo operatore `UNION`, che non usa`ALL`, viene racchiuso tra parentesi. Il secondo operatore `UNION` viene elaborato per primo perché è racchiuso tra parentesi. Restituisce solo le righe non duplicate della tabella perché l'opzione `ALL` non viene usata e i duplicati vengono rimossi. Queste righe vengono combinate con i risultati della prima istruzione `SELECT` mediante le parole chiave `UNION ALL`. Questo esempio non rimuove i duplicati tra i due set.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, FirstName, LastName  
@@ -350,8 +357,5 @@ FROM DimCustomer
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-[Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
-  
-  
-
+[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+[Esempi di istruzioni SELECT (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)  

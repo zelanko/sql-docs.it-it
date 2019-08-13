@@ -1,7 +1,7 @@
 ---
-title: Creazione di estensioni
+title: Creare estensioni
 titleSuffix: Azure Data Studio
-description: Informazioni sulla creazione e aggiunta di estensioni alle Data Studio di Azure
+description: Informazioni sulla creazione e l'aggiunta di estensioni in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,30 +11,30 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959600"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estendere la funzionalità tramite la creazione di estensioni di Azure Data Studio
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estendere le funzionalità creando estensioni per Azure Data Studio
 
-Le estensioni in [!INCLUDE[name-sos](../includes/name-sos-short.md)] forniscono un modo semplice per aggiungere ulteriori funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Le estensioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)] consentono di aggiungere facilmente nuove funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-Le estensioni sono fornite dal team di Studio di Azure Data (Microsoft), nonché la community di terze parti 3rd (l'utente).
+Le estensioni vengono fornite sia dal team di Azure Data Studio (Microsoft) sia dalla community di terze parti.
 
 
 ## <a name="author-an-extension"></a>Creare un'estensione
 
-Se si è interessati a estendere Azure Data Studio, è possibile creare estensioni personalizzate e pubblicarlo in raccolta di estensioni.
+Se si è interessati a estendere Azure Data Studio, è possibile creare un'estensione personalizzata e pubblicarla nella raccolta di estensioni.
 
-**Creazione di un'estensione**
+**Scrittura di un'estensione**
 
 ***Prerequisiti***
 
-Per sviluppare un'estensione è necessario Node. js installato e disponibile nel $PATH. Node. js include npm, Node. js Package Manager, che verrà usato per installare il generatore di estensione.
+Per sviluppare un'estensione, è necessario che Node.js sia installato e disponibile in $PATH. Node.js include npm, lo strumento di gestione dei pacchetti di Node.js, che verrà usato per installare il generatore di estensioni.
 
-Per avviare la nuova estensione, è possibile usare il generatore di estensione di Studio dei dati di Azure. Il Yeoman [generatore di estensione](https://www.npmjs.com/package/generator-azuredatastudio) è molto semplice creare progetti di estensione semplice. Per avviare il generatore, digitare quanto segue al prompt dei comandi:
+Per avviare la nuova estensione, è possibile usare il generatore di estensioni di Azure Data Studio. Il [generatore di estensioni](https://www.npmjs.com/package/generator-azuredatastudio) Yeoman consente di creare semplici progetti di estensione con estrema semplicità. Per avviare il generatore, digitare quanto segue in un prompt dei comandi:
 
 `npm install -g yo generator-azuredatastudio`
 
@@ -43,23 +43,23 @@ Per avviare la nuova estensione, è possibile usare il generatore di estensione 
 
 **Riferimenti di estendibilità**
 
-Per informazioni su Extensibility di Studio dei dati di Azure, vedere [panoramica dell'estendibilità](extensibility.md). È anche possibile visualizzare esempi di come usare l'API esistente [esempi](https://github.com/Microsoft/azuredatastudio/tree/master/samples).
+Per informazioni sull'estendibilità di Azure Data Studio, vedere [Panoramica dell'estendibilità](extensibility.md). È anche possibile vedere esempi di come usare l'API negli [esempi](https://github.com/Microsoft/azuredatastudio/tree/master/samples) esistenti.
 
 
 ## <a name="debug-an-extension"></a>Eseguire il debug di un'estensione
 
-È possibile eseguire il debug la nuova estensione con l'estensione di Visual Studio Code [eseguire il Debug di Azure Data Studio](https://github.com/kevcunnane/sqlops-debug).
+È possibile eseguire il debug della nuova estensione usando l'estensione [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug) di Visual Studio Code.
 
 Passaggi
 - Aprire l'estensione con [Visual Studio Code](https://code.visualstudio.com/)
-- Installare l'estensione Azure dati Studio eseguire il Debug
-- Premere **F5** oppure fare clic sull'icona di Debug e fare clic su **avviare**.
-- Una nuova istanza della Data Studio di Azure viene avviato in modalità speciale (estensione sviluppo Host) e questa nuova istanza a questo punto è a conoscenza dell'estensione.
+- Installare l'estensione Azure Data Studio Debug
+- Premere **F5** o fare clic sull'icona Debug e quindi su **Avvia**.
+- Una nuova istanza di Azure Data Studio viene avviata in una modalità speciale (Host di sviluppo estensione) e riconosce ora l'estensione.
 
 
-## <a name="create-an-extension-package"></a>Creare un pacchetto di estensione
+## <a name="create-an-extension-package"></a>Creare un pacchetto di estensioni
 
-Dopo la scrittura dell'estensione, è necessario creare un pacchetto VSIX per essere in grado di installarlo in Studio dei dati di Azure. È possibile usare [vsce](https://github.com/Microsoft/vscode-vsce) per creare il pacchetto VSIX.
+Dopo aver scritto l'estensione, è necessario creare un pacchetto VSIX per poterlo installare in Azure Data Studio. È possibile usare [vsce](https://github.com/Microsoft/vscode-vsce) per creare il pacchetto VSIX.
 
 `npm install -g vsce`
 
@@ -68,13 +68,13 @@ Dopo la scrittura dell'estensione, è necessario creare un pacchetto VSIX per es
 
 ## <a name="publish-an-extension"></a>Pubblicare un'estensione
 
-Per pubblicare la nuova estensione per Azure Data Studio:
+Per pubblicare la nuova estensione in Azure Data Studio:
 
-1. Aggiungere l'estensione https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
-2. Attualmente non è disponibile il supporto per le estensioni di terze parti di host, in modo invece di scaricare l'estensione, Azure Data Studio ha la possibilità di passare a una pagina di download. Per impostare una pagina di download per l'estensione, impostare il valore dell'asset "Microsoft.AzureDataStudio.DownloadPage".
-3. Creare una richiesta pull con il ramo di rilascio/le estensioni.
+1. Aggiungere l'estensione a https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
+2. Non è attualmente disponibile il supporto per l'hosting di estensioni di terze parti; anziché scaricare l'estensione, quindi, è possibile reindirizzare Azure Data Studio su una pagina di download. Per impostare una pagina di download per l'estensione, impostare il valore di asset "Microsoft.AzureDataStudio.DownloadPage".
+3. Creare una richiesta pull per il ramo Release/Extensions.
 4. Inviare una richiesta di revisione al team.
 
-L'estensione verrà esaminata e aggiunto alla raccolta di estensioni.
+L'estensione verrà esaminata e aggiunta alla raccolta di estensioni.
 
-**La pubblicazione degli aggiornamenti di estensione** il processo di pubblicazione di aggiornamenti è simile alla pubblicazione dell'estensione. Assicurarsi che la versione viene aggiornata in package. JSON
+**Pubblicazioni di aggiornamenti alle estensioni** Il processo di pubblicazione degli aggiornamenti è simile alla pubblicazione dell'estensione. Assicurarsi che la versione sia aggiornata in package.json

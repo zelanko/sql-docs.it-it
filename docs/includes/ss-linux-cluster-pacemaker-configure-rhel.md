@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215624"
 ---
 3. In tutti i nodi del cluster aprire le porte del firewall di Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
@@ -15,8 +15,8 @@ ms.locfileid: "68215624"
 
    > Se il firewall non ha una configurazione a disponibilità elevata predefinita, aprire le porte seguenti per Pacemaker.
    >
-   > * TCP: Porte 2224, 3121, 21064
-   > * UDP: Porta 5405
+   > * TCP: porte 2224, 3121, 21064
+   > * UDP: porta 5405
 
 1. Installare i pacchetti Pacemaker in tutti i nodi.
 

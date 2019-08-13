@@ -2,7 +2,7 @@
 title: Elaborazione di query intelligenti nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità di elaborazione di query intelligenti e miglioramento delle prestazioni delle query in SQL Server e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354621"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388373"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -27,7 +27,7 @@ La famiglia di funzionalità di elaborazione di query intelligenti include funzi
 
 ![Elaborazione di query intelligenti](./media/iqp-feature-family.png)
 
-È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query intelligenti abilitando il livello di compatibilità applicabile per il database. Questa opzione è impostabile con Transact-SQL. Esempio:  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query intelligenti abilitando il livello di compatibilità applicabile per il database. Questa opzione è impostabile con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempio:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazion
 
 | **Funzionalità di elaborazione di query intelligenti** | **Supporto nel database SQL di Azure** | **Supporto in SQL Server** |**Descrizione** |
 | --- | --- | --- |--- |
-| [Join adattivi (modalità batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|I join adattivi selezionano in modo dinamico un tipo di join in fase di esecuzione in base alle righe di input effettive.|
-| [Count Distinct approssimato](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sì, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0, anteprima pubblica|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
-| [Modalità batch per rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
-| [Esecuzione interleaved](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|Consente di usare la cardinalità effettiva della funzione con valori di tabella con istruzioni multiple rilevata nella prima compilazione invece di una stima fissa.|
-| [Feedback delle concessioni di memoria (modalità batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|Se una query in modalità batch contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
-| [Feedback delle concessioni di memoria (modalità riga)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
-| [Inlining di funzioni definite dall'utente scalari](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | no | Sì, a partire da SQL Server 2019 CTP 2.1 nel livello di compatibilità 150, anteprima pubblica|Le funzioni definite dall'utente scalari vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni.|
-| [Compilazione posticipata delle variabili di tabella](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
+| [Join adattivi (modalità batch)](#batch-mode-adaptive-joins) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|I join adattivi selezionano in modo dinamico un tipo di join in fase di esecuzione in base alle righe di input effettive.|
+| [Count Distinct approssimato](#approximate-query-processing) | Sì, anteprima pubblica| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
+| [Modalità batch per rowstore](#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
+| [Esecuzione interleaved](#interleaved-execution-for-mstvfs) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|Consente di usare la cardinalità effettiva della funzione con valori di tabella con istruzioni multiple rilevata nella prima compilazione invece di una stima fissa.|
+| [Feedback delle concessioni di memoria (modalità batch)](#batch-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|Se una query in modalità batch contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
+| [Feedback delle concessioni di memoria (modalità riga)](#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
+| [Inlining di funzioni definite dall'utente scalari](#scalar-udf-inlining) | no | Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 nel livello di compatibilità 150, anteprima pubblica|Le funzioni definite dall'utente scalari vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni.|
+| [Compilazione posticipata delle variabili di tabella](#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
+La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md), usando un singolo piano memorizzato nella cache. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 
-Con questa funzionalità, il piano può passare in modo dinamico a una strategia di join più efficace durante l'esecuzione usando un singolo piano memorizzato nella cache.
-
-La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
-Il funzionamento è il seguente:
--  Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
--  Se l'input del join di compilazione supera una determinata soglia di numero di righe non si verifica alcun cambiamento e il piano continua con un hash join.
-
-La query seguente illustra un esempio di join adattivo:
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md), viene visualizzato il piano seguente:
-
-![Risultato della query: 336 righe](./media/4_AQPStats336Rows.png)
-
-Nel piano viene visualizzato quanto segue:
-1. È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
-1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
-1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
-1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Ora si confronti il piano con la stessa query, ma questa volta per un valore *Quantità* che ha una sola riga nella tabella:
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-La query restituisce una riga. Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
-
-![Risultato della query: una riga](./media/5_AQPStatsOneRow.png)
-
-Nel piano viene visualizzato quanto segue:
-- Con una sola riga restituita, ora il flusso di righe attraversa Ricerca indice cluster.
-- Poiché non è stata portata avanti la fase di compilazione dell'hash join, nessuna riga attraversa il secondo ramo.
-
-### <a name="adaptive-join-benefits"></a>Vantaggi del join adattivo
-Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
-
-### <a name="adaptive-join-overhead"></a>Sovraccarichi del join adattivo
-I join adattivi presentano requisiti di memoria superiori rispetto a un piano equivalente con join a cicli annidati indicizzati. La memoria aggiuntiva risulta necessaria, come se il join a cicli annidati fosse un hash join. Si registra un sovraccarico anche per la fase di compilazione come operazione stop-and-go rispetto a un join a cicli annidati equivalente a livello di flussi. A tale costo aggiuntivo corrisponde una maggior flessibilità per gli scenari in cui i conteggi delle righe possono variare nell'input di compilazione.
-
-### <a name="adaptive-join-caching-and-re-use"></a>Memorizzazione nella cache e riuso dei join adattivi
-I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'istruzione. Dopo la compilazione, le esecuzioni consecutive restano adattive sulla base della soglia di join adattivo di compilazione e delle righe di runtime del flusso di dati della fase di compilazione dell'input esterno.
-
-### <a name="tracking-adaptive-join-activity"></a>Rilevamento delle attività di join adattivo
-L'operatore Join adattivo ha i seguenti attributi dell'operatore del piano:
-
-| Attributo del piano | Descrizione |
-|--- |--- |
-| AdaptiveThresholdRows | Visualizza l'uso della soglia che determina il passaggio da un hash join a un join a cicli annidati. |
-| EstimatedJoinType | Probabile tipo del join. |
-| ActualJoinType | In un piano reale visualizza l'algoritmo di join scelto in base alla soglia. |
-
-Il piano stimato visualizza la struttura del piano di join adattivo, la soglia di join adattivo definita e il tipo di join stimato.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilità tra join adattivi e Archivio query
-Query Store acquisisce e può imporre un piano di join adattivo in modalità batch.
-
-### <a name="adaptive-join-eligible-statements"></a>Istruzioni idonee per i join adattivi
-Alcune condizioni rendono un join logico idoneo per un join adattivo in modalità batch:
-- Il livello di compatibilità del database è 140.
-- La query è un'istruzione SELECT (attualmente le istruzioni di modifica dei dati non sono idonee).
-- Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
-- L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata a cui fa riferimento direttamente il join.
-- Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Efficienza dei join adattivi e dei join a cicli annidati
-Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
-
-### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
-Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo. In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
-
-![Soglia di join](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Disabilitazione dei join adattivi senza modificare il livello di compatibilità
-
-È possibile disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  
-Per disabilitare i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+Per altre informazioni, vedere [Informazioni sui join adattivi](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
 Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache. Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
@@ -212,7 +92,11 @@ La memoria concessa reale è conforme al limite di memoria per le query determin
 È possibile disabilitare i commenti della concessione di memoria nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. Per disabilitare i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
@@ -220,7 +104,11 @@ Quando è abilitata, questa impostazione viene visualizzata come abilitata in [s
 Per abilitare nuovamente i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 È anche possibile disabilitare i commenti sulla concessione di memoria in modalità batch per una query specifica definendo `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
@@ -354,14 +242,22 @@ Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano usando l'esecuzio
 È possibile disabilitare l'esecuzione interleaved nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  Per disabilitare l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 È anche possibile disabilitare l'esecuzione interleaved per una query specifica definendo `DISABLE_INTERLEAVED_EXECUTION_TVF` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:

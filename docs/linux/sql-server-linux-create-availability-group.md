@@ -1,6 +1,6 @@
 ---
 title: Creare e configurare un gruppo di disponibilità per SQL Server in Linux
-description: Questa esercitazione illustra come creare e configurare i gruppi di disponibilità per SQL Server in Linux.
+description: Questa esercitazione illustra come creare e configurare gruppi di disponibilità per SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,41 +9,41 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077437"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa esercitazione illustra come creare e configurare un gruppo di disponibilità (AG) per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e in precedenza su Windows, è possibile abilitare gruppi di disponibilità con o senza la creazione del cluster Pacemaker sottostante prima di tutto. Integrazione con il cluster, se necessario, non viene eseguita fino alla versione successiva.
+Questa esercitazione illustra come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e versioni precedenti in Windows, è possibile abilitare i gruppi di disponibilità sia che si crei o non si crei prima il cluster Pacemaker sottostante. L'integrazione con il cluster, se necessaria, viene eseguita solo in un momento successivo.
 
 L'esercitazione include le attività seguenti:
  
 > [!div class="checklist"]
-> * Abilitare gruppi di disponibilità.
-> * Creare i certificati e gli endpoint di gruppo di disponibilità.
+> * Abilitare i gruppi di disponibilità.
+> * Creare endpoint e certificati per i gruppi di disponibilità.
 > * Usare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL per creare un gruppo di disponibilità.
-> * Creare il [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] account di accesso e le autorizzazioni per Pacemaker.
-> * Creare la disponibilità del gruppo di risorse in un cluster Pacemaker (solo per il tipo esterno).
+> * Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker.
+> * Creare risorse dei gruppi di disponibilità in un cluster Pacemaker (solo di tipo Esterno).
 
 ## <a name="prerequisite"></a>Prerequisiti
-- Distribuire il cluster a disponibilità elevata Pacemaker, come descritto in [distribuire un cluster Pacemaker per SQL Server in Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+- Distribuire il cluster a disponibilità elevata Pacemaker come descritto in [Distribuire un cluster Pacemaker per SQL Server in Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 
-## <a name="enable-the-availability-groups-feature"></a>Abilitare la funzionalità gruppi di disponibilità
+## <a name="enable-the-availability-groups-feature"></a>Abilitare la funzionalità dei gruppi di disponibilità
 
-A differenza di su Windows, è possibile usare PowerShell o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] funzionalità (AG) di gruppi di Configuration Manager per abilitare la disponibilità. In Linux, è necessario usare `mssql-conf` per abilitare la funzionalità. Esistono due modi per abilitare la funzionalità gruppi di disponibilità: usare la `mssql-conf` utilità oppure modificare il `mssql.conf` file manualmente.
+Diversamente da Windows, non è possibile usare PowerShell o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager per abilitare la funzionalità dei gruppi di disponibilità. In Linux è necessario usare `mssql-conf` per abilitare la funzionalità. È possibile abilitare la funzionalità dei gruppi di disponibilità in due modi: usando l'utilità `mssql-conf` o modificando il file `mssql.conf` manualmente.
 
 > [!IMPORTANT]
-> La funzionalità gruppo di disponibilità deve essere abilitata per le repliche di sola configurazione, anche in [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)].
+> La funzionalità dei gruppi di disponibilità deve essere abilitata per le repliche di sola configurazione, anche in [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)].
 
 ### <a name="use-the-mssql-conf-utility"></a>Usare l'utilità mssql-conf
 
-Prompt dei comandi, eseguire quanto segue:
+Al prompt dei comandi eseguire il comando seguente:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
@@ -51,7 +51,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 
 ### <a name="edit-the-mssqlconf-file"></a>Modificare il file mssql.conf
 
-È inoltre possibile modificare il `mssql.conf` file, che si trova sotto il `/var/opt/mssql` cartella, aggiungere le righe seguenti:
+È anche possibile modificare il file `mssql.conf`, che si trova nella cartella `/var/opt/mssql`, aggiungendo le righe seguenti:
 
 ```
 [hadr]
@@ -59,34 +59,34 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Riavvio [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Dopo aver abilitato gruppi di disponibilità, come in Windows, è necessario riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Che può essere eseguita nel modo seguente:
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+Dopo aver abilitato i gruppi di disponibilità, come in Windows, è necessario riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. A tale scopo, eseguire il comando seguente:
 
 ```bash
 sudo systemctl restart mssql-server
 ```
 
-## <a name="create-the-availability-group-endpoints-and-certificates"></a>Creare l'endpoint di gruppo di disponibilità e certificati
+## <a name="create-the-availability-group-endpoints-and-certificates"></a>Creare endpoint e certificati del gruppo di disponibilità
 
-Un gruppo di disponibilità Usa endpoint TCP per la comunicazione. In Linux, gli endpoint per un gruppo di disponibilità sono supportati solo se si usano certificati per l'autenticazione. Ciò significa che il certificato da un'istanza deve essere ripristinato in tutte le altre istanze che saranno le repliche nello stesso gruppo di disponibilità. Il processo dei certificati è necessario anche per una replica di sola configurazione. 
+Un gruppo di disponibilità usa gli endpoint TCP per le comunicazioni. In Linux gli endpoint per un gruppo di disponibilità sono supportati solo se per l'autenticazione vengono usati i certificati. Questo significa che il certificato di un'istanza deve essere ripristinato in tutte le altre istanze che saranno repliche che fanno parte dello stesso gruppo di disponibilità. Il processo di autenticazione tramite certificato è necessario anche per una replica di sola configurazione. 
 
-Creazione di endpoint e il ripristino dei certificati possono essere eseguite solo tramite Transact-SQL. È possibile utilizzare non [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-anche i certificati generati. È necessario anche un processo per gestire e sostituire i certificati che scadono.
+La creazione degli endpoint e il ripristino dei certificati possono essere eseguiti solo tramite Transact-SQL. Si possono usare anche certificati non generati da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Sarà necessario anche un processo per gestire e sostituire eventuali certificati scaduti.
 
 > [!IMPORTANT]
-> Se si prevede di usare il [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] procedura guidata per creare il gruppo di disponibilità, è comunque necessario creare e ripristinare i certificati tramite Transact-SQL in Linux.
+> Se si prevede di usare la procedura guidata di [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] per creare il gruppo di disponibilità, è comunque necessario creare e ripristinare i certificati usando Transact-SQL in Linux.
 
-Per la sintassi completa le opzioni disponibili per i vari comandi (ad esempio aggiuntiva di sicurezza), consultare:
+Per la sintassi completa delle opzioni disponibili per i vari comandi, ad esempio per un livello di sicurezza aggiuntivo, vedere:
 
 -   [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
--   [CREARE CERTIFICATI](../t-sql/statements/create-certificate-transact-sql.md)
+-   [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 -   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
 
 > [!NOTE]
-> Anche se verrà creato un gruppo di disponibilità, viene utilizzato il tipo di endpoint *FOR DATABASE_MIRRORING*, perché alcuni aspetti sottostante una volta sono stati condivisi con tale funzionalità attualmente deprecata.
+> Anche se si sta creando un gruppo di disponibilità, il tipo di endpoint usa *FOR DATABASE_MIRRORING*, perché alcuni aspetti sottostanti erano condivisi con questa funzionalità ormai deprecata.
 
-In questo esempio creerà i certificati per una configurazione a tre nodi. I nomi delle istanze sono LinAGN1 LinAGN2 e LinAGN3.
+In questo esempio vengono creati i certificati per una configurazione a tre nodi. I nomi delle istanze sono LinAGN1, LinAGN2 e LinAGN3.
 
-1.  Eseguire le operazioni seguenti sul LinAGN1 per creare la chiave master, un certificato e un endpoint, nonché eseguire il backup del certificato. In questo esempio viene utilizzata la tipica porta TCP 5022 per l'endpoint.
+1.  Eseguire il codice seguente in LinAGN1 per creare la chiave master, il certificato e l'endpoint e per eseguire il backup del certificato. In questo esempio per l'endpoint viene usata la porta TCP standard 5022.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -115,7 +115,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-2.  Eseguire la stessa operazione nel LinAGN2:
+2.  Eseguire lo stesso codice in LinAGN2:
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -144,7 +144,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-3.  Infine, seguire la stessa sequenza in LinAGN3:
+3.  Infine, eseguire la stessa sequenza in LinAGN3:
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -175,19 +175,19 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     
 4.  Usando `scp` o un'altra utilità, copiare i backup del certificato in ogni nodo che farà parte del gruppo di disponibilità.
     
-    In questo esempio:
+    Per questo esempio:
     
-    - Copiare LinAGN1_Cert.cer LinAGN2 e LinAGN3
-    - Copiare LinAGN2_Cert.cer LinAGN1 e LinAGN3.
-    - Copiare LinAGN3_Cert.cer LinAGN1 e LinAGN2.
+    - Copiare LinAGN1_Cert.cer in LinAGN2 e LinAGN3.
+    - Copiare LinAGN2_Cert.cer in LinAGN1 e LinAGN3.
+    - Copiare LinAGN3_Cert.cer in LinAGN1 e LinAGN2.
     
-5.  Modificare la proprietà e il gruppo associato il file del certificato copiato a `mssql`.
+5.  Cambiare la proprietà e il gruppo associato ai file di certificato copiati in `mssql`.
     
     ```bash
     sudo chown mssql:mssql <CertFileName>
     ```
     
-6.  Creare account di accesso a livello di istanza e gli utenti associati a LinAGN2 e LinAGN3 su LinAGN1.
+6.  Creare gli account di accesso a livello di istanza e gli utenti associati a LinAGN2 e LinAGN3 in LinAGN1.
     
     ```SQL
     CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
@@ -201,7 +201,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-7.  Ripristinare LinAGN2_Cert e LinAGN3_Cert su LinAGN1. I certificati delle altre repliche è un aspetto importante della sicurezza e la comunicazione del gruppo di disponibilità.
+7.  Ripristinare LinAGN2_Cert e LinAGN3_Cert in LinAGN1. La presenza dei certificati delle altre repliche è un aspetto importante della comunicazione e della sicurezza dei gruppi di disponibilità.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -228,7 +228,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-9.  Creare account di accesso a livello di istanza e gli utenti associati a LinAGN1 e LinAGN3 su LinAGN2.
+9.  Creare gli account di accesso a livello di istanza e gli utenti associati a LinAGN1 e LinAGN3 in LinAGN2.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -242,7 +242,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-10. Ripristinare LinAGN1_Cert e LinAGN3_Cert su LinAGN2.
+10. Ripristinare LinAGN1_Cert e LinAGN3_Cert in LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -258,7 +258,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-11. Concedere agli account di accesso associato LinAG1 e LinAGN3 dell'autorizzazione per connettersi all'endpoint in LinAGN2.
+11. Concedere agli account di accesso associati a LinAGN1 e LinAGN3 l'autorizzazione per la connessione all'endpoint in LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +270,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-12. Creare account di accesso a livello di istanza e gli utenti associati a LinAGN1 e LinAGN2 su LinAGN3.
+12. Creare gli account di accesso a livello di istanza e gli utenti associati a LinAGN1 e LinAGN2 in LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +284,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-13. Ripristinare LinAGN1_Cert e LinAGN2_Cert su LinAGN3. 
+13. Ripristinare LinAGN1_Cert e LinAGN2_Cert in LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -300,7 +300,7 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
     GO
     ```
     
-14. Concedere agli account di accesso associato LinAG1 e LinAGN2 dell'autorizzazione per connettersi all'endpoint in LinAGN3.
+14. Concedere agli account di accesso associati a LinAGN1 e LinAGN2 l'autorizzazione per la connessione all'endpoint in LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -314,76 +314,76 @@ In questo esempio creerà i certificati per una configurazione a tre nodi. I nom
 
 ## <a name="create-the-availability-group"></a>Creare il gruppo di disponibilità
 
-In questa sezione viene illustrato come utilizzare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL per creare il gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+Questa sezione illustra come usare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL per creare il gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
 ### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Utilizzare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
-Questa sezione illustra come creare un gruppo di disponibilità con un tipo di cluster External tramite SSMS con la creazione guidata gruppo di disponibilità.
+Questa sezione illustra come creare un gruppo di disponibilità con un tipo di cluster esterno usando SSMS con la Creazione guidata gruppo di disponibilità.
 
-1.  In SQL Server Management Studio, espandere **disponibilità elevata AlwaysOn**, fare clic destro **gruppi di disponibilità**e selezionare **Creazione guidata nuovo gruppo di disponibilità**.
+1.  In SSMS espandere **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse su **Gruppi di disponibilità** e scegliere **Disponibilità elevata Always On**.
 
-2.  Nella finestra di dialogo Introduction, fare clic su **successivo**.
+2.  Nella finestra di dialogo Introduzione fare clic su **Avanti**.
 
-3.  Nella finestra di dialogo specificare le opzioni di gruppo di disponibilità, immettere un nome per il gruppo di disponibilità e selezionare un tipo di cluster di EXTERNAL o nessuno nell'elenco a discesa. Esterno deve essere usato quando Pacemaker verrà distribuito. Nessuno è per scenari specializzati, ad esempio lettura con scalabilità orizzontale. Se si seleziona l'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [opzione failover di rilevamento dell'integrità a livello di disponibilità gruppo database](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Fare clic su **Avanti**.
+3.  Nella finestra di dialogo Specificare le opzioni del gruppo di disponibilità immettere un nome per il gruppo di disponibilità e selezionare il tipo di cluster ESTERNO o NESSUNO nell'elenco a discesa. Per distribuire Pacemaker occorre usare il tipo Esterno. Il tipo Nessuno è riservato per scenari specializzati, come la scalabilità in lettura. La selezione dell'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Scegliere **Avanti**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  Nella finestra di dialogo Seleziona database, selezionare i database che faranno parte del gruppo di disponibilità. Ogni database deve avere un backup completo prima di aggiungerlo a un gruppo di disponibilità. Fare clic su **Avanti**.
+4.  Nella finestra di dialogo Seleziona database selezionare i database che faranno parte del gruppo di disponibilità. Prima di aggiungere ogni database a un gruppo di disponibilità è necessario effettuarne un backup completo. Scegliere **Avanti**.
 
-5.  Nella finestra di dialogo specifica repliche, fare clic su **Aggiungi Replica**.
+5.  Nella finestra di dialogo Specifica repliche fare clic su **Aggiungi replica**.
 
-6.  Nella finestra di dialogo Connetti al Server, immettere il nome dell'istanza di Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] che sarà la replica secondaria e le credenziali per connettersi. Fare clic su **Connetti**.
+6.  Nella finestra di dialogo Connetti al server immettere il nome dell'istanza di Linux di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] che costituirà la replica secondaria e le credenziali per la connessione. Fare clic su **Connetti**.
 
 7.  Ripetere i due passaggi precedenti per l'istanza che conterrà una replica di sola configurazione o un'altra replica secondaria.
 
-8.  Tutte le tre istanze dovrebbero ora essere elencate nella finestra di dialogo specifica repliche. Se si usa un tipo di cluster External, per la replica secondaria che sarà una replica secondaria true, assicurarsi che la modalità di disponibilità corrisponde a quello della replica primaria e la modalità di failover è impostata su External. Per la replica di sola configurazione, selezionare solo una modalità di disponibilità della configurazione.
+8.  Ora tutte e tre le istanze dovrebbero essere elencate nella finestra di dialogo Specifica repliche. Se si usa il tipo di cluster Esterno, per la replica secondaria assicurarsi che la modalità di disponibilità corrisponda a quella della replica primaria e che la modalità di failover sia impostata su Esterno. Per la replica di sola configurazione, selezionare la modalità di disponibilità Sola configurazione.
 
-    L'esempio seguente illustra un gruppo di disponibilità con due repliche, un tipo di cluster External e una replica di sola configurazione.
+    L'esempio seguente illustra un gruppo di disponibilità con due repliche, un cluster di tipo Esterno e una replica di sola configurazione.
 
     ![](./media/sql-server-linux-create-availability-group/image4.png)
 
-    L'esempio seguente illustra un gruppo di disponibilità con due repliche, un tipo di cluster None, e una replica di sola configurazione.
+    L'esempio seguente illustra un gruppo di disponibilità con due repliche, un cluster di tipo Nessuno e una replica di sola configurazione.
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  Se si desidera modificare le preferenze di backup, fare clic sulla scheda Preferenze di Backup. Per altre informazioni sulle preferenze di backup con gruppi di disponibilità, vedere [configurare il backup su repliche di disponibilità](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
+9.  Se si vogliono modificare le preferenze di backup, fare clic sulla scheda Preferenze di backup. Per altre informazioni sulle preferenze di backup con i gruppi di disponibilità, vedere [Configurare backup in repliche secondarie per un gruppo di disponibilità Always On](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. Se con database secondari leggibili o la creazione di un gruppo di disponibilità con un cluster di tipo None per scalabilità in lettura, è possibile creare un listener selezionando la scheda Listener. Inoltre è possibile aggiungere un listener in un secondo momento. Per creare un listener, scegliere l'opzione **creare un listener del gruppo di disponibilità** e immettere un nome e una porta TCP/IP se si desidera utilizzare un indirizzo IP DHCP statico o assegnato automaticamente. Tenere presente che per un gruppo di disponibilità con un tipo di cluster None, l'indirizzo IP deve essere statico e impostare all'indirizzo IP della replica primaria.
+10. Se si usano repliche secondarie leggibili o si crea un gruppo di disponibilità con un cluster di tipo Nessuno per la scalabilità in lettura, è possibile creare un listener selezionando la scheda Listener. Un listener può anche essere aggiunto in un secondo momento. Per creare un listener, scegliere l'opzione **Crea un listener del gruppo di disponibilità** e immettere un nome e una porta TCP/IP, oltre a specificare se usare un indirizzo IP DHCP statico o assegnato automaticamente. Tenere presente che per un gruppo di disponibilità con un tipo di cluster Nessuno l'indirizzo IP deve essere statico e impostato sull'indirizzo IP della replica primaria.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
-11. Se viene creato un listener per gli scenari leggibili, SQL Server Management Studio 17.3 o successiva consente di creare il routing in sola lettura nella procedura guidata. Può anche essere aggiunto in un secondo momento tramite SSMS o Transact-SQL. Per aggiungere routing ora di sola lettura:
+11. Se si crea un listener per scenari di repliche leggibili, SSMS 17.3 o versioni successive consente la creazione del routing di sola lettura nella procedura guidata. Il listener può anche essere aggiunto successivamente tramite SSMS o Transact-SQL. Per aggiungere subito il routing di sola lettura:
 
-    a.  Selezionare la scheda di Routing di sola lettura.
+    A.  Selezionare la scheda Routing di sola lettura.
 
-    b.  Immettere l'URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usa la porta dell'istanza, non l'endpoint.
+    B.  Immettere gli URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usano la porta dell'istanza, non l'endpoint.
 
-    c.  Selezionare ogni URL e dal basso, selezionare le repliche leggibili. Per la selezione multipla, tenere premuto MAIUSC o fare clic e trascinare.
+    c.  Selezionare ogni URL e nella parte inferiore selezionare le repliche leggibili. Per effettuare una selezione multipla, tenere premuto MAIUSC o fare clic e trascinare.
 
-12. Fare clic su **Avanti**.
+12. Scegliere **Avanti**.
 
-13. Scegli modalità di inizializzazione nelle repliche secondarie. L'impostazione predefinita consiste nell'usare [il seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile la procedura guidata eseguire una backup, copia e ripristino (la seconda opzione); aggiungerlo se hanno manualmente il backup, copiata e ripristinato il database nelle repliche (terza opzione); o aggiungere il database in un secondo momento (ultima opzione). Come con i certificati, se si apportano i backup e copiarli manualmente, le autorizzazioni per i file di backup deve essere impostato nelle altre repliche. Fare clic su **Avanti**.
+13. Specificare la modalità di inizializzazione delle repliche secondarie. L'impostazione predefinita prevede l'uso del [seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile indicare alla procedura guidata di eseguire un backup, una copia e un ripristino (seconda opzione), di procedere con l'aggiunta se è stato eseguito manualmente il backup, la copia e il ripristino del database nelle repliche (terza opzione) o di aggiungere il database in un secondo momento (ultima opzione). Come accade con i certificati, se si eseguono manualmente i backup e li si copia, le autorizzazioni per i file di backup devono essere impostate sulle altre repliche. Scegliere **Avanti**.
 
-14. Nella finestra di dialogo convalida, se tutti gli elementi non arrivi come esito positivo, provare a utilizzare. Alcuni avvisi siano accettabili e non irreversibili, ad esempio se non si crea un listener. Fare clic su **Avanti**.
+14. Se nella finestra di dialogo Convalida alcune operazioni sono indicate come non riuscite, ricercarne la causa. Alcuni avvisi sono accettabili e non indicano errori irreversibili, ad esempio nel caso in cui non si crea un listener. Scegliere **Avanti**.
 
-15. Nella finestra di dialogo riepilogo, fare clic su **fine**. A questo punto verrà avviata la procedura per creare il gruppo di disponibilità.
+15. Nella finestra di dialogo Riepilogo fare clic su **Fine**. Verrà avviato il processo di creazione del gruppo di disponibilità.
 
-16. Una volta completata la creazione del gruppo di disponibilità, fare clic su **Chiudi** sui risultati. È ora possibile visualizzare il gruppo di disponibilità nelle repliche nelle viste a gestione dinamica, nonché nella cartella disponibilità elevata Always On in SQL Server Management Studio.
+16. Una volta completata la creazione del gruppo di disponibilità, fare clic su **Chiudi** nella finestra Risultati. Ora è possibile vedere il gruppi di disponibilità nelle viste a gestione dinamica e nella cartella Disponibilità elevata Always On in SSMS.
 
 ### <a name="use-transact-sql"></a>Usare Transact-SQL
 
-In questa sezione vengono illustrati esempi di creazione di un gruppo di disponibilità con Transact-SQL. Il listener e routing di sola lettura può essere configurati dopo aver creato il gruppo di disponibilità. Il gruppo di disponibilità può essere modificato con `ALTER AVAILABILITY GROUP`, ma la modifica del tipo di cluster non può essere eseguita [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Se non si intendeva creare un gruppo di disponibilità con un tipo di cluster External, è necessario eliminarla e ricrearla con un tipo di cluster None. Altre informazioni e altre opzioni sono disponibili ai collegamenti seguenti:
+Questa sezione illustra alcuni esempi di creazione di un gruppo di disponibilità tramite Transact-SQL. Il listener e il routing di sola lettura possono essere configurati dopo la creazione del gruppo di disponibilità. Il gruppo di disponibilità stesso può essere modificato con `ALTER AVAILABILITY GROUP`, ma il tipo di cluster non può essere modificato in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Se non si intende creare un gruppo di disponibilità con un cluster di tipo Esterno, è necessario eliminarlo e ricrearlo con un cluster di tipo Nessuno. Per altre informazioni e altre opzioni, vedere i collegamenti seguenti:
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
--   [Configurare il Routing di sola lettura per un gruppo di disponibilità (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
+-   [Configurare il routing di sola lettura per un gruppo di disponibilità (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Creare o configurare un listener del gruppo di disponibilità (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Repliche di esempio uno-due con una sola configurazione replica (tipo di cluster esterna)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Esempio 1 - Due repliche con una replica di sola configurazione (cluster di tipo Esterno)
 
-In questo esempio viene illustrato come creare un gruppo di disponibilità con due repliche che usa una replica di sola configurazione.
+Questo esempio illustra come creare un gruppo di disponibilità con due repliche che usa una replica di sola configurazione.
 
-1.  Eseguire sul nodo che sarà la replica primaria che contiene la copia di lettura/scrittura completa dei database. Questo esempio viene usato il seeding automatico.
+1.  Eseguire il codice di esempio sul nodo che sarà la replica primaria contenente la copia con funzioni di lettura/scrittura complete dei database. Questo esempio usa il seeding automatico.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -405,7 +405,7 @@ In questo esempio viene illustrato come creare un gruppo di disponibilità con d
     GO
     ```
     
-2.  Nella finestra di query connessa a altra replica, eseguire il comando seguente per creare un join della replica al gruppo di disponibilità e avviare il processo di seeding dalla replica primaria alla replica secondaria.
+2.  In una finestra di query connessa all'altra replica eseguire il codice seguente per aggiungere la replica al gruppo di disponibilità e avviare il processo di seeding dalla replica primaria alla replica secondaria.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -417,7 +417,7 @@ In questo esempio viene illustrato come creare un gruppo di disponibilità con d
     GO
     ```
     
-3. Nella finestra di query connessa alla replica di sola configurazione, creare un join al gruppo di disponibilità.
+3. In una finestra di query connessa alla replica di sola configurazione aggiungere la replica al gruppo di disponibilità.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -425,11 +425,11 @@ In questo esempio viene illustrato come creare un gruppo di disponibilità con d
     GO
    ```
 
-#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Repliche di esempio due-tre con il routing di sola lettura (tipo di cluster esterna)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Esempio 2 - Tre repliche con routing di sola lettura (cluster di tipo Esterno)
 
-Questo esempio mostra tre completa le repliche e la modalità sola lettura e routing possono essere configurati come parte della creazione iniziale del gruppo di disponibilità.
+Questo esempio mostra tre repliche complete e illustra il modo in cui il routing di sola lettura può essere configurato nell'ambito della creazione del gruppo di disponibilità iniziale.
 
-1.  Eseguire sul nodo che sarà la replica primaria che contiene la copia di lettura/scrittura completa dei database. Questo esempio viene usato il seeding automatico.
+1.  Eseguire il codice di esempio sul nodo che sarà la replica primaria contenente la copia con funzioni di lettura/scrittura complete dei database. Questo esempio usa il seeding automatico.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -461,15 +461,15 @@ Questo esempio mostra tre completa le repliche e la modalità sola lettura e rou
     GO
     ```
     
-    Alcuni aspetti da considerare questa configurazione:
+    Ecco alcuni aspetti da considerare per questa configurazione:
     
     - *AGName* è il nome del gruppo di disponibilità.
     - *DBName* è il nome del database che verrà usato con il gruppo di disponibilità. Può anche essere un elenco di nomi separati da virgole.
-    - *ListenerName* è un nome diverso da quello di uno dei nodi del server sottostanti. Si sarà registrato in DNS insieme a *IPAddress*.
-    - *IPAddress* è un indirizzo IP associato *ListenerName*. È inoltre univoco e non uguale a uno dei nodi del server /. Le applicazioni e gli utenti finali useranno entrambi *ListenerName* oppure *IPAddress* per connettersi al gruppo di disponibilità.
-    - *Subnet mask* è la subnet mask *IPAddress*, ad esempio 255.255.255.0.
+    - *ListenerName* è un nome diverso da qualsiasi nodo/server sottostante. Verrà registrato nel DNS insieme a *IPAddress*.
+    - *IPAddress* è un indirizzo IP associato a *ListenerName*. È inoltre univoco e non corrisponde ad alcuno dei server/nodi. Le applicazioni e gli utenti finali useranno *ListenerName* o *IPAddress* per connettersi al gruppo di disponibilità.
+    - *SubnetMask* è la subnet mask di *IPAddress*, ad esempio 255.255.255.0.
 
-2.  Nella finestra di query connessa a altra replica, eseguire il comando seguente per creare un join della replica al gruppo di disponibilità e avviare il processo di seeding dalla replica primaria alla replica secondaria.
+2.  In una finestra di query connessa all'altra replica eseguire il codice seguente per aggiungere la replica al gruppo di disponibilità e avviare il processo di seeding dalla replica primaria alla replica secondaria.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -481,13 +481,13 @@ Questo esempio mostra tre completa le repliche e la modalità sola lettura e rou
     GO
     ```
     
-3.  Ripetere il passaggio 2 per la replica di terza.
+3.  Ripetere il passaggio 2 per la terza replica.
 
-#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Repliche di esempio due di tre con sola lettura di routing (nessuno tipo di cluster)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Esempio 3 - Due repliche con routing di sola lettura (cluster di tipo Nessuno)
 
-In questo esempio viene illustrata la creazione di una configurazione con due repliche utilizzando un tipo di cluster None. Viene usato per lo scenario di scalabilità in lettura in cui non è previsto alcun failover. Verrà creato il listener che è effettivamente la replica primaria, nonché di sola lettura il routing, usando la funzionalità round robin.
+Questo esempio illustra la creazione di una configurazione a due repliche che usa un cluster di tipo Nessuno. Viene usata per lo scenario di scalabilità in lettura in cui non è previsto alcun failover. Viene creato il listener che è effettivamente la replica primaria, oltre al routing di sola lettura, usando la funzionalità di round robin.
 
-1.  Eseguire sul nodo che sarà la replica primaria che contiene la copia di lettura/scrittura completa dei database. Questo esempio viene usato il seeding automatico.
+1.  Eseguire il codice di esempio sul nodo che sarà la replica primaria contenente la copia con funzioni di lettura/scrittura complete dei database. Questo esempio usa il seeding automatico.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -515,13 +515,13 @@ In questo esempio viene illustrata la creazione di una configurazione con due re
     Where
     - *AGName* è il nome del gruppo di disponibilità.
     - *DBName* è il nome del database che verrà usato con il gruppo di disponibilità. Può anche essere un elenco di nomi separati da virgole.
-    - *PortOfEndpoint* è il numero di porta utilizzato dall'endpoint creato.
-    - *PortOfInstance* è il numero di porta utilizzato dall'istanza di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
-    - *ListenerName* è un nome che è diverso da quello di qualsiasi delle repliche sottostante, ma non verrà effettivamente usato.
+    - *PortOfEndpoint* è il numero di porta usato dall'endpoint creato.
+    - *PortOfInstance* è il numero di porta usato dall'istanza di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+    - *ListenerName* è un nome diverso da qualsiasi replica sottostante, ma non viene effettivamente usato.
     - *PrimaryReplicaIPAddress* è l'indirizzo IP della replica primaria.
-    - *Subnet mask* è la subnet mask *IPAddress*. Ad esempio 255.255.255.0.
+    - *SubnetMask* è la subnet mask di *IPAddress*. Ad esempio, 255.255.255.0.
     
-2.  Partecipa alla replica secondaria al gruppo di disponibilità e avviare il seeding automatico.
+2.  Aggiungere la replica secondaria al gruppo di disponibilità e avviare il seeding automatico.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -533,11 +533,11 @@ In questo esempio viene illustrata la creazione di una configurazione con due re
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Creare il [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] account di accesso e le autorizzazioni per Pacemaker
+## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker
 
-Un cluster Pacemaker di elevata disponibilità sottostante [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve accedere al [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] istanza, nonché le autorizzazioni nel gruppo di disponibilità se stesso. Questi passaggi creano account di accesso e le autorizzazioni associate, oltre a un file che viene descritto come accedere a Pacemaker [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+Un cluster a disponibilità elevata Pacemaker sottostante a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve poter accedere all'istanza di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e deve avere le autorizzazioni per il gruppo di disponibilità stesso. La procedura seguente crea l'account di accesso e le autorizzazioni associate, oltre a un file che indica a Pacemaker come accedere a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-1.  Nella finestra di query connessa alla prima replica, eseguire quanto segue:
+1.  In una finestra di query connessa alla prima replica eseguire il codice seguente:
 
     ```SQL
     CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
@@ -553,47 +553,47 @@ Un cluster Pacemaker di elevata disponibilità sottostante [!INCLUDE[ssnoversion
     GO
     ```
     
-2.  Nel nodo 1, immettere il comando 
+2.  Nel nodo 1 immettere il comando 
     ```bash
     sudo emacs /var/opt/mssql/secrets/passwd
     ```
     
-    Si aprirà l'editor Emacs.
+    Verrà aperto l'editor Emacs.
     
-3.  Nell'editor, immettere le due righe seguenti:
+3.  Immettere le due righe seguenti nell'editor:
 
     ```
     PMLogin
     <StrongPassword>
     ```
     
-4.  Tenere premuto il tasto CTRL e quindi premere X, quindi C, per chiuderla e salvare il file.
+4.  Tenere premuto CTRL e premere X, quindi C per uscire e salvare il file.
 
 5.  Execute 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
     
-    Per bloccare il file.
+    per bloccare il file.
 
-6.  Ripetere i passaggi 1-5 negli altri server che fungerà da repliche.
+6.  Ripetere i passaggi 1-5 negli altri server che fungeranno da repliche.
 
-## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Creare la disponibilità del gruppo di risorse del cluster Pacemaker (solo esterno)
+## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Creare le risorse dei gruppi di disponibilità nel cluster Pacemaker (solo di tipo Esterno)
 
-Dopo una data di disponibilità gruppo viene creato in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], le risorse corrispondenti devono essere create in Pacemaker, se viene specificato un tipo di cluster External. Esistono due risorse associate a un gruppo di disponibilità: il gruppo di disponibilità e un indirizzo IP. Configurare la risorsa indirizzo IP è facoltativo se non si usa la funzionalità di listener, ma è consigliato.
+Dopo aver creato un gruppo di disponibilità in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], è necessario creare le risorse corrispondenti in Pacemaker, quando viene specificato un tipo di cluster Esterno. A un gruppo di disponibilità sono associate due risorse: il gruppo di disponibilità stesso e un indirizzo IP. La configurazione della risorsa indirizzo IP è facoltativa se non si usa la funzionalità del listener, ma è tuttavia consigliata.
 
-La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa denominata un clone. La risorsa del gruppo di disponibilità ha essenzialmente le copie in ogni nodo e vi è una risorsa di controllo denominata master. Lo schema è associato con il server che ospita la replica primaria. Le repliche secondarie (normale o di sola configurazione) vengono considerate gli slave e può essere promosso al master in un failover.
+La risorsa gruppo di disponibilità creata è un tipo speciale di risorsa chiamata clone. Sono presenti copie di questa risorsa in ogni nodo, con una risorsa con funzioni di controllo detta risorsa master. La risorsa master è associata al server che ospita la replica primaria. Le repliche secondarie (normali o di sola configurazione) sono considerate slave e possono essere alzate al livello master in un failover.
 
-1.  Creare la risorsa del gruppo di disponibilità con la sintassi seguente:
+1.  Per creare la risorsa gruppo di disponibilità, usare la sintassi seguente:
 
-    **Ubuntu e Red Hat Enterprise Linux (RHEL)**
+    **Red Hat Enterprise Linux (RHEL) e Ubuntu**
     
     ```bash
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s --master meta notify=true
     ```
 
     >[!NOTE]
-    >In RHEL 7.4, è possibile riscontrare un avviso con l'uso di - master. Per evitare questo problema, usare `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
+    >In RHEL 7.4 è possibile che venga visualizzato un avviso con l'uso di --master. Per evitare questo avviso, usare `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     
@@ -616,11 +616,11 @@ La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa de
     commit
     ```
     
-    in cui *NameForAGResource* è il nome univoco assegnato a questa risorsa cluster per il gruppo di disponibilità, e *AGName* è il nome del gruppo di disponibilità che è stato creato.
+    dove *NameForAGResource* è il nome univoco assegnato a questa risorsa cluster per il gruppo di disponibilità e *AGName* è il nome del gruppo di disponibilità creato.
  
-2.  Creare la risorsa indirizzo IP per il gruppo di disponibilità che verrà associato alla funzionalità di listener.
+2.  Creare la risorsa indirizzo IP del gruppo di disponibilità che verrà associata alla funzionalità del listener.
 
-    **Ubuntu e RHEL**
+    **RHEL e Ubuntu**
     
     ```bash
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
@@ -636,11 +636,11 @@ La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa de
           cidr_netmask=<Netmask>
     ```
     
-    in cui *NameForIPResource* è il nome univoco per la risorsa IP, e *IPAddress* è l'indirizzo IP statico assegnato alla risorsa. In SLES, devi anche specificare la subnet mask. Ad esempio, 255.255.255.0 avrebbe un valore pari a 24 per *subnet mask.*
+    dove *NameForIPResource* è il nome univoco della risorsa IP e *IPAddress* è l'indirizzo IP statico assegnato alla risorsa. In SLES è necessario fornire anche la netmask. Ad esempio, 255.255.255.0 avrebbe il valore 24 per *Netmask*.
     
-3.  Per assicurarsi che l'indirizzo IP e la risorsa del gruppo di disponibilità sono in esecuzione nello stesso nodo, è necessario configurare un vincolo con più sedi.
+3.  Per fare in modo che la risorsa indirizzo IP e la risorsa gruppo di disponibilità siano in esecuzione nello stesso nodo, è necessario configurare un vincolo di condivisione del percorso.
 
-    **Ubuntu e RHEL**
+    **RHEL e Ubuntu**
     
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
@@ -654,11 +654,11 @@ La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa de
     commit
     ```
     
-    in cui *NameForIPResource* è il nome per una risorsa IP *NameForAGResource* è il nome della risorsa del gruppo di disponibilità e in SLES, *NameForConstraint* è il nome per il vincolo.
+    dove *NameForIPResource* è il nome della risorsa IP, *NameForAGResource* è il nome della risorsa gruppo di disponibilità e, in SLES, *NameForConstraint* è il nome del vincolo.
 
-4.  Creare un vincolo per assicurarsi che la risorsa del gruppo di disponibilità sia attivo e in esecuzione prima dell'indirizzo IP. Mentre il vincolo di condivisione percorso implica un vincolo di ordinamento, questo applica.
+4.  Creare un vincolo di ordinamento per fare in modo che la risorsa del gruppo di disponibilità sia attiva e in esecuzione prima dell'indirizzo IP. Mentre il vincolo di condivisione del percorso implica un vincolo di ordinamento, questo lo applica.
 
-    **Ubuntu e RHEL**
+    **RHEL e Ubuntu**
     
     ```bash
     sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
@@ -672,20 +672,20 @@ La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa de
     commit
     ```
     
-    in cui *NameForIPResource* è il nome per una risorsa IP *NameForAGResource* è il nome della risorsa del gruppo di disponibilità e in SLES, *NameForConstraint* è il nome per il vincolo.
+    dove *NameForIPResource* è il nome della risorsa IP, *NameForAGResource* è il nome della risorsa gruppo di disponibilità e, in SLES, *NameForConstraint* è il nome del vincolo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione si è appreso come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. Si è appreso come a:
+In questa esercitazione si è appreso come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. Si è appreso come:
 > [!div class="checklist"]
-> * Abilitare gruppi di disponibilità.
-> * Gli endpoint di creazione del gruppo di disponibilità e certificati.
+> * Abilitare i gruppi di disponibilità.
+> * Creare endpoint e certificati per i gruppi di disponibilità.
 > * Usare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL per creare un gruppo di disponibilità.
-> * Creare il [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] account di accesso e le autorizzazioni per Pacemaker.
-> * Creare risorse del gruppo di disponibilità in un cluster Pacemaker.
+> * Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker.
+> * Creare le risorse del gruppo di disponibilità in un cluster Pacemaker.
 
-Per la maggior parte delle attività di amministrazione del gruppo di disponibilità, tra cui gli aggiornamenti e il failover, vedere:
+Per informazioni sulla maggior parte delle attività di amministrazione dei gruppi di disponibilità, inclusi gli aggiornamenti e il failover, vedere:
 
 > [!div class="nextstepaction"]
-> [Funzioni gruppo di disponibilità elevata per SQL Server in Linux](sql-server-linux-availability-group-failover-ha.md)
+> [Gestire gruppi di disponibilità elevata per SQL Server in Linux](sql-server-linux-availability-group-failover-ha.md)
 

@@ -1,7 +1,7 @@
 ---
 title: -- (commento) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950236"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495478"
 ---
 # <a name="---comment-transact-sql"></a>-- (commento) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950236"
  Stringa di caratteri contenente il testo del commento.  
   
 ## <a name="remarks"></a>Remarks  
- Utilizzare due trattini (--) per commenti su una sola riga o nidificati. I commenti inseriti con -- sono delimitati dal carattere di nuova riga. I commenti possono essere di qualsiasi lunghezza. Nella tabella seguente sono elencati i tasti di scelta rapida che è possibile utilizzare per impostare o meno il testo come commento.  
+Usare due trattini ( **--** ) per commenti su una sola riga o annidati. I commenti inseriti con **--** vengono terminati da una nuova riga, specificata con un carattere di ritorno a capo (U+000A), un carattere di avanzamento riga (U+000D) o una combinazione dei due. I commenti possono essere di qualsiasi lunghezza. Nella tabella seguente sono elencati i tasti di scelta rapida che è possibile utilizzare per impostare o meno il testo come commento.
   
 |Azione|Standard|  
 |------------|--------------|  

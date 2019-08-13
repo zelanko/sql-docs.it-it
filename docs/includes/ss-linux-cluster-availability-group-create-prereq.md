@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215570"
 ---
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di creare il gruppo di disponibilità, è necessario:
 
@@ -14,14 +14,14 @@ Prima di creare il gruppo di disponibilità, è necessario:
 - Installare SQL Server.
 
 >[!NOTE]
->In Linux, è necessario creare un gruppo di disponibilità prima di aggiungerlo come risorsa cluster per la gestione del cluster. Questo documento propone un esempio di creazione del gruppo di disponibilità. Per istruzioni di distribuzione specifiche per creare il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, vedere i collegamenti nella sezione "Passaggi successivi".
+>In Linux è necessario creare un gruppo di disponibilità prima di aggiungerlo come risorsa cluster, da gestire con il cluster. Questo documento propone un esempio di creazione del gruppo di disponibilità. Per istruzioni specifiche della distribuzione per creare il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, vedere i collegamenti nella sezione Passaggi successivi.
 
 1. Aggiornare il nome del computer per ogni host.
 
    Ogni nome di SQL Server deve:
    
-   - i 15 caratteri o meno.
-   - Deve essere univoco all'interno della rete.
+   - Essere composto da 15 caratteri o meno.
+   - Essere univoco all'interno della rete.
    
    Per impostare il nome del computer, modificare `/etc/hostname`. Lo script seguente consente di modificare `/etc/hostname` con `vi`:
 
@@ -32,7 +32,7 @@ Prima di creare il gruppo di disponibilità, è necessario:
 2. Configurare il file hosts.
 
     >[!NOTE]
-    >Se i nomi host sono registrati con i relativi IP nel server DNS, non devi effettuare i passaggi seguenti. Verificare che tutti i nodi faranno parte della configurazione del gruppo di disponibilità possono comunicare tra loro. (Un ping al nome host deve rispondere con l'indirizzo IP corrispondente). Inoltre, assicurarsi che il file /etc/hosts non contenga un record che viene associato l'indirizzo IP localhost 127.0.0.1 con il nome host del nodo.
+    >Se i nomi host sono registrati con i relativi IP nel server DNS, non è necessario eseguire i passaggi seguenti. Verificare che tutti i nodi che faranno parte della configurazione del gruppo di disponibilità possano comunicare tra loro. Eseguendo il ping del nome host si dovrebbe ottenere come risposta l'indirizzo IP corrispondente. Assicurarsi anche che il file /etc/hosts non contenga un record che esegue il mapping dell'indirizzo IP di localhost 127.0.0.1 con il nome host del nodo.
     >
 
    Il file hosts in ogni server contiene gli indirizzi IP e i nomi di tutti i server che faranno parte del gruppo di disponibilità. 
@@ -49,7 +49,7 @@ Prima di creare il gruppo di disponibilità, è necessario:
    sudo vi /etc/hosts
    ```
 
-   L'esempio seguente illustra `/etc/hosts` su **node1** con aggiunte per **node1**, **node2** e **node3**. In questo documento **node1** fa riferimento al server che ospita la replica primaria. E **node2** e **node3** fare riferimento ai server che ospitano le repliche secondarie.
+   L'esempio seguente illustra `/etc/hosts` su **node1** con aggiunte per **node1**, **node2** e **node3**. In questo documento **node1** si riferisce al server che ospita la replica primaria. **node2** e **node3** si riferiscono ai server che ospitano le repliche secondarie.
 
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -61,7 +61,7 @@ Prima di creare il gruppo di disponibilità, è necessario:
 
 ### <a name="install-sql-server"></a>Installare SQL Server
 
-Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di installazione di SQL Server per varie distribuzioni: 
+Installare SQL Server. I collegamenti seguenti rimandano alle istruzioni di installazione di SQL Server per varie distribuzioni: 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
@@ -69,29 +69,29 @@ Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di instal
 
 ## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>Abilitare la funzionalità Gruppi di disponibilità Always On e riavviare mssql-server
 
-Abilitare gruppi di disponibilità AlwaysOn in ogni nodo che ospita un'istanza di SQL Server. Quindi riavviare `mssql-server`. Eseguire lo script riportato di seguito:
+Abilitare i gruppi di disponibilità AlwaysOn in ogni nodo che ospita un'istanza di SQL Server. Riavviare quindi `mssql-server`. Eseguire lo script riportato di seguito:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##  <a name="enable-an-alwaysonhealth-event-session"></a>Abilitare una sessione eventi AlwaysOn_health 
+##  <a name="enable-an-alwayson_health-event-session"></a>Abilitare una sessione eventi AlwaysOn_health 
 
-Facoltativamente, è possibile abilitare eventi estesi con gruppi di disponibilità AlwaysOn semplificare la diagnosi della causa principale, risolvere gli errori di un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server: 
+Facoltativamente, è possibile abilitare gli eventi estesi dei gruppi di disponibilità AlwaysOn per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi che interessano un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server: 
 
 ```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Per altre informazioni su questa sessione XE, vedere [AlwaysOn eventi estesi](https://msdn.microsoft.com/library/dn135324.aspx).
+Per altre informazioni su questa sessione XE, vedere [Eventi AlwaysOn estesi](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Creare un certificato
 
 Il servizio SQL Server in Linux usa i certificati per autenticare la comunicazione tra gli endpoint del mirroring. 
 
-Lo script Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e protegge il file con una chiave privata. Aggiornare lo script con password complesse. Connettersi all'istanza di SQL Server primario. Per creare il certificato, eseguire lo script di Transact-SQL seguente:
+Lo script Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e protegge il file con una chiave privata. Aggiornare lo script con password complesse. Stabilire la connessione all'istanza primaria di SQL Server. Per creare il certificato, eseguire lo script Transact-SQL seguente:
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -104,16 +104,16 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-A questo punto la replica di SQL Server primaria dispone di un certificato in `/var/opt/mssql/data/dbm_certificate.cer` e di una chiave privata in `var/opt/mssql/data/dbm_certificate.pvk`. Copiare questi due file nello stesso percorso in tutti i server che ospiteranno le repliche di disponibilità. Usare l'utente mssql o concedere l'autorizzazione all'utente mssql per accedere a tali file. 
+A questo punto la replica di SQL Server primaria dispone di un certificato in `/var/opt/mssql/data/dbm_certificate.cer` e di una chiave privata in `var/opt/mssql/data/dbm_certificate.pvk`. Copiare questi due file nello stesso percorso in tutti i server che ospiteranno le repliche di disponibilità. Usare l'utente mssql o concedere l'autorizzazione all'utente mssql per questi file. 
 
-Nel server di origine, ad esempio, il comando seguente copia i file nel computer di destinazione. Sostituire il `**<node2>**` valori con i nomi delle istanze di SQL Server che ospiteranno le repliche. 
+Nel server di origine, ad esempio, il comando seguente copia i file nel computer di destinazione. Sostituire i valori `**<node2>**` con i nomi delle istanze di SQL Server che ospiteranno le repliche. 
 
 ```bash
 cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-In ogni server di destinazione, concedere l'autorizzazione all'utente mssql per accedere al certificato.
+In ogni server di destinazione assegnare all'utente mssql l'autorizzazione per accedere al certificato.
 
 ```bash
 cd /var/opt/mssql/data
@@ -138,7 +138,7 @@ CREATE CERTIFICATE dbm_certificate
 
 Gli endpoint del mirroring del database usano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che partecipano a sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. 
 
-Lo script Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Inizia l'endpoint e concede l'autorizzazione di connessione per il certificato creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`. Facoltativamente è possibile includere un indirizzo IP `LISTENER_IP = (0.0.0.0)`. L'indirizzo IP del listener deve essere un indirizzo IPv4. È anche possibile usare `0.0.0.0`. 
+Lo script Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avvia l'endpoint e assegna l'autorizzazione di connessione al certificato creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`. Facoltativamente è possibile includere un indirizzo IP `LISTENER_IP = (0.0.0.0)`. L'indirizzo IP del listener deve essere un indirizzo IPv4. È anche possibile usare `0.0.0.0`. 
 
 Aggiornare lo script Transact-SQL seguente per il proprio ambiente in tutte le istanze di SQL Server: 
 
@@ -172,7 +172,7 @@ La porta TCP sul firewall deve essere aperta per la porta del listener.
 
 
 >[!IMPORTANT]
->Per la versione di SQL Server 2017 è l'unico metodo di autenticazione supportato per l'endpoint del mirroring `CERTIFICATE`. Il `WINDOWS` opzione verrà abilitata in una versione futura.
+>In SQL Server 2017, l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` verrà abilitata in una versione futura.
 
 Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 

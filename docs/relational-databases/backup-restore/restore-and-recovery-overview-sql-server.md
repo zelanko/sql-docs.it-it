@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeea69e39184744a25890b1dae85390e00934090
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111168"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471054"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,9 +90,9 @@ ms.locfileid: "68111168"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
-|File restore **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|Nessuna.|  
-|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|File restore **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|Page restore **\***|Supporto completo.|In casi specifici. **\*\***|Nessuna.|  
+|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68111168"
 
 ## <a name="adr"></a> Ripristino accelerato del database
 
-In SQL Server 2019 preview CTP 2.3 viene introdotto il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) per SQL Server locale. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database di SQL Server. Il [recupero del database](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) è il processo che SQL Server usa per avviare ogni database in uno stato coerente a livello di transazioni o in uno stato normale. Un database in cui è abilitato il recupero del database accelerato completa l'operazione di recupero in modo considerevolmente più veloce dopo un failover o una chiusura non normale. 
+Nell'anteprima di SQL Server 2019 CTP 2.3 viene introdotto il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) per SQL Server locale. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database di SQL Server. Il [recupero del database](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) è il processo che SQL Server usa per avviare ogni database in uno stato coerente a livello di transazioni o in uno stato normale. Un database in cui è abilitato il recupero del database accelerato completa l'operazione di recupero in modo considerevolmente più veloce dopo un failover o una chiusura non normale. 
 
 È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 o versioni successive usando la sintassi seguente:
 

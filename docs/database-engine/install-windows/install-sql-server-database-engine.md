@@ -1,7 +1,7 @@
 ---
 title: Installare il motore di database di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 968cf923f1defcf724b3a3c8a968a20c54f3e30b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 787c6b96d9f4bad7372a559a1282fa1252e5e97a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991108"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419355"
 ---
 # <a name="install-sql-server-database-engine"></a>Installare il motore di database di SQL Server
 
@@ -38,7 +38,13 @@ Quando si seleziona **Motore di database di [!INCLUDE[ssNoVersion](../../include
   
 -   [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md) - componente facoltativo  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+-   [Machine Learning Services (In-Database) con R, Python e Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - componente facoltativo
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 -   [Machine Learning Services (In-Database) con R e Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - componente facoltativo
+::: moniker-end
 
 -   Ricerca full-text - componente facoltativo  
   

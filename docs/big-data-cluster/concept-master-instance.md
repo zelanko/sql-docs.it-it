@@ -1,7 +1,7 @@
 ---
 title: Che cos'è l'istanza master?
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive l'istanza master di SQL Server in un cluster di big data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive l'istanza master di SQL Server in un cluster Big Data di SQL Server 2019 (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,65 +9,65 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958706"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822700"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster di big data di SQL Server?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster Big Data di SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive il ruolo del *istanza master di SQL Server* in un cluster di big data di SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster di big data server&#41 [piano di controllo](big-data-cluster-overview.md#controlplane).
+Questo articolo descrive il ruolo dell' *istanza master di SQL Server* in un cluster Big Data per SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data per gestire la connettività, le query con scalabilità orizzontale, i metadati e i database utente e i servizi di machine learning.
 
 L'istanza master di SQL Server offre le funzionalità seguenti:
 
 ## <a name="connectivity"></a>Connettività
 
-L'istanza master di SQL Server fornisce un endpoint TDS accessibile dall'esterno per il cluster. È possibile connettere le applicazioni o strumenti di SQL Server, ad esempio Data Studio di Azure o convertito tramite SQL Server Management Studio per questo endpoint come qualsiasi altra istanza di SQL Server.
+L'istanza master di SQL Server fornisce un endpoint TDS accessibile esternamente per il cluster. È possibile connettere applicazioni o strumenti di SQL Server come Azure Data Studio o SQL Server Management Studio a questo endpoint allo stesso modo di qualsiasi altra istanza di SQL Server.
 
-## <a name="scale-out-query-management"></a>Gestione delle query di tipo scale-out
+## <a name="scale-out-query-management"></a>Gestione delle query con scalabilità orizzontale
 
-L'istanza master di SQL Server contiene il motore di query di tipo scale-out che consente di distribuire le query tra istanze di SQL Server in nodi di [pool di calcolo](concept-compute-pool.md). Il motore di query di scalabilità orizzontale fornisce inoltre l'accesso tramite Transact-SQL per tutte le tabelle Hive nel cluster senza alcuna configurazione aggiuntiva.
+L'istanza master di SQL Server contiene il motore di query con scalabilità orizzontale usato per distribuire query tra istanze di SQL Server nei nodi del [pool di calcolo](concept-compute-pool.md). Il motore di query con scalabilità orizzontale fornisce anche l'accesso tramite Transact-SQL a tutte le tabelle Hive nel cluster senza configurazioni aggiuntive.
 
-## <a name="metadata-and-user-databases"></a>I metadati e dei database utente
+## <a name="metadata-and-user-databases"></a>Database di metadati e utente
 
-Oltre ai database di sistema SQL Server standard, l'istanza SQL master contiene inoltre quanto segue:
+Oltre ai database di sistema di SQL Server standard, l'istanza master di SQL Server contiene anche gli elementi seguenti:
 
-- Un database dei metadati che contiene i metadati della tabella di HDFS
-- Una mappa partizioni di piano dati
-- Dettagli delle tabelle esterne che forniscono l'accesso al piano dati del cluster.
-- Origini dati esterne PolyBase e tabelle esterne definite nel database utente.
+- Database di metadati che contiene i metadati della tabella HDFS
+- Mappa partizioni del piano dati
+- Informazioni dettagliate sulle tabelle esterne che permettono di accedere al piano dati del cluster.
+- Origini dati esterne e tabelle esterne PolyBase definite nei database utente.
 
-È anche possibile scegliere di aggiungere i proprio database utente per l'istanza master di SQL Server.
+È anche possibile scegliere di aggiungere i propri database utente all'istanza master di SQL Server.
 
-## <a name="machine-learning-services"></a>Servizi di Machine learning
+## <a name="machine-learning-services"></a>Machine Learning Services
 
-SQL Server servizi di machine learning sono una funzionalità aggiuntiva per il motore di database, utilizzato per l'esecuzione di codice Java, R e Python in SQL Server. Questa funzionalità si basa su framework di estendibilità di SQL Server, che consente di isolare i processi esterni dai processi del motore di core, ma si integra completamente con i dati relazionali come stored procedure, script T-SQL contenente le istruzioni di R o Python o Java, R o Codice Python che contiene di T-SQL.
+Machine Learning Services per SQL Server è una funzionalità aggiuntiva per il motore di database, usata per l'esecuzione di codice Java, R e Python in SQL Server. Questa funzionalità è basata sul framework di estendibilità di SQL Server, che isola i processi esterni dai processi del motore di base, ma si integra completamente con i dati relazionali come stored procedure, come script T-SQL contenenti istruzioni R o Python o come codice Java, R o Python contenente T-SQL.
 
-Come parte di un cluster di big data di SQL Server, servizi machine learning saranno disponibili nell'istanza SQL Server master per impostazione predefinita. Ciò significa che dopo l'esecuzione di script esterni è abilitato nell'istanza di master di SQL Server, verrà è possibile eseguire Java, script R e Python con sp_execute_external_script.
+Nell'ambito di un cluster Big Data di SQL Server, Machine Learning Services sarà disponibile nell'istanza master di SQL Server per impostazione predefinita. Questo significa che una volta abilitata l'esecuzione di script esterni nell'istanza master di SQL Server, sarà possibile eseguire script Java, R e Python usando sp_execute_external_script.
 
-### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vantaggi dei servizi di machine learning in un cluster di big data
+### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vantaggi di Machine Learning Services in un cluster Big Data
 
-SQL Server 2019 semplifica per big data da unire ai dati dimensionali in genere archiviati nel database enterprise. Il valore dei big data aumenta notevolmente quando non è sufficiente nelle mani di parti di un'organizzazione, ma è anche incluso nei report, dashboard e le applicazioni. Allo stesso tempo, i data Scientist possono continuare a usare gli strumenti dell'ecosistema di Spark o HDFS e facile, hanno accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ il master di SQL Server istanza.
+SQL Server 2019 semplifica l'unione di Big Data ai dati dimensionali generalmente archiviati nel database aziendale. Il valore dei Big Data aumenta notevolmente se questi non sono disponibili solo parzialmente in un'organizzazione, ma sono inclusi anche in report, dashboard e applicazioni. Allo stesso tempo, i data scientist possono continuare a usare gli strumenti dell'ecosistema Spark/HDFS e hanno semplice accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ l'istanza master di SQL Server.
 
-I cluster di SQL Server 2019 dei big data, è possibile eseguire altre con i data Lake enterprise. Gli analisti e sviluppatori di SQL Server è possibile:
+Con i cluster Big Data di SQL Server 2019, è possibile eseguire molte più operazioni con i data lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
 
-* Compilare applicazioni che utilizzano i dati da data Lake enterprise.
-* Motivo su tutti i dati con la query Transact-SQL.
-* Utilizzare l'ecosistema di strumenti di SQL Server e applicazioni esistente per accedere e analizzare i dati aziendali.
-* Ridurre la necessità per lo spostamento dei dati tramite la virtualizzazione dei dati e data mart.
-* Continuare a usare Spark per scenari di big data.
-* Compilare applicazioni aziendali intelligenti tramite Spark o SQL Server per il training dei modelli su data Lake.
+* Compilare applicazioni che utilizzano dati di data lake aziendali.
+* Riflettere su tutti i dati con query Transact-SQL.
+* Usare l'ecosistema esistente di strumenti e applicazioni di SQL Server per accedere ai dati aziendali e analizzarli.
+* Ridurre la necessità di spostamento dei dati tramite la virtualizzazione dei dati e i data mart.
+* Continuare a usare Spark per scenari di Big Data.
+* Compilare applicazioni aziendali intelligenti con Spark o SQL Server per eseguire il training di modelli sui data lake.
 * Rendere operativi i modelli nei database di produzione per ottenere prestazioni ottimali.
-* Dati Stream direttamente in enterprise data mart per analitica in tempo reale.
-* Esplorare i dati visivamente tramite un'analisi interattiva e strumenti di Business Intelligence.
+* Trasmettere i dati direttamente nei data mart aziendali per l'analisi in tempo reale.
+* Esplorare visivamente i dati usando analisi interattive e strumenti di business intelligence.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere le risorse seguenti:
+Per altre informazioni sui cluster Big Data di SQL Server, vedere le risorse seguenti:
 
-- [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
-- [Workshop: Cluster di big data Microsoft SQL Server architettura](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

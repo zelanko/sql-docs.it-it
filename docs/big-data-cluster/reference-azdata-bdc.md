@@ -1,7 +1,7 @@
 ---
-title: riferimento BDC azdata
+title: Informazioni di riferimento su azdata bdc
 titleSuffix: SQL Server big data clusters
-description: Articolo di riferimento per i comandi BDC azdata.
+description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,34 +10,34 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426041"
 ---
-# <a name="azdata-bdc"></a>azdata BDC
+# <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L'articolo seguente fornisce informazioni di riferimento sui comandi di **integrazione applicativa** dei dati nello strumento **azdata** . Per ulteriori informazioni su altri comandi **azdata** , vedere [riferimento azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **bdc** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 
 |     |     |
 | --- | --- |
-[creazione BDC azdata](#azdata-bdc-create) | Creare un cluster di Big Data.
-[eliminazione BDC azdata](#azdata-bdc-delete) | Eliminare un cluster di Big Data.
-[azdata configurazione BDC](reference-azdata-bdc-config.md) | Comandi di configurazione.
-[endpoint BDC azdata](reference-azdata-bdc-endpoint.md) | Comandi dell'endpoint.
-[stato BDC azdata](reference-azdata-bdc-status.md) | Comandi di stato.
-[debug BDC azdata](reference-azdata-bdc-debug.md) | Comandi di debug.
-[controllo BDC azdata](reference-azdata-bdc-control.md) | Comandi di controllo.
-[azdata pool di integrazione applicativa dei dati](reference-azdata-bdc-pool.md) | Comandi del pool.
-[azdata BDC HDFS](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
-[Spark azdata BDC](reference-azdata-bdc-spark.md) | I comandi Spark consentono all'utente di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
-## <a name="azdata-bdc-create"></a>creazione BDC azdata
-Creare un cluster SQL Server Big Data: è richiesta la configurazione Kube nel sistema insieme alle variabili di ambiente seguenti [' CONTROLLER_USERNAME ',' CONTROLLER_PASSWORD ',' MSSQL_SA_PASSWORD ',' KNOX_PASSWORD '].
+[azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.
+[azdata bdc delete](#azdata-bdc-delete) | Elimina un cluster Big Data.
+[azdata bdc config](reference-azdata-bdc-config.md) | Comandi di configurazione.
+[azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | Comandi dell'endpoint.
+[azdata bdc status](reference-azdata-bdc-status.md) | Comandi di stato.
+[azdata bdc debug](reference-azdata-bdc-debug.md) | Comandi di debug.
+[azdata bdc control](reference-azdata-bdc-control.md) | Comandi di controllo.
+[azdata bdc pool](reference-azdata-bdc-pool.md) | Comandi di pool.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
+## <a name="azdata-bdc-create"></a>azdata bdc create
+Crea un cluster Big Data di SQL Server - Nel sistema è necessaria una configurazione kube insieme alle seguenti variabili di ambiente ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -47,23 +47,23 @@ azdata bdc create [--name -n]
 ```
 ### <a name="examples"></a>Esempi
 
-Esperienza di distribuzione dell'integrazione applicativa dei dati guidata: si riceveranno richieste per i valori necessari.
+Esperienza guidata di distribuzione del cluster Big Data: si riceveranno le indicazioni relative ai valori necessari.
 
 ```bash
 azdata bdc create
 ```
 
-Distribuzione BDC con argomenti.
+Distribuzione del cluster Big Data con argomenti.
 
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
-Distribuzione BDC con il nome specificato anziché il nome predefinito nel profilo.
+Distribuzione del cluster Big Data con il nome specificato anziché con il nome predefinito nel profilo.
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
 
-Distribuzione di integrazione applicativa dei dati con argomenti: nessuna richiesta verrà assegnata quando viene utilizzato il flag--Force.
+Distribuzione del cluster Big Data con argomenti: viene usato il flag --force e non verrà quindi visualizzato alcun messaggio di richiesta.
 
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
@@ -71,55 +71,55 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--name -n`
-Nome del cluster di Big data, usato per gli spazi dei nomi kubernetes.
+Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
-Profilo di configurazione del cluster di Big data, usato per la distribuzione del cluster: [' AKS-dev-test ',' kubeadm-dev-test ',' minikube-dev-test ']
+Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-Si accettano le condizioni di licenza? [Sì/No]. Se non si vuole usare questo arg, è possibile impostare la variabile di ambiente ACCEPT_EULA su "Yes". Le condizioni di licenza per questo prodotto possono essere visualizzate https://aka.ms/azdata-eula in https://go.microsoft.com/fwlink/?LinkId=2002534 e.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula e https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
-Etichetta del nodo del cluster di Big data, usata per definire i nodi in cui eseguire la distribuzione.
+Etichetta del nodo del cluster Big data, usata per definire i nodi in cui eseguire la distribuzione.
 #### `--force -f`
-Force create, all'utente non verrà richiesto alcun valore e tutti i problemi verranno stampati come parte di stderr.
+Forza la creazione, all'utente non viene richiesto di inserire alcun valore e tutti i problemi vengono stampati come parte di stderr.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-bdc-delete"></a>eliminazione BDC azdata
-Eliminare il cluster di SQL Server Big Data-la configurazione KUBE è necessaria nel sistema insieme alle variabili di ambiente seguenti [' CONTROLLER_USERNAME ',' CONTROLLER_PASSWORD '].
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-bdc-delete"></a>azdata bdc delete
+Elimina un cluster Big Data di SQL Server - Nel sistema è necessaria una configurazione kube insieme alle seguenti variabili di ambiente ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
 ```
 ### <a name="examples"></a>Esempi
-Eliminazione di BDC in cui il nome utente e la password del controller sono già impostati nell'ambiente di sistema.
+Eliminazione di un cluster Big Data in cui il nome utente e la password del controller sono già impostati nell'ambiente di sistema.
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--name -n`
-Nome del cluster di Big Data usato per lo spazio dei nomi kubernetes.
+Nome del cluster Big Data, usato per lo spazio dei nomi kubernetes.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--force -f`
-Forzare l'eliminazione Big Data cluster.
+Forza l'eliminazione di un cluster Big Data.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su altri comandi **azdata** , vedere [riferimento azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata** , vedere [Install azdata to manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

@@ -1,7 +1,7 @@
 ---
 title: "Esercitazione: Creare un'estensione"
 titleSuffix: Azure Data Studio
-description: Questa esercitazione illustra come creare un'estensione per aggiungere funzionalità personalizzate a Data Studio di Azure.
+description: Questa esercitazione illustra come creare un'estensione per aggiungere funzionalità personalizzate ad Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,38 +11,38 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959088"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Esercitazione: Creare un'estensione di Studio dei dati di Azure
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Esercitazione: Creare un'estensione di Azure Data Studio
 
-Questa esercitazione illustra come creare una nuova estensione di Studio dei dati di Azure. L'estensione crea familiare SSMS tasti di scelta rapida in Azure Data Studio.
+Questa esercitazione illustra come creare una nuova estensione di Azure Data Studio. L'estensione crea i familiari tasti di scelta rapida di SSMS in Azure Data Studio.
 
-Durante questa esercitazione si apprenderà come:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 > * Creare un progetto di estensione
-> * Installare il generatore di estensione
+> * Installare il generatore di estensioni
 > * Creare l'estensione
 > * Testare l'estensione
-> * Creare un pacchetto di estensione
+> * Creare il pacchetto dell'estensione
 > * Pubblicare l'estensione nel marketplace
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Azure Data Studio viene compilato nello stesso framework come Visual Studio Code, in modo che le estensioni per Azure Data Studio vengono compilate usando Visual Studio Code. Per iniziare, sono necessari i componenti seguenti:
+Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi le estensioni per Azure Data Studio vengono compilate usando Visual Studio Code. Per iniziare, sono necessari i componenti seguenti:
 
-- [Node. js](https://nodejs.org) installato e disponibile nel `$PATH`. Include Node. js [npm](https://www.npmjs.com/), Node. js Package Manager, che consente di installare il generatore di estensione.
+- [Node.js](https://nodejs.org) installato e disponibile in `$PATH`. Node.js include [npm](https://www.npmjs.com/), lo strumento di gestione dei pacchetti di Node.js, che viene usato per installare il generatore di estensioni.
 - [Visual Studio Code](https://code.visualstudio.com) per eseguire il debug dell'estensione.
-- Azure Data Studio [estensione di Debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (facoltativo). Ciò consente di testare l'estensione senza la necessità di creare un pacchetto e installarlo in Azure Data Studio.
-- Assicurarsi che `azuredatastudio` sia presente nel percorso. Per Windows, assicurarsi di scegliere il `Add to Path` opzione setup.exe. Per Mac o Linux, eseguire la *installare il comando 'azuredatastudio' nel percorso* opzione.
+- [Estensione di debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) di Azure Data Studio (facoltativo). In questo modo è possibile testare l'estensione senza dover creare il pacchetto e installarla in Azure Data Studio.
+- Assicurarsi che `azuredatastudio` sia nel percorso. Per Windows, assicurarsi di scegliere l'opzione `Add to Path` in setup.exe. Per Mac o Linux, eseguire l'opzione *Installa il comando 'azuredatastudio' in PATH*.
 
 
-## <a name="install-the-extension-generator"></a>Installare il generatore di estensione
+## <a name="install-the-extension-generator"></a>Installare il generatore di estensioni
 
-Per semplificare il processo di creazione di estensioni, abbiamo creato un [generatore di estensione](https://code.visualstudio.com/docs/extensions/yocode) usando Yeoman. Per installarlo, eseguire il comando seguente dal prompt dei comandi:
+Per semplificare il processo di creazione delle estensioni, abbiamo creato un [generatore di estensioni](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Per installarlo, eseguire il comando seguente dal prompt dei comandi:
 
 `npm install -g yo generator-azuredatastudio`
 
@@ -50,43 +50,43 @@ Per semplificare il processo di creazione di estensioni, abbiamo creato un [gene
 
 Per creare un'estensione:
 
-1. Avviare il generatore di estensione con il comando seguente:
+1. Avviare il generatore di estensioni con il comando seguente:
 
    `yo azuredatastudio`
 
-2. Scegli **nuova mappatura** dall'elenco dei tipi di estensione:
+2. Scegliere **New Keymap** (Nuova mappatura tastiera) dall'elenco dei tipi di estensione:
 
-   ![Generatore di estensione](./media/tutorial-create-extension/extension-generator.png)
+   ![generatore di estensioni](./media/tutorial-create-extension/extension-generator.png)
 
-3. Seguire i passaggi necessari per inserire il nome di estensione (per questa esercitazione, usare **ssmskeymap2**) e aggiungere una descrizione.
+3. Seguire i passaggi per compilare il nome dell'estensione (per questa esercitazione, usare **ssmskeymap2**) e aggiungere una descrizione.
 
-Completare i passaggi precedenti, viene creata una nuova cartella. Aprire la cartella in Visual Studio Code e si è pronti per creare tasti di scelta rapida estensioni personalizzate!
+Il completamento dei passaggi precedenti consente di creare una nuova cartella. Aprire la cartella in Visual Studio Code ed è tutto pronto per creare un'estensione per i tasti di scelta rapida personalizzati.
 
 
-### <a name="add-a-keyboard-shortcut"></a>Aggiungere un tasto di scelta rapida
+### <a name="add-a-keyboard-shortcut"></a>Aggiungere una scelta rapida da tastiera
 
-**Passaggio 1: Trovare le scelte rapide da sostituire**
+**Passaggio 1: Trovare le scelte rapide da tastiera da sostituire**
 
-Ora che abbiamo nostra estensione pronto per iniziare, aggiungere alcuni SSMS tastiera tasti di scelta rapida (o tasti di scelta rapida) in Azure Data Studio. Ho utilizzato [foglio informativo di Andy Mallon](https://am2.co/2018/02/updated-cheat-sheet/) e un elenco di tasti di scelta rapida da tastiera di RedGate per trovare l'ispirazione.
+Ora che l'estensione è pronta, aggiungere alcune scelte rapide da tastiera (o tasti di scelta rapida) di SSMS in Azure Data Studio. Qui ci si è ispirati alla [scheda di riferimento rapido di Andy Mallon](https://am2.co/2018/02/updated-cheat-sheet/) e all'elenco di scelte rapide da tastiera di RedGate.
 
-Sono stati le cose che ho visto mancanti:
+Ecco le principali combinazioni mancanti:
 
-- Eseguire una query con il piano di esecuzione effettivo attivato. Si tratta **Ctrl + M** in SQL Server Management Studio e non dispone di un'associazione in Data Studio di Azure.
-- Visto **CTRL + MAIUSC + E** come secondo modalità di esecuzione di una query. Feedback dell'utente indicato che questa era manca.
-- Visto **ALT+F1** eseguire `sp_help`. È stato aggiunto in Studio di Azure Data ma dal momento che l'associazione è stata già in uso, viene eseguito il mapping a **ALT + F2** invece.
-- Attiva/Disattiva schermo (**MAIUSC + ALT + INVIO**).
-- **F8** per mostrare **Esplora oggetti** / **visualizzazione server**.
+- Eseguire una query con il piano di esecuzione effettivo abilitato. In SSMS corrisponde a **CTRL+M** e non ha una scelta rapida da tastiera in Azure Data Studio.
+- **CTRL+MAIUSC+E** come secondo modo per eseguire una query. Il feedback degli utenti indica che questa scelta rapida da tastiera è mancante.
+- **ALT+F1** per l'esecuzione di `sp_help`. Questa opzione è stata aggiunta in Azure Data Studio ma poiché questa scelta rapida da tastiera era già in uso, è stato eseguito il mapping a **ALT+F2**.
+- Attiva/Disattiva schermo intero (**MAIUSC+ALT+INVIO**).
+- **F8** per mostrare **Esplora oggetti** / **visualizzazione Server**.
 
-È facile trovare e sostituire questi tasti di scelta rapida. Eseguire *tasti di scelta rapida Open* per visualizzare i **tasti di scelta rapida** scheda in Azure Data Studio, cercare *query* e quindi scegliere **associazione Cambia chiave**. Dopo aver modificato il tasto di scelta rapida, è possibile visualizzare il mapping aggiornato nel file KeyBindings. JSON (eseguire *tasti di scelta rapida Open* per visualizzarlo).
+È facile trovare e sostituire questi tasti di scelta rapida. Eseguire *Apri tasti di scelta rapida* per visualizzare la scheda **Scelte rapide da tastiera** in Azure Data Studio, cercare *query*, quindi scegliere **Cambia tasto di scelta rapida**. Una volta modificato il tasto di scelta rapida, è possibile visualizzare il mapping aggiornato nel file keybindings.json (eseguire *Apri tasti di scelta rapida* per visualizzarlo).
 
 ![tasti di scelta rapida](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![estensione di file KeyBindings. JSON](./media/tutorial-create-extension/keybindings-json.png)
+![Estensione keybindings.json](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**Passaggio 2: Aggiungere tasti di scelta rapida per l'estensione**
+**Passaggio 2: Aggiungere collegamenti all'estensione**
 
-Per aggiungere tasti di scelta rapida per l'estensione, aprire il *package. JSON* del file (nell'estensione) e sostituire il `contributes` sezione con il codice seguente:
+Per aggiungere collegamenti all'estensione, aprire il file *package.json* (nell'estensione) e sostituire la sezione `contributes` con il codice seguente:
 
 ```json
 "contributes": {
@@ -121,25 +121,25 @@ Per aggiungere tasti di scelta rapida per l'estensione, aprire il *package. JSON
 
 ## <a name="test-your-extension"></a>Testare l'estensione
 
-Assicurarsi che `azuredatastudio` sia presente nel percorso eseguendo il comando di installazione azuredatastudio nel comando di percorso in Studio di Azure Data.
+Assicurarsi che `azuredatastudio` sia in PATH eseguendo il comando Installa il comando 'azuredatastudio' in PATH in Azure Data Studio.
 
-Verificare che sia installata l'estensione Azure dati Studio eseguire il Debug in Visual Studio Code.
+Verificare che in Visual Studio Code sia installata l'estensione di debug di Azure Data Studio.
 
-Selezionare **F5** per avviare Studio dei dati di Azure in modalità di debug con l'estensione in esecuzione:
+Selezionare **F5** per avviare Azure Data Studio in modalità di debug con l'estensione in esecuzione:
 
 ![installare l'estensione](./media/tutorial-create-extension/install-extension.png)
 
-![estensione di test](./media/tutorial-create-extension/test-extension.png)
+![testare l'estensione](./media/tutorial-create-extension/test-extension.png)
 
-Mappe delle chiavi sono una delle estensioni più rapida per creare, in modo che la nuova estensione di questo punto dovrebbe essere pronti per condividere e funzionino correttamente.
+Le mappature della tastiera sono tra le estensioni più veloci da creare, quindi la nuova estensione dovrebbe ora funzionare correttamente ed essere pronta per la condivisione.
 
-## <a name="package-your-extension"></a>Creare un pacchetto di estensione
+## <a name="package-your-extension"></a>Creare il pacchetto dell'estensione
 
-Per condividere con altri utenti è necessario creare un pacchetto di estensione in un unico file. Questo può essere pubblicato in marketplace delle estensioni di Studio di Azure Data o condiviso tra il team o della community. A tale scopo, è necessario installare un altro pacchetto npm dalla riga di comando:
+Per condividere l'estensione con altri utenti, è necessario inserirla in un pacchetto costituito da un unico file. Questo può essere pubblicato nel marketplace delle estensioni di Azure Data Studio o condiviso all'interno del team o della community. A tale scopo, è necessario installare un altro pacchetto npm dalla riga di comando:
 
 `npm install -g vsce`
 
-Passare alla directory di base dell'estensione ed eseguire `vsce package`. Devo aggiungere un paio di righe aggiuntive per arrestare il *vsce* strumento che segnala che:
+Passare alla directory di base dell'estensione ed eseguire `vsce package`. Qui sono state aggiunte un paio di righe extra perché lo strumento *vsce* mostrava errori:
 
 ```json
 "repository": {
@@ -151,36 +151,36 @@ Passare alla directory di base dell'estensione ed eseguire `vsce package`. Devo 
 },
 ```
 
-Dopo questa operazione è stata eseguita, il file ssmskeymap 0.1.0.vsix è stato creato e pronto per installare e condividere con tutto il mondo!
+Al termine di questa operazione, il file sssmskeymap-0.1.0.vsix è stato creato ed è pronto per l'installazione e la condivisione.
 
 ![installare l'estensione](./media/tutorial-create-extension/extensions.png)
 
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Pubblicare l'estensione nel marketplace
 
-Il marketplace delle estensioni Studio di Azure Data non è completamente ancora implementato, ma il processo corrente è per ospitare l'estensione VSIX in una posizione (ad esempio, una pagina di GitHub Release) quindi inviare per l'aggiornamento di una richiesta pull [questo file JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con di informazioni sull'estensione.
+Il marketplace delle estensioni di Azure Data Studio non è ancora completamente implementato, ma il processo corrente consiste nell'ospitare il pacchetto VSIX dell'estensione in una posizione qualsiasi (ad esempio, una pagina delle versioni di GitHub), quindi inviare una richiesta pull per aggiornare [questo file JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con le informazioni sull'estensione.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
 > * Creare un progetto di estensione
-> * Installare il generatore di estensione
+> * Installare il generatore di estensioni
 > * Creare l'estensione
 > * Testare l'estensione
-> * Creare un pacchetto di estensione
+> * Creare il pacchetto dell'estensione
 > * Pubblicare l'estensione nel marketplace
 
 
-Ci auguriamo che dopo aver letto questo che sarà ispirazione per creare un'estensione personalizzata per Azure Data Studio. È disponibile il supporto per Dashboard Insights (grafici piuttosto che eseguire in SQL Server), una serie di API specifiche di SQL e un vastissimo insieme esistente di punti di estensione ereditata da Visual Studio Code.
+Ci auguriamo che la lettura di questo articolo sia di ispirazione per creare un'estensione personalizzata per Azure Data Studio. Sono disponibili il supporto per dashboard di informazioni dettagliate (utili grafici eseguiti in SQL Server), una serie di API specifiche di SQL e un enorme set di punti di estensione ereditati da Visual Studio Code.
 
-Se si è fatti un'idea ma non conoscono come iniziare, aprire un problema o un tweet di team: [azuredatastudio](https://twitter.com/azuredatastudio).
+Se si ha un'idea, ma non si è certi di come iniziare, aprire un problema o inviare un tweet al team: [azuredatastudio](https://twitter.com/azuredatastudio).
 
-È sempre possibile fare riferimento al [Guida all'estensione di Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview) poiché concerne tutte le API esistenti e i modelli.
+È sempre possibile fare riferimento alla [Guida delle estensioni di Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview) perché copre tutte le API e i modelli esistenti.
 
 
-Per informazioni su come lavorare con T-SQL Studio di dati di Azure, completare l'esercitazione Editor T-SQL:
+Per informazioni su come usare T-SQL in Azure Data Studio, completare l'esercitazione sull'editor T-SQL:
 
 > [!div class="nextstepaction"]
 > [Usare l'editor Transact-SQL per creare oggetti di database](tutorial-sql-editor.md).

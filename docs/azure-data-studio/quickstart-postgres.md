@@ -1,7 +1,7 @@
 ---
-title: 'Avvio rapido: Connettersi ed eseguire query con PostgreSQL'
+title: 'Avvio rapido: Connettersi ed eseguire query in PostgreSQL'
 titleSuffix: Azure Data Studio
-description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a PostgreSQL ed eseguire una query
+description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi a PostgreSQL ed eseguire una query
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.prod: sql
@@ -11,85 +11,85 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959461"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query con PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-Questa Guida introduttiva illustra come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a Postgres e quindi usare istruzioni SQL per creare il database *tutorialdb* ed eseguire una query.
+# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query in PostgreSQL con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+Questo argomento di avvio rapido illustra come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a Postgres e come usare istruzioni SQL per creare il database *tutorialdb* ed eseguire query su di esso.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Per completare questa Guida introduttiva, è necessario [!INCLUDE[name-sos](../includes/name-sos-short.md)], l'estensione di PostgreSQL per [! INCLUDERE[nome-sos](../includes/name-sos-short.md)e l'accesso a un server PostgreSQL.
+Per completare questo argomento di avvio rapido, è necessario [!INCLUDE[name-sos](../includes/name-sos-short.md)], l'estensione PostgreSQL per [!INCLUDE[name-sos](../includes/name-sos-short.md) e l'accesso a un server PostgreSQL.
 
-- [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
-- [Installare le estensioni di PostgreSQL per Azure Data Studio](postgres-extension.md).
-- [Installare PostgreSQL](https://www.postgresql.org/download/). (In alternativa, è possibile creare un database Postgres nel cloud usando [az postgres backup](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)). 
+- [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installare l'estensione PostgreSQL per Azure Data Studio](postgres-extension.md).
+- [Installare PostgreSQL](https://www.postgresql.org/download/). In alternativa, è possibile creare un database Postgres nel cloud con il comando [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli). 
 
 ## <a name="connect-to-postgresql"></a>Connettersi a PostgreSQL
 
 1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 
-2. La prima volta che avvia [!INCLUDE[name-sos](../includes/name-sos-short.md)] il **connessione** verrà visualizzata la finestra di dialogo. Se il **connessione** finestra di dialogo non si apre, fare clic sui **nuova connessione** icona nel **server** pagina:
+2. La prima volta che si avvia [!INCLUDE[name-sos](../includes/name-sos-short.md)], viene visualizzata la finestra di dialogo **Connessione**. Se la finestra di dialogo **Connessione** non si apre, fare clic sull'icona **Nuova connessione** nella pagina **SERVER**:
 
-   ![Icona "Nuova connessione"](media/quickstart-postgresql/new-connection-icon.png)
+   ![Icona Nuova connessione](media/quickstart-postgresql/new-connection-icon.png)
 
-3. Nel modulo che viene visualizzata, passare a **tipo di connessione** e selezionare **PostgreSQL** dall'elenco a discesa.
+3. Nel modulo che viene visualizzato, passare a **Tipo di connessione** e scegliere **PostgreSQL** nell'elenco a discesa.
 
 
-4. Compilare i campi rimanenti usando il nome del server, nome utente e password per il server PostgreSQL. 
+4. Compilare i campi rimanenti usando il nome server, il nome utente e la password relativi al server PostgreSQL. 
 
-   ![Schermata "Nuova connessione"](media/quickstart-postgresql/new-connection-screen.png)  
+   ![Nuova schermata di connessione](media/quickstart-postgresql/new-connection-screen.png)  
 
    | Impostazione       | Valore di esempio | Descrizione |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | localhost | Nome completo del server |
-   | **Nome utente** | Postgres | Il nome utente desiderato con cui accedere. |
-   | **Password (account di accesso SQL)** | *password* | La password per l'account che con cui si esegue l'accesso. |
-   | **Password** | *Controlla* | Selezionare questa casella se non si vuole immettere la password ogni volta che si connette. |
-   | **Nome database** | \<Default\> | Se si desidera che la connessione per specificare un database, riempire l'oggetto. |
-   | **Gruppo di server** | \<Default\> | Questa opzione consente di assegnare questa connessione a un gruppo di server specifico che è creare. | 
-   | **Nome (facoltativo)** | *Lasciare vuoto* | Questa opzione consente di specificare un nome descrittivo per il server. | 
+   | **User name** | postgres | Nome utente con cui si desidera eseguire l'accesso. |
+   | **Password (account di accesso SQL)** | *password* | Password dell'account con cui si esegue l'accesso. |
+   | **Password** | *Controlla* | Selezionare questa casella se non si vuole immettere la password ogni volta che ci si connette. |
+   | **Nome database** | \<Default\> | Compilare questo campo se si vuole che nella connessione sia specificato un database. |
+   | **Gruppo di server** | \<Default\> | Questa opzione consente di assegnare la connessione a uno specifico gruppo di server precedentemente creato. | 
+   | **Nome (facoltativo)** | *lasciare vuoto* | Questa opzione consente di specificare un nome descrittivo per il server. | 
 
-5. Selezionare **Connessione**. 
+5. Selezionare **Connetti**. 
 
-Dopo aver stabilito la connessione, il server viene aperto nel **server** nella barra laterale.
+Dopo il completamento della connessione, il server si apre nella barra laterale **SERVER**.
 
 
 ## <a name="create-a-database"></a>Creazione di un database
 
-La procedura seguente crea un database denominato **tutorialdb**:
+Questa procedura consente di creare un database denominato **tutorialdb**:
 
-1. Fare clic su server PostgreSQL nel **i server** nella barra laterale e selezionare **nuova Query**.
+1. Fare clic con il pulsante destro del mouse sul server PostgreSQL nella barra laterale **SERVER** e scegliere **Nuova query**.
 
-2. Incollare l'istruzione SQL nell'editor di query che si apre.
+2. Incollare questa istruzione SQL nell'editor di query visualizzato.
 
    ```sql
    CREATE DATABASE tutorialdb;
    ```
 
-3. Nella barra degli strumenti selezionare **eseguiti** per eseguire la query. Le notifiche risultano visibili nel **messaggi** riquadro per visualizzare lo stato di avanzamento di query.
+3. Sulla barra degli strumenti selezionare **Esegui** per eseguire la query. Nel riquadro **MESSAGGI** vengono visualizzate alcune notifiche che informano l'utente sullo stato di avanzamento della query.
 
 >[!TIP]
-> È possibile usare **F5** sulla tastiera per eseguire l'istruzione invece di usare **eseguire**.
+> Per eseguire l'istruzione è possibile premere **F5** sulla tastiera anziché usare l'opzione **Esegui**.
 
-Al termine dell'esecuzione della query, fare doppio clic su **database** e selezionare **aggiornare** per visualizzare **tutorialdb** nell'elenco sotto il **database** nodo .
+Dopo il completamento della query, fare clic con il pulsante destro del mouse su **Database** e scegliere **Aggiorna** per visualizzare la voce **tutorialdb** nell'elenco presente sotto il nodo **Database**.
 
 
 ## <a name="create-a-table"></a>Creare una tabella
 
- La procedura seguente crea una tabella di **tutorialdb**:
+ Questa procedura consente di creare una tabella in **tutorialdb**:
 
-1. Modificare il contesto di connessione al **tutorialdb** usando l'elenco a discesa nell'editor di query. 
+1. Modificare il contesto di connessione in **tutorialdb** usando l'elenco a discesa disponibile nell'editor di query. 
 
    ![Modifica del contesto](media/quickstart-postgresql/change-context.png)
 
-2. Incollare l'istruzione SQL nell'editor di query e fare clic su **eseguiti**. 
+2. Incollare l'istruzione SQL seguente nell'editor di query e fare clic su **Esegui**. 
 
    > [!NOTE]
-   > È possibile aggiungere questo o sovrascrivere la query esistente nell'editor. Facendo clic **eseguire** esegue solo le query che è evidenziata. Se non viene evidenziato, fare clic su **eseguire** esegue tutte le query nell'editor.
+   > È possibile aggiungerla o sovrascrivere la query esistente nell'editor. Facendo clic su **Esegui** viene eseguita solo la query evidenziata. Se nessuna query risulta evidenziata, facendo clic su **Esegui** vengono eseguite tutte le query nell'editor.
 
    ```sql
    -- Drop the table if it already exists
@@ -105,7 +105,7 @@ Al termine dell'esecuzione della query, fare doppio clic su **database** e selez
 
 ## <a name="insert-rows"></a>Inserire righe
 
-Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
+Incollare il frammento di codice seguente nella finestra di query e fare clic su **Esegui**:
 
    ```sql
    -- Insert rows into table 'customers'
@@ -118,9 +118,9 @@ Incollare il frammento di codice seguente nella finestra query, quindi fare clic
       ( 4, 'Janet', 'United States','janet1@adventure-works.com');
    ```
 
-## <a name="query-the-data"></a>Eseguire query sui dati
+## <a name="query-the-data"></a>Eseguire una query sui dati
 
-1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
+1. Incollare il frammento di codice seguente nell'editor di query e fare clic su **Esegui**:
    
    ```sql
    -- Select rows from table 'customers'
@@ -129,8 +129,8 @@ Incollare il frammento di codice seguente nella finestra query, quindi fare clic
 
 2. Vengono visualizzati i risultati della query:
 
-   ![Visualizzare i risultati](media/quickstart-postgresql/view-results.png)
+   ![Visualizzazione dei risultati](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Next Steps
 
-Scopri le [scenari disponibili per Postgres in Azure Data Studio](postgres-extension.md). 
+Informazioni sugli [scenari disponibili per Postgres in Azure Data Studio](postgres-extension.md). 

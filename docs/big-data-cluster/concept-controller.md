@@ -1,67 +1,67 @@
 ---
 title: Che cos'è il controller?
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive il controller di un cluster di big data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive il controller di un cluster Big Data di SQL Server 2019 (anteprima).
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ef2424ae5a1c41821d47f033329c0c53121b59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958741"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68419543"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Che cos'è il controller in un cluster di big data di SQL Server?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Che cos'è il controller in un cluster Big Data di SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Il controller ospita la logica di base per distribuire e gestire un cluster di big data. Si occupa di tutte le interazioni con Kubernetes, le istanze di SQL Server che fanno parte del cluster e altri componenti come HDFS e Spark.
+Il controller ospita la logica di base per la distribuzione e la gestione di un cluster Big Data. Si occupa di tutte le interazioni con Kubernetes, le istanze di SQL Server che fanno parte del cluster e altri componenti come HDFS e Spark.
 
 Il servizio controller fornisce le funzionalità di base seguenti:
 
-- Gestione del ciclo di vita del cluster: bootstrap del cluster & eliminazione, aggiornare le configurazioni
-- Gestire le istanze di SQL Server master
-- Gestire i pool di calcolo, dati e archiviazione
-- Esporre gli strumenti di monitoraggio per osservare lo stato del cluster
-- Esporre gli strumenti di risoluzione dei problemi per rilevare e correggere problemi imprevisti
-- Gestire la sicurezza del cluster:
-  - Verificare che gli endpoint cluster sicuro
-  - Gestire utenti e ruoli
-  - Configurare le credenziali per la comunicazione all'interno del cluster
+- Gestione del ciclo di vita del cluster: bootstrap del cluster ed eliminazione e aggiornamento delle configurazioni
+- Gestione delle istanze master di SQL Server
+- Gestione dei pool di calcolo, dati e archiviazione
+- Esposizione degli strumenti di monitoraggio per osservare lo stato del cluster
+- Esposizione degli strumenti di risoluzione dei problemi per rilevare e correggere problemi imprevisti
+- Gestione della sicurezza del cluster:
+  - Protezione degli endpoint del cluster
+  - Gestione di utenti e ruoli
+  - Configurazione delle credenziali per la comunicazione all'interno del cluster
 
 ## <a name="deploying-the-controller-service"></a>Distribuzione del servizio controller
 
-Il controller è distribuito e ospitato nello spazio dei nomi Kubernetes stesso in cui il cliente vuole compilare un cluster di big data. Questo servizio viene installato da un amministratore di Kubernetes durante cluster bootstrap, utilizzando il **mssqlctl** utilità della riga di comando. Per altre informazioni, vedere [Introduzione ai cluster di SQL Server i big data](deploy-get-started.md).
+Il controller viene distribuito e ospitato nello stesso spazio dei nomi Kubernetes in cui il cliente vuole compilare un cluster Big Data. Questo servizio viene installato da un amministratore di Kubernetes durante il bootstrap del cluster, usando l'utilità della riga di comando **azdata**. Per altre informazioni, vedere [Introduzione ai cluster Big Data di SQL Server](deploy-get-started.md).
 
-Il flusso di lavoro di costruzione verrà layout su Kubernetes un cluster di big data completamente funzionale di SQL Server che include tutti i componenti descritti nel [Panoramica](big-data-cluster-overview.md) articolo. Il flusso di lavoro bootstrap crea innanzitutto il servizio controller, e ciò è sufficiente distribuire il servizio controller si coordina l'installazione e configurazione del resto della parte i servizi del pool di archiviazione, calcolo, dati e master.
+Il flusso di lavoro di implementazione disporrà su Kubernetes un cluster Big Data di SQL Server completamente funzionale che include tutti i componenti descritti nell'articolo [Panoramica](big-data-cluster-overview.md). Il flusso di lavoro di bootstrap crea innanzitutto il servizio controller che, una volta distribuito, coordina l'installazione e la configurazione della restante parte dei servizi dei pool master, di calcolo, di dati e di archiviazione.
 
-## <a name="managing-the-cluster-through-the-controller-service"></a>La gestione del cluster tramite il servizio controller
+## <a name="managing-the-cluster-through-the-controller-service"></a>Gestione del cluster tramite il servizio controller
 
-È possibile gestire il cluster tramite il servizio di controller usando **mssqlctl** comandi. Se si distribuiscono oggetti aggiuntivi di Kubernetes, ad esempio i POD nello spazio dei nomi stesso, non sono gestiti o monitorati dal servizio controller. È anche possibile usare **kubectl** comandi per gestire il cluster a livello di Kubernetes. Per altre informazioni, vedere [monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big data](cluster-troubleshooting-commands.md).
+È possibile gestire il cluster tramite il servizio controller usando uno dei comandi **azdata**. Se si distribuiscono oggetti Kubernetes aggiuntivi, come i pod, nello stesso spazio dei nomi, questi non vengono gestiti o monitorati dal servizio controller. È anche possibile usare i comandi **kubectl** per gestire il cluster a livello di Kubernetes. Per altre informazioni, vedere [Monitoraggio e risoluzione dei problemi dei cluster Big Data di SQL Server](cluster-troubleshooting-commands.md).
 
-Il controller e gli oggetti Kubernetes (set di informazioni sullo stato, i POD, segreti e così via) creati per un cluster di big data si trovano in uno spazio dei nomi Kubernetes dedicato. Il servizio controller verrà concesse le autorizzazioni dall'amministratore del cluster Kubernetes per gestire tutte le risorse all'interno di tale spazio dei nomi.  I criteri RBAC per questo scenario viene configurato automaticamente come parte della distribuzione iniziale del cluster usando **mssqlctl**.
+Il controller e gli oggetti Kubernetes (set con stato, pod, segreti e così via) creati per un cluster Big Data si trovano in uno spazio dei nomi Kubernetes dedicato. L'amministratore del cluster concederà al servizio controller l'autorizzazione Kubernetes per gestire tutte le risorse all'interno di questo spazio dei nomi.  Il criterio di controllo degli accessi in base al ruolo per questo scenario viene configurato automaticamente come parte della distribuzione iniziale del cluster tramite **azdata**.
 
-### <a name="mssqlctl"></a>mssqlctl
+### <a name="azdata"></a>azdata
 
-**mssqlctl** è un'utilità della riga di comando scritta in Python che consente di avviare e gestire i cluster di big data tramite le API REST esposta dal servizio controller gli amministratori del cluster.
+**azdata** è un'utilità della riga di comando scritta in Python che permette agli amministratori del cluster di eseguire il bootstrap e la gestione di cluster Big Data tramite API REST esposte dal servizio controller.
 
 ## <a name="controller-service-security"></a>Sicurezza del servizio controller
 
-Tutte le comunicazioni per il servizio controller viene effettuata tramite l'API REST su HTTPS. Un certificato autofirmato verrà automaticamente generato automaticamente in fase di bootstrap. 
+Tutte le comunicazioni con il servizio controller avvengono tramite un'API REST su HTTPS. Un certificato autofirmato verrà generato automaticamente in fase di bootstrap. 
 
-L'autenticazione all'endpoint del servizio controller è basato su nome utente e password. Vengono effettuato il provisioning di queste credenziali in fase di bootstrap del cluster usando l'input per le variabili di ambiente `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD`.
+L'autenticazione all'endpoint del servizio controller si basa su nome utente e password. Queste credenziali vengono sottoposte a provisioning in fase di bootstrap del cluster usando l'input per le variabili di ambiente `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD`.
 
 > [!NOTE]
-> È necessario fornire una password in conformità con [requisiti di complessità delle password di SQL Server](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> È necessario fornire una password conforme ai [requisiti di complessità delle password di SQL Server](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere le risorse seguenti:
+Per altre informazioni sui cluster Big Data di SQL Server, vedere le risorse seguenti:
 
-- [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
-- [Workshop: Cluster di big data Microsoft SQL Server architettura](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -4,17 +4,17 @@ description: Questa pagina illustra i passaggi per l'uso della procedura guidata
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041111"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418772"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 
@@ -22,7 +22,7 @@ Uno degli scenari chiave per SQL Server 2019 CTP 2.0 è la possibilità di virtu
 
 ## <a name="start-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna
 
-Connettersi all'istanza principale usando il numero di porta/indirizzo IP dell'endpoint **sql-server-master** ottenuto con il comando [ **mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Espandere il nodo **Database** in Esplora oggetti. Selezionare quindi uno dei database di cui si vogliono virtualizzare i dati da un'istanza di SQL Server esistente. Fare clic con il pulsante destro del mouse sul database e selezionare **Create External Table** (Crea tabella esterna) per avviare la procedura guidata Virtualize Data (Virtualizza dati). È anche possibile avviare la procedura guidata Virtualize Data (Virtualizza dati) dal riquadro comandi. Premere CTRL+MAIUSC+P in Windows o Cmd+MAIUSC+P in un computer Mac.
+Connettersi all'istanza principale usando il numero di porta/indirizzo IP dell'endpoint **sql-server-master** ottenuto con il comando [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Espandere il nodo **Database** in Esplora oggetti. Selezionare quindi uno dei database di cui si vogliono virtualizzare i dati da un'istanza di SQL Server esistente. Fare clic con il pulsante destro del mouse sul database e selezionare **Create External Table** (Crea tabella esterna) per avviare la procedura guidata Virtualize Data (Virtualizza dati). È anche possibile avviare la procedura guidata Virtualize Data (Virtualizza dati) dal riquadro comandi. Premere CTRL+MAIUSC+P in Windows o Cmd+MAIUSC+P in un computer Mac.
 
 ![Procedura guidata Virtualize Data (Virtualizza dati)](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selezione un'origine dati

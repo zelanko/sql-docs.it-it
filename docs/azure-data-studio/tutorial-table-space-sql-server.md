@@ -1,7 +1,7 @@
 ---
-title: "Esercitazione: Abilitare il widget insight esempio di tabella dello spazio dell'utilizzo"
+title: 'Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle'
 titleSuffix: Azure Data Studio
-description: Questa esercitazione illustra come abilitare il widget insight tabella spazio utilizzo esempio sul dashboard del database di Studio di Azure Data.
+description: Questa esercitazione illustra come abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle nel dashboard del database Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958981"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare la tabella dello spazio dell'utilizzo esempio insight widget usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Con questa esercitazione viene illustrato come abilitare un widget sulla dashboard del database al fine di avere una panoramica sull'utilizzo dello spazio per tutte le tabelle in un database. Durante questa esercitazione, si apprenderà come:
+Questa esercitazione illustra come abilitare un widget di informazioni dettagliate nel dashboard del database, offrendo una vista immediata dell'uso dello spazio da parte di tutte le tabelle di un database. In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
-> * Attivare rapidamente un widget di informazioni dettagliate utilizzando un esempio incorporato
-> * Visualizzare i dettagli sullo spazio utilizzato dalle tabelle
-> * Filtrare i dati e visualizzare il dettaglio dell'etichetta in un grafico di informazioni dettagliate
+> * Attivare rapidamente un widget di informazioni dettagliate usando un widget di informazioni dettagliate predefinito
+> * Visualizzare i dettagli relativi allo spazio usato dalle tabelle
+> * Filtrare i dati e visualizzare i dettagli dell'etichetta in un grafico di informazioni dettagliate
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
-- [Connettersi ed eseguire query su SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query sul database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Attivare un insight di gestione in [!INCLUDE[name-sos](../includes/name-sos-short.md)]del dashboard del database
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] offre un widget di esempio incorporato per monitorare lo spazio utilizzato dalle tabelle in un database.
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Attivare le informazioni dettagliate sulla gestione nel dashboard del database di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] include un widget di esempio predefinito per monitorare lo spazio usato dalle tabelle in un database.
 
-1. Al fine di accedere al file delle *IMPOSTAZIONI UTENTE* premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
-2. Tipo di *le impostazioni* nella casella di ricerca e selezionare **preferenze: Aprire le impostazioni utente**.
-2. Scrivere ora *dashboard* nella ricerca impostazioni e individuare **dashboard.database.widgets**.
+1. Aprire le *impostazioni utente* premendo **CTRL+MAIUSC+P** e aprire il *riquadro comandi*.
+2. Digitare *impostazioni* nella casella di ricerca e selezionare **Preferenze: Apri impostazioni utente**.
+2. Digitare *dashboard* nella casella di input Ricerca impostazioni e individuare **dashboard.database.widgets**.
 
-3. Per personalizzare il **dashboard.database.widgets** impostazioni è necessario modificare il **dashboard.database.widgets** voce nella **impostazioni utente** sezione (la colonna nel lato destro). Se è presente alcun **dashboard.database.widgets** nel **delle impostazioni utente** sezione, passare il mouse sul **dashboard.database.widgets** testo nella colonna impostazioni predefinite e fare clic su l'icona a forma di matita visualizzata a sinistra del testo e fare clic su **Copia impostazioni**. Se viene visualizzato il menu a comparsa **sostituire nelle impostazioni**, senza selezionarlo. Andare alla **delle impostazioni utente** colonna a destra e individuare le **dashboard.database.widgets** sezione e andare al passaggio successivo.
+3. Per personalizzare le impostazioni di **dashboard.database.widgets** è necessario modificare la voce **dashboard.database.widgets** nella sezione **IMPOSTAZIONI UTENTE** (la colonna sul lato destro). Se nella sezione **IMPOSTAZIONI UTENTE** non è presente la voce **dashboard.database.widgets**, posizionare il puntatore del mouse sul testo **dashboard.database.widgets** nella colonna IMPOSTAZIONI PREDEFINITE, fare clic sull'icona a forma di matita che compare a sinistra del testo e quindi fare clic su **Copia nelle impostazioni**. Se il popup indica **Sostituisci nelle impostazioni**, non fare clic su di esso. Passare alla colonna **IMPOSTAZIONI UTENTE** a destra, individuare la sezione **dashboard.database.widgets** e procedere al passaggio successivo.
 
-4. Nel **dashboard.database.widgets** sezione, aggiungere quanto segue:
+4. Nella sezione **dashboard.database.widgets** aggiungere quanto segue:
 
    ```json
         {
@@ -57,38 +57,38 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
             }
         },
     ```
-Il **dashboard.database.widgets** sezione dovrebbe essere simile all'immagine seguente:
+La sezione **dashboard.database.widgets** dovrebbe essere simile all'immagine seguente:
 
-   ![Impostazioni di ricerca](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   ![Ricerca impostazioni](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-5. Premere **Ctrl + S** per salvare le impostazioni.
+5. Premere **CTRL + S** per salvare le impostazioni.
 
-6. Aprire la dashboard del database facendo clic con il pulsante destro del mouse su **TutorialDB**, quindi fare clic su **Gestisci**.
+6. Aprire il dashboard del database facendo clic con il pulsante destro del mouse su **TutorialDB** e scegliere **Gestisci**.
 
-7. Visualizza i *spazio di tabella* widget insight, come illustrato nell'immagine seguente: 
+7. Visualizzare il widget di informazioni dettagliate sullo *spazio usato dalle tabelle*, come illustrato nell'immagine seguente: 
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
-## <a name="working-with-the-insight-chart"></a>Utilizzo del grafico di informazioni dettagliate
+## <a name="working-with-the-insight-chart"></a>Uso del grafico di informazioni dettagliate
 
-Il grafico di informazioni dettagliate di [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce filtri e dettagli al passaggio del mouse. Provare i passaggi seguenti:
+Il grafico di informazioni dettagliate di [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce dettagli relativi ai filtri e al passaggio del mouse. Per provare questa procedura:
 
-1. Fare clic e attivare/disattivare la legenda *rows_count* nel grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e nasconde le serie di dati quando si attiva o disattiva una legenda.
+1. Fare clic e attivare la legenda *row_count* sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e nasconde la serie di dati mediante l'attivazione e la disattivazione di una legenda.
     
-2. Passare il puntatore del mouse sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)]mostra ulteriori informazioni sull'etichetta della serie di dati e il relativo valore, come illustrato nella schermata seguente:
+2. Passare il puntatore del mouse sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra altre informazioni sull'etichetta della serie di dati e il relativo valore, come illustrato nello screenshot seguente.
 
-   ![legenda e attivazione/disattivazione grafico](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
+   ![attivazione e legenda grafico](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
-> * Attivare rapidamente un widget di informazioni dettagliate utilizzando un esempio incorporato
-> * Visualizzare i dettagli sullo spazio utilizzato dalle tabelle.
-> * Filtrare i dati e visualizzare il dettaglio dell'etichetta in un grafico di informazioni dettagliate
+> * Attivare rapidamente un widget di informazioni dettagliate usando un widget di informazioni dettagliate predefinito.
+> * Visualizzare i dettagli relativi allo spazio usato dalle tabelle.
+> * Filtrare i dati e visualizzare i dettagli dell'etichetta in un grafico di informazioni dettagliate
 
-Per informazioni su come costruire un widget di informazioni dettagliate personalizzato, completare l'esercitazione successiva:
+Per informazioni su come creare un widget di informazioni dettagliate personalizzato, completare l'esercitazione seguente:
 
 > [!div class="nextstepaction"]
-> [Costruire un widget di informazioni dettagliate personalizzato](tutorial-build-custom-insight-sql-server.md).
+> [Creare un widget di informazioni dettagliate personalizzato](tutorial-build-custom-insight-sql-server.md).

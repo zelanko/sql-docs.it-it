@@ -1,7 +1,7 @@
 ---
 title: Installare SQL Server dal prompt dei comandi | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991095"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419327"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -277,8 +277,9 @@ Utilizzare le linee guida seguenti per sviluppare comandi di installazione con l
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obbligatorio**|Viene specificato l'account di avvio per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obbligatorio](#Accounts)|Viene specificata la password per l'account di avvio del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Facoltativo**|Viene specificata la modalità di [avvio](#Accounts) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python/Machine Learning Services (In-Database)|MPYCACHEDIRECTORY|Riservato per utilizzi futuri. Usa %TEMP% per archiviare i file CAB Python per l'installazione in un computer privo di connessione Internet. |  
-|R/Machine Learning Services (In-Database)|MRCACHEDIRECTORY|Usare questo parametro per specificare la directory della cache per il supporto di funzionalità Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone) o R in SQL Server 2017 Machine Learning Services o Machine Learning Server (Standalone). Questa impostazione viene in genere usata quando si esegue l'installazione di componenti R dalla [riga di comando in un computer senza accesso a Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|Python/Machine Learning Services (In-Database)|/MPYCACHEDIRECTORY|Riservato per utilizzi futuri. Usa %TEMP% per archiviare i file CAB Python per l'installazione in un computer privo di connessione Internet. |  
+|R/Machine Learning Services (In-Database)|/MRCACHEDIRECTORY|Usare questo parametro per specificare la directory della cache per il supporto di funzionalità Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone) o R in SQL Server 2017 Machine Learning Services o Machine Learning Server (Standalone). Questa impostazione viene in genere usata quando si esegue l'installazione di componenti R dalla [riga di comando in un computer senza accesso a Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|Java/Machine Learning Services (In-Database)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Facoltativo** | A partire da SQL Server 2019, specifica l'installazione di Java con Machine Learning Services. Se /SQL_INST_JAVA viene fornito senza il parametro/SQLJAVADIR, si presuppone che si voglia installare Zulu JRE, fornito dal supporto di installazione. <br /><br /> Specificando un percorso per /SQLJAVADIR, si indica che si vuole usare un componente JRE o JDK già installato. |
   
 ###### <a name="sample-syntax"></a>Sintassi di esempio:  
  Per installare una nuova istanza autonoma con i componenti del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], di ricerca full-text e di replica e abilitare l'inizializzazione immediata dei file per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

@@ -9,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930643"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476310"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -33,7 +33,6 @@ Mostra lo spazio di archiviazione usato per la memorizzazione nella cache dei se
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## <a name="remarks"></a>Remarks
 
 Il comando `DBCC SHOWRESULTCACHESPACEUSED` non accetta parametri e restituisce lo spazio usato dal database in cui viene eseguito il comando.
@@ -49,6 +48,16 @@ Gli utenti possono svuotare manualmente la cache dei set di risultati per un dat
 
 È richiesta l'autorizzazione VIEW SERVER STATE.
   
+## <a name="result-sets"></a>Set di risultati  
+  
+|colonna|Tipo di dati|Descrizione|  
+|------------|---------------|-----------------|  
+|reserved_space|BIGINT|Spazio totale usato per il database, in KB. Questo numero cambierà con l'aumento del set di risultati memorizzato nella cache.|  
+|data_space|BIGINT|Spazio usato per i dati, in KB.|  
+|index_space|BIGINT|Spazio usato per gli indici, in KB.|  
+|unused_space|BIGINT|Spazio che è parte dello spazio riservato e non usato, in KB.|  
+
+
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

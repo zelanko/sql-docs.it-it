@@ -1,6 +1,6 @@
 ---
-title: Come configurare la memoria persistente (PMEM) per SQL Server in Linux
-description: Questo articolo fornisce una procedura dettagliata per la configurazione PMEM in Linux.
+title: Come configurare la memoria persistente per SQL Server in Linux
+description: Questo articolo descrive la procedura dettagliata per la configurazione della memoria persistente in Linux.
 author: DBArgenis
 ms.author: argenisf
 ms.reviewer: vanto
@@ -10,42 +10,42 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077557"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente (PMEM) per SQL Server in Linux
+# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive come configurare la memoria persistente (PMEM) per SQL Server in Linux. Supporto PMEM in Linux è stato introdotto in fase di anteprima di SQL Server 2019.
+Questo articolo descrive come configurare la memoria persistente per SQL Server in Linux. Il supporto della memoria persistente in Linux è stato introdotto in Anteprima di SQL Server 2019.
 
 ## <a name="overview"></a>Panoramica
 
-SQL Server 2016 ha introdotto il supporto per moduli DIMM Non-Volatile e un'ottimizzazione denominata [della parte finale del Log memorizzazione nella cache nella memoria NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Queste ottimizzazioni ridotto il numero di operazioni necessarie per finalizzare un buffer del log in un archivio permanente. Questo consente di sfruttare l'accesso diretto di Windows Server a un dispositivo di memoria persistente in modalità DAX.
+SQL Server 2016 ha introdotto il supporto per i DIMM non volatili e un'ottimizzazione denominata [Memorizzazione della cache del file LDF in NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Queste ottimizzazioni riducono il numero di operazioni necessarie per finalizzare i buffer dei log in una risorsa di archiviazione permanente. Questa operazione sfrutta l'accesso diretto di Windows Server a un dispositivo di memoria permanente in modalità DAX.
 
-Anteprima di SQL Server 2019 estende il supporto per la memoria persistente dispositivi (PMEM) per Linux, fornendo illuminazione completa dei dati e delle transazioni di file di log inseriti in PMEM. Illuminazione fa riferimento al metodo di accesso al dispositivo di archiviazione con spazio utente efficiente `memcpy()` operazioni. Anziché passare attraverso lo stack di sistema e l'archiviazione file, SQL Server Usa il supporto DAX in Linux per inserire i dati direttamente in dispositivi, riducendo la latenza.
+Anteprima di SQL Server 2019 estende il supporto dei dispositivi con memoria persistente a Linux, garantendo il riconoscimento completo dei file di dati e dei log delle transazioni all'interno della memoria persistente. Per riconoscimento si intende il metodo di accesso al dispositivo di archiviazione tramite operazioni `memcpy()` efficienti sullo spazio utente. Invece di passare attraverso il file system e lo stack di archiviazione, SQL Server si avvale del supporto DAX in Linux per inserire direttamente i dati nei dispositivi, riducendo la latenza.
 
-## <a name="enable-enlightenment-of-database-files"></a>Abilitare illuminazione dei file di database
-Per abilitare l'illuminazione di file di database in SQL Server in Linux, seguire i passaggi seguenti:
+## <a name="enable-enlightenment-of-database-files"></a>Abilitare il riconoscimento dei file di database
+Per abilitare il riconoscimento dei file di database in SQL Server in Linux, seguire questa procedura:
 
 1. Configurare i dispositivi.
 
-  In Linux, usare il `ndctl` utilità.
+  In Linux usare l'utilità `ndctl`.
 
-  - Installare `ndctl` configurare PMEM dispositivo. È possibile trovarlo [qui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
-  - Per creare uno spazio dei nomi, usare [ndctl].
+  - Installare `ndctl` per configurare il dispositivo con memoria persistente. L'utilità è disponibile [qui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  - Usare [ndctl] per creare uno spazio dei nomi.
 
   ```bash 
   ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
-  >Se si usa `ndctl` versioni precedenti a 59, usare `--mode=memory`.
+  >Se si usa una versione di `ndctl` precedente alla 59, usare `--mode=memory`.
 
-  Usare `ndctl` per verificare lo spazio dei nomi. Output di esempio seguente:
+  Usare `ndctl` per verificare lo spazio dei nomi. Di seguito è riportato output di esempio:
 
 ```bash
 ndctl list
@@ -60,7 +60,7 @@ ndctl list
 ]
 ```
 
-  - Creare e montare PMEM dispositivo
+  - Creare e montare il dispositivo con memoria persistente
 
     Ad esempio, con XFS
 
@@ -77,9 +77,9 @@ ndctl list
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  Una volta che il dispositivo è stato configurato con ndctl, formattato e montato, è possibile inserire i file di database in esso. È anche possibile creare un nuovo database 
+  Dopo che il dispositivo è stato configurato con ndctl, formattato e montato, è possibile inserire file di database all'interno di esso. È anche possibile creare un nuovo database 
 
-1. Poiché i dispositivi PMEM sono O_DIRECT sicura, abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Questo flag di traccia è un flag di traccia di avvio e di conseguenza deve essere abilitato tramite l'utilità mssql-conf. Si noti che si tratta di una modifica della configurazione a livello di server e non si deve utilizzare questo flag di traccia se si dispone di eventuali dispositivi non conformi O_DIRECT che richiedono il meccanismo di scaricamento forzato per garantire l'integrità dei dati. Per ulteriori informazioni, vedere https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
+1. Poiché i dispositivi con memoria persistente sono protetti da O_DIRECT, abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Questo è un flag di traccia di avvio e come tale deve essere abilitato tramite l'utilità mssql-conf. Si noti che questa è una modifica della configurazione a livello di server e che questo flag di traccia non deve essere usato se sono presenti dispositivi non conformi a O_DIRECT che richiedono il meccanismo di scaricamento forzato per garantire l'integrità dei dati. Per ulteriori informazioni, vedere https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Riavviare SQL Server.
 

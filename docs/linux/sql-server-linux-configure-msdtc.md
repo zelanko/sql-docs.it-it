@@ -1,6 +1,6 @@
 ---
 title: Come configurare MSDTC in Linux
-description: Questo articolo fornisce una procedura dettagliata per la configurazione di MSDTC in Linux.
+description: Questo articolo descrive la procedura dettagliata per la configurazione di MSDTC in Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/21/2019
@@ -9,62 +9,62 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077613"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Come configurare Microsoft Distributed Transaction Coordinator (MSDTC) in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive come configurare Microsoft Distributed Transaction Coordinator (MSTDC) in Linux. Supporto MSDTC in Linux è stato introdotto in fase di anteprima di SQL Server 2019.
+Questo articolo descrive come configurare Microsoft Distributed Transaction Coordinator (MSTDC) in Linux. Il supporto di MSDTC in Linux è stato introdotto nell'anteprima di SQL Server 2019.
 
 ## <a name="overview"></a>Panoramica
 
-Le transazioni distribuite sono abilitate in SQL Server in Linux con l'introduzione di MSDTC e RPC funzionalità di BizTalk mapper di endpoint all'interno di SQL Server. Per impostazione predefinita, un processo di mapping degli endpoint RPC è in ascolto sulla porta 135 per le richieste RPC in ingresso e fornisce informazioni sui componenti registrati per le richieste remote. Richieste remote possono usare le informazioni restituite dal mapper di endpoint per comunicare con i componenti RPC registrati, ad esempio servizi MSDTC. Un processo richiede privilegi di utente con privilegi avanzati per eseguire l'associazione di porte note (numeri di porta inferiori a 1024) in Linux. Per evitare l'avvio di SQL Server con privilegi a livello radice per il processo RPC endpoint mapper, gli amministratori di sistema devono usare iptables per creare il protocollo NAT per instradare il traffico sulla porta 135 al processo di mapping degli endpoint della SQL Server RPC.
+Le transazioni distribuite vengono abilitate in SQL Server in Linux introducendo la funzionalità di mapper di endpoint MSDTC e RPC all'interno di SQL Server. Per impostazione predefinita, un processo di mapping degli endpoint RPC è in ascolto sulla porta 135 per le richieste RPC in ingresso e fornisce informazioni sui componenti registrati alle richieste remote. Le richieste remote possono usare le informazioni restituite dal mapper di endpoint per comunicare con i componenti RPC registrati, ad esempio i servizi MSDTC. Un processo richiede privilegi avanzati per l'associazione a porte note (numeri di porta inferiori a 1024) in Linux. Per evitare di avviare SQL Server con privilegi root per il processo del mapper di endpoint RPC, gli amministratori di sistema devono usare iptables per creare la conversione NAT (Network Address Translation) per instradare il traffico sulla porta 135 al processo di mapping degli endpoint RPC di SQL Server.
 
-SQL Server 2019 presenta due parametri di configurazione per l'utilità mssql-conf.
+SQL Server 2019 introduce due parametri di configurazione per l'utilità mssq-conf.
 
-| impostazione MSSQL-conf | Descrizione |
+| Impostazione di mssql-conf | Descrizione |
 |---|---|
-| **network.rpcport** | La porta TCP che associa il processo di agente mapping endpoint RPC. |
-| **distributedtransaction.servertcpport** | La porta che il server MSDTC è in ascolto. Se non impostato, il servizio MSDTC utilizza una porta temporanea casuale sul riavvio del servizio e le eccezioni del firewall dovrà essere riconfigurato in modo da garantire che il servizio MSDTC possibile la comunicazione. |
+| **network.rpcport** | Porta TCP a cui viene associato il processo del mapper di endpoint RPC. |
+| **distributedtransaction.servertcpport** | Porta su cui è in ascolto il server MSDTC. Se non è impostata, il servizio MSDTC usa una porta temporanea casuale ai riavvii del servizio e sarà necessario riconfigurare le eccezioni del firewall per garantire che il servizio MSDTC possa continuare le comunicazioni. |
 
-Per altre informazioni su queste impostazioni e altre impostazioni MSDTC correlate, vedere [configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md#msdtc).
+Per altre informazioni su queste impostazioni e altre impostazioni MSDTC correlate, vedere [Configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md#msdtc).
 
-## <a name="supported-msdtc-configurations"></a>Configurazioni supportate di MSDTC
+## <a name="supported-msdtc-configurations"></a>Configurazioni MSDTC supportate
 
-Sono supportate le seguenti configurazioni di MSDTC:
+Sono supportate le configurazioni MSDTC seguenti:
 
-- OLE-TX transazioni distribuite in SQL Server in Linux per provider ODBC.
-- Transazioni distribuite XA sono Impostate su SQL Server in Linux usando i provider ODBC e JDBC. Per le transazioni XA deve essere eseguita tramite il provider ODBC, è necessario usare Microsoft ODBC Driver per SQL Server versione 17.3 o successiva.
+- Transazioni distribuite OLE-TX su SQL Server in Linux per provider ODBC.
+- Transazioni distribuite XA su SQL Server in Linux tramite provider JDBC e ODBC. Per eseguire transazioni XA con il provider ODBC, è necessario usare Microsoft ODBC Driver for SQL Server versione 17.3 o successiva.
 - Transazioni distribuite nel server collegato.
 
-Per le limitazioni e problemi noti per MSDTC in fase di anteprima, vedere [note sulla versione di anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md#msdtc).
+Per le limitazioni e i problemi noti per MSDTC in anteprima, vedere [Note sulla versione dell'anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md#msdtc).
 
 ## <a name="msdtc-configuration-steps"></a>Passaggi di configurazione di MSDTC
 
-Esistono tre passaggi per configurare la funzionalità e le comunicazioni MSDTC. Se non vengono eseguiti i passaggi di configurazione necessarie, SQL Server non abiliterà la funzionalità MSDTC.
+Sono previsti tre passaggi per configurare le comunicazioni e la funzionalità di MSDTC. Se i passaggi di configurazione necessari non vengono eseguiti, SQL Server non abiliterà la funzionalità MSDTC.
 
-- Configurare **network.rpcport** e **distributedtransaction.servertcpport** usando mssql-conf.
-- Configurare il firewall per consentire la comunicazione sul **distributedtransaction.servertcpport** e la porta 135.
-- Configurare il server Linux routing in modo che la comunicazione RPC sulla porta 135 viene reindirizzata a SQL Server **network.rpcport**.
+- Configurare **network.rpcport** e **distributedtransaction.servertcpport** con mssql-conf.
+- Configurare il firewall per consentire le comunicazioni su **distributedtransaction.servertcpport** e la porta 135.
+- Configurare il routing del server Linux in modo che le comunicazioni RPC sulla porta 135 vengano reindirizzate a **network.rpcport** di SQL Server.
 
-Le sezioni seguenti forniscono istruzioni dettagliate per ogni passaggio.
+Le sezioni seguenti includono istruzioni dettagliate per ogni passaggio.
 
 ## <a name="configure-rpc-and-msdtc-ports"></a>Configurare le porte RPC e MSDTC
 
-Configurare innanzitutto **network.rpcport** e **distributedtransaction.servertcpport** usando mssql-conf. Questo passaggio se comuni tra tutte le distribuzioni supportate e specifiche di SQL Server.
+Configurare prima di tutto **network.rpcport** e **distributedtransaction.servertcpport** con mssql-conf. Questo passaggio è specifico per SQL Server e comune a tutte le distribuzioni supportate.
 
-1. Usare mssql-conf per impostare il **network.rpcport** valore. Nell'esempio seguente imposta lo 13500.
+1. Usare mssql-conf per impostare il valore di **network.rpcport**. Nell'esempio seguente viene impostato il valore 13500.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.rpcport 13500
    ```
 
-2. Impostare il **distributedtransaction.servertcpport** valore. Nell'esempio seguente imposta lo 51999.
+2. Impostare il valore di **distributedtransaction.servertcpport**. Nell'esempio seguente viene impostato il valore 51999.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport 51999
@@ -78,16 +78,16 @@ Configurare innanzitutto **network.rpcport** e **distributedtransaction.servertc
 
 ## <a name="configure-the-firewall"></a>Configurare il firewall
 
-Il secondo passaggio consiste nel configurare il firewall per consentire la comunicazione sul **servertcpport** e la porta 135.  In questo modo il processo MSDTC per comunicare esternamente ad altri gestori delle transazioni e i coordinatori e il processo di mapping endpoint RPC. I passaggi effettivi per questo variano a seconda della distribuzione di Linux e firewall. 
+Il secondo passaggio consiste nel configurare il firewall per consentire le comunicazioni su **servertcpport** e la porta 135.  Ciò consente al processo di mapping degli endpoint RPC e al processo MSDTC di comunicare esternamente con altri gestori e coordinatori di transazioni. La procedura effettiva può variare a seconda della distribuzione e del firewall di Linux. 
 
-Nell'esempio seguente viene illustrato come creare queste regole sul **Ubuntu**.
+L'esempio seguente mostra come creare queste regole in **Ubuntu**.
 
 ```bash
 sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
 
-L'esempio seguente mostra come è stato possibile eseguire questa operazione per **Red Hat Enterprise Linux (RHEL)** :
+L'esempio seguente mostra come eseguire questa operazione in **Red Hat Enterprise Linux (RHEL)** :
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
@@ -95,17 +95,17 @@ sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-È importante configurare il firewall prima di configurare routing delle porte nella sezione successiva. Aggiornamento dei firewall, è possibile cancellare le regole di routing di porta in alcuni casi.
+È importante configurare il firewall prima di configurare il routing delle porte nella sezione successiva. In alcuni casi, l'aggiornamento del firewall può cancellare le regole di routing delle porte.
 
-## <a name="configure-port-routing"></a>Configurare il routing di porta
+## <a name="configure-port-routing"></a>Configurare il routing delle porte
 
-Configurare la tabella di routing server Linux in modo che la comunicazione RPC sulla porta 135 viene reindirizzata a SQL Server **network.rpcport**. Meccanismo di configurazione di port forwarding in distribuzione diverso può variare. Le sezioni seguenti forniscono indicazioni per Ubuntu, unità di streaming Enterprise Linux (SLES) e Red Hat Enterprise Linux (RHEL).
+Configurare la tabella di routing del server Linux in modo che le comunicazioni RPC sulla porta 135 vengano reindirizzate a **network.rpcport** di SQL Server. Il meccanismo di configurazione per l'inoltro delle porte in una distribuzione diversa può variare. Le sezioni seguenti includono indicazioni per Ubuntu, SUS Enterprise Linux (SLES) e Red Hat Enterprise Linux (RHEL).
 
-### <a name="port-routing-in-ubuntu-and-sles"></a>Porta il routing in Ubuntu e SLES
+### <a name="port-routing-in-ubuntu-and-sles"></a>Routing delle porte in Ubuntu e SLES
 
-Ubuntu e SLES non usano i **firewalld** del servizio, pertanto **iptables** regole sono un meccanismo efficiente per raggiungere routing delle porte. Il **iptables** regole potrebbero non persistere durante i riavvii, in modo che i comandi seguenti offrono anche istruzioni per il ripristino delle regole dopo un riavvio.
+Ubuntu e SLES non usano il servizio **firewalld**, quindi le regole di **iptable** rappresentano un meccanismo efficiente per ottenere il routing delle porte. Le regole di **iptable** potrebbero non essere mantenute tra un riavvio e l'altro, quindi i comandi seguenti includono anche istruzioni per il ripristino delle regole dopo un riavvio.
 
-1. Creare regole di routing per la porta 135. Nell'esempio seguente, la porta 135 viene indirizzata alla porta RPC, 13500, definita nella sezione precedente. Sostituire `<ipaddress>` con l'indirizzo IP del server.
+1. Creare regole di routing per la porta 135. Nell'esempio seguente la porta 135 viene indirizzata alla porta RPC 13500 definita nella sezione precedente. Sostituire `<ipaddress>` con l'indirizzo IP del server.
 
    ```bash
    sudo iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL  \
@@ -114,9 +114,9 @@ Ubuntu e SLES non usano i **firewalld** del servizio, pertanto **iptables** rego
       -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
    ```
 
-   Il `--comment RpcEndPointMapper` parametro nei comandi precedenti assiste nella gestione di queste regole nei comandi successivi.
+   Il parametro `--comment RpcEndPointMapper` nei comandi precedenti facilita la gestione di queste regole nei comandi successivi.
 
-2. Visualizzare le regole di routing che è stato creato con il comando seguente:
+2. Visualizzare le regole di routing create con il comando seguente:
 
    ```bash
    sudo iptables -S -t nat | grep "RpcEndPointMapper"
@@ -128,42 +128,42 @@ Ubuntu e SLES non usano i **firewalld** del servizio, pertanto **iptables** rego
    sudo iptables-save > /etc/iptables.conf
    ```
 
-4. Per ricaricare le regole dopo un riavvio, aggiungere il comando seguente per `/etc/rc.local` (per Ubuntu) o a `/etc/init.d/after.local` (per SLES):
+4. Per ricaricare le regole dopo un riavvio, aggiungere il comando seguente a `/etc/rc.local` (per Ubuntu) o a `/etc/init.d/after.local` (per SLES):
 
    ```bash
    iptables-restore < /etc/iptables.conf
    ```
 
    > [!NOTE]
-   > È necessario disporre dei privilegi di utente con privilegi avanzati (sudo) per modificare la **Local** oppure **after.local** file.
+   > Per modificare i file **rc.local** or **after.local**, è necessario disporre di privilegi avanzati (sudo).
 
-Il **iptables salvataggio** e **iptables-restore** comandi, insieme con `rc.local` / `after.local` configurazione di avvio, forniscono un meccanismo di base per salvare e ripristinare iptables voci. A seconda della distribuzione di Linux, si potrebbe essere più avanzati o automatizzate le opzioni disponibili. Ad esempio, un'alternativa di Ubuntu è il **permanenti iptables** pacchetto per rendere persistente le voci.
+I comandi **iptables-save** e **iptables-restore**, insieme alla configurazione di avvio `rc.local`/`after.local`, forniscono un meccanismo di base per salvare e ripristinare le voci di iptables. A seconda della distribuzione Linux potrebbero essere disponibili opzioni più avanzate o automatizzate. Ad esempio, un'alternativa Ubuntu è il pacchetto **iptables-persistent** per rendere persistenti le voci.
 
 > [!IMPORTANT]
-> I passaggi precedenti presuppongono un indirizzo IP fisso. Se viene modificato l'indirizzo IP per l'istanza di SQL Server (a causa di interventi manuali o DHCP), è necessario rimuovere e ricreare le regole di routing se sono state create con iptables. Se è necessario ricreare o eliminare le regole di routing esistente, è possibile usare il comando seguente per rimuovere vecchia `RpcEndPointMapper` regole:
+> I passaggi precedenti presuppongono un indirizzo IP fisso. Se l'indirizzo IP per l'istanza di SQL Server cambia (a causa di interventi manuali o di DHCP), è necessario rimuovere e ricreare le regole di routing se sono state create con iptables. Se è necessario ricreare o eliminare le regole di routing esistenti, è possibile usare il comando seguente per rimuovere le regole `RpcEndPointMapper` precedenti:
 > 
 > ```bash
 > sudo iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done
 > ```
 
-### <a name="port-routing-in-rhel"></a>Routing in RHEL porta
+### <a name="port-routing-in-rhel"></a>Routing delle porte in RHEL
 
-Nelle distribuzioni che usano **firewalld** servizio, ad esempio Red Hat Enterprise Linux, lo stesso servizio può essere usato per entrambi apertura della porta nel server e l'inoltro alla porta interni. Ad esempio, in Red Hat Enterprise Linux, è consigliabile usare **firewalld** service (tramite **firewall-cmd** utilità di configurazione con `-add-forward-port` o opzioni simili) per creare e gestire porte permanente regole di inoltro anziché iptables.
+Nelle distribuzioni che usano il servizio **firewalld**, ad esempio Red Hat Enterprise Linux, è possibile usare lo stesso servizio sia per l'apertura della porta nel server che per l'inoltro delle porte interne. Ad esempio, in Red Hat Enterprise Linux, è consigliabile usare il servizio **firewalld** (tramite l'utilità di configurazione **firewall-cmd** con `-add-forward-port` o opzioni simili) per creare e gestire le regole di inoltro delle porte persistenti anziché usare iptables.
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
 sudo firewall-cmd --reload
 ```
 
-## <a name="verify"></a>Verificare
+## <a name="verify"></a>Verifica
 
-A questo punto, SQL Server deve essere in grado di partecipare alle transazioni distribuite. Per verificare che SQL Server sia in ascolto, eseguire la **netstat** comando (se si usa RHEL, potrebbe essere necessario installare prima il **net-tools** pacchetto):
+A questo punto, SQL Server dovrebbe essere in grado di partecipare alle transazioni distribuite. Per verificare che SQL Server sia in ascolto, eseguire il comando **netstat** (se si usa RHEL, potrebbe essere necessario installare prima il pacchetto **net-tools**):
 
 ```bash
 sudo netstat -tulpn | grep sqlservr
 ```
 
-Si dovrebbe visualizzato un output simile al seguente:
+L'output dovrebbe essere simile al seguente:
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -176,17 +176,17 @@ tcp6 0 0 :::13500 :::* LISTEN 13911/sqlservr
 tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 ```
 
-Tuttavia, dopo un riavvio, SQL Server non viene avviato in ascolto il **servertcpport** fino a quando la prima transazione distribuita. In questo caso, si vedrebbe non SQL Server in ascolto sulla porta 51999 in questo esempio finché la prima transazione distribuita.
+Tuttavia, dopo un riavvio, SQL Server non inizia l'ascolto su **servertcpport** fino alla prima transazione distribuita. In questo caso, SQL Server non risulterà in ascolto sulla porta 51999 in questo esempio fino alla prima transazione distribuita.
 
-## <a name="configure-authentication-on-rpc-communication-for-msdtc"></a>Configurare l'autenticazione in comunicazione RPC per MSDTC
+## <a name="configure-authentication-on-rpc-communication-for-msdtc"></a>Configurare l'autenticazione per le comunicazioni RPC per MSDTC
 
-MSDTC per SQL Server in Linux non usa l'autenticazione in comunicazione RPC per impostazione predefinita. Tuttavia, quando il computer host viene aggiunto a un dominio di Active Directory (AD), è possibile configurare MSDTC per usare la comunicazione RPC autenticata usando seguendo **mssql-conf** impostazioni:
+MSDTC per SQL Server in Linux non usa l'autenticazione per le comunicazioni RPC per impostazione predefinita. Tuttavia, quando il computer host viene aggiunto a un dominio di Active Directory (AD), è possibile configurare MSDTC per l'uso delle comunicazioni RPC autenticate con le impostazioni di **mssql-conf** seguenti:
 
 | Impostazione | Descrizione |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Configurare sicuro solo le chiamate RPC per le transazioni distribuite. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configurare la protezione che delle chiamate RPC solo per le transazioni distribuite. |
-| **distributedtransaction.turnoffrpcsecurity**               | Abilita o disabilita la sicurezza RPC per le transazioni distribuite. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Configurare solo chiamate RPC protette per le transazioni distribuite. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configurare la sicurezza delle chiamate RPC per le transazioni distribuite. |
+| **distributedtransaction.turnoffrpcsecurity**               | Abilitare o disabilitare la sicurezza RPC per le transazioni distribuite. |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

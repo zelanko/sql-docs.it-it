@@ -1,75 +1,80 @@
 ---
-title: Eseguire processi Spark in Azure Data Studio
+title: Inviare processi Spark nei cluster Big Data di SQL Server in Azure Data Studio
 titleSuffix: SQL Server big data clusters
-description: Inviare processi Spark nei cluster di SQL Server i big data in Azure Data Studio.
+description: Inviare processi Spark nei cluster Big Data di SQL Server in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727364"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470684"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Inviare processi Spark nei cluster di SQL Server i big data in Azure Data Studio
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Inviare processi Spark nei cluster Big Data di SQL Server in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Uno degli scenari chiave per i cluster di big data è la possibilità di inviare processi Spark per l'anteprima di SQL Server 2019. La funzionalità di invio dei processi di Spark consente di inviare un file con estensione Jar o Py locali con riferimenti a cluster di big data di SQL Server 2019. Consente inoltre di eseguire un file con estensione Jar o Py, che sono già presenti nel file system HDFS. 
+Uno degli scenari chiave per i cluster Big Data di SQL Server è la possibilità di inviare processi Spark per la versione di anteprima di SQL Server 2019. La funzionalità di invio di processi Spark consente di inviare file Jar o Py locali con riferimenti ai cluster Big Data di SQL Server 2019. Consente inoltre di eseguire file Jar o Py che si trovano già nel file system HDFS. 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
+- [Strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
    - **kubectl**
 
-- [Connessione di Studio di Azure Data al gateway HDFS/Spark del cluster di big data](connect-to-big-data-cluster.md).
+- [Connettere Azure Data Studio al gateway HDFS/Spark del cluster Big Data](connect-to-big-data-cluster.md).
 
-## <a name="open-spark-job-submission-dialog"></a>Aprire la finestra di invio dei processi di Spark
-Esistono diversi modi per aprire la finestra di invio dei processi di Spark. I modi in cui includere Dashboard, menu di scelta rapida in Esplora oggetti e pannello contenente comandi.
+## <a name="open-spark-job-submission-dialog"></a>Aprire la finestra di dialogo di invio dei processi Spark
 
-+ Fare clic su **nuovo processo Spark** nel dashboard per aprire la finestra di dialogo Spark submission processo.
+Ci sono diversi modi per aprire la finestra di dialogo di invio dei processi Spark. A tale scopo è possibile usare il dashboard, il menu di scelta rapida in Esplora oggetti e il riquadro comandi.
 
-    ![Menu Invia selezionando il dashboard](./media/submit-spark-job/new-spark-job.png)
- 
-+ Fare doppio clic sul cluster in Esplora oggetti e selezionare **Submit Spark Job** dal menu di scelta rapida. Verrà aperto dialogo di invio dei processi Spark.  
- 
-    ![Menu Invia dal cluster pulsante destro del mouse](./media/submit-spark-job/submit-spark-job.png)
+- Per aprire la finestra di dialogo di invio dei processi Spark, fare clic su **New Spark Job** (Nuovo processo Spark) nel dashboard.
 
-+ Fare doppio clic su un file con estensione Jar / all'anno precedente in Esplora oggetti e selezionare **Submit Spark Job** dal menu di scelta rapida. Verrà aperta una finestra con il campo Jar / all'anno precedente sia già popolato invio processo Spark. 
- 
-    ![Inviare i menu di scelta dal file di scelta rapida](./media/submit-spark-job/submit-spark-job-2.png)
+    ![Menu per l'invio facendo clic nel dashboard](./media/submit-spark-job/new-spark-job.png)
 
-+ Usare i comandi **Submit Spark Job** nel riquadro comandi digitando Cmd + MAIUSC + P (nel Mac) e Ctrl + MAIUSC + P (in Windows).
+- In alternativa, fare clic con il pulsante destro del mouse sul cluster in Esplora oggetti e scegliere **Submit Spark Job** (Invia processo Spark) dal menu di scelta rapida.
 
-    ![Inviare comandi di menu in windows](./media/submit-spark-job/submit-spark-job-3.png)
+    ![Menu per l'invio facendo clic con il pulsante destro del mouse sul file](./media/submit-spark-job/submit-spark-job-1.png)
 
-    ![Inviare comandi di menu in mac](./media/submit-spark-job/submit-spark-job-4.png)
+
+- Per aprire la finestra di dialogo di invio dei processi Spark con i campi relativi a Jar/Py prepopolati, fare clic con il pulsante destro del mouse su un file Jar/Py in Esplora oggetti e scegliere **Submit Spark Job** (Invia processo Spark) dal menu di scelta rapida.  
+
+    ![Menu per l'invio facendo clic con il pulsante destro del mouse sul cluster](./media/submit-spark-job/submit-spark-job.png)
+
+- Usare il comando **Submit Spark Job** (Invia processo Spark) dal riquadro comandi premendo **CTRL+MAIUSC+P** (in Windows) e **CMD+MAIUSC+P** (in Mac).
+
+    ![Menu per l'invio nel riquadro comandi in Windows](./media/submit-spark-job/submit-spark-job-3.png)
+
+    ![Menu per l'invio nel riquadro comandi in mac](./media/submit-spark-job/submit-spark-job-4.png)
   
  
-## <a name="submit-spark-job"></a>Inviare processi Spark 
-La finestra di dialogo Spark submission processo viene visualizzato come indicato di seguito. Immettere il nome del processo, percorso del file con estensione JAR / all'anno precedente, la classe principale e gli altri campi. Il file Jar / origine del file rispetto all'anno precedente potrebbe essere da locale o da un HDFS. Se il processo dispone di Spark fa riferimento a file con estensione jar, Py file o file aggiuntivi, fare clic su **avanzate** scheda e immettere i percorsi dei file corrispondenti. Fare clic su **Submit** per inviare processi Spark.
- 
-![Nuova finestra di dialogo spark processo](./media/submit-spark-job/submit-spark-job-section.png)
+## <a name="submit-spark-job"></a>Inviare un processo Spark 
 
-![Finestra di dialogo avanzata](./media/submit-spark-job/submit-spark-job-section-1.png)
+La finestra di dialogo di invio dei processi Spark viene visualizzata come illustrato di seguito. Immettere il nome del processo, il percorso del file JAR/Py, la classe principale e gli altri campi. L'origine del file Jar/Py può essere locale o in HDFS. Se il processo Spark contiene file Py, file Jar di riferimento o file aggiuntivi, fare clic sulla scheda **ADVANCED** (AVANZATE) e immettere i percorsi di file corrispondenti. Fare clic su **Submit** (Invia) per inviare il processo Spark.
 
-## <a name="monitor-spark-job-submission"></a>Monitorare l'invio di processi Spark
-Dopo che viene inviato il processo Spark, le informazioni sullo stato invio e l'esecuzione del processo di Spark vengono visualizzati nella cronologia di attività sulla sinistra. E i dettagli sull'avanzamento e i log vengono visualizzati anche nella **OUTPUT** finestra nella parte inferiore.
-+ Quando il processo Spark è in corso, il **la cronologia delle attività** pannello e **OUTPUT** finestra vengono aggiornati con lo stato di avanzamento.
+![Finestra di dialogo relativa a un nuovo processo Spark](./media/submit-spark-job/submit-spark-job-section.png)
 
-![Processo spark di monitoraggio in corso](./media/submit-spark-job/monitor-spark-job-submission.png)
+![Finestra di dialogo relativa alle impostazioni avanzate](./media/submit-spark-job/submit-spark-job-section-1.png)
 
-+ Quando il processo Spark è completata con esito positivo, è possibile visualizzare l'interfaccia utente di Spark e l'interfaccia utente di Yarn collegamenti nel **OUTPUT** finestra. È possibile scegliere i collegamenti per altre informazioni.
+## <a name="monitor-spark-job-submission"></a>Monitorare l'invio del processo Spark
 
-![Collegamento al processo Spark nell'output](./media/submit-spark-job/monitor-spark-job-submission-2.png)
+Una volta inviato il processo Spark, le informazioni sullo stato di invio e di esecuzione del processo vengono visualizzate nella cronologia attività a sinistra. I dettagli sullo stato di avanzamento e i log vengono visualizzati anche nella finestra **OUTPUT** nella parte inferiore.
+
+- Quando il processo Spark è in corso, il pannello **Task History** (Cronologia attività) e la finestra **OUTPUT** vengono aggiornati in base allo stato di avanzamento.
+
+    ![Visualizzare il processo Spark in corso](./media/submit-spark-job/monitor-spark-job-submission.png)
+
+- Al termine del processo Spark, i collegamenti dell'interfaccia utente Spark e dell'interfaccia utente Yarn vengono visualizzati nella finestra **OUTPUT**. Fare clic sui collegamenti per altre informazioni.
+
+    ![Collegamento del processo Spark nell'output](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni sul cluster di big data di SQL Server e gli scenari correlati, vedere [What ' s cluster di big data di SQL Server](big-data-cluster-overview.md)?
 
+Per altre informazioni sui cluster Big Data di SQL Server e sugli scenari correlati, vedere [Che cosa sono i cluster Big Data di SQL Server?](big-data-cluster-overview.md)

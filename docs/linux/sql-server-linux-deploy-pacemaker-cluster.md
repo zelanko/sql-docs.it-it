@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077468"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Distribuire un cluster Pacemaker per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa esercitazione illustra le attività necessarie per distribuire un cluster Pacemaker di Linux per una [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] gruppo disponibilità Always On (AG) o istanza del cluster di failover (FCI). A differenza dei Server Windows fortemente accoppiato / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, la creazione del cluster Pacemaker, nonché configurazione del gruppo (AG) di disponibilità in Linux può essere eseguita prima o dopo l'installazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Dopo aver configurato il cluster, viene eseguita l'integrazione e la configurazione delle risorse per la parte di Pacemaker di una distribuzione del gruppo di disponibilità o FCI.
+Questa esercitazione illustra le attività necessarie per distribuire un cluster Pacemaker in Linux per un gruppo di disponibilità Always On o un'istanza del cluster di failover di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Diversamente da quanto avviene per lo stack Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] strettamente associato, la creazione di un cluster Pacemaker e la configurazione di un gruppo di disponibilità in Linux possono essere eseguite prima o dopo l'installazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L'integrazione e la configurazione delle risorse per la parte Pacemaker di una distribuzione di un gruppo di disponibilità o di un'istanza del cluster di failover vengono eseguite dopo la configurazione del cluster.
 > [!IMPORTANT]
-> Un gruppo di disponibilità con un tipo di cluster None viene *non* richiedono un cluster Pacemaker, né possono essere gestito da Pacemaker. 
+> Un gruppo di disponibilità con un cluster di tipo None *non* richiede un cluster Pacemaker né può essere gestito da Pacemaker. 
 
 > [!div class="checklist"]
-> * Installare il componente aggiuntivo disponibilità elevata e Pacemaker.
-> * Preparare i nodi per Pacemaker (RHEL e soltanto Ubuntu).
+> * Installare il componente aggiuntivo per la disponibilità elevata e installare Pacemaker.
+> * Preparare i nodi per Pacemaker (solo RHEL e Ubuntu).
 > * Creare il cluster Pacemaker.
-> * Installare i pacchetti di SQL Server a disponibilità elevata e SQL Server Agent.
+> * Installare i pacchetti per la disponibilità elevata di SQL Server e SQL Server Agent.
  
 ## <a name="prerequisite"></a>Prerequisiti
 [Installare SQL Server 2017](sql-server-linux-setup.md).
 
-## <a name="install-the-high-availability-add-on"></a>Installare il componente aggiuntivo disponibilità elevata
-Usare la sintassi seguente per installare i pacchetti che costituiscono il componente aggiuntivo disponibilità elevata (HA) per ogni distribuzione di Linux. 
+## <a name="install-the-high-availability-add-on"></a>Installare il componente aggiuntivo per la disponibilità elevata
+Usare la sintassi seguente per installare i pacchetti che costituiscono il componente aggiuntivo per la disponibilità elevata per ogni distribuzione di Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
-1.  Registrare il server usando la sintassi seguente. Viene chiesto di immettere un nome utente valido e una password.
+1.  Registrare il server usando la sintassi seguente. Viene richiesto di specificare un nome utente e una password validi.
     
     ```bash
     sudo subscription-manager register
@@ -48,21 +48,21 @@ Usare la sintassi seguente per installare i pacchetti che costituiscono il compo
     sudo subscription-manager list --available
     ```
 
-3.  Eseguire il comando seguente per associare un'elevata disponibilità RHEL con la sottoscrizione
+3.  Eseguire il comando seguente per associare la disponibilità elevata di RHEL alla sottoscrizione
     
     ```bash
     sudo subscription-manager attach --pool=<PoolID>
     ```
     
-    in cui *PoolId* è l'ID del pool per la sottoscrizione di disponibilità elevata nel passaggio precedente.
+    dove *PoolId* è l'ID del pool per la sottoscrizione della disponibilità elevata del passaggio precedente.
     
-4.  Abilitare il repository per poter utilizzare il componente aggiuntivo disponibilità elevata.
+4.  Abilitare il repository per poter usare il componente aggiuntivo per la disponibilità elevata.
     
     ```bash
     sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
     ```
     
-5.  Installa Pacemaker.
+5.  Installare Pacemaker.
     
     ```bash
     sudo yum install pacemaker pcs fence-agents-all resource-agents
@@ -76,19 +76,19 @@ sudo apt-get install pacemaker pcs fence-agents resource-agents
 
 **SUSE Linux Enterprise Server (SLES)**
 
-Installare il modello di disponibilità elevata in YaST o eseguire operazioni come parte dell'installazione del server principale. L'installazione può essere eseguita con un ISO o DVD come origine o recuperandolo online.
+Installare il modello di disponibilità elevata in YaST o eseguire questa operazione durante l'installazione principale del server. L'installazione può essere eseguita usando un file ISO o un DVD come origine oppure online.
 > [!NOTE]
-> In SLES, il componente aggiuntivo a disponibilità elevata verrà inizializzato quando viene creato il cluster.
+> In SLES il componente aggiuntivo per la disponibilità elevata viene inizializzato al momento della creazione del cluster.
 
-## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>Preparare i nodi per Pacemaker (RHEL e soltanto Ubuntu)
-Pacemaker Usa un utente creato nella distribuzione denominata *hacluster*. L'utente viene creata quando viene installato il componente aggiuntivo a disponibilità elevata in Ubuntu e RHEL.
-1. In ogni server che fungerà da un nodo del cluster Pacemaker, creare la password di un utente può essere usato dal cluster. Il nome usato negli esempi viene *hacluster*, ma è possibile utilizzare qualsiasi nome. Il nome e la password deve essere lo stesso in tutti i nodi che fanno parte del cluster Pacemaker.
+## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>Preparare i nodi per Pacemaker (solo RHEL e Ubuntu)
+Pacemaker stesso usa un utente creato durante la distribuzione, denominato *hacluster*. L'utente viene creato quando il componente aggiuntivo per la disponibilità elevata è installato in RHEL e Ubuntu.
+1. In ogni server che fungerà da nodo del cluster Pacemaker creare la password per un utente che verrà usato dal cluster. Il nome usato negli esempi è *hacluster*, ma è possibile usare qualsiasi nome. Il nome e la password devono essere gli stessi in tutti i nodi che fanno parte del cluster Pacemaker.
    
     ```bash
     sudo passwd hacluster
     ```
     
-2. In ogni nodo che farà parte del cluster Pacemaker, abilitare e avviare il `pcsd` servizio con i comandi seguenti (RHEL e Ubuntu):
+2. In ogni nodo che farà parte del cluster Pacemaker abilitare e avviare il servizio `pcsd` con i comandi seguenti (RHEL e Ubuntu):
 
    ```bash
    sudo systemctl enable pcsd
@@ -101,20 +101,20 @@ Pacemaker Usa un utente creato nella distribuzione denominata *hacluster*. L'ute
    sudo systemctl status pcsd
    ```
    
-   Per garantire che `pcsd` viene avviato.
-3. Abilitare il servizio Pacemaker in ogni nodo del cluster Pacemaker possibili.
+   per assicurarsi che `pcsd` venga avviato.
+3. Abilitare il servizio Pacemaker in ogni nodo possibile del cluster Pacemaker.
    
    ```bash
    sudo systemctl start pacemaker
    ```
 
-   In Ubuntu, viene visualizzato un errore:
+   In Ubuntu viene visualizzato un errore:
    
-   *pacemaker di avvio predefinita non contiene nessun runlevels, l'interruzione.*
+   *pacemaker Default-Start contains no runlevels, aborting.* (L'avvio predefinito di Pacemaker non contiene livelli di esecuzione. Interruzione in corso.).
    
-   Questo errore è un problema noto. Nonostante l'errore, abilitare il servizio Pacemaker ha esito positivo e questo bug verrà corretto in un determinato momento nel futuro.
+   Questo è un errore noto. Nonostante l'errore, l'abilitazione del servizio Pacemaker ha esito positivo e questo bug verrà risolto in futuro.
    
-4. Successivamente, creare e avviare il cluster Pacemaker. C'è una differenza tra Ubuntu e RHEL in questo passaggio. Mentre in entrambe le distribuzioni, installando `pcs` consente di configurare un file di configurazione predefinito per il cluster, Pacemaker in RHEL, eseguire questo comando Elimina una configurazione esistente e crea un nuovo cluster.
+4. Successivamente, creare e avviare il cluster Pacemaker. In questa fase esiste una differenza tra RHEL e Ubuntu. Anche se in entrambe le distribuzioni l'installazione di `pcs` configura un file di configurazione predefinito per il cluster Pacemaker, in RHEL l'esecuzione di questo comando elimina definitivamente qualsiasi configurazione esistente e crea un nuovo cluster.
 
 <a id="create"></a>
 ## <a name="create-the-pacemaker-cluster"></a>Creare il cluster Pacemaker 
@@ -128,79 +128,79 @@ Questa sezione illustra come creare e configurare il cluster per ogni distribuzi
    sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
-   in cui *NodeX* è il nome del nodo.
+   dove *NodeX* è il nome del nodo.
 2. Creare il cluster
    
    ```bash
    sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
    ```
    
-   in cui *PMClusterName* è il nome assegnato al cluster Pacemaker e *Nodelist* è riportato l'elenco di nomi dei nodi separati da uno spazio.
+   dove *PMClusterName* è il nome assegnato al cluster Pacemaker e *Nodelist* è l'elenco di nomi dei nodi separati da uno spazio.
 
 **Ubuntu**
 
-Configurazione di Ubuntu è simile a RHEL. Tuttavia, è un'importante differenza: installazione dei pacchetti Pacemaker crea una configurazione di base per il cluster e attiva e avvia `pcsd`. Se si prova a configurare il cluster Pacemaker, seguendo le istruzioni di RHEL esattamente, viene visualizzato un errore. Per risolvere questo problema, procedere come segue: 
+La configurazione di Ubuntu è simile a quella di RHEL. Esiste tuttavia un'importante differenza: l'installazione dei pacchetti di Pacemaker crea una configurazione di base per il cluster e abilita e avvia `pcsd`. Se si prova a configurare il cluster Pacemaker seguendo esattamente le istruzioni per RHEL, si verifica un errore. Per risolvere il problema, seguire questa procedura: 
 1. Rimuovere la configurazione di Pacemaker predefinita da ogni nodo.
    
    ```bash
    sudo pcs cluster destroy
    ```
    
-2. Seguire i passaggi nella sezione relativa a RHEL per la creazione del cluster Pacemaker.
+2. Seguire i passaggi nella sezione RHEL per la creazione del cluster pacemaker.
 
 **SLES**
 
-Il processo per la creazione di un cluster Pacemaker è completamente diverso in SLES, piuttosto che su Ubuntu e RHEL. I passaggi seguenti documentano come creare un cluster con SLES.
-1. Avviare il processo di configurazione cluster eseguendo 
+Il processo per la creazione di un cluster Pacemaker è completamente diverso in SLES rispetto a RHEL e Ubuntu. I passaggi seguenti illustrano come creare un cluster con SLES.
+1. Avviare il processo di configurazione del cluster eseguendo 
    ```bash
    sudo ha-cluster-init
    ``` 
    
-   in uno dei nodi. Potrebbe essere richiesto che NTP non è configurato e che non viene trovata alcuna periferica watchdog. Va bene per operazioni di tutto. Watchdog è correlato a STONITH se si usa l'isolamento predefinito di SLES che è basato sull'archiviazione. NTP e i watchdog possono essere configurati in un secondo momento.
+   in uno dei nodi. È possibile che venga richiesto che NTP non sia configurato e che non siano presenti dispositivi watchdog. In questo modo non si verificheranno problemi. Il watchdog è correlato a STONITH se si usa l'isolamento predefinito di SLES, che è basato sulla risorsa di archiviazione. È possibile configurare NTP e il watchdog in un secondo momento.
    
-2. Viene chiesto di configurare Corosync. Viene richiesto per l'indirizzo di rete da associare, nonché l'indirizzo multicast e la porta. L'indirizzo di rete è la subnet che si sta utilizzando; ad esempio, 192.191.190.0. È possibile accettare le impostazioni predefinite in ogni prompt, o se necessario, modificarle.
+2. Viene richiesto di configurare Corosync. Viene chiesto l'indirizzo di rete a cui eseguire l'associazione, nonché l'indirizzo multicast e la porta. L'indirizzo di rete è la subnet usata, ad esempio 192.191.190.0. È possibile accettare le impostazioni predefinite a ogni prompt o modificarle se necessario.
    
-3. Successivamente, viene chiesto se si desidera configurare SBD, ovvero l'isolamento basato su disco. Questa configurazione può essere eseguita in un secondo momento se necessario. Se non SBD è configurata, a differenza di su Ubuntu e RHEL `stonith-enabled` per impostazione predefinita sarà essere impostato su false.
+3. Viene quindi chiesto se si vuole configurare SBD, ovvero l'isolamento basato su disco. Questa configurazione può essere eseguita in un secondo momento, se necessario. Se SBD non viene configurato, diversamente da quanto avviene per RHEL e Ubuntu, `stonith-enabled` verrà impostato sul valore predefinito false.
    
-4. Infine, viene chiesto se si desidera configurare un indirizzo IP per l'amministrazione. Questo indirizzo IP è facoltativo, ma funzionalità simile per l'indirizzo IP per un cluster di failover di Windows Server (WSFC) nel senso che viene creato un indirizzo IP del cluster da utilizzare per la connessione ad esso tramite a disponibilità elevata Web Konsole (HAWK). Anche questa configurazione, è facoltativa.
+4. Viene infine chiesto se si vuole configurare un indirizzo IP per l'amministrazione. Questo indirizzo IP è facoltativo, ma funziona in modo simile all'indirizzo IP per un cluster WSFC (Windows Server Failover Cluster) perché crea un indirizzo IP nel cluster da usare per la connessione tramite HAWK (HA Web Konsole). Anche questa configurazione è facoltativa.
    
-5. Assicurarsi che il cluster sia attivo e in esecuzione eseguendo 
+5. Verificare che il cluster sia operativo eseguendo 
    ```bash
    sudo crm status
    ```
    
-6. Modifica il *hacluster* password con 
+6. Cambiare la password *hacluster* con 
    ```bash
    sudo passwd hacluster
    ```
    
-7. Se è stato configurato un indirizzo IP per l'amministrazione, è possibile eseguirne il test in un browser, che consente anche di testare la modifica della password per *hacluster*.
+7. Se è stato configurato un indirizzo IP per l'amministrazione, è possibile testarlo in un browser. In questo modo viene testata anche la modifica della password per *hacluster*.
    ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
-8. In un altro server SLES che sarà un nodo del cluster, eseguire 
+8. In un altro server SLES che sarà un nodo del cluster eseguire 
    ```bash
    sudo ha-cluster-join
    ```
    
-9. Quando richiesto, immettere il nome o indirizzo IP del server in cui è stato configurato come primo nodo del cluster nei passaggi precedenti. Il server viene aggiunto come nodo al cluster esistente.
+9. Quando richiesto, immettere il nome o l'indirizzo IP del server configurato come primo nodo del cluster nei passaggi precedenti. Il server viene aggiunto come nodo al cluster esistente.
    
-10. Verificare che il nodo sia stato aggiunto tramite l'esecuzione 
+10. Verificare che il nodo sia stato aggiunto eseguendo 
    ```bash
    sudo crm status
    ```
    
-11. Modifica il *hacluster* password con 
+11. Cambiare la password *hacluster* con 
    ```bash
    sudo passwd hacluster
    ```
    
 12. Ripetere i passaggi da 8 a 11 per tutti gli altri server da aggiungere al cluster.
 
-## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Installare i pacchetti di SQL Server a disponibilità elevata e SQL Server Agent
-Usare i comandi seguenti per installare il pacchetto SQL Server a disponibilità elevata e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente, se non sono già installati. Installazione del pacchetto a disponibilità elevata dopo l'installazione [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] richiede il riavvio del [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per poter essere utilizzato. Queste istruzioni presuppongono che i repository per i pacchetti Microsoft sono già stati configurati, poiché [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] devono essere installati a questo punto.
+## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Installare i pacchetti per la disponibilità elevata di SQL Server e SQL Server Agent
+Usare i comandi seguenti per installare il pacchetto per la disponibilità elevata di SQL Server e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, se non sono già installati. L'installazione del pacchetto per la disponibilità elevata dopo l'installazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] richiede un riavvio di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in modo che sia possibile usarlo. Queste istruzioni presuppongono che i repository per i pacchetti Microsoft siano già stati configurati, perché [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deve essere installato ora.
 > [!NOTE]
-> - Se non userà [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent per il log shipping o qualsiasi altro utilizzo, non deve essere installato, pertanto il pacchetto *mssql-server-agent* può essere ignorato.
-> - Gli altri pacchetti facoltativi per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ricerca Full-Text (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-è*), non sono obbligatorio per la disponibilità elevata, per un'istanza FCI o un gruppo di disponibilità.
+> - Se non si userà [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent per il log shipping o per altro, non è necessario installarlo, quindi il pacchetto *mssql-server-agent* può essere ignorato.
+> - Gli altri pacchetti facoltativi per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux, Ricerca full-text di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), non sono obbligatori per la disponibilità elevata, sia per un'istanza del cluster di failover che per un gruppo di disponibilità.
 
 **RHEL**
 
@@ -225,12 +225,12 @@ sudo systemctl restart mssql-server
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione è stato descritto come distribuire un cluster Pacemaker per SQL Server in Linux. Si è appreso come a:
+Questa esercitazione ha illustrato come distribuire un cluster Pacemaker per SQL Server in Linux. Si è appreso come:
 > [!div class="checklist"]
-> * Installare il componente aggiuntivo disponibilità elevata e Pacemaker.
-> * Preparare i nodi per Pacemaker (RHEL e soltanto Ubuntu).
+> * Installare il componente aggiuntivo per la disponibilità elevata e installare Pacemaker.
+> * Preparare i nodi per Pacemaker (solo RHEL e Ubuntu).
 > * Creare il cluster Pacemaker.
-> * Installare i pacchetti di SQL Server a disponibilità elevata e SQL Server Agent.
+> * Installare i pacchetti per la disponibilità elevata di SQL Server e SQL Server Agent.
 
 Per creare e configurare un gruppo di disponibilità per SQL Server in Linux, vedere:
 

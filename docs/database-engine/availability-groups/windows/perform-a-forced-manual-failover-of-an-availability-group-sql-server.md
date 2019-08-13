@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014612"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388355"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68014612"
   
 -   È possibile che si verifichi una perdita di dati durante il failover forzato di un gruppo di disponibilità. Inoltre, se la replica primaria è in esecuzione quando si inizia un failover forzato, è possibile che i client siano ancora connessi ai database primari precedenti. Pertanto, è consigliabile forzare il failover solo se la replica primaria non è più in esecuzione e si è disposti a rischiare la perdita di dati per ripristinare l'accesso ai database nel gruppo di disponibilità.  
   
--   Quando un database secondario si trova nello stato REVERTING o INITIALIZING, il failover forzato provocherebbe il mancato avvio del database come database primario. Se il database era nello stato INITIALIZING, sarà necessario applicare i record del log mancanti da un backup del database o ripristinare completamente il database. Se il database era nello stato REVERTING, sarà necessario ripristinare completamente il database dai backup.  
+-   Quando un database secondario si trova nello stato REVERTING o INITIALIZING e viene forzato il failover, il database non si avvia come database primario. Se il database era nello stato INITIALIZING, sarà necessario applicare i record di log mancanti da un backup del database o ripristinare completamente il database da zero. Se il database era nello stato REVERTING, sarà necessario ripristinare completamente il database dai backup.  
   
 -   Un comando di failover viene eseguito non appena la destinazione di failover avrà accettato il comando. Tuttavia, il recupero del database si verifica in modo asincrono dopo che il gruppo di disponibilità ha completato il failover.  
   

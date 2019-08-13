@@ -1,7 +1,7 @@
 ---
-title: Esplora le risorse di SQL di Azure con Azure Resource Explorer
+title: Esplorare le risorse SQL di Azure con Azure Resource Explorer
 titleSuffix: Azure Data Studio
-description: Informazioni su come esplorare e gestire Server SQL di Azure, Database SQL di Azure e istanza gestita SQL Azure tramite Azure Resource Explorer.
+description: Informazioni su come esplorare e gestire server di Azure SQL, database SQL di Azure e Istanza gestita di SQL di Azure tramite Azure Resource Explorer.
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
@@ -10,96 +10,96 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959711"
 ---
-# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire le risorse di SQL di Azure con Azure Resource Explorer
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire risorse SQL di Azure con Azure Resource Explorer
 
-In questo documento descrive come è possibile esplorare e gestire Server SQL di Azure, database SQL di Azure e le risorse di istanza gestita SQL di Azure tramite Azure Resource Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Questo documento illustra come esplorare e gestire risorse server di Azure SQL, database SQL di Azure e Istanza gestita di SQL di Azure tramite Azure Resource Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->Esplora risorse di Azure saranno supportato in fase di anteprima di SQL Server 2019 nel mese di ottobre. Successivamente, è possibile installare l'estensione di anteprima attraverso [Gestione estensioni](extensions.md) o tramite **File** > **Installa pacchetto dal pacchetto VSIX**.
+>Azure Resource Explorer sarà supportato nell'anteprima di SQL Server 2019 di ottobre. Successivamente, sarà possibile installare l'estensione di anteprima tramite il [gestore estensioni](extensions.md) o tramite **File** > **Install Package from VSIX Package** (Installa pacchetto da pacchetto VSIX).
 
 
-## <a name="connect-to-azure"></a>Connect to Azure
+## <a name="connect-to-azure"></a>Connettersi ad Azure
 
-Dopo aver installato il plug-in anteprima SQL, verrà visualizzata un'icona Azure nella barra dei menu a sinistra. Fare clic sull'icona per aprire Esplora risorse di Azure. Se non viene visualizzata l'icona di Azure, fare clic con il pulsante destro della barra dei menu a sinistra e selezionare **Azure Resource Explorer**.
+Dopo aver installato il plug-in di anteprima SQL, sulla barra dei menu a sinistra compare un'icona di Azure. Fare clic sull'icona per aprire Azure Resource Explorer. Se l'icona di Azure non compare, fare clic con il pulsante destro del mouse sulla barra dei menu a sinistra e scegliere **Azure Resource Explorer**.
 
-### <a name="add-an-azure-account"></a>Aggiungere un account di Azure
+### <a name="add-an-azure-account"></a>Aggiungere un account Azure
 
-Per visualizzare le risorse SQL associate agli account Azure, è innanzitutto necessario aggiungere l'account da [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Per visualizzare le risorse SQL associate a un account Azure, è necessario prima di tutto aggiungere l'account a [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
-1. Aprire **account collegati** finestra di dialogo tramite l'icona di gestione di account in basso a sinistra o tramite **accedere ad Azure...**  collegamento in Esplora risorse di Azure.
+1. Aprire la finestra di dialogo **Account collegati** tramite l'icona di gestione account in basso a sinistra o tramite il collegamento **Accedi ad Azure...** in Azure Resource Explorer.
 
     ![Accedi ad Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
-2. Nel **account collegati** finestra di dialogo, fare clic su **aggiungere un account**.
+2. Nella finestra di dialogo **Account collegati** fare clic su **Aggiungi un account**.
 
-    ![Aggiungere un account di Azure](media/azure-resource-explorer/add-an-azure-account.png)
+    ![Aggiungere un account Azure](media/azure-resource-explorer/add-an-azure-account.png)
 
-3. Fare clic su **copiare e aprire** per aprire il browser per l'autenticazione.
+3. Fare clic su **Copia e apri** per aprire il browser per l'autenticazione.
 
-    ![Pagina di autenticazione aperta nel browser](media/azure-resource-explorer/open-authentication-in-browser.png)
+    ![Aprire la pagina di autenticazione nel browser](media/azure-resource-explorer/open-authentication-in-browser.png)
 
-4. Incollare il **codice utente** nella pagina web e fare clic su **continua** per eseguire l'autenticazione.
+4. Incollare il **Codice utente** nella pagina Web e fare clic su **Continua** per eseguire l'autenticazione.
 
-    ![Eseguire l'autenticazione nel browser](media/azure-resource-explorer/authenticate-in-browser.png)
+    ![Autenticazione nel browser](media/azure-resource-explorer/authenticate-in-browser.png)
 
-5. Nelle [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] è necessario individuare usato per l'accesso nell'account di Azure in **account collegati** finestra di dialogo.
+5. A questo punto, in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] l'account Azure connesso dovrebbe comparire nella finestra di dialogo **Account collegati**.
 
-    ![Azure account connesso](media/azure-resource-explorer/signed-in-azure-account.png)
+    ![Account Azure connesso](media/azure-resource-explorer/signed-in-azure-account.png)
 
-### <a name="add-more-azure-accounts"></a>Aggiungere gli account di Azure più
+### <a name="add-more-azure-accounts"></a>Aggiungere altri account Azure
 
-Più account di Azure sono supportati in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. Per aggiungere gli account di Azure più, fare clic sul pulsante nella parte superiore destra del **account collegati** finestra di dialogo e seguire i passaggi con aggiunta una sezione di account di Azure per aggiungere gli account di Azure più.
+In [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] sono supportati più account Azure. Per aggiungere altri account Azure, fare clic sul pulsante in alto a destra nella finestra di dialogo **Account collegati** e seguire la stessa procedura illustrata nella sezione Aggiungere un account Azure per aggiungere altri account.
 
-![Aggiungere account di Azure più](media/azure-resource-explorer/add-more-azure-account.png)
+![Aggiunta di account Azure](media/azure-resource-explorer/add-more-azure-account.png)
 
-### <a name="remove-an-azure-account"></a>Rimuovere un account di Azure
+### <a name="remove-an-azure-account"></a>Rimuovere un account Azure
 
-Per rimuovere un oggetto esistente registrato nell'account di Azure:
+Per rimuovere un account Azure connesso esistente:
 
-1. Aprire **account collegati** dialogo tramite l'icona di gestione di account in basso a sinistra.
-2. Scegliere il **X** pulsante a destra dell'account di Azure per rimuoverlo.
+1. Aprire la finestra di dialogo **Account collegati** tramite l'icona di gestione account in basso a sinistra.
+2. Fare clic sul pulsante **X** a destra dell'account Azure per rimuoverlo.
 
-    ![Rimuovere l'account di Azure](media/azure-resource-explorer/remove-azure-account.png)
+    ![Rimozione di account Azure](media/azure-resource-explorer/remove-azure-account.png)
 
-## <a name="filter-subscription"></a>Sottoscrizione di filtro
+## <a name="filter-subscription"></a>Filtrare la sottoscrizione
 
-Una volta effettuato l'accesso a un account Azure, tutte le sottoscrizioni associate con tale visualizzazione account di Azure in Esplora risorse di Azure. È possibile filtrare le sottoscrizioni per ogni account di Azure.
+Una volta effettuato l'accesso a un account Azure, tutte le sottoscrizioni associate all'account vengono visualizzate in Azure Resource Explorer. È possibile filtrare le sottoscrizioni per ogni account Azure.
 
-1. Scegliere il **Select Subscription** pulsante a destra dell'account di Azure.
+1. Fare clic sul pulsante **Seleziona sottoscrizione** a destra dell'account Azure.
 
-   ![Sottoscrizione di filtro](media/azure-resource-explorer/filter-subscription.png)
+   ![Filtrare la sottoscrizione](media/azure-resource-explorer/filter-subscription.png)
 
-2. Selezionare le caselle di controllo per le sottoscrizioni di account si vuole cercare e quindi fare clic su **OK**.
+2. Selezionare le caselle di controllo per le sottoscrizioni dell'account che si vogliono esplorare e quindi fare clic su **OK**.
 
-   ![Selezionare la sottoscrizione](media/azure-resource-explorer/select-subscription.png)
+   ![Seleziona sottoscrizione](media/azure-resource-explorer/select-subscription.png)
 
-## <a name="explore-azure-sql-resources"></a>Esplora le risorse di SQL di Azure
+## <a name="explore-azure-sql-resources"></a>Esplorare le risorse SQL di Azure
 
-Per spostarsi all'interno di una risorsa di SQL di Azure in Esplora risorse di Azure, espandere gli account Azure e tipo gruppo di risorse.
+Per passare a una risorsa SQL di Azure in Azure Resource Explorer, espandere gli account Azure e il gruppo del tipo di risorsa.
 
-Esplora risorse di Azure supporta attualmente Server SQL di Azure, Database SQL di Azure e istanza gestita SQL di Azure.
+Attualmente Azure Resource Explorer supporta server di Azure SQL, database SQL di Azure e Istanza gestita di SQL di Azure.
 
-## <a name="connect-to-azure-sql-resources"></a>Connettersi alle risorse di SQL di Azure
+## <a name="connect-to-azure-sql-resources"></a>Connettersi a risorse SQL di Azure
 
-Esplora risorse di Azure forniscono un accesso rapido che consente di connettersi a SQL Server e database per la gestione e query. 
+Azure Resource Explorer consente di connettersi rapidamente a database e server SQL per eseguire query e attività di gestione. 
 
-1. Esplorazione della risorsa SQL che si desidera connettersi con la visualizzazione struttura ad albero.
-2. Fare clic con il pulsante destro la risorsa e selezionare **Connect**, è anche possibile trovare il pulsante Connetti a destra della risorsa.
+1. Esplorare la risorsa SQL a cui si vuole eseguire la connessione dalla visualizzazione albero.
+2. Fare clic con il pulsante destro del mouse sulla risorsa e scegliere **Connetti**. Il pulsante Connetti è anche disponibile a destra della risorsa.
 
-   ![Connessione a risorsa di SQL di Azure](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
+   ![Connettersi alla risorsa SQL di Azure](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
 
-3. In aperta **Connection** finestra di dialogo immettere la password e fare clic su **Connect**.
+3. Nella finestra di dialogo **Connessione** aperta immettere la password e fare clic su **Connetti**.
 
-   ![Finestra di dialogo connessione SQL](media/azure-resource-explorer/sql-connection-dialog.png)
-4. Il **server** automaticamente verrà visualizzata la finestra con il nuovo SQL server/database connesso dopo la connessione ha esito positivo.
+   ![Finestra di dialogo della connessione SQL](media/azure-resource-explorer/sql-connection-dialog.png)
+4. Una volta stabilita la connessione, la finestra **Server** si apre automaticamente con il nuovo database/server SQL connesso.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] connettersi ed eseguire query di database SQL di Azure](quickstart-sql-database.md)
-- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query nel database SQL di Azure](quickstart-sql-database.md)
+- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query in Azure SQL Data Warehouse](quickstart-sql-dw.md)

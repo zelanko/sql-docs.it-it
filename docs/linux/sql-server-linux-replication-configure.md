@@ -11,10 +11,10 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67895933"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurare la replica di SQL Server in Linux
@@ -23,28 +23,28 @@ ms.locfileid: "67895933"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce la replica di SQL Server per le istanze di SQL Server in Linux.
 
-Per informazioni dettagliate sulla replica, vedere [documentazione di SQL Server replica](../relational-databases/replication/sql-server-replication.md).
+Per informazioni dettagliate sulla replica, vedere la [documentazione della replica di SQL Server](../relational-databases/replication/sql-server-replication.md).
 
-Configurare la replica in Linux con SQL Server Management Studio (SSMS) o le procedure di Transact-SQL archiviate.
+Configurare la replica in Linux tramite stored procedure di SQL Server Management Studio (SSMS) o Transact-SQL.
 
-* Per usare SQL Server Management Studio, seguire le istruzioni riportate in questo articolo.
+* Per usare SSMS, seguire le istruzioni riportate in questo articolo.
 
-  Usare SSMS in un sistema operativo Windows per connettersi alle istanze di SQL Server. Per e istruzioni, vedere [usare SSMS per gestire SQL Server in Linux](./sql-server-linux-manage-ssms.md).
+  Usare SSMS in un sistema operativo Windows per connettersi a istanze di SQL Server. Per informazioni di background e istruzioni, vedere [Usare SSMS per gestire SQL Server in Linux](./sql-server-linux-manage-ssms.md).
   
-* Per un esempio con le stored procedure, seguire le [replica di configurare SQL Server in Linux](sql-server-linux-replication-tutorial-tsql.md) esercitazione.
+* Per un esempio con stored procedure, seguire l'esercitazione [Configurare la replica di SQL Server in Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Prima di configurare i server di pubblicazione, i server di distribuzione e sottoscrittori, è necessario completare alcuni passaggi di configurazione per l'istanza di SQL Server.
+Prima di configurare i server di pubblicazione, i database di distribuzione e i sottoscrittori, è necessario completare alcuni passaggi di configurazione per l'istanza di SQL Server.
 
-1. Abilitare SQL Server Agent per usare gli agenti di replica. In tutti i server Linux, eseguire i comandi seguenti nel terminale.
+1. Abilitare l'uso degli agenti di replica in SQL Server Agent. Nel terminale di tutti i server Linux eseguire i comandi seguenti.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
   sudo systemctl restart mssql-server
   ```
 
-1. Configurare l'istanza di SQL Server per la replica. Per configurare l'istanza di SQL Server per la replica, eseguire `sys.sp_MSrepl_createdatatypemappings` in tutte le istanze che partecipano alla replica.
+1. Configurare l'istanza di SQL Server per la replica. Per configurare l'istanza di SQL Server per la replica, eseguire `sys.sp_MSrepl_createdatatypemappings` in tutte le istanze interessate dalla replica.
 
   ```sql
   USE msdb
@@ -53,9 +53,9 @@ Prima di configurare i server di pubblicazione, i server di distribuzione e sott
   GO
   ```
 
-1. Creare una cartella snapshot. Gli agenti di SQL Server richiedono una cartella di snapshot di lettura/scrittura in. Creare la cartella snapshot nel server di distribuzione.
+1. Creare una cartella snapshot. Gli agenti SQL Server richiedono una cartella snapshot in cui leggere o scrivere. Creare la cartella snapshot nel server di distribuzione.
 
-  Per creare la cartella snapshot e concedere l'accesso a `mssql` utente, eseguire il comando seguente:
+  Per creare la cartella snapshot e consentirne l'accesso all'utente `mssql`, eseguire il comando seguente:
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -63,38 +63,38 @@ Prima di configurare i server di pubblicazione, i server di distribuzione e sott
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Configurare e monitorare la replica con SQL Server Management Studio (SSMS)
+## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Eseguire la configurazione e il monitoraggio della replica con SQL Server Management Studio (SSMS)
 
 ### <a name="configure-the-distributor"></a>Configurare il server di distribuzione
   
 Per configurare il server di distribuzione: 
 
-1. In SQL Server Management Studio connettersi all'istanza di SQL Server in Esplora oggetti.
+1. In SSMS connettersi all'istanza di SQL Server in Esplora oggetti.
 
-1. Fare doppio clic su **replica**, fare clic su **configurare la distribuzione...** .
+1. Fare clic con il pulsante destro del mouse su **Replica** e scegliere **Configura distribuzione...** .
 
-1. Seguire le istruzioni nel **configurazione guidata distribuzione**.
+1. Seguire le istruzioni della **Configurazione guidata distribuzione**.
 
-### <a name="create-publication-and-articles"></a>Creare pubblicazioni e articoli
+### <a name="create-publication-and-articles"></a>Creare la pubblicazione e gli articoli
 
-Per creare una pubblicazione e degli articoli:
+Per creare la pubblicazione e gli articoli:
 
-1. In Esplora oggetti fare clic su **replica** > **pubblicazioni locali**> **nuova pubblicazione...** .
+1. In Esplora oggetti fare clic su **Replica** > **Pubblicazioni locali**> **Nuova pubblicazione...** .
 
-1. Seguire le istruzioni **Creazione guidata nuova pubblicazione** per configurare il tipo di replica e gli articoli che appartengono alla pubblicazione.
+1. Seguire le istruzioni della **Creazione guidata nuova pubblicazione** per configurare il tipo di replica e gli articoli che appartengono alla pubblicazione.
 
 ### <a name="configure-the-subscription"></a>Configurare la sottoscrizione
 
-Per configurare la sottoscrizione in Esplora oggetti, fare clic su **replica** > **sottoscrizioni locali**> **nuove sottoscrizioni...** .
+Per configurare la sottoscrizione in Esplora oggetti, fare clic su **Replica** > **Sottoscrizioni locali**> **Nuova sottoscrizione...** .
 
-### <a name="monitor-replication-jobs"></a>Monitorare i processi di replica
+### <a name="monitor-replication-jobs"></a>Eseguire il monitoraggio dei processi di replica
 
-Usare Monitoraggio replica per monitorare i processi di replica.
+Usare Monitoraggio replica per eseguire il monitoraggio dei processi di replica.
 
-In Esplora oggetti fare doppio clic su **replica**, fare clic su **Avvia monitoraggio replica**.
+In Esplora oggetti fare clic con il pulsante destro del mouse su **Replica** e fare clic su **Avvia Monitoraggio replica**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Concetti: Replica di SQL Server in Linux](sql-server-linux-replication.md)
+[Concetti: replica di SQL Server in Linux](sql-server-linux-replication.md)
 
-[Stored procedure di replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Stored procedure per la replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).

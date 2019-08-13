@@ -1,5 +1,5 @@
 ---
-title: Creare un join SQL Server in Linux con Active Directory
+title: Aggiungere SQL Server in Linux ad Active Directory
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027346"
 ---
-# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Creare un join SQL Server in un host Linux a un dominio di Active Directory
+# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Aggiungere un host di SQL Server in Linux a un dominio di Active Directory
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo offre indicazioni generiche su come aggiungere un computer host SQL Server su Linux a un dominio di Active Directory (AD). Esistono due metodi: usare un pacchetto SSSD predefinito o i provider di Active Directory di terze parti. Sono esempi di prodotti di terze parti domain join [PowerBroker Identity Services (PBI)](https://www.beyondtrust.com/), [una sola identità](https://www.oneidentity.com/products/authentication-services/), e [Centrify](https://www.centrify.com/). Questa guida include i passaggi per verificare la configurazione di Active Directory. Tuttavia, non si tratta di fornire istruzioni su come aggiungere un computer a un dominio quando si usano le utilità di terze parti.
+Questo articolo fornisce indicazioni generali su come aggiungere un computer host di SQL Server in Linux a un dominio di Active Directory (AD). Sono disponibili due metodi: usare un pacchetto SSSD incorporato o usare provider Active Directory di terze parti. Esempi di prodotti di terze parti per l'aggiunta a un dominio sono [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) e [Centrify](https://www.centrify.com/). Questa guida include i passaggi per verificare la configurazione di Active Directory. Non ha tuttavia lo scopo di fornire istruzioni su come aggiungere un computer a un dominio quando si usano utilità di terze parti.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Prima di configurare l'autenticazione di Active Directory, è necessario configurare un controller di dominio Active Directory, Windows, nella rete. Aggiungere quindi il Server SQL in un host Linux a un dominio di Active Directory.
+Prima di configurare l'autenticazione di Active Directory, è necessario configurare un controller di dominio Active Directory, Windows, nella rete. Aggiungere quindi l'host di SQL Server in Linux a un dominio di Active Directory.
 
 > [!IMPORTANT]
-> La procedura di esempio descritta in questo articolo è per solo come indicazioni. I passaggi effettivi possono variare leggermente nel proprio ambiente in base alla modalità di configurazione dell'ambiente globale. Coinvolgi gli amministratori di sistema e di dominio per l'ambiente per la configurazione specifica, personalizzazione e le operazioni di risoluzione dei problemi.
+> Le procedure di esempio descritte in questo articolo sono puramente indicative. Le procedure effettive possono essere leggermente diverse in base alla configurazione dell'ambiente generale. Coinvolgere gli amministratori di sistema e di dominio dell'ambiente per le attività specifiche di configurazione e personalizzazione e per l'eventuale risoluzione dei problemi.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Controllare la connessione a un controller di dominio
 
-Verificare che sia possibile contattare il controller di dominio con entrambi i nomi brevi e nome completi del dominio:
+Verificare che sia possibile contattare il controller di dominio sia con il nome breve che con quello completo del dominio:
 
 ```bash
 ping contoso
@@ -39,13 +39,13 @@ ping contoso.com
 ```
 
 > [!TIP]
-> Questa esercitazione viene usato **contoso.com** e **CONTOSO.COM** come nomi di dominio e dell'area di autenticazione esempio, rispettivamente. Usa inoltre **DC1. CONTOSO.COM** come nell'esempio il nome di dominio del controller di dominio completo. È necessario sostituire questi nomi con i propri valori.
+> Questa esercitazione usa **contoso.com** e **CONTOSO.COM** rispettivamente come nome di dominio e nome dell'area di autenticazione di esempio. Usa anche **DC1.CONTOSO.COM** come nome di dominio completo di esempio del controller di dominio. È necessario sostituire questi nomi con i valori effettivi.
 
-Se uno di questi controlli nome ha esito negativo, aggiornare l'elenco di ricerca di dominio. Le sezioni seguenti forniscono istruzioni per Ubuntu, Red Hat Enterprise Linux (RHEL) e SUSE Linux Enterprise Server (SLES) rispettivamente.
+Se la verifica di uno di questi nomi non riesce, aggiornare l'elenco di ricerca del dominio. Le sezioni seguenti forniscono istruzioni per Ubuntu, Red Hat Enterprise Linux (RHEL) e SUSE Linux Enterprise Server (SLES) rispettivamente.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Modificare il **/etc/network/interfaces** file, in modo che il dominio di Active Directory è nell'elenco di ricerca di dominio:
+1. Modificare il file **/etc/network/interfaces** in modo che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio:
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,15 +56,15 @@ Se uno di questi controlli nome ha esito negativo, aggiornare l'elenco di ricerc
    ```
 
    > [!NOTE]
-   > L'interfaccia di rete, `eth0`, potrebbero essere diversi per diverse macchine. Per trovare quello in uso, eseguire **ifconfig**. Copiare quindi l'interfaccia con un indirizzo IP e i byte trasmessi e ricevuti.
+   > L'interfaccia di rete, `eth0`, potrebbe essere diversa a seconda del computer. Per individuare quella in uso, eseguire **ifconfig**. Copiare quindi l'interfaccia che ha un indirizzo IP e byte trasmessi e ricevuti.
 
-1. Dopo avere modificato questo file, riavviare il servizio di rete:
+1. Dopo aver modificato il file, riavviare il servizio di rete:
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
-1. Successivamente, verificare che il **/etc/resolv.conf** file contiene una riga simile al seguente:
+1. Verificare quindi che il file **/etc/resolv.conf** contenga una riga come quella nell'esempio seguente:
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -73,7 +73,7 @@ Se uno di questi controlli nome ha esito negativo, aggiornare l'elenco di ricerc
 
 ### <a name="rhel"></a>RHEL
 
-1. Modificare il **/etc/sysconfig/network-scripts/ifcfg-eth0** file, in modo che il dominio di Active Directory è nell'elenco di ricerca di dominio. In alternativa, modificare un altro file di configurazione di interfaccia come appropriato:
+1. Modificare il file **/etc/sysconfig/network-scripts/ifcfg-eth0** in modo che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio. In alternativa, modificare un altro file di configurazione dell'interfaccia nel modo appropriato:
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -81,20 +81,20 @@ Se uno di questi controlli nome ha esito negativo, aggiornare l'elenco di ricerc
    DOMAIN="contoso.com com"
    ```
 
-1. Dopo avere modificato questo file, riavviare il servizio di rete:
+1. Dopo aver modificato il file, riavviare il servizio di rete:
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Verificare ora che il **/etc/resolv.conf** file contiene una riga simile al seguente:
+1. Verificare quindi che il file **/etc/resolv.conf** contenga una riga come quella nell'esempio seguente:
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. Se è comunque possibile effettuare il ping di controller di dominio, trovare il nome di dominio completo e l'indirizzo IP del controller di dominio. È un nome di dominio di esempio **DC1. CONTOSO.COM**. Aggiungere la seguente voce **/e così via/hosts**:
+1. Se non è ancora possibile effettuare il ping del controller di dominio, trovare il nome di dominio completo e l'indirizzo IP del controller di dominio. Un nome di dominio di esempio è **DC1.CONTOSO.COM**. Aggiungere la voce seguente a **/etc/hosts**:
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,43 +102,43 @@ Se uno di questi controlli nome ha esito negativo, aggiornare l'elenco di ricerc
 
 ### <a name="sles"></a>SLES
 
-1. Modificare il **/etc/sysconfig/network/config** file, in modo che l'indirizzo IP controller di dominio Active Directory viene usato per le query DNS e il dominio di Active Directory è nell'elenco di ricerca di dominio:
+1. Modificare il file **/etc/sysconfig/network/config** in modo che l'indirizzo IP del controller di dominio Active Directory venga usato per le query DNS e che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio:
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
    NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
    ```
 
-1. Dopo avere modificato questo file, riavviare il servizio di rete:
+1. Dopo aver modificato il file, riavviare il servizio di rete:
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Successivamente, verificare che il **/etc/resolv.conf** file contiene una riga simile al seguente:
+1. Verificare quindi che il file **/etc/resolv.conf** contenga una riga come quella nell'esempio seguente:
 
    ```/etc/resolv.conf
    search contoso.com com
    nameserver **<AD domain controller IP address>**
    ```
 
-## <a name="join-to-the-ad-domain"></a>Creare un join al dominio di Active Directory
+## <a name="join-to-the-ad-domain"></a>Eseguire l'aggiunta al dominio di Active Directory
 
-Dopo aver verificato la configurazione di base e la connettività con il controller di dominio, sono disponibili due opzioni per la partecipazione a un computer host SQL Server su Linux con controller di dominio Active Directory:
+Una volta verificata la configurazione di base e la connettività con il controller di dominio, sono disponibili due opzioni per l'aggiunta di un computer host di SQL Server in Linux con il controller di dominio Active Directory:
 
 - [Opzione 1: Usare un pacchetto SSSD](#option1)
-- [Opzione 2: Usare le utilità di terze parti openldap provider](#option2)
+- [Opzione 2: Usare le utilità del provider openldap di terze parti](#option2)
 
-### <a id="option1"></a> Opzione 1: Usa il pacchetto SSSD aggiunta al dominio di Active Directory
+### <a id="option1"></a> Opzione 1: Usare il pacchetto SSSD per l'aggiunta a un dominio AD
 
-Questo metodo viene aggiunto l'host di SQL Server a un dominio di Active Directory usando **realmd** e **sssd** pacchetti.
+Questo metodo aggiunge l'host di SQL Server a un dominio di Active Directory usando i pacchetti **realmd** e **sssd**.
 
 > [!NOTE]
-> Questo è il metodo preferito di unione di un host Linux a un controller di dominio Active Directory.
+> È il metodo preferito per l'aggiunta di un host Linux a un controller di dominio AD.
 
-Utilizzare la procedura seguente per aggiungere un host di SQL Server a un dominio di Active Directory:
+Per aggiungere un host di SQL Server a un dominio di Active Directory, seguire questa procedura:
 
-1. Uso [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) per aggiungere il computer host al dominio AD. È innanzitutto necessario installare entrambi i **realmd** e pacchetti client Kerberos nel computer host SQL Server usando Gestione pacchetti della distribuzione Linux:
+1. Usare [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) per aggiungere il computer host al dominio AD. È necessario prima installare i pacchetti client **realmd** e Kerberos nel computer host di SQL Server usando lo strumento di gestione pacchetti della distribuzione Linux:
 
    **RHEL:**
 
@@ -160,27 +160,27 @@ Utilizzare la procedura seguente per aggiungere un host di SQL Server a un domin
 
 1. Se l'installazione del pacchetto client Kerberos richiede un nome dell'area di autenticazione, immettere il nome di dominio in lettere maiuscole.
 
-1. Dopo aver confermato che il DNS sia configurato correttamente, aggiungere il dominio eseguendo il comando seguente. È necessario eseguire l'autenticazione con un account di AD che abbia privilegi sufficienti in Active Directory per aggiungere un nuovo computer al dominio. Questo comando crea un nuovo account computer in Active Directory, il **/etc/krb5.keytab** ospitare file keytab, configura il dominio in **/etc/sssd/sssd.conf**e gli aggiornamenti **/etc/krb5.conf**.
+1. Dopo aver verificato che il DNS sia configurato correttamente, aggiungere il dominio eseguendo il comando seguente. È necessario eseguire l'autenticazione con un account di Active Directory che disponga di privilegi sufficienti in Active Directory per aggiungere un nuovo computer al dominio. Questo comando crea un nuovo account computer in Active Directory, crea il file keytab host **/etc/krb5.keytab**, configura il dominio in **/etc/sssd/sssd.conf** e aggiorna **/etc/krb5.conf**.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    ```
 
-   Verrà visualizzato il messaggio, `Successfully enrolled machine in realm`.
+   Dovrebbe essere visualizzato il messaggio `Successfully enrolled machine in realm`.
 
-   Nella tabella seguente sono elencati alcuni messaggi di errore che si potrebbero ricevere e suggerimenti su come risolverli:
+   La tabella seguente elenca alcuni messaggi di errore che si potrebbero ricevere e suggerimenti per risolverli:
 
-   | Messaggio di errore | Recommendation |
+   | Messaggio di errore | Consiglio |
    |---|---|
-   | `Necessary packages are not installed` | Installare i pacchetti usando Gestione pacchetti della distribuzione Linux prima di eseguire nuovamente il comando di join dell'area di autenticazione. |
-   | `Insufficient permissions to join the domain` | Verificare con un amministratore di dominio che si dispone di autorizzazioni sufficienti per aggiungere macchine Linux al dominio. |
-   | `KDC reply did not match expectations` | Si potrebbe non avere specificato il nome dell'area di autenticazione corrette per l'utente. Nomi dell'area di autenticazione sono tra maiuscole e minuscole, lettere maiuscole in genere e può essere identificati con l'area di comando Individua contoso.com. |
+   | `Necessary packages are not installed` | Installare i pacchetti usando lo strumento di gestione pacchetti della distribuzione Linux prima di eseguire di nuovo il comando realm join. |
+   | `Insufficient permissions to join the domain` | Verificare con un amministratore di dominio di disporre di autorizzazioni sufficienti per aggiungere computer Linux al dominio. |
+   | `KDC reply did not match expectations` | È possibile che non sia stato specificato il nome dell'area di autenticazione corretto per l'utente. I nomi dell'area di autenticazione fanno distinzione tra maiuscole e minuscole, in genere sono in maiuscolo e possono essere identificati con il comando realm discover contoso.com. |
 
-   SQL Server Usa SSSD e NSS per eseguire il mapping di account utente e gruppi di identificatori di sicurezza (SID). SSSD deve essere configurato e in esecuzione per SQL Server creare correttamente gli account di accesso di AD. **realmd** in genere esegue questa operazione automaticamente come parte dell'aggiunta al dominio, ma in alcuni casi, è necessario eseguire queste operazioni separatamente.
+   SQL Server usa SSSD e NSS per il mapping degli account utente e dei gruppi agli ID di sicurezza (SID). SSSD deve essere configurato e in esecuzione affinché SQL Server possa creare correttamente gli account di accesso di Active Directory. **realmd** in genere esegue questa operazione automaticamente nell'ambito dell'aggiunta del dominio, ma in alcuni casi è necessario eseguirla separatamente.
 
-   Per altre informazioni, vedere come [configurare manualmente SSSD](https://access.redhat.com/articles/3023951), e [configurare NSS per lavorare con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Per altre informazioni, vedere gli articoli che spiegano come [configurare SSSD manualmente](https://access.redhat.com/articles/3023951) e come [configurare NSS per l'uso con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
-1. Verificare che ora è possibile raccogliere informazioni relative a un utente dal dominio e che è possibile acquisire un ticket Kerberos come tale utente. L'esempio seguente usa **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), e [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) comandi per questo oggetto.
+1. Verificare che sia ora possibile raccogliere informazioni su un utente dal dominio e che sia possibile acquisire un ticket Kerberos come tale utente. A questo scopo, l'esempio seguente usa i comandi **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) e [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html).
 
    ```bash
    id user@contoso.com
@@ -197,22 +197,22 @@ Utilizzare la procedura seguente per aggiungere un host di SQL Server a un domin
    ```
 
    > [!NOTE]
-   > - Se **id user@contoso.com**  , restituisce `No such user`, verificare che il servizio SSSD avviato correttamente eseguendo il comando `sudo systemctl status sssd`. Se il servizio è in esecuzione e viene comunque visualizzato l'errore, provare ad abilitare la registrazione dettagliata per SSSD. Per altre informazioni, vedere la documentazione di Red Hat per [risoluzione dei problemi SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Se **id user@contoso.com** restituisce `No such user`, verificare che il servizio SSSD sia stato avviato correttamente eseguendo il comando `sudo systemctl status sssd`. Se il servizio è in esecuzione e viene ancora visualizzato l'errore, provare ad abilitare la registrazione dettagliata per SSSD. Per altre informazioni, vedere la documentazione di Red Hat relativa alla [risoluzione dei problemi di SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Se **kinit user@CONTOSO.COM**  restituisce un risultato, `KDC reply did not match expectations while getting initial credentials`, verificare che l'area di autenticazione è specificato in maiuscolo.
+   > - Se **kinit user@CONTOSO.COM** restituisce `KDC reply did not match expectations while getting initial credentials`, verificare di avere specificato il nome dell'area di autenticazione in maiuscolo.
 
-Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggiunta di domini di identità](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
+Per altre informazioni, vedere la documentazione di Red Hat relativa all'[individuazione e aggiunta di domini di identità](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Opzione 2: Usare le utilità di terze parti openldap provider
+### <a id="option2"></a> Opzione 2: Usare le utilità del provider openldap di terze parti
 
-È possibile usare le utilità di terze parti, ad esempio [PBI](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), o [Centrify](https://www.centrify.com/). Questo articolo illustra i passaggi per ogni singola utilità. È innanzitutto necessario utilizzare una di queste utilità per aggiungere l'host di Linux per SQL Server al dominio prima di continuare in avanti.  
+È possibile usare utilità di terze parti come [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) o [Centrify](https://www.centrify.com/). Questo articolo non include le procedure per ogni singola utilità. Prima di procedere, è necessario usare una di queste utilità per aggiungere l'host Linux per SQL Server al dominio.  
 
-Per tutte le query relative AD SQL Server non Usa codice dell'integratore di sistemi di terze parti o una raccolta. SQL Server esegue sempre una query AD usando chiamate alla libreria openldap direttamente in questa configurazione. Gli integratori di terze parti possono essere usati solo per aggiungere l'host Linux al dominio Active Directory e SQL Server non dispone di qualsiasi comunicazione diretta con queste utilità.
+SQL Server non usa codice o librerie di integratori di terze parti per le query correlate ad Active Directory. Esegue sempre le query su Active Directory tramite chiamate alla libreria openldap direttamente in questa configurazione. Gli integratori di terze parti vengono usati solo per aggiungere l'host Linux al dominio di Active Directory e SQL Server non ha alcuna comunicazione diretta con queste utilità.
 
 > [!IMPORTANT]
-> Vedere le indicazioni per l'uso di **mssql-conf** `network.disablesssd` opzione di configurazione nel **ulteriori opzioni di configurazione** sezione dell'articolo [usare Active L'autenticazione di directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> Vedere i consigli per l'uso dell'opzione di configurazione **mssql-conf** `network.disablesssd` nella sezione **Opzioni di configurazione aggiuntive** dell'articolo [Usare l'autenticazione di Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
 
-Verificare che il **/etc/krb5.conf** sia configurato correttamente. Per la maggior parte dei provider di Active Directory di terze parti, questa configurazione viene eseguita automaticamente. Tuttavia, controllare **/etc/krb5.conf** per i valori seguenti evitare eventuali problemi futuri:
+Verificare che **/etc/krb5.conf** sia configurato correttamente. Per la maggior parte dei provider di Active Directory di terze parti, questa configurazione viene eseguita automaticamente. Tuttavia, per evitare eventuali problemi futuri, verificare se in **/etc/krb5.conf** sono presenti i valori seguenti:
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -227,16 +227,16 @@ contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
 
-## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Verificare che il DNS inverso è configurato correttamente
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Verificare che il DNS inverso sia configurato correttamente
 
-Questo comando deve restituire il nome di dominio completo (FQDN) dell'host che esegue SQL Server. Ad esempio **SqlHost.contoso.com**.
+Il comando seguente deve restituire il nome di dominio completo (FQDN) dell'host che esegue SQL Server. Un esempio è **SqlHost.contoso.com**.
 
 ```bash
 host **<IP address of SQL Server host>**
 ```
 
-L'output di questo comando dovrebbe essere simile a `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Se questo comando non restituisce il nome di dominio completo dell'host, o se il nome FQDN non è corretto, aggiungere una voce DNS inversa per il Server SQL in un host Linux al server DNS.
+L'output di questo comando dovrebbe essere simile a `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Se il comando non restituisce il nome di dominio completo dell'host o se il nome di dominio completo non è corretto, aggiungere una voce di DNS inverso per l'host di SQL Server in Linux al server DNS.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Questo articolo illustra i prerequisiti di configurazione di un Server SQL in un computer host di Linux con l'autenticazione di Active Directory. Per completare la configurazione di SQL Server in Linux per supportare gli account di Active Directory, seguire le istruzioni in [autenticazione Usa Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md).
+Questo articolo ha illustrato i prerequisiti per la configurazione di un computer host di SQL Server in Linux con l'autenticazione di Active Directory. Per completare la configurazione di SQL Server in Linux per il supporto degli account Active Directory, seguire le istruzioni in [Usare l'autenticazione di Azure Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md).

@@ -1,20 +1,19 @@
 ---
-title: Installare PolyBase in Linux | Microsoft Docs
-description: Questo articolo descrive come installare la ricerca full-text di SQL Server in Linux.
+title: Installare PolyBase in Linux
+titlesuffix: SQL Server
+description: Questo articolo descrive come installare PolyBase di SQL Server in Linux.
 author: aboke
 ms.author: aboke
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062138"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495359"
 ---
 # <a name="install-polybase-on-linux"></a>Installare PolyBase in Linux
 
@@ -154,8 +153,6 @@ sudo systemctl restart mssql-server
 >Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
 ## <a name="next-steps"></a>Passaggi successivi
-
-### <a name="supported-external-data-sources-on-linux"></a>Origini dati esterne supportate in Linux
 
 PolyBase in Linux può accedere alle origini dati seguenti. Vedere i collegamenti forniti per altre informazioni su come creare una tabella esterna da queste origini quando PolyBase è abilitato. 
 

@@ -1,7 +1,7 @@
 ---
-title: Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
+title: Configurare un gruppo di disponibilità di SQL Server con scalabilità in lettura in Linux
 titleSuffix: SQL Server
-description: Informazioni sulla configurazione di un SQL Server Always nel gruppo di disponibilità (AG) per i carichi di lavoro di scalabilità in lettura in Linux.
+description: Informazioni sulla configurazione di un gruppo di disponibilità Always On di SQL Server per i carichi di lavoro con scalabilità in lettura in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027265"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità di SQL Server con scalabilità in lettura in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-È possibile configurare un SQL Server Always nel gruppo di disponibilità (AG) per i carichi di lavoro di scalabilità in lettura in Linux. Esistono due tipi di architetture per i gruppi di disponibilità. Un'architettura per la disponibilità elevata utilizza una gestione di cluster per assicurare la continuità aziendale migliorata. Questa architettura può includere anche le repliche con scalabilità in lettura. Per creare l'architettura a disponibilità elevata, vedere [configurare SQL Server gruppo di disponibilità AlwaysOn per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'altra architettura supporta solo i carichi di lavoro di scalabilità in lettura. Questo articolo illustra come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di scalabilità in lettura. Questa architettura fornisce solo la scalabilità in lettura. Non fornisce la disponibilità elevata.
+È possibile configurare un gruppo di disponibilità Always On SQL Server per i carichi di lavoro con scalabilità in lettura in Linux. Esistono due tipi di architetture per i gruppi di disponibilità. L'architettura per la disponibilità elevata usa un modulo di gestione cluster per garantire la continuità operativa in modo più efficace. Questa architettura può includere anche repliche con scalabilità in lettura. Per creare un'architettura per la disponibilità elevata, vedere [Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'altra architettura supporta solo i carichi di lavoro di scalabilità in lettura. Questo articolo illustra come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di scalabilità in lettura. Questa architettura fornisce solo la scalabilità in lettura. Non fornisce la disponibilità elevata.
 
 > [!NOTE]
 > Un gruppo di disponibilità con `CLUSTER_TYPE = NONE` può includere repliche ospitate in diverse piattaforme del sistema operativo. Non può tuttavia supportare la disponibilità elevata. 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-Questo gruppo di disponibilità non è una configurazione a disponibilità elevata. Se occorre una disponibilità elevata, seguire le istruzioni in [configurare un gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md). In particolare, creazione del gruppo di disponibilità con `CLUSTER_TYPE=WSFC` (in Windows) o `CLUSTER_TYPE=EXTERNAL` (in Linux). Quindi integrato con un gestore del cluster usando uno di Windows Server failover clustering in Windows o Pacemaker in Linux.
+Questo gruppo di disponibilità non è una configurazione a disponibilità elevata. Se la disponibilità elevata è necessaria, seguire le istruzioni in [Configurare un gruppo di disponibilità Always On per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md). In particolare, creare il gruppo di disponibilità con `CLUSTER_TYPE=WSFC` (in Windows) o `CLUSTER_TYPE=EXTERNAL` (in Linux). Integrare quindi un modulo di gestione cluster (Windows Server Failover Clustering in Windows o Pacemaker in Linux).
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>Eseguire la connessione a repliche secondarie di sola lettura
 

@@ -1,5 +1,5 @@
 ---
-title: Installazione di ricerca Full-Text SQL Server in Linux
+title: Installare la ricerca full-text di SQL Server in Linux
 description: Questo articolo descrive come installare la ricerca full-text di SQL Server in Linux.
 author: VanMSFT
 ms.author: vanto
@@ -9,22 +9,22 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065088"
 ---
-# <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
+# <a name="install-sql-server-full-text-search-on-linux"></a>Installare la ricerca full-text di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-La procedura seguente installa [ricerca Full-Text di SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) in Linux. Ricerca full-Text consente di eseguire query full-text su dati di tipo carattere in tabelle di SQL Server. Per problemi noti per questa versione, vedere la [note sulla versione](sql-server-linux-release-notes.md).
+I passaggi seguenti installano la [ricerca full-text di SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) in Linux. La ricerca full-text consente di eseguire query full-text su dati di tipo carattere in tabelle di SQL Server. Per i problemi noti di questa versione, vedere le [note sulla versione](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Prima di installare ricerca Full-Text di SQL Server, prima di tutto [installare SQL Server](sql-server-linux-setup.md#platforms). Ciò consente di configurare le chiavi e i repository che usano quando si installa il **mssql-server-fts** pacchetto.
+> Prima di installare la ricerca full-text di SQL Server, [installare SQL Server](sql-server-linux-setup.md#platforms). In questo modo verranno configurati le chiavi e i repository usati durante l'installazione del pacchetto **mssql-server-fts**.
 
-Installare ricerca Full-Text di SQL Server per la tua piattaforma:
+Installare la ricerca full-text di SQL Server per la piattaforma in uso:
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
@@ -32,71 +32,71 @@ Installare ricerca Full-Text di SQL Server per la tua piattaforma:
 
 ## <a name="RHEL">Eseguire l'installazione in RHEL</a>
 
-Usare i comandi seguenti per installare il **mssql-server-fts** in Red Hat Enterprise Linux. 
+Usare i comandi seguenti per installare **mssql-server-fts** in Red Hat Enterprise Linux. 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-Se hai già **mssql-server-fts** installato, è possibile aggiornare alla versione più recente con i comandi seguenti:
+Se il pacchetto **mssql-server-fts** è già installato, è possibile eseguire l'aggiornamento all'ultima versione con i comandi seguenti:
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto della ricerca full-text nelle [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Eseguire l'installazione in Ubuntu</a>
 
-Usare i comandi seguenti per installare il **mssql-server-fts** in Ubuntu. 
+Usare i comandi seguenti per installare **mssql-server-fts** in Ubuntu. 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-Se hai già **mssql-server-fts** installato, è possibile aggiornare alla versione più recente con i comandi seguenti:
+Se il pacchetto **mssql-server-fts** è già installato, è possibile eseguire l'aggiornamento all'ultima versione con i comandi seguenti:
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto della ricerca full-text nelle [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Eseguire l'installazione in SLES</a>
 
-Usare i comandi seguenti per installare il **mssql-server-fts** su SUSE Linux Enterprise Server. 
+Usare i comandi seguenti per installare **mssql-server-fts** in SUSE Linux Enterprise Server. 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-Se hai già **mssql-server-fts** installato, è possibile aggiornare alla versione più recente con i comandi seguenti:
+Se il pacchetto **mssql-server-fts** è già installato, è possibile eseguire l'aggiornamento all'ultima versione con i comandi seguenti:
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto della ricerca full-text nelle [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Lingue supportate
 
-Ricerca full-Text utilizza [word breaker](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) che determinano come identificare le singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Con SQL Server vengono installati i Word breaker per le lingue seguenti:
+La ricerca full-text usa [word breaker](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) per stabilire come identificare le parole singole in base alla lingua. Per ottenere un elenco di word breaker registrati, è possibile eseguire una query sulla vista del catalogo **sys.fulltext_languages**. Con SQL Server vengono installati i word breaker per le lingue seguenti:
 
-| Linguaggio | ID della lingua |
+| Linguaggio | ID lingua |
 |---|---|
 | Lingua neutra | 0 |
 | Arabo | 1025 |
-| Bengali (India) | 1093 |
+| Bengalese (India) | 1093 |
 | Bokmål | 1044 |
 | Portoghese (Brasile) | 1046 |
 | Inglese (Regno Unito) | 2057 |
 | Bulgaro | 1026 |
 | Catalano | 1027 |
-| Cinese (RAS di Hong Kong, Repubblica popolare cinese) | 3076 |
+| Cinese (Hong Kong - R.A.S., Repubblica popolare cinese) | 3076 |
 | Cinese (RAS di Macao) | 5124 |
 | Cinese (Singapore) | 4100 |
 | Croato | 1050 |
@@ -144,65 +144,65 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 
 ## <a id="filters"></a> Filtri
 
-Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, è necessario un filtro installato per elaborare il file. Per altre informazioni sui filtri, vedere [configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
+La ricerca full-text funziona anche con testo archiviato all'interno di file binari. In questo caso, tuttavia, per elaborare il file è necessario installare un filtro. Per altre informazioni sui filtri, vedere [Configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'** . Per SQL Server, vengono installati i filtri seguenti:
+È possibile visualizzare l'elenco dei filtri installati chiamando **sp_help_fulltext_system_components 'filter'** . Per SQL Server vengono installati i filtri seguenti:
 
-| Nome componente | ID classe | Version |
+| Nome componente | ID classe | Versione |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|. asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.asc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.asp | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|ASX | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.bas | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cls | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|. cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione DSW | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.HHC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.hta | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|. HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|HTX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.html | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.ics | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.idl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|INF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.jav | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -212,42 +212,42 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |Con estensione odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.odl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.PRC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.pl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.prc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.rc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.rc2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|. reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rgs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.SOL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.sol | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.udt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.url | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|estensione vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vsscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -256,11 +256,11 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Ricerca semantica
-[Ricerca semantica](../relational-databases/search/semantic-search-sql-server.md) si basa sulla funzionalità di ricerca Full-Text per estrarre e indicizzare statisticamente pertinenti *frasi chiave*. In questo modo è possibile eseguire una query il significato all'interno dei documenti nel database. È anche utile per identificare documenti simili.
+La [ricerca semantica](../relational-databases/search/semantic-search-sql-server.md) si basa sulla funzionalità di ricerca full-text per estrarre e indicizzare *frasi chiave* statisticamente pertinenti. In questo modo è possibile eseguire query di significati all'interno dei documenti nel database, nonché identificare documenti simili.
 
-Per usare la ricerca semantica, è necessario innanzitutto ripristinare il database Semantic Language Statistics nel computer.
+Per usare la ricerca semantica, è prima necessario ripristinare il database Semantic Language Statistics nel computer.
 
-1. Usare uno strumento, ad esempio [sqlcmd](sql-server-linux-setup-tools.md), per eseguire il comando Transact-SQL seguente nell'istanza di Linux di SQL Server. Questo comando Ripristina il database di statistiche lingua.
+1. Tramite uno strumento quale [sqlcmd](sql-server-linux-setup-tools.md) eseguire il comando Transact-SQL seguente nell'istanza di SQL Server in Linux. Questo comando ripristina il database Semantic Language Statistics.
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -271,9 +271,9 @@ Per usare la ricerca semantica, è necessario innanzitutto ripristinare il datab
    ```
 
    > [!NOTE]
-   > Se necessario, aggiornare i percorsi nel comando RESTORE precedente in modo che la configurazione.
+   > Se necessario, aggiornare i percorsi nel comando RESTORE precedente per adattarli alla configurazione in uso.
 
-1. Eseguire il comando Transact-SQL seguente per registrare il database di statistiche lingua semantica.
+1. Eseguire il comando Transact-SQL seguente per registrare il database Semantic Language Statistics.
 
     ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
@@ -282,4 +282,4 @@ Per usare la ricerca semantica, è necessario innanzitutto ripristinare il datab
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per informazioni sulla ricerca Full-Text, vedere [ricerca Full-Text di SQL Server](../relational-databases/search/full-text-search.md). 
+Per informazioni sulla ricerca full-text, vedere [Ricerca full-text di SQL Server](../relational-databases/search/full-text-search.md). 

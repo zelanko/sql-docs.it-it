@@ -11,10 +11,10 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065187"
 ---
 # <a name="sql-server-replication-on-linux"></a>Replica di SQL Server in Linux
@@ -23,23 +23,23 @@ ms.locfileid: "68065187"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce la replica di SQL Server per le istanze di SQL Server in Linux.
 
-Configurare la replica in Linux con SQL Server Management Studio (SSMS) [stored procedure di replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+Configurare la replica in Linux con le [stored procedure di replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) di SQL Server Management Studio (SSMS).
 
-Può far parte di un'istanza di SQL Server in qualsiasi ruolo replica:
+Un'istanza di SQL Server può far parte di qualsiasi ruolo di replica:
 
 * Server di pubblicazione
 * Database di distribuzione
 * Sottoscrittore
 
-Uno schema di replica può combinarsi e corrispondere piattaforme del sistema operativo. Ad esempio, uno schema di replica può includere un'istanza di SQL Server in Linux per server di pubblicazione e server di distribuzione e sottoscrittori sono istanze di SQL Server in Windows, nonché di Linux.
+Uno schema di replica può combinare diverse piattaforme di sistema operativo. Uno schema di replica può ad esempio includere un'istanza di SQL Server in Linux per il server di pubblicazione e il database di distribuzione e i sottoscrittori possono includere istanze di SQL Server in Windows e in Linux.
 
-Istanze di SQL Server in Linux possono partecipare a un tipo di replica.
+Le istanze di SQL Server in Linux possono far parte di qualsiasi tipo di replica.
 
 * Transazionale
 * Merge
 * Snapshot
 
-Per informazioni dettagliate sulla replica, vedere [documentazione di SQL Server replica](../relational-databases/replication/sql-server-replication.md).
+Per informazioni dettagliate sulla replica, vedere la [documentazione della replica di SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="supported-features"></a>Caratteristiche supportate
 
@@ -48,9 +48,9 @@ Per [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] sono supportate le f
 * Replica snapshot
 * Replica transazionale
 * Replica di tipo merge
-* Replica peer-to-Peer
+* Replica peer-to-peer
 * Replica con porte non predefinite <!--Add link to explanation-->
-* Replica con l'autenticazione di AD
+* Replica con autenticazione AD
 * Configurazioni di replica in Windows e Linux
 * Aggiornamenti immediati per la replica transazionale
 
@@ -58,11 +58,11 @@ Per [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] sono supportate le f
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] non supporta le funzionalità seguenti:
 
-* Sottoscrittori di aggiornamento immediato
+* Sottoscrittori di aggiornamenti immediati
 * Pubblicazione Oracle
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Configurare la replica di SQL Server in Linux](sql-server-linux-replication-tutorial-tsql.md)
 
-[Esempio: Configurare la replica di SQL Server in Linux](sql-server-linux-replication-configure.md)
+[Esempio: configurare la replica di SQL Server in Linux](sql-server-linux-replication-configure.md)

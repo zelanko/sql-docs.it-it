@@ -1,6 +1,6 @@
 ---
 title: Configurare la replica di SQL Server in Linux
-description: Questa esercitazione illustra come configurare la replica snapshot SQL Server in Linux.
+description: Questa esercitazione illustra come configurare la replica snapshot di SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130114"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configurare la replica con T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In questa esercitazione si configurerà la replica snapshot SQL Server in Linux con due istanze di SQL Server usando Transact-SQL. Server di pubblicazione e server di distribuzione sarà la stessa istanza, e il sottoscrittore sarà in un'istanza separata.
+In questa esercitazione verrà configurata la replica snapshot di SQL Server in Linux con due istanze di SQL Server tramite Transact-SQL. Il server di pubblicazione e il server di distribuzione si troveranno nella stessa istanza e il sottoscrittore si troverà in un'istanza separata.
 
 > [!div class="checklist"]
-> * Abilitare gli agenti di replica di SQL Server in Linux
+> * Abilitare agenti di replica di SQL Server in Linux
 > * Creare un database di esempio
 > * Configurare la cartella snapshot per l'accesso degli agenti di SQL Server
 > * Configurare il server di distribuzione
 > * Configurare il server di pubblicazione
-> * Configurare pubblicazioni e articoli
-> * Configurare server di sottoscrizione 
+> * Configurare la pubblicazione e gli articoli
+> * Configurare il sottoscrittore 
 > * Eseguire i processi di replica
 
 Tutte le configurazioni di replica possono essere configurate con [stored procedure di replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-## <a name="prerequisites"></a>Prerequisiti  
-Per completare questa esercitazione, è necessario:
+## <a name="prerequisites"></a>Prerequisites  
+Per completare questa esercitazione è necessario quanto segue:
 
 - Due istanze di SQL Server con la versione più recente di SQL Server in Linux
-- Uno strumento per eseguire T-SQL Query per impostare la replica, ad esempio SQLCMD o SQL Server Management Studio
+- Uno strumento per eseguire query T-SQL per la configurazione della replica, ad esempio SQLCMD o SSMS
 
-  Visualizzare [usare SSMS per gestire SQL Server in Linux](./sql-server-linux-manage-ssms.md).
+  Vedere [Usare SSMS per gestire SQL Server in Linux](./sql-server-linux-manage-ssms.md).
 
 ## <a name="detailed-steps"></a>Passaggi dettagliati
 
-1. Abilitare gli agenti di replica di SQL Server in Linux abilitare SQL Server Agent per usare gli agenti di replica. In entrambi i computer host, eseguire i comandi seguenti nel terminale. 
+1. Abilitare gli agenti di replica di SQL Server in Linux. Abilitare SQL Server Agent per l'uso degli agenti di replica. Nel terminale di entrambi i computer host eseguire i comandi seguenti. 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. Creare Database di esempio e un tabella nel server di pubblicazione creare un database di esempio e una tabella che verrà utilizzato come gli articoli per una pubblicazione.
+1. Creare un database e una tabella di esempio. Nel server di pubblicazione creare una tabella e un database di esempio che fungeranno da articoli per una pubblicazione.
 
   ```sql
   CREATE DATABASE Sales
@@ -63,14 +63,14 @@ Per completare questa esercitazione, è necessario:
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  L'altra istanza di SQL Server, nel Sottoscrittore, creare il database per ricevere gli articoli.
+  Nell'altra istanza di SQL Server, il sottoscrittore, creare il database per la ricezione degli articoli.
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. Creare la cartella Snapshot per agenti di SQL Server su lettura/scrittura nel server di distribuzione, creare la cartella snapshot e concedere l'accesso all'utente 'mssql' 
+1. Creare la cartella snapshot per la lettura/scrittura da parte degli agenti di SQL Server. Nel server di distribuzione creare la cartella snapshot e concedere l'accesso all'utente 'mssql' 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ Per completare questa esercitazione, è necessario:
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. Configurare server di distribuzione In questo esempio, il server di pubblicazione sarà anche il server di distribuzione. Eseguire i comandi seguenti nel server di pubblicazione per configurare l'istanza per la distribuzione oltre.
+1. Configurare il server di distribuzione. In questo esempio il server di pubblicazione fungerà anche da server di distribuzione. Eseguire i comandi seguenti nel server di pubblicazione per configurare l'istanza anche per la distribuzione.
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ Per completare questa esercitazione, è necessario:
   GO
   ```
 
-1. Configurare server di pubblicazione eseguire i comandi TSQL seguenti nel server di pubblicazione.
+1. Configurare il server di pubblicazione. Eseguire i comandi T-SQL seguenti nel server di pubblicazione.
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ Per completare questa esercitazione, è necessario:
   GO
   ```
 
-1. Configurare i seguenti comandi TSQL di esecuzione del processo di pubblicazione nel server di pubblicazione.
+1. Configurare il processo di pubblicazione. Eseguire i comandi T-SQL seguenti nel server di pubblicazione.
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ Per completare questa esercitazione, è necessario:
   @publisher_password = @publisherpassword
   ```
 
-1. Creare articoli dalla tabella relativa alle vendite eseguire i comandi TSQL seguenti nel server di pubblicazione.
+1. Creare gli articoli dalla tabella Sales. Eseguire i comandi T-SQL seguenti nel server di pubblicazione.
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ Per completare questa esercitazione, è necessario:
   @vertical_partition = N'false'
   ```
 
-1. Configura sottoscrizione eseguire i comandi TSQL seguenti nel server di pubblicazione.
+1. Configurare la sottoscrizione. Eseguire i comandi T-SQL seguenti nel server di pubblicazione.
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -238,7 +238,7 @@ Per completare questa esercitazione, è necessario:
   GO
   ```
 
-1. Eseguire processi dell'agente di replica
+1. Eseguire i processi dell'agente di replica
 
   Eseguire la query seguente per ottenere un elenco di processi:
 
@@ -246,7 +246,7 @@ Per completare questa esercitazione, è necessario:
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  Eseguire il processo di replica Snapshot per generare lo snapshot:
+  Eseguire il processo di replica snapshot per generare lo snapshot:
 
   ```sql
   USE msdb;  
@@ -255,7 +255,7 @@ Per completare questa esercitazione, è necessario:
   GO
   ```
 
-  Eseguire il processo di replica Snapshot per generare lo snapshot:
+  Eseguire il processo di replica snapshot per generare lo snapshot:
 
   ```sql
   USE msdb;  
@@ -264,32 +264,32 @@ Per completare questa esercitazione, è necessario:
   GO
   ```
 
-1. Sottoscrittore di connettersi ed eseguire query su dati replicati 
+1. Connettere il sottoscrittore ed eseguire query sui dati replicati 
 
-  Nel Sottoscrittore, verificare che la replica sta eseguendo la query seguente:
+  Nel sottoscrittore verificare che la replica funzioni eseguendo la query seguente:
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-In questa esercitazione è stato configurato la replica snapshot SQL Server in Linux con due istanze di SQL Server usando Transact-SQL.
+In questa esercitazione è stata configurata la replica snapshot di SQL Server in Linux con due istanze di SQL Server tramite Transact-SQL.
 
 > [!div class="checklist"]
-> * Abilitare gli agenti di replica di SQL Server in Linux
+> * Abilitare agenti di replica di SQL Server in Linux
 > * Creare un database di esempio
 > * Configurare la cartella snapshot per l'accesso degli agenti di SQL Server
 > * Configurare il server di distribuzione
 > * Configurare il server di pubblicazione
-> * Configurare pubblicazioni e articoli
-> * Configurare server di sottoscrizione 
+> * Configurare la pubblicazione e gli articoli
+> * Configurare il sottoscrittore 
 > * Eseguire i processi di replica
 
 ## <a name="see-also"></a>Vedere anche
 
-Per informazioni dettagliate sulla replica, vedere [documentazione di SQL Server replica](../relational-databases/replication/sql-server-replication.md).
+Per informazioni dettagliate sulla replica, vedere la [documentazione della replica di SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Concetti: Replica di SQL Server in Linux](sql-server-linux-replication.md)
+[Concetti: replica di SQL Server in Linux](sql-server-linux-replication.md)
 
-[Stored procedure di replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Stored procedure per la replica](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).

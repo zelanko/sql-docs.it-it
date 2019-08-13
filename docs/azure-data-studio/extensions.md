@@ -1,7 +1,7 @@
 ---
-title: Aggiungere le estensioni
+title: Aggiungere estensioni
 titleSuffix: Azure Data Studio
-description: Aggiungere le estensioni dal Marketplace delle estensioni a Data Studio di Azure
+description: Aggiungere estensioni ad Azure Data Studio dal Marketplace di estensioni
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,29 +11,29 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: db2350b24addde1d263e7cb396f7b69818870b37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959586"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Estendere le funzionalità di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Estendere le funzionali di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Le estensioni in [!INCLUDE[name-sos](../includes/name-sos-short.md)] forniscono un modo semplice per aggiungere ulteriori funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
+Le estensioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)] consentono di aggiungere facilmente nuove funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
 
-Le estensioni sono fornite dal team di Studio di Azure Data (Microsoft), nonché la community di terze parti 3rd (l'utente). Per informazioni dettagliate sulla creazione di estensioni, vedere [Extension authoring](extension-authoring.md).
+Le estensioni vengono fornite sia dal team di Azure Data Studio (Microsoft) sia dalla community di terze parti. Per informazioni dettagliate sulla creazione di estensioni, vedere [Creazione di estensioni](extension-authoring.md).
 
 
-## <a name="add-azure-data-studio-extensions"></a>Aggiungere le estensioni di Azure Data Studio
+## <a name="add-azure-data-studio-extensions"></a>Aggiungere estensioni ad Azure Data Studio
 
-1. Per aprire la gestione delle estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni o scegliere **Estensioni** dal menu **Visualizza**.
-2. Selezionare un'estensione disponibile per visualizzare i dettagli.
+1. Per aprire Gestione estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni oppure l'opzione **Estensioni** dal menu **Visualizza**.
+2. Selezionare un'estensione disponibile per visualizzarne i dettagli.
 
    ![Gestione estensioni](media/extensions/extension-manager.png)
 
-3. Selezionare l'estensione desiderata e scegliere **Installa**.
-4. Selezionare **Ricarica** per abilitare l'estensione (richiesto solo la prima volta in cui l'estensione viene installata).
-5. Passare al dashboard di gestione facendo clic con il tasto destro del mouse sul server o sul database e selezionando **Gestisci**.
+3. Selezionare l'estensione desiderata e **installarla**.
+4. Selezionare **Ricarica** per abilitare l'estensione (necessario solo la prima volta che si installa un'estensione).
+5. Passare al dashboard di gestione facendo clic con il pulsante destro del mouse sul server o sul database in uso e scegliendo quindi **Gestisci**.
 6. Le estensioni installate vengono visualizzate come schede nel dashboard di gestione:
 
    ![Gestione estensioni](media/extensions/dashboard-extensions.png)

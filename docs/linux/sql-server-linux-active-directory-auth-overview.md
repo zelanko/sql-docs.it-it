@@ -1,5 +1,5 @@
 ---
-title: Autenticazione di Active Directory per SQL Server in Linux
+title: Autenticazione di Azure Active Directory per SQL Server in Linux
 titleSuffix: SQL Server
 description: Questo articolo offre una panoramica dell'autenticazione di Active Directory per SQL Server in Linux.
 ms.date: 04/01/2019
@@ -12,47 +12,47 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67834418"
 ---
-# <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticazione di Active Directory per SQL Server in Linux
+# <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticazione di Azure Active Directory per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo offre una panoramica dell'autenticazione di Active Directory (AD) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. L'autenticazione di Active Directory è detta anche autenticazione integrata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+Questo articolo offre una panoramica dell'autenticazione di Active Directory (AD) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. L'autenticazione di AD in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è nota anche come autenticazione integrata. 
 
-## <a name="ad-authentication-overview"></a>Panoramica dell'autenticazione AD
+## <a name="ad-authentication-overview"></a>Panoramica dell'autenticazione di AD
 
-L'autenticazione di AD consente ai client aggiunti a un dominio in Windows o Linux per l'autenticazione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando le credenziali di dominio e il protocollo Kerberos.
+L'autenticazione di AD consente ai client aggiunti a un dominio in Windows o Linux di eseguire l'autenticazione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando le proprie credenziali di dominio e il protocollo Kerberos.
 
-L'autenticazione AD offre i vantaggi seguenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione:
+Rispetto all'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'autenticazione di AD presenta i vantaggi seguenti:
 
-- Gli utenti di eseguire l'autenticazione tramite single sign-on, senza che venga richiesta una password.   
-- Tramite la creazione di account di accesso per gruppi di Active Directory, è possibile gestire l'accesso e autorizzazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'appartenenza a gruppi di Active Directory.  
-- Ogni utente dispone di una singola identità dell'organizzazione, quindi non è necessario tenere traccia di quali [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gli account di accesso corrispondono alle quali gli utenti.   
-- Active Directory consente di applicare i criteri password centralizzati all'interno dell'organizzazione.   
+- Gli utenti eseguono l'autenticazione tramite Single Sign-On e non devono specificare la password.   
+- Creando account di accesso per i gruppi AD, è possibile gestire l'accesso e le autorizzazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite le appartenenze a tali gruppi.  
+- Ogni utente ha un'unica identità in tutta l'organizzazione. Non è quindi necessario tenere traccia della corrispondenza tra gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e ciascun utente.   
+- AD consente di applicare criteri centralizzati per le password in tutta l'organizzazione.   
 
 ## <a name="configuration-steps"></a>Passaggi di configurazione
 
-Per usare l'autenticazione di Active Directory, è necessario disporre di un Controller di dominio Active Directory (Windows) nella rete.
+Per usare l'autenticazione di Active Directory, è necessaria la presenza di un controller di dominio di Active Directory (Windows) all'interno della rete.
 
-Nell'esercitazione, vengono forniti i dettagli per informazioni su come configurare l'autenticazione AD [esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md). Nell'elenco seguente offre un riepilogo con un collegamento a ogni sezione nell'esercitazione:
+I dettagli sulla configurazione dell'autenticazione di Active Directory sono disponibili in [Esercitazione: Usare l'autenticazione di Azure Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md). L'elenco seguente offre un riepilogo e un collegamento a ogni sezione dell'esercitazione:
 
 1. [Aggiungere un host di SQL Server a un dominio di Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Creare un utente di AD per SQL Server e impostare ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
-1. [Configurare keytab il servizio SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Configurare il file keytab del servizio SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Proteggere il file keytab](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Configurare SQL Server per usare il file keytab per l'autenticazione Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
-1. [Creare gli account di accesso di SQL Server basata su Active Directory in Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
-1. [Connettersi a SQL Server Usa l'autenticazione AD](sql-server-linux-active-directory-authentication.md#connect).
+1. [Configurare SQL Server per l'uso del file keytab per l'autenticazione Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
+1. [Creare account di accesso di SQL Server basati su AD in Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
+1. [Connettersi a SQL Server usando l'autenticazione di Active Directory](sql-server-linux-active-directory-authentication.md#connect).
 
 ## <a name="known-issues"></a>Problemi noti
 
-- A questo punto, l'unico metodo di autenticazione supportato per l'endpoint del mirroring è certificato. Metodo di autenticazione di WINDOWS verrà abilitato nelle versioni future.
+- L'unico metodo di autenticazione attualmente supportato per l'endpoint di mirroring del database è CERTIFICATE. Il metodo di autenticazione WINDOWS verrà abilitato in una versione futura.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Next Steps
 
-Per altre informazioni su come implementare l'autenticazione di Active Directory per SQL Server in Linux, vedere [esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md).
+Per altre informazioni su come implementare l'autenticazione di Active Directory per SQL Server in Linux, vedere [Esercitazione: Usare l'autenticazione di Azure Active Directory con SQL Server in Linux](sql-server-linux-active-directory-authentication.md).

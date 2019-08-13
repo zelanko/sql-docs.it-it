@@ -1,7 +1,7 @@
 ---
 title: Estensione di PostgreSQL (anteprima)
 titleSuffix: Azure Data Studio
-description: Estensioni di PostgreSQL (anteprima) per Azure Data Studio
+description: Estensione PostgreSQL (anteprima) per Azure Data Studio
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu; sstein
@@ -11,40 +11,40 @@ ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959481"
 ---
 # <a name="postgresql-extension-preview"></a>Estensione di PostgreSQL (anteprima)
 
-L'estensione di PostgreSQL (anteprima) consente di connettersi a, eseguire una query e lo sviluppo per Postgres usando le funzionalità di Studio di Azure Data. 
+L'estensione PostgreSQL (anteprima) consente di usare le funzionalità di Azure Data Studio per connettersi a Postgres, eseguire query su di esso e sviluppare per Postgres. 
 
-Includono le funzionalità di Studio dei dati di Azure disponibili per PostgreSQL:
+Le funzionalità di Azure Data Studio disponibili per PostgreSQL includono:
 
-- Gestione connessione e l'editor di query
-- Dashboard personalizzabili e widget insight
+- Gestione connessioni ed editor di query
+- Dashboard e widget di informazioni dettagliate personalizzabili
 - Frammenti di codice
 - [Terminale integrato](integrated-terminal.md)
 - [Tasti di scelta rapida](keyboard-shortcuts.md)
-- [Integrazione del controllo codice sorgente](source-control.md)
+- [Integrazione del controllo del codice sorgente](source-control.md)
 - [Impostazioni utente e area di lavoro](settings.md)
 
 
-## <a name="install-the-postgresql-extension-preview"></a>Installare l'estensione di PostgreSQL (anteprima)
+## <a name="install-the-postgresql-extension-preview"></a>Installare l'estensione PostgreSQL (anteprima)
 
-Se si ha già installato Studio dati di Azure, vedere le [istruzioni di installazione](download.md).
+Se Azure Data Studio non è ancora stato installato, vedere le [istruzioni di installazione](download.md).
 
-1. Dalla barra laterale in Azure Data Studio, selezionare l'icona delle estensioni.
-   ![Icona delle estensioni](media/extensions/postgresql-extension/extensions-icon.png)
+1. Selezionare l'icona delle estensioni nella barra laterale di Azure Data Studio.
+   ![Icona Estensioni](media/extensions/postgresql-extension/extensions-icon.png)
 
-2. Nella barra di ricerca, digitare 'postgresql'. Selezionare l'estensione di PostgreSQL.
+2. Digitare "postgresql" nella barra di ricerca. Selezionare l'estensione PostgreSQL.
 
-3. Selezionare **Installa**. Una volta installato, selezionare **Ricarica** per attivare l'estensione in Azure Data Studio.
+3. Selezionare **Installa**. Al termine dell'installazione, selezionare **Ricarica** per attivare l'estensione in Azure Data Studio.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Scopri [come connettersi ed eseguire query Postgres da Azure Data Studio](quickstart-postgres.md).
+Informazioni su [come connettersi ed eseguire query su Postgres da Azure Data Studio](quickstart-postgres.md).
 

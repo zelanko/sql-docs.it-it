@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025606"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476273"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
 
 <sup>2</sup> Fare riferimento alla pagina della documentazione [Configurare l'opzione di configurazione del server max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) per informazioni sui thread di lavoro predefiniti calcolati per un determinato numero di CPU per cui è stata impostata l'affinità nell'host corrente.
 
-<sup>3</sup> Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
+<sup>3</sup> Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*. Applicabile solo alle versioni a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Come configurare le opzioni di memoria tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Usare le due opzioni per la memoria del server **min server memory** e **max server memory** per riconfigurare la quantità di memoria, in megabyte, gestita dallo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  

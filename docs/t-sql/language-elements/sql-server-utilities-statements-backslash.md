@@ -1,7 +1,7 @@
 ---
 title: Barra rovesciata (continuazione di riga) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121666"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495439"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Barra rovesciata (continuazione di riga) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` suddivide una stringa estesa di tipo costante, di caratteri o binaria in due o più righe per una maggiore leggibilità.  
@@ -57,7 +58,7 @@ ms.locfileid: "68121666"
  Continuazione di una stringa.  
   
 ## <a name="remarks"></a>Remarks  
- Questo comando restituisce le prime sezioni e quelle successive della stringa come un'unica stringa, senza la barra rovesciata.  
+Questo comando restituisce le prime sezioni e quelle successive della stringa come un'unica stringa, senza la barra rovesciata. La nuova riga dopo la barra rovesciata deve essere un carattere di avanzamento riga (U+000A) o una combinazione di ritorno a capo (U+000D) e avanzamento riga (U+000A), in quest'ordine. 
 
 ## <a name="examples"></a>Esempi  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 Nell'esempio seguente vengono usati una barra rovesciata e un ritorno a capo per suddividere una stringa binaria in due righe.  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

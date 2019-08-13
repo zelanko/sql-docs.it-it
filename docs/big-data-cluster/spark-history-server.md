@@ -1,7 +1,7 @@
 ---
-title: Diagnosi/debug delle applicazioni Spark
+title: Eseguire il debug e la diagnosi delle applicazioni Spark
 titleSuffix: SQL Server big data clusters
-description: Usare il Server cronologia Spark per eseguire il debug e diagnosticare le applicazioni Spark in esecuzione nei cluster di SQL Server 2019 dei big Data.
+description: Usare il server cronologia Spark per il debug e la diagnosi delle applicazioni Spark in esecuzione in cluster Big Data di SQL Server 2019.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,199 +9,199 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5659de24ed9cc0a61290d055049c804c6709b2a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957859"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731083"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
+# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Eseguire il debug e la diagnosi delle applicazioni Spark nei cluster Big Data di SQL Server nel server cronologia Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce indicazioni su come usare il Server cronologia Spark estesi per eseguire il debug e diagnosticare le applicazioni Spark in un cluster di big data 2019 Server SQL (anteprima). Queste funzionalità di debug e diagnosi vengono incorporate nel Server cronologia Spark e con tecnologia Microsoft. L'estensione include schede di dati e scheda graph e diagnosi. Nella scheda dati, gli utenti possono controllare i dati di input e outpui del processo Spark. Nella scheda graph, gli utenti possono controllare il flusso di dati e riprodurre il grafico del processo. Nella scheda diagnostica utente può fare riferimento a un'asimmetria dei dati, mancata sincronizzazione dell'ora e analisi dell'utilizzo di Executor.
+Questo articolo fornisce indicazioni su come usare il server cronologia Spark esteso per eseguire il debug e la diagnosi delle applicazioni Spark in un cluster Big Data di SQL Server 2019 (anteprima). Le funzionalità di debug e diagnosi sono integrate nel server cronologia Spark e basate su tecnologia Microsoft. L'estensione include le schede relative a dati, grafici e diagnosi. Nella scheda relativa ai dati gli utenti possono esaminare i dati di input e di output del processo Spark. Nella scheda relativa ai grafici gli utenti possono esaminare il flusso di dati e riprodurre il grafico del processo. Nella scheda relativa alla diagnosi l'utente può vedere le analisi relative ad asimmetria dei dati, sfasamento dell'ora e utilizzo dell'executor.
 
-## <a name="get-access-to-spark-history-server"></a>Ottenere l'accesso a Server cronologia Spark
+## <a name="get-access-to-spark-history-server"></a>Ottenere l'accesso al server cronologia Spark
 
-L'esperienza utente di Spark cronologia server di origine aprire è stata migliorata con le informazioni, che includono dati specifici del processo e la visualizzazione interattiva dei flussi di dati e grafico processo per cluster di big data. 
+L'esperienza utente del server cronologia Spark open source è stata migliorata con alcune informazioni, tra cui dati specifici dei processi e visualizzazione interattiva del grafico del processo e dei flussi di dati per i cluster Big Data. 
 
-### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire il sito Web Server cronologia Spark dell'interfaccia utente dall'URL
-Aprire il Server cronologia Spark passando all'URL seguente, sostituire `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster di big data. Sono possibile fare riferimento altre informazioni: [Distribuire il cluster di big data di SQL Server](quickstart-big-data-cluster-deploy.md)
+### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire l'interfaccia utente Web del server cronologia Spark tramite l'URL
+Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 ```
 
-Web Server cronologia Spark dell'interfaccia utente sarà simile a:
+L'interfaccia utente Web del server cronologia Spark ha un aspetto simile al seguente:
 
 ![Server cronologia Spark](./media/apache-azure-spark-history-server/spark-history-server.png)
 
 
-## <a name="data-tab-in-spark-history-server"></a>Scheda di dati nel Server cronologia Spark
-Selezionare l'ID di processo, quindi scegliere **dati** nel menu degli strumenti per ottenere la visualizzazione dei dati.
+## <a name="data-tab-in-spark-history-server"></a>Scheda relativa ai dati del server cronologia Spark
+Selezionare l'ID processo e quindi fare clic su **Dati** nel menu degli strumenti per passare alla visualizzazione dati.
 
-+ Controllare la **input**, **Outputs**, e **operazioni su tabella** selezionando le schede separatamente.
++ Esaminare **Input**, **Output** e **Table Operations** (Operazioni tabella) selezionando le schede separatamente.
 
-    ![Schede di dati Server cronologia Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Schede relative ai dati del server cronologia Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
-+ Copiare tutte le righe facendo clic sul pulsante **copia**.
++ Copiare tutte le righe facendo clic sul pulsante **Copia**.
 
     ![Copiare tutte le righe](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
-+ Salvare tutti i dati come file con estensione CSV facendo clic sul pulsante **csv**.
++ Salvare tutti i dati in un file CSV facendo clic sul pulsante **csv**.
 
-    ![Salvare i dati come file CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Salvare i dati in file CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
-+ Ricerca immettendo parole chiave nel campo **ricerca**, il risultato della ricerca verrà visualizzati immediatamente.
++ Eseguire una ricerca immettendo le parole chiave nel campo **Cerca** e il risultato della ricerca verrà visualizzato immediatamente.
 
     ![Eseguire una ricerca con parole chiave](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
-+ Fare clic sull'intestazione di colonna per ordinare tabelle, fare clic sul segno più per espandere una riga per visualizzare altri dettagli o fare clic sul segno meno per comprimere una riga.
++ Fare clic sull'intestazione di colonna per ordinare la tabella, fare clic sul segno più per espandere una riga e visualizzare altri dettagli oppure fare clic sul segno meno per comprimere una riga.
 
     ![Funzionalità della tabella di dati](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
-+ Scaricare un singolo file facendo clic sul pulsante **Download parziale** che posizionare a destra, quindi il file selezionato viene scaricato alla posizione locale. Se il file non esiste più, si aprirà una nuova scheda per visualizzare i messaggi di errore.
++ Scaricare un singolo file facendo clic sul pulsante **Download parziale** a destra e il file selezionato verrà scaricato in un percorso locale. Se il file non esiste più, verrà aperta una nuova scheda per visualizzare i messaggi di errore.
 
-    ![Download di una riga di dati](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Scaricare una riga di dati](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
-+ Copia percorso completo o relativo, selezionando il **Copia percorso completo**, **Copia percorso relativo** vengono espanse dal menu di download. Per i file di archiviazione di azure data lake, **aperto in Azure Storage Explorer** avvierà Azure Storage Explorer. E individuare la cartella esatta durante l'accesso.
++ Copiare il percorso completo o relativo selezionando i comandi **Copia percorso completo**, **Copia percorso relativo** per espandere il menu di download. Per i file di Azure Data Lake Storage, il comando **Open in Azure Storage Explorer** (Apri in Azure Storage Explorer) avvia Azure Storage Explorer. Individuare la cartella esatta al momento dell'accesso.
 
     ![Copiare un percorso completo o relativo](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
-+ Scegliere il numero di tabella seguente per passare pagine quando troppo molte righe per visualizzare in un'unica pagina. 
++ Fare clic sul numero sotto la tabella per spostarsi tra le pagine quando sono presenti troppe righe da visualizzare in una pagina. 
 
     ![Pagina di dati](./media/apache-azure-spark-history-server/sparkui-data-page.png)
 
-+ Passare il puntatore sul punto interrogativo accanto a dati da visualizzare la descrizione comando, oppure fare clic sul punto interrogativo per ottenere altre informazioni.
++ Passare il puntatore sul punto interrogativo accanto all'intestazione dei dati per visualizzare la descrizione comando oppure fare clic sul punto interrogativo per ottenere altre informazioni.
 
-    ![Dati altre info](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
+    ![Altre informazioni sui dati](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
 
-+ Inviare commenti e suggerimenti con problemi facendo **fornire commenti e suggerimenti**.
++ Per inviare feedback e commenti relativi ai problemi, fare clic su **Provide us feedback** (Invia feedback).
 
-    ![commenti e suggerimenti di Graph](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
+    ![Feedback sui grafici](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
-## <a name="graph-tab-in-spark-history-server"></a>Scheda grafico nel Server cronologia Spark
+## <a name="graph-tab-in-spark-history-server"></a>Scheda relativa ai grafici del server cronologia Spark
 
-Selezionare l'ID di processo, quindi scegliere **Graph** dal menu dello strumento per ottenere la visualizzazione grafico del processo.
+Selezionare l'ID processo e quindi fare clic su **Grafico** nel menu degli strumenti per passare alla visualizzazione grafici.
 
-+ Panoramica del processo per controllare, il grafico del processo generato. 
++ Esaminare la panoramica del processo nel grafico del processo generato. 
 
-+ Per impostazione predefinita, mostrerà tutti i processi e potrebbe essere filtrata dal **ID processo**.
++ Per impostazione predefinita, verranno visualizzati tutti i processi, che è possibile filtrare in base a **ID processo**.
 
-    ![ID processo del grafico](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
+    ![ID processo nei grafici](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ È necessario lasciare **lo stato di avanzamento** come valore predefinito. Utente può controllare il flusso di dati selezionando **Read** o * * Written * * * nell'elenco a discesa dei **Display**.
++ In questo caso viene lasciata l'opzione **Stato** come valore predefinito. L'utente può controllare il flusso di dati selezionando **Leggi** o **scritto** nell'elenco a discesa di **visualizzazione**.
 
-    ![visualizzazione del grafico](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
+    ![Visualizzazione grafici](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
-    La visualizzazione del nodo grafico in colore che mostra la mappa termica.
+    Il nodo relativo ai grafici viene visualizzato con un colore che indica la mappa termica.
 
-    ![mappa termica del grafico](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
+    ![mappa termica dei grafici](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
 
-+ Riprodurre il processo facendo il **riproduzione** pulsante e arrestare in qualsiasi momento facendo clic sul pulsante Arresta. La visualizzazione di attività a colori per visualizzare lo stato di diversi durante la riproduzione:
++ Per riprodurre il processo, fare clic sul pulsante **Riproduzione** e per arrestarlo in qualsiasi momento fare clic sul pulsante Arresta. L'attività viene visualizzata con un colore che indica il diverso stato durante la riproduzione:
 
-    + Verde per ha avuto esito positivo: Il processo è stata completata.
-    + Arancione per ripetuti: Istanze di attività non riuscite ma che non influiscono sul risultato finale del processo. Queste attività erano duplicati o ripetere le istanze che può essere completata in un secondo momento.
-    + Blu per esecuzione: L'attività è in esecuzione.
-    + Bianco per l'attesa o ignorate: L'attività è in attesa di esecuzione o la fase è ignorato.
-    + Non è riuscita rosso per: L'attività non è riuscita.
+    + Verde per l'esito positivo: il processo è stato completato correttamente.
+    + Arancione per un nuovo tentativo: alcune istanze delle attività hanno avuto esito negativo ma ciò non influisce sul risultato finale del processo. Per queste attività sono presenti istanze duplicate o nuovi tentativi che potrebbero riuscire in un secondo momento.
+    + Blu per l'esecuzione: l'attività è in esecuzione.
+    + Bianco per l'attesa o un'operazione ignorata: l'attività è in attesa di esecuzione o la fase è stata ignorata.
+    + Rosso per l'esito negativo: l'attività non è riuscita.
 
-    ![esempio di colore grafico, in esecuzione](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
+    ![esempio di colore del grafico, in esecuzione](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
-    La visualizzazione fase ignorata in bianco.
-    ![esempio di colore del grafico, skip](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
+    La fase ignorata viene visualizzata in bianco.
+    ![esempio di colore del grafico, operazione ignorata](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
 
-    ![esempio di colore Graph, non è riuscita](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
+    ![esempio di colore del grafico, operazione non riuscita](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
  
     > [!NOTE]
-    > È consentita la riproduzione per ogni processo. Per processo incompleto. la riproduzione non è supportata.
+    > È consentita la riproduzione per ogni processo. Per un processo incompleto, la riproduzione non è supportata.
 
 
-+ Scorre il mouse per ingrandire in ingresso/uscita grafico del processo oppure fare clic su **adatta alla** per renderla adatta allo schermo.
++ Scorrere con il mouse per fare zoom avanti o indietro oppure fare clic su **Adatta alla finestra** per adattare la visualizzazione allo schermo.
  
-    ![zoom del grafico in base alle](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
+    ![zoom del grafico per adattarlo](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
 
-+ Passare il mouse sul nodo grafico per visualizzare la descrizione comando quando sono presenti le attività non riuscite, fare clic sul palco per aprire la pagina di fase.
++ Passare il puntatore sul nodo del grafico per visualizzare la descrizione comando quando sono presenti attività non riuscite e fare clic su una fase per aprire la pagina relativa.
 
     ![descrizione comando del grafico](./media/apache-azure-spark-history-server/sparkui-graph-tooltip.png)
 
-+ Nella scheda graph processo fasi disporrà della descrizione comando e icona piccola visualizzata se sono presenti attività soddisfa le seguenti condizioni:
-    + Asimmetria dei dati: leggere i dati delle dimensioni > dimensioni di tutte le attività all'interno di questa fase di lettura dei dati Media * 2 e i dati letti dimensione > 10 MB
-    + Sfasamento dell'ora: tempo di esecuzione > tempo di esecuzione medio di tutte le attività all'interno di questa fase * 2 e il tempo di esecuzione > 2 minuti
++ Nella scheda relativa al grafico del processo, per le fasi sono visualizzate una descrizione comando e una piccola icona se sono presenti attività che soddisfano le condizioni seguenti:
+    + Asimmetria dei dati: dimensioni di lettura dei dati > dimensioni medie di lettura dei dati di tutte le attività all'interno della fase * 2 e dimensioni di lettura dei dati > 10 MB
+    + Sfasamento dell'ora: tempo di esecuzione > tempo di esecuzione medio di tutte le attività all'interno della fase * 2 e tempo di esecuzione > 2 min
 
-    ![icona dello sfasamento del Graph](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
+    ![icona dell'asimmetria del grafico](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
 
-+ Il nodo grafico del processo visualizzerà le informazioni seguenti di ogni fase:
++ Il nodo del grafico del processo visualizza le informazioni seguenti per ogni fase:
     + ID.
     + Nome o descrizione.
     + Numero totale di attività.
-    + Dati letti: la somma delle dimensioni di input e shuffle dimensioni di lettura.
-    + Scrittura di dati: la somma delle dimensioni di output e la sequenza casuale di dimensione di scrittura.
-    + Tempo di esecuzione: il tempo tra l'ora di inizio del primo tentativo e l'ora di completamento dell'ultimo tentativo.
-    + Conteggio delle righe: la somma dei record di input, record di output, riprodurre in modo casuale i record di lettura e scrittura record di riproduzione casuale.
-    + Stato di avanzamento.
+    + Dati letti: somma delle dimensioni di input e delle dimensioni di lettura casuale.
+    + Dati scritti: somma delle dimensioni di output e delle dimensioni di scrittura casuale.
+    + Tempo di esecuzione: tempo tra l'ora di inizio del primo tentativo e l'ora di completamento dell'ultimo tentativo.
+    + Conteggio righe: somma di record di input, record di output, record di lettura casuale e record di scrittura casuale.
+    + Stato.
 
     > [!NOTE]
-    > Per impostazione predefinita, il nodo grafico del processo verrà visualizzate le informazioni dall'ultimo tentativo di ogni fase (ad eccezione di tempo di esecuzione fase), ma durante il grafico di riproduzione nodo consentirà di visualizzare le informazioni di ogni tentativo.
+    > Per impostazione predefinita, il nodo del grafico del processo visualizzerà le informazioni dell'ultimo tentativo di ogni fase, ad eccezione del tempo di esecuzione della fase, ma durante la riproduzione il nodo del grafico mostrerà le informazioni di ogni tentativo.
 
     > [!NOTE]
-    > Per le dimensioni dei dati di lettura e scrittura viene usato 1 MB = 1000 KB = 1000 * 1000 byte.
+    > Per le dimensioni dei dati letti e scritti si usa 1 MB = 1000 KB = 1000 * 1000 byte.
 
-+ Inviare commenti e suggerimenti con problemi facendo **fornire commenti e suggerimenti**.
++ Per inviare feedback e commenti relativi ai problemi, fare clic su **Provide us feedback** (Invia feedback).
 
-    ![commenti e suggerimenti di Graph](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
+    ![Feedback sui grafici](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
 
-## <a name="diagnosis-tab-in-spark-history-server"></a>Scheda diagnosi nel Server cronologia Spark
-Selezionare l'ID di processo, quindi scegliere **diagnosi** nel menu degli strumenti per ottenere il processo di visualizzazione di diagnosi. La scheda diagnostica include **asimmetria dei dati**, **sfasamento dell'ora**, e **analisi dell'utilizzo dell'Executor**.
+## <a name="diagnosis-tab-in-spark-history-server"></a>Scheda relativa alla diagnosi del server cronologia Spark
+Selezionare l'ID processo e quindi fare clic su **Diagnosi** nel menu degli strumenti per passare alla visualizzazione diagnosi. La scheda relativa alla diagnosi include **Asimmetria dei dati**, **Sfasamento dell'ora** e **Executor Usage Analysis** (Analisi utilizzo executor).
     
-+ Verificare i **asimmetria dei dati**, **sfasamento dell'ora**, e **analisi dell'utilizzo dell'Executor** selezionando le schede, rispettivamente.
++ Esaminare i valori di **Asimmetria dei dati**, **Sfasamento dell'ora** e **Executor Usage Analysis** (Analisi utilizzo executor) selezionando le rispettive schede.
 
-    ![Schede di diagnosi](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
+    ![Scheda relativa alla diagnosi](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
 
 ### <a name="data-skew"></a>Asimmetria dei dati
-Fare clic su **asimmetria dei dati** corrispondente della scheda vengono visualizzate attività differente in base ai parametri specificati. 
+Fare clic sulla scheda **Asimmetria dei dati** per visualizzare le attività asimmetriche corrispondenti in base ai parametri specificati. 
 
-+ **Specificare i parametri** -la prima sezione Visualizza i parametri, che consentono di rilevare differenze dei dati. La regola predefinita è: Dati attività letti è maggiori di tre volte in cui i dati di attività medio di lettura e i dati attività letti sono superiore a 10 MB. Se si desidera definire una regola personalizzata per le attività asimmetriche, è possibile scegliere i parametri, il **fase asimmetrica**, e **inclinare Char** sezione verrà aggiornata di conseguenza. 
++ **Specificare i parametri** - La prima sezione visualizza i parametri usati per rilevare l'asimmetria dei dati. La regola predefinita è: la quantità di dati attività letti è maggiore di tre volte rispetto alla quantità media di dati attività letti e la quantità di dati attività letti è maggiore di 10 MB. Se si vuole definire una regola personalizzata per le attività asimmetriche, è possibile scegliere i parametri e le sezioni **Fase asimmetrica** e **Skew Chart** (Grafico asimmetrie) verranno aggiornate di conseguenza. 
 
-+ **Asimmetria fase** -nella seconda sezione vengono visualizzate le fasi, che sono asimmetrici attività che soddisfano i criteri specificati in precedenza. Se è presente più di un'attività asimmetriche in una fase, la tabella fase asimmetrica viene visualizzato solo l'attività più differente (ad esempio, i dati più grande di asimmetria dei dati). 
++ **Fase asimmetrica** - La seconda sezione visualizza le fasi che hanno attività asimmetriche che soddisfano i criteri specificati in precedenza. Se in una fase è presente più di un'attività asimmetrica, nella tabella delle fasi asimmetriche viene visualizzata solo l'attività con più asimmetria, ad esempio i dati di dimensioni maggiori per l'asimmetria dei dati. 
 
-    ![Sezione2 asimmetria dei dati](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
+    ![Sezione 2 relativa all'asimmetria dati](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **Una differenza del grafico** : quando è selezionata una riga nella tabella di gestione temporanea di inclinazione, verrà visualizzato il grafico inclinazione ulteriori dettagli di distribuzioni di attività basati su dati letti e tempo di esecuzione. Le attività asimmetriche vengono contrassegnate in rosso e le normali attività vengano contrassegnate in blu. Per considerazioni relative alle prestazioni, il grafico visualizza solo le attività di esempio fino a 100. Nel pannello in basso a destra vengono visualizzati i dettagli dell'attività.
++ **Skew Chart** (Grafico asimmetrie) - Quando viene selezionata una riga nella tabella delle fasi asimmetriche, il grafico delle asimmetrie visualizza più dettagli delle distribuzioni delle attività in base ai dati letti e al tempo di esecuzione. Le attività asimmetriche sono contrassegnate in rosso e le attività normali sono contrassegnate in blu. Per consentire la valutazione delle prestazioni, il grafico visualizza solo fino a 100 attività di esempio. I dettagli delle attività sono visualizzati nel pannello inferiore destro.
 
-    ![Sezione3 asimmetria dei dati](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
+    ![Sezione 3 relativa all'asimmetria dati](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 
-### <a name="time-skew"></a>Mancata sincronizzazione dell'ora
-Il **sfasamento dell'ora** scheda vengono visualizzate attività asimmetriche basate sul tempo di esecuzione di attività. 
+### <a name="time-skew"></a>Sfasamento dell'ora
+La scheda **Sfasamento dell'ora** visualizza le attività asimmetriche in base al tempo di esecuzione. 
 
-+ **Specificare i parametri** -la prima sezione Visualizza i parametri, che consentono di rilevare lo sfasamento dell'ora. I criteri predefiniti per il rilevamento dello sfasamento di orario è: tempo di esecuzione di attività è maggiore di tre volte del tempo medio di esecuzione e il tempo di esecuzione di attività è maggiore di 30 secondi. È possibile modificare i parametri in base alle esigenze. Il **fase asimmetrica** e **inclinare grafico** visualizzare le informazioni sulle attività e fasi corrispondente allo stesso modo il **asimmetria dei dati** scheda riportato sopra.
++ **Specificare i parametri** - La prima sezione visualizza i parametri, che vengono usati per rilevare lo sfasamento dell'ora. I criteri predefiniti per il rilevamento dello sfasamento dell'ora sono: il tempo di esecuzione dell'attività è maggiore di tre volte rispetto al tempo medio di esecuzione e il tempo di esecuzione dell'attività è maggiore di 30 secondi. È possibile modificare i parametri in base alle esigenze. Le sezioni **Fase asimmetrica** e **Skew Chart** (Grafico asimmetrie) visualizzano le informazioni sulle fasi e sulle attività corrispondenti come nella scheda **Asimmetria dei dati** precedente.
 
-+ Fare clic su **sfasamento dell'ora**, quindi incluso nel risultato filtrato **fase asimmetrica** sezione in base ai parametri impostati nella sezione **specifica parametri di**. Fare clic su un elemento **fase asimmetrica** sezione, quindi, il grafico corrispondente viene redatto in sezione3 e i dettagli dell'attività vengono visualizzati nel pannello in basso a destra.
++ Fare clic su **Sfasamento dell'ora** e i risultati filtrati verranno visualizzati nella sezione **Fase asimmetrica** in base ai parametri impostati nella sezione **Specificare i parametri**. Fare clic su un elemento nella sezione **Fase asimmetrica** per tracciare il grafico corrispondente nella sezione 3 e visualizzare i dettagli delle attività nel pannello inferiore destro.
 
-    ![Sezione2 dello sfasamento dell'ora](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
+    ![Sezione 2 relativa allo sfasamento dell'ora](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
 
 ### <a name="executor-usage-analysis"></a>Analisi dell'utilizzo dell'executor
-Visualizza la il grafico sull'utilizzo di Executor di Spark esecutore effettivo in esecuzione e allocazione lo stato del processo.  
+Il grafico relativo all'utilizzo dell'executor visualizza l'allocazione effettiva dell'executor del processo Spark e lo stato di esecuzione.  
 
-+ Fare clic su **analisi dell'utilizzo dell'Executor**, quindi è in versione bozza quattro curve tipi sull'utilizzo di executor. Includano **allocata executor**, **executor in esecuzione**, **inattività executor**, e **numero massimo di istanze di Executor**. Riguardanti gli executor allocati, ogni "Executor aggiunto" o "Executor rimosse" evento aumenterà o diminuirà executor allocato. È possibile controllare "Event Timeline" nella scheda "Jobs" per il confronto di più.
++ Fare clic su **Executor Usage Analysis** (Analisi utilizzo executor) per tracciare quattro tipi di curve relative all'utilizzo dell'executor. Le curve indicano **Allocated Executors** (Executor allocati), **Running Executors** (Executor in esecuzione), **Idle Executors** (Executor inattivi) e **Max Executor Instances** (Istanze massime executor). Per quanto riguarda gli excutor allocati, ogni evento di aggiunta o rimozione di un executor comporta un aumento o una diminuzione del numero di executor allocati. È possibile esaminare la sequenza temporale degli eventi nella scheda relativa ai processi per ulteriori confronti.
 
-    ![Scheda executor](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
+    ![Scheda relativa agli executor](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 
 + Fare clic sull'icona del colore per selezionare o deselezionare il contenuto corrispondente in tutte le bozze.
 
-    ![Selezionare grafico](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    ![Selezionare il grafico](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
 
 
 ## <a name="known-issues"></a>Problemi noti
-Il Server cronologia Spark ha i seguenti problemi noti:
+Il server cronologia Spark presenta i problemi noti seguenti:
 
-+ Attualmente, funziona solo per cluster Spark 2.3.
++ Attualmente funziona solo per il cluster Spark 2.3.
 
-+ Non visualizzerà dati di input/output usando RDD nella scheda dati.
++ I dati di input/output con RDD non vengono visualizzati nella scheda dei dati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Gestire le risorse per un cluster Spark in HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Introduzione ai cluster Big Data di SQL Server](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Configurare le impostazioni di Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

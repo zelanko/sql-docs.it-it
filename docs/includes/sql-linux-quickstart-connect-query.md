@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215630"
 ---
 ## <a name="connect-locally"></a>Eseguire la connessione in locale
@@ -52,7 +52,7 @@ La seguente procedura consente di creare un nuovo database denominato `TestDB`.
    ```
 
 > [!TIP]
-> Per altre informazioni sulla scrittura di istruzioni e query Transact-SQL, vedere [esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Per altre informazioni sulla scrittura di istruzioni e query Transact-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserire i dati
 
@@ -106,22 +106,22 @@ Per terminare la sessione **sqlcmd**, digitare `QUIT`:
 QUIT
 ```
 
-## <a name="performance-best-practices"></a>Procedure consigliate sulle prestazioni
+## <a name="performance-best-practices"></a>Procedure consigliate per le prestazioni
 
-Dopo l'installazione di SQL Server in Linux, esaminare le procedure consigliate per la configurazione di Linux e SQL Server per migliorare le prestazioni per gli scenari di produzione. Per altre informazioni, vedere [consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux](../linux/sql-server-linux-performance-best-practices.md).
+Dopo l'installazione di SQL Server in Linux, esaminare le procedure consigliate per configurare Linux e SQL Server in modo da ottimizzare le prestazioni per gli scenari di produzione. Per altre informazioni, vedere [Procedure consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux](../linux/sql-server-linux-performance-best-practices.md).
 
-## <a name="cross-platform-data-tools"></a>Strumenti multipiattaforma dati
+## <a name="cross-platform-data-tools"></a>Strumenti dati multipiattaforma
 
-Oltre a **sqlcmd**, è possibile usare i seguenti strumenti multipiattaforma per la gestione di SQL Server:
+Oltre a **sqlcmd**, è possibile usare gli strumenti multipiattaforma seguenti per gestire SQL Server:
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Un'utilità di gestione database GUI di multi-piattaforma. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor di codice multipiattaforma con interfaccia utente grafica che eseguono istruzioni Transact-SQL con l'estensione mssql. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Una configurazione e automazione uno strumento multipiattaforma basato sui cmdlet. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Un'interfaccia della riga di comando multipiattaforma per l'esecuzione di comandi Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Utilità multipiattaforma di gestione di database basata su interfaccia utente grafica. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Editor di codice multipiattaforma basato su interfaccia utente grafica che esegue istruzioni Transact-SQL con l'estensione MSSQL. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Strumento multipiattaforma di automazione e configurazione basato sui cmdlet. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Interfaccia della riga di comando multipiattaforma per l'esecuzione di comandi Transact-SQL. |
 
-## <a name="connecting-from-windows"></a>La connessione da Windows
+## <a name="connecting-from-windows"></a>Connessione da Windows
 
 Gli strumenti di SQL Server in Windows consentono di connettersi alle istanze di SQL Server in Linux nello stesso modo in cui si connettono a qualsiasi istanza remota di SQL Server.
 
@@ -145,7 +145,7 @@ Per altri scenari di installazione, vedere le risorse seguenti:
 | [Installazione offline](../linux/sql-server-linux-setup.md#offline) | Informazioni su come scaricare manualmente i pacchetti per l'installazione offline |
 
 > [!TIP]
-> Per le risposte alle domande più frequenti, vedere la [SQL Server in Linux FAQ](../linux/sql-server-linux-faq.md).
+> Per le risposte alle domande frequenti, vedere [Domande frequenti su SQL Server in Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

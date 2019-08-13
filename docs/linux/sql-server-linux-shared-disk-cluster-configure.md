@@ -1,5 +1,5 @@
 ---
-title: "Configurare l'istanza del cluster di failover: SQL Server su Linux (RHEL)"
+title: Configurare un'istanza del cluster di failover - SQL Server in Linux (RHEL)
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,61 +10,61 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032305"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare l'istanza del cluster di failover: SQL Server su Linux (RHEL)
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare un'istanza del cluster di failover - SQL Server in Linux (RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Un'istanza cluster di failover di SQL Server nel disco condiviso due nodi fornisce ridondanza a livello di server per la disponibilità elevata. In questa esercitazione descrive come creare un'istanza del cluster di failover a due nodi di SQL Server in Linux. I passaggi specifici che è necessario completare includono:
+Un'istanza del cluster di failover su disco condiviso a due nodi di SQL Server fornisce ridondanza a livello di server per la disponibilità elevata. In questa esercitazione si apprenderà come creare un'istanza del cluster di failover a due nodi di SQL Server in Linux. I passaggi specifici che si completeranno includono:
 
 > [!div class="checklist"]
 > * Installare e configurare Linux
 > * Installare e configurare SQL Server
 > * Configurare il file hosts
-> * Configurare l'archiviazione condivisa e spostare i file di database
+> * Configurare la risorsa di archiviazione condivisa e spostare i file di database
 > * Installare e configurare Pacemaker in ogni nodo del cluster
 > * Configurare l'istanza del cluster di failover
 
-Questo articolo illustra come creare un'istanza di cluster di failover (FCI) due nodi nel disco condiviso per SQL Server. L'articolo include istruzioni ed esempi di script per Red Hat Enterprise Linux (RHEL). Distribuzioni Ubuntu sono simili a RHEL in modo che gli esempi di script in genere funzionano anche in Ubuntu. 
+Questo articolo illustra come creare un'istanza del cluster di failover su disco condiviso a due nodi per SQL Server. L'articolo include istruzioni ed esempi di script per Red Hat Enterprise Linux (RHEL). Le distribuzioni di Ubuntu sono simili a quelle di RHEL, quindi gli esempi di script funzionano anche in Ubuntu. 
 
-Per informazioni concettuali, vedere [istanza SQL Server Failover Cluster (FCI) in Linux](sql-server-linux-shared-disk-cluster-concepts.md).
+Per informazioni di carattere generale, vedere [Istanza del cluster di failover di SQL Server in Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Per completare lo scenario end-to-end seguente, è necessario due macchine virtuali da distribuire il cluster a due nodi e un altro server per l'archiviazione. I passaggi seguenti illustrano la configurazione di questi server.
+Per completare lo scenario end-to-end seguente, sono necessari due computer per distribuire il cluster a due nodi e un altro server per la risorsa di archiviazione. I passaggi seguenti illustrano come verranno configurati questi server.
 
 ## <a name="set-up-and-configure-linux"></a>Installare e configurare Linux
 
-Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cluster. In ogni nodo del cluster, configurare una distribuzione linux. Usare la distribuzione e la versione stesso in entrambi i nodi. Usare uno o l'altra delle distribuzioni seguenti:
+Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cluster. In ogni nodo del cluster configurare una distribuzione di Linux. Usare la stessa distribuzione e la stessa versione in entrambi i nodi. Usare una o l'altra delle distribuzioni seguenti:
     
-* RHEL con una sottoscrizione valida per il componente aggiuntivo a disponibilità elevata
+* RHEL con una sottoscrizione valida per il componente aggiuntivo per la disponibilità elevata
 
 ## <a name="install-and-configure-sql-server"></a>Installare e configurare SQL Server
 
-1. Installare e configurare SQL Server su entrambi i nodi.  Per istruzioni dettagliate, vedere [installare SQL Server in Linux](sql-server-linux-setup.md).
-1. Designare un nodo primario e l'altro come secondario, ai fini della configurazione. Usare questi termini per gli elementi seguenti in questa Guida.  
-1. Nel nodo secondario, arrestare e disabilitare SQL Server.
-    Nell'esempio seguente arresta e disattiva SQL Server: 
+1. Installare e configurare SQL Server in entrambi i nodi.  Per istruzioni dettagliate, vedere [Installare SQL Server in Linux](sql-server-linux-setup.md).
+1. Designare un nodo come primario e l'altro come secondario, ai fini della configurazione. Usare questi termini per la parte seguente di questa guida.  
+1. Nel nodo secondario arrestare e disabilitare SQL Server.
+    L'esempio seguente arresta e disabilita SQL Server: 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > Set tempo di attività, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, la propria identità non è condiviso tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario in ogni nodo secondario in modo che ogni account mssql locale possono accedervi per decrittografare la chiave Master del Server. 
+    > In fase di configurazione, viene generata una chiave master del server per l'istanza di SQL Server e viene inserita in `var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivisa tra i nodi. È quindi necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario, in modo che ogni account mssql locale possa accedervi per decrittografare la chiave master del server. 
 
-1.  Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker Usa questo account per verificare quale nodo è in esecuzione SQL Server. 
+1.  Nel nodo primario creare un account di accesso di SQL Server per Pacemaker e concedere l'autorizzazione di accesso per eseguire `sp_server_diagnostics`. Pacemaker usa questo account per verificare quale nodo sta eseguendo SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   Connettersi a SQL Server `master` database con l'account sa e di eseguire il comando seguente:
+   Connettersi al database `master` di SQL Server con l'account sa ed eseguire i comandi seguenti:
 
    ```sql
    USE [master]
@@ -73,13 +73,13 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   In alternativa, è possibile impostare le autorizzazioni a un livello più granulare. Richiede l'accesso a Pacemaker `VIEW SERVER STATE` allo stato di integrità query con, sp_server_diagnostics `setupadmin` e `ALTER ANY LINKED SERVER` per aggiornare il nome dell'istanza FCI con il nome della risorsa tramite l'esecuzione sp_dropserver e sp_addserver. 
+   In alternativa, è possibile impostare le autorizzazioni a un livello più granulare. L'account di accesso di Pacemaker richiede `VIEW SERVER STATE` per effettuare una query sullo stato di integrità con sp_server_diagnostics, `setupadmin` e `ALTER ANY LINKED SERVER` per aggiornare il nome dell'istanza del cluster di failover con il nome della risorsa eseguendo sp_dropserver e sp_addserver. 
 
-1. Nel nodo primario, arrestare e disabilitare SQL Server. 
+1. Nel nodo primario arrestare e disabilitare SQL Server. 
 
 ## <a name="configure-the-hosts-file"></a>Configurare il file hosts
 
-In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includere l'indirizzo IP e nome di ogni nodo del cluster.
+In ogni nodo del cluster configurare il file hosts. Il file hosts deve includere l'indirizzo IP e il nome di ogni nodo del cluster.
 
 1. Controllare l'indirizzo IP per ogni nodo. Lo script seguente mostra l'indirizzo IP del nodo corrente. 
 
@@ -87,12 +87,12 @@ In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includer
     sudo ip addr show
     ```
 
-1. Impostare il nome del computer in ogni nodo. Assegnare a ogni nodo un nome univoco che è di 15 caratteri o meno. Impostare il nome del computer, aggiungerlo al `/etc/hosts`. Lo script seguente consente di modificare `/etc/hosts` con `vi`. 
+1. Impostare il nome computer in ogni nodo. Assegnare a ogni nodo un nome univoco di 15 caratteri o meno. Per impostare il nome computer, aggiungerlo a `/etc/hosts`. Lo script seguente consente di modificare `/etc/hosts` con `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   L'esempio seguente illustra `/etc/hosts` con le aggiunte di due nodi denominati `sqlfcivm1` e `sqlfcivm2`.
+   L'esempio seguente mostra `/etc/hosts` con l'aggiunta di due nodi denominati `sqlfcivm1` e `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -101,13 +101,13 @@ In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includer
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>Configurare l'archiviazione e spostare i file di database  
+## <a name="configure-storage--move-database-files"></a>Configurare la risorsa di archiviazione e spostare i file di database  
 
-È necessario fornire spazio di archiviazione possono accedere a entrambi i nodi. È possibile usare NFS, iSCSI o SMB. Configurare l'archiviazione, presentare l'archiviazione per i nodi del cluster e quindi spostare i file di database nella nuova archiviazione. Gli articoli seguenti illustrano i passaggi per ogni tipo di archiviazione:
+È necessario fornire una risorsa di archiviazione a cui possano accedere entrambi i nodi. È possibile usare iSCSI, NFS o SMB. Configurare la risorsa di archiviazione, presentarla ai nodi del cluster e quindi spostare i file di database nella nuova risorsa di archiviazione. Gli articoli seguenti illustrano i passaggi per ogni tipo di archiviazione:
 
-- [Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Configurare cluster di failover - NFS - SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Configurare cluster di failover - SMB - SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configurare un'istanza del cluster di failover - iSCSI - SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configurare un'istanza del cluster di failover - NFS - SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configurare un'istanza del cluster di failover - SMB - SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installare e configurare Pacemaker in ogni nodo del cluster
 
@@ -130,10 +130,10 @@ In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includer
    sudo firewall-cmd --reload
    ```
 
-   > Se si usa un altro firewall che non dispone di una configurazione a disponibilità elevata predefinita, le porte seguenti devono essere aperte per consentire a essere in grado di comunicare con altri nodi del cluster Pacemaker
+   > Se si sta usando un altro firewall che non ha una configurazione a disponibilità elevata predefinita, è necessario aprire le porte seguenti per consentire a Pacemaker di comunicare con altri nodi del cluster
    >
-   > * TCP: Porte 2224, 3121, 21064
-   > * UDP: Porta 5405
+   > * TCP: porte 2224, 3121, 21064
+   > * UDP: porta 5405
 
 1. Installare i pacchetti Pacemaker in ogni nodo.
 
@@ -161,15 +161,15 @@ In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includer
 
 ## <a name="configure-the-failover-cluster-instance"></a>Configurare l'istanza del cluster di failover
 
-Verrà creato l'istanza FCI in un gruppo di risorse. Questo è un po' più semplice perché il gruppo di risorse riduce la necessità per i vincoli. Tuttavia, aggiungere le risorse nel gruppo di risorse nell'ordine in che cui deve iniziare. L'ordine che devono avviare è: 
+L'istanza del cluster di failover verrà creata in un gruppo di risorse. Si tratta di un approccio un po' più semplice perché il gruppo di risorse riduce la necessità di vincoli. Aggiungere tuttavia le risorse nel gruppo di risorse nell'ordine in cui devono essere avviate. L'ordine di avvio è il seguente: 
 
 1. Risorsa di archiviazione
-2. Risorse di rete
+2. Risorsa di rete
 3. Risorsa dell'applicazione
 
-Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del gruppo di risorse deve essere univoco rispetto a qualsiasi risorsa creata in Pacemaker.
+Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGrp. Il nome del gruppo di risorse deve essere univoco rispetto a qualsiasi risorsa creata in Pacemaker.
 
-1.  Creare la risorsa disco. Se non esiste un problema, non si otterrà alcuna risposta. Il modo per creare la risorsa disco dipende dal tipo di archiviazione. Di seguito è riportato un esempio per ogni tipo di archiviazione. Usare l'esempio in cui si applica al tipo di archiviazione per l'archiviazione in cluster.
+1.  Creare la risorsa disco. Se non si verificano problemi, non verrà restituita alcuna risposta. Il modo in cui creare la risorsa disco dipende dal tipo di archiviazione. Di seguito è riportato un esempio per ogni tipo di archiviazione. Usare l'esempio che si applica al tipo dell'archiviazione in cluster.
 
     **iSCSI**
 
@@ -177,15 +177,15 @@ Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del 
     sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
     ```
 
-    \<iSCSIDIskResourceName > è il nome della risorsa associato al disco iSCSI
+    \<iSCSIDIskResourceName> è il nome della risorsa associata al disco iSCSI
 
-    \<VolumeGroupName > è il nome del gruppo di volumi  
+    \<VolumeGroupName> è il nome del gruppo di volumi  
 
-    \<LogicalVolumeName > è il nome del volume logico che è stato creato  
+    \<LogicalVolumeName> è il nome del volume logico creato  
 
-    \<FolderToMountiSCSIDIsk > è la cartella per montare il disco (per i database di sistema e il percorso predefinito, sarebbe /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> è la cartella in cui montare il disco (per i database di sistema e la posizione predefinita, sarà /var/opt/mssql/data)
 
-    \<FileSystemType > sarebbe EXT4 o XFS a seconda del modo in cui sono state formattate le cose e quali la distribuzione supporta. 
+    \<FileSystemType> sarà EXT4 o XFS a seconda della formattazione scelta e degli elementi supportati dalla distribuzione. 
 
     **NFS**
 
@@ -194,13 +194,13 @@ Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del 
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > è il nome della risorsa associato nella condivisione NFS
+    \<NFSDIskResourceName> è il nome della risorsa associata alla condivisione NFS
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare
+    \<IPAddressOfNFSServer> è l'indirizzo IP del server NFS da usare
 
-    \<FolderOnNFSServer > è il nome della condivisione NFS
+    \<FolderOnNFSServer> è il nome della condivisione NFS
 
-    \<FolderToMountNFSShare > è la cartella per montare il disco (per i database di sistema e il percorso predefinito, sarebbe /var/opt/mssql/data)
+    \<FolderToMountNFSShare> è la cartella in cui montare il disco (per i database di sistema e la posizione predefinita, sarà /var/opt/mssql/data)
 
     Di seguito è riportato un esempio:
 
@@ -214,61 +214,61 @@ Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del 
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName > è il nome del server con la condivisione SMB
+    \<ServerName> è il nome del server con la condivisione SMB
 
-    \<ShareName > è il nome della condivisione
+    \<ShareName> è il nome della condivisione
 
-    \<Nomecartella > è il nome della cartella creata nel passaggio precedente
+    \<FolderName> è il nome della cartella creata nell'ultimo passaggio
     
-    \<Nome utente > è il nome dell'utente per accedere alla condivisione
+    \<UserName> è il nome dell'utente con cui accedere alla condivisione
 
-    \<Password > è la password per l'utente
+    \<Password> è la password associata all'utente
 
-    \<ADDomain > è il dominio di Active Directory Domain Services (se applicabile quando si usa una condivisione SMB basate su Windows Server)
+    \<ADDomain> è il dominio Active Directory Domain Services (se applicabile quando si usa una condivisione SMB basata su Windows Server)
 
-    \<mssqlUID > è l'UID dell'utente mssql
+    \<mssqlUID> è l'ID dell'utente mssql
 
-    \<mssqlGID > è il GID dell'utente mssql
+    \<mssqlGID> è l'identificatore di gruppo dell'utente mssql
 
-    \<RGName > è il nome del gruppo di risorse
+    \<RGName> è il nome del gruppo di risorse
  
-2.  Creare l'indirizzo IP che verrà utilizzato dall'istanza FCI. Se non esiste un problema, non si otterrà alcuna risposta.
+2.  Creare l'indirizzo IP che verrà usato dall'istanza del cluster di failover. Se non si verificano problemi, non verrà restituita alcuna risposta.
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName > è il nome della risorsa associato all'indirizzo IP
+    \<IPResourceName> è il nome della risorsa associata all'indirizzo IP
 
-    \<Indirizzo IP > è l'indirizzo IP per l'istanza FCI
+    \<IPAddress> è l'indirizzo IP per l'istanza del cluster di failover
 
-    \<NetworkCard > è la scheda di rete associata alla subnet (ad esempio eth0)
+    \<NetworkCard> è la scheda di rete associata alla subnet (ad esempio, eth0)
 
-    \<Subnet mask > è la subnet mask della subnet (ad esempio 24)
+    \<NetMask> è la netmask della subnet (ad esempio, 24)
 
-    \<RGName > è il nome del gruppo di risorse
+    \<RGName> è il nome del gruppo di risorse
  
-3.  Creare la risorsa di infrastruttura di classificazione file. Se non esiste un problema, non si otterrà alcuna risposta.
+3.  Creare la risorsa istanza del cluster di failover. Se non si verificano problemi, non verrà restituita alcuna risposta.
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName > è il nome della risorsa non solo, ma il nome descrittivo associato con l'istanza FCI. Questo è ciò che utenti e applicazioni useranno per connettersi. 
+    \<FCIResourceName> non è solo il nome della risorsa, ma anche il nome descrittivo associato all'istanza del cluster di failover, che gli utenti e le applicazioni useranno per connettersi. 
 
-    \<RGName > è il nome del gruppo di risorse.
+    \<RGName> è il nome del gruppo di risorse.
  
-4.  Eseguire il comando `sudo pcs resource`. L'istanza FCI deve essere online.
+4.  Eseguire il comando `sudo pcs resource`. L'istanza del cluster di failover deve essere online.
  
-5.  Connettersi all'istanza di FCI con SSMS o sqlcmd usando il nome DNS/risorsa dell'istanza FCI.
+5.  Connettersi all'istanza del cluster di failover con SSMS o sqlcmd usando il nome DNS o della risorsa dell'istanza del cluster di failover.
 
-6.  Eseguire l'istruzione `SELECT @@SERVERNAME`. Deve restituire il nome dell'istanza FCI.
+6.  Eseguire l'istruzione `SELECT @@SERVERNAME`, che deve restituire il nome dell'istanza del cluster di failover.
 
-7.  Eseguire l'istruzione `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. Deve restituire il nome del nodo in cui è in esecuzione l'istanza FCI.
+7.  Eseguire l'istruzione `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`, che deve restituire il nome del nodo in cui è in esecuzione l'istanza del cluster di failover.
 
-8.  Effettuare manualmente l'infrastruttura di classificazione file per gli altri nodi. Vedere le istruzioni riportate sotto [istanza del cluster di failover Operate - SQL Server in Linux](sql-server-linux-shared-disk-cluster-operate.md).
+8.  Eseguire il failover manuale dell'istanza del cluster di failover negli altri nodi. Vedere le istruzioni in [Gestire un'istanza del cluster di failover - SQL Server in Linux](sql-server-linux-shared-disk-cluster-operate.md).
 
-9.  Infine, eseguire il failover sul nodo originale e rimuovere il vincolo con più sedi.
+9.  Eseguire infine il failback dell'istanza del cluster di failover nel nodo originale e rimuovere il vincolo di condivisione del percorso.
 
 <!---
 
@@ -280,18 +280,18 @@ Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del 
 -->
 ## <a name="summary"></a>Riepilogo
 
-In questa esercitazione sono completate le attività seguenti.
+In questa esercitazione sono state completate le attività seguenti.
 
 > [!div class="checklist"]
 > * Installare e configurare Linux
 > * Installare e configurare SQL Server
 > * Configurare il file hosts
-> * Configurare l'archiviazione condivisa e spostare i file di database
+> * Configurare la risorsa di archiviazione condivisa e spostare i file di database
 > * Installare e configurare Pacemaker in ogni nodo del cluster
 > * Configurare l'istanza del cluster di failover
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Funzionamento di istanza del cluster di failover: SQL Server in Linux](sql-server-linux-shared-disk-cluster-operate.md)
+- [Gestire un'istanza del cluster di failover - SQL Server in Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

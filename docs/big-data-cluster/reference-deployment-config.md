@@ -1,7 +1,7 @@
 ---
-title: Riferimento a file di configurazione di distribuzione
+title: Informazioni di riferimento sul file di configurazione della distribuzione
 titleSuffix: SQL Server big data clusters
-description: Informazioni di riferimento per un file di configurazione distribuzione di cluster di big data.
+description: Informazioni di riferimento per un file di configurazione della distribuzione del cluster Big Data.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958241"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Riferimento a file di configurazione di distribuzione per i cluster di big data
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Informazioni di riferimento sui file di configurazione della distribuzione per cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce un file JSON che documenta la struttura di un file di configurazione SQL Server 2019 distribuzione cluster dei big Data.
+Questo articolo fornisce un file JSON che documenta la struttura di un file di configurazione della distribuzione dei cluster Big Data di SQL Server 2019.
 
 > [!TIP]
-> Non usare questo come file di configurazione di distribuzione effettive. Al contrario, seguire le istruzioni nel [Guida alla distribuzione](deployment-guidance.md#configfile) per informazioni su come usare i file di configurazione.
+> Non usarlo come file di configurazione della distribuzione effettiva. Seguire invece le istruzioni riportate nelle [linee guida per la distribuzione](deployment-guidance.md#configfile) per informazioni su come usare i file di configurazione.
 
 ## <a name="deployment-configuration-file"></a>File di configurazione della distribuzione
 
-Usare il file JSON seguente come riferimento per la struttura e le impostazioni in un file di configurazione distribuzione di cluster di big data.
+Usare il file JSON seguente come riferimento per la struttura e le impostazioni in un file di configurazione della distribuzione di un cluster Big Data.
 
 ```json
 {
@@ -453,4 +453,4 @@ Usare il file JSON seguente come riferimento per la struttura e le impostazioni 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come usare e personalizzare i file di configurazione di distribuzione, vedere [come distribuire i dati di grandi dimensioni di SQL Server di cluster in Kubernetes](deployment-guidance.md#configfile).
+Per altre informazioni su come usare e personalizzare file di configurazione delle distribuzioni, vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md#configfile).

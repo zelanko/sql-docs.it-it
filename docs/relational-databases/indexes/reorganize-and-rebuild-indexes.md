@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909584"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476263"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 
@@ -71,11 +71,28 @@ Una volta noto il grado di frammentazione, usare la tabella seguente per determi
 
 <sup>1</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.
 
-Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso.
+> [!TIP]
+> Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Se ad esempio un determinato indice viene usato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in termini di prestazioni è meno evidente per gli indici usati principalmente per le operazioni di ricerca. Analogamente, la rimozione della frammentazione in un heap (una tabella senza indici cluster) è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
+
 Non è in genere consigliabile usare questi comandi per livelli di frammentazione ridotti (inferiori al 5%), poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice. Per altre informazioni su `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]
 > La ricompilazione o la riorganizzazione degli indici di dimensioni ridotte spesso non riduce la frammentazione. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice.
+
+### <a name="index-defragmentation-considerations"></a>Considerazioni sulla deframmentazione dell'indice
+In determinate condizioni, la ricompilazione di un indice cluster ricreerà automaticamente tutti gli indici non cluster che fanno riferimento alla chiave di clustering, se è necessario modificare gli identificatori fisici o logici contenuti nei record degli indici non cluster.
+
+Scenari che forzano la ricompilazione automatica di tutti gli indici non cluster in una tabella:
+
+-  Creazione di un indice cluster in una tabella
+-  Rimozione di un indice cluster, che causa l'archiviazione della tabella come heap
+-  Modifica della chiave di clustering per includere o escludere colonne
+
+Scenari che non richiedono la ricompilazione automatica di tutti gli indici non cluster in una tabella:
+
+-  Ricompilazione di un indice cluster univoco
+-  Ricompilazione di un indice cluster non univoco
+-  Modifica dello schema dell'indice, ad esempio tramite l'applicazione di uno schema di partizionamento a un indice cluster o lo spostamento dell'indice cluster in un filegroup diverso
 
 ### <a name="Restrictions"></a> Limitazioni e restrizioni
 
@@ -96,7 +113,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
 
 #### <a name="Permissions"></a> Autorizzazioni
 
-È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro di almeno uno dei ruoli seguenti:
+È richiesta l'autorizzazione `ALTER` per la tabella o la vista. L'utente deve essere un membro di almeno uno dei ruoli seguenti:
 
 - Ruolo del database **db_ddladmin** <sup>1</sup>
 - Ruolo del database **db_owner**

@@ -1,5 +1,5 @@
 ---
-title: Copia bulk di dati a SQL Server in Linux
+title: Eseguire una copia bulk dei dati in SQL Server in Linux
 description: ''
 author: VanMSFT
 ms.author: vanto
@@ -9,43 +9,43 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68127316"
 ---
-# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia bulk di dati con bcp da SQL Server in Linux
+# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Eseguire una copia bulk dei dati con bcp in SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo illustra come usare il [bcp](../tools/bcp-utility.md) utilità della riga di comando di copia bulk dei dati tra un'istanza di SQL Server in Linux e un file di dati in un formato specificato dall'utente.
+Questo articolo illustra come usare l'utilità della riga di comando [bcp](../tools/bcp-utility.md) per eseguire una copia bulk dei dati tra un'istanza di SQL Server in Linux e un file di dati in un formato specificato dall'utente.
 
-È possibile usare `bcp` per importare un numero elevato di righe in tabelle di SQL Server oppure per esportare dati dalle tabelle di SQL Server in file di dati. Tranne quando è usato con l'opzione queryout `bcp` non richiede alcuna conoscenza di Transact-SQL. Il `bcp` utilità della riga di comando funziona con Microsoft SQL Server in esecuzione in locale o nel cloud, su Linux, Windows o Docker e Database SQL di Azure e Azure SQL Data Warehouse.
+È possibile usare `bcp` per importare un numero elevato di righe in tabelle di SQL Server oppure per esportare dati da tabelle di SQL Server a file di dati. A eccezione del caso in cui venga usata con l'opzione queryout, `bcp` non richiede alcuna conoscenza di Transact-SQL. L'utilità della riga di comando `bcp` funziona con Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker e nel database SQL di Azure e in Azure SQL Data Warehouse.
 
 Questo articolo illustra come:
-- Importare dati in una tabella usando il `bcp in` comando
-- Esportare i dati da una tabella usando il `bcp out` comando
+- Importare i dati in una tabella usando il comando `bcp in`
+- Esportare i dati da una tabella usando il comando `bcp out`
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
-`bcp` fa parte di strumenti della riga di comando di SQL Server, che non vengono installati automaticamente con SQL Server in Linux. Se non è già installato gli strumenti da riga di comando di SQL Server nel computer Linux, è necessario installarli. Per altre informazioni su come installare gli strumenti, selezionare la distribuzione di Linux dall'elenco seguente:
+`bcp` fa parte degli strumenti da riga di comando di SQL Server, che non vengono installati automaticamente con SQL Server in Linux. Se gli strumenti da riga di comando di SQL Server non sono già stati installati nel computer Linux, è necessario installarli. Per altre informazioni su come installare gli strumenti, selezionare la distribuzione di Linux dall'elenco seguente:
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
 - [SUSE Linux Enterprise Server (SLES)](sql-server-linux-setup-tools.md#SLES)
 
-## <a name="import-data-with-bcp"></a>Importare dati con bcp
+## <a name="import-data-with-bcp"></a>Importare i dati con bcp
 
-In questa esercitazione si crea un database di esempio e una tabella nell'istanza locale di SQL Server (**localhost**) e quindi usare `bcp` da caricare nella tabella di esempio da un file di testo su disco.
+In questa esercitazione si creano un database e una tabella di esempio nell'istanza di SQL Server locale (**localhost**) e quindi si usa `bcp` per caricare dati nella tabella di esempio da un file di testo su disco.
 
-### <a name="create-a-sample-database-and-table"></a>Creare un database di esempio e un tabella
+### <a name="create-a-sample-database-and-table"></a>Creare un database e una tabella di esempio
 
-Iniziamo creando un database di esempio con una semplice tabella utilizzato nella parte restante di questa esercitazione.
+Si inizierà con la creazione di un database di esempio con una semplice tabella usata nella parte restante di questa esercitazione.
 
-1. Nella casella di Linux, aprire un terminale di comando.
+1. Nel computer Linux aprire un terminale di comando.
 
-2. Copiare e incollare i comandi seguenti nella finestra del terminale. Questi comandi usano il **sqlcmd** utilità della riga di comando per creare un database di esempio (**BcpSampleDB**) e una tabella (**TestEmployees**) nell'istanza locale di SQL Server (**localhost**). Ricordare di sostituire il `username` e `<your_password>` esigenze prima di eseguire i comandi.
+2. Copiare e incollare i comandi seguenti nella finestra del terminale. Questi comandi usano l'utilità della riga di comando **sqlcmd** per creare un database di esempio (**BcpSampleDB**) e una tabella (**TestEmployees**) nell'istanza di SQL Server locale (**localhost**). Ricordarsi di sostituire `username` e `<your_password>`, se necessario, prima di eseguire i comandi.
 
 Creare il database **BcpSampleDB**:
 ```bash 
@@ -56,7 +56,7 @@ Creare la tabella **TestEmployees** nel database **BcpSampleDB**:
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>Creare il file di dati di origine
-Copiare e incollare il comando seguente nella finestra del terminale. Utilizziamo l'oggetto incorporato `cat` comando per creare un file di dati di testo di esempio con tre record salvare il file nella home directory come **~/test_data.txt**. I campi nei record sono delimitati da una virgola.
+Copiare e incollare il comando seguente nella finestra del terminale. Si usa il comando `cat` predefinito per creare un file di dati di esempio con tre record. Salvare il file nella home directory come **~/test_data.txt**. I campi nei record sono delimitati da una virgola.
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -66,42 +66,42 @@ cat > ~/test_data.txt << EOF
 EOF
 ```
 
-È possibile verificare che il file di dati è stato creato correttamente eseguendo il comando seguente nella finestra del terminale:
+È possibile verificare che il file di dati sia stato creato correttamente eseguendo il comando seguente nella finestra del terminale:
 ```bash 
 cat ~/test_data.txt
 ```
 
-Nella finestra del terminale verrà visualizzato quanto segue:
+Nella finestra del terminale dovrebbe essere visualizzato quanto segue:
 ```bash
 1,Jared,Australia
 2,Nikita,India
 3,Tom,Germany
 ```
 
-### <a name="import-data-from-the-source-data-file"></a>Importare i dati dal file di dati di origine
-Copiare e incollare i comandi seguenti nella finestra del terminale. Questo comando Usa `bcp` per connettersi all'istanza di SQL Server locale (**localhost**) e importare i dati dal file di dati ( **~/test_data.txt**) nella tabella (**TestEmployees** ) nel database (**BcpSampleDB**). Ricordare di sostituire il nome utente e `<your_password>` esigenze prima di eseguire i comandi.
+### <a name="import-data-from-the-source-data-file"></a>Importa i dati dal file di dati di origine
+Copiare e incollare i comandi seguenti nella finestra del terminale. Questo comando usa `bcp` per connettersi all'istanza di SQL Server locale (**localhost**) e importare i dati dal file di dati ( **~/test_data.txt**) nella tabella (**TestEmployees**) nel database (**BcpSampleDB**). Ricordarsi di sostituire il nome utente e `<your_password>`, se necessario, prima di eseguire i comandi.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
 ```
 
-Ecco una breve panoramica dei parametri della riga di comando è stato usato con `bcp` in questo esempio:
-- `-S`: specifica l'istanza di SQL Server a cui connettersi
-- `-U`: specifica l'ID di accesso utilizzato per connettersi a SQL Server
+Ecco una breve panoramica dei parametri della riga di comando usati con `bcp` in questo esempio:
+- `-S`: specifica l'istanza di SQL Server alla quale connettersi
+- `-U`: specifica l'ID di accesso usato per connettersi SQL Server
 - `-P`: specifica la password per l'ID di accesso
-- `-d`: Specifica il database a cui connettersi
-- `-c`: esegue le operazioni usando dati di tipo carattere
-- `-t`: Specifica il carattere di terminazione del campo. Utilizziamo `comma` come il carattere di terminazione del campo per i record nel file di dati
+- `-d`: specifica il database al quale connettersi
+- `-c`: esegue le operazioni usando un tipo di dati carattere
+- `-t`: specifica il carattere di terminazione del campo. Per i record nel file di dati viene usato `comma` come carattere di terminazione del campo
 
 > [!NOTE]
-> In questo esempio non viene specificato un terminatore di riga personalizzato. Le righe nel file di dati di testo sono stati correttamente terminate con `newline` quando è stato usato il `cat` comando per creare il file di dati in precedenza.
+> In questo esempio non viene specificato un carattere di terminazione della riga personalizzato. Le righe nel file di dati di testo sono state terminate correttamente con `newline` quando è stato usato il comando `cat` per creare il file di dati in precedenza.
 
-È possibile verificare che i dati sono stati importati correttamente eseguendo il comando seguente nella finestra del terminale. Ricordare di sostituire il `username` e `<your_password>` esigenze prima di eseguire il comando.
+È possibile verificare che i dati siano stati importati correttamente eseguendo il comando seguente nella finestra del terminale. Ricordarsi di sostituire `username` e `<your_password>`, se necessario, prima di eseguire il comando.
 ```bash 
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <your_password> -I -Q "SELECT * FROM TestEmployees;"
 ```
 
-Questo dovrebbe visualizzare i risultati seguenti:
+Verranno visualizzati i risultati seguenti:
 ```bash
 Id          Name                Location
 ----------- ------------------- -------------------
@@ -114,20 +114,20 @@ Id          Name                Location
 
 ## <a name="export-data-with-bcp"></a>Esportare i dati con bcp
 
-In questa esercitazione, userà `bcp` per esportare dati dalla tabella di esempio creato in precedenza in un nuovo file di dati.
+In questa esercitazione si usa `bcp` per esportare i dati dalla tabella di esempio creata in precedenza a un nuovo file di dati.
 
-Copiare e incollare i comandi seguenti nella finestra del terminale. Questi comandi usano il `bcp` utilità della riga di comando per esportare i dati dalla tabella **TestEmployees** nel database **BcpSampleDB** in un nuovo file di dati denominato **~/test_export.txt** .  Ricordare di sostituire il nome utente e `<your_password>` esigenze prima di eseguire il comando.
+Copiare e incollare i comandi seguenti nella finestra del terminale. Questi comandi usano l'utilità della riga di comando `bcp` per esportare i dati dalla tabella **TestEmployees** nel database **BcpSampleDB** a un nuovo file di dati denominato **~/test_export.txt**.  Ricordarsi di sostituire il nome utente e `<your_password>`, se necessario, prima di eseguire il comando.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
 ```
 
-È possibile verificare che i dati siano stati esportati correttamente eseguendo il comando seguente nella finestra del terminale:
+È possibile verificare che il file di dati sia stato esportato correttamente eseguendo il comando seguente nella finestra del terminale:
 ```bash 
 cat ~/test_export.txt
 ```
 
-Nella finestra del terminale verrà visualizzato quanto segue:
+Nella finestra del terminale dovrebbe essere visualizzato quanto segue:
 ```
 1,Jared,Australia
 2,Nikita,India
@@ -136,6 +136,6 @@ Nella finestra del terminale verrà visualizzato quanto segue:
 
 ## <a name="see-also"></a>Vedere anche
 - [utilità bcp](../tools/bcp-utility.md)
-- [Formati di dati per la compatibilità mediante bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
-- [Importazione Bulk dei dati tramite BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [Formati di dati per la compatibilità quando si usa bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [Importare dati per operazioni bulk usando BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
