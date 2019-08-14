@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470763"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995829"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire cluster Big Data di SQL Server in Kubernetes
 
@@ -87,10 +87,10 @@ Le opzioni di distribuzione dei cluster Big Data sono definite in un file di con
 
 È possibile distribuire un cluster Big Data eseguendo **azdata bdc create**. Verrà chiesto di scegliere una delle configurazioni predefinite e quindi verranno presentati i passaggi di distribuzione.
 
-La prima volta che si esegue `azdata`, è necessario includere `--accept-eula` per accettare le condizioni del contratto di licenza con l'utente finale.
+La prima volta che si esegue `azdata`, è necessario includere `--accept-eula=yes` per accettare le condizioni del contratto di licenza con l'utente finale.
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 In questo scenario vengono chieste le impostazioni che non fanno parte della configurazione predefinita, ad esempio le password. 
@@ -149,8 +149,8 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 | **MSSQL_SA_PASSWORD** | Obbligatoria |Password dell'utente amministratore di sistema per l'istanza master di SQL Server. |
 | **KNOX_PASSWORD** | Obbligatoria |Password dell'utente Knox. |
 | **ACCEPT_EULA**| Obbligatoria per il primo utilizzo di `azdata`| Non richiede alcun valore. Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula` al primo utilizzo del comando `azdata`.|
-| **DOCKER_USERNAME** | Facoltativa | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
-| **DOCKER_PASSWORD** | Facoltativa |Password per accedere al repository privato citato sopra. |
+| **DOCKER_USERNAME** | Facoltativo | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
+| **DOCKER_PASSWORD** | Facoltativo |Password per accedere al repository privato citato sopra. |
 
 Queste variabili di ambiente devono essere impostate prima di chiamare **azdata bdc create**. Se una qualsiasi delle variabili non è impostata, viene chiesto di farlo.
 
@@ -263,7 +263,7 @@ Dopo aver eseguito lo script di distribuzione, è possibile ottenere gli indiriz
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-### <a name="minikube"></a>minikube
+### <a name="minikube"></a>Minikube
 
 Se si usa minikube, è necessario eseguire il comando seguente per ottenere l'indirizzo IP cui è necessario connettersi. Oltre all'indirizzo IP, specificare la porta per l'endpoint cui è necessario connettersi.
 
