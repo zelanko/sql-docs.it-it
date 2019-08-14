@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077686"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823110"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-È possibile eseguire il backup di database di SQL Server 2017 in Linux con gli stessi strumenti usati in altre piattaforme. In un server Linux, per connettersi a SQL Server ed eseguire backup è possibile usare **sqlcmd**. Da Windows è possibile connettersi a SQL Server in Linux ed eseguire backup tramite l'interfaccia utente. La funzionalità di backup è identica in tutte le piattaforme. È ad esempio possibile eseguire il backup di database in locale, in unità remote o nel [servizio di archiviazione BLOB di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+È possibile eseguire il backup dei database da SQL Server 2017 in Linux con molte opzioni diverse. In un server Linux, per connettersi a SQL Server ed eseguire backup è possibile usare **sqlcmd**. Da Windows è possibile connettersi a SQL Server in Linux ed eseguire backup tramite l'interfaccia utente. La funzionalità di backup è identica in tutte le piattaforme. È ad esempio possibile eseguire il backup di database in locale, in unità remote o nel [servizio di archiviazione BLOB di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="backup-a-database"></a>Eseguire il backup di un database
 

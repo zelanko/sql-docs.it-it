@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388398"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892735"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
 
@@ -27,7 +27,7 @@ ms.locfileid: "68388398"
 
 Il Feature Pack di SQL Server Integration Services (SSIS) per Azure è un'estensione che fornisce i componenti elencati in questa pagina per consentire a SSIS di connettersi ai servizi Azure, trasferire i dati tra Azure e le origini dati locali ed elaborare i dati archiviati in Azure.
 
-[![Scaricare il Feature Pack di SSIS per Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Scarica**
+[![Scaricare il Feature Pack di SSIS per Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Scarica**
 
 - Per SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - Per SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -96,6 +96,60 @@ Per usare TLS 1.2, aggiungere un valore `REG_DWORD` denominato `SchUseStrongCryp
 
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
 2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+
+## <a name="dependency-on-java"></a>Dipendenza da Java
+
+Java è necessario per usare determinate funzionalità.
+L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
+Sono state sottoposte a test le build di Java seguenti.
+
+- [OpenJDK 8u192 di Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Configurare OpenJDK di Zulu
+
+1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
+2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
+3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
+4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
+5. Immettere `JAVA_HOME` in **Nome variabile**.
+6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
+   Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
+7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
+8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
+9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
+
+### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configurare OpenJDK di Zulu in Azure-SSIS Integration Runtime
+
+Questa operazione deve essere eseguita tramite l'[interfaccia di configurazione personalizzata](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) per Azure-SSIS Integration Runtime.
+Si supponga di usare `zulu8.33.0.1-jdk8.0.192-win_x64.zip`.
+Il contenitore BLOB può essere organizzato come indicato di seguito.
+
+~~~
+main.cmd
+install_openjdk.ps1
+zulu8.33.0.1-jdk8.0.192-win_x64.zip
+~~~
+
+Come punto di ingresso, `main.cmd` attiva l'esecuzione dello script di PowerShell `install_openjdk.ps1` che a sua volta estrae `zulu8.33.0.1-jdk8.0.192-win_x64.zip` e imposta `JAVA_HOME` di conseguenza.
+
+**main.cmd**
+
+~~~
+powershell.exe -file install_openjdk.ps1
+~~~
+
+**install_openjdk.ps1**
+
+~~~
+Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
+~~~
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Configurare Oracle Java SE Runtime Environment
+
+1. Scaricare ed eseguire il programma di installazione con estensione exe.
+2. Seguire le istruzioni del programma di installazione per completare l'installazione.
 
 ## <a name="scenario-processing-big-data"></a>Scenario: Elaborazione di Big Data
  Usare il connettore di Azure per completare l'elaborazione di Big Data:

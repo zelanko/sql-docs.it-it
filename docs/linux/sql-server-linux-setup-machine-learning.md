@@ -1,6 +1,6 @@
 ---
 title: Installare SQL Server Machine Learning Services (R, Python) in Linux
-description: Informazioni su come installare SQL Server Machine Learning Services (R, Python) su Red Hat, Ubuntu e SUSE.
+description: Informazioni su come installare SQL Server Machine Learning Services (R, Python) in Red Hat, Ubuntu e SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -10,101 +10,103 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834677"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476194"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installare SQL Server 2019 Machine Learning Services (R, Python) in Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) viene eseguito nei sistemi operativi Linux a partire da questa versione di anteprima di SQL Server 2019. Seguire i passaggi descritti in questo articolo per installare le estensioni di apprendimento automatico per R e Python. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Machine learning e le estensioni di programmazione è un componente aggiuntivo per il motore di database. Sebbene sia possibile [installare il motore di database e servizi di Machine Learning contemporaneamente](#install-all), è consigliabile installare e configurare il motore di database di SQL Server prima di tutto in modo da poter risolvere eventuali problemi prima di aggiungerne altri componenti. 
+[SQL Server Machine Learning Services](../advanced-analytics/index.yml) viene eseguito nei sistemi operativi Linux a partire da questa versione di anteprima di SQL Server 2019. Eseguire la procedura descritta in questo articolo per installare le estensioni di Machine Learning per R e Python.
 
-Percorso del pacchetto per le estensioni R e Python è nei repository di origine Linux di SQL Server. Se è già configurato repository del codice sorgente per l'installazione del motore di database, è possibile eseguire la **mssql-mlservices** i comandi di installazione usando la stessa registrazione del repository del pacchetto.
+Le estensioni di Machine Learning e di programmazione sono un componente aggiuntivo del motore di database. Anche se è possibile [installare il motore di database e Machine Learning Services simultaneamente](#install-all), è consigliabile installare e configurare prima il motore di database di SQL Server per poter risolvere eventuali problemi prima di aggiungere altri componenti. 
 
-Servizi di Machine Learning è supportato anche sui contenitori di Linux. Microsoft non fornisce contenitori predefiniti con i servizi di Machine Learning, ma è possibile crearne una dai contenitori di SQL Server usando [un modello di esempio disponibile in GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+Il percorso del pacchetto per le estensioni R e Python si trova nei repository di origine di Linux per SQL Server. Se i repository di origine per l'installazione del motore di database sono già stati configurati, è possibile eseguire i comandi di installazione del pacchetto **mssql-mlservices** usando la stessa registrazione dei repository.
 
-## <a name="uninstall-previous-ctp"></a>Versione CTP precedente di disinstallazione
+Machine Learning Services è supportato anche nei contenitori Linux. Non vengono forniti contenitori predefiniti con Machine Learning Services, ma è possibile crearne uno dai contenitori di SQL Server usando [un modello di esempio disponibile in GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-L'elenco dei pacchetti è stato modificato nelle ultime versioni CTP diversi, generando un minor numero di pacchetti. È consigliabile disinstallare CTP 2.x in modo da rimuovere tutti i pacchetti precedenti prima di installare versioni CTP 3.1. Installazione side-by-side di più versioni non è supportata.
+## <a name="uninstall-previous-ctp"></a>Disinstallare la versione CTP precedente
 
-### <a name="1-confirm-package-installation"></a>1. Confermare l'installazione del pacchetto
+L'elenco dei pacchetti è stato modificato nelle ultime versioni di CTP, creando un numero minore di pacchetti. Si consiglia di disinstallare CTP 2.x per rimuovere tutti i pacchetti precedenti prima di installare CTP 3.2. L'installazione side-by-side di più versioni non è supportata.
 
-È possibile verificare l'esistenza di un'installazione precedente come primo passaggio. I file seguenti indicano un'installazione esistente: checkinstallextensibility.sh, exthost, launchpad.
+### <a name="1-confirm-package-installation"></a>1. Verificare l'installazione dei pacchetti
+
+Come primo passaggio, potrebbe essere necessario verificare se esiste un'installazione precedente. I file seguenti indicano un'installazione esistente: checkinstallextensibility.sh, exthost, launchpad.
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Disinstallare i pacchetti di precedente versione CTP 2.x
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Disinstallare i pacchetti CTP 2.x precedenti
 
-Disinstallare a livello di pacchetto più basso. Qualsiasi pacchetto upstream dipende da un pacchetto di livello inferiore viene automaticamente disinstallato.
+Disinstallare il pacchetto di livello più basso. Qualsiasi pacchetto upstream dipendente da un pacchetto di livello inferiore viene disinstallato automaticamente.
 
   + Per l'integrazione di R, rimuovere **microsoft-r-open***
   + Per l'integrazione di Python, rimuovere **mssql-mlservices-python**
 
-Comandi per la rimozione dei pacchetti vengono visualizzati nella tabella seguente.
+I comandi per la rimozione dei pacchetti sono elencati nella tabella seguente.
 
-| Piattaforma  | Comandi di rimozione pacchetto | 
+| Piattaforma  | Comandi di rimozione dei pacchetti | 
 |-----------|----------------------------|
 | RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
 | SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 è composto da due o tre pacchetti, a seconda di quale versione CTP è installato in precedenza. (Il pacchetto foreachiterators combinato nel pacchetto mro principale in CTP 2.2.) Se uno di questi pacchetti rimangono dopo aver rimosso microsoft-r-open-mro-3.4.4, è necessario rimuoverli singolarmente.
+> Microsoft R Open 3.4.4 è costituito da due o tre pacchetti, a seconda della versione CTP installata in precedenza. Il pacchetto foreachiterators è stato combinato nel pacchetto mro principale della versione CTP 2.2. Se uno di questi pacchetti è ancora presente dopo aver rimosso microsoft-r-open-mro-3.4.4, è necessario rimuoverli singolarmente.
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-31-install"></a>3. Procedere con l'installazione di versioni CTP 3.1
+### <a name="3-proceed-with-ctp-32-install"></a>3. Procedere con l'installazione di CTP 3.2
 
-Installare il massimo livello di pacchetto seguendo le istruzioni riportate in questo articolo per il sistema operativo.
+Installare il pacchetto di livello più alto seguendo le istruzioni riportate in questo articolo per il sistema operativo.
 
-Per ogni set di specifiche del sistema operativo di istruzioni di installazione *massimo livello di pacchetto* può essere **esempio 1: installazione completa** per il set completo di pacchetti, o **esempio 2 - installazione minima**  per il minor numero di pacchetti necessari per un'installazione valida.
+Per ogni set di istruzioni di installazione specifico del sistema operativo, il *pacchetto di livello più alto* corrisponde a **Esempio 1 - Installazione completa** per il set di pacchetti completo oppure a **Esempio 2 - Installazione minima** per il numero minimo di pacchetti necessari per un'installazione valida.
 
-1. Per l'integrazione di R, iniziare con [MRO](#mro) perché è un prerequisito. Integrazione di R non verrà installato senza di essa.
+1. Per l'integrazione di R, iniziare con [MRO](#mro) perché è un prerequisito, senza il quale l'integrazione di R non verrà installata.
 
-2. Eseguire i comandi di installazione usando la sintassi e i gestori di pacchetti per il sistema operativo: 
+2. Eseguire i comandi di installazione usando le utilità di gestione pacchetti e la sintassi per il sistema operativo in uso: 
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-+ La versione di Linux deve essere [supportati da SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), ma non include il motore Docker. Le versioni supportate sono:
++ La versione di Linux deve essere [supportata da SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), ma non include il motore Docker. Le versioni supportate includono:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
-   + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
+   + [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ (Solo R) [Microsoft R Open](#mro) la distribuzione di R di base per la funzionalità di R in SQL Server
++ (Solo R) [Microsoft R Open](#mro) fornisce la distribuzione di R di base per la funzionalità R in SQL Server
 
-+ È necessario uno strumento per l'esecuzione di comandi T-SQL. Un editor di query è necessario per la convalida e configurazione di post-installazione. È consigliabile [Studio di Azure Data](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), un download gratuito che viene eseguito in Linux.
++ È necessario avere uno strumento per eseguire i comandi T-SQL. Un editor di query è necessario per la configurazione e la convalida successiva all'installazione. È consigliabile usare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), scaricabile gratuitamente, che viene eseguito in Linux.
 
 <a name="mro"></a>
 
 ### <a name="microsoft-r-open-mro-installation"></a>Installazione di Microsoft R Open (MRO)
 
-Distribuzione di base di Microsoft di R è un prerequisito per l'uso di RevoScaleR, MicrosoftML e altri pacchetti R installati con i servizi di Machine Learning.
+La distribuzione di base di Microsoft di R è un prerequisito per l'uso di RevoScaleR, MicrosoftML e altri pacchetti R installati con Machine Learning Services.
 
 La versione richiesta è MRO 3.5.2.
 
-Scegliere tra i due approcci seguenti per installare MRO:
+Per installare MRO, scegliere uno dei due approcci seguenti:
 
-+ Scaricare il file tarball MRO da MRAN, decomprimerlo ed eseguire lo script install.sh. È possibile seguire le [istruzioni di installazione su MRAN](https://mran.microsoft.com/releases/3.5.2) se si desidera che questo approccio.
++ Scaricare il file tarball di MRO da MRAN, decomprimerlo ed eseguire lo script install.sh. Se si sceglie questo approccio, è possibile seguire le [istruzioni di installazione nella pagina di MRAN](https://mran.microsoft.com/releases/3.5.2).
 
-+ In alternativa, registrare il **packages.microsoft.com** repository come descritto di seguito per installare due pacchetti che includono la distribuzione MRO: microsoft-r-open-mro e microsoft-r-open-mkl. 
++ In alternativa, registrare il repository **packages.microsoft.com**, come descritto sotto, per installare i due pacchetti comprendenti la distribuzione di MRO: microsoft-r-open-mro e microsoft-r-open-mkl. 
 
-I comandi seguenti registrare il repository fornendo MRO. Post-registrazione, i comandi per installare altri pacchetti R, ad esempio mssql-mlservices-mml-r, includerà automaticamente MRO come una dipendenza del pacchetto.
+I comandi seguenti registrano il repository che fornisce MRO. Dopo la registrazione, i comandi per l'installazione di altri pacchetti R, ad esempio mssql-mlservices-mml-r, includeranno automaticamente MRO come dipendenza del pacchetto.
 
 #### <a name="mro-on-ubuntu"></a>MRO in Ubuntu
 
@@ -155,35 +157,35 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 zypper update
 ```
 
-## <a name="package-list"></a>Elenco dei pacchetti
+## <a name="package-list"></a>Elenco di pacchetti
 
-In un dispositivo connesso a internet, i pacchetti vengono scaricati e installati indipendentemente dal motore di database mediante il programma di installazione del pacchetto per ogni sistema operativo. La tabella seguente descrive tutti i pacchetti disponibili, ma per R e Python, si specificano pacchetti che forniscono l'installazione completa di funzionalità o l'installazione della funzionalità minima.
+In un dispositivo connesso a Internet i pacchetti vengono scaricati e installati in modo indipendente dal motore di database usando il programma di installazione del pacchetto per ogni sistema operativo. La tabella seguente descrive tutti i pacchetti disponibili, ma per R e Python si specificano pacchetti che forniscono l'installazione completa delle funzionalità o l'installazione minima delle funzionalità.
 
-| Nome pacchetto | Si applica a | Descrizione |
+| Nome pacchetto | Applicabile a | Descrizione |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Tutti | Framework di estendibilità utilizzato per eseguire codice R e Python. |
-| microsoft-openmpi  | Python, R | Interfaccia utilizzata dalle librerie Revo * per la parallelizzazione in Linux di passaggio dei messaggi. |
-| mssql-mlservices-python | Python | Distribuzione di open source di Python e Anaconda. |
-|mssql-mlservices-mlm-py  | Python | *Installazione completa*. Fornisce revoscalepy, microsoftml, pre-training di modelli per l'analisi del sentiment definizione delle funzionalità e il testo di immagine.| 
-|mssql-mlservices-packages-py  | Python | *Installazione minima*. Fornisce microsoftml e revoscalepy. <br/>Esclude i modelli con training preliminare. | 
-| [microsoft-r-open*](#mro) | R | Distribuzione open source di R, è costituito da tre pacchetti. |
-|mssql-mlservices-mlm-r  | R | *Installazione completa*. Fornisce RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-training di modelli per l'analisi del sentiment definizione delle funzionalità e il testo di immagine.| 
-|mssql-mlservices-packages-r  | R | *Installazione minima*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Esclude i modelli con training preliminare. | 
-|mssql-mlservices-mml-py  | Solo CTP 2.0, 2.1 | Obsoleto in CTP 2.2 a causa di un consolidamento del pacchetto di Python in mssql-mslservices-python. Fornisce revoscalepy. Esclude microsoftml e modelli con training preliminare.| 
-|mssql-mlservices-mml-r  | Solo CTP 2.0, 2.1 | Obsoleto in CTP 2.2 a causa di consolidamento di pacchetti R in mssql-mslservices-python. Provides RevoScaleR, sqlRUtils, olapR. Esclude MicrosoftML e modelli con training preliminare.  |
+|mssql-server-extensibility  | All | Framework di estendibilità usato per eseguire il codice R e Python. |
+| microsoft-openmpi  | Python, R | Interfaccia per la trasmissione di messaggi usata dalle librerie Revo* per la parallelizzazione in Linux. |
+| mssql-mlservices-python | Python | Distribuzione open source di Anaconda e Python. |
+|mssql-mlservices-mlm-py  | Python | *Installazione completa*. Fornisce revoscalepy, microsoftml, modelli con training preliminare per la definizione di un immagine e l'analisi del sentiment del testo.| 
+|mssql-mlservices-packages-py  | Python | *Installazione minima*. Fornisce revoscalepy e microsoftml. <br/>Esclude i modelli con training preliminare. | 
+| [microsoft-r-open*](#mro) | R | Distribuzione open source di R, costituita da tre pacchetti. |
+|mssql-mlservices-mlm-r  | R | *Installazione completa*. Fornisce RevoScaleR, MicrosoftML, sqlRUtils, olapR, modelli con training preliminare per la definizione di un immagine e l'analisi del sentiment del testo.| 
+|mssql-mlservices-packages-r  | R | *Installazione minima*. Fornisce RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Esclude i modelli con training preliminare. | 
+|mssql-mlservices-mml-py  | Solo CTP 2.0-2.1 | Obsoleto nella versione CTP 2.2 a causa del consolidamento del pacchetto Python in mssql-mslservices-python. Fornisce revoscalepy. Esclude i modelli con training preliminare e microsoftml.| 
+|mssql-mlservices-mml-r  | Solo CTP 2.0-2.1 | Obsoleto nella versione CTP 2.2 a causa del consolidamento del pacchetto R in mssql-mslservices-python. Fornisce RevoScaleR, sqlRUtils, olapR. Esclude i modelli con training preliminare e MicrosoftML.  |
 
 <a name="RHEL"></a>
 
 ## <a name="redhat-commands"></a>Comandi di RedHat
 
-È possibile installare il supporto linguistico in qualsiasi combinazione desiderata (uno o più linguaggi). Per R e Python, sono disponibili due pacchetti tra cui scegliere. Uno fornisce tutte le funzionalità disponibili, caratterizzate come le *installazione completa*. La scelta alternativa esclude pre-addestrati modelli di machine learning e viene considerata il *installazione minima*.
+È possibile installare il supporto per la lingua in qualsiasi combinazione necessaria (una o più lingue). Per R e Python, è possibile scegliere tra due pacchetti. Uno fornisce tutte le funzionalità disponibili, caratterizzate dall'*installazione completa*. La scelta alternativa esclude i modelli di Machine Learning con training preliminare ed è considerata l'*installazione minima*.
 
 > [!Tip]
 > Se possibile, eseguire `yum clean all` per aggiornare i pacchetti nel sistema prima dell'installazione.
 
-### <a name="example-1----full-installation"></a>Esempio 1: installazione completa 
+### <a name="example-1----full-installation"></a>Esempio 1: Installazione completa 
 
-Include open source R e Python, il framework di estendibilità, microsoft-openmpi, le estensioni (R, Python), con librerie di machine learning e i modelli con training preliminare per R e Python. 
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, estensioni (R, Python), con librerie di Machine Learning e modelli con training preliminare per R e Python. 
 
 ```bash
 # Install as root or sudo
@@ -193,9 +195,9 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### <a name="example-2---minimum-installation"></a>Esempio 2: installazione minima 
+### <a name="example-2---minimum-installation"></a>Esempio 2: Installazione minima 
 
-Include librerie di machine learning, Revo * librerie di base e open source R e Python, il framework di estendibilità, microsoft-openmpi per R e Python. Esclude i modelli con training preliminare.
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, librerie principali di Revo* e librerie di Machine Learning per R e Python. Esclude i modelli con training preliminare.
 
 ```bash
 # Install as root or sudo
@@ -209,14 +211,14 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 
 ## <a name="ubuntu-commands"></a>Comandi di Ubuntu
 
-È possibile installare il supporto linguistico in qualsiasi combinazione desiderata (uno o più linguaggi). Per R e Python, sono disponibili due pacchetti tra cui scegliere. Uno fornisce tutte le funzionalità disponibili, caratterizzate come le *installazione completa*. La scelta alternativa esclude pre-addestrati modelli di machine learning e viene considerata il *installazione minima*.
+È possibile installare il supporto per la lingua in qualsiasi combinazione necessaria (una o più lingue). Per R e Python, è possibile scegliere tra due pacchetti. Uno fornisce tutte le funzionalità disponibili, caratterizzate dall'*installazione completa*. La scelta alternativa esclude i modelli di Machine Learning con training preliminare ed è considerata l'*installazione minima*.
 
 > [!Tip]
-> Se possibile, eseguire `apt-get update` per aggiornare i pacchetti nel sistema prima dell'installazione. Inoltre, alcune immagini docker di Ubuntu potrebbero non avere l'opzione di apt trasporto https. Per installarlo, usare `apt-get install apt-transport-https`.
+> Se possibile, eseguire `apt-get update` per aggiornare i pacchetti nel sistema prima dell'installazione. Inoltre, alcune immagini Docker di Ubuntu potrebbero non avere l'opzione di trasporto apt HTTPS. Per installarla, usare `apt-get install apt-transport-https`.
 
-### <a name="example-1----full-installation"></a>Esempio 1: installazione completa 
+### <a name="example-1----full-installation"></a>Esempio 1: Installazione completa 
 
-Include open source R e Python, il framework di estendibilità, microsoft-openmpi, le estensioni (R, Python), con librerie di machine learning e i modelli con training preliminare per R e Python. 
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, estensioni (R, Python), con librerie di Machine Learning e modelli con training preliminare per R e Python. 
 
 ```bash
 # Install as root or sudo
@@ -226,9 +228,9 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### <a name="example-2---minimum-installation"></a>Esempio 2: installazione minima 
+### <a name="example-2---minimum-installation"></a>Esempio 2: Installazione minima 
 
-Include librerie di machine learning, Revo * librerie di base e open source R e Python, il framework di estendibilità, microsoft-openmpi per R e Python. Esclude i modelli con training preliminare. 
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, librerie principali di Revo* e librerie di Machine Learning per R e Python. Esclude i modelli con training preliminare. 
 
 ```bash
 # Install as root or sudo
@@ -240,13 +242,13 @@ sudo apt-get install mssql-mlservices-packages-r
 
 <a name="suse"></a>
 
-## <a name="suse-commands"></a>Comandi SUSE
+## <a name="suse-commands"></a>Comandi di SUSE
 
-È possibile installare il supporto linguistico in qualsiasi combinazione desiderata (uno o più linguaggi). Per R e Python, sono disponibili due pacchetti tra cui scegliere. Uno fornisce tutte le funzionalità disponibili, caratterizzate come le *installazione completa*. La scelta alternativa esclude pre-addestrati modelli di machine learning e viene considerata il *installazione minima*.
+È possibile installare il supporto per la lingua in qualsiasi combinazione necessaria (una o più lingue). Per R e Python, è possibile scegliere tra due pacchetti. Uno fornisce tutte le funzionalità disponibili, caratterizzate dall'*installazione completa*. La scelta alternativa esclude i modelli di Machine Learning con training preliminare ed è considerata l'*installazione minima*.
 
-### <a name="example-1----full-installation"></a>Esempio 1: installazione completa 
+### <a name="example-1----full-installation"></a>Esempio 1: Installazione completa 
 
-Include open source R e Python, il framework di estendibilità, microsoft-openmpi, le estensioni (R, Python), con librerie di machine learning e i modelli con training preliminare per R e Python. 
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, estensioni (R, Python), con librerie di Machine Learning e modelli con training preliminare per R e Python. 
 
 ```bash
 # Install as root or sudo
@@ -256,9 +258,9 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### <a name="example-2---minimum-installation"></a>Esempio 2: installazione minima 
+### <a name="example-2---minimum-installation"></a>Esempio 2: Installazione minima 
 
-Include librerie di machine learning, Revo * librerie di base e open source R e Python, il framework di estendibilità, microsoft-openmpi per R e Python. Esclude i modelli con training preliminare. 
+Include R e Python open source, framework di estendibilità, microsoft-openmpi, librerie principali di Revo* e librerie di Machine Learning per R e Python. Esclude i modelli con training preliminare. 
 
 ```bash
 # Install as root or sudo
@@ -268,18 +270,18 @@ sudo zypper install mssql-mlservices-packages-py-9.4.7*
 sudo zypper install mssql-mlservices-packages-r-9.4.7*
 ```
 
-## <a name="post-install-config-required"></a>Configurazione di post-installazione (obbligatorio)
+## <a name="post-install-config-required"></a>Configurazione successiva all'installazione (obbligatoria)
 
-Configurazione aggiuntiva viene eseguito principalmente tramita il [lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md).
+La configurazione aggiuntiva viene eseguita principalmente tramite lo [strumento mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Aggiungere l'account utente mssql utilizzato per eseguire il servizio SQL Server. È obbligatorio se è stato ancora eseguito il programma di installazione in precedenza.
+1. Aggiungere l'account utente mssql usato per eseguire il servizio SQL Server. Questa operazione è necessaria se la configurazione non è stata eseguita in precedenza.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Accettare il contratto di licenza di R e Python open source. Esistono diversi modi per eseguire tale operazione. Se in precedenza accettati licenza di SQL Server e si siano aggiungendo a questo punto le estensioni R o Python, il comando seguente è il tuo consenso delle condizioni:
+2. Accettare i contratti di licenza per R e Python open source. Questa operazione può essere eseguita in più modi. Se in precedenza è stata accettata la licenza di SQL Server e ora si aggiungono le estensioni R o Python, il comando seguente è il consenso alle condizioni:
 
    ```bash
    # Run as SUDO or root
@@ -287,9 +289,9 @@ Configurazione aggiuntiva viene eseguito principalmente tramita il [lo strumento
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
 
-   Un flusso di lavoro alternativo è che, se non si ha ancora accettato il motore di database di SQL Server contratto di licenza, il programma di installazione rileva mssql-mlservices pacchetti e istruzioni per l'accettazione delle condizioni di licenza quando `mssql-conf setup` viene eseguito. Per altre informazioni sui parametri di condizioni di licenza, vedere [configurare SQL Server con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+   Un flusso di lavoro alternativo prevede che, se il contratto di licenza per il motore di database di SQL Server non è ancora stato accettato, il programma di installazione rilevi i pacchetti mssql-mlservices e chieda l'accettazione delle condizioni di licenza quando viene eseguito `mssql-conf setup`. Per altre informazioni sui parametri delle condizioni di licenza, vedere [Configurare SQL Server con lo strumento mssql conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Abilitare l'accesso alla rete in uscita. Accesso alla rete in uscita è disabilitata per impostazione predefinita. Per abilitare le richieste in uscita, impostare "outboundnetworkaccess" proprietà Boolean utilizzando lo strumento mssql-conf. Per altre informazioni, vedere [configurare SQL Server in Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Abilitare l'accesso alla rete in uscita. L'accesso alla rete in uscita è disabilitato per impostazione predefinita. Per abilitare le richieste in uscita, impostare la proprietà booleana "outboundnetworkaccess" usando lo strumento mssql-conf. Per altre informazioni, vedere [Configurare SQL Server in Linux con mssql conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -297,13 +299,13 @@ Configurazione aggiuntiva viene eseguito principalmente tramita il [lo strumento
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. Per R di funzionalità di integrazione solo, imposta il **MKL_CBWR** variabile di ambiente [garantire coerenti con l'output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli Intel Math Kernel Library (MKL).
+4. Per integrare solo le funzionalità di R, impostare la variabile di ambiente **MKL_CBWR** in modo da [garantire un output coerente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli di Intel Math Kernel Library (MKL).
 
-   + Modificare o creare un file denominato **file con estensione bash_profile** nella home directory utente, aggiungendo la riga `export MKL_CBWR="AUTO"` al file.
+   + Modificare o creare un file denominato **.bash_profile** nella home directory dell'utente, aggiungendo la riga `export MKL_CBWR="AUTO"` al file.
 
-   + Eseguire questo file digitando `source .bash_profile` un prompt dei comandi bash.
+   + Eseguire questo file digitando `source .bash_profile` al prompt dei comandi di Bash.
 
-5. Riavviare il servizio Launchpad di SQL Server e l'istanza del motore di database per leggere i valori aggiornati dal file INI. Ricorda di un messaggio di riavvio ogni volta che viene modificata un'impostazione di estendibilità.  
+5. Riavviare il servizio Launchpad di SQL Server e l'istanza del motore di database per leggere i valori aggiornati dal file INI. Un messaggio di riavvio avverte ogni volta che viene modificata un'impostazione relativa all'estendibilità.  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -311,24 +313,24 @@ Configurazione aggiuntiva viene eseguito principalmente tramita il [lo strumento
    systemctl restart mssql-server.service
    ```
 
-6. Abilitare l'esecuzione dello script esterno usando Azure Data Studio o un altro strumento come SQL Server Management Studio (solo Windows) che esegue Transact-SQL. 
+6. Abilitare l'esecuzione di script esterni usando Azure Data Studio o un altro strumento come SQL Server Management Studio (solo Windows) che esegue Transact-SQL. 
 
    ```bash
    EXEC sp_configure 'external scripts enabled', 1 
    RECONFIGURE WITH OVERRIDE 
    ```
 
-7. Riavviare il servizio Launchpad di nuovo.
+7. Riavviare nuovamente il servizio Launchpad.
 
 ## <a name="verify-installation"></a>Verificare l'installazione
 
-Librerie di R (MicrosoftML, RevoScaleR e ad altri utenti) sono reperibile in `/opt/mssql/mlservices/libraries/RServer`.
+Le librerie R (MicrosoftML, RevoScaleR e altre) sono disponibili in `/opt/mssql/mlservices/libraries/RServer`.
 
-Le librerie Python (microsoftml e revoscalepy) sono reperibile in `/opt/mssql/mlservices/libraries/PythonServer`.
+Le librerie Python (microsoftml e revoscalepy) sono disponibili in `/opt/mssql/mlservices/libraries/PythonServer`.
 
-Per convalidare l'installazione, eseguire uno script T-SQL che esegue una stored procedure di sistema il richiamo di R o Python. È necessario uno strumento di query per questa attività. Azure Data Studio è una scelta ottimale. Altri utilizzati di frequente strumenti come SQL Server Management Studio o PowerShell sono solo Windows. Se si dispone di un computer Windows con questi strumenti, usarlo per connettersi all'installazione di Linux del motore di database.
+Per convalidare l'installazione, eseguire uno script T-SQL che esegue una stored procedure di sistema richiamando R o Python. Per questa attività sarà necessario uno strumento di query. Azure Data Studio è una scelta ottimale. Altri strumenti di uso comune, ad esempio SQL Server Management Studio o PowerShell, sono solo per Windows. Se si ha un computer Windows con questi strumenti, usarlo per connettersi all'installazione Linux del motore di database.
 
-Eseguire il comando SQL seguente per testare l'esecuzione di R in SQL Server. Se non viene eseguito lo script, provare a riavviare il servizio, `sudo systemctl restart mssql-server.service`.
+Eseguire il comando SQL seguente per testare l'esecuzione di R in SQL Server. Se lo script non viene eseguito, provare a riavviare il servizio con il comando `sudo systemctl restart mssql-server.service`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -355,35 +357,35 @@ GO
 
 <a name="install-all"></a>
 
-## <a name="chained-combo-install"></a>Installa concatenata "combinata"
+## <a name="chained-combo-install"></a>Installazione "combinata" concatenata
 
-È possibile installare e configurare il motore di database e servizi di Machine Learning in una sequenza di operazioni mediante l'aggiunta di parametri in un comando che installa il motore di database e i pacchetti R o Python. 
+È possibile installare e configurare il motore di database e Machine Learning Services in una sola procedura aggiungendo i pacchetti e i parametri R o Python in un comando che installa il motore di database. 
 
-1. Per l'integrazione di R, installare [Microsoft R Open](#mro) come prerequisito. Se non si installa la funzionalità R, ignorare questo passaggio.
+1. Per l'integrazione di R, installare [Microsoft R Open](#mro) come prerequisito. Ignorare questo passaggio se non si sta installando la funzionalità R.
 
-2. Fornire una riga di comando che include il motore di database, oltre a funzionalità di estensione del linguaggio.
+2. Specificare una riga di comando che includa il motore di database, oltre alle funzionalità delle estensioni del linguaggio.
 
-  È possibile aggiungere una singola funzione, ad esempio un motore di database dell'integrazione, installare Python.
+  È possibile aggiungere un'unica funzionalità, ad esempio l'integrazione di Python, a un'installazione del motore di database.
 
   ```bash
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* 
   ```
 
-  In alternativa, è possibile aggiungere entrambe le estensioni (R, Python).
+  In alternativa, aggiungere entrambe le estensioni (R, Python).
 
   ```bash
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
-3. Accettare i contratti di licenza e completare la configurazione di post-installazione. Usare la **mssql-conf** dello strumento per questa attività.
+3. Accettare i contratti di licenza e completare la configurazione successiva all'installazione. Per questa attività usare lo strumento **mssql-conf**.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  Verrà richiesto di accettare il contratto di licenza per il motore di database, scegliere un'edizione e impostare la password dell'amministratore. Inoltre richiesto di accettare il contratto di licenza per i servizi di Machine Learning.
+  Verrà richiesto di accettare il contratto di licenza per il motore di database, scegliere un'edizione e impostare la password dell'amministratore. Viene anche richiesto di accettare il contratto di licenza per Machine Learning Services.
 
-4. Riavviare il servizio, se viene richiesto di farlo.
+4. Se richiesto, riavviare il servizio.
 
   ```bash
   sudo systemctl restart mssql-server.service
@@ -391,53 +393,53 @@ GO
 
 ## <a name="unattended-installation"></a>Installazione automatica
 
-Usando il [installazione automatica](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) per il motore di Database, aggiungere i pacchetti per mssql-mlservices ed EULA.
+Usando l'[installazione automatica](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) per il motore di database, aggiungere i pacchetti per mssql-mlservices e le condizioni di licenza.
 
-È importante ricordare che il programma di installazione o lo strumento mssql-conf richiesta per l'accettazione di contratto di licenza. Se è già configurato il motore di database di SQL Server e accettato le condizioni di licenza, usare uno dei parametri mlservices specifiche condizioni di licenza per le distribuzioni di R e Python open source:
+Si ricordi che il programma di installazione o lo strumento mssql-conf richiede l'accettazione del contratto di licenza. Se il motore di database di SQL Server è già stato configurato e le condizioni di licenza sono già state accettate, usare uno dei parametri delle condizioni di licenza specifici di mlservices per le distribuzioni di R e Python open source:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 ```
 
-Tutte le possibili permutazioni di accettazione del contratto sono documentate in [configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+Tutte le possibili permutazioni dell'accettazione delle condizioni di licenza sono documentate in [Configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 ## <a name="offline-installation"></a>Installazione offline
 
-Seguire le [installazione Offline](sql-server-linux-setup.md#offline) istruzioni per la procedura di installazione dei pacchetti. Trovare il sito di download e quindi scaricare pacchetti specifici usando l'elenco dei pacchetti riportato di seguito.
+Per la procedura di installazione dei pacchetti, seguire le istruzioni contenute in [Installazione offline](sql-server-linux-setup.md#offline). Trovare il sito di download e quindi scaricare i pacchetti specifici usando l'elenco di pacchetti riportato di seguito.
 
 > [!Tip]
-> Molti degli strumenti di gestione pacchetti forniscono comandi utili per determinano le dipendenze dei pacchetti. Per yum, usare `sudo yum deplist [package]`. Per Ubuntu, utilizzare `sudo apt-get install --reinstall --download-only [package name]` seguita da `dpkg -I [package name].deb`.
+> Molti degli strumenti di gestione dei pacchetti forniscono comandi che consentono di determinare le dipendenze dei pacchetti. Per yum, usare `sudo yum deplist [package]`. Per Ubuntu, usare `sudo apt-get install --reinstall --download-only [package name]` seguito da `dpkg -I [package name].deb`.
 
 
 #### <a name="download-site"></a>Sito di download
 
-È possibile scaricare i pacchetti da [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Tutti i pacchetti mlservices per R e Python sono con percorso condiviso con pacchetto del motore di database. Versione di base per i pacchetti mlservices è 9.4.5 (per CTP 2.0) 9.4.6 (per CTP 2.1 e versioni successive). Tenere presente che i pacchetti r-microsoft-open si trovano in un [diversi repository](#mro).
+È possibile scaricare i pacchetti da [https://packages.microsoft.com/](https://packages.microsoft.com/). Tutti i pacchetti mlservices per R e Python hanno un percorso condiviso con il pacchetto del motore di database. La versione di base per i pacchetti mlservices è la 9.4.5 (per CTP 2.0) 9.4.6 (per CTP 2.1 e versioni successive). Si ricordi che i pacchetti microsoft-r-open si trovano in un [repository diverso](#mro).
 
 #### <a name="rhel7-paths"></a>Percorsi RHEL/7
 
 |||
 |--|----|
-| MSSQL/mlservices pacchetti | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
-| pacchetti r-Microsoft-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Pacchetti microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
-#### <a name="ubuntu1604-paths"></a>Percorsi/Ubuntu 16.04
-
-|||
-|--|----|
-| MSSQL/mlservices pacchetti | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
-| pacchetti r-Microsoft-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
-
-#### <a name="sles12-paths"></a>Percorsi SLES 12
+#### <a name="ubuntu1604-paths"></a>Percorsi Ubuntu/16.04
 
 |||
 |--|----|
-| MSSQL/mlservices pacchetti | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
-| pacchetti r-Microsoft-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Pacchetti microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
-#### <a name="package-list"></a>Elenco dei pacchetti
+#### <a name="sles12-paths"></a>Percorsi SLES/12
 
-A seconda le estensioni che si desidera utilizzare, scaricare i pacchetti necessari per una lingua specifica. I nomi file esatti includono informazioni sulla piattaforma nel suffisso, ma i nomi di file riportato di seguito devono essere sufficientemente vicine per determinare i file da ottenere.
+|||
+|--|----|
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Pacchetti microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
+
+#### <a name="package-list"></a>Elenco di pacchetti
+
+A seconda delle estensioni che si vogliono usare, scaricare i pacchetti necessari per una linguaggio specifico. I nomi dei file esatti includono le informazioni sulla piattaforma nel suffisso, ma i nomi dei file riportati di seguito dovrebbero essere sufficienti per determinare quali file ottenere.
 
 ```
 # Core packages 
@@ -459,19 +461,19 @@ mssql-mlservices-packages-py-9.4.7.64
 mssql-mlservices-mlm-py-9.4.7.64
 ```
 
-## <a name="add-more-rpython-packages"></a>Aggiunta di altri pacchetti R o Python 
+## <a name="add-more-rpython-packages"></a>Aggiungere altri pacchetti R/Python 
  
-È possibile installare altri pacchetti R e Python e utilizzarli nello script che esegue SQL Server 2019.
+È possibile installare altri pacchetti R e Python e usarli nello script eseguito in SQL Server 2019.
 
 ### <a name="r-packages"></a>Pacchetti R 
  
-1. Avviare una sessione R.
+1. Avviare una sessione di R.
 
    ```r
    # sudo /opt/mssql/mlservices/bin/R/R 
    ```
 
-2. Installare un pacchetto R chiamato [glue](https://mran.microsoft.com/package/glue) per testare l'installazione del pacchetto.
+2. Installare un pacchetto R denominato [glue](https://mran.microsoft.com/package/glue) per testare l'installazione del pacchetto.
 
    ```r
    # install.packages("glue",lib="/opt/mssql/mlservices/libraries/RServer") 
@@ -492,13 +494,13 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 ### <a name="python-packages"></a>Pacchetti Python 
  
-1. Installare un pacchetto di Python denominato [httpie](https://httpie.org/) tramite pip. 
+1. Installare un pacchetto Python denominato [httpie](https://httpie.org/) usando pip. 
 
    ```python
    # sudo /opt/mssql/mlservices/bin/python/python -m pip install httpie 
    ``` 
 
-2. Importare il pacchetto di Python nelle [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+2. Importare il pacchetto Python in [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
  
    ```python
    EXEC sp_execute_external_script  
@@ -506,35 +508,35 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>Limitazioni nelle versioni CTP
+## <a name="limitations-in-ctp-releases"></a>Limitazioni nelle versioni di CTP
 
-Integrazione di R e Python in Linux è ancora in fase di sviluppo attivo. Le funzionalità seguenti non sono ancora abilitate nella versione di anteprima.
+L'integrazione di R e Python in Linux è ancora in fase di sviluppo attivo. Le funzionalità seguenti non sono ancora abilitate nella versione di anteprima.
 
-+ L'autenticazione implicita non è attualmente disponibile in servizi di Machine Learning in Linux a questo punto, il che significa che non è possibile connettersi al server da uno script in corso di R o Python per accedere a dati o altre risorse. 
++ L'autenticazione implicita attualmente non è disponibile in Machine Learning Services. Ciò significa che non è possibile connettersi al server da uno script R o Python in esecuzione per accedere ai dati o ad altre risorse. 
 
 ### <a name="resource-governance"></a>Governance delle risorse
 
-È disponibile la parità tra Linux e Windows per [governance delle risorse](../t-sql/statements/create-external-resource-pool-transact-sql.md) per il pool di risorse esterne, ma le statistiche per [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) dispone attualmente unità di misura diversa in Linux. Le unità vengono allineati in una versione CTP successiva.
+Esiste parità tra Linux e Windows per la [governance delle risorse](../t-sql/statements/create-external-resource-pool-transact-sql.md) per i pool di risorse esterni, ma le statistiche per [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) hanno attualmente unità diverse in Linux. Le unità saranno allineate in una versione CTP futura.
  
 | Nome colonna   | Descrizione | Valore in Linux | 
 |---------------|--------------|---------------|
-|peak_memory_kb | La quantità massima di memoria utilizzata per il pool di risorse. | In Linux, questa statistica è originata dal sottosistema di memoria Cgroup, dove il valore è memory.max_usage_in_bytes |
-|write_io_count | Totale scrittura generati dalla reimpostazione delle statistiche di Resource Governor. | In Linux, questa statistica è originata dal sottosistema di blkio Cgroup, dove il valore della riga di scrittura è blkio.throttle.io_serviced | 
-|read_io_count | Il totale di lettura generati dalla reimpostazione delle statistiche di Resource Governor. | In Linux, questa statistica è originata dal sottosistema di blkio Cgroup, in cui valore della riga di lettura è blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | CPU utente kernel tempo totale espresso in millisecondi, reimpostazione delle statistiche di Resource Governor. | In Linux, questa statistica è originata dal sottosistema di cpuacct Cgroup, dove il valore nella riga dell'utente è cpuacct.stat |  
-|total_cpu_user_ms | Tempo cumulativo della CPU di un utente espresso in millisecondi, reimpostazione delle statistiche di Resource Governor.| In Linux, questa statistica è originata dal sottosistema di cpuacct Cgroup, dove il valore per il valore di riga del sistema è cpuacct.stat | 
-|active_processes_count | Il numero di processi esterni in esecuzione al momento della richiesta.| In Linux, questa statistica è originata dal sottosistema dei PID GGroups, dove il valore è pids.current | 
+|peak_memory_kb | Quantità massima di memoria usata per il pool di risorse. | In Linux questa statistica è originata dal sottosistema di memoria CGroups, dove il valore è memory.max_usage_in_bytes |
+|write_io_count | Il totale degli I/O di scrittura generati dalla reimpostazione delle statistiche di Resource Governor. | In Linux questa statistica è originata dal sottosistema blkio di CGroups, dove il valore nella riga di scrittura è blkio.throttle.io_serviced | 
+|read_io_count | Il totale degli I/O di lettura generati dalla reimpostazione delle statistiche di Resource Governor. | In Linux questa statistica è originata dal sottosistema blkio di CGroups, dove il valore nella riga di lettura è blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | Tempo del kernel dell'utente della CPU cumulativo, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. | In Linux questa statistica è originata dal sottosistema cpuacct di CGroups, dove il valore nella riga dell'utente è cpuacct.stat |  
+|total_cpu_user_ms | Tempo dell'utente della CPU cumulativo, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor.| In Linux questa statistica è originata dal sottosistema cpuacct di CGroups, dove il valore nella riga di sistema è cpuacct.stat | 
+|active_processes_count | Numero di processi esterni in esecuzione al momento della richiesta.| In Linux questa statistica è originata dal sottosistema pids GGroups, dove il valore è pids.current | 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Gli sviluppatori di R possono iniziare a usare alcuni semplici esempi e informazioni di base del funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
+Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Esercitazione: Eseguire R in T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Esercitazione: Analitica nel database per gli sviluppatori di R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Esercitazione: Analisi nel database per sviluppatori R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Gli sviluppatori di Python è possono imparare a usare Python con SQL Server seguendo queste esercitazioni:
+Gli sviluppatori Python possono apprendere come usare Python con SQL Server seguendo queste esercitazioni:
 
 + [Esercitazione: Eseguire Python in T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Esercitazione: Analitica nel database per sviluppatori Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Esercitazione: Analisi nel database per sviluppatori Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Per visualizzare esempi di machine learning basate su scenari reali, vedere [di Machine learning esercitazioni](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).
+Per esempi di Machine Learning basati su scenari reali, vedere [Esercitazioni su Machine Learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

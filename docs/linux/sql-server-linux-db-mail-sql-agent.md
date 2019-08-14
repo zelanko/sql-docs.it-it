@@ -1,6 +1,6 @@
 ---
-title: Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
-description: Questo articolo descrive come usare posta elettronica database e gli avvisi di posta elettronica con SQL Server in Linux
+title: Avvisi di Posta elettronica database e di posta elettronica con SQL Agent in Linux
+description: Questo articolo descrive come usare gli avvisi di Posta elettronica database e di posta elettronica con SQL Server in Linux
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,19 +9,19 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077454"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Avvisi di Posta elettronica database e di posta elettronica con SQL Agent in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-I passaggi seguenti mostrano come configurare posta elettronica database e usarlo con SQL Server Agent (**mssql-server-agent**) in Linux. 
+I passaggi seguenti illustrano come configurare e usare Posta elettronica database con SQL Server Agent (**mssql-server-agent**) in Linux. 
 
-## <a name="1-enable-db-mail"></a>1. Abilitare posta elettronica database
+## <a name="1-enable-db-mail"></a>1. Abilitare Posta elettronica database
 
 ```sql
 USE master 
@@ -61,7 +61,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Aggiungere l'account di posta elettronica Database a un profilo di posta elettronica Database
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Aggiungere un account di Posta elettronica database a un profilo di Posta elettronica database
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 @is_default = 1 ; 
  ```
  
-## <a name="5-add-account-to-profile"></a>5. Aggiungere account al profilo 
+## <a name="5-add-account-to-profile"></a>5. Aggiungere l'account al profilo 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp   
 @profile_name = 'default',   
@@ -77,9 +77,9 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
 @sequence_number = 1;  
  ```
  
-## <a name="6-send-test-email"></a>6. Invio di posta elettronica di test
+## <a name="6-send-test-email"></a>6. Inviare un messaggio di posta elettronica di prova
 > [!NOTE]
-> Potrebbe essere necessario passare al client di posta elettronica e abilitare il "client meno sicuri inviare posta elettronica Consenti". Non tutti i client riconoscono posta elettronica database come un daemon di posta elettronica.
+> Potrebbe essere necessario passare al client di posta elettronica e abilitare "allow less secure clients to send mail" (Consenti ai client meno sicuri di inviare posta elettronica). Non tutti i client riconoscono Posta elettronica database come daemon di posta elettronica.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -90,8 +90,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Impostare il profilo di posta elettronica database utilizzando mssql-conf o variabile di ambiente
-È possibile utilizzare l'utilità mssql-conf o variabili di ambiente per registrare il profilo di posta elettronica database. In questo caso, è possibile chiamare predefinito del profilo.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Impostare il profilo di Posta elettronica database usando mssql-conf o una variabile di ambiente
+Per registrare il profilo di Posta elettronica database, è possibile usare l'utilità mssql-conf o variabili di ambiente. In questo caso, il profilo verrà chiamato default.
 
 ```bash
 # via mssql-conf
@@ -111,7 +111,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Invia messaggio di posta elettronica quando ha esito positivo 'Agente processo di Test' 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Inviare un messaggio di posta elettronica quando il processo 'Agent Test Job' ha esito positivo 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -122,4 +122,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni su come usare SQL Server Agent per creare, pianificare ed eseguire i processi, vedere [eseguire un processo di SQL Server Agent in Linux](sql-server-linux-run-sql-server-agent-job.md).
+Per altre informazioni su come usare SQL Server Agent per creare, pianificare ed eseguire processi, vedere [Eseguire un processo di SQL Server Agent in Linux](sql-server-linux-run-sql-server-agent-job.md).

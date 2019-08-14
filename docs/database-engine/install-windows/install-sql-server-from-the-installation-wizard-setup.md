@@ -1,7 +1,7 @@
 ---
 title: Installare SQL Server 2016 dall'Installazione guidata (programma di installazione) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419264"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742911"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -280,9 +280,9 @@ Ciò non è applicabile a SQL Server 2019.
   
      Il flusso di lavoro della parte rimanente dell'installazione dipende dalle funzionalità specificate per l'installazione. A seconda delle selezioni, potrebbero non essere visualizzate tutte le pagine. 
 
-1. Se si sceglie di installare la funzionalità PolyBase, verrà aggiunta la pagina **Configurazione di PolyBase** per l'installazione di SQL Server, che viene visualizzata dopo la pagina **Configurazione dell'istanza**. PolyBase richiede almeno Oracle JRE 7 Update 51 e se questo componente non è già stato installato, a partire da SQL Server 2019 è possibile installare Azul Zulu Open JRE insieme a SQL Server. Nella pagina **Configurazione di PolyBase** è possibile scegliere di usare SQL Server come istanza autonoma abilitata per PolyBase oppure è possibile usare SQL Server come parte di un gruppo con scalabilità orizzontale di PolyBase. Se si sceglie di usare il gruppo con scalabilità orizzontale, è necessario specificare un intervallo di porte fino a 6 o più porte.  Nella pagina **Percorso di installazione di Java** è possibile scegliere di installare Azul Zulu Open JRE incluso con l'installazione di SQL Server 2019 oppure fornire un percorso di un componente JRE o JDK già installato nel computer.
+1. A partire da SQL Server 2019, non è più necessario che Oracle JRE 7 Update 51 (come minimo) sia pre-installato nel computer prima di installare la funzionalità Polybase. Se si sceglie di installare la funzionalità Polybase, verrà aggiunta la pagina **Percorso di installazione di Java** per l'installazione di SQL Server, che viene visualizzata dopo la pagina **Configurazione dell'istanza**. Nella pagina Percorso di installazione di Java è possibile scegliere di installare Azul Zulu Open JRE incluso con l'installazione di SQL Server 2019 oppure fornire un percorso di un componente JRE o JDK diverso già installato nel computer.
 
-1. A partire da SQL Server 2019, è stato aggiunto Java nell'elenco Machine Learning Services ed estensioni del linguaggio, insieme a R e Python. Se si sceglie di installare la funzionalità Java, verrà aggiunta la pagina **Percorso di installazione di Java** nella finestra di dialogo per l'installazione di SQL Server, che viene visualizzata dopo la pagina **Configurazione dell'istanza**. Nella pagina **Percorso di installazione di Java** è possibile scegliere di installare Azul Zulu Open JRE incluso con l'installazione di SQL Server 2019 oppure fornire un percorso di un componente JRE o JDK già installato nel computer.
+1. A partire da SQL Server 2019, Java è stato aggiunto con le estensioni del linguaggio. Se si sceglie di installare la funzionalità Java, verrà aggiunta la pagina **Percorso di installazione di Java** nella finestra di dialogo per l'installazione di SQL Server, che viene visualizzata dopo la pagina **Configurazione dell'istanza**. Nella pagina **Percorso di installazione di Java** è possibile scegliere di installare Zulu Open JRE incluso con l'installazione di SQL Server 2019 oppure fornire un percorso di un componente JRE o JDK diverso già installato nel computer.
 
 1. Usare la pagina **Configurazione server - Account di servizio** per specificare gli account di accesso per i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione. Per altre informazioni sulle impostazioni di configurazione, vedere [Guida dell'installazione guidata](../../sql-server/install/instance-configuration.md#serverconfig).
   

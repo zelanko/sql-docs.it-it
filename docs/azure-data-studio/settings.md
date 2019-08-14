@@ -1,7 +1,7 @@
 ---
-title: Utente e le impostazioni dell'area di lavoro
+title: Impostazioni utente e dell'area di lavoro
 titleSuffix: Azure Data Studio
-description: Come personalizzare Azure dati Studio modificando le impostazioni dell'area di lavoro e utente.
+description: Come personalizzare Azure Data Studio modificando le impostazioni utente e dell'area di lavoro.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,56 +11,56 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959276"
 ---
-# <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni dell'area di lavoro e utente
+# <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni utente e dell'area di lavoro
 
-È facile da configurare [!INCLUDE[name-sos](../includes/name-sos-short.md)] in base alle esigenze tramite le impostazioni. Quasi tutte le parti di [!INCLUDE[name-sos](../includes/name-sos-short.md)]dell'editor, interfaccia utente e comportamento funzionale sono disponibili opzioni è possibile modificare.
+Le impostazioni consentono di configurare facilmente [!INCLUDE[name-sos](../includes/name-sos-short.md)] in base alle preferenze personali. Sono disponibili opzioni per la modifica di quasi tutti i componenti dell'editor, dell'interfaccia utente e del comportamento funzionale di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce due ambiti diversi per le impostazioni:
+In [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono disponibili due diversi ambiti di impostazioni:
 
-* **Utente** : queste impostazioni si applicano globalmente a qualsiasi istanza di[!INCLUDE[name-sos](../includes/name-sos-short.md)].
-* **Area di lavoro**: sono impostazioni specifiche di una cartella nel computer e sono disponibili solo quando la cartella è aperta in Esplora risorse dalla barra laterale. Le impostazioni definite in questo ambito ridefiniscono quelle di ambito utente.
+* **Utente** Queste impostazioni vengono applicate globalmente a qualsiasi istanza di [!INCLUDE[name-sos](../includes/name-sos-short.md)] aperta.
+* **Area di lavoro** Le impostazioni dell'area di lavoro sono specifiche di una cartella del computer e sono disponibili solo se la cartella è aperta nella barra laterale Explorer. Le impostazioni definite in questo ambito sostituiscono quelle specificate nell'ambito dell'utente.
 
 ## <a name="creating-user-and-workspace-settings"></a>Creazione di impostazioni utente e dell'area di lavoro
 
-Il comando di menu **File** > **Preferenze** > **Impostazioni** (**sqlops**  >  **Preferenze** > **Impostazioni** su Mac) fornisce il punto di ingresso per configurare le impostazioni utente e dell'area di lavoro. Esse vengono fornite con un elenco di impostazioni predefinite. Copiare qualsiasi impostazione si desideri modificare nell'appropriato file `settings.json`. Le schede a destra consentono di passare rapidamente tra i file delle impostazioni utente e dell'area di lavoro.
+Il comando di menu **File** > **Preferenze** > **Impostazioni** (**Codice** > **Preferenze** > **Impostazioni** in Mac) costituisce il punto di ingresso per la configurazione delle impostazioni utente e dell'area di lavoro. Viene visualizzato un elenco di impostazioni predefinite. Copiare le impostazioni che si vuole modificare nel file `settings.json` appropriato. Le schede a destra consentono di spostarsi rapidamente tra i file delle impostazioni utente e quelli delle impostazioni dell'area di lavoro.
 
-È anche possibile aprire le impostazioni utente e dell'area di lavoro dal **riquadro comandi** (**Ctrl + MAIUSC + P**) con **preferenze: Aprire le impostazioni utente** e **preferenze: Aprire le impostazioni dell'area di lavoro** oppure usare il tasto di scelta rapida (**Ctrl +,** ).
+È possibile aprire le impostazioni utente e quelle dell'area di lavoro da **Riquadro comandi** (**CTRL+MAIUSC+P**) con **Preferenze: Apri impostazioni utente** e **Preferenze: Apri impostazioni area di lavoro** oppure usare la scelta rapida da tastiera (**CTRL +** ).
 
-Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di codice per essere rientrate automaticamente.
+Nell'esempio seguente vengono disabilitati i numeri di riga nell'editor e vengono configurate righe di codice di cui aumentare automaticamente il rientro.
 
 ![Impostazioni di esempio](media/settings/sample-settings.png)
 
-Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo aver modificato e salvato il file `settings.json`.
+Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo il salvataggio del file `settings.json` modificato.
 
->**Nota:** Le impostazioni dell'area di lavoro sono utili per la condivisione delle impostazioni specifiche del progetto in un team.
+>**Nota:** Le impostazioni dell'area di lavoro sono particolarmente utili per condividere le impostazioni specifiche di un progetto tra i membri del team.
 
-## <a name="settings-file-locations"></a>Percorsi dei file delle impostazioni
+## <a name="settings-file-locations"></a>Percorsi del file delle installazioni
 
-A seconda della piattaforma, il file delle impostazioni utente si trova nei percorsi seguenti:
+A seconda della piattaforma, il file delle impostazioni utente si trova qui:
 
 * **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Il file delle impostazioni dell'area di lavoro si trova sotto la cartella `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` nel progetto.
+Il file di impostazioni dell'area di lavoro si trova nella cartella `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` del progetto.
 
-## <a name="hot-exit"></a>Esci da accesso frequente
+## <a name="hot-exit"></a>Hot Exit
 
-Azure Data Studio memorizza le modifiche non salvate ai file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita frequente in Visual Studio Code.
+Per impostazione predefinita, Azure Data Studio ricorda le modifiche non salvate apportate ai file anche quando si chiude il programma. Si tratta quindi di una funzionalità analoga a Hot Exit di Visual Studio Code.
 
-Per impostazione predefinita, a caldo exit è disattivata. Abilitare uscita hot modificando il `files.hotExit` impostazione. Per informazioni dettagliate, vedere [Esci da accesso frequente (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+Per impostazione predefinita, la funzionalità Hot Exit è disattivata. Per attivare la funzionalità Hot Exit, modificare l'impostazione `files.hotExit`. Per informazioni dettagliate, vedere [Hot Exit (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
-## <a name="tab-color"></a>Colore della scheda
+## <a name="tab-color"></a>Colore delle schede
 
-Per semplificare l'identificazione delle connessioni utilizzate, le schede aperte nell'editor possono essere impostate con un proprio colore in modo che esso corrisponda a quello definito nel gruppo di Server a cui appartiene la connessione. Per impostazione predefinita, i colori delle schede sono disattivati. Abilitare i colori delle schede modificando l'impostazione `sql.tabColorMode`.
+Per semplificare l'identificazione delle connessioni in uso, è possibile impostare i colori delle schede aperte nell'editor in modo che corrispondano al colore del gruppo di server a cui appartiene la connessione. Per impostazione predefinita, i colori delle schede sono disattivati. Per attivare i colori delle schede, modificare l'impostazione `sql.tabColorMode`.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le impostazioni utente e dell'area di lavoro da Visual Studio Code, informazioni dettagliate sono incluse nell'articolo sulle [impostazioni per Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] ha ereditato le funzionalità delle impostazioni utente e dell'area di lavoro da Visual Studio Code e, per informazioni dettagliate sulle impostazioni, è quindi possibile consultare l'articolo [Impostazioni per Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
