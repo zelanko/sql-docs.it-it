@@ -1,6 +1,6 @@
 ---
-title: Specifica del Backup VDI - SQL Server in Linux
-description: SQL Server Backup Virtual Device Interface Specification.
+title: Specifica del backup VDI - SQL Server in Linux
+description: Specifica dell'interfaccia dispositivo virtuale per il backup di SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,34 +10,34 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67996440"
 ---
-# <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server nel client Linux VDI SDK specifica
+# <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Specifica SDK client VDI per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo documento descrive le interfacce fornite da SQL Server per il SDK del client Linux virtual device interface (VDI). Fornitori di software indipendenti (ISV) possono usare la Virtual Backup Device interfaccia API (Application Programming) per integrare SQL Server nei loro prodotti. In generale, VDI in Linux si comporta in modo analogo a un'infrastruttura VDI in Windows con le modifiche seguenti:
+Questo documento illustra le interfacce fornite dall'SDK del client VDI (Virtual Device Interface) per SQL Server in Linux. I fornitori di software indipendenti (ISV) possono usare l'API Virtual Backup Device Interface (VDI) per integrare SQL Server nei propri prodotti. In generale, VDI in Linux si comporta in modo analogo a VDI in Windows con le modifiche seguenti:
 
-- Memoria condivisa di Windows diventa memoria POSIX condiviso.
-- I semafori Windows diventano i semafori POSIX.
-- Tipi di Windows, ad esempio HRESULT e DWORD vengono modificati agli equivalenti di integer.
+- La memoria condivisa di Windows diventa la memoria condivisa POSIX.
+- I semafori di Windows diventano i semafori POSIX.
+- I tipi Windows come HRESULT e DWORD vengono sostituiti con gli equivalenti integer.
 - Le interfacce COM vengono rimosse e sostituite con una coppia di classi C++.
-- SQL Server in Linux non supporta le istanze denominate in modo che i riferimenti al nome dell'istanza sono stati rimossi. 
-- Libreria condivisa viene implementata in libsqlvdi.so installato presso /opt/mssql/lib/libsqlvdi.so
+- SQL Server in Linux non supporta le istanze denominate, quindi i riferimenti al nome dell'istanza sono stati rimossi. 
+- La libreria condivisa è implementata in libsqlvdi.so installato nel percorso /opt/MSSQL/lib/libsqlvdi.so.
 
-Questo documento è un addendum alle **vbackup.chm** che illustra in dettaglio la specifica di un'infrastruttura VDI di Windows. Scaricare il [Windows VDI specifica](https://www.microsoft.com/download/details.aspx?id=17282).
+Questo documento è un supplemento di **vbackup.chm** che descrive in dettaglio la specifica VDI di Windows. Scaricare la [specifica VDI di Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
-Esaminare anche la soluzione backup VDI di esempio nella [repository GitHub degli esempi di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Vedere anche la soluzione di backup VDI di esempio nel [repository GitHub degli esempi di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
-## <a name="user-permissions-setup"></a>Impostazione delle autorizzazioni utente
+## <a name="user-permissions-setup"></a>Configurazione delle autorizzazioni utente
 
-In Linux, le primitive POSIX sono proprietà dell'utente la creazione di essi e al gruppo predefinito. Per gli oggetti creati da SQL Server, questi saranno per impostazione predefinita di proprietà di utente mssql e il gruppo mssql. Per consentire la condivisione tra SQL Server e client VDI, uno dei due metodi seguenti sono consigliati:
+In Linux, le primitive POSIX sono di proprietà dell'utente che le crea e del relativo gruppo predefinito. Per impostazione predefinita, gli oggetti creati da SQL Server sono di proprietà dell'utente mssql e del gruppo mssql. Per consentire la condivisione tra SQL Server e il client VDI, è consigliabile usare uno dei due metodi seguenti:
 
-1. Eseguire il Client VDI come l'utente mssql
+1. Eseguire il client VDI come utente mssql
    
    Eseguire il comando seguente per passare all'utente mssql:
    
@@ -45,7 +45,7 @@ In Linux, le primitive POSIX sono proprietà dell'utente la creazione di essi e 
    sudo su mssql
    ```
 
-2. Aggiungere l'utente mssql al gruppo del vdiuser e il vdiuser al gruppo mssql.
+2. Aggiungere l'utente mssql al gruppo vdiuser e vdiuser al gruppo mssql.
    
    Eseguire i comandi seguenti:
 
@@ -55,21 +55,21 @@ In Linux, le primitive POSIX sono proprietà dell'utente la creazione di essi e 
    sudo usermod -a -G vdiuser mssql
    ```
 
-   Riavviare il server di rilevare i nuovi gruppi per SQL Server e vdiuser
+   Riavviare il server per selezionare nuovi gruppi per SQL Server e vdiuser
 
 ## <a name="client-functions"></a>Funzioni client
 
-In questo capitolo contiene le descrizioni di tutte le funzioni client. Le descrizioni di includono le informazioni seguenti:
+Questa sezione contiene le descrizioni di ognuna delle funzioni client. Le descrizioni includono le informazioni seguenti:
 
 - Scopo della funzione
 - Sintassi della funzione
-- elenco di parametri
+- Elenco parametri
 - Valori restituiti
-- Note
+- Remarks
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
-**Scopo** questa funzione crea il set di dispositivi virtuali.
+**Scopo** Questa funzione crea il set di dispositivi virtuali.
 
 **Sintassi**
    ```
@@ -81,20 +81,20 @@ In questo capitolo contiene le descrizioni di tutte le funzioni client. Le descr
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| | **name** | Identifica il set di dispositivi virtuali. Le regole per i nomi utilizzati dai CreateFileMapping() devono essere seguite. Qualsiasi carattere eccetto barra rovesciata (\) può essere utilizzato. Si tratta di una stringa di caratteri. È consigliabile facendolo precedere la stringa con nome di prodotto o della società dell'utente e nome del database. |
-| |**cfg** | Questa è la configurazione per il set di dispositivo virtuale. Per altre informazioni, vedere "Configurazione" più avanti in questo documento.
+| | **name** | Identifica il set di dispositivi virtuali. È necessario seguire le regole per i nomi usati da CreateFileMapping(). È possibile usare qualsiasi carattere eccetto la barra rovesciata (\)). Stringa di caratteri. È consigliabile anteporre alla stringa il nome del prodotto o della società dell'utente e il nome del database. |
+| |**cfg** | Configurazione per il set di dispositivi virtuali. Per altre informazioni, vedere la sezione "Configurazione" più avanti in questo documento.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** | Funzione completata. |
-| |**VD_E_NOTSUPPORTED** |Uno o più dei campi nella configurazione non è valido o in caso contrario, non è supportato. |
-| |**VD_E_PROTOCOL** | Il dispositivo virtuale impostato già esistente.
+| |**VD_E_NOTSUPPORTED** |Uno o più campi della configurazione non sono validi o altrimenti non supportati. |
+| |**VD_E_PROTOCOL** | Il set di dispositivi virtuali esiste già.
 
-**La sezione Osservazioni** creare il metodo deve essere chiamato solo una volta per ogni operazione di BACKUP o ripristino. Dopo aver richiamato il metodo Close, il client può riutilizzare l'interfaccia per creare un altro set di dispositivo virtuale.
+**Osservazioni** Il metodo Create deve essere chiamato una sola volta per ogni operazione di backup o ripristino. Dopo aver richiamato il metodo Close, il client può riutilizzare l'interfaccia per creare un altro set di dispositivi virtuali.
 
 ## <a name="clientvirtualdevicesetgetconfiguration"></a>ClientVirtualDeviceSet::GetConfiguration
 
-**Scopo** questa funzione viene utilizzata per attendere che il server configurare il set di dispositivi virtuali.
+**Scopo** Questa funzione viene usata per attendere che il server configuri il set di dispositivi virtuali.
 **Sintassi**
    ```
    int ClientVirtualDeviceSet::GetConfiguration (
@@ -105,20 +105,20 @@ In questo capitolo contiene le descrizioni di tutte le funzioni client. Le descr
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| | **timeout** | Si tratta del timeout in millisecondi. Consente di impedire i timeout infinito o qualsiasi numero intero negativo.
-| | **cfg** | Al termine dell'esecuzione, contiene la configurazione selezionata dal server. Per altre informazioni, vedere "Configurazione" più avanti in questo documento.
+| | **timeout** | Timeout in millisecondi. Usare INFINITE o un numero intero negativo per impedire il timeout.
+| | **cfg** | Dopo la corretta esecuzione, contiene la configurazione selezionata dal server. Per altre informazioni, vedere la sezione "Configurazione" più avanti in questo documento.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** | La configurazione è stata restituita.
-| |**VD_E_ABORT** |È stato richiamato SignalAbort.
-| |**VD_E_TIMEOUT** |La funzione verifica il timeout.
+| |**VD_E_ABORT** |SignalAbort è stato richiamato.
+| |**VD_E_TIMEOUT** |Timeout della funzione.
 
-**La sezione Osservazioni** questa funzione blocca in uno stato di avviso. Dopo una chiamata ha esito positivo, i dispositivi nel set di dispositivo virtuale possono essere aperta.
+**Osservazioni** Questa funzione causa un blocco in uno stato di avviso. Una volta completata la chiamata, è possibile aprire i dispositivi nel set di dispositivi virtuali.
 
 
 ## <a name="clientvirtualdevicesetopendevice"></a>ClientVirtualDeviceSet::OpenDevice
-**Scopo** questa funzione consente di aprire uno dei dispositivi nel set di dispositivo virtuale.
+**Scopo** Questa funzione apre uno dei dispositivi nel set di dispositivi virtuali.
 **Sintassi**
    ```
    int ClientVirtualDeviceSet::OpenDevice (
@@ -130,25 +130,25 @@ In questo capitolo contiene le descrizioni di tutte le funzioni client. Le descr
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | | **name** |Identifica il set di dispositivi virtuali.
-| | **ppVirtualDevice** |Quando la funzione ha esito positivo, viene restituito un puntatore al dispositivo virtuale. Questo dispositivo viene usato per l'operazione GetCommand e CompleteCommand.
+| | **ppVirtualDevice** |Quando la funzione riesce, viene restituito un puntatore al dispositivo virtuale. Questo dispositivo viene usato per GetCommand e CompleteCommand.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** |Funzione completata.
-| |**VD_E_ABORT** | È stato richiesto Abort.
+| |**VD_E_ABORT** | È stata richiesta l'interruzione.
 | |**VD_E_OPEN** |  Tutti i dispositivi sono aperti.
-| |**VD_E_PROTOCOL** |  Il set non è nello stato di inizializzazione o il dispositivo è già aperto.
-| |**VD_E_INVALID** |Il nome del dispositivo non è valido. Non è uno dei nomi noti dovranno includere il set.
+| |**VD_E_PROTOCOL** |  Il set non è nello stato di inizializzazione o questo particolare dispositivo è già aperto.
+| |**VD_E_INVALID** |Il nome del dispositivo non è valido. Non è uno dei nomi noti inclusi nel set.
 
-**La sezione Osservazioni** VD_E_OPEN può essere restituito senza problemi. Il client può chiamare OpenDevice mezzo di un ciclo fino a quando non viene restituito il codice.
-Se è configurato più di un dispositivo, ad esempio *n* i dispositivi, verrà restituito il set di dispositivi virtuali *n* interfacce univoco del dispositivo.
+**Osservazioni** VD_E_OPEN può essere restituito senza problemi. Il client può chiamare OpenDevice per mezzo di un ciclo finché questo codice non viene restituito.
+Se sono configurati più dispositivi, ad esempio *n* dispositivi, il set di dispositivi virtuali restituirà *n* interfacce di dispositivo univoche.
 
-Il `GetConfiguration` funzione può essere usata per attendere fino a quando i dispositivi possono essere aperti.
-Se questa funzione non riesce, viene restituito un valore null tramite il ppVirtualDevice.
+La funzione `GetConfiguration` può essere usata per attendere che i dispositivi possano essere aperti.
+Se la funzione non riesce, viene restituito un valore Null tramite ppVirtualDevice.
  
 ## <a name="clientvirtualdevicegetcommand"></a>ClientVirtualDevice::GetCommand
 
-**Scopo** questa funzione viene utilizzata per ottenere il successivo comando in coda in un dispositivo. Quando richiesto, questa funzione è in attesa per il comando successivo.
+**Scopo** Questa funzione viene usata per ottenere il comando successivo accodato a un dispositivo. Quando richiesto, questa funzione attende il comando successivo.
 
 **Sintassi**
    ```
@@ -160,23 +160,23 @@ Se questa funzione non riesce, viene restituito un valore null tramite il ppVirt
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**timeout** |Questo è il tempo di attesa, espresso in millisecondi. Usare finito per un'attesa indefinita. Usare 0 per eseguire il polling di un comando. Se non è attualmente disponibile alcun comando, viene restituito VD_E_TIMEOUT. Se si verifica il timeout, il client decide l'azione successiva.
-| |**Timeout** |Questo è il tempo di attesa, espresso in millisecondi. Usare finito o un valore negativo per un'attesa indefinita. Usare 0 per eseguire il polling di un comando. Se non è disponibile alcun comando prima che il timeout scade, viene restituito VD_E_TIMEOUT. Se si verifica il timeout, il client decide l'azione successiva.
-| |**ppCmd** |Quando un comando viene restituito correttamente, il parametro restituisce l'indirizzo di un comando da eseguire. La memoria restituita è di sola lettura. Quando il comando viene completato, questo puntatore viene passato alla routine CompleteCommand. Per informazioni dettagliate su ogni comando, vedere la sezione "Commands" più avanti in questo documento.
+| |**timeout** |Tempo di attesa, in millisecondi. Usare INFINTE per un'attesa illimitata. Usare 0 per eseguire il polling di un comando. Se non è attualmente disponibile alcun comando, viene restituito VD_E_TIMEOUT. Se si verifica il timeout, il client decide l'azione successiva.
+| |**Timeout** |Tempo di attesa, in millisecondi. Usare INFINTE o un valore negativo per un'attesa illimitata. Usare 0 per eseguire il polling di un comando. Se non è disponibile alcun comando prima della scadenza del timeout, viene restituito VD_E_TIMEOUT. Se si verifica il timeout, il client decide l'azione successiva.
+| |**ppCmd** |Quando un comando viene restituito correttamente, il parametro restituisce l'indirizzo di un comando da eseguire. La memoria restituita è di sola lettura. Quando il comando viene completato, questo puntatore viene passato alla routine CompleteCommand. Per informazioni dettagliate su ogni comando, vedere la sezione "Comandi" più avanti in questo documento.
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** |È stato recuperato un comando.
 | |**VD_E_CLOSE** |Il dispositivo è stato chiuso dal server.
-| |**VD_E_TIMEOUT** |Nessun comando è disponibile e il timeout è scaduto.
-| |**VD_E_ABORT** |Client o il server ha usato la SignalAbort per forzare l'arresto.
+| |**VD_E_TIMEOUT** |Nessun comando disponibile e timeout scaduto.
+| |**VD_E_ABORT** |Il client o il server ha usato SignalAbort per forzare l'arresto.
 
-**La sezione Osservazioni** VD_E_CLOSE quando viene restituito, SQL Server ha chiuso il dispositivo. Questo fa parte dell'arresto normale. Dopo che tutti i dispositivi sono stati chiusi, il client richiama ClientVirtualDeviceSet::Close per chiudere il set di dispositivi virtuali.
-Quando questa routine deve bloccarsi in attesa per un comando, il thread è disponibile in una condizione di avviso.
+**Osservazioni** La restituzione di VD_E_CLOSE indica che SQL Server ha chiuso il dispositivo. Fa parte della normale procedura di arresto. Una volta chiusi tutti i dispositivi, il client richiama ClientVirtualDeviceSet::Close per chiudere il set di dispositivi virtuali.
+Quando questa routine deve bloccarsi per attendere un comando, il thread viene lasciato in una condizione di avviso.
 
 ## <a name="clientvirtualdevicecompletecommand"></a>ClientVirtualDevice::CompleteCommand
 
-**Scopo** questa funzione viene utilizzata per notificare a SQL Server che ha completato un comando. Informazioni sul completamento appropriati per il comando deve essere restituiti. Per altre informazioni, vedere la sezione "Commands" più avanti in questo documento.
+**Scopo** Questa funzione viene usata per notificare a SQL Server il completamento di un comando. Devono essere restituite le informazioni di completamento appropriate per il comando. Per altre informazioni, vedere la sezione "Comandi" più avanti in questo documento.
 
 **Sintassi** 
 
@@ -191,23 +191,23 @@ Quando questa routine deve bloccarsi in attesa per un comando, il thread è disp
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**pCmd** |Questo è l'indirizzo di un comando restituito precedentemente dal ClientVirtualDevice::GetCommand.
-| |**completionCode** |Si tratta di un codice di stato che indica lo stato di completamento. Questo parametro deve essere restituito per tutti i comandi. Il codice restituito deve essere appropriato per il comando in esecuzione. ERROR_SUCCESS viene usato in tutti i casi per indicare un comando eseguito correttamente. Per l'elenco completo dei possibili codici, vedere il file, vdierror.h. Viene visualizzato un elenco dei codici di stato tipici per ogni comando in "Commands" più avanti in questo documento.
-| |**bytesTransferred** |Questo è il numero di byte trasferiti. Viene restituito solo per il trasferimento di dati, i comandi di lettura e scrittura.
-| |**position** |Si tratta di una risposta al comando GetPosition solo.
+| |**pCmd** |Indirizzo di un comando restituito in precedenza da ClientVirtualDevice::GetCommand.
+| |**completionCode** |Codice di stato che indica lo stato di completamento. Questo parametro deve essere restituito per tutti i comandi. Il codice restituito deve essere appropriato per il comando in esecuzione. ERROR_SUCCESS viene usato in tutti i casi per indicare un comando eseguito correttamente. Per l'elenco completo dei codici possibili, vedere il file vdierror.h. Un elenco dei codici di stato tipici per ogni comando è disponibile nella sezione "Comandi" più avanti in questo documento.
+| |**bytesTransferred** |Numero di byte trasferiti correttamente. Viene restituito solo per i comandi di trasferimento dati Read e Write.
+| |**position** |Risposta al solo comando GetPosition.
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**NOERROR** |Il completamento corretto è stato osservato.
-| |**VD_E_INVALID** |pCmd non era un comando attivo.
-| |**VD_E_ABORT** |Abort è stata segnalata.
+| |**NOERROR** |Il completamento è stato annotato correttamente.
+| |**VD_E_INVALID** |pCmd non è un comando attivo.
+| |**VD_E_ABORT** |Interruzione segnalata.
 | |**VD_E_PROTOCOL** |Il dispositivo non è aperto.
 
-**La sezione Osservazioni** None
+**Osservazioni** Nessuna
 
 ## <a name="clientvirtualdevicesetsignalabort"></a>ClientVirtualDeviceSet::SignalAbort
 
-**Scopo** questa funzione viene utilizzata per segnalare che non deve verificarsi un arresto anomalo.
+**Scopo** Questa funzione viene usata per segnalare che dovrebbe verificarsi una chiusura anomala.
 
 **Sintassi** 
 
@@ -217,17 +217,17 @@ Quando questa routine deve bloccarsi in attesa per un comando, il thread è disp
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |Nessuna | Non applicabile
+| |None | Non applicabile
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**NOERROR**|La notifica di interruzione è stata registrata correttamente.
+| |**NOERROR**|La notifica di interruzione è stata inviata correttamente.
 
-**La sezione Osservazioni** in qualsiasi momento, il client può scegliere di interrompere l'operazione di BACKUP o ripristino. Questa routine segnala che devono interrompere tutte le operazioni. Lo stato del set di dispositivo virtuale complessiva entra in uno stato terminato in modo anomalo. Viene restituito alcun comando ulteriormente in qualsiasi dispositivo. Tutti i comandi incompiuti vengono completati automaticamente, restituendo 995L come un codice di completamento. Il client deve chiamare ClientVirtualDeviceSet::Close dopo che è terminato in modo sicuro qualsiasi utilizzo dei buffer fornito al client in sospeso. Per altre informazioni, vedere "Terminazione anomala" più indietro in questo documento.
+**Osservazioni** In qualsiasi momento il client può scegliere di interrompere l'operazione di backup o ripristino. Questa routine segnala che tutte le operazioni devono essere interrotte. Il set globale di dispositivi virtuali entra in uno stato di chiusura anomala. Nessun altro comando viene restituito su nessun dispositivo. Tutti i comandi non completati vengono completati automaticamente, restituendo ERROR_OPERATION_ABORTED come codice di completamento. Il client deve chiamare ClientVirtualDeviceSet::Close dopo aver terminato in modo sicuro qualsiasi uso dei buffer forniti al client. Per altre informazioni, vedere "Chiusura anomala" più indietro in questo documento.
 
 ## <a name="clientvirtualdevicesetclose"></a>ClientVirtualDeviceSet::Close
 
-**Scopo** questa funzione consente di chiudere il set di dispositivi virtuali creato da ClientVirtualDeviceSet::Create. Restituisce la versione di tutte le risorse associate al set di dispositivo virtuale.
+**Scopo** Questa funzione chiude il set di dispositivi virtuali creato da ClientVirtualDeviceSet::Create. Il risultato è il rilascio di tutte le risorse associate al set di dispositivi virtuali.
 
 **Sintassi** 
 
@@ -237,22 +237,22 @@ Quando questa routine deve bloccarsi in attesa per un comando, il thread è disp
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |Nessuna |Non applicabile
+| |None |Non applicabile
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**NOERROR** |Viene restituito quando il set di dispositivo virtuale è stata chiusa correttamente.
-| |**VD_E_PROTOCOL** |È stata eseguita alcuna azione perché il set di dispositivo virtuale non era aperto.
-| |**VD_E_OPEN** |I dispositivi sono stati ancora aperti.
+| |**NOERROR** |Viene restituito dopo la corretta chiusura del set di dispositivi virtuali.
+| |**VD_E_PROTOCOL** |Non è stata eseguita alcuna azione perché il set di dispositivi virtuali non era aperto.
+| |**VD_E_OPEN** |I dispositivi erano ancora aperti.
 
-**La sezione Osservazioni** la chiamata di Close è una dichiarazione di client che devono essere rilasciate tutte le risorse usate dal set di dispositivo virtuale. Il client deve verificare che tutte le attività che coinvolgono i buffer dei dati e i dispositivi virtuali sono terminata prima di richiamare una chiusura. Tutte le interfacce di dispositivo virtuale restituite dalla OpenDevice vengono invalidate da chiudere.
-Il client è consentito dopo la chiamata di chiusura viene restituito a una chiamata di creazione dell'interfaccia di set di dispositivo virtuale. Tale chiamata crea un nuovo dispositivo virtuale impostato per un'operazione di BACKUP o RESTORE successiva.
-Se Chiudi viene chiamato quando uno o più dispositivi virtuali vengono ancora aperti, viene restituito VD_E_OPEN. In questo caso, SignalAbort viene attivata internamente, per garantire una corretta chiusura se possibile. Vengono rilasciate le risorse di infrastruttura VDI. Il client deve attendere per un'indicazione VD_E_CLOSE su ogni dispositivo prima di richiamare ClientVirtualDeviceSet::Close. Se il client sa che il set di dispositivo virtuale è già in uno stato terminato in modo anomalo, quindi non possono prevedere un'indicazione VD_E_CLOSE dall'operazione GetCommand e può richiamare ClientVirtualDeviceSet::Close appena attività su buffer condiviso viene terminato.
-Per altre informazioni, vedere "Terminazione anomala" più indietro in questo documento.
+**Osservazioni** La chiamata di Close è una dichiarazione del client che tutte le risorse usate dal set di dispositivi virtuali devono essere rilasciate. Il client deve verificare che tutte le attività che coinvolgono i buffer di dati e i dispositivi virtuali siano terminate prima di richiamare Close. Tutte le interfacce di dispositivo virtuale restituite da OpenDevice vengono invalidate da Close.
+Il client è autorizzato a eseguire una chiamata Create sull'interfaccia del set di dispositivi virtuali dopo la restituzione della chiamata Close. Questa chiamata creerebbe un nuovo set di dispositivi virtuali per un'operazione di backup o ripristino successiva.
+Se Close viene chiamato quando uno o più dispositivi virtuali sono ancora aperti, viene restituito VD_E_OPEN. In questo caso, SignalAbort viene attivato internamente per garantire un arresto corretto, se possibile. Le risorse VDI vengono rilasciate. Il client deve attendere un'indicazione VD_E_CLOSE su ogni dispositivo prima di richiamare ClientVirtualDeviceSet::Close. Se il client sa che il set di dispositivi virtuali si trova già in uno stato di chiusura anomala, non deve attendere un'indicazione VD_E_CLOSE da GetCommand e può richiamare ClientVirtualDeviceSet::Close appena terminano le attività sui buffer condivisi.
+Per altre informazioni, vedere "Chiusura anomala" più indietro in questo documento.
 
 ## <a name="clientvirtualdevicesetopeninsecondary"></a>ClientVirtualDeviceSet::OpenInSecondary
 
-**Scopo** questa funzione consente di aprire il dispositivo virtuale impostato in un client secondario. Il client primario deve avere già usato GetConfiguration e crea per configurare il set di dispositivi virtuali.
+**Scopo** Questa funzione apre il set di dispositivi virtuali in un client secondario. Il client primario deve avere già usato Create e GetConfiguration per configurare il set di dispositivi virtuali.
 
 **Sintassi** 
    
@@ -264,19 +264,19 @@ Per altre informazioni, vedere "Terminazione anomala" più indietro in questo do
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**setName** |Identifica il set. Questo nome è distinzione maiuscole/minuscole e deve corrispondere al nome usato dal client primario, quando richiamata ClientVirtualDeviceSet::Create.
+| |**setName** |Identifica il set. Questo nome fa distinzione tra maiuscole e minuscole e deve corrispondere al nome usato dal client primario per richiamare ClientVirtualDeviceSet::Create.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** |Funzione completata.
-| |**VD_E_PROTOCOL** |Il set di dispositivi virtuali non è stato creato, è già stata aperta in questo client o il dispositivo virtuale set non è pronto ad accettare richieste aperte dai client secondario.
-| |**VD_E_ABORT** |L'operazione è in corso interrotta.
+| |**VD_E_PROTOCOL** |Il set di dispositivi virtuali non è stato creato, è già stato aperto nel client oppure non è pronto ad accettare richieste di apertura da client secondari.
+| |**VD_E_ABORT** |Operazione interrotta.
 
-**La sezione Osservazioni** quando si usa un modello di processo più, il client primario è responsabile del rilevamento normale e anomala terminazione dei client secondario.
+**Osservazioni** Quando si usa un modello a più processi, il client primario è responsabile del rilevamento della chiusura normale e anomala dei client secondari.
 
 ## <a name="clientvirtualdevicesetgetbufferhandle"></a>ClientVirtualDeviceSet::GetBufferHandle
 
-**Scopo** alcune applicazioni possono richiedere più di un processo su cui operare i buffer restituiti da ClientVirtualDevice::GetCommand. In questi casi, il processo che riceve il comando è possibile usare GetBufferHandle per ottenere un handle di processo indipendenti che identifica il buffer. Questo handle può quindi essere comunicato a qualsiasi altro processo che ha anche l'apertura di Set di dispositivi virtuali stesso. Tale processo sarebbe quindi usare ClientVirtualDeviceSet::MapBufferHandle per ottenere l'indirizzo del buffer. L'indirizzo sarà probabilmente un indirizzo diverso da quello nel relativo partner poiché ogni processo può eseguire il mapping di buffer in indirizzi diversi.
+**Scopo** Alcune applicazioni potrebbero richiedere più di un processo per operare sui buffer restituiti da ClientVirtualDevice::GetCommand. In questi casi, il processo che riceve il comando può usare GetBufferHandle per ottenere un handle indipendente dal processo che identifica il buffer. Questo handle può quindi essere comunicato a qualsiasi altro processo che ha lo stesso set di dispositivi virtuali aperto. Tale processo può quindi usare ClientVirtualDeviceSet::MapBufferHandle per ottenere l'indirizzo del buffer. L'indirizzo sarà probabilmente diverso da quello del partner, perché ogni processo può eseguire il mapping dei buffer a indirizzi diversi.
 
 **Sintassi** 
 
@@ -289,20 +289,20 @@ Per altre informazioni, vedere "Terminazione anomala" più indietro in questo do
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**pBuffer** |Questo è l'indirizzo di un buffer ottenuto da un comando di lettura o scrittura.
+| |**pBuffer** |Indirizzo di un buffer ottenuto da un comando Read o Write.
 | |**BufferHandle** |Viene restituito un identificatore univoco per il buffer.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** |Funzione completata.
-| |**VD_E_PROTOCOL** |Il set di dispositivo virtuale non è attualmente aperto.
-| |**VD_E_INVALID** |Il pBuffer non è un indirizzo valido.
+| |**VD_E_PROTOCOL** |Il set di dispositivi virtuali non è attualmente aperto.
+| |**VD_E_INVALID** |pBuffer non è un indirizzo valido.
 
-La sezione Osservazioni il processo che richiama la funzione GetBufferHandle è responsabile del richiamo ClientVirtualDevice::CompleteCommand durante il trasferimento dei dati è stato completato.
+Osservazioni - Il processo che richiama la funzione GetBufferHandle è responsabile della chiamata a ClientVirtualDevice::CompleteCommand al termine del trasferimento dei dati.
 
 ## <a name="clientvirtualdevicesetmapbufferhandle"></a>ClientVirtualDeviceSet::MapBufferHandle
 
-**Scopo** questa funzione viene utilizzata per ottenere un indirizzo di buffer valida da un handle del buffer ottenuto da un altro processo. 
+**Scopo** Questa funzione viene usata per ottenere un indirizzo del buffer valido da un handle del buffer ottenuto da un altro processo. 
 
 **Sintassi** 
 
@@ -315,15 +315,15 @@ La sezione Osservazioni il processo che richiama la funzione GetBufferHandle è 
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |**dwBuffer** |Questo è l'handle restituito da ClientVirtualDeviceSet::GetBufferHandle.
-| |**ppBuffer** |Questo è l'indirizzo dei buffer valido nel processo corrente.
+| |**dwBuffer** |Handle restituito da ClientVirtualDeviceSet::GetBufferHandle.
+| |**ppBuffer** |Indirizzo del buffer valido nel processo corrente.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | |**NOERROR** |Funzione completata.
-| |**VD_E_PROTOCOL** |Il set di dispositivo virtuale non è attualmente aperto.
-| |**VD_E_INVALID** |Il ppBuffer è un handle non valido.
+| |**VD_E_PROTOCOL** |Il set di dispositivi virtuali non è attualmente aperto.
+| |**VD_E_INVALID** |ppBuffer è un handle non valido.
 
-**La sezione Osservazioni** necessario prestare attenzione per comunicare correttamente i punti di controllo. Gli handle sono locali rispetto a un set unico dispositivo virtuale. I processi di partner la condivisione di un handle devono garantire tale buffer gli handle vengono usati solo all'interno dell'ambito del dispositivo virtuale impostato da cui è stato originariamente ottenuto il buffer.
+**Osservazioni** Prestare attenzione a comunicare correttamente gli handle. Gli handle sono locali in un singolo set di dispositivi virtuali. I processi partner che condividono un handle devono assicurarsi che gli handle del buffer vengano usati solo nell'ambito del set di dispositivi virtuali da cui è stato originariamente ottenuto il buffer.
 
 
