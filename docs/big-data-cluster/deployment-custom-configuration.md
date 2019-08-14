@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cae2c216245fdb6483b3ad07a88b3517c38550bd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470747"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969500"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurare le impostazioni di distribuzione per cluster Big Data
 
@@ -174,16 +174,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> Configurare la posizione dei pod tramite etichette Kubernetes
 
-È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Ad esempio, può essere necessario fare in modo che i pod del pool di archiviazione siano posizionati in nodi con più archiviazione o che le istanze master di SQL Server si trovino in nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di pool nel file di configurazione della distribuzione del cluster. Kubernetes si occuperà quindi dell'impostazione dell'affinità dei pod e dei nodi che corrispondono a etichette specifiche.
+È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Ad esempio, può essere necessario fare in modo che i pod del pool di archiviazione siano posizionati in nodi con più archiviazione o che le istanze master di SQL Server si trovino in nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di pool nel file di configurazione della distribuzione del cluster. Kubernetes si occuperà quindi dell'impostazione dell'affinità dei pod e dei nodi che corrispondono a etichette specifiche. La chiave dell'etichetta specifica che deve essere aggiunta ai nodi nel cluster kubernetes è **MSSQL-cluster-Wide**. Il valore di questa etichetta può essere qualsiasi stringa scelta.
 
-L'esempio seguente mostra come modificare un file di configurazione personalizzato in modo da includere un'impostazione per le etichette dei nodi per l'istanza master di SQL Server. Si noti che non è presente alcuna chiave *nodeLabel* nelle configurazioni predefinite e di conseguenza è necessario modificare un file di configurazione personalizzato manualmente oppure creare un file di patch e applicarlo al file di configurazione personalizzato.
+Nell'esempio seguente viene illustrato come modificare un file di configurazione personalizzato per includere un'impostazione dell'etichetta del nodo per l'istanza master SQL Server, il pool di calcolo, il pool di dati & pool di archiviazione. Si noti che non è presente alcuna chiave *nodeLabel* nelle configurazioni predefinite e di conseguenza è necessario modificare un file di configurazione personalizzato manualmente oppure creare un file di patch e applicarlo al file di configurazione personalizzato. Il Pod dell'istanza master di SQL Server verrà distribuito in un nodo che contiene un'etichetta **MSSQL-cluster-Wide** con valore **BDC-Master**. Il pool di calcolo e i pod del pool di dati verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-SQL**. I pod del pool di archiviazione verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-storage**.
 
 Creare un file denominato **patch.json** nella directory corrente con il contenuto seguente:
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -197,8 +197,35 @@ Creare un file denominato **patch.json** nella directory corrente con il contenu
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }
