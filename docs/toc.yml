@@ -10012,12 +10012,12 @@
           items:
             - name: Criteri di supporto per SSMS
               href: ssms/support-policy.md
-            - name: Feedback e Guida
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: Documentazione per gli utenti in SSMS
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Dati di utilizzo anonimi
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: Commenti e suggerimenti >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: Installare sqlpackage
