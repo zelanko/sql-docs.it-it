@@ -13,12 +13,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
-ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
+ms.openlocfilehash: bc65a8a9c17c7e6a7c37e6f08675f89d1b113c8d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251007"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028649"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67251007"
   
 |||  
 |-|-|  
-|![Macchina virtuale di Azure](../../master-data-services/media/azure-virtual-machine.png "macchina virtuale di Azure")|Per provare SQL Server 2016, Iscriversi a Microsoft Azure, quindi andare **[qui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per selezionare una macchina virtuale con SQL Server 2016 già installato. Quando hai finito, è possibile eliminare la macchina virtuale.|  
+|![Macchina virtuale di Azure](../../master-data-services/media/azure-virtual-machine.png "Macchina virtuale di Azure")|Per provare SQL Server 2016, Iscriversi a Microsoft Azure, quindi andare **[qui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per selezionare una macchina virtuale con SQL Server 2016 già installato. Al termine, è possibile eliminare la macchina virtuale.|  
   
  Per usare [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], definire una tabella usata molto frequentemente come tabella con ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria sono completamente transazionali, durevoli e sono accessibili tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] allo stesso modo delle tabelle basate su disco. Una query può fare riferimento sia alle tabelle ottimizzate per la memoria che alle tabelle basate su disco. Una transazione può aggiornare i dati nelle tabelle ottimizzate per la memoria e in quelle basate su disco. Le stored procedure che fanno riferimento solo alle tabelle ottimizzate per la memoria possono essere compilate in modo nativo nel codice macchina per migliorare ulteriormente le prestazioni. Il motore di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è progettato per una concorrenza delle sessioni estremamente alta per il tipo di transazioni OLTP supportate da un livello intermedio con elevata scalabilità orizzontale. Per ottenere ciò, vengono usati strutture di dati prive di latch e un controllo della concorrenza ottimistica con più versioni. Il risultato è prevedibile, una bassa latenza inferiore a un millisecondo e una velocità effettiva elevata con scalabilità lineare per le transazioni di database. Il miglioramento effettivo delle prestazioni dipende da molti fattori, ma in genere si possono ottenere miglioramenti delle prestazioni da 5 a 20 volte.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67251007"
 |Bassa latenza.|Richiedere transazioni aziendali a bassa latenza che le tipiche soluzioni di database non riescono a ottenere.|Eliminare i conflitti.<br /><br /> Ridurre il tempo di esecuzione del codice.<br /><br /> Esecuzione del codice a bassa latenza.<br /><br /> Recupero di dati efficiente.|  
 |Gestione dello stato delle sessioni.|Operazioni di inserimento e aggiornamento e ricerche di punti frequenti.<br /><br /> Caricamento a elevata scalabilità da numerosi server Web senza stato.|Eliminare i conflitti.<br /><br /> Recupero di dati efficiente.<br /><br /> Riduzione o rimozione di operazioni I/O facoltative quando si usano tabelle non durevoli.|  
   
- Per altre informazioni sugli scenari in cui [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] consente di ottenere il massimo miglioramento delle prestazioni, vedere [OLTP In memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Per ulteriori informazioni sugli scenari in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] cui si otterranno i maggiori vantaggi in termini di prestazioni, vedere [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] migliora le prestazioni in modo ottimale in OLTP con transazioni con esecuzione rapida.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67251007"
   
 -   Controllo della concorrenza ottimistica che elimina i blocchi logici.  
   
--   Oggetti senza blocco che eliminano tutti i latch e i blocchi fisici. Thread che eseguono lavoro transazionale non utilizzano blocchi o latch per il controllo della concorrenza.  
+-   Oggetti senza blocco che eliminano tutti i latch e i blocchi fisici. I thread che eseguono lavoro transazionale non usano blocchi o latch per il controllo della concorrenza.  
   
 -   Stored procedure compilate in modo nativo che comportano un miglioramento significativo delle prestazioni rispetto alle stored procedure interpretate quando si accede a una tabella ottimizzata per la memoria.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "67251007"
   
  Altre informazioni su [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sono disponibili in:  
   
--   [Microsoft?? SQL Server?? Guida al prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft? SQL Server? Guida del prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [Blog di OLTP in memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 -   [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Panoramica dei meccanismi interni OLTP In memoria SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+-   [Panoramica delle funzionalità interne di OLTP in memoria SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
     <!--
          (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
          (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)

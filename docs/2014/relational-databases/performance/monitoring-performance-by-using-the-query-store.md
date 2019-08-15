@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150804"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028602"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Archivio query
   La funzionalità dell'archivio query mette a disposizione degli amministratori di database informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. La funzionalità acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva in modo che sia possibile esaminarli successivamente. I dati vengono separati dagli intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Ottenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Get it](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Si tratta attualmente di una funzionalità di anteprima. Per usare la funzionalità Archivio query è necessario dichiarare di essere a conoscenza e di accettare che l'implementazione della funzionalità è soggetta alle condizioni per l'anteprima indicate nel contratto di licenza, ad esempio il Contratto Enterprise, il Contratto di Microsoft Azure o il Contratto di Sottoscrizione Microsoft Online, oltre a eventuali [condizioni per l'utilizzo aggiuntive per le anteprime di Microsoft Azure](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
+>  Si tratta attualmente di una funzionalità di anteprima. Per usare la funzionalità Archivio query è necessario dichiarare di essere a conoscenza e di accettare che l'implementazione della funzionalità è soggetta alle condizioni per l'anteprima indicate nel contratto di licenza, ad esempio il Contratto Enterprise, il Contratto di Microsoft Azure o il Contratto di Sottoscrizione Microsoft Online, oltre a eventuali [condizioni per l'utilizzo aggiuntive per le anteprime di Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
 ##  <a name="Enabling"></a> Abilitazione di Archivio query  
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.  
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Si noti che non sono consentiti valori arbitrari, è necessario usare uno dei seguenti: 1, 5, 10, 15, 30 e 60.  
+ Si noti che non sono consentiti valori arbitrari. è necessario usare uno degli elementi seguenti: 1, 5, 10, 15, 30 e 60.  
   
  Il nuovo valore per l'intervallo viene esposto tramite la vista `sys.database_query_store_options`.  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  Per rimuovere i dati non necessari, nell'esempio precedente viene usata la stored procedure estesa `sp_query_store_remove_query`. È anche possibile usare altre due procedure.  
   
--   `sp_query_store_reset_exec_stats` -cancellare le statistiche di runtime per un determinato piano.  
+-   `sp_query_store_reset_exec_stats`-Cancella le statistiche di runtime per un determinato piano.  
   
--   `sp_query_store_remove_plan` -Rimuove un singolo piano.  
+-   `sp_query_store_remove_plan`-Rimuove un singolo piano.  
   
 
   
 ###  <a name="Peformance"></a> Controllo delle prestazioni e risoluzione dei problemi  
  Dal momento che Archivio query conserva la cronologia delle metriche relative a compilazione e runtime per tutte le esecuzioni delle query, è possibile rispondere facilmente a numerose domande relative al carico di lavoro.  
   
- **Ultima *n* le query eseguite sul database.**  
+ **Ultime *n* query eseguite sul database.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **Il numero di query con il tempo medio esecuzione nell'ultima ora.**  
+ **Numero di query con il tempo medio di esecuzione più lungo nell'ultima ora.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Il numero di query con le principali Media i/o fisiche legge nelle ultime 24 ore, con numero medio di righe corrispondente e il conteggio delle esecuzioni.**  
+ **Numero di query con il numero medio di operazioni di i/o fisico più grande nelle ultime 24 ore, con il numero medio di righe e il conteggio delle esecuzioni corrispondente.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Le query che recentemente peggiorate delle prestazioni (confrontando altro punto nel tempo).** L'esempio di query seguente restituisce tutte le query in cui il tempo di esecuzione è raddoppiato nelle ultime 48 ore in seguito alla modifica del piano selezionato. La query confronta tutti gli intervalli delle statistiche di runtime affiancandoli.  
+ **Query di cui è stato recentemente effettuato il regresso in termini di prestazioni (confronto tra temporizzazioni diverse).** L'esempio di query seguente restituisce tutte le query in cui il tempo di esecuzione è raddoppiato nelle ultime 48 ore in seguito alla modifica del piano selezionato. La query confronta tutti gli intervalli delle statistiche di runtime affiancandoli.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Per visualizzare tutte le regressioni delle prestazioni, non solo quelle correlate alla modifica del piano selezionato, è sufficiente rimuovere la condizione `AND p1.plan_id <> p2.plan_id` dalla query precedente.  
   
- **Query regredite recente delle prestazioni (confrontando cronologia delle esecuzioni recenti e).** La query successiva confronta le esecuzioni di query in base ai periodi di esecuzione. In questo specifico esempio la query confronta le esecuzioni nel periodo recente (1 ora) con il periodo della cronologia (ultimo giorno) e identifica quelle che hanno introdotto additional_duration_workload. Questa metrica viene ottenuta moltiplicando la differenza tra l'esecuzione media recente e quella media della cronologia e il numero delle esecuzioni recenti. Rappresenta in effetti la quantità di esecuzioni recenti con durata aggiuntiva introdotte rispetto alla cronologia:  
+ **Query che hanno recentemente regressione nelle prestazioni (confronto tra l'esecuzione recente e la cronologia).** La query successiva confronta le esecuzioni di query in base ai periodi di esecuzione. In questo specifico esempio la query confronta le esecuzioni nel periodo recente (1 ora) con il periodo della cronologia (ultimo giorno) e identifica quelle che hanno introdotto additional_duration_workload. Questa metrica viene ottenuta moltiplicando la differenza tra l'esecuzione media recente e quella media della cronologia e il numero delle esecuzioni recenti. Rappresenta in effetti la quantità di esecuzioni recenti con durata aggiuntiva introdotte rispetto alla cronologia:  
   
 ```  
 --- "Recent" workload - last 1 hour  

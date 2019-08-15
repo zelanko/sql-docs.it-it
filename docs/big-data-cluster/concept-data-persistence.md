@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68471000"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028587"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -24,7 +24,7 @@ I [volumi permanenti](https://kubernetes.io/docs/concepts/storage/persistent-vol
 
 ## <a name="configure-persistent-volumes"></a>Configurare volumi permanenti
 
-Un cluster Big Data di SQL Server utilizza questi volumi permanenti tramite [classi di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/). È possibile creare classi di archiviazione diverse per diversi tipi di archiviazione e specificarle in fase di distribuzione del cluster Big Data. È possibile configurare la classe di archiviazione e la dimensione dell'attestazione di volume permanente da usare per uno scopo specifico a livello di pool. Un cluster Big Data di SQL Server crea [attestazioni di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con il nome della classe di archiviazione specificato per ogni componente che richiede volumi permanenti. Monta quindi i volumi permanenti corrispondenti nel pod. 
+Un cluster Big Data di SQL Server utilizza questi volumi permanenti tramite [classi di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/). È possibile creare classi di archiviazione diverse per diversi tipi di archiviazione e specificarle in fase di distribuzione del cluster Big Data. È possibile configurare la classe di archiviazione e la dimensione dell'attestazione di volume permanente da usare per uno scopo specifico a livello di pool. Crea un cluster di big data server [attestazioni di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con il nome della classe di archiviazione specificato per ogni componente che richiede volumi permanenti. Monta quindi i volumi permanenti corrispondenti nel pod. 
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>Configurare le impostazioni di archiviazione del cluster Big Data
 
@@ -60,7 +60,7 @@ La sezione [Configurare l'archiviazione](#config-samples) contiene altri esempi 
 Il servizio Azure Kubernetes include [due classi di archiviazione predefinite](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv), **default** e **managed-premium**, insieme allo strumento di provisioning dinamico per entrambe. È possibile specificare una delle due per creare una classe di archiviazione personalizzata per la distribuzione del cluster Big Data con archiviazione permanente abilitata. Per impostazione predefinita, il file di configurazione del cluster predefinito per *aks-dev-test* del servizio Azure Kubernetes include configurazioni di archiviazione permanente per usare la classe di archiviazione **default**.
 
 > [!WARNING]
-> I volumi permanenti creati con le classi di archiviazione predefinite **default** e **managed-premium** usano il criterio di recupero *Delete*. Di conseguenza, quando si elimina il cluster Big Data di SQL Server, vengono eliminati anche le attestazioni di volumi permanenti e quindi i volumi permanenti. È possibile creare classi di archiviazione personalizzate usando lo strumento di provisioning **azure-disk** con un criterio di recupero *Retain*, come mostrato in [questo](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) articolo.
+> I volumi permanenti creati con le classi di archiviazione predefinite **default** e **managed-premium** usano il criterio di recupero *Delete*. Di conseguenza, quando si elimina il cluster Big Data di SQL Server, vengono eliminati anche le attestazioni di volumi permanenti e quindi i volumi permanenti. È possibile creare classi di archiviazione personalizzate usando lo strumento di provisioning **azure-disk** con un criterio di recupero *Retain*, come mostrato in [questo](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) articolo.
 
 
 ## <a name="minikube-storage-class"></a>Classe di archiviazione di minikube

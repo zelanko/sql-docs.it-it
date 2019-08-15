@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9444842081456563f411ad618f32b8dbd59f7513
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426441"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028559"
 ---
 # <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>Installare azdata per gestire i cluster Big Data di SQL Server
 
@@ -71,8 +71,8 @@ In Linux è necessario installare Python 3.5 e quindi eseguire l'aggiornamento d
 1. Installare i pacchetti Python necessari:
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 
