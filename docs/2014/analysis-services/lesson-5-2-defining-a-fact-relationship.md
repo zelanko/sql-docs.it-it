@@ -10,12 +10,12 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493858"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
   Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
@@ -118,7 +118,7 @@ ms.locfileid: "68888234"
      ![Dimensionamento di Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionamento di Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione di una relazione molti-a-molti](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
+ [Definizione di una relazione molti-a-molti](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
