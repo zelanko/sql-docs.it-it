@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888746"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494018"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Creazione di un'origine dati (Esercitazione di base sul data mining)
   Un' *origine dati* è una connessione dati salvata e gestita nel progetto e distribuita [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel database. L'origine dati contiene il nome del server e del database in cui si trovano i dati di origine in aggiunta ad altre proprietà di connessione necessarie.  
@@ -62,7 +62,7 @@ ms.locfileid: "68888746"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Definizione di un'origine dati](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Definizione di un'origine dati](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [Impostare opzioni di rappresentazione &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

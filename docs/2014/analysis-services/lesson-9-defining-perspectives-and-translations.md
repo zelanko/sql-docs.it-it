@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887891"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493751"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
@@ -28,7 +28,7 @@ ms.locfileid: "68887891"
  [Definizione ed esplorazione delle prospettive](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  In questa attività vengono definite ed esplorate le prospettive per semplificare la visualizzazione del cubo per utenti o utilizzi specifici.  
   
- [Definizione ed esplorazione delle traduzioni](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Definizione ed esplorazione delle traduzioni](lesson-9-2-defining-and-browsing-translations.md)  
  In questa procedura vengono definite ed esplorate traduzioni di metadati specifici in determinate lingue.  
   
 ## <a name="next-lesson"></a>Lezione successiva  

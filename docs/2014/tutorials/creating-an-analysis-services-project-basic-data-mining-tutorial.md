@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893338"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494037"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Creazione di un progetto di Analysis Services (Esercitazione di base sul data mining)
   In ogni progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vengono definiti gli oggetti in un singolo database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] può contenere molti tipi diversi di oggetti  
@@ -32,7 +32,7 @@ ms.locfileid: "68893338"
   
  Per impostazione predefinita, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa l'istanza **localhost** per i nuovi progetti. Se si usa un'istanza denominata o un server diverso, è necessario creare e aprire il progetto prima di modificare il nome dell'istanza.  
   
- Per altre informazioni sui progetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
+ Per altre informazioni sui progetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Per creare un progetto di Analysis Services  
   

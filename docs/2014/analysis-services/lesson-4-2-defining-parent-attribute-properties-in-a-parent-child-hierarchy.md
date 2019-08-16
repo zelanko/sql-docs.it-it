@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888383"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494009"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio
   Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888383"
      ![Gerarchia Employees modificata](../../2014/tutorials/media/l4-employee-2.png "Gerarchia Employees modificata")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Raggruppamento automatico dei membri degli attributi](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [Raggruppamento automatico dei membri degli attributi](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md)   

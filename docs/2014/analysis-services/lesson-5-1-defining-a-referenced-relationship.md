@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888287"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493929"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definizione di una relazione di tipo Riferimento
   Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "68888287"
      Finestra di ![dialogo Definisci relazione] Finestra di (../../2014/tutorials/media/l5-referencedrelationship-5.gif "dialogo Definisci relazione")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione di una relazione di tipo Fatti](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [Definizione di una relazione di tipo Fatti](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

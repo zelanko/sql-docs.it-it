@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888132"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493889"
 ---
 # <a name="defining-named-sets"></a>Definizione dei set denominati
   Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888132"
      ![Riquadro filtro contenente due set] denominati (../../2014/tutorials/media/l6-named-set-05.gif "Riquadro filtro contenente due set") denominati  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Lezione 7: Definizione degli indicatori &#40;di prestazioni chiave KPI&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lezione 7: Definizione degli indicatori &#40;di prestazioni chiave KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   

@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888110"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493818"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
   Il dimensionamento dei dati della tabella dei fatti tramite una dimensione dei fatti senza l'applicazione di un filtro appropriato sui dati restituiti dalla query può causare un rallentamento delle prestazioni. Per evitare questo problema, è possibile definire un'azione drill-through che limita il numero complessivo di righe restituite. In questo modo è possibile migliorare in modo significativo le prestazioni delle query.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888110"
      ![Ordini spediti ad Adam Powell](../../2014/tutorials/media/l8-action8.gif "Ordini spediti ad Adam Powell")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 9: Definizione di prospettive e traduzioni](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Azioni &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Azioni nei modelli multidimensionali](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definizione di una relazione di tipo Fatti](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [Definizione di una relazione di tipo Fatti](lesson-5-2-defining-a-fact-relationship.md)   
  [Definire una relazione di tipo Fatti e le relative proprietà](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

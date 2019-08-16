@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888082"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493789"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definizione ed esplorazione dei KPI
   Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
@@ -268,6 +268,6 @@ ms.locfileid: "68888082"
      Verrà visualizzato il margine di profitto lordo per le biciclette vendute dai rivenditori in Nord America nel terzo trimestre dell'anno di calendario 2007.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 8: Definizione di azioni](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Lezione 8: Definizione di azioni](lesson-8-defining-actions.md)  
   
   
