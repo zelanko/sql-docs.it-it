@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891091"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530907"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configurazione iniziale (PowerPivot per SharePoint)
   Seguire i passaggi descritti in questo argomento per configurare un'installazione iniziale di PowerPivot per SharePoint. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di configurazione PowerPivot. Tale strumento consente di eseguire in modo automatico tutti i passaggi di configurazione descritti di seguito.  
@@ -195,7 +195,7 @@ ms.locfileid: "68891091"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: Configurare l'account di aggiornamento dati automatico PowerPivot  
  La creazione di un account di aggiornamento dati automatico per l'accesso ai dati PowerPivot è spesso richiesta per l'accesso ai dati esterni durante l'aggiornamento dei dati. Ad esempio, se Kerberos non è abilitato, è necessario creare un account automatico che il servizio PowerPivot può utilizzare per connettersi alle origini dati esterne.  
   
- Per istruzioni su come creare l'account di aggiornamento dati automatico PowerPivot o altre credenziali archiviate utilizzate nell'aggiornamento dati, vedere [configurare l'account &#40;di aggiornamento dati automatico PowerPivot PowerPivot per SharePoint&#41; ](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint) e [configurare le credenziali archiviate per l' &#40;aggiornamento&#41;dati PowerPivot PowerPivot per SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Per istruzioni su come creare l'account di aggiornamento dati automatico PowerPivot o altre credenziali archiviate utilizzate nell'aggiornamento dati, vedere [configurare l'account &#40;di aggiornamento dati automatico PowerPivot PowerPivot per SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [configurare le credenziali archiviate per l' &#40;aggiornamento&#41;dati PowerPivot PowerPivot per SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a> Passaggio 6: Abilita raccolta dati di utilizzo  
  PowerPivot per SharePoint utilizza l'infrastruttura della raccolta dati di utilizzo di SharePoint per raggruppare informazioni sull'utilizzo di PowerPivot nell'intera farm. Anche se i dati di utilizzo fanno sempre parte di un'installazione di SharePoint, devono essere abilitati prima di poter essere utilizzati. Per altre informazioni, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  

@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957328"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530889"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "68957328"
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole riservate MDX](/sql/mdx/mdx-reserved-words)   
- [Analysis Services &#40;traduzioni&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [Analysis Services &#40;traduzioni&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XMLA XML for Analysis &#40;Compliance&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

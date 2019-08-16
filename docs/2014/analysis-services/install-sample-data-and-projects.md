@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888623"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530824"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services
   Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni su Analysis Services.  
@@ -145,7 +145,7 @@ ms.locfileid: "68888623"
 8.  Avviare SQL Server Management Studio. In SQL Server Management Studio connettersi ad Analysis Services. Verificare che nel server sia in esecuzione un database denominato **Analysis Services Tutorial**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- È ora possibile avviare l'esercitazione. Per altre informazioni introduttive, vedere [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial).  
+ È ora possibile avviare l'esercitazione. Per altre informazioni introduttive, vedere [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

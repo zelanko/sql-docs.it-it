@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715223"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531051"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installare SQL Server Machine Learning Services in Windows
 
@@ -244,6 +244,10 @@ A livello di istanza, la configurazione aggiuntiva potrebbe includere:
 * [Creare un account di accesso per SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Gestire le quote disco](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) per evitare che script esterni eseguano attività che esauriscono lo spazio su disco
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019 in Windows, il meccanismo di isolamento è stato modificato. Ciò influiscono su **SQLRUserGroup**, le regole del firewall, l'autorizzazione per i file e l'autenticazione implicita. Per ulteriori informazioni, vedere [modifiche di isolamento per Machine Learning Services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ Nel database potrebbero essere necessari gli aggiornamenti della configurazione 
 
 Ora che tutto funziona, potrebbe essere necessario ottimizzare il server per supportare l'apprendimento automatico o installare modelli con training.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>Aggiungere altri account di lavoro
 
 Se si prevede che molti utenti eseguano script contemporaneamente, è possibile aumentare il numero di account di lavoro assegnati al servizio launchpad. Per ulteriori informazioni, vedere [modificare il pool di account utente per SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>Ottimizzare il server per l'esecuzione di script
 
@@ -286,7 +292,7 @@ Per installare e gestire i pacchetti R, è possibile configurare i gruppi di ute
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Gli sviluppatori r possono iniziare a usare alcuni semplici esempi e apprendere le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
+Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Esercitazione: Eseguire R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
@@ -296,4 +302,4 @@ Gli sviluppatori Python possono apprendere come usare Python con SQL Server segu
 + [Esercitazione: Eseguire Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Esercitazione: Analisi nel database per sviluppatori Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Per visualizzare esempi di machine learning basati su scenari reali, vedere Esercitazioni su [Machine Learning](../tutorials/machine-learning-services-tutorials.md).
+Per esempi di Machine Learning basati su scenari reali, vedere [Esercitazioni su Machine Learning](../tutorials/machine-learning-services-tutorials.md).

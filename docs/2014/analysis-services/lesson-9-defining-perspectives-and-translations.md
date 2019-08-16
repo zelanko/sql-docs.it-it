@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493751"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530834"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
@@ -35,7 +35,7 @@ ms.locfileid: "69493751"
  [Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Analysis Services Tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Esercitazione di modellazione &#40;multidimensionale Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Prospettive](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [Prospettive nei modelli multidimensionali](multidimensional-models/perspectives-in-multidimensional-models.md)   

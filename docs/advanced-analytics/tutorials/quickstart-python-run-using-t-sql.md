@@ -1,24 +1,24 @@
 ---
-title: Guida introduttiva per l'esecuzione di codice Python di base "Hello World" in T-SQL
-description: Guida introduttiva per script Python in SQL Server. Informazioni di base sulla chiamata di script Python con il sistema sp_execute_external_script stored procedure in un esercizio Hello-World.
+title: 'Avvio rapido: "Hello World" di Python'
+description: Questa Guida introduttiva illustra i concetti chiave eseguendo uno script Python "Hello World" in SQL Server Machine Learning Services. Si userà il stored procedure di sistema T-SQL sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714818"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530975"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Avvio rapido: Script Python "Hello World" in SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Avvio rapido: Eseguire uno script Python "Hello World" in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa Guida introduttiva illustra i concetti chiave eseguendo uno script Python "Hello World" di tipo inT-SQL, con un'introduzione al stored procedure di sistema **sp_execute_external_script** . 
+Questa Guida introduttiva illustra i concetti chiave eseguendo uno script Python "Hello World" in SQL Server Machine Learning Services. Si userà il stored procedure di sistema T-SQL **sp_execute_external_script** .
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053224"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530857"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni controllo del server che indica lo stato corrente del controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|ID del controllo. Esegue il mapping per il **audit_id** campo il **sys.audits** vista del catalogo.|  
-|**name**|**sysname**|Nome del controllo. Stesso come il **name** campo il **Sys. server_audits** vista del catalogo.|  
-|**status**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = destinazione creare hanno esito negativo<br /><br /> 4 = in corso l'arresto|  
+|**audit_id**|**int**|ID del controllo. Esegue il mapping al campo **Audit_ID** nella vista del catalogo **sys. Audits** .|  
+|**name**|**sysname**|Nome del controllo. Uguale al campo **Name** nella vista del catalogo **sys. server_audits** .|  
+|**status**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = creazione destinazione non riuscita<br /><br /> 4 = chiusura in corso|  
 |**status_desc**|**nvarchar(256)**|Stringa che visualizza lo stato del controllo del server:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC dell'ultima modifica dello stato per il controllo.|  
-|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato per il **sys.db_xe_sessions.address** vista del catalogo.|  
+|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato alla vista del catalogo **sys. dm _xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Percorso e nome file completo della destinazione del file di controllo attualmente utilizzato. Definito solo per i controlli dei file.|  
 |**audit_file_size**|**bigint**|Dimensioni approssimate in byte del file di controllo. Definito solo per i controlli dei file.|  
   
 ## <a name="permissions"></a>Permissions  
- Le entità devono disporre **VIEW SERVER STATE** e **seleziona** autorizzazioni.  
+ Le entità devono disporre dell'autorizzazione **View Server state** e **SELECT** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

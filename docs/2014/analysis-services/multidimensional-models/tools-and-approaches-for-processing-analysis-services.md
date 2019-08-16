@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072815"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530937"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
   L'elaborazione è un'operazione durante la quale tramite Analysis Services viene effettuata una query su un'origine dati relazionale e gli oggetti di Analysis Services vengono popolati utilizzando i dati ottenuti.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072815"
  L'elaborazione è un'operazione estremamente configurabile, controllata da un set di opzioni che determinano se si verifica un'elaborazione completa o incrementale a livello di oggetto. Per altre informazioni sulle opzioni di elaborazione e gli oggetti, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) ed [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per altre informazioni sull'elaborazione dei modelli tabulari, vedere [elaborare Database, tabella o partizione](../tabular-models/process-database-table-or-partition-analysis-services.md) e [elaborare i dati &#40;modello tabulare di SSAS&#41;](../process-data-ssas-tabular.md).  
+>  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere elaborazione di [database, tabelle o partizioni](../tabular-models/process-database-table-or-partition-analysis-services.md) e dati [ &#40;di&#41;elaborazione SSAS tabulare](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Gestione di oggetti in SQL Server Management Studio  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66072815"
   
 4.  Nella finestra di dialogo **Elaborazione dimensione** , nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
   
-5.  Fare clic su **Esegui**.  
+5.  Fai clic su **Esegui**.  
   
 6.  Al termine dell'elaborazione, fare clic su **Chiudi**.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072815"
   
 1.  Avviando questa versione di SQL Server, è possibile utilizzare i cmdlet di PowerShell per Analysis Services per l'elaborazione di oggetti. È possibile eseguire i cmdlet seguenti in modo interattivo o in script:  
   
-    -   [Cmdlet Invoke-ProcessCube](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Cmdlet Invoke-ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Cmdlet Invoke-ProcessDimension](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Cmdlet Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Cmdlet Invoke-ProcessPartition](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Cmdlet Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [cmdlet Invoke-ASCmd](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)che può essere usato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
+    -   [cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd)che può essere usato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Monitoraggio dell'elaborazione degli oggetti utilizzando SQL Server Profiler  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66072815"
 3.  Modificare l'attività per specificare una connessione al database, gli oggetti da elaborare e l'opzione di elaborazione. Per ulteriori informazioni sull'implementazione di questa attività, vedere [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
+ [Elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   
   

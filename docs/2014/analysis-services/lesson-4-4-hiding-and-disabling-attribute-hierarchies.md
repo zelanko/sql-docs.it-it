@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888357"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530850"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Come nascondere e disabilitare le gerarchie degli attributi
   Per impostazione predefinita, una gerarchia dell'attributo viene creata per ogni attributo di una dimensione e ogni gerarchia è disponibile per il dimensionamento dei dati delle tabelle dei fatti. Questa gerarchia include un livello Totale e un livello di dettaglio contenente tutti i membri della gerarchia. Come illustrato in precedenza, è possibile organizzare gli attributi in gerarchie definite dall'utente per offrire percorsi di navigazione in un cubo. In alcuni casi è possibile disabilitare o nascondere determinati attributi o le rispettive gerarchie. Alcuni attributi, ad esempio i numeri della previdenza sociale o il codice fiscale, le retribuzioni, le date di nascita e le informazioni di accesso non sono attributi in base ai quali gli utenti dimensionano le informazioni sul cubo. Queste informazioni vengono invece generalmente visualizzate come dettagli di un particolare membro dell'attributo. È possibile nascondere queste gerarchie degli attributi lasciando gli attributi visibili come proprietà del membro di un attributo specifico. È inoltre possibile rendere visibili i membri di altri attributi, come ad esempio i nomi dei clienti o i codici postali, solo quando vengono visualizzati tramite una gerarchia utente anziché indipendentemente tramite una gerarchia dell'attributo. Ciò può essere determinato dal numero dei membri distinti nella gerarchia dell'attributo. Per migliorare le prestazioni di elaborazione, è infine consigliabile disabilitare le gerarchie degli attributi non utilizzate dagli utenti a fini di esplorazione.  
@@ -126,6 +126,6 @@ ms.locfileid: "68888357"
      Si noti che i livelli nascosti, **Postal Code** e **Full Name**, sono visibili nella gerarchia definita dall'utente.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Ordinamento dei membri dell'attributo in base a un attributo secondario](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
+ [Ordinamento dei membri dell'attributo in base a un attributo secondario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

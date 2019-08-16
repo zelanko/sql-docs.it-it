@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890810"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530955"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guida&#39;per gli sviluppatori (motore di database)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un vasto set di strumenti per lo sviluppo, l'amministrazione e il controllo di applicazioni di database.  
@@ -52,7 +52,7 @@ ms.locfileid: "68890810"
  Viene descritto come utilizzare l'interfaccia di programmazione della finestra di messaggio eccezione nelle applicazioni per fornire maggiore controllo sulla messaggistica, offrire agli utenti la possibilità di salvare il contenuto dei messaggi di errore per riferimento futuro, nonché ottenere informazioni sui messaggi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di data mining](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Programmazione di data mining](../analysis-services/dev-guide/data-mining-programming.md)   
  [Guida &#40;per gli sviluppatori Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Guida &#40;per gli sviluppatori Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Guida &#40;per gli sviluppatori-replica&#41;](replication/concepts/replication-developer-documentation.md)   

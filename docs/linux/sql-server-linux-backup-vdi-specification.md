@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996440"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810973"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Specifica SDK client VDI per SQL Server in Linux
 
@@ -29,7 +29,7 @@ Questo documento illustra le interfacce fornite dall'SDK del client VDI (Virtual
 - SQL Server in Linux non supporta le istanze denominate, quindi i riferimenti al nome dell'istanza sono stati rimossi. 
 - La libreria condivisa è implementata in libsqlvdi.so installato nel percorso /opt/MSSQL/lib/libsqlvdi.so.
 
-Questo documento è un supplemento di **vbackup.chm** che descrive in dettaglio la specifica VDI di Windows. Scaricare la [specifica VDI di Windows](https://www.microsoft.com/download/details.aspx?id=17282).
+Questo documento è un supplemento di **vbackup.chm** che descrive in dettaglio la specifica VDI di MS SQL Serve in Windows. Scaricare la [specifica SQL VDI di Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
 Vedere anche la soluzione di backup VDI di esempio nel [repository GitHub degli esempi di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 

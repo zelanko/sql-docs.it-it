@@ -1,29 +1,29 @@
 ---
-title: Panoramica dell'esercitazione su Python SQL Server 2017
-description: Introduzione alle esercitazioni su Python per l'analisi del database SQL Server 2017.
+title: Esercitazioni di Python
+description: Questo articolo descrive le esercitazioni di Python per SQL Server Machine Learning Services. Informazioni su come eseguire gli script Python. Consente di compilare, eseguire il training e distribuire modelli Python per SQL Server. Informazioni sui contesti di calcolo locali e remoti. Esplora i pacchetti Microsoft Python per data science e machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/16/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65dd2197d9fb079da116908871d931ad19370cf5
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ba0b03f658f0121b04d5a2002cd2f28fbd522a8d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714775"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530956"
 ---
-# <a name="sql-server-2017-python-tutorials"></a>Esercitazioni su Python SQL Server 2017
+# <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni su Python per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo descrive le esercitazioni di Python per l'analisi del database in [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
-+ Informazioni su come eseguire il wrapping e l'esecuzione di codice Python nelle stored procedure.
-+ Serializzare e salvare i modelli basati su Python per SQL Server database.
-+ Informazioni sui contesti di calcolo locali e remoti e su quando usarli.
-+ Esplora i moduli Microsoft Python per le attività di data science e machine learning.
++ Informazioni su come eseguire gli script Python.
++ Consente di compilare, eseguire il training e distribuire modelli Python per SQL Server.
++ Informazioni sui contesti di calcolo locali e remoti.
++ Esplora i pacchetti Microsoft Python per data science e machine learning.
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -35,17 +35,6 @@ Questo articolo descrive le esercitazioni di Python per l'analisi del database i
 | [Avvio rapido: Creare, eseguire il training e usare un modello Python con stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md) | Vengono illustrati i meccanismi di incorporamento del codice Python in una stored procedure, fornendo input e stored procedure l'esecuzione. |
 | [Esercitazione: Creare un modello usando revoscalepy](use-python-revoscalepy-to-create-model.md) | Viene illustrato come eseguire il codice da un terminale Python remoto, usando SQL Server contesto di calcolo. È necessario avere familiarità con gli strumenti e gli ambienti Python. Viene fornito codice di esempio che consente di creare un modello utilizzando **rxLinMod**dalla nuova libreria **revoscalepy** . |
 | [Esercitazione: Informazioni su Python Analytics in-database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md) | Questa procedura dettagliata end-to-end illustra il processo di creazione di una soluzione Python completa con le stored procedure T-SQL. Tutto il codice Python è incluso.|
-
-<a name ="bkmk_samples"></a>
-
-## <a name="code-samples"></a>Esempi di codice
-
-Questi esempi e demo forniti dal team di sviluppo SQL Server evidenziano i modi in cui è possibile usare l'analisi incorporata in applicazioni reali.
-
-| Collegamento | Descrizione |
-|------|-------------|
-| [Creazione di un modello predittivo con Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Scopri in che modo un'azienda di noleggio di sci può usare Machine Learning per prevedere i noleggi futuri, che consente al piano aziendale e al personale di soddisfare la domanda futura. |
-| [Eseguire il clustering dei clienti con Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Informazioni su come usare l'algoritmo Kmeans per eseguire il clustering senza supervisione dei clienti. |
 
 ## <a name="see-also"></a>Vedere anche
 
