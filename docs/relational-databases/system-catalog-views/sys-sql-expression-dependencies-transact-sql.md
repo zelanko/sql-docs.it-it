@@ -20,12 +20,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893539"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561131"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68893539"
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
 
 > [!NOTE]
-> Le tabelle, le visualizzazioni, le statistiche filtrate e i tipi di entità di stored procedure Transact-SQL di Azure SQL data warehouse e Parallel data warehouse sono supportati da questo elenco.  Le informazioni sulle dipendenze vengono create e gestite solo per tabelle, viste e statistiche filtrate.  
+> Azure SQL Data Warehouse e Parallel data warehouse supportano le tabelle, le viste, le statistiche filtrate e i tipi di entità delle stored procedure Transact-SQL da questo elenco.  Le informazioni sulle dipendenze vengono create e gestite solo per tabelle, viste e statistiche filtrate.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
