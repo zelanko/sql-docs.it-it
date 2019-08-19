@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893994"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028915"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -36,7 +36,7 @@ Community Technology Preview (CTP) 3.2 è la versione pubblica più recente di [
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
 |Anteprima pubblica |Prima della versione CTP 3.2, il cluster Big Data di SQL Server era disponibile per gli early adopter registrati. Questa versione consente a chiunque di sperimentare le funzionalità dei cluster Big Data di SQL Server. <br/><br/> Vedere [Introduzione ai cluster Big Data di SQL Server](../big-data-cluster/deploy-get-started.md).|
-|`azdata` |CTP 3.2 introduce `azdata`, un'utilità da riga di comando scritta in Python che consente agli amministratori del cluster di avviare e gestire il cluster Big Data tramite le API REST. `azdata` sostituisce `mssqlctl`. Vedere [Installare `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|`azdata` |La versione CTP 3.2 introduce `azdata`, un'utilità da riga di comando scritta in Python che consente agli amministratori del cluster di avviare e gestire il cluster Big Data tramite le API REST. `azdata` sostituisce `mssqlctl`. Vedere [Installare `azdata`](../big-data-cluster/deploy-install-azdata.md). |
 |PolyBase |I nomi delle colonne della tabella esterna vengono ora usati per eseguire query su origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. Nelle versioni CTP precedenti, le colonne venivano associate solo in base al numero ordinale nella destinazione e i nomi di colonna nella definizione della tabella esterna non venivano usati.|
 |Aggiornamento della suddivisione in livelli HDFS |Introduzione della funzionalità di aggiornamento per la suddivisione in livelli HDFS, in modo che sia possibile aggiornare un montaggio esistente per l'ultimo snapshot dei dati remoti. Vedere [Suddivisione in livelli HDFS](../big-data-cluster/hdfs-tiering.md) |
 |Risoluzione dei problemi basata su notebook |CTP 3.2 introduce notebook Jupyter per semplificare la [distribuzione](../big-data-cluster/deploy-notebooks.md) e l'[individuazione, la diagnosi e la risoluzione dei problemi](../big-data-cluster/manage-notebooks.md) per i componenti in un cluster Big Data di SQL Server. |
@@ -83,7 +83,6 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Limitazioni delle funzionalità| Evitare che alcune forme di SQL injection causino la divulgazione di informazioni sul database, anche quando l'attacco SQL injection riesce. Vedere [Limitazioni delle funzionalità](../relational-databases/security/feature-restrictions.md)|
 |Indicizzare le colonne crittografate|Creare indici sulle colonne crittografate usando la crittografia casuale e le chiavi abilitate per l'enclave, per migliorare le prestazioni delle query avanzate (in cui vengono usati `LIKE` e operatori di confronto). Vedere [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Sospendere e riprendere l'analisi iniziale per Transparent Data Encryption (TDE)|Vedere [Analisi Transparent Data Encryption (TDE) con possibilità di sospensione e ripresa](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Gestione dei certificati in Gestione configurazione SQL Server|Vedere [Gestione dei certificati (Gestione configurazione SQL Server)](../database-engine/configure-windows/manage-certificates.md)

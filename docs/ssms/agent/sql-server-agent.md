@@ -1,7 +1,5 @@
 ---
 title: SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265245"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552664"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-**Contenuto dell'articolo**  
-  
--   [Vantaggi di SQL Server Agent](#Benefits)  
-  
--   [Componenti di SQL Server Agent](#Components)  
-  
--   [Sicurezza per l'amministrazione di SQL Server Agent](#Security)  
-  
-## <a name="Benefits"></a>Vantaggi di SQL Server Agent  
+
+## <a name="Benefits"></a>Vantaggi di SQL Server Agent 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I processi sono costituiti da uno o più passaggi, ciascuno dei quali contiene un'attività, ad esempio il backup di un database.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in grado di eseguire un processo incluso in una pianificazione, in risposta a un evento specifico, oppure su richiesta. Se, ad esempio, l'esigenza è quella di eseguire il backup di tutti i server aziendali ogni sera in orario non lavorativo, è possibile automatizzare questa attività, Pianificare l'esecuzione del backup dal lunedì al venerdì dopo le 22.00. In caso di problemi durante l'operazione, SQL Server Agent potrà registrare l'evento e inviarne notifica all'utente.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: aaddcbfb9520f2619df82ddbf3695604c2cbee40
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661378"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995879"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
@@ -573,7 +573,7 @@ Dopo aver impostato la proprietà, riavviare il servizio Launchpad di SQL Server
 sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
 
 # Turns off network access but preserves the setting
-/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
 
 # Removes the setting and rescinds network access
 sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess

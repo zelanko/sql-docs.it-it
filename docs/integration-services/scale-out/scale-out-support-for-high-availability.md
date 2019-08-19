@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064557"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028756"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -73,7 +73,7 @@ Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\P
 
 La registrazione nel database SSISDB viene eseguita dall'account di accesso **##MS_SSISLogDBWorkerAgentLogin##** la cui password viene generata automaticamente. Per il corretto funzionamento della registrazione per tutte le repliche del database SSISDB, eseguire le operazioni seguenti
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Modificare la password di **##MS_SSISLogDBWorkerAgentLogin##** nell'istanza di SQL Server primaria
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Modificare la password di **##MS_SSISLogDBWorkerAgentLogin##** nell'istanza di SQL Server primaria
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 Aggiungere l'account di accesso all'istanza di SQL Server secondaria
 
@@ -98,7 +98,7 @@ Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di 
 
 Nelle macchine virtuali di Azure questa procedura di configurazione richiede passaggi aggiuntivi. Una spiegazione completa di questi concetti e passaggi esula dall'ambito di questo articolo.
 
-1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Esercitazione: Bilanciare il carico del traffico interno con un servizio di bilanciamento del carico Basic nel portale di Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

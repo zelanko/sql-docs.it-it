@@ -1,10 +1,7 @@
 ---
 title: Eliminare automaticamente un processo | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3a5afe43160ac8ea3c0922514e707694e2f888f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d5139a6e413a15527439d7a62ba0749cdf022ef7
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251916"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553350"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -46,18 +47,6 @@ Tramite le risposte ai processi gli amministratori del database vengono informat
 -   Eliminazione automatica del processo.  
   
     Usare la risposta soltanto se si è certi che non sarà necessario rieseguire il processo.  
-  
-**Contenuto dell'articolo**  
-  
--   **Prima di iniziare:**  
-  
-    [Security](#Security)  
-  
--   **Per specificare le risposte ai processi utilizzando:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   

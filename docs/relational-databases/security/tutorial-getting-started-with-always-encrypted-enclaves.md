@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888889"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028812"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno d
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] o versioni successive.
 - Windows 10 Enterprise versione 1809 o Windows Server 2019 Datacenter.
-- Se il computer SQL Server è un computer fisico, è necessario soddisfare i [requisiti hardware di Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+- Se il computer SQL Server è un computer fisico, è necessario soddisfare i [requisiti hardware di Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
    - Processore a 64 bit con SLAT (Second Level Address Translation)
    - Supporto di CPU per Estensioni modalità di monitoraggio macchina virtuale (VT-c nelle CPU Intel)
    - Supporto per la virtualizzazione abilitato (Intel VT-x o AMD-V)
 - Se il computer SQL Server è una macchina virtuale, la macchina virtuale deve essere configurata per supportare la sicurezza basata sulla virtualizzazione.
-   - In Hyper-V 2016 o versioni successive, usare una macchina virtuale di prima generazione e [abilitare le estensioni di virtualizzazione annidata](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) nel processore della macchina virtuale oppure usare una macchina virtuale di seconda generazione. Per altre informazioni sulle generazioni di macchine virtuali, vedere [È necessario creare una macchina virtuale di generazione 1 o 2 in Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
+   - In Hyper-V 2016 o versioni successive, usare una macchina virtuale di prima generazione e [abilitare le estensioni di virtualizzazione annidata](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) nel processore della macchina virtuale oppure usare una macchina virtuale di seconda generazione. Per altre informazioni sulle generazioni di macchine virtuali, vedere [È necessario creare una macchina virtuale di generazione 1 o 2 in Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - In Azure, assicurarsi di eseguire una dimensione di macchina virtuale che supporta una delle opzioni seguenti:
-      - Virtualizzazione annidata, ad esempio macchine virtuali serie Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - Macchine virtuali di seconda generazione, ad esempio serie Dsv3 o Esv3. Vedere [Supporto per le macchine virtuali di seconda generazione in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - Virtualizzazione annidata, ad esempio macchine virtuali serie Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - Macchine virtuali di seconda generazione, ad esempio serie Dsv3 o Esv3. Vedere [Supporto per le macchine virtuali di seconda generazione in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - In VMWare vSphere 6.7 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Altri hypervisor e cloud pubblici potrebbero supportare l'uso di Always Encrypted con enclave sicure in una macchina virtuale, purché le estensioni di virtualizzazione (note a volte come virtualizzazione annidata) vengano esposte alla macchina virtuale. Vedere la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.
 - [SQL Server Management Studio (SSMS) 18.0 o versioni successive](../../ssms/download-sql-server-management-studio-ssms.md).
