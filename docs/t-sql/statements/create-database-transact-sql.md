@@ -54,7 +54,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 ## <a name="click-a-product"></a>Fare clic su un prodotto.
 
-Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -262,7 +262,7 @@ Le opzioni seguenti sono consentite solo quando CONTAINMENT è stato impostato s
 
   Se l'opzione è impostata su ON, i moduli del database (ad esempio le viste, le funzioni definite dall'utente o le stored procedure) che utilizzano un contesto di rappresentazione possono accedere alle risorse esterne al database.
 
-  Se l'opzione è impostata su OFF, i moduli del database in un conteso di rappresentazione non possono accedere alle risorse esterne al database. Il valore predefinito è OFF.
+  Se l'opzione è impostata su OFF, i moduli del database in un contesto di rappresentazione non possono accedere alle risorse esterne al database. Il valore predefinito è OFF.
 
   L'opzione TRUSTWORTHY viene impostata su OFF ogni volta che il database viene collegato.
 
@@ -448,7 +448,7 @@ Per le descrizioni di NAME e FILENAME e i rispettivi valori, vedere le descrizio
 
 AS SNAPSHOT OF *source_database_name* specifica che il database in fase di creazione è uno snapshot del database di origine specificato da *source_database_name*. Lo snapshot e il database di origine devono essere archiviati nella stessa istanza.
 
-Per altre informazioni, vedere [Snapshot di database](#database-snapshots) nella sezione Remarks.
+Per altre informazioni, vedere [Snapshot del database](#database-snapshots) nella sezione Remarks.
 
 ## <a name="remarks"></a>Remarks
 
@@ -481,13 +481,13 @@ Durante la creazione di un database, creare file di dati di dimensioni corrispon
 
 Per l'archiviazione dei file di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile usare una rete di archiviazione (SAN), una rete basata su iSCSI o un disco collegato localmente, poiché questa configurazione ottimizza le prestazioni e l'affidabilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="database-snapshots"></a>Snapshot di database
+## <a name="database-snapshots"></a>Snapshot del database
 È possibile usare l'istruzione `CREATE DATABASE` per creare una visualizzazione statica, di sola lettura, uno *snapshot* del *database di origine*. Uno snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Un database di origine può avere più snapshot.
 
 > [!NOTE]
-> Quando si crea uno snapshot di database, l'istruzione `CREATE DATABASE` non può far riferimento a file di log, file offline, file di ripristino e file inattivi.
+> Quando si crea uno snapshot del database, l'istruzione `CREATE DATABASE` non può far riferimento a file di log, file offline, file di ripristino e file inattivi.
 
-Se la creazione di uno snapshot di database ha esito negativo, lo snapshot diventa sospetto e deve essere eliminato. Per altre informazioni, vedere [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
+Se la creazione di uno snapshot del database ha esito negativo, lo snapshot diventa sospetto e deve essere eliminato. Per altre informazioni, vedere [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
 Ogni snapshot viene mantenuto fino a quando non viene eliminato tramite `DROP DATABASE`.
 
@@ -683,7 +683,7 @@ GO
 ```
 
 ### <a name="f-creating-a-database-snapshot"></a>F. Creazione di uno snapshot del database
-L'esempio seguente crea lo snapshot di database `sales_snapshot0600`. Poiché uno snapshot di database è in sola lettura, non è possibile specificare un file di log. In conformità con la sintassi, viene specificato ogni file nel database di origine, mentre i filegroup non vengono specificati.
+L'esempio seguente crea lo snapshot del database `sales_snapshot0600`. Poiché uno snapshot del database è in sola lettura, non è possibile specificare un file di log. In conformità con la sintassi, viene specificato ogni file nel database di origine, mentre i filegroup non vengono specificati.
 
 Il database di origine per questo esempio è il database `Sales` creato nell'esempio D.
 
@@ -854,7 +854,7 @@ GO
 - [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
-- [Snapshot di database](../../relational-databases/databases/database-snapshots-sql-server.md)
+- [snapshot del database](../../relational-databases/databases/database-snapshots-sql-server.md)
 - [Spostare file del database](../../relational-databases/databases/move-database-files.md)
 - [Database](../../relational-databases/databases/databases.md)
 - [BLOB - Dati BLOB](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
