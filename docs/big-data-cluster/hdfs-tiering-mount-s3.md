@@ -9,12 +9,12 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702874"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611414"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare S3 per la suddivisione in livelli HDFS in un cluster Big Data
 
@@ -61,7 +61,7 @@ Dopo aver preparato un file di credenziali con chiavi di accesso, è ora possibi
    
 1. Impostare la variabile di ambiente MOUNT_CREDENTIALS seguendo le istruzioni sopra riportate
 
-1. Montare la risorsa di archiviazione HDFS remota in Azure usando **azdata bdc storage-pool mount create**. Sostituire i valori segnaposto prima di eseguire il comando seguente:
+1. Montare la risorsa di archiviazione HDFS remota in S3 usando **azdata BDC storage-pool Mount create**. Sostituire i valori segnaposto prima di eseguire il comando seguente:
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>

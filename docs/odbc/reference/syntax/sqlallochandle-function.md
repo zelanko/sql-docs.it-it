@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  Se Gestione driver non è in grado di allocare memoria per  *\*OutputHandlePtr* quando viene chiamato **SQLAllocHandle** con *HandleType* SQL_HANDLE_ENV o se l'applicazione fornisce un puntatore null per *OutputHandlePtr*,  **SQLAllocHandle** restituisce SQL_ERROR. Gestione driver imposta **OutputHandlePtr* su SQL_NULL_HENV (a meno che l'applicazione non abbia fornito un puntatore null, che restituisce SQL_ERROR). Nessun handle con cui associare ulteriori informazioni di diagnostica.  
   
- Gestione driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finché l'applicazione non chiama SQLConnect, **SQLBrowseConnect**o **SQLDriverConnect**. Se si verifica un errore nella funzione **SQLAllocHandle** a livello di driver, la funzione SQLConnect,  **SQLBrowseConnect**o **SQLDRIVERCONNECT** a livello di gestione driver restituisce SQL_ERROR. La struttura dei dati di diagnostica contiene SQLSTATE IM004 ( **SQLAllocHandle** del driver non riuscita). L'errore viene restituito in un handle di connessione.  
+ Gestione driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finchél'applicazione non chiama SQLConnect, **SQLBrowseConnect**o **SQLDriverConnect**. Se si verifica un errore nella funzione **SQLAllocHandle** a livello di driver, la funzione SQLConnect, **SQLBrowseConnect**o **SQLDRIVERCONNECT** a livello di gestione driver restituisce SQL_ERROR. La struttura dei dati di diagnostica contiene SQLSTATE IM004 ( **SQLAllocHandle** del driver non riuscita). L'errore viene restituito in un handle di connessione.  
   
  Per ulteriori informazioni sul flusso di chiamate di funzione tra Gestione driver e un driver, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -112,7 +112,7 @@ SQLRETURN SQLAllocHandle(
 > [!NOTE]  
 >  La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per  *\*OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima di riallocarlo . La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
   
- Nei sistemi operativi che supportano più thread, le applicazioni possono utilizzare lo stesso ambiente, connessione, istruzione o handle descrittore su thread diversi. I driver devono pertanto supportare l'accesso sicuro, multithread a queste informazioni; un modo per ottenere questo risultato, ad esempio, consiste nell'usare una sezione critica o un semaforo. Per ulteriori informazioni sul threading, vedere [](../../../odbc/reference/develop-app/multithreading.md)multithreading.  
+ Nei sistemi operativi che supportano più thread, le applicazioni possono utilizzare lo stesso ambiente, connessione, istruzione o handle descrittore su thread diversi. I driver devono pertanto supportare l'accesso sicuro, multithread a queste informazioni; un modo per ottenere questo risultato, ad esempio, consiste nell'usare una sezione critica o un semaforo. Per ulteriori informazioni sul threading, vedere [multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
  **SQLAllocHandle** non imposta l'attributo di ambiente SQL_ATTR_ODBC_VERSION quando viene chiamato per allocare un handle di ambiente. l'attributo Environment deve essere impostato dall'applicazione. in caso di chiamata a **SQLAllocHandle** per l'allocazione di un handle di connessione, verrà restituito il valore SQLSTATE HY010 (errore della sequenza di funzioni).  
   
@@ -155,7 +155,7 @@ SQLRETURN SQLAllocHandle(
   
  Quando un'applicazione chiama **SQLAllocHandle** con l'argomento *INPUTHANDLE puntare* impostato su SQL_HANDLE_DBC e impostato su un handle di ambiente condiviso, gestione driver tenta di trovare un ambiente condiviso esistente corrispondente agli attributi dell'ambiente impostato dall'applicazione. Se non esiste alcun ambiente di questo tipo, ne viene creato uno con un conteggio dei riferimenti (gestito da Gestione driver) di 1. Se viene trovato un ambiente condiviso corrispondente, tale handle viene restituito all'applicazione e il relativo conteggio dei riferimenti viene incrementato.  
   
- La connessione effettiva che verrà utilizzata non è determinata da Gestione driver fino a quando  non viene chiamato SQLConnect o **SQLDriverConnect** . Gestione driver utilizza le opzioni di connessione nella chiamata a **SQLConnect** (o le parole chiave di connessione nella chiamata a **SQLDriverConnect**) e gli attributi di connessione impostati dopo l'allocazione della connessione per determinare la connessione nel pool. deve essere usato. Per altre informazioni, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ La connessione effettiva che verrà utilizzata non è determinata da Gestione driver fino a quando non viene chiamato SQLConnect o **SQLDriverConnect** . Gestione driver utilizza le opzioni di connessione nella chiamata a **SQLConnect** (o le parole chiave di connessione nella chiamata a **SQLDriverConnect**) e gli attributi di connessione impostati dopo l'allocazione della connessione per determinare la connessione nel pool. deve essere usato. Per altre informazioni, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ## <a name="allocating-a-statement-handle"></a>Allocazione di un handle di istruzione  
  Un handle di istruzione fornisce l'accesso alle informazioni di istruzione, ad esempio i messaggi di errore, il nome del cursore e le informazioni sullo stato per l'elaborazione di istruzioni SQL. Per informazioni generali sugli handle di istruzione, vedere [handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md).  
@@ -171,7 +171,7 @@ SQLRETURN SQLAllocHandle(
   
  Quando il descrittore allocato in modo esplicito viene liberato, il descrittore allocato in modo implicito viene nuovamente associato all'istruzione. (L'attributo SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC per l'istruzione viene nuovamente impostato sull'handle descrittore allocato in modo implicito). Questo vale per tutte le istruzioni associate al descrittore allocato in modo esplicito nella connessione.  
   
- Per ulteriori informazioni sui descrittori, vedere [](../../../odbc/reference/develop-app/descriptors.md)descrittori.  
+ Per ulteriori informazioni sui descrittori, vedere [descrittori](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
  Vedere il [programma ODBC di esempio](../../../odbc/reference/sample-odbc-program.md), la funzione [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md), la [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)e la [funzione SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md).  

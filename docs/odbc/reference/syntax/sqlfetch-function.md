@@ -50,7 +50,7 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLFetch** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando la [funzione SQLGETDIAGREC](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) con *HandleType* SQL_HANDLE_STMT e un *handle* di *statementHandle* . Nella tabella seguente sono elencati i valori SQLSTATE generalmente restituiti  da SQLFetch e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente. Se si verifica un errore in una singola colonna, è possibile chiamare [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) con un *DiagIdentifier* di SQL_DIAG_COLUMN_NUMBER per determinare la colonna in cui si è verificato l'errore. è possibile chiamare e **SQLGetDiagField** con un *DiagIdentifier* di SQL_DIAG_ROW_NUMBER per determinare la riga che contiene la colonna.  
+ Quando **SQLFetch** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando la [funzione SQLGETDIAGREC](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) con *HandleType* SQL_HANDLE_STMT e un *handle* di *statementHandle* . Nella tabella seguente sono elencati i valori SQLSTATE generalmente restituiti da SQLFetch e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente. Se si verifica un errore in una singola colonna, è possibile chiamare [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) con un *DiagIdentifier* di SQL_DIAG_COLUMN_NUMBER per determinare la colonna in cui si è verificato l'errore. è possibile chiamare e **SQLGetDiagField** con un *DiagIdentifier* di SQL_DIAG_ROW_NUMBER per determinare la riga che contiene la colonna.  
   
  Per tutti questi SQLSTATE che possono restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (ad eccezione di 01XXX SQLSTATE), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in una o più righe, ma non tutte, righe di un'operazione più righe e viene restituito SQL_ERROR se si verifica un errore in un operazione a riga singola.  
   
@@ -75,8 +75,8 @@ SQLRETURN SQLFetch(
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
 |HY000|Errore generale|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*buffer MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per *statementHandle*. La  funzione SQLFetch è stata chiamata e prima del completamento dell'esecuzione è stato chiamato SQLCancel o **SQLCancelHandle** in *statementHandle*. Quindi,  la funzione SQLFetch è stata chiamata nuovamente in *statementHandle*.<br /><br /> In alternativa,  la funzione SQLFetch è stata chiamata e prima del completamento dell'esecuzione è stato chiamato SQLCancel o **SQLCancelHandle** su *statementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è  stata chiamata la funzione SQLFetch.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e ha restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, SQLExecute o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLFetch** è stato chiamato per *statementHandle* dopo la chiamata di **SQLExtendedFetch** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
+|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione SQLFetch è stata chiamata e prima del completamento dell'esecuzione è stato chiamato SQLCancel o **SQLCancelHandle** in *statementHandle*. Quindi, la funzione SQLFetch è stata chiamata nuovamente in *statementHandle*.<br /><br /> In alternativa, la funzione SQLFetch è stata chiamata e prima del completamento dell'esecuzione è stato chiamato SQLCancel o **SQLCancelHandle** su *statementHandle* da un thread diverso in un'applicazione multithread.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione SQLFetch.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e ha restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, SQLExecute o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLFetch** è stato chiamato per *statementHandle* dopo la chiamata di **SQLExtendedFetch** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY090|Lunghezza della stringa o del buffer non valida|L'attributo dell'istruzione SQL_ATTR_USE_BOOKMARK è stato impostato su SQL_UB_VARIABLE e la colonna 0 è stata associata a un buffer la cui lunghezza non è uguale alla lunghezza massima del segnalibro per il set di risultati. Questa lunghezza è disponibile nel campo SQL_DESC_OCTET_LENGTH di IRD e può essere ottenuta chiamando **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**.|  
 |HY107|Valore di riga non compreso nell'intervallo|Il valore specificato con l'attributo dell'istruzione SQL_ATTR_CURSOR_TYPE è SQL_CURSOR_KEYSET_DRIVEN, ma il valore specificato con l'attributo dell'istruzione SQL_ATTR_KEYSET_SIZE è maggiore di 0 e minore del valore specificato con SQL_ATTR_ROW_ARRAY_ Attributo di istruzione SIZE.|  
@@ -89,9 +89,9 @@ SQLRETURN SQLFetch(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLFetch** restituisce il set di righe successivo nel set di risultati. Può essere chiamato solo quando esiste un set di risultati, ovvero dopo una chiamata che crea un set di risultati e prima che il cursore su tale set di risultati venga chiuso. Se vengono associate colonne, vengono restituiti i dati in tali colonne. Se l'applicazione ha specificato un puntatore a una matrice di stato della riga o a un buffer in cui restituire il numero di righe recuperate, **SQLFetch** restituisce anche queste informazioni. Le chiamate  a SQLFetch possono essere combinate con chiamate a **SQLFetchScroll** , ma non possono essere combinate con chiamate a **SQLExtendedFetch**. Per ulteriori informazioni, vedere [recupero di una riga di dati](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
+ **SQLFetch** restituisce il set di righe successivo nel set di risultati. Può essere chiamato solo quando esiste un set di risultati, ovvero dopo una chiamata che crea un set di risultati e prima che il cursore su tale set di risultati venga chiuso. Se vengono associate colonne, vengono restituiti i dati in tali colonne. Se l'applicazione ha specificato un puntatore a una matrice di stato della riga o a un buffer in cui restituire il numero di righe recuperate, **SQLFetch** restituisce anche queste informazioni. Le chiamate a SQLFetch possono essere combinate con chiamate a **SQLFetchScroll** , ma non possono essere combinate con chiamate a **SQLExtendedFetch**. Per ulteriori informazioni, vedere [recupero di una riga di dati](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Se un'applicazione ODBC 3 *. x* funziona con un driver ODBC 2 *. x* , gestione driver esegue il mapping delle chiamate SQLFetch a **SQLExtendedFetch** per un driver ODBC 2  *. x* che supporta **SQLExtendedFetch**. Se il driver ODBC*2. x* non supporta **SQLExtendedFetch**, gestione driver esegue il mapping delle chiamate SQLFetch a SQLFetch nel driver ODBC 2  *. x* , che può recuperare solo una singola riga.  
+ Se un'applicazione ODBC 3 *. x* funziona con un driver ODBC 2 *. x* , gestione driver esegue il mapping delle chiamate SQLFetch a **SQLExtendedFetch** per un driver ODBC 2 *. x* che supporta **SQLExtendedFetch**. Se il driver ODBC*2. x* non supporta **SQLExtendedFetch**, gestione driver esegue il mapping delle chiamate SQLFetch a SQLFetch nel driver ODBC 2 *. x* , che può recuperare solo una singola riga.  
   
  Per ulteriori informazioni, vedere [cursori a blocchi, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice G: Linee guida driver per la compatibilità con le versioni precedenti.  
   
@@ -100,14 +100,14 @@ SQLRETURN SQLFetch(
   
  L'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE specifica il numero di righe nel set di righe. Se il set di righe recuperato da **SQLFetch** si sovrappone alla fine del set di risultati, **SQLFetch** restituisce un set di righe parziale. Ovvero, se S + R-1 è maggiore di L, dove S è la riga iniziale del set di righe da recuperare, R è la dimensione del set di righe e L è l'ultima riga nel set di risultati, quindi sono valide solo le prime righe L-S + 1 del set di righe. Le righe rimanenti sono vuote e hanno lo stato SQL_ROW_NOROW.  
   
- Dopo  la restituzione di SQLFetch, la riga corrente è la prima riga del set di righe.  
+ Dopo la restituzione di SQLFetch, la riga corrente è la prima riga del set di righe.  
   
- Le regole elencate nella tabella seguente descrivono il posizionamento del cursore dopo una chiamata a SQLFetch, in base alle condizioni elencate nella seconda tabella in questa sezione.  
+ Le regole elencate nella tabella seguente descrivono il posizionamento del cursore dopo unachiamata a SQLFetch, in base alle condizioni elencate nella seconda tabella in questa sezione.  
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |Prima dell'avvio|1|  
-|*CurrRowsetStart* LastResultRow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
 |CurrRowsetStart > *LastResultRow-RowsetSize*[1]|Dopo la fine|  
 |Dopo la fine|Dopo la fine|  
   
@@ -118,12 +118,12 @@ SQLRETURN SQLFetch(
 |Notation|Significato|  
 |--------------|-------------|  
 |Prima dell'avvio|Il cursore a blocchi è posizionato prima dell'inizio del set di risultati. Se la prima riga del nuovo set di righe precede l'inizio del set di risultati, **SQLFetch** restituisce SQL_NO_DATA.|  
-|Dopo la fine|Il cursore a blocchi viene posizionato dopo la fine del set di risultati. Se la prima riga del nuovo set di righe è successiva alla fine del set di risultati  , SQLFetch restituisce SQL_NO_DATA.|  
+|Dopo la fine|Il cursore a blocchi viene posizionato dopo la fine del set di risultati. Se la prima riga del nuovo set di righe è successiva alla fine del set di risultati , SQLFetch restituisce SQL_NO_DATA.|  
 |*CurrRowsetStart*|Il numero della prima riga nel set di righe corrente.|  
 |*LastResultRow*|Numero dell'ultima riga nel set di risultati.|  
 |*RowsetSize*|Dimensioni del set di righe.|  
   
- Si supponga, ad esempio, che un set di risultati includa 100 righe e che la dimensione del set di righe sia 5. Nella tabella seguente vengono illustrati il set di righe e  il codice restituito restituiti da SQLFetch per posizioni di inizio diverse.  
+ Si supponga, ad esempio, che un set di risultati includa 100 righe e che la dimensione del set di righe sia 5. Nella tabella seguente vengono illustrati il set di righe e il codice restituito restituiti da SQLFetch per posizioni di inizio diverse.  
   
 |Set di righe corrente|Codice restituito|Nuovo set di righe|numero di righe recuperate|  
 |--------------------|-----------------|----------------|------------------------|  
@@ -137,11 +137,11 @@ SQLRETURN SQLFetch(
 |Dopo la fine|SQL_NO_DATA|No.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Restituzione di dati nelle colonne con binding  
- Poiché **SQLFetch** restituisce ogni riga, inserisce i dati per ogni colonna associata nel buffer associato a tale colonna. Se non è associata alcuna colonna  , SQLFetch non restituisce dati, ma sposta il cursore del blocco avanti. È comunque possibile recuperare i dati utilizzando **SQLGetData**. Se il cursore è un cursore più righe (ovvero SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1), SQLGetData può  essere chiamato solo se viene restituito SQL_GD_BLOCK quando **SQLGetInfo** viene chiamato con un *InfoType* di SQL_GETDATA_EXTENSIONS. Per ulteriori informazioni, vedere [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
+ Poiché **SQLFetch** restituisce ogni riga, inserisce i dati per ogni colonna associata nel buffer associato a tale colonna. Se non è associata alcuna colonna , SQLFetch non restituisce dati, ma sposta il cursore del blocco avanti. È comunque possibile recuperare i dati utilizzando **SQLGetData**. Se il cursore è un cursore più righe (ovvero SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1), SQLGetData può essere chiamato solo se viene restituito SQL_GD_BLOCK quando **SQLGetInfo** viene chiamato con un *InfoType* di SQL_GETDATA_EXTENSIONS. Per ulteriori informazioni, vedere [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
  Per ogni colonna associata in una riga, **SQLFetch** esegue le operazioni seguenti:  
   
-1.  Imposta il buffer di lunghezza/indicatore su SQL_NULL_DATA e procede alla successiva colonna se i dati sono NULL. Se i dati sono NULL e non è stato associato alcun buffer di lunghezza  /indicatore, SQLFetch restituisce SQLState 22002 (variabile indicatore obbligatoria ma non fornita) per la riga e procede alla riga successiva. Per informazioni su come determinare l'indirizzo del buffer di lunghezza/indicatore, vedere "indirizzi del buffer" in [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+1.  Imposta il buffer di lunghezza/indicatore su SQL_NULL_DATA e procede alla successiva colonna se i dati sono NULL. Se i dati sono NULL e non è stato associato alcun buffer di lunghezza /indicatore, SQLFetch restituisce SQLState 22002 (variabile indicatore obbligatoria ma non fornita) per la riga e procede alla riga successiva. Per informazioni su come determinare l'indirizzo del buffer di lunghezza/indicatore, vedere "indirizzi del buffer" in [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
      Se i dati della colonna non sono NULL, **SQLFetch** procede al passaggio 2.  
   
@@ -152,13 +152,13 @@ SQLRETURN SQLFetch(
   
 3.  Converte i dati nel tipo specificato da *targetType* in **SQLBindCol**.  
   
-4.  Se i dati sono stati convertiti in un tipo di dati a lunghezza variabile, ad esempio carattere  o binario, SQLFetch controlla se la lunghezza dei dati supera la lunghezza del buffer di dati. Se la lunghezza dei dati di tipo carattere, incluso il carattere di terminazione null, supera la lunghezza del buffer di  dati, SQLFetch tronca i dati alla lunghezza del buffer di dati meno la lunghezza di un carattere di terminazione null. Quindi, termina i dati null. Se la lunghezza dei dati binari supera la lunghezza del buffer di dati, **SQLFetch** lo tronca alla lunghezza del buffer di dati. La lunghezza del buffer di dati viene specificata con *bufferLength* in **SQLBindCol**.  
+4.  Se i dati sono stati convertiti in un tipo di dati a lunghezza variabile, ad esempio carattere o binario, SQLFetch controlla se la lunghezza dei dati supera la lunghezza del buffer di dati. Se la lunghezza dei dati di tipo carattere, incluso il carattere di terminazione null, supera la lunghezza del buffer di dati, SQLFetch tronca i dati alla lunghezza del buffer di dati meno la lunghezza di un carattere di terminazione null. Quindi, termina i dati null. Se la lunghezza dei dati binari supera la lunghezza del buffer di dati, **SQLFetch** lo tronca alla lunghezza del buffer di dati. La lunghezza del buffer di dati viene specificata con *bufferLength* in **SQLBindCol**.  
   
      **SQLFetch** non tronca mai i dati convertiti in tipi di dati a lunghezza fissa; si presuppone sempre che la lunghezza del buffer di dati sia la dimensione del tipo di dati.  
   
 5.  Inserisce i dati convertiti (e possibilmente troncati) nel buffer di dati. Per informazioni su come determinare l'indirizzo del buffer di dati, vedere "indirizzi del buffer" in [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
-6.  Inserisce la lunghezza dei dati nel buffer di lunghezza/indicatore. Se il puntatore indicatore e il puntatore di lunghezza sono entrambi impostati sullo stesso buffer (come una chiamata a **SQLBindCol** ), la lunghezza viene scritta nel buffer per i dati validi e SQL_NULL_DATA viene scritta nel buffer per i dati null. Se non è stato associato alcun buffer di lunghezza  /indicatore, SQLFetch non restituisce la lunghezza.  
+6.  Inserisce la lunghezza dei dati nel buffer di lunghezza/indicatore. Se il puntatore indicatore e il puntatore di lunghezza sono entrambi impostati sullo stesso buffer (come una chiamata a **SQLBindCol** ), la lunghezza viene scritta nel buffer per i dati validi e SQL_NULL_DATA viene scritta nel buffer per i dati null. Se non è stato associato alcun buffer di lunghezza /indicatore, SQLFetch non restituisce la lunghezza.  
   
     -   Per i dati di tipo carattere o binario, questa è la lunghezza dei dati dopo la conversione e prima del troncamento perché il buffer dei dati è troppo piccolo. Se il driver non è in grado di determinare la lunghezza dei dati dopo la conversione, come accade talvolta con i dati Long, la lunghezza viene impostata su SQL_NO_TOTAL. Se i dati sono stati troncati a causa dell'attributo dell'istruzione SQL_ATTR_MAX_LENGTH, il valore di questo attributo viene inserito nel buffer di lunghezza/indicatore anziché la lunghezza effettiva. Questo è dovuto al fatto che questo attributo è progettato per troncare i dati nel server prima della conversione, in modo che il driver non abbia alcun modo per determinare la lunghezza effettiva.  
   
@@ -166,14 +166,14 @@ SQLRETURN SQLFetch(
   
      Per informazioni su come determinare l'indirizzo del buffer di lunghezza/indicatore, vedere "indirizzi del buffer" in [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
-7.  Se i dati vengono troncati durante la conversione senza perdita di cifre significative (ad esempio, il numero reale 1,234 viene troncato al numero intero 1 quando viene convertito  ), SQLFetch restituisce SQLSTATE 01S07 (troncamento frazionario) e SQL_SUCCESS_WITH_INFO. Se i dati vengono troncati perché la lunghezza del buffer dei dati è troppo piccola (ad esempio, la stringa "abcdef" viene inserita in un buffer a 4 byte), **SQLFetch** restituisce SQLSTATE 01004 (dati troncati) e SQL_SUCCESS_WITH_INFO. Se i dati vengono troncati a causa dell'attributo dell'istruzione  SQL_ATTR_MAX_LENGTH, SQLFetch restituisce SQL_SUCCESS e non restituisce SQLSTATE 01S07 (troncamento frazionario) o SQLSTATE 01004 (dati troncati). Se i dati vengono troncati durante la conversione con una perdita di cifre significative (ad esempio, se un valore SQL_INTEGER maggiore di 100.000 è stato convertito in  SQL_C_TINYINT), SQLFetch restituisce SQLSTATE 22003 (valore numerico non compreso nell'intervallo) e SQL_ERROR (se il le dimensioni del set di righe sono pari a 1) o SQL_SUCCESS_WITH_INFO (se le dimensioni del set di righe sono maggiori di 1).  
+7.  Se i dati vengono troncati durante la conversione senza perdita di cifre significative (ad esempio, il numero reale 1,234 viene troncato al numero intero 1 quando viene convertito ), SQLFetch restituisce SQLSTATE 01S07 (troncamento frazionario) e SQL_SUCCESS_WITH_INFO. Se i dati vengono troncati perché la lunghezza del buffer dei dati è troppo piccola (ad esempio, la stringa "abcdef" viene inserita in un buffer a 4 byte), **SQLFetch** restituisce SQLSTATE 01004 (dati troncati) e SQL_SUCCESS_WITH_INFO. Se i dati vengono troncati a causa dell'attributo dell'istruzione SQL_ATTR_MAX_LENGTH, SQLFetch restituisce SQL_SUCCESS e non restituisce SQLSTATE 01S07 (troncamento frazionario) o SQLSTATE 01004 (dati troncati). Se i dati vengono troncati durante la conversione con una perdita di cifre significative (ad esempio, se un valore SQL_INTEGER maggiore di 100.000 è stato convertito in SQL_C_TINYINT), SQLFetch restituisce SQLSTATE 22003 (valore numerico non compreso nell'intervallo) e SQL_ERROR (se il le dimensioni del set di righe sono pari a 1) o SQL_SUCCESS_WITH_INFO (se le dimensioni del set di righe sono maggiori di 1).  
   
- Il contenuto del buffer dei dati associato e il buffer di lunghezza/indicatore non sono definiti  se SQLFetch o **SQLFETCHSCROLL** non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO.  
+ Il contenuto del buffer dei dati associato e il buffer di lunghezza/indicatore non sono definiti se SQLFetch o **SQLFETCHSCROLL** non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO.  
   
 ## <a name="row-status-array"></a>Matrice di stato riga  
- La matrice di stato della riga viene utilizzata per restituire lo stato di ogni riga nel set di righe. L'indirizzo di questa matrice viene specificato con l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR. La matrice viene allocata dall'applicazione e deve avere tutti gli elementi specificati dall'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE. I relativi valori vengono impostati da SQLFetch, **SQLFetchScroll**e **SQLBulkOperations** o **SQLSetPos** (tranne quando sono stati chiamati dopo che il cursore è stato posizionato da **SQLExtendedFetch**). Se il valore dell'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR è un puntatore null, queste funzioni non restituiscono lo stato della riga.  
+ La matrice di stato della riga viene utilizzata per restituire lo stato di ogni riga nel set di righe. L'indirizzo di questa matrice viene specificato con l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR. La matrice viene allocata dall'applicazione e deve avere tutti gli elementi specificati dall'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE. I relativi valori vengono impostatida SQLFetch, **SQLFetchScroll**e **SQLBulkOperations** o **SQLSetPos** (tranne quando sono stati chiamati dopo che il cursore è stato posizionato da **SQLExtendedFetch**). Se il valore dell'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR è un puntatore null, queste funzioni non restituiscono lo stato della riga.  
   
- Il contenuto del buffer della matrice di stato della riga non è  definito se SQLFetch o **SQLFETCHSCROLL** non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO.  
+ Il contenuto del buffer della matrice di stato della riga non è definito se SQLFetch o **SQLFETCHSCROLL** non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO.  
   
  Nella matrice di stato della riga vengono restituiti i valori seguenti.  
   
@@ -191,7 +191,7 @@ SQLRETURN SQLFetch(
   
  [2] alcuni driver non sono in grado di rilevare gli aggiornamenti ai dati e pertanto non possono restituire questo valore. Per determinare se un driver è in grado di rilevare gli aggiornamenti alle righe recuperate, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ROW_UPDATES.  
   
- [3] **SQLFetch** può restituire questo valore solo quando è combinato con chiamate a **SQLFetchScroll**. Questo perché **SQLFetch** si sposta nel set di risultati e quando viene utilizzato in modo esclusivo, non recupera alcuna riga. Poiché non viene recuperata alcuna riga, **SQLFetch** non rileva le modifiche apportate alle righe recuperate in precedenza. Tuttavia, se **SQLFetchScroll** posiziona il cursore prima che vengano utilizzate righe recuperate  in precedenza e SQLFetch per recuperare tali righe, SQLFetch può rilevare eventuali modifiche apportate a tali righe.  
+ [3] **SQLFetch** può restituire questo valore solo quando è combinato con chiamate a **SQLFetchScroll**. Questo perché **SQLFetch** si sposta nel set di risultati e quando viene utilizzato in modo esclusivo, non recupera alcuna riga. Poiché non viene recuperata alcuna riga, **SQLFetch** non rileva le modifiche apportate alle righe recuperate in precedenza. Tuttavia, se **SQLFetchScroll** posiziona il cursore prima che vengano utilizzate righe recuperate in precedenza e SQLFetch per recuperare tali righe, SQLFetch può rilevare eventuali modifiche apportate a tali righe.  
   
  [4] restituito da SQLBulkOperations. Non impostato da **SQLFetch** o **SQLFetchScroll**.  
   
@@ -201,34 +201,34 @@ SQLRETURN SQLFetch(
  Il contenuto del buffer recuperato dalle righe non è definito se **SQLFetch** o **SQLFETCHSCROLL** non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, tranne quando viene restituito SQL_NO_DATA, nel qual caso il valore nel buffer recuperato dalle righe viene impostato su 0.  
   
 ### <a name="error-handling"></a>Gestione degli errori  
- Gli errori e gli avvisi possono essere applicati a singole righe o all'intera funzione. Per ulteriori informazioni sui record di diagnostica, [](../../../odbc/reference/develop-app/diagnostics.md) vedere Diagnostics and [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Gli errori e gli avvisi possono essere applicati a singole righe o all'intera funzione. Per ulteriori informazioni sui record di diagnostica, [Diagnostics](../../../odbc/reference/develop-app/diagnostics.md) vedere and [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>Errori e avvisi sull'intera funzione  
- Se si verifica un errore per l'intera funzione, ad esempio SQLSTATE HYT00 (timeout scaduto) o SQLSTATE 24000 (stato del cursore non  valido), SQLFetch restituisce SQL_ERROR e il valore SQLSTATE applicabile. Il contenuto dei buffer del set di righe non è definito e la posizione del cursore è invariata.  
+ Se si verifica un errore per l'intera funzione, ad esempio SQLSTATE HYT00 (timeout scaduto) o SQLSTATE 24000 (stato del cursore non valido), SQLFetch restituisce SQL_ERROR e il valore SQLSTATE applicabile. Il contenuto dei buffer del set di righe non è definito e la posizione del cursore è invariata.  
   
- Se viene visualizzato un avviso per l'intera funzione  , SQLFetch restituisce SQL_SUCCESS_WITH_INFO e il valore SQLSTATE applicabile. I record di stato per gli avvisi che si applicano all'intera funzione vengono restituiti prima dei record di stato che si applicano a singole righe.  
+ Se viene visualizzato un avviso per l'intera funzione , SQLFetch restituisce SQL_SUCCESS_WITH_INFO e il valore SQLSTATE applicabile. I record di stato per gli avvisi che si applicano all'intera funzione vengono restituiti prima dei record di stato che si applicano a singole righe.  
   
 #### <a name="errors-and-warnings-in-individual-rows"></a>Errori e avvisi in singole righe  
- Se un errore, ad esempio SQLSTATE 22012 (divisione per zero), o un avviso, ad esempio SQLSTATE 01004 (dati troncati), si applica a una singola riga , SQLFetch esegue le operazioni seguenti:  
+ Se un errore, ad esempio SQLSTATE 22012 (divisione per zero), o un avviso, ad esempio SQLSTATE 01004 (dati troncati), si applica a una singola riga, SQLFetch esegue le operazioni seguenti:  
   
 -   Imposta l'elemento corrispondente della matrice di stato della riga su SQL_ROW_ERROR per gli errori o SQL_ROW_SUCCESS_WITH_INFO per gli avvisi.  
   
 -   Aggiunge zero o più record di stato che contengono SQLSTATE per l'errore o l'avviso.  
   
--   Imposta i campi numero di riga e colonna nei record di stato. Se **SQLFetch** non è in grado di determinare un numero di riga o di colonna, imposta tale numero rispettivamente su SQL_ROW_NUMBER_UNKNOWN o SQL_COLUMN_NUMBER_UNKNOWN. Se il record di stato non si applica a una colonna specifica  , SQLFetch imposta il numero di colonna su SQL_NO_COLUMN_NUMBER.  
+-   Imposta i campi numero di riga e colonna nei record di stato. Se **SQLFetch** non è in grado di determinare un numero di riga o di colonna, imposta tale numero rispettivamente su SQL_ROW_NUMBER_UNKNOWN o SQL_COLUMN_NUMBER_UNKNOWN. Se il record di stato non si applica a una colonna specifica , SQLFetch imposta il numero di colonna su SQL_NO_COLUMN_NUMBER.  
   
- **SQLFetch** continua a recuperare le righe fino a recuperare tutte le righe nel set di righe. Restituisce SQL_SUCCESS_WITH_INFO, a meno che non si verifichi un errore in ogni riga del set di righe (escluse le righe con stato SQL_ROW_NOROW), nel qual caso restituisce SQL_ERROR. In particolare, se le dimensioni del set di righe sono pari a 1 e si verifica  un errore in tale riga, SQLFetch restituisce SQL_ERROR.  
+ **SQLFetch** continua a recuperare le righe fino a recuperare tutte le righe nel set di righe. Restituisce SQL_SUCCESS_WITH_INFO, a meno che non si verifichi un errore in ogni riga del set di righe (escluse le righe con stato SQL_ROW_NOROW), nel qual caso restituisce SQL_ERROR. In particolare, se le dimensioni del set di righe sono pari a 1 e si verifica un errore in tale riga, SQLFetch restituisce SQL_ERROR.  
   
  **SQLFetch** restituisce i record di stato nell'ordine dei numeri di riga. Ovvero restituisce tutti i record di stato per le eventuali righe sconosciute; restituisce quindi tutti i record di stato per la prima riga (se presente), quindi restituisce tutti i record di stato per la seconda riga (se presente) e così via. I record di stato per ogni riga vengono ordinati in base alle normali regole per l'ordinamento dei record di stato; Per ulteriori informazioni, vedere la sezione relativa alla sequenza di record di stato in [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
 ### <a name="descriptors-and-sqlfetch"></a>Descrittori e SQLFetch  
- Nelle sezioni seguenti viene descritto  il modo in cui SQLFetch interagisce con i descrittori.  
+ Nelle sezioni seguenti viene descritto il modo in cui SQLFetch interagisce con i descrittori.  
   
 #### <a name="argument-mappings"></a>Mapping degli argomenti  
- Il driver non imposta alcun campo del descrittore in base agli argomenti di SQLFetch.  
+ Il driver non imposta alcun campo del descrittore in base agliargomenti di SQLFetch.  
   
 #### <a name="other-descriptor-fields"></a>Altri campi del descrittore  
- I campi di descrizione seguenti vengono utilizzati da SQLFetch.  
+ I campi di descrizione seguenti vengono utilizzatida SQLFetch.  
   
 |Campo di descrizione|DESC.|Campo in|Imposta tramite|  
 |----------------------|-----------|--------------|-----------------|  
@@ -252,7 +252,7 @@ SQLRETURN SQLFetch(
  **SQLFetch** determina se l'applicazione ha specificato buffer di lunghezza e indicatore distinti. In questo caso, quando i dati non sono NULL, **SQLFetch** imposta il buffer dell'indicatore su 0 e restituisce la lunghezza nel buffer di lunghezza. Quando i dati sono NULL, **SQLFetch** imposta il buffer dell'indicatore su SQL_NULL_DATA e non modifica il buffer di lunghezza.  
   
 ### <a name="code-example"></a>Esempio di codice  
- Vedere [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [](../../../odbc/reference/syntax/sqlcolumns-function.md)SQLColumns, [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)e SQLProcedures. [](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+ Vedere [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md) e [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md).  
   
 ### <a name="related-functions"></a>Funzioni correlate  
   

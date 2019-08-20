@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0180d8087b556ea32728ef8924681bb65ec7ea2
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936950"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611441"
 ---
-# <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+# <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -40,15 +40,15 @@ Restituisce informazioni su ciascuna richiesta in esecuzione all'interno di [!IN
 |start_time|**datetime**|Timestamp relativo all'arrivo della richiesta. Non ammette i valori Null.|  
 |status|**nvarchar(30)**|Stato della richiesta. I possibili valori sono i seguenti:<br /><br /> Sfondo<br />In esecuzione<br />Eseguibile<br />Sospeso<br />Suspended<br /><br /> Non ammette i valori Null.|  
 |command|**nvarchar(32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
-|sql_handle|**varbinary(64)**|È un token che identifica in modo univoco il batch o una stored procedure che fa parte della query. Ammette i valori Null.|  
+|sql_handle|**varbinary(64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Ammette i valori Null.|  
 |statement_start_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
 |statement_end_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
-|plan_handle|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch attualmente in esecuzione. Ammette i valori Null.|  
+|plan_handle|**varbinary(64)**|Token che identifica in modo univoco un piano di esecuzione della query per un batch attualmente in esecuzione. Ammette i valori Null.|  
 |database_id|**smallint**|ID del database utilizzato per eseguire la richiesta. Non ammette i valori Null.|  
 |user_id|**int**|ID dell'utente che ha inviato la richiesta. Non ammette i valori Null.|  
 |connection_id|**uniqueidentifier**|ID della connessione nella quale è arrivata la richiesta. Ammette i valori Null.|  
 |blocking_session_id|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata.<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Al momento non è stato possibile determinare l'ID sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
-|wait_type|**nvarchar(60)**|Se la richiesta è momentaneamente bloccata, in questa colonna viene restituito il tipo di attesa. Ammette i valori Null.<br /><br /> Per informazioni sui tipi di attese, vedere [DM os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Se la richiesta è momentaneamente bloccata, in questa colonna viene restituito il tipo di attesa. Ammette i valori Null.<br /><br /> Per informazioni sui tipi di attese, vedere [sys. dm _os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Se la richiesta è momentaneamente bloccata, in questa colonna viene restituita la durata dell'attesa corrente espressa in millisecondi. Non ammette i valori Null.|  
 |last_wait_type|**nvarchar(60)**|Se la richiesta è stata precedentemente bloccata, questa colonna restituisce il tipo dell'ultima attesa. Non ammette i valori Null.|  
 |wait_resource|**nvarchar(256)**|Se la richiesta è momentaneamente bloccata, questa colonna restituisce la risorsa per la quale la richiesta è in attesa. Non ammette i valori Null.|  
@@ -88,22 +88,22 @@ Restituisce informazioni su ciascuna richiesta in esecuzione all'interno di [!IN
 |group_id|**int**|ID del gruppo del carico di lavoro a cui appartiene la query. Non ammette i valori Null.|  
 |query_hash|**binary(8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
 |query_plan_hash|**binary(8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.|  
-|statement_sql_handle|**varbinary(64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Handle SQL della singola query.<br /><br />Questa colonna è NULL se Query Store non è abilitato per il database. |  
-|statement_context_id|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La chiave esterna facoltativa alla sys.query_context_settings.<br /><br />Questa colonna è NULL se Query Store non è abilitato per il database. |  
-|dop |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il grado di parallelismo della query. |  
-|parallel_worker_count |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il numero di thread di lavoro paralleli riservati se si tratta di una query parallela.  |  
-|external_script_request_id |**uniqueidentifier** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> L'ID della richiesta dello script esterno associato alla richiesta corrente. |  
-|is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se la richiesta è un'operazione su indici ripristinabili. |  
-|page_resource |**binary(8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Una rappresentazione esadecimale a 8 byte della risorsa di pagina se il `wait_resource` colonna contiene una pagina. |  
-|page_server_reads|**bigint**|**Si applica a**: Con Iperscalabilità di Database SQL di Azure<br /><br /> Numero di letture di server di pagine effettuate dalla richiesta. Non ammette i valori Null.|  
+|statement_sql_handle|**varbinary(64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Handle SQL della singola query.<br /><br />Se Query Store non è abilitato per il database, questa colonna è NULL. |  
+|statement_context_id|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Chiave esterna facoltativa per sys. query_context_settings.<br /><br />Se Query Store non è abilitato per il database, questa colonna è NULL. |  
+|dop |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Grado di parallelismo della query. |  
+|parallel_worker_count |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di processi di lavoro paralleli riservati se si tratta di una query parallela.  |  
+|external_script_request_id |**uniqueidentifier** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID della richiesta di script esterno associato alla richiesta corrente. |  
+|is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se la richiesta è un'operazione sugli indici ripristinabili. |  
+|page_resource |**binary(8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Rappresentazione esadecimale a 8 byte della risorsa della pagina se la `wait_resource` colonna contiene una pagina. Per ulteriori informazioni, vedere [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Si applica a**: Iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalla richiesta. Non ammette i valori Null.|  
 
 ## <a name="remarks"></a>Note 
 Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive. I valori temporali restituiti da questa DMW non includono il tempo trascorso in modalità preemptive.
 
-Durante l'esecuzione di richieste in parallelo nelle [modalità riga](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un thread di lavoro per coordinare i thread di lavoro responsabili per il completamento di attività assegnate. In questa vista DMV solo il thread coordinator è visibile per la richiesta. Le colonne **legge**, **scrive**, **logical_reads**, e **row_count** sono **non aggiornato** per il thread coordinatore. Le colonne **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**, e **granted_query_memory** vengono **aggiornato solo** per il thread coordinator. Per altre informazioni, vedere la [Thread e Guida all'architettura delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
+Quando si eseguono richieste parallele in [modalità riga](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un thread di lavoro per coordinare i thread di lavoro responsabili del completamento delle attività ad essi assegnati. In questa DMV solo il thread coordinatore è visibile per la richiesta. Le colonne **Read**, **writes**, **logical_reads**e **ROW_COUNT** **non vengono aggiornate** per il thread coordinatore. Le colonne **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** vengono **aggiornate solo** per il thread coordinatore. Per ulteriori informazioni, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Permissions
-Se l'utente dispone `VIEW SERVER STATE` autorizzazione per il server, è possibile visualizzare le sessioni in esecuzione tutte nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente verrà visualizzato solo nella sessione corrente. `VIEW SERVER STATE` non è possibile concedere [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] in modo `sys.dm_exec_requests` sarà sempre limitata alla connessione corrente.
+Se l'utente dispone `VIEW SERVER STATE` dell'autorizzazione per il server, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. in caso contrario, l'utente visualizzerà solo la sessione corrente. `VIEW SERVER STATE`non può essere concesso [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] in `sys.dm_exec_requests` , pertanto è sempre limitato alla connessione corrente.
   
 ## <a name="examples"></a>Esempi  
   
@@ -125,14 +125,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Ricerca di tutti i blocchi contenuti in un batch in esecuzione
 
-Le seguenti query di esempio **exec_requests** per trovare il batch specifico e copiare il `transaction_id` dall'output.
+Nell'esempio seguente viene eseguita una query su **sys. dm _exec_requests** per trovare il batch `transaction_id` interessante e copiarne l'oggetto dall'output.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Quindi, per trovare le informazioni di blocco, usare l'insieme copiato `transaction_id` con la funzione di sistema **DM tran_locks**.  
+Quindi, per trovare informazioni sul blocco, usare l' `transaction_id` oggetto copiato con la funzione di sistema **sys. dm _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -143,7 +143,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. Ricerca di tutte le richieste attualmente bloccate
 
-Le seguenti query di esempio **exec_requests** per trovare informazioni relative alle richieste bloccate.  
+Nell'esempio seguente viene eseguita una query su **sys. dm _exec_requests** per trovare informazioni sulle richieste bloccate.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -154,7 +154,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>D. Le richieste esistenti per la CPU di ordinamento
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. Ordinamento delle richieste esistenti per CPU
 
 ```sql
 SELECT 

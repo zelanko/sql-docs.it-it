@@ -97,14 +97,14 @@ SQLRETURN SQLFreeHandle(
  Se l'ambiente è un ambiente condiviso, l'applicazione che chiama **SQLFreeHandle** con *HandleType* di SQL_HANDLE_ENV non ha più accesso all'ambiente dopo la chiamata, ma le risorse dell'ambiente non vengono necessariamente liberate. La chiamata a **SQLFreeHandle** decrementa il conteggio dei riferimenti dell'ambiente. Il conteggio dei riferimenti viene gestito da Gestione driver. Se non raggiunge zero, l'ambiente condiviso non viene liberato, perché è ancora in uso da parte di un altro componente. Se il conteggio dei riferimenti raggiunge zero, le risorse dell'ambiente condiviso vengono liberate.  
   
 ## <a name="freeing-a-connection-handle"></a>Liberazione di un handle di connessione  
- Prima di chiamare **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_DBC, un'applicazione deve chiamare  Disconnect per la connessione se è presente una connessione a questo handle *.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valida.  
+ Prima di chiamare **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_DBC, un'applicazione deve chiamare Disconnect per la connessione se è presente una connessione a questo handle *.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valida.  
   
  Per ulteriori informazioni, vedere [handle di connessione](../../../odbc/reference/develop-app/connection-handles.md) e disconnessione [da un'origine dati o da un driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
 ## <a name="freeing-a-statement-handle"></a>Rilascio di un handle di istruzione  
  Una chiamata a **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_STMT libera tutte le risorse allocate da una chiamata a **SQLALLOCHANDLE** con una *HandleType* di SQL_HANDLE_STMT. Quando un'applicazione chiama **SQLFreeHandle** per liberare un'istruzione con risultati in sospeso, i risultati in sospeso vengono eliminati. Quando un'applicazione libera un handle di istruzione, il driver libera i quattro descrittori allocati automaticamente associati a tale handle. Per ulteriori informazioni, vedere [handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md) e [liberare un handle di istruzione](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
- Si noti  che sqldisconnette rilascia automaticamente le istruzioni e i descrittori aperti sulla connessione.  
+ Si noti che sqldisconnette rilascia automaticamente le istruzioni e i descrittori aperti sulla connessione.  
   
 ## <a name="freeing-a-descriptor-handle"></a>Liberare un handle descrittore  
  Una chiamata a **SQLFreeHandle** con *HandleType* di SQL_HANDLE_DESC libera l'handle del descrittore nell' *handle*. La chiamata a **SQLFreeHandle** non rilascia alcuna memoria allocata dall'applicazione a cui è possibile fare riferimento da un campo puntatore (inclusi SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR) di qualsiasi record di descrittore di  *Handle*. La memoria allocata dal driver per i campi che non sono campi puntatore viene liberata quando l'handle viene liberato. Quando viene liberato un handle di descrittore allocato dall'utente, a tutte le istruzioni a cui è stato associato il punto di controllo liberato viene ripristinato il rispettivo handle descrittore automaticamente  
@@ -112,12 +112,12 @@ SQLRETURN SQLFreeHandle(
 > [!NOTE]
 >  I driver ODBC 2 *. x* non supportano la liberazione degli handle descrittore, così come non supportano l'allocazione di handle di descrittore.  
   
- Si noti  che sqldisconnette rilascia automaticamente le istruzioni e i descrittori aperti sulla connessione. Quando un'applicazione libera un handle di istruzione, il driver libera tutti i descrittori generati automaticamente associati a tale handle.  
+ Si noti che sqldisconnette rilascia automaticamente le istruzioni e i descrittori aperti sulla connessione. Quando un'applicazione libera un handle di istruzione, il driver libera tutti i descrittori generati automaticamente associati a tale handle.  
   
- Per ulteriori informazioni sui descrittori, vedere [](../../../odbc/reference/develop-app/descriptors.md)descrittori.  
+ Per ulteriori informazioni sui descrittori, vedere [descrittori](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
- Per altri esempi di codice, vedere [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e SQLConnect. [](../../../odbc/reference/syntax/sqlconnect-function.md)  
+ Per altri esempi di codice, vedere [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 ### <a name="code"></a>Codice  
   

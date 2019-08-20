@@ -1,21 +1,21 @@
 ---
-title: R Server autonomo o installazione Machine Learning Server
+title: Che cosa sono Machine Learning Server autonomo o R Server in SQL Server?
 description: Panoramica introduttiva a R Server autonomo e Machine Learning Server nella configurazione SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715109"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028608"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (autonomo) e Machine Learning Server (autonomo) in SQL Server
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Che cosa sono Machine Learning Server autonomo o R Server in SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server fornisce il supporto per l'installazione di un R Server autonomo o Machine Learning Server eseguito in modo indipendente da SQL Server. A seconda della versione SQL Server, un server autonomo ha una base di R Open Source e possibilmente Python, sovrapposto a librerie ad alte prestazioni di Microsoft che aggiungono analisi statistiche e predittive su larga scala. Le librerie abilitano anche le attività di Machine Learning scritte in R o Python. 
@@ -79,7 +79,7 @@ Scegliere la lingua migliore per l'attività. R è ideale per calcoli statistici
 
 ### <a name="step-4-operationalize-your-solution"></a>Passaggio 4: Rendere operativo la soluzione
 
-I server autonomi possono usare [la funzionalità di](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) messa in funzione dei [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)non basati su SQL. È possibile configurare un server autonomo per la messa in funzione, che offre i vantaggi seguenti: distribuire e ospitare il codice come servizi Web, eseguire la diagnostica, testare la capacità del servizio Web.
+I server autonomi possono usare la funzionalità di [messa in funzione](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) dei [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) non basati su SQL. È possibile configurare un server autonomo per la messa in funzione, che offre i vantaggi seguenti: distribuire e ospitare il codice come servizi Web, eseguire la diagnostica, testare la capacità del servizio Web.
 
 ### <a name="step-5-maintain-your-server"></a>Passaggio 5: Gestire il server
 

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419282"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621671"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Esercitazione: Caricare dati di esempio in un cluster Big Data di SQL Server
 
@@ -25,7 +25,7 @@ Questa esercitazione illustra come usare uno script per caricare dati di esempio
 > [!TIP]
 > È possibile trovare esempi aggiuntivi per cluster Big Data di SQL Server 2019 (anteprima) nel repository GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Si trovano nel percorso **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Un cluster Big Data distribuito](deployment-guidance.md)
 - [Strumenti per Big Data](deploy-big-data-tools.md)
@@ -33,7 +33,7 @@ Questa esercitazione illustra come usare uno script per caricare dati di esempio
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> Caricare dati di esempio
 
 Questa procedura usa uno script di bootstrap per scaricare un backup del database di SQL Server e caricare i dati nel cluster Big Data. Per semplicità d'uso, questa procedura è stata suddivisa nelle sezioni [Windows](#windows) e [Linux](#linux).
