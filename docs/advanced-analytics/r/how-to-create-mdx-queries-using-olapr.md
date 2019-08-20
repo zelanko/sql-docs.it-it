@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: HT
+ms.openlocfilehash: 0b98e2bafd53eaabd606d09b3e0b51dd3d53aceb
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887668"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494060"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Come creare query MDX in R tramite olapr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Gli esempi seguenti si basano sul progetto AdventureWorks data mart e Cube, perc
 
 + Creare il cubo utilizzato in questi esempi seguendo le Analysis Services Esercitazione fino alla lezione 4: [Creazione di un cubo OLAP](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Scaricare un cubo esistente come backup e ripristinarlo in un'istanza di Analysis Services. Questo sito, ad esempio, fornisce un cubo completamente elaborato in formato compresso: [Modello multidimensionale di Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Estrarre il file e quindi ripristinarlo nell'istanza di SSAS. Per altre informazioni, vedere [backup e ripristino](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)o [cmdlet Restore-ASDatabase](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet).
++ Scaricare un cubo esistente come backup e ripristinarlo in un'istanza di Analysis Services. Questo sito, ad esempio, fornisce un cubo completamente elaborato in formato compresso: [Modello multidimensionale di Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Estrarre il file e quindi ripristinarlo nell'istanza di SSAS. Per altre informazioni, vedere [backup e ripristino](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)o [cmdlet Restore-ASDatabase](/powershell/module/sqlserver/restore-asdatabase).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. Query MDX di base con filtro dei dati
 
