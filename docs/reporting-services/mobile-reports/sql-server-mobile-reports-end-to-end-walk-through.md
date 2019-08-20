@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502429"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028887"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -39,7 +39,7 @@ Per proseguire, sono necessari questi prodotti:
 *  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
-  *  [Scaricare l'app Power BI per dispositivi mobili](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
+  *  [Scaricare l'app Power BI per dispositivi mobili](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
