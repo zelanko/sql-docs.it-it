@@ -25,7 +25,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68085796"
 ---
-# <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
+# <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esecuzioni `UPDATE STATISTICS` su tutte le tabelle interne e definite dall'utente nel database corrente.  
@@ -44,7 +44,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @resample = ] 'resample'` Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **@resample** è **varchar (8)** con valore predefinito 'NO'.  
+`[ @resample = ] 'resample'` Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **resample** è **varchar (8)** con valore predefinito 'NO'.  
   
 ## <a name="remarks"></a>Note  
  **sp_updatestats** viene eseguito `UPDATE STATISTICS`, specificando il `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. La procedura sp_updatestats mostra i messaggi che indicano lo stato di avanzamento dell'esecuzione. Al termine dell'aggiornamento, viene mostrato un messaggio che indica l'effettivo aggiornamento delle statistiche di tutte le tabelle.  
