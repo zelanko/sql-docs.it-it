@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956328"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027881"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver per SQL Server
 
@@ -53,8 +53,8 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
 ## <a name="samples"></a>Esempi  
 
 * [Applicazioni di esempio del driver JDBC](sample-jdbc-driver-applications.md)  
-* [Introduzione con Java in Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Introduzione con Java in macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Introduzione con Java in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Introduzione con Java su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Introduzione con Java su SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Introduzione a Java in Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Introduzione a Java in macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Introduzione a Java su Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Introduzione a Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Introduzione a Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

@@ -1,7 +1,7 @@
 ---
 title: Utilizzo dei tipi di dati (JDBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003846"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025705"
 ---
-# <a name="working-with-data-types-jdbc"></a>Utilizzo dei tipi di dati (JDBC)
+# <a name="working-with-data-types-jdbc"></a>Uso dei tipi di dati (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

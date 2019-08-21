@@ -1,7 +1,7 @@
 ---
 title: Cenni preliminari sul driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/18/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b9fcab3a49f8cac08d35320cbad0f339cd42b2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956232"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027928"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Panoramica del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "67956232"
 
 ## <a name="see-also"></a>Vedere anche  
  [Repository GitHub del driver JDBC](https://github.com/microsoft/mssql-jdbc)  
- [Informazioni di riferimento sull'API del driver JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Riferimento all'API del driver JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

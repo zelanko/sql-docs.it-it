@@ -1,7 +1,7 @@
 ---
 title: Informazioni sulle transazioni XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004159"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027222"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -38,7 +38,7 @@ Le classi per l'implementazione delle transazioni distribuite sono le seguenti:
 > [!NOTE]  
 > Le connessioni delle transazioni distribuite XA sono impostate sul livello di isolamento predefinito Read Committed.  
   
-## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Linee guida e limitazioni relative all'utilizzo di transazioni XA  
+## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Linee guida e limitazioni relative all'uso di transazioni XA  
 
 Le seguenti linee guida aggiuntive si applicano alle transazioni a "regime di controllo stretto ("tightly-coupled")":  
 
@@ -152,7 +152,7 @@ Un valore di timeout viene impostato per ogni transazione all'avvio e SQL Server
   
      Indica che tutte le transazioni avranno un timeout di 30 secondi (il valore massimo) se il client non specifica alcun timeout. Se il client specifica un timeout, viene utilizzato il timeout del client, a condizione che sia minore di 30 secondi (il valore massimo).  
   
-### <a name="upgrading-sqljdbcxadll"></a>Aggiornamento di sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>Aggiornamento di sqljdbc_xa.dll
 
 Quando si installa una nuova versione del driver JDBC, è consigliabile utilizzare il file sqljdbc_xa.dll della nuova versione per aggiornare il file sqljdbc_xa.dll nel server.  
   

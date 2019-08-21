@@ -1,7 +1,7 @@
 ---
 title: Informazioni sulle transazioni | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5a6caa9c9bf1766b59aa813719d1461b6ef1aa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916582"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027345"
 ---
 # <a name="understanding-transactions"></a>Informazioni sulle transazioni
 
@@ -27,7 +27,7 @@ Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], le transazion
 
 Le applicazioni devono controllare le transazioni tramite istruzioni Transact-SQL o i metodi forniti dal driver JDBC, ma non entrambi. L'utilizzo simultaneo di istruzioni Transact-SQL e dei metodi dell'API di JDBC nella stessa transazione potrebbe comportare problemi, tra cui l'impossibilità di eseguire il commit di una transazione quando previsto, oppure l'esecuzione del commit o del rollback di una transazione e l'avvio imprevisto di una nuova transazione oppure il verificarsi di eccezioni di tipo "Impossibile riprendere la transazione".
 
-## <a name="using-local-transactions"></a>Utilizzo delle transazioni locali
+## <a name="using-local-transactions"></a>Uso delle transazioni locali
 
 Una transazione viene considerata locale se è a fase singola e viene gestita direttamente dal database. Il driver JDBC supporta le transazioni locali usando vari metodi della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), inclusi [setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md), [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) e [rollback](../../connect/jdbc/reference/rollback-method.md). Le transazioni locali vengono in genere gestite in modo esplicito dall'applicazione o in modo automatico dal server applicazioni Java Platform, Enterprise Edition (Java EE).
 
@@ -35,7 +35,7 @@ Nell'esempio seguente viene eseguita una transazione locale costituita da due is
 
 [!code[JDBC#UnderstandingTransactions1](../../connect/jdbc/codesnippet/Java/understanding-transactions_1.java)]
 
-## <a name="using-distributed-transactions"></a>Utilizzo di transazioni distribuite
+## <a name="using-distributed-transactions"></a>Uso di transazioni distribuite
 
 Una transazione distribuita aggiorna dati su due o più database in rete conservando al contempo le importanti caratteristiche di atomicità, consistenza, isolamento e durata, ovvero le proprietà ACID, dell'elaborazione delle transazioni. Il supporto delle transazioni distribuite è stato aggiunto all'API JDBC nella specifica JDBC 2.0 Optional API. La gestione delle transazioni distribuite viene in genere eseguita automaticamente dalla gestione transazioni JTS (Java Transaction Service) in un ambiente server applicazioni Java EE. Tuttavia, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le transazioni distribuite con qualsiasi gestione transazioni conforme a JTA (Java Transaction API).
 

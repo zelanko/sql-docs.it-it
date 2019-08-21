@@ -1,7 +1,7 @@
 ---
 title: Esempio di modifica dei dati del set di risultati | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4fda5493ac0f52cf8a6f669fd4989e44a6856278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52ef5b12771cb7ef65f34dd7d890f19a8541d3ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957178"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028330"
 ---
 # <a name="modifying-result-set-data-sample"></a>Esempio di modifica dei dati dei set di risultati
 
@@ -113,4 +113,4 @@ public class UpdateResultSet {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo dei set di risultati](../../../connect/jdbc/code-samples/working-with-result-sets.md)
+[Uso dei set di risultati](../../../connect/jdbc/code-samples/working-with-result-sets.md)

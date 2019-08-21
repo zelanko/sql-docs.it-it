@@ -1,7 +1,7 @@
 ---
-title: Uso di una stored procedure con un conteggio aggiornamenti | Microsoft Docs
+title: Uso di una stored procedure con i conteggi di aggiornamento | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004076"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026933"
 ---
-# <a name="using-a-stored-procedure-with-an-update-count"></a>Utilizzo di una stored procedure con i conteggi di aggiornamento
+# <a name="using-a-stored-procedure-with-an-update-count"></a>Uso di una stored procedure con i conteggi di aggiornamento
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -53,4 +53,4 @@ Nell'esempio seguente viene passata alla funzione una connessione aperta al data
 
 ## <a name="see-also"></a>Vedere anche
 
-[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)

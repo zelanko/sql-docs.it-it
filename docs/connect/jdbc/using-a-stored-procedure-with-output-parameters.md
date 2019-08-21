@@ -1,7 +1,7 @@
 ---
 title: Uso di una stored procedure con parametri di output | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916488"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026830"
 ---
-# <a name="using-a-stored-procedure-with-output-parameters"></a>Utilizzo di una stored procedure con parametri di output
+# <a name="using-a-stored-procedure-with-output-parameters"></a>Uso di una stored procedure con parametri di output
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -84,8 +84,8 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 > [!NOTE]  
 > In questi esempi viene usato il metodo Execute della classe SQLServerCallableStatement per eseguire il stored procedure. in quanto la stored procedure non ha restituito alcun set di risultati. In caso contrario, si userebbe il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).
 
-Le stored procedure possono restituire conteggi aggiornamenti e più set di risultati. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è conforme alla specifica JDBC 3.0, che stabilisce che prima di recuperare i parametri OUT devono essere recuperati più set di risultati e conteggi di aggiornamento. Ovvero, l'applicazione deve recuperare tutti gli oggetti ResultSet e i conteggi di aggiornamento prima di recuperare i parametri OUT usando i metodi CallableStatement. Getter. In caso contrario, gli oggetti ResultSet e i conteggi di aggiornamento non ancora recuperati andranno persi quando vengono recuperati i parametri OUT. Per ulteriori informazioni sui conteggi degli aggiornamenti e su più set di risultati, vedere [utilizzo di una stored procedure con un conteggio degli aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzo di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).
+Le stored procedure possono restituire conteggi aggiornamenti e più set di risultati. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è conforme alla specifica JDBC 3.0, che stabilisce che prima di recuperare i parametri OUT devono essere recuperati più set di risultati e conteggi di aggiornamento. Ovvero, l'applicazione deve recuperare tutti gli oggetti ResultSet e i conteggi di aggiornamento prima di recuperare i parametri OUT usando i metodi CallableStatement. Getter. In caso contrario, gli oggetti ResultSet e i conteggi di aggiornamento non ancora recuperati andranno persi quando vengono recuperati i parametri OUT. Per ulteriori informazioni sui conteggi degli aggiornamenti e su più set di risultati, vedere [utilizzo di un stored procedure con un conteggio degli aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzo di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)

@@ -1,7 +1,7 @@
 ---
 title: Uso della crittografia SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003963"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026030"
 ---
-# <a name="using-ssl-encryption"></a>Utilizzo della crittografia SSL
+# <a name="using-ssl-encryption"></a>Uso della crittografia SSL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

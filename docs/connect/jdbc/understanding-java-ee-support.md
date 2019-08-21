@@ -1,7 +1,7 @@
 ---
 title: Informazioni sul supporto Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892316"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027258"
 ---
 # <a name="understanding-java-ee-support"></a>Informazioni sul supporto Java EE
 
@@ -41,7 +41,7 @@ Per il driver JDBC 7.4, il driver è incluso in **mssql-jdbc-7.4.1.jre8.jar**, *
   
 Il nome della classe viene utilizzato ogni volta che si carica il driver con la classe JDBC DriverManager e ogni volta che si specifica il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
   
-## <a name="data-sources"></a>Origini dati
+## <a name="data-sources"></a>Origini dei dati
 
 Il driver JDBC fornisce supporto per le origini dati Java EE e JDBC 3.0. La classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) del driver JDBC è implementata da `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
@@ -55,7 +55,7 @@ Il driver JDBC fornisce supporto per le origini dati Java EE e JDBC 3.0. La clas
 |ConnectionPoolDataSource|`com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource` <br/> <br/> Origine dati per la configurazione dei pool di connessioni al server applicazioni JAVA EE. Utilizzata in genere quando l'applicazione è in esecuzione in un server applicazioni JAVA EE.|  
 |XADataSource|`com.microsoft.sqlserver.jdbc.SQLServerXADataSource` <br/> <br/> Origine dati per la configurazione delle origini dati JAVA EE XA. Utilizzata in genere quando l'applicazione è in esecuzione in un server applicazioni JAVA EE e in uno strumento di gestione transazioni XA.|  
   
-### <a name="data-source-properties"></a>Proprietà dell'origine dati
+### <a name="data-source-properties"></a>Proprietà origine dati
 
 Tutte le origini dati consentono di impostare e ottenere qualsiasi proprietà associata al set di proprietà del driver sottostante.  
   
@@ -74,7 +74,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Per altre informazioni sulle proprietà dell'origine dati, vedere [Impostazione delle proprietà delle origini dei dati](../../connect/jdbc/setting-the-data-source-properties.md).  
+Per altre informazioni sulle proprietà dell'origine dati, vedere [Impostazione delle proprietà dell'origine dati](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,7 +1,7 @@
 ---
 title: Recupero di ParameterMetaData tramite useFmtOnly | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 29ee2c5c22baf77b6994a440f1d9d442ba2b812a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894093"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025498"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recupero di ParameterMetaData tramite useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -139,6 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione per il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891291"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027796"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Note sulla versione per il driver Microsoft JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Questo articolo elenca le versioni del _driver Microsoft JDBC per SQL Server_ . Per ogni versione sono elencate e descritte le modifiche.
+Questo articolo elenca le versioni del _driver Microsoft JDBC per SQL Server_. Per ogni versione sono elencate e descritte le modifiche.
 ## <a name="741"></a>7.4.1
 
 ### <a name="compliance"></a>Conformità
@@ -55,7 +55,7 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 | Ulteriori dettagli e limitazioni. | Vedere [Uso di useFMTOnly](../../connect/jdbc/using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Aggiornamento di _Microsoft Azure Key Vault SDK for Java_ , versione 1.2.1
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Aggiornamento di _Microsoft Azure Key Vault SDK for Java_, versione 1.2.1
 
 | Modifica di Key Vault SDK | Dettagli |
 | :------------------- | :------ |
@@ -92,7 +92,7 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 > 
 > È consigliabile aggiornare i progetti per l'uso dei file JAR della versione 7.2.2. Per altre informazioni, vedere le note sulla versione per [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) e [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Autenticazione dell' _ di Active Directory
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Autenticazione dell'_identità del servizio gestita_ di Active Directory
 
 | Modifica dell'identità del servizio gestita | Dettagli |
 | :--------- | :------ |
@@ -116,7 +116,7 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 | Dettagli aggiuntivi. | Vedere [Gestione degli errori](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>Aggiornamento di _Microsoft Azure Active Directory Authentication Library (ADAL4J) per Java_ , versione 1.6.3
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>Aggiornamento di _Microsoft Azure Active Directory Authentication Library (ADAL4J) per Java_, versione 1.6.3
 
 | Modifica per ADAL4J | Dettagli |
 | :------------ | :------ |
@@ -125,7 +125,7 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 | Dettagli aggiuntivi. | Vedere [Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Aggiornamento di _Microsoft Azure Key Vault SDK for Java_ , versione 1.2.0
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Aggiornamento di _Microsoft Azure Key Vault SDK for Java_, versione 1.2.0
 
 | Modifica di Key Vault SDK | Dettagli |
 | :------------------- | :------ |

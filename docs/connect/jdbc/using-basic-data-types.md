@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di tipi di dati di base | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916367"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026515"
 ---
-# <a name="using-basic-data-types"></a>Utilizzo di tipi di dati di base
+# <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -113,7 +113,7 @@ Se è necessario passare parametri tipizzati in una stored procedure, è possibi
 > [!NOTE]  
 > In questo esempio viene restituito un set di risultati con i risultati dell'esecuzione della stored procedure.
 
-Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di input, vedere [utilizzo di una stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di input, vedere [utilizzo di un stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recupero di parametri da una stored procedure
 
@@ -124,7 +124,7 @@ Se è necessario recuperare parametri da una stored procedure, occorre innanzitu
 > [!NOTE]  
 > Oltre al parametro out, può essere restituito anche un set di risultati con i risultati dell'esecuzione della stored procedure.  
   
-Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di output, vedere [utilizzo di una stored procedure con parametri di output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di output, vedere [utilizzo di un stored procedure con i parametri di output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>Vedere anche
 

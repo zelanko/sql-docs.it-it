@@ -1,7 +1,7 @@
 ---
 title: Configurazione del client per la crittografia SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956894"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028197"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>Configurazione del client per la crittografia SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67956894"
   
  Per altre informazioni sulla convalida del certificato del server, vedere la sezione Convalida del certificato SSL del server in [Informazioni sul supporto SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="configuring-the-client-trust-store"></a>Configurazione dell'archivio di attendibilità del client  
+## <a name="configuring-the-client-trust-store"></a>Configurazione dell'archivio di attendibilità del client 
  Per la convalida del certificato del server è necessario che il materiale relativo all'attendibilità venga fornito in fase di connessione usando le proprietà di connessione **trustStore** e **trustStorePassword** in modo esplicito o usando l'archivio di attendibilità predefinito di JVM (Java Virtual Machine) sottostante. Per altre informazioni su come impostare le proprietà **trustStore** e **trustStorePassword** in una stringa di connessione, vedere [Connessione tramite la crittografia SSL](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Se la proprietà **trustStore** non è specificata o è impostata su Null, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa il provider di sicurezza di JVM sottostante, ovvero Java Secure Socket Extension (SunJSSE). Il provider SunJSSE fornisce un oggetto TrustManager predefinito, usato per convalidare i certificati X.509 restituiti da SQL Server rispetto al materiale relativo all'attendibilità fornito in un archivio di attendibilità.  

@@ -1,7 +1,7 @@
 ---
 title: Esempio di lettura di dati di grandi dimensioni con una stored procedure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7132ddcd254358cd2199145d260f09ed0465adb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956125"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027809"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>Esempio di lettura di dati di grandi dimensioni con una stored procedure
 
@@ -48,4 +48,4 @@ Infine, tramite il codice di esempio vengono visualizzati i dati restituiti con 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo di dati di grandi dimensioni](../../connect/jdbc/working-with-large-data.md)
+[Uso di dati di grandi dimensioni](../../connect/jdbc/working-with-large-data.md)

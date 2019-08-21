@@ -1,7 +1,7 @@
 ---
 title: Uso di una stored procedure con stato restituito | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916517"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027109"
 ---
-# <a name="using-a-stored-procedure-with-a-return-status"></a>Utilizzo di una stored procedure con stato restituito
+# <a name="using-a-stored-procedure-with-a-return-status"></a>Uso di una stored procedure con stato restituito
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -61,4 +61,4 @@ Nell'esempio seguente viene passata alla funzione una connessione aperta al data
 
 ## <a name="see-also"></a>Vedere anche
 
-[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)

@@ -1,7 +1,7 @@
 ---
 title: Supporto dei dati XML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: af528f507f39cde948ae269d58abb2c0d9dcce46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004274"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027707"
 ---
 # <a name="supporting-xml-data"></a>Supporto dei dati XML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,7 +1,7 @@
 ---
 title: Programmazione con SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956178"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027776"
 ---
 # <a name="programming-with-sqlxml"></a>Programmazione con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67956178"
   
  Se l'applicazione richiama il metodo setObject specificando un parametro di scala o di lunghezza con un oggetto SQLXML, il parametro di scala o di lunghezza verrà ignorato.  
   
-## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>Linee guida e limitazioni relative all'utilizzo di oggetti SQLXML  
+## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>Linee guida e limitazioni relative all'uso di oggetti SQLXML  
  Le applicazioni possono utilizzare gli oggetti SQLXML per leggere e scrivere i dati da e nel database. Nel seguente elenco vengono fornite informazioni su limitazioni e linee guida specifiche da adottare quando si utilizzano oggetti SQLXML:  
   
 -   Un oggetto SQLXML può essere valido solo per la durata della transazione in cui è stato creato.  
@@ -100,6 +100,6 @@ ms.locfileid: "67956178"
  I flussi di caratteri e binari restituiti dall'oggetto SQLXML rispettano le modalità di buffer adattivo o completo. Se invece i parser XML non sono flussi, non rispetteranno le impostazioni del buffer adattivo o completo. Per ulteriori informazioni sul buffer adattivo, vedere [utilizzo del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)  
+ [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

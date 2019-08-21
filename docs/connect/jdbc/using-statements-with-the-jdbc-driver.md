@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di istruzioni con il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005920"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025788"
 ---
-# <a name="using-statements-with-the-jdbc-driver"></a>Utilizzo delle istruzioni con il driver JDBC
+# <a name="using-statements-with-the-jdbc-driver"></a>Uso delle istruzioni con il driver JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,8 +37,8 @@ Il driver JDBC offre tre classi per il recupero dei dati da un database [!INCLUD
 
 | Argomento                                                                                                    | Descrizione                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Viene descritto come usare le istruzioni SQL con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    |
-| [USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md) | Viene descritto come usare le stored procedure con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [Uso di istruzioni SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Viene descritto come usare le istruzioni SQL con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    |
+| [Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md) | Viene descritto come usare le stored procedure con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Uso di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md)                           | Viene descritto come utilizzare il driver JDBC per recuperare i dati da più set di risultati.                                                                       |
 | [Uso delle sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)                           | Viene descritto come utilizzare le sequenze di escape SQL, quali i valori letterali di data e ora e le funzioni.                                                               |
 | [Uso delle chiavi generate automaticamente](../../connect/jdbc/using-auto-generated-keys.md)                             | Viene descritto come utilizzare le chiavi generate automaticamente.                                                                                                     |

@@ -1,7 +1,7 @@
 ---
 title: Informazioni sul controllo della concorrenza | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004194"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027642"
 ---
 # <a name="understanding-concurrency-control"></a>Informazioni sul controllo della concorrenza
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

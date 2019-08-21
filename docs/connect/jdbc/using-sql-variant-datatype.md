@@ -1,7 +1,7 @@
 ---
 title: Utilizzo del tipo di dati sql_variant | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916176"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025846"
 ---
-# <a name="using-sqlvariant-data-type"></a>Utilizzo di dati Sql_variant
+# <a name="using-sql_variant-data-type"></a>Uso del tipo di dati Sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Utilizzo di stored procedure con sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Utilizzo di stored procedure con sql_variant:   
 Con stored procedure, ad esempio:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Limitazioni di sql_variant:
+## <a name="limitations-of-sql_variant"></a>Limitazioni di sql_variant:
 - Quando si utilizza TVP per popolare una tabella con `datetime` un `smalldatetime` `getSmallDateTime()` `getDateTime()` / / `getDate()` valore archiviato in un sql_variant, chiamare su / / `date` Il set di risultati non funziona e genera l'eccezione seguente:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`

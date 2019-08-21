@@ -1,7 +1,7 @@
 ---
 title: Utilizzo del buffer adattivo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916459"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026804"
 ---
-# <a name="using-adaptive-buffering"></a>Utilizzo del buffer adattivo
+# <a name="using-adaptive-buffering"></a>Uso del buffer adattivo
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -63,7 +63,7 @@ Quando l'applicazione usa il buffer adattivo, i valori recuperati dai metodi get
 > [!NOTE]
 > Una chiamata a ResultSet. Close () durante l'elaborazione di un ResultSet richiederebbe a Microsoft JDBC driver per SQL Server di leggere ed eliminare tutti i pacchetti rimanenti. Questa operazione può richiedere molto tempo se la query ha restituito un set di dati di grandi dimensioni e soprattutto se la connessione di rete è lenta.
 
-## <a name="guidelines-for-using-adaptive-buffering"></a>Linee guida per l'utilizzo del buffer adattivo
+## <a name="guidelines-for-using-adaptive-buffering"></a>Linee guida per l'uso del buffer adattivo
 
 Per ridurre al minimo l'utilizzo della memoria da parte dell'applicazione, gli sviluppatori devono attenersi alle importanti linee guida seguenti:
 

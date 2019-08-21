@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di tipi di dati avanzati | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004070"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027016"
 ---
-# <a name="using-advanced-data-types"></a>Utilizzo di tipi di dati avanzati
+# <a name="using-advanced-data-types"></a>Uso di tipi di dati avanzati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -120,7 +120,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 > [!NOTE]  
 > L'utilizzo del metodo Clob o Blob non rappresenta un modo efficace di caricamento di dati di grandi dimensioni.  
 
-### <a name="modifying-large-value-types-in-a-database"></a>Modifica di tipi per valori di grandi dimensioni in un database
+### <a name="modifying-large-value-types-in-a-database"></a>Modifica dei tipi per valori di grandi dimensioni in un database
 
 Nella maggior parte dei casi, l'approccio consigliato per aggiornare o modificare valori di grandi dimensioni nel database consiste nel passare parametri mediante le classi [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), usando comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] quali `UPDATE`, `WRITE` e `SUBSTRING`.  
 
@@ -170,7 +170,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile usare 
   
 Per altre informazioni sui tipi di dati definiti dall'utente, vedere la sezione sull'uso e la modifica delle istanze dei tipi definiti dall'utente nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="sqlvariant-data-type"></a>Tipo di dati sql_variant
+## <a name="sql_variant-data-type"></a>Tipo di dati sql_variant
 
 Per informazioni sul tipo di dati sql_variant, vedere [utilizzo del tipo di dati sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 

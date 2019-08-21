@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di una connessione | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916079"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025469"
 ---
-# <a name="working-with-a-connection"></a>Utilizzo di una connessione
+# <a name="working-with-a-connection"></a>Uso di una connessione
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Creazione di una connessione con un'origine dei dati di destinazione molto specifica
+## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Creazione di una connessione con un'origine dati di destinazione molto specifica
 
 Se è necessario creare una connessione di database con un'origine dei dati di destinazione molto specifica, è possibile adottare diversi approcci. Ogni approccio dipende dalle proprietà impostate utilizzando l'URL della connessione.
 
@@ -93,7 +93,7 @@ Per connettersi a un database specifico su un server, utilizzare l'esempio segue
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Per ulteriori esempi di URL di connessione, vedere [Costruzione dell'URL della connessione](../../connect/jdbc/building-the-connection-url.md).
+Per altri esempi di URL di connessione, vedere [Costruzione dell'URL della connessione](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Creazione di una connessione con un timeout di accesso personalizzato
 

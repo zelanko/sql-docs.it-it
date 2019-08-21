@@ -1,7 +1,7 @@
 ---
 title: Informazioni sui tipi di dati del driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916605"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027268"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Informazioni sui tipi di dati del driver JDBC
 
@@ -37,7 +37,7 @@ Negli argomenti di questa sezione viene descritto come utilizzare i tipi di dati
 | [Informazioni sulle differenze tra i tipi di dati](../../connect/jdbc/understanding-data-type-differences.md)                                                 | Vengono descritte le differenze tra i vari tipi di dati del driver JDBC.                                                                                                                                                                                                    |
 | [Informazioni sulle conversioni dei tipi di dati](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | Viene descritto in che modo viene gestita la conversione dei tipi di dati quando si utilizzano i metodi di richiamo e impostazione.                                                                                                                                                                                  |
 | [Supporto per set di caratteri nazionali](../../connect/jdbc/national-character-set-support.md)                                                           | Viene descritto il supporto per i tipi di set di caratteri nazionali.                                                                                                                                                                                                          |
-| [Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Viene descritta l'interfaccia SQLXML. Descrive anche come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**.                                                                                                             |
+| [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Viene descritta l'interfaccia SQLXML. Descrive anche come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**.                                                                                                             |
 | [Wrapper e interfacce](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Tratta le interfacce che includono le costanti e i metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] che consentono a un server applicazioni di creare un proxy della classe. Tratta anche il supporto per l'interfaccia `java.sql.Wrapper`. |
   
 ## <a name="see-also"></a>Vedere anche

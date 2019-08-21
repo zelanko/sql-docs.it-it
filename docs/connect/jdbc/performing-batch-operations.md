@@ -1,7 +1,7 @@
 ---
 title: Esecuzione di operazioni batch | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956229"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027919"
 ---
 # <a name="performing-batch-operations"></a>Esecuzione di operazioni batch
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

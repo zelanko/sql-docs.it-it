@@ -1,7 +1,7 @@
 ---
 title: Accesso alle informazioni di diagnostica nel log degli eventi estesi | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957489"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028496"
 ---
-# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
+# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel log degli eventi estesi
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] con l'aggiornamento della traccia ([Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md)) è stato possibile semplificare la correlazione di eventi client con informazioni di diagnostica, ad esempio errori di connessione, provenienti dal buffer circolare della connettività del server e informazioni sulle prestazioni dell'applicazione nel log degli eventi estesi. Per ulteriori informazioni sulla lettura del log degli eventi estesi, vedere [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx) (Visualizzare i dati di una sessione di eventi).  

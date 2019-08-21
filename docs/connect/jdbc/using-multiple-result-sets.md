@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di più set di risultati | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005967"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026269"
 ---
-# <a name="using-multiple-result-sets"></a>Utilizzo di più set di risultati
+# <a name="using-multiple-result-sets"></a>Uso di più set di risultati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ Se il metodo execute restituisce **true**, l'istruzione eseguita ha restituito u
 Se il metodo execute restituisce **false**, l'istruzione eseguita ha restituito un valore di conteggio aggiornamenti che può essere recuperato chiamando il metodo [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md).
 
 > [!NOTE]  
-> Per ulteriori informazioni sui conteggi degli aggiornamenti, vedere [utilizzo di una stored procedure con un conteggio aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
+> Per ulteriori informazioni sui conteggi degli aggiornamenti, vedere [utilizzo di un stored procedure con un numero di aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
 Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] è passata alla funzione e viene costruita un'istruzione SQL che, una volta eseguita, restituisce due set di risultati:
 

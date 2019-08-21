@@ -1,7 +1,7 @@
 ---
 title: Sicurezza dell'applicazione | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957456"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028508"
 ---
 # <a name="application-security"></a>Sicurezza dell'applicazione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Quando si usa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è importante adottare tutte le misure necessarie per garantire la sicurezza delle applicazioni. Nelle sezioni seguenti vengono fornite informazioni relative alle procedure da implementare a questo scopo.  
   
-## <a name="using-java-policy-permissions"></a>Utilizzo di autorizzazioni basate sui criteri Java  
+## <a name="using-java-policy-permissions"></a>Uso di autorizzazioni basate sui criteri Java  
  Quando si usa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è importante specificare le autorizzazioni basate sui criteri Java necessarie richieste dal driver JDBC. Java Runtime Environment (JRE) offre un modello di sicurezza completo utilizzabile in fase di esecuzione per determinare se un thread dispone dei diritti di accesso a una risorsa. L'accesso può essere gestito grazie ai file dei criteri di sicurezza, i quali, a loro volta, sono gestiti dal distributore e dal ruolo sysadmin del contenitore. Le autorizzazioni elencate in questo argomento sono quelle che influiscono sul driver JDBC.  
   
  Di seguito è riportato un esempio di autorizzazione tipica disponibile nel file dei criteri:  

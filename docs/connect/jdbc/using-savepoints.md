@@ -1,7 +1,7 @@
 ---
 title: Uso di salvataggio | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9212e2de7a093b92c51489bb17623a2120e5ce35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916224"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026134"
 ---
-# <a name="using-savepoints"></a>Utilizzo dei punti di salvataggio
+# <a name="using-savepoints"></a>Uso dei punti di salvataggio
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

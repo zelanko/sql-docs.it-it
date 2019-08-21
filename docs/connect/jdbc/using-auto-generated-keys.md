@@ -1,7 +1,7 @@
 ---
 title: Uso delle chiavi generate automaticamente | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 55541d7487f27a6fa4e38fef8baf47a6ef3ff6d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003983"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026608"
 ---
-# <a name="using-auto-generated-keys"></a>Utilizzo delle chiavi generate automaticamente
+# <a name="using-auto-generated-keys"></a>Uso delle chiavi generate automaticamente
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

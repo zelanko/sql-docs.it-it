@@ -1,7 +1,7 @@
 ---
 title: Interfaccia SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f235525e7a633bc0c49d39f8bec6bf4a79c0885d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006027"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027695"
 ---
 # <a name="sqlxml-interface"></a>Interfaccia SQLXML
 
@@ -51,4 +51,4 @@ L'oggetto SQLXML non diventa né scrivibile né leggibile quando l'applicazione 
   
 ## <a name="see-also"></a>Vedere anche  
 
-[Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)  
+[Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md)  

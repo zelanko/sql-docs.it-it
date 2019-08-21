@@ -1,7 +1,7 @@
 ---
 title: Uso di un'istruzione SQL per modificare i dati | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9de31bad8ef2980e7322b529a6a2b68a12355c2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004019"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026749"
 ---
-# <a name="using-an-sql-statement-to-modify-data"></a>Utilizzo di un'istruzione SQL per modificare i dati
+# <a name="using-an-sql-statement-to-modify-data"></a>Uso di un'istruzione SQL per modificare i dati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -38,4 +38,4 @@ Nell'esempio seguente, viene passata alla funzione una connessione aperta al dat
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Uso di istruzioni SQL](../../connect/jdbc/using-statements-with-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: Connessione con l'autenticazione di Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956813"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028118"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -175,7 +175,7 @@ JDK viene fornita `kinit`con, che è possibile usare per ottenere un TGT da cent
 #### <a name="linux-and-mac"></a>Linux e Mac
 
 ##### <a name="requirements"></a>Requisiti
-Accesso a un computer Windows aggiunto a un dominio per eseguire una query sul controller di dominio Kerberos.
+Accesso a un computer aggiunto a un dominio di Windows per eseguire una query sul controller di dominio Kerberos.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Passaggio 1: trovare il KDC Kerberos
 - **Esegui in**: riga di comando di Windows
@@ -201,12 +201,12 @@ Accesso a un computer Windows aggiunto a un dominio per eseguire una query sul c
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  Salvare quindi il file krb5. conf e uscire
+  Salvare quindi il file krb5.conf e uscire
 
 > [!NOTE]
->  Il dominio deve essere presente in tutte le MAIUSCOLe.
+>  Il dominio deve essere in lettere MAIUSCOLE.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Passaggio 3: test del ticket che concede il recupero ticket
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Passaggio 3: test del recupero del Ticket Granting Ticket
 - **Esegui in**: Linux/Mac
 - **Azione**:
   - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un TGT da KDC, quindi verrà richiesta la password del dominio.
