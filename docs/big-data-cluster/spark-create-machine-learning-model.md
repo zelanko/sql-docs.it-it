@@ -1,22 +1,22 @@
 ---
 title: Creazione ed esportazione di modelli di Machine Learning Spark con MLeap
 titleSuffix: SQL Server big data clusters
-description: Usare PySpark per eseguire il training e creare modelli di Machine Learning con Spark in SQL Server cluster di Big Data (anteprima). Esportare con MLeap e quindi assegnare un punteggio al modello con Java in SQL Server.
+description: Usare PySpark per eseguire il training e creare modelli di Machine Learning [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con Spark in (anteprima). Esportare con MLeap e quindi assegnare un punteggio al modello con Java in SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893964"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653416"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Creare, esportare e assegnare punteggi ai modelli di Machine Learning Spark nei cluster SQL Server Big Data
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Creare, esportare e assegnare punteggi ai modelli di Machine Learning Spark in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 Nell'esempio seguente viene illustrato come compilare un modello con [Spark ml](https://spark.apache.org/docs/latest/ml-guide.html), esportare il modello in [MLeap](http://mleap-docs.combust.ml/)e assegnare un punteggio al modello in SQL Server con l' [estensione del linguaggio Java](../language-extensions/language-extensions-overview.md). Questa operazione viene eseguita nel contesto di un cluster SQL Server 2019 Big Data.
 
@@ -51,7 +51,7 @@ Per questo esempio, il Census Data (**AdultCensusIncome. csv**) viene usato per 
 
    Questo notebook contiene le celle con i comandi necessari per questa sezione dell'esempio.
 
-1. Aprire il notebook in Azure Data Studio ed eseguire ogni blocco di codice. Per ulteriori informazioni sull'utilizzo dei notebook, vedere la pagina relativa [alla modalità di utilizzo dei notebook in SQL Server 2019 Preview](notebooks-guidance.md).
+1. Aprire il notebook in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook nella versione di anteprima di SQL Server 2019](notebooks-guidance.md).
 
 I dati vengono prima letti in Spark e suddivisi in set di dati di training e di testing. Il codice addestra quindi un modello di pipeline con i dati di training. Infine, esporta il modello in un bundle MLeap.
 
@@ -68,4 +68,4 @@ Dopo aver compilato l'esempio, è possibile usare Transact-SQL per chiamare l'ap
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui cluster di Big Data, vedere [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md)
+Per ulteriori informazioni sui cluster Big data, vedere [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

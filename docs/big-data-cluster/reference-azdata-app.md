@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata app.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031d8283f14e06515394bb26aa94049a43b6b79f
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426281"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653223"
 ---
 # <a name="azdata-app"></a>azdata app
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426281"
 
 L'articolo seguente fornisce informazioni di riferimento sui comandi **app** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Modelli.
@@ -266,8 +266,8 @@ Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefin
 #### `--query -q`
 Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

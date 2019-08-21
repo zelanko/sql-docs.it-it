@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc spark statement.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6f29c473bdd4b665389e97bc2e0dbff572dc7288
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 57044b75219f4c2827c322c100a5d25d5f0b274a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969392"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653190"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -138,4 +138,4 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

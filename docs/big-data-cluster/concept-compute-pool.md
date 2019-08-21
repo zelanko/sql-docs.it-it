@@ -1,20 +1,20 @@
 ---
 title: Che cosa sono i pool di calcolo?
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive il pool di calcolo di un cluster Big Data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive il pool di calcolo in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9ae112369ddad91bec125ec19713040a5aae915
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958803"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653089"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Che cosa sono i pool di calcolo in un cluster Big Data di SQL Server?
 
@@ -32,7 +32,7 @@ Un pool di calcolo può svolgere la funzione di un gruppo PolyBase di scale-out 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data di SQL Server, vedere le risorse seguenti:
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere le risorse seguenti:
 
-- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
+- [Workshop: Architettura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

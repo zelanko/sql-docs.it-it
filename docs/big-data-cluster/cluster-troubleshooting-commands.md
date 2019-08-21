@@ -1,26 +1,26 @@
 ---
 title: Monitorare e risolvere i problemi
 titleSuffix: SQL Server big data clusters
-description: Questo articolo offre utili comandi per il monitoraggio e la risoluzione dei problemi di un cluster Big Data di SQL Server 2019 (anteprima).
+description: Questo articolo fornisce comandi utili per il monitoraggio e la risoluzione [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]dei problemi di.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841563"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653027"
 ---
-# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitoraggio e risoluzione dei problemi dei cluster Big Data di SQL Server
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Monitoraggio e risoluzione dei problemi[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive diversi comandi utili di Kubernetes che è possibile usare per il monitoraggio e la risoluzione dei problemi di un cluster Big Data di SQL Server 2019 (anteprima). Mostra come visualizzare dettagli approfonditi su un pod o altri elementi di Kubernetes che si trovano nel cluster Big Data. Questo articolo presenta anche le attività comuni, ad esempio la copia di file in o da un contenitore che esegue uno dei cluster Big Data di SQL Server.
+Questo articolo descrive diversi comandi di Kubernetes utili che è possibile usare per monitorare e risolvere [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]i problemi relativi a. Mostra come visualizzare dettagli approfonditi su un pod o altri elementi di Kubernetes che si trovano nel cluster Big Data. Questo articolo presenta anche le attività comuni, ad esempio la copia di file in o da un contenitore che esegue uno dei cluster Big Data di SQL Server.
 
 > [!TIP]
 > Eseguire i comandi **kubectl** seguenti in un computer client Windows (cmd.exe o PowerShell) o Linux (Bash). Questi comandi richiedono la precedente autenticazione nel cluster e un contesto del cluster per l'esecuzione. Ad esempio, per un cluster del servizio Azure Kubernetes creato in precedenza è possibile eseguire `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` per scaricare il file di configurazione del cluster Kubernetes e impostare il contesto del cluster.
@@ -224,4 +224,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster Big Data, vedere [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)la pagina relativa a.

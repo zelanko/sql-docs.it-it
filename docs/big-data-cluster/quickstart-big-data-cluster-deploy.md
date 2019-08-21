@@ -1,35 +1,35 @@
 ---
 title: Eseguire la distribuzione con uno script Python
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come usare uno script di distribuzione per distribuire cluster Big Data di SQL Server 2019 (anteprima) nel servizio Azure Kubernetes.
+description: Informazioni su come usare uno script di distribuzione per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] distribuire (anteprima) in Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee1c8669e6496553c367b4d1078d1e6a7f26497
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470713"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653235"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In questa esercitazione si usa uno script di distribuzione Python di esempio per distribuire un cluster Big Data di SQL Server 2019 (anteprima) nel servizio Azure Kubernetes.
+In questa esercitazione si userà uno script di distribuzione Python di esempio per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] la distribuzione in Azure Kubernetes Service (AKS).
 
 > [!TIP]
-> Il servizio Azure Kubernetes è solo una delle opzioni per ospitare Kubernetes per il cluster Big Data. Per informazioni sulle altre opzioni di distribuzione e su come personalizzarle, vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md).
+> Il servizio Azure Kubernetes è solo una delle opzioni per ospitare Kubernetes per il cluster Big Data. Per informazioni sulle altre opzioni di distribuzione e su come personalizzare le opzioni di distribuzione, vedere [How to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] deploy on Kubernetes](deployment-guidance.md).
 
 La distribuzione predefinita di cluster Big Data usata in questo articolo è costituita da un'istanza SQL master, un'istanza del pool di calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati vengono salvati in modo permanente usando i volumi permanenti Kubernetes che usano le classi di archiviazione predefinite del servizio Azure Kubernetes. La configurazione predefinita usata in questa esercitazione è adatta per ambienti di sviluppo e test.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Una sottoscrizione di Azure.
 - [Strumenti per Big Data](deploy-big-data-tools.md):
@@ -72,7 +72,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
 
 1. Quando richiesto, immettere le informazioni seguenti:
 
-   | valore | Descrizione |
+   | Value | Descrizione |
    |---|---|
    | **ID sottoscrizione di Azure** | ID della sottoscrizione di Azure da usare per il servizio Azure Kubernetes. È possibile elencare tutte le sottoscrizioni e i relativi ID eseguendo `az account list` da un'altra riga di comando. |
    | **Gruppo di risorse di Azure** | Nome del gruppo di risorse di Azure da creare per il cluster del servizio Azure Kubernetes. |
@@ -113,7 +113,7 @@ Dopo 10 o 20 minuti, si riceverà una notifica che indica che il pod del control
 ```
 
 > [!IMPORTANT]
-> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. In caso di problemi durante la distribuzione, vedere [Monitoraggio e risoluzione dei problemi dei cluster Big Data di SQL Server](cluster-troubleshooting-commands.md).
+> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. Se si verificano problemi con la distribuzione, vedere [monitoraggio e risoluzione [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]dei ](cluster-troubleshooting-commands.md)problemi.
 
 ## <a name="inspect-the-cluster"></a>Esaminare il cluster
 
@@ -151,7 +151,7 @@ Aprire una nuova finestra di comando per usare **kubectl** durante il processo d
    ```
 
 > [!TIP]
-> Per informazioni dettagliate su come monitorare una distribuzione e risolvere i relativi problemi, vedere [Monitoraggio e risoluzione dei problemi dei cluster Big Data di SQL Server](cluster-troubleshooting-commands.md).
+> Per ulteriori informazioni su come monitorare e risolvere i problemi relativi a una distribuzione, vedere [monitoraggio e risoluzione dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)problemi.
 
 ## <a name="connect-to-the-cluster"></a>Stabilire la connessione al cluster
 
@@ -166,7 +166,7 @@ Il cluster Big Data di SQL Server è ora distribuito nel servizio Azure Kubernet
 
 ## <a name="clean-up"></a>Eseguire la pulizia
 
-Se si stanno testando i cluster Big Data di SQL Server in Azure, è necessario eliminare il cluster del servizio Azure Kubernetes al termine per evitare l'addebito di costi imprevisti. Non rimuovere il cluster se si intende continuare a usarlo.
+Se si esegue il [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] test in Azure, è necessario eliminare il cluster AKS al termine per evitare addebiti imprevisti. Non rimuovere il cluster se si intende continuare a usarlo.
 
 > [!WARNING]
 > La procedura seguente consente di eliminare il cluster del servizio Azure Kubernetes, rimuovendo anche il cluster Big Data di SQL Server. Se si hanno un database o dati HDFS da conservare, eseguire il backup dei dati prima di eliminare il cluster.
@@ -179,7 +179,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Lo script di distribuzione ha consentito di configurare il servizio Azure Kubernetes e di distribuire un cluster Big Data di SQL Server 2019. È anche possibile scegliere di personalizzare le distribuzioni future tramite installazioni manuali. Per altre informazioni sulle modalità di distribuzione dei cluster Big Data e su come personalizzare le distribuzioni, vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md).
+Lo script di distribuzione ha consentito di configurare il servizio Azure Kubernetes e di distribuire un cluster Big Data di SQL Server 2019. È anche possibile scegliere di personalizzare le distribuzioni future tramite installazioni manuali. Per altre informazioni sul modo in cui vengono distribuiti Big Data cluster e su come personalizzare le distribuzioni, vedere [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
 Ora che il cluster Big Data di SQL Server è stato distribuito, è possibile caricare i dati di esempio ed esplorare le esercitazioni:
 

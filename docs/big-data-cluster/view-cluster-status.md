@@ -5,16 +5,16 @@ description: Questo articolo illustra come visualizzare lo stato di un cluster B
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419285"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653279"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster Big Data
 
@@ -214,4 +214,4 @@ I valori `nodeMetricsUrl` e `sqlMetricsUrl` forniscono un collegamento a un dash
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster Big Data, vedere [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)la pagina relativa a.

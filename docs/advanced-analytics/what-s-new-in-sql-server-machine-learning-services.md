@@ -1,7 +1,7 @@
 ---
 title: Novità
 description: Nuovi annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,12 +9,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715299"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652296"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità di SQL Server Machine Learning Services
 
@@ -30,8 +30,9 @@ Questa versione aggiunge le funzionalità principali richieste per le operazioni
 > [!NOTE]
 > Per informazioni sulle novità di Java in SQL Server 2019, vedere la pagina relativa alle [novità di SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-| Versione | Aggiornamento delle funzionalità |
+| Release | Aggiornamento delle funzionalità |
 |---------|----------------|
+| RC 1 | [La connessione loopback a SQL Server da uno script Python o R](connect/loopback-connection.md) è ora supportata sia per Windows che per Linux. |
 | CTP 3.2 | Nessuna modifica. |
 | CTP 3.1 | Nessuna modifica. |
 | CTP 3.0 | Nessuna modifica. |
@@ -104,7 +105,7 @@ Inoltre, **SQL Server 2016 R Server (standalone)** è stato rilasciato come modo
 
 Per gli annunci di funzionalità, vedere Novità [di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Versione |Aggiornamento delle funzionalità |
+| Release |Aggiornamento delle funzionalità |
 |---------|----------------|
 | Aggiunte CU | Il [**punteggio in tempo reale**](real-time-scoring.md) si basa sulle C++ librerie native per leggere un modello archiviato in un formato binario ottimizzato e quindi genera stime senza dover chiamare il runtime di R. Questo rende più veloci le operazioni di assegnazione dei punteggi. Con l'assegnazione dei punteggi in tempo reale, è possibile eseguire un stored procedure o eseguire il punteggio in tempo reale dal codice R. Il Punteggio in tempo reale è disponibile anche per SQL Server 2016, se l'istanza viene aggiornata alla versione più recente [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]di. |
 | Versione iniziale | [**Integrazione di R per l'analisi nel database**](r/sql-server-r-services.md). <br/><br/> Pacchetti r per la chiamata di funzioni R in T-SQL e viceversa. Le funzioni RevoScaleR forniscono analisi R su larga scala suddividendo i dati in parti componenti, coordinando e gestendo l'elaborazione distribuita e aggregando i risultati. In SQL Server 2016 R Services (in-database), il motore RevoScaleR è integrato con un'istanza del motore di database, l'analisi dei dati e l'analisi dei dati nello stesso contesto di elaborazione. <br/><br/>Integrazione di T-SQL e R tramite [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). È possibile chiamare qualsiasi codice R usando questo stored procedure. Questa infrastruttura sicura consente la distribuzione di livello aziendale di modelli e script RN che possono essere chiamati da un'applicazione usando una semplice stored procedure. I miglioramenti delle prestazioni aggiuntivi si ottengono tramite il flusso dei dati dai processi SQL ai processi R e dalla parallelizzazione degli anelli MPI. <br/><br/>È possibile usare la funzione T-SQL [Predict](../t-sql/queries/predict-transact-sql.md) per eseguire il [Punteggio nativo](sql-native-scoring.md) in un modello con training preliminare salvato in precedenza nel formato binario richiesto.|

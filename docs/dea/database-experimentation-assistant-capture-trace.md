@@ -1,6 +1,6 @@
 ---
-title: Acquisire una traccia nel Database sperimentazione Assistant per gli aggiornamenti di SQL Server
-description: Acquisire una traccia nel Database sperimentazione Assistant
+title: Acquisire una traccia in Database Experimentation Assistant per gli aggiornamenti SQL Server
+description: Acquisire una traccia in Database Experimentation Assistant
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -12,136 +12,136 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059000"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653812"
 ---
-# <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia nel Database sperimentazione Assistant
+# <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
-È possibile utilizzare un'acquisizione di traccia nel Database sperimentazione Assistant DEA () per creare un file di traccia che include un log di eventi del server acquisiti. Un evento del server acquisiti è un evento che si verifica in un server specifico durante un periodo di tempo specifico. Un'acquisizione di traccia deve essere eseguita una sola volta per ogni server.
+È possibile utilizzare un'acquisizione di traccia in Database Experimentation Assistant (DEA) per creare un file di traccia con un log di eventi del server acquisiti. Un evento del server acquisito è un evento che si verifica in un server specifico durante un periodo di tempo specifico. Un'acquisizione di traccia deve essere eseguita una volta per ogni server.
 
-Prima di avviare un'acquisizione di traccia, assicurarsi di eseguire il backup tutti i database di destinazione.
+Prima di avviare un'acquisizione di traccia, assicurarsi di eseguire il backup di tutti i database di destinazione.
 
-La memorizzazione nella cache di query in SQL Server potrebbe influenzare i risultati della valutazione. È consigliabile riavviare il servizio SQL Server (MSSQLSERVER) nell'applicazione Servizi per migliorare la coerenza dei risultati della valutazione.
+La memorizzazione nella cache delle query in SQL Server potrebbe influire sui risultati della valutazione. È consigliabile riavviare il servizio SQL Server (MSSQLSERVER) nell'applicazione Servizi per migliorare la coerenza dei risultati della valutazione.
 
-## <a name="create-a-trace-capture"></a>Creare un'acquisizione traccia
+## <a name="create-a-trace-capture"></a>Creare un'acquisizione di traccia
 
-1. In DEA, selezionare l'icona di menu nel menu a sinistra. Nel menu espanso, selezionare **acquisire le tracce** accanto all'icona della fotocamera.
+1. In DEA selezionare l'icona di menu nel menu a sinistra. Nel menu espanso selezionare Acquisisci **tracce** accanto all'icona della fotocamera.
 
-    ![Selezionare l'acquisizione di tracce nel menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![Selezionare Acquisisci tracce nel menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
-1. Sotto **New Capture**immettere o selezionare le informazioni seguenti:
+1. In **nuova acquisizione**immettere o selezionare le informazioni seguenti:
 
-    - **Nome dell'istanza SQL Server**: Immettere un nome per il computer che esegue SQL Server in cui si desidera acquisire una traccia del server.
-    - **Nome del database**: Immettere un nome per un database in cui si desidera avviare una traccia di database. Se non si specifica un database, traccia viene acquisita in tutti i database nel server.
+    - **Nome istanza SQL Server**: Immettere un nome per il computer in cui è in esecuzione SQL Server in cui si desidera acquisire una traccia del server.
+    - **Nome database**: Immettere un nome per un database in cui avviare una traccia del database. Se non si specifica un database, la traccia viene acquisita in tutti i database del server.
     - **Nome file di traccia**: Immettere un nome per il file di traccia per l'acquisizione.
-    - **Dimensioni file massime (MB)** : Selezionare la dimensione di rollover dei file. Viene creato un nuovo file in base alle esigenze con le dimensioni di file che scelto. Le dimensioni consigliate di rollover sono 200 MB.
-    - **Durata (in min)** : Selezionare il periodo di tempo (in minuti) che si desidera che l'acquisizione di traccia per l'esecuzione.
-    - **Percorso in cui archiviare i file di output traccia**: Selezionare il percorso di destinazione per il file di traccia. 
+    - **Dimensioni file massime (MB)** : Selezionare le dimensioni del rollover per i file. Quando necessario, viene creato un nuovo file in base alle dimensioni del file selezionato. Le dimensioni consigliate per il rollover sono 200 MB.
+    - **Durata (in minuti)** : Consente di selezionare l'intervallo di tempo (in minuti) in cui si desidera che l'acquisizione di traccia venga eseguita.
+    - **Percorso per archiviare il file di traccia di output**: Consente di selezionare il percorso di destinazione del file di traccia. 
 
     > [!NOTE]
-    > Il percorso del file nel file di traccia deve essere nel computer che esegue SQL Server. Se il servizio SQL Server non è impostato per un account specifico, il servizio potrebbe essere necessarie autorizzazioni di scrittura nella cartella specificata per il file di traccia da scrivere.
+    > Il percorso del file di traccia deve trovarsi nel computer in cui è in esecuzione SQL Server. Se il servizio SQL Server non è impostato per un account specifico, potrebbe essere necessario che il servizio disponga delle autorizzazioni di scrittura per la cartella specificata per il file di traccia da scrivere.
     >
     >
 
-    ![Nuova pagina di acquisizione](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+    ![Pagina nuova acquisizione](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
 
-## <a name="start-the-trace-capture"></a>Avviare l'acquisizione traccia
+## <a name="start-the-trace-capture"></a>Avviare l'acquisizione della traccia
 
-Dopo aver immesso o selezionato le informazioni necessarie, selezionare **avviare** avvio dell'acquisizione di tracce. Se le informazioni immesse sono valide, verrà avviato il processo di acquisizione di traccia. In caso contrario, le caselle di testo con le voci non valide sono evidenziate in rosso. 
+Dopo aver immesso o selezionato le informazioni necessarie, selezionare **Avvia** per avviare l'acquisizione delle tracce. Se le informazioni immesse sono valide, viene avviato il processo di acquisizione della traccia. In caso contrario, le caselle di testo con voci non valide vengono evidenziate con il rosso. 
 
-Assicurarsi che i valori è stato selezionato o immesse siano corretti e quindi selezionare **avviare**.
+Verificare che i valori selezionati o immessi siano corretti, quindi selezionare **Avvia**.
 
-Al termine dell'acquisizione della traccia in esecuzione, individuare il nuovo file di traccia nel percorso del file specificato nella **percorso per l'archiviazione file di output traccia**. Selezionare l'icona a forma di campana nella parte inferiore del menu a sinistra per monitorare lo stato di avanzamento dell'acquisizione.
+Al termine dell'esecuzione dell'acquisizione della traccia, trovare il nuovo file di traccia nel percorso del file specificato in **percorso per archiviare il file di traccia di output**. Selezionare l'icona a campana nella parte inferiore del menu a sinistra per monitorare lo stato di avanzamento dell'acquisizione.
 
-![Acquisire lo stato di avanzamento di tracce](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+![Stato di acquisizione tracce](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
 
 ### <a name="trace-file"></a>File di traccia
 
-L'acquisizione di traccia scrive un file con estensione trc nel percorso specificato. Il file di traccia include i risultati della traccia dell'attività di un database di SQL Server. File TRC sono progettati per fornire ulteriori informazioni sugli errori che vengono rilevati e segnalati da SQL Server.
+L'acquisizione della traccia scrive un file con estensione TRC nel percorso specificato. Il file di traccia include i risultati della traccia dell'attività di un database di SQL Server. I file TRC sono progettati per fornire ulteriori informazioni sugli errori rilevati e segnalati da SQL Server.
 
-## <a name="frequently-asked-questions-about-trace-capture"></a>Domande frequenti sull'acquisizione traccia
+## <a name="frequently-asked-questions-about-trace-capture"></a>Domande frequenti sull'acquisizione di tracce
 
-Seguenti sono alcune domande frequenti sull'acquisizione di traccia in DEA.
+Di seguito sono riportate alcune domande frequenti sull'acquisizione di tracce in DEA.
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Gli eventi che vengono acquisiti quando si esegue un'acquisizione della traccia in un database di produzione?
+### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Quali eventi vengono acquisiti quando si esegue un'acquisizione di traccia in un database di produzione?
 
-Nella tabella seguente fornisce l'elenco di eventi e i dati della colonna corrispondente che vengono raccolti per le tracce:
+La tabella seguente include l'elenco di eventi e i dati di colonna corrispondenti raccolti per le tracce:
   
-|Nome evento|Dati di testo (1)|Dati binari (2)|ID del database (3)|Nome host (8)|Nome dell'applicazione (10)|Nome account di accesso (11)|SPID (12)|Ora di inizio (14)|Ora di fine (15)|Nome del database (35)|Sequenza di eventi (51 su)|IsSystem (60)|  
+|Nome evento|Dati di testo (1)|Dati binari (2)|ID database (3)|Nome host (8)|Nome applicazione (10)|Nome account di accesso (11)|SPID (12)|Ora di inizio (14)|Ora di fine (15)|Nome database (35)|Sequenza di eventi (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: completato (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: avvio (11)**||*|*|*|*|*|*|*||*|*|*|  
-|**RPC Output Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
+|**Parametro di output RPC (100)**|*||*|*|*|*|*|*||*|*|*|  
 |**SQL: BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**SQL:BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
-|**Audit Login (14)**|*|*|*|*|*|*|*|*||*|*|*|  
-|**Audit Logout (15)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**Controlla account di accesso (14)**|*|*|*|*|*|*|*|*||*|*|*|  
+|**Controllo disconnessione (15)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**ExistingConnection (17)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**CursorOpen (53)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorPrepare (70)**|*||*|*|*|*|*|*||*|*|*|  
-|**Prepare SQL (71)**|||*|*|*|*|*|*||*|*|*|  
-|**Exec preparata SQL (72)**|||*|*|*|*|*|*||*|*|*|  
+|**Preparare SQL (71)**|||*|*|*|*|*|*||*|*|*|  
+|**SQL preparato per exec (72)**|||*|*|*|*|*|*||*|*|*|  
 |**CursorExecute (74)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorClose (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>È disponibile un effetto sulle prestazioni nella mio server di produzione durante l'esecuzione di acquisizione traccia?
+### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Si è verificato un effetto sulle prestazioni del server di produzione quando l'acquisizione della traccia è in esecuzione?
     
-Sì, è disponibile un effetto minimo sulle prestazioni durante la raccolta delle tracce. Nei test, è stato rilevato un pressione della memoria di % 3.
+Sì, si verifica un effetto minimo sulle prestazioni durante la raccolta delle tracce. Nei test è stato rilevato un numero eccessivo di richieste di memoria al 3%.
     
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Quale tipo di autorizzazioni sono necessarie per l'acquisizione di tracce in un carico di lavoro di produzione?
+### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Quali tipi di autorizzazioni sono necessari per l'acquisizione di tracce su un carico di lavoro di produzione?
     
-- L'utente Windows che esegue l'operazione di traccia nell'applicazione DEA deve disporre dei diritti sysadmin nel computer che esegue SQL Server.
-- L'account del servizio usato nel computer che esegue SQL Server deve avere accesso in scrittura al percorso del file di traccia specificata.
+- L'utente di Windows che esegue l'operazione di traccia nell'applicazione DEA deve disporre dei diritti di amministratore di sistema nel computer in cui è in esecuzione SQL Server.
+- L'account di servizio utilizzato nel computer che esegue SQL Server deve disporre dell'accesso in scrittura al percorso del file di traccia specificato.
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>È possibile acquisire le tracce per l'intero server o solo su un database singolo?
+### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>È possibile acquisire le tracce per l'intero server o solo per un singolo database?
     
-È possibile usare DEA per acquisire le tracce per tutti i database nel server o per un singolo database.
+È possibile utilizzare DEA per acquisire tracce per tutti i database nel server o per un singolo database.
     
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Ho un server collegato configurato nel mio ambiente di produzione. Queste query vengono visualizzati nelle tracce?
+### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Un server collegato è configurato nell'ambiente di produzione. Queste query vengono visualizzate nelle tracce?
     
-Se si esegue un'acquisizione di traccia per l'intero server, la traccia acquisisce tutte le query, incluse le query di server collegato. Per eseguire un'acquisizione di traccia per l'intero server, lasciare il **sicurissimo** nella casella **New Capture** vuoto.
+Se si sta eseguendo un'acquisizione di traccia per l'intero server, la traccia acquisisce tutte le query, incluse le query del server collegato. Per eseguire un'acquisizione di traccia per l'intero server, lasciare vuota la casella **nome database** in **nuova acquisizione** .
     
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Che cos'è il tempo minimo consigliato per le tracce del carico di lavoro di produzione?
+### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Qual è il tempo minimo consigliato per le tracce del carico di lavoro di produzione?
     
-È consigliabile scegliere un periodo che meglio rappresenta l'intero del carico di lavoro. In questo modo, l'analisi viene eseguita in tutte le query nel carico di lavoro.
+Si consiglia di scegliere un'ora che meglio rappresenti l'intero carico di lavoro. In questo modo, l'analisi viene eseguita su tutte le query del carico di lavoro.
     
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Quanto è importante eseguire un backup di database corretto prima di iniziare un'acquisizione traccia?
+### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Quanto è importante eseguire un backup del database prima di avviare un'acquisizione di traccia?
     
-Prima di avviare un'acquisizione di traccia, assicurarsi di eseguire il backup tutti i database di destinazione. Riproduzione della traccia acquisita nella destinazione 1 e 2 di destinazione. Se lo stato del database non è lo stesso, non sono sincronizzati i risultati della sperimentazione.
+Prima di avviare un'acquisizione di traccia, assicurarsi di eseguire il backup di tutti i database di destinazione. La traccia acquisita in target 1 e target 2 viene rieseguita. Se lo stato del database non è lo stesso, i risultati della sperimentazione sono sbilanciati.
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>È possibile raccogliere XEvents anziché le tracce ed è possibile riprodurre XEvents?
+### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>È possibile raccogliere XEvent anziché tracce ed è possibile riprodurre XEvent?
     
-Sì. DEA supporta XEvents. Scaricare la versione più recente di DEA e fare una prova.
+Sì. DEA supporta XEvent. Scaricare la versione più recente di DEA e assegnarle un tentativo.
 
-## <a name="troubleshoot-trace-captures"></a>Risolvere i problemi di acquisizioni di traccia
+## <a name="troubleshoot-trace-captures"></a>Risolvere i problemi relativi alle acquisizioni di traccia
 
 Se viene visualizzato un errore durante l'esecuzione di un'acquisizione di traccia, esaminare i prerequisiti seguenti:
 
-- Verificare che il nome del computer che esegue SQL Server sia valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
-- Verificare che la configurazione del firewall non blocca le connessioni al computer che esegue SQL Server.
-- Verificare che l'utente disponga delle autorizzazioni elencate nel post di blog [domande frequenti sulla riproduzione](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
-- Verificare che il nome di traccia non segue la convenzione standard rollover (acquisire\_1). Provare invece i nomi di traccia, ad esempio acquisizione\_1A o Capture1.
+- Verificare che il nome del computer in cui è in esecuzione SQL Server sia valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
+- Verificare che la configurazione del firewall non blocchi le connessioni al computer in cui è in esecuzione SQL Server.
+- Verificare che l'utente disponga delle autorizzazioni elencate nel post di Blog relativo alla [riproduzione delle domande frequenti](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- Verificare che il nome della traccia non segua la convenzione di rollover standard\_(Capture 1). In alternativa, provare i nomi di\_traccia come Capture 1a o Capture1.
 
-Ecco alcune possibili errori che potrebbero verificarsi e soluzioni per risolverli:
+Di seguito sono riportati alcuni possibili errori che possono essere visualizzati e le soluzioni per risolverli:
 
 |Possibili errori|Soluzione|  
 |---|---|  
-|Non è possibile avviare la traccia nella destinazione di SQL Server, verificare che si disponga delle autorizzazioni necessarie e che l'account di SQL Server disponga di accesso in scrittura al percorso del file di traccia specificato, il codice di errore Sql (53)|L'utente che esegue lo strumento DEA deve avere accesso al computer che esegue SQL Server. L'utente deve essere assegnato il ruolo sysadmin.|  
-|Non è possibile avviare la traccia nella destinazione di SQL Server, verificare che si disponga delle autorizzazioni necessarie e che l'account di SQL Server disponga di accesso in scrittura al percorso del file di traccia specificato, il codice di errore Sql (19062)|Il percorso di traccia specificato potrebbe non esistere o la cartella non ha le autorizzazioni di scrittura per l'account in cui SQL Server sono in esecuzione servizi (ad esempio, servizio di rete). Il percorso deve esistere e deve avere le autorizzazioni necessarie per avviare la traccia.|  
-|Una traccia DEA attualmente è in esecuzione nel server di destinazione.|La traccia attiva è già in esecuzione nel server di destinazione. Quando una traccia a livello di server è già in esecuzione non è possibile avviare una nuova traccia.|  
-|Non è possibile aprire il database richiesto per l'acquisizione di traccia. Questo errore potrebbe essere causato da un nome di database non corretto.|Il database specificato non esiste o non è accessibile all'utente corrente. Usare il nome di database corretto.|  
+|Impossibile avviare la traccia sul SQL Server di destinazione. verificare se si dispone delle autorizzazioni necessarie e che l'account di SQL Server disponga dell'accesso in scrittura al percorso del file di traccia specificato codice errore SQL (53)|L'utente che esegue lo strumento DEA deve disporre dell'accesso al computer in cui è in esecuzione SQL Server. All'utente deve essere assegnato il ruolo sysadmin.|  
+|Impossibile avviare la traccia sul SQL Server di destinazione. verificare se si dispone delle autorizzazioni necessarie e che l'account di SQL Server disponga dell'accesso in scrittura al percorso del file di traccia specificato codice errore SQL (19062)|Il percorso di traccia specificato potrebbe non esistere o la cartella non dispone delle autorizzazioni di scrittura per l'account con cui vengono eseguiti SQL Server servizi, ad esempio servizio di rete. Il percorso deve esistere e deve disporre delle autorizzazioni necessarie per l'avvio della traccia.|  
+|Una traccia DEA è attualmente in esecuzione nel server di destinazione.|Una traccia attiva è già in esecuzione nel server di destinazione. Non è possibile avviare una nuova traccia quando è già in esecuzione una traccia a livello di server.|  
+|Impossibile aprire il database richiesto per l'acquisizione della traccia. Questo errore potrebbe essere causato da un nome di database errato.|Il database specificato non esiste o non è accessibile all'utente corrente. Usare il nome del database corretto.|  
 
-Se vengono visualizzati altri errori etichettati *codice di errore Sql*, vedere [i messaggi di errore di sistema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) per descrizioni dettagliate e le risoluzioni.
-    
+Se vengono visualizzati altri errori con l'etichetta *codice errore SQL*, vedere [motore di database errori](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) per descrizioni dettagliate.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per informazioni su come configurare gli strumenti di Distributed Replay in SQL Server prima riprodurre una traccia acquisita, vedere [replay configura](database-experimentation-assistant-configure-replay.md).
+- Per informazioni su come configurare gli strumenti di Riesecuzione distribuita in SQL Server prima di riprodurre una traccia acquisita, vedere [configurare la riproduzione](database-experimentation-assistant-configure-replay.md).
 
-- Per un'introduzione di 19 minuti DEA e dimostrazione, guardare il video seguente:
+- Per un'introduzione di 19 minuti a DEA e dimostrazione, Guarda il video seguente:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

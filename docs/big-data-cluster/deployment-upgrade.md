@@ -1,22 +1,22 @@
 ---
 title: Eseguire l'aggiornamento a una nuova versione
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come aggiornare cluster Big Data di SQL Server 2019 (anteprima) a una nuova versione.
+description: Informazioni su come eseguire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] l'aggiornamento (anteprima) a una nuova versione.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731087"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652339"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Come aggiornare cluster Big Data di SQL Server
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come eseguire l'aggiornamento[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Installare la nuova versione
 
-Dopo aver rimosso il cluster Big Data precedente e aver installato la versione più recente di **azdata**, distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per altre informazioni, vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
+Dopo aver rimosso il cluster Big Data precedente e aver installato la versione più recente di **azdata**, distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per ulteriori informazioni, vedere [la pagina relativa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] alla modalità di distribuzione in Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster Big Data, vedere [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)la pagina relativa a.

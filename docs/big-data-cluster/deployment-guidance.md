@@ -1,22 +1,22 @@
 ---
 title: Linee guida per la distribuzione
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come distribuire cluster Big Data di SQL Server 2019 (anteprima) in Kubernetes.
+description: Informazioni su come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) in Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995829"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652351"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire cluster Big Data di SQL Server in Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Come eseguire la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] distribuzione in Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ Prima di distribuire un cluster Big Data di SQL Server 2019, [installare innanzi
 
 ## <a id="prereqs"></a> Prerequisiti per Kubernetes
 
-I cluster Big Data di SQL Server richiedono la versione minima di Kubernetes v1.10 per server e client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]richiedere una versione minima di Kubernetes di almeno v 1.10 per server e client (kubectl).
 
 > [!NOTE]
 > Le versioni client e server di Kubernetes devono essere comprese tra le versioni secondarie +1 e -1. Per altre informazioni, vedere [Note sulla versione di Kubernetes e criteri per gli SKU relativi alla differenza tra versioni](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ Eseguire il comando **kubectl** per visualizzare la configurazione del cluster. 
 kubectl config view
 ```
 
-Dopo aver configurato il cluster Kubernetes, è possibile procedere con la distribuzione di un nuovo cluster Big Data di SQL Server. Se si esegue l'aggiornamento da una versione precedente, vedere [Come aggiornare cluster Big Data di SQL Server](deployment-upgrade.md).
+Dopo aver configurato il cluster Kubernetes, è possibile procedere con la distribuzione di un nuovo cluster Big Data di SQL Server. Se si esegue l'aggiornamento da una versione precedente, vedere [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Panoramica della distribuzione
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. In caso di problemi durante la distribuzione, vedere [Monitoraggio e risoluzione dei problemi dei cluster Big Data di SQL Server](cluster-troubleshooting-commands.md).
+> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. Se si verificano problemi con la distribuzione, vedere [monitoraggio e risoluzione [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]dei ](cluster-troubleshooting-commands.md)problemi.
 
 Al termine della distribuzione, l'output segnala l'esito positivo:
 
@@ -314,4 +314,4 @@ Per altre informazioni sulla distribuzione di cluster Big Data, vedere le risors
 
 - [Configurare le impostazioni di distribuzione per cluster Big Data](deployment-custom-configuration.md)
 - [Eseguire una distribuzione offline di un cluster Big Data di SQL Server](deploy-offline.md)
-- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Architettura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

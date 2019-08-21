@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715026"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633611"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usare i gestori di pacchetti R per installare i pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Questa procedura usa RGui, ma è possibile usare RTerm o qualsiasi altro strumen
 
 ## <a name="install-a-package-using-rgui"></a>Installare un pacchetto usando RGui
 
-1. [Determinare il percorso della libreria di istanze](../package-management/default-packages.md). Passare alla cartella in cui sono installati gli strumenti R. Il percorso predefinito per un'istanza predefinita di SQL Server 2017, ad esempio, è il seguente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinare il percorso della libreria di istanze](../package-management/r-package-information.md). Passare alla cartella in cui sono installati gli strumenti R. Il percorso predefinito per un'istanza predefinita di SQL Server 2017, ad esempio, è il seguente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Fare clic con il pulsante destro del mouse su RGui. exe e scegliere **Esegui come amministratore**. Se non si dispone delle autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti necessari.
 

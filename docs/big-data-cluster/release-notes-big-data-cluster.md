@@ -1,28 +1,31 @@
 ---
 title: Note sulla versione
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive gli aggiornamenti più recenti e i problemi noti per i cluster Big Data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive gli aggiornamenti più recenti e i problemi [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] noti per (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476246"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653430"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster Big Data in SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo elenca gli aggiornamenti e i problemi noti per le versioni più recenti dei cluster Big Data di SQL Server.
+Questo articolo elenca gli aggiornamenti e conosce i problemi per le versioni più recenti [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]di.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (luglio)
 
@@ -32,7 +35,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Anteprima pubblica |Prima della versione CTP 3.2, il cluster Big Data di SQL Server era disponibile per gli early adopter registrati. Questa versione consente a chiunque di sperimentare le funzionalità dei cluster Big Data di SQL Server. <br/><br/> Vedere [Introduzione ai cluster Big Data di SQL Server](deploy-get-started.md).|
+|Anteprima pubblica |Prima della versione CTP 3.2, il cluster Big Data di SQL Server era disponibile per gli early adopter registrati. Questa versione consente a chiunque di sperimentare le funzionalità dei cluster Big Data di SQL Server. <br/><br/> Vedere [Introduzione a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).|
 |`azdata` |La versione CTP 3.2 introduce `azdata`, un'utilità da riga di comando scritta in Python che consente agli amministratori del cluster di avviare e gestire il cluster Big Data tramite le API REST. `azdata` sostituisce `mssqlctl`. Vedere [Installare `azdata`](deploy-install-azdata.md). |
 |PolyBase |I nomi delle colonne della tabella esterna vengono ora usati per eseguire query su origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. Nelle versioni CTP precedenti le colonne nell'origine dati esterna venivano associate solo in base alla posizione ordinale e i nomi specificati nella definizione EXTERNAL TABLE non venivano usati. |
 |Aggiornamento della suddivisione in livelli HDFS |Introduzione della funzionalità di aggiornamento per la suddivisione in livelli HDFS, in modo che sia possibile aggiornare un montaggio esistente per l'ultimo snapshot dei dati remoti. Vedere [Suddivisione in livelli HDFS](hdfs-tiering.md) |
@@ -353,7 +356,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 | Materiale sussidiario sul supporto della GPU per l'esecuzione di Deep Learning con TensorFlow in Spark. | [Distribuire un cluster di Big Data con il supporto della GPU ed eseguire TensorFlow](spark-gpu-tensorflow.md). |
 | Le origini dati **SqlDataPool** e **SqlStoragePool** non vengono più create per impostazione predefinita. | Se necessario, crearle manualmente. Vedere i [problemi noti](#externaltablesctp24). |
 | Supporto di `INSERT INTO SELECT` per il pool di dati. | Per un esempio, vedere [Esercitazione: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md) (Inserire dati in un pool di dati di SQL Server con Transact-SQL). |
-| Opzioni `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Forza o disabilita l'uso del pool di calcolo per le query sulle tabelle esterne. Ad esempio, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Opzioni `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Forza o disabilita l'uso del pool di calcolo per le query sulle tabelle esterne. Ad esempio `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Aggiornamento delle raccomandazioni sulla distribuzione del servizio Azure Kubernetes. | Quando si valutano i cluster di Big Data nel servizio Azure Kubernetes, è ora consigliabile usare un singolo nodo di dimensioni **Standard_L8s**. |
 | Aggiornamento del runtime Spark a Spark 2.4. | |
 
@@ -481,9 +484,9 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 | :---------- | :------ |
-| Inviare processi Spark nei cluster di Big Data in IntelliJ. | [Inviare processi Spark nei cluster di Big Data di SQL Server in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Interfaccia della riga di comando comune per la distribuzione di applicazioni e la gestione di cluster. | [Come distribuire un'app in un cluster di Big Data di SQL Server 2019 (anteprima)](big-data-cluster-create-apps.md) |
-| Estensione di VS Code per distribuire applicazioni in un cluster di Big Data. | [Come usare VS Code per distribuire applicazioni nei cluster di Big Data di SQL Server](app-deployment-extension.md) |
+| Inviare processi Spark nei cluster di Big Data in IntelliJ. | [Inviare processi [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Interfaccia della riga di comando comune per la distribuzione di applicazioni e la gestione di cluster. | [Come distribuire un'app in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Estensione di VS Code per distribuire applicazioni in un cluster di Big Data. | [Come usare VS Code per distribuire le applicazioni in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Modifiche apportate all'utilizzo dei comandi dello strumento **azdata**. | Per informazioni più dettagliate, vedere i [problemi noti di azdata](#azdatactp23). |
 | Usare Sparklyr in un cluster Big Data | [Usare Sparklyr in cluster di Big Data di SQL Server 2019](sparklyr-from-RStudio.md) |
 | Montare un'archiviazione esterna compatibile con Hadoop Distributed File System (HDFS) in un cluster Big Data con la **suddivisione in livelli HDFS**. | Vedere [Suddivisione in livelli HDFS](hdfs-tiering.md). |
@@ -676,7 +679,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 ### <a name="known-issues"></a>Problemi noti
 
-Le sezioni seguenti descrivono i problemi noti per i cluster Big Data di SQL Server nella versione CTP 2.1.
+Le sezioni seguenti forniscono problemi noti per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nella versione CTP 2,1.
 
 #### <a name="deployment"></a>Distribuzione
 
@@ -751,7 +754,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 ### <a name="known-issues"></a>Problemi noti
 
-Le sezioni seguenti descrivono i problemi noti per i cluster Big Data di SQL Server nella versione CTP 2.0.
+Le sezioni seguenti forniscono problemi noti per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nella versione CTP 2,0.
 
 #### <a name="deployment"></a>Distribuzione
 
@@ -801,4 +804,4 @@ Le sezioni seguenti descrivono i problemi noti per i cluster Big Data di SQL Ser
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data di SQL Server, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).

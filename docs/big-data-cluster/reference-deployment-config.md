@@ -5,16 +5,16 @@ description: Informazioni di riferimento per un file di configurazione della dis
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958241"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653496"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Informazioni di riferimento sui file di configurazione della distribuzione per cluster Big Data
 
@@ -453,4 +453,4 @@ Usare il file JSON seguente come riferimento per la struttura e le impostazioni 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come usare e personalizzare file di configurazione delle distribuzioni, vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md#configfile).
+Per ulteriori informazioni su come utilizzare e personalizzare i file di configurazione della distribuzione, vedere [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md#configfile).

@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894030"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653511"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -281,4 +281,4 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

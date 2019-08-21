@@ -1,28 +1,28 @@
 ---
 title: Inserire dati con processi Spark
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster Big Data di SQL Server 2019 (anteprima) usando processi Spark in Azure Data Studio.
+description: Questa esercitazione illustra come inserire i dati nel pool di dati di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usando i processi Spark in Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957812"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653290"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con processi Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come usare processi Spark per caricare dati nel [pool di dati](concept-data-pool.md) di un cluster Big Data di SQL Server 2019 (anteprima). 
+Questa esercitazione illustra come usare i processi Spark per caricare i dati nel [pool di dati](concept-data-pool.md) di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un oggetto. 
 
-In questa esercitazione verranno illustrate le procedure per:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna nel pool di dati.
@@ -107,7 +107,7 @@ Il passaggio successivo consiste nella creazione di un processo di streaming Spa
    |---|---|
    | nome del server | SQL Server da usare per la lettura dello schema della tabella |
    | numero di porta | Porta su cui è in ascolto SQL Server (valore predefinito: 1433) |
-   | username | Nome utente di accesso a SQL Server |
+   | userName | Nome utente di accesso a SQL Server |
    | password | Password di accesso a SQL Server |
    | nome del database | Database di destinazione |
    | nome tabella esterna | Tabella da usare per i risultati |

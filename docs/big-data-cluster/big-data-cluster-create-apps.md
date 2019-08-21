@@ -1,35 +1,35 @@
 ---
 title: Distribuire applicazioni con azdata
 titleSuffix: SQL Server big data clusters
-description: Distribuire uno script Python o R come applicazione in un cluster Big Data di SQL Server 2019 (anteprima).
+description: Distribuire uno script Python o R come applicazione in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419489"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653152"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app in un cluster Big Data di SQL Server (anteprima)
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come distribuire un'app in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come distribuire e gestire uno script R e Python come applicazione all'interno di un cluster Big Data di SQL Server 2019 (anteprima).
+Questo articolo descrive come distribuire e gestire lo script R e Python come applicazione all'interno di un cluster SQL Server 2019 Big Data.
 
 ## <a name="whats-new-and-improved"></a>Novità e miglioramenti
 
 - Un'unica utilità della riga di comando per gestire cluster e app.
 - Distribuzione semplificata di app con controllo granulare tramite file di specifiche.
-- Supporto per l'hosting di tipi di applicazione aggiuntivi: SSIS e MLeap (novità in CTP 2.3)
-- [Estensione di VS Code](app-deployment-extension.md) per gestire la distribuzione di applicazioni
+- Supporto per l'hosting di tipi di applicazione aggiuntivi, SSIS e MLeap (novità di CTP 2,3).
+- [Visual Studio Code estensione](app-deployment-extension.md) per gestire la distribuzione dell'applicazione.
 
-Le applicazioni vengono distribuite e gestite tramite l'utilità della riga di comando `azdata`. Questo articolo fornisce alcuni esempi su come distribuire app dalla riga di comando. Per informazioni sull'uso in Visual Studio Code, fare riferimento a [Estensione di VS Code](app-deployment-extension.md).
+Le applicazioni vengono distribuite e gestite tramite l'utilità della riga di comando `azdata`. Questo articolo fornisce alcuni esempi su come distribuire app dalla riga di comando. Per informazioni su come usarlo in Visual Studio Code fare riferimento a [Visual Studio Code estensione](app-deployment-extension.md).
 
 Sono supportati i tipi seguenti di app:
 - App R e Python (funzioni, modelli e app)
@@ -41,7 +41,7 @@ Sono supportati i tipi seguenti di app:
 - [Cluster Big Data di SQL Server 2019](deployment-guidance.md)
 - [Utilità della riga di comando azdata](deploy-install-azdata.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 
 In SQL Server 2019 (anteprima) è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
 
@@ -64,7 +64,7 @@ azdata app create --help
 
 Le sezioni seguenti descrivono più dettagliatamente questi comandi.
 
-## <a name="sign-in"></a>Accedi
+## <a name="sign-in"></a>Accesso
 
 Prima di distribuire applicazioni o interagirvi, accedere al cluster Big Data di SQL Server con il comando `azdata login`. Specificare l'indirizzo IP esterno del servizio `controller-svc-external`, ad esempio `https://ip-address:30080`, insieme al nome utente e alla password del cluster.
 
@@ -74,16 +74,16 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## <a name="aks"></a>Servizio Azure Kubernetes
 
-Se si usa il servizio Azure Kubernetes, è necessario eseguire il comando seguente per ottenere l'indirizzo IP del servizio `mgmtproxy-svc-external` eseguendo questo comando in una finestra di Bash o di comando:
+Se si usa il servizio Azure Kubernetes, è necessario eseguire il comando seguente per ottenere l'indirizzo IP del servizio `controller-svc-external` eseguendo questo comando in una finestra di Bash o di comando:
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>kubeadm o minikube
 
-Se si usa kubeadm o minikube, è necessario eseguire il comando seguente per ottenere l'indirizzo IP per accedere al cluster
+Se si usa Kubeadm o Minikube, eseguire il comando seguente per ottenere l'indirizzo IP per accedere al cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,19 +105,19 @@ Il comando seguente mostra un esempio del possibile aspetto di questo comando:
 azdata app create --spec ./addpy
 ```
 
-Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per altre informazioni sul file `spec.yaml`, vedere la [pagina sulla distribuzione di applicazioni](concept-application-deployment.md).
+Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per ulteriori informazioni sul `spec.yaml` file, vedere [la pagina](concept-application-deployment.md) relativa alla distribuzione di applicazioni.
 
 Per distribuire l'app di esempio, creare i file seguenti in una directory denominata `addpy`:
 
-- `add.py`. Copiare il codice Python seguente in questo file:
+- `add.py` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice Python seguente in questo file:
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
-- `spec.yaml`. Copiare il codice seguente in questo file:
+- `spec.yaml` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice seguente in questo file:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -241,7 +241,7 @@ Il comando init fornisce una sorta di impalcatura con gli elementi rilevanti nec
 azdata app init --name hello --version v1 --template python
 ```
 
-Verrà creata una cartella denominata hello.  È possibile eseguire `cd` per passare alla directory ed esaminare i file generati nella cartella. Il file spec.yaml definisce l'app, ad esempio il nome, la versione e il codice sorgente. È possibile modificare le specifiche in modo da cambiare nome, versione, input e output.
+Verrà creata una cartella denominata hello.  È possibile eseguire `cd` per passare alla directory ed esaminare i file generati nella cartella. spec. YAML definisce l'app, ad esempio il nome, la versione e il codice sorgente. È possibile modificare le specifiche per modificare nome, versione, input e output.
 
 Ecco un esempio di output del comando init, visualizzato nella cartella
 
@@ -270,8 +270,8 @@ Il comando describe fornisce informazioni dettagliate sull'app, tra cui l'endpoi
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -295,6 +295,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come integrare app distribuite in cluster Big Data di SQL Server nelle proprie applicazioni, vedere [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md). È anche possibile fare riferimento ad altri esempi in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy).
+Per altre informazioni, vedere come integrare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] le app distribuite nelle applicazioni in uso in [applicazioni in cluster Big Data](big-data-cluster-consume-apps.md) . È anche possibile fare riferimento ad altri esempi in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy).
 
-Per altre informazioni sui cluster Big Data di SQL Server, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).

@@ -5,22 +5,22 @@ description: Articolo di riferimento per i comandi azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894001"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653093"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L'articolo seguente offre informazioni di riferimento per lo strumento **azdata** per [cluster Big Data di SQL Server 2019 (anteprima)](big-data-cluster-overview.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sullo strumento **azdata** per [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima)](big-data-cluster-overview.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
 
 ## <a name="commands"></a>Comandi:
 |     |     |
@@ -95,4 +95,4 @@ Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di deb
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

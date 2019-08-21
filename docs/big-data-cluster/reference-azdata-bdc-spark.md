@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc spark.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cdc07f6feed29606eb24dc98790d7c8ffa4754c9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: bed382bbb6695b94f5242e915c18d8f7a07e6f58
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426061"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653459"
 ---
 # <a name="azdata-bdc-spark"></a>azdata bdc spark
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426061"
 
 L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc spark** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata bdc spark batch](reference-azdata-bdc-spark-batch.md) | Gestisce le operazioni batch all'interno del sistema Spark.
@@ -31,4 +31,4 @@ L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc spa
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

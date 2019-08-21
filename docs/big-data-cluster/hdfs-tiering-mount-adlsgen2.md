@@ -1,20 +1,20 @@
 ---
 title: Montare ADLS Gen2 per la suddivisione in livelli HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un cluster Big Data di SQL Server 2019 (anteprima).
+description: Questo articolo illustra come configurare la suddivisione in livelli di HDFS per montare un Azure Data Lake Storage esterno file system in HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in un.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742728"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652313"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare ADLS Gen2 per la suddivisione in livelli HDFS in un cluster Big Data
 
@@ -153,4 +153,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data di SQL Server 2019, vedere [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md).
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).

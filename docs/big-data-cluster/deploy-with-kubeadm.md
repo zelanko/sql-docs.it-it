@@ -1,26 +1,26 @@
 ---
 title: Configurare Kubernetes con kubeadm
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16.04 o 18.04 (fisici o virtuali) per distribuzioni di cluster Big Data di SQL Server 2019 (anteprima).
+description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16,04 o 18,04 (fisici o virtuali) per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661363"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652370"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurare Kubernetes in più computer per distribuzioni di cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce un esempio di come usare **kubeadm** per configurare Kubernetes in più computer per distribuzioni di cluster Big Data di SQL Server 2019 (anteprima). In questo esempio la destinazione è rappresentata da più computer Ubuntu 16.04 o 18.04 LTS (fisici o virtuali). Se la distribuzione viene eseguita in una piattaforma Linux diversa, è necessario modificare alcuni dei comandi per adeguarli al sistema in uso.  
+Questo articolo fornisce un esempio di come usare **kubeadm** per configurare Kubernetes in più computer per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni. In questo esempio la destinazione è rappresentata da più computer Ubuntu 16.04 o 18.04 LTS (fisici o virtuali). Se la distribuzione viene eseguita in una piattaforma Linux diversa, è necessario modificare alcuni dei comandi per adeguarli al sistema in uso.  
 
 > [!TIP] 
 > Per gli script di esempio che configurano Kubernetes, vedere [Creare un cluster Kubernetes usando Kubeadm in Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).

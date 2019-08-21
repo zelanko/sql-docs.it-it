@@ -1,26 +1,26 @@
 ---
 title: Configurare minikube
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come configurare minikube per le distribuzioni di cluster Big Data di SQL Server 2019 (anteprima) in un singolo computer.
+description: Informazioni su come configurare minikube per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni in un singolo computer.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1991176de132062c46f36f30f4f384e483c069f9
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: b2022fe6ad8a0aa23c4dd7d917e925ae1daba572
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969418"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652408"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Configurare minikube per le distribuzioni di cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come configurare **minikube** in un singolo computer per le distribuzioni di cluster Big Data di SQL Server 2019 (anteprima). Minikube è uno strumento che semplifica l'esecuzione di Kubernetes in un singolo computer, ad esempio un computer portatile o un desktop. Minikube esegue un cluster Kubernetes a nodo singolo all'interno di una macchina virtuale nel portatile per gli utenti che vogliono provare Kubernetes o che usano quotidianamente questa piattaforma per lo sviluppo. 
+Questo articolo descrive come configurare **minikube** in un singolo computer per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni. Minikube è uno strumento che semplifica l'esecuzione di Kubernetes in un singolo computer, ad esempio un computer portatile o un desktop. Minikube esegue un cluster Kubernetes a nodo singolo all'interno di una macchina virtuale nel portatile per gli utenti che vogliono provare Kubernetes o che usano quotidianamente questa piattaforma per lo sviluppo. 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -41,7 +41,7 @@ Questo articolo descrive come configurare **minikube** in un singolo computer pe
 
 ## <a name="install-minikube"></a>Installare minikube
 
-Installare la versione minikube in base alle istruzioni per la [versione v 1.3.0](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). Il cluster di Big Data SQL Server 2019 (anteprima) funziona solo con la versione v 1.0.0 e versioni di.
+Installare la versione minikube in base alle istruzioni per la [versione v 1.3.0](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). Il [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] funziona solo con la versione v 1.0.0 e versioni su.
 
 ## <a name="create-a-minikube-cluster"></a>Creare un cluster minikube
 
@@ -71,4 +71,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Tramite i passaggi in questo articolo è stato configurato un cluster minikube. Il passaggio successivo consiste nel distribuire un cluster Big Data di SQL Server 2019. Per informazioni, vedere l'articolo seguente:
 
-[Distribuire cluster Big Data di SQL Server 2019 in Kubernetes](deployment-guidance.md#deploy)
+[Distribuisci [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in Kubernetes](deployment-guidance.md#deploy)

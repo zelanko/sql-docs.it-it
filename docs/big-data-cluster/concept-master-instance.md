@@ -1,20 +1,20 @@
 ---
 title: Che cos'è l'istanza master?
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive l'istanza master di SQL Server in un cluster Big Data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive l'istanza master di SQL Server in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822700"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652272"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster Big Data di SQL Server?
 
@@ -53,7 +53,7 @@ Nell'ambito di un cluster Big Data di SQL Server, Machine Learning Services sar�
 
 SQL Server 2019 semplifica l'unione di Big Data ai dati dimensionali generalmente archiviati nel database aziendale. Il valore dei Big Data aumenta notevolmente se questi non sono disponibili solo parzialmente in un'organizzazione, ma sono inclusi anche in report, dashboard e applicazioni. Allo stesso tempo, i data scientist possono continuare a usare gli strumenti dell'ecosistema Spark/HDFS e hanno semplice accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ l'istanza master di SQL Server.
 
-Con i cluster Big Data di SQL Server 2019, è possibile eseguire molte più operazioni con i data lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], è possibile eseguire altre operazioni con i data Lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
 
 * Compilare applicazioni che utilizzano dati di data lake aziendali.
 * Riflettere su tutti i dati con query Transact-SQL.
@@ -67,7 +67,7 @@ Con i cluster Big Data di SQL Server 2019, è possibile eseguire molte più oper
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data di SQL Server, vedere le risorse seguenti:
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere le risorse seguenti:
 
-- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
+- [Workshop: Architettura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

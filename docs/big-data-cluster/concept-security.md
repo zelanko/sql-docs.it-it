@@ -1,22 +1,22 @@
 ---
 title: Concetti relativi alla sicurezza
 titleSuffix: SQL Server big data clusters
-description: Questo articolo presenta i concetti relativi alla sicurezza per i cluster Big Data di SQL Server 2019 (anteprima). È inclusa la descrizione degli endpoint del cluster e dell'autenticazione del cluster.
+description: Questo articolo descrive i concetti relativi [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]alla sicurezza per. È inclusa la descrizione degli endpoint del cluster e dell'autenticazione del cluster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958662"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652259"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concetti relativi alla sicurezza per i cluster Big Data di SQL Server
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Concetti relativi alla sicurezza per[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -44,7 +44,7 @@ Attualmente non è possibile aprire porte aggiuntive per accedere al cluster dal
 
 La protezione degli endpoint nel cluster Big Data avviene tramite password che possono essere impostate/aggiornate usando variabili di ambiente o comandi dell'interfaccia della riga di comando. Tutte le password interne del cluster vengono archiviate come segreti Kubernetes.  
 
-## <a name="authentication"></a>Autenticazione
+## <a name="authentication"></a>Authentication
 
 Durante il provisioning del cluster, vengono creati diversi account di accesso.
 
@@ -82,7 +82,7 @@ La comunicazione con servizi non SQL all'interno del cluster Big Data, ad esempi
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data di SQL Server, vedere le risorse seguenti:
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere le risorse seguenti:
 
-- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Architettura dei cluster Big Data di Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
+- [Workshop: Architettura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

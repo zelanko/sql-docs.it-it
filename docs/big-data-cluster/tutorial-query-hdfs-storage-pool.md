@@ -1,28 +1,28 @@
 ---
 title: Eseguire query sui dati HDFS presenti nel pool di archiviazione
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come eseguire una query su dati HDFS in un cluster Big Data di SQL Server 2019 (anteprima). Si creerà una tabella esterna con i dati del pool di archiviazione e si eseguirà quindi una query.
+description: Questa esercitazione illustra come eseguire query sui dati di HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in un. Si creerà una tabella esterna con i dati del pool di archiviazione e si eseguirà quindi una query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957701"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652447"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire query su dati HDFS in un cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come eseguire una query su dati HDFS in un cluster Big Data di SQL Server 2019 (anteprima).
+Questa esercitazione illustra come eseguire query sui dati di HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in un.
 
-In questa esercitazione verranno illustrate le procedure per:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna che punta ai dati HDFS in un cluster Big Data.

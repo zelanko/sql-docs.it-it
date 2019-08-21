@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715209"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634546"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aggiornare i componenti di Machine Learning (R e Python) in istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -148,7 +148,7 @@ Il programma di installazione di Microsoft Machine Learning rileva le funzionali
 
     ![Configurare il passaggio di installazione](media/mls-931-installer-mssql13.png)
 
-1. Nella pagina **contratto di licenza** **selezionare Accetto** le condizioni per l'accettazione delle condizioni di licenza per Machine Learning server. 
+1. Nella pagina **contratto di licenza** selezionare Accetto le condizioni per l'accettazione delle condizioni di licenza per Machine Learning server. 
 
 1. Nelle pagine successive fornire il consenso alle condizioni di licenza aggiuntive per tutti i componenti open source selezionati, ad esempio Microsoft R Open o la distribuzione di Python Anaconda.
 
@@ -274,11 +274,11 @@ In alternativa, si tratta di un maggior numero di operazioni, ma è anche possib
 
 ### <a name="step-3-add-any-third-party-packages"></a>Passaggio 3: Aggiungere eventuali pacchetti di terze parti
 
-È possibile che siano stati aggiunti altri pacchetti open source o di terze parti alla raccolta di pacchetti. Poiché l'inversione dell'associazione cambia il percorso della libreria di pacchetti predefinita, è necessario reinstallare i pacchetti nella libreria usata da R e Python. Per altre informazioni, vedere [pacchetti predefiniti](../package-management/default-packages.md), [installare nuovi pacchetti R](../r/install-additional-r-packages-on-sql-server.md)e [installare nuovi pacchetti Python](../python/install-additional-python-packages-on-sql-server.md).
+È possibile che siano stati aggiunti altri pacchetti open source o di terze parti alla raccolta di pacchetti. Poiché l'inversione dell'associazione cambia il percorso della libreria di pacchetti predefinita, è necessario reinstallare i pacchetti nella libreria usata da R e Python. Per altre informazioni, vedere [informazioni sul pacchetto R](../package-management/r-package-information.md) e [installazione](../package-management/install-additional-r-packages-on-sql-server.md)e [informazioni sul pacchetto python](../package-management/python-package-information.md) e [installazione](../package-management/install-additional-python-packages-on-sql-server.md).
 
 ## <a name="sqlbindrexe-command-syntax"></a>Sintassi del comando sqlbindr. exe
 
-### <a name="usage"></a>Uso
+### <a name="usage"></a>Utilizzo
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
@@ -296,7 +296,7 @@ In alternativa, si tratta di un maggior numero di operazioni, ma è anche possib
 
 Il programma di installazione MLS e sqlbindr restituiscono entrambi i codici di errore e i messaggi seguenti.
 
-|Codice di errore  | `Message`           | Dettagli               |
+|Codice di errore  | Messaggio           | Dettagli               |
 |------------|-------------------|-----------------------|
 |Errore di binding 0 | OK (esito positivo) | Associazione passata senza errori. |
 |Errore di binding 1 | Argomenti non validi | Errore di sintassi. |
