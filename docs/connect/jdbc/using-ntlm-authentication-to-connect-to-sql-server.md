@@ -1,7 +1,7 @@
 ---
 title: Utilizzo dell'autenticazione NTLM per la connessione a SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894103"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026097"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Utilizzo dell'autenticazione NTLM per la connessione a SQL Server
 
