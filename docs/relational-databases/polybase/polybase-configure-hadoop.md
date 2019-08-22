@@ -21,7 +21,7 @@ ms.locfileid: "68062327"
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in Hadoop.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
 
