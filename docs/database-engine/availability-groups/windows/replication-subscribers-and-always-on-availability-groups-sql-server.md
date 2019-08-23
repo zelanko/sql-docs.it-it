@@ -1,7 +1,7 @@
 ---
 title: Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/16/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07865ca96c72e9501382212d75a2223fa652572f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014278"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969439"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68014278"
   Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori push della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità. Per i sottoscrittori pull della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità e il server sottoscrizione originale è attivo e in esecuzione. Questo avviene perché i processi dell'agente di distribuzione vengono creati solo nel sottoscrittore originale (replica primaria del gruppo di disponibilità). Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
   
 ## <a name="what-is-supported"></a>Operazioni supportate  
- La replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione e il failover automatico dei sottoscrittori transazionali. I sottoscrittori della replica di tipo merge possono far parte di un gruppo di disponibilità, tuttavia sono necessarie azioni manuali per configurare il nuovo sottoscrittore dopo un failover. Non è possibile combinare i gruppi di disponibilità con gli scenari Websync e SQL Server Compact.  
+ La replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione e il failover automatico dei sottoscrittori transazionali. I sottoscrittori della replica di tipo merge possono far parte di un gruppo di disponibilità, tuttavia sono necessarie azioni manuali per configurare il nuovo sottoscrittore dopo un failover. Non è possibile combinare i gruppi di disponibilità con gli scenari WebSync e SQL Server Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Come creare una sottoscrizione transazionale in un ambiente AlwaysOn  
  Per la replica transazionale, usare i passaggi seguenti per configurare un gruppo di disponibilità del sottoscrittore e impostarne il failover:  
@@ -40,17 +40,13 @@ ms.locfileid: "68014278"
     > [!NOTE]  
     >  La sottoscrizione deve essere creata usando uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] e non può essere creata con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
-4.  Se si crea una sottoscrizione pull:  
+4.  Per creare una sottoscrizione pull:  
   
-    1.  Nel nodo primario del sottoscrittore in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]aprire l'albero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
+    1.  Usare lo script di esempio riportato nella sezione **Creazione di una sottoscrizione pull di una replica transazionale** sottostante per creare la sottoscrizione con il nome del listener del gruppo di disponibilità del sottoscrittore. 
+   
+    2.  Dopo un failover, creare il processo dell'agente di distribuzione nella nuova replica primaria usando la stored procedure **sp_addpullsubscription_agent**. 
   
-    2.  Identificare il processo dell' **agente di distribuzione pull** e modificare il processo.  
-  
-    3.  Nel passaggio del processo **Esecuzione dell'agente** verificare i parametri `-Publisher` e `-Distributor` . Verificare che questi parametri contengano i nomi corretti del server diretto e dell'istanza del server di distribuzione e del database di pubblicazione.  
-  
-    4.  Modificare il parametro `-Subscriber` impostando il nome del listener del gruppo di disponibilità del sottoscrittore.  
-  
- Quando si crea la sottoscrizione usando questa procedura, non si dovranno eseguire azioni dopo un failover.  
+ Quando si crea una sottoscrizione pull con il database di sottoscrizione in un gruppo di disponibilità, dopo ogni failover è consigliabile disabilitare il processo dell'agente di distribuzione nella replica primaria precedente e abilitare il processo nella nuova replica primaria.  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>Creazione di una sottoscrizione push di una replica transazionale  
   
@@ -69,6 +65,26 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
        @subscriber_db = N'<subscriber database name>',   
        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO  
+```  
+
+## <a name="creating-a-transactional-replication-pull-subscription"></a>Creazione di una sottoscrizione pull di una replica transazionale  
+  
+```  
+-- commands to execute at the subscriber, in the subscriber database:  
+use [<subscriber database name>]  
+EXEC sp_addpullsubscription @publisher= N'<publisher name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
+Go
+
+EXEC sp_addpullsubscription_agent 
+        @publisher =  N'<publisher name>', 
+        @subscriber = N'<availability group listener name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
+        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
+GO
 ```  
   
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Per riprendere gli agenti di merge dopo il failover del gruppo di disponibilità del sottoscrittore  

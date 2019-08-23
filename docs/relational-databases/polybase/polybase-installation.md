@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062204"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561122"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -72,6 +72,9 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
 3. Nella pagina Selezione funzionalità scegliere **Servizio query PolyBase per i dati esterni**.  
 
    ![Servizi PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servizi PolyBase")  
+   
+   >[!NOTE]
+   >PolyBase in SQL Server 2019 ora include un'opzione aggiuntiva **Connettore Java per origini dati HDFS**. Per altre informazioni su questa funzionalità, vedere [Funzionalità di anteprima di SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/).
    
 4. Nella pagina Configurazione server configurare il **servizio motore PolyBase di SQL Server** e **SQL Server PolyBase Data Movement Service** per l'esecuzione con lo stesso account di dominio.  
 

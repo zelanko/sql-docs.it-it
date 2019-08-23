@@ -20,70 +20,70 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 428da3c62a4fec178e80400e92997d8cefa3a86a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 619ce91eb47d69298c2b4bc53741f2a8cb7461dd
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024406"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969371"
 ---
-# <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
+# <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce l'ultimo valore Identity generato per una tabella o una vista specificata. L'ultimo valore Identity generato può essere per qualsiasi sessione e qualsiasi ambito.  
+Restituisce l'ultimo valore Identity generato per una tabella o una vista specificata. L'ultimo valore Identity generato può essere per qualsiasi sessione e qualsiasi ambito.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-IDENT_CURRENT( 'table_name' )  
+IDENT_CURRENT( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *table_name*  
- Nome della tabella per la quale viene restituito il valore Identity. *table_name* è di tipo **varchar** e non prevede alcun valore predefinito.  
+*table_or_view*  
+Nome della tabella o della vista per la quale viene restituito il valore Identity. *table_or_view* è di tipo **varchar** e non prevede alcun valore predefinito.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **numeric(38,0)**  
+**numerico**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Eccezioni  
- Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.  
+Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come IDENT_CURRENT possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come IDENT_CURRENT possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Remarks  
- IDENT_CURRENT è simile alle funzioni per valori Identity SCOPE_IDENTITY e @@IDENTITY di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ciascuna di queste funzioni differiscono:  
-  
+IDENT_CURRENT è simile alle funzioni per valori Identity SCOPE_IDENTITY e @@IDENTITY di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ciascuna di queste funzioni differiscono:  
+
 -   La funzione IDENT_CURRENT restituisce l'ultimo valore Identity generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito.  
-  
 -   La funzione @@IDENTITY restituisce l'ultimo valore Identity generato per qualsiasi tabella della sessione corrente in tutti gli ambiti.  
-  
 -   La funzione SCOPE_IDENTITY restituisce l'ultimo valore Identity generato per qualsiasi tabella della sessione e dell'ambito correnti.  
   
- Quando il valore IDENT_CURRENT è NULL, perché la tabella non conteneva righe oppure è stata troncata, la funzione IDENT_CURRENT restituisce il valore di inizializzazione.  
+Quando il valore IDENT_CURRENT è NULL, perché la tabella non conteneva righe oppure è stata troncata, la funzione IDENT_CURRENT restituisce il valore di inizializzazione.  
   
- Le istruzioni e le transazioni con esito negativo sono in grado di modificare i dati Identity correnti di una tabella e creare gap nei valori della colonna Identity. Non viene mai eseguito il rollback del valore Identity, anche se non si esegue il commit della transazione che ha tentato l'inserimento del valore nella tabella. Se, ad esempio, un'istruzione INSERT ha esito negativo a causa di una violazione di IGNORE_DUP_KEY, il valore Identity corrente per la tabella viene comunque incrementato.  
+Le istruzioni e le transazioni con esito negativo sono in grado di modificare i dati Identity correnti di una tabella e creare gap nei valori della colonna Identity. Non viene mai eseguito il rollback del valore Identity, anche se non si esegue il commit della transazione che ha tentato l'inserimento del valore nella tabella. Se, ad esempio, un'istruzione INSERT ha esito negativo a causa di una violazione di IGNORE_DUP_KEY, il valore Identity corrente per la tabella viene comunque incrementato.  
+
+Quando si usa IDENT_CURRENT su una vista che contiene join, viene restituito NULL, a prescindere dal fatto che una o più delle tabelle unite in join abbiano una colonna Identity. 
   
- Prestare attenzione quando si utilizza IDENT_CURRENT per stimare il successivo valore Identity generato. È possibile che il valore generato effettivo sia diverso dalla somma di IDENT_CURRENT e IDENT_INCR a causa di inserimenti effettuati da altre sessioni.  
+> [!IMPORTANT]
+> Prestare attenzione quando si usa IDENT_CURRENT per stimare il successivo valore Identity generato. È possibile che il valore generato effettivo sia diverso dalla somma di IDENT_CURRENT e IDENT_INCR a causa di inserimenti effettuati da altre sessioni.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. Restituzione dell'ultimo valore Identity generato per una tabella specificata  
  Nell'esempio seguente viene restituito l'ultimo valore Identity generato per la tabella `Person.Address` nel database `AdventureWorks2012`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;  
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. Confronto dei valori Identity restituiti da IDENT_CURRENT, @@IDENTITY e SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-ident_current-identity-and-scope_identity"></a>B. Confronto dei valori Identity restituiti da IDENT_CURRENT, @@IDENTITY e SCOPE_IDENTITY  
  Nell'esempio seguente vengono illustrati i diversi valori Identity restituiti dalle funzioni `IDENT_CURRENT`, `@@IDENTITY` e `SCOPE_IDENTITY`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N't6', N'U') IS NOT NULL   

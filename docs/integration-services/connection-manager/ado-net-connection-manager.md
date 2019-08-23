@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 32b01cce82cd1fd2af018b002a3c551ea480c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3856f1f651db485aa9e54758c2d2a92ebf2ea0a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897983"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028778"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
 
@@ -62,7 +62,7 @@ ms.locfileid: "67897983"
   
  Molte delle opzioni di configurazione della gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] dipendono dal provider .NET usato dalla gestione connessione.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
 -   [Configura gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -89,6 +89,9 @@ ms.locfileid: "67897983"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Identità gestite per l'autenticazione delle risorse di Azure
 Quando si eseguono pacchetti SSIS nel [runtime di integrazione Azure-SSIS in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), è possibile usare l'[identità gestita](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure (o istanza gestita). La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
 
+> [!NOTE]
+>  Quando si usa l'autenticazione Azure AD (inclusa l'autenticazione identità gestita) per connettersi al database SQL di Azure (o istanza gestita), esistono problemi noti che possono causare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+
 Per usare l'autenticazione identità gestita per il database SQL di Azure, seguire questa procedura per configurare il database:
 
 1. **Creare un gruppo in Azure AD.** Impostare l'identità gestita come membro del gruppo.
@@ -109,7 +112,7 @@ Per usare l'autenticazione identità gestita per il database SQL di Azure, segui
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Concedere le autorizzazioni necessarie al gruppo di Azure AD** come si farebbe normalmente per gli utenti SQL e altri utenti. Ad esempio, eseguire il codice seguente:
+1. **Concedere le autorizzazioni necessarie al gruppo di Azure AD** come si farebbe normalmente per gli utenti SQL e altri utenti. Per i ruoli appropriati, vedere [Ruoli a livello di database](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Ad esempio, eseguire il codice seguente:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -134,11 +137,11 @@ Per usare l'autenticazione identità gestita per Istanza gestita di database SQL
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Concedere all'identità gestita della data factory le autorizzazioni necessarie**. Eseguire il codice T-SQL seguente nel database da cui o in cui si vuole copiare i dati:
+1. **Concedere all'identità gestita della data factory le autorizzazioni necessarie**. Per i ruoli appropriati, vedere [Ruoli a livello di database](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Eseguire il codice T-SQL seguente nel database da cui o in cui si vuole copiare i dati:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Infine **configurare l'autenticazione identità gestita** per la gestione connessione ADO.NET. Sono disponibili due opzioni.
@@ -152,7 +155,7 @@ Infine **configurare l'autenticazione identità gestita** per la gestione connes
     >  Nel runtime di integrazione Azure-SSIS tutti gli altri metodi di autenticazione, ad esempio l'autenticazione integrata e la password, preconfigurati nella gestione connessione ADO.NET verranno **ignorati** quando viene usata l'autenticazione identità gestita per stabilire la connessione al database.
 
 > [!NOTE]
->  Per configurare l'autenticazione identità gestita nei pacchetti esistenti, assicurarsi di ricompilare almeno una volta il progetto SSIS con l'[ultima versione di Progettazione SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) e di ridistribuire il progetto SSIS nel runtime di integrazione Azure-SSIS in modo che la nuova proprietà di gestione connessione **ConnectUsingManagedIdentity** venga aggiunta automaticamente in tutte le gestioni connessione ADO.NET nel progetto SSIS.
+>  Per configurare l'autenticazione identità gestita nei pacchetti esistenti, il metodo consigliato consiste nel ricompilare almeno una volta il progetto SSIS con l'[ultima versione di Progettazione SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) e ridistribuire il progetto SSIS nel runtime di integrazione Azure-SSIS in modo che la nuova proprietà di gestione connessione **ConnectUsingManagedIdentity** venga aggiunta automaticamente in tutte le gestioni connessione ADO.NET nel progetto SSIS. In alternativa, è possibile usare direttamente l'override della proprietà con il percorso della proprietà **\Package.Connections[{nome della gestione connessione}].Properties[ConnectUsingManagedIdentity]** in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
