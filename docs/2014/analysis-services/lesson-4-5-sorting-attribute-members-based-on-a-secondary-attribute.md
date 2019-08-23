@@ -115,7 +115,7 @@ ms.locfileid: "69493899"
   
      Si noti che i membri della gerarchia dell'attributo sono ora ordinati in base a un criterio logico per distanza crescente come illustrato nella figura seguente.  
   
-     ![Gerarchia dell'attributo Commute Distance] riordinata (../../2014/tutorials/media/l4-memberproperties-5.gif "Gerarchia dell'attributo Commute Distance") riordinata  
+     ![Gerarchia dell'attributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif " riordinata Gerarchia dell'attributo Commute Distance") riordinata  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

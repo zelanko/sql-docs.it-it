@@ -52,7 +52,7 @@ ms.locfileid: "69493784"
   
 8.  Selezionare **SpanishMonthName** nell'elenco **Colonne per la traduzione**, come illustrato nella figura seguente.  
   
-     Finestra di ![dialogo Traduzione dati attributo] Finestra di (../../2014/tutorials/media/l9-translations-4.gif "dialogo Traduzione dati attributo")  
+     Finestra di ![dialogo Traduzione dati attributo](../../2014/tutorials/media/l9-translations-4.gif " Finestra di dialogo Traduzione dati attributo")  
   
 9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione ( **...** ) per la traduzione in **francese (Francia)** dell'attributo **Month Name** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493784"
   
      Si noti che gli elementi del riquadro Metadati vengono ripopolati. Quando gli elementi del riquadro Metadati sono stati ripopolati, si noti che la misura Internet Sales-Sales Amount non viene più visualizzata nella cartella di visualizzazione Vendite Internet, Viene invece visualizzato in spagnolo in una nuova cartella di visualizzazione denominata `Ventas del lnternet`, come illustrato nella figura seguente.  
   
-     ![Riquadro dei metadati] ripopolato (../../2014/tutorials/media/l9-translations-6.gif "Riquadro dei metadati") ripopolato  
+     ![Riquadro dei metadati](../../2014/tutorials/media/l9-translations-6.gif " ripopolato Riquadro dei metadati") ripopolato  
   
 6.  Nel riquadro Metadati fare clic con il pulsante `Cantidad de las Ventas del Internet` destro del mouse e scegliere **Aggiungi a query**.  
   

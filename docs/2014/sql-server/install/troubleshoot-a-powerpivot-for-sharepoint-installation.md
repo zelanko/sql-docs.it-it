@@ -31,7 +31,7 @@ ms.locfileid: "68892440"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Le immagini di anteprima per Raccolta PowerPivot sono visualizzate come una X rossa.  
  Una delle cause possibile potrebbe essere che **Integrazione della funzionalità di PowerPivot per le raccolte siti** non è attiva. Completare la procedura seguente:  
   
-1.  Nella libreria della raccolta PowerPivot fare clic su **Impostazioni sito** dall'icona a forma di ingranaggio ![SharePoint]impostazioni di(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") o l'elenco **Home** .  
+1.  Nella libreria della raccolta PowerPivot fare clic su **Impostazioni sito** dall'icona a forma di ingranaggio ![SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") o l'elenco **Home** .  
   
 2.  Nella sezione **Amministrazione raccolta siti** fare clic su **Funzionalità raccolta siti**.  
   

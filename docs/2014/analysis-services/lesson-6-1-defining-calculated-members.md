@@ -272,7 +272,7 @@ ms.locfileid: "69493879"
   
      Si noti che il margine di profitto lordo per le vendite rivenditore è notevolmente inferiore rispetto alle vendite Internet, come illustrato nella figura seguente.  
   
-     ![Riquadro dei dati] in cui sono visualizzate le vendite rivenditore (../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Riquadro dei dati") in cui sono visualizzate le vendite rivenditore  
+     ![Riquadro dei dati](../../2014/tutorials/media/l6-calculatedmembers-7b.gif " in cui sono visualizzate le vendite rivenditore Riquadro dei dati") in cui sono visualizzate le vendite rivenditore  
   
 9. Aggiungere le misure **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**e **Reseller Sales Ratio to All Products** all'area Valori.  
   
