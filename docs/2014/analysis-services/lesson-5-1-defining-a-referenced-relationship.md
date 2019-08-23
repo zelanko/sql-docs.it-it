@@ -52,7 +52,7 @@ ms.locfileid: "69493929"
   
      Nella figura seguente viene illustrata la finestra di dialogo **Define Relationship** con una relazione di tipo Regolare tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** .  
   
-     Finestra di ![dialogo Definisci relazione] Finestra di (../../2014/tutorials/media/l5-referencedrelationship-4.gif "dialogo Definisci relazione")  
+     Finestra di ![dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-4.gif "dialogo Definisci relazione")  
   
 9. Fare clic su **Annulla**.  
   

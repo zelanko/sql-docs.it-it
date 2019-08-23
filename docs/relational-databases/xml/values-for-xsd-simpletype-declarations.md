@@ -1,5 +1,5 @@
 ---
-title: Valori per dichiarazioni &lt;<xsd:simpleType>&gt; | Microsoft Docs
+title: Valori per dichiarazioni &lt;xsd:simpleType&gt; | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68096978"
 ---
-# <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;<xsd:simpleType>&gt;
+# <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;xsd:simpleType&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Nella tabella seguente vengono descritte le restrizioni applicate, basate su tutte le enumerazioni di tipi semplici XSD riconosciute.  
   
