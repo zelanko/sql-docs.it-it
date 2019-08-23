@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68060248693b33cead474f051f93d69208ce512f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893568"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68984586"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -36,7 +36,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 ## <a name="click-a-product"></a>Fare clic su un prodotto.
 
-Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -769,14 +769,13 @@ WITH
 ;
 ```
 
-### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-the-storage-account-key"></a>C. Creare un'origine dati esterna per fare riferimento ad Azure Data Lake Storage Gen 1 o 2 usando la chiave dell'account di archiviazione
+### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-2-using-the-storage-account-key"></a>C. Creare un'origine dati esterna per fare riferimento ad Azure Data Lake Storage Gen 2 usando la chiave dell'account di archiviazione
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
 WITH
 --   IDENTITY   = '<storage_account_name>'
@@ -785,7 +784,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
--- Note this example uses a Gen 2 endpoint (abfss)
+-- Note this example uses a Gen 2 secured endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'

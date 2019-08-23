@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809837"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553297"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 I flag di traccia vengono usati per impostare funzionalità del server specifiche o per modificare un particolare comportamento. Il flag di traccia 3226 è ad esempio un flag di traccia di avvio di uso comune che elimina i messaggi di backup riuscito nel log degli errori. I flag di traccia vengono spesso usati per diagnosticare i problemi di prestazioni o eseguire il debug di stored procedure o sistemi complessi, ma possono anche essere consigliati dal supporto tecnico Microsoft per risolvere un comportamento che ha conseguenze negative su uno specifico carico di lavoro.  Tutti i flag di traccia descritti e quelli consigliati dal supporto tecnico Microsoft sono completamente supportati in un ambiente di produzione se usati come indicato.  Si noti che i flag di traccia in questo elenco possono essere accompagnati da considerazioni aggiuntive sul loro uso specifico, pertanto è consigliabile esaminare con attenzione tutti i consigli specificati qui e/o dal personale del supporto tecnico. Come con qualsiasi modifica alla configurazione in SQL Server, è sempre consigliabile testare accuratamente il flag in un ambiente non di produzione prima della distribuzione.
 
@@ -51,8 +51,10 @@ Per verificare i flag di traccia attivi, usare il comando `DBCC TRACESTATUS`.
 
 ## <a name="trace-flags"></a>Flag di traccia
 
-  
-Nella tabella seguente vengono elencati e descritti i flag di traccia disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Nella tabella seguente vengono elencati e descritti i flag di traccia disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!NOTE]
+> Istanza gestita di database SQL di Azure supporta i flag di traccia globali seguenti: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024. I flag di traccia di sessione non sono ancora supportati in Istanza gestita.
  
 > [!NOTE]
 > Alcuni flag di traccia sono stati introdotti in specifiche versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sulla versione applicabile, vedere l'articolo del supporto tecnico Microsoft associato a un flag di traccia specifico.

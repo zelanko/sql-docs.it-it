@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024374"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969450"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il valore di inizializzazione originale, come dato di tipo **numeric**( **@@** MAXPRECISION,0), specificato durante la creazione di una colonna Identity in una tabella o una vista. La modifica del valore corrente di una colonna Identity usando DBCC CHECKIDENT non comporta anche la modifica del valore restituito da questa funzione.  
+  Restituisce il valore di inizializzazione originale specificato durante la creazione di una colonna Identity in una tabella o una vista. La modifica del valore corrente di una colonna Identity usando DBCC CHECKIDENT non comporta anche la modifica del valore restituito da questa funzione.  
   
  ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che specifica la tabella o la vista in cui verificare la presenza di un valore di inizializzazione Identity. *table_or_view* può essere una costante stringa di caratteri racchiusa tra virgolette, una variabile, una funzione o un nome di colonna. *table_or_view* è di tipo **char**, **nchar**, **varchar** o **nvarchar**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **numeric**  
+**numerico**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Eccezioni  
  Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione necessaria per visualizzare l'oggetto.  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. Restituzione del valore di inizializzazione da una tabella specificata  
  Nell'esempio seguente viene restituito il valore di inizializzazione per la tabella `Person.Address` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Restituzione del valore di inizializzazione da più tabelle  
  L'esempio seguente restituisce le tabelle del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che includono una colonna Identity con un valore di inizializzazione.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

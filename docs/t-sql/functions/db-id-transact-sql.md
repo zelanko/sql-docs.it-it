@@ -1,7 +1,7 @@
 ---
 title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,14 +23,14 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2dc84cd224b8ea1863fd67561fdcf20a37c4544
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119021"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995745"
 ---
-# <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
+# <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Questa funzione restituisce il numero di identificazione (ID) di un database specificato.
@@ -52,6 +52,9 @@ Nome del database il cui numero di ID database verrà restituito da `DB_ID`. Se 
 
 ## <a name="remarks"></a>Remarks
 `DB_ID` può essere usato solo per restituire l'identificatore del database corrente nel database SQL di Azure. Se il nome del database specificato è diverso da quello del database corrente, viene restituito NULL.
+
+> [!NOTE]
+> Se usato con il database SQL di Azure, `DB_ID` potrebbe non restituire lo stesso risultato della query di `database_id` da **sys.databases**. Se il chiamante di `DB_ID` confronta il risultato con altre viste **sys**, è necessario eseguire una query su **sys.databases**.
   
 ## <a name="permissions"></a>Autorizzazioni  
 Se il chiamante di `DB_ID` non è proprietario di un database non **master** o non **tempdb** specifico, sono necessarie almeno le autorizzazioni a livello di server `ALTER ANY DATABASE` o `VIEW ANY DATABASE` per visualizzare la riga `DB_ID` corrispondente. Per il database **master**, `DB_ID` necessita almeno dell'autorizzazione `CREATE DATABASE`. Il database a cui si connette il chiamante verrà sempre visualizzato in **sys.databases**.
@@ -77,7 +80,7 @@ SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];
 GO  
 ```  
   
-### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilizzo di DB_ID per specificare il valore di un parametro di una funzione di sistema  
+### <a name="c-using-db_id-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilizzo di DB_ID per specificare il valore di un parametro di una funzione di sistema  
 Questo esempio usa l'istruzione `DB_ID` per restituire l'ID del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nella funzione di sistema `sys.dm_db_index_operational_stats`. La funzione utilizza un ID di database come primo parametro.
   
 ```sql

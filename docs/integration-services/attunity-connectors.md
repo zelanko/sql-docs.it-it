@@ -1,6 +1,6 @@
 ---
 title: Connettori Microsoft per Oracle e Teradata di Attunity (SSIS) | Microsoft Docs
-ms.date: 05/16/2017
+ms.date: 08/16/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -10,18 +10,21 @@ ms.topic: conceptual
 ms.assetid: ''
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 4bdd68dccdcf8c2b317c81b120feb6949bb96c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f7b6ebe42d98002627c170daaee00d4886804e8
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027570"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553187"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Connettori Microsoft per Oracle e Teradata di Attunity per Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
+> [!NOTE]
+> I connettori Attunity per Oracle e Teradata supportano SQL Server 2017 e versioni precedenti.
+>
+> A partire da SQL Server 2019, è possibile ottenere i connettori più recenti per Oracle e Teradata qui: [Connettore Microsoft per Oracle](data-flow/oracle-connector.md)
 
 È possibile scaricare connettori per Integration Services di Attunity che ottimizzano le prestazioni quando si caricano i dati in o da Oracle o Teradata in un pacchetto SSIS.
 

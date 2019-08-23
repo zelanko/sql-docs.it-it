@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040601"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553255"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Abilita i flag di traccia specificati.
   
@@ -48,7 +48,7 @@ Numero del flag di traccia da abilitare.
 Segnaposto che indica la possibilità di specificare più flag di traccia.  
   
 -1  
-Attiva i flag di traccia specificati a livello globale.  
+Attiva i flag di traccia specificati a livello globale. Questo argomento è obbligatorio in Istanza gestita di SQL di Azure. 
   
 WITH NO_INFOMSGS  
 Disattiva tutti i messaggi informativi.  
@@ -61,7 +61,9 @@ In un server di produzione, per evitare comportamenti imprevisti è consigliabil
 I flag di traccia consentono di personalizzare alcune caratteristiche controllando il funzionamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo essere stati abilitati, i flag rimangono abilitati nel server fino a quando non vengono disabilitati tramite l'istruzione DBCC TRACEOFF. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due tipi di flag di traccia: di sessione e globali. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server. Per determinare lo stato dei flag di traccia, eseguire DBCC TRACESTATUS. Per disabilitare i flag di traccia, eseguire DBCC TRACEOFF.
   
 Dopo avere attivato un flag di traccia che interessa i piani di query, eseguire `DBCC FREEPROCCACHE;` in modo che i piani memorizzati nella cache vengano ricompilati usando il nuovo comportamento relativo ai piani.
-  
+
+Istanza gestita di database SQL di Azure supporta i flag di traccia globali seguenti: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024
+
 ## <a name="result-sets"></a>Set di risultati  
  L'istruzione DBCC TRACEON restituisce il set di risultati seguente (messaggio):  
   

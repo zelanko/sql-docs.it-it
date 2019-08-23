@@ -1,7 +1,7 @@
 ---
 title: Opzioni di configurazione server memory | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763168"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028743"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione server memory
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,9 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue necessariamente l'allocazione della quantità di memoria specificata in **min server memory**. Se il carico sul server non richiede mai l'allocazione della quantità di memoria specificata in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito con una quantità di memoria inferiore.
 
-<a name="max_server_memory"></a> Usare **max server memory** per garantire che il sistema operativo non subisca un pregiudizievole utilizzo elevato di memoria. Per impostare la configurazione di max server memory, monitorare il consumo complessivo del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare i requisiti di memoria.
-
-- Dalla memoria totale del sistema operativo, riservare memoria sufficiente per il sistema operativo stesso.
-- Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **_stack size** <sup>1</sup> **\* calculated max worker threads**<sup>2</sup>. Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
+<a name="max_server_memory"></a> Usare **max server memory** per garantire che il sistema operativo non subisca un pregiudizievole utilizzo elevato di memoria. Per impostare la configurazione di max server memory, monitorare il consumo complessivo del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare i requisiti di memoria. Per ottenere calcoli più precisi per una singola istanza:
+- Dalla memoria totale del sistema operativo riservare 1-4 GB al sistema operativo stesso.
+- Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>** . Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
 
 <sup>1</sup> Fare riferimento alla [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md#stacksizes) per informazioni sulle dimensioni degli stack di thread per ogni architettura.
 

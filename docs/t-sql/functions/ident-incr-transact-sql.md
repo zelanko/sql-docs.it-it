@@ -19,45 +19,44 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3d601df6b045347a46010b422308cabc43188c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024385"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969472"
 ---
-# <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
+# <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il valore di incremento, come dato di tipo **numeric** ( **@@** MAXPRECISION, 0), specificato durante la creazione di una colonna Identity in una tabella o una vista.  
+Restituisce il valore di incremento specificato durante la creazione di una colonna Identity in una tabella o una vista.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *table_or_view* **'**  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che specifica la tabella o la vista in cui si vuole verificare la presenza di un valore di incremento Identity valido. *table_or_view* può essere una costante stringa di caratteri racchiusa tra virgolette. Può anche essere una variabile, una funzione o un nome di colonna. *table_or_view* è di tipo **char**, **nchar**, **varchar** o **nvarchar**.  
+**'** *table_or_view* **'**  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che specifica la tabella o la vista in cui si vuole verificare la presenza di un valore di incremento Identity valido. *table_or_view* può essere una costante stringa di caratteri racchiusa tra virgolette. Può anche essere una variabile, una funzione o un nome di colonna. *table_or_view* è di tipo **char**, **nchar**, **varchar** o **nvarchar**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **numeric**  
+**numerico**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Eccezioni  
- Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione necessaria per visualizzare l'oggetto.  
+Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione necessaria per visualizzare l'oggetto.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha autorizzazioni. Se l'utente non ha le autorizzazioni necessarie per l'oggetto, le funzioni predefinite di creazione dei metadati come IDENT_INCR possono restituire NULL. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha autorizzazioni. Se l'utente non ha le autorizzazioni necessarie per l'oggetto, le funzioni predefinite di creazione dei metadati come IDENT_INCR possono restituire NULL. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. Restituzione del valore di incremento per una tabella specificata  
  Nell'esempio seguente viene restituito il valore di incremento per la tabella `Person.Address` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. Restituzione del valore di incremento da più tabelle  
  Nell'esempio seguente vengono restituite le tabelle del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che include una colonna Identity con un valore di incremento.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

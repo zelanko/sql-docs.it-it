@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081657"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026139"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ Come indicato nell'illustrazione:
  Le istanze **Polygon** accettate sono istanze che possono essere archiviate in una variabile **geometry** o **geography** senza generare un'eccezione. Di seguito sono riportate le istanze **Polygon** accettate:  
   
 -   Istanza **Polygon** vuota  
--   Istanza **Polygon** che ha un anello esterno accettabile e zero o più anelli interni accettabili  
+-   Istanza **Polygon** che ha un anello esterno accettabile (**LineString**) e zero o più anelli interni accettabili (**LineString**s)  
   
-I criteri seguenti sono necessari affinché un anello sia accettabile.  
+I criteri seguenti sono necessari affinché un anello (**LineString**) sia accettabile.  
   
 -   L'istanza **LineString** deve essere accettata.  
 -   L'istanza **LineString** deve avere almeno quattro punti.  

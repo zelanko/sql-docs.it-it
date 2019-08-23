@@ -18,12 +18,12 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b3a833caee68600ccc2fbf6f92244b5969e7dbb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263113"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995847"
 ---
 # <a name="resize-the-job-history-log"></a>Modificare le dimensioni del log di cronologia processi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   
-3.  Nella pagina **Cronologia** verificare che la casella di controllo **Limita dimensioni log cronologia processi**sia selezionata.  
+3.  Selezionare la pagina **Cronologia**, quindi verificare che l'opzione **Limita dimensioni log cronologia processi** sia selezionata.  
   
 4.  Nella casella **Dimensioni massime log cronologia processi** immettere il numero massimo di righe consentito per il log cronologia processi.  
   

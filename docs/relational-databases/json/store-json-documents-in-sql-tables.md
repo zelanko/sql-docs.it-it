@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059576"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957450"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Archiviare documenti JSON in SQL Server o nel database SQL
-SQL Server e il database SQL di Azure includono funzioni JSON native che consentono di analizzare i documenti JSON usando il linguaggio SQL standard. È ora possibile archiviare i documenti JSON in SQL Server o nel database SQL ed eseguire query sui dati JSON come in un database NoSQL. In questo articolo vengono descritte le opzioni per archiviare i documenti JSON in SQL Server o nel database SQL.
+SQL Server e il database SQL di Azure includono funzioni JSON native che consentono di analizzare i documenti JSON usando il linguaggio SQL standard. È possibile archiviare i documenti JSON in SQL Server o nel database SQL ed eseguire query sui dati JSON come in un database NoSQL. In questo articolo vengono descritte le opzioni per archiviare i documenti JSON in SQL Server o nel database SQL.
+
+## <a name="json-storage-format"></a>Formato di archiviazione JSON
+
+La prima decisione per la progettazione dell'archiviazione è la modalità di archiviazione dei documenti JSON nelle tabelle. Sono disponibili due opzioni:
+- **Archiviazione LOB**: i documenti JSON possono essere archiviati così come sono in colonne `NVARCHAR`. Questo è il modo migliore per eseguire rapidamente il caricamento e l'inserimento dei dati, perché la velocità di caricamento corrisponde al caricamento delle colonne stringa. Questo approccio può introdurre un'ulteriore riduzione delle prestazioni per il tempo di query/analisi se non viene eseguita l'indicizzazione sui valori JSON, poiché devono essere analizzati i documenti JSON non elaborati durante l'esecuzione delle query. 
+- **Archiviazione relazionale**: i documenti JSON possono essere analizzati durante l'inserimento nella tabella usando le funzioni `OPENJSON`, `JSON_VALUE` o `JSON_QUERY`. I frammenti dei documenti JSON di input possono essere archiviati nelle colonne con tipo di dati SQL o in colonne NVARCHAR contenenti elementi secondari JSON. Questo approccio aumenta il tempo di caricamento perché l'analisi JSON viene eseguita durante il caricamento, tuttavia le prestazioni delle query corrispondono a quelle delle query classiche sui dati relazionali.
 
 ## <a name="classic-tables"></a>Tabelle classiche
 
