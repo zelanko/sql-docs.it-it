@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652240"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009336"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Che cos'è il pool di[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]archiviazione ()?
 
@@ -33,7 +33,7 @@ Il pool di archiviazione è formato da nodi di archiviazione costituiti da SQL S
 I nodi di archiviazione sono responsabili delle attività seguenti:
 
 - Inserimento di dati tramite Spark.
-- Archiviazione dei dati in HDFS (formato parquet). HDFS fornisce anche la persistenza dei dati, tenendo conto che i dati HDFS vengono distribuiti tra tutti i nodi di archiviazione del cluster Big Data di SQL Server.
+- Archiviazione dei dati in HDFS (parquet e formato testo delimitato). HDFS fornisce anche la persistenza dei dati, tenendo conto che i dati HDFS vengono distribuiti tra tutti i nodi di archiviazione del cluster Big Data di SQL Server.
 - Accesso ai dati tramite gateway HDFS ed endpoint SQL Server.
 
 ## <a name="next-steps"></a>Passaggi successivi
