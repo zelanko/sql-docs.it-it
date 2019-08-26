@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032048"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653700"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
 
@@ -22,7 +22,7 @@ ms.locfileid: "68032048"
 
 Questo articolo illustra come configurare un'istanza di SQL Server in Kubernetes nel servizio Azure Kubernetes, con archiviazione persistente per la disponibilità elevata. La soluzione garantisce la resilienza. Se l'istanza di SQL Server ha esito negativo, Kubernetes la ricrea automaticamente in un nuovo pod. Kubernetes garantisce la resilienza anche in caso di errore di un nodo.
 
-Questa esercitazione illustra come configurare un'istanza di SQL Server a disponibilità elevata in un contenitore nel servizio Azure Kubernetes. È anche possibile creare [gruppi di disponibilità Always On per i contenitori di SQL Server](sql-server-ag-kubernetes.md). Per confrontare le due diverse soluzioni Kubernetes, vedere [Disponibilità elevata per i contenitori di SQL Server](sql-server-linux-container-ha-overview.md).
+Questa esercitazione illustra come configurare un'istanza di SQL Server a disponibilità elevata in un contenitore nel servizio Azure Kubernetes.
 
 > [!div class="checklist"]
 > * Creare una password dell'amministratore di sistema
