@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912090"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009401"
 ---
 # <a name="columnstore-indexes-overview"></a>Indici columnstore: Panoramica
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ Quando si crea una tabella con l'istruzione `CREATE TABLE` è possibile creare l
 |Eliminare una riga da un indice columnstore.|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Usare [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) per eliminare una riga.<br /><br /> **Riga columnstore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente ma recupera lo spazio di archiviazione fisico della riga solo dopo che l'indice è stato ricompilato.<br /><br /> **Riga deltastore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina la riga logicamente e fisicamente.|  
 |Aggiornare una riga nell'indice columnstore.|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Usare [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) per aggiornare una ruga.<br /><br /> **Riga columnstore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente e quindi inserisce la riga aggiornata nel deltastore.<br /><br /> **Riga deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiorna la riga nel deltastore.|  
 |Caricare dati in un indice columnstore.|[Caricamento dei dati di indici columnstore](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|Forzare il passaggio di tutte le righe del deltastore nel columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Deframmentazione degli indici columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`ALTER INDEX` con l'opzione `REBUILD` forza il passaggio di tutte le righe nel columnstore.|  
+|Forzare il passaggio di tutte le righe del deltastore nel columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`ALTER INDEX` con l'opzione `REBUILD` forza il passaggio di tutte le righe nel columnstore.|  
 |Deframmentare un indice columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` consente di deframmentare indici columnstore online.|  
 |Unire tabelle con indici columnstore.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
