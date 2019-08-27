@@ -46,9 +46,9 @@ Come illustrato nel diagramma seguente, la risorsa di archiviazione viene presen
 
 ## <a name="number-of-instances-and-nodes"></a>Numero di istanze e nodi
 
-Una differenza fondamentale con SQL Server in Linux è che può essere presente una sola installazione di SQL Server per ogni server Linux. Tale installazione viene chiamata istanza. Ciò significa che, a differenza di Windows Server che supporta fino a 25 istanze del cluster di failover per ogni Windows Server Failover Cluster (WSFC), un'istanza del cluster di failover basata su Linux avrà una sola istanza. Questa istanza è anche un'istanza predefinita. In Linux non esiste il concetto di istanza denominata. 
+Una differenza fondamentale con SQL Server in Linux è data dalla presenza di una sola installazione di SQL Server per ogni server Linux. Tale installazione viene chiamata istanza. Ciò significa che, a differenza di Windows Server che supporta fino a 25 istanze del cluster di failover per ogni Windows Server Failover Cluster (WSFC), un'istanza del cluster di failover basata su Linux avrà una sola istanza. Questa istanza è anche un'istanza predefinita. In Linux non esiste il concetto di istanza denominata. 
 
-Un cluster Pacemaker può avere solo fino a 16 nodi solo quando è coinvolto Corosync, quindi una singola istanza del cluster di failover può estendersi su un massimo di 16 server. Un'istanza del cluster di failover implementata con l'edizione Standard di SQL Server supporta fino a due nodi di un cluster, anche se il cluster Pacemaker consente un massimo di 16 nodi.
+Un cluster Pacemaker può avere solo fino a 16 nodi quando è coinvolto Corosync, quindi una singola istanza del cluster di failover può estendersi su un massimo di 16 server. Un'istanza del cluster di failover implementata con l'edizione Standard di SQL Server supporta fino a due nodi di un cluster, anche se il cluster Pacemaker consente un massimo di 16 nodi.
 
 In un'istanza del cluster di failover di SQL Server l'istanza di SQL Server è attiva in un nodo o nell'altro.
 
