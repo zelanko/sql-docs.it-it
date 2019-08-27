@@ -1415,7 +1415,7 @@
             - name: data warehouse
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: Eseguire la deframmentazione
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: SQL Graph
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -5722,8 +5722,10 @@
       items:
         - name: Novità
           href: dma/dma-whatsnew.md
-        - name: Valutare
+        - name: Valutare il database SQL
           href: dma/dma-assesssqlonprem.md
+        - name: Valutare SQL Server Integration Services (SSIS)
+          href: dma/dma-assess-ssis.md
         - name: Identificare lo SKU del database SQL di Azure corretto
           href: dma/dma-sku-recommend-sql-db.md
         - name: Aggiornare SQL Server a una versione successiva
