@@ -4153,6 +4153,8 @@
     - name: Eseguire l'aggiornamento di SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: Certificazione di compatibilità
+          href: database-engine/install-windows/compatibility-certification.md
         - name: Aggiornamenti di versione ed edizione supportati per SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: Aggiornamenti di versione ed edizione supportati per SQL Server 2016
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: Modificare la modalità di compatibilità del database e usare Query Store
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: Modificare la modalità di compatibilità del database con Assistente ottimizzazione query
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Configurazione
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -6555,7 +6559,7 @@
               items:
                 - name: Livello di crittografia delle chiavi asimmetriche
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-                - name: Verifica dei problemi di ritardo di I/O nel sottosistema di I/O del disco
+                - name: Controllare i problemi di ritardo di I/O nel sottosistema di I/O del disco
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Verifica dei problemi correlati ai tentativi di lettura nel sottosistema di input/output del disco
                   href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -6868,7 +6872,7 @@
               href: relational-databases/sql-trace/limit-trace-file-and-table-sizes.md
             - name: Pianificare tracce
               href: relational-databases/sql-trace/schedule-traces.md
-        - name: Query Store
+        - name: Archivio query
           href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
           items:
             - name: OLTP in memoria
@@ -6925,7 +6929,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-databases.md
                     - name: Garbage Collection
                       href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-                    - name: IO Governor
+                    - name: I/O Governor
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: Phantom Processor
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: Convalidare le guide di piano dopo l'aggiornamento
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: Assistente ottimizzazione query
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Resource Governor
           href: relational-databases/resource-governor/resource-governor.md
           items:
