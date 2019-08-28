@@ -1,7 +1,7 @@
 ---
 title: Compilazione dell'URL di connessione | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957379"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028450"
 ---
 # <a name="building-the-connection-url"></a>Costruzione dell'URL della connessione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +83,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## <a name="escaping-values-in-the-connection-url"></a>Utilizzo della sequenza di escape dei valori nell'URL della connessione  
+## <a name="escaping-values-in-the-connection-url"></a>Uso della sequenza di escape dei valori nell'URL della connessione  
  Se nell'URL della connessione vengono utilizzati caratteri speciali, quali spazi, punti e virgola, virgolette, è necessario includere alcune parti dell'URL in una sequenza di escape. L'impostazione di una sequenza di escape per tali caratteri è supportata nel driver JDBC se tali caratteri sono racchiusi tra parentesi graffe. Ad esempio con {;} il carattere di punto e virgola è incluso in una sequenza di escape.  
   
  I valori inclusi in una sequenza di escape possono contenere caratteri speciali (in particolare '=', ';', '[]' e lo spazio) ma non parentesi graffe. I valori che contengono parentesi graffe e che devono essere inclusi in una sequenza di escape devono essere aggiunti a una raccolta di proprietà.  
@@ -96,7 +96,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  I file sqljdbc_auth.dll sono installati nel percorso seguente:  
   
- \<*directory di installazione*>\<\sqljdbc_*Version*>\\<*Language*> \auth\  
+ \<*directory di installazione*>\<\sqljdbc_*Version*>\\<*Language>* \auth\  
   
  Per qualsiasi sistema operativo supportato da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vedere uso dell' [autenticazione integrata Kerberos per connettersi a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) per una descrizione di una funzionalità aggiunta in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] che consente a un'applicazione di connettersi a un database usando Integrated autenticazione con tipo 4 Kerberos.  
   
