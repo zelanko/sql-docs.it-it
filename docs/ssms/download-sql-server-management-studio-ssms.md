@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823126"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123098"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -81,7 +81,6 @@ SQL Server Management Studio 18.2:
 | Esecuzione o risultati di query | Aggiunta di "Ora di completamento" nei messaggi per tenere traccia di quando viene completata l'esecuzione di una determinata query. |
 | Esecuzione o risultati di query  | È consentita la visualizzazione (risultato come testo) e l'archiviazione nelle celle (risultato come griglia) di più dati. SSMS consente ora fino a 2 M di caratteri per entrambi (rispettivamente, fino a 256 e 64 K). In questo modo è stato risolto anche il problema a causa del quale gli utenti non erano in grado di acquisire più di 43680 caratteri dalle celle della griglia. |
 | Showplan | Aggiunta di un nuovo attributo in QueryPlan quando è abilitata la funzionalità UDF scalare inline (ContainsInlineScalarTsqlUdfs). |
-| SMO | Aggiunta del supporto per "Limitazioni delle funzionalità*. Per altre informazioni sulla funzionalità stessa, vedere [Limitazioni delle funzionalità](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Per informazioni sulle estensioni di valutazione, vedere [Introduzione alle API Valutazione SQL](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Ottimizzazione delle prestazioni per l'utilità di pianificazione pacchetti SSIS in Azure |
 |  |  |
 

@@ -3,7 +3,7 @@ title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 02e4b66b1f215e513b005c770aebf9afc256ea8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f0b159230f89503aac00b4cc0b4ec5d0da5e39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098762"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123170"
 ---
-# <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
@@ -64,7 +64,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT restituisce Null  
+### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT restituisce Null  
  Nell'esempio seguente viene dimostrato che TRY_CONVERT restituisce Null quando il cast non riesce.  
   
 ```sql  
@@ -104,7 +104,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>B. TRY_CONVERT restituisce un errore  
+### <a name="b-try_convert-fails-with-an-error"></a>B. TRY_CONVERT restituisce un errore  
  Nell'esempio seguente viene dimostrato che TRY_CONVERT restituisce un errore quando il cast non è consentito in modo esplicito.  
   
 ```sql  
@@ -118,7 +118,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT ha esito positivo  
+### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT ha esito positivo  
  In questo esempio viene dimostrato che l'espressione deve essere nel formato previsto.  
   
 ```  

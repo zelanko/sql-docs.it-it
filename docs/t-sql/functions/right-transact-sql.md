@@ -20,12 +20,12 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20e082110f771f0c1525369b0f778fb0df6e6b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095389"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123178"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ RIGHT ( character_expression , integer_expression )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati di tipo carattere o binario. *character_expression* può essere una costante, una variabile o una colonna. *character_expression* può essere di qualsiasi tipo di dati, eccetto **text** o **ntext**, implicitamente convertibile in **varchar** o **nvarchar**. In alternativa usare la funzione [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *character_expression*.  
   
  *integer_expression*  
- Valore Integer positivo che specifica quanti caratteri di *character_expression* verranno restituiti. Se l'argomento *integer_expression* è negativo, viene restituito un errore. Se *integer_expression* è di tipo **bigint** e contiene un valore elevato, *character_expression* deve essere di un tipo di dati di grandi dimensioni, ad esempio **varchar(max)**.  
+ Valore Integer positivo che specifica quanti caratteri di *character_expression* verranno restituiti. Se l'argomento *integer_expression* è negativo, viene restituito un errore. Se *integer_expression* è di tipo **bigint** e contiene un valore elevato, *character_expression* deve essere di un tipo di dati di grandi dimensioni, ad esempio **varchar(max)** .  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce **varchar** quando *character_expression* è un tipo di dati carattere non Unicode.  
@@ -110,9 +110,7 @@ lters
  Nell'esempio seguente viene usata la funzione `RIGHT` per restituire gli ultimi due caratteri della stringa di caratteri `abcdefg`.  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;  
+SELECT RIGHT('abcdefg', 2); 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

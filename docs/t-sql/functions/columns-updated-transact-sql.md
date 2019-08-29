@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419597"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Questa funzione restituisce uno schema di bit **varbinary** che indica le colonne inserite o aggiornate in una tabella o vista. Usare `COLUMNS_UPDATED` in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.
@@ -74,7 +74,7 @@ Quando un set di colonne è definito in una tabella, il comportamento della funz
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Utilizzo di COLUMNS_UPDATED per controllare le prime 8 colonne di una tabella  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Utilizzo di COLUMNS_UPDATED per controllare le prime 8 colonne di una tabella  
 Nell'esempio seguente vengono create due tabelle: `employeeData` e `auditEmployeeData`. La tabella `employeeData` include informazioni riservate sulle retribuzioni dei dipendenti e può essere modificata dai membri dell'ufficio del personale. Se il numero di codice fiscale, lo stipendio annuale o il numero di conto corrente bancario relativi a un dipendente cambiano, nella tabella di controllo `auditEmployeeData` viene generato e inserito un record di controllo.
   
 Con la funzione `COLUMNS_UPDATED()`, è possibile verificare rapidamente eventuali modifiche apportate a colonne contenenti informazioni riservate sui dipendenti. Se si usa `COLUMNS_UPDATED()` ciò funziona solo quando si tenta di rilevare le modifiche alle prime otto colonne della tabella.
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
 Per controllare gli aggiornamenti eseguiti su colonne diverse dalle prime otto colonne di una tabella, usare la funzione `SUBSTRING` per controllare il bit corretto restituito da `COLUMNS_UPDATED`. Nell'esempio seguente vengono controllati gli aggiornamenti relativi alle colonne `3`, `5` e `9` della tabella `AdventureWorks2012.Person.Person`.
   
 ```sql

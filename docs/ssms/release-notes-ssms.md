@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809859"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122989"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -62,7 +62,6 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 | Esecuzione o risultati di query | Aggiunta di *Ora di completamento* nei messaggi per tenere traccia di quando viene completata l'esecuzione di una determinata query. |
 | Esecuzione o risultati di query | È consentita la visualizzazione (risultato come testo) e l'archiviazione nelle celle (risultato come griglia) di più dati. SSMS consente ora fino a 2 M di caratteri per entrambi (rispettivamente, fino a 256 e 64 K). In questo modo è stato risolto anche il problema a causa del quale gli utenti non erano in grado di acquisire più di 43680 caratteri dalle celle della griglia. |
 | Showplan | Aggiunta di un nuovo attributo in QueryPlan quando è abilitata la [funzionalità UDF scalare inline](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs). |
-| SMO | Aggiunta del supporto per *Limitazioni delle funzionalità*. Per altre informazioni sulla funzionalità stessa, vedere [Limitazioni delle funzionalità](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO | Aggiunta del supporto per l'*API Valutazione SQL*. Per altre informazioni, vedere [API Valutazione SQL](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 è la versione GA più recente di SSMS. Se è necessaria una versione 
 |Always Encrypted| La casella di controllo Abilita Always Encrypted nella nuova scheda Always Encrypted nella finestra di dialogo Connetti al server ora consente di abilitare o disabilitare facilmente la funzionalità Always Encrypted per una connessione di database.|
 |Always Encrypted con enclave sicuri| Nell'anteprima di SQL Server 2019 sono stati apportati diversi miglioramenti per il supporto della funzionalità Always Encrypted con enclave sicuri:  Un campo di testo per specificare l'URL di attestazione dell'enclave nella finestra di dialogo Connetti al server (la nuova scheda Always Encrypted).  La nuova casella di controllo nella finestra di dialogo Nuova chiave master della colonna per controllare se una nuova chiave master della colonna consente i calcoli dell'enclave.  Altre finestre di dialogo di gestione delle chiavi Always Encrypted ora visualizzano informazioni su quali chiavi master della colonna consentono i calcoli dell'enclave.|
 |File di controllo|Metodo di autenticazione cambiato dal metodo basato sulla Chiave account di archiviazione all'autenticazione basata su Azure AD.|
-|File di controllo|Aggiornato l'elenco delle azioni di controllo conosciute per includere la RESTRIZIONE FUNZIONALITÀ AGGIUNGI/MODIFICA GRUPPO/ELIMINA.|
 |Classificazione dei dati| Riorganizzazione del menu attività Classificazione dati : è stato aggiunto un sottomenu al menu delle attività del database ed è stata aggiunta un'opzione per aprire il report dal menu senza dover aprire prima la finestra Classifica dati.|
 |Classificazione dei dati|Aggiunta della nuova funzionalità 'Classificazione dati' in SMO. L'oggetto colonna espone nuove proprietà: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (sola lettura). Per altre informazioni, vedere [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Classificazione dei dati|Aggiunta della nuova voce di menu "Classification Report" (Report di classificazione) nel riquadro a comparsa "Classificazione dati".|
