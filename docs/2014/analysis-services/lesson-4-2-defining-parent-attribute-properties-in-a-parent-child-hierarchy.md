@@ -79,7 +79,7 @@ ms.locfileid: "69494009"
   
      La figura seguente illustrale modifiche apportate nella finestra di dialogo **Modello denominazione livelli** .  
   
-     Finestra di ![dialogo Modello denominazione livelli] Finestra di (../../2014/tutorials/media/l4-namingtemplate.gif "dialogo Modello denominazione livelli")  
+     ![dialogo Modello denominazione livelli](../../2014/tutorials/media/l4-namingtemplate.gif "dialogo Modello denominazione livelli")  
   
 5.  Fare clic su **OK**.  
   
