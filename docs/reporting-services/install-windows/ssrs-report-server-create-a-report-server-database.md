@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262803"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123011"
 ---
 # <a name="create-a-report-server-database"></a>Creare un database del server di report 
 
@@ -24,10 +24,9 @@ La modalità nativa di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsno
 
 I database vengono creati assieme e associati in base al nome. Con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita, i database sono denominati **reportserver** e **reportservertempdb**. I due database vengono detti collettivamente **database del server di report** o **catalogo del server di report**.
 
-La **modalità SharePoint** di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
+La **modalità SharePoint** di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
 
 Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:
 
@@ -36,6 +35,8 @@ Di seguito sono riportati nomi di esempio dei tre database della modalità Share
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > Non scrivere applicazioni che eseguono query sul database del server di report. Il database del server di report non è uno schema pubblico. La struttura della tabella potrebbe cambiare da una versione all'altra. Se si scrive un'applicazione che richiede l'accesso al database del server di report, usare sempre le API di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per accedere al database del server di report.  
@@ -65,7 +66,18 @@ Nella pagina delle **opzioni di installazione del server di report** è disponib
 ## <a name="database-server-version-requirements"></a>Requisiti relativi alla versione del server di database
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato per ospitare i database del server di report. L'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può essere locale o remota. Le versioni supportate seguenti di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] possono ospitare i database del server di report:  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Istanza gestita di SQL di Azure
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ Nella pagina delle **opzioni di installazione del server di report** è disponib
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 Se s crea il database del server di report in un computer remoto, configurare la connessione per l'uso di un account utente di dominio o un account di servizio con accesso alla rete. Se si usa un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], valutare attentamente le credenziali che il server di report dovrà usare per connettersi all'istanza. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
