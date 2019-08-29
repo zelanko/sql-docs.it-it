@@ -1,0 +1,207 @@
+- name: Guida di riferimento a DMX (Data Mining Extensions)
+  href: ../dmx/data-mining-extensions-dmx-reference.md
+  items:
+    - name: Istruzioni DMX (Data Mining Extensions)
+      href: ../dmx/data-mining-extensions-dmx-statements.md
+      items:
+        - name: Istruzioni DMX - Definizione dei dati
+          href: ../dmx/dmx-statements-data-definition.md
+          items:
+            - name: CREATE MINING STRUCTURE
+              href: ../dmx/create-mining-structure-dmx.md
+            - name: ALTER MINING STRUCTURE
+              href: ../dmx/alter-mining-structure-dmx.md
+            - name: CREATE MINING MODEL
+              href: ../dmx/create-mining-model-dmx.md
+            - name: DROP MINING STRUCTURE
+              href: ../dmx/drop-mining-structure-dmx.md
+            - name: DROP MINING MODEL
+              href: ../dmx/drop-mining-model-dmx.md
+            - name: EXPORT
+              href: ../dmx/export-dmx.md
+            - name: IMPORT
+              href: ../dmx/import-dmx.md
+            - name: SELECT INTO
+              href: ../dmx/select-into-dmx.md
+        - name: Istruzioni DMX - Manipolazione dei dati
+          href: ../dmx/dmx-statements-data-manipulation.md
+          items:
+            - name: <source data query> - OPENQUERY
+              href: ../dmx/source-data-query-openquery.md
+            - name: <source data query> - OPENROWSET
+              href: ../dmx/source-data-query-openrowset.md
+            - name: <source data query> - SHAPE
+              href: ../dmx/source-data-query-shape.md
+            - name: SELECT DISTINCT FROM <model >
+              href: ../dmx/select-distinct-from-model-dmx.md
+            - name: SELECT FROM <model>.CONTENT
+              href: ../dmx/select-from-model-content-dmx.md
+            - name: SELECT FROM <model>.CASES
+              href: ../dmx/select-from-model-cases-dmx.md
+            - name: SELECT FROM <model>.SAMPLE_CASES
+              href: ../dmx/select-from-model-sample-cases-dmx.md
+            - name: SELECT FROM <model>.DIMENSION_CONTENT
+              href: ../dmx/select-from-model-dimension-content-dmx.md
+            - name: SELECT FROM <model> PREDICTION JOIN
+              href: ../dmx/select-from-model-prediction-join-dmx.md
+            - name: SELECT FROM <model>
+              href: ../dmx/select-from-model-dmx.md
+            - name: SELECT FROM <structure>.CASES
+              href: ../dmx/select-from-structure-cases.md
+            - name: Elimina
+              href: ../dmx/delete-dmx.md
+            - name: INSERT INTO
+              href: ../dmx/insert-into-dmx.md
+            - name: SELECT
+              href: ../dmx/select-dmx.md
+            - name: <source data query>
+              href: ../dmx/source-data-query.md
+            - name: UPDATE
+              href: ../dmx/update-dmx.md
+    - name: Struttura e utilizzo di query di stima DMX
+      href: structure-and-usage-of-dmx-prediction-queries.md
+    - name: Informazioni sull'istruzione DMX Select
+      href: understanding-the-dmx-select-statement.md
+    - name: Funzioni di stima correlate (DMX)
+      href: general-prediction-functions-dmx.md
+    - name: Elementi della sintassi DMX
+      href: data-mining-extensions-dmx-syntax-elements.md
+      items:
+        - name: Operatori aritmetici
+          href: ../dmx/operators-arithmetic.md
+        - name: Operatori di confronto
+          href: ../dmx/operators-comparison.md
+        - name: Operatori logici
+          href: ../dmx/operators-logical.md
+        - name: Operatori unari
+          href: ../dmx/operators-unary.md
+        - name: Identificatori (DMX)
+          href: ../dmx/identifiers-dmx.md
+        - name: Tipi di dati (DMX)
+          href: ../dmx/data-types-dmx.md
+        - name: Espressioni (DMX)
+          href: ../dmx/expressions-dmx.md
+        - name: Operatori (DMX)
+          href: ../dmx/operators-dmx.md
+        - name: Funzioni (DMX)
+          href: ../dmx/functions-dmx.md
+        - name: Commenti (DMX)
+          href: ../dmx/comments-dmx.md
+        - name: Parole chiave riservate (DMX)
+          href: ../dmx/reserved-keywords-dmx.md
+        - name: Tipi di contenuto (DMX)
+          href: ../dmx/content-types-dmx.md
+        - name: Distribuzioni (DMX)
+          href: ../dmx/distributions-dmx.md
+        - name: Utilizzo (DMX)
+          href: ../dmx/usage-dmx.md
+        - name: Flag di modellazione (DMX)
+          href: ../dmx/modeling-flags-dmx.md
+    - name: Guida di riferimento alle funzioni DMX
+      href: data-mining-extensions-dmx-function-reference.md
+      items:
+        - name: BottomCount
+          href: ../dmx/bottomcount-dmx.md
+        - name: BottomPercent
+          href: ../dmx/bottompercent-dmx.md
+        - name: BottomSum
+          href: ../dmx/bottomsum-dmx.md
+        - name: Cluster
+          href: ../dmx/cluster-dmx.md
+        - name: ClusterDistance
+          href: ../dmx/clusterdistance-dmx.md
+        - name: ClusterProbability
+          href: ../dmx/clusterprobability-dmx.md
+        - name: Exists
+          href: ../dmx/exists-dmx.md
+        - name: IsDescendant
+          href: ../dmx/isdescendant-dmx.md
+        - name: IsInNode
+          href: ../dmx/isinnode-dmx.md
+        - name: IsTestCase
+          href: ../dmx/istestcase-dmx.md
+        - name: IsTrainingCase
+          href: ../dmx/istrainingcase-dmx.md
+        - name: Lag
+          href: ../dmx/lag-dmx.md
+        - name: Stima
+          href: ../dmx/predict-dmx.md
+        - name: PredictAdjustedProbability
+          href: ../dmx/predictadjustedprobability-dmx.md
+        - name: PredictAssociation
+          href: ../dmx/predictassociation-dmx.md
+        - name: PredictCaseLikelihood
+          href: ../dmx/predictcaselikelihood-dmx.md
+        - name: PredictHistogram
+          href: ../dmx/predicthistogram-dmx.md
+        - name: PredictNodeId
+          href: ../dmx/predictnodeid-dmx.md
+        - name: PredictProbability
+          href: ../dmx/predictprobability-dmx.md
+        - name: PredictSequence
+          href: ../dmx/predictsequence-dmx.md
+        - name: PredictStdev
+          href: ../dmx/predictstdev-dmx.md
+        - name: PredictSupport
+          href: ../dmx/predictsupport-dmx.md
+        - name: PredictTimeSeries
+          href: ../dmx/predicttimeseries-dmx.md
+        - name: PredictVariance
+          href: ../dmx/predictvariance-dmx.md
+        - name: RangeMax
+          href: ../dmx/rangemax-dmx.md
+        - name: RangeMid
+          href: ../dmx/rangemid-dmx.md
+        - name: RangeMin
+          href: ../dmx/rangemin-dmx.md
+        - name: StructureColumn
+          href: ../dmx/structurecolumn-dmx.md
+        - name: TopCount
+          href: ../dmx/topcount-dmx.md
+        - name: TopPercent
+          href: ../dmx/toppercent-dmx.md
+        - name: TopSum
+          href: ../dmx/topsum-dmx.md
+        - name: Guida di riferimento agli operatori DMX
+          href: ../dmx/data-mining-extensions-dmx-operator-reference.md
+          items:
+            - name: + (addizione)
+              href: ../dmx/add-dmx.md
+            - name: '- (sottrazione)'
+              href: ../dmx/subtract-dmx.md
+            - name: '* (moltiplicazione)'
+              href: ../dmx/multiply-dmx.md
+            - name: (divisione) (DMX)
+              href: ../dmx/divide-dmx.md
+            - name: < (minore di)
+              href: ../dmx/less-than-dmx.md
+            - name: '> (maggiore di)'
+              href: ../dmx/greater-than-dmx.md
+            - name: = (uguale a)
+              href: ../dmx/equal-to-dmx.md
+            - name: <> (diverso da)
+              href: ../dmx/not-equal-to-dmx.md
+            - name: <= (minore o uguale a)
+              href: ../dmx/less-than-or-equal-to-dmx.md
+            - name: '>= (maggiore o uguale a)'
+              href: ../dmx/greater-than-or-equal-to-dmx.md
+            - name: AND
+              href: ../dmx/and-dmx.md
+            - name: NOT
+              href: ../dmx/not-dmx.md
+            - name: o
+              href: ../dmx/or-dmx.md
+            - name: + (positivo)
+              href: ../dmx/positive-dmx.md
+            - name: '- (negativo)'
+              href: ../dmx/negative-dmx.md
+            - name: // (commento)
+              href: ../dmx/double-slash-comment-dmx.md
+            - name: '-- (commento)'
+              href: ../dmx/comment-dmx-summary.md
+            - name: /*...*/ (commento)
+              href: ../dmx/slash-star-comment-dmx.md
+    - name: Convenzioni della sintassi DMX
+      href: data-mining-extensions-dmx-syntax-conventions.md
+    - name: Esercitazioni su DMX
+      href: dmx-tutorials-analysis-services-data-mining.md

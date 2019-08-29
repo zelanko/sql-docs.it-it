@@ -1,7 +1,7 @@
 ---
 title: Informazioni sulle conversioni dei tipi di dati | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7029faf333c00fc18e4f35743706a012b76c1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004180"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027477"
 ---
 # <a name="understanding-data-type-conversions"></a>Informazioni sulle conversioni dei tipi di dati
 

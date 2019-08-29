@@ -1,7 +1,7 @@
 ---
 title: Gestione di istruzioni complesse | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebd2aee0990b744df1420e88f8cc79870b350f2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956540"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027995"
 ---
 # <a name="handling-complex-statements"></a>Gestione delle istruzioni complesse
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
