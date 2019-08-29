@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 50463f27f37f9da410d1598002989f7cea6d8158
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000778"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70109751"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -92,7 +92,7 @@ Se il computer client utilizzato per la connessione a SQL Server non dispone di 
 
 1. Aprire un **prompt dei comandi** ed eseguire il comando seguente per creare una cartella locale contenente il pacchetto di **strumenti di testo** . In questo esempio viene creata `c:\temp\text-tools`la cartella.
 
-   ```command
+   ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 
