@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: Password scaduta
       href: ../database-engine/password-expired.md
-    - name: Connessione a Servizio di archiviazione Windows Azure
+    - name: Connettersi ad Archiviazione di Azure
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
