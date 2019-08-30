@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024967"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009370"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 
@@ -110,7 +110,7 @@ ms.locfileid: "68024967"
 |Top Sort||no|no|sì||    
 |Window Aggregates||ND|ND|sì|Nuovo operatore in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
-<sup>1</sup>Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (S3 e superiori), a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup> Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (S3 e successive), a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
  Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch. Questo metodo offre buone prestazioni, ma con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti: 
@@ -166,7 +166,7 @@ Con la distribuzione del predicato stringa, l'esecuzione della query calcola il 
  [Indici columnstore - Linee guida per il caricamento di dati](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Indici columnstore per il data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Architettura degli indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

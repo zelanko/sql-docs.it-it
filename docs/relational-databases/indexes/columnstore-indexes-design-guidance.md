@@ -11,12 +11,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd114b329a479745fb8e0b1ce0967d025c10565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912114"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009435"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ A meno che le dimensioni dei dati non siano sufficientemente grandi, un indice c
 
 Esempio:
 * Caricare 1.000.000 righe in una singola partizione o in una tabella non partizionata. È possibile ottenere un rowgroup compresso con 1.000.000 di righe. Questa è la configurazione ideale per ottenere alti livelli una compressione dei dati e buone prestazioni per le query.
-* Caricare 1.000.000 righe in modo uniforme in 10 partizioni. Ogni partizione riceve 100.000 righe, ovvero un numero minore rispetto alla soglia minima per la compressione del columnstore. Di conseguenza, l'indice columnstore potrebbe avere 10 rowgroup differenziali con 100.000 righe ognuno. Esistono modi per forzare i rowgroup differenziali nel columnstore. Tuttavia, se si tratta delle uniche righe nell'indice columnstore, i rowgroup compressi saranno troppo piccoli per ottenere livelli ottimali di compressione e prestazioni delle query.
+* Caricare 1.000.000 righe in modo uniforme in 10 partizioni. Ogni partizione riceve 100.000 righe, ovvero un numero minore rispetto alla soglia minima per la compressione del columnstore. Di conseguenza, l'indice columnstore potrebbe avere 10 rowgroup differenziali con 100.000 righe ognuno. Esistono modi per forzare i rowgroup differenziali nel columnstore. Se tuttavia si tratta delle uniche righe dell'indice columnstore, i rowgroup compressi saranno troppo piccoli per ottenere livelli ottimali di compressione e prestazioni delle query.
 
 Per altre informazioni sul partizionamento, vedere il post di blog di Sunil Agarwal [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (È consigliabile partizionare l'indice columnstore?).
 
@@ -181,10 +181,9 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
 |Rimuovere un indice columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Per rimuovere un indice columnstore si usa la sintassi DROP INDEX standard usata dagli indici albero B. La rimozione di un indice columnstore cluster converte la tabella columnstore in un heap.|  
 |Eliminare una riga da un indice columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Usare [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) per eliminare una riga.<br /><br /> Riga**columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente ma recupera lo spazio di archiviazione fisico della riga solo dopo che l'indice è stato ricompilato.<br /><br /> Riga**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina la riga logicamente e fisicamente.|  
 |Aggiornare una riga nell'indice columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Usare [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) per aggiornare una ruga.<br /><br /> Riga**columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente e quindi inserisce la riga aggiornata nel deltastore.<br /><br /> Riga**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiorna la riga nel deltastore.|  
-|Forzare il passaggio di tutte le righe del deltastore nel columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Indici columnstore - Deframmentazione](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX con l'opzione REBUILD forza il passaggio di tutte le righe nel columnstore.|  
+|Forzare il passaggio di tutte le righe del deltastore nel columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX con l'opzione REBUILD forza il passaggio di tutte le righe nel columnstore.|  
 |Deframmentare un indice columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE consente di deframmentare indici columnstore online.|  
 |Unire tabelle con indici columnstore.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per creare un indice columnstore vuoto per:

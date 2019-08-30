@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione di SQL Server 2019 | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,26 +9,30 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 40040948b56190a3ce94d9484e09a3386548bd31
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028847"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653053"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Note sulla versione di anteprima di SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive le limitazioni e i problemi noti per le versioni Community Technology Preview (CTP) di [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Per informazioni correlate, vedere:
-- [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+Questo articolo descrive le limitazioni e i problemi noti relativi a [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Per informazioni correlate, vedere:
 
-## <a name="ctp-32"></a>CTP 3.2
+>[Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 è l'ultima versione pubblica di [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+>[!NOTE]
+>Il contenuto è pubblicato per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate. La versione finale candidata è costituita da software provvisorio. Le informazioni sono soggette a modifiche. Per informazioni sugli scenari di supporto, vedere la sezione [Supporto](#support).
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 è disponibile solo come edizione di valutazione. Non sono disponibili altre edizioni.
+## <a name="includesql-server-2019includessssqlv15-mdmd-release-candidate-rc"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate (RC)
 
-Dettagli completi sul supporto e sulle licenze per le versioni CTP sono disponibili in `license_Eval.rtf` nel supporto di installazione.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC è la versione pubblica più recente di [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC è disponibile solo come edizione di valutazione. Non sono disponibili altre edizioni.
+
+Dettagli completi sul supporto e sulle licenze per il software di una versione finale candidata sono disponibili in `license_Eval.rtf` nel supporto di installazione.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
@@ -58,42 +62,43 @@ Dettagli completi sul supporto e sulle licenze per le versioni CTP sono disponib
   - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Gruppi di disponibilità Always On in Kubernetes
-  - Recupero del database accelerato
 
 - **Soluzione alternativa**: Nessuna. L'esclusione si applica a tutti i clienti, inclusi i partecipanti al Programma SQL Early Adopter.
 
-- **Si applica a**: Tutte le versioni CTP
+- **Si applica a**: Release Candidate
 
 ## <a name="updated-compiler"></a>Compilatore aggiornato
 
-- **Problema e impatto per i clienti**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] viene compilato con un compilatore aggiornato. In CTP 2.1 si verificava un problema noto per cui i risultati con numeri a virgola mobile e altri scenari di conversione potevano restituire valori diversi rispetto a quelli delle versioni precedenti, a causa dell'aggiornamento del compilatore. CTP 2.2 è stato aggiornato per garantire che gli scenari interessati restituiscano gli stessi risultati delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al momento del rilascio di CTP 3.2 non sono noti altri problemi. Si prega di segnalare quanto prima eventuali anomalie nei risultati rispetto a [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al [team [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).
+- **Problema e impatto per i clienti**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] viene compilato con un compilatore aggiornato. In CTP 2.1 si verificava un problema noto per cui i risultati con numeri a virgola mobile e altri scenari di conversione potevano restituire valori diversi rispetto a quelli delle versioni precedenti, a causa dell'aggiornamento del compilatore. CTP 2.2 è stato aggiornato per garantire che gli scenari interessati restituiscano gli stessi risultati delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al momento del rilascio della versione finale candidata non sono noti altri problemi. Si prega di segnalare quanto prima eventuali anomalie nei risultati rispetto a [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al [team [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).
 
 - **Soluzione alternativa**: N/D
 
-- **Si applica a**: Tutte le versioni CTP
+- **Si applica a**: Release Candidate
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>Possibile attesa tra le pagine delle condizioni di licenza durante l'installazione guidata
 
-- **Problema e impatto per i clienti**: durante l'installazione tramite installazione guidata potrebbe intercorrere una quantità eccessiva di tempo tra le condizioni di licenza (EULA) per R Services e quelle per Python.
+- **Problema e impatto per i clienti**: durante l'installazione mediante la procedura guidata, è possibile che sia necessario attendere un periodo di tempo prolungato tra il contratto di licenza con l'utente finale (EULA) per R Services e il contratto di licenza per Python.
 
 - **Soluzione alternativa**: attendere che l'installazione guidata proceda. Il tempo di attesa può superare i 30 minuti.
 
-- **Si applica a**: SQL Server 2019 CTP 3.0
+- **Si applica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0
 
 ## <a name="utf-8-collations"></a>Regole di confronto UTF-8
 
 - **Problema e impatto per i clienti**: le regole di confronto che supportano UTF-8 non possono essere usate con altre funzionalità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. UTF-8 non è supportato quando sono in uso le caratteristiche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seguenti:
 
   - OLTP in memoria
-  - Tabella esterna per PolyBase
-  - Always Encrypted
+  - Tabella esterna per PolyBase ([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Always Encrypted (fino a [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Server collegati (fino a [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
 
   > [!Note]
   > Attualmente non è disponibile il supporto dell'interfaccia utente per la scelta di regole di confronto con supporto UTF-8 in Azure Data Studio o SQL Server Data Tools (SSDT). [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) versione 18 supporta la scelta di regole di confronto abilitate per UTF-8 nell'interfaccia utente.
  
 - **Soluzione alternativa**: nessuna soluzione alternativa per le versioni [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP.
 
-- **Si applica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+
+- **Si applica a**: tutte le versioni CTP.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 
@@ -107,9 +112,8 @@ Dettagli completi sul supporto e sulle licenze per le versioni CTP sono disponib
 
 - **Problema e impatto per i clienti**: Gestione configurazione SQL Server (SSCM) non viene avviato in un computer privo di VCRuntime 140. All'avvio di SSCM è possibile che all'utente sia presentata la finestra di dialogo seguente: 
 
-  `
-  MMC could not create the snap-in. The snap-in might not have been installed correctly.
-  `
+
+  `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
 
 - **Soluzione alternativa**:  installare la versione VC Runtime 2013 (x86) più recente:
 
@@ -117,6 +121,14 @@ Dettagli completi sul supporto e sulle licenze per le versioni CTP sono disponib
   - [Diretta](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Si applica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
+
+## <a name="always-on-availability-group-kubernetes-operator-not-supported"></a>Operatore Kubernetes per gruppi di disponibilità Always On non supportato
+
+- **Problema e impatto per i clienti**: l'operatore Kubernetes per gruppi di disponibilità Always On non è supportato in questa versione finale candidata e non sarà disponibile nella versione RTM. 
+
+- **Soluzione alternativa**: None
+
+- **Si applica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release Candidate
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

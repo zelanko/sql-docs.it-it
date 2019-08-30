@@ -17,23 +17,23 @@ helpviewer_keywords:
 - characters [SQL Server], number of
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329324"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653248"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce il numero di caratteri dell'espressione stringa specificata, esclusi gli spazi finali.  
+Restituisce il numero di caratteri dell'espressione stringa specificata, esclusi gli spazi finali.  
   
 > [!NOTE]  
->  Per restituire il numero di byte usati per rappresentare un'espressione, usare la funzione [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
+> Per restituire il numero di byte usati per rappresentare un'espressione, usare la funzione [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ LEN ( string_expression )
  Se si utilizzano le regole di confronto SC, il valore intero restituito considererà le coppie di surrogati UTF-16 come un singolo carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- LEN esclude gli spazi finali. Se questo è un problema, provare a usare la funzione [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) che non taglia la stringa. Se si elabora una stringa Unicode, DATALENGTH restituirà due volte il numero di caratteri. Nell'esempio seguente viene illustrato l'uso di LEN e DATALENGTH con uno spazio finale.  
+LEN esclude gli spazi finali. Se questo è un problema, provare a usare la funzione [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) che non taglia la stringa. Se si elabora una stringa Unicode, DATALENGTH restituirà un numero che potrebbe non corrispondere al numero di caratteri. Nell'esempio seguente viene illustrato l'uso di LEN e DATALENGTH con uno spazio finale.  
   
-```  
+```sql  
 DECLARE @v1 varchar(40),  
     @v2 nvarchar(40);  
 SELECT   
@@ -63,13 +63,15 @@ SELECT
 @v2 = 'Test of 22 characters ';  
 SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
 SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
-  
 ```  
-  
+
+> [!NOTE]
+> Usare [LEN](../../t-sql/functions/len-transact-sql.md) per restituire il numero di caratteri codificati in una determinata espressione stringa e [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) per restituire la dimensione in byte per un'espressione stringa specificata. Questi output possono variare a seconda del tipo di dati e del tipo di codifica usati nella colonna. Per altre informazioni sulle differenze di archiviazione tra tipi di codifica diversi, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono selezionati il numero di caratteri e i dati in `FirstName` per le persone residenti in `Australia`. In questo esempio viene utilizzato il database AdventureWorks.  
   
-```  
+```sql  
 SELECT LEN(FirstName) AS Length, FirstName, LastName   
 FROM Sales.vIndividualCustomer  
 WHERE CountryRegionName = 'Australia';  
@@ -79,9 +81,9 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'esempio seguente restituisce il numero di caratteri nella colonna `FirstName` e i nomi e cognomi dei dipendenti in `Australia`.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2016  
+GO  
 SELECT DISTINCT LEN(FirstName) AS FNameLength, FirstName, LastName   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.DimGeography AS g   
@@ -89,9 +91,9 @@ INNER JOIN dbo.DimGeography AS g
 WHERE EnglishCountryRegionName = 'Australia';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 FNameLength  FirstName  LastName  
 -----------  ---------  ---------------  
 4            Lynn       Tsoflias
@@ -107,5 +109,3 @@ FNameLength  FirstName  LastName
  [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-
-

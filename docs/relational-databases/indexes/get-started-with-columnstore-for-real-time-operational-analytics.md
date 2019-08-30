@@ -11,26 +11,26 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107086"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009496"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduce l'analisi operativa in tempo reale, cioè la possibilità di eseguire contemporaneamente analisi e carichi di lavoro OLTP nelle stesse tabelle di database. Oltre a eseguire analisi in tempo reale, è possibile anche eliminare la necessità di ETL e di un data warehouse.  
+  SQL Server 2016 introduce l'analisi operativa in tempo reale, cioè la possibilità di eseguire contemporaneamente analisi e carichi di lavoro OLTP nelle stesse tabelle di database. Oltre a eseguire analisi in tempo reale, è possibile eliminare la necessità di ETL e di un data warehouse.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Descrizione dell'analisi operativa in tempo reale  
- In passato le aziende usavano sistemi separati per i carichi di lavoro operativi (ad esempio OLTP) e di analisi. Per questi sistemi, i processi di estrazione, trasformazione e caricamento (ETL) spostano regolarmente i dati dall'archivio operativo in un archivio di analisi. I dati di analisi sono vengono in genere archiviati in un data warehouse o data mart dedicato all'esecuzione di query di analisi. Anche se questa soluzione ha rappresentato lo standard, presentava tre problemi principali:  
+ In passato le aziende usavano sistemi separati per i carichi di lavoro operativi, ad esempio OLTP, e per quelli di analisi. Per questi sistemi, i processi di estrazione, trasformazione e caricamento (ETL) spostano regolarmente i dati dall'archivio operativo in un archivio di analisi. I dati di analisi sono vengono in genere archiviati in un data warehouse o data mart dedicato all'esecuzione di query di analisi. Anche se questa soluzione ha rappresentato lo standard, presentava tre problemi principali:  
   
 -   **Complessità.** L'implementazione di ETL può richiedere una notevole quantità di codifica, soprattutto per caricare solo le righe modificate. L'identificazione delle righe che sono state modificate può risultare difficile.  
   
 -   **Costi.** L'implementazione di ETL richiede il costo di acquisto di licenze software e hardware aggiuntive.  
   
--   **Latenza dei dati.** L'implementazione di ETL aggiunge un ritardo per l'esecuzione delle analisi. Ad esempio, se il processo ETL viene eseguito al termine di ogni giornata lavorativa, le query di analisi verranno eseguite sui dati che risalgono ad almeno un giorno prima. Per molte aziende questo ritardo è inaccettabile, perché l'attività dipende dall'analisi dei dati in tempo reale. Ad esempio, il rilevamento di frodi richiede l'analisi in tempo reale sui dati operativi.  
+-   **Latenza dei dati.** L'implementazione di ETL aggiunge un ritardo per l'esecuzione delle analisi. Se, ad esempio, il processo ETL viene eseguito al termine di ogni giornata lavorativa, le query di analisi verranno eseguite sui dati che risalgono ad almeno un giorno prima. Per molte aziende questo ritardo è inaccettabile, perché le loro attività dipendono dall'analisi dei dati in tempo reale. Ad esempio, il rilevamento di frodi richiede l'analisi in tempo reale sui dati operativi.  
   
  ![panoramica dell'analisi operativa in tempo reale](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "panoramica dell'analisi operativa in tempo reale")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68107086"
 > [!NOTE]  
 >  L'analisi operativa in tempo reale è destinata allo scenario di una singola origine dati, ad esempio un'applicazione ERP (Enterprise Resource Planning) in cui è possibile eseguire sia i carichi di lavoro operativi che i carichi di lavoro di analisi. Ciò non sostituisce la necessità di un data warehouse separato quando è necessario integrare dati da più origini prima di eseguire il carico di lavoro di analisi o quando sono necessarie prestazioni delle analisi estremamente elevate usando dati preaggregati, ad esempio cubi.  
   
- L'analisi in tempo reale usa un indice columnstore aggiornabile in una tabella rowstore.  L'indice columnstore gestisce una copia dei dati, quindi i carichi di lavoro OLTP e di analisi vengono eseguiti su copie separate dei dati. In questo modo si riduce al minimo l'impatto sulle prestazioni causato dall'esecuzione contemporanea di entrambi i carichi di lavoro.  SQL Server gestisce automaticamente le modifiche di indice in modo le modifiche OLTP siano sempre aggiornate per l'analisi. Con questa progettazione l'esecuzione di analisi in tempo reale su dati aggiornati è possibile e utile. Ciò funziona sia per le tabelle basate su disco che per le tabelle ottimizzate per la memoria.  
+ L'analisi in tempo reale usa un indice columnstore aggiornabile in una tabella rowstore.  L'indice columnstore gestisce una copia dei dati, quindi i carichi di lavoro OLTP e di analisi vengono eseguiti su copie separate dei dati. In questo modo si riduce al minimo l'impatto sulle prestazioni causato dall'esecuzione contemporanea di entrambi i carichi di lavoro.  SQL Server gestisce automaticamente le modifiche di indice in modo le modifiche OLTP siano sempre aggiornate per l'analisi. Con questa progettazione, è possibile e utile eseguire l'analisi in tempo reale su dati aggiornati. Ciò funziona sia per le tabelle basate su disco che per le tabelle ottimizzate per la memoria.  
   
 ## <a name="get-started-example"></a>Esempio introduttivo  
  Per iniziare a usare l'analisi in tempo reale:  
@@ -105,18 +105,16 @@ ms.locfileid: "68107086"
   
 -   [Uso di un ritardo di compressione/dei numeri relativi alle prestazioni per ridurre al minimo l'impatto della manutenzione di un indice columnstore non cluster](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Analisi operativa in tempo reale con le tabelle ottimizzate per la memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [Ridurre al minimo la frammentazione dell'indice in un indice columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
+-   [Analisi operativa in tempo reale con tabelle ottimizzate per la memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [L'indice columnstore e criteri di unione per rowgroup](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Suggerimento per le prestazioni n. 1: usare indici filtrati per migliorare le prestazioni delle query  
- L'esecuzione dell'analisi operativa in tempo reale può compromettere le prestazioni del carico di lavoro OLTP.  Tale impatto dovrebbe essere minimo. L'esempio mostra come usare gli indici filtrati per ridurre al minimo l'impatto dell'indice columnstore non cluster nel carico di lavoro transazionale offrendo comunque analisi in tempo reale.  
+ L'esecuzione dell'analisi operativa in tempo reale può compromettere le prestazioni del carico di lavoro OLTP.  Tale impatto dovrebbe essere minimo. L'esempio mostra come usare gli indici filtrati per ridurre al minimo l'impatto dell'indice columnstore non cluster sul carico di lavoro transazionale offrendo comunque analisi in tempo reale.  
   
  Per ridurre al minimo l'overhead di gestione di un indice columnstore non cluster in un carico di lavoro operativo, è possibile usare una condizione filtrata per creare un indice columnstore non cluster solo per i dati *meno attivi* o a modifica lenta. Ad esempio, in un'applicazione di gestione degli ordini è possibile creare un indice columnstore non cluster negli ordini che sono già stati spediti. Dopo la spedizione, raramente l'ordine viene modificato e quindi i dati possono essere considerati meno attivi. Con l'indice filtrato i dati nell'indice columnstore non cluster richiedono meno aggiornamenti, riducendo in tal modo l'impatto sul carico di lavoro transazionale.  
   
- Le query di analisi accedono in modo trasparente sia ai dati meno attivi che ai dati attivi in base alle esigenze per fornire analisi in tempo reale. Se una parte importante del carico di lavoro operativo riguarda la gestione dei dati attivi, le operazioni non richiederanno ulteriore manutenzione dell'indice columnstore. Una procedura consigliata prevede la creazione di un indice cluster rowstore per le colonne usate nella definizione dell'indice filtrato.   SQL Server usa l'indice cluster per analizzare rapidamente le righe che non soddisfano la condizione filtrata. Senza questo indice cluster, sarà necessario eseguire una scansione di tabella completa della tabella rowstore per trovare le righe che possono esercitare un elevato impatto negativo sulle prestazioni di una query di analisi. In assenza di un indice cluster si potrebbe creare un indice Btree non cluster filtrato complementare per identificare le righe, ma questa scelta non è consigliabile perché l'accesso a un ampio intervallo di righe usando indici Btree non cluster comporta costi elevati.  
+ Le query di analisi accedono in modo trasparente sia ai dati meno attivi che ai dati attivi in base alle esigenze per fornire analisi in tempo reale. Se una parte importante del carico di lavoro operativo riguarda la gestione dei dati attivi, le operazioni non richiederanno ulteriore manutenzione dell'indice columnstore. Una procedura consigliata prevede la creazione di un indice cluster rowstore per le colonne usate nella definizione dell'indice filtrato.   SQL Server usa l'indice cluster per analizzare rapidamente le righe che non soddisfano la condizione filtrata. Senza questo indice cluster, sarà necessario eseguire una scansione completa della tabella rowstore per trovare le righe che possono esercitare un elevato impatto negativo sulle prestazioni di una query di analisi. In assenza di un indice cluster si potrebbe creare un indice Btree non cluster filtrato complementare per identificare le righe, ma questa scelta non è consigliabile perché l'accesso a un ampio intervallo di righe usando indici Btree non cluster comporta costi elevati.  
   
 > [!NOTE]  
 >  Un indice columnstore non cluster filtrato è supportato solo nelle tabelle basate su disco. Non è supportato nelle tabelle ottimizzate per la memoria.  
@@ -204,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Carico di lavoro costituito da inserimento/query**: se il carico di lavoro è costituito principalmente dall'inserimento di dati e dall'esecuzione di query su tali dati, il valore COMPRESSION_DELAY predefinito di 0 è l'opzione consigliata. Le nuove righe inserite verranno compresse dopo l'inserimento di 1 milione di righe in un singolo rowgroup delta.  
     Alcuni esempi di tale carico di lavoro sono (a) carico di lavoro di data warehouse tradizionale (b) analisi del flusso di clic quando è necessario analizzare lo schema dei clic in un'applicazione Web.  
   
--   **Carico di lavoro OLTP:** se il carico di lavoro comporta un numero elevato di istruzioni DML (combinazione di numerose istruzioni Update, Delete e Insert), è possibile osservare la frammentazione dell'indice columnstore esaminando DMV sys. dm_db_column_store_row_group_physical_stats. Se si nota che una percentuale inferiore al 10% delle righe è contrassegnata come eliminata in rowgroup compressi di recente, è possibile usare l'opzione COMPRESSION_DELAY per aggiungere un ritardo quando le righe diventano idonee per la compressione. Se, ad esempio, il carico di lavoro appena inserito rimane attivo (vale a dire viene aggiornato più volte) per 60 minuti, è consigliabile scegliere 60 come COMPRESSION_DELAY.  
+-   **Carico di lavoro OLTP:** se il carico di lavoro comporta un numero elevato di istruzioni DML, ovvero una combinazione di numerose istruzioni Update, Delete e Insert, è possibile osservare la frammentazione dell'indice columnstore esaminando DMV sys. dm_db_column_store_row_group_physical_stats. Se si nota che una percentuale inferiore al 10% delle righe è contrassegnata come eliminata in rowgroup compressi di recente, è possibile usare l'opzione COMPRESSION_DELAY per aggiungere un ritardo quando le righe diventano idonee per la compressione. Se, ad esempio, il carico di lavoro appena inserito rimane attivo (ovvero viene aggiornato più volte) per 60 minuti, è consigliabile scegliere 60 come COMPRESSION_DELAY.  
   
  È probabile che nella maggior parte dei casi i clienti non debbano effettuare alcuna azione. Il valore predefinito dell'opzione COMPRESSION_DELAY dovrebbe essere sufficiente.  
 Agli utenti avanzati si consiglia di eseguire la query seguente e di raccogliere la percentuale delle righe eliminate negli ultimi 7 giorni.  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Caricamento dati di indici columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Indici columnstore per il data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

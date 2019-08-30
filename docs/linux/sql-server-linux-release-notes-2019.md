@@ -1,25 +1,25 @@
 ---
-title: Note sulla versione dell'anteprima di SQL Server 2019 in Linux
-description: Questo articolo contiene le note sulla versione e le funzionalità supportate per l'anteprima di SQL Server 2019 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
+title: Note sulla versione di SQL Server 2019 in Linux
+description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2019 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 296581ab8052a7eab384721664fc10d675bb2d06
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: af3b6f82e3b76e2dd2b11403bccf4b3e0885912e
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476026"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890895"
 ---
-# <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Note sulla versione dell'anteprima di SQL Server 2019 in Linux
+# <a name="release-notes-for-sql-server-2019-on-linux"></a>Note sulla versione di SQL Server 2019 in Linux
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
-Le note sulla versione seguenti si applicano all'anteprima di SQL Server 2019 in esecuzione in Linux. Questo articolo è suddiviso in sezioni corrispondenti a ogni versione. Ogni versione ha un collegamento a un articolo del supporto che descrive le modifiche CU, oltre ai collegamenti ai download dei pacchetti Linux.
+Le note sulla versione seguenti si applicano a SQL Server 2019 in esecuzione in Linux. Questo articolo è suddiviso in sezioni corrispondenti a ogni versione. Ogni versione ha un collegamento a un articolo del supporto che descrive le modifiche CU, oltre ai collegamenti ai download dei pacchetti Linux.
 
 > [!TIP]
 > Per informazioni sulle nuove funzionalità di Linux in SQL Server 2019, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
@@ -42,19 +42,20 @@ La maggior parte degli strumenti client esistenti per SQL Server può essere fac
 
 ## <a name="release-history"></a>Cronologia delle versioni
 
-La tabella seguente elenca la cronologia delle versioni CTP di anteprima di SQL Server 2019.
+La tabella seguente elenca la cronologia delle versioni di anteprima di SQL Server 2019.
 
-| Versione               | Versione       | Data di rilascio |
-|-----------------------|---------------|--------------|
-| [CTP 3.2](#CTP32)     | 15.0.1800.32  | 24/07/2019    |
-| [CTP 3.1](#CTP31)     | 15.0.1700.37  | 26/06/2019    |
-| [CTP 3.0](#CTP30)     | 15.0.1600.8   | 22/05/2019    |
-| [CTP 2.5](#CTP25)     | 15.0.1500.28  | 24/04/2019    |
-| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 27/03/2019    |
-| [CTP 2.3](#CTP23)     | 15.0.1300.359 | 01/03/2019    |
-| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 11/12/2018   |
-| [CTP 2.1](#CTP21)     | 15.0.1100.94  | 06/11/2018   |
-| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 24/06/2018   |
+| Versione                   | Versione       | Data di rilascio |
+|---------------------------|---------------|--------------|
+| [Release Candidate](#rc)  | 15.0.1900.25  | 21/08/2019    |
+| [CTP 3.2](#CTP32)         | 15.0.1800.32  | 24/07/2019    |
+| [CTP 3.1](#CTP31)         | 15.0.1700.37  | 26/06/2019    |
+| [CTP 3.0](#CTP30)         | 15.0.1600.8   | 22/05/2019    |
+| [CTP 2.5](#CTP25)         | 15.0.1500.28  | 24/04/2019    |
+| [CTP 2.4](#CTP24)         | 15.0.1400.75  | 27/03/2019    |
+| [CTP 2.3](#CTP23)         | 15.0.1300.359 | 01/03/2019    |
+| [CTP 2.2](#CTP22)         | 15.0.1200.24  | 11/12/2018   |
+| [CTP 2.1](#CTP21)         | 15.0.1100.94  | 06/11/2018   |
+| [CTP 2.0](#CTP20)         | 15.0.1000.34  | 24/06/2018   |
 
 ## <a id="cuinstall"></a> Come installare gli aggiornamenti
 
@@ -68,6 +69,20 @@ Se si aggiornano pacchetti di SQL Server esistenti, eseguire il comando di aggio
 - [Installare il supporto per R e Python per Machine Learning Services dell'anteprima di SQL Server 2019 in Linux](sql-server-linux-setup-machine-learning.md)
 - [Installare il pacchetto PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="rc"></a> Release Candidate (agosto 2019)
+
+Le sezioni seguenti elencano i percorsi dei pacchetti e i problemi noti per la versione finale candidata. Per altre informazioni sulle nuove funzionalità per Linux in SQL Server 2019, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i pacchetti RPM e Debian con le informazioni riportate nella tabella seguente:
+
+| Pacchetto | Versione pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 15.0.1900.25-1 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di estendibilità](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di estendibilità Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| Pacchetto SLES RPM | 15.0.1900.25-1 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di estendibilità](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM di estendibilità Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| Pacchetto Ubuntu 16.04 Debian | 15.0.1900.25-1 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[Pacchetto Debian di estendibilità](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Pacchetto Debian di estendibilità Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
 ## <a id="CTP32"></a> CTP 3.2 (luglio 2019)
 

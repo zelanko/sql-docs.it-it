@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025618"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609635"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Le opzioni per cui è necessario un riavvio di [!INCLUDE[ssNoVersion](../../incl
   
 Nel caso di alcune opzioni, per rendere effettivo il nuovo valore di configurazione è necessario riavviare il server. Se si imposta il nuovo valore e si esegue sp_configure prima di riavviare il server, il nuovo valore verrà visualizzato nella colonna **value** delle opzioni di configurazione, ma non nella colonna **value_in_use** . Dopo il riavvio del server, il nuovo valore verrà visualizzato anche nella colonna **value_in_use** .  
   
-Le opzioni a configurazione automatica sono opzioni che vengono modificate automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alle esigenze del sistema. Nella maggior parte dei casi non è necessario impostare manualmente i valori di tali opzioni. Sono esempi di opzioni a configurazione automatica **min server memory** , **max server memory** e user connections.  
+Le opzioni a configurazione automatica sono opzioni che vengono modificate automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alle esigenze del sistema. Nella maggior parte dei casi non è necessario impostare manualmente i valori di tali opzioni. Tra le opzioni di questo tipo sono incluse, ad esempio, **max worker threads** e user connections.  
   
 ## <a name="configuration-options-table"></a>Tabella delle opzioni di configurazione  
  Nella tabella seguente sono elencate tutte le opzioni di configurazione disponibili, l'intervallo di impostazioni possibili e i valori predefiniti. Le opzioni di configurazione sono contrassegnate con i seguenti codici a lettere:  

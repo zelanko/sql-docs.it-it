@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903593"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Una tabella di cronologia anonima viene creata automaticamente nello stesso schema della tabella corrente o della tabella temporale.  
   
--   Il nome della tabella di cronologia anonimo presenta il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]*. Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.  
+-   Il nome della tabella di cronologia anonimo presenta il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]* . Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.  
   
 -   La tabella di cronologia viene creata come tabella rowstore. Se possibile, viene applicata la compressione di pagina, altrimenti la tabella di cronologia sarà non compressa. Ad esempio, alcune configurazioni di tabella, come le colonne di tipo sparse, non consentono la compressione.  
   
--   Viene creato un indice cluster predefinito per la tabella di cronologia con un nome generato automaticamente in formato *IX_<history_table_name>*. L'indice cluster contiene le colonne **PERIOD** (inizio, fine).  
+-   Viene creato un indice cluster predefinito per la tabella di cronologia con un nome generato automaticamente in formato *IX_<history_table_name>* . L'indice cluster contiene le colonne **PERIOD** (inizio, fine).  
   
 -   Per creare la tabella corrente come una tabella ottimizzata per la memoria, vedere [Tabelle temporali con controllo delle versioni di sistema con tabelle ottimizzate per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).  
   
@@ -148,8 +148,8 @@ Ad esempio, si potrebbe avere un set di tabelle in cui il controllo delle versio
   
 -   costi di manutenzione minimi  
   
- Quando si converte una tabella esistente, si consiglia di usare la clausola **HIDDEN** per nascondere le nuove colonne **PERIOD** al fine di evitare conseguenze sulle applicazioni esistenti che non sono progettate per gestire nuove colonne.  
-  
+ Quando si converte una tabella esistente, è consigliabile usare la clausola **HIDDEN** per nascondere le nuove colonne **PERIOD** (le colonne datetime2 **SysStartTime** e **SysEndTime**) al fine di evitare conseguenze sulle applicazioni esistenti che non sono progettate per gestire nuove colonne.  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Aggiunta del controllo delle versioni a tabelle non temporali  
  Se si vuole iniziare a monitorare le modifiche di una tabella non temporale che contiene i dati, è necessario aggiungere la definizione **PERIOD** e facoltativamente specificare un nome per una tabella di cronologia vuota che sarà creata da SQL Server:  
   

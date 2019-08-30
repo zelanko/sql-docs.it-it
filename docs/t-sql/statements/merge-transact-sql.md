@@ -1,7 +1,7 @@
 ---
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,25 +24,25 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3a3f484bc05411f4d7b78c1734a4a3dba4330d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129445"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653350"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esegue operazioni di inserimento, aggiornamento o eliminazione in una tabella di destinazione dai risultati di un join con una tabella di origine. Sincronizzare, ad esempio, due tabelle inserendo, aggiornando o eliminando righe in una tabella in base alle differenze trovate nell'altra tabella.  
   
 **Suggerimento per le prestazioni:** il comportamento condizionale descritto per l'istruzione MERGE funziona meglio quando le due tabelle hanno una combinazione complessa di caratteristiche corrispondenti. Ad esempio, inserire una riga se non esiste o aggiornare una riga se corrisponde. Quando si aggiorna semplicemente una tabella in base alle righe di un'altra tabella, ottenere prestazioni e scalabilità migliori con le istruzioni INSERT, UPDATE e DELETE di base. Esempio:  
   
-```  
+```sql
 INSERT tbl_A (col, col2)  
-SELECT col, col2   
-FROM tbl_B   
+SELECT col, col2
+FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
@@ -50,12 +50,12 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```
 [ WITH <common_table_expression> [,...n] ]  
-MERGE   
-    [ TOP ( expression ) [ PERCENT ] ]   
+MERGE
+    [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>   
+    USING <table_source>
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -64,11 +64,11 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
     [ <output_clause> ]  
-    [ OPTION ( <query_hint> [ ,...n ] ) ]      
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
 ;  
   
 <target_table> ::=  
-{   
+{
     [ database_name . schema_name . | schema_name . ]  
   target_table  
 }  
@@ -79,18 +79,18 @@ MERGE
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
   
-<table_source> ::=   
+<table_source> ::=
 {  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]   
-        [ WITH ( table_hint [ [ , ]...n ] ) ]   
-  | rowset_function [ [ AS ] table_alias ]   
-        [ ( bulk_column_alias [ ,...n ] ) ]   
+    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
+        [ WITH ( table_hint [ [ , ]...n ] ) ]
+  | rowset_function [ [ AS ] table_alias ]
+        [ ( bulk_column_alias [ ,...n ] ) ]
   | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>   
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]   
-  | <joined_table>   
-  | <pivoted_table>   
-  | <unpivoted_table>   
+  | OPENXML <openxml_clause>
+  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
+  | <joined_table>
+  | <pivoted_table>
+  | <unpivoted_table>
 }  
   
 <merge_search_condition> ::=  
@@ -112,11 +112,11 @@ SET
   | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]   
+  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
-    INSERT [ ( column_list ) ]   
+    INSERT [ ( column_list ) ]
         { VALUES ( values_list )  
         | DEFAULT VALUES }  
 }  
@@ -126,36 +126,36 @@ SET
   
 <search condition> ::=  
     MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-    
+
 <search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+    { [ NOT ] <predicate> | ( <search_condition_without_match> )
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
 [ ,...n ]  
 
-<predicate> ::=   
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
-    | string_expression [ NOT ] LIKE string_expression   
-  [ ESCAPE 'escape_character' ]   
-    | expression [ NOT ] BETWEEN expression AND expression   
-    | expression IS [ NOT ] NULL   
-    | CONTAINS   
-  ( { column | * } , '< contains_search_condition >' )   
-    | FREETEXT ( { column | * } , 'freetext_string' )   
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )   
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
-  { ALL | SOME | ANY} ( subquery )   
-    | EXISTS ( subquery ) }   
+<predicate> ::=
+    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
+    | string_expression [ NOT ] LIKE string_expression
+  [ ESCAPE 'escape_character' ]
+    | expression [ NOT ] BETWEEN expression AND expression
+    | expression IS [ NOT ] NULL
+    | CONTAINS
+  ( { column | * } , '< contains_search_condition >' )
+    | FREETEXT ( { column | * } , 'freetext_string' )
+    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
+    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
+  { ALL | SOME | ANY} ( subquery )
+    | EXISTS ( subquery ) }
 
 <graph_search_pattern> ::=
-    { <node_alias> { 
-                      { <-( <edge_alias> )- } 
+    { <node_alias> {
+                      { <-( <edge_alias> )- }
                     | { -( <edge_alias> )-> }
-                    <node_alias> 
-                   } 
+                    <node_alias>
+                   }
     }
   
 <node_alias> ::=
-    node_table_name | node_table_alias 
+    node_table_name | node_table_alias
 
 <edge_alias> ::=
     edge_table_name | edge_table_alias
@@ -168,7 +168,7 @@ SET
 }  
   
 <dml_select_list>::=  
-    { <column_name> | scalar_expression }   
+    { <column_name> | scalar_expression }
         [ [AS] column_alias_identifier ] [ ,...n ]  
   
 <column_name> ::=  
@@ -176,7 +176,8 @@ SET
     | $action  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Argomenti
+
 WITH \<common_table_expression>  
 Specifica la vista o il set di risultati denominato temporaneo, noto anche come espressione di tabella comune, definito nell'ambito di un'istruzione MERGE. Il set di risultati deriva da una query semplice e l'istruzione MERGE vi fa riferimento. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
@@ -204,17 +205,17 @@ Se *target_table* è una vista, qualsiasi azione eseguita su di essa deve soddis
 Nome alternativo per fare riferimento a una tabella.  
   
 USING \<table_source>  
-Specifica l'origine dati corrispondente alle righe di dati in *target_table* in base a \<merge_search condition>. Il risultato di questa corrispondenza determina le azioni che le clausole WHEN dell'istruzione MERGE devono eseguire. \<table_source> può essere una tabella remota o una tabella derivata con accesso a tabelle remote. 
+Specifica l'origine dati corrispondente alle righe di dati in *target_table* in base a \<merge_search condition>. Il risultato di questa corrispondenza determina le azioni che le clausole WHEN dell'istruzione MERGE devono eseguire. \<table_source> può essere una tabella remota o una tabella derivata con accesso a tabelle remote.
   
 \<table_source> può essere una tabella derivata che usa il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare una tabella specificando più righe.  
   
 Per altre informazioni sulla sintassi e gli argomenti di questa clausola, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 ON \<merge_search_condition>  
-Specifica le condizioni in base alle quali viene creato il join tra \<table_source> e *target_table* per stabilire i punti di corrispondenza. 
+Specifica le condizioni in base alle quali viene creato il join tra \<table_source> e *target_table* per stabilire i punti di corrispondenza.
   
 > [!CAUTION]  
->  È importante specificare solo le colonne della tabella di destinazione da usare ai fini della corrispondenza, ovvero specificare colonne della tabella di destinazione confrontate con quella corrispondente della tabella di origine. Non provare a migliorare le prestazioni relative all'esecuzione delle query filtrando le righe della tabella di destinazione nella clausola ON, specificando ad esempio `AND NOT target_table.column_x = value`. Questa operazione potrebbe comportare la restituzione di risultati imprevisti e non corretti.  
+> È importante specificare solo le colonne della tabella di destinazione da usare ai fini della corrispondenza, ovvero specificare colonne della tabella di destinazione confrontate con quella corrispondente della tabella di origine. Non provare a migliorare le prestazioni relative all'esecuzione delle query filtrando le righe della tabella di destinazione nella clausola ON, specificando ad esempio `AND NOT target_table.column_x = value`. Questa operazione potrebbe comportare la restituzione di risultati imprevisti e non corretti.  
   
 WHEN MATCHED THEN \<merge_matched>  
 Specifica che tutte le righe di *target_table corrispondenti alle righe restituite da \<table_source> ON \<merge_search_condition> e che soddisfano eventuali condizioni di ricerca aggiuntive vengono aggiornate oppure eliminate in base alla clausola \<merge_matched>.  
@@ -242,7 +243,7 @@ Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per altre informazioni 
 La specifica di un hint TABLOCK in una tabella di destinazione di un'istruzione INSERT equivale alla specifica dell'hint TABLOCKX poiché determina l'acquisizione di un blocco esclusivo sulla tabella. Quando viene specificato, FORCESEEK viene applicato all'istanza implicita della tabella di destinazione unita in join con la tabella di origine.  
   
 > [!CAUTION]  
->  La specifica di READPAST con WHEN NOT MATCHED [BY TARGET] THEN INSERT può provocare l'esecuzione di operazioni INSERT che violano i vincoli UNIQUE.  
+> La specifica di READPAST con WHEN NOT MATCHED [BY TARGET] THEN INSERT può provocare l'esecuzione di operazioni INSERT che violano i vincoli UNIQUE.  
   
 INDEX ( index_val [ ,...n ] )  
 Specifica il nome o l'ID di uno o più indici della tabella di destinazione per eseguire un join implicito con la tabella di origine. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -284,7 +285,8 @@ Specifica le condizioni di ricerca per specificare \<merge_search_condition> o \
 \<graph search pattern>  
 Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli argomenti di questa clausola, vedere [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 È necessario specificare almeno una delle tre clausole MATCHED, le quali possono essere tuttavia specificate in qualsiasi ordine. Non è possibile aggiornare una variabile più di una volta nella stessa clausola MATCHED.  
   
 Tutte le azioni di inserimento, aggiornamento o eliminazione specificate nella tabella di destinazione dall'istruzione MERGE sono limitate da qualsiasi vincolo definito sulla tabella, inclusi vincoli di integrità referenziale di propagazione. Se IGNORE_DUP_KEY è ON per qualsiasi indice univoco nella tabella di destinazione, MERGE ignora questa impostazione.  
@@ -297,7 +299,8 @@ MERGE è una parola chiave completamente riservata se il livello di compatibilit
   
 Non usare l'istruzione **MERGE** quando si usa la replica di aggiornamento in coda. **MERGE** e il trigger per l'aggiornamento in coda non sono compatibili. Sostituire l'istruzione **MERGE** con un'istruzione INSERT o UPDATE.  
   
-## <a name="trigger-implementation"></a>Implementazione dei trigger  
+## <a name="trigger-implementation"></a>Implementazione dei trigger
+
 Per ogni azione di inserimento, aggiornamento o eliminazione specificata nell'istruzione MERGE, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attivati i trigger AFTER corrispondenti definiti nella tabella di destinazione, senza garantire l'ordine di attivazione dei trigger per le azioni. I trigger definiti per la stessa azione rispettano l'ordine specificato dall'utente. Per altre informazioni sull'impostazione dell'ordine di attivazione dei trigger, vedere [Specifica dei primi e degli ultimi trigger](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
 Se per la tabella di destinazione è abilitato un trigger INSTEAD OF definito nella tabella stessa per un'azione di inserimento, aggiornamento o eliminazione eseguita da un'istruzione MERGE, è necessario che per tale tabella sia abilitato un trigger INSTEAD OF per tutte le azioni specificate nell'istruzione MERGE.  
@@ -306,22 +309,106 @@ Se in *target_table* è definito un trigger INSTEAD OF UPDATE o INSTEAD OF DELET
   
 Se in *target_table* è definito un trigger INSTEAD OF INSERT, l'operazione di inserimento non viene eseguita, ma la tabella viene popolata di conseguenza.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni
+
 È necessario disporre dell'autorizzazione SELECT per la tabella di origine e dell'autorizzazione INSERT, UPDATE o DELETE per quella di destinazione. Per altre informazioni, vedere gli articoli relativi a [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md) nella sezione Autorizzazioni.  
   
+## <a name="optimizing-merge-statement-performance"></a>Ottimizzazione delle prestazioni dell'istruzione MERGE
+
+L'istruzione MERGE consente di sostituire le singole istruzioni DML con un'unica istruzione. Ciò consente di migliorare le prestazioni delle query poiché le operazioni vengono eseguite in un'unica istruzione, riducendo così al minimo il numero di elaborazioni dei dati delle tabelle di origine e di destinazione. I vantaggi in termini di prestazioni dipendono tuttavia dalla disponibilità di join e indici corretti e da altre considerazioni appropriate.
+
+### <a name="index-best-practices"></a>Procedure consigliate per gli indici
+
+Per migliorare le prestazioni dell'istruzione MERGE, è consigliabile attenersi alle linee guida seguenti relative agli indici:
+
+- Creare un indice di copertura univoco sulle colonne di join della tabella di origine.
+- Creare un indice cluster univoco nelle colonne di join della tabella di destinazione.
+
+Questi indici garantiscono l'univocità delle chiavi di join e l'ordinamento dei dati contenuti nelle tabelle. Le prestazioni delle query risultano migliorate poiché Query Optimizer non deve eseguire alcuna ulteriore elaborazione della convalida per individuare e aggiornare righe duplicate e non sono necessarie altre operazioni di ordinamento.
+
+### <a name="join-best-practices"></a>Procedure consigliate per l'operatore JOIN
+
+Per migliorare le prestazioni dell'istruzione MERGE e garantire che vengano ottenuti risultati corretti, è consigliabile attenersi alle linee guida seguenti relative ai join:
+
+- Nella clausola ON <merge_search_condition> specificare solo condizioni di ricerca che determinano i criteri per la corrispondenza dei dati nelle tabelle di origine e di destinazione, ovvero specificare solo colonne della tabella di destinazione confrontate con le colonne corrispondenti della tabella di origine. 
+- Non includere confronti con altri valori, ad esempio una costante.
+
+Per filtrare le righe delle tabelle di origine o di destinazione, adottare una delle soluzioni seguenti.
+
+- Specificare la condizione di ricerca per applicare il filtro alla riga nella clausola WHEN appropriata, ad esempio WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
+- Definire una vista sull'origine o sulla destinazione che restituisca le righe filtrate e faccia riferimento alla vista come tabella di origine o di destinazione. Se la vista viene definita sulla tabella di destinazione, qualsiasi azione eseguita su tale vista deve soddisfare le condizioni per l'aggiornamento delle viste. Per altre informazioni sull'aggiornamento di dati tramite una vista, vedere Modifica di dati tramite una vista.
+- Usare la clausola `WITH <common table expression>` per filtrare le righe delle tabelle di origine o di destinazione. Questa soluzione è simile alla definizione di criteri di ricerca aggiuntivi nella clausola ON e può produrre risultati non corretti. È consigliabile evitare di adottare questa soluzione oppure eseguirne un test accurato prima di implementarla.
+
+L'operazione di join nell'istruzione MERGE viene ottimizzata in modo analogo a un join in un'istruzione SELECT. Questo significa che, durante l'elaborazione di join in SQL Server, Query Optimizer sceglie il metodo di elaborazione del join più efficiente tra quelli possibili. Quando le dimensioni dell'origine e della destinazione sono simili e le linee guida relative agli indici descritte in precedenza vengono applicate alle tabelle di origine e di destinazione, un operatore merge join è il piano di query più efficiente. Questo perché entrambe le tabelle vengono sottoposte a scansione una sola volta e non è necessario ordinare i dati. Quando le dimensioni della tabella di origine sono inferiori rispetto a quelle della tabella di destinazione, è preferibile usare un operatore nested loops.
+
+Per forzare l'uso di un join specifico, è possibile indicare la clausola `OPTION (<query_hint>)` nell'istruzione MERGE. È consigliabile evitare di usare hash join come hint per la query per le istruzioni MERGE poiché questo tipo di join non fa uso di indici.
+
+### <a name="parameterization-best-practices"></a>Procedure consigliate per la parametrizzazione
+
+Se un'istruzione SELECT, INSERT, UPDATE o DELETE viene eseguita senza parametri, Query Optimizer di SQL Server può scegliere di parametrizzare l'istruzione internamente, ovvero di sostituire con parametri i valori letterali contenuti nella query. Ad esempio, l'istruzione INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10), può essere implementata internamente come INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). Questo processo, denominato parametrizzazione semplice, consente di migliorare la capacità del motore relazionale di trovare una corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti compilati in precedenza. Le prestazioni delle query possono risultare migliorate poiché viene ridotta la frequenza di compilazioni e ricompilazioni delle query stesse. Query Optimizer non applica il processo di parametrizzazione semplice alle istruzioni MERGE. Di conseguenza, le prestazioni delle istruzioni MERGE che contengono valori letterali potrebbero non corrispondere a quelle di singole istruzioni INSERT, UPDATE o DELETE poiché viene compilato un nuovo piano ogni volta che viene eseguita l'istruzione MERGE.
+
+Per migliorare le prestazioni delle query, è consigliabile attenersi alle linee guida seguenti relative alla parametrizzazione:
+
+- Parametrizzare tutti i valori letterali contenuti nella clausola `ON <merge_search_condition>` e nelle clausole `WHEN` dell'istruzione MERGE. È ad esempio possibile incorporare l'istruzione MERGE in una stored procedure sostituendo i valori letterali con parametri di input appropriati.
+- Se non è possibile parametrizzare l'istruzione, creare una guida di piano di tipo `TEMPLATE` e specificare l'hint per la query `PARAMETERIZATION FORCED` in tale guida.
+- Se le istruzioni MERGE vengono eseguite frequentemente nel database, impostare su FORCED l'opzione PARAMETERIZATION relativa al database. Prestare attenzione quando si imposta questa opzione. L'opzione `PARAMETERIZATION` è un'impostazione a livello di database e influisce sulle modalità di elaborazione delle query sul database.
+
+### <a name="top-clause-best-practices"></a>Procedure consigliate per la clausola TOP
+
+Nell'istruzione MERGE la clausola TOP specifica il numero o la percentuale di righe interessate dopo l'unione in join della tabella di origine e di quella di destinazione e dopo la rimozione delle righe non idonee per un'azione di inserimento, aggiornamento o eliminazione. La clausola TOP riduce ulteriormente il numero di righe unite in join in base al valore specificato e l'azione di inserimento, aggiornamento o eliminazione viene applicata alle righe unite in join rimanenti in modo non ordinato. Ciò significa che le righe vengono distribuite tra le azioni definite nelle clausole WHEN senza alcun ordine. La specifica della clausola TOP (10), ad esempio, influisce su 10 righe, 7 delle quali possono essere aggiornate e 3 inserite oppure 1 riga può essere eliminata, 5 aggiornate e 4 inserite e così via.
+
+In genere la clausola TOP viene usata per eseguire operazioni DML (Data Manipulation Language) in batch in una tabella di grandi dimensioni. Quando la clausola TOP viene usata nell'istruzione MERGE per questo scopo, è importante comprendere le implicazioni seguenti.
+
+- Possibile impatto sulle prestazioni di I/O.
+
+  L'istruzione MERGE esegue una scansione completa di entrambe le tabelle di origine e di destinazione. La divisione in batch dell'operazione consente di ridurre il numero di operazioni di scrittura eseguite per ogni batch, anche se ogni batch eseguirà una scansione completa di entrambe le tabelle di origine e di destinazione. L'attività di lettura risultante può influire sulle prestazioni della query.
+
+- Possibile restituzione di risultati non corretti.
+
+  È importante assicurarsi che tutti i batch successivi vengano destinati a nuove righe per evitare un comportamento indesiderato, ad esempio l'inserimento non corretto di righe duplicate nella tabella di destinazione. Questa situazione può verificarsi quando nella tabella di origine è contenuta una riga non presente in un batch di destinazione, ma presente nella tabella di destinazione complessiva.
+
+- Per essere sicuri che vengano restituiti risultati corretti:
+
+  - Usare la clausola ON per determinare le righe di origine che influiscono sulle righe di destinazione esistenti e le righe effettivamente nuove.
+  - Usare una condizione aggiuntiva nella clausola WHEN MATCHED per determinare se la riga di destinazione è già stata aggiornata da un batch precedente.
+
+Poiché la clausola TOP viene applicata solo dopo l'applicazione di queste clausole, a ogni esecuzione viene inserita una sola riga effettivamente non corrispondente o viene aggiornata una sola riga esistente.
+
+### <a name="bulk-load-best-practices"></a>Procedure consigliate per il caricamento bulk
+
+L'istruzione MERGE può essere usata per eseguire in modo efficiente il caricamento bulk di dati da un file di dati di origine in una tabella di destinazione specificando la clausola `OPENROWSET(BULK…)` come origine della tabella. In questo modo, l'intero file viene elaborato in un unico batch.
+
+Per migliorare le prestazioni del processo di merge di tipo bulk, è consigliabile attenersi alle linee guida seguenti:
+
+- Creare un indice cluster sulle colonne di join della tabella di destinazione.
+- Usare gli hint ORDER e UNIQUE nella clausola `OPENROWSET(BULK…)` per specificare l'ordinamento del file di dati di origine.
+
+  Per impostazione predefinita, per l'operazione bulk si presume che il file di dati non sia ordinato. È quindi importante che i dati di origine siano ordinati in base all'indice cluster nella tabella di destinazione e che l'hint ORDER venga usato per indicare l'ordine, in modo che Query Optimizer possa generare un piano di query più efficiente. Gli hint vengono convalidati in fase di runtime. Se il flusso di dati non è conforme agli hint specificati, viene generato un errore.
+
+Queste linee guida garantiscono che le chiavi di join siano univoche e che l'ordinamento dei dati nel file di origine corrisponda alla tabella di destinazione. Le prestazioni delle query risultano migliorate poiché non sono necessarie altre operazioni di ordinamento né vengono richieste copie dei dati non necessarie.
+
+### <a name="measuring-and-diagnosing-merge-performance"></a>Misurazione e diagnosi delle prestazioni delle istruzioni MERGE
+
+Per eseguire la misurazione e la diagnosi delle prestazioni delle istruzioni MERGE, sono disponibili le caratteristiche seguenti.
+
+- Contatore merge stmt nella DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md), che consente di restituire il numero di ottimizzazioni di query per le istruzioni MERGE.
+- Attributo merge_action_type nella DMV [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md), che consente di restituire il tipo del piano di esecuzione del trigger usato come risultato di un'istruzione MERGE.
+- Traccia SQL, che consente di raccogliere i dati relativi alla risoluzione dei problemi per l'istruzione MERGE in modo analogo alla raccolta dei dati per altre istruzioni DML (Data Manipulation Language). Per altre informazioni, vedere [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
+
 ## <a name="examples"></a>Esempi  
-  
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Uso di MERGE per eseguire operazioni INSERT e UPDATE in una tabella in un'unica istruzione  
+
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Uso di MERGE per eseguire operazioni INSERT e UPDATE in una tabella in un'unica istruzione
+
 Uno scenario comune è l'aggiornamento di una o più colonne in una tabella se esiste una riga corrispondente oppure l'inserimento dei dati come nuova riga se non esiste una riga corrispondente. In genere si mettono in atto entrambi gli scenari passando i parametri a una stored procedure contenente le istruzioni UPDATE e INSERT appropriate. Con l'istruzione MERGE è possibile eseguire entrambe le attività in un'unica istruzione. Nell'esempio seguente viene illustrata una stored procedure nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contiene un'istruzione INSERT e un'istruzione UPDATE. La stored procedure viene quindi modificata per eseguire le operazioni equivalenti usando una singola istruzione MERGE.  
   
 ```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
--- Update the row if it exists.      
+-- Update the row if it exists.
     UPDATE Production.UnitMeasure  
 SET Name = @Name  
 WHERE UnitMeasureCode = @UnitMeasureCode  
@@ -339,9 +426,9 @@ SELECT UnitMeasureCode, Name FROM Production.UnitMeasure
 WHERE UnitMeasureCode = 'ABC';  
 GO  
   
--- Rewrite the procedure to perform the same operations using the 
+-- Rewrite the procedure to perform the same operations using the
 -- MERGE statement.  
--- Create a temporary table to hold the updated or inserted values 
+-- Create a temporary table to hold the updated or inserted values
 -- from the OUTPUT clause.  
 CREATE TABLE #MyTempTable  
     (ExistingCode nchar(3),  
@@ -356,14 +443,14 @@ GO
 ALTER PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
   
     MERGE Production.UnitMeasure AS target  
     USING (SELECT @UnitMeasureCode, @Name) AS source (UnitMeasureCode, Name)  
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
-    WHEN MATCHED THEN   
+    WHEN MATCHED THEN
         UPDATE SET Name = source.Name  
     WHEN NOT MATCHED THEN  
         INSERT (UnitMeasureCode, Name)  
@@ -377,13 +464,14 @@ EXEC InsertUnitMeasure @UnitMeasureCode = 'XYZ', @Name = 'Test Value';
 EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'Another Test Value';  
   
 SELECT * FROM #MyTempTable;  
--- Cleanup   
+-- Cleanup
 DELETE FROM Production.UnitMeasure WHERE UnitMeasureCode IN ('ABC','XYZ');  
 DROP TABLE #MyTempTable;  
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Uso di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Uso di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione
+
 L'esempio seguente usa MERGE per aggiornare la tabella `ProductInventory` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], su base giornaliera, in base agli ordini elaborati nella tabella `SalesOrderDetail`. La colonna `Quantity` della tabella `ProductInventory` viene aggiornata sottraendo il numero di ordini effettuati ogni giorno per ciascun prodotto nella tabella `SalesOrderDetail`. Se il numero di ordini per un prodotto riduce il livello delle scorte del prodotto a zero o a un valore inferiore, la riga relativa a tale prodotto viene eliminata dalla tabella `ProductInventory`.  
   
 ```sql  
@@ -399,10 +487,10 @@ USING (SELECT ProductID, SUM(OrderQty) FROM Sales.SalesOrderDetail AS sod
 ON (target.ProductID = source.ProductID)  
 WHEN MATCHED AND target.Quantity - source.OrderQty <= 0  
     THEN DELETE  
-WHEN MATCHED   
-    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,   
+WHEN MATCHED
+    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,
                     target.ModifiedDate = GETDATE()  
-OUTPUT $action, Inserted.ProductID, Inserted.Quantity, 
+OUTPUT $action, Inserted.ProductID, Inserted.Quantity,
     Inserted.ModifiedDate, Deleted.ProductID,  
     Deleted.Quantity, Deleted.ModifiedDate;  
 GO  
@@ -410,7 +498,8 @@ GO
 EXECUTE Production.usp_UpdateInventory '20030501'  
 ```  
   
-### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Uso di MERGE per eseguire operazioni UPDATE e INSERT in una tabella di destinazione usando una tabella di origine derivata  
+### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Uso di MERGE per eseguire operazioni UPDATE e INSERT in una tabella di destinazione usando una tabella di origine derivata
+
 Nell'esempio seguente viene utilizzata l'istruzione MERGE per modificare la tabella `SalesReason` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eseguendo l'aggiornamento o l'inserimento di righe. Quando il valore di `NewName` nella tabella di origine corrisponde a un valore della colonna `Name` nella tabella di destinazione (`SalesReason`), la colonna `ReasonType` viene aggiornata nella tabella di destinazione. Quando il valore di `NewName` non corrisponde, la riga di origine viene inserita nella tabella di destinazione. La tabella di origine è una tabella derivata che utilizza il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare più righe per la tabella di origine. Per altre informazioni sull'uso del costruttore di valori di tabella in una tabella derivata, vedere [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). L'esempio illustra anche come archiviare i risultati della clausola OUTPUT in una variabile di tabella. Si riepilogano quindi i risultati dell'istruzione MERGE eseguendo una semplice operazione di selezione che restituisce il numero di righe inserite e aggiornate.  
   
 ```sql  
@@ -418,7 +507,7 @@ Nell'esempio seguente viene utilizzata l'istruzione MERGE per modificare la tabe
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
 MERGE INTO Sales.SalesReason AS Target  
-USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'), 
+USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'),
               ('Internet', 'Promotion'))  
        AS Source (NewName, NewReasonType)  
 ON Target.Name = Source.NewName  
@@ -434,7 +523,8 @@ FROM @SummaryOfChanges
 GROUP BY Change;  
 ```  
   
-### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Inserimento dei risultati dell'istruzione MERGE in un'altra tabella  
+### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Inserimento dei risultati dell'istruzione MERGE in un'altra tabella
+
 Nell'esempio seguente vengono acquisiti i dati restituiti dalla clausola OUTPUT di un'istruzione MERGE e tali dati vengono inseriti in un'altra tabella. L'istruzione MERGE consente di aggiornare la colonna `Quantity` della tabella `ProductInventory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], in base agli ordini elaborati nella tabella `SalesOrderDetail`. L'esempio acquisisce le righe aggiornate e le inserisce in un'altra tabella usata per tenere traccia delle modifiche apportate alle scorte.  
   
 ```sql  
@@ -443,35 +533,36 @@ CREATE TABLE Production.UpdatedInventory
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
 GO  
 INSERT INTO Production.UpdatedInventory  
-SELECT ProductID, LocationID, NewQty, PreviousQty   
+SELECT ProductID, LocationID, NewQty, PreviousQty
 FROM  
 (    MERGE Production.ProductInventory AS pi  
-     USING (SELECT ProductID, SUM(OrderQty)   
+     USING (SELECT ProductID, SUM(OrderQty)
             FROM Sales.SalesOrderDetail AS sod  
             JOIN Sales.SalesOrderHeader AS soh  
             ON sod.SalesOrderID = soh.SalesOrderID  
             AND soh.OrderDate BETWEEN '20030701' AND '20030731'  
             GROUP BY ProductID) AS src (ProductID, OrderQty)  
      ON pi.ProductID = src.ProductID  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0
         THEN UPDATE SET pi.Quantity = pi.Quantity - src.OrderQty  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0
         THEN DELETE  
-    OUTPUT $action, Inserted.ProductID, Inserted.LocationID, 
+    OUTPUT $action, Inserted.ProductID, Inserted.LocationID,
         Inserted.Quantity AS NewQty, Deleted.Quantity AS PreviousQty)  
- AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty) 
+ AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty)
  WHERE Action = 'UPDATE';  
 GO  
 ```  
 
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Uso di MERGE per eseguire INSERT o UPDATE in una tabella bordi di destinazione in un database a grafo
+
 In questo esempio si creano le tabelle nodi `Person` e `City` e la tabella bordi `livesIn`. Si usa l'istruzione MERGE sul bordo `livesIn` e si inserisce una nuova riga se il bordo non esiste già tra `Person` e `City`. Se il bordo esiste già, si aggiorna solo l'attributo StreetAddress sul bordo `livesIn`.
 
 ```sql
 -- CREATE node and edge tables
 CREATE TABLE Person
     (
-        ID INTEGER PRIMARY KEY, 
+        ID INTEGER PRIMARY KEY,
         PersonName VARCHAR(100)
     )
 AS NODE
@@ -479,8 +570,8 @@ GO
 
 CREATE TABLE City
     (
-        ID INTEGER PRIMARY KEY, 
-        CityName VARCHAR(100), 
+        ID INTEGER PRIMARY KEY,
+        CityName VARCHAR(100),
         StateName VARCHAR(100)
     )
 AS NODE
@@ -535,20 +626,18 @@ GO
 
 -- Verify that all the address were added/updated correctly
 SELECT PersonName, CityName, StreetAddress
-FROM Person , City , livesIn 
+FROM Person , City , livesIn
 WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>Vedere anche  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
-[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-[Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
-[MERGE nei pacchetti di Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
-[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
-[Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
 
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+- [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)
+- [MERGE nei pacchetti di Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)
+- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
+- [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  

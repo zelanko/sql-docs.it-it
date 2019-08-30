@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912157"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009457"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Indici columnstore - Data warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912157"
 -   Isolamento dello snapshot per il livello di compatibilità del database 130 e i livelli superiori.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Migliorare le prestazioni con una combinazione di indici non cluster e columnstore  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]è possibile definire indici non cluster in un indice columnstore cluster.   
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile definire indici non cluster in un indice columnstore cluster.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Esempio: migliorare l'efficienza del posizionamento all'interno delle tabelle con un indice non cluster  
  Per migliorare l'efficienza del posizionamento all'interno delle tabelle in un data warehouse, è possibile creare un indice non cluster progettato per l'esecuzione di query le cui prestazioni vengono ottimizzate dal posizionamento all'interno delle tabelle. Le query che cercano valori corrispondenti o restituiscono un intervallo di valori ridotto garantiscono prestazioni migliori con un indice albero B che con un indice columnstore. Tali query non richiedono l'analisi completa della tabella eseguita dall'indice columnstore e restituiscono il risultato corretto più velocemente eseguendo una ricerca binaria tramite un indice albero B.  
@@ -131,6 +131,6 @@ END TRAN
  [Indici columnstore - Linee guida per il caricamento di dati](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Architettura degli indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

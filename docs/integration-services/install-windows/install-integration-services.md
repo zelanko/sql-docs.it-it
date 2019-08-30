@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023595"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621699"
 ---
 # <a name="install-integration-services"></a>Installazione di Integration Services
 
@@ -44,9 +44,9 @@ ms.locfileid: "68023595"
 -   [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>Eseguire un'installazione autonoma o affiancata    
-È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nelle configurazioni seguenti:    
+È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nelle configurazioni seguenti:    
     
--   È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un computer in cui non sono presenti istanze precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+-   È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un computer in cui non sono presenti istanze precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 -   È possibile effettuare un'installazione side-by-side di [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e di un'istanza esistente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
     
@@ -84,7 +84,7 @@ Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversio
 
 Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], selezionare i componenti necessari dall'elenco seguente:
 
--   **Integration Services (SSIS)**. Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
+-   **Integration Services (SSIS)** . Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
 
     -   Supporto per il catalogo SSIS nel motore di database di SQL Server.
 
@@ -96,7 +96,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 -   **Motore di database di SQL Server**. Installare il motore di database con l'Installazione guidata di SQL Server. La selezione del motore di database consente di creare e ospitare il database del catalogo SSIS, `SSISDB`, per archiviare, gestire, eseguire e monitorare i pacchetti SSIS.
 
--   **SQL Server Data Tools (SSDT)**. Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
+-   **SQL Server Data Tools (SSDT)** . Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
 
     -   Strumenti di progettazione e sviluppo di pacchetti SSIS, incluso Progettazione SSIS.
 
@@ -122,6 +122,6 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 -   **Componenti aggiuntivi facoltativi**. Facoltativamente, da SQL Server Feature Pack è possibile scaricare componenti aggiuntivi di terze parti.
 
-    -   MicrosoftÂ® Connector per SAP BW per Microsoft SQL ServerÂ®. Per ottenere questi componenti, vedere [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft® Connector for SAP BW per Microsoft SQL Server®. Per ottenere questi componenti, vedere [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Connettore Microsoft per Oracle di Attunity versione 5.0 e connettore Teradata Microsoft di Attunity versione 5.0. Per ottenere questi componenti, vedere [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179) (Connettori Microsoft versione 5.0 per Oracle e Teradata).

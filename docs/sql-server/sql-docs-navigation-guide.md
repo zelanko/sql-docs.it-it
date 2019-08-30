@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028832"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621750"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server 
 
@@ -39,16 +39,15 @@ Se si vuole creare un file PDF, fare clic sul collegamento **Scarica PDF** dispo
 
 ## <a name="toc-navigation-hints"></a>Suggerimenti per gli spostamenti nel sommario
 
-Le voci del sommario (TOC) con `>` alla fine della voce indicano che l'utente verrà indirizzato a una pagina all'esterno di docs.microsoft.com. 
+Le voci del sommario che terminano con `>` indicano che l'utente verrà indirizzato a contenuto della documentazione tecnica con un sommario diverso. 
 
 ![Parentesi angolari singole nel sommario](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Le voci nel sommario con `>>` indicano il reindirizzamento a contenuto della documentazione tecnica con un sommario diverso. 
+Le voci del sommario che terminano con `>>` indicano che l'utente verrà indirizzato a una pagina all'esterno di docs.microsoft.com. 
 
 ![Marcatori di spostamento nel sommario](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Se si passa a una di queste pagine, è possibile tornare alla pagina del contenuto tecnico di SQL Server principale e al sommario selezionando la voce "Benvenuto in SQL Server > >" disponibile nella parte superiore di ogni sommario. 
+Se si passa a una di queste pagine, è possibile tornare alla pagina principale del contenuto tecnico di SQL Server e al sommario selezionando la voce "Benvenuto in SQL Server >" disponibile nella parte superiore di ogni sommario. 
 
 ![Tornare al sommario SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ La documentazione tecnica di SQL Server include contenuto per diverse versioni e
 
 ![Filtro della versione in SQL Docs](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Se si seleziona **All SQL** \> **Hide nothing** (Tutto SQL > Visualizza tutto), tutto il contenuto è visibile e non viene nascosto niente con il filtro. L'opzione [**Hide nothing** (Visualizza tutto) non è consigliata per l'uso di routine](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Se si seleziona **All SQL** \> **Hide nothing** (Tutto SQL > Visualizza tutto), tutto il contenuto è visibile e non viene nascosto niente con il filtro. L'opzione **Hide nothing** (Visualizza tutto) può visualizzare contenuto pertinente a diverse versioni di SQL Server nello stesso articolo, che può risultare contraddittorio, poco chiaro o fuorviante. L'opzione [**Hide nothing** (Visualizza tutto) non è pertanto consigliata per un uso di routine](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Percorsi di navigazione
 

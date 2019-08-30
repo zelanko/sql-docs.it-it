@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di Always Encrypted con il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916454"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026638"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [scaricare le dipendenze ADAL4J e AKV con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
-SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Utilizzare la procedura guidata Always Encrypted SQL Server Management Studio (SSMS) o altri strumenti supportati per creare le definizioni delle chiavi master della colonna e della chiave di crittografia della colonna nel database. È possibile usare la stessa procedura guidata per generare un certificato autofirmato nell'archivio certificati di Windows che può essere usato come chiave master della colonna per i dati always Encrypted. Per ulteriori informazioni sulla sintassi T-SQL della chiave master della colonna e della chiave di crittografia della colonna, vedere rispettivamente creazione della chiave [Master](../../t-sql/statements/create-column-master-key-transact-sql.md) della colonna e [creazione della chiave di crittografia](../../t-sql/statements/create-column-encryption-key-transact-sql.md) della colonna.
+SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Utilizzare la procedura guidata Always Encrypted SQL Server Management Studio (SSMS) o altri strumenti supportati per creare le definizioni delle chiavi master della colonna e della chiave di crittografia della colonna nel database. È possibile usare la stessa procedura guidata per generare un certificato autofirmato nell'archivio certificati di Windows che può essere usato come chiave master della colonna per i dati Always Encrypted. Per ulteriori informazioni sulla sintassi T-SQL della chiave master della colonna e della chiave di crittografia della colonna, vedere rispettivamente creazione della chiave [Master](../../t-sql/statements/create-column-master-key-transact-sql.md) della colonna e [creazione della chiave di crittografia](../../t-sql/statements/create-column-encryption-key-transact-sql.md) della colonna.
 
 Il nome di SQLServerColumnEncryptionCertificateStoreProvider è MSSQL_CERTIFICATE_STORE e può essere sottoposto a query dall'API GetName () dell'oggetto provider. Viene automaticamente registrato dal driver e può essere utilizzato senza alcuna modifica dell'applicazione.
 
@@ -153,7 +153,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 Il driver JDBC crea automaticamente un'istanza di SQLServerColumnEncryptionJavaKeyStoreProvider quando queste credenziali sono presenti nelle proprietà di connessione.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Creazione di una chiave master della colonna per l'archivio chiavi Java
-SQLServerColumnEncryptionJavaKeyStoreProvider può essere usato con i tipi di archivio chiavi JKS o PKCS12. Per creare o importare una chiave da usare con questo provider, usare l'utilità per la [chiave Java.](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) La chiave deve avere la stessa password dell'archivio chiavi. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata usando l'utilità di chiave:
+SQLServerColumnEncryptionJavaKeyStoreProvider può essere usato con i tipi di archivio chiavi JKS o PKCS12. Per creare o importare una chiave da usare con questo provider, usare l' [](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utilità per la chiave Java. La chiave deve avere la stessa password dell'archivio chiavi. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata usando l'utilità di chiave:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks

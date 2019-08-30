@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476016"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653524"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installare le estensioni del linguaggio (Java) di SQL Server 2019 in Linux
 
@@ -29,9 +29,9 @@ Il percorso del pacchetto per le estensioni Java si trova nei repository di orig
 
 Le estensioni del linguaggio sono supportate anche nei contenitori Linux. Non vengono forniti contenitori predefiniti con le estensioni del linguaggio, ma è possibile crearne uno dai contenitori di SQL Server usando [un modello di esempio disponibile in GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp"></a>Disinstallare la versione CTP precedente
+## <a name="uninstall-previous-ctp-version"></a>Disinstallare la versione CTP precedente
 
-L'elenco dei pacchetti è stato modificato nelle ultime versioni di CTP, creando un numero minore di pacchetti. Si consiglia di disinstallare CTP 2.x per rimuovere tutti i pacchetti precedenti prima di installare CTP 3.2. L'installazione side-by-side di più versioni non è supportata.
+L'elenco dei pacchetti è stato modificato nelle ultime versioni di CTP, creando un numero minore di pacchetti. È consigliabile disinstallare la versione CTP per rimuovere tutti i pacchetti precedenti prima di installare RC 1. L'installazione side-by-side di più versioni non è supportata.
 
 ### <a name="1-confirm-package-installation"></a>1. Verificare l'installazione dei pacchetti
 
@@ -41,7 +41,7 @@ Come primo passaggio, potrebbe essere necessario verificare se esiste un'install
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Disinstallare i pacchetti CTP 2.x precedenti
+### <a name="2-uninstall-previous-ctp-packages"></a>2. Disinstallare i pacchetti CTP precedenti
 
 Disinstallare il pacchetto di livello più basso. Qualsiasi pacchetto upstream dipendente da un pacchetto di livello inferiore viene disinstallato automaticamente.
 
@@ -55,7 +55,7 @@ I comandi per la rimozione dei pacchetti sono elencati nella tabella seguente.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Procedere con l'installazione di CTP 3.2
+### <a name="3-install-release-candidate-1-rc-1"></a>3. Installare Release Candidate 1 (RC 1)
 
 Installare il pacchetto di livello più alto seguendo le istruzioni riportate in questo articolo per il sistema operativo.
 
@@ -85,14 +85,14 @@ In un dispositivo connesso a Internet i pacchetti vengono scaricati e installati
 
 | Nome pacchetto | Applicabile a | Descrizione |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Tutte le lingue | Framework di estendibilità usato per eseguire il codice Java. |
-|mssql-server-extensibility-java | Java | Estensione Java per il caricamento di un ambiente di esecuzione Java. Non sono disponibili librerie o pacchetti aggiuntivi per Java. |
+|mssql-server-extensibility  | Tutte le lingue | Framework di estendibilità usato per l'estensione del linguaggio Java |
+|mssql-server-extensibility-java | Java | Framework di estendibilità usato per l'estensione del linguaggio Java che include un runtime Java supportato |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Installare le estensioni del linguaggio
 
-Per installare le estensioni del linguaggio e Java in Linux, installare **mssql-server-extensibility-java**. Quando si installa **mssql-server-extensibility-java**, il pacchetto installa automaticamente JRE 8 se non è già installato. Verrà anche aggiunto il percorso JVM a una variabile di ambiente denominata JRE_HOME.
+Per installare le estensioni del linguaggio e Java in Linux, installare **mssql-server-extensibility-java**. Quando si installa **mssql-server-extensibility-java**, il pacchetto installa automaticamente JRE 11 se non è già installato. Verrà anche aggiunto il percorso JVM a una variabile di ambiente denominata JRE_HOME.
 
 > [!Note]
 > In un server connesso a Internet, durante l'installazione del pacchetto principale, vengono scaricate e installate le dipendenze del pacchetto. Se il server non è connesso a Internet, vedere altri dettagli sull'[installazione offline](#offline-install).
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Limitazioni nelle versioni di CTP
+## <a name="limitations-in-the-rc-1-release"></a>Limitazioni nella versione RC 1
 
 Le estensioni del linguaggio e l'estendibilità Java in Linux sono ancora in fase di sviluppo attivo. Le funzionalità seguenti non sono ancora abilitate nella versione di anteprima.
 
@@ -295,7 +295,7 @@ Le estensioni del linguaggio e l'estendibilità Java in Linux sono ancora in fas
 
 ### <a name="resource-governance"></a>Governance delle risorse
 
-Esiste parità tra Linux e Windows per la [governance delle risorse](../t-sql/statements/create-external-resource-pool-transact-sql.md) per i pool di risorse esterni, ma le statistiche per [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) hanno attualmente unità diverse in Linux. Le unità saranno allineate in una versione CTP futura.
+Esiste parità tra Linux e Windows per la [governance delle risorse](../t-sql/statements/create-external-resource-pool-transact-sql.md) per i pool di risorse esterni, ma le statistiche per [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) hanno attualmente unità diverse in Linux. 
  
 | Nome colonna   | Descrizione | Valore in Linux | 
 |---------------|--------------|---------------|

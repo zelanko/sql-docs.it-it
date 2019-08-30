@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316660"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621684"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316660"
   
 -   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. Consente ad esempio di enumerare e ottenere un elenco delle tabelle presenti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle.  
+-   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle. Si noti che non è possibile specificare l'ordine in cui vengono recuperati i file.  
   
 -   Foreach From Variable Enumerator, per enumerare gli oggetti enumerabili contenuti in una variabile specificata. L'oggetto enumerabile può essere una matrice, un oggetto **DataTable**ADO.NET, un enumeratore [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e così via. È ad esempio possibile enumerare i valori di una matrice che contiene i nomi dei server.  
   
@@ -513,9 +513,9 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della cartella sp
 
 L'autorizzazione Data Lake storage Gen2 è determinata sia da [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) che da [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
 Verificare che gli ACL siano configurati usando l'ID oggetto (OID) dell'entità servizio per la registrazione dell'app, come descritto [qui](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
-Questa operazione è diversa dall'ID applicazione (client) usato con la configurazione RBAC.
-Quando a un'entità di sicurezza vengono concesse le autorizzazioni per i dati RBAC tramite un ruolo predefinito o tramite un ruolo personalizzato, queste autorizzazioni vengono valutate per prime all'autorizzazione di una richiesta.
-Se l'operazione richiesta è autorizzata dalle assegnazioni RBAC dell'entità di sicurezza, l'autorizzazione viene immediatamente risolta e non vengono eseguiti controlli ACL aggiuntivi.
+Questo ID è diverso dall'ID applicazione (client) usato con la configurazione di Controllo degli accessi in base al ruolo.
+Quando a un'entità di sicurezza vengono concesse le autorizzazioni per i dati di Controllo degli accessi in base al ruolo tramite un ruolo predefinito o tramite un ruolo personalizzato, queste autorizzazioni vengono valutate per prime all'autorizzazione di una richiesta.
+Se l'operazione richiesta è autorizzata dalle assegnazioni di Controllo degli accessi in base al ruolo dell'entità di sicurezza, l'autorizzazione viene immediatamente risolta e non vengono eseguiti controlli ACL aggiuntivi.
 In alternativa, se l'entità di sicurezza non dispone di un'assegnazione RBAC o se l'operazione della richiesta non corrisponde all'autorizzazione assegnata, vengono eseguiti i controlli ACL per determinare se l'entità di sicurezza è autorizzata a eseguire l'operazione richiesta.
 Per il corretto funzionamento dell'enumeratore, concedere almeno l'autorizzazione **Execute** a partire dal file system radice, insieme all'autorizzazione **Read** per la cartella di destinazione.
 In alternativa, concedere almeno il ruolo **Storage Blob Data Reader** con RBAC.

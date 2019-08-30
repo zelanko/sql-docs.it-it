@@ -26,7 +26,7 @@
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md
-- name: File di dati di SQL Server in Windows Azure
+- name: File di dati di SQL Server in Azure
   href: sql-server-data-files-in-microsoft-azure.md
 - name: Filegroup e file di database
   href: database-files-and-filegroups.md
@@ -135,7 +135,7 @@
   href: view-or-change-the-compatibility-level-of-a-database.md
 - name: Creare un alias del tipo di dati definito dall'utente
   href: create-a-user-defined-data-type-alias.md
-- name: Snapshot di database
+- name: Snapshot del database
   href: database-snapshots-sql-server.md
   items:
     - name: Visualizzare le dimensioni del file sparse di uno snapshot del database (Transact-SQL)

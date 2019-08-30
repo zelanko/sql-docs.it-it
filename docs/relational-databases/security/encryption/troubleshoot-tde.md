@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903615"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Questo articolo descrive i requisiti per l'uso di Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault e come identificare e risolvere gli errori più comuni.
+Questo articolo descrive come identificare e risolvere problemi di accesso alle chiavi di Azure Key Vault che hanno reso inaccessibile un database configurato per l'uso di [Transparent Data Encryption (TDE) con chiavi gestite dai clienti in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
-## <a name="requirements"></a>Requisiti
+## <a name="introduction"></a>Introduzione
+Quando la tecnologia TDE è configurata per l'uso di una chiave gestita dal cliente in Azure Key Vault, per mantenere online il database è necessario disporre dell'accesso continuo alla protezione TDE.  Se il server SQL logico non ha più accesso alla protezione TDE gestita dal cliente in Azure Key Vault, un database negherà tutte le connessioni e risulterà inaccessibile nel portale di Azure.
 
-Per risolvere i problemi relativi a TDE con una protezione TDE gestita dal cliente in Azure Key Vault, è necessario soddisfare questi requisiti:
+Per le prime 48 ore, se il problema sottostante di accesso alla chiave di Azure Key Vault viene risolto, il database verrà risanato e riportato online automaticamente.  Ciò significa che per tutti i casi di interruzione intermittente e temporanea della connessione di rete non è richiesta alcuna azione da parte dell'utente e il database viene riportato online automaticamente.  Nella maggior parte dei casi, per risolvere il problema sottostante di accesso alla chiave di Key Vault è necessario l'intervento dell'utente. 
 
-- L'istanza di SQL Server logica e l'insieme di credenziali delle chiavi devono trovarsi nella stessa area.
-- L'identità dell'istanza di SQL Server logica fornita da Azure Active Directory (Azure AD), ovvero l'AppId in Azure Key Vault, deve essere un tenant nella sottoscrizione originale. Se il server è stato spostato in una sottoscrizione diversa da quella in cui è stato creato, l'identità del server (AppId) deve essere ricreata.
-- L'insieme di credenziali delle chiavi deve essere attivo e in esecuzione. Per informazioni su come controllare lo stato dell'insieme di credenziali delle chiavi, vedere [Integrità risorse di Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview). Per iscriversi per le notifiche, vedere i [gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- Per il failover corretto in uno scenario di ripristino di emergenza geografico entrambi gli insiemi di credenziali delle chiavi devono contenere lo stesso materiale per le chiavi.
-- Il server logico deve avere un'identità di Azure AD (AppId) per l'autenticazione nell'insieme di credenziali delle chiavi.
-- L'AppId deve avere accesso all'insieme di credenziali delle chiavi, nonché disporre delle autorizzazioni Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave per le chiavi selezionate come protezione TDE.
+Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi.  Tutte le altre azioni sul database non sono consentite fino a quando non è stato ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online.   Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno supportata la modifica dell'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
 
-Per altre informazioni, vedere [Linee guida per la configurazione di TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+Quando un database rimane inaccessibile per più di 48 ore, non verrà più eseguita la correzione automatica.  Se l'accesso alla chiave di Azure Key Vault richiesta è stato ripristinato, è necessario riconvalidare manualmente l'accesso per riportare online il database.  Il ripristino dello stato online del database dopo che questo è rimasto inaccessibile per più di 48 ore può richiedere una notevole quantità di tempo a seconda delle dimensioni del database e attualmente richiede un ticket di supporto. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il collegamento geografico se è stato configurato il ripristino di emergenza geografico, la cronologia del recupero temporizzato e i tag, andranno perse.  È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di risolvere entro 48 ore i problemi sottostanti relativi all'insieme di credenziali delle chiavi. 
 
-## <a name="common-misconfigurations"></a>Errori di configurazione comuni
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errori comuni che causano l'inaccessibilità dei database
 
 La maggior parte dei problemi che si verificano quando si usa TDE con Azure Key Vault è causata da uno degli errori di configurazione seguenti:
 
@@ -46,10 +43,11 @@ La maggior parte dei problemi che si verificano quando si usa TDE con Azure Key 
 
 - L'insieme di credenziali delle chiavi è stato eliminato per errore.
 - Il firewall è stato configurato per Azure Key Vault, ma non consente l'accesso ai servizi Microsoft.
+- Un errore di rete intermittente rende non disponibile l'insieme di credenziali delle chiavi.
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Non sono disponibili le autorizzazioni per accedere all'insieme di credenziali delle chiavi o la chiave non esiste
 
-- La chiave è stata eliminata per errore.
+- La chiave è stata accidentalmente eliminata o disabilitata oppure è scaduta.
 - L'AppId dell'istanza di SQL Server logica è stato eliminato per errore.
 - L'istanza di SQL Server logica è stata spostata in un'altra sottoscrizione. Se il server logico viene spostato in una sottoscrizione diversa, è necessario creare un nuovo AppId.
 - Le autorizzazioni concesse all'AppId per le chiavi non sono sufficienti (non includono le autorizzazioni Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave).
@@ -89,7 +87,7 @@ Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi pa
 Per altre informazioni, vedere [Assegnare un'identità Azure AD al server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Se l'istanza di SQL Server logica è stata spostata in una nuova sottoscrizione dopo la configurazione iniziale di TDE con Azure Key Vault, è necessario ripetere il passaggio di configurazione dell'identità di Azure AD per creare il nuovo AppId. Aggiungere quindi l'AppId all'insieme di credenziali delle chiavi e assegnare le autorizzazioni corrette alla chiave. 
+> Se l'istanza di SQL Server logica è stata spostata in un nuovo tenant dopo la configurazione iniziale di TDE con Azure Key Vault, è necessario ripetere il passaggio di configurazione dell'identità di Azure AD per creare il nuovo AppId. Aggiungere quindi l'AppId all'insieme di credenziali delle chiavi e assegnare le autorizzazioni corrette alla chiave. 
 >
 
 ### <a name="missing-key-vault"></a>Insieme di credenziali delle chiavi mancante
@@ -164,8 +162,82 @@ Verificare che l'istanza di SQL Server logica abbia le autorizzazioni per l'insi
 - Se l'AppId è presente, verificare che abbia le autorizzazioni per le chiavi seguenti: Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave.
 - Se l'AppId non è presente, aggiungerlo facendo clic sul pulsante **Aggiungi nuovo**. 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>Recupero dello stato di TDE dal log attività
+
+Per consentire il monitoraggio dello stato del database in caso di problemi di accesso alla chiave di Azure Key Vault,nel [log attività](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) verranno registrati gli eventi seguenti per l'ID risorsa in base all'URL di Azure Resource Manager e alla combinazione di Subscription+Resourcegroup+ServerName+DatabseName: 
+
+**Evento registrato quando il servizio non ha più accesso alla chiave di Azure Key Vault**
+
+Nome evento: MakeDatabaseInaccessible 
+
+Stato: Started 
+
+Descrizione: il database non ha più accesso alla chiave di Azure Key Vault ed è ora inaccessibile: <error message>   
+
+ 
+
+**Evento registrato quando inizia il calcolo del tempo di attesa di 48 ore per la correzione automatica** 
+
+Nome evento: MakeDatabaseInaccessible 
+
+Stato: InProgress 
+
+Descrizione: il database rimane in attesa che l'accesso alla chiave di Azure Key Vault venga ristabilito dall'utente entro 48 ore.   
+
+ 
+
+**Evento registrato quando il database è stato riportato online automaticamente**
+
+Nome evento: MakeDatabaseAccessible 
+
+Stato: Operazione completata 
+
+Descrizione: l'accesso del database alla chiave di Azure Key Vault è stato ristabilito e il database è ora online. 
+
+ 
+
+**Evento registrato quando il problema non è stato risolto entro 48 ore e l'accesso alla chiave di Azure Key Vault deve essere convalidato manualmente** 
+
+Nome evento: MakeDatabaseInaccessible 
+
+Stato: Operazione completata 
+
+Descrizione: il database non è accessibile e richiede all'utente di risolvere gli errori di Azure Key Vault e di ristabilire l'accesso alla chiave di Azure Key Vault mediante la riconvalida della chiave. 
+
+ 
+
+**Evento registrato quando il database viene riportato online dopo la riconvalida manuale della chiave**
+
+Nome evento: MakeDatabaseAccessible 
+
+Stato: Operazione completata 
+
+Descrizione: l'accesso del database alla chiave di Azure Key Vault è stato ristabilito e il database è ora online. 
+
+ 
+
+**Evento registrato quando la riconvalida dell'accesso alla chiave di Azure Key Vault ha esito positivo e il database viene riportato online**
+
+Nome evento: MakeDatabaseAccessible 
+
+Stato: Started 
+
+Descrizione: il ripristino dell'accesso del database alla chiave di Azure Key Vault è stato avviato. 
+
+ 
+
+**Evento registrato quando la riconvalida dell'accesso alla chiave di Azure Key Vault ha esito negativo**
+
+Nome evento: MakeDatabaseAccessible 
+
+Stato: Non riuscito 
+
+Descrizione: il ripristino dell'accesso del database alla chiave di Azure Key Vault non è riuscito. 
+
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Rivedere le [linee guida per la configurazione di TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 - Scoprire [Integrità risorse di Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Vedere come [assegnare un'identità di Azure AD al server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+- Configurare [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) per ricevere notifiche e avvisi in base alle preferenze, ad esempio Posta elettronica/SMS/Push/Messaggio vocale, App per la logica, Webhook, Gestione dei servizi IT o Runbook di Automazione. 
+
+

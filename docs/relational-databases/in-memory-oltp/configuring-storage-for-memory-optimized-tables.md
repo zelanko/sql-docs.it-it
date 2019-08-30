@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915279"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634573"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   È necessario configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS).  
   
 ## <a name="storage-capacity"></a>Capacità di archiviazione  
- Usare le informazioni in [Stimare i requisiti di memoria delle tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) per stimare le dimensioni in memoria delle tabelle ottimizzate per la memoria durevoli del database. Poiché gli indici non vengono mantenuti per le tabelle ottimizzate per la memoria, non includere le dimensioni degli indici. Una volta determinata la dimensione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle in memoria durevoli.  
+
+Usare le informazioni in [Stimare i requisiti di memoria delle tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) per stimare le dimensioni in memoria delle tabelle ottimizzate per la memoria durevoli del database. Poiché gli indici non vengono mantenuti per le tabelle ottimizzate per la memoria, non includere le dimensioni degli indici. 
+ 
+Dopo aver determinato le dimensioni, è necessario fornire spazio su disco sufficiente per contenere i file di checkpoint, che vengono usati per archiviare i dati appena modificati. I dati archiviati contengono non solo il contenuto di nuove righe aggiunte alle tabelle in memoria, ma anche nuove versioni delle righe esistenti. Quando le righe vengono inserite o aggiornate, la quantità di dati archiviati aumenta. Le versioni delle righe vengono unite e le risorse di archiviazione vengono recuperate quando si verifica il troncamento del log. Se per qualsiasi motivo il troncamento del log subisce ritardi, le dimensioni dell'archivio OLTP in memoria aumenteranno.
+
+Un buon punto di partenza per ridimensionare le risorse di archiviazione per questa area consiste nel riservare una quantità di spazio pari a quattro volte le dimensioni delle tabelle durevoli in memoria. Monitorare l'utilizzo dello spazio e prepararsi a espandere le risorse di archiviazione disponibili, se necessario.
   
 ## <a name="storage-iops"></a>IOPS di archiviazione  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] consente di aumentare notevolmente la velocità effettiva del carico di lavoro. Pertanto, è importante verificare che le operazioni di IO non rappresentino un collo di bottiglia.  
