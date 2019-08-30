@@ -1,5 +1,5 @@
 ---
-title: Adattatore del cloud per SQL Server | Microsoft Docs
+title: adattatore del cloud per SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
-- Deploy to Windows Azure
+- Deploy to Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2ddaf87aa91e62cc422bf5a4558232f03339121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065148"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154388"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
-  Il servizio adattatore cloud viene creato durante il provisioning di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Macchine virtuali di Windows Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
+  Il servizio adattatore del cloud viene creato come parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning in una macchina virtuale di Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
   
  L'adattatore cloud è un servizio senza stato e sincrono tramite cui si ricevono i messaggi da un'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando il servizio adattatore cloud viene arrestato, l'adattatore cloud con accesso remoto viene arrestato, l'associazione del certificato SSL viene annullata e la regola di Windows Firewall viene disabilitata.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66065148"
   
 -   L'adattatore cloud è supportato con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 e versioni successive. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, per l'adattatore cloud per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessario SMO (SQL Management Objects) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
--   Il servizio Web Adattatore del cloud viene eseguito come account di **sistema locale** e verifica le credenziali del client prima dell'esecuzione di qualsiasi attività. Le credenziali fornite dal client devono appartenere all'account utente che è un membro della classe locale **gli amministratori** gruppo nel computer remoto.  
+-   Il servizio Web Adattatore del cloud viene eseguito come account di **sistema locale** e verifica le credenziali del client prima dell'esecuzione di qualsiasi attività. Le credenziali fornite dal client devono appartenere all'account use membro del gruppo **Administrators** locale nel computer remoto.  
   
 -   L'adattatore cloud supporta solo l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66065148"
 ## <a name="cloud-adapter-configuration-settings"></a>Impostazioni di configurazione dell'adattatore cloud  
  Per modificare le impostazioni di un adattatore cloud, utilizzare le informazioni sulla configurazione dell'adattatore cloud riportate di seguito.  
   
--   **Percorso predefinito per il file di configurazione** -C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Percorso predefinito del file di configurazione** : C:\Programmi\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Parametri del file di configurazione** -  
   
@@ -59,11 +59,11 @@ ms.locfileid: "66065148"
   
         -   \</appSettings>  
   
-    -   \</configuration>  
+    -   \<>/configurazione  
   
--   **Dettagli del certificato** -il certificato ha i valori seguenti:  
+-   **Dettagli del certificato** : il certificato presenta i valori seguenti:  
   
-    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
+    -   Subject-"CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   
@@ -71,29 +71,29 @@ ms.locfileid: "66065148"
   
  **Valori del file di configurazione**:  
   
-|Impostazione|Valori|Impostazione predefinita|Commenti|  
+|Impostazione|Valori|Predefinito|Commenti|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Se omesso, viene utilizzato 11435.|  
-|WebServiceCertificate|Thumbprint|Vuoto|Se vuoto, viene generato un nuovo certificato autofirmato.|  
+|WebServiceCertificate|Thumbprint|Empty|Se vuoto, viene generato un nuovo certificato autofirmato.|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Risoluzione dei problemi dell'adattatore cloud  
  Per risolvere i problemi relativi all'adattatore cloud per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], fare riferimento alle informazioni seguenti:  
   
--   **Errore di registrazione e gestione** -errori e messaggi di stato vengono scritti nel registro eventi applicazioni.  
+-   **Gestione degli errori e registrazione** : gli errori e i messaggi di stato vengono scritti nel registro eventi dell'applicazione.  
   
--   **Traccia, eventi** -tutti gli eventi vengono scritti nel registro eventi applicazioni.  
+-   **Traccia, eventi** : tutti gli eventi vengono scritti nel registro eventi dell'applicazione.  
   
--   **Controllo, configurazione** -usare il file di configurazione che si trova:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Controllo, configurazione** : usare il file di configurazione che si trova in:  C:\Programmi\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
-|Errore|ID errore|Causa|Soluzione|  
+|Errore|ID errore|Causa|Risoluzione|  
 |-----------|--------------|-----------|----------------|  
 |Si è verificata un'eccezione durante l'aggiunta del certificato all'archivio certificati. {Testo dell'eccezione}.|45560|Autorizzazioni per l'archiviazione dei certificati del computer|Verificare che il servizio adattatore cloud disponga delle autorizzazioni per aggiungere i certificati all'archivio certificati del computer.|  
 |Si è verificata un'eccezione durante il tentativo di configurare l'associazione SSL per la porta {numero di porta} e il certificato {Identificazione digitale}. {Eccezione}.|45561|Un'altra applicazione ha già utilizzato la porta o vi ha già associato un certificato.|Rimuovere le associazioni esistenti o modificare la porta dell'adattatore cloud nel file di configurazione.|  
 |Impossibile trovare il certificato SSL [{Identificazione digitale}] nell'archivio certificati.|45564|L'identificazione digitale del certificato è nel file di configurazione, ma l'archivio certificati personale per il servizio non contiene il certificato.<br /><br /> Autorizzazioni insufficienti.|Verificare che il certificato sia nell'archivio certificati personale per il servizio.<br /><br /> Verificare che il servizio disponga delle autorizzazioni corrette per l'archivio.|  
 |Impossibile avviare il servizio Web. {Testo dell'eccezione}.|45570|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
 |Il certificato [{Identificazione digitale}] è scaduto.|45565|Si fa riferimento a un certificato scaduto nel file di configurazione.|Aggiungere un certificato valido e aggiornare il file di configurazione con la relativa identificazione digitale.|  
-|Errore del servizio Web: {0}.|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
+|Errore del servizio Web {0}:.|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

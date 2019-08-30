@@ -12,27 +12,27 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c5428611c67315407ed31478fbb60ccca1b6dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 991a909ba1ab40ec3fc48f365b4799ec35c9d17b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921871"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154709"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Creare le credenziali - Eseguire l'autenticazione nel servizio di archiviazione Azure
   Usare la finestra di dialogo **Backup su URL - Creazione credenziali** per creare nuove credenziali SQL.  
   
- Quando si utilizza questa finestra di dialogo per creare le credenziali, è necessario fornire un certificato di gestione di Windows Azure aggiunto all'archivio certificati locale o un profilo di pubblicazione scaricato nel computer per convalidare la sottoscrizione e le informazioni sull'account di archiviazione.  
+ Quando si usa questa finestra di dialogo per creare una credenziale, è necessario fornire un certificato di gestione di Azure aggiunto all'archivio certificati locale o un profilo di pubblicazione scaricato nel computer per convalidare la sottoscrizione e le informazioni sull'account di archiviazione.  
   
  **Credenziali SQL**  
  Specificare il nome delle credenziali SQL che si desidera creare.  
   
-## <a name="windows-azure-credentials"></a>Credenziali di Windows Azure  
+## <a name="azure-credentials"></a>Credenziali di Azure  
  **Certificato di gestione**  
- Utilizzare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Windows Azure. Per ulteriori informazioni sul certificato di gestione di Windows Azure, vedere [Creare e caricare un certificato di gestione per Windows Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Usare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Azure. Per altre informazioni sul certificato di gestione di Azure, vedere [creare e caricare un certificato di gestione per Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Sottoscrizione**  
- Selezionare, digitare o incollare l'ID sottoscrizione di Windows Azure corrispondente al certificato di gestione dall'archivio certificati locale.  
+ Selezionare, digitare o incollare l'ID sottoscrizione di Azure corrispondente al certificato di gestione dall'archivio certificati locale.  
   
  **Profilo di pubblicazione**  
  Utilizzare questa opzione se si dispone di un profilo di pubblicazione scaricato nel computer. Se si utilizza questa opzione, l'ID sottoscrizione e il certificato vengono inseriti automaticamente.  

@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806403"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153817"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
   In questo argomento viene descritto come creare un piano di manutenzione a uno o più server utilizzando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
@@ -67,7 +67,7 @@ ms.locfileid: "62806403"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzando Creazione guidata piano di manutenzione  
+##  <a name="SSMSProcedure"></a>Utilizzo della creazione guidata piano di manutenzione  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Per avviare la Creazione guidata piano di manutenzione  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62806403"
   
         7.  Fare clic su **OK**.  
   
-    6.  Scegliere **Avanti**.  
+    6.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Selezione server di destinazione** selezionare i server in cui si desidera eseguire il piano di manutenzione. Questa pagina viene visualizzata solo nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurate come server master.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "62806403"
      Utilizza l'opzione `SORT_IN_TEMPDB` che determina la posizione in cui i risultati intermedi dell'ordinamento, generati durante la creazione dell'indice, vengono memorizzati temporaneamente. Se non è necessario eseguire un'operazione di ordinamento o se l'ordinamento può essere eseguito in memoria, l'opzione `SORT_IN_TEMPDB` viene ignorata.  
   
      Casella di controllo**Mantieni indici online durante la reindicizzazione**  
-     Utilizza l'opzione `ONLINE` per consentire agli utenti di accedere alla tabella o ai dati dell'indice cluster sottostanti, nonché agli eventuali indici non cluster associati durante le operazioni sugli indici. Se si seleziona questa opzione consente di attivare le opzioni aggiuntive per la ricompilazione degli indici che non consentono le ricompilazioni online: **Non ricompilare indici** e **Ricompila indici offline**.  
+     Utilizza l'opzione `ONLINE` per consentire agli utenti di accedere alla tabella o ai dati dell'indice cluster sottostanti, nonché agli eventuali indici non cluster associati durante le operazioni sugli indici. La selezione di questa opzione comporta l'attivazione di opzioni aggiuntive per la ricompilazione degli indici che non consentono le ricompilazioni online: **Non ricompilare indici** e **Ricompila indici offline**.  
   
     > [!NOTE]  
     >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -364,13 +364,13 @@ ms.locfileid: "62806403"
      Specificare la cartella in cui inserire i file di database creati automaticamente. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
      **Credenziali SQL**  
-     Selezionare le credenziali SQL utilizzate per autenticare il servizio di archiviazione Windows Azure. Se non si dispone di credenziali SQL esistenti utilizzabili, fare clic sul pulsante **Crea** per crearne delle nuove.  
+     Selezionare le credenziali SQL usate per l'autenticazione nell'archiviazione di Azure. Se non si dispone di credenziali SQL esistenti utilizzabili, fare clic sul pulsante **Crea** per crearne delle nuove.  
   
     > [!IMPORTANT]  
-    >  La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. Se non si dispone dell'accesso al certificato di gestione o al profilo di pubblicazione, è possibile creare le credenziali di SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso tramite Transact-SQL o SQL Server Management Studio. Vedere il codice di esempio il [per creare una credenziale](../security/authentication-access/create-a-credential.md#Credential) argomento per creare le credenziali tramite Transact-SQL. In alternativa, utilizzando SQL Server Management Studio, dall'istanza del motore di database, fare clic con il pulsante destro del mouse su **Sicurezza**, scegliere **Nuovo**e selezionare **Credenziale**. Specificare il nome dell'account di archiviazione per **Identity** e la chiave di accesso nel campo **Password** .  
+    >  La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. Se non si dispone dell'accesso al certificato di gestione o al profilo di pubblicazione, è possibile creare le credenziali di SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso tramite Transact-SQL o SQL Server Management Studio. Vedere il codice di esempio nell'argomento [per creare credenziali](../security/authentication-access/create-a-credential.md#Credential) per creare le credenziali tramite Transact-SQL. In alternativa, utilizzando SQL Server Management Studio, dall'istanza del motore di database, fare clic con il pulsante destro del mouse su **Sicurezza**, scegliere **Nuovo**e selezionare **Credenziale**. Specificare il nome dell'account di archiviazione per **Identity** e la chiave di accesso nel campo **Password** .  
   
      **Contenitore di archiviazione di Azure**  
-     Specificare il nome del contenitore del servizio di archiviazione Windows Azure.  
+     Specificare il nome del contenitore di archiviazione di Azure  
   
      **Prefisso URL**  
      Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<account di archiviazione.blob.core.windows.net**.  
@@ -488,10 +488,10 @@ ms.locfileid: "62806403"
      **Azione**  
      Specifica il tipo e il nome di ciascuna azione.  
   
-     **Stato**  
+     **Status**  
      Indica se l'intera azione della procedura guidata ha restituito il valore **Esito positivo** o **Esito negativo**.  
   
-     **Message**  
+     **Messaggio**  
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  

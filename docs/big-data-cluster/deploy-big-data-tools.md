@@ -5,16 +5,16 @@ description: Informazioni su come installare gli strumenti usati [!INCLUDE[big-d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 84c7181bfd7c0ee014b382052bb6493d68251331
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653403"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153616"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
 
@@ -33,14 +33,14 @@ La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica 
 | **Python** | Yes | Python è un linguaggio di programmazione di alto livello interpretato e orientato a oggetti con semantica dinamica. Molte parti dei cluster Big Data per SQL Server usano Python. | [Installare Python](#python)|
 | **azdata** | Yes | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](deploy-install-azdata.md) |
 | **kubectl**<sup>1</sup> | Yes | Strumento da riga di comando per il monitoraggio del cluster Kuberentes sottostante ([altre informazioni](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio (Insider)** | Yes | Strumento grafico multipiattaforma per l'esecuzione di query su SQL Server ([altre informazioni](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installazione](https://aka.ms/azdata-insiders) |
+| **Azure Data Studio-SQL Server 2019 versione finale candidata (RC)** | Yes | Strumento grafico multipiattaforma per l'esecuzione di query SQL Server. | [Installazione](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **Estensione di SQL Server 2019** | Yes | Estensione per Azure Data Studio che supporta la connessione al cluster Big Data. Fornisce anche una procedura guidata di virtualizzazione dei dati. | [Installazione](../azure-data-studio/sql-server-2019-extension.md) |
 | **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installazione](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Facoltativo | Interfaccia della riga di comando moderna per l'esecuzione di query su SQL Server ([altre informazioni](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Per alcuni script | Strumento da riga di comando legacy per l'esecuzione di query su SQL Server ([altre informazioni](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Per alcuni script | Strumento da riga di comando per il trasferimento di dati con URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: installare il pacchetto curl |
 
-<sup>1</sup> È necessario usare kubectl 1.10 o versioni successive. Inoltre, la versione di kubectl deve essere più o meno una versione secondaria del cluster Kubernetes. Se si vuole installare una versione specifica nel client kubectl, vedere [Installare il file binario di kubectl tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl). In Windows 10 usare cmd.exe e non Windows PowerShell per eseguire curl. 
+<sup>1</sup> È necessario usare kubectl 1.10 o versioni successive. Inoltre, la versione di kubectl deve essere più o meno una versione secondaria del cluster Kubernetes. Se si vuole installare una versione specifica nel client kubectl, vedere [Installare il file binario di kubectl tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl). In Windows 10 usare cmd.exe e non Windows PowerShell per eseguire curl.
 
 > [!TIP]
 > Per usare kubectl con un cluster distribuito in precedenza nel servizio Azure Kubernetes, è necessario impostare il contesto del cluster con il comando dell'interfaccia della riga di comando di Azure seguente:
@@ -81,6 +81,133 @@ Gli strumenti rimanenti sono necessari solo in determinati scenari. È possibile
    ```PowerShell
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
+
+## <a name="download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc"></a>Scaricare e installare Azure Data Studio SQL Server 2019 versione finale candidata (RC)
+
+Azure Data Studio SQL Server 2019 RC fornisce funzionalità e funzionalità specifiche per SQL Server 2019 RC.
+
+Per le normali versioni di produzione di Azure Data Studio, seguire le istruzioni disponibili in [scaricare e installare Azure Data Studio](../azure-data-studio/download.md).
+
+|Piattaforma|Scarica|Data di rilascio| Versione |
+|:---|:---|:---|:---|
+|Windows|[Programma di installazione utente (scelta consigliata)](https://go.microsoft.com/fwlink/?linkid=2102435)<br>[Programma di installazione di sistema](https://go.microsoft.com/fwlink/?linkid=2102523)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2102524)|27 agosto 2019 |RC 1.11.0-insider|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2102436)|27 agosto 2019 |RC 1.11.0-insider|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2102526)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2102437)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102525)|27 agosto 2019 |RC 1.11.0-insider|
+
+Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](../big-data-cluster/release-notes-big-data-cluster.md).
+
+### <a name="get-azure-data-studio-for-windows"></a>Ottenere Azure Data Studio per Windows
+
+Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'esperienza di installazione Windows standard e un file ZIP.
+
+Il *programma di installazione utente* è consigliato perché non richiede privilegi di amministratore, il che semplifica sia le installazioni che gli aggiornamenti. Il programma di installazione utente non richiede privilegi di amministratore perché il percorso si trova nella cartella AppData locale (LOCALAPPDATA) dell'utente. Il programma di installazione utente fornisce anche un'esperienza di aggiornamento in background più fluida. Per altre informazioni, vedere l'articolo sulla [Configurazione utente per Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
+**Programma di installazione utente** (scelta consigliata)
+
+1. Scaricare ed eseguire il [programma di installazione *utente* di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=2102435).
+2. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+
+**Programma di installazione di sistema**
+
+1. Scaricare ed eseguire il [programma di installazione *di sistema* di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=2102523).
+2. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+
+**.zip file**
+
+1. Scaricare lo [ZIP di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=2102524).
+2. Individuare il file scaricato ed estrarlo.
+3. Eseguire `\azuredatastudio-windows\azuredatastudio.exe`
+
+### <a name="get-azure-data-studio-for-macos"></a>Ottenere Azure Data Studio per macOS
+
+1. Scaricare [[!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=2102436).
+2. Per espandere il contenuto del file ZIP, fare doppio clic su di esso.
+3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *Azure Data Studio.app* nella cartella *Applicazioni*.
+
+### <a name="get-azure-data-studio-for-linux"></a>Ottenere Azure Data Studio per Linux
+
+1. Scaricare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux usando uno dei programmi di installazione o l'archivio tar.gz:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2102526)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2102437)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102525)
+1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra del terminale e digitare i comandi seguenti:
+
+   **Installazione Debian:**
+   ```bash
+   cd ~
+   sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
+
+   azuredatastudio
+   ```
+
+   **Installazione RPM:**
+   ```bash
+   cd ~
+   yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
+
+   azuredatastudio
+   ```
+
+   **Installazione tar.gz:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
+   azuredatastudio 
+   ``` 
+
+   > [!NOTE]
+   > In Debian, Redhat e Ubuntu, potrebbero mancare alcune dipendenze. Per installarle, a seconda della versione di Linux, utilizzare i comandi seguenti:
+   
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libunwind8
+   ```
+
+   **RedHat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
+   **Ubuntu:** 
+   ```bash
+   sudo apt-get install libxss1
+
+   sudo apt-get install libgconf-2-4
+
+   sudo apt-get install libunwind8
+   ```
+
+### <a name="supported-operating-systems"></a>Sistemi operativi supportati
+
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] è supportato in Windows, macOS e Linux, sulle piattaforme seguenti:
+
+#### <a name="windows"></a>Windows
+
+- Windows 10 (64 bit)
+- Windows 8.1 (64 bit)
+- Windows 8 (64 bit)
+- Windows 7 (SP1) (64 bit) - Richiede [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2 (64 bit)
+- Windows Server 2012 (64 bit)
+- Windows Server 2008 R2 (64 bit)
+
+#### <a name="macos"></a>macOS
+
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
+
+#### <a name="linux"></a>Linux
+
+- Red Hat Enterprise Linux 7.4
+- Red Hat Enterprise Linux 7.3
+- SUSE Linux Enterprise Server v12 SP2
+- Ubuntu 16.04
 
 ## <a name="next-steps"></a>Passaggi successivi
 

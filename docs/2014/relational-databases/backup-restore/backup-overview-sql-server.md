@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922122"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155008"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "62922122"
   
 -   [Compressione dei backup](#BackupCompression)  
   
--   [Restrizioni sulle operazioni di Backup in SQL Server](#Restrictions)  
+-   [Limitazioni relative alle operazioni di backup in SQL Server](#Restrictions)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62922122"
   
  **Tipi di backup**  
   
- [Backup di sola copia](copy-only-backups-sql-server.md)  
+ [backup di sola copia](copy-only-backups-sql-server.md)  
  Backup per utilizzo speciale indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  backup dei dati  
@@ -83,10 +83,10 @@ ms.locfileid: "62922122"
  [backup parziale](partial-backups-sql-server.md)  
  Contiene dati provenienti solo da una parte dei filegroup in un database, compresi i dati del filegroup primario, di ogni filegroup con accesso di lettura/scrittura e di eventuali file di sola lettura specificati opzionalmente.  
   
- **Supporti di backup termini e definizioni**  
+ **Termini e definizioni dei supporti di backup**  
   
- [Dispositivo di backup](backup-devices-sql-server.md)  
- Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ [dispositivo di backup](backup-devices-sql-server.md)  
+ Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. SQL Server backup possono anche essere scritti in un servizio di archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [supporti di backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uno o più nastri o file del disco in cui sono stati scritti uno o più backup.  
@@ -103,10 +103,10 @@ ms.locfileid: "62922122"
  [set di supporti con mirroring](mirrored-backup-media-sets-sql-server.md)  
  Più copie (copie mirror) di un set di supporti.  
   
-##  <a name="BackupCompression"></a> Compressione dei backup  
+##  <a name="BackupCompression"></a>Compressione dei backup  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive. I backup compressi possono essere ripristinati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Restrizioni sulle operazioni di Backup in SQL Server  
+##  <a name="Restrictions"></a>Limitazioni relative alle operazioni di backup in SQL Server  
  Il backup può verificarsi mentre il database è online e in uso. Si applicano tuttavia le restrizioni seguenti.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Non è possibile eseguire il backup dei dati offline  
@@ -136,7 +136,7 @@ ms.locfileid: "62922122"
  Se un'operazione di backup si sovrappone a un'operazione di gestione di file o di compattazione, si verifica un conflitto. Indipendentemente dall'operazione in conflitto avviata per prima, la seconda operazione viene rimandata fino al timeout del blocco richiesto dalla prima operazione. Il periodo di timeout è controllato da un'impostazione relativa al timeout di sessione. Se il blocco viene rilasciato entro il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
- **Per lavorare con i dispositivi di backup e supporti di backup**  
+ **Per lavorare con i dispositivi di backup e i supporti di backup**  
   
 -   [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62922122"
   
 -   [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Per creare un backup**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922122"
   
 -   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   

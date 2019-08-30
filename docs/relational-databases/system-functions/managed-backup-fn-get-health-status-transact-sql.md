@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140664"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155809"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una tabella con 0, una o più righe del conteggio aggregato degli errori restituiti dagli eventi estesi per un periodo specificato.  
   
- La funzione viene utilizzata per segnalare lo stato di integrità dei servizi in Smart Admin.  Attualmente [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è supportata in quello della Smart Admin. Pertanto gli errori restituiti sono correlati al [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ La funzione viene usata per segnalare lo stato di integrità dei servizi in Smart admin.  Attualmente [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è supportato con l'ombrello di amministrazione intelligente. Pertanto gli errori restituiti sono correlati al [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,16 +45,16 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="Arguments"></a> Argomenti  
  [@begin_time]  
- L'inizio del periodo di tempo a partire dal quale viene eseguito il conteggio aggregato degli errori.  Il @begin_time parametro è DATETIME. Il valore predefinito è NULL. Quando il valore è NULL, la funzione elabora gli eventi restituiti fino a 30 minuti prima dell'ora corrente.  
+ L'inizio del periodo di tempo a partire dal quale viene eseguito il conteggio aggregato degli errori.  Il @begin_time parametro è DateTime. Il valore predefinito è NULL. Quando il valore è NULL, la funzione elabora gli eventi restituiti fino a 30 minuti prima dell'ora corrente.  
   
  [ @end_time]  
- La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time parametro è DateTime e il valore predefinito NULL. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
+ La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time parametro è di tipo DateTime e il valore predefinito è null. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Windows Azure.|  
+|number_of_storage_connectivity_errors|int|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Azure.|  
 |number_of_sql_errors|int|Numero di errori restituiti mentre il programma si connette al motore di SQL Server.|  
 |number_of_invalid_credential_errors|int|Numero di errori restituiti mentre il programma tenta di eseguire l'autenticazione utilizzando le credenziali SQL.|  
 |number_of_other_errors|int|Numero di errori di altre categorie oltre la connettività, SQL o le credenziali.|  
@@ -63,12 +63,12 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_retention_loops|int|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, usare la stored procedure **managed_backup.sp_get_backup_diagnostics** per ottenere un elenco degli eventi estesi per trovare i dettagli dell'errore.  
+ Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, usare il stored procedure **managed_backup. sp_get_backup_diagnostics** per ottenere un elenco di eventi estesi per trovare i dettagli dell'errore.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- È necessario **seleziona** autorizzazioni nella funzione.  
+ Sono richieste le autorizzazioni **Select** per la funzione.  
   
 ## <a name="examples"></a>Esempi  
   

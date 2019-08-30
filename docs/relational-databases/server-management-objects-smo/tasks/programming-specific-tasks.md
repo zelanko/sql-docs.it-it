@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030235"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148402"
 ---
 # <a name="programming-specific-tasks"></a>Programmazione di attività specifiche
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030235"
 |[Implementazione della ricerca full-text](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Viene descritto come implementare cataloghi e indici di ricerca full-text in SMO.|  
 |[Implementazione di endpoint](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Viene descritto come creare endpoint per gestire payload per il mirroring di database, le richieste SOAP e Service Broker.|  
 |[Creazione e aggiornamento delle statistiche](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Viene descritto come configurare e monitorare statistiche su un database in SMO.|  
-|[Traccia e riproduzione di eventi](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Viene descritto come utilizzare il **traccia** e **Replay** oggetti in SMO gli eventi di traccia e riproduzione.|  
+|[Traccia e riproduzione di eventi](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Viene descritto come utilizzare gli oggetti **Trace** e replay in SMO per tracciare e riprodurre gli eventi.|  
   
   

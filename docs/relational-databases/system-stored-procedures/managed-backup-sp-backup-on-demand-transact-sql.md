@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942058"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155395"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Richiede al [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] di eseguire un backup del database specificato.  
   
- Utilizzare questa stored procedure per l'esecuzione dei backup ad hoc per un database configurato con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ciò impedisce qualsiasi interruzione nella catena di backup, i processi del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vengono riconosciuti e il backup viene archiviato nello stesso contenitore di archiviazione BLOB di Windows Azure.  
+ Utilizzare questa stored procedure per l'esecuzione dei backup ad hoc per un database configurato con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. In questo modo si impedisce che le interruzioni [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] della catena di backup e dei processi siano compatibili e che il backup venga archiviato nello stesso contenitore di archiviazione BLOB di Azure.  
   
  Al completamento del backup, viene restituito il percorso del file di backup completo che include il nome e la posizione del nuovo file di backup risultante dall'operazione di backup.  
   
@@ -50,21 +50,21 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Argomenti  
  @database_name  
- Nome del database in cui deve essere eseguito il backup. Il @database_name viene **SYSNAME**.  
+ Nome del database in cui deve essere eseguito il backup. È @database_name di **tipo sysname**.  
   
  @type  
- Tipo di backup da eseguire:  Database o Log. Il @type parametro è **NVARCHAR(32)** .  
+ Tipo di backup da eseguire:  Database o log. Il @type parametro è di **tipo nvarchar (32)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory**stored procedure.  
+ È richiesta l'appartenenza al ruolo del database **db_backupoperator** , con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** su **sp_delete_backuphistory**stored procedure.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente effettua una richiesta di backup di database per il database 'TestDB'. Per questo database è stato abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Nell'esempio seguente viene eseguita una richiesta di backup del database per il database ' TestDB '. Per questo database è stato abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ```  
 Use MSDB  

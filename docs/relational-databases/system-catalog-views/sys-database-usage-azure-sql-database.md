@@ -1,5 +1,5 @@
 ---
-title: Sys. database_usage (Database SQL di Azure) | Microsoft Docs
+title: sys. database_usage (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,36 +20,36 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079403"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155539"
 ---
-# <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
+# <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Nota: Si applica solo al Database di SQL Azure V11.**  
+  **Si noti Questo vale solo per il database SQL di Azure V11.**  
   
- Elenca il numero, tipo e durata dei database sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Elenca il numero, il tipo e la durata dei database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
- Il **Sys. database_usage** vista contiene le colonne seguenti.  
+ La vista **sys. database_usage** contiene le colonne seguenti.  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |time|Data di esecuzione degli eventi di utilizzo.|  
-|sku|Il tipo del livello di servizio per il database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
+|sku|Tipo di livello di servizio per il database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|Numero massimo di database di un tipo SKU presente durante il giorno.|  
   
 ## <a name="permissions"></a>Permissions  
- Accesso in lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni sufficienti per connettersi al **master** database.  
+ L'accesso in sola lettura a questa vista è disponibile per tutti gli utenti che dispongono delle autorizzazioni per connettersi al database **Master** .  
   
 ## <a name="remarks"></a>Note  
- Il **Sys. database_usage** vista restituisce una riga per ogni giorno della sottoscrizione.  
+ La vista **sys. database_usage** restituisce una riga per ogni giorno della sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dettagli prezzi del Database SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Account e fatturazione nel Database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Dettagli prezzi del database SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Account e fatturazione nel database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

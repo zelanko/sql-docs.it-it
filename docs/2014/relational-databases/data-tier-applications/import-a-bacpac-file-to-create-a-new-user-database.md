@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918185"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154643"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
   Importare un file dell'applicazione livello dati (DAC), con estensione bacpac, per creare una copia del database originale, completo dei dati, in una nuova istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati o database tra istanze o per creare un backup logico, quale la creazione di una copia locale di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "62918185"
 ## <a name="prerequisites"></a>Prerequisiti  
  È consigliabile evitare di importare file di esportazione dell'applicazione livello dati provenienti da origini sconosciute o non attendibili. Tali file potrebbero contenere codice dannoso che potrebbe eseguire codice Transact-SQL indesiderato o causare errori modificando lo schema. Prima di usare un file di esportazione proveniente da un'origine sconosciuta o non attendibile, decomprimere l'applicazione livello dati e controllare il codice, ad esempio le stored procedure e altro codice definito dall'utente. Per altre informazioni su come eseguire questi controlli, vedere [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file di esportazione dell'applicazione livello dati senza password. Quando il file viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
 ## <a name="permissions"></a>Permissions  
@@ -101,9 +101,9 @@ ms.locfileid: "62918185"
   
 -   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Importa da Windows Azure** -Importa un file BACPAC da un contenitore di Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
+-   **Importa da Azure** : importa un file BACPAC da un contenitore di Azure. È necessario connettersi a un contenitore di Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
   
-     Quando si esplora Windows Azure, sarà possibile passare tra contenitori all'interno di un solo account. È necessario specificare un solo file bacpac per continuare l'operazione di importazione. È possibile ordinare colonne in base a **Nome**, **Dimensioni**o **Data modifica**.  
+     Quando si esplora Azure, sarà possibile passare tra contenitori all'interno di un solo account. È necessario specificare un solo file bacpac per continuare l'operazione di importazione. È possibile ordinare colonne in base a **Nome**, **Dimensioni**o **Data modifica**.  
   
      Per continuare, specificare il file bacpac da importare, quindi fare clic su **Apri**.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "62918185"
   
  Scegliere **Avanti**per continuare.  
   
- **Per un Database SQL:**  
+ **Per un database SQL:**  
   
 -   **Nome nuovo database**: specificare un nome per il database importato.  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  : specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Dimensioni massime del database (GB)** -usare il menu di riepilogo a discesa per specificare le dimensioni massime per il database.  
+-   **Dimensioni massime database (GB)** : usare il menu a discesa per specificare le dimensioni massime del database.  
   
  Scegliere **Avanti**per continuare.  
   

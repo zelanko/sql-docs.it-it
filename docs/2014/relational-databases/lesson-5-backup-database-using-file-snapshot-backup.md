@@ -1,5 +1,5 @@
 ---
-title: "Lezione 6: Eseguire la migrazione di un database da un'origine del computer locale a una macchina di destinazione in Microsoft Azure | Microsoft Docs"
+title: 'Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090686"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153735"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Microsoft Azure
-  In questa lezione si presuppone che si disponga già di un'altra istanza di SQL Server che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Windows Azure. Per informazioni su come creare una macchina virtuale SQL Server in Windows Azure, vedere la pagina relativa al [provisioning di una macchina virtuale SQL Server in Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo aver eseguito il provisioning di una macchina virtuale SQL Server in Windows Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio presente in un altro computer.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure
+  In questa lezione si presuppone che si disponga già di un altro SQL Server, che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Azure. Per informazioni su come creare una macchina virtuale SQL Server in Azure, vedere provisioning di [una macchina virtuale SQL Server in Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo il provisioning di una macchina virtuale SQL Server in Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio in un altro computer.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  
   
--   Creazione di un account di Archiviazione di Windows Azure.  
+-   Si ha un account di archiviazione di Azure.  
   
--   Creazione di un contenitore nell'account di Archiviazione di Windows Azure.  
+-   È stato creato un contenitore nell'account di archiviazione di Azure.  
   
 -   Creazione dei criteri in un contenitore con diritti di lettura, scrittura ed elenco. Generazione di una chiave SAS.  
   
 -   Creazione di una credenziale di SQL Server nel computer di origine.  
   
--   Creazione di una macchina virtuale SQL Server di destinazione in Windows Azure. È consigliabile crearla selezionando un'immagine della piattaforma che prevede SQL Server 2014.  
+-   È già stata creata una destinazione SQL Server macchina virtuale in Azure. È consigliabile crearla selezionando un'immagine della piattaforma che prevede SQL Server 2014.  
   
- Per eseguire la migrazione di un database dall'istanza locale di SQL Server a un'altra macchina virtuale in Windows Azure, è possibile effettuare i passaggi riportati di seguito:  
+ Per eseguire la migrazione di un database da SQL Server locale a un'altra macchina virtuale in Azure, è possibile seguire questa procedura:  
   
 1.  Nel computer di origine, ovvero un computer locale in questa esercitazione, aprire una finestra di query in SQL Server Management Studio. Scollegare il database per spostarlo in un altro computer attenendosi alle istruzioni seguenti:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66090686"
   
         2.  Sulla barra degli strumenti Standard fare clic su **Nuova query**.  
   
-        3.  Copiare e incollare l'esempio seguente nella finestra Query e modificare se necessario. L'istruzione seguente crea una credenziale di SQL Server per archiviare il certificato di accesso condiviso del contenitore di archiviazione.  
+        3.  Copiare e incollare l'esempio seguente nella finestra Query e modificare se necessario. L'istruzione seguente crea una credenziale SQL Server per archiviare il certificato di accesso condiviso del contenitore di archiviazione.  
   
             ```sql  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66090686"
   
              Al termine del passaggio, nel computer di destinazione è stato importato il certificato di crittografia di cui è stato eseguito il backup dal computer di origine. Successivamente, è possibile allegare file di dati nel computer di destinazione.  
   
-    2.  Quindi si crea un database con i file di dati e di log che puntano ai file esistenti in Archiviazione di Windows Azure utilizzando l'opzione FOR ATTACH. Nella finestra di query, eseguire l'istruzione seguente:  
+    2.  Quindi, creare un database con i file di dati e di log che puntano ai file esistenti in archiviazione di Azure usando l'opzione FOR Connetti. Nella finestra di query, eseguire l'istruzione seguente:  
   
         ```sql  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66090686"
   
  Si noti che il database crittografato è stato trasferito in un'altra istanza di calcolo senza spostamento di dati.  
   
- Per creare un database con file di dati e di log che puntano ai file esistenti in Archiviazione di Windows Azure utilizzando l'interfaccia utente di SQL Server Management Studio, eseguire i passaggi indicati di seguito:  
+ Per creare un database con file di dati e di log che puntano ai file esistenti in archiviazione di Azure usando SQL Server Management Studio interfaccia utente, seguire questa procedura:  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.  
   
@@ -136,9 +136,9 @@ ms.locfileid: "66090686"
   
 5.  Nella finestra di dialogo **Collega database** scegliere **Aggiungi**per specificare il database da collegare. Nella finestra di dialogo **Individua file di database** :  
   
-     Per percorso di File di dati di Database, digitare: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     Per il percorso del file di dati del `https://teststorageaccnt.blob.core.windows.net/testcontainer/`database, digitare:.  
   
-     Per il nome di File, digitare: `TestDB1Data.mdf`.  
+     Per nome file, digitare: `TestDB1Data.mdf`.  
   
 6.  Fare clic su **OK**.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "66090686"
   
  **Lezione successiva:**  
   
- [Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lezione 7: Spostare i file di dati in archiviazione di Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

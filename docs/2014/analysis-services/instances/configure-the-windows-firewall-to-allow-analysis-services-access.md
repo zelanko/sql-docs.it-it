@@ -1,5 +1,5 @@
 ---
-title: Configurare il Firewall di Windows per consentire l'accesso ad Analysis Services | Microsoft Docs
+title: Configurare la Windows Firewall per consentire l'accesso Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b74c767c50e8a62c2d65ad089e386a94b9c8a5e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080264"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151854"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurare Windows Firewall per consentire l'accesso ad Analysis Services
   Un primo passaggio importante per rendere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponibile nella rete consiste nel determinare se è necessario sbloccare le porte in un firewall. Per la maggior parte delle installazioni è necessario creare almeno una regola del firewall in entrata per consentire le connessioni a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -34,13 +34,13 @@ ms.locfileid: "66080264"
   
 -   Per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 non aprire porte in Windows Firewall. Come componente aggiuntivo per SharePoint, il servizio utilizza porte configurate per SharePoint e stabilisce solo connessioni locali all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che carica ed esegue query sui modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Per le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in Macchine virtuali di Windows Azure, utilizzare istruzioni alternative per configurare l'accesso al server. Vedere [SQL Server Business Intelligence in Macchine virtuali di Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   Per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le istanze in esecuzione in macchine virtuali di Azure, utilizzare istruzioni alternative per la configurazione dell'accesso al server. Vedere [SQL Server Business Intelligence in macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Anche se l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta TCP 2383, è possibile configurare il server per l'ascolto su una porta fissa diversa, la connessione al server nel formato seguente: \<nomeserver >:\<NumeroPorta >.  
+ Anche se l'istanza predefinita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di è in ascolto sulla porta TCP 2383, è possibile configurare il server in modo che sia in ascolto su una porta fissa diversa, connettendosi \<al server nel\<formato: nomeserver >: NumeroPorta >.  
   
  È possibile utilizzare una sola porta TCP per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In computer che dispongono di più schede di rete o più indirizzi IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto su una porta TCP per tutti gli indirizzi IP assegnati o con alias al computer. In caso di requisiti specifici per più porte, provare a configurare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'accesso HTTP. In questo modo è possibile configurare più endpoint HTTP su qualsiasi porta si desideri. Vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Controllare le impostazioni del firewall e delle porte per Analysis Services](#bkmk_checkport)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66080264"
   
 -   [Configurazione delle porte per un cluster di Analysis Services](#bkmk_cluster)  
   
--   [Configurazione della porta per PowerPivot per SharePoint](#bkmk_powerpivot)  
+-   [Configurazione porta per PowerPivot per SharePoint](#bkmk_powerpivot)  
   
 -   [Utilizzare una porta fissa per un'istanza predefinita o denominata di Analysis Services](#bkmk_fixed)  
   
@@ -63,11 +63,11 @@ ms.locfileid: "66080264"
   
  Le assegnazioni di porte dinamiche vengono utilizzate solo per le istanze denominate. Il servizio `MSOLAP$InstanceName` è in grado di determinare la porta da utilizzare all'avvio. Per determinare il numero effettivo della porta in uso da un'istanza denominata, effettuare le operazioni seguenti:  
   
--   Avviare Gestione attività e quindi fare clic su **Services** per ottenere il PID del `MSOLAP$InstanceName`.  
+-   Avviare Gestione attività e fare clic su **Servizi** per ottenere il PID del `MSOLAP$InstanceName`.  
   
 -   Eseguire `netstat -ao -p TCP` dalla riga di comando per visualizzare le informazioni sulla porta TCP per tale PID.  
   
--   Verificare la porta usando SQL Server Management Studio e connettersi a un server Analysis Services nel formato seguente: \<IPAddress>:\<portnumber>.  
+-   Verificare la porta utilizzando SQL Server Management Studio e connettersi a un server Analysis Services nel formato seguente: \<IPAddress >:\<NumeroPorta >.  
   
  Sebbene un'applicazione possa essere in ascolto su una porta specifica, le connessioni non riescono se l'accesso è bloccato da un firewall. Per consentire alle connessioni di raggiungere un'istanza denominata di Analysis Services, è necessario sbloccare nel firewall l'accesso a msmdsrv.exe o alla porta fissa su cui è in ascolto. Nelle restanti sezioni di questo argomento vengono fornite le istruzioni necessarie per questa operazione.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "66080264"
   
 2.  Fare clic con il pulsante destro del mouse su **Regole connessioni in entrata** e scegliere **Nuova regola**.  
   
-3.  In tipo di regola fare clic su `Port` e quindi fare clic su **successivo**.  
+3.  In tipo di regola fare `Port` clic su Avanti e quindi su **Avanti**.  
   
-4.  In protocollo e porte selezionare **TCP** e quindi digitare `2383` nelle **porte locali specifiche**.  
+4.  In protocollo e porte selezionare **TCP** e quindi digitare `2383` **porte locali specifiche**.  
   
 5.  In Azione fare clic su **Consenti la connessione** , quindi su **Avanti**.  
   
 6.  In Profilo deselezionare tutti i percorsi di rete non applicabili, quindi fare clic su **Avanti**.  
   
-7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Analysis Services (tcp-in) 2383`), quindi fare clic su **fine**.  
+7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Analysis Services (tcp-in) 2383`) e quindi fare clic su **fine**.  
   
 8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificando il nome di rete del server in **Nome server**.  
   
@@ -121,9 +121,9 @@ ms.locfileid: "66080264"
   
  Scegliere uno degli approcci seguenti per abilitare l'accesso remoto a un'istanza denominata di Analysis Services:  
   
--   Utilizzare assegnazioni di porta dinamiche e il servizio SQL Server Browser. Sbloccare la porta utilizzata dal servizio SQL Server Browser in Windows Firewall. Connettersi al server nel formato seguente: \<servername >\\< NomeIstanza\>.  
+-   Utilizzare assegnazioni di porta dinamiche e il servizio SQL Server Browser. Sbloccare la porta utilizzata dal servizio SQL Server Browser in Windows Firewall. Connettersi al server nel formato seguente: \<nomeserver >\\< NomeIstanza\>.  
   
--   Utilizzare insieme una porta fissa e il servizio SQL Server Browser. Questo approccio consente la connessione usando questo formato: \<servername >\\< NomeIstanza\>, identica all'approccio di assegnazione di porte dinamiche, ad eccezione del fatto che in questo caso il server è in ascolto su una porta fissa. In questo scenario, il servizio SQL Server Browser fornisce la risoluzione dei nomi all'istanza di Analysis Services che è in attesa sulla porta fissa. Per utilizzare questo approccio, configurare il server in modo che sia in attesa su una porta fissa, sbloccare l'accesso a tale porta e sbloccare l'accesso alla porta utilizzata dal servizio SQL Server Browser.  
+-   Utilizzare insieme una porta fissa e il servizio SQL Server Browser. Questo approccio consente di connettersi utilizzando il formato \<nomeserver >\\< NomeIstanza\>, identico all'approccio di assegnazione porta dinamica, con la differenza che in questo caso il server è in ascolto su una porta fissa. In questo scenario, il servizio SQL Server Browser fornisce la risoluzione dei nomi all'istanza di Analysis Services che è in attesa sulla porta fissa. Per utilizzare questo approccio, configurare il server in modo che sia in attesa su una porta fissa, sbloccare l'accesso a tale porta e sbloccare l'accesso alla porta utilizzata dal servizio SQL Server Browser.  
   
  Il servizio SQL Server Browser viene utilizzato solo con istanze denominate, mai con l'istanza predefinita. Il servizio viene installato automaticamente ed è abilitato quando si installa una qualsiasi funzionalità di SQL Server come istanza denominata. Se si sceglie un approccio che richiede il servizio SQL Server Browser, accertarsi che rimanga abilitato e avviato nel server.  
   
@@ -144,19 +144,19 @@ ms.locfileid: "66080264"
   
 2.  Per sbloccare l'accesso al servizio SQL Server Browser, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata** , quindi scegliere **Nuova regola**.  
   
-3.  In tipo di regola fare clic su `Port` e quindi fare clic su **successivo**.  
+3.  In tipo di regola fare `Port` clic su Avanti e quindi su **Avanti**.  
   
-4.  In protocollo e porte selezionare **TCP** e quindi digitare `2382` nelle **porte locali specifiche**.  
+4.  In protocollo e porte selezionare **TCP** e quindi digitare `2382` **porte locali specifiche**.  
   
 5.  In Azione fare clic su **Consenti la connessione** , quindi su **Avanti**.  
   
 6.  In Profilo deselezionare tutti i percorsi di rete non applicabili, quindi fare clic su **Avanti**.  
   
-7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Browser Service (tcp-in) 2382`), quindi fare clic su **fine**.  
+7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Browser Service (tcp-in) 2382`) e quindi fare clic su **fine**.  
   
-8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il nome dell'istanza nel formato seguente: \<nomeserver > \\< NomeIstanza\>. Ad esempio, su un server denominato **AW-SRV01** con un'istanza denominata **Finance**, il nome server è **AW-SRV01\Finance**.  
+8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi al Analysis Services specificando il nome di rete del server e il nome dell'istanza nel formato \<nomeserver > \\< NomeIstanza\>. Ad esempio, su un server denominato **AW-SRV01** con un'istanza denominata **Finance**, il nome server è **AW-SRV01\Finance**.  
   
- **Opzione 2: Usare una porta fissa per un'istanza denominata**  
+ **Opzione 2: Utilizzare una porta fissa per un'istanza denominata**  
   
  In alternativa, è possibile assegnare una porta fissa e quindi sbloccare l'accesso a tale porta. Questo approccio offre capacità di controllo migliori rispetto a consentire l'accesso al file eseguibile di un programma. Per questo motivo, per accedere a una qualsiasi istanza di Analysis Services è consigliabile utilizzare una porta fissa.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "66080264"
   
 2.  Per sbloccare l'accesso ad Analysis Services, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata** , quindi scegliere **Nuova regola**.  
   
-3.  In tipo di regola fare clic su `Port` e quindi fare clic su **successivo**.  
+3.  In tipo di regola fare `Port` clic su Avanti e quindi su **Avanti**.  
   
 4.  In Protocollo e porte selezionare **TCP** , quindi digitare la porta fissa in **Porte locali specifiche**.  
   
@@ -176,9 +176,9 @@ ms.locfileid: "66080264"
   
 6.  In Profilo deselezionare tutti i percorsi di rete non applicabili, quindi fare clic su **Avanti**.  
   
-7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Analysis Services on port 54321`), quindi fare clic su **fine**.  
+7.  In nome digitare un nome descrittivo per questa regola (ad esempio, `SQL Server Analysis Services on port 54321`) e quindi fare clic su **fine**.  
   
-8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il numero di porta nel formato seguente: \<nomeserver >: \<NumeroPorta >.  
+8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi al Analysis Services specificando il nome di rete del server e il numero di porta nel formato \<: nomeserver >: \<NumeroPorta >.  
   
 #### <a name="netsh-advfirewall-syntax"></a>Sintassi di netsh advfirewall  
   
@@ -199,7 +199,7 @@ ms.locfileid: "66080264"
   
  Si noti che l'utilizzo di una porta fissa implica la modifica della sintassi di connessione per l'istanza predefinita, in quanto è necessario aggiungere il numero di porta al nome del server. Per la connessione a un'istanza locale predefinita di Analysis Services in attesa sulla porta 54321 in SQL Server Management Studio, sarebbe ad esempio necessario digitare localhost:54321 come nome del server nella finestra di dialogo Connetti al server di Management Studio.  
   
- Se si usa un'istanza denominata, è possibile assegnare una porta fissa senza apportare modifiche a come si specifica il nome del server (in particolare, è possibile usare \<nomeserver\nomeistanza > per la connessione a un'istanza denominata in ascolto su una porta fissa). Tale operazione funziona solo se il servizio SQL Server Browser è in esecuzione ed è stata sbloccata la porta sulla quale è in attesa. Servizio SQL Server Browser viene fornito il reindirizzamento alla porta fissa in base a \<nomeserver\nomeistanza >. Se si aprono le porte sia per il servizio SQL Server Browser che per l'istanza denominata di Analysis Services in ascolto sulla porta fissa, tramite il servizio SQL Server Browser la connessione viene risolta in un'istanza denominata.  
+ Se si utilizza un'istanza denominata, è possibile assegnare una porta fissa senza apportare alcuna modifica al modo in cui si specifica il nome del server (in particolare \<, è possibile utilizzare nomeserver\nomeistanza > per connettersi a un'istanza denominata in ascolto su una porta fissa). Tale operazione funziona solo se il servizio SQL Server Browser è in esecuzione ed è stata sbloccata la porta sulla quale è in attesa. SQL Server Browser servizio fornirà il reindirizzamento alla porta fissa basata su \<nomeserver\nomeistanza >. Se si aprono le porte sia per il servizio SQL Server Browser che per l'istanza denominata di Analysis Services in ascolto sulla porta fissa, tramite il servizio SQL Server Browser la connessione viene risolta in un'istanza denominata.  
   
 1.  Determinare una porta TCP/IP disponibile da utilizzare.  
   
@@ -211,12 +211,12 @@ ms.locfileid: "66080264"
   
 4.  Configurare Windows Firewall per sbloccare la porta TCP specificata. In alternativa, se si sta utilizzando una porta fissa per un'istanza denominata, sbloccare sia la porta TCP specificata per tale istanza sia la porta TCP 2382 per il servizio SQL Server Browser.  
   
-5.  Effettuare una verifica connettendosi localmente (in Management Studio) e, successivamente, in remoto da un'applicazione client in un altro computer. Per usare Management Studio, connettersi a un'istanza predefinita di Analysis Services specificando un nome di server nel formato seguente: \<nomeserver >:\<NumeroPorta >. Per un'istanza denominata, specificare il nome del server \<servername >\\< NomeIstanza\>.  
+5.  Effettuare una verifica connettendosi localmente (in Management Studio) e, successivamente, in remoto da un'applicazione client in un altro computer. Per utilizzare Management Studio, connettersi a un'istanza predefinita di Analysis Services specificando il nome di un server nel \<formato nomeserver >\<: NumeroPorta >. Per un'istanza denominata, specificare il nome del server \<come NomeServer\\> <\>NomeIstanza.  
   
 ##  <a name="bkmk_cluster"></a> Configurazione delle porte per un cluster di Analysis Services  
  Un cluster di failover di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è sempre in ascolto sulla porta TCP 2383, indipendentemente da come è stato installato, istanza predefinita o denominata. Le assegnazioni di porta dinamiche non vengono utilizzate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se è installato in un cluster di failover Windows. Aprire TCP 2383 in ogni nodo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel cluster. Per ulteriori informazioni sul clustering di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Come eseguire il clustering di SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-##  <a name="bkmk_powerpivot"></a> Configurazione della porta per PowerPivot per SharePoint  
+##  <a name="bkmk_powerpivot"></a>Configurazione porta per PowerPivot per SharePoint  
  L'architettura server per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è fondamentalmente diversa a seconda della versione di SharePoint in uso.  
   
  **SharePoint 2013**  
@@ -229,7 +229,7 @@ ms.locfileid: "66080264"
   
  **SharePoint 2010**  
   
- Se si utilizza SharePoint 2010, non è necessario aprire le porte in Windows Firewall. In SharePoint vengono aperte le porte necessarie e i componenti aggiuntivi, ad esempio PowerPivot per SharePoint, vengono eseguiti nell'ambiente SharePoint. In un'installazione di PowerPivot per SharePoint 2010, il Servizio di sistema PowerPivot dispone dell'utilizzo esclusivo dell'istanza locale del servizio SQL Server Analysis Services (PowerPivot) installata nello stesso computer. Per l'accesso al servizio del motore Analysis Services locale, che consente operazioni di caricamento, esecuzione di query ed elaborazione di dati PowerPivot nel server SharePoint, vengono utilizzate connessioni locali e non di rete. Per richiedere i dati PowerPivot da applicazioni client, le richieste vengono indirizzate attraverso le porte aperte dal programma di installazione di SharePoint (in particolare, vengono definite le regole in ingresso per consentire l'accesso a SharePoint - 80, amministrazione centrale SharePoint v4, servizi Web di SharePoint e SPUserCodeV4). Poiché i servizi Web PowerPivot vengono eseguiti in una farm di SharePoint, le regole del firewall di SharePoint sono sufficienti per l'accesso remoto ai dati PowerPivot in una farm di SharePoint.  
+ Se si utilizza SharePoint 2010, non è necessario aprire le porte in Windows Firewall. In SharePoint vengono aperte le porte necessarie e i componenti aggiuntivi, ad esempio PowerPivot per SharePoint, vengono eseguiti nell'ambiente SharePoint. In un'installazione di PowerPivot per SharePoint 2010, il Servizio di sistema PowerPivot dispone dell'utilizzo esclusivo dell'istanza locale del servizio SQL Server Analysis Services (PowerPivot) installata nello stesso computer. Per l'accesso al servizio del motore Analysis Services locale, che consente operazioni di caricamento, esecuzione di query ed elaborazione di dati PowerPivot nel server SharePoint, vengono utilizzate connessioni locali e non di rete. Per richiedere dati PowerPivot da applicazioni client, le richieste vengono instradate tramite porte aperte dal programma di installazione di SharePoint. in particolare, vengono definite regole in ingresso per consentire l'accesso a SharePoint-80, amministrazione centrale SharePoint V4, servizi Web di SharePoint , e SPUserCodeV4). Poiché i servizi Web PowerPivot vengono eseguiti in una farm di SharePoint, le regole del firewall di SharePoint sono sufficienti per l'accesso remoto ai dati PowerPivot in una farm di SharePoint.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio SQL Server Browser &#40;motore di database e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

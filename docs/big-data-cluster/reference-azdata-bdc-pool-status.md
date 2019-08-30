@@ -5,22 +5,22 @@ description: Articolo di riferimento per i comandi azdata bdc pool status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eafc72c6d86d38eabd26b735a9d5dab967e2e6be
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ee49ee09107c98047bd5aea849b9ae486eb6736a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653487"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153116"
 ---
 # <a name="azdata-bdc-pool-status"></a>azdata bdc pool status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc pool status** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+Questo articolo è un articolo di riferimento per **azdata**. 
 
 ## <a name="commands"></a>Comandi:
 |     |     |
@@ -74,4 +74,6 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

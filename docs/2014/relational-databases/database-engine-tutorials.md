@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872667"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154616"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
   In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -44,17 +44,17 @@ ms.locfileid: "62872667"
  [Esercitazione: Amministrazione di server tramite la gestione basata su criteri](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  In questa esercitazione viene illustrato come creare criteri applicabili agli standard di amministrazione di un sito.  
   
- [Esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Esercitazione: Valutazione delle procedure consigliate tramite la gestione basata su criteri](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In questa esercitazione viene illustrato come creare criteri utilizzabili per analizzare istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] per problemi noti.  
   
- [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- In questa esercitazione viene illustrato come effettuare un backup di SQL Server e il ripristino nel servizio di archiviazione BLOB di Windows Azure.  
+ [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ Questa esercitazione illustra come eseguire una SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure.  
   
- [Esercitazione: File di dati di SQL Server nel servizio di archiviazione di Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- In questa esercitazione sono incluse informazioni sull'archiviazione di file di dati di SQL Server direttamente nel servizio di archiviazione BLOB di Windows Azure.  
+ [Esercitazione: SQL Server file di dati nel servizio di archiviazione di Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ Questa esercitazione illustra come archiviare direttamente i file di dati SQL Server nel servizio di archiviazione BLOB di Azure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni di SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
+ [Esercitazioni per SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
  [WIKI di TechNet: Esempi di SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876818"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154833"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
   Usare la pagina  **Opzioni multimediali** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni multimediali del database.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876818"
 ## <a name="options"></a>Opzioni  
   
 ### <a name="overwrite-media"></a>Sovrascrivi supporti  
- Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (archiviazione di Windows Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup utilizzando l'istruzione Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Per ulteriori informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato URL (archiviazione di Azure) come destinazione di backup nella pagina generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup utilizzando l'istruzione Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Per ulteriori informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Solo l'opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti** è supportata con le opzioni di crittografia. Se si selezionano le opzioni nella sezione **Esegui backup nel set di supporti esistente**, le opzioni di crittografia nella pagina **Opzioni di backup** saranno disabilitate.  
   

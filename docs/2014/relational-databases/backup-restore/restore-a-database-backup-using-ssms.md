@@ -1,5 +1,5 @@
 ---
-title: Ripristinare un Backup del Database (SQL Server Management Studio) | Microsoft Docs
+title: Ripristinare un backup del database (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921235"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154784"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Ripristino di un backup del database (SQL Server Management Studio)
   In questo argomento viene descritto come ripristinare un backup completo del database.  
@@ -40,7 +40,7 @@ ms.locfileid: "62921235"
   
 2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
   
-3.  Fare doppio clic su database, scegliere **attività**, scegliere **ripristinare**e quindi fare clic su **Database**, che consente di visualizzare il **Restore Database** finestra di dialogo.  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **attività**, **Ripristina**, quindi fare clic su **database**per aprire la finestra di dialogo **Ripristina database** .  
   
 4.  Per specificare l'origine e il percorso dei set di backup da ripristinare, nella pagina **Generale** , utilizzare la sezione **Origine** . Selezionare una delle opzioni seguenti:  
   
@@ -63,22 +63,22 @@ ms.locfileid: "62921235"
         >  Questo elenco è disponibile solo quando l'opzione **Dispositivo** è selezionata. Saranno disponibili solo i database che dispongono di backup sul dispositivo selezionato.  
   
          **Supporti di backup**  
-         Selezionare il supporto per l'operazione di ripristino: **File**, **nastro**, **URL**oppure **dispositivo di Backup**. L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.  
+         Selezionare il supporto per l'operazione di ripristino: **File**, **nastro**, **URL**o **dispositivo di backup**. L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.  
   
          **Percorso di backup**  
          Consente di visualizzare, aggiungere o rimuovere supporti per l'operazione di ripristino. L'elenco può contenere fino a 64 file, nastri o dispositivi di backup.  
   
          **Aggiungi**  
-         Aggiunge il percorso di un dispositivo di backup per il **percorso di Backup** elenco. In base al tipo di supporto selezionato nel **supporti di Backup** campo, facendo clic su **Add** si apre una delle finestre di dialogo seguenti.  
+         Aggiunge il percorso di un dispositivo di backup all'elenco dei **percorsi di backup** . A seconda del tipo di supporto selezionato nel campo supporti di **backup** , fare clic su **Aggiungi** per aprire una delle seguenti finestre di dialogo.  
   
         |Tipo di supporto|Finestra di dialogo|Descrizione|  
         |----------------|----------------|-----------------|  
         |**File**|**Individua file di backup**|In questa finestra di dialogo è possibile selezionare un file locale nell'albero o specificare un file remoto utilizzandone il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Seleziona dispositivo di backup**|In questa finestra di dialogo è possibile eseguire una selezione da un elenco di dispositivi di backup logici definiti sull'istanza del server.|  
         |**Nastro**|**Seleziona unità nastro**|In questa finestra di dialogo è possibile eseguire una selezione da un elenco di unità nastro fisicamente collegate al computer che esegue l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**URL**|Verranno avviate due finestre di dialogo nell'ordine seguente:<br /><br /> 1) **connessione ad archiviazione di Azure**<br /><br /> 2) **individua File di Backup in Windows Azure**|Nel **Connetti ad archiviazione di Windows Azure** nella finestra di dialogo selezionare le credenziali SQL esistenti che archivia le Windows Azure storage account accesso e il nome informazioni sulla chiave, o creare nuove credenziali SQL specificando il nome di account di archiviazione e informazioni sulla chiave di accesso archivio. Per altre informazioni, vedere [Connetti ad archiviazione di Windows Azure &#40;Ripristina&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Nel **individua File di Backup** nella finestra di dialogo è possibile selezionare un file dall'elenco di contenitori visualizzati nel riquadro a sinistra.|  
+        |**URL**|Verranno avviate due finestre di dialogo nell'ordine seguente:<br /><br /> 1) **connettersi ad archiviazione di Azure**<br /><br /> 2) **individuare il file di backup in Azure**|Nella finestra di dialogo **Connetti ad archiviazione di Azure** selezionare le credenziali SQL esistenti che archiviano il nome dell'account di archiviazione di Azure e le informazioni sulla chiave di accesso oppure creare nuove credenziali SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso alle archiviazione. Per altre informazioni, vedere [Connect to Azure Storage &#40;&#41;Restore](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Nella finestra di dialogo **Individua file di backup** è possibile selezionare un file dall'elenco di contenitori visualizzato nel frame a sinistra.|  
   
-         Se l'elenco è completo, il **Add** pulsante non è disponibile.  
+         Se l'elenco è completo, il pulsante **Aggiungi** non è disponibile.  
   
          **Rimuovi**  
          Consente di rimuovere uno o più file, nastri o dispositivi di backup logici selezionati.  
@@ -112,7 +112,7 @@ ms.locfileid: "62921235"
   
         -   **RESTORE WITH STANDBY** lascia il database in modalità di sola lettura. Annulla le transazioni di cui non è stato eseguito il commit, ma salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati.  
   
-    3.  **Esegui il backup della parte finale del log prima del ripristino** verrà selezionato se necessario per il punto nel tempo selezionato. Non è necessario modificare questa impostazione, ma è possibile scegliere di eseguire il backup della parte finale del log, anche se non è richiesto. Inserire il nome file in questa posizione? Se il primo set di backup **generale** pagina si trova in Windows Azure, il log tail anche sottoporre a backup nello stesso contenitore di archiviazione.  
+    3.  **Esegui il backup della parte finale del log prima del ripristino** verrà selezionato se necessario per il punto nel tempo selezionato. Non è necessario modificare questa impostazione, ma è possibile scegliere di eseguire il backup della parte finale del log, anche se non è richiesto. Inserire il nome file in questa posizione? Se il primo set di backup nella pagina **generale** è in Azure, verrà eseguito il backup anche del log della parte finale nello stesso contenitore di archiviazione.  
   
     4.  Le operazioni di ripristino potrebbero non riuscire in presenza di connessioni attive al database. Selezionare l'opzione **Chiudi connessioni esistenti** per garantire che tutte le connessioni attive tra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il database vengano chiuse. Questa casella di controllo imposta il database sulla modalità utente singolo prima di effettuare qualsiasi operazione di ripristino e imposta il database sulla modalità multiutente al termine.  
   

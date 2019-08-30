@@ -10,12 +10,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876509"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154750"
 ---
 # <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
   In questo argomento vengono descritti i passaggi necessari per creare un backup crittografato tramite Transact-SQL.  
@@ -29,7 +29,7 @@ ms.locfileid: "62876509"
   
  Utilizzare i passaggi seguenti per creare un backup crittografato di un database in un disco locale. In questo esempio viene utilizzato un database utente denominato MyTestDB.  
   
-1.  **Creare una chiave Master del database master:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
+1.  **Creare una chiave master del database del database master:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "62876509"
   
     ```  
   
-2.  **Creare un certificato di Backup:** Creare un certificato di backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query e quindi fare clic su **Esegui**.  
+2.  **Creare un certificato di backup:** creare un certificato di backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query e quindi fare clic su **Esegui**.  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "62876509"
   
     ```  
   
-3.  **Il backup del database:** Specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  **Eseguire il backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -71,16 +71,16 @@ ms.locfileid: "62876509"
   
  Per un esempio di crittografia di un backup protetto da Extensible Key Management, vedere [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>Backup nel servizio di archiviazione Windows Azure con crittografia  
- Se si crea un backup nel servizio di archiviazione Windows Azure usando l'opzione **Backup di SQL Server nell'URL** , i passaggi di crittografia sono gli stessi, ma è necessario usare un URL come destinazione e le credenziali di SQL per autenticare il servizio di archiviazione Windows Azure. Se si desidera configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le opzioni di crittografia, vedere [configurazione di SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md) e [configurazione di SQL Server Managed Backup to Windows Azure per i gruppi di disponibilità](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>Backup in archiviazione di Azure con crittografia  
+ Se si sta creando un backup in archiviazione di Azure usando l'opzione **SQL Server Backup to URL** , i passaggi di crittografia sono gli stessi, ma è necessario usare l'URL come destinazione e le credenziali SQL per l'autenticazione nell'archiviazione di Azure. Se si vuole configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le opzioni di crittografia, vedere [configurazione di SQL Server backup gestito in Azure](enable-sql-server-managed-backup-to-microsoft-azure.md) e [configurazione SQL Server backup gestito in Azure per i gruppi di disponibilità](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  **Prerequisiti**  
   
--   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti di archiviazione di Azure Windows](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
+-   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare oggetti](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)di archiviazione di Azure.  
   
 -   Chiave master di un database master e certificato o chiave asimmetrica nell'istanza di SQL Server. Per le autorizzazioni e i requisiti di crittografia, vedere [Crittografia dei backup](backup-encryption.md).  
   
-1.  **Creare credenziali di SQL Server:** Per creare una credenziale di SQL Server, connettersi al motore di Database, aprire una nuova finestra query e copiare e incollare l'esempio seguente e fare clic su **Execute**.  
+1.  **Creare credenziali di SQL Server:** per creare le credenziali di SQL Server, connettersi al motore di database, aprire una nuova finestra Query, copiare e incollare l'esempio seguente e quindi fare clic su **Esegui**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -100,7 +100,7 @@ ms.locfileid: "62876509"
   
     ```  
   
-3.  **Creare un certificato di Backup:** Creare un certificato di Backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**  
+3.  **Creare un certificato di backup:** creare un certificato di backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "62876509"
   
     ```  
   
-4.  **Il backup del database:** Specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+4.  **Eseguire il backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

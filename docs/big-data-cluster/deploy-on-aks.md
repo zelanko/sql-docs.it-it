@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652381"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160698"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 
@@ -37,7 +37,7 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
    - **Estensione di SQL Server 2019**
    - **Interfaccia della riga di comando di Azure**
 
-- Server Kubernetes versione 1.10 o successiva. Per il servizio Azure Kubernetes, è necessario usare il parametro `--kubernetes-version` per specificare una versione diversa rispetto a quella predefinita.
+- Versione minima 1,13 per il server Kubernetes. Per il servizio Azure Kubernetes, è necessario usare il parametro `--kubernetes-version` per specificare una versione diversa rispetto a quella predefinita.
 
 - Per un'esperienza ottimale di convalida degli scenari di base nel servizio Azure Kubernetes, usare:
    - 8 vCPU in tutti i nodi

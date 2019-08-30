@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: File di dati di SQL Server nel servizio di archiviazione di Microsoft Azure | Microsoft Docs'
+title: 'Esercitazione: SQL Server file di dati nel servizio di archiviazione di Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,51 +10,51 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89022104fef0b99412060290361961922b9d6b08
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523895"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155311"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Esercitazione: File di dati di SQL Server nel servizio Archiviazione di Microsoft Azure
-  Introduzione all'esercitazione sui file di dati di SQL Server nel servizio di archiviazione Windows Azure In questa esercitazione sono incluse informazioni sull'archiviazione di file di dati di SQL Server direttamente nel servizio di archiviazione BLOB di Windows Azure.  
+# <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>Esercitazione: SQL Server file di dati nel servizio di archiviazione di Azure
+  Introduzione all'esercitazione relativa ai file di dati di SQL Server nel servizio di archiviazione di Azure. Questa esercitazione illustra come archiviare direttamente i file di dati SQL Server nel servizio di archiviazione BLOB di Azure.  
   
- Il supporto per l'integrazione di SQL Server per il servizio di archiviazione BLOB di Windows Azure è una funzionalità avanzata di SQL Server 2014. Per una panoramica delle funzionalità e vantaggi dell'uso di questa funzionalità, vedere [file di dati di SQL Server in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
+ Il supporto per l'integrazione SQL Server per il servizio di archiviazione BLOB di Azure è un miglioramento SQL Server 2014. Per una panoramica delle funzionalità e dei vantaggi derivanti dall'uso di questa funzionalità, vedere [SQL Server di file di dati in Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
- Nell'esercitazione viene illustrato come archiviare i file di dati di SQL Server nel servizio di archiviazione Windows Azure in più lezioni. Ogni lezione è incentrata su un'attività specifica. In primo luogo, verrà illustrato come creare un account di archiviazione e un contenitore in Windows Azure. Successivamente, verrà illustrato come creare le credenziali di SQL Server per poter integrare SQL Server con il Servizio di archiviazione Windows Azure. Infine, verrà creato un database direttamente nel Servizio di archiviazione Windows Azure. Inoltre, verranno illustrati scenari di crittografia, di migrazione e di backup e ripristino.  
+ Questa esercitazione illustra come archiviare SQL Server file di dati nel servizio di archiviazione di Azure in più lezioni. Ogni lezione è incentrata su un'attività specifica. Per prima cosa, si apprenderà come creare un account di archiviazione e un contenitore in Azure. Si apprenderà quindi come creare una SQL Server credenziali per poter integrare SQL Server con archiviazione di Azure. Quindi, si creerà direttamente un database in archiviazione di Azure. Inoltre, verranno illustrati scenari di crittografia, di migrazione e di backup e ripristino.  
   
  L'esercitazione è suddivisa in nove lezioni:  
   
- **[Lezione 1: Creare il contenitore e Account di archiviazione di Azure di Windows](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
- In questa lezione vengono creati un contenitore e un account di archiviazione di Windows Azure.  
+ **[Lezione 1: Creare un account e un contenitore di archiviazione di Azure](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
+ In questa lezione viene creato un account di archiviazione di Azure e un contenitore.  
   
- **[Lezione 2. Creare un criterio sul contenitore e generare una firma di accesso condiviso &#40;firma di accesso condiviso&#41; chiave](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
+ **[Lezione 2. Creare un criterio per il contenitore e generare una &#40;&#41; chiave di firma di accesso condiviso](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  In questa lezione vengono creati i criteri del contenitore BLOB e viene inoltre generata una firma di accesso condiviso.  
   
- **[Lezione 3: Creare una credenziale di SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
- In questa lezione verranno create le credenziali per archiviare le informazioni di sicurezza utilizzate per accedere all'account di archiviazione di Windows Azure.  
+ **[Lezione 3: Creazione di una credenziale SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
+ In questa lezione verranno create le credenziali per archiviare le informazioni di sicurezza usate per accedere all'account di archiviazione di Azure.  
   
- **[Lezione 4: Creare un database in archiviazione di Microsoft Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
- In questa lezione viene creato un database nel Servizio di archiviazione Windows Azure utilizzando l'opzione FILENAME di CREATE DATABASE.  
+ **[Lezione 4: Creare un database in archiviazione di Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
+ In questa lezione viene creato un database in archiviazione di Azure usando l'opzione CREATE database FILENAME.  
   
- **[Lezione 5. &#40;Facoltativo&#41; crittografare il database tramite Transparent Data Encryption](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
+ **Lezione 5. &#40;Crittografia&#41; facoltativa del database tramite TRANSparent Data Encryption**  
  In questa lezione viene crittografato il database tramite Transparent Data Encryption (TDE) e un certificato del server.  
   
- **[Lezione 6: Eseguire la migrazione di un database da un'origine del computer locale a una macchina di destinazione in Microsoft Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
- In questa lezione viene eseguita la migrazione di un database da un'istanza locale a una macchina virtuale in Windows Azure utilizzando l'opzione FOR ATTACH di CREATE DATABASE.  
+ **[Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ In questa lezione viene eseguita la migrazione di un database da locale a una macchina virtuale in Azure tramite l'opzione CREATE DATABASE FOR Connetti.  
   
- **[Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
- In questa lezione vengono spostati i file di dati nel Servizio di archiviazione Windows Azure utilizzando l'istruzione ALTER DATABASE.  
+ **[Lezione 7: Spostare i file di dati in archiviazione di Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
+ In questa lezione si spostano i file di dati in archiviazione di Azure usando l'istruzione ALTER DATABASE.  
   
- **[Lezione 8. Ripristinare un database in archiviazione di Microsoft Azure](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  
- In questa lezione viene ripristinato un database nel Servizio di archiviazione Windows Azure utilizzando l'opzione MOVE di RESTORE DATABASE.  
+ **[Lezione 8. Ripristinare un database in archiviazione di Azure](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  
+ In questa lezione viene ripristinato un database in archiviazione di Azure utilizzando l'opzione RESTOre database MOVE.  
   
- **[Lezione 9. Ripristinare un database da archiviazione di Microsoft Azure](lesson-8-restore-as-new-database-from-log-backup.md)**  
- In questa lezione viene ripristinato un database dal Servizio di archiviazione Windows Azure utilizzando l'opzione MOVE di RESTORE DATABASE.  
+ **[Lezione 9. Ripristinare un database da archiviazione di Azure](lesson-8-restore-as-new-database-from-log-backup.md)**  
+ In questa lezione viene ripristinato un database da archiviazione di Azure utilizzando l'opzione RESTOre database MOVE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di dati di SQL Server in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md)  
+ [SQL Server file di dati in Azure](databases/sql-server-data-files-in-microsoft-azure.md)  
   
   

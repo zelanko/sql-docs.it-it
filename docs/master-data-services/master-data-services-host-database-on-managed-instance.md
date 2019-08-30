@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794926"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155374"
 ---
 # <a name="host-database-on-managed-instance"></a>Database host nell'istanza gestita
 
@@ -26,7 +26,7 @@ ms.locfileid: "68794926"
 
   Questo articolo illustra come configurare un database MDS in un'istanza gestita.
   
-## <a name="preparation"></a>Preparazione
+## <a name="preparation"></a>Operazioni preliminari
 
 Per la preparazione, è necessario completare i passaggi seguenti.
 - Terminare la creazione e la configurazione dell'istanza gestita. Includere la rete virtuale e la VPN da punto a sito.
@@ -108,7 +108,7 @@ Vengono installati [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], gli a
 
 **Impostazione del database e del sito Web**
 
-1. Connettere la rete virtuale di Windows Azure per assicurarsi che sia possibile connettersi all'istanza gestita.
+1. Connettere la rete virtuale di Azure per assicurarsi che sia possibile connettersi all'istanza gestita.
 
     ![MDS-SQLServer2019-config-mi-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")  
 

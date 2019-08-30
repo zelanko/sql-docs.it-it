@@ -10,21 +10,21 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6eb2d66203de226cd7ab414c97ecc219717573a0
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619593"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154668"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
-  In questo argomento sono inclusi i suggerimenti per la risoluzione dei problemi e le procedure consigliate relativi al backup e ripristino di SQL Server nel servizio BLOB di Windows Azure.  
+  Questo argomento include procedure consigliate e suggerimenti per la risoluzione dei problemi per SQL Server backup e ripristini al servizio BLOB di Azure.  
   
- Per ulteriori informazioni sull'utilizzo del servizio di archiviazione BLOB di Windows Azure per le operazioni di backup e ripristino di SQL Server, vedere:  
+ Per ulteriori informazioni sull'utilizzo del servizio di archiviazione BLOB di Azure per SQL Server operazioni di backup o ripristino, vedere:  
   
--   [Backup e ripristino di SQL Server con il servizio di Archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestione dei backup  
  Nell'elenco seguente sono inclusi i consigli generali sulla gestione dei backup:  
@@ -33,7 +33,7 @@ ms.locfileid: "65619593"
   
 -   Quando si crea un contenitore, è consigliabile impostare il livello di accesso su **privato**, in modo che solo gli utenti o account che possono fornire le informazioni di autenticazione richieste possano leggere o scrivere i BLOB nel contenitore.  
   
--   Per i database di SQL Server in un'istanza di SQL Server in esecuzione in una macchina virtuale di Windows Azure, utilizzare un account di archiviazione nella stessa area della macchina virtuale per evitare i costi di trasferimento dei dati tra le aree. L'utilizzo della stessa area garantisce anche prestazioni ottimali per le operazioni di backup e ripristino.  
+-   Per SQL Server database in un'istanza di SQL Server in esecuzione in una macchina virtuale di Azure, usare un account di archiviazione nella stessa area della macchina virtuale per evitare i costi di trasferimento dei dati tra le aree. L'utilizzo della stessa area garantisce anche prestazioni ottimali per le operazioni di backup e ripristino.  
   
 -   Un'attività di backup non completata correttamente può generare un file di backup non valido. Sono consigliate l'identificazione periodica dei backup non completati e l'eliminazione dei file BLOB. Per altre informazioni, vedere [Eliminazione dei file BLOB di backup con lease attivi](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -41,18 +41,18 @@ ms.locfileid: "65619593"
   
 ## <a name="handling-large-files"></a>Gestione di file di grandi dimensioni  
   
--   Nell'operazione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzati più thread per ottimizzare il trasferimento dei dati ai servizi di archiviazione BLOB di Windows Azure.  Le prestazioni, tuttavia, dipendono da vari fattori, ad esempio la larghezza di banda del fornitore di software indipendente e le dimensioni del database. Se si intende eseguire il backup di database o filegroup di grandi dimensioni da un database di SQL Server locale, si consiglia di eseguire innanzitutto alcuni test della velocità effettiva. [Del archiviazione di Azure contratto di servizio](https://go.microsoft.com/fwlink/?LinkId=271619) hanno tempi di elaborazione massimi per i blob che è possibile prendere in considerazione.  
+-   L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operazione di backup usa più thread per ottimizzare il trasferimento dei dati ai servizi di archiviazione BLOB di Azure.  Le prestazioni, tuttavia, dipendono da vari fattori, ad esempio la larghezza di banda del fornitore di software indipendente e le dimensioni del database. Se si intende eseguire il backup di database o filegroup di grandi dimensioni da un database di SQL Server locale, si consiglia di eseguire innanzitutto alcuni test della velocità effettiva. I [contratti di contratto di archiviazione di Azure](https://go.microsoft.com/fwlink/?LinkId=271619) hanno tempi di elaborazione massimi per i BLOB che è possibile prendere in considerazione.  
   
 -   L'uso dell'opzione `WITH COMPRESSION` come consigliato nella sezione **Gestione dei backup** è molto importante quando si esegue il backup di file di grandi dimensioni.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Risoluzione dei problemi di backup nell'URL e di ripristino dallo stesso  
- Di seguito sono elencate alcune modalità rapide per la risoluzione di errori durante l'esecuzione del backup nel servizio di archiviazione BLOB di Windows Azure o del ripristino dallo stesso.  
+ Di seguito sono riportati alcuni modi rapidi per risolvere gli errori durante il backup o il ripristino dal servizio di archiviazione BLOB di Azure.  
   
- Per evitare errori a causa di limitazioni o le opzioni non supportate, esaminare l'elenco delle limitazioni e supporto per BACKUP e ripristino di informazioni di comandi nel [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) articolo.  
+ Per evitare errori a causa di opzioni o limitazioni non supportate, esaminare l'elenco delle limitazioni e il supporto per le informazioni sui comandi di BACKUP e ripristino nell'articolo [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Errori di autenticazione:**  
   
--   WITH CREDENTIAL è una nuova opzione ed è necessaria per le operazioni di backup nel servizio di archiviazione BLOB di Windows Azure e di ripristino dallo stesso. Di seguito sono riportati i possibili errori correlati alle credenziali:  
+-   WITH CREDENTIAL è una nuova opzione ed è necessario eseguire il backup o il ripristino dal servizio di archiviazione BLOB di Azure. Di seguito sono riportati i possibili errori correlati alle credenziali:  
   
      Le credenziali specificate nel comando `BACKUP` o `RESTORE` non esistono. Per evitare questo problema, è possibile includere istruzioni T-SQL per creare le credenziali qualora non siano presenti nell'istruzione di backup. Di seguito è riportato un esempio pratico:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65619593"
   
 -   Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni **Modifica qualsiasi credenziale** .  
   
--   Verificare il nome dell'account di archiviazione e i valori di chiave. Le informazioni archiviate nelle credenziali devono corrispondere ai valori delle proprietà dell'account di archiviazione di Windows Azure utilizzati nelle operazioni di backup e ripristino.  
+-   Verificare il nome dell'account di archiviazione e i valori di chiave. Le informazioni archiviate nelle credenziali devono corrispondere ai valori delle proprietà dell'account di archiviazione di Azure usato nelle operazioni di backup e ripristino.  
   
  **Errori di backup:**  
   
@@ -89,12 +89,12 @@ ms.locfileid: "65619593"
   
         -   `VERIFYONLY`  
   
-    -   È anche possibile trovare informazioni esaminando il registro eventi di Windows - registri in applicazioni con il nome "SQLBackupToUrl".  
+    -   È anche possibile trovare informazioni esaminando il registro eventi di Windows in registri applicazioni con il nome "SQLBackupToUrl".  
   
 -   Quando si esegue il ripristino da un backup compresso, è possibile che venga visualizzato l'errore seguente:  
   
-    -   **Si è verificata un'eccezione SqlException 3284. Gravità: 16, stato: 5**  
-        **Il contrassegno di file del messaggio nel dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' non è allineato. Eseguire nuovamente l'istruzione Restore con le stesse dimensioni di blocco usata per creare il set di backup: '65536' potrebbe essere un valore possibile.**  
+    -   **Si è verificata un'eccezione SqlException 3284. Gravità: stato 16: 5**  
+        **Il contrassegno dei messaggi nel dispositivo https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak '' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backupset: ' 65536' sembra un valore possibile.**  
   
          Per risolvere il problema, eseguire nuovamente l'istruzione `BACKUP` con il valore `BLOCKSIZE = 65536` specificato.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "65619593"
   
      Se si tenta di nuovo un'istruzione di backup, quest'ultimo potrebbe non essere completato e potrebbe essere visualizzato un errore simile al seguente:  
   
-     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Errore del server remoto: Qui (412) attualmente sono attivo un lease sul blob e nessun ID lease è stato specificato nella richiesta**.  
+     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Il server remoto ha restituito un errore: (412) attualmente esiste un lease nel BLOB e nella richiesta**non è stato specificato alcun ID lease.  
   
      Se un'istruzione RESTORE viene tentata in un file BLOB di backup con un lease attivo, l'operazione di ripristino non viene completata e viene visualizzato un errore simile al seguente:  
   
-     **Messaggio eccezione: Errore del server remoto: (409) Conflict..**  
+     **Messaggio eccezione: Il server remoto ha restituito un errore: (409) in conflitto..**  
   
      Quando si verifica un errore di questo tipo, i file BLOB devono essere eliminati. Per altre informazioni su questo scenario e su come risolvere il problema, vedere [Eliminazione dei file BLOB di backup con lease attivi](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "65619593"
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server.   Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   
--   Scrivere su "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " non è riuscita: Backup su URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione del trasporto: La connessione è stata chiusa.  
+-   Scrittura in "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " non riuscita: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
   
 -   Si è verificato un errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Impossibile recuperare l'errore dall'endpoint remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "65619593"
   
      Interruzione anomala di BACKUP DATABASE in corso.  
   
--   Backupiorequest:: Reportioerror: errore di scrittura nel dispositivo di backup 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione del trasporto: La connessione è stata chiusa.  
+-   BackupIoRequest:: ReportIoError: errore di scrittura nel dispositivo di http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak backup ''. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
   
  Se si abilita la registrazione dettagliata mediante il flag di traccia 3051, è inoltre possibile che nei log venga visualizzato il messaggio seguente:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619593"
   
  **Impostazioni proxy predefinite non rilevate:**  
   
- Talvolta le impostazioni predefinite non vengono rilevate, causando errori di autenticazione del proxy come quello indicato di seguito:*Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Il backup all'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Errore del server remoto: (407)*  **Richiesta autenticazione proxy**.  
+ Talvolta le impostazioni predefinite non vengono rilevate, causando errori di autenticazione del proxy come quello indicato di seguito:*Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Il backup all'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Il server remoto ha restituito un errore: (407) **Richiesta autenticazione proxy.***  
   
  Per risolvere il problema, creare un file di configurazione che consenta al processo di backup su URL di utilizzare le impostazioni predefinite del proxy effettuando i passaggi indicati di seguito.  
   
@@ -151,12 +151,12 @@ ms.locfileid: "65619593"
   
     ```  
   
-2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Ad esempio, se SQL Server è installato nell'unità C del computer, inserire il file di configurazione: *C:\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName > \MSSQL\Binn*.  
+2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Se, ad esempio, il SQL Server è installato nell'unità C del computer, inserire il file di configurazione: *C:\Programmi\Microsoft SQL Server\MSSQL12. NomeIstanza\<> \MSSQL\Binn*.  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure  
- Poiché Backup gestito di SQL Server è compilato in Backup nell'URL, i suggerimenti per la risoluzione di problemi descritti nelle sezioni precedenti vengono applicati ai database o alle istanze tramite Backup gestito di SQL Server.  Informazioni sulla risoluzione dei problemi di SQL Server Managed Backup to Windows Azure sono descritto dettagliatamente [risoluzione dei problemi di SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Risoluzione dei problemi di SQL Server backup gestito in Azure  
+ Poiché Backup gestito di SQL Server è compilato in Backup nell'URL, i suggerimenti per la risoluzione di problemi descritti nelle sezioni precedenti vengono applicati ai database o alle istanze tramite Backup gestito di SQL Server.  Informazioni dettagliate sulla risoluzione dei problemi di SQL Server backup gestito in Azure sono descritte in [risoluzione dei problemi di SQL Server backup gestito in Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristino da backup archiviati in Windows Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
+ [Ripristino da backup archiviati in Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

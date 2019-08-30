@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992127"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152466"
 ---
 # <a name="dqs-administration"></a>amministrazione dqs
 
@@ -35,7 +35,7 @@ ms.locfileid: "67992127"
   
 -   Consente agli amministratori DQS di eseguire il monitoraggio delle attività DQS su un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] da un [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e, se necessario, *terminare* un'attività in esecuzione o *arrestare* un processo in esecuzione all'interno di un'attività.  
   
--   Configurare le impostazioni del servizio dati di riferimento, ad esempio l'impostazione della connettività con Windows Azure Marketplace e la gestione di provider del servizio dati di riferimento diretti.  
+-   Configurare le impostazioni del servizio dati di riferimento, ad esempio la configurazione della connettività con Azure Marketplace e la gestione diretta di provider del servizio dati di riferimento di terze parti.  
   
 -   Configurare valori soglia per le attività di pulizia e di corrispondenza.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67992127"
 ### <a name="configuration"></a>Configurazione  
  La schermata **Configurazione** del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] consente all'amministratore DQS di effettuare le attività seguenti:  
   
--   **Dati di riferimento**: configurare i provider del servizio dati di riferimento: Microsoft Azure Marketplace o provider del servizio dati di riferimento diretto. Dopo avere configurato i provider del servizio dati di riferimento, è possibile eseguire il mapping di un dominio singolo/composito ai dati di riferimento durante l'attività di gestione del dominio in una Knowledge Base, quindi utilizzare la stessa Knowledge Base per l'attività di pulizia in un progetto Data Quality. È inoltre possibile specificare le impostazioni proxy per la connessione a Internet per utilizzare Windows Azure Marketplace.  
+-   **Dati di riferimento**: configurare i provider del servizio dati di riferimento: Azure Marketplace o provider del servizio dati di riferimento diretti. Dopo avere configurato i provider del servizio dati di riferimento, è possibile eseguire il mapping di un dominio singolo/composito ai dati di riferimento durante l'attività di gestione del dominio in una Knowledge Base, quindi utilizzare la stessa Knowledge Base per l'attività di pulizia in un progetto Data Quality. Consente inoltre di specificare le impostazioni proxy per la connessione a Internet per l'uso di Azure Marketplace.  
   
 -   **Impostazioni generali**: specificare i valori soglia per la pulizia e la corrispondenza dei dati e determinare se abilitare notifiche per la profilatura in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Questi valori soglia vengono utilizzati da DQS durante le attività di pulizia assistita da computer e di corrispondenza in un progetto Data Quality.  
   

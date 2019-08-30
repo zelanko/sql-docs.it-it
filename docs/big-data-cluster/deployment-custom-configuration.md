@@ -5,20 +5,149 @@ description: Informazioni su come personalizzare la distribuzione di un cluster 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652397"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155315"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurare le impostazioni di distribuzione per cluster Big Data
+# <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per i servizi e le risorse del cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Partendo da un set predefinito di profili di configurazione incorporati nello strumento di gestione di azdata, è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro di integrazione applicativa dei dati. A partire dalla versione finale candidata, la struttura dei file di configurazione è stata aggiornata per consentire di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa. 
+
+È anche possibile impostare le configurazioni a livello di risorsa o aggiornare le configurazioni per tutti i servizi in una risorsa. Di seguito è riportato un riepilogo della struttura per **BDC. JSON**:
+
+```json
+{
+    "apiVersion": "v1",
+    "metadata": {
+        "kind": "BigDataCluster",
+        "name": "mssql-cluster"
+    },
+    "spec": {
+        "resources": {
+            "nmnode-0": {...
+            },
+            "sparkhead": {...
+            },
+            "zookeeper": {...
+            },
+            "gateway": {...
+            },
+            "appproxy": {...
+            },
+            "master": {...
+            },
+            "compute-0": {...
+            },
+            "data-0": {...
+            },
+            "storage-0": {...
+        },
+        "services": {
+            "sql": {
+                "resources": [
+                    "master",
+                    "compute-0",
+                    "data-0",
+                    "storage-0"
+                ]
+            },
+            "hdfs": {
+                "resources": [
+                    "nmnode-0",
+                    "zookeeper",
+                    "storage-0",
+                    "sparkhead"
+                ],
+                "settings": {...
+            },
+            "spark": {
+                "resources": [
+                    "sparkhead",
+                    "storage-0"
+                ],
+                "settings": {...
+            }
+        }
+    }
+}
+```
+
+Per aggiornare le configurazioni a livello di risorsa, ad esempio le istanze in un pool, è necessario aggiornare la specifica della risorsa. Ad esempio, per aggiornare il numero di istanze nel pool di calcolo, si modificherà questa sezione nel file di configurazione **BDC. JSON** :
+```json
+"resources": {
+    ...
+    "compute-0": {
+        "metadata": {
+            "kind": "Pool",
+            "name": "default"
+        },
+        "spec": {
+            "type": "Compute",
+            "replicas": 4
+        }
+    }
+    ...
+}
+``` 
+
+Analogamente, per modificare le impostazioni di un servizio signle all'interno di una risorsa specifica. Se ad esempio si vuole modificare le impostazioni della memoria di Spark solo per il componente Spark nel pool di archiviazione, si UDPATE la risorsa **storage-0** con una sezione **Settings** per il servizio **Spark** nel file di configurazione **BDC. JSON** .
+```json
+"resources":{
+    ...
+     "storage-0": {
+        "metadata": {
+            "kind": "Pool",
+            "name": "default"
+        },
+        "spec": {
+            "type": "Storage",
+            "replicas": 2,
+            "settings": {
+                "spark": {
+                    "driverMemory": "2g",
+                    "driverCores": "1",
+                    "executorInstances": "3",
+                    "executorMemory": "1536m",
+                    "executorCores": "1"
+                }
+            }
+        }
+    }
+    ...
+}
+```
+
+Se si desidera applicare le stesse configurazioni per un servizio associato a più risorse, verranno aggiornate le **Impostazioni** corrispondenti nella sezione **Servizi** . Ad esempio, se si desidera impostare le stesse impostazioni per Spark in entrambi i pool di archiviazione e i pool Spark, è necessario aggiornare la sezione **Impostazioni** nella sezione servizio **Spark** del file di configurazione **BDC. JSON** .
+
+```json
+"services": {
+    ...
+    "spark": {
+        "resources": [
+            "sparkhead",
+            "storage-0"
+        ],
+        "settings": {
+            "driverMemory": "2g",
+            "driverCores": "1",
+            "executorInstances": "3",
+            "executorMemory": "1536m",
+            "executorCores": "1"
+        }
+    }
+    ...
+}
+```
+
 
 Per personalizzare i file di configurazione della distribuzione del cluster, è possibile usare qualsiasi editor in formato JSON, ad esempio VSCode. Per la creazione di script per queste modifiche a scopo di automazione, usare il comando **azdata bdc config**. Questo articolo descrive come configurare le distribuzioni di cluster Big Data modificando i file di configurazione della distribuzione. Fornisce anche alcuni esempi su come modificare la configurazione per diversi scenari. Per altre informazioni sull'uso di file di configurazione nelle distribuzioni, vedere le [linee guida per la distribuzione](deployment-guidance.md#configfile).
 
@@ -26,7 +155,7 @@ Per personalizzare i file di configurazione della distribuzione del cluster, è 
 
 - [Installare azdata](deploy-install-azdata.md).
 
-- Ognuno degli esempi in questa sezione presuppone che sia stata creata una copia di una delle configurazioni standard. Per altre informazioni, vedere [Creare una pubblicazione](deployment-guidance.md#customconfig). Ad esempio, il comando seguente crea una directory denominata `custom` che contiene due file di configurazione della distribuzione JSON, **cluster.json** e **control.json**, in base alla configurazione **aks-dev-test** predefinita:
+- Ognuno degli esempi in questa sezione presuppone che sia stata creata una copia di una delle configurazioni standard. Per altre informazioni, vedere [Creare una pubblicazione](deployment-guidance.md#customconfig). Ad esempio, il comando seguente crea una directory denominata `custom` che contiene due file di configurazione della distribuzione JSON, **BDC. JSON** e **Control. JSON**, basati sulla configurazione predefinita **AKS-dev-test** :
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -34,11 +163,11 @@ Per personalizzare i file di configurazione della distribuzione del cluster, è 
 
 ## <a id="clustername"></a> Modificare il nome del cluster
 
-Il nome del cluster è sia il nome del cluster Big Data sia lo spazio dei nomi Kubernetes che verrà creato durante la distribuzione. Viene specificato nella parte seguente del file di configurazione della distribuzione **cluster.json**:
+Il nome del cluster è sia il nome del cluster Big Data sia lo spazio dei nomi Kubernetes che verrà creato durante la distribuzione. Viene specificato nella parte seguente del file di configurazione della distribuzione di **BDC. JSON** :
 
 ```json
 "metadata": {
-    "kind": "Cluster",
+    "kind": "BigDataCluster",
     "name": "mssql-cluster"
 },
 ```
@@ -46,7 +175,7 @@ Il nome del cluster è sia il nome del cluster Big Data sia lo spazio dei nomi K
 Il comando seguente invia una coppia chiave-valore al parametro **--json-values** per modificare il nome del cluster Big Data in **test-cluster**:
 
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -54,21 +183,23 @@ azdata bdc config replace --config-file custom/cluster.json --json-values "metad
 
 ## <a id="ports"></a> Aggiornare le porte degli endpoint
 
-Gli endpoint vengono definiti per il controller in **control.json** e per il gateway e l'istanza master di SQL Server nelle sezioni corrispondenti in **cluster.json**. La parte seguente del file di configurazione **control.json** mostra le definizioni degli endpoint per il controller:
+Gli endpoint vengono definiti per il controller nel file **Control. JSON** e per il gateway e l'istanza di SQL Server Master nelle sezioni corrispondenti in **BDC. JSON**. La parte seguente del file di configurazione **control.json** mostra le definizioni degli endpoint per il controller:
 
 ```json
-"endpoints": [
+{
+  "endpoints": [
     {
-        "name": "Controller",
-        "serviceType": "LoadBalancer",
-        "port": 30080
+      "name": "Controller",
+      "serviceType": "LoadBalancer",
+      "port": 30080
     },
     {
-        "name": "ServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30777
+      "name": "ServiceProxy",
+      "serviceType": "LoadBalancer",
+      "port": 30777
     }
-]
+  ]
+}
 ```
 
 L'esempio seguente usa il formato JSON inline per modificare la porta per l'endpoint **controller**:
@@ -79,28 +210,35 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 
 ## <a id="replicas"></a> Configurare repliche dei pool
 
-Le caratteristiche di ogni pool, ad esempio il pool di archiviazione, vengono definite nel file di configurazione **cluster.json**. Ad esempio, la parte seguente del file **cluster.json** mostra una definizione del pool di archiviazione:
+Le configurazioni di ogni risorsa, ad esempio il pool di archiviazione, vengono definite nel file di configurazione **BDC. JSON** . Ad esempio, la parte seguente di **BDC. JSON** Mostra una definizione di risorsa **storage-0** :
 
 ```json
-"pools": [
-   {
-       "metadata": {
-           "kind": "Pool",
-           "name": "default"
-       },
-       "spec": {
-           "type": "Storage",
-           "replicas": 2
-       }
-   }
-]
+"storage-0": {
+    "metadata": {
+        "kind": "Pool",
+        "name": "default"
+    },
+    "spec": {
+        "type": "Storage",
+        "replicas": 2,
+        "settings": {
+            "spark": {
+                "driverMemory": "2g",
+                "driverCores": "1",
+                "executorInstances": "3",
+                "executorMemory": "1536m",
+                "executorCores": "1"
+            }
+        }
+    }
+}
 ```
 
 È possibile configurare il numero di istanze in un pool modificando il valore **replicas** per ogni pool. L'esempio seguente usa il formato JSON inline per modificare questi valori per i pool di archiviazione e di dati rispettivamente in `10` e `4`:
 
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
 ```
 
 ## <a id="storage"></a> Configurare l'archiviazione
@@ -112,31 +250,31 @@ azdata bdc config replace --config-file custom/cluster.json --json-values "$.spe
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "spec.resources.storage-0.spec",
       "value": {
-        "storage":{
-        "data":{
-                "size": "100Gi",
-                "className": "myStorageClass",
-                "accessMode":"ReadWriteOnce"
-                },
-        "logs":{
-                "size":"32Gi",
-                "className":"myStorageClass",
-                "accessMode":"ReadWriteOnce"
-                }
-                },
-        "type":"Storage",
-        "replicas":2
+        "type": "Storage",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
       }
     }
   ]
 }
 ```
 
-È quindi possibile usare il comando **azdata bdc config patch** per aggiornare il file di configurazione **cluster.json**.
+È quindi possibile usare il comando **azdata BDC config patch** per aggiornare il file di configurazione **BDC. JSON** .
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 ```
 
 > [!NOTE]
@@ -149,32 +287,15 @@ Per altre informazioni sulla configurazione dell'archiviazione, vedere [Salvatag
 È anche possibile configurare i pool di archiviazione per l'esecuzione senza Spark e creare un pool Spark separato. In questo modo, è possibile ridimensionare la potenza di calcolo di Spark indipendentemente dall'archiviazione. Per informazioni su come configurare il pool Spark, vedere l'[esempio di file di patch JSON](#jsonpatch) alla fine di questo articolo.
 
 
-
-Poiché per impostazione predefinita il valore di **includeSpark** per il pool di archiviazione è impostato su true, è necessario aggiungere il campo **includeSpark** nella configurazione dell'archiviazione per poter apportare modifiche. Il file di patch JSON seguente mostra come aggiungere questo campo.
-
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
-      "value": {
-       "type":"Storage",
-       "replicas":2,
-       "includeSpark":false
-      }
-    }
-  ]
-}
-```
+Per impostazione predefinita, l'impostazione **includeSpark** per la risorsa pool di archiviazione è impostata su true, pertanto è necessario modificare il campo **includeSpark** nella configurazione dell'archiviazione per apportare modifiche. Il comando seguente mostra come modificare questo valore usando JSON inline.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
 ## <a id="podplacement"></a> Configurare la posizione dei pod tramite etichette Kubernetes
 
-È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Ad esempio, può essere necessario fare in modo che i pod del pool di archiviazione siano posizionati in nodi con più archiviazione o che le istanze master di SQL Server si trovino in nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di pool nel file di configurazione della distribuzione del cluster. Kubernetes si occuperà quindi dell'impostazione dell'affinità dei pod e dei nodi che corrispondono a etichette specifiche. La chiave dell'etichetta specifica che deve essere aggiunta ai nodi nel cluster kubernetes è **MSSQL-cluster-Wide**. Il valore di questa etichetta può essere qualsiasi stringa scelta.
+È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Ad esempio, è possibile assicurarsi che i pod delle risorse del pool di archiviazione vengano posizionati in nodi con più spazio di archiviazione o SQL Server istanze master vengano posizionate su nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di pool nel file di configurazione della distribuzione del cluster. Kubernetes si occuperà quindi dell'impostazione dell'affinità dei pod e dei nodi che corrispondono a etichette specifiche. La chiave dell'etichetta specifica che deve essere aggiunta ai nodi nel cluster kubernetes è **MSSQL-cluster-Wide**. Il valore di questa etichetta può essere qualsiasi stringa scelta.
 
 Nell'esempio seguente viene illustrato come modificare un file di configurazione personalizzato per includere un'impostazione dell'etichetta del nodo per l'istanza master SQL Server, il pool di calcolo, il pool di dati & pool di archiviazione. Si noti che non è presente alcuna chiave *nodeLabel* nelle configurazioni predefinite e di conseguenza è necessario modificare un file di configurazione personalizzato manualmente oppure creare un file di patch e applicarlo al file di configurazione personalizzato. Il Pod dell'istanza master di SQL Server verrà distribuito in un nodo che contiene un'etichetta **MSSQL-cluster-Wide** con valore **BDC-Master**. Il pool di calcolo e i pod del pool di dati verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-SQL**. I pod del pool di archiviazione verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-storage**.
 
@@ -185,46 +306,55 @@ Creare un file denominato **patch.json** nella directory corrente con il contenu
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
+      "path": "spec.resources.master.spec",
       "value": {
-    "type": "Master",
+        "type": "Master",
         "replicas": 1,
-        "hadrEnabled": false,
         "endpoints": [
-            {
-             "name": "Master",
-             "serviceType": "NodePort",
-             "port": 31433
-            }
-          ],
+          {
+            "name": "Master",
+            "serviceType": "NodePort",
+            "port": 31433
+          }
+        ],
+        "settings": {
+          "sql": {
+            "hadr.enabled": "false"
+          }
+        },
         "nodeLabel": "bdc-master"
       }
     },
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "path": "spec.resources.compute-0.spec",
       "value": {
-    "type": "Compute",
+        "type": "Compute",
         "replicas": 1,
         "nodeLabel": "bdc-sql"
       }
     },
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "path": "spec.resources.data-0.spec",
       "value": {
-    "type": "Data",
+        "type": "Data",
         "replicas": 2,
         "nodeLabel": "bdc-sql"
       }
     },
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "spec.resources.storage-0.spec",
       "value": {
-    "type": "Storage",
+        "type": "Storage",
         "replicas": 3,
-        "nodeLabel": "bdc-storage"
+        "nodeLabel": "bdc-storage",
+        "settings": {
+          "spark": {
+            "includeSpark": "true"
+          }
+        }
       }
     }
   ]
@@ -232,7 +362,7 @@ Creare un file denominato **patch.json** nella directory corrente con il contenu
 ```
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> File di patch JSON
@@ -242,26 +372,26 @@ I file di patch JSON configurano più impostazioni contemporaneamente. Per altre
 Il file **patch.json** seguente esegue queste modifiche:
 
 - Aggiorna la porta di un singolo endpoint in **control.json**.
-    ```json
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "$.spec.endpoints[?(@.name=='Controller')].port",
-          "value": 30000
-        }   
-      ]
+      "op": "replace",
+      "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+      "value": 30000
     }
-    ```
+  ]
+}
+```
 
 - Aggiorna tutti gli endpoint (**port** e **serviceType**) in **control.json**.
-    ```json
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "spec.endpoints",
-          "value": [
+      "op": "replace",
+      "path": "spec.endpoints",
+      "value": [
         {
           "serviceType": "LoadBalancer",
           "port": 30001,
@@ -272,105 +402,104 @@ Il file **patch.json** seguente esegue queste modifiche:
           "port": 30778,
           "name": "ServiceProxy"
         }
-          ]
-        }
       ]
     }
-    ```
+  ]
+}
+```
 
 - Aggiorna le impostazioni di archiviazione del controller in **control.json**. Queste impostazioni sono applicabili a tutti i componenti del cluster, a meno che non vengano sostituite a livello di pool.
-    ```json
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "spec.storage",
-          "value": {
+      "op": "replace",
+      "path": "spec.storage",
+      "value": {
         "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-               },
+          "className": "managed-premium",
+          "accessMode": "ReadWriteOnce",
+          "size": "100Gi"
+        },
         "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-               }
-           }
-         }  
-      ]
+          "className": "managed-premium",
+          "accessMode": "ReadWriteOnce",
+          "size": "32Gi"
+        }
+      }
     }
-    ```
+  ]
+}
+```
 
 - Aggiorna il nome della classe di archiviazione in **control.json**.
-    ```json
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "spec.storage.data.className",
-          "value": "managed-premium"
-        }   
-      ]
+      "op": "replace",
+      "path": "spec.storage.data.className",
+      "value": "managed-premium"
     }
-    ```
+  ]
+}
+```
 
-- Aggiorna le impostazioni di archiviazione per il pool di archiviazione in **cluster.json**.
-    ```json
+- Aggiorna le impostazioni di archiviazione del pool per il pool di archiviazione in **BDC. JSON**.
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
-          "value": {
-        "type":"Storage",
-        "replicas":2,
-        "storage":{
-        "data":{
+      "op": "replace",
+      "path": "spec.resources.storage-0.spec",
+      "value": {
+        "type": "Storage",
+        "replicas": 2,
+        "storage": {
+          "data": {
             "size": "100Gi",
             "className": "myStorageClass",
-            "accessMode":"ReadWriteOnce"
-            },
-        "logs":{
-            "size":"32Gi",
-            "className":"myStorageClass",
-            "accessMode":"ReadWriteOnce"
-            }
-            }
-         }
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
         }
-      ]
+      }
     }
-    ```
+  ]
+}
+```
 
-- Aggiorna le impostazioni di Spark per il pool di archiviazione in **cluster.json**.
-    ```json
+- Aggiorna le impostazioni di Spark per il pool di archiviazione in **BDC. JSON**.
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "replace",
-          "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-          "value": {
+      "op": "replace",
+      "path": "spec.services.spark.settings",
+      "value": {
         "driverMemory": "2g",
         "driverCores": 1,
         "executorInstances": 3,
         "executorCores": 1,
         "executorMemory": "1536m"
-          }
-        }   
-      ]
+      }
     }
-    ```
+  ]
+}
+```
 
-- Crea un pool Spark con 2 istanze in **cluster.json**.
-    ```json
+- Consente di creare un pool Spark con 2 istanze in **BDC. JSON**.
+```json
+{
+  "patch": [
     {
-      "patch": [
-        {
-          "op": "add",
-          "path": "spec.pools/-",
-          "value":
-          {
+      "op": "add",
+      "path": "spec.resources.spark-0",
+      "value": {
         "metadata": {
           "kind": "Pool",
           "name": "default"
@@ -378,46 +507,112 @@ Il file **patch.json** seguente esegue queste modifiche:
         "spec": {
           "type": "Spark",
           "replicas": 2
-        },
-        "hadoop": {
-          "yarn": {
-            "nodeManager": {
-              "memory": 12288,
-              "vcores": 6
-            },
-            "schedulerMax": {
-              "memory": 12288,
-              "vcores": 6
-            },
-            "capacityScheduler": {
-              "maxAmPercent": 0.3
-            }
-          },
-          "spark": {
-            "driverMemory": "2g",
-            "driverCores": 1,
-            "executorInstances": 2,
-            "executorMemory": "2g",
-            "executorCores": 1
-          }
         }
-          }
-        } 
-      ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "spec.services.spark.resources/-",
+      "value": "spark-0"
+    },
+    {
+      "op": "add",
+      "path": "spec.services.hdfs.resources/-",
+      "value": "spark-0"
+    },
+    {
+      "op": "add",
+      "path": "spec.services.spark.settings",
+      "value": {
+        "DriverMemory": "2g",
+        "DriverCores": "1",
+        "ExecutorInstances": "2",
+        "ExecutorMemory": "2g",
+        "ExecutorCores": "1"
+      }
     }
-    ```
-
-
+  ]
+}
+```
 
 > [!TIP]
 > Per altre informazioni sulla struttura e sulle opzioni per modificare un file di configurazione della distribuzione, vedere [Informazioni di riferimento sul file di configurazione della distribuzione per cluster Big Data](reference-deployment-config.md).
 
-Usare il comando **azdata bdc config** per applicare le modifiche nel file di patch JSON. L'esempio seguente applica il file **patch.json** a un file di configurazione della distribuzione di destinazione **custom/cluster.json**.
+Usare il comando **azdata bdc config** per applicare le modifiche nel file di patch JSON. L'esempio seguente applica il file **patch. JSON** a un file di configurazione della distribuzione di destinazione **Custom/BDC. JSON**.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
+## <a name="disable-elasticsearch-to-run-in-privileged-mode"></a>Disabilitare ElasticSearch per l'esecuzione in modalità privilegiata
+Per impostazione predefinita, il contenitore ElasticSearch viene eseguito in modalità Privilege nel cluster Big Data. Ciò consente di assicurarsi che al momento dell'inizializzazione del contenitore il contenitore disponga di autorizzazioni sufficienti per aggiornare un'impostazione nell'host obbligatorie quando ElasticSearch elabora una quantità maggiore di log. Altre informazioni su questo argomento sono disponibili in [questo articolo](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html). 
+
+Per disabilitare il contenitore che esegue ElasticSearch per l'esecuzione in modalità privilegiata, è necessario aggiornare la sezione **Settings** nel file **Control. JSON** e specificare il valore di **VM. max _map_count** su **-1**. Di seguito è riportato un esempio di come questa sezione avrà un aspetto simile al seguente:
+```json
+"settings": {
+    "ElasticSearch": {
+        "vm.max_map_count": "-1"
+      }
+}
+```
+
+È possibile manualmente modificare il file **Control. JSON** e aggiungere la sezione precedente alla **specifica**. in alternativa, è possibile creare un file di patch **elasticsearch-patch. JSON** come riportato di seguito e usare l'interfaccia della riga di comando di **azdata** per applicare patch al file **config. JSON** :
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "spec",
+      "value": {
+        "docker": {
+            "registry": "mcr.microsoft.com",
+            "repository": "mssql/bdc",
+            "imageTag": "2019-RC1-ubuntu",
+            "imagePullPolicy": "Always"
+        },
+        "storage": {
+            "data": {
+                "className": "default",
+                "accessMode": "ReadWriteOnce",
+                "size": "15Gi"
+            },
+            "logs": {
+                "className": "default",
+                "accessMode": "ReadWriteOnce",
+                "size": "10Gi"
+            }
+        },
+        "endpoints": [
+            {
+                "name": "Controller",
+                "serviceType": "LoadBalancer",
+                "port": 30080
+            },
+            {
+                "name": "ServiceProxy",
+                "serviceType": "LoadBalancer",
+                "port": 30777
+            }
+        ],
+        "settings": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+             }
+        }
+       }
+    }
+  ]
+}
+```
+
+Eseguire questo comando per applicare patch al file di configurazione:
+```
+azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
+```
+
+> [!IMPORTANT]
+> È consigliabile come procedura consigliata aggiornare manualmente l'impostazione di **max_map_count** in ogni host del cluster Kubernetes in base alle istruzioni riportate in [questo articolo](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per ulteriori informazioni sull'utilizzo dei file di configurazione nelle distribuzioni Big Data cluster, vedere [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md#configfile).

@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922275"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154829"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
 > [!NOTE]  
->  Per informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Windows Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Per informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Azure, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Contenuto dell'argomento**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922275"
   
      [Sicurezza](#Security)  
   
--   **Per creare un database completo di backup, utilizzando:**  
+-   **Per creare un backup completo del database utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62922275"
   
 3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
-4.  Nel `Database` casella di riepilogo, verificare il nome del database. È possibile selezionare facoltativamente un database diverso nell'elenco.  
+4.  Nella casella di Riepilogo verificare il nome del database. `Database` È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
 5.  È possibile eseguire il backup di un database per qualsiasi modello di recupero (**FULL**, **BULK_LOGGED**o **SIMPLE**).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922275"
     > [!NOTE]  
     >  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
   
-8.  Per la **componente di Backup**, fare clic su `Database`.  
+8.  Per **componente di backup**, `Database`fare clic su.  
   
 9. Accettare il nome predefinito del set di backup indicato nella casella di testo **Nome** oppure immettere un nome diverso per il set di backup.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922275"
          Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, facoltativamente, aggiungere una descrizione per il set di supporti nella casella di testo **Descrizione nuovo set di supporti** .  
   
         > [!IMPORTANT]  
-        >  Questa opzione è disabilitata se è stato selezionato **URL** nella pagina **Generale** . Queste azioni non sono supportate durante l'esecuzione del backup nel Servizio di archiviazione Windows Azure.  
+        >  Questa opzione è disabilitata se è stato selezionato **URL** nella pagina **Generale** . Queste azioni non sono supportate quando si esegue il backup nell'archiviazione di Azure.  
   
 14. Nella sezione **Affidabilità** è possibile selezionare facoltativamente:  
   
@@ -224,7 +224,7 @@ ms.locfileid: "62922275"
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>A. Esecuzione del backup su un dispositivo disco  
+#### <a name="a-backing-up-to-a-disk-device"></a>R. Esecuzione del backup su un dispositivo disco  
  Nell'esempio riportato di seguito viene eseguito il backup su disco del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completo, utilizzando `FORMAT` per creare un nuovo set di supporti.  
   
 ```sql  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
-1.  Utilizzare il cmdlet `Backup-SqlDatabase`. Per indicare in modo esplicito che si tratta di un backup completo del database, specificare il **- BackupAction** parametro con il valore predefinito, `Database`. Questo parametro è facoltativo per i backup completi di database.  
+1.  Utilizzare il cmdlet `Backup-SqlDatabase` . Per indicare in modo esplicito che si tratta di un backup completo del database, specificare il parametro **-parametro BackupAction** con `Database`il valore predefinito. Questo parametro è facoltativo per i backup completi di database.  
   
      L'esempio seguente consente di creare un backup di database completo del database di `MyDB` nel percorso di backup predefinito dell'istanza del server `Computer\Instance`. Facoltativamente, in questo esempio viene specificato `-BackupAction Database`.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup &#40;del database SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Ripristinare un backup del database nel modello di recupero con registrazione minima &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

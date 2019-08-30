@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917086"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154578"
 ---
 # <a name="databases"></a>Database
   Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917086"
 |-|-|  
 |[Database di sistema.](system-databases.md)|[Eliminare file di dati o file di log da un database](delete-data-or-log-files-from-a-database.md)|  
 |[Database indipendenti](contained-databases.md)|[Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](display-data-and-log-space-information-for-a-database.md)|  
-|[File di dati di SQL Server in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
+|[SQL Server file di dati in Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
 |[Filegroup e file di database](database-files-and-filegroups.md)|[Rinominare un database](rename-a-database.md)|  
 |[Stati del database](database-states.md)|[Impostare un database in modalità utente singolo](set-a-database-to-single-user-mode.md)|  
 |[Stati dei file](file-states.md)|[Compattare un database](shrink-a-database.md)|  

@@ -25,12 +25,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922198"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155051"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
   Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati sottoposti a *backup* vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
@@ -39,15 +39,15 @@ ms.locfileid: "62922198"
   
 -   [Termini e definizioni](#TermsAndDefinitions)  
   
--   [Uso di dispositivi di Backup su disco](#DiskBackups)  
+-   [Uso di dispositivi di backup su disco](#DiskBackups)  
   
 -   [Uso di dispositivi nastro](#TapeDevices)  
   
--   [Usando un dispositivo di Backup logico](#LogicalBackupDevice)  
+-   [Uso di un dispositivo di backup logico](#LogicalBackupDevice)  
   
--   [Set di supporti di Backup con mirroring](#MirroredMediaSets)  
+-   [Set di supporti di backup con mirroring](#MirroredMediaSets)  
   
--   [Archiviazione di backup SQL Server](#Archiving)  
+-   [Archiviazione SQL Server backup](#Archiving)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62922198"
  dispositivo di backup fisico  
  Unità nastro o file su disco fornito dal sistema operativo. È possibile scrivere un backup su un massimo di 64 dispositivi di backup. Se un backup richiede più dispositivi di backup, tutti devono corrispondere a un unico tipo di dispositivo, ovvero disco o nastro.  
   
- I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure oltre che su disco o nastro.  
+ È anche possibile scrivere backup di SQL Server nel servizio di archiviazione BLOB di Azure, oltre che su disco o nastro.  
   
-##  <a name="DiskBackups"></a> Uso di dispositivi di Backup su disco  
+##  <a name="DiskBackups"></a>Uso di dispositivi di backup su disco  
  **Contenuto della sezione**  
   
--   [Specifica un File di Backup utilizzando il nome fisico (Transact-SQL)](#BackupFileUsingPhysicalName)  
+-   [Specifica di un file di backup utilizzando il nome fisico (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
--   [Impostazione del percorso di un File di Backup su disco](#BackupFileDiskPath)  
+-   [Specifica del percorso di un file di backup su disco](#BackupFileDiskPath)  
   
--   [Backup in un File in una condivisione di rete](#NetworkShare)  
+-   [Esecuzione del backup in un file in una condivisione di rete](#NetworkShare)  
   
  Se lo spazio su disco assegnato a un file si esaurisce mentre è in corso l'aggiunta di un backup al set di supporti durante un'operazione di backup, l'operazione avrà esito negativo. Le dimensioni massime di un file di backup sono determinate dallo spazio libero su disco disponibile nel dispositivo disco. Le dimensioni appropriate per un dispositivo disco di backup dipendono pertanto dalle dimensioni dei backup eseguiti.  
   
@@ -81,14 +81,14 @@ ms.locfileid: "62922198"
 > [!IMPORTANT]  
 >  È consigliabile utilizzare come disco di backup un disco diverso da quelli in cui sono archiviati i dati di database e i log. Questa condizione è necessaria per garantire l'accesso ai backup in caso di errore del disco contenente il log o i dati.  
   
-###  <a name="BackupFileUsingPhysicalName"></a> Specifica un File di Backup utilizzando il nome fisico (Transact-SQL)  
+###  <a name="BackupFileUsingPhysicalName"></a>Specifica di un file di backup utilizzando il nome fisico (Transact-SQL)  
  La sintassi di base di [BACKUP](/sql/t-sql/statements/backup-transact-sql) per specificare un file di backup utilizzando il nome del dispositivo fisico è la seguente:  
   
  BACKUP DATABASE *database_name*  
   
  TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- Ad esempio:  
+ Esempio:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -109,8 +109,8 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a> Impostazione del percorso di un File di Backup su disco  
- Quando si specifica un file di backup, è consigliabile immetterne il percorso completo e il nome di file. Quando si esegue il backup di un file, se si specifica solo il nome del file o un percorso relativo, il file di backup viene inserito nella directory di backup predefinita. La directory di backup predefinita è C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, dove *n* rappresenta il numero dell'istanza del server. Pertanto, per l'istanza del server predefinita, la directory di backup predefinita è: C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+###  <a name="BackupFileDiskPath"></a>Specifica del percorso di un file di backup su disco  
+ Quando si specifica un file di backup, è consigliabile immetterne il percorso completo e il nome di file. Quando si esegue il backup di un file, se si specifica solo il nome del file o un percorso relativo, il file di backup viene inserito nella directory di backup predefinita. La directory di backup predefinita è C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, dove *n* rappresenta il numero dell'istanza del server. Pertanto, per l'istanza del server predefinita, la directory di backup predefinita è: C:\Programmi\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
   
  Per evitare ambiguità, in particolare negli script, è consigliabile specificare in modo esplicito il percorso della directory di backup in ogni clausola DISK. Questa indicazione risulta tuttavia meno importante quando si utilizza l'editor di query. In questo caso infatti, se si è certi che il file di backup si trovi nella directory di backup predefinita, è possibile omettere il percorso dalla clausola DISK. Ad esempio, l'istruzione `BACKUP` seguente consente di effettuare il backup del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nella directory di backup predefinita.  
   
@@ -123,7 +123,7 @@ GO
 > [!NOTE]  
 >  Il percorso predefinito è archiviato nella chiave del Registro di sistema **BackupDirectory** in **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
-###  <a name="NetworkShare"></a> Backup in un File in una condivisione di rete  
+###  <a name="NetworkShare"></a>Esecuzione del backup in un file in una condivisione di rete  
  Per accedere a un file su disco remoto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbia accesso alla condivisione di rete e disponga delle autorizzazioni necessarie per eseguire operazioni di scrittura nella condivisione di rete durante il backup e di lettura durante il ripristino. La disponibilità delle autorizzazioni e delle unità di rete dipende dal contesto in cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Per eseguire il backup in un'unità di rete quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un account utente di dominio, è necessario eseguire il mapping dell'unità condivisa a un'unità di rete nella sessione in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si avvia Sqlservr.exe dalla riga di comando, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rilevate tutte le unità di rete di cui è stato eseguito il mapping nella sessione di accesso.  
@@ -138,7 +138,7 @@ GO
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Specifica di un nome UNC (Universal Naming Convention)  
  Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\** _NomeSistema_ **\\** _NomeCondivisione_ **\\** _Percorso_ **\\** _NomeFile_.  
   
- Ad esempio:  
+ Esempio:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -146,16 +146,16 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a> Uso di dispositivi nastro  
+##  <a name="TapeDevices"></a>Uso di dispositivi nastro  
   
 > [!NOTE]  
 >  Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
   
  **Contenuto della sezione**  
   
--   [Specifica di un nastro di Backup utilizzando il nome fisico (Transact-SQL)](#BackupTapeUsingPhysicalName)  
+-   [Specifica di un nastro di backup utilizzando il nome fisico (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
--   [Specifiche delle unità nastro opzioni BACKUP e RESTORE (Transact-SQL)](#TapeOptions)  
+-   [Opzioni di BACKUP e ripristino specifiche del nastro (Transact-SQL)](#TapeOptions)  
   
 -   [Gestione dei nastri aperti](#OpenTapes)  
   
@@ -169,14 +169,14 @@ GO
   
 -   Se durante l'operazione di backup lo spazio disponibile su un dispositivo di backup su nastro si esaurisce, ma rimangono ancora dati da registrare, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene richiesto di inserire un nuovo nastro e l'operazione di backup continua dopo il caricamento del nuovo nastro.  
   
-###  <a name="BackupTapeUsingPhysicalName"></a> Specifica di un nastro di Backup utilizzando il nome fisico (Transact-SQL)  
+###  <a name="BackupTapeUsingPhysicalName"></a>Specifica di un nastro di backup utilizzando il nome fisico (Transact-SQL)  
  La sintassi di base di [BACKUP](/sql/t-sql/statements/backup-transact-sql) per specificare un nastro di backup utilizzando il nome di dispositivo fisico dell'unità nastro è la seguente:  
   
  BACKUP { DATABASE | LOG } *database_name*  
   
  TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- Ad esempio:  
+ Esempio:  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -190,7 +190,7 @@ GO
   
  FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a> Specifiche delle unità nastro opzioni BACKUP e RESTORE (Transact-SQL)  
+###  <a name="TapeOptions"></a>Opzioni di BACKUP e ripristino specifiche del nastro (Transact-SQL)  
  Per facilitare la gestione dei nastri, per l'istruzione BACKUP sono disponibili le opzioni seguenti specifiche dei nastri:  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -204,15 +204,15 @@ GO
 > [!NOTE]  
 >  Per altre informazioni sulla sintassi e sugli argomenti di BACKUP, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Per altre informazioni sulla sintassi e gli argomenti di RESTORE, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) e [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
-###  <a name="OpenTapes"></a> Gestione dei nastri aperti  
+###  <a name="OpenTapes"></a>Gestione dei nastri aperti  
  Per visualizzare un elenco dei dispositivi nastro aperti e lo stato delle richieste di montaggio, eseguire una query nella DMV [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Questa vista contiene tutti i nastri aperti, inclusi i nastri in uso che risultano temporaneamente inattivi in quanto in attesa dell'operazione BACKUP o RESTORE successiva.  
   
  Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'usare il comando seguente: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Utilizzo del servizio di archiviazione BLOB di Windows Azure  
- I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure.  Per ulteriori informazioni su come utilizzare il servizio di archiviazione BLOB di Windows Azure per i backup, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## <a name="using-the-azure-blob-storage-service"></a>Uso del servizio di archiviazione BLOB di Azure  
+ È possibile scrivere backup di SQL Server nel servizio di archiviazione BLOB di Azure.  Per altre informazioni su come usare il servizio di archiviazione BLOB di Azure per i backup, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="LogicalBackupDevice"></a> Usando un dispositivo di Backup logico  
+##  <a name="LogicalBackupDevice"></a>Uso di un dispositivo di backup logico  
  Un *dispositivo di backup logico* è un nome facoltativo definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro. Un dispositivo di backup logico consente di utilizzare i riferimenti indiretti per fare riferimento al dispositivo di backup fisico corrispondente.  
   
  La definizione di un dispositivo di backup logico implica l'assegnazione di un nome logico a un dispositivo fisico. Ad esempio, un dispositivo logico, AdventureWorksBackups, può essere definito in modo da puntare al file Z:\SQLServerBackups\AdventureWorks2012.bak o all'unità nastro \\\\.\tape0. Nei comandi di backup e di ripristino è quindi possibile specificare come dispositivo di backup AdventureWorksBackups anziché DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' o TAPE = '\\\\.\tape0'.  
@@ -238,14 +238,14 @@ GO
   
 2.  Definizione di un nuovo dispositivo di backup logico che utilizzi il nome del dispositivo logico originale ma esegua il mapping a un dispositivo di backup fisico diverso. I dispositivi di backup logici sono particolarmente utili per identificare i dispositivi di backup su nastro.  
   
-##  <a name="MirroredMediaSets"></a> Set di supporti di Backup con mirroring  
+##  <a name="MirroredMediaSets"></a>Set di supporti di backup con mirroring  
  Il mirroring dei set di supporti di backup riduce l'effetto di eventuali funzionamenti non corretti dei dispositivi di backup. Tali problemi possono risultare estremamente gravi, poiché i backup rappresentano l'ultima difesa contro la perdita dei dati. Con l'aumento delle dimensioni dei database, cresce il rischio che un errore di un dispositivo o di un supporto di backup impedisca il ripristino di un backup. I supporti di backup con mirroring aumentano l'affidabilità dei backup garantendo la ridondanza per il dispositivo di backup fisico. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 >  I set di supporti di backup con mirroring sono supportati solo in [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versioni successive.  
   
-##  <a name="Archiving"></a> Archiviazione di backup SQL Server  
- È consigliabile utilizzare un'utilità di backup del file system per l'archiviazione dei backup del disco, nonché conservare gli archivi in una posizione esterna. L'utilizzo del disco consente di utilizzare la rete per scrivere i backup archiviati in un disco esterno. Il servizio di archiviazione BLOB di Windows Azure può essere utilizzato come opzione di archiviazione esterna.  È possibile caricare i backup su disco o scriverli direttamente nel servizio di archiviazione BLOB di Windows Azure.  
+##  <a name="Archiving"></a>Archiviazione SQL Server backup  
+ È consigliabile utilizzare un'utilità di backup del file system per l'archiviazione dei backup del disco, nonché conservare gli archivi in una posizione esterna. L'utilizzo del disco consente di utilizzare la rete per scrivere i backup archiviati in un disco esterno. Il servizio di archiviazione BLOB di Azure può essere usato come opzione di archiviazione fuori sede.  È possibile caricare i backup su disco o scrivere direttamente i backup nel servizio di archiviazione BLOB di Azure.  
   
  Un altro approccio comune all'archiviazione consiste nello scrivere backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un disco di backup locale, archiviarli su nastro e quindi archiviare i nastri in una posizione esterna.  
   

@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Report o un Feed di dati (SSAS) | Microsoft Docs
+title: Connettersi a un report o a un feed di dati (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087167"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151834"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un feed di dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -31,7 +31,7 @@ ms.locfileid: "66087167"
   
  Fare clic su **Visualizza report** per visualizzare il report.  
   
- **Sfoglia**  
+ **Browse**  
  Passare al percorso in cui è disponibile un report.  
   
  **Advanced**  
@@ -44,21 +44,21 @@ ms.locfileid: "66087167"
  **Nome descrittivo connessione**  
  Digitare un nome descrittivo per la connessione al feed di dati.  
   
- **URL Feed di dati**  
+ **URL feed di dati**  
  Digitare il percorso completo di un documento di servizio Atom (estensione atomsvc o atom) o l'URL per un solo feed di dati oppure fare clic su **Sfoglia** per selezionare un documento di servizio Atom.  
   
- **Sfoglia**  
+ **Browse**  
  Passare al percorso in cui è disponibile un report.  
   
  Fare clic su **Visualizza set di dati disponibili di DataMarket Azure** per visualizzare i set di dati disponibili.  
   
  **Chiave dell'account**  
- Specificare la chiave di account utilizzata per accedere alle sottoscrizioni al set di dati di Windows Azure Marketplace.  
+ Specificare la chiave dell'account usata per accedere alle sottoscrizioni del set di dati di Azure Marketplace.  
   
- **Find**  
+ **Trovare**  
  Individuare una chiave di account associata a un account di Windows Live.  
   
- **Salva chiave account**  
+ **Salva la chiave dell'account**  
  Salvare la chiave di account (crittografata) con la connessione dati.  
   
  **Advanced**  
@@ -71,12 +71,12 @@ ms.locfileid: "66087167"
  **Nome descrittivo connessione**  
  Digitare un nome descrittivo per la connessione al feed di dati.  
   
- **URL Feed di dati**  
+ **URL feed di dati**  
  Digitare il percorso completo di un documento di servizio Atom (estensione atomsvc o atom) o l'URL per un solo feed di dati oppure fare clic su **Sfoglia** per selezionare un documento di servizio Atom.  
   
  Fare clic su **Includi sempre +++tutte le colonne di feed** per specificare se importare tutte le colonne di feed di dati.  
   
- **Sfoglia**  
+ **Browse**  
  Passare al percorso in cui è disponibile un feed di dati.  
   
  **Advanced**  

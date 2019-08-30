@@ -10,15 +10,15 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250536"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152686"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
-  L'oggetto prestazione **SQLServer:HTTP_STORAGE_OBJECT** è costituito dai contatori delle prestazioni per il monitoraggio dell'account di archiviazione Windows Azure. Usando [file di dati di SQL Server in Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) funzionalità, è possibile archiviare i file di database nei blob di archiviazione Windows Azure. Questo oggetto prestazione considera ogni account di archiviazione Windows Azure come unità diversa.  
+# <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
+  L'oggetto prestazione **SqlServer: HTTP_STORAGE_OBJECT** è costituito da contatori delle prestazioni che consentono di monitorare l'account di archiviazione di Azure. Usando [SQL Server file di dati in Azure](../databases/sql-server-data-files-in-microsoft-azure.md) , è possibile archiviare i file di database nei BLOB del servizio di archiviazione di Azure. Questo oggetto prestazione considera ogni account di archiviazione di Azure come un'unità diversa.  
   
 |Nome contatore|Descrizione|  
 |------------------|-----------------|  

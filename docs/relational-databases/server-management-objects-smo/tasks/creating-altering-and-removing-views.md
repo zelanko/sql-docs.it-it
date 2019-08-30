@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di viste | Microsoft Docs
+title: Creazione, modifica e rimozione di visualizzazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2851cab846e8f814e03e2b96ad10c69136c9a27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f441b1a732d9b75c7d2cda7d7b949b991ce4a689
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111489"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148461"
 ---
 # <a name="creating-altering-and-removing-views"></a>Creazione, modifica e rimozione di viste
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111489"
  La proprietà <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.View> definisce la vista. Equivale all'istruzione SELECT di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per la creazione di una vista.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Creazione, modifica e rimozione di una vista in Visual Basic  
  In questo esempio di codice viene illustrato come creare una vista di due tabelle tramite un inner join. La vista viene creata tramite la modalità testo, di conseguenza è necessario impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  

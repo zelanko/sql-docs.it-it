@@ -5,22 +5,22 @@ description: Articolo di riferimento per i comandi azdata bdc pool.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba88c46d0925d739101b93e79664c4ec470ca73a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d25282ac50a71fe92fcee59cc99795924f7e01b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653681"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155219"
 ---
 # <a name="azdata-bdc-pool"></a>azdata bdc pool
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc pool** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+Questo articolo è un articolo di riferimento per **azdata**. 
 
 ## <a name="commands"></a>Comandi:
 |     |     |
@@ -29,4 +29,6 @@ L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc poo
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

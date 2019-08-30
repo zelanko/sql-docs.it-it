@@ -5,16 +5,16 @@ description: Informazioni sul funzionamento del salvataggio permanente dei dati 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028587"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155344"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -83,7 +83,7 @@ Per tutte le personalizzazioni, è necessario innanzitutto creare una copia del 
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-Verranno creati due file, **cluster.json** e **control.json**, che possono essere personalizzati modificandoli manualmente, oppure è possibile usare il comando **azdata bdc config**. È possibile usare una combinazione di librerie jsonpath e jsonpatch per fornire modi per modificare i file di configurazione.
+Verranno creati due file, **BDC. JSON** e **Control. JSON** , che possono essere personalizzati modificando manualmente oppure è possibile usare il comando **azdata BDC config** . È possibile usare una combinazione di librerie jsonpath e jsonpatch per fornire modi per modificare i file di configurazione.
 
 
 ### <a id="config-samples"></a> Configurare il nome della classe di archiviazione e/o le dimensioni delle attestazioni
@@ -109,7 +109,7 @@ Un'altra opzione consiste nel modificare manualmente il file di configurazione p
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ Un'altra opzione consiste nel modificare manualmente il file di configurazione p
 Applicare il file di patch. Usare il comando **azdata bdc config patch** per applicare le modifiche nel file di patch JSON. L'esempio seguente applica il file patch.json a un file di configurazione della distribuzione di destinazione custom.json.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

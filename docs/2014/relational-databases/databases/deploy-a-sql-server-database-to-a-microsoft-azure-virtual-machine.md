@@ -30,7 +30,7 @@ helpviewer_keywords:
 - Deploy a database
 - Deploy to Azure VM
 - Migrate to Azure
-- Windows Azure virtual machine
+- Azure virtual machine
 - Migrate to Azure VM
 - Migrate to the cloud
 - SQL Server Management Studio
@@ -42,29 +42,29 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 933a03f2e6192be32eebd84923f4e513bd1716e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054045"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154557"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
-  Usare la procedura guidata **Distribuzione del database alla macchina virtuale Microsoft Azure** per distribuire un database da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Microsoft Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
+  Usare la procedura guidata **Distribuisci un database di SQL Server in una** macchina virtuale di Azure per distribuire un database [!INCLUDE[ssDE](../../includes/ssde-md.md)] da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza del a in una macchina virtuale (VM) di Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
   
  Non è possibile usare la procedura guidata per i backup differenziali perché non sovrascrive un database esistente avente lo stesso nome di database. Per sostituire un database esistente sulla VM, è innanzitutto necessario eliminare il database esistente o modificare il nome del database. Se si verifica un conflitto di denominazione tra il nome del database per un'operazione di distribuzione in transito e un database esistente sulla VM, la procedura guidata suggerirà un nome di database aggiunto per il database in transito per consentire il completamento dell'operazione.  
   
 ##  <a name="before_you_begin"></a> Prima di iniziare  
  Per completare questa procedura guidata, è necessario essere in grado di fornire le informazioni indicate di seguito e avere configurato le seguenti impostazioni:  
   
--   Dettagli dell'account Microsoft associati alla sottoscrizione di Microsoft Azure.  
+-   I dettagli di account Microsoft associati alla sottoscrizione di Azure.  
   
--   Profilo di pubblicazione di Microsoft Azure.  
+-   Profilo di pubblicazione di Azure.  
   
     > [!CAUTION]  
     >  SQL Server supporta attualmente la versione del profilo di pubblicazione 2.0. Per scaricare la versione supportata del profilo di pubblicazione, vedere [Download del profilo di pubblicazione 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
--   Il certificato di gestione caricato nella sottoscrizione di Microsoft Azure.  
+-   Il certificato di gestione caricato nella sottoscrizione di Azure.  
   
 -   Il certificato di gestione salvato nell'archivio certificati personale sul computer in cui viene eseguita la procedura guidata.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66054045"
   
 -   Se si distribuisce il database a un macchina virtuale esistente, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere configurata per rimanere in attesa su una porta TCP/IP.  
   
--   L'immagine di una macchina virtuale di Microsoft Azure o di una raccolta che si intende usare per la creazione della macchina virtuale deve disporre dell'adattatore cloud di SQL Server configurato e in esecuzione.  
+-   Una macchina virtuale o un'immagine della raccolta di Azure che si intende usare per la creazione della macchina virtuale deve avere la SQL Server adattatore del cloud configurata e in esecuzione.  
   
--   È necessario configurare un endpoint aperto per un adattatore del cloud di SQL Server nel gateway di Microsoft Azure con porta privata 11435.  
+-   È necessario configurare un endpoint aperto per il SQL Server adattatore del cloud sul gateway di Azure con la porta privata 11435.  
   
- Se inoltre si intende distribuire il database in una macchina virtuale di Microsoft Azure esistente, è necessario essere in grado di fornire anche quanto indicato di seguito:  
+ Inoltre, se si prevede di distribuire il database in una macchina virtuale di Azure esistente, è necessario essere in grado di fornire:  
   
 -   Nome DNS del servizio cloud che ospita la macchina virtuale.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66054045"
   
 -   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine.  
   
- Per altre informazioni sull'esecuzione di SQL Server in Macchine virtuali di Microsoft Azure, vedere [Preparazione della migrazione a SQL Server in Macchine virtuali di Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
+ Per altre informazioni sull'esecuzione di SQL Server in macchine virtuali di Azure, vedere [preparazione della migrazione a SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  Nei computer che eseguono sistemi operativi Windows Server, è necessario usare le seguenti impostazioni di configurazione per eseguire questa procedura guidata:  
   
--   Disabilitare configurazione sicurezza avanzata:  Utilizzare Server Manager > Server locale per impostare Internet Explorer Enhanced Security Configuration (ESC) su **OFF**.  
+-   Disabilitare la configurazione della sicurezza avanzata:  Utilizzare Server Manager > server locale per impostare la configurazione della sicurezza avanzata di Internet Explorer (ESC) su **disattivato**.  
   
--   Abilitare JavaScript:  Internet Explorer > Opzioni Internet > sicurezza > livello cliente > script > esecuzione script attivo: **Abilitare**.  
+-   Abilita JavaScript:  Internet Explorer > Opzioni Internet > sicurezza > livello cliente > Scripting > scripting attivo: **Abilitare**.  
   
 ###  <a name="limitations"></a> Limitazioni e restrizioni  
  Il limite per le dimensioni del database per questa operazione è di 1 TB.  
@@ -101,7 +101,7 @@ ms.locfileid: "66054045"
   
  La funzionalità di distribuzione non supporta i servizi ospitati associati a un gruppo di affinità. Ad esempio, gli account di archiviazione associati a un gruppo di affinità non possono essere selezionati per l'uso nella pagina **Impostazioni di distribuzione** di questa procedura guidata.  
   
- La versione di SQL Server nella macchina virtuale deve essere uguale o successiva alla versione di SQL Server di origine. Versioni del database di SQL Server che è possibile distribuire in una macchina virtuale di Microsoft Azure tramite questa procedura guidata:  
+ La versione di SQL Server nella macchina virtuale deve essere uguale o successiva alla versione di SQL Server di origine. SQL Server versioni del database che possono essere distribuite in una macchina virtuale di Azure tramite questa procedura guidata:  
   
 -   SQL Server 2008  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66054045"
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- Versioni del database SQL Server in esecuzione in un database di Macchine virtuali di Microsoft Azure può essere distribuito in:  
+ SQL Server le versioni di database in esecuzione in un database di macchine virtuali di Azure possono essere distribuite in:  
   
 -   SQL Server 2012  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66054045"
   
             -   BackupPath="\\\\[nome server]\\[volume]\\" \<!-- Ultimo percorso usato per il backup. Usato come impostazione predefinita nella procedura guidata. -->  
   
-            -   CleanupDisabled = False /> \<! -- La procedura guidata non elimina i file intermedi e gli oggetti di Windows Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/> \<!--procedura guidata non eliminerà i file intermedi e gli oggetti di Azure (VM, CS, SA). -->  
   
         -   <PublishProfile \<! -- Informazioni sull'ultimo profilo di pubblicazione usato. -->  
   
@@ -171,19 +171,19 @@ ms.locfileid: "66054045"
 ###  <a name="permissions"></a> Autorizzazioni  
  Il database distribuito deve essere in uno stato normale e accessibile per l'account utente che esegue la procedura guidata. L'account utente deve disporre delle autorizzazioni per eseguire un'operazione di backup.  
   
-##  <a name="launch_wizard"></a> Utilizzando il Database di distribuzione guidata macchina virtuale di Azure di Windows  
+##  <a name="launch_wizard"></a>Uso della procedura guidata Distribuisci database in una macchina virtuale di Azure  
  **Per avviare la procedura guidata, effettuare i passaggi seguenti:**  
   
 1.  Usare SQL Server Management Studio per connettere l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al database che si desidera distribuire.  
   
 2.  In **Esplora oggetti**espandere il nome dell'istanza, quindi il nodo **Database** .  
   
-3.  Fare doppio clic il database che si desidera distribuire, scegliere **attività**, quindi selezionare **distribuzione del Database alla macchina virtuale Windows Azure...**  
+3.  Fare clic con il pulsante destro del mouse sul database che si desidera distribuire, selezionare **attività**, quindi scegliere **Distribuisci database in macchina virtuale di Azure.**  
   
 
   
 ##  <a name="Introduction"></a> Pagina Introduzione  
- In questa pagina è illustrata la procedura guidata **Distribuire un database di SQL Server a una macchina virtuale di Windows Azure** .  
+ Questa pagina descrive la procedura guidata **Distribuisci un database di SQL Server in una macchina virtuale di Azure** .  
   
  **Opzioni**  
   
@@ -193,57 +193,57 @@ ms.locfileid: "66054045"
   
 -   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
--   **Guida in linea** -avvia l'argomento della Guida MSDN per la procedura guidata.  
+-   **Guida** : avvia l'argomento della Guida di MSDN per la procedura guidata.  
   
 ##  <a name="Source_settings"></a> Impostazioni di origine  
- Usare questa pagina per connettere l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database da distribuire alla macchina virtuale di Microsoft Azure. È anche necessario specificare una posizione temporanea per il salvataggio dei file dal computer locale prima di essere trasferiti a Microsoft Azure. Può essere un percorso di rete condiviso.  
+ Usare questa pagina per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database da distribuire nella macchina virtuale di Azure. Verrà inoltre specificato un percorso temporaneo per i file da salvare dal computer locale prima che vengano trasferiti in Azure. Può essere un percorso di rete condiviso.  
   
  **Opzioni**  
   
--   Fare clic su **Connetti...**  e quindi specificare i dettagli della connessione per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database da distribuire.  
+-   Fare clic su **Connetti** e quindi specificare i dettagli della connessione per l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di che ospita il database da distribuire.  
   
 -   Usare l'elenco a discesa **Selezione database** per specificare il database da distribuire.  
   
--   Nel campo **Altre impostazioni** specificare una cartella condivisa accessibile al servizio macchina virtuale di Microsoft Azure.  
+-   Nel campo **altre impostazioni** specificare una cartella condivisa che sarà accessibile al servizio VM di Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure: Accedi  
- Usare questa pagina per connettersi a Microsoft Azure e fornire il certificato di gestione o i dettagli del profilo di pubblicazione.  
+##  <a name="Azure_sign-in"></a>Accesso ad Azure  
+ Usare questa pagina per connettersi ad Azure e fornire il certificato di gestione o i dettagli del profilo di pubblicazione.  
   
  **Opzioni**  
   
--   **Certificato di gestione** -usare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Windows Azure.  
+-   **Certificato di gestione** : usare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Azure.  
   
--   **Profilo di pubblicazione** -usare questa opzione se si dispone già di un profilo di pubblicazione scaricato nel computer.  
+-   **Profilo di pubblicazione** : usare questa opzione se si dispone già di un profilo di pubblicazione scaricato nel computer.  
   
--   **Accedi** - usare questa opzione per accedere a Windows Azure tramite un Microsoft account, ad esempio, un account Hotmail o Live ID - per generare e scaricare un nuovo certificato di gestione. Si noti che il numero di certificati per ogni sottoscrizione è limitato.  
+-   **Accedi** : usare questa opzione per accedere ad Azure usando un account Microsoft, ad esempio un account Live ID o Hotmail, per generare e scaricare un nuovo certificato di gestione. Si noti che il numero di certificati per ogni sottoscrizione è limitato.  
   
--   **Sottoscrizione** : selezionare, digitare o incollare l'ID di sottoscrizione Windows Azure corrispondente al certificato di gestione dall'archivio certificati locale o un profilo di pubblicazione.  
+-   **Sottoscrizione** : selezionare, digitare o incollare l'ID sottoscrizione di Azure corrispondente al certificato di gestione dall'archivio certificati locale o da un profilo di pubblicazione.  
   
 ##  <a name="Deployment_settings"></a> Pagina Impostazioni di distribuzione  
  Usare questa pagina per specificare il server di destinazione e fornire i dettagli sul nuovo database.  
   
  **Opzioni**  
   
--   **Macchina virtuale di Azure** -specificare i dettagli per la macchina virtuale che ospiterà il database di SQL Server:  
+-   **Macchina virtuale di Azure** : specificare i dettagli della macchina virtuale che ospiterà il database di SQL Server:  
   
--   **Nome del servizio cloud** -specificare il nome del servizio che ospita la macchina virtuale. Per creare un nuovo servizio cloud, specificare un nome per il nuovo servizio cloud.  
+-   **Nome servizio cloud** : specificare il nome del servizio che ospita la macchina virtuale. Per creare un nuovo servizio cloud, specificare un nome per il nuovo servizio cloud.  
   
--   **Nome della macchina virtuale** -specificare il nome della macchina virtuale che ospiterà il database di SQL Server. Per creare una nuova macchina virtuale di Microsoft Azure, specificare un nome per la nuova macchina virtuale.  
+-   **Nome macchina virtuale** : specificare il nome della macchina virtuale che ospiterà il database di SQL Server. Per creare una nuova macchina virtuale di Azure, specificare un nome per la nuova macchina virtuale.  
   
--   **Impostazioni** -usare questo pulsante per creare una nuova macchina virtuale per ospitare il database di SQL Server. Se si usa una macchina virtuale esistente, le informazioni immesse saranno usate per autenticare le credenziali.  
+-   **Impostazioni** : usare il pulsante impostazioni per creare una nuova macchina virtuale per ospitare il database di SQL Server. Se si usa una macchina virtuale esistente, le informazioni immesse saranno usate per autenticare le credenziali.  
   
--   **Account di archiviazione** -selezionare l'account di archiviazione nell'elenco a discesa. Per creare un nuovo account di archiviazione, specificare un nome per il nuovo account. Si noti che gli account di archiviazione associati a un gruppo di affinità non saranno disponibili nell'elenco a discesa.  
+-   **Account di archiviazione** : selezionare l'account di archiviazione dall'elenco a discesa. Per creare un nuovo account di archiviazione, specificare un nome per il nuovo account. Si noti che gli account di archiviazione associati a un gruppo di affinità non saranno disponibili nell'elenco a discesa.  
   
--   **Database di destinazione** -specificare i dettagli per il database di destinazione.  
+-   **Database di destinazione** : specificare i dettagli per il database di destinazione.  
   
--   **Connessione al server** -dettagli della connessione per il server.  
+-   **Connessione server** : dettagli della connessione per il server.  
   
 -   **Database** : specificare o confermare il nome di un nuovo database. Se il nome del database esiste già nell'istanza di destinazione di SQL Server, specificare un nome di database modificato.  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
  Usare questa pagina per esaminare le impostazioni specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
- Potrebbe essere richiesta l'esecuzione di passaggi manuali per distribuire i dettagli del database al database di SQL Server nella macchina virtuale di Microsoft Azure. Tali passaggi saranno descritti in dettaglio automaticamente.  
+ È possibile che siano necessari passaggi manuali per distribuire i dettagli del database nel database di SQL Server nella macchina virtuale di Azure. Tali passaggi saranno descritti in dettaglio automaticamente.  
   
 ##  <a name="Results"></a> Pagina Risultati  
  In questa pagina è riportato l'esito positivo o negativo dell'operazione di distribuzione, indicante i risultati di ogni azione. Per ogni azione per la quale è stato rilevato un errore sarà presente un'indicazione nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
@@ -256,7 +256,7 @@ ms.locfileid: "66054045"
  [Esportazione di un'applicazione livello dati](../data-tier-applications/export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Backup e ripristino del database SQL di Azure.](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Distribuzione di SQL Server in Macchine virtuali di Microsoft Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
- [Preparazione della migrazione a SQL Server in Macchine virtuali di Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
+ [Distribuzione SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Preparativi per la migrazione a SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

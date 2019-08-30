@@ -5,37 +5,51 @@ description: Articolo di riferimento per i comandi azdata bdc control status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c30fa0bdb9e74941387393a7dffeaadcae05b303
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 33a479f30617fae22ecfc46ddaf115d3a29eed6c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653219"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155291"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc control status** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+Questo articolo è un articolo di riferimento per **azdata**. 
 
 ## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
-[azdata bdc control status show](#azdata-bdc-control-status-show) | Stato del controllo.
+[azdata bdc control status show](#azdata-bdc-control-status-show) | Controllare lo stato del servizio.
 ## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
-Stato del controllo.
+Controllare lo stato del servizio.
 ```bash
-azdata bdc control status show 
+azdata bdc control status show [--resource -r] 
+                               [--all -a]
 ```
 ### <a name="examples"></a>Esempi
-Ottenere lo stato di controllo
+Ottenere lo stato del servizio.
 ```bash
 azdata bdc control status show
 ```
+Ottenere lo stato del servizio di controllo con tutte le istanze.
+```bash
+azdata bdc control status show --all
+```
+Ottenere lo stato della risorsa del controllo all'interno del servizio di controllo.
+```bash
+azdata bdc control status show --resource control
+```
+### <a name="optional-parameters"></a>Parametri facoltativi
+#### `--resource -r`
+Ottenere questa risorsa in questo servizio.
+#### `--all -a`
+Mostra tutte le istanze di ogni risorsa all'interno del servizio.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -50,4 +64,6 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

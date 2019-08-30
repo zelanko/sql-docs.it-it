@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Objects (SMO) Guida per programmatori | Documenti di Microsoft
+title: Guida alla programmazione di SQL Server Management Objects (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - SQL Server Management Objects
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2381d3485b2c6d2ad2d21ef1e71a4bdf99a34e8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2dd5a5e2aa8c9003c06ae80f1cf077a0f54f4e21
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092800"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148561"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guida alla programmazione di SMO (SQL Server Management Objects)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) è una raccolta di oggetti progettati per programmare tutti gli aspetti della gestione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) è una raccolta di oggetti progettati per la programmazione di tutti gli aspetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] della gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|
-|[Introduzione a SMO](getting-started-in-smo.md)|Fornisce informazioni su come iniziare a sviluppare un'applicazione SMO
+|[Introduzione a SMO](getting-started-in-smo.md)|Vengono fornite informazioni su come avviare lo sviluppo di un'applicazione SMO
 |[Creazione di programmi SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Programmazione di attività specifiche](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Fornisce informazioni sulla programmazione degli oggetti SMO negli spazi dei nomi Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi e Microsoft.SqlServer.Management.Trace.<br /><br /> Sono incluse istruzioni per scrivere programmi che definiscono database e gestiscono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare SMO per creare database, eseguire backup, creare processi, configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assegnare autorizzazioni ed eseguire molte altre attività amministrative.|  
 |[Documentazione per gli sviluppatori di replica](../../relational-databases/replication/concepts/replication-developer-documentation.md)|Fornisce informazioni sulla programmazione di oggetti RMO nello spazio dei nomi Microsoft.SqlServer.Replication.|  
   

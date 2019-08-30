@@ -1,33 +1,33 @@
 ---
 title: Informazioni di riferimento sui comandi azdata bdc config
 titleSuffix: SQL Server big data clusters
-description: Articolo di riferimento per i comandi azdata bdc.
+description: Articolo di riferimento per i comandi di configurazione di azdata BDC.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653511"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155283"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc config** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+Questo articolo è un articolo di riferimento per **azdata**. 
 
 ## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Inizializza un profilo di configurazione del cluster Big Data che è possibile usare per la creazione del cluster.
 [azdata bdc config list](#azdata-bdc-config-list) | Elenca i profili di configurazione disponibili.
-[azdata bdc config show](#azdata-bdc-config-show) | Mostra la configurazione corrente del cluster Big Data o la configurazione di un file locale specificato, ovvero custom/cluster.json.
+[azdata bdc config show](#azdata-bdc-config-show) | Mostra la configurazione corrente di BDC o la configurazione di un file locale specificato, ovvero Custom/BDC. JSON.
 [azdata bdc config add](#azdata-bdc-config-add) | Aggiunge un valore per un percorso JSON in un file di configurazione.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Rimuove un valore per un percorso JSON in un file di configurazione.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Sostituisce un valore per un percorso JSON in un file di configurazione.
@@ -53,11 +53,11 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Percorso del file in cui si vuole inserire il profilo di configurazione. Il valore predefinito è cwd con custom-config.json.
 #### `--source -s`
-Origine del profilo di configurazione: ["aks-dev-test", "kubeadm-dev-test", "minikube-dev-test"]
+Origine del profilo di configurazione: [' AKS-dev-test ',' kubeadm-prod ',' minikube-dev-test ',' kubeadm-dev-test ']
 #### `--force -f`
 Forza la sovrascrittura del file di destinazione.
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -87,12 +87,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--config-profile -c`
-Profilo di configurazione predefinito: ["aks-dev-test", "kubeadm-dev-test", "minikube-dev-test"]
+Profilo di configurazione predefinito: [' AKS-dev-test ',' kubeadm-prod ',' minikube-dev-test ',' kubeadm-dev-test ']
 #### `--type -t`
 Tipo di configurazione che si vuole visualizzare.
 `cluster`
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -105,7 +105,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
-Mostra la configurazione corrente del cluster Big Data o la configurazione di un file locale specificato, ovvero custom/cluster.json. Il comando può accettare anche un percorso JSON se si vuole ottenere solo una sezione.  È anche possibile specificare un file di destinazione per l'output.  Se non si specifica un file di destinazione, l'output verrà inviato nel terminale.
+Mostra la configurazione corrente di BDC o la configurazione di un file locale specificato, ovvero Custom/BDC. JSON. Il comando può accettare anche un percorso JSON se si vuole ottenere solo una sezione.  È anche possibile specificare un file di destinazione per l'output.  Se non si specifica un file di destinazione, l'output verrà inviato nel terminale.
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
@@ -119,15 +119,15 @@ azdata bdc config show
 ```
 In un file di configurazione locale ottenere un valore alla fine di un percorso di chiave JSON semplice.
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
-In un file di configurazione locale ottenere un valore alla fine di un percorso di chiave JSON con un'istruzione condizionale.
+In un file di configurazione locale ottiene le risorse all'interno di un servizio
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data se non si vuole la configurazione del cluster a cui si è attualmente connessi, ad esempio custom/cluster.json.
+Percorso del file di configurazione del cluster di Big data se non si vuole che la configurazione del cluster a cui si currentlylogged, ad esempio Custom/BDC. JSON
 #### `--target -t`
 File di output in cui archiviare il risultato. Valore predefinito: indirizzamento a StdOut.
 #### `--json-path -j`
@@ -158,9 +158,9 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data per la configurazione che si vuole impostare, ad esempio custom/cluster.json.
+Percorso del file di configurazione del cluster di Big Data della configurazione che si vuole impostare, ad esempio Custom/BDC. JSON
 #### `--json-values -j`
-Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di aggiunta NON supporta le istruzioni condizionali.  Per esempi relativi all'aspetto del percorso, vedere http://jsonpatch.com/.  Se si vuole accedere a una matrice, è necessario indicare l'indice, ad esempio key.0=value.
+Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di aggiunta NON supporta le istruzioni condizionali.  Se il valore inline fornito è una coppia chiave-valore con ' =' è,', è possibile usare caratteri di escape per tali caratteri.  Ad esempio, Key1 = "Key2\=val2\,Key3\=Val3". Per esempi relativi all'aspetto del percorso, vedere http://jsonpatch.com/.  Se si vuole accedere a una matrice, è necessario indicare l'indice, ad esempio key.0=value.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -185,7 +185,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data per la configurazione che si vuole impostare, ad esempio custom/cluster.json.
+Percorso del file di configurazione del cluster di Big Data della configurazione che si vuole impostare, ad esempio Custom/BDC. JSON
 #### `--json-path -j`
 Elenco di percorsi JSON basati sulla libreria jsonpatch che indica i valori da rimuovere, ad esempio: key1.subkey1,key2.subkey2. L'operazione di rimozione NON supporta le istruzioni condizionali. Per esempi relativi all'aspetto del percorso, vedere http://jsonpatch.com/.  Se si vuole accedere a una matrice, è necessario indicare l'indice, ad esempio key.0=value.
 ### <a name="global-arguments"></a>Argomenti globali
@@ -214,15 +214,15 @@ Esempio 2 - Sostituire lo spazio di archiviazione del piano di controllo.
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-Esempio 3 - Sostituire lo spazio di archiviazione del pool, incluse le repliche (pool di archiviazione).
+Ex 3: sostituire le specifiche delle risorse storage-0, incluse le repliche.
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data per la configurazione che si vuole impostare, ad esempio custom/cluster.json.
+Percorso del file di configurazione del cluster di Big Data della configurazione che si vuole impostare, ad esempio Custom/BDC. JSON
 #### `--json-values -j`
-Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di sostituzione supporta le istruzioni condizionali tramite la libreria jsonpath.  Per usarle, il percorso deve iniziare con $. In questo modo sarà possibile usare un'istruzione condizionale come -j $.key1.key2[?(@.key3=='someValue'].key4=value. Vedere gli esempi seguenti. Per altre informazioni, vedere https://jsonpath.com/
+Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di sostituzione supporta le istruzioni condizionali tramite la libreria jsonpath.  Per usarle, il percorso deve iniziare con $. In questo modo sarà possibile usare un'istruzione condizionale come -j $.key1.key2[?(@.key3=='someValue'].key4=value. Se il valore inline fornito è una coppia chiave-valore con ' =' è,', è possibile usare caratteri di escape per tali caratteri.  Ad esempio, Key1 = "Key2\=val2\,Key3\=Val3". Vedere gli esempi seguenti. Per altre informazioni, vedere https://jsonpath.com/
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -257,14 +257,14 @@ azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 ```
 Esempio 3 - Sostituire lo spazio di archiviazione del pool, incluse le repliche (pool di archiviazione) con il file di patch.
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json): 
-        {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
+        {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data per la configurazione che si vuole impostare, ad esempio custom/cluster.json.
+Percorso del file di configurazione del cluster di Big Data della configurazione che si vuole impostare, ad esempio Custom/BDC. JSON
 #### `--patch-file -p`
 Percorso di un file JSON di patch basato sulla libreria jsonpatch: http://jsonpatch.com/. Il file JSON di patch deve iniziare con una chiave denominata "patch", il cui valore è una matrice di operazioni di patch da eseguire. Per il percorso di un'operazione di patch, è possibile usare la notazione con punto, ad esempio key1.key2, per la maggior parte delle operazioni. Se si vuole eseguire un'operazione di sostituzione e si sta sostituendo un valore in una matrice che richiede un'istruzione condizionale, usare la notazione jsonpath facendo iniziare il percorso con $. In questo modo sarà possibile usare un'istruzione condizionale come $.key1.key2[?(@.key3=='someValue'].key4. Vedere gli esempi seguenti. Per altre informazioni sulle istruzioni condizionali, vedere https://jsonpath.com/.
 ### <a name="global-arguments"></a>Argomenti globali
@@ -281,4 +281,6 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per ulteriori informazioni su come installare lo strumento **azdata** , vedere [Install azdata to Manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

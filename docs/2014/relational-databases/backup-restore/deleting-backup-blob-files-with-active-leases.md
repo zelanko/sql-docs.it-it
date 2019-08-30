@@ -10,15 +10,15 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876171"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154765"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminazione dei file BLOB di backup con lease attivi
-  Quando si esegue il backup nell'archiviazione di Windows Azure o il ripristino dallo stesso, tramite SQL Server viene acquisito un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare il lease ed eliminare il BLOB.  
+  Quando si esegue il backup o il ripristino da archiviazione di Azure, SQL Server acquisisce un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare il lease ed eliminare il BLOB.  
   
  Per altre informazioni sui tipi di lease, leggere questo [articolo](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
@@ -29,17 +29,17 @@ ms.locfileid: "62876171"
 ## <a name="managing-orphaned-blobs"></a>Gestione dei BLOB orfani  
  Nei passaggi seguenti viene descritto come effettuare una rimozione dopo un backup non riuscito o un'attività di ripristino. Tutti i passaggi possono essere effettuati utilizzando gli script di PowerShell. Nella sezione seguente è disponibile un esempio di codice:  
   
-1.  **Identificazione dei BLOB con lease:** se si usa uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.   È inoltre possibile utilizzare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, è consigliabile rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
+1.  **Identificazione di BLOB con lease:** se si usa uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.   È inoltre possibile utilizzare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, è consigliabile rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
   
-2.  **Interruzione del lease:** usando una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Suddivisione del lease:** usando una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  Tramite SQL Server viene generato un ID lease per stabilire l'accesso esclusivo durante l'operazione di ripristino. L'ID lease di ripristino è BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Eliminazione del Blob:** Per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
+3.  **Eliminazione del BLOB:** Per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
 ###  <a name="Code_Example"></a> Esempio di script di PowerShell  
- **\*\* Importanti \* \***  se si esegue PowerShell 2.0, è possibile caricare l'assembly Microsoft WindowsAzure.Storage.dll problemi. È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
+ **Importante sesi\* esegue PowerShell 2,0, è possibile che si verifichino problemi durante il caricamento dell'assembly Microsoft WindowsAzure. storage. dll. \* \* \*** È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
   
 -   Creare o modificare il file powershell.exe.config per caricare gli assembly .NET 2.0 e .NET 4.0 in fase di esecuzione con quanto riportato di seguito:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62876171"
  Suggerimenti per l'esecuzione di questo script  
   
 > [!WARNING]  
->  Se viene eseguito un backup nel servizio di archiviazione BLOB di Windows Azure contemporaneamente a questo script, è possibile che il backup non venga completato perché il lease che il backup sta tentando di acquisire viene interrotto. È consigliabile eseguire questo script durante un periodo di manutenzione o quando non sono previste esecuzioni di backup.  
+>  Se un backup nel servizio di archiviazione BLOB di Azure è in esecuzione contemporaneamente a questo script, il backup può avere esito negativo perché questo script interrompe il lease che il backup sta tentando di acquisire nello stesso momento. È consigliabile eseguire questo script durante un periodo di manutenzione o quando non sono previste esecuzioni di backup.  
   
-1.  Quando si esegue questo script, verrà richiesto di fornire valori per l'account e la chiave di archiviazione, il contenitore, nonché per i parametri del percorso e del nome dell'assembly di archiviazione di Windows Azure. Il percorso dell'assembly di archiviazione è la directory di installazione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nome del file per l'assembly di archiviazione è Microsoft.WindowsAzure.Storage.dll. Di seguito è riportato un esempio delle richieste e dei valori immessi:  
+1.  Quando si esegue questo script, verrà richiesto di specificare i valori per l'account di archiviazione, la chiave di archiviazione, il contenitore e i parametri del percorso e del nome dell'assembly di archiviazione di Azure. Il percorso dell'assembly di archiviazione è la directory di installazione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nome del file per l'assembly di archiviazione è Microsoft.WindowsAzure.Storage.dll. Di seguito è riportato un esempio delle richieste e dei valori immessi:  
   
     ```  
     cmdlet  at command pipeline position 1  

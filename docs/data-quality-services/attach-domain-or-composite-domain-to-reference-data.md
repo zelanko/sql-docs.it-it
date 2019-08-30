@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8171d552d850ec929f7aba5b55b6f0e2c6ae7265
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8aed52e248a61b5d10fc58977854b49837ebfad
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935633"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152776"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In questo argomento viene descritto come collegare domini/domini compositi in una Knowledge Base Data Quality a un servizio dati di riferimento in Windows Azure Marketplace per compilare le informazioni rispetto ai dati di alta qualità nei dati di riferimento. Ogni servizio dati di riferimento contiene uno schema (colonne di dati). Dopo aver collegato un dominio o un dominio composito a un servizio dati di riferimento, è necessario eseguire il mapping del dominio collegato o i singoli domini all'interno del dominio composito collegato alle colonne appropriate in uno schema del servizio dati di riferimento. Il collegamento di un dominio composito a un servizio dati di riferimento consente di collegare solo un dominio a un servizio dati di riferimento e quindi di eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
+  In questo argomento viene descritto come aggiungere domini/domini compositi in una Knowledge Base Data Quality a un servizio dati di riferimento in Azure Marketplace per creare informazioni rispetto ai dati di riferimento di alta qualità. Ogni servizio dati di riferimento contiene uno schema (colonne di dati). Dopo aver collegato un dominio o un dominio composito a un servizio dati di riferimento, è necessario eseguire il mapping del dominio collegato o i singoli domini all'interno del dominio composito collegato alle colonne appropriate in uno schema del servizio dati di riferimento. Il collegamento di un dominio composito a un servizio dati di riferimento consente di collegare solo un dominio a un servizio dati di riferimento e quindi di eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
 
 > [!IMPORTANT]
 > Questo articolo cita servizi dati di riferimento di terze parti che in precedenza erano disponibili in Azure DataMarket. DataMarket e i Servizi dati, inclusi ad esempio i dati di indirizzi Melissa, non sono più disponibili a partire dal 31/12/2016. Di conseguenza non è più possibile eseguire gli esempi di questo articolo con i servizi specificati di DataMarket. È comunque possibile usare servizi di dati di riferimento, disponibili direttamente online da provider di dati di riferimento terzi.
@@ -73,7 +73,7 @@ ms.locfileid: "67935633"
          ![Finestra di dialogo Catalogo dei provider di dati di riferimento online](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Finestra di dialogo Catalogo dei provider di dati di riferimento online")  
   
         > [!NOTE]  
-        >  -   Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** il nodo **DataMarket Data Quality Services** mostra tutti i provider del servizio dati di riferimento a cui è stata effettuata la sottoscrizione in Windows Azure Marketplace. Se in DQS sono stati configurati provider del servizio dati di riferimento di terze parti online, essi verranno visualizzati in un altro nodo denominato **Provider online diretti di terzi** (non disponibile ora poiché in DQS non è stato configurato alcun provider del servizio dati di riferimento di terze parti online).  
+        >  -   Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** il nodo DataMarket **Data Quality Services** Mostra tutti i provider del servizio dati di riferimento sottoscritti in Azure Marketplace. Se in DQS sono stati configurati provider del servizio dati di riferimento di terze parti online, essi verranno visualizzati in un altro nodo denominato **Provider online diretti di terzi** (non disponibile ora poiché in DQS non è stato configurato alcun provider del servizio dati di riferimento di terze parti online).  
   
 9. Si tornerà alla scheda **Dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67935633"
   
 10. Fare clic su **Fine** per pubblicare la Knowledge Base. Al termine della pubblicazione della Knowledge Base verrà visualizzato un messaggio di conferma.  
   
- È possibile utilizzare ora questa Knowledge Base per l'attività di pulizia in un progetto Data Quality per standardizzare e pulire gli indirizzi US nei dati di origine in base alle informazioni fornite da Melissa Data tramite Windows Azure Marketplace.  
+ È ora possibile usare questa Knowledge base per l'attività di pulizia in un progetto Data Quality per standardizzare e pulire gli indirizzi US nei dati di origine in base alle informazioni fornite da Melissa Data tramite Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive all'esecuzione del mapping di un dominio ai dati di riferimento  
  Creare un progetto Data Quality ed eseguire l'attività di pulizia sui dati di origine che contengono gli indirizzi US confrontandolo con la Knowledge Base creata in questo argomento. Vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

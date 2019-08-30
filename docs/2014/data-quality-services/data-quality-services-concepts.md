@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480727"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154450"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
@@ -37,7 +37,7 @@ ms.locfileid: "65480727"
   
  **Servizi dati di riferimento**  
   
- È possibile utilizzare i dati di riferimento per convalidare, correggere e migliorare i dati, sfruttando i servizi di società che garantiscono la qualità dei dati di riferimento. È possibile utilizzare i servizi di Windows Azure MarketPlace per connettersi ai provider di dati di riferimento. In alternativa, è possibile utilizzare una connessione diretta a un provider. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ È possibile utilizzare i dati di riferimento per convalidare, correggere e migliorare i dati, sfruttando i servizi di società che garantiscono la qualità dei dati di riferimento. È possibile usare i servizi di Azure Marketplace per connettersi ai provider di dati di riferimento oppure è possibile usare una connessione diretta a un provider. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  Per ulteriori informazioni sulla gestione delle informazioni in DQS, vedere [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

@@ -5,27 +5,39 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653430"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160687"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster Big Data in SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Note sulla versione per i cluster SQL Server Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo elenca gli aggiornamenti e conosce i problemi per le versioni più recenti [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]di.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Versione finale candidata (agosto)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cluster Big Data in 2019 SQL Server versione finale candidata.
+
+### <a name="whats-new"></a>Novità
+
+|Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+|SQL Server Always On gruppo di disponibilità |Quando si distribuisce un cluster SQL Server Big data, è possibile configurare la distribuzione per creare un gruppo di disponibilità da fornire:<br/><br/>-Disponibilità elevata <br/><br/>-Lettura-scalabilità orizzontale <br/><br/>-Inserimento di dati con scalabilità orizzontale nel pool di dati<br/><br>Vedere [distribuire con disponibilità elevata](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Installazione semplificata per lo strumento con [installazione Manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`comando](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`comando](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Scaricare la build finale candidata di Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Aggiunta di notebook per la risoluzione dei problemi tramite SQL Server manuale della Guida di 2019 Jupyter.<br/><br/>Aggiunta dell'esperienza di accesso del controller.<br/><br/>Aggiunta del dashboard del controller per visualizzare gli endpoint di servizio, visualizzare lo stato di integrità del cluster e accedere ai notebook per la risoluzione dei problemi.<br/><br/>Miglioramento delle prestazioni di modifica/output delle celle notebook.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti
+
+SQL Server 2019 i cluster Big Data rilasciano il numero `15.0.1900.47`di build dell'aggiornamento candidata.
 
 ## <a id="ctp32"></a> CTP 3.2 (luglio)
 
@@ -48,13 +60,13 @@ Le sezioni seguenti descrivono i problemi noti e le limitazioni per questa versi
 
 #### <a name="polybase"></a>PolyBase
 
-- Il push della clausola TOP quando il conteggio è > 1000 non è supportato in questa versione. In questi casi, tutte le righe verranno lette dall'origine dati remota.
+- Il push della clausola TOP quando il conteggio è > 1000 non è supportato in questa versione. In questi casi, tutte le righe verranno lette dall'origine dati remota. (Risolto nella versione finale candidata)
 
 - Il push di join con percorso condiviso nelle origini dai esterne non è supportato in questa versione. Ad esempio, il push di due tabelle del pool di dati con tipo di distribuzione ROUND_ROBIN sposterà i dati nell'istanza SQL master o nell'istanza del pool di calcolo per eseguire l'operazione di join.
 
 #### <a name="compute-pool"></a>Pool di calcolo
 
-- La distribuzione di cluster Big Data supporta solo pool di calcolo con una istanza.
+- La distribuzione di cluster Big Data supporta solo pool di calcolo con una istanza. (Risolto nella versione finale candidata)
 
 #### <a name="storage-pool"></a>Pool di archiviazione
 

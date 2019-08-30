@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876275"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154793"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
   In questo argomento viene presentata la terminologia di base relativa ai supporti per le procedure di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è rivolto ai nuovi utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono descritti il formato usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i supporti di backup, la corrispondenza tra supporti e dispositivi di backup, l'organizzazione dei backup nei relativi supporti e vengono elencate alcune considerazioni relative ai set e ai gruppi di supporti. In questo argomento vengono inoltre illustrati i passaggi per inizializzare e formattare i supporti di backup in occasione del primo utilizzo o della sostituzione di un set di supporti precedente con uno nuovo e vengono elencate le operazioni necessarie per sovrascrivere set di backup precedenti in un set di supporti e per aggiungere nuovi set di backup a set di supporti esistenti.  
   
 > [!NOTE]  
->  Per altre informazioni sul backup di SQL Server per il servizio di archiviazione Blob di Windows Azure, vedere, [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Per altre informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Azure, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
@@ -48,15 +48,15 @@ ms.locfileid: "62876275"
  Contenuto di backup aggiunto a un set di supporti da un'operazione di backup completata.  
   
   
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Panoramica del set di supporti, gruppi di supporti e set di Backup  
- I backup disponibili in un set di uno o più supporti di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di *supporti di backup*, nastri o file su disco, o oggetti BLOB di Windows Azure, su cui una o più operazioni di backup hanno eseguito la scrittura usando un tipo e un numero fissi di dispositivi di backup. Un set di supporti specificati usano unità nastro, unità disco o oggetti BLOB di Windows Azure, ma non una combinazione di due o più. Ad esempio, è possibile che i dispositivi di backup associati a un set di supporti siano tre unità nastro denominate `\\.\TAPE0`, `\\.\TAPE1`e `\\.\TAPE2`. Il set di supporti include solo nastri, a partire da almeno tre nastri, ovvero uno per unità. Il tipo e il numero di dispositivi di backup vengono definiti in fase di creazione di un set di supporti e non è possibile modificarli. Se necessario, tra le operazioni di backup e ripristino è tuttavia possibile sostituire un determinato dispositivo con un dispositivo dello stesso tipo.  
+##  <a name="OvMediaSetsFamiliesBackupSets"></a>Panoramica di set di supporti, gruppi di supporti e set di backup  
+ I backup disponibili in un set di uno o più supporti di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di *supporti di backup*, nastri o file su disco, o oggetti BLOB di Azure, su cui una o più operazioni di backup hanno eseguito la scrittura usando un tipo e un numero fissi di dispositivi di backup. Un set di supporti specificati usano unità nastro, unità disco o oggetti BLOB di Azure, ma non una combinazione di due o più. Ad esempio, è possibile che i dispositivi di backup associati a un set di supporti siano tre unità nastro denominate `\\.\TAPE0`, `\\.\TAPE1`e `\\.\TAPE2`. Il set di supporti include solo nastri, a partire da almeno tre nastri, ovvero uno per unità. Il tipo e il numero di dispositivi di backup vengono definiti in fase di creazione di un set di supporti e non è possibile modificarli. Se necessario, tra le operazioni di backup e ripristino è tuttavia possibile sostituire un determinato dispositivo con un dispositivo dello stesso tipo.  
   
  Per creare un set di supporti nei supporti di backup durante un'operazione di backup, formattare i supporti di backup. Per altre informazioni, vedere [Creazione di un nuovo set di supporti](#CreatingMediaSet)più avanti in questo argomento. Dopo la formattazione, ogni file o nastro include un'intestazione supporto per il set di supporti ed è pronto per la ricezione di contenuto di backup. Dopo la creazione dell'intestazione, l'operazione di backup continua e in tutti i dispositivi di backup specificati per l'operazione viene eseguito il backup dei dati specificati nel supporto di backup.  
   
 > [!NOTE]  
 >  È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o in un secondo momento può leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Gruppi di supporti  
@@ -89,7 +89,7 @@ ms.locfileid: "62876275"
 -   Indicazione della presenza o meno di un'etichetta del supporto MTF o di una descrizione dei supporti nella descrizione del supporto.  
   
     > [!NOTE]  
-    >  Tutti i supporti che viene usati per un'operazione di backup o ripristino utilizzano un formato di backup standard denominato [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] mantiene qualsiasi etichetta dei supporti MTF scritta da un'altra applicazione ma non scrive etichette dei supporti MTF.  
+    >  Tutti i supporti usati per un'operazione di backup o ripristino usano un formato di backup standard [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] denominato conserva qualsiasi etichetta del supporto MTF scritta da un'altra applicazione ma non scrive le etichette dei supporti MTF.  
   
 -   Etichetta del supporto MTF ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format) o descrizione del supporto (testo in formato libero).  
   
@@ -166,12 +166,12 @@ GO
   
 -   Numero di set di backup  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> Utilizzando supporti set e dei gruppi  
+##  <a name="ConsiderationsForMediaSetFamilies"></a>Uso di set di supporti e famiglie  
  In questa sezione vengono illustrate alcune considerazioni sull'utilizzo dei set e dei gruppi di supporti.  
   
   
   
-###  <a name="CreatingMediaSet"></a> Creazione di un nuovo Set di supporti  
+###  <a name="CreatingMediaSet"></a>Creazione di un nuovo set di supporti  
  Per creare un nuovo set di supporti, è necessario formattare i supporti di backup, ovvero uno o più nastri o file su disco. Durante il processo di formattazione i supporti di backup vengono modificati come descritto di seguito:  
   
 1.  L'eventuale vecchia intestazione viene eliminata, così come il contenuto precedente dei supporti di backup.  
@@ -181,7 +181,7 @@ GO
 2.  Sul supporto di backup (nastro o file su disco) di ciascun dispositivo di backup viene scritta una nuova intestazione supporto.  
   
   
-###  <a name="UseExistingMediaSet"></a> Backup in un Set di supporti esistente  
+###  <a name="UseExistingMediaSet"></a>Esecuzione del backup in un set di supporti esistente  
  Quando si esegue il backup su un set di supporti esistente, è possibile scegliere tra le due opzioni seguenti:  
   
 -   Accodare i dati al set di backup esistente.  
@@ -200,7 +200,7 @@ GO
     > [!NOTE]  
     >  La sovrascrittura dei set di backup esistenti viene specificata tramite l'opzione INIT dell'istruzione BACKUP.  
   
-####  <a name="Appending"></a> Accodamento a set di Backup esistenti  
+####  <a name="Appending"></a>Aggiunta a set di backup esistenti  
  È possibile archiviare nello stesso supporto i backup dello stesso database o di database differenti eseguiti in momenti diversi. Se si accoda un altro set di backup a un supporto esistente, il contenuto precedente del supporto rimane invariato e il nuovo backup viene registrato dopo la fine dell'ultimo backup presente nel supporto.  
   
  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accoda sempre i nuovi backup al supporto. È possibile accodare i backup solo alla fine del supporto. Se ad esempio un volume del supporto include cinque set di backup, non è possibile ignorare i primi tre set e sovrascrivere il quarto con un nuovo set di backup.  
@@ -210,10 +210,10 @@ GO
  I backup di Microsoft Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono condividere lo stesso supporto ma non sono interoperativi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o versioni successive possono leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
-####  <a name="Overwriting"></a> Sovrascrittura di set di Backup  
+####  <a name="Overwriting"></a>Sovrascrittura di set di backup  
  La sovrascrittura dei set di backup esistenti viene specificata tramite l'opzione INIT dell'istruzione BACKUP. Se le verifiche hanno esito positivo, questa opzione sovrascrive gli eventuali set di backup presenti nei supporti, mantenendo solo l'intestazione supporto. Se non esiste alcuna intestazione supporto ne viene creata una.  
   
  Per quanto riguarda le intestazioni del nastro, può risultare opportuno mantenerle. Nel caso di backup su disco vengono sovrascritti soltanto i file usati dai dispositivi di backup specificati per l'operazione. Gli altri file presenti nel disco rimangono inalterati. Durante la sovrascrittura di backup è possibile mantenere l'intestazione supporto esistente. Il nuovo backup verrà creato come primo backup del dispositivo di backup. Se l'intestazione supporto non è presente, viene creata automaticamente una nuova intestazione con un nome e una descrizione del supporto. Se l'intestazione supporto esistente non è valida, l'operazione di backup viene interrotta. Se il supporto è vuoto, viene generata una nuova intestazione supporto con gli eventuali valori MEDIANAME, MEDIAPASSWORD e MEDIADESCRIPTION specificati.  
@@ -236,7 +236,7 @@ GO
  I supporti di backup non vengono sovrascritti se sono protetti con una password di Microsoft Windows. Per poterli sovrascrivere, è necessario reinizializzarli.  
   
   
-###  <a name="SequenceNumbers"></a> Numeri di sequenza  
+###  <a name="SequenceNumbers"></a>Numeri di sequenza  
  L'ordine corretto è importante per più gruppi di supporti in un set di supporti o per più supporti di backup in un gruppo di supporti. Il backup assegna pertanto i numeri di sequenza nei modi seguenti:  
   
 -   Gruppi di supporti sequenziali in un set di supporti  
@@ -259,7 +259,7 @@ GO
      Per qualsiasi ripristino da backup su disco e per qualsiasi ripristino online, tutti i gruppi di supporti devono essere montati simultaneamente. Per un ripristino offline da backup su nastro, è possibile elaborare i gruppi di supporti da un minor numero di dispositivi di backup. Ogni gruppo di supporti deve essere elaborato completamente prima di avviare l'elaborazione di un altro gruppo di supporti. I gruppi di supporti vengono sempre elaborati in parallelo, a meno che siano ripristinati con un dispositivo singolo.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
- **Per creare un nuovo file multimediale set**  
+ **Per creare un nuovo set di supporti**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**)  
   
@@ -273,7 +273,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (opzione NOINIT)  
   
- **Per sovrascrivere set di backup esistenti**  
+ **Per sovrascrivere i set di backup esistenti**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (opzione **Sovrascrivi tutti i set di backup esistenti**)  
   
@@ -283,13 +283,13 @@ GO
   
 -   [Impostare la data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Per visualizzare i numeri di sequenza e dei gruppi di supporti**  
+ **Per visualizzare i numeri di sequenza dei supporti e delle famiglie**  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (colonna **family_sequence_number**)  
   
- **Per visualizzare i set di backup in un determinato dispositivo di backup**  
+ **Per visualizzare i set di backup in un dispositivo di backup specifico**  
   
 -   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
@@ -297,7 +297,7 @@ GO
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **Leggere l'intestazione supporto specificata in un dispositivo di backup**  
+ **Per leggere l'intestazione supporto del supporto in un dispositivo di backup**  
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
