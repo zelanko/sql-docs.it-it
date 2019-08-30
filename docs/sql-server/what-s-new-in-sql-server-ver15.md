@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903636"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026237"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -91,7 +91,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Supporto per la codifica di caratteri UTF-8 |Supporta i caratteri UTF-8 per la codifica di importazione ed esportazione e come regole di confronto a livello di database o a livello di colonna per i dati stringa. Sono così supportate le applicazioni che si estendono su scala globale, in cui il requisito di fornire servizi e applicazioni di database multilingue globali è essenziale per soddisfare le esigenze dei clienti e le normative specifiche del mercato. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/>[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate consente il supporto UTF-8 per le tabelle esterne Polybase e per Always Encrypted.|
+|Supporto per la codifica di caratteri UTF-8 |Supporta i caratteri UTF-8 per la codifica di importazione ed esportazione e come regole di confronto a livello di database o a livello di colonna per i dati stringa. Sono così supportate le applicazioni che si estendono su scala globale, in cui il requisito di fornire servizi e applicazioni di database multilingue globali è essenziale per soddisfare le esigenze dei clienti e le normative specifiche del mercato. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate consente il supporto UTF-8 per le tabelle esterne Polybase e per Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
 |Query su tabelle esterne |I nomi delle colonne della tabella esterna vengono ora usati per eseguire query su origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. Vedere [Che cos'è PolyBase?](../relational-databases/polybase/polybase-guide.md)|
-|Supporto per la codifica di caratteri UTF-8|Supporta i caratteri UTF-8 con le tabelle esterne. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)|
+|Supporto per la codifica di caratteri UTF-8|Supporta i caratteri UTF-8 con le tabelle esterne. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>Impostazioni del server
@@ -147,6 +147,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |:---|:---|
 |Recupero del database accelerato | Abilitare il recupero accelerato del database per ogni database. Vedere [Recupero del database accelerato](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 |Uso forzato di cursori statici e fast forward | Supporto dell'uso forzato del piano di Query Store per cursori statici e fast forward. Vedere [Supporto dell'uso forzato del piano per cursori fast forward e statici](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Governance delle risorse| Il valore configurabile per l'opzione `REQUEST_MAX_MEMORY_GRANT_PERCENT` di `CREATE WORKLOAD GROUP` e `ALTER WORKLOAD GROUP` è stato modificato da dal tipo di dati integer a float per consentire un controllo più granulare dei limiti di memoria. Vedere [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) e [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Riduzione delle ricompilazioni per i carichi di lavoro| Migliora l'utilizzo di tabelle temporanee in più ambiti. Vedere [Riduzione delle ricompilazioni per i carichi di lavoro](../relational-databases/tables/tables.md#ctp23) |
 |Scalabilità per il checkpoint indiretto |Vedere [Scalabilità migliorata per il checkpoint indiretto](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Metadati `tempdb` ottimizzati per la memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../relational-databases/in-memory-database.md), ovvero i metadati `tempdb` ottimizzati per la memoria, rimuovendo così in modo efficace questo collo di bottiglia e sbloccando un nuovo livello di scalabilità per i carichi di lavoro `tempdb` eccessivi. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Vedere [Metadati `tempdb` ottimizzati per la memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
@@ -155,7 +156,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |Compilazione posticipata delle variabili di tabella|Migliora la qualità del piano e le prestazioni generali per le query che fanno riferimento a variabili di tabella. Durante l'ottimizzazione e la compilazione iniziale, questa funzionalità propaga le stime della cardinalità basate sui conteggi effettivi delle righe di variabili di tabella. Queste informazioni accurate sui conteggi di righe ottimizzano le operazioni del piano downstream. Vedere [Compilazione posticipata delle variabili di tabella](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
 |`APPROX_COUNT_DISTINCT `|Per gli scenari in cui la precisione assoluta non è importante, ma la velocità di risposta è cruciale, `APPROX_COUNT_DISTINCT` esegue aggregazioni tra set di dati di grandi dimensioni usando meno risorse rispetto a `COUNT(DISTINCT())` per un livello superiore di concorrenza. Vedere [Elaborazione delle query approssimativa](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 |Modalità batch per rowstore|La modalità batch per rowstore abilita l'esecuzione in modalità batch senza richiedere indici columnstore. L'esecuzione in modalità batch usa la CPU in modo più efficiente nel caso di carichi di lavoro analitici, ma fino a [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] viene usata solo quando una query include operazioni con indici columnstore. Alcune applicazioni, tuttavia, possono usare funzionalità che non sono supportate con gli indici columnstore e pertanto non riescono a sfruttare la modalità batch. A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], la modalità batch è abilitata nei carichi di lavoro analitici idonei, le cui query includono operazioni con qualsiasi tipo di indice (rowstore o columnstore). Vedere [Modalità batch per rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Inlining di funzioni definite dall'utente scalari|Trasforma automaticamente le funzioni definite dall'utente scalari in espressioni relazionali e le incorpora nella query SQL chiamante. Questa trasformazione migliora le prestazioni dei carichi di lavoro che sfruttano le funzioni definite dall'utente scalari. [Inlining di funzioni definite dall'utente scalari](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Inlining di funzioni definite dall'utente scalari|Trasforma automaticamente le funzioni definite dall'utente scalari in espressioni relazionali e le incorpora nella query SQL chiamante. Questa trasformazione migliora le prestazioni dei carichi di lavoro che sfruttano le funzioni definite dall'utente scalari. Vedere [Inlining di funzioni definite dall'utente scalari](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>Gruppi di disponibilità
@@ -193,14 +194,6 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |Miglioramenti di `tempdb` | Per impostazione predefinita, una nuova installazione di SQL Server in Linux crea più file di dati `tempdb` in base al numero di core logici (con un massimo di 8 file di dati). Questo non vale per gli aggiornamenti sul posto di una versione principale o secondaria. Ogni file `tempdb` è di 8 MB, con un aumento automatico di 64 MB. Questo comportamento è simile all'installazione predefinita di SQL Server in Windows. |
 | PolyBase in Linux | [Installare PolyBase](../relational-databases/polybase/polybase-linux-setup.md) in Linux per i connettori non Hadoop.<br/><br/>[Mapping dei tipi di PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Supporto di Change Data Capture (CDC) | Change Data Capture (CDC) è ora supportato in Linux per SQL Server 2019. |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>Configurazione
-
-|Nuova funzionalità o aggiornamento | Dettagli |
-|:---|:---|
-|Nuove opzioni di configurazione della memoria | Imposta le opzioni di configurazione del server *min server memory (MB)* e *max server memory (MB)* durante l'installazione. Per altre informazioni, vedere i parametri `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` in [Installare SQL Server dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Il valore proposto verrà allineato con le linee guida per la configurazione della memoria riportate in [Opzioni di configurazione server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|Nuove opzioni di impostazione del parallelismo | Imposta l'opzione di configurazione del server *max degree of parallelism* durante l'installazione. Per altre informazioni, vedere il parametro `SQLMAXDOP` in [Installare SQL Server dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Il valore predefinito verrà allineato con le linee guida relative all'opzione max degree of parallelism riportate in [Configurare l'opzione di configurazione del server max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -247,7 +240,7 @@ In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2 sono state an
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Note sulla versione](sql-server-ver15-release-notes.md).
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Note sulla versione](sql-server-ver15-release-notes.md).
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: white paper tecnico](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Pubblicato in settembre 2018. Si applica a Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 per Windows, Linux e i contenitori Docker.
 
