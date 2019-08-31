@@ -13,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7cb79e9f369366b4144cf79b072b80cad17dde77
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154079"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176075"
 ---
 # <a name="what39s-new-database-engine"></a>&#39;Novità (motore di database)
   In quest'ultima versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sono stati apportati miglioramenti e introdotte nuove funzionalità per offrire ulteriori opportunità a progettisti, sviluppatori e amministratori che progettano, sviluppano e gestiscono sistemi di archiviazione dati e anche per migliorare la loro produttività. Di seguito sono indicate le aree del [!INCLUDE[ssDE](../includes/ssde-md.md)] in cui sono stati apportati miglioramenti.  

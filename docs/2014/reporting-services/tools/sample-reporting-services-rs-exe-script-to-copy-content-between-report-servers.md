@@ -10,12 +10,12 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c8434c0db2ca394ec3fbfbab3613b2ea69ac042d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2f8ccf455e9b20c4b8dffc4cc433ce68319a8251
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153808"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176154"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report
   Questo argomento presenta e descrive uno script RSS di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] di esempio tramite cui vengono copiati elementi di contenuto e impostazioni da un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a un altro server di report, tramite l'utilità **RS.exe** . RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], sia in modalità nativa che in modalità SharePoint. Lo script copia gli elementi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , ad esempio report e sottoscrizioni, da un server a un altro. Lo script supporta server di report in modalità nativa e in modalità SharePoint.  

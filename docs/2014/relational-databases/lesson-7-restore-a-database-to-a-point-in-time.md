@@ -10,14 +10,14 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153733"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175422"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lezione 8. Ripristinare un database in archiviazione di Azure
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lezione 8. Ripristinare un database in Archiviazione di Azure
   In questa lezione verrà illustrato come creare un file di backup in locale e quindi ripristinarlo in archiviazione di Azure. Si noti che è possibile fare in modo che il database sia in locale o in una macchina virtuale in Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6 e 7.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  

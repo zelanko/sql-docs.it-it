@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154627"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175981"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
   L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze o per creare un backup logico o per creare una copia on-premise di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

@@ -10,14 +10,14 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153757"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175632"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lezione 4: Creare un database in archiviazione di Azure
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lezione 4: Creare un database in Archiviazione di Azure
   In questa lezione verrà illustrato come creare un database usando la funzionalità file di dati di SQL Server in Azure. Si noti che prima di questa lezione, è necessario aver completato le lezioni 1, 2 e 3. La lezione 3 è un passaggio molto importante perché è necessario archiviare le informazioni sul contenitore di archiviazione di Azure e il nome dei criteri e la chiave SAS associati nell'archivio delle credenziali SQL Server prima della lezione 4.  
   
  Per ogni contenitore di archiviazione utilizzato da un file di dati o di log, è necessario creare una credenziale di SQL Server il cui nome corrisponda al percorso del contenitore. Quindi, è possibile creare un nuovo database in archiviazione di Azure  

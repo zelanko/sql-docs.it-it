@@ -10,14 +10,14 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154101"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176095"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurazione di SQL Server backup gestito in Azure per i gruppi di disponibilità
+# <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurazione del backup gestito di SQL Server in Azure per i gruppi di disponibilità
   In questo argomento viene fornita un'esercitazione sulla configurazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per i database che partecipano ai gruppi di disponibilità AlwaysOn.  
   
 ## <a name="availability-group-configurations"></a>Configurazioni del gruppo di disponibilità  
@@ -68,7 +68,7 @@ ms.locfileid: "70154101"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Abilitare e configurare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di disponibilità  
  In questa esercitazione vengono descritti i passaggi per abilitare e configurare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database (AGTestDB) nei computer Node1 e Node2, nonché i passaggi per abilitare il monitoraggio dello stato di integrità del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-1.  **Creare un account di archiviazione di Azure:** I backup vengono archiviati nel servizio di archiviazione BLOB di Azure. È necessario creare prima un account di archiviazione di Azure, se non è già presente. Per altre informazioni, vedere [creazione di un account di archiviazione di Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Prendere nota del nome dell'account di archiviazione, delle chiavi di accesso e dell'URL dell'account di archiviazione. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono utilizzate per creare le credenziali SQL. Queste credenziali vengono utilizzate dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] durante le operazioni di backup per l'autenticazione nell'account di archiviazione.  
+1.  **Creare un account di archiviazione di Azure**: I backup vengono archiviati nel servizio di archiviazione BLOB di Azure. È necessario creare prima un account di archiviazione di Azure, se non è già presente. Per altre informazioni, vedere [creazione di un account di archiviazione di Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Prendere nota del nome dell'account di archiviazione, delle chiavi di accesso e dell'URL dell'account di archiviazione. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono utilizzate per creare le credenziali SQL. Queste credenziali vengono utilizzate dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] durante le operazioni di backup per l'autenticazione nell'account di archiviazione.  
   
 2.  **Creare credenziali SQL:** Creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso alle archiviazione come password.  
   

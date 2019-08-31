@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server backup gestito in Azure: Interoperabilità e coesistenza | Microsoft Docs'
+title: 'Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154068"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176070"
 ---
-# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>SQL Server backup gestito in Azure: Interoperabilità e coesistenza
+# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza
   In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Di seguito vengono descritte alcune di queste caratteristiche: Gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database e drop database.  
   
 ### <a name="alwayson-availability-groups"></a>Gruppi di disponibilità AlwaysOn  

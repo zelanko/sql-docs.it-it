@@ -1,6 +1,6 @@
 ---
-title: Ripristinare il database master - sistema di piattaforma Analitica | Microsoft Docs
-description: Ripristinare il database master nel sistema di piattaforma Analitica.
+title: 'Ripristinare il database master: sistema di piattaforma di analisi (APS) | Microsoft Docs'
+description: Ripristinare il database master in Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,32 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7c9931ab6fb0946de83c3113a36de723a7a05cd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 624e1199fb953945ae6476a1f935dded48508bab
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960134"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176132"
 ---
-# <a name="restore-the-master-database-in-analytics-platform-system"></a>Ripristinare il database master nel sistema di piattaforma Analitica
-Il **Restore Master** pagina di Gestione configurazione SQL Server PDW consente di ripristinare il database master da un backup.  
+# <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Ripristinare il database master in Analytics Platform System (APS)
+La pagina **Ripristina Master** della SQL Server PDW Configuration Manager consente di ripristinare il database master da un backup.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 > [!IMPORTANT]  
-> Per eseguire il ripristino, SQL Server PDW è necessario eliminare il database master corrente, che contiene le informazioni di sicurezza utente e il catalogo del database. È consigliabile effettuare un backup del database master corrente prima di eseguire il ripristino.  
+> Per eseguire il ripristino, SQL Server PDW necessario eliminare il database master corrente, che contiene le informazioni sulla sicurezza dell'utente e il catalogo del database. Prima di eseguire il ripristino, è consigliabile eseguire un backup del database master corrente.  
   
 ## <a name="to-restore-the-master-database"></a>Per ripristinare il database master  
   
-1.  Avviare Gestione configurazione. Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
+1.  Avviare il Configuration Manager. Per altre informazioni, vedere [avviare la piattaforma &#40;Configuration Manager Analytics System&#41;](launch-the-configuration-manager.md).  
   
-2.  Nel riquadro a sinistra di Configuration Manager, fare clic su **Restore Master**.  
+2.  Nel riquadro sinistro della Configuration Manager fare clic su **Ripristina Master**.  
   
-3.  Selezionare il master di backup da ripristinare.  
+3.  Selezionare il backup master da ripristinare.  
   
 4.  Fare clic su **Applica**.  
   
-5.  Per eseguire il ripristino, SQL Server PDW arresterà tutti i servizi di appliance e disconnettere tutti gli utenti. Al termine del ripristino, SQL Server PDW verrà riavviato i servizi di appliance.  
+5.  Per eseguire il ripristino, SQL Server PDW arresterà tutti i servizi Appliance e disconnetterà tutti gli utenti. Al termine del ripristino SQL Server PDW riavvierà i servizi Appliance.  
   
-![DWConfig ripristino master PDW](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![Master ripristino PDW Appliance DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

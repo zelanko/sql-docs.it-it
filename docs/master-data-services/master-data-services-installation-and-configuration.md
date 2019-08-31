@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985289"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176301"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -33,7 +33,7 @@ Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../i
  
 Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Informazioni su SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Scarica**  
+> **Scaricare**  
 > -   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Se si ha un account di Azure,  Fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server.  
 > 
@@ -45,8 +45,8 @@ Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../i
 - Quando si installa [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in un computer Windows Server 2012, potrebbe essere necessario configurare la Sicurezza avanzata di Internet Explorer per consentire lo scripting per il sito dell'applicazione Web. In caso contrario, il passaggio al sito nel computer server avrà esito negativo.
 - Per funzionare nell'applicazione Web, è necessario installare Silverlight 5 nel computer client. Se non si possiede la versione richiesta di Silverlight, viene richiesto di installarla quando si passa a un'area dell'applicazione Web in cui è necessaria. Silverlight 5 può essere installato da **[qui](https://www.microsoft.com/silverlight/)** .
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale di Azure
-Per impostazione predefinita, quando si seleziona una macchina virtuale di Azure con [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] già installato viene installato anche [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale di Azure
+Per impostazione predefinita, quando si avvia una macchina virtuale di Azure [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] in cui è [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] già installato, viene installato anche. 
 
 La fase successiva consiste nell'installazione di Internet Information Services (IIS). Vedere la sezione [Installazione e configurazione di IIS](#InstallIIS). 
 
@@ -127,18 +127,18 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 2.  Fare clic su **Crea database**e quindi fare clic su **Avanti** nella **Creazione guidata database**.  
   
-3.  Nel **Server di Database** , specificare l'istanza di SQL Server. 
+3.  Nella pagina **server database** specificare l'istanza di SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Aggiunge il supporto per l'istanza gestita di SQL Server. Impostare il valore della **istanza di SQL Server** all'host di un Database SQL di Azure a istanza gestita. Ad esempio `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host di un'istanza gestita di database SQL di Azure. Ad esempio `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che sia possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
+4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
-    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], istanza gestita di connettersi al Database SQL di Azure, usare uno dei tipi di autenticazione seguenti:
+    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], per connettersi all'istanza gestita di database SQL di Azure, usare uno dei seguenti tipi di autenticazione:
     >
-    >- Autenticazione integrata di Azure Active Directory: **Utente corrente-integrata con Active Directory**
-    >- Autenticazione di SQL Server: **Account di SQL Server**.
+    >- Azure Active Directory l'autenticazione integrata: **Utente corrente-Active Directory integrato**
+    >- Autenticazione SQL Server: **SQL Server account**.
     >
-    >In istanza gestita di Database SQL di Azure, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
+    >Nell'istanza gestita di database SQL di Azure, l'utente deve essere un membro `sysadmin` del ruolo predefinito del server.
 
     > [!NOTE]  
     >  Quando si seleziona il tipo di autenticazione **Utente corrente - sicurezza integrata**, la casella **Nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows connesso al computer. Se si esegue [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 

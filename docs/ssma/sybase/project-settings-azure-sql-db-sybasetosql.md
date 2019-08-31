@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 98430a626a628d4c8cc040b53a9cf24ad1752048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028786"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176231"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Impostazioni del progetto (database SQL di Azure) (SybaseToSQL)
-Le impostazioni del progetto di database SQL di Azure consentono di configurare il suffisso di database di Azure SQL DB da aggiungere nella finestra di dialogo di connessione e consente inoltre l'implementazione di meccanismo di heartbeat nella connessione di database SQL di Azure.  
+Le impostazioni del progetto database SQL di Azure consentono di configurare il suffisso del database SQL di Azure da aggiungere nella finestra di dialogo di connessione e consentire anche l'implementazione del meccanismo heartbeat nella connessione al database SQL di Azure.  
   
-Nel riquadro di database SQL di Azure è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  
+Il riquadro database SQL di Azure è disponibile nelle finestre di dialogo **Impostazioni progetto** e **Impostazioni progetto predefinite** .  
   
--   Utilizzare la finestra di dialogo Impostazioni di progetto per impostare le opzioni di configurazione per il progetto corrente. Per accedere a impostazioni di database SQL di Azure, scegliere il **strumenti** dal menu **impostazioni progetto**, fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi selezionare  **Azure SQL database**.  
+-   Utilizzare la finestra di dialogo Impostazioni progetto per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni del database SQL di Azure, nel menu **strumenti** selezionare **Impostazioni progetto**, fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi selezionare **database SQL di Azure**.  
   
--   Utilizzare la finestra di dialogo Impostazioni di progetto predefinito per impostare le opzioni di configurazione per tutti i progetti. Per accedere a impostazioni di database SQL di Azure, scegliere il **strumenti** dal menu **DefaultProject impostazioni**, fare clic su **generali** nella parte inferiore del riquadro a sinistra e quindi selezionare **Azure SQL database**.  
+-   Utilizzare la finestra di dialogo Impostazioni progetto predefinite per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni del database SQL di Azure, nel menu **strumenti** selezionare **Impostazioni DefaultProject**, fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi selezionare **database SQL di Azure**.  
   
 ## <a name="connectivity"></a>Connettività  
-**Intervallo di heartbeat**  
+**Intervallo heartbeat**  
   
-Specifica un intervallo di tempo da usare per il meccanismo di heartbeat per mantenere la connessione di database SQL di Azure attiva nel ' minuti: formato secondi.  
+Specifica un intervallo di tempo da usare per il meccanismo di heartbeat per tenere attiva la connessione del database SQL di Azure nel formato "minuti: secondi".  
   
-**Il valore predefinito**:' 4:45 '  
+**Valore predefinito**:' 4:45'  
   
-Il valore deve essere specificato in sto: formato degli ss (ad esempio, ' 4:45 ' o ' 0:50 ').  
+Il valore deve essere specificato nel formato ' m:SS ' (ad esempio,' 4:45' o ' 0:50').  
   
-**Suffisso del Server di database SQL di Azure**  
+**Suffisso del server di database SQL di Azure**  
   
-Specifica un suffisso di server di database SQL di Azure  
+Specifica un suffisso del server di database SQL di Azure  
   
-**Il valore predefinito**: 'database.windows.net'.  
+**Valore predefinito**:' database.Windows.NET '.  
   

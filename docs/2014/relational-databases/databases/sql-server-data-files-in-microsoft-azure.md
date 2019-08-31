@@ -10,14 +10,14 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154544"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175699"
 ---
-# <a name="sql-server-data-files-in-azure"></a>SQL Server file di dati in Azure
+# <a name="sql-server-data-files-in-azure"></a>File di dati di SQL Server in Azure
   SQL Server file di dati in Azure consente il supporto nativo per i file di database SQL Server archiviati come BLOB di Azure. Consente di creare un database in SQL Server in esecuzione in locale o in una macchina virtuale in Azure con un percorso di archiviazione dedicato per i dati nell'archivio BLOB di Azure. Questo miglioramento semplifica in particolar modo lo spostamento di database tra computer mediante le operazioni di collegamento e scollegamento. Inoltre, fornisce un percorso di archiviazione alternativo per i file di backup del database consentendo di eseguire il ripristino da o in archiviazione di Azure. Pertanto, rende possibile l'utilizzo di diverse soluzioni ibride offrendo numerosi vantaggi per la virtualizzazione dei dati, lo spostamento dei dati, la sicurezza e la disponibilità nonché costi moderatamente bassi e manutenzione per una disponibilità elevata e una scalabilità elastica.  
   
  Questo argomento introduce i concetti e le considerazioni fondamentali per archiviare i file di dati SQL Server nel servizio di archiviazione di Azure.  

@@ -13,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154388"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176014"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
   Il servizio adattatore del cloud viene creato come parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning in una macchina virtuale di Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  

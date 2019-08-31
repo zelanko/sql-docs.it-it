@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155008"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175991"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

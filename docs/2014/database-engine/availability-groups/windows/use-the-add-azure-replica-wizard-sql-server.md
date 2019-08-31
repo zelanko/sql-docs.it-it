@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154398"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176000"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
   Usare la procedura guidata Aggiungi replica Azure per creare una nuova macchina virtuale di Azure in un ambiente IT ibrido e configurarla come replica secondaria per un gruppo di disponibilità AlwaysOn nuovo o esistente.  

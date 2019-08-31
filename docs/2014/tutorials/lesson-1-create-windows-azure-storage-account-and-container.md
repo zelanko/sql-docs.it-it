@@ -10,14 +10,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3f9775b98a2cf86690bf290543d6394e06cefe32
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 69d09b5b058af3404226905bdbe0ef83f33982cf
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153497"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176174"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lezione 1: Creare un account e un contenitore di archiviazione di Azure
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lezione 1: Creare account e contenitore di Archiviazione di Azure
   Prima di poter iniziare a archiviare i file di dati SQL Server in archiviazione di Azure, è necessario creare prima un account di archiviazione di Azure e un contenitore BLOB e una firma di accesso condiviso. Nella lezione 1 vengono illustrati i passaggi per accedere al portale di gestione di Azure, creare un account di archiviazione, un contenitore BLOB e una firma di accesso condiviso.  
   
  Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere ai BLOB, alle tabelle e alle code dell'account in uso. Per accedere alle risorse utilizzando questa nuova funzionalità di SQL Server senza condividere la chiave di accesso dell'account di archiviazione, è necessario eseguire le seguenti operazioni:  
@@ -33,7 +33,7 @@ ms.locfileid: "70153497"
 ## <a name="create-storage-account"></a>Creare un account di archiviazione  
  Per creare un account di archiviazione nel portale di gestione di Azure, seguire questa procedura:  
   
-1.  Accedere al portale di gestione di [Azure](https://manage.windowsazure.com) usando l'account. Se non si ha un account Azure, visitare la [versione di valutazione gratuita di Azure](http://www.windowsazure.com/pricing/free-trial/).  
+1.  Accedere al portale di gestione di [Azure](https://manage.windowsazure.com) usando l'account. Se non si dispone di un account Azure, visitare la [versione di valutazione gratuita di Azure](http://www.windowsazure.com/pricing/free-trial/).  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   

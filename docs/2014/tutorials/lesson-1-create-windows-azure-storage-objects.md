@@ -10,14 +10,14 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154348"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176102"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lezione 1: Creare oggetti di archiviazione di Azure
+# <a name="lesson-1-create-azure-storage-objects"></a>Lezione 1: Creare oggetti di Archiviazione di Azure
   Prima di creare i backup di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'archiviazione del cloud, è necessario creare prima un account di archiviazione e, successivamente, un contenitore BLOB. Nella lezione 1 vengono illustrati i passaggi per accedere al portale di gestione di Azure, creando un account di archiviazione e un contenitore BLOB.  
   
 ## <a name="create-a-storage-account"></a>Creare un account di archiviazione  
