@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984586"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123164"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_ SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -89,7 +89,7 @@ Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 e versioni successive)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 e versioni successive)                          |
 | MongoDB o CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 e versioni successive)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 e versioni successive) - solo Windows           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 e versioni successive) - solo Windows           |
 | Operazioni bulk             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 e versioni successive)                  |
 
 Percorso:
@@ -792,6 +792,24 @@ WITH
 ,    TYPE       = HADOOP
 )
 [;]
+```
+
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Creare un'origine dati esterna per fare riferimento alla connettività Polybase ad Azure Data Lake Store Gen2
+
+Non è necessario specificare SECRET quando ci si connette a un account Azure Data Lake Store Gen2 con il meccanismo [Identità gestita](/azure/active-directory/managed-identities-azure-resources/overview
+).
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
 ```
 
 ## <a name="see-also"></a>Vedere anche
