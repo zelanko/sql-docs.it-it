@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231706"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123121"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni. Questo è anche possibile in misura minore durante l'aggiornamento da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a una nuova versione.
 
-A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e per tutte le nuove versioni, tutte le modifiche di Query Optimizer sono associate al livello di compatibilità del database più recente, quindi i piani non vengono modificati esattamente nel punto di aggiornamento, ma quando un utente passa dall'opzione di database `COMPATIBILITY_LEVEL` alla versione più recente disponibile. Per altre informazioni sulle modifiche a Query Optimizer introdotte in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vedere [Stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md). Per altre informazioni sui livelli di compatibilità e sul loro possibile effetto sugli aggiornamenti, vedere [Livelli di compatibilità e aggiornamenti di SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e per tutte le nuove versioni, tutte le modifiche di Query Optimizer sono associate al livello di compatibilità del database più recente, quindi i piani non vengono modificati esattamente nel punto di aggiornamento, ma quando un utente passa dall'opzione di database `COMPATIBILITY_LEVEL` alla versione più recente disponibile. Per altre informazioni sulle modifiche a Query Optimizer introdotte in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vedere [Stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md). Per altre informazioni sui livelli di compatibilità e sul loro possibile effetto sugli aggiornamenti, vedere [Livelli di compatibilità e aggiornamenti del motore di database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 Questa funzionalità di collegamento offerta dal livello di compatibilità del database in combinazione con Query Store offre un livello ottimale di controllo delle prestazioni delle query nel processo di aggiornamento, se l'aggiornamento segue il flusso di lavoro consigliato illustrato di seguito. Per altre informazioni sul flusso di lavoro consigliato per l'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare il Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -210,7 +210,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 È necessaria l'appartenenza al ruolo **db_owner**.
   
 ## <a name="see-also"></a>Vedere anche  
- [Livelli di compatibilità e aggiornamenti di SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Livelli di compatibilità e aggiornamenti del motore di database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Modificare la modalità di compatibilità del database e usare Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

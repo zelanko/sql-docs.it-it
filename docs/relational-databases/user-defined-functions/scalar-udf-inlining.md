@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fc60a102a56aa5cb8c749db93290d20ec4b7f30e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126246"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030333"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -123,7 +123,7 @@ Il piano di esecuzione per questa query in SQL Server 2017 (livello di compatibi
 
 ![Piano di query senza inlining](./media/query-plan-without-udf-inlining.png)
 
-Come illustrato dal piano, SQL Server adotta una strategia semplice: per ogni tupla nella tabella `CUSTOMER`, chiama la funzione definita dall'utente e genera l'output dei risultati. Questa strategia è ingenua e inefficiente. Con l'inlining, una funzione definita dall'utente di questo tipo viene trasformata in una sottoquery scalare equivalente, che viene inserita nella query chiamante al posto della funzione definita dall'utente.
+Come illustrato dal piano, SQL Server adotta una strategia semplice: per ogni tupla nella tabella `CUSTOMER`, chiama la funzione definita dall'utente e genera l'output dei risultati. Questa strategia è semplicistica e inefficiente. Con l'inlining, una funzione definita dall'utente di questo tipo viene trasformata in una sottoquery scalare equivalente, che viene inserita nella query chiamante al posto della funzione definita dall'utente.
 
 Per la stessa query, il piano con l'inlining della funzione definita dall'utente ha l'aspetto seguente.
 

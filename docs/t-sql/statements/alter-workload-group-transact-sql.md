@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091748"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026226"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *group_name* | "**default**"  
+ *group_name* | "**default**"       
  Nome di un gruppo di carico di lavoro esistente definito dall'utente o del gruppo di carico di lavoro predefinito di Resource Governor.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Per i gruppi del carico di lavoro e pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.  
   
- IMPORTANCE = { LOW | MEDIUM | HIGH }  
+ IMPORTANCE = { LOW | **MEDIUM** | HIGH }       
  Specifica l'importanza relativa di una richiesta nel gruppo del carico di lavoro. I possibili valori di importanza sono i seguenti:  
   
 -   LOW  
@@ -71,30 +71,29 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con diversa importanza e interni allo stesso pool di risorse influiscono l'uno sull'altro, ma non sui gruppi di carico di lavoro in un altro pool di risorse.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
- Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. La percentuale è relativa alla dimensioni del pool di risorse specificata da MAX_MEMORY_PERCENT.  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
+ Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT.  
+
+*value* è un integer fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
   
 > [!NOTE]  
 > La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
   
- *value* deve essere 0 o un valore intero positivo. L'intervallo consentito per *value* è compreso tra 0 e 100. L'impostazione predefinita di *value* è 25.  
-  
- Si noti quanto segue:  
-  
--   Impostando *value* su 0 si impedisce l'esecuzione delle query con operazioni SORT e HASH JOIN nei gruppi del carico di lavoro definiti dall'utente.  
-  
--   Non è consigliabile impostare *value* su un valore maggiore di 70 perché è possibile che il server non possa riservare una quantità sufficiente di memoria se sono in esecuzione altre query simultaneamente. È possibile che venga restituito l'errore di timeout query 8645.  
+> [!IMPORTANT]
+> Impostando *value* su 0 si impedisce l'esecuzione delle query con operazioni SORT e HASH JOIN nei gruppi del carico di lavoro definiti dall'utente.     
+>
+> Non è consigliabile impostare *value* su un valore maggiore di 70 perché è possibile che il server non possa riservare una quantità sufficiente di memoria se sono in esecuzione altre query simultaneamente. È possibile che venga restituito l'errore di timeout query 8645.      
   
 > [!NOTE]  
->  Se i requisiti di memoria della query superano il limite specificato da questo parametro, il server effettua le operazioni seguenti:  
+> Se i requisiti di memoria della query superano il limite specificato da questo parametro, il server effettua le operazioni seguenti:  
 >   
->  Per i gruppi di carico di lavoro definiti dall'utente, il server tenta di ridurre il grado di parallelismo delle query fino a quando i requisiti di memoria non rientrano nel limite o fino a quando il grado di parallelismo non è uguale a 1. Se i requisiti di memoria delle query sono ancora superiori al limite, si verifica l'errore 8657.  
+> -  Per i gruppi di carico di lavoro definiti dall'utente, il server tenta di ridurre il grado di parallelismo delle query fino a quando i requisiti di memoria non rientrano nel limite o fino a quando il grado di parallelismo non è uguale a 1. Se i requisiti di memoria delle query sono ancora superiori al limite, si verifica l'errore 8657.  
 >   
->  Per i gruppi di carico di lavoro interni e predefiniti, il server permette alla query di ottenere la memoria necessaria.  
+> -  Per i gruppi di carico di lavoro interni e predefiniti, il server permette alla query di ottenere la memoria necessaria.  
 >   
->  In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.  
+> In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.  
   
- REQUEST_MAX_CPU_TIME_SEC =*value*  
+ REQUEST_MAX_CPU_TIME_SEC = *value*       
  Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value* è 0, ovvero un valore illimitato.  
   
 > [!NOTE]  
@@ -111,7 +110,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *value* deve essere un numero intero positivo. L'impostazione predefinita per *value*, 0, usa un calcolo interno basato sul costo della query per determinare il tempo massimo.  
   
- MAX_DOP =*value*  
+ MAX_DOP =*value*       
  Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *value* deve essere 0 o un numero intero positivo, da 1 a 255. Quando *value* è 0, il server sceglie il grado massimo di parallelismo. Si tratta dell'impostazione predefinita e consigliata.  
   
 > [!NOTE]  
@@ -128,14 +127,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
 -   Il valore MAX_DOP del gruppo di carico di lavoro ha sempre la precedenza sull'opzione "max degree of parallelism" di sp_configure.  
   
--   Se la query viene contrassegnata come seriale (MAX_DOP = 1 ) in fase di compilazione, durante l'esecuzione non potrà ritornare a parallela, indipendentemente dal gruppo di carico di lavoro o dall'impostazione sp_configure.  
+-   Se la query viene contrassegnata come seriale (MAX_DOP = 1) in fase di compilazione, durante l'esecuzione non potrà ritornare a parallela, indipendentemente dal gruppo di carico di lavoro o dall'impostazione sp_configure.  
   
  Dopo la configurazione di DOP, è possibile diminuire solo la richiesta di memoria concessa. La riconfigurazione del gruppo di carico di lavoro non è visibile durante l'attesa nella coda della memoria concessa.  
   
- GROUP_MAX_REQUESTS =*value*  
+ GROUP_MAX_REQUESTS = *value*      
  Viene specificato il numero massimo di richieste simultanee eseguibili nel gruppo del carico di lavoro. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value*, vale a dire 0, consente un numero illimitato di richieste. Quando viene raggiunto il numero massimo di richieste simultanee, un utente in quel gruppo può effettuare l'accesso, ma viene posizionato in uno stato di attesa fino a quando le richieste simultanee non sono inferiori al valore specificato.  
   
- USING { *pool_name* | "**default**" }  
+ USING { *pool_name* | "**default**" }      
  Associa il gruppo del carico di lavoro al pool di risorse definito dall'utente identificato da *pool_name*, in modo da inserire il gruppo del carico di lavoro nel pool di risorse. Se *pool_name* non viene specificato o non si usa l'argomento USING, il gruppo del carico di lavoro viene inserito nel pool predefinito di Resource Governor.  
   
  Se utilizzata con ALTER WORKLOAD GROUP, l'opzione "default" deve essere delimitata da virgolette ("") o parentesi quadrate ([]) per evitare conflitti con DEFAULT, una parola riservata di sistema. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
@@ -164,7 +163,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  La quantità di memoria utilizzata per la creazione dell'indice in una tabella partizionata non allineata è proporzionale al numero di partizioni coinvolte.  Se la memoria totale necessaria supera il limite per query (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto dal gruppo di carico di lavoro di Resource Governor, la creazione dell'indice potrebbe non riuscire. Poiché il gruppo di carico di lavoro "default" consente a una query di superare il limite per query con la memoria minima necessaria per la compatibilità con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utente potrebbe essere in grado di eseguire la stessa creazione dell'indice in un gruppo di carico di lavoro "default", se nel pool di risorse "default" è configurata una quantità di memoria totale sufficiente per eseguire la query.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione CONTROL SERVER.  
+ È richiesta l'autorizzazione `CONTROL SERVER`.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene indicato come modificare l'importanza delle richieste nel gruppo predefinito da `MEDIUM` a `LOW`.  
@@ -177,7 +176,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
- Nell'esempio seguente viene indicato come spostare un gruppo di carico di lavoro dal pool in cui si trova al pool predefinito.  
+ L'esempio seguente mostra come spostare un gruppo di carico di lavoro dal pool in cui si trova al pool predefinito.  
   
 ```sql  
 ALTER WORKLOAD GROUP adHoc  

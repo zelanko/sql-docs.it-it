@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986227"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190381"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|Al termine della pubblicazione, tutti i vincoli verranno verificati come un unico set, evitando errori di dati causati da un controllo o da un vincolo di chiave esterna al centro della pubblicazione. Se impostata su False, i vincoli verranno pubblicati senza il controllo dei dati corrispondenti.|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|Include istruzioni di aggiornamento alla fine dello script di pubblicazione.|
 |**/p:**|Storage=({File&#124;Memory})|Specifica la modalità di archiviazione degli elementi durante la compilazione del modello di database. Per motivi di prestazioni, l'impostazione predefinita è InMemory. In caso di database di dimensioni estese, è necessaria l'archiviazione di file di cui è stato eseguito il backup.|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Specifica se gli errori rilevati durante la verifica della pubblicazione devono essere considerati come avvisi. Il controllo viene effettuato a fronte del piano di distribuzione generato prima che il piano venga eseguito nel database di destinazione. La verifica del piano consente di rilevare problemi quali la perdita di oggetti della sola destinazione, ad esempio gli indici, che devono essere eliminati per apportare una modifica. Con la verifica è anche possibile individuare le dipendenze, ad esempio una tabella o una visualizzazione, presenti a causa di un riferimento a un progetto composito ma che non esistono nel database di destinazione. È possibile scegliere di eseguire questa operazione per ottenere un elenco completo di tutti i problemi, anziché fare in modo che l'azione di pubblicazione venga arrestata al primo errore.|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifica se devono essere generati avvisi quando vengono rilevate differenze negli oggetti che non possono essere modificati, ad esempio quando risultano differenti la dimensione o i percorsi di un file.|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Specifica se gli errori rilevati durante la verifica della pubblicazione devono essere considerati come avvisi. Il controllo viene effettuato a fronte del piano di distribuzione generato prima che il piano venga eseguito nel database di destinazione. La verifica del piano consente di rilevare problemi quali la perdita di oggetti della sola destinazione, ad esempio gli indici, che devono essere eliminati per apportare una modifica. Con la verifica è anche possibile individuare le dipendenze, ad esempio una tabella o una visualizzazione, presenti a causa di un riferimento a un progetto composito ma che non esistono nel database di destinazione. È possibile scegliere di eseguire questa operazione per ottenere un elenco completo di tutti i problemi, anziché fare in modo che l'azione di pubblicazione venga arrestata al primo errore.
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifica se devono essere generati avvisi quando vengono rilevate differenze negli oggetti che non possono essere modificati, ad esempio quando risultano differenti la dimensione o i percorsi di un file.|
 |**/p:**|VerifyCollationCompatibility = (valore BOOLEANo ' true ')|Specifica se viene verificata la compatibilità delle regole di confronto.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifica se prima della pubblicazione devono essere eseguiti i controlli che arresteranno l'azione di pubblicazione qualora vengono rilevati problemi che potrebbero bloccare l'esecuzione della pubblicazione. Ad esempio, l'azione di pubblicazione potrebbe venire arrestata se si hanno chiavi esterne nel database di destinazione che non esistono nel progetto di database e tale situazione comporta la generazione di errori durante la pubblicazione.|
 |

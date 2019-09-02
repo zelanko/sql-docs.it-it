@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768686"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030324"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
 
 ## <a name="limitations-or-exclusions"></a>Limitazioni o esclusioni
 
-- Il server di distribuzione locale non è supportato. Ad esempio, il server di pubblicazione e il server di distribuzione devono trovarsi in istanze diverse di SQL Server. Un server di pubblicazione che usa se stesso come server di distribuzione, ovvero come server di distribuzione locale, non supporta i database di distribuzione in un gruppo di disponibilità.
+- Il server di distribuzione locale non è supportato. Ad esempio, il server di pubblicazione e il server di distribuzione devono trovarsi in istanze diverse di SQL Server. Queste istanze possono essere ospitate nello stesso set di nodi.  Un server di pubblicazione che usa se stesso come server di distribuzione, ovvero come server di distribuzione locale, non supporta i database di distribuzione in un gruppo di disponibilità.
 - Il server di pubblicazione Oracle non è supportato.
 - ma non la replica di tipo merge.
 - La replica transazionale con sottoscrittori ad aggiornamento immediato o in coda non è supportata.
 - La replica peer-to-peer non è supportata.
-- Tutte le istanze di SQL Server che ospitano le repliche del database di distribuzione devono essere SQL Server 2017 CU 6 o versione successiva. 
+- Tutte le istanze di SQL Server 2017 che ospitano le repliche del database di distribuzione devono essere SQL Server 2017 CU 6 o versione successiva. 
+- Tutte le istanze di SQL Server 2016 che ospitano le repliche del database di distribuzione devono essere SQL Server 2016 SP2-CU3 o versione successiva.
 - Tutte le istanze di SQL Server che ospitano le repliche del database di distribuzione devono essere della stessa versione, tranne nel breve intervallo di tempo durante il quale viene eseguito l'aggiornamento.
 - Il database di distribuzione deve essere in modalità di recupero con registrazione completa.
 - Per il ripristino e per consentire il troncamento del log delle transazioni, configurare il backup del log delle transazioni e il backup completo.

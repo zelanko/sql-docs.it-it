@@ -1,7 +1,7 @@
 ---
 title: Extensible Key Management (EKM) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049879"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148789"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), l'uso del provider di *API di crittografia Microsoft* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Con la crescente richiesta di conformità con le normative e il problema della privacy dei dati, le organizzazioni sfruttano la crittografia come modalità per fornire una soluzione di "difesa approfondita". Questo approccio risulta spesso poco pratico se si utilizzano solo gli strumenti di gestione della crittografia dei database. I produttori di hardware forniscono prodotti che consentono la gestione aziendale delle chiavi usando i *Moduli di sicurezza hardware* (HSM, Hardware Security Modules). I dispositivi HSM consentono di archiviare le chiavi di crittografia su moduli hardware o software. Questa soluzione è più sicura poiché le chiavi di crittografia non risiedono insieme ai dati di crittografia.  

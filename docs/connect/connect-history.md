@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957517"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154179"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Cronologia driver per Microsoft SQL Server
 
@@ -57,7 +57,7 @@ Introdotta in 2009 come progetto open source, i driver Microsoft per PHP per SQL
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Driver Microsoft per node. js per SQL Server
 
-Il driver Microsoft per node. js per SQL Server consente alle applicazioni node. js in Microsoft Windows e Microsoft Windows Azure di accedere Microsoft SQL Server e il database SQL di Microsoft Azure. Le attività di sviluppo non sono più incentrate su questo driver. Non è consigliabile creare nuove applicazioni usando il driver Microsoft per node. js per SQL Server.
+Il driver Microsoft per node. js per SQL Server consente alle applicazioni node. js in Microsoft Windows e Microsoft Azure di accedere Microsoft SQL Server e database SQL di Microsoft Azure. Le attività di sviluppo non sono più incentrate su questo driver. Non è consigliabile creare nuove applicazioni usando il driver Microsoft per node. js per SQL Server.
 
 Per ulteriori informazioni sul driver Microsoft per node. js per SQL Server, vedere [WindowsAzure/node-SqlServer](https://github.com/Azure/node-sqlserver).
 

@@ -14,27 +14,33 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: facdfe832b9bd7889d699f8c17f6397ba5d3dd4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934838"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122965"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   Gli articoli di questa sezione descrivono come eseguire l'aggiornamento del motore di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-1.  [Scegliere un metodo di aggiornamento del motore di database](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Prima di iniziare a eseguire un aggiornamento, è necessario comprendere i vari metodi di aggiornamento. Questo articolo descrive i metodi di aggiornamento e i passaggi previsti per ognuno.  
+1.  [Scegliere un metodo di aggiornamento del motore di database](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Prima di iniziare a eseguire un aggiornamento, è necessario comprendere i vari metodi di aggiornamento. Questo articolo descrive i metodi di aggiornamento e i passaggi previsti per ognuno.  
   
-2.  [Pianificare e testare il piano di aggiornamento del motore di database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Dopo aver esaminato i metodi di aggiornamento, si è pronti per sviluppare il metodo di aggiornamento appropriato per l'ambiente e per testarlo prima di aggiornare l'ambiente esistente. Questo articolo illustra lo sviluppo di un piano di aggiornamento e il relativo test.  
+2.  [Pianificare e testare il piano di aggiornamento del motore di database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Dopo aver esaminato i metodi di aggiornamento, si è pronti per sviluppare il metodo di aggiornamento appropriato per l'ambiente e per testarlo prima di aggiornare l'ambiente esistente. Questo articolo illustra lo sviluppo di un piano di aggiornamento e il relativo test.  
   
-3.  [Completare l'aggiornamento al motore di database](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Dopo aver aggiornato i database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è necessario eseguire passaggi aggiuntivi, tra cui un nuovo backup, l'abilitazione di nuove funzionalità e il ripopolamento di cataloghi full-text. Questo articolo tratta tali passaggi.  
+3.  [Completare l'aggiornamento del motore di database](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Dopo aver aggiornato il motore di database a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e quando i database sono online, è necessario eseguire passaggi aggiuntivi, tra cui un nuovo backup, l'aggiornamento delle funzionalità dei database per abilitare le nuove funzionalità e il ripopolamento di cataloghi full-text. Questo articolo tratta tali passaggi.  
   
-4.  [Modificare la modalità di compatibilità del database e usare l'archivio query](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uno dei passaggi da eseguire dopo aver aggiornato [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prevede l'abilitazione di nuove funzionalità modificando la modalità di compatibilità del database e usando quindi l'archivio query per monitorare le prestazioni. Questo articolo descrive il processo e propone un flusso di lavoro consigliato.  
-  
-5.  [Vantaggi delle nuove funzionalità di SQL Server](https://www.microsoft.com/sql-server/sql-server-2017) Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
+4.  Aggiornare il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**Si applica a:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Uno dei passaggi da eseguire quando i database sono online nella nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] può essere l'aggiornamento della modalità di funzionamento dei database per abilitare le nuove funzionalità modificando il livello di compatibilità del database. Questa operazione può essere eseguita manualmente o tramite Assistente ottimizzazione query. 
+
+    - [Modificare la modalità di compatibilità del database e usare Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Dopo aver modificato manualmente il livello di compatibilità del database, usare Query Store per monitorare le prestazioni e identificare le possibili regressioni. Questo articolo descrive il processo consigliato e propone un flusso di lavoro consigliato.  
+
+    - [Modificare la modalità di compatibilità del database con Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md). In alternativa alla modifica manuale, usare **Assistente ottimizzazione query** per eseguire in modo guidato il processo consigliato di modifica del livello di compatibilità del database. Questo articolo illustra questo processo e fornisce istruzioni sul flusso di lavoro di Assistente ottimizzazione query.  
+
+    Per altre informazioni sulle nuove funzionalità e sui comportamenti migliorati disponibili dopo la modifica del livello di compatibilità del database, vedere [Differenze tra i livelli di compatibilità](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
+
+5.  [Scoprire le nuove funzionalità di SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
   
   

@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086765"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148831"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ Definisce una data in combinazione con un'ora del giorno con considerazione del 
 |Utilizzo|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formati predefiniti per i valori letterali stringa (utilizzati per il client legacy)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo di date|Da 01-01-0001 a 31-12-9999<br /><br /> Dal 1 gennaio 1 al 31 dicembre 9999|  
-|Intervallo di ore|da 00:00:00 a 23:59:59,9999999 (i secondi frazionari non sono supportati in Informatica)|  
-|Intervallo di differenze di fuso orario|da -14:00 a +14:00 (la differenza di fuso orario viene ignorata in Informatica)|  
-|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59 indicante i secondi.<br /><br /> n* rappresenta un numero composto da un numero di cifre da 0 a 7 e compreso tra 0 e 9999999, indicante i secondi frazionari. I secondi frazionari non sono supportati in Informatica.<br /><br /> hh rappresenta un numero di due cifre compreso tra -14 e +14. La differenza di fuso orario viene ignorata in Informatica.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59. La differenza di fuso orario viene ignorata in Informatica.|  
+|Intervallo di ore|da 00:00:00 a 23:59:59.9999999|  
+|Intervallo di differenze di fuso orario|Da -14:00 a +14:00|  
+|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59 indicante i secondi.<br /><br /> n* rappresenta un numero composto da un numero di cifre da 0 a 7 e compreso tra 0 e 9999999, indicante i secondi frazionari.<br /><br /> hh rappresenta un numero di due cifre compreso tra -14 e +14. <br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59.|  
 |Lunghezza in caratteri|Da un minimo di 26 posizioni (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) a un massimo di 34 (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Precisione, scala|Vedere la tabella riportata di seguito.|  
 |Dimensioni dello spazio di archiviazione|10 byte, fissa è l'impostazione predefinita con l'impostazione predefinita di 100 ns di precisione in secondi frazionari.|  

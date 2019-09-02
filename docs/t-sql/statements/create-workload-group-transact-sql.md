@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/05/2019
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2528d770b1ad7e08898deb8e34350ccb3ad1ccfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948096"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026217"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -55,9 +55,11 @@ CREATE WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Argomenti
 
-*group_name* Nome definito dall'utente per il gruppo di carico di lavoro. *group_name* è un valore alfanumerico, può essere composto da un massimo di 128 caratteri, deve essere univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere conforme alle regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md).
+*group_name*     
+Nome definito dall'utente per il gruppo di carico di lavoro. *group_name* è un valore alfanumerico, può essere composto da un massimo di 128 caratteri, deve essere univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere conforme alle regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
-IMPORTANCE = { LOW | **MEDIUM** | HIGH } Specifica l'importanza relativa di una richiesta nel gruppo del carico di lavoro. L'importanza è compresa fra le seguenti, MEDIUM è l'impostazione predefinita:
+IMPORTANCE = { LOW | **MEDIUM** | HIGH }     
+Specifica l'importanza relativa di una richiesta nel gruppo del carico di lavoro. L'importanza è compresa fra le seguenti, MEDIUM è l'impostazione predefinita:
 
 - LOW
 - MEDIUM (valore predefinito)
@@ -68,33 +70,44 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH } Specifica l'importanza relativa di una 
 
 IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con diversa importanza e interni allo stesso pool di risorse influiscono l'uno sull'altro, ma non sui gruppi di carico di lavoro in un altro pool di risorse.
 
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT. *value* è un valore Integer fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e float a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], con un'impostazione predefinita di 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
+REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
+Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT. 
 
-> [!NOTE]
-> La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.
->
-> - Impostando *value* su 0 si impedisce l'esecuzione delle query con operazioni SORT e HASH MATCH nei gruppi di carico di lavoro definiti dall'utente. > - Non è consigliabile impostare *value* su un valore maggiore di 70 perché è possibile che il server non possa riservare una quantità sufficiente di memoria se sono in esecuzione altre query simultaneamente. È possibile che venga restituito l'errore di timeout query 8645.
-> - Se i requisiti di memoria della query superano il limite specificato da questo parametro, il server effettua le operazioni seguenti:
->
-> Per i gruppi di carico di lavoro definiti dall'utente, il server tenta di ridurre il grado di parallelismo delle query fino a quando i requisiti di memoria non rientrano nel limite o fino a quando il grado di parallelismo non è uguale a 1. Se i requisiti di memoria delle query sono ancora superiori al limite, si verifica l'errore 8657.
->
-> Per i gruppi di carico di lavoro interni e predefiniti, il server permette alla query di ottenere la memoria necessaria.
->
-> In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.
+*value* è un integer fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
 
-REQUEST_MAX_CPU_TIME_SEC = *value* Specifica il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value* è 0, ovvero un valore illimitato.
+> [!NOTE]  
+> La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
+  
+> [!IMPORTANT]
+> Impostando *value* su 0 si impedisce l'esecuzione delle query con operazioni SORT e HASH JOIN nei gruppi del carico di lavoro definiti dall'utente.     
+>
+> Non è consigliabile impostare *value* su un valore maggiore di 70 perché è possibile che il server non possa riservare una quantità sufficiente di memoria se sono in esecuzione altre query simultaneamente. È possibile che venga restituito l'errore di timeout query 8645.      
+  
+> [!NOTE]  
+> Se i requisiti di memoria della query superano il limite specificato da questo parametro, il server effettua le operazioni seguenti:  
+>   
+> -  Per i gruppi di carico di lavoro definiti dall'utente, il server tenta di ridurre il grado di parallelismo delle query fino a quando i requisiti di memoria non rientrano nel limite o fino a quando il grado di parallelismo non è uguale a 1. Se i requisiti di memoria delle query sono ancora superiori al limite, si verifica l'errore 8657.  
+>   
+> -  Per i gruppi di carico di lavoro interni e predefiniti, il server permette alla query di ottenere la memoria necessaria.  
+>   
+> In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.  
+
+REQUEST_MAX_CPU_TIME_SEC = *value*     
+Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value* è 0, ovvero un valore illimitato.
 
 > [!NOTE]
 > Per impostazione predefinita, Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
 > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
 
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value* Specifica il tempo massimo, in secondi, che una query può attendere prima che diventi disponibile una concessione di memoria (memoria buffer di lavoro). *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value*, 0, usa un calcolo interno basato sul costo della query per determinare il tempo massimo.
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*     
+Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value*, 0, usa un calcolo interno basato sul costo della query per determinare il tempo massimo.
 
 > [!NOTE]
 > L'esecuzione della query può riuscire anche in caso di timeout relativo alla concessione di memoria. L'esito negativo di una query si verifica solo se sono in esecuzione più query simultaneamente. In caso contrario, la query può ottenere solo la minima concessione di memoria, con una conseguente riduzione delle prestazioni.
 
-MAX_DOP = *value* Specifica il grado massimo di parallelismo (DOP) per le richieste parallele. *value* deve essere 0 o un valore intero positivo. L'intervallo consentito per *value* è compreso tra 0 e 64. L'impostazione predefinita per *value*, 0, usa l'impostazione globale. MAX_DOP viene gestito nel modo seguente:
+MAX_DOP = *value*     
+Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *value* deve essere 0 o un valore intero positivo. L'intervallo consentito per *value* è compreso tra 0 e 64. L'impostazione predefinita per *value*, 0, usa l'impostazione globale. MAX_DOP viene gestito nel modo seguente:
 
 - MAX_DOP, inteso come hint per la query, è efficace fintanto che non supera il valore MAX_DOP del gruppo del carico di lavoro. Se l'hint per la query MAXDOP supera il valore configurato con Resource Governor, nel motore di database viene utilizzato il valore MAXDOP di Resource Governor.
 - MAX_DOP, inteso come hint per la query, ha sempre la precedenza sull'opzione "max degree of parallelism" di sp_configure.
@@ -102,16 +115,19 @@ MAX_DOP = *value* Specifica il grado massimo di parallelismo (DOP) per le richie
 - Se la query viene contrassegnata come seriale in fase di compilazione, durante l'esecuzione non potrà ritornare a parallela, indipendentemente dal gruppo del carico di lavoro o dall'impostazione sp_configure.
 - Dopo la configurazione di DOP, è possibile diminuire solo la richiesta di memoria concessa. La riconfigurazione del gruppo di carico di lavoro non è visibile durante l'attesa nella coda della memoria concessa.
 
-GROUP_MAX_REQUESTS = *value* Specifica il numero massimo di richieste simultanee eseguibili nel gruppo del carico di lavoro. *value* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *value* è 0 e consente un numero illimitato di richieste. Quando viene raggiunto il numero massimo di richieste simultanee, un utente in quel gruppo può effettuare l'accesso, ma viene posizionato in uno stato di attesa fino a quando le richieste simultanee non sono inferiori al valore specificato.
+GROUP_MAX_REQUESTS = *value*     
+Viene specificato il numero massimo di richieste simultanee eseguibili nel gruppo del carico di lavoro. *value* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *value* è 0 e consente un numero illimitato di richieste. Quando viene raggiunto il numero massimo di richieste simultanee, un utente in quel gruppo può effettuare l'accesso, ma viene posizionato in uno stato di attesa fino a quando le richieste simultanee non sono inferiori al valore specificato.
 
-USING { *pool_name* |  **"default"** } Associa il gruppo del carico di lavoro al pool di risorse definito dall'utente identificato da *pool_name*. In questo modo, il gruppo del carico di lavoro viene inserito nel pool di risorse. Se *pool_name* non viene specificato o non si usa l'argomento USING, il gruppo del carico di lavoro viene inserito nel pool predefinito di Resource Governor.
+USING { *pool_name* |  **"default"** }     
+Associa il gruppo del carico di lavoro al pool di risorse definito dall'utente identificato da *pool_name*. In questo modo, il gruppo del carico di lavoro viene inserito nel pool di risorse. Se *pool_name* non viene specificato o non si usa l'argomento USING, il gruppo del carico di lavoro viene inserito nel pool predefinito di Resource Governor.
 
 "default" è una parola riservata e, se utilizzata con USING, deve essere delimitata da virgolette ("") o parentesi quadre ([]).
 
 > [!NOTE]
 > Per i gruppi di carico di lavoro e i pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.
 
-EXTERNAL external_pool_name | "default" **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+EXTERNAL external_pool_name | "default"     
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Il gruppo del carico di lavoro può specificare un pool di risorse esterne. È possibile definire un gruppo del carico di lavoro e associarlo a 2 pool:
 
@@ -119,7 +135,6 @@ Il gruppo del carico di lavoro può specificare un pool di risorse esterne. È p
 - Un pool di risorse esterne per i processi esterni. Per altre informazioni, vedere [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ## <a name="remarks"></a>Remarks
-
 Quando si usa `REQUEST_MEMORY_GRANT_PERCENT`, per la creazione dell'indice è possibile usare più memoria dell'area di lavoro di quella concessa inizialmente, al fine di migliorare le prestazioni. Tale gestione particolare è supportata da Resource Governor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La concessione iniziale, così come qualsiasi concessione supplementare, è tuttavia limitata dalle impostazioni del pool di risorse e del gruppo di carico di lavoro.
 
 ### <a name="index-creation-on-a-partitioned-table"></a>Creazione dell'indice in una tabella partizionata

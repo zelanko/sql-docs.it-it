@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495455"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110278"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
 
@@ -47,7 +47,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 ## <a name="click-a-product"></a>Fare clic su un prodotto.
 
-Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Viene visualizzato contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -1719,7 +1719,7 @@ Per determinare lo stato di questa opzione, è possibile esaminare la colonna is
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION {ON | OFF}         
-Imposta il database in modo che sia crittografato (ON) o non crittografato (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+Imposta il database per l'utilizzo della crittografia (ON) o no (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su **READ ONLY**, l'operazione di crittografia del database avrà esito negativo.
 
@@ -1784,7 +1784,7 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]         
-Verifica se Query Store è abilitato nel database e controlla la rimozione del contenuto di Query Store.
+Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query.
 
 ON         
 Abilita Query Store.
@@ -1796,7 +1796,7 @@ CLEAR
 Rimuove il contenuto di Query Store.
 
 OPERATION_MODE         
-Descrive la modalità di funzionamento di Query Store. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.
+Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.
 
 CLEANUP_POLICY         
 Descrive i criteri di conservazione dati di Query Store. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni in cui le informazioni per una query vengono conservate nell'archivio query. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.
@@ -2455,7 +2455,7 @@ Per determinare lo stato di questa opzione, è possibile esaminare la colonna is
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION { ON | OFF }         
-Imposta il database in modo che sia crittografato (ON) o non crittografato (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+Imposta il database per l'utilizzo della crittografia (ON) o no (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su **READ ONLY**, l'operazione di crittografia del database avrà esito negativo.
 
@@ -2517,7 +2517,7 @@ Per determinare l'impostazione corrente di questa opzione, è possibile esaminar
 **\<query_store_options> ::=**         
 
 ON | OFF | CLEAR [ ALL ]         
-Verifica se Query Store è abilitato nel database e controlla la rimozione del contenuto di Query Store.
+Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query.
 
 ON         
 Abilita Query Store.
@@ -2529,7 +2529,7 @@ CLEAR
 Rimuove il contenuto di Query Store.
 
 OPERATION_MODE         
-Descrive la modalità di funzionamento di Query Store. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.
+Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.
 
 CLEANUP_POLICY         
 Descrive i criteri di conservazione dati di Query Store. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni in cui le informazioni per una query vengono conservate nell'archivio query. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 Nome del database da modificare.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Si applica ad Azure SQL Data Warehouse (anteprima)
+**Si applica a** Azure SQL Data Warehouse (anteprima)
 
 Questo comando deve essere eseguito mentre si è connessi al database `master`.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in `sys.databases` per visualizzare l'impostazione di memorizzazione nella cache dei risultati per un database.  
 
@@ -2947,6 +2954,21 @@ Specifica che i set di risultati delle query restituiti da questo database non v
 comando|Simile a|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Si applica a** Azure SQL Data Warehouse (anteprima)
+
+ON Abilita l'opzione READ_COMMITTED_SNAPSHOT a livello di database.
+
+OFF disattiva l'opzione READ_COMMITTED_SNAPSHOT a livello di database.
+
+L'impostazione di READ_COMMITTED_SNAPSHOT su ON o OFF per un database comporterà la terminazione di tutte le connessioni aperte al database.  È possibile apportare questa modifica durante la finestra di manutenzione del database o attendere fino a quando non esiste alcuna connessione attiva al database, ad eccezione della connessione che esegue il comando ALTER DATABASE.  Il database non deve essere in modalità utente singolo.  La modifica dell'impostazione READ_COMMITTED_SNAPSHOT a livello di sessione non è supportata.  Per verificare questa impostazione per un database, controllare la colonna is_read_committed_snapshot_on in sys.databases.
+
+In un database con l'impostazione READ_COMMITTED_SNAPSHOT abilitata, è possibile che le query riscontrino prestazioni più lente a causa dell'analisi delle versioni se sono presenti più versioni dei dati. Anche le transazioni aperte lunghe possono causare un aumento delle dimensioni del database in caso di modifiche dei dati da parte di queste transazioni che bloccano la pulizia delle versioni.  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 Il set di risultati memorizzato nella cache viene riutilizzato per una query se vengono soddisfatti tutti i requisiti seguenti:
@@ -2959,12 +2981,9 @@ Dopo l'attivazione della memorizzazione nella cache del set di risultati per un 
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Richiede le autorizzazioni seguenti:
+Per impostare l'opzione RESULT_SET_CACHING, un utente deve avere un account di accesso di tipo entità di livello server, ovvero quello creato dal processo di provisioning, oppure essere un membro del ruolo del database `dbmanager`.  
 
-- Accesso principale di livello server (creato dal processo di provisioning) oppure
-- Membro del ruolo del database `dbmanager`.
-
-Il proprietario del database può modificare il database solo se è un membro del ruolo dbmanager.
+Per impostare l'opzione READ_COMMITTED_SNAPSHOT, un utente deve avere l'autorizzazione ALTER per il database.
 
 ## <a name="examples"></a>Esempi
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Abilitare l'opzione Read_Committed_Snapshot per un database
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>Vedere anche

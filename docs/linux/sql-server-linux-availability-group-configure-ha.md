@@ -5,17 +5,17 @@ description: Informazioni sulla creazione di un gruppo di disponibilità Always 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027252"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030301"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux
 
@@ -135,7 +135,7 @@ Eseguire **solo uno** degli script seguenti:
 - Creare un gruppo di disponibilità con due repliche sincrone e una replica di configurazione:
 
    >[!IMPORTANT]
-   >Questa architettura consente a qualsiasi edizione di SQL Server di ospitare la terza replica. La terza replica, ad esempio, può essere ospitata in SQL Server Enterprise Edition. In Enterprise Edition l'unico tipo di endpoint valido è `WITNESS`. 
+   >Questa architettura consente a qualsiasi edizione di SQL Server di ospitare la terza replica. La terza replica, ad esempio, può essere ospitata in SQL Server Express Edition. In Express Edition l'unico tipo di endpoint valido è `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ Eseguire **solo uno** degli script seguenti:
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Aggiungere le repliche secondarie al gruppo di disponibilità
 
-L'utente di Pacemaker richiede le autorizzazioni `ALTER`, `CONTROL` e `VIEW DEFINITION` sul gruppo di disponibilità in tutte le repliche. Per concedere le autorizzazioni, eseguire lo script Transact-SQL seguente dopo che il gruppo di disponibilità è stato creato nella replica primaria e in ogni replica secondaria immediatamente dopo l'aggiunta al gruppo di disponibilità. Prima di eseguire lo script, sostituire `<pacemakerLogin>` con il nome dell'account utente di Pacemaker.
+L'utente di Pacemaker richiede le autorizzazioni `ALTER`, `CONTROL` e `VIEW DEFINITION` sul gruppo di disponibilità in tutte le repliche. Per concedere le autorizzazioni, eseguire lo script Transact-SQL seguente dopo che il gruppo di disponibilità è stato creato nella replica primaria e in ogni replica secondaria immediatamente dopo l'aggiunta al gruppo di disponibilità. Prima di eseguire lo script, sostituire `<pacemakerLogin>` con il nome dell'account utente di Pacemaker. Se non è disponibile un account di accesso per Pacemaker, [creare un account di accesso di SQL Server per Pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 Lo script Transact-SQL seguente aggiunge un'istanza di SQL Server a un gruppo di disponibilità denominato `ag1`. Aggiornare lo script per il proprio ambiente. In ogni istanza di SQL Server che ospita una replica secondaria eseguire lo script Transact-SQL seguente per aggiungerla al gruppo di disponibilità.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

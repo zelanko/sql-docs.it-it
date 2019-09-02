@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715288"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059282"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Il repository di esempi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 - [Quorum raddoppia il carico di lavoro del database delle chiavi riducendone al contempo l'utilizzo del 70% grazie all'uso di OLTP in memoria nel database SQL di Azure](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - Con OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], EdgeNet ha migliorato le prestazioni del caricamento batch dei dati e ha rimosso la necessità di mantenere una cache di livello intermedio: [Azienda di servizi dati ottiene l'accesso in tempo reale ai dati dei prodotti con la tecnologia in memoria](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Il Beth Israel Deaconess Medical Center ha migliorato in modo significativo la velocità di inserimento dei dati dai controller di dominio e la gestione dei picchi del carico di lavoro grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
+- Il Beth Israel Deaconess Medical Center ha migliorato in modo significativo la velocità di inserimento dei dati dai controller di dominio e la gestione dei picchi del carico di lavoro grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>Memorizzazione nella cache e stato della sessione
 

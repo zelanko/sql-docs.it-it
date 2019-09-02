@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123164"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190412"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -95,7 +95,7 @@ Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 Percorso:
 
 - `<`Namenode`>` = nome del computer, URI del servizio dei nomi o indirizzo IP di `Namenode` nel cluster Hadoop. PolyBase deve risolvere tutti i nomi DNS usati dal cluster Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = porta su cui è in ascolto l'origine dati esterna. Per trovare la porta in Hadoop, si usa il parametro di configurazione `fs.default.name`. L'impostazione predefinita è 8020.
+- `port` = porta su cui è in ascolto l'origine dati esterna. Per trovare la porta in Hadoop, si usa il parametro di configurazione `fs.defaultFS`. L'impostazione predefinita è 8020.
 - `<container>` = contenitore dell'account di archiviazione che include i dati. I contenitori radice sono di sola lettura, di conseguenza i dati non possono essere riscritti nel contenitore.
 - `<storage_account>` = nome dell'account di archiviazione della risorsa di Azure.
 - `<server_name>` = nome host.
@@ -899,7 +899,7 @@ Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 Percorso:
 
 - `<`Namenode`>` = nome del computer, URI del servizio dei nomi o indirizzo IP di `Namenode` nel cluster Hadoop. PolyBase deve risolvere tutti i nomi DNS usati dal cluster Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = porta su cui è in ascolto l'origine dati esterna. Per trovare la porta in Hadoop, si usa il parametro di configurazione `fs.default.name`. L'impostazione predefinita è 8020.
+- `port` = porta su cui è in ascolto l'origine dati esterna. Per trovare la porta in Hadoop, si usa il parametro di configurazione `fs.defaultFS`. L'impostazione predefinita è 8020.
 - `<container>` = contenitore dell'account di archiviazione che include i dati. I contenitori radice sono di sola lettura, di conseguenza i dati non possono essere riscritti nel contenitore.
 - `<storage_account>` = nome dell'account di archiviazione della risorsa di Azure.
 

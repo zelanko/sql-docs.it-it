@@ -1,7 +1,7 @@
 ---
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141140"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190385"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -97,8 +97,6 @@ FROM fn_helpcollations();
 - Durante il ripristino o il collegamento di un database è necessario che le regole di confronto predefinite del database e quelle delle colonne o dei parametri di tipo **char**, **varchar** e **text** presenti nel database siano supportate dal sistema operativo.
 
 > [!NOTE]
-> Le regole di confronto del server dell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
->
 > Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.
 >
 > Se le regole di confronto specificate o adottate dall'oggetto cui viene fatto riferimento usano una tabella codici non supportata dai sistemi operativi Windows, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore.

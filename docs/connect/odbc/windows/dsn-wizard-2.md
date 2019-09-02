@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936578"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152572"
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
@@ -43,7 +43,7 @@ Specifica che il driver esegue l'autenticazione SQL Server utilizzando un ID di 
 
 ### <a name="with-active-directory-interactive-authentication"></a>Con autenticazione interattiva di Active Directory
 
-Specifica che il driver esegue l'autenticazione per SQL Server utilizzando Azure Active Directory modalità interattiva fornendo l'ID di accesso. Verrà attivata la finestra di dialogo di richiesta di autenticazione di Windows Azure.
+Specifica che il driver esegue l'autenticazione per SQL Server utilizzando Azure Active Directory modalità interattiva fornendo l'ID di accesso. Verrà attivata la finestra di dialogo di richiesta di autenticazione di Azure.
 
 ### <a name="login-id"></a>ID accesso
 

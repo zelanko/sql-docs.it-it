@@ -1,7 +1,7 @@
 ---
 title: CAST e CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,53 +35,30 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caba5466432356cf6997b26a0a3b8c732b3179ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5bf26f336c2cbc90e3465fc20c21ebc548e947cf
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040167"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123188"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Queste funzioni convertono un'espressione da un tipo di dati a un altro.  
 
-**Esempio:** Modificare il tipo di dati di input
-
-**Cast**
-```sql  
-SELECT 9.5 AS Original,
-       CAST(9.5 AS INT) AS [int],
-       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
-
-```  
-**Converti**
-```sql  
-SELECT 9.5 AS Original,
-       CONVERT(INT, 9.5) AS [int],
-       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
-```  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
-|Originale   |INT    |Decimal |  
-|----|----|----|  
-|9.5 |9 |9.5000 |  
-
-**Vedere gli [esempi](#BKMK_examples)** più avanti in questo argomento. 
-  
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-  
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   
 -- CONVERT Syntax:  
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
-  
+
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
 ## <a name="arguments"></a>Argomenti  
 *expression*  
 Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.
@@ -90,19 +67,19 @@ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.m
 Tipo di dati di destinazione. Include **xml**, **bigint** e **sql_variant**. Non è possibile usare i tipi di dati alias.
   
 *length*  
-Numero intero facoltativo che specifica la lunghezza del tipo di dati di destinazione. Il valore predefinito è 30.
+Intero facoltativo che specifica la lunghezza del tipo di dati di destinazione per i tipi di dati che consentono una lunghezza specificata dall'utente. Il valore predefinito è 30.
   
 *style*  
 Espressione integer che specifica il modo in cui la funzione CONVERT converte *expression*. Per un valore di stile NULL, viene restituito NULL. *data_type* determina l'intervallo. 
   
 ## <a name="return-types"></a>Tipi restituiti
 Restituisce *expression* convertito in *data_type*.
-
-## <a name="date-and-time-styles"></a>Stili date e time  
+  
+## <a name="date-and-time-styles"></a>Stili di data e ora  
 Se il tipo di dati di *expression* è date o time, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], gli unici stili supportati nella conversione dai tipi date e time in **datetimeoffset** sono 0 o 1. Tutti gli altri stili di conversione restituiscono l'errore 9809.
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il formato di data in stile arabo con l'algoritmo kuwaitiano.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il formato di data in stile arabo con l'algoritmo kuwaitiano.
   
 |Senza il secolo (aa) (<sup>1</sup>)|Con il secolo (aaaa)|Standard|Input/Output (<sup>3</sup>)|  
 |---|---|--|---|
@@ -114,23 +91,25 @@ Se il tipo di dati di *expression* è date o time, *style* può avere uno dei va
 |**5**|**105**|Italiano|  5 = gg-mm-aa<br /> 105 = gg-mm-aaaa|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = gg mes aa<br /> 106 = gg mes aaaa|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mes gg, aa<br /> 107 = Mes gg, aaaa|  
-|**8**|**108**|-|hh:mi:ss|  
+|**8** o **24**|**108**|-|hh:mi:ss|  
 |-|**9** o **109** (<sup>1,</sup><sup>2</sup>)|Valore predefinito + millisecondi|mes gg aaaa hh:mi:ss:mmmAM (o PM)|  
 |**10**|**110**|USA| 10 = mm-gg-aa<br /> 110 = mm-gg-aaaa|  
 |**11**|**111**|Giappone| 11 = aa/mm/gg<br /> 111 = aaaa/mm/gg|  
 |**12**|**112**|ISO| 12 = aammgg<br /> 112 = aaaammgg|  
-|-|**13** o **113** (<sup>1,</sup><sup>2</sup>)|Valore predefinito Europa + millisecondi|gg mes aaaa hh:mi:ss:mmm(24h)|  
-|**14**|**114**|-|hh:mi:ss:mmm(24h)|  
-|-|**20** o **120** (<sup>2</sup>)|ODBC canonico|aaaa-mm-gg hh:mi:ss(24h)|  
-|-|**21** o **121** (<sup>2</sup>)|ODBC canonico (con millisecondi) predefinito per time, date, datetime2 e datetimeoffset|aaaa-mm-gg hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ggThh:mi:ss.mmm (senza spazi)<br /><br /> Nota: per un valore in millisecondi (mmm) pari a 0, il valore della frazione decimale in millisecondi non verrà visualizzato. Ad esempio, il valore "2012-11-07T18:26:20.000" viene visualizzato come "2012-11-07T18:26:20".|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 con fuso orario Z.|aaaa-mm-ggThh:mi:ss.mmmZ (senza spazi)<br /><br /> Nota: per un valore in millisecondi (mmm) pari a 0, il valore decimale in millisecondi non verrà visualizzato. Ad esempio, il valore "2012-11-07T18:26:20.000" viene visualizzato come "2012-11-07T18:26:20".|  
+|-|**13** o **113** (<sup>1,</sup><sup>2</sup>)|Valore predefinito Europa + millisecondi|gg mes aaaa hh:mi:ss:mmm (24h)|  
+|**14**|**114**|-|hh:mi:ss:mmm (24h)|  
+|-|**20** o **120** (<sup>2</sup>)|ODBC canonico|aaaa-mm-gg hh:mi:ss (24h)|  
+|-|**21** o **25** o **121** (<sup>2</sup>)|ODBC canonico (con millisecondi) predefinito per time, date, datetime2 e datetimeoffset|aaaa-mm-gg hh:mi:ss.mmm (24h)|  
+|**22**|-|U.S.| mm/gg/aa hh:mi:ss AM (o PM)|
+|-|**23**|ISO8601|aaaa-mm-gg|
+|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ggThh:mi:ss.mmm (senza spazi)<br /><br /> **Nota:** per un valore in millisecondi (mmm) pari a 0, il valore della frazione decimale in millisecondi non verrà visualizzato. Ad esempio, il valore "2012-11-07T18:26:20.000" viene visualizzato come "2012-11-07T18:26:20".| 
+|-|**127**(<sup>6, 7</sup>)|ISO8601 con fuso orario Z.|aaaa-mm-ggThh:mi:ss.mmmZ (senza spazi)<br /><br /> **Nota:** per un valore in millisecondi (mmm) pari a 0, il valore decimale in millisecondi non verrà visualizzato. Ad esempio, il valore "2012-11-07T18:26:20.000" viene visualizzato come "2012-11-07T18:26:20".|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|gg mes aaaa hh:mi:ss:mmmAM<br /><br /> In questo stile, **mes** è una rappresentazione unicode multi token Hijri del nome completo del mese. Questo valore non è reso correttamente in un'installazione US predefinita di SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|gg/mm/aaaa hh:mi:ss:mmmAM|  
   
 <sup>1</sup> Questi valori di stile restituiscono risultati non deterministici. Include tutti gli stili (aa) (senza secolo) e un subset di stili (aaaa) (con il secolo).
   
-<sup>2</sup> I valori predefiniti (**0** o **100**, **9** o **109**, **13** o **113**, **20** o **120** e **21** o **121**) restituiscono sempre il secolo (aaaa).
+<sup>2</sup> I valori predefiniti (**0** o **100**, **9** o **109**, **13** o **113**, **20** o **120**, **23** e **21** o **25** o **121**) restituiscono sempre il secolo (aaaa).
 
 <sup>3</sup> Input quando viene eseguita la conversione nel tipo di dati **datetime**, output quando viene eseguita la conversione in dati di tipo carattere.
 
@@ -139,11 +118,11 @@ Se il tipo di dati di *expression* è date o time, *style* può avere uno dei va
 <sup>5</sup> Hijri è un sistema di calendario con diverse variazioni. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato l'algoritmo kuwaitiano.
 
 > [!IMPORTANT]
->  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta anni a due cifre in base a un anno di cambio data pari a 2049, Ciò significa che SQL Server interpreta l'anno a due cifre 49 come 2049 e l'anno a due cifre 50 come 1950. Numerose applicazioni client, incluse quelle basate su oggetti di automazione, usano il 2030 come anno di cambio data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica l'opzione di configurazione del cambio data per anno a due cifre per modificare l'anno di cambio data usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò consente una gestione coerente delle date. È consigliabile specificare l'anno nel formato a quattro cifre.
+>  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta anni a due cifre in base a un anno di cambio data pari a 2049, Ciò significa che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta l'anno a due cifre 49 come 2049 e l'anno a due cifre 50 come 1950. Numerose applicazioni client, incluse quelle basate su oggetti di automazione, usano il 2030 come anno di cambio data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica l'opzione di configurazione del cambio data per anno a due cifre per modificare l'anno di cambio data usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò consente una gestione coerente delle date. È consigliabile specificare l'anno nel formato a quattro cifre.
 
 <sup>6</sup> Supportato solo per il cast di dati dal tipo carattere al tipo di dati **datetime** o **smalldatetime**. Quando si esegue il cast dei dati di tipo carattere che rappresentano solo componenti di data o di ora al tipo di dati **datetime** o **smalldatetime**, il componente di ora non specificato viene impostato su 00:00:00.000 e il componente di data non specificato viene impostato su 01-01-1900.
   
-<sup>7</sup> Usare l'indicatore di fuso orario facoltativo **Z** per semplificare il mapping tra i valori **datetime** XML con informazioni sul fuso orario e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i valori **datetime** senza fuso orario. Z indica il fuso orario UTC-0. Il valore di offset HH:MM nella direzione + o - indica altri fusi orari. Ad esempio: `2006-12-12T23:45:12-08:00`.
+<sup>7</sup> Usare l'indicatore di fuso orario facoltativo **Z** per semplificare il mapping tra i valori **datetime** XML con informazioni sul fuso orario e i valori **datetime** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza fuso orario. Z indica il fuso orario UTC-0. Il valore di offset HH:MM nella direzione + o - indica altri fusi orari. Ad esempio: `2006-12-12T23:45:12-08:00`.
   
 Quando si convertono dati di tipo **smalldatetime** in dati di tipo carattere, gli stili che includono secondi o millisecondi visualizzano una serie di zeri. Quando si esegue la conversione da valori **datetime** o **smalldatetime**, usare la lunghezza appropriata per il tipo di dati **char** o **varchar** per troncare le parti della data superflue.
   
@@ -157,7 +136,7 @@ Se il tipo di dati di **expression** è **float** o *real*, *style* può avere u
 |**0** (predefinito)|Al massimo 6 cifre. Usare questo valore nella notazione scientifica, quando è appropriato.|  
 |**1**|Sempre 8 cifre. Usare questo valore nella notazione scientifica.|  
 |**2**|Sempre 16 cifre. Usare questo valore nella notazione scientifica.|  
-|**3**|Sempre 17 cifre. Usare per la conversione senza perdita di dati. Con questo stile, è garantita la conversione di ogni float Distinct in una stringa di caratteri Distinct.<br /><br /> **Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**3**|Sempre 17 cifre. Usare per la conversione senza perdita di dati. Con questo stile, è garantita la conversione di ogni float Distinct in una stringa di caratteri Distinct.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Incluso per motivi di compatibilità con le versioni precedenti. Questi valori potrebbero essere deprecati in una versione futura.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Stili money e smallmoney
@@ -192,15 +171,23 @@ Se il tipo di dati di **expression** è **binary(n)** , **char(n)** , **varbinar
 Per le conversioni implicite non è necessario specificare la funzione CAST o la funzione CONVERT. Per le conversioni esplicite è necessario specificare la funzione CAST o la funzione CONVERT. Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **bigint**, **sql_variant** e **xml**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
   
 > [!TIP]  
->  Questo grafico è disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35834) come file PDF scaricabile.  
+> Questo grafico è disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35834) come file PDF scaricabile.  
   
 ![Tabella di conversione dei tipi di dati](../../t-sql/data-types/media/lrdatahd.png "Tabella di conversione dei tipi di dati")
   
+Il grafico sopra riportato illustra tutte le conversioni esplicite e implicite consentite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma il tipo di dati risultante della conversione dipende dall'operazione eseguita:
+
+-  Per le conversioni esplicite, l'istruzione stessa determina il tipo di dati risultante.    
+-  Per le conversioni implicite, le istruzioni di assegnazione, ad esempio l'impostazione del valore di una variabile o l'inserimento di un valore in una colonna, hanno come risultato il tipo di dati definito dalla dichiarazione di variabile o dalla definizione di colonna.    
+-  Per gli operatori di confronto o altre espressioni, il tipo di dati risultante dipenderà dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).
+
+> [!TIP]
+> Un esempio pratico degli [effetti della precedenza dei tipi di dati nelle conversioni](#precedence-example) è disponibile più avanti in questa sezione.
+
 Quando si esegue la conversione tra **datetimeoffset** e i tipi di dati di carattere **char**, **nchar**, **nvarchar** e **varchar**, la parte relativa alla differenza di fuso orario convertita deve essere sempre costituita da cifre doppie sia per HH che per MM. Ad esempio, -08:00.
   
-> [!NOTE]  
->  
->  Poiché i dati Unicode usano sempre un numero pari di byte, prestare attenzione nella conversione tra dati di tipo **binary** o **varbinary** e tipi di dati supportati da Unicode. La conversione seguente, ad esempio, non restituisce il valore esadecimale 41. Restituisce un valore esadecimale di 4100: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
+> [!NOTE]   
+> Poiché i dati Unicode usano sempre un numero pari di byte, prestare attenzione nella conversione tra dati di tipo **binary** o **varbinary** e tipi di dati supportati da Unicode. La conversione seguente, ad esempio, non restituisce il valore esadecimale 41. Restituisce un valore esadecimale di 4100: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
   
 ## <a name="large-value-data-types"></a>Tipi di dati per valori di grandi dimensioni
 Per quanto riguarda le conversioni implicite ed esplicite, i tipi di dati per valori di grandi dimensioni si comportano come i tipi di dati per valori di dimensioni minori, in particolare i tipi di dati **nvarchar**, **varbinary** e **varchar**. Considerare tuttavia queste indicazioni:
@@ -251,8 +238,8 @@ SELECT CAST(CAST(@myval AS varbinary(20)) AS decimal(10,5));
 SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));  
 ```  
   
-> [!NOTE]  
->  Evitare di costruire valori di tipo **binary** e di convertirli in un tipo di dati della categoria dei tipi numerici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non garantisce che il risultato della conversione di un tipo di dati **decimal** o **numeric** nel tipo **binary** sia uguale in versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> [!WARNING]  
+> Evitare di costruire valori di tipo **binary** e di convertirli in un tipo di dati della categoria dei tipi numerici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non garantisce che il risultato della conversione di un tipo di dati **decimal** o **numeric** nel tipo **binary** sia uguale in versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Nell'esempio seguente viene illustrata un'espressione troppo breve per essere visualizzata.
   
@@ -276,10 +263,11 @@ Terri       Duffy         NULL   *
 Roberto     Tamburello    NULL   *
 Rob         Walters       NULL   *
 Gail        Erickson      Ms.    *
+
 (5 row(s) affected)  
 ```
   
-Quando si convertono tipi di dati con un numero di cifre decimali diverso, in alcuni casi SQL Server restituisce un valore troncato e in altri restituisce un valore arrotondato. La tabella che segue illustra questo comportamento.
+Quando si convertono tipi di dati con un numero di cifre decimali diverso, in alcuni casi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un valore troncato e in altri restituisce un valore arrotondato. La tabella che segue illustra questo comportamento.
   
 |From|Per|Comportamento|  
 |---|---|---|
@@ -334,13 +322,20 @@ DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);
 SELECT CAST (@x AS NVARCHAR(3));  
 ```  
   
-Quando si usano le regole di confronto SC, il comportamento di `CONVERT` è analogo a quello di `CAST`.
+Quando si usano le regole di confronto SC, il comportamento di `CONVERT` è analogo a quello di `CAST`. Per altre informazioni, vedere [Regole di confronto e supporto Unicode - Caratteri supplementari](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità
 Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo stile predefinito per le operazioni CAST e CONVERT nei tipi di dati **time** e **datetime2** è 121, tranne quando uno dei due tipi viene usato in un'espressione di colonna calcolata. Per le colonne calcolate, lo stile predefinito è 0. Questo comportamento influisce sulle colonne calcolate quando vengono create o usate nelle query con parametrizzazione automatica o nelle definizioni dei vincoli.
   
-Con il livello di compatibilità 110 e superiore, lo stile predefinito per le operazioni CAST e CONVERT nei tipi di dati **time** e **datetime2** è sempre 121. Se una query si basa sul comportamento obsoleto, usare un livello di compatibilità inferiore a 110 oppure specificare in modo esplicito lo stile 0 nella query interessata.
-  
+Con il [livello di compatibilità](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 e superiore, lo stile predefinito per le operazioni CAST e CONVERT sui tipi di dati **time** e **datetime2** è sempre 121. Se una query si basa sul comportamento obsoleto, usare un livello di compatibilità inferiore a 110 oppure specificare in modo esplicito lo stile 0 nella query interessata.
+
+|Valore di [Livello di compatibilità](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)|Stile predefinito per CAST e CONVERT<sup>1</sup>|Stile predefinito per la colonna calcolata|  
+|------------|------------|------------|
+|< **110**|121|0|  
+|> = **110**|121|121|  
+
+<sup>1</sup> Ad eccezione delle colonne calcolate
+
 L'aggiornamento del database al livello di compatibilità 110 e superiore non comporta la modifica dei dati utente archiviati su disco. È necessario correggere manualmente questi dati nel modo opportuno. Se ad esempio si usa SELECT INTO per creare una tabella da un'origine che contiene un'espressione di colonna calcolata descritta in precedenza, vengono archiviati i dati (con stile 0), non la definizione della colonna calcolata. Sarà necessario aggiornare manualmente questi dati in base allo stile 121.
   
 ## <a name="BKMK_examples"></a> Esempi  
@@ -354,7 +349,7 @@ USE AdventureWorks2012;
 GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
-WHERE CAST(ListPrice AS int) LIKE '3%';  
+WHERE CAST(ListPrice AS int) LIKE '33%';  
 GO  
   
 -- Use CONVERT.  
@@ -362,9 +357,46 @@ USE AdventureWorks2012;
 GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
-WHERE CONVERT(int, ListPrice) LIKE '3%';  
+WHERE CONVERT(int, ListPrice) LIKE '33%';  
 GO  
 ```  
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Il set di risultati di esempio è lo stesso per CAST e CONVERT. 
+
+```
+ProductName                    ListPrice
+------------------------------ ---------------------
+LL Road Frame - Black, 58      337.22
+LL Road Frame - Black, 60      337.22
+LL Road Frame - Black, 62      337.22
+LL Road Frame - Red, 44        337.22
+LL Road Frame - Red, 48        337.22
+LL Road Frame - Red, 52        337.22
+LL Road Frame - Red, 58        337.22
+LL Road Frame - Red, 60        337.22
+LL Road Frame - Red, 62        337.22
+LL Road Frame - Black, 44      337.22
+LL Road Frame - Black, 48      337.22
+LL Road Frame - Black, 52      337.22
+Mountain-100 Black, 38         3374.99
+Mountain-100 Black, 42         3374.99
+Mountain-100 Black, 44         3374.99
+Mountain-100 Black, 48         3374.99
+HL Road Front Wheel            330.06
+LL Touring Frame - Yellow, 62  333.42
+LL Touring Frame - Blue, 50    333.42
+LL Touring Frame - Blue, 54    333.42
+LL Touring Frame - Blue, 58    333.42
+LL Touring Frame - Blue, 62    333.42
+LL Touring Frame - Yellow, 44  333.42
+LL Touring Frame - Yellow, 50  333.42
+LL Touring Frame - Yellow, 54  333.42
+LL Touring Frame - Yellow, 58  333.42
+LL Touring Frame - Blue, 44    333.42
+HL Road Tire                   32.60
+
+(28 rows affected)
+```
   
 ### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilizzo della funzione CAST con operatori aritmetici  
 In questo esempio viene eseguito il calcolo di una sola colonna (`Computed`) dividendo il totale delle vendite dell'anno in corso (`SalesYTD`) per la percentuale di commissione (`CommissionPCT`). Questo valore viene arrotondato al numero intero più vicino e viene quindi eseguito il CAST del valore a un tipo di dati `int`.
@@ -396,6 +428,7 @@ Computed
 101664220
 124511336
 97688107
+
 (14 row(s) affected)  
 ```  
   
@@ -461,6 +494,7 @@ FirstName        LastName            SalesYTD         BusinessEntityID
 Tsvi             Reiter              2811012.7151      279
 Syed             Abbas               219088.8836       288
 Rachel           Valdez              2241204.0424      289
+
 (3 row(s) affected)  
 ```
   
@@ -488,7 +522,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 Per altri esempi, vedere [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md).
   
 ### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. Utilizzo di CAST e CONVERT con dati datetime  
-Iniziando con i valori GETDATE(), questo esempio visualizza la data e l'ora correnti, usa `CAST` per modificarle in dati di tipo carattere e quindi usa `CONVERT` per visualizzare data e ora nel formato `ISO 8601`.
+Iniziando con i valori `GETDATE()`, questo esempio visualizza la data e l'ora correnti, usa `CAST` per modificarle in dati di tipo carattere e quindi usa `CONVERT` per visualizzare data e ora nel formato `ISO 8601`.
   
 ```sql
 SELECT   
@@ -504,6 +538,7 @@ GO
 UnconvertedDateTime     UsingCast              UsingConvertTo_ISO8601
 ----------------------- ---------------------- ------------------------------
 2006-04-18 09:58:04.570 Apr 18 2006  9:58AM    2006-04-18T09:58:04.570
+
 (1 row(s) affected)  
 ```
   
@@ -523,6 +558,7 @@ GO
 UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ----------------------- ----------------------- ------------------------
 2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997
+
 (1 row(s) affected)  
 ```
   
@@ -540,6 +576,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];
 Style 0, binary to character
 ----------------------------
 Name  
+
 (1 row(s) affected)  
 ```
  
@@ -554,6 +591,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];
 Style 1, binary to character
 ------------------------------
 0x4E616D
+
 (1 row(s) affected)  
 ```  
  
@@ -568,6 +606,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];
 Style 2, binary to character
 ------------------------------
 4E616D65
+
 (1 row(s) affected)  
 ```
   
@@ -582,6 +621,7 @@ SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];
 Style 0, character to binary
 ----------------------------
 0x4E616D6500000000
+
 (1 row(s) affected)  
 ```
   
@@ -595,6 +635,7 @@ SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];
 Style 1, character to binary
 ---------------------------- 
 0x4E616D65
+
 (1 row(s) affected)  
 ```  
 
@@ -608,6 +649,7 @@ SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];
 Style 2, character to binary  
 ----------------------------------  
 0x4E616D65
+
 (1 row(s) affected)  
 ```  
   
@@ -629,11 +671,99 @@ SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];
 SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], 
    CAST (@dt1 AS time) AS [datetime as time];  
 ```  
+
+### <a name="j-using-convert-with-datetime-data-in-different-formats"></a>J. Uso di CONVERT con dati datetime in formati diversi  
+A partire da valori `GETDATE()`, questo esempio usa `CONVERT` per visualizzare tutti gli stili di data e ora nella sezione [Stili di data e ora](#date-and-time-styles) di questo articolo.
+
+|N. di formato|Query di esempio|Risultato di esempio|
+|--------|------------------------------------|------------------|
+|0|`SELECT CONVERT(nvarchar, GETDATE(), 0)`|23 ago 2019  1:39PM|
+|1|`SELECT CONVERT(nvarchar, GETDATE(), 1)`|08/23/19|
+|2|`SELECT CONVERT(nvarchar, GETDATE(), 2)`|19.08.23|
+|3|`SELECT CONVERT(nvarchar, GETDATE(), 3)`|23/08/19|
+|4|`SELECT CONVERT(nvarchar, GETDATE(), 4)`|23.08.19|
+|5|`SELECT CONVERT(nvarchar, GETDATE(), 5)`|23-08-19|
+|6|`SELECT CONVERT(nvarchar, GETDATE(), 6)`|23 ago 19|
+|7|`SELECT CONVERT(nvarchar, GETDATE(), 7)`|Ago 23, 19|
+|8 o 24 o 108|`SELECT CONVERT(nvarchar, GETDATE(), 8)`|13:39:17|
+|9 o 109|`SELECT CONVERT(nvarchar, GETDATE(), 9)`|Ago 23 2019  1:39:17:090PM|
+|10|`SELECT CONVERT(nvarchar, GETDATE(), 10)`|08-23-19|
+|11|`SELECT CONVERT(nvarchar, GETDATE(), 11)`|19/08/23|
+|12|`SELECT CONVERT(nvarchar, GETDATE(), 12)`|190823|
+|13 o 113|`SELECT CONVERT(nvarchar, GETDATE(), 13)`|23 ago 2019 13:39:17:090|
+|14 o 114|`SELECT CONVERT(nvarchar, GETDATE(), 14)`|13:39:17:090|
+|20 o 120|`SELECT CONVERT(nvarchar, GETDATE(), 20)`|2019-08-23 13:39:17|
+|21 o 25 o 121|`SELECT CONVERT(nvarchar, GETDATE(), 21)`|2019-08-23 13:39:17.090|
+|22|`SELECT CONVERT(nvarchar, GETDATE(), 22)`|08/23/19  1:39:17 PM|
+|23|`SELECT CONVERT(nvarchar, GETDATE(), 23)`|2019-08-23|
+|101|`SELECT CONVERT(nvarchar, GETDATE(), 101)`|08/23/2019|
+|102|`SELECT CONVERT(nvarchar, GETDATE(), 102)`|2019.08.23|
+|103|`SELECT CONVERT(nvarchar, GETDATE(), 103)`|23/08/2019|
+|104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
+|105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
+|106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 ago 2019|
+|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Ago 23, 2019|
+|110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
+|111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
+|112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
+|113|`SELECT CONVERT(nvarchar, GETDATE(), 113)`|23 ago 2019 13:39:17.090|
+|120|`SELECT CONVERT(nvarchar, GETDATE(), 120)`|2019-08-23 13:39:17|
+|121|`SELECT CONVERT(nvarchar, GETDATE(), 121)`|2019-08-23 13:39:17.090|
+|126|`SELECT CONVERT(nvarchar, GETDATE(), 126)`|2019-08-23T13:39:17.090|
+|127|`SELECT CONVERT(nvarchar, GETDATE(), 127)`|2019-08-23T13:39:17.090|
+|130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
+|131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
+
+### <a name="precedence-example"></a> K. Effetti della precedenza dei tipi di dati nelle conversioni consentite  
+L'esempio seguente definisce una variabile di tipo VARCHAR, assegna un valore integer alla variabile e quindi seleziona una concatenazione della variabile con una stringa.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.' AS Result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
+```  
+Result
+-----------------------
+1 is a string.
+```  
+
+Il valore int di 1 è stato convertito in VARCHAR.
+
+In questo esempio viene illustrata una query simile, usando invece una variabile int:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.' AS Result
+```
+
+In questo caso, l'istruzione SELECT genererà l'errore seguente:
+
+```
+Msg 245, Level 16, State 1, Line 3
+Conversion failed when converting the varchar value ' is not a string.' to data type int.
+```
+
+Per valutare l'espressione `@notastring + ' is not a string.'`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve seguire le regole di precedenza dei tipi di dati per completare la conversione implicita prima che il risultato dell'espressione possa essere calcolato. Dato che int ha una precedenza maggiore di VARCHAR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di convertire la stringa in un intero e non riesce perché la stringa non può essere convertita in un intero. 
+
+Se si specifica una stringa che può essere convertita, l'istruzione ha esito positivo, come nell'esempio seguente:
+
+```SQL
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+In questo caso, la stringa `'1'` può essere convertita nel valore intero 1, quindi questa istruzione SELECT restituirà il valore 2. Quando i tipi di dati forniti sono integer, l'operatore + diventa operatore matematico di addizione, anziché una concatenazione di stringhe.
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="j-using-cast-and-convert"></a>J. Uso di CAST e CONVERT  
-Questo esempio recupera il nome dei prodotti il cui prezzo contiene un `3` come prima cifra e converte il valore `ListPrice` di questi prodotti nel tipo **int**. Viene usato il database AdventureWorksDW.
+### <a name="l-using-cast-and-convert"></a>L. Uso di CAST e CONVERT  
+Questo esempio recupera il nome dei prodotti il cui prezzo contiene un `3` come prima cifra e converte il valore `ListPrice` di questi prodotti nel tipo **int**. Usa il database `AdventureWorksDW2016`.
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -641,7 +771,7 @@ FROM dbo.DimProduct
 WHERE CAST(ListPrice AS int) LIKE '3%';  
 ```  
   
-Questo esempio illustra la stessa query in cui viene usato CONVERT anziché CAST. Viene usato il database AdventureWorksDW.
+Questo esempio illustra la stessa query in cui viene usato CONVERT anziché CAST. Usa il database `AdventureWorksDW2016`.
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -649,8 +779,8 @@ FROM dbo.DimProduct
 WHERE CONVERT(int, ListPrice) LIKE '3%';  
 ```  
   
-### <a name="k-using-cast-with-arithmetic-operators"></a>K. Utilizzo della funzione CAST con operatori aritmetici  
-Questo esempio calcola un unico valore di colonna dividendo il prezzo unitario del prodotto (`UnitPrice`) per la percentuale di sconto (`UnitPriceDiscountPct`). Il risultato viene arrotondato al numero intero più prossimo e infine convertito in un tipo di dati `int`. In questo esempio viene usato il database AdventureWorksDW.
+### <a name="m-using-cast-with-arithmetic-operators"></a>M. Utilizzo della funzione CAST con operatori aritmetici  
+Questo esempio calcola un unico valore di colonna dividendo il prezzo unitario del prodotto (`UnitPrice`) per la percentuale di sconto (`UnitPriceDiscountPct`). Il risultato viene arrotondato al numero intero più prossimo e infine convertito in un tipo di dati `int`. In questo esempio viene utilizzato il database `AdventureWorksDW2016`.
   
 ```sql
 SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,  
@@ -672,8 +802,8 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-with-the-like-clause"></a>L. Utilizzo di CAST con la clausola LIKE  
-Questo esempio converte nella colonna **money** il valore `ListPrice` in un tipo **int** e quindi in un tipo **char(20)** in modo che possa essere usato dalla clausola LIKE. In questo esempio viene usato il database AdventureWorksDW.  
+### <a name="n-using-cast-with-the-like-clause"></a>N. Utilizzo di CAST con la clausola LIKE  
+Questo esempio converte nella colonna **money** il valore `ListPrice` in un tipo **int** e quindi in un tipo **char(20)** in modo che possa essere usato dalla clausola LIKE. In questo esempio viene utilizzato il database `AdventureWorksDW2016`.  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
@@ -681,8 +811,8 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. Utilizzo di CAST e CONVERT con dati datetime  
-Questo esempio visualizza la data e l'ora correnti, usa CAST per modificarle in dati di tipo carattere e quindi usa CONVERT per visualizzarle nel formato ISO 8601. In questo esempio viene usato il database AdventureWorksDW.
+### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. Utilizzo di CAST e CONVERT con dati datetime  
+Questo esempio visualizza la data e l'ora correnti, usa CAST per modificarle in dati di tipo carattere e quindi usa CONVERT per visualizzarle nel formato ISO 8601. In questo esempio viene utilizzato il database `AdventureWorksDW2016`.
   
 ```sql
 SELECT TOP(1)  
@@ -700,7 +830,7 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025  
 ```  
   
-Questo esempio rappresenta all'incirca l'opposto dell'esempio precedente. L'esempio visualizza una data e un'ora come dati di tipo carattere, usa CAST per modificare i dati di tipo carattere nel tipo di dati **datetime** e quindi usa CONVERT per modificare i dati di tipo carattere nel tipo di dati **datetime**. In questo esempio viene usato il database AdventureWorksDW.
+Questo esempio rappresenta all'incirca l'opposto dell'esempio precedente. L'esempio visualizza una data e un'ora come dati di tipo carattere, usa CAST per modificare i dati di tipo carattere nel tipo di dati **datetime** e quindi usa CONVERT per modificare i dati di tipo carattere nel tipo di dati **datetime**. In questo esempio viene utilizzato il database `AdventureWorksDW2016`.
   
 ```sql
 SELECT TOP(1)   
@@ -717,12 +847,14 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ----------------------- ----------------------- ------------------------
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
-  
+
 ## <a name="see-also"></a>Vedere anche
- [Conversione del tipo di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
- [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
- [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
- [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)
+[Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
+[Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
+[FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
+[STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
+[Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)      
+[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

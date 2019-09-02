@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553113"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059262"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553113"
 | Miglioramenti ai notebook | &bull; &nbsp; Aggiunta di codice o di una cella di testo inline <br/>&bull; &nbsp; Aggiunta la possibilità di fare clic con il pulsante destro del mouse sulla griglia dei risultati SQL per salvare i risultati come CSV, JSON e così via <br/> &bull; &nbsp; Miglioramento delle prestazioni di caricamento del notebook per velocizzare il caricamento di JSON <br/> &bull; &nbsp; L'elenco completo dei miglioramenti è disponibile [qui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | Supporto di SQL Server 2019 |  Questa versione include il supporto per altre funzionalità per cluster Big Data di SQL Server 2019, tra cui: <br/> &bull; &nbsp; Riduzione del tempo necessario per caricare le informazioni relative a tabelle e colonne nella pagina di mapping degli oggetti. <br/> &bull; &nbsp; Correzione di un bug relativo al caricamento delle credenziali con ambito database esistenti nella pagina Dettagli connessione. <br/> &bull; &nbsp; Aumento delle dimensioni predefinite del campione usato per l'analisi PROSE. | 
 | L'estensione Dacpac ora supporta AAD | 
-| Visual Studio Code versione di maggio Merge 1.37 | I miglioramenti più recenti sono disponibili [qui](https://code.visualstudio.com/updates/v1_37). |
+| Visual Studio Code versione di luglio Merge 1.37 | I miglioramenti più recenti sono disponibili [qui](https://code.visualstudio.com/updates/v1_37). |
 | Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553113"
 | Miglioramenti a Confronto schema | &bull; &nbsp; Aggiunta delle opzioni Escludi/Includi <br/>&bull; &nbsp; Genera script apre lo script dopo la generazione <br/>&bull; &nbsp; Rimozione delle barre di scorrimento doppie  <br/>&bull; &nbsp; Miglioramenti alla formattazione e al layout <br/>&bull; &nbsp; L'elenco completo delle modifiche è disponibile [qui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Sezione messaggi spostata in una scheda personalizzata | Quando gli utenti eseguivano query SQL, i risultati e i messaggi si trovavano in pannelli in pila. Ora si trovano in schede separate in un solo pannello, come in SSMS. |
 | Miglioramenti ai notebook SQL | &bull; &nbsp; Gli utenti possono ora scegliere di usare le proprie installazioni di Python 3 o Anaconda nei notebook <br/>&bull; &nbsp; Più correzioni per stabilità e aspetto/finitura <br/> &bull; &nbsp; L'elenco completo dei miglioramenti è disponibile [qui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
-| Visual Studio Code versione di maggio Merge 1.34 | I miglioramenti più recenti sono disponibili [qui](https://code.visualstudio.com/updates/v1_34) |
+| Visual Studio Code versione di aprile Merge 1.34 | I miglioramenti più recenti sono disponibili [qui](https://code.visualstudio.com/updates/v1_34) |
 | Bug e problemi risolti. | Vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 

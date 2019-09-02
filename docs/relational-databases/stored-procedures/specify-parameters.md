@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136646"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110276"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,10 +64,10 @@ GO
  La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **\@first**, **\@second** e **\@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Se un valore del parametro viene specificato nel formato **\@parametro =**_valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro =**_valore_, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
+>  Se un valore del parametro viene specificato nel formato **\@parametro =** _valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro =** _valore_, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Qualsiasi parametro passato nel formato **\@parametro =**_valore_ contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
+>  Qualsiasi parametro passato nel formato **\@parametro =** _valore_ contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  
  I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se ad esempio si definisce un parametro con un tipo di dati **tinyint** , verranno accettati solo i valori numerici nell'intervallo compreso tra 0 e 255 quando vengono passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  Se il valore predefinito è una stringa di caratteri contenente spazi vuoti o punteggiatura o se inizia con un numero, ad esempio 6xxx, è necessario racchiuderlo tra virgolette singole.  
+
+> [!NOTE] 
+> I parametri predefiniti non sono supportati in Azure SQL Data Warehouse o in Parallel Data Warehouse. 
   
  Se per il parametro non può essere specificato in modo appropriato alcun valore come predefinito, specificare come tale NULL. È consigliabile la restituzione di un messaggio personalizzato da parte della procedura se quest'ultima viene eseguita senza un valore per il parametro.  
   
@@ -127,7 +130,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **\@parametro =**_valore_.  
+ Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **\@parametro =** _valore_.  
   
 ## <a name="specifying-parameter-direction"></a>Specifica della direzione di un parametro  
  La direzione di un parametro può essere input, cioè un valore viene passato nel corpo della procedura, o output, vale a dire che tramite la procedura viene restituito un valore al programma chiamante. Il parametro di input è l'impostazione predefinita.  
