@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2bbb7465b3d012d5aa786a0e8c614a9d4689074
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329333"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212450"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - Ambiente ospitato in CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   L'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual C#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
   
   CLR include la memoria sottoposta a Garbage Collection, il threading preemptive, i servizi metadati (Reflection del tipo), la verificabilità del codice e la sicurezza dall'accesso di codice. CLR utilizza metadati per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate a metodi, generare codice nativo, implementare la sicurezza e impostare limiti di contesto per la fase di esecuzione.  
@@ -64,7 +64,7 @@ ms.locfileid: "68329333"
   
  I modelli diversi per threading, pianificazione e gestione della memoria presentano una sfida di integrazione per un sistema di gestione di database relazionali (RDBMS) con scalabilità in grado di supportare migliaia di sessioni utente simultanee. L'architettura deve garantire che la scalabilità del sistema non venga danneggiata dal codice utente che chiama direttamente le API per le primitive di threading, memoria e sincronizzazione.  
   
-###### <a name="security"></a>Sicurezza  
+###### <a name="security"></a>Security  
  Il codice utente in esecuzione nel database deve essere conforme alle regole di autenticazione e autorizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caso di accesso a oggetti di database, quali tabelle e colonne. Gli amministratori del database, inoltre, devono essere in grado di controllare l'accesso alle risorse del sistema operativo, ad esempio file e accesso di rete, dal codice utente in esecuzione nel database. Questa pratica diventa importante in quanto i linguaggi di programmazione gestiti (a differenza dei linguaggi non gestiti come Transact-SQL) forniscono API per accedere a tali risorse. Il sistema deve fornire un metodo protetto che consenta al codice utente di accedere alle risorse del computer al di fuori dell'elaborazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>Prestazioni  

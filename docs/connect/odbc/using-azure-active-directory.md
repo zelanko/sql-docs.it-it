@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008494"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176162"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso di Azure Active Directory con il driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,9 +31,9 @@ Il Microsoft ODBC Driver for SQL Server con la versione 13,1 o successive consen
 
 La `Authentication` parola chiave può essere usata per la connessione a un DSN o a una stringa di connessione per controllare la modalità di autenticazione. Il valore impostato nella stringa di connessione esegue l'override del DSN, se specificato. Il _valore pre-attributo_ dell' `Authentication` impostazione è il valore calcolato dalla stringa di connessione e dai valori DSN.
 
-|nome|Valori|Default|Descrizione|
+|Nome|Valori|Default|Descrizione|
 |-|-|-|-|
-|`Authentication`|(non impostato), (stringa vuota), `SqlPassword` `ActiveDirectoryPassword` `ActiveDirectoryIntegrated`,,, `ActiveDirectoryInteractive`,`ActiveDirectoryMsi` |(non impostato)|Controlla la modalità di autenticazione.<table><tr><th>valore<th>Descrizione<tr><td>(non impostato)<td>Modalità di autenticazione determinata da altre parole chiave (opzioni di connessione legacy esistenti).<tr><td>(stringa vuota)<td>Nome stringa di connessione Eseguire l'override di `Authentication` un valore impostato nel DSN.<tr><td>`SqlPassword`<td>Eseguire l'autenticazione direttamente a un'istanza di SQL Server usando un nome utente e una password.<tr><td>`ActiveDirectoryPassword`<td>Eseguire l'autenticazione con un'identità Azure Active Directory usando un nome utente e una password.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo driver Windows_. Eseguire l'autenticazione con un'identità Azure Active Directory usando l'autenticazione integrata.<tr><td>`ActiveDirectoryInteractive`<td>_Solo driver Windows_. Eseguire l'autenticazione con un'identità Azure Active Directory usando l'autenticazione interattiva.<tr><td>`ActiveDirectoryMsi`<td>Eseguire l'autenticazione con Azure Active Directory identità usando l'autenticazione dell'identità del servizio gestito. Per l'identità assegnata dall'utente, UID è impostato sull'ID oggetto dell'identità utente.</table>|
+|`Authentication`|(non impostato), (stringa vuota), `SqlPassword` `ActiveDirectoryPassword` `ActiveDirectoryIntegrated`,,, `ActiveDirectoryInteractive`,`ActiveDirectoryMsi` |(non impostato)|Controlla la modalità di autenticazione.<table><tr><th>valore<th>Descrizione<tr><td>(non impostato)<td>Modalità di autenticazione determinata da altre parole chiave (opzioni di connessione legacy esistenti).<tr><td>(stringa vuota)<td>Guida alla stringa di connessione Eseguire l'override di `Authentication` un valore impostato nel DSN.<tr><td>`SqlPassword`<td>Eseguire l'autenticazione direttamente a un'istanza di SQL Server usando un nome utente e una password.<tr><td>`ActiveDirectoryPassword`<td>Eseguire l'autenticazione con un'identità Azure Active Directory usando un nome utente e una password.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo driver Windows_. Eseguire l'autenticazione con un'identità Azure Active Directory usando l'autenticazione integrata.<tr><td>`ActiveDirectoryInteractive`<td>_Solo driver Windows_. Eseguire l'autenticazione con un'identità Azure Active Directory usando l'autenticazione interattiva.<tr><td>`ActiveDirectoryMsi`<td>Eseguire l'autenticazione con Azure Active Directory identità usando l'autenticazione dell'identità del servizio gestito. Per l'identità assegnata dall'utente, UID è impostato sull'ID oggetto dell'identità utente.</table>|
 |`Encrypt`|(non impostato), `Yes`, `No`|(vedere la descrizione)|Controlla la crittografia per una connessione. Se il valore pre-attributo dell' `Authentication` impostazione non è _None_ nel DSN o nella stringa di connessione, il valore predefinito `Yes`è. Diversamente, il valore predefinito è `No`. Se l'attributo `SQL_COPT_SS_AUTHENTICATION` sostituisce il valore pre-attributo di `Authentication`, impostare in modo esplicito il valore della crittografia nel DSN o nella stringa di connessione o nell'attributo di connessione. Il valore pre-attributo della crittografia è `Yes` se il valore è impostato su `Yes` nel DSN o nella stringa di connessione.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Attributi di connessione nuovi e/o modificati
@@ -99,7 +99,7 @@ Queste opzioni corrispondono agli stessi cinque disponibili nell'interfaccia ute
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Solo driver Windows_). Autenticazione integrata di Windows tramite ADAL, che prevede il riscatto delle credenziali dell'account di Windows per un token di accesso emesso da AAD, presupponendo che il database di destinazione si trovi nel database SQL di Azure. Il certificato del server viene convalidato, indipendentemente dall'impostazione della crittografia `TrustServerCertificate` (a meno `true`che non sia impostato su). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Solo driver Windows_). L'autenticazione interattiva di AAD usa la tecnologia Azure per l'autenticazione a più fattori per configurare la connessione. In questa modalità, fornendo l'ID di accesso, viene attivata una finestra di dialogo di autenticazione di Windows Azure che consente all'utente di immettere la password per completare la connessione. Il nome utente viene passato nella stringa di connessione.
+7. (_Solo driver Windows_). L'autenticazione interattiva di AAD usa la tecnologia Azure per l'autenticazione a più fattori per configurare la connessione. In questa modalità, fornendo l'ID di accesso, viene attivata una finestra di dialogo di autenticazione di Azure che consente all'utente di immettere la password per completare la connessione. Il nome utente viene passato nella stringa di connessione.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -163,7 +163,7 @@ Nell'esempio seguente viene illustrato il codice necessario per connettersi a SQ
     ...
     free(pAccToken);
 ~~~
-Di seguito è riportata una stringa di connessione di esempio da utilizzare con Azure Active Directory l'autenticazione interattiva. Si noti che non contiene il campo PWD perché la password viene immessa usando la schermata di autenticazione di Windows Azure.
+Di seguito è riportata una stringa di connessione di esempio da utilizzare con Azure Active Directory l'autenticazione interattiva. Si noti che non contiene il campo PWD perché la password viene immessa usando la schermata di autenticazione di Azure.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

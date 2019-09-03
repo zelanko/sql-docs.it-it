@@ -1,5 +1,5 @@
 ---
-title: Panoramica dell'integrazione con CLR | Microsoft Docs
+title: Cenni preliminari sull'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b6db8bb34130ec844ffc7c982723c871defe961
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d87768886150b06b23c6ff5053e4f0f524828904
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134904"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212402"
 ---
 # <a name="clr-integration---overview"></a>Integrazione CLR - Panoramica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Common Language Runtime (CLR) rappresenta il fulcro di Microsoft .NET Framework e fornisce l'ambiente di esecuzione per tutto il codice .NET Framework. Il codice eseguito in CLR viene chiamato codice gestito. CLR fornisce varie funzioni e servizi necessari per l'esecuzione del programma, incluse le funzioni di compilazione JIT (Just-In-Time), di allocazione e gestione della memoria, di imposizione dell'indipendenza dai tipi, di gestione delle eccezioni, di gestione dei thread e di sicurezza.  Per ulteriori informazioni, vedere .NET Framework SDK.  
   
  Grazie all'integrazione di CLR in Microsoft SQL Server, è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Poiché il codice gestito viene compilato nel codice nativo prima dell'esecuzione, è possibile ottenere notevoli miglioramenti delle prestazioni in alcuni scenari.  
@@ -40,11 +40,11 @@ ms.locfileid: "68134904"
  Il codice gestito risulta più appropriato di [!INCLUDE[tsql](../../includes/tsql-md.md)] per i calcoli e la logica di esecuzione complicata e dispone inoltre di un supporto esteso per numerose attività complesse, ad esempio la gestione delle stringhe e le espressioni regolari. Grazie alle funzionalità della libreria .NET Framework, è possibile accedere facilmente a migliaia di classi e routine preesistenti da qualsiasi stored procedure, trigger o funzione definita dall'utente. La libreria di classi di base (BCL, Base Class Library) include classi che forniscono funzionalità per la modifica delle stringhe, operazioni matematiche avanzate, accesso ai file, crittografia e altro ancora.  
   
 > [!NOTE]  
->  Sebbene molte di queste classi siano disponibili nel codice CLR in SQL Server, quelle che non sono appropriate per l'utilizzo sul lato server, ad esempio le classi di windowing, non risultano disponibili. Per altre informazioni, vedere [librerie di .NET Framework supportate](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Sebbene molte di queste classi siano disponibili nel codice CLR in SQL Server, quelle che non sono appropriate per l'utilizzo sul lato server, ad esempio le classi di windowing, non risultano disponibili. Per ulteriori informazioni, vedere [supported .NET Framework libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
  Uno dei vantaggi del codice gestito è l'indipendenza dai tipi o la garanzia che il codice acceda ai tipi solo con modalità consentite e ben definite. Prima che venga eseguito il codice gestito, CLR verifica che il codice sia sicuro. Viene ad esempio eseguito un controllo del codice per verificare che non venga letta memoria che non sia stata scritta in precedenza. CLR è inoltre in grado di garantire che il codice non modifichi la memoria non gestita.  
   
- L'integrazione con CLR offre un potenziale miglioramento delle prestazioni. Per informazioni, vedere [sulle prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ L'integrazione con CLR offre un potenziale miglioramento delle prestazioni. Per informazioni, vedere [prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
 > [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
@@ -56,12 +56,12 @@ ms.locfileid: "68134904"
  Un altro aspetto che incide sulla decisione di utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] o il codice gestito è la posizione in cui si desidera che risieda il codice, ovvero il computer server o il computer client. Sia [!INCLUDE[tsql](../../includes/tsql-md.md)] che il codice gestito possono essere eseguiti nel server. In questo modo, il codice e i dati si troveranno vicini e sarà possibile usufruire delle capacità di elaborazione del server. D'altra parte, è possibile che si desideri evitare di collocare le attività che richiedono un utilizzo elevato del processore sul server di database. La maggior parte dei moderni computer client è piuttosto potente ed è possibile che si desideri usufruire di queste capacità di elaborazione posizionando la quantità maggiore possibile di codice sul client. Diversamente da [!INCLUDE[tsql](../../includes/tsql-md.md)], il codice gestito può essere eseguito in un computer client.  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Scelta tra stored procedure estese e codice gestito  
- Le stored procedure estese consentono di ottenere funzionalità altrimenti non disponibili con le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Diversamente dal codice gestito indipendente dai tipi, tuttavia, le stored procedure estese possono compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestione della memoria, la pianificazione di thread e fiber e i servizi di sincronizzazione sono, inoltre, notevolmente più integrati tra il codice gestito di CLR e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Grazie all'integrazione con CLR, è possibile scrivere le stored procedure necessarie per eseguire attività non consentite in [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo più sicuro rispetto alle stored procedure estese. Per altre informazioni sull'integrazione con CLR e stored procedure estese, vedere [sulle prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Le stored procedure estese consentono di ottenere funzionalità altrimenti non disponibili con le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Diversamente dal codice gestito indipendente dai tipi, tuttavia, le stored procedure estese possono compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestione della memoria, la pianificazione di thread e fiber e i servizi di sincronizzazione sono, inoltre, notevolmente più integrati tra il codice gestito di CLR e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Grazie all'integrazione con CLR, è possibile scrivere le stored procedure necessarie per eseguire attività non consentite in [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo più sicuro rispetto alle stored procedure estese. Per ulteriori informazioni sull'integrazione con CLR e sulle stored procedure estese, vedere [prestazioni dell'integrazione CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architettura dell'integrazione con CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [Accesso ai dati da oggetti di Database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Accesso ai dati da oggetti di database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introduzione all'integrazione con CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Posta elettronica database le Stored procedure (Transact-SQL) | Microsoft Docs
+title: Stored procedure di Posta elettronica database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 326f1634c19939c1d6044a2842474c4c7dd1c547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942379"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211315"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Stored procedure di Posta elettronica database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguenti stored procedure che consentono di eseguire operazioni di posta elettronica da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]supporta le seguenti stored procedure di sistema utilizzate per eseguire operazioni di posta elettronica dall'interno di un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="database-mail-procedures"></a>Procedure di Posta elettronica database  
   
