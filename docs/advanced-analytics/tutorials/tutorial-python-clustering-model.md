@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abcd13b5db24f7ffd44a21b4690f14d97645cdd5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 595652a2bfa7392d3b4f900082f33cc589631147
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211925"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238669"
 ---
 # <a name="tutorial-perform-clustering-in-python-with-sql-server-machine-learning-services"></a>Esercitazione: Eseguire il clustering in Python con SQL Server Machine Learning Services
 
@@ -25,8 +25,8 @@ Nella prima parte di questa serie verranno configurati i prerequisiti per l'eser
 
 Nelle parti due e tre di questa serie si svilupperanno alcuni script Python in un notebook di Azure Data Studio per analizzare e preparare i dati ed eseguire il training di un modello di machine learning. Quindi, nella quarta parte, verranno eseguiti gli script Python all'interno di un database SQL usando le stored procedure.
 
-Il clustering può essere illustrato come organizzare i dati in gruppi in cui i membri di un gruppo sono in qualche modo simili. Per questa serie di esercitazioni, si supponga di disporre di un'azienda di vendita al dettaglio. Si utilizzerà l'algoritmo **K-means** per eseguire il clustering dei clienti in un set di dati di acquisti del prodotto e viene restituito. Con il clustering dei clienti, è possibile concentrare in modo più efficace le attività di marketing selezionando gruppi specifici.
-Il clustering K-means è un algoritmo di *apprendimento* non supervisionato che cerca modelli nei dati in base a analogie.
+Il *clustering* può essere illustrato come organizzare i dati in gruppi in cui i membri di un gruppo sono in qualche modo simili. Per questa serie di esercitazioni, si supponga di disporre di un'azienda di vendita al dettaglio. Si utilizzerà l'algoritmo **K-means** per eseguire il clustering dei clienti in un set di dati di acquisti del prodotto e viene restituito. Con il clustering dei clienti, è possibile concentrare in modo più efficace le attività di marketing selezionando gruppi specifici.
+Il clustering K-means è un algoritmo di *apprendimento non supervisionato* che cerca modelli nei dati in base a analogie.
 
 L'articolo spiega come:
 
