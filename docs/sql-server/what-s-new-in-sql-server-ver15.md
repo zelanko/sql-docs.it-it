@@ -1,6 +1,6 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026237"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155469"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -40,15 +40,12 @@ Le sezioni seguenti presentano una panoramica di queste funzionalità.
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| Soluzione Big Data scalabile | [Distribuire cluster scalabili](../big-data-cluster/deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes <br/><br/> Leggere, scrivere ed elaborare Big Data da Transact-SQL o Spark<br/><br/> Combinare e analizzare con facilità dati relazionali di alto valore con volumi elevati di Big Data<br/><br/>Eseguire query su origini dati esterne<br/><br/>Archiviare Big Data in HDFS gestito da SQL Server<br/><br/>Eseguire query sui dati da più origini dati esterne tramite il cluster<br/><br/> Usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi<br/><br/> Distribuire ed eseguire applicazioni in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Soluzione Big Data scalabile | [Distribuire cluster scalabili](../big-data-cluster/deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes <br/><br/> Leggere, scrivere ed elaborare Big Data da Transact-SQL o Spark<br/><br/> Combinare e analizzare con facilità dati relazionali di alto valore con volumi elevati di Big Data<br/><br/>Eseguire query su origini dati esterne<br/><br/>Archiviare Big Data in HDFS gestito da SQL Server<br/><br/>Eseguire query sui dati da più origini dati esterne tramite il cluster<br/><br/> Usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi<br/><br/> Distribuire ed eseguire applicazioni in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> I database dell'istanza principale di SQL Server usano il gruppo di disponibilità Always On<br/>|
 | &nbsp; | &nbsp; |
 
 Per altri dettagli, vedere [Che cosa sono i [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] di SQL Server?](../big-data-cluster/big-data-cluster-overview.md)
 
 L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP)](what-s-new-in-sql-server-ver15-prerelease.md) contiene un elenco delle funzionalità annunciate e modificate per tutte le versioni CTP precedenti di questa funzionalità.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Motore di database
 

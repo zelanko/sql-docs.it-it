@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136486"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155693"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ In particolare, se una query contiene predicati di uguaglianza che interessano u
   
 **Soluzione alternativa:** se si usano gli indici hash, controllare le query e i piani di query per determinare se le query possono trarre vantaggio dalle operazioni Index Seek su un subset della chiave di indice o sui predicati di disuguaglianza. Se è necessario eseguire la ricerca su un subset della chiave di indice, utilizzare un indice NON CLUSTER oppure un indice HASH esattamente sulle colonne in cui eseguire la ricerca. Se è necessario eseguire la ricerca in un predicato di disuguaglianza, utilizzare un indice NON CLUSTER anziché HASH.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Si verifica un errore quando si utilizza una tabella ottimizzata per la memoria e una variabile di tabella ottimizzata per la memoria nella stessa query, se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Si verifica un errore quando si utilizza una tabella ottimizzata per la memoria e una variabile di tabella ottimizzata per la memoria nella stessa query, se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON  
 **Problema:** se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON e si accede sia a una tabella ottimizzata per la memoria sia a una variabile di tabella ottimizzata per la memoria nella stessa istruzione al di fuori del contesto di una transazione utente, è possibile che venga visualizzato il messaggio di errore seguente:  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **Soluzione alternativa:** Nessuna. È opportuno non fare affidamento sul valore worker_time segnalato nelle DMV delle statistiche di esecuzione per le query con esecuzione rapida nelle stored procedure compilate in modo nativo.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Si verifica un errore con SHOWPLAN_XML per le stored procedure compilate in modo nativo che contengono espressioni lunghe  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Si verifica un errore con SHOWPLAN_XML per le stored procedure compilate in modo nativo che contengono espressioni lunghe  
 **Problema:** se una stored procedure compilata in modo nativo contiene un'espressione lunga, l'acquisizione di SHOWPLAN_XML per la stored procedure, tramite l'opzione T-SQL SET SHOWPLAN_XML ON o l'opzione "Visualizza piano di esecuzione stimato" in Management Studio, potrebbe causare l'errore seguente:  
   
 ```  
@@ -336,8 +336,8 @@ Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi rela
   
 ### <a name="AzureVM"></a>SQL Server 2014 RTM in macchine virtuali di Microsoft Azure  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>La procedura guidata Aggiungi replica Azure restituisce un errore durante la configurazione di un listener del gruppo di disponibilità in Windows Azure  
-**Problema:** se un gruppo di disponibilità ha un listener, la procedura guidata Aggiungi replica Azure restituisce un errore durante il tentativo di configurare il listener in Windows Azure.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>La procedura guidata Aggiungi replica Azure restituisce un errore durante la configurazione di un listener del gruppo di disponibilità in Azure  
+**Problema:** se un gruppo di disponibilità ha un listener, la procedura guidata Aggiungi replica Azure restituisce un errore durante il tentativo di configurare il listener in Azure.  
   
 Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l'assegnazione di un indirizzo IP in ogni subnet che ospita repliche del gruppo di disponibilità, inclusa la subnet di Azure.  
   
@@ -345,9 +345,9 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 1.  Nella pagina Listener, assegnare un indirizzo IP statico libero al listener del gruppo di disponibilità nella subnet di Azure che ospiterà la replica del gruppo di disponibilità.  
   
-    Questa soluzione consente alla procedura guidata di completare l'aggiunta della replica in Windows Azure.  
+    Questa soluzione alternativa consente alla procedura guidata di completare l'aggiunta della replica in Azure.  
   
-2.  Al termine della procedura guidata, sarà necessario completare la configurazione del listener in Windows Azure come descritto in [Configurazione del listener per i gruppi di disponibilità AlwaysOn in Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
+2.  Al termine della procedura guidata, sarà necessario completare la configurazione del listener in Azure come descritto in [Configurazione del listener per i gruppi di disponibilità AlwaysOn in Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

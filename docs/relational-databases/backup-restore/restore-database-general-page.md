@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ba9c414aa28455b15ef46fb9d334f40ee4a6b6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050fb8ed2364066dfe0a6a41e41ec295590d7895
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944791"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155516"
 ---
 # <a name="restore-database-general-page"></a>Ripristina database (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67944791"
 |Nome|Definizione|  
 |----------|----------------|  
 |**Database**|Selezionare il database da ripristinare dall'elenco a discesa. Nell'elenco sono inclusi solo i database di cui è stato eseguito il backup in base alla cronologia dei backup di **msdb** .|  
-|**Dispositivo**|Selezionare i dispositivi di backup logici o fisici (nastri, URL o file) in cui sono inclusi i backup da ripristinare. Questo è necessario se il backup del database è stato effettuato su un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per selezionare uno o più dispositivi di backup logici o fisici, fare clic sul pulsante per la ricerca. Verrà visualizzata la finestra di dialogo **Seleziona dispositivi di backup** . È possibile selezionare fino a 64 dispositivi che appartengono a un singolo set di supporti. I dispositivi nastro devono essere fisicamente collegati al computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un file di backup può trovarsi su un dispositivo disco locale o rimovibile. Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). È inoltre possibile selezionare **URL** come tipo di dispositivo per i file di backup archiviati nel servizio di archiviazione Windows Azure.<br /><br /> Quando si chiude la finestra di dialogo **Seleziona dispositivi di backup** , il dispositivo selezionato viene visualizzato sotto forma di valori di sola lettura nell'elenco **Dispositivo** .|  
+|**Dispositivo**|Selezionare i dispositivi di backup logici o fisici (nastri, URL o file) in cui sono inclusi i backup da ripristinare. Questo è necessario se il backup del database è stato effettuato su un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per selezionare uno o più dispositivi di backup logici o fisici, fare clic sul pulsante per la ricerca. Verrà visualizzata la finestra di dialogo **Seleziona dispositivi di backup** . È possibile selezionare fino a 64 dispositivi che appartengono a un singolo set di supporti. I dispositivi nastro devono essere fisicamente collegati al computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un file di backup può trovarsi su un dispositivo disco locale o rimovibile. Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). È anche possibile selezionare **URL** come tipo di dispositivo per i file di backup archiviati in Archiviazione di Azure.<br /><br /> Quando si chiude la finestra di dialogo **Seleziona dispositivi di backup** , il dispositivo selezionato viene visualizzato sotto forma di valori di sola lettura nell'elenco **Dispositivo** .|  
 |**Database**|Nell'elenco a discesa selezionare il nome del database da cui i backup devono essere ripristinati.<br /><br /> Nota: Questo elenco è disponibile solo quando l'opzione **Dispositivo** è selezionata. Saranno disponibili solo i database che dispongono di backup sui dispositivi selezionati.|  
   
 ### <a name="destination"></a>Destination  

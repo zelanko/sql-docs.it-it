@@ -79,9 +79,17 @@
       items:
         - name: Esercitazioni di Python
           href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: Creare un modello Python usando revoscalepy
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: Clustering dei clienti (K-means)
+        - name: Noleggio di sci (regressione lineare)
+          items:
+            - name: 1 - Introduzione
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+            - name: 2 - Preparare i dati
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+            - name: 3 - Eseguire il training del modello
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+            - name: 4 - Distribuire il modello
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+        - name: Categorizzazione dei clienti (clustering K-means)
           items:
             - name: 1 - Introduzione
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
@@ -91,6 +99,8 @@
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
             - name: 4 - Distribuire il modello
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+        - name: Creare un modello Python usando revoscalepy
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: Python per sviluppatori SQL
           items:
             - name: 1 - Introduzione

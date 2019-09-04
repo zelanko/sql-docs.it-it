@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911758"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155653"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,7 @@ ALTER USER userName
  LOGIN **=** _loginName_  
  Modifica il mapping di un utente associandolo a un altro account di accesso, modificando l'ID di sicurezza (SID) dell'utente in modo che corrisponda all'ID di sicurezza dell'account di accesso.  
   
- Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
+ Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
  NAME **=** _newUserName_  
  Specifica il nuovo nome dell'utente. *newUserName* non deve essere già presente nel database corrente.  

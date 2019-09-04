@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938893"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155841"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -178,7 +178,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
   
- Se l'istruzione CREATE USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione CREATE USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
+ Se l'istruzione CREATE USER è l'unica istruzione in un batch SQL, il database SQL di Azure supporta la clausola WITH LOGIN. Se l'istruzione CREATE USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  Specifica il primo schema in cui verrà eseguita una ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database.  

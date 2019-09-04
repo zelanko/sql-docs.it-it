@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d5fa3b8a91147789dfafad6a69ac6210dfd8119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940888"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176309"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In questo argomento vengono forniti alcuni script di esempio che possono essere utilizzati per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure mediante i cmdlet di PowerShell.  
+  In questo argomento vengono illustrati alcuni script di esempio che possono essere usati per automatizzare i backup nel servizio Archiviazione BLOB di Azure tramite i cmdlet di PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Panoramica dei cmdlet di PowerShell per il backup e il ripristino  
- **Backup-SqlDatabase** e **Restore-SqlDatabase** sono i due principali cmdlet disponibili per eseguire operazioni di backup e ripristino. Inoltre, sono presenti altri cmdlet che possono essere necessari per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure come il set di cmdlet **SqlCredential** . Di seguito è riportato un elenco di cmdlet di PowerShell disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzati nelle operazioni di backup e ripristino:  
+ **Backup-SqlDatabase** e **Restore-SqlDatabase** sono i due principali cmdlet disponibili per eseguire operazioni di backup e ripristino. Esistono anche altri cmdlet che possono essere necessari per automatizzare i backup nel servizio di archiviazione BLOB di Azure, ad esempio il set di cmdlet **SqlCredential**. Di seguito è riportato un elenco di cmdlet di PowerShell disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usati nelle operazioni di backup e ripristino:  
   
  Backup-SqlDatabase  
  Questo cmdlet viene utilizzato per creare un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "67940888"
  Questo cmdlet viene utilizzato per ripristinare un database.  
   
  New-SqlCredential  
- Questo cmdlet viene utilizzato per creare le credenziali SQL da utilizzare per il backup di SQL Server nel servizio di archiviazione di Windows Azure. Per altre informazioni sulle credenziali e sul relativo uso nelle operazioni di backup e ripristino di SQL Server, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Questo cmdlet viene usato per creare le credenziali SQL necessarie per il backup di SQL Server in Archiviazione di Azure. Per altre informazioni sulle credenziali e sul relativo uso nelle operazioni di backup e ripristino di SQL Server, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Questo cmdlet viene utilizzato per recuperare l'oggetto Credential e le relative proprietà.  
@@ -44,7 +44,7 @@ ms.locfileid: "67940888"
  Questo cmdlet viene utilizzato per modificare o impostare le proprietà dell'oggetto Credential di SQL.  
   
 > [!TIP]  
->  I cmdlet relativi alle credenziali vengono utilizzati nelle operazioni di backup e ripristino negli scenari del servizio di archiviazione BLOB di Windows Azure.  
+>  I cmdlet relativi alle credenziali vengono usati nelle operazioni di backup e ripristino negli scenari del servizio di archiviazione BLOB di Azure.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell per le operazioni di backup di più istanze di più database  
  Nelle sezioni seguenti vengono forniti alcuni script per diverse operazioni quali la creazione di credenziali SQL in più istanze di SQL Server, il backup di tutti i database utente in un'istanza di SQL Server e simili. È possibile utilizzare questi script per automatizzare e pianificare le operazioni di backup in base ai requisiti dell'ambiente. Gli script forniti di seguito sono esempi e possono essere modificati o estesi per l'ambiente in uso.  
@@ -59,7 +59,7 @@ ms.locfileid: "67940888"
   
      Per altre informazioni, vedere [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
-3.  Ogni esempio di codice può essere utilizzato in modo indipendente modificando i valori di variabili, tuttavia la creazione di un account di archiviazione Windows Azure e delle credenziali SQL è un prerequisito necessario per tutte le operazioni di backup e ripristino nel servizio di archiviazione BLOB di Windows Azure.  
+3.  Ogni esempio di codice può essere usato in modo indipendente modificando i valori di variabili, tuttavia la creazione di un account di Archiviazione di Azure e delle credenziali SQL è un prerequisito necessario per tutte le operazioni di backup e ripristino nel servizio Archiviazione BLOB di Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Creare le credenziali SQL in tutte le istanze di SQL Server  
  Sono disponibili due script di esempio, entrambi per la creazione delle credenziali SQL "mybackupToURL" in tutte le istanze di SQL Server in un computer. Il primo esempio è semplice e consente di creare le credenziali senza intercettare eccezioni.  Se ad esempio sono già presenti credenziali esistenti con lo stesso nome in una delle istanze del computer, lo script avrà esito negativo. Nel secondo esempio vengono intercettati gli errori consentendo allo script di continuare.  

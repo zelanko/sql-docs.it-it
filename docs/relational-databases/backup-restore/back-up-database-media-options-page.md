@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940916"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155556"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940916"
 ## <a name="options"></a>Opzioni  
   
 ### <a name="overwrite-media"></a>Sovrascrivi supporti  
- Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (archiviazione di Windows Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup usando **BACKUP TO URL. WITH FORMAT** (istruzione Transact-SQL). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (Archiviazione di Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup usando **BACKUP TO URL. WITH FORMAT** (istruzione Transact-SQL). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  L'opzione **Sovrascrivi supporti** è disabilitata se è stato selezionato **URL** come destinazione di backup nella pagina **Generale**.
   

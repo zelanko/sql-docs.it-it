@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115708"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155573"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -366,12 +366,12 @@ Casella di controllo**Includi indici**
      Specificare la cartella in cui inserire i file di database creati automaticamente. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
      **Credenziali SQL**  
-     Selezionare le credenziali SQL utilizzate per autenticare il servizio di archiviazione Windows Azure. Se non si dispone di credenziali SQL esistenti utilizzabili, fare clic sul pulsante **Crea** per crearne delle nuove.  
+     Selezionare le credenziali SQL usate per l'autenticazione in Archiviazione di Azure. Se non si dispone di credenziali SQL esistenti utilizzabili, fare clic sul pulsante **Crea** per crearne delle nuove.  
   
     > **IMPORTANTE** La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. Se non si dispone dell'accesso al certificato di gestione o al profilo di pubblicazione, è possibile creare le credenziali di SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso tramite Transact-SQL o SQL Server Management Studio. Vedere il codice di esempio nell'argomento [Creare credenziali](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) per creare le credenziali tramite Transact-SQL. In alternativa, utilizzando SQL Server Management Studio, dall'istanza del motore di database, fare clic con il pulsante destro del mouse su **Sicurezza**, scegliere **Nuovo**e selezionare **Credenziale**. Specificare il nome dell'account di archiviazione per **Identity** e la chiave di accesso nel campo **Password** .  
   
      **Contenitore di archiviazione di Azure**  
-     Specificare il nome del contenitore del servizio di archiviazione Windows Azure.  
+     Specificare il nome del contenitore di Archiviazione di Azure  
   
      **Prefisso URL**  
      Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<account di archiviazione.blob.core.windows.net**.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893621"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155705"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,8 +119,8 @@ Usare la chiave di accesso salvata per creare le credenziali di SQL Server segue
 
 1. Eseguire l'istruzione per creare le credenziali. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Eseguire il backup del database nel servizio Archiviazione BLOB di Azure
-In questa lezione verrà usata un'istruzione T-SQL per eseguire un backup completo del database nel servizio Archiviazione BLOB di Azure. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Eseguire il backup del database nel servizio Archiviazione BLOB di Azure
+In questa sezione si userà un'istruzione T-SQL per eseguire un backup completo del database nel servizio Archiviazione BLOB di Azure. 
 
 1. Connettersi all'istanza di SQL Server usando SQL Server Management Studio. 
 1. Selezionare il database **SQLTestDB** e aprire una finestra **Nuova query**. 
@@ -138,7 +138,7 @@ In questa lezione verrà usata un'istruzione T-SQL per eseguire un backup comple
 1. Eseguire l'istruzione per il backup del database SQLTestDB nell'URL. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Ripristinare il database dal servizio Archiviazione BLOB di Azure
+## <a name="restore-database-from-azure-blob-storage-service"></a>Ripristinare il database dal servizio Archiviazione BLOB di Azure
 In questa sezione verrà usata un'istruzione T-SQL per ripristinare il backup di database completo. 
 
 1. Connettersi all'istanza di SQL Server usando SQL Server Management Studio. 

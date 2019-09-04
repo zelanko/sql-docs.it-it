@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076159"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155623"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Connetti ad Archiviazione di Microsoft Azure (Ripristino)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La finestra di dialogo consente di specificare la connessione alle informazioni sull'account del servizio di archiviazione Windows Azure per recuperare l'archiviazione di file nell'account di archiviazione di Windows Azure. Dopo avere specificato le informazioni necessarie, fare clic su **Connetti** per stabilire la connessione al servizio di archiviazione Microsoft Azure.  
+  La finestra di dialogo consente di specificare la connessione alle informazioni sull'account di archiviazione di Azure per recuperare l'archivio di file nell'account di archiviazione di Azure. Dopo avere specificato le informazioni necessarie, fare clic su **Connetti** per stabilire la connessione all'archiviazione di Azure.  
   
-## <a name="windows-azure-storage-account"></a>Account di archiviazione di Windows Azure  
+## <a name="azure-storage-account"></a>Account di archiviazione di Microsoft Azure  
  **Account di archiviazione**  
- Selezionare, digitare o incollare il nome dell'account di archiviazione di Windows Azure da utilizzare. Nella casella di riepilogo sono elencati gli account utilizzati in precedenza.  
+ Selezionare, digitare o incollare il nome dell'account di archiviazione di Azure da usare. Nella casella di riepilogo sono elencati gli account utilizzati in precedenza.  
   
  **Chiave dell'account**  
- Specificare la chiave di accesso dell'account di archiviazione di Windows Azure.  
+ Specificare la chiave di accesso dell'account di archiviazione di Azure.  
   
  Casella di controllo**Usa endpoint sicuri (HTTPS)**  
- Selezionare questa opzione per stabilire una connessione sicura alla risorsa di archiviazione di Windows Azure (scelta consigliata).  
+ Selezionare questa opzione per stabilire una connessione sicura all'archiviazione di Azure (scelta consigliata).  
   
  Casella di controllo**Salva chiave account**  
  Selezionare questa casella di controllo se si desidera memorizzare in SQL Server la chiave di accesso per l'account di archiviazione.  

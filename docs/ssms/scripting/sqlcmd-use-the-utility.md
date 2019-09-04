@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdb412284c67fdccce8c3628aed41b6be0cae04
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267628"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155749"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68267628"
   
 -   L'opzione server ( **-S**) identifica l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla quale si connette **sqlcmd**.  
   
--   Le opzioni di autenticazione ( **-E**, **-U**e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA:** l'opzione **-E** è quella predefinita e non deve essere specificata.  
+-   Le opzioni di autenticazione ( **-E**, **-U**e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA** l'opzione **-E** è quella predefinita e non deve essere specificata.  
   
 -   Le opzioni di input ( **-Q**, **-q**e **-i**) identificano la posizione dell'input per **sqlcmd**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68267628"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **NOTA:** Nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita. **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
+    > **NOTA** Nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita. **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
   
 -   Connessione a un'istanza denominata utilizzando l'autenticazione di Windows per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -473,7 +473,7 @@ ms.locfileid: "68267628"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. Utilizzo di sqlcmd per impostare la crittografia in un database SQL di Windows Azure  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Utilizzo di sqlcmd per impostare la crittografia in database SQL di Azure  
  È possibile eseguire un comando **sqlcmd**in una connessione ai dati [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per specificare la crittografia e l'attendibilità del certificato. Sono disponibili due opzioni di **sqlcmd**:  
   
 -   L'opzione -N viene utilizzata dal client per richiedere una connessione crittografata. Equivale all'opzione ADO.net `ENCRYPT = true`.  

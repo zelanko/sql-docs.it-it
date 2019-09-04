@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912806"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154805"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Estrarre, pubblicare e registrare file con estensione dacpac
 Questo argomento descrive quattro procedure eseguibili facendo clic con il pulsante destro del mouse su un database connesso in Esplora oggetti di SQL Server:  
@@ -50,7 +50,7 @@ Se è selezionata la casella di controllo **Registra come applicazione livello d
 La configurazione di pubblicazione aggiuntiva è disponibile nella finestra di dialogo **Impostazioni di pubblicazione avanzate** a cui è possibile accedere facendo clic sul pulsante **Avanzate**.  
   
 ## <a name="extract-data-tier-application"></a>Estrarre l'applicazione livello dati  
-È possibile estrarre un file con estensione dacpac da un database. Tramite l'operazione di estrazione viene creato un file di snapshot di database (con estensione dacpac) da un database SQL di Azure o SQL Server attivo, che potrebbe contenere dati di tabelle utente, oltre allo schema del database.  
+È possibile estrarre un file con estensione dacpac da un database. L'operazione di estrazione crea un file di snapshot del database (DACPAC) da un database SQL di Azure o SQL Server attivo, che potrebbe contenere dati di tabelle utente, oltre allo schema del database.  
   
 Specificare il file con estensione dacpac da creare. Il pulsante **Proprietà DAC** visualizza la finestra di dialogo **Proprietà DAC** che consente di specificare le proprietà del file con estensione dacpac.  
   

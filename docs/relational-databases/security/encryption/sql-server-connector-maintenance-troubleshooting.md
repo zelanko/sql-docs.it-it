@@ -1,7 +1,7 @@
 ---
 title: Manutenzione e risoluzione dei problemi di Connettore SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140696"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148785"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "68140696"
   
 ### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Aggiornamento del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Le versioni 1.0.1.0 e successive sono supportate negli ambienti di produzione. Usare le istruzioni seguenti per eseguire l'aggiornamento alla versione più recente disponibile nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
+Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Le versioni 1.0.1.0 e successive sono supportate negli ambienti di produzione. Usare le istruzioni seguenti per eseguire l'aggiornamento alla versione più recente disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
 Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Queste istruzioni evitano di dover riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
  
@@ -138,11 +138,12 @@ Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa pro
 8.  Dopo aver verificato il corretto funzionamento dell'aggiornamento, è possibile eliminare la cartella precedente di Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si è scelto di rinominarla invece di disinstallarla nel passaggio 3.  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Rollover dell'entità servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi.  L'entità servizio ha un ID client e una chiave di autenticazione.  Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**.  La **chiave di autenticazione** è valida per un determinato periodo di tempo (1 o 2 anni).   Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio.  Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi.  L'entità servizio ha un ID client e una chiave di autenticazione.  Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**.  La **Chiave di autenticazione** è valida per un determinato periodo di tempo (uno o due anni).   Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio.  Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e ripristino delle chiavi  
 È importante eseguire regolarmente il backup dell'insieme di credenziali delle chiavi. In caso di perdita di una chiave asimmetrica nell'insieme di credenziali, è possibile ripristinarla dal backup. La chiave deve essere ripristinata usando lo stesso nome precedente con il comando Restore di PowerShell (vedere i passaggi successivi).  
-In caso di perdita dell'insieme di credenziali, è necessario ricreare un insieme di credenziali e ripristinare la chiave asimmetrica al suo interno usando lo stesso nome assegnato in precedenza. Il nome dell'insieme di credenziali può essere diverso o uguale rispetto a prima. È necessario impostare anche le autorizzazioni di accesso nel nuovo insieme di credenziali per concedere all'entità servizio di SQL Server l'accesso richiesto per gli scenari di crittografia di SQL Server e quindi modificare le credenziali di SQL Server in modo che includano il nuovo nome dell'insieme di credenziali.  
+In caso di perdita dell'insieme di credenziali, è necessario ricreare un insieme di credenziali e ripristinare la chiave asimmetrica al suo interno usando lo stesso nome assegnato in precedenza. Il nome dell'insieme di credenziali può essere diverso o uguale rispetto a prima. È necessario impostare anche le autorizzazioni di accesso nel nuovo insieme di credenziali per concedere all'entità servizio di SQL Server l'accesso richiesto per gli scenari di crittografia di SQL Server e quindi modificare le credenziali di SQL Server in modo che includano il nuovo nome dell'insieme di credenziali.
+
 In sintesi, ecco i passaggi necessari:  
   
 * Eseguire il backup della chiave dell'insieme di credenziali usando il cmdlet di Powershell Backup-AzureKeyVaultKey.  
@@ -191,7 +192,7 @@ I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purc
 3. Selezionare la sottoscrizione di Azure attualmente in uso e fare clic su **Modifica directory** nei comandi nella parte inferiore della schermata.
 4. Nella finestra popup usare il menu a discesa **Directory** per selezionare l'istanza di Active Directory che si vuole usare. L'istanza verrà impostata come directory predefinita.
 5. Assicurarsi di essere l'amministratore globale della nuova istanza di Active Directory selezionata. Se non si è l'amministratore globale, si potrebbero perdere le autorizzazioni di gestione a causa della modifica della directory.
-6. Dopo la chiusura della finestra popup, se non è visualizzata alcuna delle sottoscrizioni, potrebbe essere necessario aggiornare il filtro **Filtra per directory** in **Sottoscrizioni** nel menu in alto a destra della schermata per visualizzare le sottoscrizioni che usano la nuova istanza di Active Directory appena aggiornata.
+6. Dopo la chiusura della finestra popup, se non è visualizzata alcuna sottoscrizione, potrebbe essere necessario aggiornare il filtro **Filtra per directory** in **Sottoscrizioni** nel menu in alto a destra della schermata per visualizzare le sottoscrizioni che usano l'istanza di Active Directory appena aggiornata.
 
     > [!NOTE] 
     > Si potrebbe non disporre delle autorizzazioni per modificare la directory predefinita nella sottoscrizione di Azure. In questo caso, creare l'entità servizio AAD nella directory predefinita, in modo che si trovi nella stessa directory dell'insieme di credenziali delle chiavi di Azure usato successivamente.
@@ -219,9 +220,9 @@ Codice di errore  |Simbolo  |Descrizione
 3000 | ErrorSuccess | L'operazione AKV è stata completata.    
 3001 | ErrorUnknown | L'operazione AKV non è riuscita con un errore non specificato.    
 3002 | ErrorHttpCreateHttpClientOutOfMemory | Non è possibile creare HttpClient per un'operazione AKV perché la memoria è insufficiente.    
-3003 | ErrorHttpOpenSession | Non è possibile aprire una sessione Http a causa di un errore di rete.    
-3004 | ErrorHttpConnectSession | Non è possibile connettere una sessione Http a causa di un errore di rete.    
-3005 | ErrorHttpAttemptConnect | Un tentativo di connessione non è riuscito a causa di un errore di rete.    
+3003 | ErrorHttpOpenSession | Impossibile aprire una sessione HTTP a causa di un errore di rete.    
+3004 | ErrorHttpConnectSession | Impossibile connettere una sessione HTTP a causa di un errore di rete.    
+3005 | ErrorHttpAttemptConnect | Impossibile tentare la connessione a causa di un errore di rete.    
 3006 | ErrorHttpOpenRequest | Non è possibile aprire una richiesta a causa di un errore di rete.    
 3007 | ErrorHttpAddRequestHeader | Non è possibile aggiungere l'intestazione della richiesta.    
 3008 | ErrorHttpSendRequest | Non è possibile inviare una richiesta a causa di un errore di rete.    
@@ -292,9 +293,9 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](/powershell/module/azurerm.keyvault/)  
   
-## <a name="see-also"></a>Vedere anche  
- [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+ [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)
