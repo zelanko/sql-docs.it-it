@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ebc5ccef3130a490a6563531dd61e66a0218083d
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715837"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304819"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Download CAB per aggiornamenti cumulativi di SQL Server istanze di analisi nel database
 
@@ -38,9 +38,9 @@ Iniziare con un'installazione di base.
 
 I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i file CAB e li si trasferiscono nel computer di destinazione, inserirli in una cartella pratica, ad esempio **download** , oppure la cartella% Temp% dell'utente di installazione.
 
-|Versione  |Componente | Collegamento di download  | Problemi risolti | 
+|Release  |Componente | Collegamento di download  | Problemi risolti | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| I file binari all'interno del pacchetto sono ora firmati. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| I file binari all'interno del pacchetto sono ora firmati. |
 | | Microsoft Python aperto     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| I file binari all'interno del pacchetto sono ora firmati. |
@@ -101,7 +101,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 Per SQL Server 2016 R Services, le versioni di base sono la versione RTM o una versione Service Pack.
 
-|Versione  |Collegamento di download  |
+|Release  |Collegamento di download  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

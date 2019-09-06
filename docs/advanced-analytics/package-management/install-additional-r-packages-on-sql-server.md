@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190363"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70275670"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo descrive come usare le funzioni nel pacchetto [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) per installare nuovi pacchetti R in un'istanza di SQL Server Machine Learning Services o R Services per SQL Server. I pacchetti installati possono essere usati negli script R eseguiti nel database usando l'istruzione T-SQL [SP-Execute-External-script-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
+Questo articolo descrive come usare le funzioni nel pacchetto [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) per installare nuovi pacchetti R in un'istanza di SQL Server Machine Learning Services o R Services per SQL Server. I pacchetti installati possono essere usati negli script R eseguiti nel database usando l'istruzione T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
 > Il comando r `install.packages` standard non è consigliato per l'aggiunta di pacchetti R in SQL Server. Usare invece **sqlmlutils** come descritto in questo articolo.

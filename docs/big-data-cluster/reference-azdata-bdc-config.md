@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b24a552bcfaae45fa4c8644d590d2573909a03ce
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155283"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304831"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ Origine del profilo di configurazione: [' AKS-dev-test ',' kubeadm-prod ',' mini
 #### `--force -f`
 Forza la sovrascrittura del file di destinazione.
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -92,7 +92,7 @@ Profilo di configurazione predefinito: [' AKS-dev-test ',' kubeadm-prod ',' mini
 Tipo di configurazione che si vuole visualizzare.
 `cluster`
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

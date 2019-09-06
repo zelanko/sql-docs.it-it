@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155315"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304822"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per i servizi e le risorse del cluster
 
@@ -99,7 +99,7 @@ Per aggiornare le configurazioni a livello di risorsa, ad esempio le istanze in 
 }
 ``` 
 
-Analogamente, per modificare le impostazioni di un servizio signle all'interno di una risorsa specifica. Se ad esempio si vuole modificare le impostazioni della memoria di Spark solo per il componente Spark nel pool di archiviazione, si UDPATE la risorsa **storage-0** con una sezione **Settings** per il servizio **Spark** nel file di configurazione **BDC. JSON** .
+Analogamente, per modificare le impostazioni di un singolo servizio all'interno di una risorsa specifica. Ad esempio, se si vuole modificare le impostazioni della memoria di Spark solo per il componente Spark nel pool di archiviazione, è necessario aggiornare la risorsa **storage-0** con una sezione **delle impostazioni** per il servizio **Spark** nel file di configurazione **BDC. JSON** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configurare l'archiviazione
 
-È anche possibile modificare la classe di archiviazione e le caratteristiche usate per ogni pool. L'esempio seguente assegna una classe di archiviazione personalizzata al pool di archiviazione e aggiorna la dimensione dell'attestazione di volume permanente per l'archiviazione dei dati a 100 GB. Creare prima di tutto un file patch.json come indicato di seguito, che include la nuova sezione *storage*, oltre a *type* e *replicas*
+È anche possibile modificare la classe di archiviazione e le caratteristiche usate per ogni pool. Nell'esempio seguente viene assegnata una classe di archiviazione personalizzata ai pool di archiviazione e di dati e viene aggiornata la dimensione dell'attestazione del volume permanente per l'archiviazione dei dati in 500 GB per HDFS (pool di archiviazione) e 100 GB per il pool di dati. Creare prima di tutto un file patch.json come indicato di seguito, che include la nuova sezione *storage*, oltre a *type* e *replicas*
 
 ```json
 {
@@ -256,13 +256,33 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Ad esempio, è possibile assicurarsi che i pod delle risorse del pool di archiviazione vengano posizionati in nodi con più spazio di archiviazione o SQL Server istanze master vengano posizionate su nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di pool nel file di configurazione della distribuzione del cluster. Kubernetes si occuperà quindi dell'impostazione dell'affinità dei pod e dei nodi che corrispondono a etichette specifiche. La chiave dell'etichetta specifica che deve essere aggiunta ai nodi nel cluster kubernetes è **MSSQL-cluster-Wide**. Il valore di questa etichetta può essere qualsiasi stringa scelta.
 
-Nell'esempio seguente viene illustrato come modificare un file di configurazione personalizzato per includere un'impostazione dell'etichetta del nodo per l'istanza master SQL Server, il pool di calcolo, il pool di dati & pool di archiviazione. Si noti che non è presente alcuna chiave *nodeLabel* nelle configurazioni predefinite e di conseguenza è necessario modificare un file di configurazione personalizzato manualmente oppure creare un file di patch e applicarlo al file di configurazione personalizzato. Il Pod dell'istanza master di SQL Server verrà distribuito in un nodo che contiene un'etichetta **MSSQL-cluster-Wide** con valore **BDC-Master**. Il pool di calcolo e i pod del pool di dati verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-SQL**. I pod del pool di archiviazione verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-storage**.
+Nell'esempio seguente viene illustrato come modificare un file di configurazione personalizzato per includere un'impostazione dell'etichetta del nodo per l'istanza master SQL Server, il pool di calcolo, il pool di dati & pool di archiviazione. Non esiste alcuna chiave di *nodeLabel* nelle configurazioni predefinite, quindi è necessario modificare manualmente un file di configurazione personalizzato oppure creare un file di patch e applicarlo al file di configurazione personalizzato. Il Pod dell'istanza master di SQL Server verrà distribuito in un nodo che contiene un'etichetta **MSSQL-cluster-Wide** con valore **BDC-Master**. Il pool di calcolo e i pod del pool di dati verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-SQL**. I pod del pool di archiviazione verranno distribuiti nei nodi che contengono un'etichetta **MSSQL-cluster-Wide** con valore **BDC-storage**.
 
 Creare un file denominato **patch.json** nella directory corrente con il contenuto seguente:
 

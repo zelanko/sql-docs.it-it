@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158216"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304728"
 ---
 # <a name="azdata-control"></a>controllo azdata
 
@@ -47,7 +47,7 @@ Nome del piano di controllo, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
 Profilo di configurazione del cluster, usato per la distribuzione del cluster: [' AKS-dev-test ',' kubeadm-prod ',' minikube-dev-test ',' kubeadm-dev-test ']
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
 #### `--node-label -l`
 Etichetta del nodo, usata per definire i nodi in cui eseguire la distribuzione.
 #### `--force -f`
