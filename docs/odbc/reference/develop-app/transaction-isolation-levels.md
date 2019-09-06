@@ -31,7 +31,7 @@ ms.locfileid: "67985113"
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
 I *Livelli di isolamento delle transazioni* sono una misura dell'esito positivo dell'isolamento delle transazioni. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza dei seguenti fenomeni:  
   
--   **Letture dirty** Una *lettura dirty* si verifica quando una transazione legge dei dati che non sono ancora stati committati. Ad esempio, si supponga che transazione 1 aggiorni una riga. La transazione 2 legge la riga prima che transazione 1 committi l'aggiornamento. Se la transazione 1 esegue il rollback della modifica, la transazione 2 avrà letto dei dati che sono considerati mai esistiti.  
+-   **Letture dirty** Una *lettura dirty* si verifica quando una transazione legge dei dati di cui non è stato ancora eseguito il commit. Ad esempio, si supponga che transazione 1 aggiorni una riga. La transazione 2 legge la riga prima che transazione 1 esegua il commit dell'aggiornamento. Se la transazione 1 esegue il rollback della modifica, la transazione 2 avrà letto dei dati che sono considerati mai esistiti.  
   
 -   **Letture non ripetibili** Una *lettura non ripetibile* si verifica quando una transazione legge la stessa riga due volte, ma ottiene ogni volta dati diversi. Ad esempio, si supponga transazione 1 legga una riga. La transazione 2 aggiorni o elimini tale riga ed esegue il commit di update o delete. Se la transazione 1 consente di leggere nuovamente la riga, recupera i valori di riga diversi o scopre che la riga è stata eliminata.
   
