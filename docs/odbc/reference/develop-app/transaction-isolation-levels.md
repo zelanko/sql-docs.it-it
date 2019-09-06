@@ -29,13 +29,13 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "67985113"
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
-*Livelli di isolamento delle transazioni* sono una misura dell'estensione per la transazione ha esito positivo isolamento. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza di fenomeni di seguenti:  
+I *Livelli di isolamento delle transazioni* sono una misura dell'esito positivo dell'isolamento delle transazioni. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza dei seguenti fenomeni:  
   
--   **Letture dirty** un' *lettura dirty* si verifica quando una transazione legge i dati che non sono ancora stato eseguito il commit. Ad esempio, si supponga che gli aggiornamenti delle transazioni 1 una riga. La transazione 2 legge la riga aggiornata prima dell'aggiornamento di commit della transazione 1. Se la transazione 1 esegue il rollback della modifica, la transazione 2 hanno leggeranno i dati che sono considerati mai esistito.  
+-   **Letture dirty** Una *lettura dirty* si verifica quando una transazione legge dei dati di cui non è stato ancora eseguito il commit. Ad esempio, si supponga che transazione 1 aggiorni una riga. La transazione 2 legge la riga prima che transazione 1 esegua il commit dell'aggiornamento. Se la transazione 1 esegue il rollback della modifica, la transazione 2 avrà letto dei dati che sono considerati mai esistiti.  
   
--   **Letture non ripetibili** un' *lettura non ripetibile* si verifica quando una transazione legge la stessa riga due volte, ma ottiene ogni volta dati diversi. Ad esempio, si supponga di transazione 1 legge una riga. La transazione 2 aggiorna o elimina tale riga ed esegue il commit di update o delete. Se la transazione 1 consente di leggere nuovamente la riga, recupera i valori di riga diversi o individua che la riga è stata eliminata.  
+-   **Letture non ripetibili** Una *lettura non ripetibile* si verifica quando una transazione legge la stessa riga due volte, ma ottiene ogni volta dati diversi. Ad esempio, si supponga transazione 1 legga una riga. La transazione 2 aggiorni o elimini tale riga ed esegue il commit di update o delete. Se la transazione 1 consente di leggere nuovamente la riga, recupera i valori di riga diversi o scopre che la riga è stata eliminata.
   
--   **Righe fantasma** un' *fantasma* è una riga che corrisponde ai criteri di ricerca, ma non viene inizialmente visualizzata. Si supponga, ad esempio, la transazione 1 legge un set di righe che soddisfano alcuni criteri di ricerca. La transazione 2 genera una nuova riga (tramite un aggiornamento o un'operazione di inserimento) che corrisponde ai criteri di ricerca per la transazione 1. Se la transazione 1 reexecutes l'istruzione che legge le righe, ottiene un diverso set di righe.  
+-   **Righe fantasma** Una *riga fantasma* è una riga che corrisponde ai criteri di ricerca, ma non viene inizialmente visualizzata. Si supponga, ad esempio, che la transazione 1 legge un set di righe che soddisfano alcuni criteri di ricerca. La transazione 2 genera una nuova riga (tramite un aggiornamento o un'operazione di inserimento) che corrisponde ai criteri di ricerca della transazione 1. Se la transazione 1 riesegue l'istruzione che legge le righe, ottiene un diverso set di righe.
   
  I quattro livelli di isolamento (come definito da SQL-92) sono definiti in termini di questi fenomeni. Nella tabella seguente, una "X" contrassegna ogni fenomeno che può verificarsi.  
   
