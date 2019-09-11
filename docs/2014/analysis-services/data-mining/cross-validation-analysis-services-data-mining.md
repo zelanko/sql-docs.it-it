@@ -60,7 +60,7 @@ ms.locfileid: "68809850"
   
  Nell'esempio nel diagramma viene illustrato l'utilizzo dei dati se vengono specificate tre riduzioni.  
   
- ![Come i dati dei segmenti della convalida] incrociata (../media/xvoverviewmain.gif "Come i dati dei segmenti della convalida") incrociata  
+ ![Come i dati dei segmenti della convalida incrociata](../media/xvoverviewmain.gif "Come i dati dei segmenti della convalida incrociata")  
   
  Nello scenario nel diagramma, la struttura di data mining contiene un set di dati di controllo utilizzato per il testing, ma il set di dati di test non è stato incluso per la convalida incrociata. Di conseguenza, per la convalida incrociata vengono utilizzati tutti i dati nel set di dati di training, ovvero il 70% dei dati nella struttura di data mining. Il report della convalida incrociata mostra il numero totale di case utilizzato in ogni partizione.  
   

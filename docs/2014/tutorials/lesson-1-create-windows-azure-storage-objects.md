@@ -31,7 +31,7 @@ ms.locfileid: "70176102"
   
 3.  Passare all'account di archiviazione creato nel passaggio precedente. Dal centro inferiore della pagina Web fare clic su **Gestisci chiavi**. Verranno visualizzate le informazioni sull'account. Copiare il nome dell'account di archiviazione e le chiavi di accesso. Queste informazioni sono necessarie per creare le credenziali archiviate di SQL. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queste informazioni vengono utilizzate per accedere all'account di archiviazione e per creare i backup.  
   
-     Screenshot ![delle chiavi dell'account di archiviazione di Azure] Screenshot (../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "delle chiavi dell'account di archiviazione di Azure")  
+     ![Screenshot delle chiavi dell'account di archiviazione di Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Screenshot delle chiavi dell'account di archiviazione di Azure")  
   
     > [!NOTE]  
     >  Inoltre, è possibile creare un account di archiviazione a livello di programmazione tramite le API REST. Per altre informazioni, vedere [creare un account di archiviazione](https://go.microsoft.com/fwlink/?LinkId=271928).  

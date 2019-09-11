@@ -94,7 +94,7 @@ ms.locfileid: "70175970"
 -   Quando si esegue il ripristino da un backup compresso, è possibile che venga visualizzato l'errore seguente:  
   
     -   **Si è verificata un'eccezione SqlException 3284. Gravità: stato 16: 5**  
-        **Il contrassegno dei messaggi nel dispositivo https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak '' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backupset: ' 65536' sembra un valore possibile.**  
+        **Il contrassegno dei messaggi nel dispositivo'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backupset: ' 65536' sembra un valore possibile.**  
   
          Per risolvere il problema, eseguire nuovamente l'istruzione `BACKUP` con il valore `BLOCKSIZE = 65536` specificato.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175970"
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server.   Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   
--   Scrittura in "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " non riuscita: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
+-   Scrittura in 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak ' non riuscita: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
   
 -   Si è verificato un errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Impossibile recuperare l'errore dall'endpoint remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175970"
   
      Interruzione anomala di BACKUP DATABASE in corso.  
   
--   BackupIoRequest:: ReportIoError: errore di scrittura nel dispositivo di http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak backup ''. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
+-   BackupIoRequest:: ReportIoError: errore di scrittura nel dispositivo di'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'backup. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione di trasporto: La connessione è stata chiusa.  
   
  Se si abilita la registrazione dettagliata mediante il flag di traccia 3051, è inoltre possibile che nei log venga visualizzato il messaggio seguente:  
   
