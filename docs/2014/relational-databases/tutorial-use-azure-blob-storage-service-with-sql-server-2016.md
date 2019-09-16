@@ -39,7 +39,7 @@ ms.locfileid: "70176089"
  **[Lezione 4: Creare un database in archiviazione di Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
  In questa lezione viene creato un database in archiviazione di Azure usando l'opzione CREATE database FILENAME.  
   
- **Lezione 5. &#40;Crittografia&#41; facoltativa del database tramite TRANSparent Data Encryption**  
+ **[Lezione 5. &#40;Crittografia&#41; facoltativa del database tramite TRANSparent Data Encryption](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  In questa lezione viene crittografato il database tramite Transparent Data Encryption (TDE) e un certificato del server.  
   
  **[Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
