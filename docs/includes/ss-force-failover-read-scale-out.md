@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 87fce17db46dc590fbffe0bae0b27c17bd54320e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68213088"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70963578"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
@@ -72,7 +72,7 @@ Per effettuare il failover manuale senza perdita di dati:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
+        SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
    ```
 
    Questa impostazione assicura che per ogni transazione attiva venga eseguito il commit della replica primaria e di almeno una replica secondaria sincrona. 

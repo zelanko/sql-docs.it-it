@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db1acd2f2ef408f1e9bed70949444bda5a1ef3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03b8a6f9750973cb86aaa1af3915ccfc0f172370
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111479"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911247"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concessione, revoca e negazione delle autorizzazioni
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68111479"
  Le autorizzazioni per i database e gli oggetti di database possono essere assegnate analogamente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> e l'oggetto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Concessione delle autorizzazioni del server in Visual Basic  
  In questo esempio di codice vengono concesse le autorizzazioni Create Endpoint e Alter Any Endpoint all'account di accesso specificato, quindi le autorizzazioni vengono enumerate e visualizzate. Una delle autorizzazioni viene revocata e successivamente le autorizzazioni vengono nuovamente enumerate. In questo esempio si presuppone che l'account di accesso specificato disponga delle autorizzazioni specificate con cui iniziare.  

@@ -2,23 +2,30 @@
 title: Novità di SSMA per Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 39f8d7da95fc8e2102d1208216a2eb43bb038fea
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632066"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745432"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di accesso in ogni versione.  
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+La versione di SSMA per l'accesso a v 8.4 è stata migliorata con correzioni mirate progettate per risolvere i problemi di accessibilità e correggere un bug correlato alle colonne di indice Max (per consentire 32 anziché 16) per SQL Server 2016 e versioni successive.
+
+> [!IMPORTANT]
+> Con SSMA v 7.4 e versioni successive, .NET 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,18 +34,12 @@ La versione di SSMA per l'accesso a v 8.3 è stata migliorata con correzioni mir
 * Risolvere i problemi di accessibilità
 * Aggiungere il supporto di base per il tipo ' hierarchyid ' in SQL Server
 
-> [!IMPORTANT]
-> Con SSMA v 7.4 e versioni successive, .NET 4.5.2 è un prerequisito di installazione.
-
 ## <a name="ssma-v82"></a>SSMA v8.2
 
 La versione di SSMA per l'accesso a v 8.2 è stata migliorata con correzioni mirate progettate per migliorare la qualità e le metriche di conversione.
 
 > [!NOTE]
 > Un problema noto relativo all'aggiornamento automatico può provocare l'errore di un aggiornamento da SSMA v 8.1 a v 8.2. Se si verifica questo errore, scaricare la nuova versione e installarla manualmente.
-
-> [!IMPORTANT]
-> Con SSMA v 7.4 e versioni successive, .NET 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 

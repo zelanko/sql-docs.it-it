@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di trigger | Documenti di Microsoft
+title: Creazione, modifica e rimozione di trigger | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,24 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 735428d35b267168f76798f875ca63f3972a676c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd2aa0bce55273295cfde3b15d2863d7e35f3d26
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002660"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911260"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Creazione, modifica e rimozione di trigger
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  In SMO i trigger sono rappresentati tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. Il [!INCLUDE[tsql](../../../includes/tsql-md.md)] codice eseguito quando il trigger viene attivato viene impostato dal <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> proprietà dell'oggetto Trigger. Il tipo di trigger viene impostato tramite altre proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, ad esempio la proprietà <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Si tratta di una proprietà booleana che specifica se il trigger viene attivato da un **UPDATE** dei record nella tabella padre.  
+  In SMO i trigger sono rappresentati tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. Il [!INCLUDE[tsql](../../../includes/tsql-md.md)] codice che viene eseguito quando il trigger attivato viene impostato <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> dalla proprietà dell'oggetto trigger. Il tipo di trigger viene impostato tramite altre proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, ad esempio la proprietà <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Si tratta di una proprietà booleana che specifica se il trigger viene attivato da un **aggiornamento** dei record nella tabella padre.  
   
  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger> rappresenta trigger DML (Data Manipulation Language) tradizionali. In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive sono supportati anche i trigger DDL (Data Definition Language). I trigger DDL sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> e dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>.  
   
 ## <a name="example"></a>Esempio  
-Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-basic"></a>Creazione, modifica e rimozione di un trigger in Visual Basic  

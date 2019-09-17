@@ -1,10 +1,7 @@
 ---
 title: Editor di query e di testo (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266029"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988154"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## <a name="sql-server-management-studio-editors"></a>Editor di SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Editor di SQL Server Management Studio
+
  I quattro editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] condividono un'architettura comune. L'editor di testo implementa il livello di base della funzionalità e può essere utilizzato come editor di base per i file di testo. Gli altri tre editor, ossia gli editor di query, estendono questa base di funzionalità includendo un servizio di linguaggio che definisce la sintassi di uno dei linguaggi supportati in SQL Server. Gli editor di query implementano inoltre vari livelli di supporto per caratteristiche dell'editor quali IntelliSense il debug. Gli editor di query includono l'editor di query del Motore di database per l'utilizzo nella compilazione di script che contengono istruzioni Transact-SQL e XQuery, l'editor MDX per il linguaggio MDX, l'editor DMX per il linguaggio DMX e l'editor XML/A per il linguaggio XML for Analysis.  
   
-## <a name="common-components"></a>Componenti comuni  
+## <a name="common-components"></a>Componenti comuni
+
  Tutti gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] condividono questi componenti:  
   
  **Riquadro del codice**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266029"
  **A capo automatico**  
  Visualizza le righe lunghe di testo o di codice su più righe per consentire la visualizzazione di tutto il testo. L'opzione A capo automatico non modifica l'aspetto del testo quando viene eseguito o stampato. È possibile attivarla nella finestra di dialogo **Strumenti**, **Opzioni** , nella pagina Editor di testo, Tutti i linguaggi, Generale o in una pagina specifica dell'editor.  
   
-## <a name="code-editor-components"></a>Componenti dell'editor del codice  
+## <a name="code-editor-components"></a>Componenti dell'editor del codice
+
  Gli editor del codice contengono queste caratteristiche oltre a quelle condivise con gli editor di testo e XML:  
   
  **Risultati**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266029"
  **Barra di stato**  
  Visualizza informazioni sul sistema associate alla finestra dell'editor di query, ad esempio l'istanza a cui è connesso l'editor di query.  
   
-## <a name="database-engine-query-editor-components"></a>Componenti dell'editor di query del Motore di database  
+## <a name="database-engine-query-editor-components"></a>Componenti dell'editor di query del Motore di database
+
  Questi componenti sono disponibili soltanto nell'editor di query del Motore di database:  
   
  **Debugger**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266029"
 |Viene descritto come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice e visualizzare informazioni di debug, ad esempio i valori in variabili e parametri.|[Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Viene descritto come impostare colori personalizzati per istanze diverse del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e come impostarli come sfondo della barra di stato nelle finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra di stato &#40;editor di query del Motore di database&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+ [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

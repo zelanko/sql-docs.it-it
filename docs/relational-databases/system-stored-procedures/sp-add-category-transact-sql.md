@@ -17,19 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941773"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810550"
 ---
-# <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Aggiunge al server la categoria specificata di processi, avvisi o operatori.  
+  Aggiunge al server la categoria specificata di processi, avvisi o operatori. Per un metodo alternativo, vedere [creare una categoria di processi usando SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+ > [!IMPORTANT]  
+ > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'` La classe della categoria da aggiungere. *classe* viene **varchar (8)** con un valore predefinito di processo, i possibili valori sono i seguenti.  
+`[ @class = ] 'class'`Classe della categoria da aggiungere. la classe è di *tipo* **varchar (8)** e il valore predefinito è job. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -50,27 +53,27 @@ sp_add_category
 |ALERT|Aggiunge una categoria di avvisi.|  
 |OPERATOR|Aggiunge una categoria di operatori.|  
   
-`[ @type = ] 'type'` Tipo di categoria da aggiungere. *tipo di* viene **varchar(12)** , con valore predefinito è **locale**, i possibili valori sono i seguenti.  
+`[ @type = ] 'type'`Tipo di categoria da aggiungere. il *tipo* è **varchar (12)** e il valore predefinito è **local**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |LOCAL|Categoria di processi locali.|  
-|MULTI-SERVER|Categoria di processi multiserver.|  
-|Nessuno|Una categoria per una classe diversa da JOB **.**|  
+|FUNZIONALITÀ MULTISERVER|Categoria di processi multiserver.|  
+|Nessuno|Categoria per una classe diversa da JOB **.**|  
   
-`[ @name = ] 'name'` Il nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- **sp_add_category** deve essere eseguita la **msdb** database.  
+ **sp_add_category** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_category**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_category**.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene creata la categoria di processi locale `AdminJobs`.  

@@ -1,5 +1,5 @@
 ---
-title: Registrare le proprietà degli oggetti, metodi ed eventi | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto record | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,34 +12,33 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712300"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737661"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Record
-## <a name="propertiescollections"></a>Le proprietà e le raccolte  
+## <a name="propertiescollections"></a>Proprietà/raccolte  
  [Proprietà ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Raccolta di campi](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Raccolta Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Proprietà Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (proprietà)](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [Proprietà ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)  
+ [Proprietà RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
  [Proprietà Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
  [Proprietà state](../../../ado/reference/ado-api/state-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [Cancel (metodo)](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Metodo Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Close (metodo)](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66712300"
  [Metodo Open (record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

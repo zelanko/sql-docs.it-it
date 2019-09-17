@@ -1,5 +1,5 @@
 ---
-title: Sys. syslanguages (Transact-SQL) | Microsoft Docs
+title: sys. syslanguages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053387"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874877"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68053387"
 |dateformat|**nchar(3)**|Formato di data, ad esempio DMY.|  
 |datefirst|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
 |upgrade|**int**|Riservato per l'utilizzo nel sistema.|  
-|name|**sysname**|Nome di lingua ufficiale, ad esempio, francese.|  
+|name|**sysname**|Nome della lingua ufficiale, ad esempio, Français.|  
 |alias|**sysname**|Nome di lingua alternativo, ad esempio Francese.|  
 |months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
 |shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68053387"
 |Thai|1054|1054|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Viste &#40;di compatibilità Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mapping di tabelle di sistema a &#40;viste di sistema Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

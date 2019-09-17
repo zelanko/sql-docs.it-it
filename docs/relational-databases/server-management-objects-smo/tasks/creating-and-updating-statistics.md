@@ -1,5 +1,5 @@
 ---
-title: Creazione e aggiornamento delle statistiche | Documenti di Microsoft
+title: Creazione e aggiornamento delle statistiche | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a52823c6a136f413826348174e5e7902c141e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111472"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911152"
 ---
 # <a name="creating-and-updating-statistics"></a>Creazione e aggiornamento delle statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111472"
  È possibile creare statistiche per qualsiasi colonna tramite gli oggetti <xref:Microsoft.SqlServer.Management.Smo.Statistic> e <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. Il metodo <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> può essere eseguito per aggiornare le statistiche nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Statistic>. I risultati possono essere visualizzati in Query Optimizer.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Creazione e aggiornamento di statistiche in Visual Basic  
  In questo esempio di codice viene creata una nuova tabella in un database esistente per il quale vengono creati gli oggetti <xref:Microsoft.SqlServer.Management.Smo.Statistic> e <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  

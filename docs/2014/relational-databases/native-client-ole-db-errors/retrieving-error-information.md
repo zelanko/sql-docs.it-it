@@ -1,5 +1,5 @@
 ---
-title: Il recupero delle informazioni di errore | Microsoft Docs
+title: Recupero delle informazioni sull'errore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffc13d634c5f213980f837db958860ea7ff51b32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186128"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874596"
 ---
 # <a name="retrieving-error-information"></a>Recupero delle informazioni sugli errori
-  In questo esempio ottiene informazioni dalle varie interfacce di errore esposte dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client.  
+  In questo esempio vengono ottenute informazioni dalle diverse interfacce di errore esposte dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -64,7 +64,7 @@ void DumpErrorInfo
     SSERRORINFO*            pSSErrorInfo = NULL;  
     OLECHAR*                pSSErrorStrings = NULL;  
   
-    // Hard-code an American English locale for the example.  
+    // Hard-code an English (United States) locale for the example.  
     DWORD                   MYLOCALEID = 0x0409;  
   
     // Only ask for error information if the interface supports  

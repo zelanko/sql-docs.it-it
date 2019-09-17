@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653671"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878698"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Eseguire il [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] debug e la diagnosi delle applicazioni Spark nel server di cronologia Spark
 
@@ -27,7 +27,7 @@ Questo articolo fornisce indicazioni su come usare il server cronologia Spark es
 L'esperienza utente del server cronologia Spark open source è stata migliorata con alcune informazioni, tra cui dati specifici dei processi e visualizzazione interattiva del grafico del processo e dei flussi di dati per i cluster Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire l'interfaccia utente Web del server cronologia Spark tramite l'URL
-Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
+Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. Si noti che in un'autenticazione di base (nome utente/password) Big Data configurazione del cluster, è necessario fornire la **radice** utente quando viene richiesto di accedere agli endpoint del gateway (Knox). Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

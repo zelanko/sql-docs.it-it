@@ -1,5 +1,5 @@
 ---
-title: Globalizzazione suggerimenti e procedure consigliate (Analysis Services) | Microsoft Docs
+title: Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080854"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874409"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
@@ -68,9 +68,9 @@ ms.locfileid: "66080854"
   
      In Cina e a Singapore, il supporto tecnico Microsoft tende a usare il cinese semplificato con il pinyin come criterio di ordinamento preferito. Le regole di confronto consigliate sono Chinese_PRC (per SQL Server 2000), Chinese_PRC_90 (per SQL Server 2005) o Chinese_Simplified_Pinyin_100 (per SQL Server 2008 e versioni successive).  
   
-     Taiwan è più comune per visualizzare il cinese tradizionale con l'ordinamento consigliato è basato sul numero: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
+     In Taiwan è più frequente vedere il cinese tradizionale con l'ordinamento consigliato basato sul numero di tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
   
-     Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). A Macao viene usato abbastanza spesso Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 e versioni successive).  
+     Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). In Macao, Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 e versioni successive) viene utilizzato abbastanza spesso.  
   
 -   Per il giapponese, il set di regole di confronto usato più di frequente è Japanese_CI_AS. Japanese_XJIS_100 viene usato nelle installazione che supportano [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 viene in genere usato nei progetti di migrazione dei dati, con dati provenienti da piattaforme non Windows o da origini dati diverse dal motore di database relazionale di SQL Server.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080854"
   
 |Alfabeto|Distinzione maiuscole/minuscole|  
 |---------------------|----------------------|  
-|**Alfabeto latino di base**|Gli identificatori di oggetto espressi in caratteri latini (una qualsiasi delle 26 lettere minuscole o minuscole in inglese) vengono trattati come valori senza distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Ad esempio, gli ID oggetto seguenti verranno considerati identici: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services considera i caratteri nella stringa come se fossero tutti in maiuscolo e quindi esegue un semplice confronto tra byte indipendente dalla lingua.<br /><br /> Si noti che sono interessati solo i 26 caratteri. Nel caso di una lingua dell'Europa occidentale, che usa però caratteri scandinavi, il carattere aggiuntivo non sarà in maiuscolo.|  
+|**Alfabeto latino di base**|Gli identificatori di oggetto espressi in caratteri latini (una qualsiasi delle 26 lettere minuscole o minuscole in inglese) vengono trattati come valori senza distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Ad esempio, gli ID oggetto seguenti sono considerati identici: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services considera i caratteri nella stringa come se fossero tutti in maiuscolo e quindi esegue un semplice confronto tra byte indipendente dalla lingua.<br /><br /> Si noti che sono interessati solo i 26 caratteri. Nel caso di una lingua dell'Europa occidentale, che usa però caratteri scandinavi, il carattere aggiuntivo non sarà in maiuscolo.|  
 |**Cirillico, greco, copto, armeno**|Gli identificatori di oggetto in un alfabeto non latino composto da due set di caratteri maiuscoli/minuscoli distinti, ad esempio il cirillico, fanno sempre distinzione tra maiuscole e minuscole. Ad esempio, Измерение e измерение sono considerati due valori distinti, anche se l'unica differenza è rappresentata dal carattere minuscolo/maiuscolo della prima lettera.|  
   
  **Implicazioni della distinzione tra maiuscole/minuscole per gli identificatori di oggetto**  
@@ -91,7 +91,7 @@ ms.locfileid: "66080854"
  Il comportamento dei caratteri maiuscoli/minuscoli descritto nella tabella riguarda solo gli identificatori di oggetto e non i nomi degli oggetti. Se si noterà una differenza nella modalità di funzionamento della soluzione (dopo l'installazione di SQL Server 2012 SP2 o versioni successive), sarà probabilmente un problema di elaborazione. Le query non sono interessate dagli identificatori di oggetto. Per entrambi linguaggi di query (DAX e MDX), il motore delle formule usa il nome dell'oggetto (non l'identificatore).  
   
 > [!NOTE]  
->  Le modifiche al codice correlate alla distinzione maiuscole/minuscole sono state considerate una modifica di rilievo per alcune applicazioni. Visualizzare [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) per altre informazioni.  
+>  Le modifiche al codice correlate alla distinzione maiuscole/minuscole sono state considerate una modifica di rilievo per alcune applicazioni. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità Analysis Services in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) .  
   
 ##  <a name="bkmk_test"></a> Test delle impostazioni locali con Excel, SQL Server Profiler e SQL Server Management Studio  
  Durante il test delle traduzioni, la connessione deve specificare l'identificatore LCID della traduzione. Come illustrato nell'argomento relativo a come [ottenere una lingua diversa da SSAS in Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)è possibile usare Excel per testare le traduzioni.  
@@ -106,7 +106,7 @@ ms.locfileid: "66080854"
   
      Verranno visualizzate le traduzioni francesi dal database di esempio Adventure Works.  
   
-     ![Tabella pivot di Excel con traduzioni in francese](media/ssas-localetest-excel.png "tabella pivot di Excel con traduzioni in francese")  
+     ![Tabella pivot di Excel con traduzioni in francese](media/ssas-localetest-excel.png "Tabella pivot di Excel con traduzioni in francese")  
   
  È possibile poi usare SQL Server Profiler per verificare le impostazioni locali. Fare clic su un evento `Session Initialize` e quindi controllare l'elenco delle proprietà nell'area di testo sottostante per trovare `<localeidentifier>1036</localeidentifier>`.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66080854"
   
 -   Eseguire una query MDX sul database Adventure Works. I risultati della query saranno le traduzioni francesi.  
   
-     ![Query MDX con traduzioni in francese in SSMS](media/ssas-localetest-ssms.png "query MDX con traduzioni in francese in SSMS")  
+     ![Query MDX con traduzioni in francese in SSMS](media/ssas-localetest-ssms.png "Query MDX con traduzioni in francese in SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Scrittura di query MDX in una soluzione contenente traduzioni  
  Le traduzioni forniscono informazioni visualizzate relative ai nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma gli identificatori degli oggetti corrispondenti non vengono tradotti. Se possibile, per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è preferibile usare gli identificatori e le chiavi anziché didascalie e nomi tradotti. Per istruzioni e script DMX (Multidimensional Expressions), ad esempio, è consigliabile usare chiavi di membri anziché nomi di membri al fine di assicurare la portabilità in contesti con più lingue.  
@@ -139,7 +139,7 @@ ms.locfileid: "66080854"
   
 3.  **Usare i formati di data ISO per informazioni di data e ora universali**  
   
-     Uno [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Usare sempre il ISO Data formato aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
+     Uno [Analysis Services esperto](http://geekswithblogs.net/darrengosbell/Default.aspx) ha questa raccomandazione: "Si usa sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data passate alle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del client o del server. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

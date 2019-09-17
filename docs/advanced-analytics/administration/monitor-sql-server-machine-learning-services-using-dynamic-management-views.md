@@ -1,35 +1,35 @@
 ---
-title: Monitorare l'esecuzione di script R e Python mediante le viste a gestione dinamica (DMV)
-description: Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni R e Python in SQL Server Machine Learning Services.
+title: Monitorare l'esecuzione di script Python e R usando DMV
+description: Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni di Python e R in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715327"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978401"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorare SQL Server Machine Learning Services mediante le viste a gestione dinamica (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni (R e Python), le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in SQL Server Machine Learning Services.
+Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni (Python e R), le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in SQL Server Machine Learning Services.
 
 In questo articolo si troveranno i DMV specifici per SQL Server Machine Learning Services. Sono inoltre disponibili query di esempio che mostrano:
 
 + Impostazioni e opzioni di configurazione per Machine Learning
-+ Sessioni attive che eseguono script R o Python esterni
-+ Statistiche di esecuzione per il runtime esterno per R e Python
++ Sessioni attive che eseguono Python o script esterni
++ Statistiche di esecuzione per il runtime esterno per Python e R
 + Contatori delle prestazioni per gli script esterni
 + Utilizzo della memoria per il sistema operativo, SQL Server e i pool di risorse esterne
 + Configurazione della memoria per SQL Server e pool di risorse esterne
 + Resource Governor pool di risorse, inclusi i pool di risorse esterni
-+ Pacchetti installati per R e Python
++ Pacchetti installati per Python e R
 
 Per informazioni più generali su DMV, vedere [viste a gestione dinamica del sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
@@ -40,7 +40,7 @@ Per informazioni più generali su DMV, vedere [viste a gestione dinamica del sis
 
 Per il monitoraggio dei carichi di lavoro di Machine Learning in SQL Server, è possibile usare le viste a gestione dinamica seguenti. Per eseguire una query su DMV, `VIEW SERVER STATE` è necessaria l'autorizzazione per l'istanza di.
 
-| Vista a gestione dinamica | type | Descrizione |
+| Vista a gestione dinamica | Type | Descrizione |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Esecuzione | Restituisce una riga per ogni account di lavoro attivo che esegue uno script esterno. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Esecuzione | Restituisce una riga per ogni tipo di richiesta di script esterni. |
@@ -56,7 +56,7 @@ Visualizzare l'impostazione di installazione Machine Learning Services e le opzi
 
 ![Output delle impostazioni e della query di configurazione](media/dmv-settings-and-configuration.png "Output delle impostazioni e della query di configurazione")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste e sulle funzioni utilizzate, vedere [sys. dm _server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)Configurations e [ServerProperty](../../t-sql/functions/serverproperty-transact-sql.md).
+Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste e sulle funzioni utilizzate, vedere [sys. dm _server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)e [ServerProperty](../../t-sql/functions/serverproperty-transact-sql.md).
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Contatore | Descrizione |
 |---------|-------------|
 | Total Executions | Numero di processi esterni avviati da chiamate locali o remote. |
-| Parallel Executions | Numero di volte in cui uno script includeva la _@parallel_ specifica e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] era in grado di generare e utilizzare un piano di query parallelo. |
+| Parallel Executions | Numero di volte in cui uno script include la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]  _\@specifica parallela_ e che è stata in grado di generare e utilizzare un piano di query parallelo. |
 | Streaming Executions | Numero di volte in cui è stata richiamata la funzionalità di streaming. |
 | SQL CC Executions | Numero di script esterni eseguiti in cui è stata creata un'istanza remota della chiamata e SQL Server è stato usato come contesto di calcolo. |
 | Implied Auth. Logins | Numero di volte in cui è stata effettuata una chiamata di loopback ODBC utilizzando l'autenticazione implicita. ovvero, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ha eseguito la chiamata per conto dell'utente che ha inviato la richiesta di script. |
@@ -204,7 +204,7 @@ Visualizzare informazioni sulla configurazione della memoria massima in percentu
 
 ![Output dalla query di configurazione della memoria](media/dmv-memory-configuration.png "Output dalla query di configurazione della memoria")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste utilizzate, vedere [sys.](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) Configurations e [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste utilizzate, vedere [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -278,7 +278,7 @@ Le colonne restituite sono:
 | Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
-| Version | Versione del pacchetto. |
+| Versione | Versione del pacchetto. |
 | Dipende da | Elenca i pacchetti da cui dipende il pacchetto installato. |
 | Licenza | Licenza per il pacchetto installato. |
 | LibPath | Directory in cui è possibile trovare il pacchetto. |
@@ -304,7 +304,7 @@ Le colonne restituite sono:
 | Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
-| Version | Versione del pacchetto. |
+| Versione | Versione del pacchetto. |
 | Location | Directory in cui è possibile trovare il pacchetto. |
 
 ## <a name="next-steps"></a>Passaggi successivi

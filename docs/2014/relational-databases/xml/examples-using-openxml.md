@@ -26,12 +26,12 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205111"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874696"
 ---
 # <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](specify-metaproperties-in-openxml.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "63205111"
   
  Il mapping predefinito è determinato dal valore di *flags* . Se in *SchemaDeclaration* non è specificato *ColPattern*, viene usato il mapping specificato in *flags* . Se invece in *SchemaDeclaration* è specificato *ColPattern* , il valore *flags*viene ignorato. Il valore specificato per *ColPattern* determina il tipo di mapping, che può essere incentrato sugli attributi o sugli elementi, nonché la modalità di gestione dei dati di overflow e di quelli non utilizzati.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Esecuzione di una semplice istruzione SELECT con OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>R. Esecuzione di una semplice istruzione SELECT con OPENXML  
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui clienti in un set di righe con due colonne, **CustomerID** e **ContactName**.  
   
  Prima di tutto, viene chiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento. L'handle del documento viene quindi passato a OPENXML.  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:  
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Esempio:  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Impostazione di un documento XML con più nodi di testo  
- Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio:  
+ Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Esempio:  
   
 ```  
 DECLARE @h int  
@@ -691,7 +691,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  

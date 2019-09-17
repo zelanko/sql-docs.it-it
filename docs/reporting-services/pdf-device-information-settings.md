@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503682"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911322"
 ---
 # <a name="pdf-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo PDF
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering dei report nel formato PDF.  
@@ -28,6 +28,7 @@ ms.locfileid: "65503682"
 |**ColumnSpacing**|Spaziatura delle colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**DpiX**|Risoluzione del dispositivo di output nella direzione x.|  
 |**DpiY**|Risoluzione del dispositivo di output nella direzione y.|  
+|**EmbedFonts**|Indica se incorporare i tipi di carattere nel file PDF, dimensioni maggiori, ma il rendering dei tipi di carattere del report verrà eseguito correttamente per tutti i client. Il valore **None** Disabilita l'incorporamento dei tipi di carattere.|  
 |**EndPage**|Ultima pagina del report di cui eseguire il rendering. Il valore predefinito è il valore di **StartPage**.|  
 |**HumanReadablePDF**|Indica se eseguire il rendering di un file PDF non compresso, di dimensioni maggiori ma più leggibile per gli utenti in un editor di testo normale. Il valore predefinito è **false**.|  
 |**MarginBottom**|Valore in pollici del margine inferiore da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio 1in. Questo valore ha la priorità sulle impostazioni originali del report.|  

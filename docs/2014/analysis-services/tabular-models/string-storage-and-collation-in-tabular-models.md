@@ -1,5 +1,5 @@
 ---
-title: Archivio di stringhe e regole di confronto nei modelli tabulari | Microsoft Docs
+title: Archiviazione di stringhe e regole di confronto nei modelli tabulari | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066431"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874497"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
   Le stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari. A causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
@@ -47,14 +47,14 @@ ms.locfileid: "66066431"
   
  I dati probabilmente provengono da molte origini diverse, pertanto l'utilizzo delle maiuscole e minuscole e degli accenti non è coerente e queste differenze sono state archiviate così come sono nel database relazionale. In generale i valori sono **Plant** o **Tree**, solo con maiuscole e minuscole diverse.  
   
- Quando questi valori vengono caricati in un modello tabulare che utilizza le regole di confronto predefinite e l'ordinamento per l'inglese americano, l'utilizzo delle maiuscole e minuscole non è importante, pertanto vengono archiviati solo due valori per l'intera colonna:  
+ Quando questi valori vengono caricati in un modello tabulare che utilizza le regole di confronto predefinite e l'ordinamento per l'inglese (Stati Uniti), case non è importante, pertanto vengono archiviati solo due valori per l'intera colonna:  
   
 |Classification - English|  
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
   
- Se si utilizza la colonna **Classification - English**, nel modello di classificazione della pianta è verranno visualizzati non i valori originali, con utilizzi diversi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
+ Se si utilizza la colonna **Classification-English**nel modello, ogni volta che si visualizza la classificazione Plant, non vengono visualizzati i valori originali, con i vari utilizzi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
   
 > [!WARNING]  
 >  È possibile decidere quale stringa sarà la prima a essere archiviata, in base a ciò che viene considerato corretto, ma tale operazione potrebbe risultare molto difficile. Non esiste un modo semplice per determinare in anticipo quale riga deve essere elaborata per prima dal motore, considerando che tutti i valori vengono considerati equivalenti. In alternativa, se è necessario impostare il valore standard, è necessario eseguire la pulizia di tutte le stringhe prima di caricare il modello.  

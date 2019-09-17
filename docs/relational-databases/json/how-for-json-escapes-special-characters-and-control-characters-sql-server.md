@@ -12,14 +12,15 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac718603c639fcbc8af7cb168b2aa131840c75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909381"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910811"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Modalità di uso di FOR JSON delle sequenze di escape per i caratteri speciali e di controllo (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Questo argomento descrive il modo in cui la clausola **FOR JSON** di un'istruzione **SELECT** di SQL Server usa sequenze di escape per i caratteri speciali e rappresenta i caratteri di controllo nell'output JSON.  
@@ -33,7 +34,7 @@ Se i dati di origine contengono caratteri speciali, la clausola **FOR JSON** usa
 |**Carattere speciale**|**Output con caratteri di escape**|  
 |---------------------------|--------------------------|  
 |Virgoletta (")|\\"|  
-|Barra rovesciata (\\)|\\\|  
+|Barra rovesciata (\\)|\\\\|  
 |Barra (/)|\\/|  
 |Backspace|\b|  
 |Avanzamento carta|\f|  

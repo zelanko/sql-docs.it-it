@@ -1,10 +1,7 @@
 ---
 title: Esplora oggetti | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -26,14 +23,18 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96bdde501293faf5e34391b2b6d7e7da4e7c2e7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264117"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988145"
 ---
 # <a name="object-explorer"></a>Esplora oggetti
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre caratteristiche per la gestione di oggetti in istanze di [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

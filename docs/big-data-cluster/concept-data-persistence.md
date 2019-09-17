@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155344"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878744"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -28,7 +28,7 @@ Un cluster Big Data di SQL Server utilizza questi volumi permanenti tramite [cla
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>Configurare le impostazioni di archiviazione del cluster Big Data
 
-Analogamente ad altre personalizzazioni, è possibile specificare le impostazioni di archiviazione nei file di configurazione del cluster in fase di distribuzione per ogni pool e il piano di controllo. Se nelle specifiche del pool non sono presenti impostazioni di configurazione dell'archiviazione, verranno usate le impostazioni di archiviazione del piano di controllo. Questo è un esempio della sezione di configurazione dell'archiviazione che è possibile includere nella specifica:
+Analogamente ad altre personalizzazioni, è possibile specificare le impostazioni di archiviazione nei file di configurazione del cluster al momento della distribuzione per ogni pool nel file di configurazione **BDC. JSON** e per i servizi di controllo nel file **Control. JSON** . Se non sono presenti impostazioni di configurazione dell'archiviazione nelle specifiche del pool, le impostazioni di archiviazione del controllo verranno usate **per tutti gli altri componenti**, tra cui SQL Server Master (risorsa**Master** ), HDFS (risorsa**storage-0** ) o dati piscina. Questo è un esempio della sezione di configurazione dell'archiviazione che è possibile includere nella specifica:
 
 ```json
     "storage": 

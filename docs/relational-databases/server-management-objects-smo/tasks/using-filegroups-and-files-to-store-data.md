@@ -1,5 +1,5 @@
 ---
-title: Uso di filegroup e file per dati Store | Microsoft Docs
+title: Utilizzo di filegroup e file per archiviare i dati | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82c248d89e89838e93d46940804cb145636a13fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fefe8f2a129d92b10c685e81a89079128c8c0a6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030028"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911232"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Utilizzo di filegroup e file per archiviare dati
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68030028"
  Ogni database creato automaticamente dispone di un filegroup denominato "Primary" e di un file di dati con lo stesso nome del database. È possibile aggiungere file e gruppi supplementari alle raccolte.  
   
 ## <a name="examples"></a>Esempi  
- Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Aggiunta di filegroup e file di dati a un database in Visual Basic  
  Il file di dati e il filegroup primari vengono creati automaticamente con i valori delle proprietà predefiniti. Nell'esempio di codice vengono specificati alcuni valori delle proprietà che è possibile utilizzare. In caso contrario, vengono utilizzati i valori delle proprietà predefiniti.  

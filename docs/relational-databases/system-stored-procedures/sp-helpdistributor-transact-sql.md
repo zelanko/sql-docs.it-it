@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745390"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Elenca le informazioni sul server di distribuzione, il database di distribuzione, [!INCLUDE[msCoName](../../includes/msconame-md.md)] la directory di lavoro e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'account utente di Agent. Questa stored procedure viene eseguita nel database di pubblicazione o in qualsiasi database del server di pubblicazione.  
@@ -105,12 +105,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Colonna del set di risultati|Parametro di output|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@account**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|none|  
   
  La colonna del set dei risultati seguente viene restituita agli utenti nell'elenco di accesso alla pubblicazione per una pubblicazione nel server di distribuzione:  
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Colonna del set di risultati|Parametro di output|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|database di distribuzione|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@distribuzione**|  
+|database di distribuzione|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

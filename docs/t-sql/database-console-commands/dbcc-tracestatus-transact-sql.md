@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040565"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211234"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Visualizza lo stato dei flag di traccia.
   
@@ -53,7 +53,7 @@ Numero del flag di traccia per cui è visualizzato lo stato. Se non vengono spec
 Segnaposto che indica la possibilità di specificare più flag di traccia.
   
 -1  
-Visualizza lo stato dei flag di traccia abilitati a livello globale. Se viene specificato -1 senza *trace#*, vengono visualizzati tutti i flag di traccia abilitati.
+Visualizza lo stato dei flag di traccia abilitati a livello globale. Se viene specificato -1 senza *trace#* , vengono visualizzati tutti i flag di traccia abilitati.
   
 WITH NO_INFOMSGS  
 Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.

@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1184cc02ceb5507d254abffc17685f8379652b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c42b16ed0564154b75f60ff16e0e9bea170f2223
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939065"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911129"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Creazione, modifica e rimozione di schemi
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67939065"
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Schema> rappresenta un contesto di proprietà per un oggetto di database. La proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> rappresenta una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Creazione, modifica e rimozione di uno schema in Visual Basic  
  In questo esempio di codice viene illustrato come creare uno schema e assegnarlo a un oggetto di database. Il programma concede quindi l'autorizzazione a un utente e successivamente crea una nuova tabella nello schema.  

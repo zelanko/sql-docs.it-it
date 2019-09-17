@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771246"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878734"
 ---
-# <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
+# <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Imposta un'opzione del database di replica per il database specificato. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione o del Sottoscrittore.  
@@ -52,7 +52,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**pubblicazione di tipo merge**|Specifica se il database può essere utilizzato per pubblicazioni di tipo merge.|  
 |**publish**|Specifica se il database può essere utilizzato per altri tipi di pubblicazione.|  
 |**sottoscrivere**|Specifica se si tratta di un database di sottoscrizione.|  
-|**Sincronizza con backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati &#40;per la programmazione&#41;Transact-SQL della](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)replica transazionale.|  
+|**Sincronizza con backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati per la programmazione &#40;&#41;Transact-SQL della replica transazionale](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'`Indica se abilitare o disabilitare l'opzione del database di replica specificata. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
   
@@ -66,7 +66,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="remarks"></a>Note  
  **sp_replicationdboption** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
- Questa procedura crea o elimina tabelle del sistema di replica specifiche, account di sicurezza specifici e così via a seconda delle opzioni impostate. Imposta il bit di categoria corrispondente nella tabella di sistema **master. sysdatabases** e crea le tabelle di sistema necessarie.  
+ Questa procedura crea o elimina tabelle del sistema di replica specifiche, account di sicurezza specifici e così via a seconda delle opzioni impostate. Imposta la corrispondente **is_published** (transacational o replica snapshot), **is_merge_published** (replica di tipo merge) o **is_distributor** bit nella tabella di sistema **master. databases** e crea il sistema necessario tabelle.  
   
  Per disabilitare la pubblicazione, è necessario che il database di pubblicazione sia online. Se esiste uno snapshot per il database di pubblicazione, deve essere eliminato prima della disabilitazione della pubblicazione. Uno snapshot del database è una copia offline e di sola lettura di un database e non è correlato a uno snapshot di replica. Per altre informazioni, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -78,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Eliminare una pubblicazione](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

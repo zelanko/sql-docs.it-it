@@ -1,5 +1,5 @@
 ---
-title: Stimare l'interruzione del servizio durante il ruolo di commutazione (mirroring del Database) | Microsoft Docs
+title: Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806851"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874443"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database)
   Durante un cambio di ruolo, l'intervallo di tempo in cui il mirroring del database sarà fuori servizio dipende dal tipo e dalla causa del cambio di ruolo.  
@@ -37,7 +37,7 @@ ms.locfileid: "62806851"
 -   Nel caso di un failover manuale, è rilevante solo il tempo richiesto per eseguire il failover del database dopo l'esecuzione del comando di failover.  
   
 ## <a name="error-detection"></a>Rilevamento dell'errore  
- Il periodo di tempo necessario al sistema per rilevare un errore dipende dal tipo di errore. Ad esempio, un errore di rete viene rilevato quasi istantaneamente, mentre il rilevamento del blocco di un server richiede per impostazione predefinita 10 secondi, ovvero il periodo di timeout predefinito.  
+ Il tempo necessario al sistema per rilevare un errore dipende dal tipo di errore. ad esempio, un errore di rete viene rilevato quasi immediatamente, mentre si nota che un server che non risponde richiede 10 secondi (con il timeout predefinito).  
   
  Per informazioni sugli errori che possono causare un esito negativo durante una sessione di mirroring del database e sul rilevamento di timeout in modalità a sicurezza elevata con failover automatico, vedere [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806851"
  Il tempo di failover è composto principalmente dal tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda rollforward, più un breve tempo aggiuntivo. Per altre informazioni sulla modalità usata dal server mirror per elaborare i record dei log, vedere [Mirroring di database &#40;SQL Server&#41;](database-mirroring-sql-server.md). Per informazioni sulla stima del tempo di failover, vedere la sezione Stima del tempo di rollforward durante il failover, più avanti in questo argomento.  
   
 > [!IMPORTANT]  
->  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Il failover durante la seguente serie di operazioni, ad esempio, potrebbe aumentare il tempo di failover:  BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Il failover durante la serie di operazioni seguente, ad esempio, potrebbe aumentare il tempo di failover:  BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Coda rollforward  
  Il rollforward del database comporta l'applicazione dei record di log presenti nella coda rollforward sul server mirror. La *coda rollforward* contiene i record di log che sono stati scritti su disco nel server mirror ma per i quali non è ancora stato eseguito il rollforward nel database mirror.  

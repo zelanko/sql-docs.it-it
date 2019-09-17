@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160687"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988100"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Note sulla versione per i cluster SQL Server Big Data
 
@@ -37,7 +37,9 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 ### <a name="known-issues"></a>Problemi noti
 
-SQL Server 2019 i cluster Big Data rilasciano il numero `15.0.1900.47`di build dell'aggiornamento candidata.
+* SQL Server 2019 i cluster Big Data rilasciano il numero `15.0.1900.47`di build dell'aggiornamento candidata.
+
+* Il profilo di distribuzione "kubeadm-prod" non è supportato nei cluster SQL Server 2019 Big Data Release Candidate con il numero di build precedente. Usare invece il profilo "kubeadm-dev-test" per le distribuzioni di Kubeadm.
 
 ## <a id="ctp32"></a> CTP 3.2 (luglio)
 
@@ -167,7 +169,7 @@ Le sezioni seguenti descrivono i problemi noti e le limitazioni per questa versi
 
 #### <a name="kibana-logs-dashboards"></a>Dashboard dei log di Kibana
 
-- Tra Aris CTP 3.0 e 3.1, la versione di Kibana è stata aggiornata da 6.3.1 a 7.0.1.  Ciò ha reso il browser Edge incompatibile con Kibana. Quando caricano la versione corrente dei dashboard Kibana in Edge, gli utenti visualizzano una pagina vuota. Vedere [qui]( https://www.elastic.co/support/matrix#matrix_browse) per i browser supportati per Kibana.rs 
+- Tra Aris CTP 3.0 e 3.1, la versione di Kibana è stata aggiornata da 6.3.1 a 7.0.1.  Questo ha reso il browser Microsoft Edge incompatibile con Kibana. Quando si carica la versione corrente dei dashboard Kibana in Microsoft Edge, gli utenti visualizzeranno una pagina vuota. Vedere [qui]( https://www.elastic.co/support/matrix#matrix_browse) per i browser supportati per Kibana.rs 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (maggio)

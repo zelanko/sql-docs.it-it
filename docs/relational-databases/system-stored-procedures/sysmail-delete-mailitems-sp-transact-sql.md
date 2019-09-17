@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941177"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846644"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @sent_before = ] 'sent_before'`Elimina i messaggi di posta elettronica fino alla data e all'ora fornite come argomento *sent_before* . *sent_before* è di tipo **DateTime** e il valore predefinito è null. che indica tutte le date.  
+`[ \@sent_before = ] 'sent_before'`Elimina i messaggi di posta elettronica fino alla data e all'ora fornite come argomento *sent_before* . *sent_before* è di tipo **DateTime** e il valore predefinito è null. che indica tutte le date.  
   
-`[ @sent_status = ] 'sent_status'`Elimina i messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* è di tipo **varchar (8)** e non prevede alcun valore predefinito. Le voci valide vengono **inviate**, non **inviate**, riprovate e **non riuscite**. NULL indica tutti gli stati.  
+`[ \@sent_status = ] 'sent_status'`Elimina i messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* è di tipo **varchar (8)** e non prevede alcun valore predefinito. Le voci valide vengono **inviate**, non **inviate**, **riprovate**e **non riuscite**. NULL indica tutti gli stati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  

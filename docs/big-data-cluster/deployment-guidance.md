@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153443"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878714"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Come eseguire la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] distribuzione in Kubernetes
 
@@ -120,7 +120,7 @@ In questo scenario vengono chieste le impostazioni che non fanno parte della con
 1. Per personalizzare le impostazioni nel profilo di configurazione della distribuzione, è possibile modificare il file di configurazione della distribuzione in uno strumento adatto per la modifica dei file JSON, ad esempio VS Code. Per l'automazione tramite script, è anche possibile modificare il profilo di distribuzione personalizzato tramite il comando **azdata bdc config**. Ad esempio, il comando seguente modifica un profilo di distribuzione personalizzato per modificare il nome del cluster distribuito da quello predefinito (**mssql-cluster**) a **test-cluster**:  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 | **CONTROLLER_USERNAME** | Obbligatoria |Nome utente per l'amministratore del cluster. |
 | **CONTROLLER_PASSWORD** | Obbligatoria |Password per l'amministratore del cluster. |
 | **MSSQL_SA_PASSWORD** | Obbligatoria |Password dell'utente amministratore di sistema per l'istanza master di SQL Server. |
-| **KNOX_PASSWORD** | Obbligatoria |Password dell'utente Knox. |
+| **KNOX_PASSWORD** | Obbligatoria |Password per l'utente **root** Knox. Si noti che in una configurazione di base dell'autenticazione l'utente supportato per Knox è **root**.|
 | **ACCEPT_EULA**| Obbligatoria per il primo utilizzo di `azdata`| Non richiede alcun valore. Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula` al primo utilizzo del comando `azdata`.|
 | **DOCKER_USERNAME** | Facoltativo | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
 | **DOCKER_PASSWORD** | Facoltativo |Password per accedere al repository privato citato sopra. |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> È necessario usare l'utente **root** per il gateway Knox con la password precedente. **root** è l'unico utente supportato in questa configurazione di autenticazione di base (nome utente/password). Per SQL Server Master, il nome utente di cui è stato effettuato il provisioning da usare con la password precedente è **sa**.
+
 
 Dopo aver impostato le variabili di ambiente, è necessario eseguire `azdata bdc create` per attivare la distribuzione. Questo esempio usa il profilo di configurazione del cluster creato sopra:
 

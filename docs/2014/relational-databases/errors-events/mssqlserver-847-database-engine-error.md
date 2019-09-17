@@ -12,14 +12,14 @@ ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762801"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874546"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
     
 ## <a name="details"></a>Dettagli  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62762801"
 |Testo del messaggio|Timeout durante l'attesa del latch: classe '%ls', ID %p, tipo %d, attività 0x%p: %d, attesa %d, flag 0x%I64x, attività proprietaria 0x%p. L'attesa verrà protratta.|  
   
 ## <a name="explanation"></a>Spiegazione  
- È possibile che un computer si arresti oppure che si verifichi un timeout o altre interruzioni delle operazioni regolari nel momento in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrive errori di latch del buffer nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Un computer potrebbe non riuscire a rispondere oppure è possibile che si verifichi un timeout o altre interruzioni delle operazioni regolari nello stesso momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui vengono scritti gli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di latch del buffer nel log degli errori.  
   
  Se nel messaggio il campo stat ha il valore di 0x04 attivato, significa che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa di un'operazione di I/O. Nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe inoltre essere presente il messaggio [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md).  
   

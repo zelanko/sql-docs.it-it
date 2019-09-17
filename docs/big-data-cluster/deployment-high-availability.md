@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158166"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874700"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire SQL Server cluster di Big data con disponibilità elevata
 
@@ -31,6 +31,7 @@ Di seguito sono riportate alcune delle funzionalità abilitate dai gruppi di dis
 1. Viene eseguito automaticamente il provisioning di un endpoint esterno per la connessione ai database del gruppo di disponibilità. Questo endpoint `master-svc-external` svolge il ruolo di listener del gruppo di disponibilità.
 1. Viene eseguito il provisioning di un secondo endpoint esterno per le connessioni di sola lettura alle repliche secondarie. 
 
+
 # <a name="deploy"></a>Distribuzione
 
 Per distribuire SQL Server Master in un gruppo di disponibilità:
@@ -39,9 +40,9 @@ Per distribuire SQL Server Master in un gruppo di disponibilità:
 1. Specificare il numero di repliche per il gruppo di disponibilità (il valore minimo è 3)
 1. Configurare i dettagli del secondo endpoint esterno creato per le connessioni alle repliche secondarie di sola lettura
 
-Nei passaggi seguenti viene illustrato come creare un file di patch che include queste impostazioni e come applicarlo ai profili `aks-dev-test` di `kubeadm-dev-test` configurazione o. Questi passaggi illustrano un esempio di come applicare la patch `aks-dev-test` al profilo per aggiungere gli attributi a disponibilità elevata.
+Nei passaggi seguenti viene illustrato come creare un file di patch che include queste impostazioni e come applicarlo ai profili `aks-dev-test` di `kubeadm-dev-test` configurazione o. Questi passaggi illustrano un esempio di come applicare la patch `aks-dev-test` al profilo per aggiungere gli attributi a disponibilità elevata. Per una distribuzione in un cluster kubeadm, è possibile applicare una patch simile, ma assicurarsi *di usare* Deport per il **serviceType** nella sezione **endpoint** .
 
-1. Creazione di `ha-patch.json` un file
+1. Creazione di `patch.json` un file
 
     ```json
     {
@@ -78,7 +79,7 @@ Nei passaggi seguenti viene illustrato come creare un file di patch che include 
 1. Clonare il profilo di destinazione
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Applicare il file di patch al profilo personalizzato
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Gli eventi di failover possono verificarsi durante un'esecuzione di query distribuita che accede ai dati da origini dati remote come HDFS o il pool di dati. Come procedura consigliata, le applicazioni devono essere progettate in modo da ottenere la logica di ripetizione dei tentativi di connessione in caso di disconnessione causata dal failover.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Connettersi ai database nelle repliche secondarie
 

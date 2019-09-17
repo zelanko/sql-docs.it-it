@@ -1,5 +1,5 @@
 ---
-title: Durata delle transazioni | Microsoft Docs
+title: Durate delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759af22d445bb3c67db1f39ecf69dbeee1b666fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902481"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874849"
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67902481"
   
 -   Un tentativo di esecuzione del commit di una transazione non avviato nella stessa procedura provoca un errore di runtime.  
   
--   Un tentativo di esecuzione del rollback di una transazione non avviato nella stessa procedura fa in modo che la transazione si blocchi, impedendo il verificarsi di qualsiasi altra operazione con effetto collaterale. La transazione viene interrotta fino a quando il codice CLR non abbandona l'ambito. Si noti che questo comportamento può risultare utile quando si rileva un errore all'interno della procedura e si desidera verificare che venga terminata l'intera transazione.  
+-   Il tentativo di eseguire il rollback di una transazione non avviata nella stessa procedura comporta l'interruzione della risposta da parte della transazione, evitando che si verifichino altre operazioni di effetto collaterale. La transazione viene interrotta fino a quando il codice CLR non abbandona l'ambito. Si noti che questo comportamento può risultare utile quando si rileva un errore all'interno della procedura e si desidera verificare che venga terminata l'intera transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
