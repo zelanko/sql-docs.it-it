@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 406fb50ceaba177d02bf8d79d0c37191dbe178f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986259"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874397"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
@@ -24,9 +24,10 @@ Scaricare e installare la versione più recente per .NET Framework e le anteprim
 
 |Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
 |:---|:---|:---|:---|:---|
-|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 aprile 2019|18.2|15.0.4384.2|
-|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|15 aprile 2019 | 18.2 |15.0.4384.2|
-|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|15 aprile 2019 | 18.2 |15.0.4384.2|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 settembre 2019|18,3|15.0.4532.1|
+|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|6 settembre 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|6 settembre 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|6 settembre 2019| 18,3|15.0.4532.1|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md).
 
@@ -36,14 +37,26 @@ Per informazioni dettagliate sulla versione più recente, vedere le [note sulla 
 
 Questa versione di sqlpackage include un'esperienza di installazione Windows standard e un file ZIP: 
 
-1. Scaricare ed eseguire il [programma di installazione DacFramework.msi per Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
+1. Scaricare ed eseguire il [programma di installazione DacFramework.msi per Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
 2. Aprire una nuova finestra del prompt dei comandi ed eseguire sqlpackage.exe
     - sqlpackage viene installato nella cartella ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```
     - Installando la versione x86 in un computer x64, sqlpackage viene installato nella cartella ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```
 
-## <a name="get-sqlpackage-preview-for-macos"></a>Ottenere sqlpackage (anteprima) per macOS
+## <a name="get-sqlpackage-net-core-preview-for-windows"></a>Ottenere SqlPackage .NET Core (anteprima) per Windows
 
-1. Scaricare [sqlpackage per macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
+1. Scaricare [sqlpackage per Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
+2. Per estrarre il file, fare clic con il pulsante destro del mouse sul file in Esplora risorse e selezionare "Estrai tutto..." e selezionare la directory di destinazione.
+3. Aprire una nuova finestra del terminale, può effettuare il CD nel percorso in cui è stato exracted SqlPackage:
+
+   **Installazione file con estensione zip:**
+
+   ```bash
+   sqlpackage
+   ```
+
+## <a name="get-sqlpackage-net-core-preview-for-macos"></a>Ottenere SqlPackage .NET Core (anteprima) per macOS
+
+1. Scaricare [sqlpackage per macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    **Installazione file con estensione zip:**
@@ -56,9 +69,9 @@ Questa versione di sqlpackage include un'esperienza di installazione Windows sta
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Ottenere sqlpackage (anteprima) per Linux
+## <a name="get-sqlpackage-net-core-preview-for-linux"></a>Ottenere SqlPackage .NET Core (anteprima) per Linux
 
-1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2087431) usando uno dei programmi di installazione o l'archivio tar.gz:
+1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2102978) usando uno dei programmi di installazione o l'archivio tar.gz:
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    **Installazione file con estensione zip:**

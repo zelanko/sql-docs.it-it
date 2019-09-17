@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809449"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774171"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>sqlpackage 18.3
+
+|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 settembre 2019|18,3|15.0.4532.1|
+|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|6 settembre 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|6 settembre 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|6 settembre 2019| 18,3|15.0.4532.1|
+
+### <a name="features"></a>Funzionalità
+
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Azure SQL Data Warehouse (anteprima) | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse. | 
+| Distribuzione | Aggiungere il parametro/p: DatabaseLockTimeout = (INT32 '60 ') a SqlPackage. | 
+| Distribuzione | Aggiungere il parametro/p: LongRunningCommandTimeout = (INT32) a SqlPackage. |
+| Esportazione/estrazione | Aggiungere il parametro/p: TempDirectoryForTableData = (STRING) a SqlPackage. |
+| Distribuzione | Consente di caricare i collaboratori della distribuzione da percorsi aggiuntivi. I collaboratori alla distribuzione verranno caricati dalla stessa directory di target. dacpac da distribuire, dalla directory Extensions rispetto al file binario SqlPackage. exe e dal parametro/p: AdditionalDeploymentContributorPaths = (STRING) aggiunto a SqlPackage dove è possibile specificare ulteriori percorsi di directory. |
+| Distribuzione | Aggiungere il supporto per OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correzioni
+
+| Fix | Dettagli |
+| :-- | :------ |
+| Distribuzione | Correzione per ignorare gli indici automatici in modo che non vengano eliminati durante la distribuzione. | 
+| Always Encrypted | Correzione per la gestione di Always Encrypted colonne varchar. | 
+| Compilazione/distribuzione | Correzione per risolvere il metodo nodes () per i set di colonne XML.| 
+| ScriptDom | Correggere altri casi in cui la stringa ' URL ' è stata interpretata come token di primo livello. | 
+| Grafico | Correzione del TSQL generato per i riferimenti pseudo colonna nei vincoli.  | 
+| Esportazione | Generare password casuali che soddisfino i requisiti di complessità. | 
+| Distribuzione | Correzione per rispettare i timeout dei comandi durante il recupero dei vincoli. | 
+| .NET Core (anteprima) | Correzione della registrazione diagnostica in un file. | 
+| .NET Core (anteprima) | Usare il flusso per esportare i dati della tabella per supportare tabelle di grandi dimensioni. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>sqlpackage 18.2
 
-Data di rilascio:&nbsp;15 aprile 2019  
-Build: &nbsp; 15.0.4384.2 
+|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 aprile 2019|18.2|15.0.4384.2|
+|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|15 aprile 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|15 aprile 2019 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>Funzionalità
 
@@ -162,7 +201,7 @@ Build: &nbsp; 14.0.3917.1
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Quando si importa un file bacpac del database SQL di Azure in un'istanza locale, sono stati corretti gli errori causati dal _mancato supporto delle chiavi master di database senza password in questa versione di SQL Server_ . | &nbsp; |
+| Quando si importa un file bacpac del database SQL di Azure in un'istanza locale, sono stati corretti gli errori causati dal _mancato supporto delle chiavi master di database senza password in questa versione di SQL Server_. | &nbsp; |
 | Correzione di un errore di pseudo-colonna non risolta per le tabelle grafo. | &nbsp; |
 | Correzione dell'uso di SchemaCompareDataModel con l'autenticazione SQL per confrontare gli schemi. | &nbsp; |
 | &nbsp; | &nbsp; |

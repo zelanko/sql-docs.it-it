@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937628"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278763"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Ripristinare un backup del database tramite SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
     
     -   **Dispositivo**    
     
-         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . 
+         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . 
          
-        -   Finestra di dialogo**Seleziona dispositivi di backup**  
+        -   Finestra di dialogo**Seleziona dispositivi di backup**   
         
             **Tipo di supporto di backup**  
          Selezionare un tipo di supporto dall'elenco a discesa **Tipo di supporti di backup** .  Nota: L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.
@@ -108,27 +108,27 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
     
 8. Per visualizzare o selezionare le opzioni avanzate, nella pagina **Opzioni** del pannello **Opzioni di ripristino** è possibile selezionare una delle opzioni seguenti, in base alla situazione:    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  Opzioni**WITH** (non obbligatorie):    
+   1. Opzioni**WITH** (non obbligatorie):    
     
-        -   **Sovrascrivi il database esistente (WITH REPLACE)**    
+     - **Sovrascrivi il database esistente (WITH REPLACE)**    
     
-        -   **Mantieni le impostazioni di replica (WITH KEEP_REPLICATION)**    
+     - **Mantieni le impostazioni di replica (WITH KEEP_REPLICATION)**    
     
-        -   **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**    
+     - **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**    
     
-    2.  Selezionare un'opzione per la casella **Stato di recupero** . Questa casella determina lo stato del database al termine dell'operazione di ripristino.    
+   2. Selezionare un'opzione per la casella **Stato di recupero** . Questa casella determina lo stato del database al termine dell'operazione di ripristino.    
     
-        -   **RESTORE WITH RECOVERY** è il comportamento predefinito che lascia il database pronto per l'utilizzo mediante il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. Selezionare questa opzione se si desidera ripristinare subito tutti i backup necessari.    
+     - **RESTORE WITH RECOVERY** è il comportamento predefinito che lascia il database pronto per l'utilizzo mediante il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. Selezionare questa opzione se si desidera ripristinare subito tutti i backup necessari.    
     
-        -   **RESTORE WITH NORECOVERY** lascia il database non operativo e non esegue il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. Non è possibile utilizzare il database fino al completamento del recupero.    
+     - **RESTORE WITH NORECOVERY** lascia il database non operativo e non esegue il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. Non è possibile utilizzare il database fino al completamento del recupero.    
     
-        -   **RESTORE WITH STANDBY** lascia il database in modalità di sola lettura. Annulla le transazioni di cui non è stato eseguito il commit, ma salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati.    
+     - **RESTORE WITH STANDBY** lascia il database in modalità di sola lettura. Annulla le transazioni di cui non è stato eseguito il commit, ma salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati.    
     
-    3.  **Eseguire il backup della parte finale del log prima del ripristino.** Non in tutti gli scenari di ripristino è necessario un backup della parte finale del log.  Per altre informazioni, vedere **Scenari in cui è necessario un backup della parte finale del log** in [Backup della parte finale del log (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    4.  Le operazioni di ripristino potrebbero non riuscire in presenza di connessioni attive al database. Selezionare l'opzione **Chiudi connessioni esistenti** per garantire che tutte le connessioni attive tra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il database vengano chiuse. Questa casella di controllo imposta il database sulla modalità utente singolo prima di effettuare qualsiasi operazione di ripristino e imposta il database sulla modalità multiutente al termine.    
-    5.  Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.    
+   3. **Eseguire il backup della parte finale del log prima del ripristino.** Non in tutti gli scenari di ripristino è necessario un backup della parte finale del log.  Per altre informazioni, vedere **Scenari in cui è necessario un backup della parte finale del log** in [Backup della parte finale del log (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+  
+   4. Le operazioni di ripristino potrebbero non riuscire in presenza di connessioni attive al database. Selezionare l'opzione **Chiudi connessioni esistenti** per garantire che tutte le connessioni attive tra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il database vengano chiuse. Questa casella di controllo imposta il database sulla modalità utente singolo prima di effettuare qualsiasi operazione di ripristino e imposta il database sulla modalità multiutente al termine.    
+  
+   5. Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.    
     
 Per altre informazioni su queste opzioni di ripristino, vedere [Ripristina database &#40;(pagina Opzioni)&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -140,10 +140,10 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
-4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
+4.  Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
 5.  Fare clic su **OK** per tornare alla pagina **Generale** .
 6.  Fare clic su **Opzioni** nel riquadro **Seleziona una pagina** .
-7.  Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)** .
+7.  Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)**.
 
     > [!NOTE]
     > Se non si seleziona questa opzione, potrebbe essere visualizzato il messaggio di errore seguente: "System.Data.SqlClient.SqlError: Il set di backup include il backup di un database diverso dal database '`Sales`' esistente. (Microsoft.SqlServer.SmoExtended)"
@@ -168,7 +168,7 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
-4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
+4.  Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
 5.  Fare clic su **OK** per tornare alla pagina **Generale** .
 6.  Nella sezione **Destinazione** , la casella **Database** viene popolata automaticamente con il nome del database da ripristinare. Per modificare il nome del database, immettere il nome nuovo nella casella **Database** .
 7.  Fare clic su **Opzioni** nel riquadro **Seleziona una pagina** .
@@ -190,7 +190,7 @@ Nell'esempio seguente viene ripristinato lo stato del database corrispondente al
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
-4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup completo e a tutti i backup del log delle transazioni rilevanti.  Fare clic su **OK** dopo aver selezionato i file di backup su disco.
+4.  Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup completo e a tutti i backup del log delle transazioni rilevanti.  Fare clic su **OK** dopo aver selezionato i file di backup su disco.
 5.  Fare clic su **OK** per tornare alla pagina **Generale** .
 6.  Nella sezione **Destinazione** fare clic su **Sequenza temporale** per accedere alla finestra di dialogo **Sequenza temporale di backup** e selezionare manualmente un momento in cui arrestare l'azione di recupero.
 7.  Selezionare **Data e ora specifiche**.  
@@ -204,7 +204,7 @@ Nell'esempio seguente viene ripristinato lo stato del database corrispondente al
 #### <a name="common-steps"></a>Passaggi comuni
 Nei due esempi seguenti viene eseguito un ripristino di `Sales` da un backup che si trova nel servizio di archiviazione di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  il nome del contenitore è `myfirstcontainer`.  Per essere più concisi, i primi sei passaggi sono elencati di seguito una volta sola e tutti gli esempi verranno avviati con il **passaggio 7**.
 1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
-2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....** .
+2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....**.
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia (...) per aprire la finestra di dialogo **Seleziona dispositivi di backup** .    
 5.  Selezionare **URL** dall'elenco a discesa **Tipo di supporti di backup:** .
@@ -212,34 +212,34 @@ Nei due esempi seguenti viene eseguito un ripristino di `Sales` da un backup che
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Ripristinare un backup con striping in un database esistente con firma di accesso condiviso esistente.
 Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura ed elenco.  Per il contenitore `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`è stata creata una firma di accesso condiviso associata ai criteri di accesso archiviati.  I passaggi sono essenzialmente gli stessi se sono già esistenti credenziali di SQL Server.  Il database `Sales` non esiste attualmente nel server.  I file di backup sono `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.  
-*  
-7.  Selezionare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dall'elenco a discesa **Contenitore di archiviazione di Azure:** se esistono già credenziali di SQL Server, altrimenti immettere manualmente il nome del contenitore, vale a dire `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
-8.  Digitare la firma di accesso condiviso nella casella di testo con formattazione **Firma di accesso condiviso:** .
-9.  Fare clic su **OK** . Si aprirà la finestra di dialogo **Trova file di backup in Microsoft Azure** .
-10. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Tenendo premuto CTRL e selezionare i file `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
-12. Fare clic su **OK**.
-13. Fare clic su **OK** per tornare alla pagina **Generale** .
-14. Fare clic su **Opzioni** nel riquadro **Seleziona una pagina** .
-15. Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)** .
-16. Nella sezione **Backup della parte finale del log** deselezionare **Esegui il backup della parte finale del log prima del ripristino**.
-17. Nella sezione **Connessioni server** selezionare **Chiudi connessioni esistenti ai database di destinazione**.
-18. Fare clic su **OK**.
+
+1.  Selezionare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dall'elenco a discesa **Contenitore di archiviazione di Azure:** se esistono già credenziali di SQL Server, altrimenti immettere manualmente il nome del contenitore, vale a dire `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+1. Digitare la firma di accesso condiviso nella casella di testo con formattazione **Firma di accesso condiviso:** .
+1. Fare clic su **OK** . Si aprirà la finestra di dialogo **Trova file di backup in Microsoft Azure** .
+1. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Tenendo premuto CTRL e selezionare i file `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
+1. Fare clic su **OK**.
+1. Fare clic su **OK** per tornare alla pagina **Generale** .
+1. Fare clic su **Opzioni** nel riquadro **Seleziona una pagina** .
+1. Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)**.
+1. Nella sezione **Backup della parte finale del log** deselezionare **Esegui il backup della parte finale del log prima del ripristino**.
+1. Nella sezione **Connessioni server** selezionare **Chiudi connessioni esistenti ai database di destinazione**.
+1. Fare clic su **OK**.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Non esiste una firma di accesso condiviso
 In questo esempio il database `Sales` non esiste attualmente nel server.
-7.  Fare clic su **Aggiungi** . Si aprirà la finestra di dialogo **Connetti a una sottoscrizione Microsoft** .  
-8.  Completare la finestra di dialogo **Connetti a una sottoscrizione Microsoft** e fare clic su **OK** per tornare alla finestra di dialogo **Selezionare un percorso del file di backup** .  Per altre informazioni, vedere [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) (Connettersi a una sottoscrizione di Microsoft Azure).
-9.  Fare clic su **OK** nella finestra di dialogo **Selezionare un percorso del file di backup** . Si aprirà la finestra di dialogo **Trova file di backup in Microsoft Azure** .
-10. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Selezionare il file e fare clic su **OK**.
-12. Fare clic su **OK** per tornare alla pagina **Generale** .
-13. Fare clic su **OK**.
+1. Fare clic su **Aggiungi** . Si aprirà la finestra di dialogo **Connetti a una sottoscrizione Microsoft** .  
+1. Completare la finestra di dialogo **Connetti a una sottoscrizione Microsoft** e fare clic su **OK** per tornare alla finestra di dialogo **Selezionare un percorso del file di backup** .  Per altre informazioni, vedere [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) (Connettersi a una sottoscrizione di Microsoft Azure).
+1. Fare clic su **OK** nella finestra di dialogo **Selezionare un percorso del file di backup** . Si aprirà la finestra di dialogo **Trova file di backup in Microsoft Azure** .
+1. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Selezionare il file e fare clic su **OK**.
+1. Fare clic su **OK** per tornare alla pagina **Generale** .
+1. Fare clic su **OK**.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Ripristinare un backup locale nell'archiviazione di Microsoft Azure
 Il database `Sales` sarà ripristinato nel contenitore di archiviazione di Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` da un backup che si trova nel percorso `E:\MSSQL\BAK`.  Le credenziali di SQL Server per il contenitore di Azure sono già state create.  È necessario che le credenziali di SQL Server per il contenitore di destinazione siano già esistenti in quanto non è possibile crearle nell'attività di **ripristino** .  Il database `Sales` non esiste attualmente nel server.
 1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
-2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....** .
+2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....**.
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia (...) per aprire la finestra di dialogo **Seleziona dispositivi di backup** .  
 5.  Selezionare **File** dall'elenco a discesa **Tipo di supporti di backup:** .
@@ -248,7 +248,7 @@ Il database `Sales` sarà ripristinato nel contenitore di archiviazione di Micro
 8.  Fare clic su **OK** per tornare alla pagina **Generale** .
 9.  Selezionare **File** nel riquadro **Seleziona una pagina** .
 10. Selezionare la casella **Riloca tutti i file nella cartella**.
-11. Immettere il contenitore `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`nelle caselle di testo per **Cartella file di dati:** e **Cartella file di log:** .
+11. Immettere il contenitore `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`nelle caselle di testo per **Cartella file di dati:** e **Cartella file di log:**.
 12. Fare clic su **OK**.
 
 ## <a name="see-also"></a>Vedere anche    

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137443"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228449"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Inviare un messaggio di prova con Posta elettronica database  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Usare la finestra di dialogo Invia messaggio di prova per verificare se è possibile inviare messaggi con un profilo specifico.
 

@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d8e964830e56066ef75a0a2caacbdbc081cdac2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7fc8925b4257631561b6b68ed144becbadece639
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028937"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383781"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 
@@ -36,7 +36,7 @@ Se è già disponibile una licenza per Visual Studio 2019:
 
 Se non è già disponibile una licenza per Visual Studio 2019:
 
-- Installare [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt)
+- Installare [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)
 - Installare l'estensione Analysis Services, Integration Services o Reporting Services come appropriato
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Modifiche in SSDT per Visual Studio 2017

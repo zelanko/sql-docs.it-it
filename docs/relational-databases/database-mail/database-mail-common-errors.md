@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134436"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228437"
 ---
 # <a name="common-errors-with-database-mail"></a>Errori comuni con Posta elettronica database 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Questo articolo descrive alcuni errori comuni riscontrati con Posta elettronica database e le relative soluzioni.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>Impossibile trovare la stored procedure 'sp_send_dbmail'
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>Impossibile trovare la stored procedure 'sp_send_dbmail'
 La stored procedure [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) è installata nel database msdb. È necessario eseguire **sp_send_dbmail** dal database msdb oppure specificare un nome in tre parti per la stored procedure.
 
 Esempio:
@@ -48,7 +48,7 @@ Questo messaggio può avere due cause, ovvero il profilo non esiste oppure l'ute
 
 Per controllare le autorizzazioni per un profilo, eseguire la stored procedure [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) con il nome del profilo. Usare la stored procedure [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) o la [Configurazione guidata Posta elettronica database](configure-database-mail.md) per concedere l'autorizzazione di accesso a un profilo a un utente o un gruppo di msdb.
 
-## <a name="permission-denied-on-spsenddbmail"></a>Autorizzazione negata per sp_send_dbmail
+## <a name="permission-denied-on-sp_send_dbmail"></a>Autorizzazione negata per sp_send_dbmail
 
 In questo argomento viene descritto come risolvere il problema segnalato da un messaggio di errore in cui si informa che l'utente che sta tentando di inviare messaggi di Posta elettronica database non è autorizzato a eseguire sp_send_dbmail.
 
@@ -68,7 +68,7 @@ GO
 ```
 Per altre informazioni, vedere [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md).
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Posta elettronica accodata, nessuna voce in sysmail_event_log o nel registro eventi applicazioni di Windows 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Posta elettronica accodata, nessuna voce in sysmail_event_log o nel registro eventi applicazioni di Windows 
 
 Posta elettronica database si basa su Service Broker per l'accodamento dei messaggi di posta elettronica. Se l'esecuzione di Posta elettronica database viene arrestata o se il recapito dei messaggi di Service Broker non è attivato nel database **msdb**, Posta elettronica database accoda i messaggi nel database ma non è in grado di recapitarli. In questo caso, i messaggi di Service Broker rimangono nella coda della posta di Service Broker. Service Broker non attiva il programma esterno, quindi non ci sono voci di log in **sysmail_event_log** né aggiornamenti allo stato dell'elemento in **sysmail_allitems** e nelle viste correlate.
 

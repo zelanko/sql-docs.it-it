@@ -1,7 +1,8 @@
 ---
-title: Strumenti e utilità SQL per SQL Server, database SQL di Azure e Azure SQL Data Warehouse | Microsoft Docs
+title: Strumenti di gestione e query SQL per SQL Server, SQL di Azure (database SQL di Azure, istanze gestite di SQL di Azure, macchine virtuali SQL) e data warehouse di Azure SQL | Microsoft Docs
+description: Strumenti di gestione e query SQL per SQL Server, Azure SQL (database SQL di Azure, istanza gestita di SQL di Azure, macchine virtuali SQL) e Azure SQL data warehouse
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,27 +12,29 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105665"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913572"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Strumenti e utilità SQL per SQL Server, database SQL di Azure e Azure SQL Data Warehouse
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>Strumenti di gestione e query SQL per SQL Server, Azure SQL (database SQL di Azure, istanza gestita di SQL di Azure, macchine virtuali SQL) e Azure SQL data warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Per gestire (eseguire query, monitorare e così via) il database è necessario uno strumento. Mentre i database possono essere eseguiti nel cloud, in Windows o in [Linux](../linux/sql-server-linux-overview.md), non è necessario che lo strumento venga eseguito sulla stessa piattaforma del database. 
 
 Sono disponibili molti strumenti di database, pertanto questo articolo fornisce le descrizioni e i puntatori ad alcuni degli strumenti disponibili per l'uso dei database SQL. Se è necessario contribuire a decidere quale strumento è necessario, vedere [quale strumento si deve usare?](#which-tool-should-i-choose).
 
+Per ulteriori informazioni e per scaricare uno strumento, selezionare i collegamenti nella colonna strumento nelle tabelle seguenti. Per scaricare SQL Server, vedere [Install SQL Server](../database-engine/install-windows/install-sql-server.md). 
+
 ## <a name="gui-tools-to-manage-databases"></a>Strumenti dell'interfaccia utente grafica per la gestione dei database  
 
-Di seguito sono riportati gli strumenti principali dell'interfaccia utente grafica (GUI):
+Gli strumenti seguenti forniscono un'interfaccia utente grafica (GUI):
 
 | Strumento | Descrizione | Viene eseguito in |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]è uno strumento gratuito e leggero per la gestione dei database ovunque si trovino. Questa versione di anteprima offre funzionalità di gestione di database, tra cui un editor Transact-SQL esteso e informazioni dettagliate personalizzabili sullo stato operativo dei database. | **viene eseguito in Windows, MacOS e Linux. [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]è uno strumento gratuito e leggero per la gestione dei database ovunque si trovino. Questa versione di anteprima offre funzionalità di gestione di database, tra cui un editor Transact-SQL esteso e informazioni dettagliate personalizzabili sullo stato operativo dei database. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] viene eseguito in Windows, macOS e Linux**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usare SQL Server Management Studio (SSMS) per eseguire query, progettare e gestire i SQL Server, il database SQL di Azure e Azure SQL Data Warehouse. | **SSMS viene eseguito in Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Trasforma Visual Studio in un ambiente di sviluppo avanzato per SQL Server, database SQL di Azure e Azure SQL Data Warehouse.| **SSDT viene eseguito in Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Dopo l'installazione di Visual Studio Code, installare l' [estensione MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) per lo sviluppo di Microsoft SQL Server, database SQL di Azure e SQL data warehouse.| **Visual Studio Code viene eseguito in Windows, MacOS e Linux**.|

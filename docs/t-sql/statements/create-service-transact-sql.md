@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117116"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745391"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea un nuovo servizio. Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un nome per un'attività specifica o per un set di attività. Il nome del servizio viene utilizzato da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il routing dei messaggi, il recapito dei messaggi alla coda corretta in un database nonché per l'applicazione del contratto per una conversazione.  
   
@@ -55,7 +55,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Imposta come proprietario del servizio l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifica la coda che riceve i messaggi per il servizio. La coda deve esistere nello stesso database del servizio. Se non si specifica *schema_name* viene usato lo schema predefinito per l'utente che esegue l'istruzione.  
   
  *contract_name*  

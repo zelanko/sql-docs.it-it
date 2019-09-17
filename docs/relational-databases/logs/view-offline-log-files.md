@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083908"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212313"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "68083908"
   
      Se si desidera connettersi a un computer remoto, effettuare le operazioni seguenti:  
   
-    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** , quindi scegliere **Connetti a un altro computer**.  
+    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)**, quindi scegliere **Connetti a un altro computer**.  
   
     2.  Nella finestra di dialogo **Cambio computer gestito** fare clic su **Altro computer**.  
   
     3.  Immettere il nome del computer remoto, quindi fare clic su **OK**.  
   
-3.  Fare clic on il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (***NomeComputerRemoto***)** e scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (**_NomeComputerRemoto_**)**, quindi scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo delle proprietà di **Controllo WMI** fare clic sulla scheda **Sicurezza** .  
   

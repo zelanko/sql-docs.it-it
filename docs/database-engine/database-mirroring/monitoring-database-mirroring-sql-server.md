@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b29c55f0618d095840a7f56e5618231935b6fe4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996550"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212291"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ ms.locfileid: "67996550"
   
      Gli amministratori di sistema possono usare la stored procedure di sistema **sp_dbmmonitorresults** per visualizzare e, facoltativamente, aggiornare la tabella dello stato, se non è stata aggiornata entro i 15 secondi precedenti. Questa stored procedure chiama la stored procedure **sp_dbmmonitorupdate** e restituisce una o più righe di cronologia, in base a quanto richiesto nella chiamata di procedura. Per informazioni sullo stato nel set di risultati, vedere [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Monitoraggio dello stato di mirroring del database (membri di dbm_monitor)  
- Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per conoscere l'ora dello stato visualizzato, osservare l'ora indicata in corrispondenza delle etichette **Log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** nella pagina **Stato**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitoraggio dello stato di mirroring del database (membri di dbm_monitor)  
+ Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per conoscere l'ora dello stato visualizzato, osservare l'ora indicata in corrispondenza delle etichette **Log principale (**_\<ora>_**)** e **Log mirror (**_\<ora>_**)** nella pagina **Stato**.  
   
  I membri del ruolo predefinito del database **dbm_monitor** dipendono dal **Processo di Monitoraggio mirroring del database** per l'aggiornamento della tabella dello stato a intervalli regolari. Se il processo non esiste o se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato non è più aggiornato e potrebbe non riflettere più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   
@@ -294,11 +294,11 @@ ms.locfileid: "67996550"
   
  Per il mirroring del database sono disponibili gli eventi seguenti:  
   
--   Classe di evento**Database Mirroring State Change**  
+-   Classe di evento**Database Mirroring State Change**   
   
      Indica quando lo stato di mirroring di un database con mirroring cambia. Per altre informazioni, vedere [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe di evento**Audit Database Mirroring Login**  
+-   Classe di evento**Audit Database Mirroring Login**   
   
      Segnala i messaggi di controllo correlati alla sicurezza di trasporto per il mirroring del database. Per altre informazioni, vedere [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

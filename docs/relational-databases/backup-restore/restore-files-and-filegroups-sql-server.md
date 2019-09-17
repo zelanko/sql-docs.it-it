@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041514"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278762"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Ripristino di file e filegroup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,21 +140,21 @@ ms.locfileid: "68041514"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. (RESTORE WITH RECOVERY)**  
+  Esegue il recupero del database. Questo è il comportamento predefinito. Selezionare questa opzione solo se si stanno ripristinando tutti i backup necessari. Questa opzione equivale all'opzione WITH RECOVERY in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)**  
+  Il database viene lasciato nello stato di ripristino. Per recuperare il database sarà necessario eseguire un altro ripristino utilizzando l'opzione RESTORE WITH RECOVERY descritta in precedenza. Questa opzione equivale all'opzione WITH NORECOVERY in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  Selezionando questa opzione, l'opzione **Mantieni le impostazioni di replica** non sarà disponibile.  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Lascia il database in modalità sola lettura. Esegui il rollback delle transazioni di cui non è stato eseguito il commit e salva l'operazione di rollback in un file in modo che gli effetti del recupero possano essere annullati. (RESTORE WITH STANDBY)**  
+  Il database viene lasciato nello stato di standby. Questa opzione equivale all'opzione WITH STANDBY in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     Choosing this option requires that you specify a standby file.  
+  Se si seleziona questa opzione è necessario specificare un file standby.  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **File di rollback**  
+  Specificare un nome per il file standby nella casella di testo **File di rollback** . Questa opzione è necessaria se il database viene lasciato in modalità sola lettura (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
