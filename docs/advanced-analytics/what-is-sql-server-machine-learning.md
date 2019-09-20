@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276671"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149937"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Che cos'è SQL Server Machine Learning Services (Python e R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Per ulteriori informazioni sui pacchetti installati con Machine Learning Service
 
 1. Scrivere il primo script Python o R
 
-    + Avvio rapido: Eseguire uno script "Hello World" [in Python](tutorials/quickstart-python-run-using-t-sql.md) o [in R](tutorials/quickstart-r-run-using-tsql.md)
-    + Avvio rapido: Creare un modello predittivo [in Python](tutorials/quickstart-python-train-score-in-tsql.md) o [in R](tutorials/quickstart-r-create-predictive-model.md)
+    + Avvio rapido: [Creazione ed esecuzione di semplici script R in SQL](tutorials/quickstart-r-create-script.md)
+    + Avvio rapido: [Creare ed eseguire il training di un modello predittivo in R](tutorials/quickstart-r-train-score-model.md)
     + Esercitazione: [Usare Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Esplorazione dei dati, progettazione di funzionalità, training e distribuzione di modelli ed esecuzione di stime (serie in cinque parti)
     + Esercitazione: [Usare R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Esplorazione dei dati, progettazione di funzionalità, training e distribuzione di modelli ed esecuzione di stime (serie in cinque parti)
     + Esercitazione: [Usare Machine Learning Services in R Tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Esplora i dati, crea grafici e tracciati, Esegui la progettazione delle funzionalità, Esegui il training e Distribuisci modelli ed Esegui stime (serie in sei parti)
