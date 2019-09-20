@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027319"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910806"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare un cluster RHEL per un gruppo di disponibilità di SQL Server
 
@@ -46,7 +46,7 @@ I passaggi da seguire per creare un gruppo di disponibilità sui server Linux pe
    La modalità di configurazione di un modulo per la gestione di risorse cluster dipende dalla specifica distribuzione Linux. 
 
    >[!IMPORTANT]
-   >Per la disponibilità elevata, negli ambienti di produzione è necessario un agente di isolamento, ad esempio STONITH. Nelle dimostrazioni di questa documentazione non vengono usati agenti di isolamento. Le dimostrazioni sono riportate solo a scopo di test e convalida. 
+   >Per la disponibilità elevata, negli ambienti di produzione è necessario un agente di isolamento, ad esempio STONITH. Nelle dimostrazioni di questa documentazione non vengono usati agenti di isolamento. Le dimostrazioni sono riportate solo a scopo di test e convalida.
    
    >Un cluster Linux usa l'isolamento per ripristinare uno stato noto del cluster. La modalità di configurazione dell'isolamento dipende dalla distribuzione e dall'ambiente. Attualmente l'isolamento non è disponibile in alcuni ambienti cloud. Per altre informazioni, vedere [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (Criteri di supporto per il cluster RHEL a disponibilità elevata - Piattaforme di virtualizzazione).
 
@@ -104,6 +104,8 @@ Dopo aver configurato Pacemaker, usare `pcs` per interagire con il cluster. Eseg
 
 I fornitori di cluster Pacemaker richiedono l'abilitazione di STONITH e un dispositivo di isolamento impostato per una configurazione di cluster supportata. STONITH è l'acronimo di "Shoot The Other Node In The Head", un'espressione inglese usata per indicare che l'altro nodo deve essere arrestato. Quando il modulo per la gestione di risorse cluster non riesce a determinare lo stato di un nodo o di una risorsa in un nodo, è possibile ripristinare uno stato noto del cluster tramite l'isolamento.
 
+Un dispositivo STONITH fornisce un agente di isolamento. La [configurazione di Pacemaker in Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) offre un esempio di come creare un dispositivo STONITH per questo cluster in Azure. Modificare le istruzioni per l'ambiente.
+
 L'isolamento a livello di risorsa garantisce che i dati non subiscano danni in caso di interruzione tramite la configurazione di una risorsa. È ad esempio possibile usare l'isolamento a livello di risorsa per contrassegnare come obsoleto il disco su un nodo quando il collegamento di comunicazione diventa inattivo. 
 
 L'isolamento a livello di nodo consente di assicurarsi che un nodo non esegua alcuna risorsa. Questa operazione viene eseguita tramite il reset del nodo. Pacemaker supporta un'ampia gamma di dispositivi di isolamento, ad esempio un alimentatore di continuità o schede di interfaccia di gestione per i server.
@@ -114,14 +116,14 @@ Per informazioni su STONITH e sull'isolamento, vedere gli articoli seguenti:
 * [Fencing and STONITH](https://clusterlabs.org/doc/crm_fencing.html) (Isolamento e STONITH)
 * [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html) (Componente aggiuntivo a disponibilità elevata di Red Hat con Pacemaker: Isolamento)
 
-Poiché la configurazione dell'isolamento a livello di nodo dipende principalmente dall'ambiente in uso, disabilitarlo per questa esercitazione. Potrà essere configurato in un secondo momento. Lo script seguente disabilita l'isolamento a livello di nodo:
-
-```bash
-sudo pcs property set stonith-enabled=false
-```
-  
->[!IMPORTANT]
->La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata. RHEL non fornisce agenti di isolamento per ambienti cloud (incluso Azure) o Hyper-V. Di conseguenza, il fornitore del cluster non offre supporto per l'esecuzione di cluster di produzione in questi ambienti. Questo problema è attualmente in fase di studio e una soluzione sarà disponibile nelle versioni future.
+>[!NOTE]
+>Poiché la configurazione dell'isolamento a livello di nodo dipende principalmente dall'ambiente in uso, disabilitarlo per questa esercitazione. Potrà essere configurato in un secondo momento. Lo script seguente disabilita l'isolamento a livello di nodo:
+>
+>```bash
+>sudo pcs property set stonith-enabled=false
+>``` 
+>
+>La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata.
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare la proprietà del cluster cluster-recheck-interval
 

@@ -18,26 +18,27 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140821"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913553"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Le linee guida seguenti consentono di aumentare il grado di portabilità tra lingue diverse, nonché il supporto di più lingue, per i database e le applicazioni di database che utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
 
--   A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] usare:
-    -   I tipi di dati **char**, **varchar** e **varchar(max)** con le regole di confronto abilitate per [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
-    -   I tipi di dati **nchar**, **nvarchar** e **nvarchar(max)** con le regole di confronto abilitate per [caratteri supplementari](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
+-   A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] usare:
+    -   I tipi di dati **char**, **varchar** e **varchar(max)** con le regole di confronto abilitate per [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) e i dati codificati con UTF-8.
+    -   I tipi di dati **nchar**, **nvarchar** e **nvarchar(max)** con le regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) e i dati codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2.      
 
     In questo modo si evitano problemi di conversione della tabella codici. Per altre considerazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)** . In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)**. Se si usano regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), i dati vengono codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2. In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+
     > [!IMPORTANT]
-    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)** .
+    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)**.
   
 -   Quando si eseguono confronti e operazioni con mesi o giorni della settimana, usare le parti numeriche della data invece delle stringhe di nomi. I nomi dei mesi e dei giorni della settimana restituiti variano a seconda dell'impostazione della lingua. Ad esempio, `DATENAME(MONTH,GETDATE())` restituisce `May` quando la lingua è impostata su inglese (Stati Uniti), `Mai` se è impostato il tedesco e `mai` se è impostato il francese. Specificare quindi una funzione quale [DATEPART](../../t-sql/functions/datepart-transact-sql.md) che usa il numero invece del nome del mese. Utilizzare i nomi DATEPART quando si compilano i set di risultati da visualizzare all'utente, in quanto le stringhe di nomi sono più significative delle parti numeriche. Non creare tuttavia il codice di logica che dipende dai nomi visualizzati di una lingua specifica.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68140821"
   
     -   Le applicazioni ADO, OLE DB e ODBC devono utilizzare le clausole di escape seguenti relative a timestamp, data e ora:  
   
-         **{ ts'** _aaaa_ **-** _mm_ **-** _gg_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** , ad esempio: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _aaaa_ **-** _mm_ **-** _gg_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}**, ad esempio: **{ ts'1998-09-24 10:02:20'}**  
   
          **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'1998-09-24'}**
   

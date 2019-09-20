@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c636db57a13cc242fb152f8dd670eb247f962247
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764095"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846595"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizzazione e modifica delle proprietà della pubblicazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,29 +106,29 @@ ms.locfileid: "68764095"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), specificando il nome della pubblicazione per il parametro **@publication** . Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
+1.  Eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), specificando il nome della pubblicazione per il parametro **\@publication**. Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>Per modificare le proprietà di una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
+1.  Eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specificando la proprietà della pubblicazione da modificare nel parametro **\@property** e il nuovo valore di questa proprietà nel parametro **\@value**.  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **\@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **\@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Per visualizzare le proprietà di una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specificando il nome della pubblicazione per il parametro **@publication** . Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
+1.  Eseguire [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specificando il nome della pubblicazione per il parametro **\@publication**. Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>Per modificare le proprietà di una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
+1.  Eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specificando la proprietà della pubblicazione da modificare nel parametro **\@property** e il nuovo valore di questa proprietà nel parametro **\@value**.  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **\@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **\@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Per visualizzare le proprietà di uno snapshot  
   
-1.  Eseguire [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specificando il nome della pubblicazione per il parametro **@publication** .  
+1.  Eseguire [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specificando il nome della pubblicazione per il parametro **\@publication**.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>Per modificare le proprietà di uno snapshot  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68764095"
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico ( **&** in Microsoft Visual C# e **And** in Microsoft Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo ( **|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo ( **^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
+4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico (**&** in Microsoft Visual C# e **And** in Microsoft Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
   
 5.  (Facoltativo) Se si specifica un valore **true** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per eseguire il commit delle modifiche nel server. Se si specifica un valore **false** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (impostazione predefinita), le modifiche vengono inviate immediatamente al server.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "68764095"
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico ( **&** in Visual C# e **And** in Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo ( **|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo ( **^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
+4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico (**&** in Visual C# e **And** in Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
   
 5.  (Facoltativo) Se si specifica un valore **true** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per eseguire il commit delle modifiche nel server. Se si specifica un valore **false** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (impostazione predefinita), le modifiche vengono inviate immediatamente al server.  
   

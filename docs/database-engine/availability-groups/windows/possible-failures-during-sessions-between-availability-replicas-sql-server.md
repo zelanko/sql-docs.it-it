@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014527"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874536"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinare le cause possibili degli errori di connessione tra le repliche di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Gli errori in una sessione tra due repliche di disponibilità possono essere cau
   
 -   Errori di rete, ad esempio timeout di collegamenti TCP, pacchetti ignorati, danneggiati o in ordine errato.  
   
--   Blocco del sistema operativo, di un server o di uno stato del database.  
+-   Sistema operativo, server o database che non risponde.  
   
 -   Timeout di un server Windows.  
   

@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (grafo SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116947"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846719"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (grafo SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,44 @@ Crea una nuova tabella di grafi SQL come tabella `NODE` o `EDGE`.
 ```  
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( { <column_definition> } [ ,...n ] )   
+    ( { <column_definition> } 
+       | <computed_column_definition>
+       | <column_set_definition>
+       | [ <table_constraint> ] [ ,... n ]
+       | [ <table_index> ] }
+          [ ,...n ]
+    )   
     AS [ NODE | EDGE ]
-[ ; ]  
+    [ ON { partition_scheme_name ( partition_column_name )
+           | filegroup
+           | "default" } ]
+[ ; ] 
+
+< table_constraint > ::=
+[ CONSTRAINT constraint_name ]
+{
+    { PRIMARY KEY | UNIQUE }
+        [ CLUSTERED | NONCLUSTERED ]
+        (column [ ASC | DESC ] [ ,...n ] )
+        [
+            WITH FILLFACTOR = fillfactor
+           |WITH ( <index_option> [ , ...n ] )
+        ]
+        [ ON { partition_scheme_name (partition_column_name)
+            | filegroup | "default" } ]
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
+        [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ NOT FOR REPLICATION ]
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE { NO ACTION | CASCADE } ]
+    | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ```  
   
   
@@ -69,7 +104,7 @@ Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco
  *schema_name*    
  Nome dello schema a cui appartiene la nuova tabella.  
   
- *table_name*    
+ *table_name*      
  Nome della tabella nodi o bordi. I nomi delle tabelle devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). *table_name* può essere costituito al massimo da 128 caratteri, ad eccezione dei nomi di tabelle temporanee locali, ovvero i nomi preceduti da un solo simbolo di cancelletto (#), che non possono superare i 116 caratteri.  
   
  NODE   
@@ -77,6 +112,15 @@ Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco
 
  EDGE  
  Crea una tabella bordi.  
+ 
+ *table_constraint*   
+ Specifica le proprietà di un vincolo PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION o CHECK oppure di una definizione DEFAULT aggiunta a una tabella
+ 
+ ON { partition_scheme | filegroup | "default" }    
+ Specifica lo schema di partizione o il filegroup in cui la tabella viene archiviata. Se si specifica partition_scheme, la tabella deve essere partizionata e le relative partizioni devono essere archiviate in un set di uno o più filegroup specificati in partition_scheme. Se si specifica filegroup, la tabella viene archiviata nel filegroup indicato. Il filegroup deve essere presente nel database. Se si specifica "default" oppure si omette ON, la tabella viene archiviata nel filegroup predefinito. Il meccanismo di archiviazione di una tabella specificato in CREATE TABLE non può essere modificato in seguito.
+
+ ON {partition_scheme | filegroup | "default"}    
+ Può essere specificato anche in un vincolo PRIMARY KEY o UNIQUE. Questi vincoli comportano la creazione di indici. Se si specifica filegroup, l'indice viene archiviato nel filegroup indicato. Se si specifica "default" oppure si omette ON, l'indice viene archiviato nello stesso filegroup della tabella. Se il vincolo PRIMARY KEY o UNIQUE crea un indice cluster, le pagine di dati della tabella vengono archiviate nello stesso filegroup dell'indice. Se si specifica CLUSTERED o se il vincolo crea in altro modo un indice cluster e si specifica un valore partition_scheme diverso dal valore partition_scheme o filegroup della definizione della tabella, o viceversa, verrà rispettata solo la definizione del vincolo e gli altri valori verranno ignorati.
   
 ## <a name="remarks"></a>Remarks  
 La creazione di una tabella temporanea come tabella nodi o bordi non è supportata.  
@@ -86,6 +130,8 @@ La creazione di una tabella nodi o bordi come tabella temporanea non è supporta
 Stretch Database non è supportato per la tabella nodi o bordi.
 
 Le tabelle nodi o bordi non possono essere tabelle esterne. PolyBase non supporta le tabelle di grafi. 
+
+Non è possibile modificare una tabella nodi/archi di grafo non partizionata in una tabella nodi/archi di grafo partizionata. 
   
  
 ## <a name="examples"></a>Esempi  
@@ -119,7 +165,8 @@ L'esempio seguente illustra come creare tabelle `EDGE`
 ```
 
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche 
+ [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)

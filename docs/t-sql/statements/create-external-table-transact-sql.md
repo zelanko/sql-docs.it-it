@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 51464e85f1d9eaabb377caf851e6bdcef46a014d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68698301"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391959"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -38,13 +38,13 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 ## <a name="click-a-product"></a>Fare clic su un prodotto.
 
-Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_ SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -809,7 +809,7 @@ Questo esempio illustra come le tre opzioni REJECT interagiscono tra loro. Ad es
 REJECTED_ROW_LOCATION = *posizione della directory*
 
 Specifica la directory all'interno dell'origine dati esterna in cui vengono scritte le righe rifiutate e il file di errori corrispondente.
-Se il percorso specificato non esiste, PolyBase ne crea uno automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_ " assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. Questa directory include una cartella creata in base all'ora di inoltro del carico, con il formato AnnoMeseGiorno - OraMinutoSecondo (ad esempio 20180330-173205). In questa cartella vengono scritte due tipi di file, i file _reason (file del motivo) e i file di dati.
+Se il percorso specificato non esiste, PolyBase ne crea uno automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_" assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. Questa directory include una cartella creata in base all'ora di inoltro del carico, con il formato AnnoMeseGiorno - OraMinutoSecondo (ad esempio 20180330-173205). In questa cartella vengono scritte due tipi di file, i file _reason (file del motivo) e i file di dati.
 
 Sia i file del motivo che i file di dati hanno il queryID associato all'istruzione CTAS. Poiché i dati e il motivo si trovano in file distinti, i file corrispondenti hanno un suffisso corrispondente.
 

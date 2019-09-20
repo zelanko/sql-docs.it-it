@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7d41bc68aadd9dc2c2ee471a9b14a5dea2ad53d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6cd32a9e88d53296eb2d4a94b0eb71757afbdf63
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764224"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846525"
 ---
 # <a name="delete-an-article"></a>Eliminazione di un articolo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68764224"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Per eliminare un articolo da una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) per eliminare un articolo, indicato da **@article** , da una pubblicazione, indicata da **@publication** . Specificare il valore **1** per **@force_invalidate_snapshot** .  
+1.  Eseguire [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Specificare il valore **1** per **\@force_invalidate_snapshot**.  
   
 2.  (Facoltativo) Per rimuovere completamente l'oggetto pubblicato dal database, eseguire il comando `DROP <objectname>` nel database di pubblicazione del server di pubblicazione.  
 
@@ -52,12 +52,12 @@ ms.locfileid: "68764224"
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Per eliminare un articolo da una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) per eliminare un articolo, indicato da **@article** , da una pubblicazione, indicata da **@publication** . Se necessario, specificare un valore **1** per **@force_invalidate_snapshot** e il valore **1** per **@force_reinit_subscription** .  
+1.  Eseguire [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Se necessario, specificare il valore **1** per **\@force_invalidate_snapshot** e il valore **1** per **\@force_reinit_subscription**.  
   
 2.  (Facoltativo) Per rimuovere completamente l'oggetto pubblicato dal database, eseguire il comando `DROP <objectname>` nel database di pubblicazione del server di pubblicazione.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
- Nell'esempio seguente un articolo viene eliminato da una pubblicazione transazionale. Perché questa modifica rende non valido lo snapshot esistente, viene specificato il valore **1** per il parametro **@force_invalidate_snapshot** .  
+ Nell'esempio seguente un articolo viene eliminato da una pubblicazione transazionale. Dato che questa modifica rende non valido lo snapshot esistente, viene specificato il valore **1** per il parametro **\@force_invalidate_snapshot**.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -74,7 +74,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- Nell'esempio seguente due articoli vengono eliminati da una pubblicazione di tipo merge. Perché queste modifiche rendono non valido lo snapshot esistente, viene specificato il valore **1** per il parametro **@force_invalidate_snapshot** .  
+ Nell'esempio seguente due articoli vengono eliminati da una pubblicazione di tipo merge. Dato che queste modifiche rendono non valido lo snapshot esistente, viene specificato il valore **1** per il parametro **\@force_invalidate_snapshot**.  
   
 ```  
 DECLARE @publication AS sysname;  

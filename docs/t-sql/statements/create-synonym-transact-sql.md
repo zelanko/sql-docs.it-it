@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155818"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383827"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  
   
- È possibile creare, eliminare e fare riferimento ai sinonimi in SQL dinamico.  
+ È possibile creare, eliminare e fare riferimento ai sinonimi in SQL dinamico.
+ 
+ > [!NOTE]
+ > I sinonimi sono specifici del database e non è possibile accedervi da altri database.
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per poter creare un sinonimo in un determinato schema, un utente deve disporre dell'autorizzazione CREATE SYNONYM, oltre a disporre della proprietà dello schema o dell'autorizzazione ALTER SCHEMA.  

@@ -1,7 +1,7 @@
 ---
 title: Vincoli di arco del grafo | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731058"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873879"
 ---
 # <a name="edge-constraints"></a>Vincoli di arco
 
@@ -48,6 +48,14 @@ Si supponga che il grafico contenga i nodi `Product` e `Customer` e di usare l'a
 ### <a name="indexes-on-edge-constraints"></a>Indici sui vincoli di arco
 
 La creazione di un vincolo di arco non determina automaticamente la creazione di un indice corrispondente sulle colonne `$from_id` e `$to_id` nella tabella archi. La creazione manuale di un indice per una coppia `$from_id`, `$to_id` è consigliata in presenza di query di ricerca di punti o carichi di lavoro OLTP.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>Azioni referenziali ON DELETE sui vincoli di arco
+Le azioni di propagazione su un vincolo di arco consentono agli utenti di definire la azioni eseguite dal motore di database quando un utente elimina il nodo o i nodi a cui si connette l'arco specificato. È possibile definire le azioni referenziali seguenti:  
+*NO ACTION*   
+Il motore di database genera un errore quando si tenta di eliminare un nodo con archi connessi.  
+
+*CASCADE*   
+Quando si elimina un nodo dal database, vengono eliminati gli archi connessi.  
 
 ## <a name="working-with-edge-constraints"></a>Utilizzo di vincoli di arco
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Definizione di azioni referenziali in una nuova tabella archi 
+
+Nell'esempio seguente viene creato un vincolo di arco nella tabella archi **bought** e viene definita l'azione referenziale ON DELETE CASCADE. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -153,7 +189,7 @@ GO
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Customer TO Product, Supplier TO Product);
 ```  
 
-Nell'esempio precedente sono presenti due clausole per il vincolo di arco nel vincolo *EC_BOUGHT1*, una che connette **Customer** a **Product** e l'altra che connette **Supplier**  a **Product**. Entrambe queste clausole vengono applicate in disgiunzione. Vale a dire, un determinato arco deve soddisfare una delle due clausole per essere consentito nella tabella archi.
+Nell'esempio precedente sono presenti due clausole per il vincolo di arco nel vincolo *EC_BOUGHT1*, una che connette **Customer** a **Product** e l'altra che connette **Supplier** a **Product**. Entrambe queste clausole vengono applicate in disgiunzione. Vale a dire, un determinato arco deve soddisfare una delle due clausole per essere consentito nella tabella archi.
 
 #### <a name="creating-a-new-edge-constraint-on-existing-edge-table-with-new-edge-constraint-clause"></a>Creazione di un nuovo vincolo di arco in una tabella archi esistente, con una nuova clausola per il vincolo di arco
 
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Per modificare un vincolo di arco usando Transact-SQL, è prima necessario eliminare il vincolo di arco esistente e quindi ricrearlo con la nuova definizione.
 
+
 ### <a name="view-edge-constraints"></a>Visualizzare vincoli di arco
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Attività correlate
 
+[CREATE TABLE (grafo SQL)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Per informazioni sulla tecnologia dei grafi in SQL Server, vedere [Elaborazione di grafi con SQL Server e il database SQL di Azure](../graphs/sql-graph-overview.md?view=sql-server-2017).
+

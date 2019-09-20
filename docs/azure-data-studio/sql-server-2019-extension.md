@@ -3,19 +3,19 @@ title: Estensione SQL Server 2019 (anteprima)
 titleSuffix: Azure Data Studio
 description: Estensione SQL Server 2019 (anteprima) per Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494047"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878621"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione SQL Server 2019 (anteprima)
 
@@ -29,9 +29,9 @@ Per installare l'estensione SQL Server 2019 (anteprima), scaricare e installare 
 
    |Piattaforma|Scarica|Data di rilascio|Versione
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 agosto 2019 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 agosto 2019 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 agosto 2019 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 settembre 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 settembre 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 settembre 2019 |0.16.0
 
 1. In Azure Data Studio scegliere **Install Extension from VSIX Package** (Installa estensione da pacchetto VSIX) dal menu **File** e selezionare il file con estensione .vsix scaricato.
 
@@ -42,6 +42,10 @@ Per installare l'estensione SQL Server 2019 (anteprima), scaricare e installare 
 1. Dopo il ricaricamento, l'estensione installerà le dipendenze. È possibile visualizzare lo stato di avanzamento nella finestra di output e l'operazione potrebbe richiedere alcuni minuti.
 
 1. Al termine dell'installazione delle dipendenze, chiudere e riaprire Azure Data Studio. Il tipo di connessione **cluster Big Data di SQL Server** non è disponibile finché non si riavvia Azure Data Studio.
+
+## <a name="changes-in-release-016"></a>Modifiche nella versione 0.16
+* Procedura guidata di creazione tabella esterna:
+  * Miglioramento della gestione degli errori durante il caricamento di tabelle e viste nella pagina di mapping degli oggetti.
 
 ## <a name="changes-in-release-015"></a>Modifiche nella versione 0.15
 * Procedura guidata di creazione tabella esterna:
@@ -96,7 +100,7 @@ Altri miglioramenti e correzioni includono:
 
 #### <a name="known-issues"></a>Problemi noti
 * Quando si apre un notebook, viene visualizzata la finestra di dialogo per l'installazione di Python. Se si annulla questa installazione, i menu a discesa Kernels (Kernel) e Collega a non visualizzeranno i valori previsti. La soluzione alternativa consiste nel completare l'installazione di Python.
-* Quando un notebook viene aperto con un kernel non supportato, i menu a discesa Kernels (Kernel) e _Collega a_ provocheranno il blocco di Azure Data Studio. Sarà necessario chiudere Azure Data Studio e assicurarsi di usare un kernel supportato (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Quando un notebook viene aperto con un kernel non supportato, i menu a discesa Kernels (Kernel) e _Collega a_ provocheranno il blocco delle risposte da parte di Azure Data Studio. Sarà necessario chiudere Azure Data Studio e assicurarsi di usare un kernel supportato (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
 * Il collegamento all'interfaccia utente Spark ha esito negativo quando si usa PySpark3 o altri kernel Spark sull'endpoint SQL Server. Come soluzione alternativa, fare clic su Spark UI (Interfaccia utente Spark) dal dashboard o connettersi usando il tipo di connessione cluster Big Data di SQL Server, perché il collegamento ipertestuale all'interfaccia utente Spark sarà corretto
 
 ### <a name="extensibility-improvements"></a>Miglioramenti dell'estendibilità

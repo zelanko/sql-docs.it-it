@@ -10,15 +10,15 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959338"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212327"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance per Azure Data Studio (anteprima)
-Azure Data Studio offre ora la possibilità di creare visualizzazioni rapide per i file con estensione CSV e TSV su cui si sta lavorando, inclusi i file locali e i file in HDFS nell'ambito del cluster Big Data di SQL Server 2019. Questa estensione è utile quando si vuole effettuare un esame rapido dei dati per capire cosa sta accadendo. È basata su una tecnologia denominata SandDance di Microsoft Research, in grado di generare visualizzazioni sul posto dei dati.
+Azure Data Studio offre ora la possibilità di creare visualizzazioni rapide per i dati. Questa estensione è utile quando si vuole esaminare i dati per capire cosa sta accadendo. È basata su una tecnologia denominata SandDance di Microsoft Research, in grado di generare visualizzazioni sul posto dei dati.
 
 ![sanddance-animazione](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
@@ -29,13 +29,18 @@ Uniformi transizioni animate tra le visualizzazioni consentono inoltre di manten
 
 ## <a name="usage"></a>Utilizzo
 
+### <a name="view-csv-or-tsv-files"></a>Visualizzare file con estensione csv o tsv
+inclusi i file locali e i file in HDFS nell'ambito del cluster Big Data di SQL Server 2019.
+ 
 Dal menu file usare Apri cartella o [CTRL + K CTRL + O] per aprire la directory contenente il file CSV.  Quindi, nel pannello di Explorer fare clic con il pulsante destro del mouse sul file CSV o TSV e scegliere *Visualizza in SandDance*.
 
 Fare clic con il pulsante destro del mouse su un file CSV o TSV in HDFS, se si è connessi al cluster Big Data di SQL Server 2019, e scegliere *Visualizza in SandDance*.
 
-## <a name="known-issues"></a>Problemi noti
+### <a name="view-sql-query-results"></a>Visualizzare i risultati delle query SQL
 
-Attualmente, la prima colonna di dati deve essere un identificatore univoco.
+Partendo da una finestra di query SQL, eseguire una query per ottenere una griglia di risultati. Fare clic sull'icona del visualizzatore sul lato destro del riquadro dei risultati.
+
+## <a name="known-issues"></a>Problemi noti
 
 Attualmente non è possibile limitare il numero di righe visualizzato. L'utilizzo della memoria, tuttavia, aumenta proporzionalmente al numero di righe ed è quindi consigliabile che la visualizzazione o il set di dati sia limitato a circa 100.000 righe.
 

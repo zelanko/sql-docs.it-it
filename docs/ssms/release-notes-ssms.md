@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122989"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874554"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -109,7 +109,11 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 - Esiste una limitazione alle dimensioni dei dati visualizzati dai risultati di SSMS in griglia, testo o file.
 
-È possibile fare riferimento a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) per altri problemi noti e per inviare commenti e suggerimenti al team del prodotto. 
+- Si verifica un problema e si riceve un errore durante l'eliminazione di un database SQL di Azure in Esplora oggetti, mentre in realtà l'operazione viene eseguita correttamente. L'attività mostra un messaggio di errore non accurato.
+
+- Come lingua predefinita per gli account di accesso SQL può essere visualizzato l'Arabo nella finestra di dialogo Proprietà account di accesso, indipendentemente dalla lingua predefinita effettiva impostata per l'account di accesso. Per visualizzare la lingua predefinita effettiva per un determinato account di accesso, usare T-SQL per selezionare la voce **default_language_name** dell'account di accesso da **master.sys.server_principles**.
+
+È possibile fare riferimento a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) per altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
 ## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
 

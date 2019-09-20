@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027225"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304845"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover di un gruppo di disponibilità Always On in Linux
 
@@ -43,7 +43,7 @@ Il failover manuale prevede due passaggi.
 
    Successivamente, [si rimuove il vincolo di posizione](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Passaggio 1. Eseguire manualmente il failover spostando la risorsa del gruppo di disponibilità
+#### <a name="manualMove"></a> Passaggio 1. Eseguire manualmente il failover spostando la risorsa del gruppo di disponibilità
 
 Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità denominata *ag_cluster* in un nodo del cluster denominato *nodeName2*, eseguire il comando appropriato per la distribuzione:
 
@@ -62,7 +62,7 @@ Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità
 >[!IMPORTANT]
 >Dopo il failover manuale di una risorsa, è necessario rimuovere un vincolo di posizione che è stato aggiunto automaticamente.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">Passaggio 2. Rimuovere il vincolo di posizione
+#### <a name="removeLocConstraint"> </a> Passaggio 2. Rimuovere il vincolo di posizione
 
 Durante un failover manuale, il comando `pcs` `move` o il comando `crm` `migrate` aggiunge un vincolo di posizione per consentire il posizionamento della risorsa nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
 

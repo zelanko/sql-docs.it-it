@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301357"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929657"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Query distribuite di Microsoft SQL Server: Connettività OLE DB
 
@@ -479,7 +479,7 @@ Di seguito sono riportati i passaggi di livello superiore eseguiti nel provider 
 
 1. SQL Server crea un oggetto `Command` dall'oggetto `Session` usando `IDBCreateCommand::CreateCommand`.
 
-9. Se l'opzione di configurazione del server `Remote Query Timeout` è impostata su un valore >` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `Command` object to the same value by using `ICommandProperties::SetProperties`; `ICommand::SetCommandText` deve essere chiamato per impostare il testo del comando sulla stringa Transact-SQL generata.
+9. Se l'opzione di configurazione del server `Remote Query Timeout` è impostata su un valore > 0, SQL Server imposta la proprietà `DBPROP_COMMANDTIMEOUT` per l'oggetto `Command` sullo stesso valore tramite `ICommandProperties::SetProperties`. È necessario chiamare `ICommand::SetCommandText` per impostare il testo del comando sulla stringa Transact-SQL generata.
 
 10. SQL Server chiama `ICommandPrepare::Prepare` per preparare il comando. Se il provider non supporta questa interfaccia, SQL Server continua con il passaggio 4.
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

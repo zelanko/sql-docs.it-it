@@ -1,5 +1,5 @@
 ---
-title: Abilitare il backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
+title: Abilitare il backup gestito di SQL Server in Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -10,74 +10,103 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089824"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238738"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Abilitare il backup gestito di SQL Server in Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Abilitare il backup gestito di SQL Server in Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento descrive come abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le impostazioni predefinite a livello di database e di istanza. Viene descritta anche la procedura per abilitare le notifiche tramite posta elettronica e monitorare l'attività di backup.  
   
  In questa esercitazione viene usato Azure PowerShell. Prima di iniziare l'esercitazione, [scaricare e installare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Per abilitare anche le opzioni avanzate o usare una pianificazione personalizzata, configurare tali impostazioni prima di abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Per abilitare anche le opzioni avanzate o usare una pianificazione personalizzata, configurare tali impostazioni prima di abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [Configurare le opzioni avanzate per il backup gestito di SQL Server in Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le impostazioni predefinite  
-  
-#### <a name="create-the-azure-blob-container"></a>Creare il contenitore BLOB di Azure  
-  
-1.  **Iscriversi ad Azure:** se si dispone già di una sottoscrizione di Azure, andare al passaggio successivo. In caso contrario, è possibile iniziare con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) oppure esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).  
-  
-2.  **Creare un account di archiviazione di Azure**: se si dispone già di un account di archiviazione, andare al passaggio successivo. In caso contrario, è possibile usare il [portale di gestione di Azure](https://manage.windowsazure.com/) o Azure PowerShell per creare l'account di archiviazione. Il comando `New-AzureStorageAccount` seguente crea un account di archiviazione denominato `managedbackupstorage` nell'area Stati Uniti orientali.  
-  
-    ```powershell  
-    New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
-    ```  
-  
-     Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugli account di archiviazione di Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
-  
-3.  **Creare un contenitore BLOB per i file di backup:** è possibile creare un contenitore BLOB nel portale di gestione di Azure o con Azure PowerShell. Il comando `New-AzureStorageContainer` seguente crea un contenitore BLOB denominato `backupcontainer` nell'account di archiviazione `managedbackupstorage` .  
-  
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
-    New-AzureStorageContainer -Name backupcontainer -Context $context  
-    ```  
-  
-4.  **Generare una firma di accesso condiviso:** per accedere al contenitore, è necessario creare una firma di accesso condiviso. Questa operazione può essere eseguita in alcuni strumenti, tramite codice e con Azure PowerShell. Il comando `New-AzureStorageContainerSASToken` seguente crea un token della firma di accesso condiviso per il contenitore BLOB `backupcontainer` che scade entro un anno.  
-  
-  ```powershell  
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-  ```  
+## <a name="create-the-azure-blob-container"></a>Creare il contenitore BLOB di Azure
 
-Per Azure usare il comando seguente:
-  ```powershell
-  Connect-AzAccount
-  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-  ```  
+Il processo richiede un account Azure. Se è già disponibile un account, procedere con il passaggio successivo. In caso contrario, è possibile iniziare con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) oppure esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).
+
+Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugli account di archiviazione di Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+
+#### <a name="azure-clitabazure-cli"></a>[Interfaccia della riga di comando di Azure](#tab/azure-cli)
+
+1. Accedere all'account Azure.
+
+    ```azurecli-interactive
+    az login
+    ```
   
-L'output per questo comando conterrà sia l'URL del contenitore e che il token della firma di accesso condiviso. Di seguito è riportato un esempio:  
+1. Creare un account di archiviazione di Azure. se si dispone già di un account di archiviazione, andare al passaggio successivo. Il comando seguente crea un account di archiviazione denominato `<backupStorage>` nell'area Stati Uniti orientali.  
+  
+    ```azurecli-interactive
+    az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
+    ```  
+    
+1. Creare un contenitore BLOB denominato `<backupContainer>` per i file di backup.
+  
+    ```azurecli-interactive
+    $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
+    az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
+    ```  
+  
+1. Generare una firma di accesso condiviso per accedere al contenitore. Il comando seguente crea un token della firma di accesso condiviso per il contenitore BLOB `<backupContainer>` con scadenza annuale.  
+  
+    ```azurecli-interactive 
+    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    ```
+
+#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+
+1. Il comando seguente consente di accedere al proprio account Azure.
+
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "<subscriptionId>"
+    ```
+  
+1. Creare un account di archiviazione di Azure. se si dispone già di un account di archiviazione, andare al passaggio successivo. Il comando seguente crea un account di archiviazione denominato `<backupStorage>` nell'area Stati Uniti orientali.  
+  
+    ```azurepowershell-interactive
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
+    ```   
+  
+1. Creare un contenitore BLOB denominato `<backupContainer>` per i file di backup.  
+  
+    ```azurepowershell-interactive
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
+    ```  
+  
+1. Generare una firma di accesso condiviso per accedere al contenitore. Il comando seguente crea un token della firma di accesso condiviso per il contenitore BLOB `<backupContainer>` con scadenza annuale.
+  
+    ```azurepowershell-interactive 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    ```
+
+* * *
+
+> [!NOTE]
+> Questi passaggi possono essere eseguiti anche usando il [portale di Azure](https://portal.azure.com/).
+
+L'output conterrà l'URL del contenitore e/o il token della firma di accesso condiviso. Di seguito è riportato un esempio:  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-Nell'esempio precedente separare l'URL del contenitore dal token della firma di accesso condiviso in corrispondenza del punto interrogativo (escludendo il punto interrogativo). Ad esempio, l'output precedente corrisponde ai due valori seguenti.  
+Se l'URL è incluso, separarlo dal token della firma di accesso condiviso in corrispondenza del punto interrogativo (non includere il punto interrogativo). Ad esempio, l'output precedente corrisponde ai due valori seguenti.  
   
 |||  
 |-|-|  
-|**URL contenitore:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**Token della firma di accesso condiviso:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**URL del contenitore**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**Token della firma di accesso condiviso**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
 Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per la creazione di una credenziale SQL. Per altre informazioni sulla firma di accesso condiviso, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
-#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Abilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-managed-backup-to-azure"></a>Abilitare il backup gestito in Azure
   
 1.  **Creare credenziali SQL per l'URL di firma di accesso condiviso:** usare il token di firma di accesso condiviso per creare credenziali SQL per l'URL del contenitore BLOB. In SQL Server Management Studio usare la query Transact-SQL seguente per creare la credenziale per l'URL del contenitore BLOB in base all'esempio seguente:  
   
@@ -97,7 +126,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
     >  Per abilitare il backup gestito a livello di istanza, specificare `NULL` per il parametro `database_name` .  
   
     ```sql  
-    Use msdb;  
+    USE msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
      @enable_backup = 1,   
@@ -111,7 +140,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
 5.  **Esaminare la configurazione predefinita degli eventi estesi:** esaminare le impostazioni degli eventi estesi eseguendo l'istruzione transact-SQL seguente.  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -125,21 +154,20 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
     3.  **Abilitare le notifiche di posta elettronica per ricevere avvisi ed errori di backup:** nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **Visualizzare i file di backup nell'account di archiviazione di Microsoft Azure:** connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verranno visualizzati gli eventuali file di backup disponibili nel contenitore specificato. Potrebbe essere visualizzato un backup del database e del log entro 5 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database.  
+7.  **Visualizzare i file di backup nell'account di archiviazione di Azure:** connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di Azure. Verranno visualizzati gli eventuali file di backup disponibili nel contenitore specificato. Potrebbe essere visualizzato un backup del database e del log entro 5 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database.  
   
 8.  **Monitorare lo stato di integrità:**  è possibile eseguire il monitoraggio attraverso notifiche tramite posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
   
     ```sql  
     --  view all admin events  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -157,21 +185,19 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
-    Use msdb;  
-    Go  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    USE msdb;  
+    GO  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
     --  View all events in the current week  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -180,7 +206,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
- I passaggi descritti in questa sezione riguardano in modo specifico la configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per la prima volta nel database. È possibile modificare le configurazioni esistenti usando le stesse stored procedure di sistema e specificare nuovi valori.  
+I passaggi descritti in questa sezione riguardano in modo specifico la configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per la prima volta nel database. È possibile modificare le configurazioni esistenti usando le stesse stored procedure di sistema e specificare nuovi valori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup gestito di SQL Server in Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

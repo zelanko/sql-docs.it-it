@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134568"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211257"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134568"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
+  > [!NOTE]
+  > SQL Agent su Istanza gestita è sempre configurato per l'uso di Posta elettronica database, quindi questo contenuto non è applicabile in Istanza gestita. In Istanza gestita è necessario disporre di un profilo che deve essere chiamato **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** per associare SQL Agent a Posta elettronica database. 
+  
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   [Abilitare Posta elettronica database](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare.  
   
--   [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb** .  
+-   [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb** .
   
 -   Impostare il profilo come predefinito per il database **msdb** .  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134568"
   
 -   Nell'elenco **Sistema di posta elettronica** selezionare **Posta elettronica database**.  
   
--   Selezionare un profilo di posta elettronica per Posta elettronica database nell'elenco **Profilo posta**.  
+-   Selezionare un profilo di posta elettronica per Posta elettronica database nell'elenco **Profilo posta**. 
   
 -   Riavviare SQL Server Agent.  
   

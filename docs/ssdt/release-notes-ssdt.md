@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531034"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874897"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -304,7 +304,7 @@ _SSDT per Visual Studio 2017._
 
 Visual Studio 2017 (15.5.1) è uguale alla versione 15.5.0 tranne che per le correzioni di bug seguenti apportate al programma di installazione:
 
-1.  Risolvere il problema per cui il programma di installazione si blocca dopo l'installazione di SQL Server Integration Services.
+1.  Risolvere il problema per cui il programma di installazione smette di rispondere dopo l'installazione di SQL Server Integration Services.
 2.  Risolvere il problema per cui il programma di installazione ha esito negativo con il messaggio di errore seguente: "L'operazione metafile richiesta non è supportata (0x800707D3)".
 
 A parte queste due correzioni di bug, i dettagli seguenti per la versione 15.5.0 si applicano anche alla versione 15.5.1
@@ -497,7 +497,7 @@ _SSDT per Visual Studio 2015._
 - Risolto un problema con ChangeSource relativo alle modifiche non persistenti dell'origine dati della struttura con espressione del contesto di esecuzione
 - Risolto un problema per cui gli errori di espressione M possono causare errori dell'aggiornamento del modello senza che vengano visualizzati messaggi di errore
 - Risolto un problema per cui SSDT veniva chiuso con il messaggio di errore "Prima di chiudere la soluzione è necessario terminare la compilazione"
-- Risolto un problema per cui Visual Studio può sembrare bloccato se si imposta una modalità di rappresentazione non corretta nel modello con livello di compatibilità 1400 
+- Risolto un problema per cui può sembrare che Visual Studio smetta di rispondere se si imposta una modalità di rappresentazione non corretta nel modello con livello di compatibilità 1400 
 - La proprietà di righe di dettaglio ora viene serializzata in JSON solo quando non è vuota (modificata rispetto all'impostazione predefinita)
 - Il driver OLEDB Oracle ora è disponibile nell'elenco per la modalità DirectQuery tabulare
 - L'aggiunta di espressioni M nei modelli tabulari con compatibilità 1400 ora appare e viene aggiornata in Esplora modelli tabulari
@@ -844,7 +844,7 @@ SSDT tabulare include ora un'istanza SSAS interna che viene avviata automaticame
 * Correzione di un problema per cui la finestra delle proprietà di un progetto di SSDT AS non viene ancorata correttamente se ridimensionata con scala con valori DPI alti.
 * Correzione di un problema nei progetti di SSDT AS che può causare un errore durante l'aggiornamento di determinati modelli con tabelle incollate.
 * Correzione di un problema in SSDT AS per cui incollando righe del foglio completo da Excel l'operazione è lenta e crea molte colonne indesiderate.
-* Correzione di un problema in SSDT AS per cui l'analisi e l'evidenziazione di espressioni DataTable statiche di grandi dimensioni risultano lente o appaiono bloccate.
+* Correzione di un problema in SSDT AS per cui l'analisi e l'evidenziazione di espressioni DataTable statiche di grandi dimensioni risultano lente o sembrano smettere di rispondere.
 * Correzione di un problema in SSDT AS relativo all'aggiunta di misure e valori KPI alla prospettiva corrente selezionata nell'editor.
 * Correzione di un problema in SSDT per cui l'importazione di dati in un progetto di Analysis Services da SQL Azure non supporta tipi di schema diversi da "dbo".
 

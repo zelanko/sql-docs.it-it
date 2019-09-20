@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075218"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978602"
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,27 @@ GO
 ```  
   
  L'espressione `1+2` restituisce `3` in ogni riga del set di risultati. Sebbene l'espressione `ProductID` generi un valore univoco in ogni riga del set di risultati, ogni riga include un solo valore per `ProductID`.  
-  
+ 
+- Azure SQL Data Warehouse alloca una quantità di memoria massima fissa a ogni thread, in modo che nessun thread possa usare tutta la memoria.  Parte di questa memoria viene usata per archiviare le espressioni di query.  Se una query ha troppe espressioni e la memoria necessaria supera il limite interno, il motore non la eseguirà.  Per evitare questo problema, gli utenti possono modificare la query in più query con un numero minore di espressioni in ognuna. Ad esempio, nel caso di una query con un lungo elenco di espressioni nella clausola WHERE: 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+Modificare la query come segue:
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>Vedere anche  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

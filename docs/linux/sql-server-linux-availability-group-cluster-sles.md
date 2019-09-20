@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003556"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809821"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 
@@ -220,7 +220,11 @@ L'isolamento a livello di risorsa garantisce soprattutto che i dati non subiscan
 
 L'isolamento a livello di nodo consente di assicurarsi che un nodo non esegua alcuna risorsa. Questa operazione viene eseguita tramite il reset del nodo e la relativa implementazione in Pacemaker è detta STONITH, che è l'acronimo di "Shoot The Other Node In The Head", un'espressione inglese usata per indicare che l'altro nodo deve essere arrestato. Pacemaker supporta un'ampia gamma di dispositivi di isolamento, ad esempio un alimentatore di continuità o schede di interfaccia di gestione per i server.
 
-Per altre informazioni, vedere [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (Cluster Pacemaker da zero), [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (Isolamento e Stonith) e la [documentazione di SUSE sulla disponibilità elevata: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html) (Isolamento e STONITH).
+Per altre informazioni, vedere:
+
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (Cluster Pacemaker da zero)
+- [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (Isolamento e Stonith)
+- [Documentazione di SUSE a disponibilità elevata: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html) (Isolamento e STONITH)
 
 In fase di inizializzazione del cluster, se non viene rilevata alcuna configurazione, STONITH è disabilitato. È possibile abilitarlo in un secondo momento tramite il comando seguente:
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata. SUSE non fornisce agenti di isolamento per ambienti cloud (incluso Azure) o Hyper-V. Di conseguenza, il fornitore del cluster non offre supporto per l'esecuzione di cluster di produzione in questi ambienti. Questo problema è attualmente in fase di studio e una soluzione sarà disponibile nelle versioni future.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurare le risorse cluster per SQL Server
 
