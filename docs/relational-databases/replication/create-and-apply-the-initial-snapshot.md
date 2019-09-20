@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768637"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846713"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ Gli snapshot iniziali possono essere creati a livello di programmazione creando 
 
 1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specificare **@publication** e i parametri seguenti:  
+2.  Eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specificare **\@publication** e i parametri seguenti:  
   
-    -   **@job_login, che specifica** le credenziali dell'autenticazione di Windows con cui l'agente snapshot viene eseguito nel database di distribuzione.  
+    -   **\@job_login**, che specifica le credenziali dell'autenticazione di Windows con cui l'agente di snapshot viene eseguito nel server di distribuzione.  
   
-    -   **@job_password** , che corrisponde alla password per le credenziali di Windows specificate.  
+    -   **\@job_password**, che corrisponde alla password per le credenziali di Windows specificate.  
   
-    -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **@publisher_login** e **@publisher_password** .  
+    -   (Facoltativo) Valore **0** per **\@publisher_security_mode** se l'agente userà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **\@publisher_login** e **\@publisher_password**.  
   
     -   (Facoltativo) Pianificazione della sincronizzazione per il processo dell'agente snapshot. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -105,7 +105,7 @@ Gli snapshot iniziali possono essere creati a livello di programmazione creando 
   
 3.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
   
-4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specificando il valore **@publication** dal passaggio 1.  
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specificando il valore **\@publication** dal passaggio 1.  
   
 ## <a name="apply-a-snapshot"></a>Applicare uno snapshot  
 

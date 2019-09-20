@@ -1643,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: Parametri con valori di tabella
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: Vincoli di Microsoft Edge
+        - name: Vincoli di arco
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: Crea
@@ -4183,8 +4183,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: Raccolta di dati di diagnostica e utilizzo
           items:
-            - name: Supplemento alla privacy
-              href: sql-server/sql-server-privacy.md
+            - name: Supplemento alla privacy di SQL Server
+              items:
+                - name: SQL Server 2017 e versioni precedenti
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: Configurare i dati di diagnostica e utilizzo di SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Configurare i dati di diagnostica e utilizzo degli strumenti
@@ -6495,6 +6499,12 @@
   items:
     - name: Gestione
       items:
+        - name: Ripristino accelerato del database
+          items:
+            - name: Panoramica
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: Gestione
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: Server di gestione centrale
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: Gestione configurazione

@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051427"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874461"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -139,9 +139,9 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Amarico (Etiopia)|Latin1_General_100_|Non disponibile|
 |Armeno (Armenia)|Cyrillic_General_100_|Non disponibile|
 |Assamese (India)|Assamese_100_ <sup>1</sup>|Non disponibile|
+|Bengalese (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponibile|
 |Baschiro (Russia)|Bashkir_100_|Non disponibile|
 |Basco (Basco)|Latin1_General_100_|Non disponibile|
-|Bengalese (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponibile|
 |Bengalese (India)|Bengali_100_<sup>1</sup>|Non disponibile|
 |Bosniaco (Bosnia ed Erzegovina, alfabeto cirillico)|Bosnian_Cyrillic_100_|Non disponibile|
 |Bosniaco (Bosnia ed Erzegovina, alfabeto latino)|Bosnian_Latin_100_|Non disponibile|
@@ -187,7 +187,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Norvegese (Bokmål, Norvegia)|Norwegian_100_|Non disponibile|
 |Norvegese (Nynorsk, Norvegia)|Norwegian_100_|Non disponibile|
 |Occitano (Francia)|French_100_|Non disponibile|
-|Oriya (India)|Indic_General_100_<sup>1</sup>|Non disponibile|
+|Odia (India)|Indic_General_100_<sup>1</sup>|Non disponibile|
 |Pashto (Afghanistan)|Pashto_100_<sup>1</sup>|Non disponibile|
 |Persiano (Iran)|Persian_100_|Non disponibile|
 |Punjabi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -226,7 +226,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Gallese (Regno Unito)|Welsh_100_|Non disponibile|
 |Wolof (Senegal)|French_100_|Non disponibile|
 |Xhosa/isiXhosa (Sudafrica)|Latin1_General_100_|Non disponibile|
-|Jakuto (Russia)|Yakut_100_|Non disponibile|
+|Sacha (Russia)|Yakut_100_|Non disponibile|
 |Yi (RPC)|Latin1_General_100_|Non disponibile|
 |Yoruba (Nigeria)|Latin1_General_100_|Non disponibile|
 |Zulu/isiZulu (Sudafrica)|Latin1_General_100_|Non disponibile|
@@ -235,9 +235,9 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedonian|Macedonian|
 
-<sup>1</sup>Le regole di confronto solo Unicode di Windows possono essere applicate solo a dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.
+<sup>1</sup> Le regole di confronto solo Unicode di Windows possono essere applicate solo a dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.
 
-<sup>2</sup>Come le regole di confronto per il cinese (Taiwan), il cinese (Macao) usa le regole del cinese semplificato; a differenza del cinese (Taiwan), usa la tabella codici 950.
+<sup>2</sup> Come le regole di confronto per il cinese (Taiwan), il cinese (Macao) usa le regole del cinese semplificato; a differenza del cinese (Taiwan), usa la tabella codici 950.
 
 ## <a name="see-also"></a>Vedere anche
 

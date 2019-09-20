@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907759"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846765"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definizione e modifica di un filtro di riga con parametri per un articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907759"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Per definire un filtro di riga con parametri per un articolo in una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare **@publication** , un nome di articolo per **@article** , la tabella da pubblicare per **@source_object** , la clausola WHERE che definisce il filtro con parametri per **@subset_filterclause** (escluso `WHERE`) e uno dei valori seguenti per **@partition_options** , che descrive il tipo di partizionamento risultante dall'applicazione del filtro di riga con parametri:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare **\@publication**, un nome di articolo per **\@article**, la tabella da pubblicare per **\@source_object**, la clausola WHERE che definisce il filtro con parametri per **\@subset_filterclause** (escluso `WHERE`), e uno dei valori seguenti per **\@partition_options**, che descrive il tipo di partizionamento risultante dall'applicazione del filtro di riga con parametri:  
   
     -   **0** : il filtro dell'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero si tratta di una partizione "sovrapposta".  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907759"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Per modificare un filtro di riga con parametri per un articolo in una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare **@publication** , **@article** , il valore **subset_filterclause** per **@property** , l'espressione che definisce il filtro con parametri per **@value** (escluso `WHERE`) e il valore **1** sia per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare **\@publication**, **\@article**, il valore **subset_filterclause** per **\@property**, l'espressione che definisce il filtro con parametri per **\@value** (escluso `WHERE`), e il valore **1** per **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
-2.  Se questa modifica implica un diverso comportamento del partizionamento, eseguire nuovamente [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Specificare **@publication** , **@article** , il valore **partition_options** per **@property** e l'opzione di partizionamento più appropriata tra quelle elencate di seguito per **@value** :  
+2.  Se questa modifica implica un diverso comportamento del partizionamento, eseguire nuovamente [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Specificare **\@publication**, **\@article**, il valore **partition_options** per **\@property** e l'opzione di partizionamento più appropriata tra quelle elencate di seguito per **\@value**:  
   
     -   **0** : il filtro dell'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero si tratta di una partizione "sovrapposta".  
   

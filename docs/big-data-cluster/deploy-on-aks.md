@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160698"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016894"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 
@@ -39,9 +39,9 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 
 - Versione minima 1,13 per il server Kubernetes. Per il servizio Azure Kubernetes, è necessario usare il parametro `--kubernetes-version` per specificare una versione diversa rispetto a quella predefinita.
 
-- Per un'esperienza ottimale di convalida degli scenari di base nel servizio Azure Kubernetes, usare:
+- Per garantire una distribuzione corretta e un'esperienza ottimale durante la convalida degli scenari di base in AKS, è possibile usare un singolo nodo o un cluster AKS a più nodi, con queste risorse disponibili:
    - 8 vCPU in tutti i nodi
-   - 32 GB di memoria per macchina virtuale
+   - 64 GB di memoria per macchina virtuale
    - 24 o più dischi collegati in tutti i nodi
 
    > [!TIP]

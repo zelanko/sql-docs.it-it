@@ -3,17 +3,17 @@ title: Limitazioni di sicurezza per SQL Server in Linux
 description: Questo articolo descrive le limitazioni di SQL Server in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/30/2018
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065121"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929814"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitazioni di sicurezza per SQL Server in Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "68065121"
 
 SQL Server in Linux presenta attualmente le limitazioni seguenti:
 
-* Sono disponibili criteri password standard. MUST_CHANGE è l'unica opzione che è possibile configurare.  
+* Sono disponibili criteri password standard. MUST_CHANGE è l'unica opzione che è possibile configurare. L'opzione CHECK_POLICY non è supportata.
 * Extensible Key Management non è supportato. 
 * L'uso di chiavi archiviate in Azure Key Vault non è supportato.
 * SQL Server genera un certificato autofirmato personalizzato per la crittografia delle connessioni. È possibile configurare SQL Server per l'uso di un certificato fornito dall'utente per TLS. 

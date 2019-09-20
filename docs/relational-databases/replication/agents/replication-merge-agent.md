@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085948"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846740"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, utilizzare in alternativa **@subscriber_upload_options** di **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, usare in alternativa **\@subscriber_upload_options** di **sp_addmergearticle**.  
   
  Specifica il tipo di scambio di dati durante la sincronizzazione. I possibili valori sono i seguenti:  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Specifica il numero di thread di origine utilizzati dall'agente di merge per enumerare le modifiche dall'origine. L'origine è costituita dal Sottoscrittore durante il caricamento e dal server di pubblicazione durante il download. Il valore predefinito è **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Numero massimo di secondi di attesa da parte dell'agente di merge quando il numero di processi di merge simultanei in esecuzione raggiunge il limite impostato tramite la proprietà **@max_concurrent_merge** di **sp_addmergepublication**. Se viene raggiunto il numero massimo di secondi e l'agente di merge è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
+ Numero massimo di secondi di attesa da parte dell'agente di merge quando il numero di processi di merge simultanei in esecuzione raggiunge il limite impostato tramite la proprietà **\@max_concurrent_merge** di **sp_addmergepublication**. Se viene raggiunto il numero massimo di secondi e l'agente di merge è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Percorso del database Jet (file con estensione mdb) se **SubscriberType** è **2** (consente una connessione a un database Jet senza un nome origine dati (DNS, Data Source Name) ODBC).  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937531"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278918"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Ripristino di un database in una nuova posizione (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67937531"
   
 -   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario eseguire il backup del log delle transazioni attivo. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
--   Per ripristinare un database crittografato, è necessario poter **accedere al certificato o alla chiave asimmetrica usata per crittografare il database**. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Il certificato usato per crittografare la chiave di crittografia del database deve essere mantenuto finché è necessario il backup. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+-   Per ripristinare un database crittografato, è necessario poter **accedere al certificato o alla chiave asimmetrica usata per crittografare il database**. Non è possibile ripristinare il database senza almeno uno di questi due elementi. Il certificato usato per crittografare la chiave di crittografia del database deve essere mantenuto finché è necessario il backup. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
@@ -107,64 +107,64 @@ ms.locfileid: "67937531"
   
 2.  Eseguire l'istruzione [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) per ripristinare il backup di database completo. Per impostazione predefinita, i file di dati e di log vengono ripristinati nei percorsi originali. Per modificare il percorso di un database, utilizzare l'opzione MOVE per spostare ogni file di database e per evitare conflitti con i file esistenti.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  La sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] di base per il ripristino del database in un nuovo percorso e con un nuovo nome è la seguente:  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *new_database_name*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > Quando si prepara lo spostamento di un database in un disco diverso, è necessario verificare che lo spazio disponibile sia sufficiente e identificare potenziali conflitti con i file esistenti. A tale scopo, utilizzare un'istruzione [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) che specifica gli stessi parametri MOVE che si intende utilizzare nell'istruzione RESTORE DATABASE.  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  Nella tabella seguente vengono descritti argomenti di questa istruzione RESTORE ai fini del ripristino di un database in un nuovo percorso. Per altre informazioni su questi argomenti, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-     *new_database_name*  
-     The new name for the database.  
+  *new_database_name*  
+  Nuovo nome del database.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > Se il database viene ripristinato in una diversa istanza del server, è possibile utilizzare il nome di database originale anziché uno nuovo.  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *backup_device* [ **,** ...*n* ]  
+  Specifica un elenco di dispositivi di backup, da 1 a 64, delimitati da virgole da cui deve essere ripristinato il backup del database. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente, se già definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  Se per il database si utilizza il modello di recupero con registrazione completa, può essere necessario applicare i backup del log delle transazioni dopo il ripristino del database. In questo caso, specificare l'opzione NORECOVERY.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  In caso contrario, utilizzare l'opzione RECOVERY (impostazione predefinita).  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  Identifica il set di backup da ripristinare. Il valore *1* per **backup_set_file_number** indica il primo set di backup nel supporto di backup, mentre il valore *2* per **backup_set_file_number** indica il secondo set di backup. È possibile ottenere il valore *backup_set_file_number* di un backup usando l'istruzione [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  Se questa opzione non è specificata, per impostazione predefinita viene utilizzato il primo set di backup disponibili sul dispositivo di backup.  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
+  Specifica che il file di dati o di log specificato da *logical_file_name_in_backup* deve essere ripristinato nel percorso specificato da *operating_system_file_name*. Specificare un'istruzione MOVE per ogni file logico che si desidera ripristinare dal set di backup in un nuovo percorso.  
   
-    |Opzione|Descrizione|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> <br /><br /> Nota: per ottenere un elenco dei file logici del set di backup, usare [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
-    |*operating_system_file_name*|Specifica un nuovo percorso per il file indicato da *logical_file_name_in_backup*. Il file verrà ripristinato a questo percorso.<br /><br /> Facoltativamente, *operating_system_file_name* specifica un nuovo nome per il file ripristinato. Questo passaggio è necessario se si crea una copia di un database esistente nella stessa istanza del server.|  
-    |*n*|Segnaposto tramite cui viene indicata la possibilità di specificare istruzioni MOVE aggiuntive.|  
+  |Opzione|Descrizione|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> <br /><br /> Nota: per ottenere un elenco dei file logici del set di backup, usare [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
+  |*operating_system_file_name*|Specifica un nuovo percorso per il file indicato da *logical_file_name_in_backup*. Il file verrà ripristinato a questo percorso.<br /><br /> Facoltativamente, *operating_system_file_name* specifica un nuovo nome per il file ripristinato. Questo passaggio è necessario se si crea una copia di un database esistente nella stessa istanza del server.|  
+  |*n*|Segnaposto tramite cui viene indicata la possibilità di specificare istruzioni MOVE aggiuntive.|  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio viene creato un nuovo database denominato `MyAdvWorks` ripristinando un backup del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in cui sono inclusi due file: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. In questo database viene utilizzato il modello di recupero con registrazione minima. Il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è già presente nell'istanza del server, pertanto i file del backup devono essere ripristinati in un nuovo percorso. L'istruzione RESTORE FILELISTONLY viene utilizzata per stabilire il numero e i nomi dei file del database da ripristinare. Il backup del database corrisponde al primo set disponibile sul dispositivo.  

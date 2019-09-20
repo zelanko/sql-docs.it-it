@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd857c9a493528b5759d83dd3b89924a2c22f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e46578c4d06d430a037a6af066903faa7a6a8e1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058089"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846532"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ GO
   
  **Colonne nella tabella di origine da acquisire**.  
   
- Per impostazione predefinita, tutte le colonne della tabella di origine vengono identificate come colonne acquisite. Se è necessario rilevare solo un subset di colonne, ad esempio per motivi di privacy o di prestazioni, usare il parametro *@captured_column_list* per specificare il subset di colonne.  
+ Per impostazione predefinita, tutte le colonne della tabella di origine vengono identificate come colonne acquisite. Se è necessario rilevare solo un subset di colonne, ad esempio per motivi di privacy o di prestazioni, usare il parametro *\@captured_column_list* per specificare il subset di colonne.  
   
  **Un filegroup per contenere la tabella delle modifiche.**  
   
- Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che vogliono controllare la posizione di singole tabelle delle modifiche possono usare il parametro *@filegroup_name* per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il modello **Abilitare una tabella specificando l'opzione filegroup** per un esempio su come usare il parametro *@filegroup_name* .  
+ Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che vogliono controllare la posizione di singole tabelle delle modifiche possono usare il parametro *\@filegroup_name* per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il modello **Abilitare una tabella specificando l'opzione filegroup** per un esempio su come usare il parametro *\@filegroup_name*.  
   
 ```sql  
 -- =========  
@@ -100,7 +100,7 @@ GO
   
  Lo scopo del ruolo specificato consiste nel controllare l'accesso ai dati delle modifiche. Il ruolo specificato può essere un ruolo predefinito del server esistente o un ruolo del database. Se il ruolo specificato non è già presente, verrà automaticamente creato un ruolo del database con il nome indicato. I membri del ruolo **sysadmin** o **db_owner** hanno accesso completo ai dati nelle tabelle delle modifiche. Tutti gli altri utenti devono disporre dell'autorizzazione SELECT per tutte le colonne acquisite della tabella di origine. Quando viene specificato un ruolo, inoltre, gli utenti che non sono membri del ruolo **sysadmin** o **db_owner** devono essere anche membri del ruolo specificato.  
   
- Se non si vuole usare un ruolo di controllo, impostare in modo esplicito il parametro *@role_name* su Null. Vedere il modello **Abilitare una tabella senza usare un ruolo di controllo** per un esempio su come abilitare una tabella senza un ruolo di controllo.  
+ Se non si vuole usare un ruolo di controllo, impostare in modo esplicito il parametro *\@role_name* su NULL. Vedere il modello **Abilitare una tabella senza usare un ruolo di controllo** per un esempio su come abilitare una tabella senza un ruolo di controllo.  
   
 ```sql  
 -- =========  
@@ -121,9 +121,9 @@ GO
   
  Un'istanza di acquisizione includerà sempre una funzione con valori di tabella per la restituzione di tutte le voci della tabella delle modifiche generate in un intervallo definito. Il nome di questa funzione viene creato aggiungendo il nome dell'istanza di acquisizione a "cdc.fn_cdc_get_all_changes_." Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
- Se il parametro *@supports_net_changes* è impostato su 1, viene generata anche una funzione del rilevamento delle modifiche delta. Questa funzione restituisce solo una modifica per ogni riga distinta modificata nell'intervallo specificato nella chiamata. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+ Se il parametro *\@supports_net_changes* è impostato su 1, viene generata anche una funzione delle modifiche delta per l'istanza di acquisizione. Questa funzione restituisce solo una modifica per ogni riga distinta modificata nell'intervallo specificato nella chiamata. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- Per supportare le query sulle modifiche delta, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco per identificare le righe in modo univoco. Se viene usato un indice univoco, il nome dell'indice deve essere specificato con il parametro *@index_name* . Le colonne definite nella chiave primaria o nell'indice univoco devono essere incluse nell'elenco delle colonne di origine da acquisire.  
+ Per supportare le query sulle modifiche delta, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco per identificare le righe in modo univoco. Se viene usato un indice univoco, il nome dell'indice deve essere specificato con il parametro *\@index_name*. Le colonne definite nella chiave primaria o nell'indice univoco devono essere incluse nell'elenco delle colonne di origine da acquisire.  
   
  Vedere il modello **Abilitare una tabella per le query All e Net Changes** per un esempio che descrive la creazione di un'istanza di acquisizione con entrambe le funzioni di query.  
   
@@ -142,7 +142,7 @@ GO
 ```  
   
 > [!NOTE]
->  Se Change Data Capture è abilitato in una tabella con una chiave primaria esistente e non viene usato il parametro *@index_name* per identificare un indice univoco alternativo, la funzionalità Change Data Capture userà la chiave primaria. Non saranno consentite modifiche successive alla chiave primaria se prima non si disabilita Change Data Capture per la tabella. Questa regola è sempre valida, indipendentemente dal fatto che durante la configurazione di Change Data Capture sia stato o meno richiesto il supporto per le query sulle modifiche delta. Se in una tabella non è presente alcuna chiave primaria al momento dell'abilitazione di Change Data Capture, l'aggiunta successiva di una chiave primaria verrà ignorata da Change Data Capture. Poiché Change Data Capture non utilizzerà una chiave primaria creata in seguito all'abilitazione della tabella, la chiave e le colonne chiave possono essere rimosse senza restrizioni.  
+>  Se Change Data Capture è abilitato in una tabella con una chiave primaria esistente e non viene usato il parametro *\@index_name* per identificare un indice univoco alternativo, la funzionalità Change Data Capture userà la chiave primaria. Non saranno consentite modifiche successive alla chiave primaria se prima non si disabilita Change Data Capture per la tabella. Questa regola è sempre valida, indipendentemente dal fatto che durante la configurazione di Change Data Capture sia stato o meno richiesto il supporto per le query sulle modifiche delta. Se in una tabella non è presente alcuna chiave primaria al momento dell'abilitazione di Change Data Capture, l'aggiunta successiva di una chiave primaria verrà ignorata da Change Data Capture. Poiché Change Data Capture non utilizzerà una chiave primaria creata in seguito all'abilitazione della tabella, la chiave e le colonne chiave possono essere rimosse senza restrizioni.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Disabilitazione di Change Data Capture per una tabella  
  I membri del ruolo predefinito del database **db_owner** possono rimuovere un'istanza di acquisizione per le singole tabelle di origine usando la stored procedure **sys.sp_cdc_disable_table**. Per determinare se una tabella di origine è attualmente abilitata per Change Data Capture, esaminare la colonna **is_tracked_by_cdc** nella vista del catalogo **sys.tables** . Se in seguito alla disabilitazione non è presente alcuna tabella abilitata per il database, vengono rimossi anche i processi Change Data Capture.  

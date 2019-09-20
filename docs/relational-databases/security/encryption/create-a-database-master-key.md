@@ -1,7 +1,7 @@
 ---
 title: Creare la chiave master di un database | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
@@ -13,41 +13,38 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: aliceku
 ms.author: aliceku
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee5ecd798fd799c7c36f9a41c9fdfe44e9a967b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8cc28ed0dcee4f8622a293114cfc4f83f5919240
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049993"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978044"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In questo argomento viene descritto come creare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].
-  
-## <a name="security"></a>Security  
-  
-### <a name="permissions"></a>Autorizzazioni  
-È richiesta l'autorizzazione CONTROL per il database.  
-  
-## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
-  
-### <a name="to-create-a-database-master-key"></a>Per creare la chiave master di un database  
-  
-1. Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.  
-  
-2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-3. Sulla barra Standard fare clic su **Nuova query**.  
-  
-4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
-  
-    ```sql
-    -- Creates a database master key for the "AdventureWorks2012" database.   
-    -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
-    USE AdventureWorks2012;  
-    GO  
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
-    GO  
-    ```  
-  
- Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).  
+In questo argomento viene descritto come creare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].
+
+## <a name="security"></a>Security
+
+### <a name="permissions"></a>Autorizzazioni
+
+È richiesta l'autorizzazione CONTROL per il database.
+
+## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+
+### <a name="to-create-a-database-master-key"></a>Per creare la chiave master di un database
+
+1. Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.
+2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
+3. Espandere **Database di sistema**, fare clic con il pulsante destro del mouse su `master` e quindi scegliere **Nuova query**.
+4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.
+
+   ```sql
+     -- Creates the master key.
+     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
+     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
+
+   ```
+
+Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).

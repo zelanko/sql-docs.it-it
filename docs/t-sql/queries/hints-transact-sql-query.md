@@ -1,7 +1,7 @@
 ---
 title: Hint per la query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902007"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228407"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -216,19 +216,19 @@ Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#
 NO_PERFORMANCE_SPOOL    
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto di tempdb se sono presenti numerose query simultanee in esecuzione con le operazioni di spooling.  
+Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto per tempdb in presenza di numerose query simultanee in esecuzione con le operazioni di spooling.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 Imposta Query Optimizer in modo che utilizzi un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
   
-_@variable\_name_  
+_\@variable\_name_  
 Nome di una variabile locale utilizzata in una query alla quale è possibile assegnare un valore da utilizzare con l'hint per la query OPTIMIZE FOR.  
   
 _UNKNOWN_  
 Specifica che Query Optimizer usa dati statistici anziché il valore iniziale per determinare il valore per una variabile locale durante l'ottimizzazione della query.  
   
 _literal\_constant_  
-Valore letterale costante a cui assegnare _@variable\_name_ per l'uso con l'hint per la query OPTIMIZE FOR. _literal\_constant_ viene usato solo durante l'ottimizzazione della query e non come valore _@variable\_name_ durante l'esecuzione della query. _literal\_constant_ può essere di qualsiasi tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile esprimere come valore letterale costante. Il tipo di dati di _literal\_constant_ deve supportare la conversione implicita nel tipo di dati a cui _@variable\_name_ fa riferimento nella query.  
+Valore letterale costante a cui assegnare _\@variable\_name_ per l'uso con l'hint per la query OPTIMIZE FOR. _literal\_constant_ viene usato solo durante l'ottimizzazione della query e non come valore _\@variable\_name_ durante l'esecuzione della query. _literal\_constant_ può essere di qualsiasi tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile esprimere come valore letterale costante. Il tipo di dati di _literal\_constant_ deve supportare la conversione implicita nel tipo di dati a cui _\@variable\_name_ fa riferimento nella query.  
   
 OPTIMIZE FOR può neutralizzare il comportamento predefinito di rilevamento dei parametri di Query Optimizer. Usare OPTIMIZE FOR anche quando si creano guide di piano. Per altre informazioni, vedere [Ricompilare una stored procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -327,7 +327,7 @@ Sono supportati i nomi di hint seguenti:
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'** _xml\_plan_ **'** . Non è possibile specificare USE PLAN con le istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 È possibile specificare gli hint di tabella INDEX, FORCESCAN e FORCESEEK come hint per la query per una query che non ha hint di tabella esistenti. È anche possibile usare tali hint per sostituire rispettivamente gli hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. 
 
-Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso, è necessario specificare anche un hint corrispondente come hint per la query. Per specificare l'hint corrispondente come hint per la query, usare TABLE HINT nella clausola OPTION. In questo modo, è possibile mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. 
+Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso, è necessario specificare anche un hint corrispondente come hint per la query. Per specificare l'hint corrispondente come hint per la query, usare TABLE HINT nella clausola OPTION. In questo modo, è possibile mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **\@hints** della guida del piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. 
 
 L'errore 8072 si verifica in due scenari. Uno scenario è quello in cui si specifica un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK usando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente. Il secondo scenario è il caso opposto. Questo errore indica che la clausola OPTION può provocare la modifica della semantica della query e la query avrà esito negativo.  
   

@@ -16,12 +16,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 558a2217f833c2c9016de2cde051baab3620bad7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769769"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846549"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Impostazione del periodo di scadenza per le sottoscrizioni
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "68769769"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Per impostare il periodo di scadenza per una sottoscrizione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specificare il periodo di scadenza desiderato per la sottoscrizione, in ore, per **@retention** . Il periodo di scadenza predefinito è 336 ore. Per altre informazioni, vedere [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Nel server di pubblicazione eseguire [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specificare il periodo di scadenza desiderato per la sottoscrizione, in ore, per **\@retention**. Il periodo di scadenza predefinito è 336 ore. Per altre informazioni, vedere [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Per impostare il periodo di scadenza per una sottoscrizione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specificare il valore desiderato per il periodo di scadenza della sottoscrizione per **@retention** . Specificare per **@retention_period_unit** le unità in cui esprimere il periodo di scadenza, che possono essere una delle seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specificare il valore desiderato per il periodo di scadenza della sottoscrizione per **\@retention**. Specificare per **\@retention_period_unit** le unità in cui esprimere il periodo di scadenza, che possono essere una delle seguenti:  
   
     -   **1** = Settimana  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68769769"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Per modificare il periodo di scadenza per una sottoscrizione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specificare **retention** per **@property** e il nuovo periodo di scadenza della sottoscrizione, in ore, per **@value** .  
+1.  Nel server di pubblicazione eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specificare **retention** per **\@property** e il nuovo periodo di scadenza della sottoscrizione, in ore, per **\@value**.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Per modificare il periodo di scadenza per una sottoscrizione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specificando **@publication** e **@publisher** . Si noti il valore di **retention_period_unit** nel set di risultati, che può essere uno dei seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specificando **\@publication** e **\@publisher**. Si noti il valore di **retention_period_unit** nel set di risultati, che può essere uno dei seguenti:  
   
     -   **0** = giorno  
   
@@ -95,9 +95,9 @@ ms.locfileid: "68769769"
   
     -   **3** = Anno  
   
-2.  Nel server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare **retention** per **@property** e il nuovo periodo di scadenza della sottoscrizione, come testo basato sull'unità del periodo di memorizzazione indicata nel passaggio 1, per **@value** .  
+2.  Nel server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare **retention** per **\@property** e il nuovo periodo di scadenza della sottoscrizione, come testo basato sull'unità del periodo di memorizzazione indicata nel passaggio 1, per **\@value**.  
   
-3.  (Facoltativo) Nel server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare **retention_period_unit** per **@property** e una nuova unità per il periodo di scadenza della sottoscrizione per **@value** .  
+3.  (Facoltativo) Nel server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare **retention_period_unit** per **\@property** e una nuova unità per il periodo di scadenza della sottoscrizione per **\@value**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
