@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878714"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174274"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Come eseguire la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] distribuzione in Kubernetes
 
@@ -144,11 +144,11 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 
 | Variabile di ambiente | Requisito |Descrizione |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Obbligatoria |Nome utente per l'amministratore del cluster. |
-| **CONTROLLER_PASSWORD** | Obbligatoria |Password per l'amministratore del cluster. |
-| **MSSQL_SA_PASSWORD** | Obbligatoria |Password dell'utente amministratore di sistema per l'istanza master di SQL Server. |
-| **KNOX_PASSWORD** | Obbligatoria |Password per l'utente **root** Knox. Si noti che in una configurazione di base dell'autenticazione l'utente supportato per Knox è **root**.|
-| **ACCEPT_EULA**| Obbligatoria per il primo utilizzo di `azdata`| Non richiede alcun valore. Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula` al primo utilizzo del comando `azdata`.|
+| **CONTROLLER_USERNAME** | Obbligatorio |Nome utente per l'amministratore del cluster. |
+| **CONTROLLER_PASSWORD** | Obbligatorio |Password per l'amministratore del cluster. |
+| **MSSQL_SA_PASSWORD** | Obbligatorio |Password dell'utente amministratore di sistema per l'istanza master di SQL Server. |
+| **KNOX_PASSWORD** | Obbligatorio |Password per l'utente **root** Knox. Si noti che in una configurazione di base dell'autenticazione l'utente supportato per Knox è **root**.|
+| **ACCEPT_EULA**| Obbligatoria per il primo utilizzo di `azdata`| Impostato su "Sì". Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula=yes` al primo utilizzo del comando `azdata`.|
 | **DOCKER_USERNAME** | Facoltativo | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
 | **DOCKER_PASSWORD** | Facoltativo |Password per accedere al repository privato citato sopra. |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
