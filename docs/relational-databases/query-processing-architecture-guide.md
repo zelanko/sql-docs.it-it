@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929806"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096941"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ I valori dei parametri vengono individuati durante la compilazione o ricompilazi
 -  Query inviate tramite sp_executesql 
 -  Query preparate
 
-Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
+Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
 
 > [!NOTE]
 > Per le query che usano l'hint `RECOMPILE`, vengono individuati sia i valori dei parametri che i valori correnti delle variabili locali. I valori individuati (dei parametri e delle variabili locali) sono quelli esistenti nella posizione all'interno del batch prima dell'istruzione con l'hint `RECOMPILE`. In particolare, per i parametri, non vengono individuati i valori passati con la chiamata del batch.

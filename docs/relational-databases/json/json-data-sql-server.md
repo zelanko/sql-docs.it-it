@@ -13,12 +13,12 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f97c2e52c92a4ad6313ca6b18ed17fa89d831e93
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3a18105727079997710ece9047ef87788d57b8d7
+ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190401"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71077519"
 ---
 # <a name="json-data-in-sql-server"></a>Dati JSON in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -60,10 +60,10 @@ Le sezioni successive illustrano le principali funzionalità offerte da SQL Serv
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Estrarre valori dal testo JSON e usarli nelle query
 Se un testo JSON viene archiviato in tabelle di database, è possibile leggere o modificare i valori nel testo JSON usando le funzioni predefinite seguenti:  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) verifica se una stringa include contenuto JSON valido.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) estrae un valore scalare da una stringa JSON.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) estrae un oggetto o una matrice da una stringa JSON.
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) modifica un valore in una stringa JSON.
+- [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) verifica se una stringa include contenuto JSON valido.
+- [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) estrae un valore scalare da una stringa JSON.
+- [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) estrae un oggetto o una matrice da una stringa JSON.
+- [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) modifica un valore in una stringa JSON.
 
 
 **Esempio**

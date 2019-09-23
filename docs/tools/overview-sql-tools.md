@@ -1,34 +1,35 @@
 ---
 title: Strumenti di gestione e query SQL per SQL Server, SQL di Azure (database SQL di Azure, istanze gestite di SQL di Azure, macchine virtuali SQL) e data warehouse di Azure SQL | Microsoft Docs
 description: Strumenti di gestione e query SQL per SQL Server, Azure SQL (database SQL di Azure, istanza gestita di SQL di Azure, macchine virtuali SQL) e Azure SQL data warehouse
-ms.custom: ''
-ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 09/11/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
-ms.translationtype: HT
+ms.openlocfilehash: 9c5262dfc610e62f0782b0cc6c8fe523d94d0730
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913572"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096879"
 ---
-# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>Strumenti di gestione e query SQL per SQL Server, Azure SQL (database SQL di Azure, istanza gestita di SQL di Azure, macchine virtuali SQL) e Azure SQL data warehouse
+# <a name="sql-query-and-management-tools-for-sql-server"></a>Strumenti di gestione e query SQL per SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Per gestire (eseguire query, monitorare e così via) il database è necessario uno strumento. Mentre i database possono essere eseguiti nel cloud, in Windows o in [Linux](../linux/sql-server-linux-overview.md), non è necessario che lo strumento venga eseguito sulla stessa piattaforma del database. 
+Per gestire (eseguire query, monitorare e così via) il database è necessario uno strumento. Mentre i database possono essere eseguiti nel cloud, in Windows o in [Linux](../linux/sql-server-linux-overview.md), non è necessario che lo strumento venga eseguito sulla stessa piattaforma del database.
 
 Sono disponibili molti strumenti di database, pertanto questo articolo fornisce le descrizioni e i puntatori ad alcuni degli strumenti disponibili per l'uso dei database SQL. Se è necessario contribuire a decidere quale strumento è necessario, vedere [quale strumento si deve usare?](#which-tool-should-i-choose).
 
-Per ulteriori informazioni e per scaricare uno strumento, selezionare i collegamenti nella colonna strumento nelle tabelle seguenti. Per scaricare SQL Server, vedere [Install SQL Server](../database-engine/install-windows/install-sql-server.md). 
+Per ulteriori informazioni e per scaricare uno strumento, selezionare i collegamenti nella colonna strumento nelle tabelle seguenti. Per scaricare SQL Server, vedere [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
 
-## <a name="gui-tools-to-manage-databases"></a>Strumenti dell'interfaccia utente grafica per la gestione dei database  
+## <a name="gui-tools-to-manage-databases"></a>Strumenti dell'interfaccia utente grafica per la gestione dei database
 
 Gli strumenti seguenti forniscono un'interfaccia utente grafica (GUI):
 
@@ -38,7 +39,6 @@ Gli strumenti seguenti forniscono un'interfaccia utente grafica (GUI):
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usare SQL Server Management Studio (SSMS) per eseguire query, progettare e gestire i SQL Server, il database SQL di Azure e Azure SQL Data Warehouse. | **SSMS viene eseguito in Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Trasforma Visual Studio in un ambiente di sviluppo avanzato per SQL Server, database SQL di Azure e Azure SQL Data Warehouse.| **SSDT viene eseguito in Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Dopo l'installazione di Visual Studio Code, installare l' [estensione MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) per lo sviluppo di Microsoft SQL Server, database SQL di Azure e SQL data warehouse.| **Visual Studio Code viene eseguito in Windows, MacOS e Linux**.|
-
 
 ## <a name="command-line-tools-to-manage-databases"></a>Strumenti da riga di comando per la gestione dei database
 
@@ -54,8 +54,6 @@ Di seguito sono riportati gli strumenti principali da riga di comando:
 |[**mssql-scripter (anteprima)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Scripter** è un'esperienza della riga di comando multipiattaforma per la creazione di script per database SQL Server|Windows, macOS e Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configura SQL Server in esecuzione su Linux.|Linux|
 
-
-
 ## <a name="which-tool-should-i-choose"></a>Quale strumento scegliere?
 
 - Si desidera gestire un'istanza o un database di SQL Server, in un editor leggero in Windows, Linux o Mac? Scegliere [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
@@ -63,8 +61,6 @@ Di seguito sono riportati gli strumenti principali da riga di comando:
 - Si desidera creare o gestire il codice del database, inclusa la convalida del tempo di compilazione, il refactoring e il supporto della finestra di progettazione in Windows? Scegliere [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - Si desidera eseguire una query SQL Server con uno strumento da riga di comando che include IntelliSense, la sintassi ad alta illuminazione e altro ancora? Scegliere [mssql-cli](mssql-cli.md)
 - Si desidera scrivere gli script T-SQL in un editor leggero in Windows, Linux o Mac? Scegliere [Visual Studio Code](https://code.visualstudio.com/) e l' [estensione MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-
-
 
 ## <a name="additional-tools"></a>Strumenti aggiuntivi
 
@@ -77,4 +73,3 @@ Di seguito sono riportati gli strumenti principali da riga di comando:
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L'utilità ssbdiagnose segnala i problemi in Service Broker conversazioni o la configurazione di Service Broker Services. |
 
 Per ulteriori strumenti non citati in questa pagina, vedere [utilità del prompt dei comandi SQL](command-prompt-utility-reference-database-engine.md).
-
