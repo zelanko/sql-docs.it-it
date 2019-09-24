@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: Verificare la presenza di Python in SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Hello World in Python e SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Gestire input e output
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Strutture dei dati di Python e SQL
+        - name: Creare script Python
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Gestire i tipi di dati e gli oggetti
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Eseguire il training del primo modello e usarlo
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Eseguire il training di un modello e assegnare un punteggio
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: Creare script R
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Eseguire il training di un modello e assegnare un punteggio
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Gestire i tipi di dati e gli oggetti
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: Scrivere funzioni R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Eseguire il training di un modello e assegnare un punteggio
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Esercitazioni
   items:
     - name: Python
