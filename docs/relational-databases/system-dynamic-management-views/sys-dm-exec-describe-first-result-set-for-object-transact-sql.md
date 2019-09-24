@@ -18,19 +18,19 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3d08f031394522b0d9c9ab5f09bb6a79c4d5a01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097830"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199339"
 ---
-# <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
+# <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Questa funzione a gestione dinamica accetta un' @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il @object_id specificato può essere l'ID di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
+  Questa funzione a gestione dinamica accetta @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il @object_id valore specificato può essere l'ID di [!INCLUDE[tsql](../../includes/tsql-md.md)] un stored procedure o [!INCLUDE[tsql](../../includes/tsql-md.md)] di un trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
   
- **DM exec_describe_first_result_set_for_object** dispone di definizione del set dello stesso risultato [DM exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ed è simile al [sp _ describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys. dm _exec_describe_first_result_set_for_object** presenta la stessa definizione del set di risultati di [sys. &#40;DM _exec_describe_first_result_set Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ed è simile a [sp_describe_first_result_set &#40; Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sys.dm_exec_describe_first_result_set_for_object
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *@object_id*  
- Il @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. @object_id è di tipo **int**.  
+ *\@object_id*  
+ Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di [!INCLUDE[tsql](../../includes/tsql-md.md)] un trigger. @object_idè di tipo **int**.  
   
- *@include_browse_information*  
- @include_browse_information è di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
+ *\@include_browse_information*  
+ @include_browse_informationè di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
   
 ## <a name="table-returned"></a>Tabella restituita  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
@@ -58,9 +58,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
 |**name**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
 |**is_nullable**|**bit**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
-|**system_type_id**|**int**|Contiene il system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
+|**system_type_id**|**int**|Contiene system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome del tipo di dati. Include gli argomenti (quali lunghezza, precisione, scala) specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
-|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16 o il valore impostato dal **sp_tableoption 'text in row'** .|  
+|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)** , **nvarchar (max)** , **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '** .|  
 |**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**scala**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
@@ -76,7 +76,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_xml_document**|**bit**|Restituisce 1 se il tipo di dati restituito è XML ed è garantito che questo tipo sia un documento XML completo (incluso un nodo radice), contrariamente a un frammento XML. In caso contrario, restituisce 0.|  
 |**is_case_sensitive**|**bit**|Restituisce 1 se la colonna è di un tipo string che fa distinzione tra maiuscole e minuscole e 0 in caso contrario.|  
 |**is_fixed_length_clr_type**|**bit**|Restituisce 1 se la colonna è di un tipo CLR a lunghezza fissa e 0 in caso contrario.|  
-|**source_server**|**sysname**|Nome del server di origine restituito dalla colonna in questo risultato (se ha origine in un server remoto). Il nome è specificato come viene visualizzato in sys. Servers.  Restituisce NULL se la colonna ha origine nel server locale o se non è possibile determinare in quale server ha origine. Viene popolata solo se sono richieste informazioni di esplorazione.|  
+|**source_server**|**sysname**|Nome del server di origine restituito dalla colonna in questo risultato (se ha origine in un server remoto). Il nome viene fornito come visualizzato in sys. Servers.  Restituisce NULL se la colonna ha origine nel server locale o se non è possibile determinare in quale server ha origine. Viene popolata solo se sono richieste informazioni di esplorazione.|  
 |**source_database**|**sysname**|Nome del database di origine restituito dalla colonna in questo risultato. Restituisce NULL se non è possibile determinare il database. Viene popolata solo se sono richieste informazioni di esplorazione.|  
 |**source_schema**|**sysname**|Nome dello schema di origine restituito dalla colonna in questo risultato. Restituisce NULL se non è possibile determinare lo schema. Viene popolata solo se sono richieste informazioni di esplorazione.|  
 |**source_table**|**sysname**|Nome della tabella di origine restituita dalla colonna in questo risultato. Restituisce NULL se non è possibile determinare la tabella. Viene popolata solo se sono richieste informazioni di esplorazione.|  
@@ -88,7 +88,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_sparse_column_set**|**bit**|Restituisce 1 se la colonna è una colonna di tipo sparse e 0 in caso contrario. Restituisce NULL se non è possibile determinare se la colonna fa parte di un set di colonne di tipo sparse.|  
 |**ordinal_in_order_by_list**|**smallint**|Posizione di questa colonna nell'elenco ORDER BY. Restituisce NULL se la colonna non compare nell'elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco.|  
 |**order_by_list_length**|**smallint**|Lunghezza dell'elenco ORDER BY. Restituisce NULL se non è presente alcun elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco. Si noti che questo valore sarà lo stesso per tutte le righe restituite da sp_describe_first_result_set.|  
-|**order_by_is_descending**|**smallint NULL**|Se ordinal_in_order_by_list non è NULL, il **order_by_is_descending** colonna indica la direzione della clausola ORDER BY per questa colonna. In caso contrario, viene restituito NULL.|  
+|**order_by_is_descending**|**smallint NULL**|Se ordinal_in_order_by_list non è NULL, la colonna **order_by_is_descending** segnala la direzione della clausola ORDER BY per la colonna. In caso contrario, viene restituito NULL.|  
 |**error_number**|**int**|Contiene il numero dell'errore restituito dalla funzione. Contiene NULL se non si è verificato alcun errore nella colonna.|  
 |**error_severity**|**int**|Contiene la gravità restituita dalla funzione. Contiene NULL se non si è verificato alcun errore nella colonna.|  
 |**error_state**|**int**|Contiene il messaggio sullo stato attuale restituito dalla funzione. Se non si sono verificati errori. la colonna conterrà NULL.|  
@@ -97,7 +97,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
 ## <a name="remarks"></a>Note  
- Questa funzione utilizza lo stesso algoritmo **sp_describe_first_result_set**. Per altre informazioni, vedere [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  
   
@@ -110,20 +110,20 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|Impossibile determinare il risultato perché una stored procedure CLR potrebbe potenzialmente restituire il primo risultato.|  
 |6|CLR_TRIGGER|Impossibile determinare il risultato perché un trigger CLR potrebbe potenzialmente restituire il primo risultato.|  
 |7|EXTENDED_PROCEDURE|Impossibile determinare il risultato perché una stored procedure estesa potrebbe potenzialmente restituire il primo risultato.|  
-|8|UNDECLARED_PARAMETER|Non è stato possibile determinare il risultato perché il tipo di dati di uno o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
+|8|UNDECLARED_PARAMETER|Impossibile determinare il risultato perché il tipo di dati di una o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
 |9|RECURSION|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione ricorsiva.|  
-|10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato dal **sp_describe_first_result_set** .|  
-|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata dal **sp_describe_first_result_set** (ad esempio FETCH, REVERT e così via.).|  
-|12|OBJECT_ID_NOT_SUPPORTED|Il @object_id passato alla funzione è non supportato (vale a dire non una stored procedure)|  
-|13|OBJECT_ID_DOES_NOT_EXIST|Il @object_id passato a funzione non è stata trovata nel catalogo di sistema.|  
+|10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato da **sp_describe_first_result_set** .|  
+|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata da **sp_describe_first_result_set** , ad esempio FETCH, REVERT e così via.|  
+|12|OBJECT_ID_NOT_SUPPORTED|Il @object_id passato alla funzione non è supportato (ovvero non è un stored procedure)|  
+|13|OBJECT_ID_DOES_NOT_EXIST|Il @object_id passato alla funzione non è stato trovato nel catalogo di sistema.|  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione per eseguire il @tsql argomento.  
+ È richiesta l'autorizzazione per @tsql eseguire l'argomento.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>R. Restituzione di metadati con e senza informazioni di esplorazione  
- L'esempio seguente crea una stored procedure denominata TestProc2 che restituisce due set di risultati. Nell'esempio viene dimostrato che **DM exec_describe_first_result_set** restituisce informazioni sul primo set di risultati in procedure, con e senza le informazioni di esplorazione.  
+ Nell'esempio seguente viene creato un stored procedure denominato TestProc2 che restituisce due set di risultati. Nell'esempio viene dimostrato che **sys. dm _exec_describe_first_result_set** restituisce informazioni sul primo set di risultati nella procedura, con e senza le informazioni di visualizzazione.  
   
 ```  
 CREATE PROC TestProc2  
@@ -137,8 +137,8 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
- L'esempio seguente usa sia la vista del catalogo Procedures sistema e il **DM exec_describe_first_result_set_for_object** funzione per visualizzare i metadati per i set di risultati di tutte le stored procedure di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
+ Nell'esempio seguente vengono utilizzate la vista del catalogo di sistema sys. Procedures e la funzione **sys. dm _exec_describe_first_result_set_for_object** per visualizzare i metadati per i set di risultati di tutte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] le stored procedure nel database.  
   
 ```  
 USE AdventureWorks2012;  

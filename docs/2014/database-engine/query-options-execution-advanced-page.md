@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118103"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199321"
 ---
 # <a name="query-options-execution-advanced-page"></a>Esecuzione di Opzioni query (pagina Avanzate)
 
@@ -58,11 +58,11 @@ Non **visualizzare le intestazioni del messaggio del provider** Se questa casell
 
 **Mostra ora di completamento** Consente di stampare l'ora in cui l'esecuzione della query è stata completata dopo i risultati della query o nella scheda messaggi.
 
-**Protocollo di attestazione per le enclavi vbs per Always Encrypted** Consente di impostare un protocollo di attestazione per gli enclave di sicurezza basata sulla virtualizzazione (VBS) usati da Always Encrypted con enclave sicure. 
+**Protocollo di attestazione per le enclavi vbs per Always Encrypted** Consente di impostare un protocollo di attestazione per gli enclave di sicurezza basata sulla virtualizzazione (VBS) usati da Always Encrypted con le enclave sicure.
 
-  I protocolli di attestazione supportati correnti sono:
+I protocolli di attestazione supportati correnti sono:
 
-  * Servizio sorveglianza host: un protocollo di attestazione che usa il servizio sorveglianza host di Windows (HGS).
+* Servizio sorveglianza host: protocollo di attestazione che utilizza il servizio sorveglianza host di Windows (HGS).
 
 Per altre informazioni, vedere [Always Encrypted con le enclave sicure](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) e l' [attestazione protetta dell'enclave](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 64380b71f9830292acb5c24d5a8d1578216da2de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 373700d04bb7c3d7cc28a72f881714cef9913923
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418952"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199450"
 ---
-# <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (database SQL di Azure)
+# <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per il database, esponendo lo stato per la replica locale.  
@@ -67,11 +67,11 @@ ms.locfileid: "68418952"
 |**redo_rate**|**bigint**|Velocità media in base alla quale viene eseguito il riesecuzione dei record di log in un determinato database secondario, in kilobyte (KB).|  
 |**filestream_send_rate**|**bigint**|Velocità alla quale i file FILESTREAM vengono inviati alla replica secondaria (in KB/secondo).|  
 |**end_of_log_lsn**|**numeric(25,0)**|Fine locale dell'LSN del log. LSN effettivo che corrisponde all'ultimo record di log nella cache di log sui database primario e secondari. Nella replica primaria, le righe secondarie riflettono la fine dell'LSN del log degli ultimi messaggi di stato inviati dalle repliche secondarie alla replica primaria.<br /><br /> **end_of_log_lsn** riflette un ID del blocco di log riempito con zeri. Non si tratta di un numero di sequenza del file di log (LSN).|  
-|**last_commit_lsn**|**Numeric(25,0)**|Numero di sequenza del file di log effettivo che corrisponde all'ultimo record di commit nel log delle transazioni.<br /><br /> Sul database primario corrisponde all'ultimo record di commit elaborato. Nelle righe per i database secondari viene mostrato il numero di sequenza del file di log (LSN) inviato dalla replica secondaria alla replica primaria.<br /><br /> Sulla replica secondaria si tratta dell'ultimo record di commit di cui è stato eseguito il rollforward.|  
+|**last_commit_lsn**|**numeric(25,0)**|Numero di sequenza del file di log effettivo che corrisponde all'ultimo record di commit nel log delle transazioni.<br /><br /> Sul database primario corrisponde all'ultimo record di commit elaborato. Nelle righe per i database secondari viene mostrato il numero di sequenza del file di log (LSN) inviato dalla replica secondaria alla replica primaria.<br /><br /> Sulla replica secondaria si tratta dell'ultimo record di commit di cui è stato eseguito il rollforward.|  
 |**last_commit_time**|**datetime**|Ora che corrisponde all'ultimo record di commit.<br /><br /> Sul database secondario, l'ora equivale a quella sul database primario.<br /><br /> Sulla replica primaria ogni riga del database secondario contiene l'ora in cui la replica secondaria che ospita il database secondario ha riferito alla replica primaria. La differenza di tempo tra la riga database primario e una determinata riga del database secondario rappresenta approssimativamente l'obiettivo del punto di ripristino (RPO), presupponendo che il processo di rollforward venga aggiornato e che lo stato di avanzamento sia stato segnalato alla replica primaria. dalla replica secondaria.|  
 |**low_water_mark_for_ghosts**|**bigint**|Numero a incremento progressivo costante per il database che indica un limite minimo usato dall'attività di pulizia dei record fantasma sul database primario. Se questo numero non aumenta nel tempo, implica che la pulizia dei record fantasma potrebbe non avvenire. Per decidere quali righe fantasma pulire, la replica primaria utilizza il valore minimo di questa colonna per questo database in tutte le repliche di disponibilità, inclusa quella primaria.|  
 |**secondary_lag_seconds**|**bigint**|Numero di secondi durante i quali la replica secondaria è dietro la replica primaria durante la sincronizzazione.<br /><br />**Si applica a:**  da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**quorum_commit_lsn**|**Numeric(25,0)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
 |**quorum_commit_time**|**datetime**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
 
 

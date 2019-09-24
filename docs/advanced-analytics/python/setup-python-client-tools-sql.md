@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634543"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199473"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client data science per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Che tu sia uno sviluppatore di Python nuovo a SQL o uno sviluppatore SQL nuovo p
 
 Per lo sviluppo in Python, è possibile usare Jupyter Notebooks, fornito in bundle nella distribuzione anaconda installata da SQL Server. Questo articolo illustra come avviare notebook di Jupyter in modo che sia possibile eseguire il codice Python in locale e in remoto in SQL Server.
 
-SSMS è un download separato, utile per la creazione e l'esecuzione di stored procedure su SQL Server, inclusi quelli che contengono codice Python. Quasi tutti i codici Python scritti in notebook di Jupyter possono essere incorporati in un stored procedure. È possibile eseguire altre guide introduttive per informazioni su [SSMS e Python incorporato](../tutorials/quickstart-python-verify.md).
+SSMS è un download separato, utile per la creazione e l'esecuzione di stored procedure su SQL Server, inclusi quelli che contengono codice Python. Quasi tutti i codici Python scritti in notebook di Jupyter possono essere incorporati in un stored procedure. È possibile eseguire altre guide introduttive per informazioni su [SSMS e Python incorporato](../tutorials/quickstart-python-create-script.md).
 
 ## <a name="1---install-python-packages"></a>1-installare i pacchetti Python
 
@@ -305,4 +305,4 @@ In PyCharm impostare l'interprete sull'eseguibile di Python installato da Machin
 Ora che sono disponibili strumenti e una connessione funzionante a SQL Server, espandere le proprie competenze eseguendo le guide introduttive di Python con [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Verificare che Python esista in SQL Server](../tutorials/quickstart-python-verify.md)
+> [Avvio rapido: Creazione ed esecuzione di script Python semplici con SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)

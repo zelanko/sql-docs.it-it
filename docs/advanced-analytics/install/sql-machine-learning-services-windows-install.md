@@ -4,19 +4,19 @@ titleSuffix: ''
 description: Questo articolo illustra come installare SQL Server Machine Learning Services in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634561"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199362"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>Installare SQL Server Machine Learning Services in Windows
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -103,7 +103,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 
 7. Al termine dell'installazione, se viene richiesto di riavviare il computer, eseguirlo ora. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="set-environment-variables"></a>Impostare le variabili di ambiente
+## <a name="set-environment-variables"></a>Imposta variabili di ambiente
 
 Per l'integrazione della funzionalità R, è necessario impostare la variabile di ambiente **MKL_CBWR** per [garantire l'output coerente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli di Intel Math Kernel Library (MKL).
 
