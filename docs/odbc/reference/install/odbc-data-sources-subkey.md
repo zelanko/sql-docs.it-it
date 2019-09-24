@@ -1,7 +1,7 @@
 ---
-title: Sottochiave le origini dati ODBC | Microsoft Docs
+title: Sottochiave origini dati ODBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093988"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207684"
 ---
-# <a name="odbc-data-sources-subkey"></a>Sottochiave ODBC Data Sources
-I valori nella sottochiave origini dati ODBC elencare le origini dati. Il formato di questi valori è come illustrato nella tabella seguente.  
-  
-|Nome|Tipo di dati|Data|  
-|----------|---------------|----------|  
-|*nome dell'origine dati*|REG_SZ|*driver-description*|  
-  
- Il *nome dell'origine dati* valore viene definito dal programma di amministrazione (che in genere richiesto all'utente per tale), e *driver-description* è definito dallo sviluppatore del driver (in genere è il nome del DBMS associato con il driver).  
-  
- Ad esempio, si supponga che i dati di tre origini sono state definite: Inventario, che Usa SQL Server. Libro paga, che usa dBASE; e personale, che usa i file di testo in formato. I valori nella sottochiave origini dati ODBC potrebbero essere come segue:  
-  
-```  
-Inventory : REG_SZ : SQL Server  
-Payroll : REG_SZ : dBASE  
-Personnel : REG_SZ : Text  
+# <a name="odbc-data-sources-subkey"></a>Sottochiave origini dati ODBC
+
+I valori `ODBC Data Sources` nella sottochiave elencano le origini dati. Il formato di questi valori è illustrato nella tabella seguente.
+
+| Nome | Tipo di dati | Data |
+| :--- | :-------- | :--- |
+| *nome origine dati* | REG_SZ | *driver-description* |
+| &nbsp; | &nbsp; | &nbsp; |
+
+Il valore del *nome dell'origine dati* è definito dal programma di amministrazione (che in genere richiede l'utente) e *driver-Description* viene definito dallo sviluppatore del driver (si tratta in genere del nome del DBMS associato al driver).
+
+Si supponga, ad esempio, che siano state definite tre origini dati: Inventario, che usa SQL Server; Payroll, che usa dBASE; e il personale, che usa file di testo formattato. I valori nella `ODBC Data Sources` sottochiave potrebbero essere i seguenti:
+
+```console
+Inventory : REG_SZ : SQL Server
+Payroll : REG_SZ : dBASE
+Personnel : REG_SZ : Text
 ```
