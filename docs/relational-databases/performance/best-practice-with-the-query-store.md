@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903609"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163892"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 
 > [!NOTE]
 > Nella figura sopra riportata sono illustrate forme diverse per piani di query specifici, con i significati seguenti per ogni stato possibile:<br />  
+> 
 > |Con forme|Significato|  
 > |-------------------|-------------|
 > |Circle|Query completata (esecuzione normale correttamente completata)|
 > |Square|Annullata (esecuzione inizializzata sul lato client interrotta)|
 > |Triangle|Non riuscita (esecuzione interrotta da un'eccezione)|
+> 
 > Le dimensioni della forma riflettono inoltre il numero di esecuzioni di query nell'intervallo di tempo specificato e aumentano in base al numero di esecuzioni.  
 
 -   Si può concludere che la query sia priva di un indice per l'esecuzione ottimale. Queste informazioni vengono rese disponibili all'interno del piano di esecuzione query. Creare l'indice mancante e verificare le prestazioni della query usando l'archivio query.  
@@ -290,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   Infine, è consigliabile impostare la modalità di acquisizione query su Auto per escludere le query generalmente meno rilevanti per il carico di lavoro.  
   
 ### <a name="error-state"></a>Stato di errore  
- Per recuperare l'archivio query, provare a impostare in modo esplicito la modalità lettura/scrittura e ricontrollare lo stato effettivo.  
+ Per recuperare Query Store, provare a impostare in modo esplicito la modalità lettura/scrittura e ricontrollare lo stato effettivo.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  Se il problema persiste, il danneggiamento dei dati di Query Store è persistente sul disco.
  
- A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], è possibile recuperare Query Store eseguendo la stored procedure **sp_query_store_consistency_check** all'interno del database interessato. Per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è necessario cancellare i dati da Query Store come illustrato sotto.
+ A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], è possibile recuperare Query Store eseguendo la stored procedure **sp_query_store_consistency_check** all'interno del database interessato. Prima di provare a eseguire l'operazione di ripristino, è necessario disabilitare Query Store. Per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è necessario cancellare i dati da Query Store come illustrato sotto.
  
- Se questa soluzione non funziona, si può provare a cancellare il contenuto di Query Store prima di richiedere la modalità lettura/scrittura.  
+ Se il ripristino non riesce, è possibile provare a cancellare Query Store prima di impostare la modalità lettura/scrittura.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Personalizzato|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una modalità di acquisizione CUSTOM nel comando `ALTER DATABASE SET QUERY_STORE`. Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store, per ottimizzare la raccolta dei dati in un server specifico.<br /><br />Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni: un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione query è impostata su All, Auto o Custom.
+> I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione query è impostata su All, Auto o Custom. Per acquisire le query compilate in modo nativo, abilitare la raccolta delle statistiche per query usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Mantenere i dati più rilevanti in Query Store  
  Configurare l'archivio query in modo che contenga solo i dati rilevanti per garantire l'esecuzione ininterrotta e la risoluzione ottimale dei problemi con un impatto minimo sul normale carico di lavoro.  

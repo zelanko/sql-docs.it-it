@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ace2712cd53b1b0371bd9deeb4191308a1393de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060656"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174285"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,10 +30,10 @@ ms.locfileid: "68060656"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_TOO_MANY_STMTS|  
-|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché il batch o il modulo corrispondente al valore **@plan_handle** specificato contiene più di 1000 istruzioni idonee. Creare una guida di piano per ogni istruzione nel batch o nel modulo specificando un valore **statement_start_offset** per ogni istruzione.|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché il batch o il modulo corrispondente a **\@plan_handle** specificato contiene più di 1000 istruzioni idonee. Creare una guida di piano per ogni istruzione nel batch o nel modulo specificando un valore **statement_start_offset** per ogni istruzione.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Il batch o il modulo corrispondente al valore **@plan_handle** specificato contiene più di 1000 istruzioni idonee.  
+Il batch o il modulo corrispondente all'oggetto **\@plan_handle** specificato contiene più di 1000 istruzioni idonee.  
   
 ## <a name="user-action"></a>Azione dell'utente  
 Creare una guida di piano per ogni istruzione nel batch o nel modulo specificando un valore **statement_start_offset** per ogni istruzione.  

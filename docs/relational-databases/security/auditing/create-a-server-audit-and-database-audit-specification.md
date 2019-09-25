@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095205"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066887"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095205"
      Nome della specifica del controllo del database. Tale nome viene generato automaticamente quando si crea una nuova specifica del controllo del server, ma è modificabile.  
   
      **Controllo**  
-     Nome di un controllo del database esistente. Digitare il nome del controllo o selezionarlo nell'elenco.  
+     Nome di un oggetto controllo server esistente. Digitare il nome del controllo o selezionarlo nell'elenco.  
   
      **Tipo di azione di controllo**  
      Specifica i gruppi di azioni di controllo a livello di database e le azioni di controllo da acquisire. Per l'elenco di gruppi di azioni di controllo a livello di database e di azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

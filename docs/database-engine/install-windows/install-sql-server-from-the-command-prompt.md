@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609076"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149994"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -244,7 +244,7 @@ Utilizzare le linee guida seguenti per sviluppare comandi di installazione con l
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Obbligatorio quando /SECURITYMODE=SQL**|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Facoltativo**|Specifica la modalità di sicurezza per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se questo parametro non viene specificato, è supportata solo la modalità di autenticazione di Windows.<br /><br /> Valore supportato: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Facoltativo**|Viene specificata la directory per i file di backup.<br /><br /> Valore predefinito: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Facoltativo**|Vengono specificate le impostazioni relative alle regole di confronto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Il valore predefinito è basato sulle impostazioni locali del sistema operativo Windows. Per ulteriori informazioni, vedere [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Facoltativo**|Vengono specificate le impostazioni relative alle regole di confronto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L'impostazione di installazione predefinita è determinata dalle impostazioni locali del sistema operativo. Le regole di confronto a livello di server possono essere modificate durante l'installazione oppure modificando le impostazioni locali del sistema operativo prima dell'installazione. Le regole di confronto predefinite sono impostate sulla versione disponibile meno recente associata a impostazioni locali specifiche. Questa impostazione ha lo scopo di mantenere la compatibilità con le versioni precedenti. Non sempre, quindi, si tratta delle regole di confronto consigliate. Per sfruttare tutti i vantaggi delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modificare le impostazioni di installazione predefinite per usare le regole di confronto di Windows. Ad esempio, per le impostazioni locali del sistema operativo **Inglese (Stati Uniti)** (tabella codici 1252), le regole di confronto predefinite durante l'installazione sono impostate su **SQL_Latin1_General_CP1_CI_AS** ed è possibile modificare l'impostazione scegliendo la controparte di Windows più simile **Latin1_General_100_CI_AS_SC**. <br /><br />Per altre informazioni, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Facoltativo**|Aggiunge l'utente corrente al ruolo predefinito del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**. Il parametro /ADDCURRENTUSERASSQLADMIN può essere utilizzato in caso di installazione di edizioni Express oppure quando si specifica /Role=ALLFeatures_WithDefaults. Per ulteriori informazioni, vedere /ROLE di seguito.<br /><br /> L'utilizzo di /ADDCURRENTUSERASSQLADMIN è facoltativo, mentre è obbligatorio quello di /ADDCURRENTUSERASSQLADMIN o di /SQLSYSADMINACCOUNTS. Valori predefiniti:<br /><br /> **True** per le edizioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** per tutte le altre edizioni|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Obbligatorio**|Specifica l'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obbligatorio](#Accounts)|Viene specificata la password per SQLSVCACCOUNT.|  

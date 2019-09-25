@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938886"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038872"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  Se si tenta di utilizzare una vista che dipende da una tabella o una vista eliminata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] visualizza un messaggio di errore. Se viene creata una nuova tabella o vista per sostituire quella eliminata e la struttura della nuova tabella non è diversa rispetto alla tabella di base precedente, la vista risulta di nuovo utilizzabile. Se la struttura della nuova tabella o vista è diversa, la vista deve essere eliminata e ricreata.  
   
- Se una vista non viene creata tramite la clausola SCHEMABINDING, è consigliabile eseguire [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) quando vengono apportate modifiche agli oggetti sottostanti la vista che influiscono sulla definizione di tale vista. In caso contrario, le query sulla vista possono generare risultati imprevisti.  
+ Se una vista non viene creata con la clausola SCHEMABINDING, eseguire [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) quando vengono apportate modifiche agli oggetti sottostanti la vista che influiscono sulla definizione di tale vista. In caso contrario, le query sulla vista possono generare risultati imprevisti.  
   
  Quando si crea una vista, le relative informazioni vengono archiviate nelle viste del catalogo seguenti: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) e [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Il testo dell'istruzione CREATE VIEW viene archiviato nella vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  Elenchi di selezione (select `list`)  
   
-    -   Tutte le colonne delle tabelle membro devono essere incluse nell'elenco di colonne della definizione della vista.  
+    -   Nell'elenco di colonne della definizione della vista, selezionare tutte le colonne nelle tabelle membro.  
   
-    -   Alle colonne che si trovano nella stessa posizione ordinale in ogni `select list` deve essere associato lo stesso tipo, incluse le regole di confronto. Non è sufficiente che il tipo di dati delle colonne supporti la conversione implicita, come nel caso di operazioni UNION.  
+    -   Assicurarsi che le colonne nella stessa posizione ordinale in ogni oggetto `select list` siano dello stesso tipo, incluse le regole di confronto. Non è sufficiente che il tipo di dati delle colonne supporti la conversione implicita, come nel caso di operazioni UNION.  
   
-         Inoltre, è necessario che almeno una colonna, ad esempio `<col>`, sia presente in tutti gli elenchi di selezione nella stessa posizione ordinale. La colonna `<col>` deve essere definita in modo che le tabelle membro `T1, ..., Tn` includano rispettivamente i vincoli CHECK `C1, ..., Cn` in `<col>`.  
+         Inoltre, è necessario che almeno una colonna, ad esempio `<col>`, sia presente in tutti gli elenchi di selezione nella stessa posizione ordinale. Definire `<col>` in modo che le tabelle membro `T1, ..., Tn` abbiano, rispettivamente, vincoli CHECK `C1, ..., Cn` definiti in `<col>`.  
   
          Il vincolo `C1` definito nella tabella `T1` deve avere il formato seguente:  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   I vincoli devono essere tali per cui qualsiasi valore specificato di `<col>` può soddisfare al massimo uno dei vincoli `C1, ..., Cn` e devono quindi costituire un set di intervalli disgiunti o non sovrapposti. La colonna `<col>` in cui sono definiti i vincoli disgiunti è denominata colonna di partizionamento. Si noti che nelle tabelle sottostanti tale colonna può avere nomi diversi. Per soddisfare i requisiti della colonna di partizionamento sopra descritti, i vincoli devono essere abilitati e attendibili. Se i vincoli sono disabilitati, è necessario riabilitare il controllo dei vincoli tramite l'opzione CHECK CONSTRAINT *constraint_name* dell'istruzione ALTER TABLE e convalidarli tramite l'opzione WITH CHECK.  
+    -   I vincoli devono essere tali per cui qualsiasi valore di `<col>` specificato possa soddisfare al massimo uno dei vincoli `C1, ..., Cn`, in modo che i vincoli formino un set di intervalli disgiunti o non sovrapposti. La colonna `<col>` in cui sono definiti i vincoli disgiunti è denominata colonna di partizionamento. Si noti che nelle tabelle sottostanti tale colonna può avere nomi diversi. Per soddisfare le condizioni precedenti della colonna di partizionamento, i vincoli devono essere abilitati e attendibili. Se i vincoli sono disabilitati, è necessario riabilitare il controllo dei vincoli tramite l'opzione CHECK CONSTRAINT *constraint_name* dell'istruzione ALTER TABLE e convalidarli tramite l'opzione WITH CHECK.  
   
          Negli esempi seguenti vengono illustrati alcuni set di vincoli validi:  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   Non può essere una colonna calcolata, Identity, predefinita o **timestamp**.  
   
-    -   Se una colonna di una tabella membro ha più vincoli, vengono ignorati tutti i vincoli, anche quando è necessario determinare se la vista è partizionata. Per soddisfare i requisiti per la creazione di viste partizionate, è necessario che la colonna di partizionamento includa un solo vincolo di partizionamento.  
+    -   Se una colonna di una tabella membro ha più vincoli, vengono ignorati tutti i vincoli, anche quando è necessario determinare se la vista è partizionata. Per soddisfare le condizioni della vista partizionata, assicurarsi che ci sia un solo vincolo di partizionamento nella colonna di partizionamento.  
   
     -   Non sono previste restrizioni per quanto concerne l'aggiornabilità della colonna di partizionamento.  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   Le tabelle membro non possono includere indici creati su colonne calcolate della tabella.  
   
-    -   Tutti i vincoli PRIMARY KEY delle tabelle membro devono riguardare lo stesso numero di colonne.  
+    -   Le tabelle membro hanno i vincoli PRIMARY KEY nello stesso numero di colonne.  
   
-    -   L'impostazione per lo riempimento ANSI deve essere la stessa per tutte le tabelle membro della vista. Questa impostazione può essere configurata tramite l'opzione **user options** della stored procedure **sp_configure** oppure tramite l'istruzione SET.  
+    -   Tutte le tabelle membro della vista hanno la stessa impostazione di riempimento ANSI. Questa impostazione può essere configurata tramite l'opzione **user options** della stored procedure **sp_configure** oppure tramite l'istruzione SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Requisiti per la modifica dei dati in viste partizionate  
  Le istruzioni che modificano i dati in viste partizionate sono soggette alle restrizioni seguenti:  
   
--   L'istruzione INSERT deve fornire valori per tutte le colonne della vista, anche se le tabelle membro sottostanti includono un vincolo DEFAULT per tali colonne o ammettono valori Null. Per le colonne delle tabelle membro che includono definizioni DEFAULT, nelle istruzioni non è consentito specificare la parola chiave DEFAULT in modo esplicito.  
+-   L'istruzione INSERT fornisce valori per tutte le colonne della vista, anche se le tabelle membro sottostanti hanno un vincolo DEFAULT per tali colonne o ammettono valori Null. Per le colonne delle tabelle membro che includono definizioni DEFAULT, nelle istruzioni non è consentito specificare la parola chiave DEFAULT in modo esplicito.  
   
--   Il valore inserito nella colonna di partizionamento deve soddisfare almeno uno dei vincoli sottostanti. In caso contrario, l'operazione di inserimento provoca una violazione di vincolo e ha esito negativo.  
+-   Il valore inserito nella colonna di partizionamento soddisfa almeno uno dei vincoli sottostanti. In caso contrario, l'operazione di inserimento provoca una violazione di vincolo e ha esito negativo.  
   
 -   Nelle istruzioni UPDATE non è possibile specificare la parola chiave DEFAULT come valore nella clausola SET, anche se alla colonna è associato un valore DEFAULT definito nella tabella membro corrispondente.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   Per garantire l'atomicità in tutti i nodi interessati dall'aggiornamento, viene avviata una transazione distribuita.  
   
--   Per consentire il corretto funzionamento delle istruzioni INSERT, UPDATE o DELETE, è necessario impostare l'opzione XACT_ABORT SET su ON.  
+-   Per consentire il corretto funzionamento delle istruzioni INSERT, UPDATE o DELETE, impostare l'opzione XACT_ABORT SET su ON.  
   
 -   Per tutte le colonne delle tabelle remote di tipo **smallmoney** a cui viene fatto riferimento in una vista partizionata viene eseguito il mapping come **money**. Pertanto, anche le colonne corrispondenti delle tabelle locali, ovvero le colonne che occupano la stessa posizione ordinale nell'elenco di selezione, devono essere di tipo **money**.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Requisiti per la replica  
  Per creare viste partizionate di tabelle membro coinvolte nella replica, devono essere soddisfatti i requisiti seguenti:  
   
--   Se le tabelle sottostanti sono coinvolte nella replica transazionale o di tipo merge con sottoscrizioni aggiornabili, nell'elenco di selezione deve essere presente anche la colonna **uniqueidentifier**.  
+-   Se le tabelle sottostanti sono coinvolte nella replica transazionale o di tipo merge con sottoscrizioni aggiornabili, assicurarsi che nell'elenco di selezione sia presente anche la colonna **uniqueidentifier**. 
   
      Le operazioni INSERT eseguite nella vista partizionata devono specificare un valore NEWID() per la colonna **uniqueidentifier**. Le operazioni UPDATE eseguite sulla colonna **uniqueidentifier** devono specificare il valore NEWID() in quanto non è possibile usare la parola chiave DEFAULT.  
   

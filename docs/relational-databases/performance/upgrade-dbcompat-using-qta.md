@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123121"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163898"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Questo controllo sugli aggiornamenti è stato migliorato ulteriormente in [!INCL
 A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 la nuova funzionalità **Assistente ottimizzazione query (QTA, Query Tuning Assistant)** assiste gli utenti nel flusso di lavoro consigliato per garantire la stabilità delle prestazioni durante l'aggiornamento alle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come documentato nella sezione *Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server* di [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). L'Assistente ottimizzazione query, tuttavia, non esegue il rollback a un piano valido noto in precedenza, come illustrato nell'ultimo passaggio del flusso di lavoro consigliato. L'Assistente ottimizzazione query terrà invece traccia di eventuali regressioni trovate nella vista [**Query regredite** di Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ed eseguirà l'iterazione delle possibili permutazioni delle varianti del modello di ottimizzazione applicabili in modo che possa essere generato un piano nuovo e migliore.
 
 > [!IMPORTANT]
-> L'Assistente ottimizzazione query non genera carichi di lavoro utente. Se si esegue l'Assistente ottimizzazione query in un ambiente non usato dalle applicazioni, verificare che sia comunque possibile eseguire un carico di lavoro di test rappresentativo nella destinazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con altri mezzi. 
+> L'Assistente ottimizzazione query non genera carichi di lavoro utente. Se si esegue l'Assistente ottimizzazione query in un ambiente non usato dalle applicazioni, verificare che sia comunque possibile eseguire un carico di lavoro di test rappresentativo nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di destinazione in altro modo. 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>Flusso di lavoro dell'Assistente ottimizzazione query
 Il punto di partenza dell'Assistente ottimizzazione query presuppone che un database di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] venga spostato (tramite [CREATE DATABASE... FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) o [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) a una versione più recente di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e che il livello di compatibilità del database prima dell'aggiornamento non venga modificato immediatamente. L'Assistente ottimizzazione query aiuta nell'esecuzione dei passaggi seguenti:

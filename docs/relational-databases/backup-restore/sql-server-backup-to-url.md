@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176360"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118187"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176360"
 - È possibile eseguire il backup su più BLOB in blocchi per ottenere prestazioni migliori per backup e ripristino e supportare il backup di database più grandi.
 - [BLOB in blocchi](https://azure.microsoft.com/pricing/details/storage/blobs/) è più economico di [BLOB di pagine](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo che è possibile specificare sono 4 MB. Le dimensioni massime di un singolo file di BLOB in blocchi sono di 4 MB * 50000 = 195 GB. Se il database ha dimensioni maggiori di 195 GB, è consigliabile:
-- Usare la compressione del backup
+Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggetto alle limitazioni elencate in [Differenze, limitazioni e problemi noti di T-SQL nelle istanze gestite](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ Se le dimensioni del database sono troppo grandi, è possibile:
+- Usare la compressione del backup oppure
 - Eseguire il backup su più BLOB in blocchi
 
 ###  <a name="Blob"></a> Servizio di archiviazione BLOB di Microsoft Azure  

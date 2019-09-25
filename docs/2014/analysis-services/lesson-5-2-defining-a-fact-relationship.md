@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493858"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
@@ -51,7 +51,7 @@ ms.locfileid: "69493858"
   
 7.  Nell'elenco **Colonna nome** selezionare **SalesOrderLineNumber**.  
   
-8.  Fare clic su **Avanti**.  
+8.  Scegliere **Avanti**.  
   
 9. Nella pagina **Selezione tabelle correlate** deselezionare le caselle di controllo accanto a tutte le tabelle e quindi fare clic su **Avanti**.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "69493858"
   
 12. Nella pagina **Completamento procedura guidata** modificare il nome in **Internet Sales Order Details** e quindi fare clic su **Fine** per completare la procedura guidata.  
   
-13. Nel menu **File** fare clic su **Salva tutto**.  
+13. Scegliere **Salva tutti** dal menu **File**.  
   
-14. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order** Details, selezionare **Sales Order Number**, quindi modificare la proprietà **Name** nel finestra Proprietà`Item Description.`  
+14. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order Details** , selezionare **Sales Order Number**, quindi modificare la proprietà **Name** nel finestra Proprietà`Item Description.`  
   
 15. Nella cella della proprietà **NameColumn** fare clic sul pulsante Sfoglia **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493858"
   
      L'immagine seguente illustra le proprietà della relazione di tipo Fatti nella finestra di dialogo **Definisci relazione** .  
   
-     Finestra di ![dialogo Definisci relazione] Finestra di (../../2014/tutorials/media/l5-factrelationship-2.gif "dialogo Definisci relazione")  
+     Finestra di ![dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "dialogo Definisci relazione")  
   
 3.  Fare clic su **Annulla**.  
   

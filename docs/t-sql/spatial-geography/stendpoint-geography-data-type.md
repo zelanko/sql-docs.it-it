@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (tipo di dati geography) | Microsoft Docs
+title: STEndPoint (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- STEndpoint (geography Data Type)
-- STEndpoint_TSQL
+- STEndPoint (geography Data Type)
+- STEndPoint_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- STEndpoint method
+- STEndPoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042283"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118141"
 ---
-# <a name="stendpoint-geography-data-type"></a>STEndpoint (tipo di dati geography)
+# <a name="stendpoint-geography-data-type"></a>STEndPoint (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce il punto di fine di un'istanza **geography**.  
@@ -49,7 +49,7 @@ ms.locfileid: "68042283"
  Se chiamato su un'istanza **geography** vuota, questo metodo restituisce Null.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata un'istanza `LineString` con `STGeomFromText()` e viene utilizzato `STEndpoint()` per recuperare il punto di fine di `LineString`.  
+ Nell'esempio seguente viene creata un'istanza `LineString` con `STGeomFromText()` e viene utilizzato `STEndPoint()` per recuperare il punto di fine di `LineString`.  
   
 ```  
 DECLARE @g geography;  

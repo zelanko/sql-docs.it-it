@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811044"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -128,7 +128,7 @@ ms.locfileid: "68811044"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  indice columnstore non cluster  
- Un indice columnstore non *cluster* è un indice di sola lettura creato in un indice cluster o in una tabella heap esistente. Contiene una copia di un subset di colonne, fino a includere tutte le colonne della tabella. La tabella è di sola lettura mentre contiene un indice columnstore non cluster.  
+ Un indice *columnstore non cluster* è un indice di sola lettura creato in un indice cluster o in una tabella heap esistente. Contiene una copia di un subset di colonne, fino a includere tutte le colonne della tabella. La tabella è di sola lettura mentre contiene un indice columnstore non cluster.  
   
  Un indice columnstore non cluster consente di disporre di un indice columnstore per eseguire query di analisi e, contemporaneamente, operazioni di sola lettura nella tabella originale.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811044"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>Metadata  
+### <a name="metadata"></a>Metadati  
  Tutte le colonne di un indice columnstore vengono archiviate nei metadati come colonne incluse. L'indice columnstore non contiene colonne chiave.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

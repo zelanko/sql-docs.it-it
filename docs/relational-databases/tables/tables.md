@@ -1,7 +1,7 @@
 ---
 title: Tabelle | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2cf1a6cbb774640099a7465180fc879dcc75c77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016248"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127368"
 ---
 # <a name="tables"></a>Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ Le tabelle temporanee vengono archiviate in **tempdb**. Esistono due tipi di tab
 
 #### <a name="ctp23"></a> Riduzione delle ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti
 
-In [!INCLUDE[ss2019](../../includes/sssqlv15-md.md) vengono ridotte le ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti. Prima di questa funzionalità, quando si faceva riferimento a una tabella temporanea con un'istruzione DML (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se la tabella temporanea era stata creata da un batch di ambito esterno, l'istruzione DML veniva ricompilata ogni volta che veniva eseguita. Grazie a questo miglioramento, SQL Server esegue semplici controlli aggiuntivi per evitare ricompilazioni non necessarie:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] riduce le ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti. Prima di questa funzionalità, quando si faceva riferimento a una tabella temporanea con un'istruzione DML (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se la tabella temporanea era stata creata da un batch di ambito esterno, l'istruzione DML veniva ricompilata ogni volta che veniva eseguita. Grazie a questo miglioramento, SQL Server esegue semplici controlli aggiuntivi per evitare ricompilazioni non necessarie:
 
 - Controlla se il modulo di ambito esterno usato per creare la tabella temporanea in fase di compilazione è uguale a quello usato per le esecuzioni consecutive. 
 - Tiene traccia di eventuali modifiche di Data Definition Language (DDL) apportate alla compilazione iniziale e le confronta con le operazioni DDL per le esecuzioni consecutive.

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "63035067"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- ![Icona di collegamento un argomento](../../2014/database-engine/media/topic-link.gif "icona di collegamento argomento") per le convenzioni della sintassi, vedere [prompt dei comandi di riferimento all'utilità &#40;motore di Database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icona di collegamento all'argomento](../../2014/database-engine/media/topic-link.gif "Icona di collegamento all'argomento") Per le convenzioni della sintassi, vedere Guida di [ &#40;riferimento&#41;all'utilità del prompt dei comandi motore di database](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,17 +64,17 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |4|L'output include tutti i messaggi di debug e di traccia.|  
   
  **-logintimeout** _timeout_value_  
- Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* is **int**_._  
+ Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* is **int** _._  
   
  **-querytimeout** _timeout_value_  
- Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int**_._  
+ Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int** _._  
   
 ## <a name="remarks"></a>Note  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Il **sqllogship** applicazione SqlLogShip.exe, viene installato nella directory Programmi\Microsoft SQL Server\120\Tools\Binn x:\Programmi\Microsoft.  
+ L'applicazione **sqllogship** , sqllogship. exe, è installata nella directory X:\Programmi\Microsoft Files\Microsoft SQL Server\120\Tools\Binn  
   
 ## <a name="permissions"></a>Permissions  
  **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy**oppure **-restore** .  

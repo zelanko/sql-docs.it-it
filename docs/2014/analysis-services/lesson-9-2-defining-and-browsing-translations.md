@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493784"
 ---
 # <a name="defining-and-browsing-translations"></a>Definizione ed esplorazione delle traduzioni
@@ -40,9 +40,9 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la **dimensione Date** `Fecha` digitare la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
-6.  Nella riga relativa all'oggetto **didascalia** per l' **attributo Month Name** `Mes del Año` digitare la colonna **spagnolo (Spagna)** translation e `Mois d'Année` la colonna Traduzione in **francese (Francia)** .  
+6.  Nella riga relativa all'oggetto **didascalia** per l'attributo **Month Name** `Mes del Año` digitare la colonna **spagnolo (Spagna)** translation e `Mois d'Année` la colonna Traduzione in **francese (Francia)** .  
   
      Si noti che quando si immettono queste traduzioni, vengono visualizzati i puntini di sospensione ( **...** ). Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la **dimensione Date** `Fecha` digitare la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
 6.  Nella riga relativa all'oggetto **didascalia** per il gruppo di misure **Internet Sales** digitare `Ventas del lnternet` la colonna Traduzione in **spagnolo (Spagna)** e `Ventes D'Internet` nella colonna Traduzione in **francese (Francia)** .  
   

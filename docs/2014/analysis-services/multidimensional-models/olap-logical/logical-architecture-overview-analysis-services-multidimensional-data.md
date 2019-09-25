@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889604"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
@@ -89,7 +89,7 @@ ms.locfileid: "68889604"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|29-99 dicembre|Dec-22-99|29-99 dicembre|  
   
- Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:** [Aggregazioni e progettazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)delle aggregazioni.  
+ Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:** [Aggregazioni e progettazioni delle aggregazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapping di misure, attributi e gerarchie  
  Le misure, gli attributi e le gerarchie del cubo di esempio derivano dalle colonne seguenti nelle tabelle dei fatti e delle dimensioni del cubo.  
@@ -101,7 +101,7 @@ ms.locfileid: "68889604"
 |Livello Route Category nella dimensione Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Attributo Route nella dimensione Route|air,sea,road,rail|RouteDimensionTable|Route|Sea|  
 |Attributo Hemisphere nella dimensione Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europa|  
+|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europe|  
 |Attributo Half nella dimensione Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Attributo Quarter nella dimensione Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   

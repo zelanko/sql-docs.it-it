@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228460"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096883"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,7 +53,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Indicizzare le colonne crittografate|Creare indici sulle colonne crittografate usando la crittografia casuale e le chiavi abilitate per l'enclave, per migliorare le prestazioni delle query avanzate (in cui vengono usati `LIKE` e operatori di confronto). Vedere [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted con enclave sicuri|Estende la funzionalità Always Encrypted con crittografia sul posto e calcoli avanzati abilitando i calcoli sui dati di testo non crittografato all'interno di un enclave sicuro sul lato server. La crittografia sul posto migliora le prestazioni e l'affidabilità delle operazioni di crittografia (crittografia delle colonne, rotazione delle chiavi di crittografia delle colonne e così via) in quanto evita di spostare i dati all'esterno del database. Il supporto per i calcoli avanzati (criteri di ricerca e operazioni di confronto) consente l'uso della funzionalità Always Encrypted con un set molto più ampio di scenari e applicazioni che richiedono la protezione dei dati sensibili, oltre a funzionalità più avanzate nelle query Transact-SQL. Vedere [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Sospendere e riprendere l'analisi iniziale per Transparent Data Encryption (TDE)|Vedere [Analisi Transparent Data Encryption (TDE) con possibilità di sospensione e ripresa](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Gestione dei certificati in Gestione configurazione SQL Server|Vedere [Gestione dei certificati (Gestione configurazione SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810330"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127363"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -1313,7 +1313,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   2720    |   16  |   no  |   Impossibile associare a schema %S_MSG '%.*ls' perché fa riferimento all'oggetto di sistema '%.* ls'.  |
 |   2722    |   16  |   no  |   In questo contesto i metodi con tipo di dati xml non sono consentiti nelle espressioni.   |
 |   2724    |   10  |   no  |   Il tipo di dati del parametro o della variabile '%.*ls' non è valido. |
-|   2725    |   16  |   no  |   Impossibile eseguire online l'operazione su %S_MSG '%.*ls' perché l'indice contiene la colonna '%.* ls' con tipo di dati text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml o con un tipo CLR di grandi dimensioni. Per gli indici non cluster, la colonna può essere una colonna di inclusione dell'indice. Per gli indici cluster può essere qualsiasi colonna della tabella. Se viene utilizzata l'opzione DROP_EXISTING, la colonna può fare parte del nuovo indice o di quello esistente. L'operazione deve essere eseguita offline. |
+|   2725    |   16  |   no  |   Impossibile eseguire online l'operazione su %S_MSG '%.*ls' perché l'indice contiene la colonna '%.* ls' con tipo di dati text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml o con un tipo CLR di grandi dimensioni. Per gli indici non cluster, la colonna può essere una colonna di inclusione dell'indice. mentre per gli indici cluster può essere qualsiasi colonna della tabella. Se viene utilizzata l'opzione DROP_EXISTING, la colonna può fare parte del nuovo indice o di quello esistente. L'operazione deve essere eseguita offline. |
 |   2726    |   16  |   no  |   La funzione di partizione '%.*ls' utilizza %d colonne. Tale numero non corrisponde a quello delle colonne di partizione utilizzate per partizionare la tabella o l'indice.  |
 |   2727    |   11  |   no  |   Impossibile trovare l'indice '%.*ls'.  |
 |   2728    |   16  |   no  |   Impossibile creare una partizione su più di %d colonne.   |
@@ -4999,7 +4999,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   11297   |   16  |   no  |   È stato ricevuto un messaggio danneggiato. L'offset del segmento di dati della variabile privata non è corretto.   |
 |   11298   |   16  |   no  |   È stato ricevuto un messaggio danneggiato. L'offset del segmento di dati della variabile pubblica non è corretto.    |
 |   11299   |   10  |   no  |   È stato ricevuto un messaggio danneggiato. Un messaggio non in sequenza conteneva un numero di sequenza diverso da zero. L'errore si è verificato nel messaggio con ID conversazione '%.*ls', initiator: %d e numero di sequenza messaggio: %I64d. |
-|   11300   |   10  |   Sì |   Errore durante il commit di un valore di sola lettura o di un TEMPDB XDES. Arresto del server in corso.    |
+|   11300   |   10  |   Sì |   Errore durante il commit di un valore di sola lettura o di un TEMPDB XDES. Arresto del server in corso.   |
 |   11301   |   10  |   Sì |   Errore durante l'esecuzione della notifica della transazione per l'evento %d dell'oggetto %p. |
 |   11302   |   10  |   Sì |   Errore durante il rollback. Arresto del database in corso. (Percorso: %d.)   |
 |   11303   |   10  |   Sì |   Errore durante il rilascio dello spazio riservato ai log: %ls spazio %I64d, codice %d, stato %d. |
@@ -5781,7 +5781,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   14596   |   16  |   no  |   Il pacchetto DTS '%s' è presente in un'altra categoria.    |
 |   14597   |   16  |   no  |   L'ID di pacchetto DTS '%s' esiste già con un nome diverso.   |
 |   14598   |   16  |   no  |   Impossibile eliminare le categorie DTS Local, Repository e LocalDefault.  |
-|   14599   |   10  |   no  |   nome    |
+|   14599   |   10  |   no  |   Nome    |
 |   14600   |   16  |   no  |   Al proxy "%s" non è stata concessa l'autorizzazione per l'utilizzo del sottosistema "%s".   |
 |   14601   |   16  |   no  |   L'operatore "%s" non è abilitato e pertanto non può ricevere notifiche.    |
 |   14602   |   16  |   no  |   Per l'operatore "%s" non è stato specificato un indirizzo di posta elettronica.    |

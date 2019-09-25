@@ -1,7 +1,7 @@
 ---
 title: Regole di confronto e supporto Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908410"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149915"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,11 @@ Per usare in modo ottimale il supporto delle regole di confronto di [!INCLUDE[ss
     
 ##  <a name="Terms"></a> Termini delle regole di confronto    
     
--   [Confronto](#Collation_Defn)    
+-   [Regole di confronto](#Collation_Defn) 
+
+    - [Set di regole di confronto](#Collation_sets)
+    
+    - [Livelli delle regole di confronto](#Collation_levels)
     
 -   [Impostazioni locali](#Locale_Defn)    
     
@@ -62,7 +66,7 @@ Le regole di confronto specificano i modelli di bit che rappresentano i caratter
     
 I risultati di un'istruzione[!INCLUDE[tsql](../../includes/tsql-md.md)] possono variare se l'istruzione viene eseguita nel contesto di database diversi che utilizzano impostazioni diverse per le regole di confronto. Se possibile, usare regole di confronto standardizzate per l'organizzazione. In questo modo, non è necessario specificare esplicitamente le regole di confronto in ogni carattere o espressione Unicode. Se è necessario usare oggetti con impostazioni diverse per tabelle codici e regole di confronto, codificare le query in modo da considerare la precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un'opzione aggiuntiva per la codifica [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` prevedono distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e codifica UTF-8. Sempre a titolo di esempio, le regole di confronto `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza, distinzione dei selettori di variazione e usano la codifica non Unicode. La tabella seguente descrive il comportamento associato a queste opzioni.    
+Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un'opzione aggiuntiva per la codifica [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` prevedono distinzione tra lettere maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e codifica UTF-8. Sempre a titolo di esempio, le regole di confronto `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza, distinzione dei selettori di variazione e usano la codifica non Unicode. La tabella seguente descrive il comportamento associato a queste opzioni.    
     
 |Opzione|Descrizione|    
 |------------|-----------------|    
@@ -70,21 +74,67 @@ Alle regole di confronto sono associate le opzioni seguenti: distinzione tra mai
 |Distinzione caratteri accentati/non accentati (\_AS)|Opera una distinzione tra caratteri accentati e non accentati. Il carattere 'a', ad esempio, non viene considerato uguale ad 'ấ'. Se questa opzione non viene selezionata, le regole di confronto non fanno distinzione tra caratteri accentati e non accentati. Ovvero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identici i caratteri accentati e non accentati ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando \_AI.|    
 |Distinzione Kana (\_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera uguali i caratteri Hiragana e Katakana ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|    
 |Distinzione larghezza (\_WS)|Opera una distinzione tra caratteri a larghezza intera e caratteri a metà larghezza. Se questa opzione non viene selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identiche le rappresentazioni con caratteri a larghezza intera e a metà larghezza dello stesso carattere ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione larghezza.|    
-|Distinzione dei selettori di variazione (\_VSS) | Opera una distinzione tra vari selettori di variazione di simboli ideografici nelle regole di confronto giapponesi Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introdotte inizialmente in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una sequenza di variazione è costituita da un carattere di base e da un selettore di variazione aggiuntivo. Se questa opzione \_VSS non è selezionata, le regole di confronto non fanno distinzione tra selettori di variazione e il selettore di variazione non viene considerato nel confronto. In altri termini, SQL Server considera identici, ai fini dell'ordinamento, i caratteri basati sullo stesso carattere con diversi selettori di variazione. Vedere anche  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Database di variazioni di simboli ideografici Unicode). <br/><br/> Le regole di confronto con distinzione tra selettori di variazione (\_VSS) non sono supportate negli indici di ricerca full-text. Questi indici supportano solo le opzioni Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_WS). I motori di CLR e XML in SQL Server non supportano i selettori di variazione (\_VSS).
-|UTF-8 (\_UTF8)|Abilita l'archiviazione dei dati con codifica UTF-8 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione non viene selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il formato di codifica non Unicode predefinito per i tipi di dati applicabili.| 
+|Distinzione dei selettori di variazione (\_VSS)|Opera una distinzione tra vari selettori di variazione di simboli ideografici nelle regole di confronto giapponesi **Japanese_Bushu_Kakusu_140** e **Japanese_XJIS_140** introdotte in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una sequenza di variazione è costituita da un carattere di base e da un selettore di variazione aggiuntivo. Se questa opzione \_VSS non è selezionata, le regole di confronto non fanno distinzione tra selettori di variazione e il selettore di variazione non viene considerato nel confronto. Ciò significa che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identici, ai fini dell'ordinamento, i caratteri basati sullo stesso carattere di base con selettori di variazione diversi. Vedere anche il [database di variazioni di simboli ideografici Unicode](https://www.unicode.org/reports/tr37/).<br/><br/> Le regole di confronto con distinzione tra selettori di variazione (\_VSS) non sono supportate negli indici di ricerca full-text. Questi indici supportano solo le opzioni Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_WS). I motori CLR e XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportano i selettori di variazione (\_VSS).|      
+|Binario (\_BIN) <sup>1</sup>|Ordina e confronta i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base agli schemi di bit definiti per ogni carattere. L'ordinamento binario prevede la distinzione tra lettere maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido. Per altre informazioni, vedere la sezione [Regole di confronto binarie](#Binary-collations) in questa pagina.|      
+|Punto di codice binario (\_BIN2) <sup>1</sup> | Ordina e confronta i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai punti di codice Unicode per i dati Unicode. Per i dati non Unicode, il punto di codice binario userà confronti identici agli ordinamenti binari.<br/><br/> Il vantaggio di usare un ordinamento con punto di codice binario è rappresentato dal fatto che non è necessario alcun riordinamento dei dati nelle applicazioni che confrontano i dati ordinati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, l'ordinamento con punto di codice binario consente di semplificare lo sviluppo delle applicazioni e di ottenere un possibile miglioramento delle prestazioni. Per altre informazioni, vedere la sezione [Regole di confronto binarie](#Binary-collations) in questa pagina.|
+|UTF-8 (\_UTF8)|Abilita l'archiviazione dei dati con codifica UTF-8 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione non viene selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il formato di codifica non Unicode predefinito per i tipi di dati applicabili. Per altre informazioni, vedere la sezione [Supporto di UTF-8](#utf8) in questa pagina.| 
+
+<sup>1</sup> Se si seleziona Binario o Punto di codice binario, le opzioni Distinzione maiuscole/minuscole (\_CS), Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\WS) non sono disponibili.      
+
+#### <a name="examples-of-collation-options"></a>Esempi di opzioni per le regole di confronto
+Le regole di confronto sono costituite da una serie di suffissi che definiscono la distinzione tra lettere maiuscole e minuscole, tra caratteri accentati e non accentati, della larghezza o dei caratteri Kana. Gli esempi seguenti descrivono i tipi di ordinamento delle varie combinazioni di suffissi.
+
+|Suffisso delle regole di confronto di Windows|Descrizione dell'ordinamento|
+|------------|-----------------| 
+|\_BIN<sup>1</sup>|Ordinamento binario|
+|\_BIN2<sup>1</sup> <sup>2</sup>|Ordinamento con punto di codice binario|
+|\_CI_AI<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CI_AI_KS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CI_AI_KS_WS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CI_AI_WS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CI_AS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CI_AS_KS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CI_AS_KS_WS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CI_AS_WS<sup>2</sup>|Senza distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CS_AI<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CS_AI_KS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CS_AI_KS_WS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CS_AI_WS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, senza distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CS_AS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CS_AS_KS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, senza distinzione di larghezza|
+|\_CS_AS_KS_WS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, con distinzione dei caratteri Kana, con distinzione di larghezza|
+|\_CS_AS_WS<sup>2</sup>|Con distinzione tra lettere maiuscole e minuscole, con distinzione tra caratteri accentati e non accentati, senza distinzione dei caratteri Kana, con distinzione di larghezza|
+
+<sup>1</sup> Se si seleziona Binario o Punto di codice binario, le opzioni Distinzione maiuscole/minuscole (\_CS), Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_\WS) non sono disponibili.    
+
+<sup>2</sup> L'aggiunta dell'opzione UTF-8 (\_UTF8) consente la codifica dei dati Unicode con UTF-8. Per altre informazioni, vedere la sezione [Supporto di UTF-8](#utf8) in questa pagina. 
+
+### <a name="Collation_sets"></a> Set di regole di confronto
+
+In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:    
+
+-  [Regole di confronto di Windows](#Windows-collations)
+
+-  [Regole di confronto binarie](#Binary-collations)
+
+-  [Regole di confronto di SQL Server](#SQL-collations)
     
- In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:    
-    
-#### <a name="windows-collations"></a>Regole di confronto di Windows    
+#### <a name="Windows-collations"></a> Regole di confronto di Windows    
 Le regole di confronto di Windows definiscono regole per l'archiviazione dei dati di tipo carattere basate sulle impostazioni locali del sistema Windows associate. Per le regole di confronto di Windows, il confronto dei dati non Unicode è implementato mediante lo stesso algoritmo dei dati Unicode. Le regole di confronto di base di Windows specificano l'alfabeto o la lingua da usare quando viene applicato l'ordinamento del dizionario, nonché la tabella codici usata per l'archiviazione di dati di tipo carattere non Unicode. Sia l'ordinamento Unicode che quello non Unicode sono compatibili con i confronti di stringhe di una versione specifica di Windows. In questo modo viene garantita la consistenza tra i tipi di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli sviluppatori possono ordinare le stringhe all'interno delle applicazioni mediante le stesse regole usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="binary-collations"></a>Regole di confronto binarie    
-Le regole di confronto binarie ordinano i dati in base alla sequenza di valori codificati definiti dalle impostazioni locali e dal tipo di dati. Per tali regole è prevista la distinzione tra maiuscole e minuscole. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto binarie definiscono le impostazioni locali e la tabella codici ANSI da usare. In questo modo viene applicato un ordinamento binario. Grazie alla loro semplicità, le regole di confronto binarie consentono di migliorare le prestazioni dell'applicazione. Per i tipi di dati non Unicode, il confronto dei dati è basato sui punti di codice definiti nella tabella codici ANSI. Per i tipi di dati Unicode, il confronto dei dati è basato sui punti di codice Unicode. Per le regole di confronto binarie nei tipi di dati Unicode, le impostazioni locali non vengono considerate ai fini dell'ordinamento dei dati. Ad esempio, l'utilizzo di Latin_1_General_BIN e Japanese_BIN su dati Unicode restituisce risultati di ordinamento identici.    
+#### <a name="Binary-collations"></a> Regole di confronto binarie    
+Le regole di confronto binarie ordinano i dati in base alla sequenza di valori codificati definiti dalle impostazioni locali e dal tipo di dati. Per tali regole è prevista la distinzione tra maiuscole e minuscole. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto binarie definiscono le impostazioni locali e la tabella codici ANSI da usare. In questo modo viene applicato un ordinamento binario. Grazie alla loro semplicità, le regole di confronto binarie consentono di migliorare le prestazioni dell'applicazione. Per i tipi di dati non Unicode, il confronto dei dati è basato sui punti di codice definiti nella tabella codici ANSI. Per i tipi di dati Unicode, il confronto dei dati è basato sui punti di codice Unicode. Per le regole di confronto binarie nei tipi di dati Unicode, le impostazioni locali non vengono considerate ai fini dell'ordinamento dei dati. Ad esempio, l'uso di **Latin_1_General_BIN** e **Japanese_BIN** su dati Unicode restituisce risultati di ordinamento identici. Per altre informazioni, vedere [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
-Esistono due tipi di regole di confronto binarie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: le regole di confronto **BIN** meno recenti e quelle più recenti **BIN2** . Nelle regole di confronto **BIN2** tutti i caratteri vengono ordinati in base ai relativi punti di codice. Nelle regole di confronto **BIN** solo il primo carattere viene ordinato in base al punto di codice e i restanti caratteri vengono ordinati in base ai relativi valori di byte. Poiché la piattaforma Intel si avvale di un'architettura little endian, i caratteri di codice Unicode vengono sempre scambiati con i byte archiviati.    
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci sono due tipi di regole di confronto binarie:
+
+-  Le regole di confronto **BIN** precedenti, che eseguono un confronto tra punti di codice incompleto per i dati Unicode. Tali regole di confronto binarie legacy eseguono il confronto del primo carattere come WCHAR e quindi un confronto byte per byte. Nelle regole di confronto **BIN** solo il primo carattere viene ordinato in base al punto di codice e i restanti caratteri vengono ordinati in base ai relativi valori di byte.
+
+-  Le regole di confronto **BIN2** più recenti, che implementano un confronto tra punti di codice puro. Nelle regole di confronto **BIN2** tutti i caratteri vengono ordinati in base ai relativi punti di codice. Poiché la piattaforma Intel ha un'architettura little endian, i caratteri di codice Unicode vengono sempre archiviati con i byte scambiati.     
     
-#### <a name="sql-server-collations"></a>regole di confronto di SQL Server    
-Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) garantiscono la compatibilità di ordinamento con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di ordinamento del dizionario per i dati non Unicode sono compatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Dato che le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati vengono visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+#### <a name="SQL-collations"></a> Regole di confronto di SQL Server    
+Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) garantiscono la compatibilità di ordinamento con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di ordinamento del dizionario per i dati non Unicode sono compatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Dato che le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati vengono visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
+
+Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'impostazione di installazione predefinita per le regole di confronto è determinata dalle impostazioni locali del sistema operativo. Le regole di confronto a livello di server possono essere modificate durante l'installazione oppure modificando le impostazioni locali del sistema operativo prima dell'installazione. Le regole di confronto predefinite sono impostate sulla versione disponibile meno recente associata a impostazioni locali specifiche. Questa impostazione ha lo scopo di mantenere la compatibilità con le versioni precedenti. Non sempre, quindi, si tratta delle regole di confronto consigliate. Per sfruttare tutti i vantaggi delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modificare le impostazioni di installazione predefinite per usare le regole di confronto di Windows. Ad esempio, per le impostazioni locali del sistema operativo **Inglese (Stati Uniti)** (tabella codici 1252), le regole di confronto predefinite durante l'installazione sono impostate su **SQL_Latin1_General_CP1_CI_AS** ed è possibile modificare l'impostazione scegliendo la controparte di Windows più simile **Latin1_General_100_CI_AS_SC**.
     
 > [!NOTE]    
 > Quando si aggiorna un'istanza in lingua inglese di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) per assicurare la compatibilità con le istanze esistenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché le regole di confronto predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono definite durante la configurazione, è importante specificare attentamente le impostazioni delle regole di confronto quando le condizioni riportate di seguito sono vere:    
@@ -92,14 +142,257 @@ Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 > -   Il codice dell'applicazione dipende dal comportamento di regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti.    
 > -   È necessario archiviare dati di tipo carattere in più lingue.    
     
- L'impostazione delle regole di confronto è supportata ai seguenti livelli di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
-    
-#### <a name="server-level-collations"></a>Regole di confronto a livello di server   
-Le regole di confronto predefinite del server vengono impostate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e diventano le regole predefinite anche per i database di sistema e per tutti i database utente. Si noti che non è possibile selezionare le regole di confronto solo Unicode durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , perché non sono supportate come regole di confronto a livello server.    
+### <a name="Collation_levels"></a> Livelli delle regole di confronto
+L'impostazione delle regole di confronto è supportata ai seguenti livelli di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
+
+-  [Regole di confronto a livello di server](#Server-level-collations)
+
+-  [Regole di confronto a livello di database](#Database-level-collations)
+
+-  [Regole di confronto a livello di colonna](#Column-level-collations)
+
+-  [Regole di confronto a livello di espressione](#Expression-level-collations)
+
+#### <a name="Server-level-collations"></a> Regole di confronto a livello di server   
+Le regole di confronto del server predefinite vengono determinate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e diventano le regole predefinite anche per i database di sistema e per tutti i database utente. 
+
+La tabella seguente illustra le designazioni delle regole di confronto predefinite determinate dalle impostazioni locali del sistema operativo, inclusi i rispettivi identificatori del codice di lingua (LCID) di Windows e SQL:
+
+|Impostazioni locali di Windows|Identificatore delle impostazioni locali (LCID) di Windows|LCID SQL|Regole di confronto predefinite|
+|---------------|---------|---------|---------------|
+|Afrikaans (Sud Africa)|0x0436|0x0409|Latin1_General_CI_AS|
+|Albanese (Albania)|0x041c|0x041c|Albanian_CI_AS|
+|Alsaziano (Francia)|0x0484|0x0409|Latin1_General_CI_AS|
+|Amarico (Etiopia)|0x045e|0x0409|Latin1_General_CI_AS|
+|Arabo (Algeria)|0x1401|0x0401|Arabic_CI_AS|
+|Arabo (Bahrein)|0x3c01|0x0401|Arabic_CI_AS|
+|Arabo (Egitto)|0x0c01|0x0401|Arabic_CI_AS|
+|Arabo (Iraq)|0x0801|0x0401|Arabic_CI_AS|
+|Arabo (Giordania)|0x2c01|0x0401|Arabic_CI_AS|
+|Arabo (Kuwait)|0x3401|0x0401|Arabic_CI_AS|
+|Arabo (Libano)|0x3001|0x0401|Arabic_CI_AS|
+|Arabo (Libia)|0x1001|0x0401|Arabic_CI_AS|
+|Arabo (Marocco)|0x1801|0x0401|Arabic_CI_AS|
+|Arabo (Oman)|0x2001|0x0401|Arabic_CI_AS|
+|Arabo (Qatar)|0x4001|0x0401|Arabic_CI_AS|
+|Arabo (Arabia Saudita)|0x0401|0x0401|Arabic_CI_AS|
+|Arabo (Siria)|0x2801|0x0401|Arabic_CI_AS|
+|Arabo (Tunisia)|0x1c01|0x0401|Arabic_CI_AS|
+|Arabo (Emirati Arabi Uniti)|0x3801|0x0401|Arabic_CI_AS|
+|Arabo (Yemen)|0x2401|0x0401|Arabic_CI_AS|
+|Armeno (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
+|Assamese (India)|0x044d|0x044d|Non disponibile a livello di server|
+|Azeri (Azerbaigian, alfabeto cirillico)|0x082c|0x082c|Deprecato, non disponibile a livello di server|
+|Azeri (Azerbaigian, alfabeto latino)|0x042c|0x042c|Deprecato, non disponibile a livello di server|
+|Baschiro (Russia)|0x046d|0x046d|Latin1_General_CI_AI|
+|Basco (Basco)|0x042d|0x0409|Latin1_General_CI_AS|
+|Bielorusso (Bielorussia)|0x0423|0x0419|Cyrillic_General_CI_AS|
+|Bengalese (Bangladesh)|0x0845|0x0445|Non disponibile a livello di server|
+|Bengalese (India)|0x0445|0x0439|Non disponibile a livello di server|
+|Bosniaco (Bosnia ed Erzegovina, alfabeto cirillico)|0x201a|0x201a|Latin1_General_CI_AI|
+|Bosniaco (Bosnia ed Erzegovina, alfabeto latino)|0x141a|0x141a|Latin1_General_CI_AI|
+|Bretone (Francia)|0x047e|0x047e|Latin1_General_CI_AI|
+|Bulgaro (Bulgaria)|0x0402|0x0419|Cyrillic_General_CI_AS|
+|Catalano (Catalogna)|0x0403|0x0409|Latin1_General_CI_AS|
+|Cinese (Hong Kong - R.A.S., Repubblica popolare cinese)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Cinese (RAS di Macao)|0x1404|0x1404|Latin1_General_CI_AI|
+|Cinese (Macao)|0x21404|0x21404|Latin1_General_CI_AI|
+|Cinese (RPC)|0x0804|0x0804|Chinese_PRC_CI_AS|
+|Cinese (RPC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Cinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
+|Cinese (Singapore)|0x21004|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Cinese (Taiwan)|0x30404|0x30404|Chinese_Taiwan_Bopomofo_CI_AS|
+|Cinese (Taiwan)|0x0404|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Corso (Francia)|0x0483|0x0483|Latin1_General_CI_AI|
+|Croato (Bosnia ed Erzegovina, alfabeto latino)|0x101a|0x041a|Croatian_CI_AS|
+|Croato (Croazia)|0x041a|0x041a|Croatian_CI_AS|
+|Ceco (Repubblica Ceca)|0x0405|0x0405|Czech_CI_AS|
+|Danese (Danimarca)|0x0406|0x0406|Danish_Norwegian_CI_AS|
+|Dari (Afghanistan)|0x048c|0x048c|Latin1_General_CI_AI|
+|Divehi (Maldive)|0x0465|0x0465|Non disponibile a livello di server|
+|Olandese (Belgio)|0x0813|0x0409|Latin1_General_CI_AS|
+|Olandese (Paesi Bassi)|0x0413|0x0409|Latin1_General_CI_AS|
+|Inglese (Australia)|0x0c09|0x0409|Latin1_General_CI_AS|
+|Inglese (Belize)|0x2809|0x0409|Latin1_General_CI_AS|
+|Inglese (Canada)|0x1009|0x0409|Latin1_General_CI_AS|
+|Inglese (Caraibi)|0x2409|0x0409|Latin1_General_CI_AS|
+|Inglese (India)|0x4009|0x0409|Latin1_General_CI_AS|
+|Inglese (Irlanda)|0x1809|0x0409|Latin1_General_CI_AS|
+|Inglese (Giamaica)|0x2009|0x0409|Latin1_General_CI_AS|
+|Inglese (Malesia)|0x4409|0x0409|Latin1_General_CI_AS|
+|Inglese (Nuova Zelanda)|0x1409|0x0409|Latin1_General_CI_AS|
+|Inglese (Filippine)|0x3409|0x0409|Latin1_General_CI_AS|
+|Inglese (Singapore)|0x4809|0x0409|Latin1_General_CI_AS|
+|Inglese (Sud Africa)|0x1c09|0x0409|Latin1_General_CI_AS|
+|Inglese (Trinidad e Tobago)|0x2c09|0x0409|Latin1_General_CI_AS|
+|Inglese (Regno Unito)|0x0809|0x0409|Latin1_General_CI_AS|
+|Inglese (Stati Uniti)|0x0409|0x0409|SQL_Latin1_General_CP1_CI_AS|
+|Inglese (Zimbabwe)|0x3009|0x0409|Latin1_General_CI_AS|
+|Estone (Estonia)|0x0425|0x0425|Estonian_CI_AS|
+|Faroese (Fær Øer)|0x0438|0x0409|Latin1_General_CI_AS|
+|Filippino (Filippine)|0x0464|0x0409|Latin1_General_CI_AS|
+|Finlandese (Finlandia)|0x040b|0x040b|Finnish_Swedish_CI_AS|
+|Francese (Belgio)|0x080c|0x040c|French_CI_AS|
+|Francese (Canada)|0x0c0c|0x040c|French_CI_AS|
+|Francese (Francia)|0x040c|0x040c|French_CI_AS|
+|Francese (Lussemburgo)|0x140c|0x040c|French_CI_AS|
+|Francese (Monaco)|0x180c|0x040c|French_CI_AS|
+|Francese (Svizzera)|0x100c|0x040c|French_CI_AS|
+|Frisone (Paesi Bassi)|0x0462|0x0462|Latin1_General_CI_AI|
+|Galiziano (Spagna)|0x0456|0x0409|Latin1_General_CI_AS|
+|Georgiano (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
+|Georgiano (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
+|Tedesco - ordinamento alfabetico telefonico (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
+|Tedesco (Austria)|0x0c07|0x0409|Latin1_General_CI_AS|
+|Tedesco (Germania)|0x0407|0x0409|Latin1_General_CI_AS|
+|Tedesco (Liechtenstein)|0x1407|0x0409|Latin1_General_CI_AS|
+|Tedesco (Lussemburgo)|0x1007|0x0409|Latin1_General_CI_AS|
+|Tedesco (Svizzera)|0x0807|0x0409|Latin1_General_CI_AS|
+|Greco (Grecia)|0x0408|0x0408|Greek_CI_AS|
+|Groenlandese (Groenlandia)|0x046f|0x0406|Danish_Norwegian_CI_AS|
+|Gujarati (India)|0x0447|0x0439|Non disponibile a livello di server|
+|Hausa (Nigeria, alfabeto latino)|0x0468|0x0409|Latin1_General_CI_AS|
+|Ebraico (Israele)|0x040d|0x040d|Hebrew_CI_AS|
+|Hindi (India)|0x0439|0x0439|Non disponibile a livello di server|
+|Ungherese (Ungheria)|0x040e|0x040e|Hungarian_CI_AS|
+|Ungherese (ordinamento tecnico)|0x1040e|0x1040e|Hungarian_Technical_CI_AS|
+|Islandese (Islanda)|0x040f|0x040f|Icelandic_CI_AS|
+|Igbo (Nigeria)|0x0470|0x0409|Latin1_General_CI_AS|
+|Indonesiano (Indonesia)|0x0421|0x0409|Latin1_General_CI_AS|
+|Inuktitut (Canada, alfabeto latino)|0x085d|0x0409|Latin1_General_CI_AS|
+|Inuktitut (alfabeto sillabico) Canada|0x045d|0x045d|Latin1_General_CI_AI|
+|Irlandese (Irlanda)|0x083c|0x0409|Latin1_General_CI_AS|
+|Italiano (Italia)|0x0410|0x0409|Latin1_General_CI_AS|
+|Italiano (Svizzera)|0x0810|0x0409|Latin1_General_CI_AS|
+|Giapponese (Giappone XJIS)|0x0411|0x0411|Japanese_CI_AS|
+|Giapponese (Giappone)|0x040411|0x40411|Latin1_General_CI_AI|
+|Kannada (India)|0x044b|0x0439|Non disponibile a livello di server|
+|Kazako (Kazakhstan)|0x043f|0x043f|Kazakh_90_CI_AS|
+|Khmer (Cambogia)|0x0453|0x0453|Non disponibile a livello di server|
+|Quiché (Guatemala)|0x0486|0x0c0a|Modern_Spanish_CI_AS|
+|Kinyarwanda (Ruanda)|0x0487|0x0409|Latin1_General_CI_AS|
+|Konkani (India)|0x0457|0x0439|Non disponibile a livello di server|
+|Coreano (ordinamento dizionario coreano)|0x0412|0x0412|Korean_Wansung_CI_AS|
+|Kirghiso (Kirghizistan)|0x0440|0x0419|Cyrillic_General_CI_AS|
+|Lao (Repubblica popolare democratica del Laos)|0x0454|0x0454|Non disponibile a livello di server|
+|Lettone (Lettonia)|0x0426|0x0426|Latvian_CI_AS|
+|Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
+|Basso sorabo (Germania)|0x082e|0x0409|Latin1_General_CI_AS|
+|Lussemburghese (Lussemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
+|Macedone (Macedonia, Ex Repubblica Jugoslava di Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Malese (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
+|Malese (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
+|Malayalam (India)|0x044c|0x0439|Non disponibile a livello di server|
+|Maltese (Malta)|0x043a|0x043a|Latin1_General_CI_AI|
+|Maori (Nuova Zelanda)|0x0481|0x0481|Latin1_General_CI_AI|
+|Mapudungun (Cile)|0x047a|0x047a|Latin1_General_CI_AI|
+|Marathi (India)|0x044e|0x0439|Non disponibile a livello di server|
+|Mohawk (Canada)|0x047c|0x047c|Latin1_General_CI_AI|
+|Mongolo (Mongolia)|0x0450|0x0419|Cyrillic_General_CI_AS|
+|Mongolo (RPC)|0x0850|0x0419|Cyrillic_General_CI_AS|
+|Nepalese (Nepal)|0x0461|0x0461|Non disponibile a livello di server|
+|Norvegese (Bokmål, Norvegia)|0x0414|0x0414|Latin1_General_CI_AI|
+|Norvegese (Nynorsk, Norvegia)|0x0814|0x0414|Latin1_General_CI_AI|
+|Occitano (Francia)|0x0482|0x040c|French_CI_AS|
+|Oriya (India)|0x0448|0x0439|Non disponibile a livello di server|
+|Pashto (Afghanistan)|0x0463|0x0463|Non disponibile a livello di server|
+|Persiano (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
+|Polacco (Polonia)|0x0415|0x0415|Polish_CI_AS|
+|Portoghese (Brasile)|0x0416|0x0409|Latin1_General_CI_AS|
+|Portoghese (Portogallo)|0x0816|0x0409|Latin1_General_CI_AS|
+|Punjabi (India)|0x0446|0x0439|Non disponibile a livello di server|
+|Quechua (Bolivia)|0x046b|0x0409|Latin1_General_CI_AS|
+|Quechua (Ecuador)|0x086b|0x0409|Latin1_General_CI_AS|
+|Quechua (Perù)|0x0c6b|0x0409|Latin1_General_CI_AS|
+|Romeno (Romania)|0x0418|0x0418|Romanian_CI_AS|
+|Romancio (Svizzera)|0x0417|0x0417|Latin1_General_CI_AI|
+|Russo (Russia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sami (Inari, Finlandia)|0x243b|0x083b|Latin1_General_CI_AI|
+|Sami (Lule, Norvegia)|0x103b|0x043b|Latin1_General_CI_AI|
+|Sami (Lule, Svezia)|0x143b|0x083b|Latin1_General_CI_AI|
+|Sami (settentrionale, Finlandia)|0x0c3b|0x083b|Latin1_General_CI_AI|
+|Sami (settentrionale, Norvegia)|0x043b|0x043b|Latin1_General_CI_AI|
+|Sami (settentrionale, Svezia)|0x083b|0x083b|Latin1_General_CI_AI|
+|Sami (Skolt, Finlandia)|0x203b|0x083b|Latin1_General_CI_AI|
+|Sami (meridionale, Norvegia)|0x183b|0x043b|Latin1_General_CI_AI|
+|Sami (meridionale, Svezia)|0x1c3b|0x083b|Latin1_General_CI_AI|
+|Sanscrito (India)|0x044f|0x0439|Non disponibile a livello di server|
+|Serbo (Bosnia ed Erzegovina, alfabeto cirillico)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
+|Serbo (Bosnia ed Erzegovina, alfabeto latino)|0x181a|0x081a|Latin1_General_CI_AI|
+|Serbo (Serbia, alfabeto cirillico)|0x0c1a|0x0c1a|Latin1_General_CI_AI|
+|Serbo (Serbia, alfabeto latino)|0x081a|0x081a|Latin1_General_CI_AI|
+|Sotho del nord/Sotho settentrionale (Sudafrica)|0x046c|0x0409|Latin1_General_CI_AS|
+|SeTswana/Tswana (Sudafrica)|0x0432|0x0409|Latin1_General_CI_AS|
+|Singalese (Sri Lanka)|0x045b|0x0439|Non disponibile a livello di server|
+|Slovacco (Slovacchia)|0x041b|0x041b|Slovak_CI_AS|
+|Sloveno (Slovenia)|0x0424|0x0424|Slovenian_CI_AS|
+|Spagnolo (Argentina)|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Bolivia)|0x400a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Cile)|0x340a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Colombia)|0x240a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Costa Rica)|0x140a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Repubblica Dominicana)|0x1c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Ecuador)|0x300a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (El Salvador)|0x440a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Guatemala)|0x100a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Honduras)|0x480a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Messico)|0x080a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Nicaragua)|0x4c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Panama)|0x180a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Paraguay)|0x3c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Perù)|0x280a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Porto Rico)|0x500a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Spagna)|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Spagna, ordinamento tradizionale)|0x040a|0x040a|Traditional_Spanish_CI_AS|
+|Spagnolo (Stati Uniti)|0x540a|0x0409|Latin1_General_CI_AS|
+|Spagnolo (Uruguay)|0x380a|0x0c0a|Modern_Spanish_CI_AS|
+|Spagnolo (Venezuela)|0x200a|0x0c0a|Modern_Spanish_CI_AS|
+|Swahili (Kenya)|0x0441|0x0409|Latin1_General_CI_AS|
+|Svedese (Finlandia)|0x081d|0x040b|Finnish_Swedish_CI_AS|
+|Svedese (Svezia)|0x041d|0x040b|Finnish_Swedish_CI_AS|
+|Siriano (Siria)|0x045a|0x045a|Non disponibile a livello di server|
+|Tagico (Tajikistan)|0x0428|0x0419|Cyrillic_General_CI_AS|
+|Tamazight (Algeria, alfabeto latino)|0x085f|0x085f|Latin1_General_CI_AI|
+|Tamil (India)|0x0449|0x0439|Non disponibile a livello di server|
+|Tartaro (Russia)|0x0444|0x0444|Cyrillic_General_CI_AS|
+|Telugu (India)|0x044a|0x0439|Non disponibile a livello di server|
+|Thai (Thailandia)|0x041e|0x041e|Thai_CI_AS|
+|Tibetano (RPC)|0x0451|0x0451|Non disponibile a livello di server|
+|Turco (Turchia)|0x041f|0x041f|Turkish_CI_AS|
+|Turcomanno (Turkmenistan)|0x0442|0x0442|Latin1_General_CI_AI|
+|Uiguro (RPC)|0x0480|0x0480|Latin1_General_CI_AI|
+|Ucraino (Ucraina)|0x0422|0x0422|Ukrainian_CI_AS|
+|Alto sorabo (Germania)|0x042e|0x042e|Latin1_General_CI_AI|
+|Urdu (Pakistan)|0x0420|0x0420|Latin1_General_CI_AI|
+|Uzbeco (Uzbekistan, alfabeto cirillico)|0x0843|0x0419|Cyrillic_General_CI_AS|
+|Uzbeco (Uzbekistan, alfabeto latino)|0x0443|0x0443|Uzbek_Latin_90_CI_AS|
+|Vietnamita (Vietnam)|0x042a|0x042a|Vietnamese_CI_AS|
+|Gallese (Regno Unito)|0x0452|0x0452|Latin1_General_CI_AI|
+|Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
+|Xhosa/isiXhosa (Sudafrica)|0x0434|0x0409|Latin1_General_CI_AS|
+|Jakuto (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
+|Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
+|Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
+|Zulu/isiZulu (Sudafrica)|0x0435|0x0409|Latin1_General_CI_AS|
+
+> [!NOTE]
+> Non è possibile selezionare regole di confronto solo Unicode durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], perché non sono supportate come regole di confronto a livello server.    
     
 Una volta che le regole di confronto sono state assegnate al server, non è possibile modificarle se non esportando tutti i dati e gli oggetti di database, ricostruendo il database **master** e importando tutti i dati e gli oggetti di database. Anziché modificare le regole di confronto predefinite di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare quelle desiderate al momento della creazione di nuovi database o colonne di database.    
+
+Per eseguire una query sulle regole di confronto del server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la funzione `SERVERPROPERTY`:
+
+```sql
+SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
+```
+
+Per eseguire una query sul server per tutte le regole di confronto disponibili, usare la funzione predefinita `fn_helpcollations()` seguente:
+
+```sql
+SELECT * FROM sys.fn_helpcollations();
+```
     
-#### <a name="database-level-collations"></a>Regole di confronto a livello di database    
+#### <a name="Database-level-collations"></a> Regole di confronto a livello di database    
 Quando viene creato o modificato un database, è possibile usare la clausola COLLATE dell'istruzione CREATE DATABASE o ALTER DATABASE per specificare regole di confronto predefinite del database. Se non viene specificata alcuna regola di confronto, al database vengono assegnate le regole di confronto del server.    
     
 Non è possibile modificare le regole di confronto del database di sistema se non modificandole per il server.    
@@ -109,11 +402,31 @@ Le regole di confronto del database vengono usate per tutti i metadati nel datab
 > [!NOTE]
 > Le regole di confronto non possono essere modificate dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
+È possibile modificare le regole di confronto di un database utente usando un'istruzione `ALTER DATABASE` simile alla seguente:
 
-#### <a name="column-level-collations"></a>Regole di confronto a livello di colonna    
+```sql
+ALTER DATABASE myDB COLLATE Greek_CS_AI;
+```
+
+> [!IMPORTANT]
+> Le modifiche apportate alle regole di confronto a livello di database non influiscono sulle regole di confronto a livello di colonna o di espressione.
+
+È possibile recuperare le regole di confronto correnti di un database usando un'istruzione simile alla seguente:
+
+```sql
+SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
+```
+
+#### <a name="Column-level-collations"></a> Regole di confronto a livello di colonna    
 Quando una tabella viene creata o modificata, è possibile specificare regole di confronto per ciascuna colonna di stringhe di caratteri utilizzando la clausola COLLATE. Se non si specificano regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.    
+
+È possibile modificare le regole di confronto di una colonna usando un'istruzione `ALTER TABLE` simile alla seguente:
+
+```sql
+ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
+```
     
-#### <a name="expression-level-collations"></a>Regole di confronto a livello di espressione    
+#### <a name="Expression-level-collations"></a> Regole di confronto a livello di espressione    
 Le regole di confronto a livello di espressione vengono impostate al momento dell'esecuzione di un'istruzione e interessano la modalità di restituzione di un set di risultati. In questo modo i risultati dell'ordinamento ORDER BY possono essere specifici delle impostazioni locali. Per implementare regole di confronto a livello di espressione, usare una clausola COLLATE simile alla seguente:    
     
 ```sql    
@@ -130,24 +443,40 @@ Le impostazioni locali rappresentano un set di informazioni associate a un paese
  L'ordinamento specifica il modo in cui vengono ordinati i valori dei dati. e influisce sui risultati del confronto dei dati stessi. I dati vengono ordinati tramite regole di confronto e possono essere ottimizzati tramite indici.    
     
 ##  <a name="Unicode_Defn"></a> Supporto Unicode    
-Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. 
-   
-Le tabelle codici usate da un client vengono determinate in base alle impostazioni del sistema operativo. Per impostare le tabelle codici del client nel sistema operativo Windows usare l'opzione **Impostazioni internazionali** del Pannello di controllo.    
+Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse.
 
-Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
-   
-Quando si spostano dati da un server a un client, le regole di confronto del server potrebbero non essere riconosciute dai driver client meno recenti. Questa situazione può verificarsi quando si spostano dati da un server Unicode a un client non Unicode. La migliore opzione potrebbe consistere nell'aggiornare il sistema operativo client affinché vengano aggiornate le regole di confronto del sistema sottostanti. Se nel client è installato il software client del database, è possibile applicare un aggiornamento dei servizi a tale software.    
-    
-> [!TIP]
-> È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
+### <a name="unicode-basics"></a>Nozioni fondamentali su Unicode
+L'archiviazione di dati in lingue diverse all'interno di un singolo database presenta difficoltà di gestione se si usano solo tabelle codici e dati di tipo carattere. È anche difficile trovare una singola tabella codici per il database che contenga tutti i caratteri necessari specifici della lingua. È inoltre difficile garantire che i caratteri speciali letti o aggiornati da client diversi che eseguono tabelle codici diverse vengano convertiti correttamente. È consigliabile che i database che supportano client internazionali usino sempre tipi di dati Unicode invece di tipi di dati non Unicode.
 
+Si consideri, ad esempio, un database di clienti dell'America del Nord per cui è necessario gestire tre lingue principali:
+
+-  Nomi e indirizzi in spagnolo per il Messico
+-  Nomi e indirizzi in francese per il Quebec
+-  Nomi e indirizzi in inglese per il resto del Canada e gli Stati Uniti
+
+Se si usano solo tabelle codici e colonne di tipo carattere, è necessario verificare che il database sia installato con una tabella codici in grado di gestire i caratteri delle tre lingue. È anche necessario garantire che i caratteri di una delle lingue letti dai client che eseguono una tabella codici di un'altra lingua vengano convertiti correttamente.
+   
+> [!NOTE]
+> Le tabelle codici usate da un client vengono determinate in base alle impostazioni del sistema operativo. Per impostare le tabelle codici del client nel sistema operativo Windows usare l'opzione **Impostazioni internazionali** del Pannello di controllo.    
+
+È difficile selezionare una tabella codici per i dati di tipo carattere in grado di supportare tutti i caratteri necessari per gli utenti di tutto il mondo.
+Il modo più semplice per gestire dati di tipo carattere in database internazionali consiste nell'usare sempre un tipo di dati che supporta Unicode. 
+
+### <a name="unicode-data-types"></a>Tipi di dati Unicode
 Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), usare tipi di dati Unicode (**nchar**, **nvarchar** e **ntext**) anziché tipi di dati non Unicode (**char**, **varchar** e **text**). 
 
 > [!NOTE]
 > Per i tipi di dati Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può rappresentare un massimo di 65.535 caratteri con UCS-2 o l'intera gamma Unicode (1.114.111 caratteri), se vengono usati caratteri supplementari. Per altre informazioni sull'abilitazione dei caratteri supplementari, vedere [Caratteri supplementari](#Supplementary_Characters).
 
 In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8), i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode (UTF-16) esistenti in precedenza (**nchar**, **nvarchar** e **ntext**). Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
-       
+
+### <a name="unicode-considerations"></a>Considerazioni su Unicode
+Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
+
+Quando si spostano dati da un server a un client, le regole di confronto del server potrebbero non essere riconosciute dai driver client meno recenti. Questa situazione può verificarsi quando si spostano dati da un server Unicode a un client non Unicode. La migliore opzione potrebbe consistere nell'aggiornare il sistema operativo client affinché vengano aggiornate le regole di confronto del sistema sottostanti. Se nel client è installato il software client del database, è possibile applicare un aggiornamento dei servizi a tale software.    
+    
+> [!TIP]
+> È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
 Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
  
 Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
@@ -163,10 +492,10 @@ Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019]
 -   Il flag UTF8 non può essere applicato a:    
     -   Regole di confronto versione 90 che non supportano caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS)    
     -   Regole di confronto binarie BIN o BIN2<sup>2</sup>    
-    -   Regole di confronto di SQL \*  
+    -   Regole di confronto di SQL\_*  
     
-<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 le regole di confronto UTF8_BIN2 sono state sostituite da Latin1_General_100_BIN2_UTF8.     
-<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
+<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 le regole di confronto **UTF8_BIN2** sono state sostituite con **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
     
 Per valutare i problemi relativi all'utilizzo di tipi di dati Unicode o non Unicode, è necessario eseguire il test dello scenario per verificare le differenze di prestazioni nell'ambiente specifico. È consigliabile standardizzare le regole di confronto usate nei sistemi presenti nell'ambito dell'organizzazione, quindi distribuire server e client Unicode laddove possibile.    
     
@@ -226,7 +555,12 @@ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per
 |[Carattere jolly per corrispondenze di singoli caratteri](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Carattere jolly per la mancata corrispondenza dei caratteri](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Sono supportati caratteri supplementari per tutte le operazioni con caratteri jolly.|Non sono supportati caratteri supplementari per queste operazioni con caratteri jolly. Sono supportati altri operatori jolly.|    
     
 ## <a name="GB18030"></a> Supporto GB18030    
-GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, tali caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello _100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie surrogate), è possibile usare le regole di confronto SC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
+GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, tali caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. 
+
+È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello \_100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie surrogate), è possibile usare le regole di confronto SC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
+
+> [!NOTE]
+> Assicurarsi che gli strumenti client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usino il tipo di carattere Dengxian per visualizzare correttamente le stringhe contenenti caratteri con codifica GB18030.
     
 ## <a name="Complex_script"></a> Supporto di lingue con alfabeti non latini    
 In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supportata l'immissione, l'archiviazione, la modifica e la visualizzazione di lingue con alfabeti non latini. Le lingue con alfabeti non latini includono i siti seguenti:    
@@ -255,7 +589,7 @@ Queste regole di confronto sono supportate negli indici del [!INCLUDE[ssde_md](.
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> Supporto di UTF-8
-In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** and **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto con il suffisso `UTF8`. Ad esempio da `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** and **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto con il suffisso `UTF8`. Ad esempio, da **LATIN1_GENERAL_100_CI_AS_SC** a **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** e **nvarchar** consentono solo la codifica UCS-2 o UTF-16 e rimangono invariati.
 
@@ -309,7 +643,9 @@ Per altre considerazioni, vedere [Scrittura di istruzioni Transact-SQL internazi
 [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) (Procedure consigliate di SQL Server: migrazione a Unicode) - non più aggiornato   
 [Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
 [Standard Unicode](http://www.unicode.org/standard/standard.html)     
-[Supporto UTF-8 in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+[Supporto UTF-8 in OLE DB Driver per SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)      
+[Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)        
+[Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)     
 Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Introduzione al supporto di UTF-8 per SQL Server)       
     
 ## <a name="see-also"></a>Vedere anche    

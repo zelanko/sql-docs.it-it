@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009387"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149981"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -132,7 +132,11 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]
     > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e selezionare la casella di controllo **Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server** per consentire all'account di servizio del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso dell'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Usare la pagina **Configurazione server - Regole di confronto** per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Usare la pagina **Configurazione server - Regole di confronto** per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
+
+   L'impostazione di installazione predefinita è determinata dalle impostazioni locali del sistema operativo. Le regole di confronto a livello di server possono essere modificate durante l'installazione oppure modificando le impostazioni locali del sistema operativo prima dell'installazione. Le regole di confronto predefinite sono impostate sulla versione disponibile meno recente associata a impostazioni locali specifiche. Questa impostazione ha lo scopo di mantenere la compatibilità con le versioni precedenti. Non sempre, quindi, si tratta delle regole di confronto consigliate. Per sfruttare tutti i vantaggi delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modificare le impostazioni di installazione predefinite per usare le regole di confronto di Windows. Ad esempio, per le impostazioni locali del sistema operativo **Inglese (Stati Uniti)** (tabella codici 1252), le regole di confronto predefinite durante l'installazione sono impostate su **SQL_Latin1_General_CP1_CI_AS** ed è possibile modificare l'impostazione scegliendo la controparte di Windows più simile **Latin1_General_100_CI_AS_SC**.
+
+   Per altre informazioni, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Usare la pagina **Configurazione del motore di database - Configurazione del server** per specificare le opzioni seguenti:  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075209"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174290"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  Restituisce l'ultima riga nel cursore, che diventa la riga corrente.  
   
- ABSOLUTE { *n*| @*nvar*}  
- Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se*n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0 non vengono restituite righe. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ Se *n* o \@*nvar* è un valore positivo, restituisce la riga che si trova a *n* righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o \@*nvar* è un valore negativo, restituisce la riga che si trova *n* righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o \@*nvar* è 0, non vengono restituite righe. *n* deve essere una costante di tipo integer e \@*nvar* deve essere di tipo **smallint**, **tinyint** o **int**.  
   
- RELATIVE { *n*| @*nvar*}  
- Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe successive alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe precedenti alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0, restituisce la riga corrente. Se si specifica `FETCH RELATIVE` con *n* o *@nvar* impostato su numeri negativi o su 0 per la prima operazione di recupero eseguita in un cursore, non viene restituita alcuna riga. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
+ RELATIVE { *n*| \@*nvar*}  
+ Se *n* o \@*nvar* è un valore positivo, restituisce la riga che si trova *n* righe oltre la riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o \@*nvar* è un valore negativo, restituisce la riga che si trova *n* righe prima della riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o \@*nvar* è 0, restituisce la riga corrente. Se si specifica `FETCH RELATIVE` con *n* o \@*nvar* impostato su un numero negativo o su 0 per la prima operazione di recupero eseguita in un cursore, non viene restituita alcuna riga. *n* deve essere una costante di tipo integer e \@*nvar* deve essere di tipo **smallint**, **tinyint** o **int**.  
   
  GLOBAL  
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
