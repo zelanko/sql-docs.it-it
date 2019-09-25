@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874397"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016871"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
@@ -24,10 +24,10 @@ Scaricare e installare la versione più recente per .NET Framework e le anteprim
 
 |Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
 |:---|:---|:---|:---|:---|
-|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 settembre 2019|18,3|15.0.4532.1|
-|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|6 settembre 2019| 18,3|15.0.4532.1|
-|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|6 settembre 2019| 18,3|15.0.4532.1|
-|Windows .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|6 settembre 2019| 18,3|15.0.4532.1|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 settembre 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|13 settembre 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|13 settembre 2019| 18.3.1|15.0.4538.1|
+|Windows .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|13 settembre 2019| 18.3.1|15.0.4538.1|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md).
 
@@ -46,7 +46,7 @@ Questa versione di sqlpackage include un'esperienza di installazione Windows sta
 
 1. Scaricare [sqlpackage per Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
 2. Per estrarre il file, fare clic con il pulsante destro del mouse sul file in Esplora risorse e selezionare "Estrai tutto..." e selezionare la directory di destinazione.
-3. Aprire una nuova finestra del terminale, può effettuare il CD nel percorso in cui è stato exracted SqlPackage:
+3. Aprire una nuova finestra del terminale e un CD nel percorso in cui è stato estratto SqlPackage:
 
    **Installazione file con estensione zip:**
 

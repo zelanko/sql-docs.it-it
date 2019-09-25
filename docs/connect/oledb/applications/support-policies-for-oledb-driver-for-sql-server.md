@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0bbc3a6806ab28769bd40d16356e6ad49ceaa822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ae0e332de1d1e673cfd4fff1e288acafa4a0619
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989274"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118144"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Criteri di supporto per driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,10 @@ ms.locfileid: "67989274"
 ## <a name="supported-operating-system-versions"></a>Versioni di sistema operativo supportate  
  Nella tabella seguente sono elencati i sistemi operativi che supportano OLE DB driver per SQL Server.  
 
-|Sistemi operativi supportati|  
+| Sistemi operativi supportati |  |
 |--------------------------------------|---------------------------------|   
-|Aggiornamento + di Microsoft Windows 8.1 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)[KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [aprile 2014 aggiornamento](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
+| Aggiornamento + di Microsoft Windows 8.1 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)[KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [aprile 2014 aggiornamento](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
+
 
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  
  Le applicazioni ADO possono usare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
