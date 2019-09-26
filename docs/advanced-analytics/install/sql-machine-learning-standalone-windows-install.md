@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715843"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271947"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installare Machine Learning Server (autonomo) o R Server (autonomo) utilizzando il programma di installazione di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -132,7 +132,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 Al termine dell'installazione, vedere la pagina relativa ai [report personalizzati per R Services per SQL Server](../r/monitor-r-services-using-custom-reports-in-management-studio.md) per assistenza con eventuali errori o avvisi, vedere [domande frequenti sull'installazione e sull'aggiornamento Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 ::: moniker-end
 
-## <a name="set-environment-variables"></a>Impostare le variabili di ambiente
+## <a name="set-environment-variables"></a>Imposta variabili di ambiente
 
 Per l'integrazione della funzionalità R, è necessario impostare la variabile di ambiente **MKL_CBWR** per [garantire l'output coerente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli di Intel Math Kernel Library (MKL).
 
@@ -153,7 +153,7 @@ Per lo sviluppo di R e Python, è comune avere più versioni nello stesso comput
 
 La tabella seguente elenca i percorsi per le distribuzioni R e Python create dai programmi di installazione Microsoft. Per completezza, la tabella include i percorsi generati dal programma di installazione di SQL Server e il programma di installazione autonomo per Microsoft Machine Learning Server.
 
-|Version| Metodo di installazione | Cartella predefinita|
+|Versione| Metodo di installazione | Cartella predefinita|
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (autonomo) |  Installazione guidata di SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (autonomo) |  Programma di installazione autonomo di Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
@@ -214,9 +214,9 @@ Nell'ambito dell'installazione di non viene installato un IDE di sviluppo. Per a
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Gli sviluppatori r possono iniziare a usare alcuni semplici esempi e apprendere le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
+Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
-+ [Esercitazione: Eseguire R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Esercitazione: Eseguire R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -226,4 +226,4 @@ Gli sviluppatori Python possono apprendere come usare Python con SQL Server segu
 + [Esercitazione: Analisi nel database per sviluppatori Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-Per visualizzare esempi di machine learning basati su scenari reali, vedere Esercitazioni su [Machine Learning](../tutorials/machine-learning-services-tutorials.md).
+Per esempi di Machine Learning basati su scenari reali, vedere [Esercitazioni su Machine Learning](../tutorials/machine-learning-services-tutorials.md).

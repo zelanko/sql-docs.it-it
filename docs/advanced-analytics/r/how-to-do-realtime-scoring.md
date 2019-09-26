@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715692"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271906"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Per utilizzare un modello con una delle opzioni di Punteggio rapido, salvare il 
 
 **Uso di SQL**
 
-Dal codice SQL è possibile eseguire il training del modello usando [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserire direttamente i modelli sottoposti a training in una tabella, in una colonna di tipo **varbinary (max)** . Per un esempio semplice, vedere [creare un modello Preditive in R](../tutorials/rtsql-create-a-predictive-model-r.md)
+Dal codice SQL è possibile eseguire il training del modello usando [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserire direttamente i modelli sottoposti a training in una tabella, in una colonna di tipo **varbinary (max)** . Per un esempio semplice, vedere [creare un modello Preditive in R](../tutorials/quickstart-r-train-score-model.md)
 
 **Uso di R**
 
@@ -96,7 +96,7 @@ La serializzazione di un modello in un formato binario è utile, ma non è neces
 
 ## <a name="scoring-in-related-products"></a>Assegnazione dei punteggi nei prodotti correlati
 
-Se si utilizza il [server autonomo](r-server-standalone.md) o un [Microsoft Machine Learning server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre alle stored procedure e alle funzioni T-SQL per la generazione rapida delle stime. Sia il server autonomo che Machine Learning Server supportano il concetto di *servizio Web* per la distribuzione del codice. È possibile aggregare un modello con training preliminare R o Python come servizio Web, chiamato in fase di esecuzione per valutare i nuovi input di dati. Per altre informazioni, vedere questi articoli:
+Se si utilizza il [server autonomo](r-server-standalone.md) o un [Microsoft Machine Learning server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre alle stored procedure e alle funzioni T-SQL per la generazione rapida delle stime. Sia il server autonomo che Machine Learning Server supportano il concetto di *servizio Web* per la distribuzione del codice. È possibile aggregare un modello con training preliminare R o Python come servizio Web, chiamato in fase di esecuzione per valutare i nuovi input di dati. Per altre informazioni, vedere gli articoli seguenti:
 
 + [Che cosa sono i servizi Web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Che cos'è la operatività?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715276"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271943"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare SQL Server componenti R e Python di Machine Learning dalla riga di comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -69,7 +69,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti di Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'utilizzo di SQL Server.|
 | /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB del componente R. |
-| /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Utilizzare% TEMP% per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione Internet. |
+| /MPYCACHEDIRECTORY | Riservato per usi futuri. Utilizzare% TEMP% per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione Internet. |
 ::: moniker-end
 
 ## <a name="indb"></a>Installazioni di istanze nel database
@@ -201,9 +201,9 @@ Per verificare lo stato di installazione dell'istanza di e risolvere i problemi 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Gli sviluppatori r possono iniziare a usare alcuni semplici esempi e apprendere le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
+Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
-+ [Esercitazione: Eseguire R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Esercitazione: Eseguire R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Gli sviluppatori Python possono apprendere come usare Python con SQL Server seguendo queste esercitazioni:
@@ -211,4 +211,4 @@ Gli sviluppatori Python possono apprendere come usare Python con SQL Server segu
 + [Esercitazione: Eseguire Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Esercitazione: Analisi nel database per sviluppatori Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Per visualizzare esempi di machine learning basati su scenari reali, vedere Esercitazioni su [Machine Learning](../tutorials/machine-learning-services-tutorials.md).
+Per esempi di Machine Learning basati su scenari reali, vedere [Esercitazioni su Machine Learning](../tutorials/machine-learning-services-tutorials.md).
