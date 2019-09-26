@@ -8,12 +8,12 @@ description: Questo articolo illustra come modificare l'aspetto del portale Web 
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221712"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199411"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
@@ -27,7 +27,7 @@ ms.locfileid: "68221712"
   
 Un pacchetto del marchio per Reporting Services consiste di tre elementi e presenta la forma di un file ZIP.   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (facoltativo)  
   
