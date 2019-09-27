@@ -23,7 +23,7 @@ ms.locfileid: "70874899"
   
  In questo articolo non vengono prese in considerazione le lingue seguenti:  
   
--   **Inglese**. Per ripristinare i componenti per la lingua inglese, vedere [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglese**. Per ripristinare i componenti per la lingua inglese, vedere [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danese, polacco e turco**. I word breaker di terze parti per il danese, il polacco e il turco inclusi con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati sostituiti con i componenti [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -380,6 +380,6 @@ ms.locfileid: "70874899"
 |Nome file corrente|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Differenze di comportamento nella ricerca full-text](/sql/database-engine/behavior-changes-to-full-text-search)
  
