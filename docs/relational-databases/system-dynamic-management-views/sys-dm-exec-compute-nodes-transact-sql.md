@@ -22,30 +22,30 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 429075f01018abbe39b13f46b79a30aa95c5c2db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097858"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326141"
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene informazioni sui nodi usati con la gestione dei dati di PolyBase. Elenca una riga per ogni nodo.  
+  Include informazioni sui nodi utilizzati con la gestione dati di base. Viene elencata una riga per ogni nodo.  
   
- Utilizzare questa DMV per visualizzare l'elenco di tutti i nodi del cluster di tipo scale-out con il ruolo, nome e indirizzo IP.  
+ Usare questa DMV per visualizzare l'elenco di tutti i nodi nel cluster con scalabilità orizzontale con il ruolo, il nome e l'indirizzo IP.  
   
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|Id numerico univoco associato al nodo. Chiave per questa visualizzazione.|Deve essere univoco nel cluster di scalabilità orizzontale, indipendentemente dal tipo.|  
-|type|**nvarchar(32)**|Tipo del nodo.|'COMPUTE', 'HEAD'|  
-|name|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriato.|  
-|Address|**nvarchar(32)**|Indirizzo IP del nodo.|Intervallo di indirizzi IP|  
+|compute_node_id|**int**|ID numerico univoco associato al nodo. Chiave per questa visualizzazione.|Univoco nel cluster con scalabilità orizzontale indipendentemente dal tipo.|  
+|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' HEAD '|  
+|NAME|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
+|address|**nvarchar(32)**|Indirizzo IP del nodo.|Intervallo di indirizzi IP|  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase con DMV di risoluzione dei problemi](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Risoluzione dei problemi di polibase con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Transact-SQL delle viste &#40;a gestione dinamica relative ai database&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
