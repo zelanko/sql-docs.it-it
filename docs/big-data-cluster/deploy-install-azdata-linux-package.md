@@ -1,7 +1,7 @@
 ---
 title: Installare azdata con il programma di installazione in Linux
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come installare lo strumento azdata per l'installazione e [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] la gestione (anteprima) con il programma di installazione (Linux).
+description: Informazioni su come installare lo strumento azdata per l'installazione e la gestione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) con il programma di installazione (Linux).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,33 +9,33 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e11e4851294ac8ffd8efa66e2156dcd47bce3aa0
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 2795178cb975ecb620528c4a5dc8715b70d447fd
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160679"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342011"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Installare `azdata` per la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] gestione in Linux
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Installare `azdata` per gestire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Linux
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come installare `azdata` per la versione finale candidata di SQL Server 2019 di cluster Big data in Linux. Prima che questi gestori di pacchetti fossero disponibili, l' `azdata` installazione `pip`di richiedeva.
+Questo articolo descrive come installare `azdata` per SQL Server i cluster di Big Data 2019 per la versione finale candidata in Linux. Prima che questi gestori di pacchetti fossero disponibili, è necessario installare `azdata` `pip`.
 
 I gestori di pacchetti sono progettati per diversi sistemi operativi e distribuzioni.
 
-- Per Linux (Ubuntu), [installare `azdata` con `apt` ](#azdata-apt)
+- Per Linux (Ubuntu), [installare `azdata` con `apt`](#azdata-apt)
 
-Al momento non sono disponibili gestori di pacchetti da installare `azdata` in altri sistemi operativi o distribuzioni. Per queste piattaforme, vedere [install `azdata` without Package Manager](./deploy-install-azdata.md).
+Al momento non sono disponibili gestori di pacchetti per installare `azdata` in altri sistemi operativi o distribuzioni. Per queste piattaforme, vedere [Install `azdata` without Package Manager](./deploy-install-azdata.md).
 
 ## <a id="linux"></a>Installare `azdata` per Linux
 
-`azdata`il pacchetto di installazione è disponibile per `apt`Ubuntu con.
+il pacchetto di installazione di `azdata` è disponibile per Ubuntu con `apt`.
 
-### <a id="azdata-apt"></a>Eseguire `azdata` l'installazione con APT (Ubuntu)
+### <a id="azdata-apt"></a>Installare `azdata` con APT (Ubuntu)
 
 >[!NOTE]
->Il `azdata` pacchetto non usa Python di sistema, bensì installa il proprio interprete Python.
+>Il pacchetto `azdata` non usa Python di sistema, bensì installa il proprio interprete Python.
 
 1. Ottenere i pacchetti necessari per il processo di installazione:
 
@@ -47,16 +47,16 @@ Al momento non sono disponibili gestori di pacchetti da installare `azdata` in a
 2. Scaricare e installare la chiave di firma:
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-3. Aggiungere le `azdata` informazioni sul repository:
+3. Aggiungere le informazioni sul repository `azdata`:
 
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
     ```
 
-4. Aggiornare le informazioni sul repository `azdata`e installare:
+4. Aggiornare le informazioni sul repository e installare `azdata`:
 
     ```bash
     sudo apt-get update
@@ -69,9 +69,9 @@ Al momento non sono disponibili gestori di pacchetti da installare `azdata` in a
     azdata --version
     ```
 
-### <a name="update"></a>Aggiorna
+### <a name="update"></a>Update
 
-Solo `azdata` aggiornamento:
+Aggiorna solo `azdata`:
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
@@ -85,7 +85,7 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo apt-get remove -y azdata-cli
     ```
 
-2. Rimuovere le `azdata` informazioni sul repository:
+2. Rimuovere le informazioni del repository `azdata`:
 
     >[!NOTE]
     >Questo passaggio non è necessario se si prevede di installare `azdata` in futuro
@@ -108,4 +108,4 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui cluster di Big Data, vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster Big Data, vedere [che cosa sono [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

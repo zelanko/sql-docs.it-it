@@ -1,7 +1,7 @@
 ---
 title: Eseguire la distribuzione con uno script Bash in un cluster kubeadm a nodo singolo
 titleSuffix: SQL Server big data clusters
-description: Usare uno script di distribuzione bash per distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] un in un cluster kubeadm a nodo singolo.
+description: Usare uno script di distribuzione bash per distribuire un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in un cluster kubeadm a nodo singolo.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652349"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341844"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Eseguire la distribuzione con uno script Bash in un cluster kubeadm a nodo singolo
 
@@ -34,7 +34,7 @@ In questa esercitazione si userà uno script di distribuzione Bash di esempio pe
 - Aggiornare i pacchetti esistenti usando i comandi seguenti per assicurarsi che l'immagine del sistema operativo sia aggiornata.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ Lo script [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-serve
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per iniziare a usare i cluster di Big data, vedere [esercitazione: Caricare i dati di esempio in un cluster](tutorial-load-sample-data.md)SQL Server Big Data.
+Per iniziare a usare i cluster di Big Data, vedere [Tutorial: Caricare i dati di esempio in un cluster SQL Server Big Data @ no__t-0.
