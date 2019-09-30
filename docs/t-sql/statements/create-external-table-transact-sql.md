@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51464e85f1d9eaabb377caf851e6bdcef46a014d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391959"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227144"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -344,7 +344,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```
@@ -809,7 +809,7 @@ Questo esempio illustra come le tre opzioni REJECT interagiscono tra loro. Ad es
 REJECTED_ROW_LOCATION = *posizione della directory*
 
 Specifica la directory all'interno dell'origine dati esterna in cui vengono scritte le righe rifiutate e il file di errori corrispondente.
-Se il percorso specificato non esiste, PolyBase ne crea uno automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_" assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. Questa directory include una cartella creata in base all'ora di inoltro del carico, con il formato AnnoMeseGiorno - OraMinutoSecondo (ad esempio 20180330-173205). In questa cartella vengono scritte due tipi di file, i file _reason (file del motivo) e i file di dati.
+Se il percorso specificato non esiste, PolyBase ne crea uno automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_ " assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. Questa directory include una cartella creata in base all'ora di inoltro del carico, con il formato AnnoMeseGiorno - OraMinutoSecondo (ad esempio 20180330-173205). In questa cartella vengono scritte due tipi di file, i file _reason (file del motivo) e i file di dati.
 
 Sia i file del motivo che i file di dati hanno il queryID associato all'istruzione CTAS. Poiché i dati e il motivo si trovano in file distinti, i file corrispondenti hanno un suffisso corrispondente.
 

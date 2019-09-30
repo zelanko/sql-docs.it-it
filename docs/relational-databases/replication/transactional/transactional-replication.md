@@ -14,15 +14,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3c7d1474164741ef8380ce1904f99a05e833456
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769309"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251075"
 ---
 # <a name="transactional-replication"></a>Replica transazionale
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La replica transazionale in genere ha inizio con la creazione di uno snapshot degli oggetti e dei dati del database di pubblicazione. Dopo la creazione dello snapshot iniziale, le successive modifiche ai dati e allo schema eseguite nel server di pubblicazione vengono generalmente recapitate al Sottoscrittore nel momento in cui vengono eseguite. Le modifiche ai dati vengono applicate al Sottoscrittore nello stesso ordine e negli stessi limiti della transazione con cui vengono eseguite nel server di pubblicazione. Di conseguenza, la consistenza transazionale all'interno di una pubblicazione è garantita.  
   
  La replica transazionale viene solitamente utilizzata negli ambienti da server a server ed è appropriata ai casi seguenti:  
@@ -38,6 +38,8 @@ ms.locfileid: "68769309"
 -   Il server di pubblicazione o il Sottoscrittore è un database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ad esempio Oracle.  
   
  Per impostazione predefinita, i Sottoscrittori di pubblicazioni transazionali devono essere considerati di sola lettura poiché le modifiche non vengono trasferite al server di pubblicazione. La replica transazionale offre tuttavia opzioni che consentono aggiornamenti nel Sottoscrittore.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ##  <a name="HowWorks"></a> Funzionamento della replica transazionale  
  La replica transazionale viene implementata dall'agente snapshot, dall'agente di lettura log e dall'agente di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'agente snapshot prepara i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, archivia i file nella cartella snapshot e registra i processi di sincronizzazione nel database di distribuzione sul server di distribuzione.  

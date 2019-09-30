@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bd9eb928819d943f902d96c8d76bcc15fb24016
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70911289"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227161"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Modifica un'origine dati esterna usata per creare una tabella esterna. L'origine dati esterna può essere Hadoop o Archiviazione BLOB di Azure (WASBS) per SQL Server e Archiviazione BLOB di Azure (WASBS) o Azure Data Lake Storage (ABFSS/ADL) per Azure SQL Data Warehouse. 
 
@@ -34,7 +34,7 @@ ms.locfileid: "70911289"
 
 ```  
 -- Modify an external data source
--- Applies to: SQL Server (2016 or later)
+-- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
         LOCATION = 'server_name_or_IP' [,] |
@@ -69,7 +69,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 TYPE = [HADOOP | BLOB_STORAGE]   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Solo per le operazioni bulk, `LOCATION` deve essere l'URL valido dell'archiviazione BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`.
+Solo per le operazioni bulk, `LOCATION` deve essere l'URL valido dell'archiviazione BLOB di Azure. Non inserire **/** , nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`.
 La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   

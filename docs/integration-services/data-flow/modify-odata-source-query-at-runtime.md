@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aed5435091125200df30dadf5ff771e5965f2d94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091724"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298205"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fornire una query di origine OData in fase di esecuzione
 

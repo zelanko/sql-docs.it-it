@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149915"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251083"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ Alle regole di confronto sono associate le opzioni seguenti: distinzione tra mai
 |Punto di codice binario (\_BIN2) <sup>1</sup> | Ordina e confronta i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai punti di codice Unicode per i dati Unicode. Per i dati non Unicode, il punto di codice binario userà confronti identici agli ordinamenti binari.<br/><br/> Il vantaggio di usare un ordinamento con punto di codice binario è rappresentato dal fatto che non è necessario alcun riordinamento dei dati nelle applicazioni che confrontano i dati ordinati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, l'ordinamento con punto di codice binario consente di semplificare lo sviluppo delle applicazioni e di ottenere un possibile miglioramento delle prestazioni. Per altre informazioni, vedere la sezione [Regole di confronto binarie](#Binary-collations) in questa pagina.|
 |UTF-8 (\_UTF8)|Abilita l'archiviazione dei dati con codifica UTF-8 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione non viene selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il formato di codifica non Unicode predefinito per i tipi di dati applicabili. Per altre informazioni, vedere la sezione [Supporto di UTF-8](#utf8) in questa pagina.| 
 
-<sup>1</sup> Se si seleziona Binario o Punto di codice binario, le opzioni Distinzione maiuscole/minuscole (\_CS), Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\WS) non sono disponibili.      
+<sup>1</sup> Se si seleziona Binario o Punto di codice binario, le opzioni Distinzione maiuscole/minuscole (\_CS), Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_\WS) non sono disponibili.      
 
 #### <a name="examples-of-collation-options"></a>Esempi di opzioni per le regole di confronto
 Le regole di confronto sono costituite da una serie di suffissi che definiscono la distinzione tra lettere maiuscole e minuscole, tra caratteri accentati e non accentati, della larghezza o dei caratteri Kana. Gli esempi seguenti descrivono i tipi di ordinamento delle varie combinazioni di suffissi.
