@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100852"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295670"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
 
@@ -102,7 +102,7 @@ ms.locfileid: "68100852"
 ### <a name="progressexecution-result-tab"></a>Scheda Stato o Risultati esecuzione  
  Durante l'esecuzione di un pacchetto nella scheda **Stato** viene mostrato lo stato di esecuzione del pacchetto. Al termine dell'esecuzione i risultati rimangono disponibili nella scheda **Risultati esecuzione** .  
   
-> **NOTA:** Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** .  
+> **NOTA** Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** .  
   
 #### <a name="connection-managers-area"></a>Area Gestioni connessioni  
  Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.  

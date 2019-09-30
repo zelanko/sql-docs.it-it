@@ -16,14 +16,14 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ba2eaa75299181de8d8599ca67c53dfb85ac08e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057456"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296172"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Progetti e soluzioni di Integration Services (SSIS)
 
@@ -110,7 +110,7 @@ I pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] risied
   
 7.  Se il software per il controllo del codice sorgente è [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, verrà visualizzata la finestra di dialogo **Accesso a Visual SourceSafe**. In **Accesso a Visual SourceSafe** specificare un nome utente, una password e il nome del database di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Fare clic su **Sfoglia** per individuare il database.  
   
-    > **NOTA:** Per visualizzare e modificare il plug-in per il controllo del codice sorgente selezionato e configurare l'ambiente di controllo del codice sorgente, scegliere **Opzioni** dal menu **Strumenti** e quindi espandere il nodo **Controllo del codice sorgente**.  
+    > **NOTA** Per visualizzare e modificare il plug-in per il controllo del codice sorgente selezionato e configurare l'ambiente di controllo del codice sorgente, scegliere **Opzioni** dal menu **Strumenti** e quindi espandere il nodo **Controllo del codice sorgente**.  
   
 8.  Fare clic su **OK** per aggiungere la soluzione a **Esplora soluzioni** e aggiungere il progetto alla soluzione.  
   

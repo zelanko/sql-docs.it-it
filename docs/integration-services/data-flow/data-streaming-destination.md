@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049415"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293106"
 ---
 # <a name="data-streaming-destination"></a>Destinazione flusso di dati
 
@@ -62,7 +62,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 |Campo|Descrizione|  
 |-----------|-----------------|  
-|nome|Nome del componente Destinazione flusso di dati nel pacchetto.|  
+|Nome|Nome del componente Destinazione flusso di dati nel pacchetto.|  
 |ValidateExternalMetadata|Indica se il componente viene convalidato usando origini dati esterne in fase di progettazione. Se è impostato su false, la convalida rispetto a origini dati esterne viene posticipata fino alla fase di esecuzione.|  
 |IDColumnName|La vista generata dalla Pubblicazione guidata di feed di dati contiene questa colonna ID supplementare. La colonna ID funge da EntityKey per i dati di output del flusso di dati quando i dati vengono utilizzati come feed OData da altre applicazioni.<br /><br /> Il nome predefinito di questa colonna è _ID. È possibile specificare un nome diverso per la colonna ID.|  
   

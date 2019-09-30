@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dfab14edde8351d014714e314c500c5319a265f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057491"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296164"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
 
@@ -122,7 +122,7 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
-    |nome|Nome del parametro.|  
+    |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
@@ -153,7 +153,7 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
-    |nome|Nome del parametro.|  
+    |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  

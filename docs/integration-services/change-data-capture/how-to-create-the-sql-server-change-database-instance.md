@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3e31e6b619e652f0802258f5bad6f2c6e7e1c8a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e71c9a5c8dcb45346c3111a924770321c1008cb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100876"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298728"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Procedura di creazione dell'istanza del database delle modifiche di SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "68100876"
   
 4.  Nel riquadro **Actions** posto sul lato destro di CDC Designer Console selezionare **New Oracle CDC Instance**.  
   
-     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio in cui si desidera creare la nuova istanza di CDC e selezionare **New Oracle CDC Instance (Nuova istanza di Oracle CDC)**.  
+     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio in cui si desidera creare la nuova istanza di CDC e selezionare **New Oracle CDC Instance (Nuova istanza di Oracle CDC)** .  
   
 5.  Immettere le informazioni necessarie nella New Instance Wizard per creare la nuova istanza. Per informazioni sulle informazioni necessarie per questa procedura guidata, vedere [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   

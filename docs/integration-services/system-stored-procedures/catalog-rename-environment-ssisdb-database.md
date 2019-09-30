@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2db5b171f0f853383c2bae99202c511151c38d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007227"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295393"
 ---
-# <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (database SSISDB)
+# <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (database SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,13 +36,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)**.  
+ Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

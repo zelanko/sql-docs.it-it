@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d50cef16424f5524429c6b4285af0ae8568391be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: de1e0cddcee34685e5921b7cc31837a301f44166
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038704"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295336"
 ---
-# <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB Database)
+# <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB Database)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -39,10 +39,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  Identificatore univoco del riferimento all'ambiente che deve essere aggiornato. *reference_id* è di tipo **bigint**.  
   
  [ @reference_type = ] *reference_type*  
- Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. *reference_type* è di tipo **char(1)**.  
+ Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. *reference_type* è di tipo **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Cartella in cui viene individuato l'ambiente. Questo valore è richiesto per i riferimenti assoluti. *environment_folder_name* è di tipo **nvarchar(128)**.  
+ Cartella in cui viene individuato l'ambiente. Questo valore è richiesto per i riferimenti assoluti. *environment_folder_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

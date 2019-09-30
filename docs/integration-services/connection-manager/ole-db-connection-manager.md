@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1a7c3d0e1648bb2c05e20c78ed293e33a34fe47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155169"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294380"
 ---
 # <a name="ole-db-connection-manager"></a>Gestione connessione OLE DB
 
@@ -90,7 +90,7 @@ Usare la finestra di dialogo **Configura gestione connessione OLE DB** per aggiu
 Quando si eseguono pacchetti SSIS in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), usare l'[identità gestita](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure (o istanza gestita). La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
 
 > [!NOTE]
->  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure (o istanza gestita), si potrebbe ricevere un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure (o istanza gestita), si potrebbe verificare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Per usare l'autenticazione identità gestita per il database SQL di Azure, seguire questa procedura per configurare il database:
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f7298cbcb3152d0bfaff2b0cc287ca6db2d332a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049635"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298604"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
 
@@ -75,7 +75,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Se viene utilizzato un algoritmo diverso, è possibile eliminare questa chiave e crearne una nuova con lo stesso nome e crittografata con la stessa password.  
   
- La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>**. Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
+ La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>** . Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
   
  Per utilizzare la clausola ENCRYPTION BY PASSWORD, è necessario che la password soddisfi i criteri password Windows per il computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tale scopo, selezionare la password della chiave asimmetrica in base a questi criteri.  
   

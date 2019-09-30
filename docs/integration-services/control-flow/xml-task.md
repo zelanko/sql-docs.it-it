@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5eeba11501703a9c64c3e883b87899c7262ececa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057743"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293657"
 ---
 # <a name="xml-task"></a>Attività XML
 
@@ -170,7 +170,7 @@ ms.locfileid: "68057743"
  **Origine**  
  Se l'opzione **Origine** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se l'opzione **Origine** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se l'opzione **Origine** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -231,11 +231,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -249,11 +249,11 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -277,11 +277,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -295,11 +295,11 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -323,11 +323,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -358,11 +358,11 @@ ms.locfileid: "68057743"
  **XPathStringSource**  
  Se la proprietà **XPathStringSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **XPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **XPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -375,11 +375,11 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -403,11 +403,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -450,11 +450,11 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -478,11 +478,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -496,11 +496,11 @@ ms.locfileid: "68057743"
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
  **Destinazione**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -524,11 +524,11 @@ ms.locfileid: "68057743"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...** > per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941466"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292420"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941466"
 ### <a name="converting-datetime-data-types"></a>Conversione dei tipi di dati di data e ora  
  È possibile modificare il tipo di dati di una colonna contenente informazioni di data e ora in modo da estrarre la parte di dati relativa alla data o all'ora. Nella tabella seguente sono illustrati i risultati della conversione da un tipo di dati di data e ora a un altro tipo di dati di data e ora.  
   
-#### <a name="converting-from-dtfiletime"></a>Conversione da DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Conversione da DT_FILETIME  
   
 |Conversione di DT_FILETIME in|Risultato|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Conversione da DT_DATE  
+#### <a name="converting-from-dt_date"></a>Conversione da DT_DATE  
   
 |Conversione di DT_DATE in|Risultato|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Conversione del tipo di dati.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### <a name="converting-from-dtdbdate"></a>Conversione da DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Conversione da DT_DBDATE  
   
 |Conversione di DT_DBDATE in|Risultato|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Impostazione dei campi dell'ora nel tipo di dati DT_DBTIMESTAMP su zero.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione dei campi dell'ora e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### <a name="converting-from-dtdbtime"></a>Conversione da DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Conversione da DT_DBTIME  
   
 |Conversione di DT_DBTIME in|Risultato|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Conversione da DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Conversione da DT_DBTIME2  
   
 |Conversione di DT_DBTIME2 in|Risultato|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Conversione da DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Conversione da DT_DBTIMESTAMP  
   
 |Conversione di DT_DBTIMESTAMP in|Risultato|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Conversione da DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Conversione da DT_DBTIMESTAMP2  
   
 |Conversione di DT_DBTIMESTAMP2 in|Risultato|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941466"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 di destinazione può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Conversione da DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Conversione da DT_DBTIMESTAMPOFFSET  
   
 |Conversione di DT_DBTIMESTAMPOFFSET in|Risultato|  
 |--------------------------------------|------------|  
