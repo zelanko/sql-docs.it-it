@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43348955140600ca174781beed4adc1089ee5add
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155188"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294493"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
 
@@ -129,7 +129,7 @@ Per usare l'autenticazione identità gestita per Istanza gestita di database SQL
     select CAST(@applicationId AS varbinary)
     ```
 
-1. Aggiungere l'identità gestita delle data factory come utente in Istanza gestita di database SQL di Azure. Eseguire il codice T-SQL seguente nel database **master**:
+1. Aggiungere l'identità gestita della data factory come utente in Istanza gestita di database SQL di Azure. Eseguire il codice T-SQL seguente nel database **master**:
     
     ```sql
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
@@ -146,7 +146,7 @@ Infine configurare l'autenticazione identità gestita per la gestione connession
     
 - **Configurare in fase di progettazione.** In Progettazione SSIS fare clic con il pulsante destro del mouse sulla gestione connessione ADO.NET e selezionare **Proprietà**. Aggiornare la proprietà `ConnectUsingManagedIdentity` impostandola su `True`.
     > [!NOTE]
-    >  Attualmente la proprietà di gestione connessione `ConnectUsingManagedIdentity`NON ha effetto (ovvero l'autenticazione identità gestita non funziona) quando il pacchetto SSIS viene eseguito in Progettazione SSIS o [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
+    >  Attualmente la proprietà di gestione connessione `ConnectUsingManagedIdentity`non ha effetto, ovvero l'autenticazione identità gestita non funziona, quando il pacchetto SSIS viene eseguito in Progettazione SSIS o [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
     
 - **Configurare in fase di esecuzione.** Quando il pacchetto viene eseguito tramite [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) o l'[attività Esegui pacchetto SSIS di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), individuare la gestione connessione ADO.NET. Aggiornarne la proprietà `ConnectUsingManagedIdentity` impostandola su `True`.
     > [!NOTE]

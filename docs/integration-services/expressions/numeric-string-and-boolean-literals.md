@@ -15,14 +15,14 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1e24da5c7cf22cd0f192d29a063e2aa7d20746cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968059"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297459"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Valori letterali numerici, stringa e booleani
 
@@ -116,6 +116,6 @@ ms.locfileid: "67968059"
 ## <a name="boolean-literals"></a>Valori letterali booleani  
  L'analizzatore di espressioni supporta i valori letterali booleani soliti: **True** e **False**. L'analizzatore di espressioni non fa distinzione tra maiuscole e minuscole ed è pertanto possibile utilizzare qualsiasi combinazione di maiuscole e minuscole. Ad esempio, è possibile utilizzare indifferentemente TRUE o True.  
   
-> **NOTA:** Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
+> **NOTA** Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
   

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7871b8225e6574067befb3ab8a90af1875410def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110386"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295568"
 ---
-# <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (database SSISDB)
+# <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (database SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,13 +36,13 @@ catalog.create_environment [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [@folder_name =] *folder_name*  
- Nome della cartella in cui sarà contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui sarà contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
- Descrizione dell'ambiente (facoltativa). *environment_description* è di tipo **nvarchar(1024)**.  
+ Descrizione dell'ambiente (facoltativa). *environment_description* è di tipo **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
