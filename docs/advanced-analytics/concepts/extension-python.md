@@ -3,17 +3,17 @@ title: Estensione del linguaggio di programmazione Python
 description: Informazioni sull'esecuzione di codice Python e sulle librerie Python predefinite in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715876"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688286"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Estensione del linguaggio Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +92,11 @@ Nel diagramma seguente viene riepilogato il flusso di lavoro complessivo quando 
 8. SQL satellite gestisce la comunicazione con SQL Server e la pulizia di oggetti processo correlati.
 9. SQL Server passa nuovamente i risultati al client.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="next-steps"></a>Passaggi successivi
 
 + [modulo revoscalepy in SQL Server](../python/ref-py-revoscalepy.md)
 + [riferimento alla funzione revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Framework di estendibilità in SQL Server](extensibility-framework.md)
 + [Estensioni R e Machine Learning in SQL Server](extension-r.md)
++ [Ottenere informazioni sul pacchetto python](../package-management/python-package-information.md)
++ [Installare pacchetti Python con sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745448"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682038"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per i servizi e le risorse del cluster
 
@@ -576,7 +576,7 @@ Per disabilitare il contenitore che esegue ElasticSearch per l'esecuzione in mod
 }
 ```
 
-È possibile manualmente modificare il file **Control. JSON** e aggiungere la sezione precedente alla **specifica**. in alternativa, è possibile creare un file di patch **elasticsearch-patch. JSON** come riportato di seguito e usare l'interfaccia della riga di comando di **azdata** per applicare patch al file **config. JSON** :
+È possibile manualmente modificare il file **Control. JSON** e aggiungere la sezione precedente alla **specifica**. in alternativa, è possibile creare un file di patch **elasticsearch-patch. JSON** come riportato di seguito e usare l'interfaccia della riga di comando di **azdata** per applicare patch al file **Control. JSON** :
 
 ```json
 {
