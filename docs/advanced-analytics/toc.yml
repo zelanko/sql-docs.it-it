@@ -255,28 +255,26 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: Amministrazione
       items:
-        - name: Gestire l'integrazione
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
         - name: Monitoraggio
           items:
             - name: Monitorare con i report SSMS
-              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: Monitorare l'uso di DMV
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
             - name: Eventi estesi
               items:
-                - name: Eventi estesi
-                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-                - name: Eventi estesi PREDICT T-SQL
-                  href: ../advanced-analytics/xe-event-predict-tsql.md
+                - name: Eseguire il monitoraggio usando gli eventi estesi
+                  href: ../advanced-analytics/administration/extended-events.md
+                - name: Eseguire il monitoraggio di PREDICT T-SQL
+                  href: ../advanced-analytics/administration/extended-events-predict-tsql.md
         - name: Esecuzione dello script di scalabilità
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
+          href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
         - name: Resource Governor
           items:
             - name: Usare Resource Governor
-              href: ../advanced-analytics/administration/resource-governance.md
+              href: ../advanced-analytics/administration/resource-governor.md
             - name: Creare un pool di risorse
-              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+              href: ../advanced-analytics/administration/create-external-resource-pool.md
     - name: Security
       items:
         - name: Concedere autorizzazioni agli utenti
