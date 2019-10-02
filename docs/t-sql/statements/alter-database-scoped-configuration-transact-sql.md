@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065854"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227183"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -44,8 +44,9 @@ Questa istruzione abilita diverse impostazioni di configurazione del database a 
 - Abilitare o disabilitare la raccolta di statistiche di esecuzione per i moduli T-SQL compilati in modo nativo.
 - Abilitare o disabilitare le opzioni online per impostazione predefinita per le istruzioni DDL che supportano la sintassi `ONLINE =`.
 - Abilitare o disabilitare le opzioni ripristinabile per impostazione predefinita per le istruzioni DDL che supportano la sintassi `RESUMABLE =`.
-- Abilitare o disabilitare le funzionalità di eliminazione automatica delle tabelle temporanee globali.
 - Abilitare o disabilitare le funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md).
+- Abilitare o disabilitare l'uso forzato del piano accelerato.
+- Abilitare o disabilitare le funzionalità di eliminazione automatica delle tabelle temporanee globali.
 - Abilitare o disabilitare l'[infrastruttura leggera di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Abilitare o disabilitare il nuovo messaggio di errore `String or binary data would be truncated`.
 - Abilita l'equivalente dell'ultimo piano di esecuzione effettivo in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -287,11 +289,20 @@ Consente di abilitare o disabilitare la compilazione posticipata delle variabili
 > [!NOTE]
 > Per il livello di compatibilità del database pari a 140 o inferiore, questa configurazione con ambito di database non ha effetto.
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+
+Abilita un meccanismo ottimizzato per l'uso forzato del piano di query, applicabile a tutte le forme di uso forzato dei piani, ad esempio [piani forzati da Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), l'[ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) o l'hint per la query [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan). Il valore predefinito è ON.
+
+> [!NOTE]
+> Non è consigliabile disabilitare l'uso forzato del piano accelerato.
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Si applica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
 
-Consente di impostare le funzionalità di eliminazione automatica per le [tabelle temporanee globali](create-table-transact-sql.md). Il valore predefinito è ON, il che significa che le tabelle temporanee globali vengono eliminate automaticamente quando non sono usate in nessuna sessione. Se impostato su OFF, le tabelle temporanee globali devono essere eliminate in modo esplicito usando un'istruzione DROP TABLE, altrimenti verranno eliminate automaticamente al riavvio del server.
+Consente di impostare la funzionalità di eliminazione automatica per le [tabelle temporanee globali](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). Il valore predefinito è ON, il che significa che le tabelle temporanee globali vengono eliminate automaticamente quando non sono usate in nessuna sessione. Se impostato su OFF, le tabelle temporanee globali devono essere eliminate in modo esplicito usando un'istruzione DROP TABLE, altrimenti verranno eliminate automaticamente al riavvio del server.
 
 - Con database singoli e pool elastici di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa opzione può essere impostata nei singoli database utente del server di database SQL.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
@@ -356,7 +367,7 @@ Le impostazioni granulari possono sostituire quelle globali e Resource Governor 
 
 - L'impostazione `sp_configure` viene sostituita dall'impostazione di Resource Governor.
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 Quando l'hint `QUERYTRACEON` viene usato per abilitare l'istanza predefinita di Query Optimizer di SQL Server 7.0 attraverso le versioni di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o gli hotfix di Query Optimizer, sarà presente una condizione OR tra l'hint per la query e l'impostazione di configurazione con ambito database a indicare che, se una delle due opzioni è abilitata, vengono applicate le configurazioni con ambito database.
 
@@ -368,11 +379,11 @@ I database secondari leggibili (gruppi di disponibilità Always On e database co
 
 Poiché `ALTER DATABASE SCOPED CONFIGURATION` è una nuova funzionalità di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) che influisce sullo schema del database, le esportazioni dello schema (con o senza dati) non possono essere importate in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Ad esempio, un'esportazione in [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un database di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in cui è stata usata questa nuova funzionalità non può essere importata in un server legacy.
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi `WITH (ONLINE = <syntax>)`. Gli indici XML non sono interessati.
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi `WITH (RESUMABLE = <syntax>)`. Gli indici XML non sono interessati.
 
@@ -404,7 +415,7 @@ In questo esempio viene impostato il parametro MAXDOP per un database secondario
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>C. Impostare LEGACY_CARDINALITY_ESTIMATION
+### <a name="c-set-legacy_cardinality_estimation"></a>C. Impostare LEGACY_CARDINALITY_ESTIMATION
 In questo esempio il parametro LEGACY_CARDINALITY_ESTIMATION viene impostato su ON per un database secondario in uno scenario di replica geografica.
 
 ```sql
@@ -417,7 +428,7 @@ In questo esempio viene impostato il parametro LEGACY_CARDINALITY_ESTIMATION per
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>D. Impostare PARAMETER_SNIFFING
+### <a name="d-set-parameter_sniffing"></a>D. Impostare PARAMETER_SNIFFING
 In questo esempio il parametro PARAMETER_SNIFFING viene impostato su OFF per un database primario in uno scenario di replica geografica.
 
 ```sql
@@ -436,7 +447,7 @@ In questo esempio viene impostato il parametro PARAMETER_SNIFFING per un databas
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>E. Impostare QUERY_OPTIMIZER_HOTFIXES
+### <a name="e-set-query_optimizer_hotfixes"></a>E. Impostare QUERY_OPTIMIZER_HOTFIXES
 Impostare il parametro QUERY_OPTIMIZER_HOTFIXES su ON per un database primario in uno scenario di replica geografica.
 
 ```sql
@@ -450,7 +461,7 @@ In questo esempio viene cancellata la cache delle procedure. È possibile solo p
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>G. Impostare IDENTITY_CACHE
+### <a name="g-set-identity_cache"></a>G. Impostare IDENTITY_CACHE
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
 
 In questo esempio viene disabilitata la cache Identity.
@@ -459,7 +470,7 @@ In questo esempio viene disabilitata la cache Identity.
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. Impostare OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. Impostare OPTIMIZE_FOR_AD_HOC_WORKLOADS
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 In questo esempio viene abilitato uno stub del piano compilato da memorizzare nella cache quando un batch viene compilato per la prima volta.
@@ -468,7 +479,7 @@ In questo esempio viene abilitato uno stub del piano compilato da memorizzare ne
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>I. Impostare ELEVATE_ONLINE
+### <a name="i-set-elevate_online"></a>I. Impostare ELEVATE_ONLINE
 **Si applica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
 
 In questo esempio viene impostato il parametro ELEVATE_ONLINE su FAIL_UNSUPPORTED.
@@ -477,7 +488,7 @@ In questo esempio viene impostato il parametro ELEVATE_ONLINE su FAIL_UNSUPPORTE
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>J. Impostare ELEVATE_RESUMABLE
+### <a name="j-set-elevate_resumable"></a>J. Impostare ELEVATE_RESUMABLE
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
 
 In questo esempio viene impostato il parametro ELEVATE_RESUMABLE su WHEN_SUPPORTED.
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [Grado di parallelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](https://support.microsoft.com/kb/2806535)
 
-### <a name="legacycardinalityestimation-resources"></a>Risorse di LEGACY_CARDINALITY_ESTIMATION
+### <a name="legacy_cardinality_estimation-resources"></a>Risorse di LEGACY_CARDINALITY_ESTIMATION
 
 - [Stima della cardinalità (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
 
-### <a name="parametersniffing-resources"></a>Risorse di PARAMETER_SNIFFING
+### <a name="parameter_sniffing-resources"></a>Risorse di PARAMETER_SNIFFING
 
 - [Analisi dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (Uso dei parametri)
 
-### <a name="queryoptimizerhotfixes-resources"></a>Risorse di QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes-resources"></a>Risorse di QUERY_OPTIMIZER_HOTFIXES
 
 - [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006)(Modello di manutenzione del flag di traccia 4199 di Query Optimizer in SQL Server)
 
-### <a name="elevateonline-resources"></a>Risorse di ELEVATE_ONLINE
+### <a name="elevate_online-resources"></a>Risorse di ELEVATE_ONLINE
 
 [Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>Risorse di ELEVATE_RESUMABLE
+### <a name="elevate_resumable-resources"></a>Risorse di ELEVATE_RESUMABLE
 
 [Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

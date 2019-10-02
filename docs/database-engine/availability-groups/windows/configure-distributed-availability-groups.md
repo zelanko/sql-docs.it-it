@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354599"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250959"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Per creare un gruppo di disponibilità distribuito, è necessario creare due gruppi di disponibilità ognuno con il proprio listener. È quindi possibile combinare questi gruppi di disponibilità in un gruppo di disponibilità distribuito. La procedura seguente illustra un esempio di base in Transact-SQL. Questo esempio non descrive in dettaglio la creazione di gruppi di disponibilità e listener, ma mette in rilievo i requisiti principali.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>Annullare il seeding automatico al server d'inoltro
+Se è necessario annullare l'inizializzazione del server d'inoltro prima che i due gruppi di disponibilità siano sincronizzati, modificare (ALTER) il gruppo di disponibilità distribuito impostando il parametro SEEDING_MODE del server di inoltro su MANUAL e annullare immediatamente il seeding. Eseguire il comando nel database primario globale: 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Aggiungere un gruppo di disponibilità distribuito nel secondo cluster  
  Creare quindi un join del gruppo di disponibilità distribuito nel secondo WSFC.  

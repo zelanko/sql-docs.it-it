@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929680"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326110"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -216,7 +216,7 @@ Creare un indice columnstore non cluster in memoria in una tabella rowstore arch
 *index_name*  
    Specifica il nome dell'indice. *index_name* deve essere univoco all'interno della tabella, ma non è necessario che lo sia all'interno del database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
    Ogni colonna deve essere di un tipo di dati supportato per gli indici columnstore. Vedere [Limitazioni e restrizioni](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) per un elenco di tipi di dati supportati.  
 
@@ -290,7 +290,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **"** default **"**  
 Crea l'indice specificato nel filegroup predefinito.  
   
-In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]** . Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
@@ -396,7 +396,7 @@ Non è possibile usare cursori o trigger in una tabella con un indice columnstor
 **Limiti specifici di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
 Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In questa versione sono stati introdotti gli indici columnstore cluster aggiornabili. Gli indici columnstore non cluster erano ancora di sola lettura.  
 
--   Change Tracking. Non è possibile usare il rilevamento delle modifiche con gli indici columnstore non cluster (NCCI) poiché sono di sola lettura. La soluzione funziona per gli indici columnstore cluster (CCI).  
+-   Change Tracking. Non è possibile usare il rilevamento delle modifiche con gli indici columnstore.  
 -   Change Data Capture. Non è possibile usare Change Data Capture per gli indici columnstore non cluster (NCCI) poiché sono di sola lettura. La soluzione funziona per gli indici columnstore cluster (CCI).  
 -   Secondario leggibile. Non è possibile accedere a un indice columnstore cluster (CCI) da una replica secondaria leggibile di un gruppo di disponibilità Always On leggibile.  È possibile accedere a un indice columnstore non cluster (NCCI) da una replica secondaria leggibile.  
 -   MARS (Multiple Active Result Sets). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS per le connessioni di sola lettura alle tabelle con un indice columnstore. Tuttavia, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] non supporta MARS per le operazioni simultanee di Data Manipulation Language (DML) su una tabella con indice columnstore. Quando questo si verifica,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina le connessioni e interrompe le transazioni.  

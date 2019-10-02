@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1891180d7fa3b1a064cf0cdebc5295303ecf7b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086704"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314606"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Indica se un oggetto viene firmato da una chiave asimmetrica o da un certificato specificato.  
@@ -44,20 +44,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  Tipo di classe a protezione diretta.  
   
- *@object_id*  
- object_id dell'oggetto sottoposto a test. *@object_id* è di tipo **int**.  
+ *\@object_id*  
+ object_id dell'oggetto sottoposto a test. *\@object_id* è di tipo **int**.  
   
- *@class*  
+ *\@class*  
  Classe dell'oggetto.  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* è di tipo **sysname**.  
+ *\@class* è **sysname**.  
   
- *@thumbprint*  
- Identificazione digitale SHA dell'oggetto. *@thumbprint* è di tipo **varbinary(32)** .  
+ *\@thumbprint*  
+ Identificazione digitale SHA dell'oggetto. *\@thumbprint* è di tipo **varbinary(32)** .  
   
 ## <a name="returned-types"></a>Tipi restituiti  
  **int**  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f6d60553fe8eff418dfb5cfb42f35dea37632d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135896"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314588"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ID di un certificato nel database. **int**.
 _cleartext_  
 Stringa di dati che verrà crittografata con il certificato.  
   
-**@cleartext**  
+**\@cleartext**  
 Variabile di uno dei tipi seguenti contenente i dati che verranno crittografati con la chiave pubblica del certificato:
 
 * **nvarchar** 

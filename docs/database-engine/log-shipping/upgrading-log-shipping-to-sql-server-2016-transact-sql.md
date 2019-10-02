@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020791"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227139"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aggiornamento del log shipping a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Durante l'aggiornamento da una configurazione per il log shipping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nuovo Service Pack di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'aggiornamento dei server di log shipping nell'ordine appropriato consentirà di preservare la soluzione di ripristino di emergenza per il log shipping.  
+  Durante l'aggiornamento da una configurazione per il log shipping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nuovo Service Pack di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'aggiornamento dei server di log shipping nell'ordine appropriato consentirà di preservare la soluzione di ripristino di emergenza per il log shipping.  
   
 > [!NOTE]  
 >  La[compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) è stata introdotta in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. In una configurazione per il log shipping aggiornata viene usata l'opzione di configurazione a livello di server **backup compression default** per controllare se la compressione dei backup viene usata per i file di backup del log delle transazioni. Il comportamento della compressione dei backup relativa ai backup del log può essere specificato per ogni configurazione per il log shipping. Per altre informazioni, vedere [Configurare il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228407"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207745"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70228407"
 Gli hint per la query specificano che gli hint indicati devono essere utilizzati in tutta la query e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Gli hint per la query vengono specificati come parte della [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). L'errore 8622 si verifica se in seguito alla presenza di uno o più hint per la query non viene generato un piano valido da Query Optimizer.  
   
 > [!CAUTION]  
-> Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere seleziona il piano di esecuzione migliore per una query, è consigliabile utilizzare hint solo se strettamente necessario e sempre da parte di sviluppatori e amministratori esperti di database.  
+> Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere seleziona il piano di esecuzione migliore per una query, è consigliabile usare hint solo se strettamente necessario e sempre da parte di sviluppatori e amministratori esperti di database.  
   
 **Si applica a:**  
   
@@ -107,7 +107,8 @@ Gli hint per la query specificano che gli hint indicati devono essere utilizzati
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -219,7 +220,7 @@ NO_PERFORMANCE_SPOOL
 Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto per tempdb in presenza di numerose query simultanee in esecuzione con le operazioni di spooling.  
   
 OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
-Imposta Query Optimizer in modo che utilizzi un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
+Imposta Query Optimizer in modo che usi un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
   
 _\@variable\_name_  
 Nome di una variabile locale utilizzata in una query alla quale è possibile assegnare un valore da utilizzare con l'hint per la query OPTIMIZE FOR.  
@@ -254,7 +255,7 @@ RECOMPILE rappresenta una valida alternativa alla creazione di una stored proced
 ROBUST PLAN  
 Impone in Query Optimizer l'applicazione di un piano che funziona anche con dimensioni di riga massime, eventualmente a scapito delle prestazioni. Quando la query viene elaborata, è possibile che tabelle e operatori intermedi debbano archiviare ed elaborare righe con dimensioni maggiori rispetto a qualsiasi riga di input. Talvolta le righe possono essere talmente estese che l'operatore specifico non è in grado di elaborarle. In questi casi, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore durante l'esecuzione della query. Usando ROBUST PLAN è possibile indicare a Query Optimizer di ignorare i piani di query in cui potrebbe verificarsi questo problema.  
   
-Se non è possibile implementare tale piano, Query Optimizer restituisce un errore invece di posticipare il rilevamento dell'errore fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
+Se non è possibile implementare tale piano, Query Optimizer restituisce un errore invece di posticipare il rilevamento degli errori fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -301,7 +302,7 @@ Sono supportati i nomi di hint seguenti:
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) che corrisponde al livello di compatibilità del database corrente. Usare questo hint per eseguire l'override dell'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` o il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o all'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
+   Forza in Query Optimizer l'uso del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o all'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Forza il comportamento di Query Optimizer a livello di query. Il comportamento rispecchia quello che si verifica se la query viene compilata con il livello di compatibilità del database _n_, dove _n_ è un livello di compatibilità del database supportato. Fare riferimento a [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) per un elenco dei valori attualmente supportati per _n_. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
@@ -327,8 +328,8 @@ Sono supportati i nomi di hint seguenti:
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
-USE PLAN N'_xml\_plan_'  
- Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'** _xml\_plan_ **'** . Non è possibile specificare USE PLAN con le istruzioni INSERT, UPDATE, MERGE o DELETE.  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+ Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'** _xml\_plan_ **'** . USE PLAN non può essere specificato nelle istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
   
@@ -338,7 +339,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 -   Quando non viene usato un alias, _exposed\_object\_name_ corrisponde esattamente alla tabella o alla vista a cui viene fatto riferimento nella clausola FROM. Se, ad esempio, viene fatto riferimento alla tabella o alla vista usando un nome in due parti, _exposed\_object\_name_ è lo stesso nome in due parti.  
   
- Quando si specifica _exposed\_object\_name_ senza specificare anche un hint di tabella, gli indici specificati nella query come parte di un hint di tabella per l'oggetto non vengono considerati. Query Optimizer determina quindi l'uso degli indici. È possibile usare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
+ Quando si specifica _exposed\_object\_name_ senza specificare anche un hint di tabella, gli indici specificati nella query come parte di un hint di tabella per l'oggetto non vengono considerati. Query Optimizer determina quindi l'utilizzo degli indici. È possibile usare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
 **\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } È l'hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   

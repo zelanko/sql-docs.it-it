@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874322"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314504"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitazione di connessioni crittografate al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
   
 2. Completare l' **Esportazione guidata certificati**e archiviare il file di certificato in una posizione appropriata.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Per configurare il server per imporre le connessioni crittografate  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Per configurare il server per imporre le connessioni crittografate
+
+> [!IMPORTANT]
+> L'account del servizio SQL Server deve avere le autorizzazioni di lettura per il certificato usato per forzare la crittografia in SQL Server. Per un account del servizio senza privilegi, sarà necessario aggiungere le autorizzazioni di lettura al certificato. In caso contrario, il riavvio del servizio SQL Server potrebbe non riuscire.
   
 1. In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
   

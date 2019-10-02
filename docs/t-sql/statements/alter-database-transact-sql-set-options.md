@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163919"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227174"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ Il set di risultati memorizzato nella cache viene riutilizzato per una query se 
 1. È presente una corrispondenza esatta tra la nuova query e la query precedente che ha generato la cache dei set di risultati.
 1. Non sono presenti dati o modifiche dello schema nelle tabelle da cui è stato generato il set di risultati memorizzato nella cache.  
 
-Dopo l'attivazione della memorizzazione nella cache del set di risultati per un database, i risultati vengono memorizzati nella cache per tutte le query finché la cache non è piena, fatta eccezione per le query con funzioni non deterministiche, ad esempio DateTime.Now().   Le query con set di risultati di grandi dimensioni (ad esempio, > 1 milione di righe) potrebbero incontrare un rallentamento delle prestazioni durante la prima esecuzione quando viene creata la cache dei risultati.
+Dopo l'attivazione della memorizzazione nella cache del set di risultati per un database, i risultati vengono memorizzati nella cache per tutte le query finché la cache non è piena, fatta eccezione per le query che usano funzioni non deterministiche, ad esempio DateTime.Now() e le query che restituiscono dati con dimensioni di riga maggiori di 64 KB.   
+
+Le query con set di risultati di grandi dimensioni (ad esempio, > 1 milione di righe) potrebbero incontrare un rallentamento delle prestazioni durante la prima esecuzione quando viene creata la cache dei risultati.
 
 **<snapshot_option> ::=**        
 

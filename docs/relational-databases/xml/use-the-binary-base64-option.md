@@ -1,7 +1,7 @@
 ---
 title: Usare l'opzione BINARY BASE64 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,51 +12,61 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 84d715b1e90c54c549a255b3ee43f24f2e5556d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: eb192cdb9a7e9ffb43561b3b642f60144861c6df
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039165"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199459"
 ---
 # <a name="use-the-binary-base64-option"></a>Utilizzo dell'opzione BINARY BASE64
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Se nella query è specificata l'opzione BINARY BASE64, i dati binari verranno restituiti con la codifica Base64. Per impostazione predefinita, se l'opzione BINARY BASE64 non viene specificata la modalità AUTO supporta la codifica URL dei dati binari, ovvero, al posto dei dati binari viene restituito un riferimento a un URL relativo alla radice virtuale del database in cui è stata eseguita la query. Tale riferimento può essere utilizzato per accedere ai dati binari effettivi nelle operazioni successive, tramite la query SQLXML ISAPI dbobject. La query deve restituire una quantità di informazioni sufficiente per l'identificazione dell'immagine, ad esempio le colonne chiave primarie.  
-  
- Quando si specifica una query, se per la colonna di dati binari della vista viene utilizzato un alias, tale alias verrà restituito nella codifica URL dei dati binari. Nelle operazioni successive l'alias non è importante e non sarà possibile utilizzare la codifica URL per recuperare l'immagine. Non utilizzare pertanto gli alias per l'esecuzione di query su una vista utilizzando la modalità AUTO della clausola FOR XML.  
-  
- In una query SELECT, il cast di una colonna qualsiasi a una colonna BLOB (Binary Large Object) rende tale query un'entità temporanea, ovvero i relativi nomi di tabella e colonna associati verranno persi. La query in modalità AUTO genererà pertanto un errore in quanto non sarà in grado di determinare la posizione in cui inserire questo valore nella gerarchia XML. Esempio:  
-  
-```  
-CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  
-INSERT INTO MyTable VALUES (1, 0x7);  
-```  
-  
- Questa query genera un errore a causa del cast a un tipo BLOB:  
-  
-```  
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO;  
-```  
-  
- Per risolvere il problema, è possibile aggiungere l'opzione BINARY BASE64 alla clausola FOR XML. Se si rimuove il casting, la query darà i risultati previsti:  
-  
-```  
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO, BINARY BASE64;  
-```  
-  
- Risultato:  
-  
-```  
-<MyTable Col1="1" Col2="Bw==" />  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
-  
-  
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+Se nella query è specificata l'opzione BINARY BASE64, i dati binari verranno restituiti con la codifica Base64.
+
+Se l'opzione BINARY BASE64 non viene specificata nella query, per impostazione predefinita la modalità AUTO supporta la codifica URL dei dati binari. Viene restituito un riferimento a un URL relativo alla radice virtuale del database. Questo riferimento è al database in cui è stata eseguita la query. Il riferimento restituito può essere usato per accedere ai dati binari effettivi nelle operazioni successive. Per ottenere questo accesso, usare la query dbobject ISAPI SQLXML. La query deve fornire informazioni sufficienti per identificare l'immagine. Tali informazioni possono includere le colonne della chiave primaria.
+
+## <a name="column-alias"></a>Alias di colonna
+
+Non usare un alias per una colonna binaria quando si esegue una query su una vista e si usa la modalità FOR XML AUTO. Se si usa un alias, l'alias viene restituito nella codifica URL dei dati binari. Nelle operazioni successive l'alias non è significativo. Non è possibile usare l'alias non significativo e la codifica URL per recuperare l'immagine.
+
+### <a name="cast-to-a-blob"></a>Eseguire il cast a un BLOB
+
+In una query SELECT, il cast di una colonna a un oggetto binario di grandi dimensioni (BLOB) rende la colonna un'entità temporanea. Essendo temporaneo, il BLOB perde il nome della tabella e il nome della colonna associati. Le query in modalità AUTO genereranno pertanto un errore perché il sistema non è in grado di determinare la posizione in cui inserire questo valore nella gerarchia XML.
+
+Si consideri, ad esempio, la tabella seguente contenente una sola riga.
+
+```sql
+CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)
+INSERT INTO MyTable VALUES (1, 0x7);
+```
+
+La query seguente genera un errore, causato dal cast a un oggetto binario di grandi dimensioni (BLOB):
+
+```sql
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO;
+```
+
+Per risolvere il problema, è possibile aggiungere l'opzione BINARY BASE64 alla clausola FOR XML. Se si rimuove il cast, la query genera risultati validi.
+
+```sql
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO, BINARY BASE64;
+```
+
+Il risultato valido previsto è il seguente:
+
+```console
+<MyTable Col1="1" Col2="Bw==" />
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Utilizzo della modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)

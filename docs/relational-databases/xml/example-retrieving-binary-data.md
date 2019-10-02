@@ -1,7 +1,7 @@
 ---
 title: 'Esempio: Recupero di dati binari | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,36 +12,38 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e63e14a5fd440a62e6cb7734e542d4dcbe4ef7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006791"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199465"
 ---
 # <a name="example-retrieving-binary-data"></a>Esempio: Recupero di dati binari
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  La query seguente restituisce la foto del prodotto archiviata in una colonna di tipo **varbinary(max)** . L'opzione `BINARY BASE64` specificata nella query consente di restituire i dati binari nel formato con codifica Base64.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT ProductPhotoID, ThumbNailPhoto  
-FROM Production.ProductPhoto  
-WHERE ProductPhotoID=1  
-FOR XML RAW, BINARY BASE64 ;  
-GO  
-```  
-  
- Risultato:  
-  
-```  
-<row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
-  
-  
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+La query seguente restituisce la foto del prodotto archiviata in una colonna di tipo **varbinary(max)** . L'opzione `BINARY BASE64` specificata nella query consente di restituire i dati binari nel formato con codifica Base64.
+
+## <a name="example"></a>Esempio
+
+```sql
+USE AdventureWorks2012;
+GO
+SELECT ProductPhotoID, ThumbNailPhoto
+FROM Production.ProductPhoto
+WHERE ProductPhotoID=1
+FOR XML RAW, BINARY BASE64 ;
+GO
+```
+
+Il risultato previsto è il seguente:
+
+```console
+<row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)

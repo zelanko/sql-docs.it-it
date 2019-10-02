@@ -2,7 +2,7 @@
 title: Inlining di funzioni definite dall'utente scalari nei database SQL di Microsoft | Microsoft Docs
 description: Funzionalità di inlining di funzioni definite dall'utente scalari, per migliorare le prestazioni delle query che chiamano funzioni definite dall'utente scalari in SQL Server (2018 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030333"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299133"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -154,7 +154,8 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 - La funzione definita dall'utente usa la clausola `EXECUTE AS CALLER` (comportamento predefinito se la clausola `EXECUTE AS` non viene specificata).
 - La funzione definita dall'utente non fa riferimento a variabili di tabella o a parametri con valori di tabella.
 - La query che chiama una funzione definita dall'utente scalare non fa riferimento a una chiamata di funzione definita dall'utente scalare nella relativa clausola `GROUP BY`.
-- La query che chiama una funzione definita dall'utente scalare nel relativo elenco di selezione con clausola `DISTINCT` non fa riferimento a una chiamata di funzione definita dall'utente scalare nella relativa clausola `ORDER BY`.
+- La query che richiama una funzione definita dall'utente scalare nel relativo elenco di selezione con clausola `DISTINCT` non include la clausola `ORDER BY`.
+- La funzione definita dall'utente non viene usata nella clausola `ORDER BY`.
 - La funzione definita dall'utente non è compilata in modo nativo (interoperabilità supportata).
 - La funzione definita dall'utente non viene usata in una colonna calcolata o in una definizione di vincolo di controllo.
 - La funzione definita dall'utente non fa riferimento a tipi definiti dall'utente.

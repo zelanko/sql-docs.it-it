@@ -1,5 +1,5 @@
 ---
-title: Virtualizzare i dati esterni in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Virtualizzare i dati esterni in SQL Server 2019 | Microsoft Docs
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per le origini dati relazionali
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418772"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341829"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 
-Uno degli scenari chiave per SQL Server 2019 CTP 2.0 è la possibilità di virtualizzare i dati. Questo processo consente di mantenere i dati nella posizione originale. È possibile *virtualizzare* i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come in qualsiasi altra tabella in SQL Server. Questo processo riduce al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Per eseguire il processo è necessario l'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere [Get started with PolyBase](polybase-guide.md) (Introduzione a PolyBase).
+Uno degli scenari chiave per SQL Server 2019 è la possibilità di virtualizzare i dati. Questo processo consente di mantenere i dati nella posizione originale. È possibile *virtualizzare* i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come in qualsiasi altra tabella in SQL Server. Questo processo riduce al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Per eseguire il processo è necessario l'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere [Get started with PolyBase](polybase-guide.md) (Introduzione a PolyBase).
 
 ## <a name="start-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna
 
@@ -44,10 +44,7 @@ In questo passaggio verrà creata una chiave master del database. La creazione d
 ![Creare una chiave master del database](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Se si ha già una chiave master del database, i campi di input sono limitati ed è possibile ignorare questo passaggio. Selezionare **Avanti** per continuare.
-
-> [!NOTE]
-> Se non si sceglie una password complessa, la procedura guidata esegue l'operazione nell'ultimo passaggio. Questo è un problema noto
+> Se è già disponibile una chiave master del database, questo passaggio verrà ignorato automaticamente.
 
 ## <a name="enter-external-data-source-credentials"></a>Immettere le credenziali dell'origine dati esterna
 

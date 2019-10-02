@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653777"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326112"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -47,7 +47,9 @@ Il database di sistema **tempdb** è una risorsa globale disponibile per tutti g
   - Versioni di riga generate dalle transazioni di modifica dei dati per le caratteristiche, ad esempio le operazioni sugli indici online, la caratteristica MARS (Multiple Active Result Set) e i trigger AFTER.  
   
 Le operazioni all'interno di **tempdb** sono a registrazione minima in modo che sia possibile eseguire il rollback delle transazioni. **tempdb** viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, nessuna parte del database **tempdb** viene salvata per le sessioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le operazioni di backup e di ripristino non sono consentite nel database **tempdb**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Proprietà fisiche di tempdb in SQL Server
 
 La tabella seguente elenca i valori di configurazione iniziali di dati e file di log di **tempdb** in SQL Server, basati sulle impostazioni predefinite per il database modello. Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -242,9 +244,7 @@ Questa implementazione presenta alcune limitazioni che è importante prendere in
     COMMIT TRAN
     ```
 3. Poiché le query eseguite nelle tabelle ottimizzate per la memoria non supportano gli hint di blocco e isolamento, le query eseguite nelle viste di catalogo tempdb ottimizzate per la memoria non rispetteranno gli hint di blocco e isolamento. Come nelle altre viste del catalogo di sistema in SQL Server, tutte le transazioni eseguite nelle viste di sistema saranno nell'isolamento READ COMMITTED (o in questo caso READ COMMITTED SNAPSHOT).
-4. È possibile che si verifichino alcuni problemi con gli indici columnstore nelle tabelle temporanee quando sono abilitati i metadati tempdb ottimizzati per la memoria. Per questa versione di anteprima, è consigliabile evitare gli indici columnstore nelle tabelle temporanee quando si usano i metadati tempdb ottimizzati per la memoria.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. Non è possibile creare [indici columnstore](../indexes/columnstore-indexes-overview.md) nelle tabelle temporanee quando sono abilitati i metadati tempdb ottimizzati per la memoria.
 
 > [!NOTE] 
 > Queste limitazioni si applicano solo quando si fa riferimento a viste di sistema tempdb. Se si desidera, sarà possibile creare una tabella temporanea nella stessa transazione non appena si accede a una tabella con ottimizzazione per la memoria in un database utente.
@@ -253,6 +253,8 @@ Questa implementazione presenta alcune limitazioni che è importante prendere in
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+Se il server non viene avviato per qualsiasi motivo dopo aver abilitato i metadati TempDB ottimizzati per la memoria, è possibile ignorare la funzionalità avviando SQL Server con la [configurazione minima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) usando l'opzione di avvio **-f**. In questo modo sarà possibile disabilitare la funzionalità e quindi riavviare SQL Server in modalità normale.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Pianificazione delle capacità per tempdb in SQL Server
 

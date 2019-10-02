@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014485"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250979"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014485"
   
 -   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** il numero effettivo di database e gruppi di disponibilità che è possibile creare in un computer (macchina virtuale o computer fisico) dipende dall'hardware e dal carico di lavoro, tuttavia non esiste un limite imposto. Microsoft ha testato un massimo di 10 gruppi di disponibilità e 100 database per computer fisico, ma non si tratta di un limite vincolante. A seconda delle specifiche hardware del server e del carico di lavoro, è possibile inserire un numero maggiore di database e di gruppi di disponibilità in un'istanza di SQL Server. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema del gruppo di disponibilità e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
   
--   **Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità:**  
+-   **Non usare Gestione cluster di failover per modificare i gruppi di disponibilità**. Lo stato di un'istanza del cluster di failover di SQL Server viene condiviso tra SQL Server e il cluster di failover di Windows (WSFC), con SQL Server che mantiene più informazioni dettagliate sullo stato delle istanze rispetto a quelle richieste dal cluster. Il modello di gestione prevede che SQL Server guidi le transazioni e sia responsabile di mantenere la visualizzazione dello stato del cluster sincronizzata con la visualizzazione dello stato di SQL Server. Se lo stato del cluster viene modificato all'esterno di SQL Server è possibile che lo stato non sia più sincronizzato tra WSFC e SQL Server e ciò potrebbe causare un comportamento imprevedibile.
   
      Esempio:  
   

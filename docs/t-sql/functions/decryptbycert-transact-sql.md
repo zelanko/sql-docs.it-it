@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118947"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314527"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Variabile di tipo **varbinary** contenente dati crittografati con il certificato
 Password usata per crittografare la chiave privata del certificato. *cert_password* deve avere un formato di dati Unicode.  
   
  @cert_password  
-Variabile di tipo **nchar** o **nvarchar** contenente la password usata per crittografare la chiave privata del certificato. *@cert_password* deve avere un formato dati Unicode.  
+Variabile di tipo **nchar** o **nvarchar** contenente la password usata per crittografare la chiave privata del certificato. *\@cert_password* deve avere un formato di dati Unicode.  
 
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte.  

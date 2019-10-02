@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127870"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251098"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inizializzare una sottoscrizione transazionale da un backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68127870"
 2.  Per una nuova pubblicazione, eseguire [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **true** per **allow_initialize_from_backup**. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
     > [!WARNING]  
-    >  Per evitare la mancanza di dati del Sottoscrittore, quando si utilizza **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilizzare sempre `@immediate_sync = N'true'`.  
+    >  Per evitare la mancanza di dati del Sottoscrittore, quando si usa **sp_addpublication** o **sp_changepublication** con `@allow_initialize_from_backup = N'true'`, usare sempre `@immediate_sync = N'true'`.  
   
 3.  Creare un backup del database di pubblicazione usando l'istruzione [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035016"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199293"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedura: Specificare script pre-distribuzione o post-distribuzione
-Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Esempio:  
+Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Lo script di pre-distribuzione non verrà eseguito quando si aggiornano le destinazioni dai risultati di confronto dello schema in Visual Studio. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Esempio:  
   
 -   Uno script pre-distribuzione può essere utilizzato per copiare i dati da una tabella da modificare in una tabella temporanea prima di riformattare e applicare i dati nella tabella modificata in uno script post-distribuzione  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>Per aggiungere e modificare uno script pre-distribuzione o post-distribuzione  
   
 1.  In **Esplora soluzioni** espandere il progetto di database per visualizzare la cartella Script.  

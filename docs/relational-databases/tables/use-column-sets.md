@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140371"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326133"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,14 +91,14 @@ ms.locfileid: "68140371"
 -   Le colonne di tipo sparse in cui sono contenuti valori Null vengono omesse dalla rappresentazione XML del set di colonne.  
   
 > [!WARNING]  
->  L'aggiunta di un set di colonne modifica il comportamento delle query SELECT *. La query restituirà il set di colonne come una colonna XML e non restituirà le singole colonne di tipo sparse. È necessario che i progettisti degli schemi e gli sviluppatori del software prestino particolare attenzione a non causare l'interruzione delle applicazioni esistenti.  
+>  L'aggiunta di un set di colonne modifica il comportamento delle query `SELECT *`. La query restituirà il set di colonne come una colonna XML e non restituirà le singole colonne di tipo sparse. È necessario che i progettisti degli schemi e gli sviluppatori del software prestino particolare attenzione a non causare l'interruzione delle applicazioni esistenti.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserimento o modifica di dati in un set di colonne  
  Per manipolare i dati di una colonna di tipo sparse, è possibile utilizzare il nome delle colonne singole o fare riferimento al nome del set di colonne e specificarne i valori utilizzando il formato XML del set di colonne stesso. Nella colonna XML le colonne di tipo sparse possono essere visualizzate in qualsiasi ordine.  
   
  Quando i valori di una colonna di tipo sparse vengono inseriti o aggiornati usando il set di colonne XML, i valori inseriti nelle colonne di tipo sparse sottostanti vengono convertiti implicitamente dal tipo di dati **xml** . Nel caso di colonne numeriche, un valore vuoto nel codice XML per la colonna numerica viene convertito in una stringa vuota, provocando l'inserimento di uno zero nella colonna numerica come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  In questo esempio per la colonna `i`non è stato specificato alcun valore, ma è stato inserito il valore `0` .  
   
-## <a name="using-the-sqlvariant-data-type"></a>Utilizzo del tipo di dati sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Utilizzo del tipo di dati sql_variant  
  Il tipo di dati **sql_variant** consente di archiviare più tipi di dati diversi, ad esempio **int**, **char**e **date**. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore **sql_variant** come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
   
 |Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scala|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Questa tabella è costituita solo da cinque colonne per semplificare la visualizzazione e la lettura.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserimento di dati in una tabella utilizzando i nomi delle colonne di tipo sparse  
  Negli esempi seguenti vengono inserite due righe nella tabella creata nell'esempio A. Negli esempi vengono utilizzati i nomi delle colonne di tipo sparse e non si fa riferimento al set di colonne.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Inserimento di dati in una tabella utilizzando il nome del set di colonne  
  Nell'esempio seguente viene inserita una terza riga nella tabella creata nell'esempio A. In questo caso i nomi delle colonne di tipo sparse non vengono utilizzati, ma viene utilizzato il nome del set di colonne. L'inserimento fornisce i valori per due delle quattro colonne di tipo sparse in formato XML.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Analisi dei risultati di un set di colonne quando viene utilizzata l'istruzione SELECT *  
  Nell'esempio seguente vengono selezionate tutte le colonne dalla tabella che contiene un set di colonne. Viene restituita una colonna XML con i valori combinati delle colonne di tipo sparse, ma non vengono restituite le singole colonne di tipo sparse.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Analisi dei risultati della selezione del set di colonne in base al nome  
  Poiché i dati di marketing non interessano il reparto Production, in questo esempio viene aggiunta una clausola `WHERE` per limitare l'output. Nell'esempio viene utilizzato il nome del set di colonne.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Analisi dei risultati della selezione di colonne di tipo sparse in base al nome  
  Quando una tabella contiene un set di colonne, è ancora possibile eseguire una query sulla tabella utilizzando i nomi delle singole colonne come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Aggiornamento di una tabella tramite un set di colonne  
  Nell'esempio seguente viene aggiornato il terzo record con i nuovi valori per entrambe le colonne di tipo sparse utilizzate da tale riga.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  Nell'esempio seguente viene aggiornato il terzo record, ma viene specificato solo il valore di una delle due colonne popolate. La seconda colonna `ProductionLocation` non è inclusa nell'istruzione `UPDATE` e viene impostata su NULL.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  
