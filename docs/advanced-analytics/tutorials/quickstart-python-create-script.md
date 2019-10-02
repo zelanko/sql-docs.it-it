@@ -90,7 +90,7 @@ Gli input per `sp_execute_external_script` il stored procedure includono:
 | @language | definisce l'estensione del linguaggio da chiamare, in questo caso Python |
 | @script | definisce i comandi passati al runtime di Python<br>L'intero script Python deve essere racchiuso in questo argomento, come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e chiamare la variabile |
 | @input_data_1 | dati restituiti dalla query, passati al runtime di Python, che restituisce i dati da SQL Server come frame di dati |
-|CON SET DI RISULTATI | la clausola definisce lo schema della tabella dati restituita per SQL Server, in questo caso l'aggiunta di "Hello World" come nome di colonna e **int** per il tipo di dati |
+|WITH RESULT SETS | la clausola definisce lo schema della tabella dati restituita per SQL Server, in questo caso l'aggiunta di "Hello World" come nome di colonna e **int** per il tipo di dati |
 
 Il comando restituisce il testo seguente:
 
