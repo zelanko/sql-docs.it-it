@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7d6ce92fe3ca3a4fb2c6209a01b3eee6b575b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85fc18ed18f157b47d9fd7b654cda4bf25e608ec
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895603"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707685"
 ---
-# <a name="bcpexec"></a>bcp_exec
+# <a name="bcp_exec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -45,19 +45,19 @@ RETCODE bcp_exec (
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *pnRowsProcessed*  
- Puntatore a DBINT. Il **bcp_exec** funzione DBInt con il numero di righe copiate correttamente. Se *pnRowsProcessed* è NULL, viene ignorato dal **bcp_exec**.  
+ Puntatore a DBINT. La funzione **bcp_exec** riempie questo DBINT con il numero di righe copiate correttamente. Se *pnRowsProcessed* è null, viene ignorato da **bcp_exec**.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- SUCCEED, SUCCEED_ASYNC o FAIL. Il **bcp_exec** funzione restituisce SUCCEED se vengono copiate tutte le righe. **bcp_exec** restituisce SUCCEED_ASYNC se un'operazione di copia bulk asincrona è ancora in attesa. **bcp_exec** restituisce FAIL se si verifica un errore completo o se il numero di righe che generano errori raggiunge il valore specificato per BCPMAXERRS tramite [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). Il valore predefinito BCPMAXERRS è 10. L'opzione BCPMAXERRS influisce solo sugli errori di sintassi rilevati dal provider durante la lettura delle righe dal file di dati, ma non delle righe inviate al server. Il server interrompe il batch quando rileva un errore con una riga. Verificare i *pnRowsProcessed* parametro per il numero di righe copiate correttamente.  
+ SUCCEED, SUCCEED_ASYNC o FAIL. La funzione **bcp_exec** restituisce succeed se vengono copiate tutte le righe. **bcp_exec** restituisce SUCCEED_ASYNC se un'operazione di copia bulk asincrona è ancora in attesa. **bcp_exec** restituisce FAIL se si verifica un errore completo o se il numero di righe che generano errori raggiunge il valore specificato per BCPMAXERRS tramite [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). Il valore predefinito BCPMAXERRS è 10. L'opzione BCPMAXERRS influisce solo sugli errori di sintassi rilevati dal provider durante la lettura delle righe dal file di dati, ma non delle righe inviate al server. Il server interrompe il batch quando rileva un errore con una riga. Controllare il parametro *pnRowsProcessed* per il numero di righe copiate correttamente.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione Copia dati da un file utente a una tabella di database o viceversa, in base al valore di *eDirection* nel parametro [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+ Questa funzione copia i dati da un file utente a una tabella di database o viceversa, a seconda del valore del parametro *eDirection* in [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
  Prima di chiamare **bcp_exec**, chiamare **bcp_init** con un nome di file utente valido. In caso contrario, viene generato un errore.  
   
- **bcp_exec** è l'unica funzione di copia che probabilmente continuerà a rimanere in attesa per un periodo di tempo in blocco. è anche l'unica funzione di copia bulk che supporta la modalità asincrona. Per impostare la modalità asincrona, utilizzare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_ON prima di chiamare **bcp_exec**. Per testare il completamento, chiamare **bcp_exec** con gli stessi parametri. Se la copia bulk non ha ancora completato, **bcp_exec** restituisce SUCCEED_ASYNC. Restituisce inoltre nel *pnRowsProcessed* un conteggio dello stato del numero di righe che sono stati inviati al server. Il commit delle righe inviate al server non viene eseguito fino a quando non viene raggiunta la fine di un batch.  
+ **bcp_exec** è l'unica funzione di copia bulk che probabilmente sarà in attesa per un periodo di tempo. è anche l'unica funzione di copia bulk che supporta la modalità asincrona. Per impostare la modalità asincrona, utilizzare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_ON prima di chiamare **bcp_exec**. Per verificare il completamento, chiamare **bcp_exec** con gli stessi parametri. Se la copia bulk non è stata ancora completata, **bcp_exec** restituisce SUCCEED_ASYNC. Restituisce anche in *pnRowsProcessed* un conteggio dello stato del numero di righe inviate al server. Il commit delle righe inviate al server non viene eseguito fino a quando non viene raggiunta la fine di un batch.  
   
- Per informazioni su una sostanziale modifica inizio la copia di massa in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione di operazioni di copia di massa &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni sulle modifiche di rilievo apportate alla copia bulk a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione &#40;di&#41;operazioni di copia bulk ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare **bcp_exec**:  

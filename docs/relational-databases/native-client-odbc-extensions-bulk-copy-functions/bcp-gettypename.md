@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895545"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707461"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -74,8 +74,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Prima o dopo|**text**|  
 |**SQLBIGBINARY**|No|**binary**|  
 |**SQLBINARY**|No|**Binario**|  
-|**SQLBIGVARBINARY**|No|**varbinary**|  
-|**SQLVARBINARY**|No|**varbinary**|  
+|**SQLBIGVARBINARY**|No|**Varbinary**|  
+|**SQLVARBINARY**|No|**Varbinary**|  
 |**SQLIMAGE**|Prima o dopo|**Immagine**|  
 |**SQLINTN**|Prima o dopo|**int-null**|  
 |**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
@@ -87,8 +87,8 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Prima o dopo|**Min**|  
 |**SQLAOPMAX**|Prima o dopo|**Max**|  
 |**SQLDATETIM4**|Prima o dopo|**smalldatetime**|  
-|**SQLMONEY4**|Prima o dopo|**smallmoney**|  
-|**SQLFLT4**|Prima o dopo|**Real**|  
+|**SQLMONEY4**|Prima o dopo|**Smallmoney**|  
+|**SQLFLT4**|Prima o dopo|**Reale**|  
 |**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
 |**SQLNCHAR**|No|**Nchar**|  
 |**SQLNVARCHAR**|No|**Nvarchar**|  
@@ -106,12 +106,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Yes|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Yes|**nvarchar(max)**|  
 |**SQLXML**|Yes|**Xml**|  
-|**SQLUDT**|Prima o dopo|**tipo definito dall'utente**|  
+|**SQLUDT**|Prima o dopo|**UDT**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
- I valori di parametro del token per i tipi di data/ora sono descritti nella colonna della tabella in "Tipo in SQLNCLI. h" [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
+ I valori dei parametri del token per i tipi data/ora vengono descritti nella colonna "tipo in sqlncli. h" della tabella nelle [modifiche della copia bulk per i tipi &#40;di data e ora&#41;avanzati OLE DB e ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
   
- Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [miglioramenti &#40;di data e ora&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

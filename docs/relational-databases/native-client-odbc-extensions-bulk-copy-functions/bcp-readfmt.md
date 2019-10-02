@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 081bad36acaa8469e7a2ada7620cf9f4828a7b97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f26e0dfeab95d4ad524f888d8f68a5aa569d80b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099458"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707455"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -51,16 +51,16 @@ RETCODE bcp_readfmt (
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Note  
- Dopo aver **bcp_readfmt** legge i valori di formato, effettua le chiamate appropriate a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
+ Dopo che **bcp_readfmt** legge i valori di formato, effettua le chiamate appropriate a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
   
- Per rendere persistente un file di formato, chiamare [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Le chiamate a **bcp_readfmt** può fare riferimento ai formati salvati. Per altre informazioni, vedere [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+ Per salvare in modo permanente un file di formato, chiamare [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Le chiamate a **bcp_readfmt** possono fare riferimento ai formati salvati. Per ulteriori informazioni, vedere [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definito dall'utente nei file che possono essere utilizzati dalle **bcp_readfmt**. Per altre informazioni sul **bcp** utilità e la struttura dei **bcp** i file di formato di dati, vedere [l'importazione ed esportazione dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definiti dall'utente nei file a cui può fare riferimento **bcp_readfmt**. Per ulteriori informazioni sull'utilità **bcp** e sulla struttura dei file di formato dei dati **bcp** , vedere [importazione ed esportazione bulk di &#40;dati&#41;SQL Server](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- Il **BCPDELAYREADFMT** pari al *eOption* parametro dei [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) modifica il comportamento di bcp_readfmt.  
+ Il valore **BCPDELAYREADFMT** del parametro *eOption* di [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) modifica il comportamento di bcp_readfmt.  
   
 > [!NOTE]  
->  Il file di formato è stato prodotto dalla versione 4.2 o versione successiva del **bcp** utilità.  
+>  Il file di formato deve essere stato prodotto dalla versione 4,2 o successiva dell'utilità **bcp** .  
   
 ## <a name="example"></a>Esempio  
   

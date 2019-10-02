@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09dc87f27f1e6cc9dc062addbe97945b47dc7802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895700"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707756"
 ---
-# <a name="bcpcolptr"></a>bcp_colptr
+# <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -46,24 +46,24 @@ RETCODE bcp_colptr (
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *pData*  
- Puntatore ai dati da copiare. Se il tipo di dati associato è il tipo di valori di grandi dimensioni (ad esempio SQLTEXT o SQLIMAGE), *pData* può essere NULL. Un valore NULL *pData* indica i valori di dati long verranno inviati a SQL Server in blocchi mediante [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Puntatore ai dati da copiare. Se il tipo di dati associato è un tipo di valore di grandi dimensioni, ad esempio SQLTEXT o SQLIMAGE, *pData* può essere null. Un valore NULL *pData* indica che i valori di dati Long verranno inviati a SQL Server in blocchi utilizzando [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Se *pData* è impostata su NULL e la colonna corrispondente al campo associato, non è un tipo di valore elevato **bcp_colptr** ha esito negativo.  
+ Se *pData* è impostato su null e la colonna corrispondente al campo associato non è un tipo di valore di grandi dimensioni, **bcp_colptr** ha esito negativo.  
   
- Per altre informazioni sui tipi di valori di grandi dimensioni, vedere [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
+ Per ulteriori informazioni sui tipi di valore di grandi dimensioni, vedere [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
   
  *idxServerCol*  
- Posizione ordinale della colonna nella tabella di database in cui vengono copiati i dati. La prima colonna di una tabella è la colonna 1. La posizione ordinale di una colonna viene indicata da [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
+ Posizione ordinale della colonna nella tabella di database in cui vengono copiati i dati. La prima colonna di una tabella è la colonna 1. La posizione ordinale di una colonna viene segnalata da [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Note  
- Il **bcp_colptr** funzione consente di modificare l'indirizzo dei dati di origine per una determinata colonna quando si copiano dati da SQL Server con [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ La funzione **bcp_colptr** consente di modificare l'indirizzo dei dati di origine per una determinata colonna durante la copia dei dati in SQL Server con [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
- Inizialmente, il puntatore ai dati dell'utente viene impostato da una chiamata a **bcp_bind**. Se l'indirizzo di dati della variabile di programma cambia tra le chiamate a **bcp_sendrow**, è possibile chiamare **bcp_colptr** per reimpostare il puntatore ai dati. La chiamata successiva a **bcp_sendrow** invia i dati indirizzati dalla chiamata al metodo **bcp_colptr**.  
+ Inizialmente, il puntatore ai dati utente viene impostato da una chiamata a **bcp_bind**. Se l'indirizzo dei dati della variabile di programma cambia tra le chiamate a **bcp_sendrow**, è possibile chiamare **bcp_colptr** per reimpostare il puntatore ai dati. La chiamata successiva a **bcp_sendrow** invia i dati indirizzati dalla chiamata a **bcp_colptr**.  
   
- Deve essere presente un oggetto separato **bcp_colptr** chiamata per ogni colonna della tabella di indirizzi contenente i dati che si desidera modificare.  
+ Deve essere presente una chiamata **bcp_colptr** separata per ogni colonna della tabella di cui si desidera modificare l'indirizzo dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
