@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874700"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823582"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire SQL Server cluster di Big data con disponibilità elevata
 
@@ -86,6 +86,11 @@ Nei passaggi seguenti viene illustrato come creare un file di patch che include 
 
     ```bash
     azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
+    ```
+1. Avviare la distribuzione del cluster usando il profilo di configurazione del cluster creato in precedenza
+
+    ```bash
+    azdata bdc create --config-profile custom-aks --accept-eula yes
     ```
 
 ## <a name="connect-to-sql-server-databases"></a>Connettersi a database di SQL Server
