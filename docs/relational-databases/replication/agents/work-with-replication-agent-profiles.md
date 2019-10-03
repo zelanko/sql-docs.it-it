@@ -95,9 +95,9 @@ ms.locfileid: "70846777"
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
-2.  Fare clic sul pulsante delle proprietà (**...**) accanto a un profilo.  
+2.  Fare clic sul pulsante delle proprietà ( **...** ) accanto a un profilo.  
   
-3.  Visualizzare i parametri e i valori nella finestra di dialogo **Proprietà profilo \<NomeProfilo>**.  
+3.  Visualizzare i parametri e i valori nella finestra di dialogo **Proprietà profilo \<NomeProfilo>** .  
   
     -   È possibile modificare i parametri nei profili definiti dall'utente, ma non quelli nei profili di sistema predefiniti.  
   
