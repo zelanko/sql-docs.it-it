@@ -1,5 +1,5 @@
 ---
-title: Estensioni personalizzate rilevate nel server di report (Upgrade Advisor) | Microsoft Docs
+title: Sono state rilevate estensioni personalizzate nel server di report (preparazione aggiornamento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 69df18da28672f05099f22821240fdf28e1fb880
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095970"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952590"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Estensioni personalizzate rilevate nel server di report (Upgrade Advisor)
   Nei file di configurazione sono state rilevate impostazioni di estensioni personalizzate, indicanti che l'installazione include una o più estensioni personalizzate per l'elaborazione dati, il recapito, il rendering, la sicurezza o l'autenticazione. In seguito all'aggiornamento le impostazioni di configurazione delle estensioni verranno spostate con il server di report aggiornato. Tuttavia, se le estensioni personalizzate sono installate nella cartella di installazione del server di report esistente, i file di assembly per tali estensioni non verranno spostate nella nuova cartella di installazione durante il processo di aggiornamento. Dopo che l'aggiornamento è stato completato, è necessario spostare i file di assembly nella nuova cartella di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,25 +34,25 @@ ms.locfileid: "66095970"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, recapito, rendering, sicurezza e autenticazione.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estendibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, il recapito, il rendering, la sicurezza e l'autenticazione.  
   
  Se nell'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono presenti estensioni o assembly personalizzati, è possibile utilizzare il programma di installazione per eseguire un aggiornamento, ma potrebbe essere necessario spostare le estensioni nel nuovo percorso di installazione dopo il completamento dell'aggiornamento oppure eseguire altri passaggi prima dell'aggiornamento.  
   
 > [!NOTE]  
->  Preparazione aggiornamento non è in grado di rilevare se assembly di codice personalizzati sono configurati per essere utilizzati in report per il calcolo di valori, stili e formattazione degli elementi. Per altre informazioni, vedere [altri Reporting Services problemi di aggiornamento](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md).  
+>  Preparazione aggiornamento non è in grado di rilevare se assembly di codice personalizzati sono configurati per essere utilizzati in report per il calcolo di valori, stili e formattazione degli elementi. Per ulteriori informazioni, vedere [altri Reporting Services problemi di aggiornamento](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md).  
   
  Se sono state acquistate estensioni personalizzate, contattare il fornitore del software per verificare se sono disponibili ulteriori informazioni sull'aggiornamento della funzionalità personalizzata.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  Utilizzare le sezioni seguenti per determinare i passaggi da eseguire in aggiunta o prima dell'esecuzione di un aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
- [L'elaborazione dati personalizzata o estensioni per il recapito](#dataprocdeliver)  
+ [Estensioni per il recapito o l'elaborazione dati personalizzate](#dataprocdeliver)  
   
  [Estensioni per il rendering personalizzate](#render)  
   
- [Estensioni di sicurezza o di autenticazione personalizzate in un server di report di SQL Server 2000](#secauth2000)  
+ [Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2000](#secauth2000)  
   
- [Estensioni di sicurezza o di autenticazione personalizzate in un server di report di SQL Server 2005](#secauth2005)  
+ [Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2005](#secauth2005)  
   
  Dopo che l'aggiornamento è stato completato, spostare gli assembly delle estensioni nella nuova cartella di installazione, quindi verificare che le estensioni personalizzate funzionino nel modo previsto. Se l'estensione non funziona, può essere necessario ricompilarla.  
   
@@ -64,18 +64,18 @@ ms.locfileid: "66095970"
   
 3.  Ricompilare la soluzione per associare l'estensione.  
   
- Se non si intende continuare l'aggiornamento, è possibile decidere di eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per i passaggi per la migrazione delle estensioni personalizzate, vedere [migrazione delle estensioni personalizzate](#migrcustext) in questo argomento.  
+ Se non si intende continuare l'aggiornamento, è possibile decidere di eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per i passaggi relativi alla migrazione di estensioni personalizzate, vedere [migrazione di estensioni personalizzate](#migrcustext) in questo argomento.  
   
-###  <a name="dataprocdeliver"></a> L'elaborazione dati personalizzata o estensioni per il recapito  
+###  <a name="dataprocdeliver"></a>Estensioni per il recapito o l'elaborazione dati personalizzate  
  Se Preparazione aggiornamento rileva estensioni per l'elaborazione dati o per il recapito personalizzate, il processo di aggiornamento non viene bloccato. Una volta completato l'aggiornamento, potrebbe tuttavia essere necessario eseguire passaggi aggiuntivi prima di poter utilizzare la funzionalità personalizzata fornita da tali estensioni. È necessario ad esempio eseguire passaggi aggiuntivi quando i file dell'estensione personalizzata vengono installati nella cartella di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Passaggi successivi all'aggiornamento per le estensioni per l'elaborazione dati o per il recapito personalizzate  
   
-1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, cartella di programma del server di report è \Programmi\Microsoft SQL Server\MSRS10_50. \< *nome_istanza*> \report server.  
+1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, la cartella del programma del server di report è \Programmi\microsoft SQL Server\MSRS10_50. \<*instance_name*> \Report server.  
   
  Per ulteriori informazioni, vedere le sezioni relative alla distribuzione di estensioni per l'elaborazione dati e il recapito nella documentazione online di SQL Server.  
   
-###  <a name="render"></a> Estensioni per il rendering personalizzate  
+###  <a name="render"></a>Estensioni per il rendering personalizzate  
  Se Preparazione aggiornamento rileva estensioni per il rendering personalizzate, il processo di aggiornamento viene bloccato. È possibile continuare il processo di aggiornamento rimuovendo le voci di configurazione dell'estensione personalizzata dal file di configurazione. In questo caso tuttavia le estensioni personalizzate non saranno disponibili per gli utenti dopo che l'aggiornamento è stato completato. Se dopo l'aggiornamento sono necessarie estensioni per il rendering personalizzate, è necessario compilare estensioni per il rendering aggiornate oppure ottenerle da un fornitore.  
   
  È necessario eseguire alcuni passaggi per abilitare un aggiornamento oppure è possibile eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "66095970"
   
  Per ulteriori informazioni, vedere la sezione relativa all'implementazione di un'estensione per il rendering nella documentazione online di SQL Server.  
   
-###  <a name="secauth2000"></a> Estensioni di sicurezza o di autenticazione personalizzate in un server di report di SQL Server 2000  
+###  <a name="secauth2000"></a>Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2000  
  Se Preparazione aggiornamento rileva estensioni di sicurezza o di autenticazione personalizzate in un server di report di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], il processo di aggiornamento viene bloccato. È necessario eseguire alcuni passaggi per abilitare un aggiornamento oppure è possibile eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In entrambi i casi è necessario aggiornare e ricompilare le estensioni con le interfacce più recenti in Microsoft.ReportingServices.Interfaces.dll, poiché le interfacce sono state modificate in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] rispetto a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 > [!IMPORTANT]  
@@ -103,7 +103,7 @@ ms.locfileid: "66095970"
   
  se si utilizza un'estensione di autenticazione personalizzata creata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario modificare il codice sorgente per supportare le nuove classi e i nuovi membri introdotti per i report basati su modello.  
   
-##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>Per aggiornare le estensioni di sicurezza o di autenticazione personalizzate da un server di report di SQL Server 2000  
+##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>Per aggiornare le estensioni di sicurezza o di autenticazione personalizzate da un server di report SQL Server 2000  
   
 1.  Aggiornare e ricompilare qualsiasi estensione di sicurezza o di autenticazione con le interfacce più recenti.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66095970"
   
  Per ulteriori informazioni, vedere la sezione relativa all'implementazione di un'estensione di sicurezza nella documentazione online di SQL Server.  
   
-###  <a name="secauth2005"></a> Estensioni di sicurezza o di autenticazione personalizzate in un server di report di SQL Server 2005  
+###  <a name="secauth2005"></a>Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2005  
  Se Preparazione aggiornamento rileva estensioni di sicurezza o di autenticazione personalizzate in un server di report di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], il processo di aggiornamento viene bloccato. È necessario eseguire alcuni passaggi per abilitare un aggiornamento oppure è possibile eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>Per aggiornare estensioni di sicurezza o di autenticazione personalizzate da un server di report di SQL Server 2005  
@@ -130,7 +130,7 @@ ms.locfileid: "66095970"
   
  Per ulteriori informazioni, vedere la sezione relativa all'implementazione di un'estensione di sicurezza nella documentazione online di SQL Server.  
   
-###  <a name="migrcustext"></a> Migrazione delle estensioni personalizzate  
+###  <a name="migrcustext"></a>Migrazione di estensioni personalizzate  
  Se si decide di eseguire la migrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anziché un aggiornamento, utilizzare i passaggi per eseguire la migrazione delle estensioni personalizzate alla nuova istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>Per eseguire la migrazione delle estensioni personalizzate a una nuova istanza di Reporting Services  
@@ -142,6 +142,6 @@ ms.locfileid: "66095970"
 3.  Configurare le estensioni nella nuova istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento di Reporting Services &#40;Preparazione aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Preparazione aggiornamento Reporting Services &#40;problemi di aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

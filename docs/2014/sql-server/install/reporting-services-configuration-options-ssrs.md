@@ -1,5 +1,5 @@
 ---
-title: Reporting Services le opzioni di configurazione (SSRS) | Microsoft Docs
+title: Opzioni di configurazione Reporting Services (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], installing
 - SQL Server Installation Wizard, Report Server Installation Options page
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092593"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952118"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opzioni di configurazione di Reporting Services (SSRS)
   Usare la pagina **Configurazione di Reporting Services** dell'Installazione guidata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare le modalità di installazione e di configurazione di un'istanza del server di report. La disponibilità di un'opzione di installazione dipende dalle opzioni scelte in precedenza nella pagina **Selezione funzionalità** e dall'installazione o meno di un'istanza locale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] contemporaneamente all'installazione del server di report.  
   
- In alcuni casi, se nel computer è installato un certificato Secure Sockets Layer (SSL) associato a un carattere jolly complesso, il programma di installazione creerà gli URL di Reporting Services utilizzando il prefisso HTTPS. Per altre informazioni sul mapping dei certificati agli URL di Reporting Services, vedere [configuri un Server di Report per connessioni Secure Sockets Layer (SSL)](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) nella documentazione Online di SQL Server.  
+ In alcuni casi, se nel computer è installato un certificato Secure Sockets Layer (SSL) associato a un carattere jolly complesso, il programma di installazione creerà gli URL di Reporting Services utilizzando il prefisso HTTPS. Per ulteriori informazioni sulla modalità di mapping dei certificati agli URL Reporting Services, vedere [configurazione di un server di report per le connessioni Secure Sockets Layer (SSL)](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) in documentazione online di SQL Server.  
   
- Per informazioni più recenti relative a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e all'installazione e configurazione di questa versione, vedere [informazioni aggiuntive sull'installazione](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
+ Per le informazioni più recenti relative a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e all'installazione e alla configurazione di questa versione, vedere [informazioni sull'installazione aggiuntive](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
   
 ## <a name="options"></a>Opzioni  
   
@@ -43,21 +43,21 @@ ms.locfileid: "66092593"
   
  Questa opzione è disponibile solo se i valori predefiniti utilizzati nell'installazione di un server di report sono validi per il sistema. Questa opzione è consigliabile per gli sviluppatori che desiderano installare tutti i componenti localmente e per gli utenti che desiderano valutare il software.  
   
- Per visualizzare le informazioni relative alle impostazioni predefinite usate durante l'installazione o per individuare i motivi per cui è impossibile installare la configurazione predefinita, fare clic su **Dettagli**. Per altre informazioni sulla configurazione predefinita per un server di report in modalità nativa, vedere [configurazione predefinita per un'installazione in modalità nativa (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091).  
+ Per visualizzare le informazioni relative alle impostazioni predefinite usate durante l'installazione o per individuare i motivi per cui è impossibile installare la configurazione predefinita, fare clic su **Dettagli**. Per ulteriori informazioni sulla configurazione predefinita per un server di report in modalità nativa, vedere [configurazione predefinita per un'installazione in modalità nativa (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091).  
   
 #### <a name="install-only"></a>Solo installazione  
- Consente di installare i file di programma del server di report, di creare l'account del servizio del server di report e di registrare il provider di Strumentazione gestione Windows (WMI) per il server di report. Questa opzione di installazione viene definita installazione di tipo "solo file". Selezionare questa opzione se non si desidera utilizzare la configurazione predefinita. Se la configurazione predefinita non può essere installata o se si esegue l'installazione di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che include [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], questa è l'unica opzione disponibile. Per altre informazioni su un'installazione "solo file", vedere [modalità installazione (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
+ Consente di installare i file di programma del server di report, di creare l'account del servizio del server di report e di registrare il provider di Strumentazione gestione Windows (WMI) per il server di report. Questa opzione di installazione viene definita installazione di tipo "solo file". Selezionare questa opzione se non si desidera utilizzare la configurazione predefinita. Se la configurazione predefinita non può essere installata o se si esegue l'installazione di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che include [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], questa è l'unica opzione disponibile. Per ulteriori informazioni su un'installazione di solo file, vedere [installazione di solo file (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Al termine dell'installazione, è necessario creare il database del server di report e configurare quest'ultimo prima di utilizzarlo. Per configurare un server di report e creare il database, utilizzare Gestione configurazione Reporting Services. Per altre informazioni, vedere [Procedura: Creare un database del Server di Report (configurazione di Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [configura una connessione di Database Server di Report](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ Al termine dell'installazione, è necessario creare il database del server di report e configurare quest'ultimo prima di utilizzarlo. Per configurare un server di report e creare il database, utilizzare Gestione configurazione Reporting Services. Per altre informazioni, vedere [Procedura: Creazione di un database del server di report (configurazione Reporting Services) ](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [configurazione di una connessione al database del server di report](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Modalità SharePoint di Reporting Services  
   
 #### <a name="install-only"></a>Solo installazione  
  Consente di installare i file di programma del server di report e i cmdlet di PowerShell. Al termine dell'installazione, sarà necessario avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere quanto riportato di seguito.  
   
--   [Installazione di Reporting Services Server di Report in modalità SharePoint per Power View e avvisi dati](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543).  
+-   [Installazione di Reporting Services server di report in modalità SharePoint per Power View e avvisi dati](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543).  
   
--   [Installare Reporting Services in modalità SharePoint come singola Server Farm](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
+-   [Installare Reporting Services modalità SharePoint come singola server farm](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
   
 -   [Reporting Services Report Server (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66092593"
   
 -   Eseguire l'installazione dal supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Fare clic sul file **rsSharePoint.msi** nella cartella Setup nel supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Scaricare e installare il componente aggiuntivo. Per altre informazioni, vedere [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
+-   Scaricare e installare il componente aggiuntivo. Per ulteriori informazioni, vedere [la posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare Gestione configurazione Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199096)   
- [Creare un database del Server di Report (configurazione di Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094)   
+ [Avvia Reporting Services Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=199096)   
+ [Creazione di un database del server di report (configurazione Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094)   
  [Eseguire l'aggiornamento e la migrazione di Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
  [Installazione dal prompt dei comandi delle modalità SharePoint e nativa di Reporting Services](https://go.microsoft.com/fwlink/?LinkId=217620)  
   

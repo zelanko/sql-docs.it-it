@@ -14,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096184"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952628"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
   Ogni istanza del server di report richiede una connessione al database del server di report in cui sono archiviati report, modelli di report, origini dei dati condivise, risorse e metadati gestiti dal server. La connessione iniziale può essere creata durante l'installazione del server di report, se si sta installando la configurazione predefinita. Nella maggior parte dei casi è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare la connessione al termine dell'installazione. È possibile modificare la connessione in qualsiasi momento per cambiare il tipo di account o reimpostare le credenziali. Per istruzioni dettagliate su come creare il database e configurare la connessione, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "66096184"
   
  Il database del server di report è un componente interno, a cui accede solo il server di report. Le credenziali e le informazioni di connessione specificate per il database del server di report vengono utilizzate esclusivamente dal server di report. Gli utenti che richiedono i report, non devono disporre di autorizzazioni per il database o di un account di accesso al database per il database del server di report.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato `System.Data.SqlClient` a cui connettersi il [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report. Se si utilizza un'istanza locale del [!INCLUDE[ssDE](../../includes/ssde-md.md)], il server di report stabilirà la connessione tramite memoria condivisa. Se si utilizza un server di database remoto per il database del server di report, a seconda dell'edizione utilizzata potrebbe essere necessario abilitare le connessioni remote. Se si usa l'edizione Enterprise Edition, le connessioni remote sono abilitate per TCP/IP per impostazione predefinita.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza `System.Data.SqlClient` per connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report. Se si utilizza un'istanza locale del [!INCLUDE[ssDE](../../includes/ssde-md.md)], il server di report stabilirà la connessione tramite memoria condivisa. Se si utilizza un server di database remoto per il database del server di report, a seconda dell'edizione utilizzata potrebbe essere necessario abilitare le connessioni remote. Se si usa l'edizione Enterprise Edition, le connessioni remote sono abilitate per TCP/IP per impostazione predefinita.  
   
  Per verificare che l'istanza accetti connessioni remote, fare clic sul menu **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, **Gestione configurazione SQL Server**, quindi verificare che il protocollo TCP/IP sia abilitato per ogni servizio.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66096184"
 ### <a name="storing-database-connection-information"></a>Archiviazione delle informazioni di connessione al database  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni di connessione vengono archiviate e crittografate nelle impostazioni di RSreportserver.config seguenti. Per creare valori crittografati per queste impostazioni, è necessario utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità rsconfig.  
   
- Non tutti i valori vengono impostati per ogni tipo di connessione. Se si configura la connessione utilizzando i valori predefiniti (vale a dire usando gli account del servizio per stabilire la connessione), <`LogonUser`>, <`LogonDomain`>, e <`LogonCred`> risulteranno vuoti, come indicato di seguito:  
+ Non tutti i valori vengono impostati per ogni tipo di connessione. Se si configura la connessione usando i valori predefiniti, ovvero usando gli account del servizio per effettuare la connessione, < `LogonUser` >, < `LogonDomain` > e < `LogonCred` > saranno vuoti, come indicato di seguito:  
   
 ```  
 <Dsn></Dsn>  
