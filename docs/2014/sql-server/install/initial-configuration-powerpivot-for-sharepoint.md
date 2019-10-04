@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 0b7fee687c45dd0b96197e6c920971661c6b70dc
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530907"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952452"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configurazione iniziale (PowerPivot per SharePoint)
   Seguire i passaggi descritti in questo argomento per configurare un'installazione iniziale di PowerPivot per SharePoint. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di configurazione PowerPivot. Tale strumento consente di eseguire in modo automatico tutti i passaggi di configurazione descritti di seguito.  
@@ -103,13 +103,13 @@ ms.locfileid: "69530907"
   
 3.  Selezionare **SQL Server applicazione di servizio PowerPivot**. Se non è presente nell'elenco, PowerPivot per SharePoint non è installato o la soluzione non è distribuita.  
   
-4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è\<PowerPivotServiceApplication number >. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
+4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è PowerPivotServiceApplication @ no__t-0number >. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
   
 5.  In Pool di applicazioni creare un nuovo pool di applicazioni e selezionare un account di sicurezza. L'account utente di dominio è obbligatorio.  
   
 6.  In **server database**scegliere un server di database in cui creare il database dell'applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_\<GUID >. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_ @ no__t-1guid >. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "69530907"
   
      Se un'applicazione del servizio PowerPivot è già elencata nel gruppo di connessioni predefinito, non aggiungerne una seconda. L'aggiunta di due applicazioni di servizio dello stesso tipo del gruppo di connessioni predefinito non è una configurazione supportata. Per ulteriori informazioni sull'utilizzo di applicazioni di servizio aggiuntive in un gruppo di connessione, vedere [connettere un'applicazione del servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
-10. Fare clic su **OK**. Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
+10. Scegliere **OK.** Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
   
 ##  <a name="ExcelServ"></a>Passaggio 4: Abilita Excel Services  
  PowerPivot per SharePoint richiede Excel Services per il supporto dell'accesso ai dati PowerPivot nella farm. È possibile determinare se Excel Services è già abilitato verificando se l'applicazione Excel Services è presente nell'elenco di applicazioni di servizio in Amministrazione centrale. Se Excel Services non è elencato, effettuare le operazioni seguenti per abilitarlo.  
@@ -170,7 +170,7 @@ ms.locfileid: "69530907"
   
 5.  In **database**specificare il SQL Server istanza di che ospiterà il database per questa applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_\<GUID >. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_ @ no__t-0guid >. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 7.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie Autenticazione di SQL Server, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione nella farm in uso.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "69530907"
   
 1.  Fare clic sull'applicazione del servizio di archiviazione sicura nell'elenco.  
   
-2.  Nella barra multifunzione applicazioni di serviziofare clic su Gestisci.  
+2.  Nella barra multifunzione applicazioni di servizio fare clic su **Gestisci**.  
   
 3.  In gestione chiavi fare clic su **genera nuova chiave**.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "69530907"
   
 1.  Da un sito di SharePoint scegliere **Azioni sito**.  
   
-     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo il nome del computer http://\<> per aprire la raccolta siti radice.  
+     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo http://\<computer Name > per aprire la raccolta siti radice.  
   
 2.  Fare clic su **Impostazioni sito**.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "69530907"
   
  L'installazione del provider consentirà di garantire che le cartelle di lavoro per le quali viene fatto riferimento a MSOLAP.4 nella stringa di connessione dati funzionino correttamente su un server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. L'installazione del provider OLE DB per SQL Server 2008 R2 rappresenta inoltre un approccio alternativo all'aggiornamento di cartelle di lavoro create in una versione precedente di PowerPivot per Excel.  
   
- È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570). Cercare **Microsoft® provider OLE DB Analysis Services per Microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto per x64 del programma di `SQLServer2008_ASOLEDB10.msi` installazione.  
+ È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570). Cercare **microsoft® provider OLE DB Analysis Services per microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto x64 del programma di installazione `SQLServer2008_ASOLEDB10.msi`.  
   
  Per ulteriori informazioni sull'installazione del provider, inclusi i passaggi di verifica, vedere [Install the provider OLE DB Analysis Services on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -236,7 +236,7 @@ ms.locfileid: "69530907"
   
  Per verificare l'integrazione di PowerPivot con un sito di SharePoint, effettuare le operazioni seguenti:  
   
-1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile\<specificare http://il nome del computer > nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile specificare http://\<your nome computer > nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati PowerPivot siano disponibili nell'applicazione. È possibile effettuare questa operazione verificando la presenza di modelli di libreria forniti da PowerPivot:  
   
@@ -256,7 +256,7 @@ ms.locfileid: "69530907"
   
 5.  In Tipo di server selezionare **Analysis Services**.  
   
-6.  In nome server immettere  **\<nome-server > \powerpivot**, dove  **\<Server-Name >** è il nome del computer in cui è installato PowerPivot per SharePoint.  
+6.  In nome server immettere **\<Server-name > \powerpivot**, dove **\<server-Name >** è il nome del computer con l'installazione di PowerPivot per SharePoint.  
   
 7.  Fare clic su **Connetti**.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "69530907"
   
  A seconda del modo in cui si configura l'applicazione del servizio PowerPivot, il servizio di sistema PowerPivot sarà aggiunto al gruppo di connessioni predefinito, rendendolo disponibile a tutte le applicazioni Web che utilizzano le connessioni predefinite. Tuttavia, se le applicazioni Web sono state configurate in modo da utilizzare gli elenchi di connessioni ad applicazioni di servizio personalizzate, sarà necessario aggiungere l'applicazione del servizio PowerPivot a ogni applicazione Web di SharePoint per la quale si desidera abilitare l'elaborazione dei dati PowerPivot. Per ulteriori informazioni, vedere [connettere un'applicazione del servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
- Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere una seconda istanza del server PowerPivot per SharePoint alla farm. Il processo di installazione è praticamente identico ai passaggi eseguiti per aggiungere il primo server, ad eccezione dei requisiti relativi all'immissione di nomi di istanza o delle informazioni sull'account di servizio. Per istruzioni, vedere [elenco di controllo per la distribuzione: Scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)di SharePoint 2010.  
+ Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere una seconda istanza del server PowerPivot per SharePoint alla farm. Il processo di installazione è praticamente identico ai passaggi eseguiti per aggiungere il primo server, ad eccezione dei requisiti relativi all'immissione di nomi di istanza o delle informazioni sull'account di servizio. Per istruzioni, vedere elenco di controllo [Deployment: Scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm di SharePoint 2010 @ no__t-0.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

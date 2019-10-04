@@ -1,5 +1,5 @@
 ---
-title: Esplorazione diretta nel Server di Report (Upgrade Advisor) di | Microsoft Docs
+title: Esplorazione diretta del server di report (preparazione aggiornamento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,33 +7,33 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 870937f4dffe356ca2216335c74566efc73d2a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095542"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952216"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>Esplorazione diretta nel server di report (Upgrade Advisor)
-  L'installazione attuale di rilevate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] durante l'esplorazione direttamente per la directory virtuale del server di report.  
+  È stata rilevata l'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di passare direttamente alla directory virtuale del server di report.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint.|  
+|modalità SharePoint **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- L'installazione attuale di rilevate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] durante l'esplorazione direttamente per la directory virtuale server di report, ad esempio **http://\<nome server > / ReportServer**. Non è supportato nelle versioni correnti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ È stata rilevata l'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sta passando direttamente alla directory virtuale del server di report, ad esempio **http://\<Server nome >/ReportServer**. Non è supportato nelle versioni correnti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  La regola costituisce un avviso e l'aggiornamento non viene bloccato.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Accedere usando l'interfaccia utente di SharePoint per le raccolte documenti oppure usare **http://\<nome server > / sito di sharepoint vti_bin/reportserver**.  
+ Sfogliare usando l'interfaccia utente di SharePoint per le raccolte documenti o usare **http://\<Server nome > sito/sharepoint >/_vti_bin/ReportServer**.  
   
   

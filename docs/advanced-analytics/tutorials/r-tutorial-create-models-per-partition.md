@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714746"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952026"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R su SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>Esecuzione parallela
 
-Si noti che gli input [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includono  **@parallel= 1**, usato per abilitare l'elaborazione parallela. Diversamente dalle versioni precedenti, in SQL Server 2019, l'impostazione  **@parallel= 1** offre un suggerimento più avanzato al Query Optimizer, rendendo l'esecuzione parallela un risultato molto più probabile.
+Si noti che gli input [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includono `@parallel=1`, usato per abilitare l'elaborazione parallela. Diversamente dalle versioni precedenti, in SQL Server 2019, l'impostazione `@parallel=1` fornisce un suggerimento più avanzato al Query Optimizer, rendendo l'esecuzione parallela un risultato molto più probabile.
 
-Per impostazione predefinita, il Query Optimizer tende a funzionare in  **@parallel= 1** per le tabelle con più di 256 righe, ma se è possibile gestirlo in modo esplicito impostando  **@parallel= 1** , come illustrato in questo script.
+Per impostazione predefinita, il Query Optimizer tende a funzionare con `@parallel=1` su tabelle con più di 256 righe, ma se è possibile gestire questa impostazione in modo esplicito impostando `@parallel=1`, come illustrato in questo script.
 
 > [!Tip]
-> Per workoads di training, è possibile **@parallel** usare con qualsiasi script di training arbitrario, anche quelli che usano algoritmi non Microsoft-RX. In genere, solo gli algoritmi RevoScaleR (con il prefisso RX) offrono il parallelismo negli scenari di training in SQL Server. Tuttavia, con il nuovo parametro, è possibile parallelizzare uno script che chiama funzioni, incluse le funzioni R Open Source, non progettate in modo specifico con tale funzionalità. Questa operazione funziona perché le partizioni presentano affinità a thread specifici, quindi tutte le operazioni chiamate in uno script vengono eseguite in base a ogni partizione nel thread specificato.
-
-<a name="training-step"></a>
+> Per workoads di training, è possibile usare `@parallel` con qualsiasi script di training arbitrario, anche quelli che usano algoritmi non Microsoft-RX. In genere, solo gli algoritmi RevoScaleR (con il prefisso RX) offrono il parallelismo negli scenari di training in SQL Server. Tuttavia, con il nuovo parametro, è possibile parallelizzare uno script che chiama funzioni, incluse le funzioni R Open Source, non progettate in modo specifico con tale funzionalità. Questa operazione funziona perché le partizioni presentano affinità a thread specifici, in modo che tutte le operazioni chiamate in uno script vengano eseguite in base alla partizione, in Give @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>Eseguire la procedura ed eseguire il training del modello
 

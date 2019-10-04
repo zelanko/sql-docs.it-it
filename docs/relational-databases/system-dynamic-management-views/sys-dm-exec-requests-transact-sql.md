@@ -1,10 +1,10 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326164"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923772"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ Restituisce informazioni su ciascuna richiesta in esecuzione all'interno di [!IN
 |database_id|**smallint**|ID del database utilizzato per eseguire la richiesta. Non ammette i valori Null.|  
 |user_id|**int**|ID dell'utente che ha inviato la richiesta. Non ammette i valori Null.|  
 |connection_id|**uniqueidentifier**|ID della connessione nella quale è arrivata la richiesta. Ammette i valori Null.|  
-|blocking_session_id|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata.<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Al momento non è stato possibile determinare l'ID sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
+|blocking_session_id|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL o uguale a 0, la richiesta non è bloccata oppure le informazioni sulla sessione della sessione di blocco non sono disponibili (o non possono essere identificate).<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Al momento non è stato possibile determinare l'ID sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
 |wait_type|**nvarchar(60)**|Se la richiesta è momentaneamente bloccata, in questa colonna viene restituito il tipo di attesa. Ammette i valori Null.<br /><br /> Per informazioni sui tipi di attese, vedere [sys. dm _os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Se la richiesta è momentaneamente bloccata, in questa colonna viene restituita la durata dell'attesa corrente espressa in millisecondi. Non ammette i valori Null.|  
 |last_wait_type|**nvarchar(60)**|Se la richiesta è stata precedentemente bloccata, questa colonna restituisce il tipo dell'ultima attesa. Non ammette i valori Null.|  
@@ -77,7 +77,7 @@ Restituisce informazioni su ciascuna richiesta in esecuzione all'interno di [!IN
 |ansi_padding|**bit**|1 = ANSI_PADDING è impostata su ON per la richiesta.<br /><br /> Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|transaction_isolation_level|**smallint**|Livello di isolamento con cui è stata creata la transazione per questa richiesta. Non ammette i valori Null.<br /><br /> 0 = Non specificato<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|Livello di isolamento con cui è stata creata la transazione per questa richiesta. Non ammette i valori Null.<br /> 0 = Non specificato<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|Periodo di timeout del blocco, espresso in millisecondi, per la richiesta. Non ammette i valori Null.|  
 |deadlock_priority|**int**|Impostazione di DEADLOCK_PRIORITY per la richiesta. Non ammette i valori Null.|  
 |row_count|**bigint**|Numero di righe restituite al client dalla richiesta. Non ammette i valori Null.|  
@@ -96,6 +96,7 @@ Restituisce informazioni su ciascuna richiesta in esecuzione all'interno di [!IN
 |is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se la richiesta è un'operazione sugli indici ripristinabili. |  
 |page_resource |**binary(8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Rappresentazione esadecimale a 8 byte della risorsa della pagina se la `wait_resource` colonna contiene una pagina. Per ulteriori informazioni, vedere [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Si applica a**: Iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalla richiesta. Non ammette i valori Null.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Note 
 Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive. I valori temporali restituiti da questa DMW non includono il tempo trascorso in modalità preemptive.
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Ricerca di tutti i blocchi contenuti in un batch in esecuzione
 
-Nell'esempio seguente viene eseguita una query su **sys. dm _exec_requests** per trovare il batch `transaction_id` interessante e copiarne l'oggetto dall'output.
+Nell'esempio seguente viene eseguita una query su **sys. dm _exec_requests** per individuare il batch interessante e copiarne il `transaction_id` dall'output.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Quindi, per trovare informazioni sul blocco, usare l' `transaction_id` oggetto copiato con la funzione di sistema **sys. dm _tran_locks**.  
+Quindi, per trovare informazioni sul blocco, utilizzare la copiata `transaction_id` con la funzione di sistema **sys. dm _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

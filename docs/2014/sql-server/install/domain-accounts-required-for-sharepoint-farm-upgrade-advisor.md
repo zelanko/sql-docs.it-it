@@ -1,5 +1,5 @@
 ---
-title: Gli account di dominio richiesti per la farm di SharePoint (Upgrade Advisor) | Microsoft Docs
+title: Account di dominio necessari per la farm di SharePoint (preparazione aggiornamento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095509"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952514"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Account di dominio richiesti per la farm di SharePoint (Upgrade Advisor)
   I prodotti SharePoint configurati per un ambiente della farm richiedono l'utilizzo di account di dominio.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint.|  
+|modalità SharePoint **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,15 +35,15 @@ ms.locfileid: "66095509"
  "Il server di report è in esecuzione con l'account NT AUTHORITY\NETWORK SERVICE predefinito, condizione non supportata dall'installazione di una farm di SharePoint. Riconfigurare il server di report affinché venga eseguito con un account di dominio".  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Per la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni precedenti, utilizzare Gestione configurazione Reporting Services per modificare l'account assegnato come account di servizio del server di report.  
+ Per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni precedenti, utilizzare il Configuration Manager Reporting Services per modificare l'account assegnato come account del servizio del server di report.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Per modificare l'account del servizio da Gestione configurazione  
   
-1.  Dal **avviare** dal menu **tutti i programmi**, quindi fare clic su **Microsoft SQL Server 2008 R2**.  
+1.  Dal menu **Start** selezionare **tutti i programmi**, quindi fare clic su **Microsoft SQL Server 2008 R2**.  
   
-2.  Selezionare **strumenti di configurazione**, quindi fare clic su **Gestione configurazione Reporting Services**.  
+2.  Selezionare **strumenti di configurazione**, quindi fare clic su **Reporting Services Configuration Manager**.  
   
-3.  In Configuration Manager, selezionare la **Account del servizio** scheda.  
+3.  In Configuration Manager selezionare la scheda **account del servizio** .  
   
 4.  Selezionare **Usa un altro account** e immettere le credenziali per un account di dominio.  
   

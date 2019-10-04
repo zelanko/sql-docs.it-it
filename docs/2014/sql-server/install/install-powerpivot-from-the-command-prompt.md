@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890178"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952135"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installazione di PowerPivot dal prompt dei comandi
   È possibile eseguire il programma di installazione dalla riga di comando per installare SQL Server PowerPivot per SharePoint. È necessario includere il parametro `/ROLE` nel comando ed escludere il parametro `/FEATURES`.  
@@ -41,7 +41,7 @@ ms.locfileid: "68890178"
  A differenza delle versioni precedenti, tutte le attività di configurazione del server vengono eseguite successivamente all'installazione. In caso di automazione delle procedure di installazione e configurazione, è possibile utilizzare PowerShell per configurare il server. Per ulteriori informazioni, vedere [configurazione di PowerPivot mediante Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comando di esempio  
- Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 `SPI_AS_ExistingFarm`viene illustrato.  
+ Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 viene visualizzato `SPI_AS_ExistingFarm`.  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -82,9 +82,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Sostituire i segnaposto per \<dominio\nomeutente > e \<strongpassword > con account utente e password validi.  
+3.  Sostituire i segnaposto per \<domain \ username > e \<StrongPassword > con account utente e password validi.  
   
-     I `/assvaccount` parametri e **/ASSVCPASSWORD** vengono utilizzati per configurare l' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] istanza nel server applicazioni. Sostituire questi segnaposto con informazioni sull'account valide.  
+     I parametri `/assvaccount` e **/ASSVCPASSWORD** vengono utilizzati per configurare l'istanza [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] nel server applicazioni. Sostituire questi segnaposto con informazioni sull'account valide.  
   
      Il parametro **/ASSYSADMINACCOUNTS** deve essere impostato sull'identità dell'utente che esegue SQL Server installazione. È necessario specificare almeno un amministratore di sistema. Si noti che il programma di installazione di SQL Server non concede più autorizzazioni sysadmin automatiche ai membri del gruppo Administrators predefinito.  
   

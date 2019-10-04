@@ -1,5 +1,5 @@
 ---
-title: Scalabilità orizzontale distribuzione (Server di Report in modalità nativa) | Microsoft Docs
+title: Distribuzione con scalabilità orizzontale (server di report in modalità nativa) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092425"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952422"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
   La pagina **Distribuzione con scalabilità orizzontale** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o di creare un join di un server di report per una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
@@ -37,7 +37,7 @@ ms.locfileid: "66092425"
  Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **SQL Server Name**  
+ **Nome SQL Server**  
  Consente di specificare il nome dell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report.  
   
  **Database Name**  
@@ -63,7 +63,7 @@ ms.locfileid: "66092425"
   
      Per un server di report che fa già parte di una distribuzione con scalabilità orizzontale, è possibile utilizzare questa pagina per aggiungere o rimuovere nodi.  
   
- **Initialize**  
+ **Inizializzare**  
  Fare clic su **Inizializza** per aggiungere un server di report alla distribuzione con scalabilità orizzontale. Questo passaggio consente di configurare un server di report per l'utilizzo di una chiave simmetrica in un database del server di report condiviso. È possibile utilizzare **Inizializza** per aggiungere un'istanza del server di report a una distribuzione con scalabilità orizzontale o per la risoluzione dei problemi di migrazione o installazione.  
   
  Un'istanza del server di report è disponibile solo se in precedenza è stata configurata una connessione al database condiviso del server di report. È necessario inoltre eseguire l'inizializzazione da un server di report già inizializzato per l'utilizzo del database del server di report.  
@@ -73,7 +73,7 @@ ms.locfileid: "66092425"
   
  A scopo cautelativo, accertarsi di creare una copia di backup della chiave simmetrica prima di rimuoverla. Dopo aver rimosso le chiavi di crittografia dell'ultimo server di report dell'elenco, specificare i nuovi requisiti per tutte le successive inizializzazioni del server di report per il database. In base al nuovo requisito, al termine dell'inizializzazione di un server di report è necessario ripristinare una copia di backup della chiave simmetrica. Il ripristino della chiave simmetrica è necessario per accedere ai dati crittografati attualmente archiviati nel database del server di report.  
   
- Se i dati crittografati non sono più necessari o se non si dispone di una copia di backup della chiave, sarà necessario eliminare i dati crittografati. Per altre informazioni, vedere [chiavi di crittografia &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Se i dati crittografati non sono più necessari o se non si dispone di una copia di backup della chiave, sarà necessario eliminare i dati crittografati. Per altre informazioni, vedere [chiavi &#40;di crittografia&#41;modalità nativa SSRS](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

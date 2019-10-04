@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 954f60e49f5bc94881fcdf66b7a381385fb40416
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 42bc370a4e1eebddb3293afe6843f3ed19338656
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890147"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952145"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installare le funzionalità di Business Intelligence di SQL Server con SharePoint (PowerPivot e Reporting Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere integrati con una farm di Microsoft SharePoint per abilitare le funzionalità di Business Intelligence (BI) in SharePoint. Tra le funzionalità sono inclusi [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]viene utilizzato per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] l'accesso ai dati in una farm di SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è il motore dati per le cartelle di lavoro create in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel a cui si accede da una raccolta di SharePoint. Una volta salvata una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint, è possibile utilizzarla come origine dati per i report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere integrati con una farm di Microsoft SharePoint per abilitare le funzionalità di Business Intelligence (BI) in SharePoint. Tra le funzionalità sono inclusi [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] viene utilizzato per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm di SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è il motore dati per le cartelle di lavoro create in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel a cui si accede da una raccolta di SharePoint. Una volta salvata una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint, è possibile utilizzarla come origine dati per i report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
  Alcuni dei passaggi di installazione e configurazione necessari per SharePoint 2010 sono diversi dai passaggi necessari per SharePoint 2013. Alcuni argomenti di questa sezione si applicano a entrambe le versioni di SharePoint.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "68890147"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "Nota") Per le note sulla versione correnti, vedere le [Note sulla versione di SQL server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
+ ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "Nota") per le note sulla versione correnti, vedere le [Note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -63,10 +63,10 @@ ms.locfileid: "68890147"
 |**3**|SharePoint con Reporting Services in modalità SharePoint|Power View|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.<br /><br /> Installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **(rsSharePoint.msi)** per SharePoint. Per ulteriori informazioni, vedere [installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41; ](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
 |**4**|Tutte le funzionalità di PowerPivot|Accedere alle cartelle di lavoro come origine dati dall'esterno della farm.<br /><br /> Pianificare l'aggiornamento dati.<br /><br /> Raccolta PowerPivot.<br /><br /> Dashboard di gestione.<br /><br /> Tipo di contenuto del file di collegamento BISM.|Distribuire il componente aggiuntivo PowerPivot per SharePoint 2013 **(spPowerPivot.msi)** . Per ulteriori informazioni, vedere quanto segue:<br /><br /> [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Per informazioni su come scaricare **spPowerPivot.msi**, vedere [Scaricare SQL Server 2014 PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
   
- Per ulteriori informazioni sull'abilitazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] delle funzionalità, vedere la pagina relativa a [SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (. https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)  
+ Per ulteriori informazioni sull'abilitazione delle funzionalità di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere la pagina relativa a [SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a>Panoramica dell'installazione  
- Se si desidera utilizzare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], eseguire due volte l'Installazione guidata di SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono opzioni separate nella pagina **impostazione ruolo** dell'installazione guidata di SQL Server.  
+ Se si desidera utilizzare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], eseguire due volte l'Installazione guidata di SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono opzioni separate nella pagina **impostazione ruolo** dell'installazione guidata SQL Server.  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supporta sia SharePoint 2010 sia SharePoint 2013; tuttavia si utilizza un'architettura e un processo di installazione differenti a seconda della versione di SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68890147"
   
      Per entrambe le versioni di SharePoint, il processo di installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inizia con la selezione del ruolo di impostazione di **SQL Server PowerPivot per SharePoint** nell'installazione guidata di SQL Server. In alternativa, utilizzare un'installazione dal prompt dei comandi di SQL Server.  
   
-     ![Impostazione del ruolo](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Impostazione del ruolo")  
+     ![Configurare]il(../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "ruolo di installazione") del ruolo  
   
 3.  Per SharePoint 2013, è possibile estendere le funzionalità e l'esperienza di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Scaricare ed eseguire **spPowerPivot.msi** per aggiungere il supporto di gestione, collaborazione ed elaborazione dell'aggiornamento dati lato server per la cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per ulteriori informazioni, vedere [Microsoft SQL Server 2014 PowerPivot per Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=324854).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68890147"
   
     1.  Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint. [Reporting Services l' &#40;installazione in modalità SharePoint di SharePoint 2010&#41; e SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) e [installare Reporting Services modalità SharePoint per SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
-    2.  Installare il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint (rsSharePoint.msi). Vedere [installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Per la versione corrente del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componente aggiuntivo per SharePoint, vedere [dove trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+    2.  Installare il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint (rsSharePoint.msi). Vedere [installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Per la versione corrente del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per SharePoint, vedere [dove trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
     3.  Configurare il servizio SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere la sezione "creare un'applicazione di servizio Reporting Services" in [installare Reporting Services modalità SharePoint per sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   

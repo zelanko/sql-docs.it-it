@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b77948b3ae5b27d7ecb82c277424057fe39ff7a0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891033"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952147"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale
   Se si installa PowerPivot per SharePoint in una farm che dispone della topologia di Amministrazione centrale, senza Excel Services o PowerPivot per SharePoint, scaricare e installare la libreria client Microsoft ADOMD.NET se si desidera l'accesso completo ai report incorporati nel dashboard di gestione PowerPivot. Alcuni report nel dashboard utilizzano ADOMD.NET per accedere a dati interni relativi all'integrità del server e all'elaborazione query di PowerPivot nella farm.  
@@ -42,7 +42,7 @@ ms.locfileid: "68891033"
   
 3.  Fare clic su **Versione**.  
   
-4.  Verificare che la versione includa 12,00. \<numero di Build > e che la descrizione è Microsoft. AnalysisService. AdomdClient.  
+4.  Verificare che la versione includa 12,00. \<build numero > e che la descrizione sia Microsoft. AnalysisService. AdomdClient.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati di utilizzo e dashboard di gestione PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  

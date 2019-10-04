@@ -2,19 +2,19 @@
 title: Requisiti hardware e software per Analysis Services server in modalità SharePoint (SQL Server 2014) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: database-engine
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 55727331dc9716501eae60e42b4299862f41d5f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 58ed4735bf44e1afe62fdc3a8ed64385087c03df
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892184"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952467"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisiti hardware e software per il server Analysis Services in modalità SharePoint (SQL Server 2014)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68892184"
   
 -   [Foglio dati di licenza di SQL Server 2014](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
--   [Come acquistare: I modelli di licenza](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) SQL Server https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) supportano (.  
+-   [How da acquistare: I modelli di licenza SQL Server supportano @ no__t-0 (https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2).  
   
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services installato in SharePoint 2013  
  Se il server Analysis Services viene installato in modalità SharePoint in un server autonomo, i requisiti minimi di sistema sono basati su [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], anziché sui requisiti del server SharePoint.  
@@ -50,7 +50,7 @@ ms.locfileid: "68892184"
   
  Nella tabella seguente viene fornita una descrizione delle configurazioni hardware minima e consigliata per un server [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] autonomo che non fa parte della farm di SharePoint:  
   
-|Componente|Minimo|Consigliato|  
+|Componente|Minima|Consigliato|  
 |---------------|-------------|-----------------|  
 |Processore|Processore dual-core a 64 bit, 3 GHz.|16 core|  
 |RAM|8 GB di RAM|64 GB di RAM|  
@@ -72,7 +72,7 @@ ms.locfileid: "68892184"
 |Versione di SharePoint|SharePoint 2010 Enterprise con Excel Services, servizio di archiviazione sicura e Attestazioni per il servizio token Windows configurati nella stessa server farm.<br /><br /> SharePoint deve essere installato utilizzando l'opzione Server farm in Installazione di SharePoint (l'opzione di installazione autonoma di SharePoint non è supportata). [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] richiede un'infrastruttura di server farm per supportare l'accesso amministrativo e ai dati. L'installazione autonoma non fornisce questi servizi.<br /><br /> L'edizione Developer, eseguita in Windows 7 o Windows Vista, non è supportata per le installazioni del server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  
 |Service Pack|È richiesto SharePoint Server 2010 Service Pack 1 (SP1).<br /><br /> È richiesto SharePoint 2010 Service Pack 1 per le funzionalità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].<br /><br /> È richiesto l'aggiornamento cumulativo di agosto 2010 di SharePoint 2010 o versione successiva in caso di aggiornamento da una versione precedente di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È consigliabile installare l'aggiornamento cumulativo di agosto 2010 o versione successiva dopo l'installazione di SharePoint Service Pack 1. Una nuova installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] non richiede l'aggiornamento cumulativo. Per ulteriori informazioni, vedere [agosto 2010 aggiornamento cumulativo per SharePoint rilasciato](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx).|  
 |Applicazione Web SharePoint|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2010 supporta solo le applicazioni Web SharePoint configurate per l'autenticazione in modalità classica. Se si aggiunge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm esistente, assicurarsi che l'applicazione Web con cui si intende utilizzarlo sia configurata per l'autenticazione in modalità classica. Per istruzioni su come verificare la modalità di autenticazione, vedere la sezione "verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica" in [distribuire soluzioni PowerPivot in SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint).|  
-|Provider di dati necessari per l'aggiornamento dei dati lato server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|Per l'aggiornamento dei dati lato server vengono ripetuti gli stessi passaggi per il recupero dei dati utilizzati per importare inizialmente i dati. Questo significa che i provider di dati utilizzati per importare i dati in una workstation client devono essere presenti anche nel server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Inoltre, utilizzando feed di dati in un server SharePoint è necessario disporre di ADO.NET Data Services. Questo software non viene installato tramite il programma di installazione dei prerequisiti di SharePoint. È necessario installare il software seguente manualmente.<br /><br /> Assembly di runtime di ADO.NET Data Services 3.5 SP1, utilizzati per esportare un elenco SharePoint come feed di dati. Scaricare e installare la versione che corrisponde al sistema operativo:<br /><br /> Per Windows Server 2008 R2, usare l' [aggiornamento di ADO.NET Data Services per .NET Framework 3,5 SP1 per Windows 7 e Windows server 2008 https://go.microsoft.com/fwlink/?LinkId=182557) R2 (](https://go.microsoft.com/fwlink/?LinkId=182557). Windows Server 2008 R2 **SP1** contiene già il provider aggiornato.<br /><br /> Per Windows Server 2008, usare l' [aggiornamento di ADO.NET Data Services per .NET Framework 3,5 SP1 per windows 2000, Windows server 2003, Windows XP, Windows Vista e Windows server https://go.microsoft.com/fwlink/?LinkId=158125) 2008 (](https://www.microsoft.com/download/details.aspx?id=22734).|  
+|Provider di dati necessari per l'aggiornamento dei dati lato server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|Per l'aggiornamento dei dati lato server vengono ripetuti gli stessi passaggi per il recupero dei dati utilizzati per importare inizialmente i dati. Questo significa che i provider di dati utilizzati per importare i dati in una workstation client devono essere presenti anche nel server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Inoltre, utilizzando feed di dati in un server SharePoint è necessario disporre di ADO.NET Data Services. Questo software non viene installato tramite il programma di installazione dei prerequisiti di SharePoint. È necessario installare il software seguente manualmente.<br /><br /> Assembly di runtime di ADO.NET Data Services 3.5 SP1, utilizzati per esportare un elenco SharePoint come feed di dati. Scaricare e installare la versione che corrisponde al sistema operativo:<br /><br /> Per Windows Server 2008 R2, usare l' [aggiornamento di ADO.NET Data Services per .NET Framework 3,5 SP1 per Windows 7 e Windows server 2008 R2 (https://go.microsoft.com/fwlink/?LinkId=182557)](https://go.microsoft.com/fwlink/?LinkId=182557). Windows Server 2008 R2 **SP1** contiene già il provider aggiornato.<br /><br /> Per Windows Server 2008, usare l' [aggiornamento di ADO.NET Data Services per .NET Framework 3,5 SP1 per windows 2000, Windows server 2003, Windows XP, Windows Vista e Windows server 2008 (https://go.microsoft.com/fwlink/?LinkId=158125)](https://www.microsoft.com/download/details.aspx?id=22734).|  
   
  [Determinare i requisiti hardware e software (SharePoint 2010) (https://go.microsoft.com/fwlink/?LinkId=169734)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
