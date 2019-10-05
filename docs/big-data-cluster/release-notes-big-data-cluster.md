@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive gli aggiornamenti più recenti e i problemi [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] noti per (anteprima).
+description: Questo articolo descrive gli aggiornamenti più recenti e i problemi noti per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988100"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974389"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Note sulla versione per i cluster SQL Server Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo elenca gli aggiornamenti e conosce i problemi per le versioni più recenti [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]di.
+Questo articolo elenca gli aggiornamenti e conosce i problemi per le versioni più recenti di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## <a id="rc"></a>Versione finale candidata (agosto)
 
@@ -31,13 +31,13 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
 |SQL Server Always On gruppo di disponibilità |Quando si distribuisce un cluster SQL Server Big data, è possibile configurare la distribuzione per creare un gruppo di disponibilità da fornire:<br/><br/>-Disponibilità elevata <br/><br/>-Lettura-scalabilità orizzontale <br/><br/>-Inserimento di dati con scalabilità orizzontale nel pool di dati<br/><br>Vedere [distribuire con disponibilità elevata](../big-data-cluster/deployment-high-availability.md). |
-|`azdata` |Installazione semplificata per lo strumento con [installazione Manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`comando](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`comando](./reference-azdata-bdc-status.md) |
+|`azdata` |Installazione semplificata per lo strumento con [installazione Manager](./deploy-install-azdata-linux-package.md)<br/><br/>[comando `azdata notebook`](./reference-azdata-notebook.md)<br/><br/>[comando `azdata bdc status`](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[Scaricare la build finale candidata di Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Aggiunta di notebook per la risoluzione dei problemi tramite SQL Server manuale della Guida di 2019 Jupyter.<br/><br/>Aggiunta dell'esperienza di accesso del controller.<br/><br/>Aggiunta del dashboard del controller per visualizzare gli endpoint di servizio, visualizzare lo stato di integrità del cluster e accedere ai notebook per la risoluzione dei problemi.<br/><br/>Miglioramento delle prestazioni di modifica/output delle celle notebook.|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
 
-* SQL Server 2019 i cluster Big Data rilasciano il numero `15.0.1900.47`di build dell'aggiornamento candidata.
+* SQL Server 2019 i cluster Big Data rilasciano il numero di build dell'aggiornamento candidato `15.0.1900.47`.
 
 * Il profilo di distribuzione "kubeadm-prod" non è supportato nei cluster SQL Server 2019 Big Data Release Candidate con il numero di build precedente. Usare invece il profilo "kubeadm-dev-test" per le distribuzioni di Kubeadm.
 
@@ -49,7 +49,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Anteprima pubblica |Prima della versione CTP 3.2, il cluster Big Data di SQL Server era disponibile per gli early adopter registrati. Questa versione consente a chiunque di sperimentare le funzionalità dei cluster Big Data di SQL Server. <br/><br/> Vedere [Introduzione a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).|
+|Anteprima pubblica |Prima della versione CTP 3.2, il cluster Big Data di SQL Server era disponibile per gli early adopter registrati. Questa versione consente a chiunque di sperimentare le funzionalità dei cluster Big Data di SQL Server. <br/><br/> Vedere [Introduzione a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
 |`azdata` |La versione CTP 3.2 introduce `azdata`, un'utilità da riga di comando scritta in Python che consente agli amministratori del cluster di avviare e gestire il cluster Big Data tramite le API REST. `azdata` sostituisce `mssqlctl`. Vedere [Installare `azdata`](deploy-install-azdata.md). |
 |PolyBase |I nomi delle colonne della tabella esterna vengono ora usati per eseguire query su origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. Nelle versioni CTP precedenti le colonne nell'origine dati esterna venivano associate solo in base alla posizione ordinale e i nomi specificati nella definizione EXTERNAL TABLE non venivano usati. |
 |Aggiornamento della suddivisione in livelli HDFS |Introduzione della funzionalità di aggiornamento per la suddivisione in livelli HDFS, in modo che sia possibile aggiornare un montaggio esistente per l'ultimo snapshot dei dati remoti. Vedere [Suddivisione in livelli HDFS](hdfs-tiering.md) |
@@ -169,7 +169,7 @@ Le sezioni seguenti descrivono i problemi noti e le limitazioni per questa versi
 
 #### <a name="kibana-logs-dashboards"></a>Dashboard dei log di Kibana
 
-- Tra Aris CTP 3.0 e 3.1, la versione di Kibana è stata aggiornata da 6.3.1 a 7.0.1.  Questo ha reso il browser Microsoft Edge incompatibile con Kibana. Quando si carica la versione corrente dei dashboard Kibana in Microsoft Edge, gli utenti visualizzeranno una pagina vuota. Vedere [qui]( https://www.elastic.co/support/matrix#matrix_browse) per i browser supportati per Kibana.rs 
+- Tra CTP 3,0 e 3,1, la versione di Kibana è stata aggiornata da 6.3.1 a 7.0.1.  Questo ha reso il browser Microsoft Edge incompatibile con Kibana. Quando si carica la versione corrente dei dashboard Kibana in Microsoft Edge, gli utenti visualizzeranno una pagina vuota. Per i browser supportati per Kibana, vedere [qui]( https://www.elastic.co/support/matrix#matrix_browse) .
 
 
 ## <a id="ctp30"></a> CTP 3.0 (maggio)
@@ -498,9 +498,9 @@ Le sezioni seguenti descrivono le nuove funzionalità e i problemi noti per i cl
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 | :---------- | :------ |
-| Inviare processi Spark nei cluster di Big Data in IntelliJ. | [Inviare processi [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Interfaccia della riga di comando comune per la distribuzione di applicazioni e la gestione di cluster. | [Come distribuire un'app in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| Estensione di VS Code per distribuire applicazioni in un cluster di Big Data. | [Come usare VS Code per distribuire le applicazioni in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| Inviare processi Spark nei cluster di Big Data in IntelliJ. | [Inviare processi Spark in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Interfaccia della riga di comando comune per la distribuzione di applicazioni e la gestione di cluster. | [Come distribuire un'app in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Estensione di VS Code per distribuire applicazioni in un cluster di Big Data. | [Come usare VS Code per distribuire le applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Modifiche apportate all'utilizzo dei comandi dello strumento **azdata**. | Per informazioni più dettagliate, vedere i [problemi noti di azdata](#azdatactp23). |
 | Usare Sparklyr in un cluster Big Data | [Usare Sparklyr in cluster di Big Data di SQL Server 2019](sparklyr-from-RStudio.md) |
 | Montare un'archiviazione esterna compatibile con Hadoop Distributed File System (HDFS) in un cluster Big Data con la **suddivisione in livelli HDFS**. | Vedere [Suddivisione in livelli HDFS](hdfs-tiering.md). |
@@ -818,4 +818,4 @@ Le sezioni seguenti forniscono problemi noti per [!INCLUDE[big-data-clusters-201
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).
+Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [che cosa sono [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
