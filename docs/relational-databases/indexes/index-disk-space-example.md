@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909722"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816690"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909722"
   
 3.  Determinare ulteriore spazio su disco temporaneo per l'ordinamento.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     Vengono illustrati i requisiti di spazio per l'ordinamento in **tempdb** (con SORT_IN_TEMPDB impostato su ON) e per l'ordinamento nella posizione di destinazione (con SORT_IN_TEMPDB impostato su OFF).  
   
     1.  Quando SORT_IN_TEMPDB è impostato su ON, in **tempdb** deve essere disponibile spazio su disco sufficiente per contenere l'indice di dimensioni maggiori (1 milione * 200 byte ~ 200 MB). Nell'operazione di ordinamento non è considerato il fattore di riempimento.  
   

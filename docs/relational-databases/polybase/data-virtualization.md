@@ -1,20 +1,20 @@
 ---
 title: Virtualizzare i dati esterni in SQL Server 2019 | Microsoft Docs
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per le origini dati relazionali
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341829"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710591"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 

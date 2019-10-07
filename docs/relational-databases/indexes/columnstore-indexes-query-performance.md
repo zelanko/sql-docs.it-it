@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009370"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816709"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 
@@ -154,8 +154,6 @@ La distribuzione del predicato stringa si basa sul dizionario primario o seconda
 Con la distribuzione del predicato stringa, l'esecuzione della query calcola il predicato in base ai valori nel dizionario e, se è qualificato, tutte le righe che fanno riferimento al valore del dizionario risultano automaticamente qualificate. Questo migliora le prestazioni in due modi:
 1.  Vengono restituite solo le righe qualificate, riducendo il numero di righe da trasmettere dal nodo SCAN. 
 2.  Il numero dei confronti di stringhe viene notevolmente ridotto. In questo esempio sono necessari solo 100 confronti di stringhe invece di un milione. Esistono alcune limitazioni, come descritto di seguito:    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Non è consentita la distribuzione del predicato stringa per i rowgroup delta. Non esiste un dizionario per le colonne nei rowgroup delta.    
     -   Non è consentita la distribuzione del predicato stringa se le voci del dizionario superano i 64 KB.    

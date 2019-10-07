@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071697"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816767"
 ---
 # <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
   
 2.  Fare clic con il pulsante destro del mouse su **Database** , quindi scegliere **Collega**.  
   
-3.  Nella finestra di dialogo **Collega database** fare clic su **Aggiungi**per specificare il database da collegare, quindi nella finestra di dialogo **Individua file di database** selezionare l'unità disco in cui si trova il database ed espandere l'albero di directory per individuare e selezionare il file con estensione mdf del database, ad esempio:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  Nella finestra di dialogo **Collega database** fare clic su **Aggiungi**per specificare il database da collegare, quindi nella finestra di dialogo **Individua file di database** selezionare l'unità disco in cui si trova il database ed espandere l'albero di directory per individuare e selezionare il file con estensione mdf del database, ad esempio:
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > Se si tenta di selezionare un database già collegato, verrà generato un errore.  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **Database da collegare**  
+     Consente di visualizzare informazioni sui database selezionati.  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<nessuna intestazione di colonna>  
+     Consente di visualizzare un'icona che indica lo stato dell'operazione di collegamento. Le icone possibili sono illustrate di seguito nella descrizione di **Stato** .  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **Percorso file MDF**  
+     Consente di visualizzare il percorso e il nome del file MDF selezionato.  
   
      **Database Name**  
-     Displays the name of the database.  
+     Consente di visualizzare il nome del database.  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **Collega come**  
+     Facoltativamente, è possibile specificare un nome diverso per il database da collegare.  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **Proprietario**  
+     Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **Stato**  
+     Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
     |----------|-----------------|-----------------|  
@@ -96,31 +94,31 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
      **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale "Impossibile trovare il file".  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **Aggiungi**  
+     Consente di individuare i file principali del database necessari. Se l'utente seleziona un file con estensione mdf, le informazioni appropriate vengono inserite automaticamente nei rispettivi campi della griglia **Database da collegare** .  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **Rimuovi**  
+     Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" dettagli database**  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **Nome file originale**  
+     Consente di visualizzare il nome del file collegato appartenente al database.  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **Tipo di file**  
+     Indica il tipo di file, ovvero **Dati** o **Log**.  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **Percorso file corrente**  
+     Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

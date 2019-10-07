@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059282"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961939"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Prima di iniziare a usare OLTP in memoria, è necessario creare il filegroup MEM
 
 È possibile usare lo script del collegamento seguente per creare il filegroup nella cartella dati predefinita e per configurare le impostazioni consigliate:
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 Lo script seguente illustra gli oggetti di OLTP in memoria che è possibile creare nel database:
 
@@ -225,7 +225,7 @@ GO
 [Tecnologie OLTP in memoria per migliorare le prestazioni di T-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
 Una dimostrazione sulle prestazioni con OLTP in memoria è disponibile in: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [Video di 17 minuti che spiega OLTP in memoria e che illustra la dimostrazione](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[Script per abilitare OLTP in memoria e impostare le opzioni consigliate](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
+[Script per abilitare OLTP in memoria e impostare le opzioni consigliate](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
 [Documentazione principale di OLTP in memoria](in-memory-oltp-in-memory-optimization.md)   
 [Vantaggi a livello di prestazioni e uso delle risorse di OLTP in memoria nel database SQL di Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
 [Miglioramento delle prestazioni della tabella temporanea e della variabile di tabella con l'ottimizzazione della memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   

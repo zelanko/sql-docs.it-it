@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066871"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708282"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,6 @@ AdventureWorks_snapshot_evening
   
 2.  Generare un'istruzione CREATE DATABASE sui file che utilizzano la clausola AS SNAPSHOT OF. Per creare uno snapshot, è necessario specificare il nome logico di ogni file di database del database di origine. La sintassi è la seguente:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -117,10 +115,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Dove *source_**database_name* è il database di origine, *logical_file_name* è il nome logico usato in SQL Server quando si fa riferimento al file, *os_file_name* rappresenta il nome e il percorso usati dal sistema operativo quando si crea il file e *database_snapshot_name* è il nome dello snapshot in base a cui si vuole ripristinare il database. Per una descrizione completa di questa sintassi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  Quando si crea uno snapshot del database, i file di log, i file offline, i file in fase di ripristino e i file inattivi non sono consentiti nell'istruzione CREATE DATABASE.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   

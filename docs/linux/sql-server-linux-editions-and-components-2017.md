@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154650"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687386"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
 
@@ -161,15 +161,15 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Connessione amministrativa dedicata|Sì|Sì|Sì|Sì, con flag di traccia|Sì, con flag di traccia|   
+|Connessione amministrativa dedicata|Sì|Sì|Sì|Sì, con flag di traccia|   
 |Supporto per script di PowerShell|Sì|Sì|Sì|Sì| 
 |Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Sì|Sì|Sì|Sì| 
-|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|no|no|   
-|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|no|no| 
-|Report di prestazioni standard|Sì|Sì|Sì|no|no| 
-|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|no|no|   
+|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|no|  
+|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|no|
+|Report di prestazioni standard|Sì|Sì|Sì|no|
+|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|no| 
 |Query diretta di viste indicizzate (tramite hint NOEXPAND)|Sì|Sì|Sì|Sì| 
-|Gestione automatica viste indicizzate|Sì|Sì|Sì|no|no| 
+|Gestione automatica viste indicizzate|Sì|Sì|Sì|no|
 |Viste partizionate distribuite|Sì|no|no|no| 
 |Operazioni indicizzate parallele|Sì|no|no|no|  
 |Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|no|no|no| 
@@ -188,10 +188,10 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Funzionalità MERGE e UPSERT|Sì|Sì|Sì|Sì|   
 |Tipi di dati data e ora|Sì|Sì|Sì|Sì|  
 |Supporto di internazionalizzazione|Sì|Sì|Sì|Sì| 
-|Ricerca full-text e semantica|Sì|Sì|Sì|Sì|no| 
-|Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|no|   
-|Service Broker (messaggistica)|Sì|Sì|No (solo client)|No (solo client)|No (solo client)|   
-|Transact-SQL - endpoint|Sì|Sì|Sì|no|no| 
+|Ricerca full-text e semantica|Sì|Sì|Sì|Sì|
+|Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|
+|Service Broker (messaggistica)|Sì|Sì|No (solo client)|No (solo client)|
+|Transact-SQL - endpoint|Sì|Sì|Sì|no|
 |Grafico|Sì|Sì|Sì|Sì|  
 
 
