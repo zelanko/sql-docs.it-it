@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006054"
+ms.locfileid: "72008425"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Avvio rapido: Gestire tipi di dati e oggetti usando Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ I concetti di cui tenere conto prima includono:
 - Un singolo valore di un frame di dati viene chiamato cella ed è accessibile in base all'indice.
 
 Come è possibile esporre il singolo risultato di un calcolo come frame di dati, se un frame di dati richiede una struttura tabulare? Una risposta consiste nel rappresentare il singolo valore scalare come una serie, che è facilmente convertibile in un frame di dati. 
+
+> [!NOTE]
+> Quando si restituiscono date, Python in SQL utilizza DATETIME con un intervallo di date limitato di 1753-01-01 (-53690) a 9999-12-31 (2958463). 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
