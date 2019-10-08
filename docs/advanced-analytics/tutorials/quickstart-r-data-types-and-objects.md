@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Questa Guida introduttiva illustra come usare i tipi di dati e gli oggetti dati in R e SQL Server con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149957"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006006"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Avvio rapido: Gestire i tipi di dati e gli oggetti usando R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ Come si può notare, una leggera modifica nella sintassi di R ha un effetto note
 Per il momento, tenere semplicemente presente che è necessario verificare i risultati previsti quando si convertono oggetti R in frame di dati.
 
 > [!TIP]
-> È anche possibile usare le funzioni di identità R, `is.matrix`ad `is.vector`esempio, per restituire informazioni sulla struttura dei dati interna.
+> È anche possibile usare le funzioni di identità R, ad esempio `is.matrix`, `is.vector`, per restituire informazioni sulla struttura dei dati interna.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversione implicita di oggetti dati
 
@@ -164,7 +164,7 @@ La colonna di tre valori viene convertita automaticamente in un oggetto matrix a
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-Si noti tuttavia che cosa accade quando si modifica la dimensione della matrice `y`.
+Si noti tuttavia che cosa accade quando si modificano le dimensioni della matrice `y`.
 
 ```sql
 execute sp_execute_external_script
@@ -197,7 +197,7 @@ Per quale motivo? In questo caso, poiché i due argomenti possono essere gestiti
 
 R offre una grande flessibilità per lavorare con vettori di dimensioni diverse e per combinare queste strutture simili a colonne in frame di dati. Gli elenchi dei vettori sono simili a una tabella, ma non seguono tutte le regole delle tabelle del database.
 
-Ad esempio, lo script seguente definisce un oggetto array numerico di lunghezza 6 e lo archivia nella variabile R `df1`. La matrice numerica viene quindi combinata con i numeri interi della tabella RTestData, che contiene tre (3) valori, per creare un nuovo frame di `df2`dati,.
+Ad esempio, lo script seguente definisce un oggetto array numerico di lunghezza 6 e lo archivia nella variabile R `df1`. La matrice numerica viene quindi combinata con i numeri interi della tabella RTestData, che contiene tre (3) valori, per creare un nuovo frame di dati, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -305,6 +305,7 @@ Per informazioni sulla scrittura di funzioni R avanzate in SQL Server, seguire q
 > [!div class="nextstepaction"]
 > [Scrivere funzioni R avanzate con SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-Per ulteriori informazioni su SQL Server Machine Learning Services, vedere:
+Per altre informazioni sull'uso di R in SQL Server Machine Learning Services, vedere gli articoli seguenti:
 
+- [Creare e assegnare un punteggio a un modello predittivo in R con SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [Che cos'è SQL Server Machine Learning Services (Python e R)?](../what-is-sql-server-machine-learning.md)

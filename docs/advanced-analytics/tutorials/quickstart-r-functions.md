@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Questa Guida introduttiva illustra come scrivere una funzione R per un calcolo statistico avanzato con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951858"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006032"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Scrivere funzioni R avanzate con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Questa Guida introduttiva descrive come incorporare funzioni matematiche e di ut
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Creare una stored procedure per generare numeri casuali
 
-Per semplicità, usare il pacchetto r `stats` , installato e caricato per impostazione predefinita in SQL Server Machine Learning Services con R installato. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
+Per semplicità, usare il pacchetto R `stats`, che viene installato e caricato per impostazione predefinita in SQL Server Machine Learning Services con R installato. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
 
 Ad esempio, il codice R seguente restituisce 100 numeri su una media di 50, data una deviazione standard di 3.
 
@@ -40,7 +40,7 @@ Ad esempio, il codice R seguente restituisce 100 numeri su una media di 50, data
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-Per chiamare questa riga di r da T-SQL, aggiungere la funzione r nel parametro di script r di `sp_execute_external_script`, come segue:
+Per chiamare questa riga di R da T-SQL, aggiungere la funzione R nel parametro di script R di `sp_execute_external_script`, come segue:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> Molti utenti vogliono usare le funzioni di temporizzazione del sistema in R, `system.time` ad `proc.time`esempio e, per acquisire il tempo usato dai processi r e analizzare i problemi di prestazioni. Per un esempio, vedere l'esercitazione [creare funzionalità di dati](../tutorials/walkthrough-create-data-features.md) in cui le funzioni temporali R sono incorporate nella soluzione.
+> Molti utenti vogliono usare le funzioni di temporizzazione del sistema in R, ad esempio `system.time` e `proc.time`, per acquisire il tempo usato dai processi R e analizzare i problemi di prestazioni. Per un esempio, vedere l'esercitazione [creare funzionalità di dati](../tutorials/walkthrough-create-data-features.md) in cui le funzioni temporali R sono incorporate nella soluzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Per creare un modello di Machine Learning usando R in SQL Server, seguire questa Guida introduttiva:
+
+> [!div class="nextstepaction"]
+> [Creare e assegnare un punteggio a un modello predittivo in R con SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 
 Per ulteriori informazioni su SQL Server Machine Learning Services, vedere:
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Creare un modello predittivo semplice in Python usando SQL Server Machine Learning Services, quindi stimare un risultato usando nuovi dati.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad067e81bdb132d7958451d711e49ca57e308bac
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204288"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006022"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare e assegnare un punteggio a un modello predittivo in Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ Verranno create ed eseguite due stored procedure in esecuzione in SQL. Il primo 
 Completando questa Guida introduttiva, si apprenderà:
 
 > [!div class="checklist"]
-> * Come incorporare il codice Python in un stored procedure
-> * Come passare input al codice tramite input nel stored procedure
-> * Modalità di utilizzo delle stored procedure per rendere operativo i modelli
+> - Come incorporare il codice Python in un stored procedure
+> - Come passare input al codice tramite input nel stored procedure
+> - Modalità di utilizzo delle stored procedure per rendere operativo i modelli
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -89,7 +89,7 @@ In questo passaggio viene eseguita la procedura per eseguire il codice incorpora
 
 I modelli archiviati per il riutilizzo in SQL Server vengono serializzati come flusso di byte e archiviati in una colonna VARBINARY (MAX) in una tabella di database. Una volta che il modello viene creato, sottoposto a training, serializzato e salvato in un database, può essere chiamato da altre procedure o dalla funzione di [stima T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) nei carichi di lavoro di assegnazione dei punteggi.
 
-1. Eseguire lo script seguente per eseguire la procedura. L'istruzione specifica per l'esecuzione di un stored procedure `EXECUTE` è alla quarta riga.
+1. Eseguire lo script seguente per eseguire la procedura. L'istruzione specifica per l'esecuzione di un stored procedure è `EXECUTE` nella quarta riga.
 
    Questo particolare script Elimina un modello esistente con lo stesso nome ("Naive Bayes") per creare spazio per i nuovi creati rieseguendo la stessa procedura. Senza l'eliminazione del modello, si verifica un errore che indica che l'oggetto esiste già. Il modello viene archiviato in una tabella denominata **iris_models**, sottoposta a provisioning al momento della creazione del database **irissql** .
 
@@ -119,7 +119,7 @@ I modelli archiviati per il riutilizzo in SQL Server vengono serializzati come f
 
 Ora che è stato creato, sottoposto a training e salvato un modello, procedere con il passaggio successivo: creazione di un stored procedure che genera stime. Questa operazione viene eseguita chiamando `sp_execute_external_script` per eseguire uno script Python che carica il modello serializzato e fornisce nuovi input di dati per il punteggio.
 
-1. Eseguire il codice seguente per creare la stored procedure che esegue il punteggio. In fase di esecuzione, questa procedura caricherà un modello binario, utilizzerà `[1,2,3,4]` le colonne come input e specificherà le colonne `[0,5,6]` come output.
+1. Eseguire il codice seguente per creare la stored procedure che esegue il punteggio. In fase di esecuzione, questa procedura caricherà un modello binario, utilizzerà le colonne `[1,2,3,4]` come input e specificherà le colonne `[0,5,6]` come output.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -170,7 +170,7 @@ Ora che è stato creato, sottoposto a training e salvato un modello, procedere c
 
 ## <a name="conclusion"></a>Conclusione
 
-In questo esercizio si è appreso come creare stored procedure dedicate a diverse attività, in cui ogni stored procedure ha `sp_execute_external_script` usato il sistema stored procedure per avviare un processo Python. Gli input per il processo Python vengono passati `sp_execute_external` a come parametri. Sia lo script Python che le variabili di dati in un database di SQL Server vengono passati come input.
+In questo esercizio si è appreso come creare stored procedure dedicate a diverse attività, in cui ogni stored procedure ha usato il sistema stored procedure `sp_execute_external_script` per avviare un processo Python. Gli input per il processo Python vengono passati a `sp_execute_external` come parametri. Sia lo script Python che le variabili di dati in un database di SQL Server vengono passati come input.
 
 In genere, è consigliabile pianificare l'uso di SSMS con codice Python lucido o codice Python semplice che restituisce output basato su riga. Come strumento, SSMS supporta linguaggi di query come T-SQL e restituisce set di righe bidimensionali. Se il codice genera un output visivo come scatterplot o istogramma, è necessario uno strumento o un'applicazione dell'utente finale in grado di eseguire il rendering dell'immagine.
 
@@ -181,11 +181,6 @@ Analogamente, è anche possibile sfruttare le funzionalità di Resourcing di SQL
 Un vantaggio finale è che i processi possono essere modificati usando i parametri. In questo esercizio, il codice Python che ha creato il modello (denominato "Naive Bayes" in questo esempio) è stato passato come input a un secondo stored procedure chiamare il modello in un processo di assegnazione dei punteggi. Questo esercizio usa solo un modello, ma è possibile immaginare come parametrizzazione il modello in un'attività di assegnazione dei punteggi renda lo script più utile.
 
 ## <a name="next-steps"></a>Passaggi successivi
-
-Per informazioni sulla gestione dei tipi di dati Python in SQL Server, seguire questa Guida introduttiva:
-
-> [!div class="nextstepaction"]
-> [Gestire tipi di dati e oggetti usando Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
 Per ulteriori informazioni su SQL Server Machine Learning Services, vedere:
 

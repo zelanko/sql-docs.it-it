@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f14b74786b70a280f4b3576537ab89041e0eb6a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119366"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006099"
 ---
-# <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
+# <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esegue una convalida nell'intera pubblicazione che verifica tutte le sottoscrizioni (push, pull e anonime) in un'unica operazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -38,29 +38,29 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+ [ **\@publication =** ] **'***Publication***'**  
+ Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @level = ] level` È il tipo di convalida da eseguire. *livello* viene **tinyint**, non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
+`[ @level = ] level` è il tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
   
 |Valore del livello|Descrizione|  
 |-----------------|-----------------|  
 |**1**|Convalida solo tramite conteggio delle righe.|  
-|**2**|Convalida mediante conteggio delle righe e checksum. Per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sottoscrittori, viene automaticamente impostato su **3**.|  
+|**2**|Convalida mediante conteggio delle righe e checksum. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, viene impostato automaticamente su **3**.|  
 |**3**|Questo è il valore consigliato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_validatemergepublication** viene utilizzata nella replica di tipo merge.  
+ **sp_validatemergepublication** viene utilizzata per la replica di tipo merge.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_validatemergepublication**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   
