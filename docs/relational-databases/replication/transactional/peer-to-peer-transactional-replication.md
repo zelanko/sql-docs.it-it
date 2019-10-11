@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121330"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710726"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121330"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà di articolo **@destination_owner** e **@destination_table** .
+-   Le proprietà di articolo `@destination_owner` e `@destination_table`.
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.   
   
  Per le proprietà indicate di seguito sono presenti considerazioni speciali:  
   
--   La proprietà di pubblicazione **@allow_initialize_from_backup** richiede il valore **true**.  
+-   La proprietà di pubblicazione `@allow_initialize_from_backup` richiede il valore **true**.  
   
--   La proprietà di articolo **@replicate_ddl** richiede il valore **true**, **@identityrangemanagementoption** richiede il valore **manual**e **@status** richiede che l'opzione **24** sia impostata.  
+-   La proprietà di articolo `@replicate_ddl` richiede il valore **true**, `@identityrangemanagementoption` richiede il valore **manual** e `@status` richiede l'impostazione dell'opzione **24**.  
   
--   Il valore delle proprietà di articolo **@ins_cmd** , **@del_cmd** e **@upd_cmd** non può essere impostato su **SQL**.  
+-   Il valore delle proprietà di articolo `@ins_cmd`, `@del_cmd` e `@upd_cmd` non può essere impostato su **SQL**.  
   
--   La proprietà di sottoscrizione **@sync_type** richiede il valore **none** o **automatic**.  
+-   La proprietà di sottoscrizione `@sync_type` richiede il valore **none** o **automatic**.  
   
 ### <a name="maintenance-considerations"></a>Considerazioni relative alla manutenzione  
  Per alcune operazioni è necessario mettere il sistema in stato di inattività, ovvero arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi:  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096923"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713273"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurare le transazioni distribuite per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ In una transazione distribuita, le applicazioni client funzionano con Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] non impedisce le transazioni distribuite per i database in un gruppo di disponibilità, anche quando il gruppo di disponibilità non è configurato per le transazioni distribuite. Tuttavia quando un gruppo di disponibilità non è configurato per le transazioni distribuite, in alcuni casi il failover potrebbe non riuscire. In particolare, l'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] della nuova replica primaria potrebbe non essere in grado di ottenere il risultato della transazione da DTC. Per consentire all'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] di ottenere il risultato delle transazioni in dubbio da DTC dopo il failover, configurare il gruppo di disponibilità per le transazioni distribuite. 
 
+DTC non è coinvolto nell'elaborazione del gruppo di disponibilità a meno che un database non sia anche membro di un cluster di failover. All'interno di un gruppo di disponibilità, la coerenza tra le repliche viene gestita dalla logica del gruppo di disponibilità: Il database primario non completa il commit né conferma il commit al chiamante fino a quando il database secondario non ha riconosciuto che i record del log sono stati salvati in modo permanente in un archivio durevole. Solo a questo punto il database primario dichiara il completamento della transazione. In modalità asincrona, non è prevista l'attesa del riconoscimento da parte della replica secondaria ed esiste esplicitamente la possibilità che una piccola quantità di dati vada persa.
+
 ## <a name="prerequisites"></a>Prerequisites
 
 Prima di configurare un gruppo di disponibilità per supportare le transazioni distribuite, è necessario soddisfare i prerequisiti seguenti:
@@ -50,6 +52,8 @@ Prima di configurare un gruppo di disponibilità per supportare le transazioni d
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Creare un gruppo di disponibilità per le transazioni distribuite
 
 Configurare un gruppo di disponibilità per supportare le transazioni distribuite. Impostare il gruppo di disponibilità per consentire a ogni database di essere registrato come strumento di gestione delle risorse. Questo articolo illustra come configurare un gruppo di disponibilità in modo che ogni database possa essere uno strumento di gestione delle risorse in DTC.
+
+
 
 È possibile creare un gruppo di disponibilità per le transazioni distribuite in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] o versioni successive. Per creare un gruppo di disponibilità per le transazioni distribuite, includere `DTC_SUPPORT = PER_DB` nella definizione del gruppo di disponibilità. Lo script seguente crea un gruppo di disponibilità per le transazioni distribuite. 
 

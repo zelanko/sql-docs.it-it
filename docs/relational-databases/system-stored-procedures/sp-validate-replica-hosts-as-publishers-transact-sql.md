@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8df9c4fcc88f568c920f0a5959338f195d79d925
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119381"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252104"
 ---
-# <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
+# <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** è un'estensione del **sp_validate_redirected_publisher** che consente tutte le repliche secondarie, piuttosto che solo la replica primaria corrente, da convalidare. **sp_validate_replicat_hosts_as_publisher** convalida un'intera sempre nella topologia di replica. **sp_validate_replica_hosts_as_publishers** deve essere eseguita direttamente nel server di distribuzione tramite una sessione desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
+  **sp_validate_replica_hosts_as_publishers** è un'estensione di **sp_validate_redirected_publisher** che consente la convalida di tutte le repliche secondarie piuttosto che solo la replica primaria corrente. **sp_validate_replicat_hosts_as_publisher** convalida un'intera topologia di replica always on. **sp_validate_replica_hosts_as_publishers** deve essere eseguito direttamente sul server di distribuzione tramite una sessione Desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,24 +40,24 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @original_publisher = ] 'original_publisher'` Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato il database. *original_publisher* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @original_publisher = ] 'original_publisher'` il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato originariamente il database. *original_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Il nome del database da pubblicare. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` il nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` La destinazione di reindirizzamento quando **sp_redirect_publisher** è stato chiamato per l'originale server di pubblicazione/database pubblicato coppia. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @redirected_publisher = ] 'redirected_publisher'` la destinazione del reindirizzamento quando **sp_redirect_publisher** è stato chiamato per la coppia server di pubblicazione originale/database pubblicato. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  No.  
   
 ## <a name="remarks"></a>Note  
- Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione **sp_validate_redirected_publisher** restituisce null per il parametro di output *@redirected_publisher* . In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
+ Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione, **sp_validate_redirected_publisher** restituisce null per il parametro di output *\@redirected_publisher*. In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
   
  Se la convalida ha esito positivo, **sp_validate_redirected_publisher** restituisce un'indicazione di esito positivo.  
   
- Se la convalida non riesce, vengono generati gli errori appropriati.  **sp_validate_redirected_publisher** rende ha rilevato un tentativi per generare tutti i problemi e non solo il primo.  
+ Se la convalida non riesce, vengono generati gli errori appropriati.  **sp_validate_redirected_publisher** esegue il massimo sforzo per generare tutti i problemi e non solo il primo rilevato.  
   
 > [!NOTE]  
 >  **sp_validate_replica_hosts_as_publishers** avrà esito negativo e verrà visualizzato il messaggio di errore seguente durante la convalida degli host della replica secondaria che non consentono l'accesso in lettura o richiedono che venga specificata la finalità di lettura.  
@@ -69,7 +69,7 @@ sp_validate_replica_hosts_as_publishers
 >  Sono stati rilevati uno o più errori di convalida del server di pubblicazione per l'host della replica 'MyReplicaHostName'.  
   
 ## <a name="permissions"></a>Permissions  
- Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per database di distribuzione o un membro di un elenco accesso pubblicazione per una pubblicazione definita associati al database di pubblicazione.  
+ Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** per il database di distribuzione oppure un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

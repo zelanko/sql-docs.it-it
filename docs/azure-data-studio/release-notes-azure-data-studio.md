@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878632"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816639"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](download.md)**
+
+## <a name="october-2019"></a>Ottobre 2019
+
+2 ottobre 2019 &nbsp; / &nbsp; versione: 1.12.0
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Rilascio dell'estensione per la cronologia delle query | L'estensione per la cronologia delle query SQL salva tutte le query precedenti eseguite in una sessione di Azure Data Studio e le elenca in ordine di esecuzione. Gli utenti possono aprire, eseguire o eliminare una query, sospendere la cronologia delle query o eliminare tutte le voci della cronologia. |
+| Nuove modalità per copiare e incollare i risultati | Sono disponibili nuove modalità per copiare e incollare i risultati dalla griglia dei risultati. |
+| Aggiornamento dell'estensione PowerShell |  |
+| Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti
+- Blocchi appunti
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raro in cui il notebook viene serializzato in modo non corretto
 
 ## <a name="september-2019"></a>Settembre 2019
 

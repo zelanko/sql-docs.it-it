@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326112"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708250"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -219,7 +219,7 @@ Per altre informazioni sui miglioramenti delle prestazioni in tempdb, vedere l'a
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadati tempdb ottimizzati per la memoria
 
-La contesa tra metadati tempdb è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati tempdb ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati tempdb ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Per acconsentire esplicitamente a questa nuova funzionalità, usare lo script seguente:
+La contesa tra metadati tempdb è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati tempdb ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Per accettare questa nuova funzionalità, usare lo script seguente:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -245,6 +245,7 @@ Questa implementazione presenta alcune limitazioni che è importante prendere in
     ```
 3. Poiché le query eseguite nelle tabelle ottimizzate per la memoria non supportano gli hint di blocco e isolamento, le query eseguite nelle viste di catalogo tempdb ottimizzate per la memoria non rispetteranno gli hint di blocco e isolamento. Come nelle altre viste del catalogo di sistema in SQL Server, tutte le transazioni eseguite nelle viste di sistema saranno nell'isolamento READ COMMITTED (o in questo caso READ COMMITTED SNAPSHOT).
 4. Non è possibile creare [indici columnstore](../indexes/columnstore-indexes-overview.md) nelle tabelle temporanee quando sono abilitati i metadati tempdb ottimizzati per la memoria.
+5. A causa della limitazione per gli indici columnstore, l'uso della stored procedure di sistema sp_estimate_data_compression_savings con il parametro di compressione dei dati COLUMNSTORE o COLUMNSTORE_ARCHIVE non è supportato quando i metadati tempdb ottimizzati per la memoria sono abilitati.
 
 > [!NOTE] 
 > Queste limitazioni si applicano solo quando si fa riferimento a viste di sistema tempdb. Se si desidera, sarà possibile creare una tabella temporanea nella stessa transazione non appena si accede a una tabella con ottimizzazione per la memoria in un database utente.

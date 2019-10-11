@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314504"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708515"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitazione di connessioni crittografate al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Affinché un certificato TLS venga caricato da [!INCLUDE[ssNoVersion](../../incl
 
 - Il certificato deve essere creato tramite l'opzione **KeySpec** **AT_KEYEXCHANGE**. In genere, la proprietà del certificato relativa all'utilizzo della chiave (**KEY_USAGE**) include anche la crittografia della chiave (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- La proprietà **Soggetto** del certificato deve specificare che il nome comune (CN, Common Name) corrisponde al nome host oppure al nome di dominio completo (FQDN, Fully Qualified Domain Name) del server. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un cluster di failover, è necessario che il nome comune corrisponda al nome host oppure al nome di dominio completo del server virtuale e che sia stato eseguito il provisioning dei certificati in tutti i nodi del cluster di failover.
+- La proprietà **Soggetto** del certificato deve specificare che il nome comune (CN, Common Name) corrisponde al nome host oppure al nome di dominio completo (FQDN, Fully Qualified Domain Name) del server. Quando si usa il nome host, nel certificato deve essere specificato il suffisso DNS. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un cluster di failover, è necessario che il nome comune corrisponda al nome host oppure al nome di dominio completo del server virtuale e che sia stato eseguito il provisioning dei certificati in tutti i nodi del cluster di failover.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) supportano i certificati con caratteri jolly. SNAC è stato deprecato e sostituito con [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). È possibile che altri client non supportino i certificati con caratteri jolly. Per altre informazioni, vedere la documentazione del client e [KB 258858](http://support.microsoft.com/kb/258858).       
   Non è possibile selezionare il certificato con caratteri jolly usando Gestione configurazione SQL Server. Per usare un certificato con caratteri jolly, è necessario modificare la chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e immettere l'identificazione personale del certificato, senza spazi, nel valore **Certificato**.  

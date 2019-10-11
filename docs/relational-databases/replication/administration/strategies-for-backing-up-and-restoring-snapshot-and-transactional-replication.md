@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768734"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710337"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,19 +207,19 @@ ms.locfileid: "68768734"
   
     1.  Ricreare la pubblicazione nel database **B**. Andare al passaggio b.  
   
-    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **A**, specificando che è necessario inizializzare la sottoscrizione con un backup, ovvero impostando il valore **initialize with backup** per il parametro **@sync_type** di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio c.  
+    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **A**, specificando che è necessario inizializzare la sottoscrizione con un backup, ovvero impostando il valore **initialize with backup** per il parametro `@sync_type` di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio c.  
   
-    3.  Ricreare la sottoscrizione nel database **A** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già disponibili i dati, ovvero impostando il valore **replication support only** per il parametro **@sync_type** di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio 8.  
+    3.  Ricreare la sottoscrizione nel database **A** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già disponibili i dati, ovvero impostando il valore **replication support only** per il parametro `@sync_type` di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio 8.  
   
 8.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **B**. In presenza di eventuali colonne Identity nelle tabelle pubblicate, andare al passaggio 9. In caso contrario, andare al passaggio 10.  
   
 9. In seguito al ripristino, l'intervallo di valori Identity assegnato a ogni tabella nel database **A** verrà usato anche nel database **B**. Assicurarsi che il database **B** ripristinato abbia ricevuto tutte le modifiche del database **B** bloccato propagate nel database **A** e nel database **C** e quindi reinizializzare l'intervallo di valori Identity per ogni tabella.  
   
-    1.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio b.  
+    1.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output `@request_id`. Andare al passaggio b.  
   
     2.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Per altre informazioni, vedere [Concetti di base relativi ai file eseguibili dell’agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) o [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Andare al passaggio c.  
   
-    3.  Eseguire [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), specificando il valore **@request_id** recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
+    3.  Eseguire [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), specificando il valore `@request_id` recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
   
     4.  Utilizzare [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) per reinizializzare ciascuna tabella nel database **B** , in modo da garantire l'utilizzo di un intervallo appropriato. Andare al passaggio 10.  
   
@@ -231,11 +231,11 @@ ms.locfileid: "68768734"
   
     1.  Arrestare qualsiasi attività sulle tabelle pubblicate nella topologia peer-to-peer. Andare al passaggio b.  
   
-    2.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio c.  
+    2.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output `@request_id`. Andare al passaggio c.  
   
     3.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Andare al passaggio d.  
   
-    4.  Eseguire [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), specificando il valore **@request_id** recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
+    4.  Eseguire [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), specificando il valore `@request_id` recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
   
     5.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che nel Sottoscrittore i dati sono già disponibili. Andare al passaggio b.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "68768734"
   
     1.  Nel database **B**eseguire una query sulla tabella [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) per recuperare il numero di sequenza del file di log (LSN) della transazione più recente che il database **B** ha ricevuto dal database **C**.  
   
-    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che è necessario inizializzare la sottoscrizione in base al numero LSN, ovvero impostando il valore **initialize from lsn** per il parametro **@sync_type** di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio b.  
+    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che è necessario inizializzare la sottoscrizione in base al numero LSN, ovvero impostando il valore **initialize from lsn** per il parametro `@sync_type` di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio b.  
   
     3.  Ricreare la sottoscrizione nel database **C** della pubblicazione nel database **B**, specificando che nel Sottoscrittore i dati sono già disponibili. Andare al passaggio 13.  
   

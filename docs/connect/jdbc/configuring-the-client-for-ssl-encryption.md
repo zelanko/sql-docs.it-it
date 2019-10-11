@@ -1,33 +1,33 @@
 ---
-title: Configurazione del client per la crittografia SSL | Microsoft Docs
+title: Configurazione del client per la crittografia | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028197"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713281"
 ---
-# <a name="configuring-the-client-for-ssl-encryption"></a>Configurazione del client per la crittografia SSL
+# <a name="configuring-the-client-for-encryption"></a>Configurazione del client per la crittografia
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] o il client deve convalidare che il server sia quello corretto e che il certificato venga rilasciato da un'autorità di certificazione ritenuta attendibile dal client. Per convalidare il certificato del server, è necessario che in fase di connessione venga fornito il materiale relativo all'attendibilità. L'autorità emittente del certificato del server deve inoltre essere un'Autorità di certificazione considerata attendibile dal client.  
   
- In questo argomento viene innanzitutto descritto come fornire il materiale relativo all'attendibilità nel computer client. Viene quindi descritto come importare un certificato del server nell'archivio di attendibilità del computer client quando l'istanza del certificato SSL (Secure Sockets Layer) di SQL Server viene emessa da un'Autorità di certificazione privata.  
+ In questo argomento viene innanzitutto descritto come fornire il materiale relativo all'attendibilità nel computer client. Viene quindi descritto come importare un certificato del server nell'archivio di attendibilità del computer client quando l'istanza del certificato TLS (Transport Layer Security) di SQL Server viene emessa da un'Autorità di certificazione privata.  
   
- Per altre informazioni sulla convalida del certificato del server, vedere la sezione Convalida del certificato SSL del server in [Informazioni sul supporto SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Per altre informazioni sulla convalida del certificato del server, vedere la sezione Convalida del certificato TLS del server in [Informazioni sul supporto della crittografia](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="configuring-the-client-trust-store"></a>Configurazione dell'archivio di attendibilità del client 
- Per la convalida del certificato del server è necessario che il materiale relativo all'attendibilità venga fornito in fase di connessione usando le proprietà di connessione **trustStore** e **trustStorePassword** in modo esplicito o usando l'archivio di attendibilità predefinito di JVM (Java Virtual Machine) sottostante. Per altre informazioni su come impostare le proprietà **trustStore** e **trustStorePassword** in una stringa di connessione, vedere [Connessione tramite la crittografia SSL](../../connect/jdbc/connecting-with-ssl-encryption.md).  
+ Per la convalida del certificato del server è necessario che il materiale relativo all'attendibilità venga fornito in fase di connessione usando le proprietà di connessione **trustStore** e **trustStorePassword** in modo esplicito o usando l'archivio di attendibilità predefinito di JVM (Java Virtual Machine) sottostante. Per altre informazioni su come impostare le proprietà **trustStore** e **trustStorePassword** in una stringa di connessione, vedere [Connessione tramite la crittografia](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Se la proprietà **trustStore** non è specificata o è impostata su Null, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa il provider di sicurezza di JVM sottostante, ovvero Java Secure Socket Extension (SunJSSE). Il provider SunJSSE fornisce un oggetto TrustManager predefinito, usato per convalidare i certificati X.509 restituiti da SQL Server rispetto al materiale relativo all'attendibilità fornito in un archivio di attendibilità.  
   
@@ -53,9 +53,9 @@ java -Djavax.net.ssl.trustStorePassword=storePassword
  Inoltre, è possibile configurare e gestire i file dell'archivio di attendibilità predefinito, come "\<home-java>/lib/security/jssecacerts" e "\<home-java>/lib/security/cacerts". A tale scopo, utilizzare l'utilità "keytool" JAVA installata con JRE (Java Runtime Environment). Per ulteriori informazioni su tale utilità, vedere la relativa documentazione nel sito Web Sun Microsystems.  
   
 ### <a name="importing-the-server-certificate-to-trust-store"></a>Importazione del certificato del server nell'archivio di attendibilità  
- Durante l'handshake SSL, il server invia il proprio certificato chiave pubblica al client. L'autorità emittente di un certificato chiave pubblica è nota come Autorità di certificazione (CA). Il client deve verificare che l'Autorità di certificazione sia considerata attendibile dal client stesso. Questa operazione può essere eseguita se la chiave pubblica delle Autorità di certificazione attendibili è conosciuta in anticipo. In genere, con JVM viene fornito un set predefinito di Autorità di certificazione attendibili.  
+ Durante l'handshake TLS, il server invia il proprio certificato chiave pubblica al client. L'autorità emittente di un certificato chiave pubblica è nota come Autorità di certificazione (CA). Il client deve verificare che l'Autorità di certificazione sia considerata attendibile dal client stesso. Questa operazione può essere eseguita se la chiave pubblica delle Autorità di certificazione attendibili è conosciuta in anticipo. In genere, con JVM viene fornito un set predefinito di Autorità di certificazione attendibili.  
   
- Se l'istanza del certificato SSL di SQL Server viene emessa da un'Autorità di certificazione privata, è necessario aggiungere il certificato dell'Autorità di certificazione all'elenco di certificati attendibili nell'archivio di attendibilità del computer client.  
+ Se l'istanza del certificato TLS di SQL Server viene emessa da un'Autorità di certificazione privata, è necessario aggiungere il certificato dell'Autorità di certificazione all'elenco di certificati attendibili nell'archivio di attendibilità del computer client.  
   
  A tale scopo, utilizzare l'utilità "keytool" JAVA installata con JRE (Java Runtime Environment). Nel prompt dei comandi seguente viene illustrato come utilizzare l'utilità "keytool" per importare un certificato da un file:  
   
@@ -84,7 +84,5 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
 9. Scegliere Avanti, quindi Fine per esportare il certificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+ [Uso della crittografia](../../connect/jdbc/using-ssl-encryption.md)   
+ [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

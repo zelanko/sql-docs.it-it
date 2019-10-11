@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283815"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680972"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lezione 1-8: Annotare e formattare il pacchetto della lezione 1 
 
@@ -55,7 +55,7 @@ In questa attività verranno utilizzate le funzionalità di formattazione di [!I
   
     Per eseguire il wrapping del testo nella casella delle annotazioni, inserire il cursore nel punto in cui si desidera iniziare una nuova riga e premere **INVIO**.  
   
-    Se non si inserisce alcun testo nella casella delle annotazioni, quest'ultima scomparirà quando si farà clic al suo esterno.  
+    Se non si inserisce alcun testo nella casella delle annotazioni, quest'ultima scomparirà quando si farà clic al suo esterno.  A causa di questo comportamento, se si vuole incollare il testo nella casella di annotazione, copiare il testo negli Appunti prima di selezionare Aggiungi annotazione. 
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 9: Testare il pacchetto della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

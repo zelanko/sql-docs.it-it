@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: sys. fn_all_changes_ @ no__t-0capture_instance @ no__t-1 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de589bbe1fe5f590ef3d75c884aae70b5276804a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c8dce82cd331e1cf35464fe7122521fcd3285fa
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140525"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251258"
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Wrapper per il **tutte le modifiche** funzioni di query. Gli script necessari per creare queste funzioni vengono generati dalla stored procedure sys.sp_cdc_generate_wrapper_function.  
+  Wrapper per le funzioni di query di **tutte le modifiche** . Gli script necessari per creare queste funzioni vengono generati dalla stored procedure sys.sp_cdc_generate_wrapper_function.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,28 +49,28 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="arguments"></a>Argomenti  
  *start_time*  
- Il **datetime** valore che rappresenta l'endpoint inferiore dell'intervallo di modifica delle voci della tabella da includere nel set di risultati.  
+ Valore **DateTime** che rappresenta l'endpoint inferiore dell'intervallo delle voci della tabella delle modifiche da includere nel set di risultati.  
   
- Solo le righe in cdc. fn_cdc_get_net_changes < capture_instance > _CT modifiche di tabella che dispone di un'ora di commit associata maggiore *start_time* sono inclusi nel set di risultati.  
+ Nel set di risultati vengono incluse solo le righe della tabella delle modifiche CDC. < capture_instance > _CT con un'ora di commit associata maggiore di *start_time* .  
   
  Se viene fornito un valore NULL per questo argomento, l'endpoint inferiore dell'intervallo della query corrisponderà all'endpoint inferiore dell'intervallo valido per l'istanza di acquisizione.  
   
  *end_time*  
- Il **datetime** valore che rappresenta l'endpoint superiore dell'intervallo di modifica delle voci della tabella da includere nel set di risultati.  
+ Valore **DateTime** che rappresenta l'endpoint superiore dell'intervallo delle voci della tabella delle modifiche da includere nel set di risultati.  
   
- Questo parametro può assumere uno dei due possibili significati a seconda del valore scelto per @closed_high_end_point quando viene chiamato Sys. sp_cdc_generate_wrapper_function per generare lo script di creazione per la funzione wrapper:  
+ Questo parametro può assumere uno dei due possibili significati a seconda del valore scelto per @closed_high_end_point quando viene chiamato sys. sp_cdc_generate_wrapper_function per generare lo script di creazione per la funzione wrapper:  
   
 -   @closed_high_end_point = 1  
   
-     Uniche righe della tabella cdc. fn_cdc_get_net_changes < capture_instance > _CT tabella delle modifiche che hanno un associato ora di commit minore o uguale a end_time vengono incluse nel set di risultati...  
+     Nel set di risultati sono incluse solo le righe della tabella delle modifiche CDC. < capture_instance > _CT con un'ora di commit associata minore o uguale a end_time.  
   
 -   @closed_high_end_point = 0  
   
-     Solo le righe del capture_instance_ct modifiche un'ora di commit associata minore di end_time vengono incluse nel risultato impostati nella tabella.  
+     Nel set di risultati vengono incluse solo le righe della tabella delle modifiche CDC. capture_instance_CT a cui è associata un'ora di commit strettamente inferiore a end_time.  
   
  Se viene fornito un valore NULL per questo argomento, l'endpoint superiore dell'intervallo della query corrisponderà all'endpoint superiore dell'intervallo valido per l'istanza di acquisizione.  
   
- < row_filter_option >:: = {tutte | tutti i aggiornamento precedente}  
+ < row_filter_option >:: = {All | All Update Old}  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati.  
   
  Le opzioni possibili sono le seguenti:  
@@ -87,12 +87,12 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Valore LSN di commit per la transazione associata alla modifica. Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |__CDC_SEQVAL|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|\<le colonne da @column_list>|**varia in base**|Le colonne identificate nel *column_list* argomento sp_cdc_generate_wrapper_function funzione quando viene chiamato per generare lo script che crea la funzione wrapper.|  
-|__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica l'operazione necessaria per applicare la riga all'ambiente di destinazione. Varia in base al valore dell'argomento *row_filter_option* fornito nella chiamata:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> 'UO' - operazione di aggiornamento ai valori obsoleti|  
-|\<le colonne da @update_flag_list>|**bit**|Un flag di bit viene denominato aggiungendo _uflag al nome della colonna. Il flag viene sempre impostato su NULL quando \__CDC_OPERATION sia ', 'I' o 'UO'. Quando \__CDC_OPERATION è un' ', è impostato su 1 se l'aggiornamento ha una modifica alla colonna corrispondente. Altrimenti, è impostato su 0.|  
+|\<columns da @column_list >|**varia**|Colonne identificate nell'argomento *column_list* per sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script che crea la funzione wrapper.|  
+|__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica l'operazione necessaria per applicare la riga all'ambiente di destinazione. Può variare in base al valore dell'argomento *row_filter_option* specificato nella chiamata:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> *row_filter_option* =' tutti gli aggiornamenti obsoleti '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> 'UO' - operazione di aggiornamento ai valori obsoleti|  
+|\<columns da @update_flag_list >|**bit**|Un flag di bit viene denominato aggiungendo _uflag al nome della colonna. Il flag viene sempre impostato su NULL quando @no__t 0 _CDC_OPERATION è' d',' I ', di ' UO '. Quando @no__t _CDC_OPERATION-0 è' UN', viene impostato su 1 se l'aggiornamento ha prodotto una modifica alla colonna corrispondente. Altrimenti, è impostato su 0.|  
   
 ## <a name="remarks"></a>Note  
- La funzione fn_all_changes _ fn_cdc_get_net_changes < capture_instance > viene utilizzata come wrapper per la funzione di query CDC. fn_cdc_get_all_changes < capture_instance >. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per generare lo script di creazione del wrapper.  
+ La funzione di > fn_all_changes_ < capture_instance funge da wrapper per la funzione di query CDC. fn_cdc_get_all_changes_ < capture_instance >. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per generare lo script di creazione del wrapper.  
   
  Le funzioni wrapper non vengono create automaticamente. Per creare le funzioni wrapper, è necessario eseguire due operazioni:  
   
@@ -102,15 +102,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- Le funzioni wrapper consentono agli utenti di eseguire sistematicamente query per le modifiche che si sono verificati all'interno di un intervallo limitato dai **datetime** valori anziché dai valori LSN. Le funzioni wrapper eseguono tutte le conversioni necessarie tra l'oggetto fornito **datetime** valori e i valori LSN necessari internamente come argomenti alle funzioni di query. Quando le funzioni wrapper vengono utilizzate in sequenza per elaborare un flusso di dati delle modifiche, assicurano che nessun dato viene perso o ripetuto purché venga rispettata la convenzione seguente: il @end_time valore dell'intervallo associato a una sola chiamata viene fornito come il @start_time valore per l'intervallo associato alla chiamata successiva.  
+ Le funzioni wrapper consentono agli utenti di eseguire sistematicamente query per le modifiche apportate all'interno di un intervallo delimitato da valori **DateTime** anziché da valori LSN. Le funzioni wrapper eseguono tutte le conversioni necessarie tra i valori **DateTime** forniti e i valori LSN necessari internamente come argomenti per le funzioni di query. Quando le funzioni wrapper vengono utilizzate in modo seriale per elaborare un flusso di dati delle modifiche, assicurano che i dati non vengano persi o ripetuti a condizione che venga eseguita la convenzione seguente: il valore @end_time dell'intervallo associato a una chiamata viene fornito come @start_time valore per l'intervallo associato alla chiamata successiva.  
   
  Utilizzando il parametro @closed_high_end_point durante la creazione dello script, è possibile generare wrapper per supportare un limite superiore chiuso o un limite superiore aperto nella finestra della query specificata, ovvero è possibile decidere se le voci che dispongono di un'ora di commit uguale al limite superiore dell'intervallo di estrazione devono essere incluse nell'intervallo. Per impostazione predefinita, il limite superiore è incluso.  
   
- Il set di risultati restituito dal **tutte le modifiche apportate** funzione wrapper restituisce _ $start_lsn e \_ \_$seqval colonne della tabella delle modifiche come colonne \__CDC_STARTLSN e \__ CDC_SEQVAL, rispettivamente. Ne consegue questi valori con solo dalle colonne rilevate che venivano visualizzate nel *@column_list* parametro quando è stato generato il wrapper. Se *@column_list* è NULL, tutte le origine rilevate vengono restituite le colonne. Le colonne di origine sono seguite da una colonna dell'operazione, \__CDC_OPERATION, ovvero una colonna di uno o due caratteri che identifica l'operazione.  
+ Il set di risultati restituito dalla funzione wrapper **All Changes** restituisce rispettivamente le colonne _ _ $ start_lsn e \_ @ no__t-2 $ seqval della tabella delle modifiche come colonne @no__t 3 _cdc_startlsn e @no__t 4 _cdc_seqval. Segue solo le colonne rilevate visualizzate nel parametro *\@column_list* al momento della generazione del wrapper. Se *\@column_list* è null, vengono restituite tutte le colonne di origine rilevate. Le colonne di origine sono seguite da una colonna operation, @no__t 0 _CDC_OPERATION, che è una colonna a uno o due caratteri che identifica l'operazione.  
   
- I flag di bit vengono quindi aggiunti al set di risultati per ogni colonna identificata nel parametro @update_flag_list. Per il **tutte le modifiche** wrapper, il flag di bit saranno sempre NULL se cdc_operation è era ', 'I' oppure 'UO'. Se \__CDC_OPERATION è un' ', il flag verrà impostato su 1 o 0, a seconda del fatto che l'operazione di aggiornamento ha causato una modifica alla colonna.  
+ I flag di bit vengono quindi aggiunti al set di risultati per ogni colonna identificata nel parametro @update_flag_list. Per il wrapper **All Changes** , i flag di bit saranno sempre null se __CDC_OPERATION è' d',' I ' o ' UO '. Se @no__t 0 _CDC_OPERATION è' UN', il flag verrà impostato su 1 o 0, a seconda che l'operazione di aggiornamento abbia causato o meno una modifica alla colonna.  
   
- Il modello di configurazione di change data capture 'Instantiate CDC Wrapper TVFs for Schema' Mostra come usare la stored procedure sp_cdc_generate_wrapper_function per ottenere gli script CREATE per tutte le funzioni wrapper per le funzioni di query definite di uno schema. Il modello crea quindi tali script. Per altre informazioni sui modelli, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
+ Il modello di configurazione di Change Data Capture ' Instantiate CDC wrapper funzioni con valori for schema ' Mostra come utilizzare sp_cdc_generate_wrapper_function stored procedure per ottenere gli script di creazione per tutte le funzioni wrapper per le funzioni di query definite di uno schema. Il modello crea quindi tali script. Per ulteriori informazioni sui modelli, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

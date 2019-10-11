@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79edaf5c5940caf00cb03de98d532de400a553a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062022"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710496"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorare e risolvere i problemi relativi a PolyBase
 
@@ -221,7 +221,7 @@ Soluzione alternativa: usare il nome DNS per reindirizzare le connessioni al Nam
 
 ## <a name="error-messages-and-possible-solutions"></a>Messaggi di errore e possibili soluzioni
 
-Per risolvere gli errori delle tabelle esterne, vedere il blog di Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (Errori di installazione di PolyBase e possibili soluzioni).
+Per risolvere gli errori delle tabelle esterne, vedere il blog di Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Errori di installazione di PolyBase e possibili soluzioni").
 
 ## <a name="see-also"></a>Vedere anche
 

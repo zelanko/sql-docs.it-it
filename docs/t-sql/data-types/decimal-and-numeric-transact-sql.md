@@ -1,7 +1,7 @@
 ---
 title: decimal e numeric (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086743"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682101"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ La conversione da **decimal** o **numeric** in **float** o **real** può determi
   
 Per impostazione predefinita, quando si converte un numero in un valore **decimal** o **numeric** con precisione e scala inferiori, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene applicato l'arrotondamento. Se invece l'opzione SET ARITHABORT è impostata su ON, in caso di overflow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnala un errore. La diminuzione di precisione e scala nelle operazioni di conversione non è sufficiente per generare un errore.
   
-Quando si convertono i valori float o reali in valori decimali o numerici, il valore decimale non conterrà mai più di 17 decimali. I valori float < 5E-18 verranno convertiti sempre come 0.
+Prima di [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], la conversione dei valori **float** in **decimal** o **numeric** è limitata ai soli valori con precisione a 17 cifre. Qualsiasi valore **float** minore di 5E-18 (se impostato usando la notazione scientifica di 5E-18 o la notazione decimale di 0.0000000000000000050000000000000005) viene arrotondato per difetto a 0. Questa non è più una restrizione a partire da [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene creata una tabella usando i tipi di dati **decimal** e **numeric**.  I valori vengono inseriti in ogni colonna. I risultati vengono restituiti usando un'istruzione SELECT.

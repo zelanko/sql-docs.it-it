@@ -1,6 +1,6 @@
 ---
 title: Opzioni di ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
-description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in un'istanza di SQL Server e il database SQL di Azure
+description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in SQL Server e il database SQL di Azure.
 ms.custom: ''
 ms.date: 09/19/2019
 ms.prod: sql
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - offline database state [SQL Server]
 - snapshot isolation framework option
 - checksums [SQL Server]
-- Automatic Tuning
+- Automatic tuning
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,24 +30,24 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227174"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952747"
 ---
-# <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
+# <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
-Imposta le opzioni del database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Imposta le opzioni del database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-Fare clic su una delle schede seguenti per la sintassi, gli argomenti, i commenti, le autorizzazioni e gli esempi per la specifica versione di SQL in uso.
+Selezionare una delle schede seguenti per la sintassi, gli argomenti, i commenti, le autorizzazioni e gli esempi per la specifica versione di SQL in uso.
 
-Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+Per altre informazioni sulle convenzioni della sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Fare clic su un prodotto.
+## <a name="select-a-product"></a>Selezionare un prodotto
 
-Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente selezionare il nome del prodotto a cui si è interessati. Verrà così visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto selezionato.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -58,12 +58,12 @@ Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Verr
 &nbsp;
 
 ## <a name="sql-server"></a>SQL Server
-Il mirroring del database, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e i livelli di compatibilità sono opzioni `SET` ma, poiché richiedono lunghe descrizioni, vengono illustrati in articoli distinti. Per altre informazioni, vedere [Mirroring del database ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) e [ Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+Il mirroring del database, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e i livelli di compatibilità sono opzioni `SET` ma, poiché richiedono lunghe descrizioni, vengono illustrati in articoli distinti. Per altre informazioni, vedere [Mirroring del database ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) e [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 Le configurazioni con ambito database vengono usate per impostare diverse configurazioni di database a livello di singolo database. Per altre informazioni, vedere [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
-> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni di impostazione a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte di seguito sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
+> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni SET a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte nelle sezioni seguenti sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -303,7 +303,7 @@ Esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le 
 **\<accelerated_database_recovery> ::=**         
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-Abilita il [ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md) (ADR, Accelerated Database Recovery) per ogni database. L'impostazione predefinita del ripristino accelerato del database è **OFF** in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Usando questa sintassi è possibile designare un filegroup specifico per i dati dell'archivio versioni permanente (PSV, Persistent Version Store). Se non è specificato alcun filegroup, per l'archivio versioni permanente viene usato il filegroup PRIMARY. Per altre informazioni ed esempi, vedere [Ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md).
+Abilita il [ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md) (ADR, Accelerated Database Recovery) per ogni database. Per impostazione predefinita, ADR è impostato su OFF in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Usando questa sintassi è possibile designare un filegroup specifico per i dati dell'archivio versioni permanente (PVS, Persistent Version Store). Se non è specificato alcun filegroup, per l'archivio versioni permanente viene usato il filegroup PRIMARY. Per altre informazioni ed esempi, vedere [Ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md).
 
 **\<auto_option> ::=**        
 
@@ -313,7 +313,7 @@ Consente di controllare le opzioni automatiche.
 ON        
 Il database viene chiuso normalmente e le relative risorse vengono rilasciate dopo la disconnessione dell'ultimo utente.
 
-Il database viene riaperto automaticamente quando un utente tenta di usarlo nuovamente, ad esempio, tramite l'esecuzione di un'istruzione `USE database_name`. Se l'opzione AUTO_CLOSE è impostata su ON, è possibile che il database venga arrestato correttamente. In questo caso, il database non viene riaperto finché un utente non prova a usarlo al successivo riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+Il database viene riaperto automaticamente quando un utente tenta di usarlo nuovamente, Ad esempio, questo comportamento di riapertura si verifica quando un utente rilascia un'istruzione `USE database_name`. Se l'opzione AUTO_CLOSE è impostata su ON, è possibile che il database venga arrestato correttamente. In questo caso, non viene riaperto finché un utente non prova a usarlo al successivo riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 OFF        
 Il database rimane aperto dopo la disconnessione dell'ultimo utente.
@@ -328,32 +328,32 @@ L'opzione AUTO_CLOSE è utile per i database desktop perché consente di gestire
 >
 > Per il mirroring del database è necessario che AUTO_CLOSE sia OFF.
 
-Quando il database è impostato su AUTOCLOSE = ON, un'operazione che avvia una chiusura automatica del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+Quando il database è impostato su AUTOCLOSE = ON, un'operazione che avvia una chiusura automatica del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database." Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-Query Optimizer crea statistiche per colonne singole nei predicati di query, in base alle esigenze, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
+Query Optimizer crea statistiche per colonne singole nei predicati di query, se necessario, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Vengono create solo sulle colonne che non sono già le prime di un oggetto statistiche esistente.
 
-Il valore predefinito è **ON**. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
+L'impostazione predefinita è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
 OFF        
-Query Optimizer non crea statistiche per le singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Query Optimizer non crea statistiche sulle singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_auto_create_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoCreateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche" nel database nell'argomento [Statistiche](../../relational-databases/statistics/statistics.md).
+Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**        
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Imposta AUTO_CREATE_STATISTICS su ON e INCREMENTAL su ON. Questa impostazione crea automaticamente statistiche incrementali ogni volta che sono supportate. Il valore predefinito è **OFF**. Per altre informazioni, vedere [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+Imposta AUTO_CREATE_STATISTICS su ON e INCREMENTAL su ON. Questa impostazione crea automaticamente statistiche incrementali ogni volta che sono supportate. Il valore predefinito è OFF. Per altre informazioni, vedere [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | **OFF** } ON        
 I file di database vengono compattati periodicamente, se necessario.
 
-È possibile compattare automaticamente sia i file di dati sia i file di log. AUTO_SHRINK riduce le dimensioni del log delle transazioni solo se per il database è impostato il modello di recupero con registrazione minima oppure se viene eseguito il backup del log. Se questa opzione è impostata su OFF, i file di database non vengono compattati automaticamente durante i controlli periodici per verificare la presenza di spazio inutilizzato.
+È possibile compattare automaticamente sia i file di dati sia i file di log. AUTO_SHRINK riduce le dimensioni del log delle transazioni solo se per il database è impostato il modello di recupero con registrazione minima oppure se viene eseguito il backup del log. Quando si imposta AUTO_SHRINK su OFF, i file di database non vengono compattati automaticamente durante i controlli periodici per verificare la presenza di spazio inutilizzato.
 
-Con l'opzione AUTO_SHRINK i file vengono compattati quando più del 25% dello spazio del file risulta inutilizzato. L'opzione causa il compattamento del file in una di due dimensioni, ossia la più grande tra:
+L'opzione AUTO_SHRINK compatta i file quando più del 25% dello spazio del file risulta inutilizzato. Compatta il file in una delle due dimensioni (a seconda del valore maggiore):
 
 - La dimensione in cui il 25% del file è costituito da spazio inutilizzato
 - La dimensione del file quando è stato creato
@@ -370,22 +370,22 @@ I file di database non vengono compattati automaticamente durante i controlli pe
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.
+Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia. basata sul numero di righe nella tabella o nella vista indicizzata.
 
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e di eseguire un piano di query memorizzato nella cache. Usa le colonne, le tabelle e le viste indicizzate nel predicato di query per determinare quali statistiche potrebbero non essere aggiornate. Query Optimizer verifica questa possibilità prima di compilare una query. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.
 
 L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica alle statistiche create per indici, colonne singole nei predicati di query e statistiche create con l'istruzione CREATE STATISTICS. Questa opzione si applica anche alle statistiche filtrate.
 
-Il valore predefinito è **ON**. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
+Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
 Usare l'opzione AUTO_UPDATE_STATISTICS_ASYNC per specificare se le statistiche vengono aggiornate in modo sincrono o asincrono.
 
 OFF        
-Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query. Query Optimizer non aggiorna inoltre le statistiche quando potrebbero essere obsolete. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query né quando potrebbero essere non aggiornate. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_auto_update_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoUpdateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche" nel database nell'argomento [Statistiche](../../relational-databases/statistics/statistics.md).
+Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
@@ -393,7 +393,7 @@ Specifica che gli aggiornamenti delle statistiche per l'opzione AUTO_UPDATE_STAT
 
 L'impostazione di questa opzione su ON non produce alcun effetto, a meno che AUTO_UPDATE_STATISTICS non sia impostata su ON.
 
-L'impostazione predefinita dell'opzione AUTO_UPDATE_STATISTICS_ASYNC è **OFF** e Query Optimizer aggiorna le statistiche in modo sincrono.
+L'impostazione predefinita dell'opzione AUTO_UPDATE_STATISTICS_ASYNC è OFF e Query Optimizer aggiorna le statistiche in modo sincrono.
 
 OFF        
 Specifica che gli aggiornamenti delle statistiche per l'opzione AUTO_UPDATE_STATISTICS sono sincroni. Query Optimizer attende il completamento degli aggiornamenti delle statistiche per compilare le query.
@@ -414,15 +414,15 @@ FORCE_LAST_GOOD_PLAN = { ON | **OFF** }
 ON        
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo piano valido noto nelle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] nel caso in cui il nuovo piano di query causi un peggioramento delle prestazioni. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continua a monitorare le prestazioni delle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] usando il piano forzato.
 
-Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità *lettura/scrittura*.
+Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità di *lettura/scrittura*.
 
 OFF        
-Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Il valore predefinito è **OFF**.
+Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Il valore predefinito è OFF.
 
 **\<change_tracking_option> ::=**         
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
-Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione Esempi più avanti in questo articolo.
+Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
 
 ON        
 Abilita il rilevamento delle modifiche per il database. Quando si abilita il rilevamento delle modifiche, è possibile impostare anche le opzioni AUTO CLEANUP e CHANGE RETENTION.
@@ -530,7 +530,7 @@ Consente di riprendere l'analisi della crittografia precedentemente sospesa.
 
 Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su **READ ONLY**, l'operazione di crittografia del database avrà esito negativo.
+Quando la crittografia è abilitata a livello di database, tutti i filegroup vengono crittografati. I nuovi filegroup erediteranno la proprietà di crittografia. Se in un database sono presenti filegroup impostati su READ ONLY, l'operazione di crittografia del database avrà esito negativo.
 
 È possibile vedere lo stato di crittografia del database, così come lo stato dell'analisi di crittografia, usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
@@ -540,7 +540,7 @@ Se la crittografia è abilitata a livello di database, vengono crittografati tut
 Controlla lo stato del database.
 
 OFFLINE        
-Il database viene chiuso normalmente e contrassegnato come offline. Non è possibile modificare il database mentre è offline.
+Il database viene chiuso normalmente e contrassegnato come offline. Mentre è offline, il database non può essere modificato.
 
 ONLINE        
 Il database è aperto e disponibile per l'uso.
@@ -591,7 +591,7 @@ Prima di impostare il database in modalità SINGLE_USER, verificare che l'opzion
 Se sono presenti processi attivi, consentire il completamento di tali processi o terminarli manualmente usando [KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md).
 
 RESTRICTED_USER        
-Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`. RESTRICTED_USER non prevede limiti di numero. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di terminazione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.
+Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`. senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di terminazione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.
 
 MULTI_USER        
 Consente la connessione al database a tutti gli utenti che dispongono di autorizzazioni appropriate.
@@ -642,7 +642,7 @@ I moduli di database in un contesto di rappresentazione non possono accedere a r
 
 L'opzione TRUSTWORTHY viene impostata su OFF ogni volta che il database viene collegato.
 
-Per impostazione predefinita, in tutti i database di sistema, a eccezione del database msdb, TRUSTWORTHY è impostata su OFF. Per i database model e tempdb questo valore non può essere modificato. È consigliabile evitare di impostare l'opzione TRUSTWORTHY su ON per il database master.
+Per impostazione predefinita, in tutti i database di sistema, a eccezione del database msdb, TRUSTWORTHY è impostata su OFF. Il valore non può essere cambiato per i database model e tempdb. È consigliabile evitare di impostare l'opzione TRUSTWORTHY su ON per il database master.
 
 Per impostare questa opzione, è necessaria l'autorizzazione `CONTROL SERVER` nel database.
 
@@ -711,7 +711,7 @@ Il database crea sempre le pagine iniziali usando extent uniformi. OFF è il val
 ON        
 Il database crea sempre le pagine iniziali usando extent misti.
 
-Questa opzione è impostata su **ON** per tutti i database di sistema. **tempdb** è l'unico database di sistema che supporta l'opzione OFF.
+Questa opzione è impostata su ON per tutti i database di sistema. **tempdb** è l'unico database di sistema che supporta l'opzione OFF.
 
 **\<PARAMETERIZATION_option> ::=**        
 
@@ -736,7 +736,7 @@ ON
 Abilita Query Store.
 
 OFF        
-Disabilita Query Store. **OFF** è il valore predefinito.
+Disabilita Query Store. OFF è il valore predefinito.
 
 CLEAR        
 Rimuove i contenuti di Query Store.
@@ -759,6 +759,10 @@ Determina la frequenza con cui i dati scritti in Query Store vengono salvati in 
 MAX_STORAGE_SIZE_MB        
 Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **bigint**.
 
+> [!NOTE]
+> Il limite MAX_STORAGE_SIZE_MB non è necessariamente applicato. Le dimensioni di archiviazione vengono controllate solo quando Query Store scrive i dati su disco. Questo intervallo viene impostato dall'opzione DATA_FLUSH_INTERVAL_SECONDS o dall'opzione **Intervallo di scaricamento dati** della finestra di dialogo Query Store di [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Il valore predefinito dell'intervallo è 900 secondi (o 15 minuti).       
+> Se Query Store ha violato il limite MAX_STORAGE_SIZE_MB tra i controlli delle dimensioni di archiviazione, passa alla modalità di sola lettura. Se SIZE_BASED_CLEANUP_MODE è abilitata, viene attivato anche il meccanismo di pulizia per applicare il limite MAX_STORAGE_SIZE_MB. 
+
 INTERVAL_LENGTH_MINUTES        
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.
 
@@ -766,7 +770,7 @@ SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }
 Determina se la pulizia deve essere attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime.
 
 AUTO        
-La pulizia basata sulle dimensioni viene attivata automaticamente quando le dimensioni sul disco raggiungono il 90% di **max_storage_size_mb**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge circa l'80% di **max_storage_size_mb**, ossia il valore di configurazione predefinito.
+La pulizia basata sulle dimensioni viene attivata automaticamente quando le dimensioni sul disco raggiungono il 90% di **MAX_STORAGE_SIZE_MB**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge circa l'80% di **MAX_STORAGE_SIZE_MB**, ovvero il valore di configurazione predefinito.
 
 OFF        
 La pulizia basata sulle dimensioni non viene attivata automaticamente.
@@ -841,7 +845,7 @@ ON
 Le pagine incomplete possono essere rilevate da [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 OFF        
-Le pagine incomplete non possono essere rilevate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+Le pagine incomplete non possono essere rilevate da [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 > [!IMPORTANT]
 > La struttura della sintassi TORN_PAGE_DETECTION ON | OFF verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di usarla in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente usano questa struttura. In alternativa, usare l'opzione PAGE_VERIFY.
@@ -863,7 +867,7 @@ Le operazioni di scrittura di pagine di database non genereranno un valore CHECK
 Per l'utilizzo dell'opzione PAGE_VERIFY, è importante tenere presente quanto segue:
 
 - L'impostazione predefinita è **CHECKSUM**.
-- Quando un database utente o di sistema viene aggiornato a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, il valore di PAGE_VERIFY (NONE o TORN_PAGE_DETECTION) rimane invariato. È consigliabile usare CHECKSUM.
+- Quando un database utente o di sistema viene aggiornato a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva, il valore di PAGE_VERIFY (NONE o TORN_PAGE_DETECTION) rimane invariato. È consigliabile usare CHECKSUM.
 
     > [!NOTE]
     > Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione di database PAGE_VERIFY è impostata su NONE per il database tempdb e non può essere modificata. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive il valore predefinito per il database tempdb è CHECKSUM per le nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si aggiorna un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene mantenuto il valore predefinito NONE. L'opzione può essere modificata. È consigliabile utilizzare CHECKSUM per il database tempdb.
@@ -909,14 +913,14 @@ FEDERATED_SERVICE_ACCOUNT = { ON | OFF }
 - Il server Azure remoto è configurato per supportare l'autenticazione di Azure Active Directory.
 - L'account del servizio in cui è in esecuzione l'istanza di SQL Server deve essere configurato come account `dbmanager` o `sysadmin` nel server di Azure remoto.
 
-Se si specifica che l'account del servizio federato è impostato su ON, non è possibile specificare anche l'argomento CREDENTIAL. Se si specifica OFF, è necessario fornire l'argomento CREDENTIAL.
+Se si specifica che l'account del servizio federato è impostato su ON, è anche possibile specificare l'argomento CREDENTIAL. Se si specifica OFF, è necessario fornire l'argomento CREDENTIAL.
 
 OFF        
 Disabilita Stretch Database per il database. Per altre informazioni, vedere [Disabilitare Stretch Database e ripristinare i dati remoti](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
 È possibile disabilitare Stretch Database per un database solo quando il database non contiene più tutte le tabelle abilitate per Stretch Database. Dopo aver disabilitato Stretch Database, la migrazione dei dati si interrompe. Inoltre, i risultati delle query non includono più i risultati delle tabelle remote.
 
-Se si disabilita Stretch, la tabella remota non viene rimossa. Per eliminare il database remoto, usare il portale di Azure.
+La disabilitazione di Stretch non comporta la rimozione del database remoto. Per eliminare il database remoto, usare il portale di Azure.
 
 **\<service_broker_option> ::=**         
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -924,7 +928,7 @@ Se si disabilita Stretch, la tabella remota non viene rimossa. Per eliminare il 
 Controlla le opzioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] seguenti, ovvero abilitazione o disabilitazione del recapito dei messaggi, impostazione di un nuovo identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o impostazione delle priorità di conversazione su ON oppure OFF.
 
 ENABLE_BROKER        
-Indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato per il database specificato. Il recapito dei messaggi viene avviato e il flag is_broker_enabled viene impostato su true nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente. Service Broker non può essere abilitato se il database è quello principale in una configurazione di mirroring del database.
+Indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato per il database specificato. Il recapito dei messaggi viene avviato e il flag is_broker_enabled viene impostato su true nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente. Service Broker non può essere abilitato se il database è il database principale in una configurazione di mirroring.
 
 > [!NOTE]
 > ENABLE_BROKER richiede un blocco esclusivo a livello di database. Se altre sessioni hanno bloccato risorse nel database, ENABLE_BROKER attende il rilascio dei blocchi da parte delle altre sessioni. Per abilitare [!INCLUDE[ssSB](../../includes/sssb-md.md)] in un database utente, accertarsi che nessun'altra sessione stia usando il database prima di eseguire l'istruzione ALTER DATABASE SET ENABLE_BROKER, ad esempio impostando il database in modalità utente singolo. Per abilitare [!INCLUDE[ssSB](../../includes/sssb-md.md)] nel database msdb, arrestare innanzitutto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per consentire a [!INCLUDE[ssSB](../../includes/sssb-md.md)] di ottenere il blocco necessario.
@@ -955,14 +959,14 @@ Calcola il livello di isolamento delle transazioni.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }        
 ON        
-Abilita l'opzione Snapshot a livello di database. Quando è abilitata, le istruzioni DML iniziano la generazione di versioni di riga anche quando nessuna transazione usano l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
+Abilita l'opzione relativa allo snapshot a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
 
 OFF        
-Consente di disabilitare l'opzione Snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento della transazione SNAPSHOT.
+Consente di disabilitare l'opzione relativa allo snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento SNAPSHOT.
 
 Quando si imposta un nuovo stato per l'opzione ALLOW_SNAPSHOT_ISOLATION (da ON a OFF oppure da OFF a ON), ALTER DATABASE restituisce il controllo al chiamante solo dopo il completamento del commit di tutte le transazioni esistenti nel database. Se per il database è già attivo lo stato specificato nell'istruzione ALTER DATABASE, il controllo viene restituito immediatamente al chiamante. Se l'istruzione ALTER DATABASE non restituisce il controllo rapidamente, usare [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) per verificare se sono presenti transazioni con esecuzione prolungata. Se l'istruzione ALTER DATABASE viene annullata, il database rimane nello stato attivo al momento dell'avvio dell'istruzione ALTER DATABASE. La vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) indica lo stato delle transazioni di isolamento dello snapshot nel database. Se **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF attenderà sei secondi prima di ritentare l'operazione.
 
-Non è possibile modificare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
+Non è possibile cambiare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
 
 Se si imposta ALLOW_SNAPSHOT_ISOLATION in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
@@ -974,16 +978,16 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata questa opzione, le transazioni che specificano il livello di isolamento Read committed usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento Read Committed, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
+Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata questa opzione, le transazioni che specificano il livello di isolamento Read committed usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento READ COMMITTED, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
 
 OFF        
 Disabilita l'opzione relativa allo snapshot Read Committed a livello di database. Le transazioni per cui è impostato il livello di isolamento READ COMMITTED usano il blocco.
 
-Per impostare READ_COMMITTED_SNAPSHOT su ON oppure OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile modificare lo stato di questa opzione quando il database è OFFLINE.
+Per impostare READ_COMMITTED_SNAPSHOT su ON o su OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile cambiare lo stato di questa opzione quando il database è OFFLINE.
 
 Se si imposta READ_COMMITTED_SNAPSHOT in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
-Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb e msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
+Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb o msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_read_committed_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
@@ -997,11 +1001,11 @@ ON
 Quando l'isolamento della transazione è impostato su un livello inferiore a SNAPSHOT, tutte le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria vengono eseguite con l'isolamento SNAPSHOT. I livelli di isolamento inferiori a SNAPSHOT sono, ad esempio, READ COMMITTED e READ UNCOMMITTED. Queste operazioni vengono eseguite indipendentemente dal fatto che venga impostato in modo esplicito il livello di isolamento della transazione a livello di sessione o che venga usata in modo implicito l'impostazione predefinita.
 
 OFF        
-Non eleva il livello di isolamento della transazione per le operazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate nelle tabelle ottimizzate per la memoria.
+Non eleva il livello di isolamento della transazione per le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria.
 
-Non è possibile modificare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
+Non è possibile cambiare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
 
-L'impostazione predefinita è **OFF**.
+L'impostazione predefinita è OFF.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_memory_optimized_elevate_to_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
@@ -1009,7 +1013,7 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 
 Controlla le opzioni di conformità ANSI a livello di database.
 
-ANSI_NULL_DEFAULT { ON | **OFF** } Determina il valore predefinito, NULL o NOT NULL, di una colonna o il [tipo CLR definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) per cui il supporto dei valori Null non è definito in modo esplicito nelle istruzioni CREATE TABLE o ALTER TABLE. Le colonne definite con vincoli seguono le regole dei vincoli indipendentemente da questa impostazione.
+ANSI_NULL_DEFAULT { ON | **OFF** } determina il valore predefinito, NULL o NOT NULL, per una colonna o un [tipo CLR definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) per cui il supporto dei valori Null non è definito in modo esplicito nell'istruzione CREATE TABLE o ALTER TABLE. Le colonne definite con vincoli seguono le regole dei vincoli indipendentemente da questa impostazione.
 
 ON        
 Il valore predefinito di una colonna non definita è NULL.
@@ -1098,7 +1102,7 @@ Il valore Null viene considerato come una stringa di caratteri vuota.
 > [IMPORTANTE ] È necessario che l'opzione CONCAT_NULL_YIELDS_NULL sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate.
 
 > [!IMPORTANT]
-> In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione CONCAT_NULL_YIELDS_NULL sarà sempre impostata su ON e qualsiasi applicazione che la imposta in modo esplicito su OFF restituirà un errore. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.
+> Nelle versioni future di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione CONCAT_NULL_YIELDS_NULL sarà sempre impostata su ON e qualsiasi applicazione che imposta l'opzione in modo esplicito su OFF restituirà un errore. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.
 
 Le impostazioni a livello di connessione definite usando l'istruzione SET sono prioritarie rispetto all'impostazione predefinita del database per CONCAT_NULL_YIELDS_NULL. Per impostazione predefinita, i client ODBC e OLE DB eseguono un'istruzione SET a livello di connessione che imposta CONCAT_NULL_YIELDS_NULL su ON per la sessione quando viene stabilita una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).
 
@@ -1111,7 +1115,7 @@ ON
 Tutte le stringhe delimitate da virgolette doppie vengono interpretate come identificatori di oggetto. Gli identificatori delimitati non devono necessariamente essere conformi alle regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. Possono essere parole chiave e includere caratteri normalmente non consentiti negli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se una virgoletta singola (') fa parte della stringa letterale, può essere rappresentata tramite virgolette doppie (").
 
 OFF        
-Gli identificatori non possono essere racchiusi tra virgolette e devono essere conformi a tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
+Gli identificatori non possono essere delimitati da virgolette e devono rispettare tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente inoltre di racchiudere gli identificatori tra parentesi quadre ([ ]). Gli identificatori tra parentesi quadre possono essere sempre usati, indipendentemente dall'impostazione di QUOTED_IDENTIFIER. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).
 
@@ -1126,7 +1130,7 @@ ON
 Viene generato un errore quando si verifica una perdita di precisione in un'espressione.
 
 OFF        
-In seguito alla perdita di precisione non viene generato alcun messaggio di errore e il risultato viene arrotondato alla precisione della colonna o della variabile in cui viene archiviato.
+La perdita di precisione non genera messaggi di errore e il risultato viene arrotondato alla precisione della colonna o della variabile in cui viene archiviato.
 
 > [!IMPORTANT]
 > È necessario che l'opzione NUMERIC_ROUNDABORT sia impostata su OFF quando vengono creati o modificati indici in colonne calcolate o viste indicizzate.
@@ -1174,12 +1178,12 @@ ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE
 Specifica se eseguire il rollback dopo il numero di secondi specificato o immediatamente. *number* è di tipo **int**.
 
 NO_WAIT        
-Specifica che la richiesta avrà esito negativo se non è possibile completare immediatamente la modifica richiesta per l'opzione o lo stato del database, senza aspettare il commit o il rollback automatico delle transazioni.
+Specifica che la richiesta ha esito negativo se non è possibile completare immediatamente la modifica richiesta dello stato del database o dell'opzione, senza aspettare il commit o il rollback automatico delle transazioni.
 
 ## <a name="SettingOptions"></a> Impostazione delle opzioni
 Per recuperare le impostazioni correnti delle opzioni di database, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-Dopo avere impostato un'opzione di database, la modifica diventa effettiva immediatamente.
+Dopo l'impostazione di un'opzione di database, la modifica diventa effettiva immediatamente.
 
 Per cambiare i valori predefiniti di qualsiasi opzione di database per tutti i nuovi database, cambiare l'opzione appropriata nel database modello.
 
@@ -1409,7 +1413,7 @@ SET QUERY_STORE = ON
 I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni di impostazione a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte di seguito sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
+> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni SET a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte nelle sezioni seguenti sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -1557,12 +1561,12 @@ Consente di controllare le opzioni automatiche.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }        
 ON        
-Query Optimizer crea statistiche per colonne singole nei predicati di query, in base alle esigenze, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
+Query Optimizer crea statistiche per colonne singole nei predicati di query, se necessario, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
 
 Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
 OFF        
-Query Optimizer non crea statistiche per le singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Query Optimizer non crea statistiche sulle singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_auto_create_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoCreateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -1594,7 +1598,7 @@ I file di database non vengono compattati automaticamente durante i controlli pe
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.
+Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia. basata sul numero di righe nella tabella o nella vista indicizzata.
 
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e di eseguire un piano di query memorizzato nella cache. Usa le colonne, le tabelle e le viste indicizzate nel predicato di query per determinare quali statistiche potrebbero non essere aggiornate. Query Optimizer verifica questa possibilità prima di compilare una query. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.
 
@@ -1605,7 +1609,7 @@ Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita p
 Usare l'opzione AUTO_UPDATE_STATISTICS_ASYNC per specificare se le statistiche vengono aggiornate in modo sincrono o asincrono.
 
 OFF        
-Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query. Query Optimizer non aggiorna inoltre le statistiche quando potrebbero essere obsolete. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query né quando potrebbero essere non aggiornate. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_auto_update_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoUpdateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -1638,16 +1642,16 @@ AUTO
 Se si imposta il valore di ottimizzazione automatica su AUTO, vengono applicate le impostazioni predefinite di configurazione di Azure per l'ottimizzazione automatica.
 
 INHERIT        
-L'utilizzo del valore INHERIT fa ereditare la configurazione predefinita dal server padre. Ciò risulta particolarmente utile se si vuole personalizzare la configurazione di ottimizzazione automatica in un server padre e fare in modo che tutti i database del server ereditino queste impostazioni personalizzate. Si noti che affinché l'ereditarietà funzioni, le tre opzioni di ottimizzazione FORCE_LAST_GOOD_PLAN, CREATE_INDEX e DROP_INDEX devono essere impostate sul valore predefinito per i database.
+L'uso del valore INHERIT fa ereditare la configurazione predefinita dal server padre. Ciò risulta particolarmente utile se si vuole personalizzare la configurazione di ottimizzazione automatica in un server padre e fare in modo che tutti i database del server ereditino queste impostazioni personalizzate. Si noti che affinché l'ereditarietà funzioni, le tre opzioni di ottimizzazione FORCE_LAST_GOOD_PLAN, CREATE_INDEX e DROP_INDEX devono essere impostate sul valore predefinito per i database.
 
 CUSTOM        
-Se si usa il valore CUSTOM, è necessario personalizzare manualmente ciascuna delle opzioni di ottimizzazione automatica disponibili nei database.
+Se si usa il valore CUSTOM, è necessario personalizzare ciascuna delle opzioni di ottimizzazione automatica disponibili nei database.
 
 Abilita o disabilita l'opzione di gestione automatica degli indici `CREATE_INDEX` di [ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 CREATE_INDEX = { DEFAULT | ON | OFF }        
 DEFAULT        
-Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'abilitazione o la disabilitazione delle singole funzionalità di ottimizzazione automatica sono definite a livello del server.
+Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'attivazione o la disattivazione delle funzionalità di ottimizzazione automatica sono definite a livello del server.
 
 ON        
 Quando questa opzione è abilitata, gli indici mancanti vengono generati automaticamente per un database. Dopo la creazione dell'indice, vengono verificati i miglioramenti delle prestazioni del carico di lavoro. Quando non offre più vantaggi in termini di prestazioni del carico di lavoro, tale indice creato viene annullato automaticamente. Gli indici creati automaticamente vengono contrassegnati come indici generati dal sistema.
@@ -1659,29 +1663,29 @@ Abilita o disabilita l'opzione di gestione automatica degli indici `DROP_INDEX` 
 
 DROP_INDEX = { DEFAULT | ON | OFF }        
 DEFAULT        
-Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'abilitazione o la disabilitazione delle singole funzionalità di ottimizzazione automatica sono definite a livello del server.
+Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'attivazione o la disattivazione delle funzionalità di ottimizzazione automatica sono definite a livello del server.
 
 ON        
 Elimina automaticamente gli indici duplicati o superflui per il carico di lavoro delle prestazioni.
 
 OFF        
-Non elimina automaticamente gli indici mancanti nel database.
+Non rimuove automaticamente gli indici mancanti del database.
 
 Abilita o disabilita l'opzione di correzione automatica dei piani `FORCE_LAST_GOOD_PLAN` di [ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }        
 DEFAULT        
-Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'abilitazione o la disabilitazione delle singole funzionalità di ottimizzazione automatica sono definite a livello del server.
+Fa ereditare le impostazioni predefinite dal server. In questo caso, le opzioni per l'attivazione o la disattivazione delle funzionalità di ottimizzazione automatica sono definite a livello del server.
 
 ON        
-Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo piano valido noto nelle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] nel caso in cui il nuovo piano di query causi un peggioramento delle prestazioni. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continua a monitorare le prestazioni delle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] usando il piano forzato. Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità *lettura/scrittura*.
+Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo piano valido noto nelle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] nel caso in cui il nuovo piano di query causi un peggioramento delle prestazioni. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continua a monitorare le prestazioni delle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] usando il piano forzato. Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità di *lettura/scrittura*.
 
 OFF        
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Si tratta del valore predefinito.
 
 **\<change_tracking_option> ::=**        
 
-Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione Esempi più avanti in questo articolo.
+Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
 
 ON        
 Abilita il rilevamento delle modifiche per il database. Quando si abilita il rilevamento delle modifiche, è possibile impostare anche le opzioni AUTO CLEANUP e CHANGE RETENTION.
@@ -1725,7 +1729,7 @@ Controlla lo stato della crittografia del database.
 ENCRYPTION { ON | OFF }        
 Imposta il database per l'utilizzo della crittografia (ON) o no (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su **READ ONLY**, l'operazione di crittografia del database avrà esito negativo.
+Quando la crittografia è abilitata a livello di database, tutti i filegroup vengono crittografati. I nuovi filegroup erediteranno la proprietà di crittografia. Se in un database sono presenti filegroup impostati su READ ONLY, l'operazione di crittografia del database avrà esito negativo.
 
 È possibile visualizzare lo stato della crittografia del database usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
@@ -1815,13 +1819,13 @@ INTERVAL_LENGTH_MINUTES
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
-Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:
+Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime.
 
 OFF        
-La pulizia basata sulle dimensioni non sarà attivata automaticamente.
+La pulizia basata sulle dimensioni non viene attivata automaticamente.
 
 AUTO        
-La pulizia basata sulle dimensioni sarà attivata automaticamente quando le dimensioni su disco raggiungeranno il 90% di **max_storage_size_mb**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge all'incirca l'80% di **max_storage_size_mb**. Si tratta del valore di configurazione predefinito.
+La pulizia basata sulle dimensioni viene attivata automaticamente quando le dimensioni sul disco raggiungono il 90% di **max_storage_size_mb**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge all'incirca l'80% di **max_storage_size_mb**. Si tratta del valore di configurazione predefinito.
 
 SIZE_BASED_CLEANUP_MODE è di tipo **nvarchar**.
 
@@ -1835,7 +1839,7 @@ AUTO
 Consente di acquisire le query pertinenti in base al conteggio delle esecuzioni e al consumo delle risorse. Si tratta del valore di configurazione predefinito di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Nessuno        
-Consente di arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. È consigliabile usare questa configurazione con attenzione per evitare che query importanti non siano acquisite.
+Consente di arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare con cautela questa configurazione perché si rischia di perdere query importanti.
 
 QUERY_CAPTURE_MODE è di tipo **nvarchar**.
 
@@ -1848,14 +1852,14 @@ Determina il livello di isolamento delle transazioni.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }        
 ON        
-Abilita l'opzione Snapshot a livello di database. Quando è abilitata, le istruzioni DML iniziano la generazione di versioni di riga anche quando nessuna transazione usano l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
+Abilita l'opzione relativa allo snapshot a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
 
 OFF        
-Consente di disabilitare l'opzione Snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento della transazione SNAPSHOT.
+Consente di disabilitare l'opzione relativa allo snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento SNAPSHOT.
 
 Quando si imposta un nuovo stato per l'opzione ALLOW_SNAPSHOT_ISOLATION (da ON a OFF oppure da OFF a ON), ALTER DATABASE restituisce il controllo al chiamante solo dopo il completamento del commit di tutte le transazioni esistenti nel database. Se per il database è già attivo lo stato specificato nell'istruzione ALTER DATABASE, il controllo viene restituito immediatamente al chiamante. Se l'istruzione ALTER DATABASE non restituisce il controllo rapidamente, usare [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) per verificare se sono presenti transazioni con esecuzione prolungata. Se l'istruzione ALTER DATABASE viene annullata, il database rimane nello stato attivo al momento dell'avvio dell'istruzione ALTER DATABASE. La vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) indica lo stato delle transazioni di isolamento dello snapshot nel database. Se **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF attenderà sei secondi prima di ritentare l'operazione.
 
-Non è possibile modificare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
+Non è possibile cambiare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
 
 Se si imposta ALLOW_SNAPSHOT_ISOLATION in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
@@ -1867,16 +1871,16 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata questa opzione, le transazioni che specificano il livello di isolamento Read committed usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento Read Committed, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
+Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata questa opzione, le transazioni che specificano il livello di isolamento READ COMMITTED usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento READ COMMITTED, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
 
 OFF        
 Disabilita l'opzione relativa allo snapshot Read Committed a livello di database. Le transazioni per cui è impostato il livello di isolamento READ COMMITTED usano il blocco.
 
-Per impostare READ_COMMITTED_SNAPSHOT su ON oppure OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile modificare lo stato di questa opzione quando il database è OFFLINE.
+Per impostare READ_COMMITTED_SNAPSHOT su ON o su OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile cambiare lo stato di questa opzione quando il database è OFFLINE.
 
 Se si imposta READ_COMMITTED_SNAPSHOT in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
-Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb e msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
+Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb o msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_read_committed_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
@@ -1888,9 +1892,9 @@ ON
 Quando l'isolamento della transazione è impostato su un livello inferiore a SNAPSHOT, tutte le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria vengono eseguite con l'isolamento SNAPSHOT. I livelli di isolamento inferiori a SNAPSHOT sono, ad esempio, READ COMMITTED e READ UNCOMMITTED. Queste operazioni vengono eseguite indipendentemente dal fatto che venga impostato in modo esplicito il livello di isolamento della transazione a livello di sessione o che venga usata in modo implicito l'impostazione predefinita.
 
 OFF        
-Non eleva il livello di isolamento della transazione per le operazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate nelle tabelle ottimizzate per la memoria.
+Non eleva il livello di isolamento della transazione per le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria.
 
-Non è possibile modificare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
+Non è possibile cambiare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
 
 Il valore predefinito è OFF.
 
@@ -2003,7 +2007,7 @@ ON
 Tutte le stringhe delimitate da virgolette doppie vengono interpretate come identificatori di oggetto. Gli identificatori delimitati non devono necessariamente essere conformi alle regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. Possono essere parole chiave e includere caratteri normalmente non consentiti negli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se una virgoletta singola (') fa parte della stringa letterale, può essere rappresentata tramite virgolette doppie (").
 
 OFF        
-Gli identificatori non possono essere racchiusi tra virgolette e devono essere conformi a tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
+Gli identificatori non possono essere delimitati da virgolette e devono rispettare tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente inoltre di racchiudere gli identificatori tra parentesi quadre ([ ]). Gli identificatori tra parentesi quadre possono essere sempre usati, indipendentemente dall'impostazione di QUOTED_IDENTIFIER. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).
 
@@ -2064,13 +2068,13 @@ ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE
 Specifica se eseguire il rollback dopo il numero di secondi specificato o immediatamente.
 
 NO_WAIT        
-Specifica che la richiesta avrà esito negativo se non è possibile completare immediatamente la modifica richiesta per l'opzione o lo stato del database, senza aspettare il commit o il rollback automatico delle transazioni.
+Specifica che la richiesta ha esito negativo se non è possibile completare immediatamente la modifica richiesta dello stato del database o dell'opzione, senza aspettare il commit o il rollback automatico delle transazioni.
 
 ## <a name="SettingOptions"></a> Impostazione delle opzioni
 
 Per recuperare le impostazioni correnti delle opzioni di database, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-Dopo avere impostato un'opzione di database, la modifica diventa effettiva immediatamente.
+Dopo l'impostazione di un'opzione di database, la modifica diventa effettiva immediatamente.
 
 Per cambiare i valori predefiniti di qualsiasi opzione di database per tutti i nuovi database, cambiare l'opzione appropriata nel database modello.
 
@@ -2205,7 +2209,7 @@ SET QUERY_STORE = ON
 I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni di impostazione a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte di seguito sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
+> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni SET a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte nelle sezioni seguenti sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -2335,12 +2339,12 @@ Consente di controllare le opzioni automatiche.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-Query Optimizer crea statistiche per colonne singole nei predicati di query, in base alle esigenze, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
+Query Optimizer crea statistiche per colonne singole nei predicati di query, se necessario, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
 
-Il valore predefinito è **ON**. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
+Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
 OFF        
-Query Optimizer non crea statistiche per le singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Query Optimizer non crea statistiche sulle singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_auto_create_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoCreateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -2372,7 +2376,7 @@ I file di database non vengono compattati automaticamente durante i controlli pe
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.
+Specifica che Query Optimizer aggiorna le statistiche quando queste vengono usate da una query e quando potrebbero non essere aggiornate. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia. basata sul numero di righe nella tabella o nella vista indicizzata.
 
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e di eseguire un piano di query memorizzato nella cache. Usa le colonne, le tabelle e le viste indicizzate nel predicato di query per determinare quali statistiche potrebbero non essere aggiornate. Query Optimizer verifica questa possibilità prima di compilare una query. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.
 
@@ -2383,11 +2387,11 @@ Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita p
 Usare l'opzione AUTO_UPDATE_STATISTICS_ASYNC per specificare se le statistiche vengono aggiornate in modo sincrono o asincrono.
 
 OFF        
-Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query. Query Optimizer non aggiorna inoltre le statistiche quando potrebbero essere obsolete. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Specifica che Query Optimizer non aggiorna le statistiche quando queste vengono usate da una query né quando potrebbero essere non aggiornate. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna is_auto_update_stats_on nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoUpdateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche" nel database nell'argomento [Statistiche](../../relational-databases/statistics/statistics.md).
+Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
@@ -2404,7 +2408,7 @@ L'impostazione di questa opzione su OFF non produce alcun effetto, a meno che AU
 
 È possibile determinare lo stato di questa opzione esaminando la colonna is_auto_update_stats_async_on nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione "Opzioni relative alle statistiche" nel database nell'argomento [Statistiche](../../relational-databases/statistics/statistics.md).
+Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
@@ -2413,14 +2417,14 @@ Abilita o disabilita l'opzione `FORCE_LAST_GOOD_PLAN` di [ottimizzazione automat
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
-Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo piano valido noto nelle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] nel caso in cui il nuovo piano di query causi un peggioramento delle prestazioni. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continua a monitorare le prestazioni delle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] usando il piano forzato. Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità *lettura/scrittura*.
+Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo piano valido noto nelle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] nel caso in cui il nuovo piano di query causi un peggioramento delle prestazioni. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continua a monitorare le prestazioni delle query [!INCLUDE[tsql-md](../../includes/tsql-md.md)] usando il piano forzato. Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuerà a usare l'ultimo piano adeguato noto. Se non si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] creerà un nuovo piano di query. L'istruzione avrà esito negativo se Query Store non è abilitato o se non è in modalità di *lettura/scrittura*.
 
 OFF        
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Si tratta del valore predefinito.
 
 **\<change_tracking_option> ::=**        
 
-Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione Esempi più avanti in questo articolo.
+Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
 
 ON        
 Abilita il rilevamento delle modifiche per il database. Quando si abilita il rilevamento delle modifiche, è possibile impostare anche le opzioni AUTO CLEANUP e CHANGE RETENTION.
@@ -2464,7 +2468,7 @@ Controlla lo stato della crittografia del database.
 ENCRYPTION { ON | **OFF** }        
 Imposta il database per l'utilizzo della crittografia (ON) o no (OFF). Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) e [Transparent Data Encryption con il database SQL di Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su **READ ONLY**, l'operazione di crittografia del database avrà esito negativo.
+Quando la crittografia è abilitata a livello di database, tutti i filegroup vengono crittografati. I nuovi filegroup erediteranno la proprietà di crittografia. Se in un database sono presenti filegroup impostati su READ ONLY, l'operazione di crittografia del database avrà esito negativo.
 
 È possibile visualizzare lo stato della crittografia del database usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
@@ -2550,13 +2554,13 @@ INTERVAL_LENGTH_MINUTES
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
-Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:
+Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime.
 
 OFF        
-La pulizia basata sulle dimensioni non sarà attivata automaticamente.
+La pulizia basata sulle dimensioni non viene attivata automaticamente.
 
 AUTO        
-La pulizia basata sulle dimensioni sarà attivata automaticamente quando le dimensioni su disco raggiungeranno il 90% di **max_storage_size_mb**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge all'incirca l'80% di **max_storage_size_mb**. Si tratta del valore di configurazione predefinito.
+La pulizia basata sulle dimensioni viene attivata automaticamente quando le dimensioni sul disco raggiungono il 90% di **max_storage_size_mb**. La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si arresta quando raggiunge all'incirca l'80% di **max_storage_size_mb**. Si tratta del valore di configurazione predefinito.
 
 SIZE_BASED_CLEANUP_MODE è di tipo **nvarchar**.
 
@@ -2570,7 +2574,7 @@ AUTO
 Consente di acquisire le query pertinenti in base al conteggio delle esecuzioni e al consumo delle risorse. Si tratta del valore di configurazione predefinito di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Nessuno        
-Consente di arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. È consigliabile usare questa configurazione con attenzione per evitare che query importanti non siano acquisite.
+Consente di arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare con cautela questa configurazione perché si rischia di perdere query importanti.
 
 QUERY_CAPTURE_MODE è di tipo **nvarchar**.
 
@@ -2583,14 +2587,14 @@ Determina il livello di isolamento delle transazioni.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }        
 ON        
-Abilita l'opzione Snapshot a livello di database. Quando è abilitata, le istruzioni DML iniziano la generazione di versioni di riga anche quando nessuna transazione usano l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
+Abilita l'opzione relativa allo snapshot a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata l'opzione, le transazioni possono specificare il livello di isolamento della transazione SNAPSHOT. Nelle transazioni eseguite con il livello di isolamento SNAPSHOT, tutte le istruzioni possono accedere a uno snapshot dei dati corrispondente allo stato dei dati al momento dell'avvio della transazione. Se una transazione eseguita con il livello di isolamento SNAPSHOT deve accedere ai dati in più database, è necessario impostare ALLOW_SNAPSHOT_ISOLATION su ON in tutti i database oppure ogni istruzione della transazione deve usare hint di blocco per qualsiasi riferimento in una clausola FROM a una tabella di un database per cui l'opzione ALLOW_SNAPSHOT_ISOLATION è impostata su OFF.
 
 OFF        
-Consente di disabilitare l'opzione Snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento della transazione SNAPSHOT.
+Consente di disabilitare l'opzione relativa allo snapshot a livello di database. Per le transazioni non può essere impostato il livello di isolamento SNAPSHOT.
 
 Quando si imposta un nuovo stato per l'opzione ALLOW_SNAPSHOT_ISOLATION (da ON a OFF oppure da OFF a ON), ALTER DATABASE restituisce il controllo al chiamante solo dopo il completamento del commit di tutte le transazioni esistenti nel database. Se per il database è già attivo lo stato specificato nell'istruzione ALTER DATABASE, il controllo viene restituito immediatamente al chiamante. Se l'istruzione ALTER DATABASE non restituisce il controllo rapidamente, usare [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) per verificare se sono presenti transazioni con esecuzione prolungata. Se l'istruzione ALTER DATABASE viene annullata, il database rimane nello stato attivo al momento dell'avvio dell'istruzione ALTER DATABASE. La vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) indica lo stato delle transazioni di isolamento dello snapshot nel database. Se **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF attenderà sei secondi prima di ritentare l'operazione.
 
-Non è possibile modificare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
+Non è possibile cambiare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è OFFLINE.
 
 Se si imposta ALLOW_SNAPSHOT_ISOLATION in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
@@ -2602,16 +2606,16 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 
 READ_COMMITTED_SNAPSHOT { ON | **OFF** }        
 ON        
-Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Una volta abilitata questa opzione, le transazioni che specificano il livello di isolamento Read committed usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento Read Committed, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
+Abilita l'opzione relativa allo snapshot Read Committed a livello di database. Se questa opzione è abilitata, le istruzioni DML iniziano a generare versioni di riga anche quando nessuna transazione usa l'isolamento dello snapshot. Quando questa opzione è abilitata, le transazioni che specificano il livello di isolamento READ COMMITTED usano il controllo delle versioni delle righe anziché il blocco. Quando una transazione viene eseguita con il livello di isolamento READ COMMITTED, tutte le istruzioni vedono uno snapshot dei dati nello stato in cui si trovano all'avvio dell'istruzione.
 
 OFF        
 Disabilita l'opzione relativa allo snapshot Read Committed a livello di database. Le transazioni per cui è impostato il livello di isolamento READ COMMITTED usano il blocco.
 
-Per impostare READ_COMMITTED_SNAPSHOT su ON oppure OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile modificare lo stato di questa opzione quando il database è OFFLINE.
+Per impostare READ_COMMITTED_SNAPSHOT su ON o su OFF, è necessario che non siano presenti connessioni attive al database, ad eccezione della connessione usata per eseguire il comando ALTER DATABASE. Non è tuttavia necessario che il database sia in modalità utente singolo. Non è possibile cambiare lo stato di questa opzione quando il database è OFFLINE.
 
 Se si imposta READ_COMMITTED_SNAPSHOT in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
-Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb e msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
+Non è possibile impostare READ_COMMITTED_SNAPSHOT su ON per i database di sistema master, tempdb o msdb. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_read_committed_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
@@ -2623,9 +2627,9 @@ ON
 Quando l'isolamento della transazione è impostato su un livello inferiore a SNAPSHOT, tutte le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria vengono eseguite con l'isolamento SNAPSHOT. I livelli di isolamento inferiori a SNAPSHOT sono, ad esempio, READ COMMITTED e READ UNCOMMITTED. Queste operazioni vengono eseguite indipendentemente dal fatto che venga impostato in modo esplicito il livello di isolamento della transazione a livello di sessione o che venga usata in modo implicito l'impostazione predefinita.
 
 OFF        
-Non eleva il livello di isolamento della transazione per le operazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate nelle tabelle ottimizzate per la memoria.
+Non eleva il livello di isolamento della transazione per le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria.
 
-Non è possibile modificare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
+Non è possibile cambiare lo stato di MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT se il database è OFFLINE.
 
 Il valore predefinito è OFF.
 
@@ -2738,7 +2742,7 @@ ON
 Tutte le stringhe delimitate da virgolette doppie vengono interpretate come identificatori di oggetto. Gli identificatori delimitati non devono necessariamente essere conformi alle regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. Possono essere parole chiave e includere caratteri normalmente non consentiti negli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se una virgoletta singola (') fa parte della stringa letterale, può essere rappresentata tramite virgolette doppie (").
 
 OFF        
-Gli identificatori non possono essere racchiusi tra virgolette e devono essere conformi a tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
+Gli identificatori non possono essere delimitati da virgolette e devono rispettare tutte le regole di [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori. È possibile delimitare i valori letterali con virgolette singole o doppie.
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente inoltre di racchiudere gli identificatori tra parentesi quadre ([ ]). Gli identificatori tra parentesi quadre possono essere sempre usati, indipendentemente dall'impostazione di QUOTED_IDENTIFIER. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).
 
@@ -2792,13 +2796,13 @@ ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE
 Specifica se eseguire il rollback dopo il numero di secondi specificato o immediatamente.
 
 NO_WAIT        
-Specifica che la richiesta avrà esito negativo se non è possibile completare immediatamente la modifica richiesta per l'opzione o lo stato del database, senza aspettare il commit o il rollback automatico delle transazioni.
+Specifica che la richiesta ha esito negativo se non è possibile completare immediatamente la modifica richiesta dello stato del database o dell'opzione, senza aspettare il commit o il rollback automatico delle transazioni.
 
 ## <a name="SettingOptions"></a> Impostazione delle opzioni
 
 Per recuperare le impostazioni correnti delle opzioni di database, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-Dopo avere impostato un'opzione di database, la modifica diventa effettiva immediatamente.
+Dopo l'impostazione di un'opzione di database, la modifica diventa effettiva immediatamente.
 
 Per cambiare i valori predefiniti di qualsiasi opzione di database per tutti i nuovi database, cambiare l'opzione appropriata nel database modello.
 
@@ -2942,24 +2946,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-    RESULT_SET_CACHING { ON | OFF }
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2973,13 +2971,14 @@ Nome del database da modificare.
 Consente di controllare le opzioni automatiche.
 
 AUTO_CREATE_STATISTICS { **ON** | OFF }        
-ON        
-Query Optimizer crea statistiche per colonne singole nei predicati di query, in base alle esigenze, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
 
-Il valore predefinito è **ON**. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
+ON        
+Query Optimizer crea statistiche per colonne singole nei predicati di query, se necessario, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Tali statistiche vengono create solo sulle colonne che ancora non sono le prime colonne di un oggetto statistiche esistente.
+
+Il valore predefinito è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
 OFF        
-Query Optimizer non crea statistiche per le singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
+Query Optimizer non crea statistiche sulle singole colonne nei predicati di query durante la compilazione delle query. L'impostazione di questa opzione su OFF può determinare piani di query e prestazioni di esecuzione delle query non ottimali.
 
 È possibile determinare lo stato di questa opzione esaminando la colonna i`s_auto_create_stats_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsAutoCreateStatistics` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -2990,6 +2989,7 @@ Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche nel
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 Imposta il database in modo che venga crittografato.
 
@@ -2998,27 +2998,32 @@ Imposta il database in modo che non venga crittografato.
 
 Per altre informazioni sulla crittografia del database, vedere Transparent Data Encryption e Transparent Data Encryption con il database SQL di Azure.
 
-Se la crittografia è abilitata a livello di database, vengono crittografati tutti i filegroup. Qualsiasi filegroup nuovo eredita la proprietà di crittografia. Se in un database sono presenti filegroup impostati su READ ONLY, l'operazione di crittografia del database avrà esito negativo.
+Quando la crittografia è abilitata a livello di database, tutti i filegroup vengono crittografati. I nuovi filegroup erediteranno la proprietà di crittografia. Se in un database sono presenti filegroup impostati su READ ONLY, l'operazione di crittografia del database avrà esito negativo.
+
 È possibile vedere lo stato di crittografia del database, così come lo stato dell'analisi di crittografia, usando la DMV sys.dm_database_encryption_keys.
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | **OFF**        
 Controlla se Query Store è abilitato in questo data warehouse.
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 Abilita Query Store.
 
 OFF        
+
 Disabilita Query Store. OFF è il valore predefinito.
 
 > [!NOTE]
 > Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], è necessario eseguire il comando `ALTER DATABASE SET QUERY_STORE` dal database utente. L'esecuzione dell'istruzione da un'altra istanza del data warehouse non è supportata.
 
-**\<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**         
 **Si applica a**: Azure SQL Data Warehouse (anteprima)
 
-Questo comando deve essere eseguito mentre si è connessi al database `master`.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. Una nuova colonna, is_result_set_caching_on, è stata introdotta in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per mostrare l'impostazione della cache dei risultati per un database.  
+Controlla se il risultato della query viene memorizzato nella cache del database.
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 Specifica che i set di risultati delle query restituiti da questo database verranno memorizzati nella cache della risorsa di archiviazione di Azure SQL Data Warehouse.
@@ -3035,6 +3040,8 @@ comando|Simile a|%DWResultCacheDb%|
 | | |
 
 ### <a name="remarks"></a>Remarks
+Questo comando deve essere eseguito mentre si è connessi al database `master`.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. Una nuova colonna, is_result_set_caching_on, è stata introdotta in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per mostrare l'impostazione della cache dei risultati per un database.  
+
 Il set di risultati memorizzato nella cache viene riutilizzato per una query se vengono soddisfatti tutti i requisiti seguenti:
 
 1. L'utente che esegue la query ha accesso a tutte le tabelle a cui viene fatto riferimento nella query.
@@ -3045,22 +3052,23 @@ Dopo l'attivazione della memorizzazione nella cache del set di risultati per un 
 
 Le query con set di risultati di grandi dimensioni (ad esempio, > 1 milione di righe) potrebbero incontrare un rallentamento delle prestazioni durante la prima esecuzione quando viene creata la cache dei risultati.
 
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
+**Si applica a**: Azure SQL Data Warehouse (anteprima)
 
-Calcola il livello di isolamento delle transazioni.
+Controlla il livello di isolamento delle transazioni di un database.
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**Si applica a**: Azure SQL Data Warehouse (anteprima)
 
 ON        
 Abilita l'opzione READ_COMMITTED_SNAPSHOT a livello di database.
 
 OFF        
-Disattiva l'opzione READ_COMMITTED_SNAPSHOT a livello di database.
+Disabilita l'opzione READ_COMMITTED_SNAPSHOT a livello di database.
 
-L'impostazione di READ_COMMITTED_SNAPSHOT su ON o OFF per un database comporterà la terminazione di tutte le connessioni aperte al database. È possibile apportare questa modifica durante la finestra di manutenzione del database o attendere fino a quando non esiste alcuna connessione attiva al database, ad eccezione della connessione che esegue il comando ALTER DATABASE.  Il database non deve essere in modalità utente singolo.  La modifica dell'impostazione READ_COMMITTED_SNAPSHOT a livello di sessione non è supportata.  Per verificare questa impostazione per un database, controllare la colonna is_read_committed_snapshot_on in sys.databases.
+### <a name="remarks"></a>Remarks
+Questo comando deve essere eseguito mentre si è connessi al database `master`. L'impostazione di READ_COMMITTED_SNAPSHOT su ON o su OFF per un database utente comporterà la terminazione di tutte le connessioni aperte al database. È possibile apportare questa modifica durante l'intervallo di manutenzione del database o attendere fino a quando non esiste alcuna connessione attiva al database, ad eccezione della connessione che esegue il comando ALTER DATABASE.  Il database non deve essere in modalità utente singolo. La modifica dell'impostazione READ_COMMITTED_SNAPSHOT a livello di sessione non è supportata.  Per verificare questa impostazione per un database, controllare la colonna is_read_committed_snapshot_on in sys.databases.
 
-In un database con l'impostazione READ_COMMITTED_SNAPSHOT abilitata, è possibile che le query riscontrino prestazioni più lente a causa dell'analisi delle versioni se sono presenti più versioni dei dati. Anche le transazioni aperte lunghe possono causare un aumento delle dimensioni del database in caso di modifiche dei dati da parte di queste transazioni che bloccano la pulizia delle versioni.  
+In un database con l'impostazione READ_COMMITTED_SNAPSHOT abilitata, è possibile che le query riscontrino prestazioni più lente a causa dell'analisi delle versioni se sono presenti più versioni dei dati. Anche le transazioni aperte da tempo possono causare un aumento delle dimensioni del database. Questo problema si verifica in caso di modifiche ai dati apportate da tali transazioni che bloccano la pulizia delle versioni.  
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -3070,56 +3078,33 @@ Per impostare l'opzione READ_COMMITTED_SNAPSHOT, un utente deve avere l'autorizz
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-enabling-the-query-store"></a>A. Abilitazione di Archivio query
-L'esempio seguente abilita Query Store.
+### <a name="check-statistics-setting-for-a-database"></a>Controllare l'impostazione delle statistiche per un database
+
+```sql
+SELECT name, is_auto_create_stats_on FROM sys.databases
+```
+### <a name="enable-query-store-for-a-database"></a>Abilitare Query Store per un database
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### <a name="b-enable-result-set-caching-for-a-database"></a>B. Abilitare la memorizzazione nella cache dei set di risultati per un database
+### <a name="enable-result-set-caching-for-a-database"></a>Abilitare la memorizzazione nella cache dei set di risultati per un database
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="c-disable-result-set-caching-for-a-database"></a>C. Disabilitare la memorizzazione nella cache dei set di risultati per un database
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. Verificare l'impostazione di memorizzazione nella cache dei set di risultati per un database
+### <a name="check-result-set-caching-setting-for-a-database"></a>Verificare l'impostazione di memorizzazione nella cache dei set di risultati per un database
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="e-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>E. Verificare il numero di query con riscontri e mancati riscontri nella cache dei set di risultati
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### <a name="f-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>F. Verificare i riscontri o i mancati riscontri nella cache dei set di risultati per una query
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Verificare i riscontri o i mancati riscontri nella cache dei set di risultati per una query
 
 ```sql
 If
@@ -3131,7 +3116,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="g-check-for-all-queries-with-result-set-cache-hits"></a>G. Verificare tutte le query con riscontri nella cache dei set di risultati
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Verificare tutte le query con riscontri nella cache dei set di risultati
 
 ```sql
 SELECT *  
@@ -3139,7 +3124,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### <a name="h-enable-read_committed_snapshot-option-for-a-database"></a>H. Abilitare l'opzione Read_Committed_Snapshot per un database
+### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>Abilitare l'opzione Read_Committed_Snapshot per un database
 
 ```sql
 ALTER DATABASE MyDatabase  

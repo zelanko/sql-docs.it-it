@@ -18,12 +18,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1d1e0171082811e8f3f049b66b78da02bd12b601
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766949"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711005"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>Visualizzare comandi replicati e altre informazioni nel database di distribuzione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68766949"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>Per visualizzare comandi replicati nel database di distribuzione da un articolo specifico o da un database specifico pubblicato tramite la replica transazionale  
   
-1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Specificare **@publication** e **@article** . Tenere presente il valore di **article id** nel set di risultati.  
+1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Specificare `@publication` e `@article`. Tenere presente il valore di **article id** nel set di risultati.  
   
-2.  Nel database di distribuzione del server di distribuzione eseguire [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md). (Facoltativo) Specificare l'ID dell'articolo indicato nel passaggio 2 per **@article_id** . (Facoltativo) Specificare l'ID del database di pubblicazione per **@publisher_database_id** . Tale valore può essere ottenuto dalla colonna **database_id** nella vista del catalogo [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+2.  Nel database di distribuzione del server di distribuzione eseguire [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md). (Facoltativo) Specificare l'ID dell'articolo indicato nel passaggio 2 per `@article_id`. (Facoltativo) Specificare l'ID del database di pubblicazione per `@publisher_database_id`. Tale valore può essere ottenuto dalla colonna **database_id** nella vista del catalogo [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

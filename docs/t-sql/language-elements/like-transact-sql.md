@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122183"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816828"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce e abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Ricerche con la clausola ESCAPE  
- È possibile eseguire ricerche di stringhe di caratteri che includono uno o più caratteri speciali. Ad esempio, nella tabella discounts di un database customers è possibile archiviare i valori relativi allo sconto che includono il segno di percentuale (%). Per cercare il segno di percentuale come carattere e non come carattere jolly, è necessario specificare la parola chiave ESCAPE e il carattere di escape. Ad esempio, un database di esempio include una colonna denominata comment contenente il testo 30%. Per cercare le righe contenenti la stringa 30% all'interno della colonna dei commenti, specificare una clausola WHERE, ad esempio `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Se ESCAPE e il carattere di escape non vengono specificati, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce tutte le righe contenenti la stringa 30.  
+ È possibile eseguire ricerche di stringhe di caratteri che includono uno o più caratteri speciali. Ad esempio, nella tabella discounts di un database customers è possibile archiviare i valori relativi allo sconto che includono il segno di percentuale (%). Per cercare il segno di percentuale come carattere e non come carattere jolly, è necessario specificare la parola chiave ESCAPE e il carattere di escape. Ad esempio, un database di esempio include una colonna denominata comment contenente il testo 30%. Per cercare le righe contenenti la stringa 30% all'interno della colonna dei commenti, specificare una clausola WHERE, ad esempio `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Se ESCAPE e il carattere di escape non vengono specificati, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce tutte le righe contenenti la stringa 30!.  
   
  Se dopo un carattere di escape non è presente alcun carattere nel modello LIKE, il modello non è valido e l'operatore LIKE restituisce FALSE. Se il carattere successivo al carattere di escape non è un carattere jolly, il carattere di escape viene eliminato e il carattere successivo viene considerato come un carattere normale nel modello. Questo è valido per il segno di percentuale (%), il carattere di sottolineatura (_) e la parentesi quadra aperta ([) quando questi caratteri jolly sono racchiusi tra doppie parentesi quadre ([ ]). I caratteri di escape possono essere usati all'interno di doppie parentesi quadre ([ ]), anche per eseguire l'escape di un accento circonflesso (^), un trattino (-) o una parentesi quadra chiusa (]).  
   

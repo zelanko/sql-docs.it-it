@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500458"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951780"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -113,7 +113,7 @@ ms.locfileid: "66500458"
 |Database multidimensionale SAP|SAP BW|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Vedere la documentazione SAP per il supporto della piattaforma.|N/D|N/D|SAP BW 7.0-7.5|S|N/D|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Vedere la documentazione di Hyperion per il supporto della piattaforma|S|N/D|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|S|N/D|  
 |Database relazionale Oracle|[Oracle](#OracleClient)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Richiede componenti client Oracle 12c o versione successiva.|S|N/D|Oracle 11g, 11g R2, 12c|S|S|  
-|Database relazionale Teradata|[Teradata](#Teradata)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende il provider di dati .NET per Teradata da Teradata.<br /><br /> Richiede il provider di dati .NET per Teradata da Teradata.<br /><br /> Vedere la documentazione di Teradata per il supporto della piattaforma.|S|N/D|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|S|N|  
+|Teradata |[Teradata](#Teradata)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende il provider di dati .NET per Teradata da Teradata.<br /><br /> Richiede il provider di dati .NET per Teradata da Teradata.<br /><br /> Vedere la documentazione di Teradata per il supporto della piattaforma.|S|N/D|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|S|N|  
 |Database relazionale DB2|Nome dell'estensione per i dati registrati e personalizzati||Host Integration (HI) Server 2004<br /><br /> Vedere la [documentazione di HI Server](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|S|N/D|N/D|S|N|  
 |Origine dati OLE DB generica|OLEDB|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Tutte le origini dei dati che supportano OLE DB.<br /><br /> Vedere la documentazione dell'origine dati per il supporto della piattaforma.|S|N/D|Tutte le origini dei dati che supportano OLE DB. Vedere la [nota](#OLEDBStandard).|S|N/D|  
 |Origine dati ODBC generica|[ODBC](#ODBCGeneric)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualsiasi origine dati che supporti ODBC.<br /><br /> Vedere la documentazione dell'origine dati per il supporto della piattaforma.|S|N/D|Qualsiasi origine dati che supporti ODBC. Vedere la [nota](#ODBCGeneric).|S|S|  
@@ -244,13 +244,13 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Estensione per l'elaborazione dati Teradata  
- Quando si seleziona il tipo di origine dati **Teradata**, viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati .NET Framework per Teradata. Per recuperare dati del report da un database Teradata, l'amministratore di sistema deve installare il provider di dati .NET Framework per Teradata nel client di creazione di report per modificare e visualizzare in anteprima report sul client e sul server di report per visualizzare i report pubblicati.  
+ Quando si seleziona il tipo di origine dati **Teradata**, viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati .NET Framework per Teradata. Per recuperare dati del report da Teradata, l'amministratore di sistema deve installare il provider di dati .NET Framework per Teradata nel client di creazione di report per modificare e visualizzare in anteprima report sul client e sul server di report per visualizzare i report pubblicati.  
   
  Per i progetti del server di report, non è disponibile una finestra Progettazione query con interfaccia grafica per questa estensione. Per creare query, è necessario utilizzare la finestra Progettazione query basata su testo.  
   
  La tabella seguente illustra le versioni del provider di dati .NET per Teradata supportate per la definizione di un'origine dati in una definizione di report in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]:  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Versione del database Teradata|Versione del provider di dati .NET Framework per Teradata|  
+|Versione di [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]|Versione Teradata|Versione del provider di dati .NET Framework per Teradata|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  I parametri multivalore non sono supportati da questa estensione. Le macro possono essere specificate in una query tramite il comando EXECUTE in modalità query TEXT.  
   
  Per altre informazioni, vedere [Tipo di connessione Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
-  
- È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Teradata [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Microsoft SQL Server 2012 Reporting e Teradata Corporation).  
-  
+ 
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> Estensione per i dati dell'elenco SharePoint  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771276"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251249"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Determina se una stored procedure definita dall'utente o un trigger definito dall'utente viene chiamato nel contesto di un trigger di replica utilizzato per sottoscrizioni ad aggiornamento immediato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore.  
@@ -39,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **[@tabid =** ]'*tabid*'  
+ [ **@tabid =** ] '*tabid*'  
  ID di oggetto della tabella in cui vengono controllati i trigger per l'aggiornamento immediato. *tabid* è di **tipo int** e non prevede alcun valore predefinito.  
   
- **[@trigger_op =** ] output '*trigger_output_parameters*'  
+ [ **@trigger_op =** ] output '*trigger_output_parameters*'  
  Specifica se il parametro di output restituisce il tipo di trigger da cui viene richiamato. *trigger_output_parameters* è di **carattere (10)** . i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
@@ -52,10 +52,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**CANC**|Trigger DELETE|  
 |NULL (predefinito)||  
   
-`[ @fonpublisher = ] fonpublisher`Specifica il percorso in cui viene eseguita la stored procedure. *fonpublisher* è di **bit**e il valore predefinito è 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
+`[ @fonpublisher = ] fonpublisher` specifica il percorso in cui viene eseguita l'stored procedure. *fonpublisher* è di **bit**e il valore predefinito è 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che è in corso la chiamata nel contesto di un trigger ad aggiornamento immediato e è il tipo di trigger restituito in *@trigger_op* .  
+ 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che è in corso la chiamata nel contesto di un trigger ad aggiornamento immediato e è il tipo di trigger restituito in *\@trigger_op*.  
   
 ## <a name="remarks"></a>Note  
  **sp_check_for_sync_trigger** viene utilizzato nella replica snapshot e nella replica transazionale.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c7dbc0d6ccf753f8f11baee2f5c1c479895d0687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107922"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252201"
 ---
-# <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
+# <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Chiama un metodo di un oggetto OLE.  
@@ -42,44 +42,44 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>Argomenti  
  *objecttoken*  
- È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
+ Token dell'oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
  *MethodName*  
  Nome del metodo dell'oggetto OLE da chiamare.  
   
- _ReturnValue_**OUTPUT**  
+ **output** di returnValue  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
- Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo restituito al client come set di risultati a colonna singola, singola riga.  
+ Se il metodo restituisce un singolo valore, specificare una variabile locale per *returnValue*, che restituisce il valore restituito del metodo nella variabile locale, oppure non specificare *returnValue*, che restituisce il valore restituito del metodo al client come set di risultati a colonna singola, a riga singola.  
   
- Se il metodo restituisce il valore è un oggetto OLE *returnvalue* deve essere una variabile locale del tipo di dati **int**. Un token di oggetto viene archiviato nella variabile locale e questo token di oggetto può essere usato con altre procedure di automazione OLE archiviati.  
+ Se il valore restituito del metodo è un oggetto OLE, *returnValue* deve essere una variabile locale di tipo di dati **int**. Un token di oggetto viene archiviato nella variabile locale e questo token dell'oggetto può essere utilizzato con altre stored procedure di automazione OLE.  
   
- Quando il metodo di valore restituito è una matrice, se *returnvalue* viene specificato, è impostato su NULL.  
+ Quando il valore restituito del metodo è una matrice, se *returnValue* viene specificato, viene impostato su null.  
   
  Viene generato un errore in uno dei casi seguenti:  
   
--   *ReturnValue* viene specificato, ma il metodo non restituisce un valore.  
+-   *returnValue* viene specificato, ma il metodo non restituisce alcun valore.  
   
 -   Il metodo restituisce una matrice a più di due dimensioni.  
   
 -   Il metodo restituisce una matrice come parametro di output.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]` È un parametro del metodo. Se specificato, *parametro* deve essere un valore del tipo di dati appropriato.  
+`[ _@parametername = ] parameter[ OUTPUT ]` è un parametro del metodo. Se specificato, il *parametro* deve essere un valore del tipo di dati appropriato.  
   
- Per ottenere il valore restituito di un parametro di output *parametri* deve essere una variabile locale del tipo di dati appropriato, e **OUTPUT** deve essere specificato. Se viene specificato un parametro costante oppure se **OUTPUT** non viene specificato, qualsiasi restituito da un parametro di output valore viene ignorato.  
+ Per ottenere il valore restituito di un parametro di output, il *parametro* deve essere una variabile locale del tipo di dati appropriato ed è necessario specificare l' **output** . Se viene specificato un parametro costante o se l' **output** non è specificato, qualsiasi valore restituito da un parametro di output viene ignorato.  
   
- Se specificato, *parametername* deve essere il nome delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che **@** _parametername_is non un [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola ( **@** ) viene rimosso, e *parametername*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
+ Se specificato, *parameterName* deve corrispondere al nome del parametro denominato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Si noti che **@** _parametername_is non è una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il simbolo di chiocciola ( **@** ) viene rimosso e *parameterName*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
  *n*  
  Segnaposto che indica la possibilità di specificare più parametri.  
   
 > [!NOTE]
->  *@parametername* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
+>  *\@parametername* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
   
- Per altre informazioni sui codici restituiti HRESULT [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Per ulteriori informazioni sui codici restituiti HRESULT, i [codici restituiti e le informazioni sull'errore di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Set di risultati  
  Se il valore restituito del metodo è una matrice a una o due dimensioni, la matrice viene restituita al client come set di risultati:  
@@ -88,11 +88,11 @@ sp_OAMethod objecttoken , methodname
   
 -   Una matrice bidimensionale viene restituita al client come set di risultati costituito da un numero di colonne pari al numero di elementi della prima dimensione della matrice e un numero di righe pari al numero di elementi della seconda dimensione della matrice. In altri termini, la matrice viene restituita come (colonne, righe).  
   
- Quando il valore restituito da una proprietà o metodo valore è una matrice **sp_OAGetProperty** oppure **sp_OAMethod** restituisce un set di risultati al client. I parametri di output dei metodi non possono essere rappresentati da matrici. Queste procedure eseguono un'analisi di tutti i valori di dati della matrice per determinare quali sono i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriati e la lunghezza di dati da utilizzare per ogni colonna del set di risultati. Per una colonna specifica queste procedure utilizzano il tipo di dati e la lunghezza necessari per rappresentare tutti i valori di dati della colonna.  
+ Quando un valore restituito da una proprietà o un valore restituito del metodo è una matrice, **sp_OAGetProperty** o **sp_OAMethod** restituisce un set di risultati al client. I parametri di output dei metodi non possono essere rappresentati da matrici. Queste procedure eseguono un'analisi di tutti i valori di dati della matrice per determinare quali sono i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriati e la lunghezza di dati da utilizzare per ogni colonna del set di risultati. Per una colonna specifica queste procedure utilizzano il tipo di dati e la lunghezza necessari per rappresentare tutti i valori di dati della colonna.  
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se i valori di dati di una colonna sono tipi di dati diversi, il tipo di dati della colonna viene scelto in base allo schema seguente.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||int|float|money|Datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -105,12 +105,12 @@ sp_OAMethod objecttoken , methodname
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. la configurazione `Ole Automation Procedures` deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-calling-a-method"></a>R. Chiamata di un metodo  
- L'esempio seguente chiama il `Connect` metodo dell'oggetto creato in precedenza **SQLServer** oggetto.  
+ Nell'esempio seguente viene chiamato il metodo `Connect` dell'oggetto **SqlServer** creato in precedenza.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Recupero di una proprietà  
- L'esempio seguente ottiene i `HostName` proprietà (dell'oggetto creato in precedenza **SQLServer** oggetto) e lo archivia in una variabile locale.  
+ Nell'esempio seguente viene ottenuta la proprietà `HostName` (dell'oggetto **SqlServer** creato in precedenza) e viene archiviata in una variabile locale.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -137,7 +137,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;di automazione OLE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

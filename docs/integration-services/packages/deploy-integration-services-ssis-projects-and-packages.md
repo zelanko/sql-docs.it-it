@@ -1,10 +1,10 @@
 ---
 title: Distribuire progetti e pacchetti di Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,31 +18,31 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282638"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680958"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con questo modello di distribuzione non era possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
+>  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con questo modello di distribuzione non era possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.
 
 > [!NOTE]
 > In questo articolo viene illustrato come distribuire i pacchetti SSIS a livello generale e come distribuire i pacchetti in locale. È possibile distribuire i pacchetti SSIS anche nelle piattaforme seguenti:
 > - **Cloud di Microsoft Azure**. Per altre informazioni, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 > - **Linux**. Per altre informazioni, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Confrontare il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Confrontare il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy
+
  Il tipo di modello di distribuzione scelto determina le opzioni di sviluppo e amministrazione disponibili per il progetto. Nella tabella seguente vengono illustrate le differenze e le similitudini tra l'utilizzo del modello di distribuzione del progetto e quello del pacchetto.  
   
 |Utilizzo del modello di distribuzione del progetto|Uso del modello di distribuzione del pacchetto legacy|  
@@ -58,9 +58,8 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 |Durante l'esecuzione, gli eventi generati dal pacchetto vengono acquisiti automaticamente e salvati nel catalogo. È possibile eseguire query su questi eventi con le viste Transact-SQL.|Durante l'esecuzione, gli eventi generati da un pacchetto non vengono acquisiti automaticamente. Per acquisire gli eventi, è necessario aggiungere un provider di log al pacchetto.|  
 |I pacchetti vengono eseguiti in un processo di Windows separato.|I pacchetti vengono eseguiti in un processo di Windows separato.|  
 |Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|  
-  
- Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>Funzionalità del modello di distribuzione del progetto  
  Nella tabella seguente sono elencate le funzionalità disponibili per i progetti sviluppati solo per il modello di distribuzione del progetto.  
   
@@ -79,9 +78,10 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 
 Se si modifica l'account del servizio SSIS in un account diverso da quello predefinito, per distribuire i pacchetti può essere necessario concedere autorizzazioni aggiuntive all'account del servizio non predefinito. Se l'account del servizio non predefinito non ha le autorizzazioni necessarie, può essere visualizzato il messaggio di errore seguente.
 
-*Errore di .NET Framework durante l'esecuzione dell'aggregazione o routine definita dall'utente "deploy_project_internal": System.ComponentModel.Win32Exception: Il client non dispone di un privilegio necessario.*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per correggere l'errore, eseguire le operazioni seguenti.
+Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per correggere l'errore, eseguire le operazioni seguenti:
 
 1.  Aprire la console di **Servizi componenti** (o eseguire Dcomcnfg.exe).
 2.  Nella console di **Servizi componenti** espandere **Servizi componenti** > **Computer** > **Risorse del computer** > **Configurazione DCOM**.
@@ -92,8 +92,9 @@ Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per corr
 7.  Nella finestra di dialogo **Autorizzazioni** aggiungere l'account del servizio non predefinito e concedere autorizzazioni **Consenti** secondo le esigenze. In genere, un account ha le autorizzazioni **Avvio locale** e **Attivazione locale**.
 8.  Fare clic su **OK** due volte e quindi chiudere la console di **Servizi componenti**.
 
-Per altre informazioni sull'errore descritto in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il post di blog seguente.  
-[System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Per altre informazioni sull'errore descritto in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il post di blog seguente:
+ 
+- [System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  
@@ -105,7 +106,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 1.  Creare un catalogo SSISDB, se non è stato ancora creato. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
+2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere le istruzioni seguenti: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
   
     -   Se il progetto è stato creato in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] o versione successiva, per impostazione predefinita il progetto usa il modello di distribuzione del progetto.  
   
@@ -144,17 +145,17 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi scegliere **Distribuisci** dal menu **Progetto** per avviare la **Distribuzione guidata Integration Services**.  
   
-     oppure  
+     o Gestione configurazione  
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** in Esplora oggetti e individuare la cartella Progetti per il progetto da distribuire. Fare clic con il pulsante destro del mouse sulla cartella **Progetti** , quindi scegliere **Distribuzione progetto**.  
   
-     oppure  
+     o Gestione configurazione  
   
      Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Nella pagina **Seleziona origine** fare clic su **File distribuzione progetto** per selezionare il file di distribuzione per il progetto.  
   
-     oppure  
+     o Gestione configurazione  
   
      Fare clic su **Catalogo di Integration Services** per selezionare un progetto che è già stato distribuito nel catalogo SSISDB.  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>Finestra di dialogo Converti in modello di distribuzione di pacchetti
   Con il comando **Converti nel modello di distribuzione del pacchetto** è possibile convertire un pacchetto nel modello di distribuzione del pacchetto dopo aver verificato la compatibilità del progetto e di ogni relativo pacchetto con questo modello. Se in un pacchetto vengono utilizzate funzionalità univoche per il modello di distribuzione del progetto, ad esempio parametri, il pacchetto non può essere convertito.  
-  
-### <a name="task-list"></a>Elenco attività  
+
  Per la conversione di un pacchetto nel modello di distribuzione del pacchetto sono necessari due passaggi.  
   
 1.  Quando si seleziona il comando **Converti nel modello di distribuzione del pacchetto** dal menu **Progetto** viene verificata la compatibilità del progetto e di ogni relativo pacchetto con questo modello. I risultati vengono visualizzati nella tabella **Risultati** .  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  Se il progetto e tutti i pacchetti superano la verifica di compatibilità, fare clic su **OK** per convertire il pacchetto.  
   
-> **NOTA:** Per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> [!NOTE]
+> Per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   La **Distribuzione guidata Integration Services** supporta due modelli di distribuzione:
@@ -287,14 +288,15 @@ static void Main()
  
  Il **modello di distribuzione del pacchetto** consente di distribuire i pacchetti che sono stati aggiornati nel catalogo SSIS senza dover distribuire l'intero progetto. 
  
- > **NOTA:** il modello di distribuzione del progetto è il modello predefinito della procedura guidata.  
+ > [!NOTE]
+ > il modello di distribuzione del progetto è il modello predefinito della procedura guidata.  
   
 ### <a name="launch-the-wizard"></a>Avviare la procedura guidata
 Avviare la procedura guidata in uno dei due modi seguenti:
 
  - Digitare **"Distribuzione guidata di SQL Server"** in Windows Search 
 
-**OR**
+ o Gestione configurazione
 
  - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio: "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -304,61 +306,70 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Seleziona origine  
+#### <a name="select-source"></a>Seleziona origine
+
  Per distribuire un file di distribuzione del progetto creato, selezionare **File distribuzione progetto** e immettere il percorso al file con estensione ispac. Per distribuire un progetto che si trova nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo. Fare clic su **Avanti** per visualizzare la pagina **Seleziona destinazione** .  
   
-#### <a name="select-destination"></a>Seleziona destinazione  
+#### <a name="select-destination"></a>Seleziona destinazione
+
  Per selezionare la cartella di destinazione per il progetto nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , immettere l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic su **Sfoglia** per effettuare una selezione da un elenco di server. Immettere il percorso del progetto in SSISDB o fare clic su **Sfoglia** per selezionarlo. Fare clic su **Avanti** per visualizzare la pagina **Verifica** .  
   
-#### <a name="review-and-deploy"></a>Verifica (e distribuisci)  
+#### <a name="review-and-deploy"></a>Verifica (e distribuisci)
+
  La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
   
-#### <a name="results"></a>Risultati  
+#### <a name="results"></a>Risultati
+
  Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML oppure su **Chiudi** per uscire dalla procedura guidata.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Seleziona origine  
+#### <a name="select-source"></a>Seleziona origine
+
  La pagina **Seleziona origine** in **Distribuzione guidata Integration Services** mostra le impostazioni specifiche per il modello di distribuzione del pacchetto al momento della selezione dell'opzione **Distribuzione di pacchetti** per il **modello di distribuzione**.  
   
- Per selezionare i pacchetti di origine, fare clic sul pulsante **Sfoglia...** per selezionare la **cartella** contenente i pacchetti o digitarne il percorso nella casella di testo **Percorso cartella pacchetti** e fare clic sul pulsante **Aggiorna** nella parte inferiore della pagina. A questo punto, tutti i pacchetti dovrebbero essere visualizzati nella cartella specificata nella casella di riepilogo. Per impostazione predefinita, tutti i pacchetti sono selezionati. Fare clic sulla **casella di controllo** nella prima colonna per scegliere i pacchetti da distribuire nel server.  
+ Per selezionare i pacchetti di origine, fare clic sul pulsante **Sfoglia** per selezionare la **cartella** contenente i pacchetti o digitarne il percorso nella casella di testo **Percorso cartella pacchetti** e fare clic sul pulsante **Aggiorna** nella parte inferiore della pagina. A questo punto, tutti i pacchetti dovrebbero essere visualizzati nella cartella specificata nella casella di riepilogo. Per impostazione predefinita, tutti i pacchetti sono selezionati. Fare clic sulla **casella di controllo** nella prima colonna per scegliere i pacchetti da distribuire nel server.  
   
- Fare riferimento alle colonne **Stato** e **Messaggio** per verificare lo stato del pacchetto. Se lo stato è impostato su **Pronto** o **Avviso**, la distribuzione guidata non blocca il processo di distribuzione. Al contrario, se lo stato è impostato su **Errore**, la procedura guidata interrompe la distribuzione dei pacchetti selezionati. Per visualizzare il dettaglio dei messaggi di avviso/errore, fare clic sul collegamento nella colonna **Messaggio** .  
+ Fare riferimento alle colonne **Stato** e **Messaggio** per verificare lo stato del pacchetto. Se lo stato è impostato su **Pronto** o **Avviso**, la distribuzione guidata non blocca il processo di distribuzione. Se lo stato è impostato su **Errore**, la procedura guidata interrompe la distribuzione dei pacchetti selezionati. Per visualizzare il dettaglio dei messaggi di avviso o errore, fare clic sul collegamento nella colonna **Messaggio**.  
   
- Se i dati sensibili o i dati del pacchetto sono crittografati con una password, digitarla nella colonna **Password** e fare clic sul pulsante **Aggiorna** per verificare che venga accettata. Se la password è corretta, lo stato verrà modificato in **Pronto** e il messaggio di avviso non verrà più visualizzato. Se sono presenti più pacchetti con la stessa password, selezionare quelli con la stessa password di crittografia, digitarla nella casella di testo **Password** e fare clic sul pulsante **Applica** . La password viene applicata ai pacchetti selezionati.  
+ Se i dati sensibili o i dati del pacchetto sono crittografati con una password, digitarla nella colonna **Password** e fare clic sul pulsante **Aggiorna** per verificare che venga accettata. Se la password è corretta, lo stato verrà modificato in **Pronto** e il messaggio di avviso non verrà più visualizzato. Se sono presenti più pacchetti con la stessa password, selezionare quelli con la stessa password di crittografia, digitarla nella casella di testo **Password** e selezionare il pulsante **Applica**. La password viene applicata ai pacchetti selezionati.  
   
  Se lo stato di tutti i pacchetti selezionati non è impostato su **Errore**, verrà abilitato il pulsante **Avanti** per proseguire con il processo di distribuzione dei pacchetti.  
   
-#### <a name="select-destination"></a>Seleziona destinazione  
- Dopo aver selezionato le origini dei pacchetti, fare clic sul pulsante **Avanti** per passare alla pagina **Seleziona destinazione** . I pacchetti devono essere distribuiti in un progetto nel catalogo SSIS (SSISDB). Prima di distribuirli, verificare quindi che il progetto di destinazione esista già nel catalogo SSIS. In caso contrario, creare un progetto vuoto. Nella pagina **Seleziona destinazione** digitare il nome del server nella casella di testo **Nome server** oppure fare clic sul pulsante **Sfoglia...** per selezionare un'istanza del server. Quindi fare clic sul pulsante **Sfoglia...** accanto alla casella di testo **Percorso** per specificare il progetto di destinazione. Se il progetto non esiste, fare clic su **Nuovo progetto...** per creare un progetto vuoto come progetto di destinazione. Il progetto **DEVE** essere creato in una cartella.  
+#### <a name="select-destination"></a>Seleziona destinazione
+
+ Dopo aver selezionato le origini dei pacchetti, fare clic sul pulsante **Avanti** per passare alla pagina **Seleziona destinazione**. I pacchetti devono essere distribuiti in un progetto nel catalogo SSIS (SSISDB). Prima di distribuirli, verificare che il progetto di destinazione esista già nel catalogo SSIS. In caso contrario, creare un progetto vuoto. Nella pagina **Seleziona destinazione** digitare il nome del server nella casella di testo **Nome server** oppure fare clic sul pulsante **Sfoglia** per selezionare un'istanza del server. Fare quindi clic sul pulsante **Sfoglia** accanto alla casella di testo **Percorso** per specificare il progetto di destinazione. Se il progetto non esiste, fare clic sul pulsante **Nuovo progetto** per creare un progetto vuoto come progetto di destinazione. Il progetto deve essere creato in una cartella.  
   
-#### <a name="review-and-deploy"></a>Verifica e distribuisci  
+#### <a name="review-and-deploy"></a>Verifica e distribuisci
+
  Fare clic su **Avanti** nella pagina **Seleziona destinazione** per passare alla pagina **Verifica** nella **Distribuzione guidata Integration Services**. Nella pagina della verifica rivedere il report di riepilogo sull'azione di distribuzione. Dopo la verifica, fare clic sul pulsante **Distribuisci** per eseguire l'azione di distribuzione.  
   
-#### <a name="results"></a>Risultati  
- Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Nella pagina **Risultati** esaminare i risultati di ogni passaggio nel processo di distribuzione. Nella pagina **Risultati** fare clic su **Salva report** per salvare il report di distribuzione o su **Chiudi** per chiudere la procedura guidata.  
+#### <a name="results"></a>Risultati
+
+ Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Nella pagina **Risultati** esaminare i risultati di ogni passaggio nel processo di distribuzione. Fare clic su **Salva report** per salvare il report di distribuzione o su **Chiudi** per chiudere la procedura guidata.  
 
 ## <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
+
   Creare un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
   
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
   
- È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È anche possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È anche possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per altre informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [Catalogo SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] espandere Cataloghi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]> nodo **SSISDB** in Esplora oggetti e individuare la cartella **Ambienti** del progetto per il quale si vuole creare un ambiente.  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] espandere il nodo Cataloghi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **SSISDB** in Esplora oggetti e individuare la cartella **Ambienti** del progetto per il quale si vuole creare un ambiente.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Ambienti** e quindi scegliere **Creazione ambiente**.  
   
-3.  Digitare un nome e una descrizione per l'ambiente, quindi fare clic su **OK**.  
+3.  Digitare un nome per l'ambiente e facoltativamente aggiungere una descrizione. Fare clic su **OK**.  
   
 4.  Fare clic con il pulsante destro del mouse sul nuovo ambiente e scegliere **Proprietà**.  
   
 5.  Nella pagina **Variabili** effettuare le operazioni seguenti per aggiungere una variabile.  
   
-    1.  Selezionare il **Tipo** per la variabile. Il nome della variabile **non deve** corrispondere al nome del parametro del progetto di cui verrà eseguito il mapping alla variabile.  
+    1.  Selezionare il **Tipo** per la variabile. Il nome della variabile non deve corrispondere al nome del parametro del progetto di cui verrà eseguito il mapping alla variabile.  
   
     2.  Immettere una **Descrizione** facoltativa per la variabile.  
   
@@ -378,7 +389,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
     2.  Nell'area **Account di accesso o ruoli** selezionare l'utente o il ruolo per cui si desidera concedere o negare le autorizzazioni.  
   
-    3.  Nell'area **Esplicita** fare clic su **Concedi** o **Nega** accanto a ogni autorizzazione.  
+    3.  Nell'area **Esplicita** selezionare **Concedi** o **Nega** accanto a ogni autorizzazione.  
   
 7.  Per creare lo script dell'ambiente, fare clic su **Script**. Per impostazione predefinita, lo script viene visualizzato in una nuova finestra dell'editor di query.  
   
@@ -393,7 +404,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 11. Fare nuovamente clic con il pulsante destro del mouse sul progetto e quindi scegliere **Configura**.  
   
-12. Per eseguire il mapping della variabile di ambiente a un parametro aggiunto al pacchetto in fase di progettazione o a un parametro che è stato generato durante la conversione del progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al modello di distribuzione del progetto, effettuare le operazioni seguenti.  
+12. Per eseguire il mapping della variabile di ambiente a un parametro aggiunto al pacchetto in fase di progettazione o a un parametro che è stato generato durante la conversione del progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al modello di distribuzione del progetto, eseguire le operazioni seguenti:
   
     1.  Nella scheda **Parametri** della pagina **Parametri** fare clic sul pulsante Sfoglia accanto al campo **Valore** .  
   
@@ -401,19 +412,20 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 13. Per eseguire il mapping della variabile di ambiente a una proprietà di gestione connessione, effettuare le operazioni seguenti. I parametri vengono automaticamente generati nel server SSIS per le proprietà di gestione connessione.  
   
-    1.  Nella scheda **Gestioni connessioni** della pagina **Parametri** fare clic sul pulsante Sfoglia accanto al campo **Valore** .  
+    1.  Nella scheda **Gestioni connessioni** della pagina **Parametri** fare clic sul pulsante **Sfoglia** accanto al campo **Valore**.  
   
     2.  Fare clic su **Usa variabile di ambiente**, quindi selezionare la variabile di ambiente creata.  
   
 14. Fare clic su **OK** due volte per salvare le modifiche.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
-  Quando un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
+
+  Quando un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model).  
   
  Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
   
 > [!TIP]
->  Ad eccezione di catalog.deploy_project, è possibile generare facilmente le istruzioni Transact-SQL per le stored procedure elencate nella procedura descritta di seguito effettuando le operazioni seguenti:  
+>  Ad eccezione di catalog.deploy_project, è possibile generare facilmente le istruzioni Transact-SQL per le stored procedure elencate nella procedura descritta di seguito effettuando le operazioni seguenti:
 > 
 >  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
 > 2.  Fare clic con il pulsante destro del mouse sul pacchetto, quindi scegliere **Esegui**.  
@@ -426,9 +438,9 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 1.  Chiamare [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) per distribuire il progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto sul server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-     Per recuperare il contenuto binario del file di distribuzione del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , per il parametro *@project_stream* usare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Per recuperare il contenuto binario del file di distribuzione del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], per il parametro _\@project_stream_ usare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment.ispac) e archiviati nel parametro *@ProjectBinary* di tipo varbinary(max). Il valore del parametro *@ProjectBinary* viene assegnato al parametro *@project_stream* .  
+     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment.ispac) e archiviati nel parametro _\@ProjectBinary di tipo varbinary(max). Il valore del parametro _\@ProjectBinary_ viene assegnato al parametro _\@project_stream_.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>Per distribuire un progetto da un server in un altro mediante stored procedure  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>Per distribuire un progetto da un server in un altro mediante stored procedure
+
  È possibile distribuire un progetto da server a server tramite le stored procedure [catalog.get_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) e [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md).  
   
  Prima di eseguire le stored procedure, è necessario effettuare le operazioni riportate di seguito.  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
   
--   Da Esplora oggetti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse sul nodo **Progetti** e selezionare **Importa pacchetto**.  
+-   Da Esplora oggetti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fare clic con il pulsante destro del mouse sul nodo **Progetti** nel **Catalogo di Integration Services** e selezionare **Importa pacchetti**.  
   
  Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
   

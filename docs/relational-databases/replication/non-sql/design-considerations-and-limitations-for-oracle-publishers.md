@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901088"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710931"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901088"
   
 -   Le pubblicazioni transazionali standard supportano tabelle contenenti fino a 1000 colonne. Le pubblicazioni transazionali Oracle supportano 995 colonne (la replica aggiunge cinque colonne a ogni tabella pubblicata).  
   
--   Le clausole COLLATE vengono aggiunte alle istruzioni CREATE TABLE per consentire confronti con distinzione tra maiuscole e minuscole, che sono importanti per le chiavi primarie e i vincoli univoci. Questo comportamento viene controllato mediante l'opzione dello schema 0x1000 specificata con il parametro **@schema_option** di [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Le clausole COLLATE vengono aggiunte alle istruzioni CREATE TABLE per consentire confronti con distinzione tra maiuscole e minuscole, che sono importanti per le chiavi primarie e i vincoli univoci. Questo comportamento viene controllato mediante l'opzione dello schema 0x1000 specificata con il parametro `@schema_option` di [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Se si utilizzano stored procedure per configurare o gestire un server di pubblicazione Oracle, non inserire le procedure all'interno di una transazione esplicita. Questa operazione non è supportata sul server collegato utilizzato per connettersi al server di pubblicazione Oracle.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901088"
   
 -   L'account con il quale l'agente snapshot e l'agente di lettura log effettuano la connessione dal server di distribuzione al server di pubblicazione viene specificato mediante uno dei metodi seguenti:  
   
-    -   Il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri **@login** e **@password** .  
+    -   Il parametro `@security_mode` di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri `@login` e `@password`.  
   
     -   La finestra di dialogo **Connetti al server** di SQL Server Management Studio, che viene utilizzata durante la configurazione del server di pubblicazione Oracle nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901088"
   
 -   Diversamente dalla password, l'account con il quale l'agente snapshot e l'agente di lettura log effettuano le connessioni non può essere modificato con [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) o mediante una finestra delle proprietà.  
   
--   Se si specifica il valore 1 (autenticazione integrata di Windows) per il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
+-   Se si specifica il valore 1 (autenticazione integrata di Windows) per il parametro `@security_mode` di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   La password e l'account del processo usati per l'agente snapshot e l'agente di lettura log (i parametri **@job_login** e **@job_password** di [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) devono essere identici alla password e all'account usati per connettersi al server di pubblicazione Oracle.  
+    -   La password e l'account del processo usati per l'agente snapshot e l'agente di lettura log (i parametri `@job_login` e `@job_password` di [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) devono essere identici alla password e all'account usati per connettersi al server di pubblicazione Oracle.  
   
-    -   Non è possibile modificare il parametro **@job_login** tramite [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), ma la password può essere modificata.  
+    -   Non è possibile modificare il parametro `@job_login` tramite [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), ma la password può essere modificata.  
   
  Per altre informazioni, sulla sicurezza della replica vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

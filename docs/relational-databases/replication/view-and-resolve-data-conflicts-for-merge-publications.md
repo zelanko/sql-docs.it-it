@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a66a95a1b2f0561d7598c5a6e400641833e5a221
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115167"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710682"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Risoluzione dei conflitti per la replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68115167"
   
  I dati dei conflitti sono disponibili nel Visualizzatore conflitti di replica per l'intervallo di tempo specificato per il periodo di memorizzazione dei conflitti, che per impostazione predefinita è di 14 giorni. Per impostare il periodo di memorizzazione dei conflitti, eseguire una delle operazioni seguenti:  
   
--   Specificare un valore del periodo di memorizzazione per il parametro **@conflict_retention** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+-   Specificare un valore del periodo di memorizzazione per il parametro `@conflict_retention` di [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
--   Specificare un valore di **conflict_retention** per il parametro **@property** e un valore del periodo di memorizzazione per il parametro **@value** di [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
+-   Specificare il valore **conflict_retention** per il parametro `@property` e un valore del periodo di memorizzazione per il parametro `@value` di [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
  Per impostazione predefinita, le informazioni sui conflitti vengono archiviate:    
 -   Nel server di pubblicazione e nel Sottoscrittore se il livello di compatibilità della pubblicazione è pari a 90RTM o superiore.   
@@ -85,9 +85,9 @@ Quando si risolve un conflitto in una replica di tipo merge, i dati della riga n
     -   **decentralized_conflicts** : 1 indica che le righe con conflitti vengono archiviate nel Sottoscrittore, mentre 0 indica che le righe con conflitti non vengono archiviate nel Sottoscrittore.  
   
         > [!NOTE]  
-        >  Per definire il comportamento della registrazione dei conflitti relativi a una pubblicazione di tipo merge, viene utilizzato il parametro **@conflict_logging** di [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Il parametro **@centralized_conflicts** è deprecato.  
+        >  Per definire il comportamento della registrazione dei conflitti relativi a una pubblicazione di tipo merge, viene usato il parametro `@conflict_logging` di [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Il parametro `@centralized_conflicts` è deprecato.  
   
-     Nella tabella seguente sono descritti i valori di queste colonne sulla base del valore specificato per **@conflict_logging** .  
+     Nella tabella seguente sono descritti i valori di queste colonne sulla base del valore specificato per `@conflict_logging`.  
   
     |Valore della proprietà @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -95,13 +95,13 @@ Quando si risolve un conflitto in una replica di tipo merge, i dati della riga n
     |**subscriber**|0|1|  
     |**both**|1|1|  
   
-2.  Nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specificare il valore **@publication** per restituire le informazioni sui conflitti solo per articoli che appartengono a una pubblicazione specifica. In tal modo per gli articoli con conflitti verranno restituite le informazioni della tabella dei conflitti. Notare il valore di **conflict_table** per qualsiasi articolo di interesse. Se il valore di **conflict_table** per un articolo è NULL, eliminare i conflitti che si sono verificati in questo articolo.  
+2.  Nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specificare il valore `@publication` per restituire le informazioni sui conflitti solo per articoli che appartengono a una pubblicazione specifica. In tal modo per gli articoli con conflitti verranno restituite le informazioni della tabella dei conflitti. Notare il valore di **conflict_table** per qualsiasi articolo di interesse. Se il valore di **conflict_table** per un articolo è NULL, eliminare i conflitti che si sono verificati in questo articolo.  
   
 3.  (Facoltativo) Rivedere le righe con conflitti presenti negli articoli di interesse. A seconda dei valori di **centralized_conflicts** e **decentralized_conflicts** ottenuti al passaggio 1, eseguire una delle operazioni seguenti:  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specificare una tabella dei conflitti per l'articolo (ottenuta al passaggio 1) per **@conflict_table** . (Facoltativo) Specificare il valore **@publication** per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituiti i dati della riga e altre informazioni sulla riga non confermata.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specificare una tabella dei conflitti per l'articolo (ottenuta al passaggio 1) per `@conflict_table`. (Facoltativo) Specificare il valore `@publication` per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituiti i dati della riga e altre informazioni sulla riga non confermata.  
   
-    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specificare una tabella dei conflitti per l'articolo (ottenuta al passaggio 1) per **@conflict_table** . In tal modo verranno restituiti i dati della riga e altre informazioni sulla riga non confermata.  
+    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specificare una tabella dei conflitti per l'articolo (ottenuta al passaggio 1) per `@conflict_table`. In tal modo verranno restituiti i dati della riga e altre informazioni sulla riga non confermata.  
   
 ## <a name="conflict-where-delete-failed"></a>Conflitto con eliminazione non riuscita   
   
@@ -112,15 +112,15 @@ Quando si risolve un conflitto in una replica di tipo merge, i dati della riga n
     -   **decentralized_conflicts** : 1 indica che le righe con conflitti vengono archiviate nel Sottoscrittore, mentre 0 indica che le righe con conflitti non vengono archiviate nel Sottoscrittore.  
   
         > [!NOTE]  
-        >  Per definire il comportamento della registrazione dei conflitti relativi a una pubblicazione di tipo merge, viene utilizzato il parametro **@conflict_logging** di [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Il parametro **@centralized_conflicts** è deprecato.  
+        >  Per definire il comportamento della registrazione dei conflitti relativi a una pubblicazione di tipo merge, viene usato il parametro `@conflict_logging` di [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Il parametro `@centralized_conflicts` è deprecato.  
   
-2.  Nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specificare il valore **@publication** per restituire le informazioni della tabella dei conflitti solo per articoli che appartengono a una pubblicazione specifica. In tal modo per gli articoli con conflitti verranno restituite le informazioni della tabella dei conflitti. Notare il valore di **source_object** per qualsiasi articolo di interesse. Se il valore di **conflict_table** per un articolo è NULL, eliminare i conflitti che si sono verificati in questo articolo.  
+2.  Nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specificare un valore per `@publication` in modo da restituire le informazioni della tabella dei conflitti solo per articoli che appartengono a una pubblicazione specifica. In tal modo per gli articoli con conflitti verranno restituite le informazioni della tabella dei conflitti. Notare il valore di **source_object** per qualsiasi articolo di interesse. Se il valore di **conflict_table** per un articolo è NULL, eliminare i conflitti che si sono verificati in questo articolo.  
   
 3.  (Facoltativo) Rivedere le informazioni sui conflitti per i conflitti di eliminazione. A seconda dei valori di **centralized_conflicts** e **decentralized_conflicts** ottenuti al passaggio 1, eseguire una delle operazioni seguenti:  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specificare il nome della tabella di origine (ottenuta al passaggio 1) nella quale si verifica il conflitto per **@source_object** . (Facoltativo) Specificare il valore **@publication** per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituite solo le informazioni sui conflitti di eliminazione archiviate nel server di pubblicazione.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specificare il nome della tabella di origine (ottenuta al passaggio 1) nella quale si è verificato il conflitto per `@source_object`. (Facoltativo) Specificare il valore `@publication` per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituite solo le informazioni sui conflitti di eliminazione archiviate nel server di pubblicazione.  
   
-    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specificare il nome della tabella di origine (ottenuta al passaggio 1) nella quale si verifica il conflitto per **@source_object** . (Facoltativo) Specificare il valore **@publication** per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituite solo le informazioni sui conflitti di eliminazione archiviate nel Sottoscrittore.  
+    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specificare il nome della tabella di origine (ottenuta al passaggio 1) nella quale si è verificato il conflitto per `@source_object`. (Facoltativo) Specificare il valore `@publication` per limitare le informazioni restituite sui conflitti a una pubblicazione specifica. In tal modo verranno restituite solo le informazioni sui conflitti di eliminazione archiviate nel Sottoscrittore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

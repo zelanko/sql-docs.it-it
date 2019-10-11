@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1678db946145ae7780ed35fcf142f915aa2a8fa7
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009320"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961953"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -77,8 +77,10 @@ Crea un indice relazionale per una tabella o una vista. Viene detto anche indice
 ```sql
 -- Create a nonclustered index on a table or view
 CREATE INDEX i1 ON t1 (col1);
---Create a clustered index on a table and use a 3-part name for the table
+
+-- Create a clustered index on a table and use a 3-part name for the table
 CREATE CLUSTERED INDEX i1 ON d1.s1.t1 (col1);
+
 -- Syntax for SQL Server and Azure SQL Database
 -- Create a nonclustered index with a unique constraint
 -- on 3 columns and specify the sort order for each column
@@ -192,11 +194,21 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 ### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Sintassi per Azure SQL Data Warehouse e Parallel Data Warehouse
 
 ```
+
+CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+    ON [ database_name . [ schema ] . | schema . ] table_name
+    [ORDER (column[,...n])]
+    [WITH ( DROP_EXISTING = { ON | OFF } )]
+[;]
+
+
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
         ( { column [ ASC | DESC ] } [ ,...n ] )
     WITH ( DROP_EXISTING = { ON | OFF } )
 [;]
+
+
 ```
 
 ## <a name="arguments"></a>Argomenti
@@ -376,7 +388,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF.
+Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF, tranne per il database SQL di Azure con servizio Hyperscale. Per tutte le operazioni di compilazione dell'indice in Hyperscale, SORT_IN_TEMPDB è sempre ON, indipendentemente dall'opzione specificata, a meno che non venga usata la ricompilazione dell'indice ripristinabile.
 
 ON      
 I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.
@@ -585,9 +597,9 @@ Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. S
 ```sql
 REBUILD WITH
 (
-DATA_COMPRESSION = NONE ON PARTITIONS (1),
-DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
-DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+  DATA_COMPRESSION = NONE ON PARTITIONS (1),
+  DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
+  DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
@@ -691,14 +703,14 @@ Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, *
 La creazione di un indice su una colonna calcolata può impedire l'esecuzione di un'operazione di inserimento o di aggiornamento che in precedenza veniva eseguita correttamente. Questo problema si può verificare quando la colonna calcolata genera un errore aritmetico. Nella tabella seguente, ad esempio, nonostante la colonna calcolata `c` generi un errore aritmetico, l'istruzione INSERT viene eseguita correttamente.
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 INSERT INTO t1 VALUES (1, 0);
 ```
 
 Se invece, dopo la creazione della tabella, viene creato un indice sulla colonna calcolata `c`, la stessa istruzione `INSERT` avrà esito negativo.
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);
 INSERT INTO t1 VALUES (1, 0);
 ```
@@ -852,12 +864,12 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (V
 Nell'esempio seguente viene creato l'indice IX_FF con due colonne della tabella dbo.FactFinance. L'istruzione successiva ricompila l'indice con un'ulteriore colonna e mantiene il nome esistente.
 
 ```sql
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey ASC, DateKey ASC);
 
---Rebuild and add the OrganizationKey
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DESC)
-WITH ( DROP_EXISTING = ON );
- ```
+-- Rebuild and add the OrganizationKey
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC)
+  WITH (DROP_EXISTING = ON);
+```
 
 ## <a name="examples-sql-server-azure-sql-database"></a>Esempi: SQL Server, database SQL di Azure
 
@@ -872,11 +884,12 @@ CREATE UNIQUE INDEX AK_UnitMeasure_Name
 Nella query seguente viene verificato il vincolo di univocità mediante un tentativo di inserimento di una riga con lo stesso valore di una riga esistente.
 
 ```sql
---Verify the existing value.
+-- Verify the existing value.
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';
 GO
+
 INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
-  VALUES ('OC', 'Ounces', GetDate());
+  VALUES ('OC', 'Ounces', GETDATE());
 ```
 
 Il messaggio di errore risultante è:
@@ -890,16 +903,20 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 Nell'esempio seguente viene illustrato l'effetto dell'opzione `IGNORE_DUP_KEY` tramite l'inserimento di più righe in una tabella temporanea prima con questa opzione impostata su `ON` e quindi con questa opzione impostata su `OFF`. Nella tabella `#Test` viene inserita una singola riga che genererà intenzionalmente un valore duplicato quando verrà eseguita la seconda istruzione `INSERT` su più righe. Il calcolo delle righe della tabella restituisce il numero di righe inserite.
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = ON);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -919,16 +936,20 @@ Si noti che le righe della tabella `Production.UnitMeasure` che non violano il v
 A questo punto vengono eseguite nuovamente le stesse istruzioni, ma l'opzione `IGNORE_DUP_KEY` è impostata su `OFF`.
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = OFF);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -968,40 +989,45 @@ SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
   QUOTED_IDENTIFIER, ANSI_NULLS ON;
 GO
+
 -- Create view with schemabinding
 IF OBJECT_ID ('Sales.vOrders', 'view') IS NOT NULL
-DROP VIEW Sales.vOrders ;
+  DROP VIEW Sales.vOrders;
 GO
+
 CREATE VIEW Sales.vOrders
-WITH SCHEMABINDING
+  WITH SCHEMABINDING
 AS
-  SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Revenue,
+  SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Revenue,
     OrderDate, ProductID, COUNT_BIG(*) AS COUNT
   FROM Sales.SalesOrderDetail AS od, Sales.SalesOrderHeader AS o
   WHERE od.SalesOrderID = o.SalesOrderID
   GROUP BY OrderDate, ProductID;
 GO
+
 -- Create an index on the view
 CREATE UNIQUE CLUSTERED INDEX IDX_V1
   ON Sales.vOrders (OrderDate, ProductID);
 GO
+
 -- This query can use the indexed view even though the view is
 -- not specified in the FROM clause.
-SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev,
+SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev,
   OrderDate, ProductID
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND ProductID BETWEEN 700 and 800
-    AND OrderDate >= CONVERT(datetime,'05/01/2002',101)
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND ProductID BETWEEN 700 AND 800
+    AND OrderDate >= CONVERT(DATETIME, '05/01/2002', 101)
 GROUP BY OrderDate, ProductID
 ORDER BY Rev DESC;
 GO
+
 -- This query can use the above indexed view
-SELECT OrderDate, SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev
+SELECT OrderDate, SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND DATEPART(mm,OrderDate)= 3
-  AND DATEPART(yy,OrderDate) = 2002
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND DATEPART(mm, OrderDate) = 3
+  AND DATEPART(yy, OrderDate) = 2002
 GROUP BY OrderDate
 ORDER BY OrderDate ASC;
 GO
@@ -1015,6 +1041,7 @@ CREATE NONCLUSTERED INDEX IX_Address_PostalCode
   ON Person.Address (PostalCode)
   INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 GO
+
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode
 FROM Person.Address
 WHERE PostalCode BETWEEN N'98000' and N'99999';
@@ -1048,7 +1075,7 @@ Nell'esempio seguente viene creato un indice in una tabella non partizionata uti
 ```sql
 CREATE NONCLUSTERED INDEX IX_INDEX_1
   ON T1 (C2)
-WITH ( DATA_COMPRESSION = ROW );
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1056,8 +1083,8 @@ Nell'esempio seguente viene creato un indice in una tabella partizionata utilizz
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH ( DATA_COMPRESSION = ROW );
+  ON PartitionTable1 (Col1)
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1065,9 +1092,11 @@ GO
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
-  DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;
+  ON PartitionTable1 (Col1)
+  WITH (
+    DATA_COMPRESSION = PAGE ON PARTITIONS(1),
+    DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4)
+  );
 GO
 ```
 
@@ -1076,24 +1105,24 @@ GO
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx1 ON test_table (col1) WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx2 ON test_table (col2) WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx1 on test_table PAUSE
-ALTER INDEX test_idx2 on test_table PAUSE
+ALTER INDEX test_idx1 ON test_table PAUSE;
+ALTER INDEX test_idx2 ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx1 on test_table RESUME
-ALTER INDEX test_idx2 on test_table RESUME
+ALTER INDEX test_idx1 ON test_table RESUME;
+ALTER INDEX test_idx2 ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx1 on test_table ABORT
-ALTER INDEX test_idx2 on test_table ABORT
+ALTER INDEX test_idx1 ON test_table ABORT;
+ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -1105,21 +1134,21 @@ Creare, riprendere, sospendere e interrompere operazioni sull'indice ripristinab
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx on test_table PAUSE
+ALTER INDEX test_idx ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx on test_table RESUME
+ALTER INDEX test_idx ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx on test_table ABORT
+ALTER INDEX test_idx ON test_table ABORT;
 ```
 
 ### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. Creare un indice non cluster in una tabella nel database corrente
@@ -1136,6 +1165,24 @@ Nell'esempio seguente viene creato un indice non cluster nella colonna `VendorID
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
+```
+### <a name="q-create-an-ordered-clustered-index-on-a-table"></a>Q. Creare un indice cluster ordinato in una tabella  
+L'esempio seguente crea un indice cluster ordinato nelle colonne `c1` e `c2` della tabella `T1` nel database `MyDB`.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1 
+ORDER (c1, c2);
+
+```
+
+### <a name="r-convert-a-cci-to-an-ordered-clustered-index-on-a-table"></a>R. Convertire un indice columnstore cluster in un indice cluster ordinato in una tabella  
+L'esempio seguente converte l'indice columnstore cluster esistente in un indice columnstore cluster ordinato denominato `MyOrderedCCI` nelle colonne `c1` e `c2` della tabella `T2` del database `MyDB`.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T2
+ORDER (c1, c2)
+WITH (DROP_EXISTING = ON);
+
 ```
 
 ## <a name="see-also"></a>Vedere anche

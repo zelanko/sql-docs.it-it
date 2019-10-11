@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251061"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823565"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ Per impostazione predefinita, il pool di buffer ibrido è abilitato nell'ambito 
 L'esempio seguente restituisce lo stato corrente della configurazione di sistema del pool di buffer ibrido per un'istanza di SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 Nell'esempio seguente vengono restituite due tabelle:
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Procedure consigliate per il pool di buffer ibrido
 
-Non è consigliabile abilitare il pool di buffer ibrido nelle istanze con meno di 16 GB di RAM.
-
 Quando si formatta un dispositivo PMEM in Windows, usare le dimensioni di unità di allocazione più grandi disponibili per NTFS (2 MB in Windows Server 2019) e assicurarsi che il dispositivo sia stato formattato per DAX (Direct Access).
+
+Per ottenere prestazioni ottimali, abilitare [Blocco di pagine in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
 
 Le dimensioni dei file devono essere un multiplo di 2 MB (modulo 2 MB deve essere uguale a zero).
 

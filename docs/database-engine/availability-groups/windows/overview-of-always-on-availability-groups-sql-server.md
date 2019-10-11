@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742935"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974383"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742935"
   
  Sono disponibili tre tipi di failover: automatico, manuale e forzato (con possibile perdita di dati). La forma o le forme di failover supportate da una determinata replica secondaria dipendono dalla relativa modalità di disponibilità e, per la modalità commit sincrono, dalla modalità di failover sulla replica primaria e sulla replica secondaria di destinazione.  
   
--   La modalità commit sincrono supporta due forme di failover, ovvero *failover manuale pianificato* e *failover automatico*, se la replica secondaria di destinazione è sincronizzata con avt1. Il supporto per queste forme di failover dipende dall'impostazione della *proprietà della modalità di failover* sui partner di failover. Se la modalità di failover è impostata su "manuale" sulla replica primaria o su quella secondaria, per la replica secondaria è supportato solo il failover manuale. Se la modalità di failover è impostata su "automatico" sia sulla replica primaria sia sulle repliche secondarie, sulla replica secondaria sono supportate entrambe le forme di failover, manuale e automatico.  
+-   La modalità commit sincrono supporta due forme di failover, ovvero *failover manuale pianificato* e *failover automatico*, se la replica secondaria di destinazione è sincronizzata con quella primaria. Il supporto per queste forme di failover dipende dall'impostazione della *proprietà della modalità di failover* sui partner di failover. Se la modalità di failover è impostata su "manuale" sulla replica primaria o su quella secondaria, per la replica secondaria è supportato solo il failover manuale. Se la modalità di failover è impostata su "automatico" sia sulla replica primaria sia sulle repliche secondarie, sulla replica secondaria sono supportate entrambe le forme di failover, manuale e automatico.  
   
     -   **Failover manuale pianificato** (senza perdita di dati)  
   

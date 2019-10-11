@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045640"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687364"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045640"
 |Colonne in GROUP BY, ORDER BY||Limitato solo dal numero di byte||  
 |Colonne o espressioni in un'istruzione GROUP BY WITH CUBE o WITH ROLLUP||10||  
 |Colonne per ogni chiave di indice||32|Se la tabella contiene uno o più indici XML, la chiave di clustering della tabella utente viene limitata a 31 colonne perché la colonna XML viene aggiunta alla chiave di clustering dell'indice XML primario. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]è possibile includere colonne non chiave in un indice non cluster per evitare di raggiungere il limite massimo di 32 colonne chiave. Per altre informazioni, vedere [Creare indici con colonne incluse](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Colonne per ogni chiave esterna||32||  
-|Colonne per ogni chiave primaria||32||  
-|Colonne per ogni tabella non estesa in larghezza||1\.024||  
-|Colonne per ogni tabella estesa in larghezza||30.000||  
-|Colonne per ogni istruzione SELECT||4\.096||  
-|Colonne per ogni istruzione INSERT||4\.096||  
+|Colonne per ogni chiave esterna o primaria||32||  
+|Colonne per ogni istruzione `INSERT`||4\.096||  
+|Colonne per ogni istruzione `SELECT`||4\.096||  
+|Colonne per ogni tabella||1\.024|Le tabelle con set di colonne di tipo sparse includono fino a 30.000 colonne. Vedere le informazioni sui [set di colonne di tipo sparse](../relational-databases/tables/use-column-sets.md).|  
+|Colonne per ogni istruzione `UPDATE`||4\.096|Ai [set di colonne di tipo sparse](../relational-databases/tables/use-column-sets.md) vengono applicati limiti diversi.|  
+|Colonne per ogni vista||1\.024||  
 |Connessioni per ogni client||Valore massimo delle connessioni configurate||  
 |Dimensioni di database||524.272 terabytes||  
 |Database per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045640"
 |Statistiche relative a colonne non indicizzate||30.000|| 
 |Tabelle per ogni istruzione SELECT||Limitato solo dalle risorse disponibili||  
 |Trigger per ogni tabella||Limitato dal numero di oggetti di un database|Gli oggetti di database possono essere tabelle, viste, stored procedure, funzioni definite dall'utente, trigger, regole, impostazioni predefinite e vincoli. La somma del numero di tutti gli oggetti in un database non può essere maggiore di 2.147.483.647.|  
-|Colonne per ogni istruzione UPDATE (tabelle estese in larghezza)||4096||  
 |Connessioni utente||32.767||  
 |Indici XML||249||  
   

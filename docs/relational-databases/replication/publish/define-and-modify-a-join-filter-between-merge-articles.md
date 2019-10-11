@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907804"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710907"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definizione e modifica di un filtro di join tra articoli di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907804"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire uno o più articoli correlati, noti anche come articoli figlio, per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specificare **@publication** , un nome univoco per il filtro per **@filtername** , il nome dell'articolo figlio creato nel passaggio 2 per **@article** , il nome dell'articolo padre da unire in join per **@join_articlename** e uno dei valori seguenti per **@join_unique_key** :  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specificare `@publication`, un nome univoco per il filtro per `@filtername`, il nome dell'articolo figlio creato nel passaggio 2 per `@article`, il nome dell'articolo padre da unire in join per `@join_articlename` e uno dei valori seguenti per `@join_unique_key`:  
   
     -   **0** : indica un join molti-a-uno o molti-a-molti tra gli articoli padre e figlio.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907804"
      In questo modo viene definito un filtro join tra i due articoli.  
   
     > [!CAUTION]  
-    >  Impostare **@join_unique_key** su **1** solo se l'univocità è garantita da un vincolo nella colonna unita tramite join nella tabella sottostante per l'articolo padre. Se **@join_unique_key** è impostato su **1** in modo errato, è possibile che si verifichi la non convergenza dei dati.  
+    >  Impostare `@join_unique_key` su **1** solo se l'univocità è garantita da un vincolo nella colonna unita tramite join nella tabella sottostante per l'articolo padre. Se `@join_unique_key` è impostato su **1** in modo errato, è possibile che si verifichi la non convergenza dei dati.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio viene definito un articolo per una pubblicazione di tipo merge, in cui all'articolo della tabella `SalesOrderDetail` viene applicato un filtro sulla tabella `SalesOrderHeader` , che presenta essa stessa un filtro di riga statico. Per altre informazioni, vedere [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

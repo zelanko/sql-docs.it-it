@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653350"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680829"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ Specifica che tutte le righe di *target_table corrispondenti alle righe restitui
 Nell'istruzione MERGE possono essere presenti al massimo due clausole WHEN MATCHED. Se vengono specificate due clausole, alla prima deve essere associata una clausola AND \<search_condition>. Per ogni riga specificata, la seconda clausola WHEN MATCHED viene applicata solo nel caso in cui non venga applicata la prima. Se sono presenti due clausole WHEN MATCHED, è necessario che una specifichi un'azione UPDATE e l'altra un'azione DELETE. Quando nella clausola \<merge_matched> viene specificato UPDATE e più righe di \<table_source> corrispondono a una riga di *target_table* in base a \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. L'istruzione MERGE non può aggiornare la stessa riga più di una volta né aggiornare ed eliminare la stessa riga.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Specifica che in *target_table* deve essere inserita una riga per ogni riga restituita da \<table_source> ON \<merge_search_condition> che non corrisponde a una riga in *target_table*, ma che soddisfa un'eventuale condizione di ricerca aggiuntiva. I valori da inserire vengono specificati dalla clausola \<merge_not_matched>. Nell'istruzione MERGE può essere presente solo una clausola WHEN NOT MATCHED.  
-  
+Specifica che in *target_table* deve essere inserita una riga per ogni riga restituita da \<table_source> ON \<merge_search_condition> che non corrisponde a una riga in *target_table*, ma che soddisfa un'eventuale condizione di ricerca aggiuntiva. I valori da inserire vengono specificati dalla clausola \<merge_not_matched>. Nell'istruzione MERGE può essere presente una sola clausola WHEN NOT MATCHED [ BY TARGET ].
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Specifica che tutte le righe di *target_table che non corrispondono alle righe restituite da \<table_source> ON \<merge_search_condition> e che soddisfano eventuali condizioni di ricerca aggiuntive vengono aggiornate oppure eliminate in base alla clausola \<merge_matched>.  
   

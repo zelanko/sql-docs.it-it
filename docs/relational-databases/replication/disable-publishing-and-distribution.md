@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768608"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710276"
 ---
 # <a name="disable-publishing-and-distribution"></a>Disabilitazione della pubblicazione e della distribuzione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768608"
 7.  Nel server di distribuzione eseguire [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) per rimuovere la designazione di server di distribuzione dal server.  
   
     > [!NOTE]  
-    >  Se prima dell'esecuzione di [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) e [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server di distribuzione viene eliminato, è necessario impostare il parametro **@no_checks** su **1**. Se un server di pubblicazione o un database di distribuzione è offline o non è raggiungibile, il parametro **@ignore_distributor** può essere impostato su **1** in modo che possa essere eliminato. Tuttavia, gli eventuali oggetti di pubblicazione e distribuzione rimasti devono essere rimossi manualmente.  
+    > Se prima dell'esecuzione di [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) e [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server di distribuzione viene eliminato, è necessario impostare il parametro `@no_checks` su **1**. Se un server di pubblicazione o un database di distribuzione è offline o non è raggiungibile, il parametro `@ignore_distributor` può essere impostato su **1** in modo che possa essere eliminato. Tuttavia, gli eventuali oggetti di pubblicazione e distribuzione rimasti devono essere rimossi manualmente.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio di script vengono rimossi oggetti della replica dal database di sottoscrizione.  

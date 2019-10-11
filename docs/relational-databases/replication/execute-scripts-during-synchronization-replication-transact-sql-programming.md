@@ -17,12 +17,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cfc7873669eb49d3fc3e160ff33f56371517e6c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768107"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710274"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Esecuzione di script durante la sincronizzazione (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68768107"
   
 2.  Salvare il file script in un percorso in cui sia accessibile all'agente snapshot per la pubblicazione.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Specificare **@publication** , il nome del file script con il percorso UNC completo creato nel passaggio 2 per **@scriptfile** e uno dei valori seguenti per **@skiperror** :  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Specificare `@publication`, il nome del file script con il percorso UNC completo creato nel passaggio 2 per `@scriptfile` e uno dei valori seguenti per `@skiperror`:  
   
     -   **0** : l'agente arresterà l'esecuzione dello script se viene rilevato un errore.  
   

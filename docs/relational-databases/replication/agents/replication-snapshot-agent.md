@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768285"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710346"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  Indica se le eliminazioni irrilevanti vengono inviate al Sottoscrittore. Le eliminazioni irrilevanti sono comandi DELETE inviati ai Sottoscrittori per righe che non appartengono alla partizione del Sottoscrittore. Le eliminazioni irrilevanti non influiscono sulla convergenza o sull'integrità dei dati, ma possono comportare traffico di rete non necessario. Il valore predefinito di **MaxNetworkOptimization** è **0**. Impostando **MaxNetworkOptimization** su **1** è possibile ridurre al minimo le possibilità di eliminazioni irrilevanti, riducendo pertanto il traffico e ottimizzando le prestazioni di rete. L'impostazione di questo parametro su **1** comporta inoltre l'aumento dell'archiviazione di metadati e può provocare una riduzione delle prestazioni nel server di pubblicazione se sono presenti più livelli di filtri di join e filtri di subset complessi. Valutare inoltre attentamente la topologia di replica e impostare **MaxNetworkOptimization** su **1** solo se il traffico di rete dovuto a eliminazioni irrilevanti è eccessivo.  
   
 > [!NOTE]
->  L'impostazione di questo parametro su **1** è utile solo quando l'opzione di ottimizzazione della sincronizzazione della pubblicazione di tipo merge è impostata su **true** (parametro **@keep_partition_changes** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+>  L'impostazione di questo parametro su **1** è utile solo quando l'opzione di ottimizzazione della sincronizzazione della pubblicazione di tipo merge è impostata su **true** (parametro `@keep_partition_changes**` di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
@@ -250,7 +250,7 @@ snapshot [ -?]
  Carattere o sequenza di caratteri che contrassegna la fine di una riga nel file di dati di copia bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il valore predefinito è \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Numero massimo di secondi di attesa da parte dell'agente snapshot quando il numero di processi snapshot dinamici simultanei in esecuzione raggiunge il limite impostato tramite la proprietà **@max_concurrent_dynamic_snapshots** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Se viene raggiunto il numero massimo di secondi e l'agente snapshot è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
+ Numero massimo di secondi di attesa da parte dell'agente snapshot quando il numero di processi snapshot dinamici simultanei in esecuzione raggiunge il limite impostato tramite la proprietà `@max_concurrent_dynamic_snapshots` di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Se viene raggiunto il numero massimo di secondi e l'agente snapshot è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Questo parametro è deprecato ed è ancora supportato solo per garantire la compatibilità con le versioni precedenti.  

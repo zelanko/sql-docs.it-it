@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903095"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710314"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903095"
   
      Per ulteriori informazioni sulle autorizzazioni richieste dagli agenti, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Specificare lo stesso account di dominio utilizzato dall'agente di merge quando si specifica un account e una password nella pagina **Informazioni sul server Web** della Creazione guidata nuova sottoscrizione o quando si specificano i valori per i parametri **@internet_url** e **@internet_login** di [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
+-   Specificare lo stesso account di dominio usato dall'agente di merge quando si specifica un account e una password nella pagina **Informazioni sul server Web** della Creazione guidata nuova sottoscrizione o quando si specificano i valori per i parametri `@internet_url` e `@internet_login` di [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
 -   Ogni pubblicazione deve utilizzare una directory virtuale separata per IIS.  
   

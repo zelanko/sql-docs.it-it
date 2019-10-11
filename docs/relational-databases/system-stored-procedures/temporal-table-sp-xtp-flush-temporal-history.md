@@ -18,17 +18,17 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3818c2ff4689605ff03660d6ae66bf4d579cb443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037309"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251273"
 ---
-# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Richiama l'attività di scaricamento dei dati per spostare tutti i commit di righe dalla tabella di staging in memoria per la tabella di cronologia basata su disco.  
+  Richiama l'attività di scaricamento dati per spostare tutte le righe di cui è stato eseguito il commit dalla tabella di staging in memoria alla tabella di cronologia basata su disco.  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *@schema_name*  
- Il nome dello schema per la tabella temporale o corrente  
+ *\@schema_name*  
+ Nome dello schema per la tabella corrente o temporale  
   
- *@object_name*  
- Il nome della tabella temporale o corrente  
+ *\@object_name*  
+ Nome della tabella corrente o temporale  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o > 0 (esito negativo)  

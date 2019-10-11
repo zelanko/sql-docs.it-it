@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227183"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713208"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], alcuni nomi di opzioni sono stati modificati:      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` è diventata `INTERLEAVED_EXECUTION_TVF`
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` è diventata `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` è diventata `BATCH_MODE_ADAPTIVE_JOINS`
+
 ## <a name="arguments"></a>Argomenti
 
 FOR SECONDARY
@@ -113,6 +119,9 @@ Specifica l'impostazione MAXDOP predefinita da usare per le istruzioni. 0 è il 
 Grazie all'opzione max degree of parallelism è possibile limitare il numero di processori da utilizzare nell'esecuzione di piani paralleli. SQL Server valuta i piani di esecuzione parallela per query, operazioni DDL (Data Definition Language) sugli indici, inserimento parallelo, modifica colonna online, raccolta di statistiche parallela e popolamento dei cursori statici e gestiti da keyset.
 
 Per impostare questa opzione a livello di istanza, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
+> [!NOTE]
+> Nel database SQL di Azure, la configurazione a livello di server **max degree of parallelism** è sempre impostata su 0. MAXDOP può essere configurato per ogni database, come descritto nell'articolo corrente. Per consigli sulla configurazione ottimale di MAXDOP, vedere la sezione [Risorse aggiuntive](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
 
 > [!TIP]
 > Per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.
@@ -351,6 +360,11 @@ Per le query con nome in 3 parti, vengono prese in considerazione le impostazion
 L'evento `ALTER_DATABASE_SCOPED_CONFIGURATION` viene aggiunto come evento DDL che può essere usato per attivare un trigger DDL ed è elemento figlio del gruppo di trigger `ALTER_DATABASE_EVENTS`.
 
 Le impostazioni di configurazione con ambito database verranno trasferite con il database, il che significa che quando un determinato database viene ripristinato o collegato, le impostazioni di configurazione esistenti rimangono.
+
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], alcuni nomi di opzioni sono stati modificati:      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` è diventata `INTERLEAVED_EXECUTION_TVF`
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` è diventata `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` è diventata `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 

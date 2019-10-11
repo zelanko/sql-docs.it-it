@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256712"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708336"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 
@@ -109,9 +109,10 @@ In questa sezione si crea una tabella nel database TutorialDB appena creato. L'e
    ![Modificare il database](media/connect-query-sql-server/changedb.png)
 
 2. Incollare il frammento di codice T-SQL seguente nella finestra di query, selezionarlo e fare clic su **Esegui** o premere F5 sulla tastiera.  
-   È possibile sostituire il testo esistente nella finestra di query o aggiungerlo alla fine. Per eseguire l'intero testo nella finestra di query, selezionare **Esegui**. Per eseguire una parte del testo, evidenziare la parte desiderata e selezionare **Esegui**.  
+   È possibile sostituire il testo esistente nella finestra di query o aggiungerlo alla fine. Per eseguire l'intero testo nella finestra di query, selezionare **Esegui**. Se il testo è stato aggiunto, è opportuno eseguire solo la parte del testo. Evidenziare quindi la parte e selezionare **Esegui**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.date: 10/03/2019
+ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326085"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816797"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -41,22 +41,22 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-183"></a>SSMS 18.3 
+## <a name="ssms-1831"></a>SSMS 18.3.1
 
-Download: [Scaricare SSMS 18.3](download-sql-server-management-studio-ssms.md)  
-Numero di build: 15.0.18178.0  
-Data di rilascio: 23 settembre 2019
+Download: [Scaricare SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+Numero di build: 15.0.18183.0  
+Data di rilascio: 2 ottobre 2019
 
-SSMS 18.3 è la versione disponibile a livello generale più recente di SSMS. Se è necessaria una versione precedente, vedere [Versioni precedenti di SSMS](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.3.1 è la versione disponibile a livello generale più recente di SSMS. Se è necessaria una versione precedente, vedere [Versioni precedenti di SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-La versione 18.3 è un aggiornamento della versione 18.2 con i nuovi elementi e le correzioni di bug seguenti.
+La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi e le correzioni di bug seguenti.
 
-## <a name="whats-new-in-183"></a>Novità della versione 18.3
+## <a name="whats-new-in-1831"></a>Novità della versione 18.3.1
 
 | Nuovo elemento | Dettagli |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Classificazione dei dati | Aggiunta delle informazioni di classificazione dei dati all'interfaccia utente delle proprietà della colonna (le opzioni *Tipo di informazioni*, *ID tipo di informazioni*, *Etichetta riservatezza* e *ID etichetta di riservatezza* non sono esposte nell'interfaccia utente di SSMS). |
-| IntelliSense/editor | Aggiornamento del supporto per le funzionalità aggiunte di recente a SQL Server 2019 (ad esempio, "ALTER SERVER CONFIGURATION"). | 
+| IntelliSense/editor | Aggiornamento del supporto per le funzionalità aggiunte di recente a SQL Server 2019 (ad esempio, "ALTER SERVER CONFIGURATION"). |
 | Integration Services | Aggiunta di una nuova voce del menu di selezione `Tools > Migrate to Azure > Configure Azure-enabled DTExec` per richiamare le esecuzioni del pacchetto SSIS in Azure-SSIS Integration Runtime come attività di esecuzione del pacchetto SSIS nelle pipeline ADF. |
 | SMO/scripting | Aggiunta del supporto dello scripting del vincolo UNIQUE di Azure SQL Data Warehouse. |
 | SMO/scripting | Classificazione dei dati </br> - Aggiunta del supporto per SQL versione 10 (SQL 2008) e versioni successive. </br> - Aggiunta del nuovo attributo di riservatezza 'rank' per SQL versione 15 (SQL 2019) e versioni successive e il database SQL di Azure. |
@@ -65,7 +65,7 @@ La versione 18.3 è un aggiornamento della versione 18.2 con i nuovi elementi e 
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per Istanza gestita di database SQL di Azure. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della visualizzazione predefinita dei cmdlet per visualizzare i risultati come tabella. |
 
-## <a name="bug-fixes-in-183"></a>Correzioni di bug nella versione 18.3
+## <a name="bug-fixes-in-1831"></a>Correzioni di bug nella versione 18.3.1
 
 | Nuovo elemento | Dettagli |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,11 +82,12 @@ La versione 18.3 è un aggiornamento della versione 18.2 con i nuovi elementi e 
 | SQL Server Management Studio (SSMS) - Generale | È stato un risolto un problema nell'interfaccia utente di XEvent a causa del quale al passaggio del mouse sulla griglia vengono selezionate righe. </br></br> Per altri dettagli, vedere UserVoice: [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) (L'interfaccia utente degli eventi estesi di SSMS seleziona azioni al passaggio del mouse). |
 | Importa file flat | È stato risolto un problema a causa del quale Importa file flat non importava tutti i dati consentendo all'utente di scegliere tra un rilevamento dei tipi di dati semplice o formattati.</br></br> Per altri dettagli, vedere UserVoice: [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) (Importa file flat di SSMS non importa tutti i dati). |
 | Integration Services | Aggiunta del nuovo tipo di operazione *StartNonCatalogExecution* per il report dell'operazione SSIS.|
+| Integration Services | È stato risolto un problema nelle pipeline di Azure Data Factory generate dall'utilità `DTExec` abilitata per Azure per usare il tipo di parametro corretto. (esplicito per 18.3.1) |
 | SMO/scripting | È stato risolto un problema che causava la generazione di errori da SMO durante il recupero delle proprietà quando si usava **SMO.Server.SetDefaultInitFields(true)** .|
 | Interfaccia utente di Query Store | È stato risolto un problema a causa del quale l'asse Y non veniva ridimensionato con la selezione della metrica *Conteggio esecuzioni* nella visualizzazione *Query rilevate*. |
 | Valutazione della vulnerabilità | Cancellazione e approvazione della baseline per database SQL di Azure disabilitata.|
 
-### <a name="known-issues-183"></a>Problemi noti (18.3)
+### <a name="known-issues-1831"></a>Problemi noti (18.3.1)
 
 - Il diagramma di database creato da SSMS in esecuzione nel computer A non può essere modificato dal computer B (si verifica un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 

@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326027"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961955"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Estensione SQL Server 2019 per Azure Data Studio (anteprima)
 
@@ -33,7 +33,7 @@ Per installare l'estensione SQL Server 2019 (anteprima), scaricare e installare 
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 settembre 2019 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 settembre 2019 |0.16.0
 
-1. In Azure Data Studio scegliere **Install Extension from VSIX Package** (Installa estensione da pacchetto VSIX) dal menu **File** e selezionare il file con estensione .vsix scaricato.
+1. In Azure Data Studio scegliere **Install Extension from VSIX Package** (Installa estensione da pacchetto VSIX) dal menu **File** e selezionare il file con estensione vsix scaricato.
 
 1. Scegliere **Sì** quando viene richiesto di confermare l'installazione e attendere la notifica di esito positivo dell'installazione.
 
@@ -65,7 +65,7 @@ Per installare l'estensione SQL Server 2019 (anteprima), scaricare e installare 
 * Procedura guidata di creazione tabella esterna:
   * Supporto per la creazione di una tabella esterna mediante un'origine dati esterna esistente.
   * Miglioramenti delle prestazioni nella procedura guidata.
-  * Gestione migliorata dei nomi degli oggetti con caratteri speciali. In alcuni casi questi causavano l'esito negativo della procedura guidata
+  * Gestione migliorata dei nomi degli oggetti con caratteri speciali. In alcuni casi questi causavano l'esito negativo della procedura guidata.
   * Miglioramenti dell'affidabilità per la pagina del mapping oggetti.
   * Rimozione dei database di sistema 'DWConfiguration', 'DWDiagnostics', 'DWQueue' dall'elenco a discesa dei database.
   * Supporto per l'impostazione del nome dell'oggetto Formato di file esterno nella procedura guidata **Create External Table from CSV Files** (Crea tabella esterna da file CSV).
@@ -82,15 +82,15 @@ Per installare l'estensione SQL Server 2019 (anteprima), scaricare e installare 
 
 ## <a name="release-notes-v0102"></a>Note sulla versione (v 0.10.2)
 ### <a name="sql-server-2019-support"></a>Supporto di SQL Server 2019
-Il supporto per SQL Server 2019 è stato aggiornato. Eseguendo la connessione a un'istanza del cluster Big Data di SQL Server, nell'albero di esplorazione verrà visualizzata una nuova cartella _Servizi dati_. Questa offre punti di avvio per azioni quali l'apertura di un nuovo notebook sulla connessione, l'invio di processi Spark e l'uso di HDFS. Si noti che per alcune azioni, ad esempio_creare dati esterni_ su un file o una cartella HDFS, è necessario installare l'estensione _SQL Server 2019 Preview_.
+Il supporto per SQL Server 2019 è stato aggiornato. Dopo la connessione a un'istanza del cluster Big Data di SQL Server, nell'albero di esplorazione viene visualizzata una nuova cartella _Servizi dati_. Questa offre punti di avvio per azioni quali l'apertura di un nuovo notebook sulla connessione, l'invio di processi Spark e l'uso di HDFS. Si noti che per alcune azioni, ad esempio _creare dati esterni_ su un file o una cartella HDFS, è necessario installare l'estensione _SQL Server 2019 Preview_.
 
 ### <a name="notebook-support"></a>Supporto di notebook
 In questa versione sono stati apportati aggiornamenti significativi all'interfaccia utente per i notebook. L'obiettivo è quello di semplificare la lettura dei notebook condivisi con l'utente. Sono state rimosse tutte le caselle di contorno intorno alle celle, a meno che non siano selezionate o evidenziate con il mouse, aggiungendo il supporto del passaggio del mouse per semplificare le azioni a livello di cella senza bisogno di selezionare una cella. Lo stato di esecuzione è ora più chiaro grazie all'aggiunta del conteggio delle esecuzioni, di un pulsante _Arresta esecuzione_ animato e altro ancora. Sono state aggiunge scelte rapide da tastiera per _New Notebook_ (Nuovo notebook) (`Ctrl+Shift+N`), _Run Cell_ (Esegui cella) (`F5`), _New Code Cell_ (Nuova cella di codice) (`Ctrl+Shift+C`), _New Text Cell_ (Nuova cella di testo) (`Ctrl+Shift+T`). In futuro, cercheremo di fare in modo che tutte le azioni chiave si possano lanciare tramite scelta rapida da tastiera, quindi ogni suggerimento sulle combinazioni mancanti è il benvenuto.
 
 Altri miglioramenti e correzioni includono:
-* L'estensione _SQL Server 2019 Preview_ ora richiede agli utenti di selezionare una directory di installazione per le dipendenze Python. Non include più Python nel `.vsix file`, riducendo così le dimensioni complessive dell'estensione. Le dipendenze Python sono necessarie per supportare i kernel Spark e Python3, quindi per usarli è necessaria l'installazione di questa estensione.
+* L'estensione _SQL Server 2019 Preview_ ora richiede agli utenti di selezionare una directory di installazione per le dipendenze Python. Non include più Python nel `.vsix file`, riducendo così le dimensioni complessive dell'estensione. Le dipendenze Python supportano i kernel Spark e Python3.
 * È stato aggiunto il supporto per l'avvio di un nuovo notebook dalla riga di comando. L'avvio con gli argomenti `--command=notebook.command.new --server=myservername` dovrebbe aprire un nuovo notebook e connettersi a questo server.
-* Correzioni delle prestazioni per notebook con codice di lunghezza elevata nelle celle. Se le celle di codice sono lunghe più di 250 righe, verrà aggiunta una barra di scorrimento.
+* Correzioni delle prestazioni per notebook con codice di lunghezza elevata nelle celle. Se le celle di codice sono lunghe più di 250 righe, viene aggiunta una barra di scorrimento.
 * Miglioramento del supporto per i file con estensione ipynb. È ora supportata la versione 3 o successiva. Si noti che, al salvataggio, i file verranno aggiornati alla versione 4 o successiva.
 * L'impostazione utente `notebook.enabled` è stata rimossa ora che il visualizzatore notebook predefinito è stabile
 * È ora supportato il tema a contrasto elevato, con una serie di correzioni al layout degli oggetti.

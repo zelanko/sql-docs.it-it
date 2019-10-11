@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174246"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710395"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "71174246"
   
 -   Specificare che gli oggetti non devono essere eliminati alla reinizializzazione della sottoscrizione. Prima della reinizializzazione, eseguire una delle seguenti operazioni:  
   
-    -   Eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare il valore "pre_creation_cmd" (**sp_changearticle**) o "pre_creation_command" (**sp_changemergearticle**) per il parametro **\@property** e il valore "none", "delete" o "truncate" per il parametro **\@value**.  
+    -   Eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare il valore 'pre_creation_cmd' (**sp_changearticle**) o 'pre_creation_command' (**sp_changemergearticle**) per il parametro `@property` e il valore 'none', 'delete' o 'truncate' per il parametro `@value`.  
   
     -   Nella sezione **Oggetto di destinazione\< della finestra di dialogo** Proprietà articolo - **Articolo>** selezionare il valore **Non modificare l'oggetto esistente**, **Elimina i dati. Se all'articolo è associato un filtro di riga, elimina solo i dati che soddisfano i criteri del filtro.** oppure **Tronca tutti i dati nell'oggetto esistente** per l'opzione **Azione se il nome è in uso**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

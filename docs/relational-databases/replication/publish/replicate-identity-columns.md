@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769834"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710869"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,16 +74,16 @@ ms.locfileid: "68769834"
 ### <a name="merge-replication"></a>Replica di tipo merge  
  Gli intervalli di valori Identity vengono gestiti dal server di pubblicazione e distribuiti ai Sottoscrittori dall'agente di merge. In una gerarchia di ripubblicazione, invece, gli intervalli vengono gestiti dal server di pubblicazione radice e dai server di ripubblicazione. I valori Identity vengono assegnati da un pool nel server di pubblicazione. Se si aggiunge un articolo con una colonna Identity a una pubblicazione mediante Creazione guidata nuova pubblicazione o usando la stored procedure [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), è necessario specificare i valori seguenti:  
   
--   Il parametro **@identity_range** , che controlla le dimensioni dell'intervallo di valori Identity inizialmente allocato sia nel server di pubblicazione sia nei Sottoscrittori con sottoscrizioni client.  
+-   Il parametro `@identity_range`, che controlla le dimensioni dell'intervallo di valori Identity inizialmente allocato sia nel server di pubblicazione sia nei Sottoscrittori con sottoscrizioni client.  
   
     > [!NOTE]  
-    >  Per i Sottoscrittori che eseguono le precedenti versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo parametro, e non il parametro **@pub_identity_range** , controlla anche le dimensioni dell'intervallo di valori Identity nei Sottoscrittori di ripubblicazione.  
+    >  Per i Sottoscrittori che eseguono le precedenti versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo parametro, e non il parametro `@pub_identity_range`, controlla anche le dimensioni dell'intervallo di valori Identity nei Sottoscrittori di ripubblicazione.  
   
--   Il parametro **@pub_identity_range** , che controlla le dimensioni dell'intervallo di valori Identity per la ripubblicazione allocato nei Sottoscrittori con sottoscrizioni server ed è necessario per la ripubblicazione dei dati. Tutti i Sottoscrittori con sottoscrizioni server ricevono un intervallo per la ripubblicazione, anche se non eseguono la ripubblicazione dei dati.  
+-   Il parametro `@pub_identity_range`, che controlla le dimensioni dell'intervallo di valori Identity per la ripubblicazione allocato nei Sottoscrittori con sottoscrizioni server ed è necessario per la ripubblicazione dei dati. Tutti i Sottoscrittori con sottoscrizioni server ricevono un intervallo per la ripubblicazione, anche se non eseguono la ripubblicazione dei dati.  
   
--   Il parametro **@threshold** , utilizzato per determinare quando è necessario un nuovo intervallo di valori Identity per una sottoscrizione di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Il parametro `@threshold`, usato per determinare quando è necessario un nuovo intervallo di valori Identity per una sottoscrizione di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Ad esempio, è possibile specificare 10.000 per **@identity_range** e 500.000 per **@pub_identity_range** . Al server di pubblicazione e a tutti i Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, incluso il Sottoscrittore con la sottoscrizione server, viene assegnato un intervallo primario di 10000. Al Sottoscrittore con la sottoscrizione server viene inoltre assegnato un intervallo primario di 500000, che può essere utilizzato dai Sottoscrittori che eseguono la sincronizzazione con il Sottoscrittore di ripubblicazione. È inoltre necessario specificare i parametri **@identity_range** , **@pub_identity_range** e **@threshold** per gli articoli della pubblicazione nel Sottoscrittore di ripubblicazione.  
+ Ad esempio, è possibile specificare 10000 per `@identity_range` e 500000 per `@pub_identity_range`. Al server di pubblicazione e a tutti i Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, incluso il Sottoscrittore con la sottoscrizione server, viene assegnato un intervallo primario di 10000. Al Sottoscrittore con la sottoscrizione server viene inoltre assegnato un intervallo primario di 500000, che può essere usato dai Sottoscrittori che eseguono la sincronizzazione con il Sottoscrittore di ripubblicazione. È inoltre necessario specificare i parametri `@identity_range`, `@pub_identity_range` e `@threshold` per gli articoli della pubblicazione nel Sottoscrittore di ripubblicazione.  
   
  Tutti i Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva ricevono inoltre un intervallo di valori Identity secondario. Questo valore secondario ha le stesse dimensioni dell'intervallo primario. Quando quest'ultimo si esaurisce viene utilizzato l'intervallo secondario. L'agente di merge assegna al Sottoscrittore un nuovo intervallo, che diventa l'intervallo secondario. In questo modo, quando vengono utilizzati i valori Identity del Sottoscrittore il processo continua.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "68769834"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Replica transazionale con sottoscrizioni ad aggiornamento in coda  
  Gli intervalli di valori Identity vengono gestiti dal server di distribuzione e distribuiti ai Sottoscrittori dall'agente di distribuzione. I valori Identity vengono assegnati da un pool nel server di distribuzione. Le dimensioni del pool dipendono dalle dimensioni del tipo di dati e dall'incremento utilizzato per la colonna Identity. Se si aggiunge un articolo con una colonna Identity a una pubblicazione mediante Creazione guidata nuova pubblicazione o usando la stored procedure [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), è necessario specificare i valori seguenti:  
   
--   Il parametro **@identity_range** , che controlla le dimensioni dell'intervallo di valori Identity inizialmente allocato a tutti i Sottoscrittori.  
+-   Il parametro `@identity_range`, che controlla le dimensioni dell'intervallo di valori Identity inizialmente allocato a tutti i Sottoscrittori.  
   
--   Il parametro **@pub_identity_range** , che controlla le dimensioni dell'intervallo di valori Identity allocato al server di pubblicazione.  
+-   Il parametro `@pub_identity_range`, che controlla le dimensioni dell'intervallo di valori Identity allocato al server di pubblicazione.  
   
--   Il parametro **@threshold** , utilizzato per determinare quando è necessario un nuovo intervallo di valori Identity per una sottoscrizione.  
+-   Il parametro `@threshold`, usato per determinare quando è necessario un nuovo intervallo di valori Identity per una sottoscrizione.  
   
- Ad esempio, è possibile specificare 10.000 per **@pub_identity_range** , 1000 per **@identity_range** (presupponendo aggiornamenti minori nel Sottoscrittore) e 80% per **@threshold** . Dopo 800 inserimenti in un Sottoscrittore, pari all'80% di 1000, al Sottoscrittore viene assegnato un nuovo intervallo. Dopo 8.000 inserimenti nel server di pubblicazione, al server di pubblicazione viene assegnato un nuovo intervallo. A questo punto vi sarà un gap nell'intervallo di valori Identity della tabella. Specificando una soglia più elevata si avranno gap più piccoli, ma il sistema sarà meno tollerante agli errori. Se per qualche ragione non è possibile eseguire l'agente di distribuzione, i Sottoscrittori potrebbero esaurire più facilmente i valori Identity.  
+ Ad esempio, è possibile specificare 10000 per `@pub_identity_range`, 1000 per `@identity_range` (presupponendo aggiornamenti minori nel Sottoscrittore) e 80% per `@threshold`. Dopo 800 inserimenti in un Sottoscrittore, pari all'80% di 1000, al Sottoscrittore viene assegnato un nuovo intervallo. Dopo 8.000 inserimenti nel server di pubblicazione, al server di pubblicazione viene assegnato un nuovo intervallo. A questo punto vi sarà un gap nell'intervallo di valori Identity della tabella. Specificando una soglia più elevata si avranno gap più piccoli, ma il sistema sarà meno tollerante agli errori. Se per qualche ragione non è possibile eseguire l'agente di distribuzione, i Sottoscrittori potrebbero esaurire più facilmente i valori Identity.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Assegnazione di intervalli per la gestione manuale degli intervalli di valori Identity  
  Se si sceglie la gestione manuale, è necessario verificare che il server di pubblicazione e tutti i Sottoscrittori utilizzino intervalli di valori Identity diversi. Si consideri, ad esempio, una tabella nel server di pubblicazione con una colonna Identity definita come `IDENTITY(1,1)`: la colonna Identity comincia col valore 1 e viene incrementata di 1 ogni volta che viene inserita una riga. Se la tabella nel server di pubblicazione ha 5.000 righe e si prevede una crescita nella tabella superiore alla durata dell'applicazione, per il server di pubblicazione si potrebbe utilizzare l'intervallo 1-10.000. Nel caso vi siano due Sottoscrittori, per il Sottoscrittore A si potrebbe usare l'intervallo 10.001-20.000 e per il Sottoscrittore B l'intervallo 20.001-30.000.  

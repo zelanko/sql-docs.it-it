@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb5b16d81ce78b6dbd587b74730b84a6139f53e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037195"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816670"
 ---
 # <a name="sql-writer-service"></a>servizio writer SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68037195"
 > Quando si usa VSS per eseguire il backup di una macchina virtuale che ospita un gruppo di disponibilità di base, se la macchina virtuale attualmente ospita database in stato di secondario, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 tali database *non* verranno inclusi nel backup con la macchina virtuale.  Questo avviene perché i gruppi di disponibilità di base non supportano il backup dei database nella replica secondaria.  Prima di queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il backup ha esito negativo con un errore.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>Virtual Backup Device Interface (VDI)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un'API denominata Virtual Backup Device Interface (VDI) che consente ai fornitori di software indipendenti di integrare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei propri prodotti, in modo da fornire supporto per operazioni di backup e di ripristino. Queste API sono state progettate per offrire affidabilità e prestazioni ottimali e per supportare la gamma completa di funzionalità di backup e di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse tutte le capacità di backup a caldo e di snapshot.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un'API denominata Virtual Backup Device Interface (VDI) che consente ai fornitori di software indipendenti di integrare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei propri prodotti, in modo da fornire supporto per operazioni di backup e di ripristino. Queste API sono state progettate per offrire affidabilità e prestazioni ottimali e per supportare la gamma completa di funzionalità di backup e di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse tutte le capacità di backup a caldo e di snapshot. Se un'applicazione di un fornitore di terze parti richiede un backup di snapshot (servizio Copia Shadow del volume), il servizio writer SQL chiama le funzioni dell'API VDI per eseguire i backup effettivi. Si noti che l'API VDI è indipendente dal servizio Copia Shadow del volume e viene spesso usata nelle soluzioni software che non impiegano API di tale servizio.
   
 ## <a name="permissions"></a>Autorizzazioni  
  Il servizio writer SQL deve essere eseguito utilizzando l'account di **sistema locale** . Per la connessione a **il servizio writer SQL usa l'account di accesso** NT Service\SQLWriter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con l'account di accesso **NT Service\SQLWriter** il processo del servizio writer SQL può essere eseguito con un livello di privilegi più basso in un account designato come **senza account di accesso**. In questo modo viene limitata la vulnerabilità. Se il servizio writer SQL viene disabilitato, qualsiasi utilità basata su snapshot VSS, ad esempio System Center Data Protection Manager, e alcuni altri prodotti di terze parti vengono interrotti o, nel peggiore dei casi, vi è il rischio di eseguire backup di database non coerenti. Se né [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sistema in cui si effettua l'esecuzione, né il sistema host (in caso di macchina virtuale) necessitano di altri elementi oltre al backup di [!INCLUDE[tsql](../../includes/tsql-md.md)] , il servizio writer SQL può essere disabilitato in modo sicuro e l'account di accesso può essere rimosso.  Si noti che il servizio writer SQL può essere richiamato da un backup a livello di sistema o di volume, se il backup è basato direttamente o meno su snapshot. Alcuni prodotti per il backup del sistema usano VSS per evitare il blocco causato da file aperti o bloccati. Il servizio writer SQL necessita di autorizzazioni elevate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] perché nel corso delle proprie attività deve bloccare brevemente tutte le operazioni di I/O per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

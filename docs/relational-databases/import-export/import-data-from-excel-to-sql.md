@@ -1,7 +1,7 @@
 ---
 title: Importare dati da Excel a SQL Server | Microsoft Docs
 ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,35 +10,35 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab41b5497e95b454db07926c55dd926df1c86135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031066"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708147"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Sono disponibili vari modi per importare dati da file di Excel a SQL Server o al database SQL di Azure. Alcuni metodi consentono di importare dati in un unico passaggio direttamente dai file di Excel. Altri metodi richiedono l'esportazione dei dati di Excel in formato testo prima di poterli importare. Questo articolo riepiloga i metodi usati di frequente e include collegamenti a informazioni più dettagliate.
+Sono disponibili vari modi per importare dati da file di Excel a SQL Server o al database SQL di Azure. Alcuni metodi consentono di importare dati in un unico passaggio direttamente dai file di Excel. Altri metodi richiedono l'esportazione dei dati di Excel in formato testo (file CSV) prima di poterli importare. Questo articolo riepiloga i metodi usati di frequente e include collegamenti a informazioni più dettagliate.
 
 ## <a name="list-of-methods"></a>Elenco di metodi
 
-Per importare dati da Excel, è possibile usare gli strumenti seguenti: 
+Per importare dati da Excel, è possibile usare gli strumenti seguenti:
 
-| Esportazione prima in formato testo                        | Direttamente da Excel                             |
-| :------------------------------------------ |:----------------------------------------------- |
-| [Procedura guidata Importa file flat](#import-wiz)      |[Importazione/Esportazione guidata SQL Server](#wiz)      |
-| Istruzione [BULK INSERT](#bulk-insert)       |[SQL Server Integration Services (SSIS)](#ssis)  |
-| [BCP](#bcp)                                 |Funzione [OPENROWSET](#openrowset)               |
-| [Copia guidata (Azure Data Factory)](#adf-wiz)|                                                 |
-| [Azure Data Factory](#adf)                  |                                                 |
+| Esportazione prima in formato testo (SQL Server e database SQL) | Direttamente da Excel (solo SQL Server locale) |
+| :------------------------------------------------- |:------------------------------------------------- |
+| [Procedura guidata Importa file flat](#import-wiz)             |[Importazione/Esportazione guidata SQL Server](#wiz)        |
+| Istruzione [BULK INSERT](#bulk-insert)              |[SQL Server Integration Services (SSIS)](#ssis)    |
+| [BCP](#bcp)                                        |Funzione [OPENROWSET](#openrowset) <br>            |
+| [Copia guidata (Azure Data Factory)](#adf-wiz)       |                                                   |
+| [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
-
 
 Se si vogliono importare più fogli di lavoro da una cartella di lavoro di Excel, è generalmente necessario eseguire una volta ogni strumento per ogni foglio.
 
-Una descrizione completa degli strumenti e dei servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questo elenco. Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati. 
+Una descrizione completa degli strumenti e dei servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questo elenco. Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
 
 > [!IMPORTANT]
 > Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
@@ -49,16 +49,17 @@ Se SQL Server non è installato o è installato senza SQL Server Management Stud
 
 È possibile importare i dati direttamente dai file di Excel scorrendo le pagine dell'Importazione/Esportazione guidata SQL Server. Facoltativamente, salvare le impostazioni come pacchetto di SQL Server Integration Services (SSIS) che è possibile personalizzare e riusare in seguito.
 
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
-    
-2.  Espandere **Database**.
-3.  Fare clic con il pulsante destro del mouse su un database.
-4.  Scegliere **Attività**.
-5.  Fare clic su una delle opzioni seguenti.  
-    -   **Importare dati**      
-    -   **Esportare dati**  
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-    ![Avviare la procedura guidata da SQL Server Management Studio](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
+2. Espandere **Database**.
+3. Fare clic con il pulsante destro del mouse su un database.
+4. Scegliere **Attività**.
+5. Fare clic su una delle opzioni seguenti.
+
+  - **Importare dati**
+  - **Esportare dati**
+
+    ![Avviare la procedura guidata da SQL Server Management Studio](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
 
 ![Connettersi a un'origine dati Excel](media/excel-connection.png)
 
@@ -71,8 +72,9 @@ Per informazioni su altri modi di avviare la procedura di importazione ed esport
 Se si ha familiarità con SSIS e si preferisce non eseguire l'Importazione/Esportazione guidata di SQL Server, creare un pacchetto SSIS che usa Excel come origine e SQL Server come destinazione nel flusso di dati.
 
 Per altre informazioni su questi componenti di SSIS, vedere gli argomenti seguenti:
--   [Origine Excel](../../integration-services/data-flow/excel-source.md)
--   [Destinazione SQL Server](../../integration-services/data-flow/sql-server-destination.md)
+
+- [Origine Excel](../../integration-services/data-flow/excel-source.md)
+- [Destinazione SQL Server](../../integration-services/data-flow/sql-server-destination.md)
 
 Per istruzioni su come creare pacchetti SSIS, vedere l'esercitazione [Creazione di un pacchetto ETL](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
@@ -80,15 +82,18 @@ Per istruzioni su come creare pacchetti SSIS, vedere l'esercitazione [Creazione 
 
 ## <a name="openrowset"></a> OPENROWSET e server collegati
 
-> [!NOTE]
-> In Azure le funzioni OPENROWSET e OPENDATASOURCE sono disponibili solo in Istanza gestita di database SQL.
+> [!IMPORTANT]
+> Nel database SQL di Azure non è possibile eseguire l'importazione direttamente da Excel. È necessario prima esportare i dati in un file di testo (CSV). Per alcuni esempi, vedere [Esempi](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 > [!NOTE]
-> Il provider ACE (in precedenza provider Jet) che si connette alle origini dati di Excel è destinato all'uso interattivo sul lato client. Se si usa il provider ACE nel server, in particolare in processi automatizzati o processi in esecuzione in parallelo, si possono ottenere risultati imprevisti.
+> Il provider ACE (in precedenza provider Jet) che si connette alle origini dati di Excel è destinato all'uso interattivo sul lato client. Se si usa il provider ACE in SQL Server, in particolare in processi automatizzati o processi in esecuzione in parallelo, si possono ottenere risultati imprevisti.
 
 ### <a name="distributed-queries"></a>Query distribuite
 
-Importare i dati direttamente dai file di Excel usando la funzione `OPENROWSET` o `OPENDATASOURCE` di Transact-SQL. Questo utilizzo è noto come *query distribuita*.
+Importare i dati direttamente in SQL Server dai file di Excel usando la funzione `OPENROWSET` o `OPENDATASOURCE` di Transact-SQL. Questo utilizzo è noto come *query distribuita*.
+
+> [!IMPORTANT]
+> Nel database SQL di Azure non è possibile eseguire l'importazione direttamente da Excel. È necessario prima esportare i dati in un file di testo (CSV). Per alcuni esempi, vedere [Esempi](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 Prima di eseguire una query distribuita, è necessario abilitare l'opzione di configurazione del server `ad hoc distributed queries`, come illustrato nell'esempio seguente. Per altre informazioni, vedere [Opzione di configurazione del server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
 
@@ -128,13 +133,14 @@ Per *aggiungere* i dati importati a una tabella *esistente* invece di creare una
 Per eseguire una query sui dati di Excel senza eseguirne l'importazione, usare la sintassi standard `SELECT ... FROM ...`.
 
 Per altre informazioni sulle query distribuite, vedere gli argomenti seguenti:
--   [Query distribuite](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) Le query distribuite sono ancora supportate in SQL Server 2016, ma la documentazione relativa a questa funzionalità non è stata aggiornata.
--   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
--   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
+
+- [Query distribuite](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) Le query distribuite sono ancora supportate in SQL Server 2016, ma la documentazione relativa a questa funzionalità non è stata aggiornata.
+- [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
+- [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
 ### <a name="linked-servers"></a>Server collegati
 
-È anche possibile configurare una connessione permanente al file di Excel come *server collegato*. L'esempio seguente importa i dati dal foglio di lavoro `Data` nel server collegato di Excel esistente `EXCELLINK` in una nuova tabella di database denominata `Data_ls`.
+È anche possibile configurare una connessione permanente da SQL Server al file di Excel come *server collegato*. L'esempio seguente importa i dati dal foglio di lavoro `Data` nel server collegato di Excel esistente `EXCELLINK` in una nuova tabella di database di SQL Server denominata `Data_ls`.
 
 ```sql
 USE ImportFromExcel;
@@ -168,14 +174,17 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 ```
 
 Per altre informazioni sui server collegati, vedere gli argomenti seguenti:
--   [Creare server collegati](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
--   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
+
+- [Creare server collegati](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
+- [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
 Per altri esempi e informazioni sia sui server collegati che sulle query distribuite, vedere gli argomenti seguenti:
--   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries) (Come usare Excel con server collegati e query distribuite di SQL Server)
--   [Come importare dati da Excel a SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
+
+- [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries) (Come usare Excel con server collegati e query distribuite di SQL Server)
+- [Come importare dati da Excel a SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
 ## <a name="prereq"></a> Prerequisito: salvare i dati di Excel come testo
+
 Per usare i restanti metodi descritti in questa pagina, ovvero l'istruzione BULK INSERT, lo strumento BCP o Azure Data Factory, è prima di tutto necessario esportare i dati di Excel in un file di testo.
 
 In Excel selezionare **File | Salva con nome** e quindi selezionare **Testo (delimitato da tabulazioni) (\*.txt)** o **CSV (delimitato da virgole) (\*.csv)** come tipo di file di destinazione.
@@ -197,7 +206,7 @@ Per altre informazioni sulla procedura guidata Importa File Flat, vedere [Proced
 
 `BULK INSERT` è un comando Transact-SQL che è possibile eseguire da SQL Server Management Studio. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` in una tabella di database esistente.
 
-Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare l'istruzione BULK INSERT per eseguire l'importazione. L'istruzione BULK INSERT non legge direttamente i file di Excel.
+Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare l'istruzione BULK INSERT per eseguire l'importazione. L'istruzione BULK INSERT non legge direttamente i file di Excel. Con il comando BULK INSERT, è possibile importare un file CSV archiviato localmente o in Archiviazione BLOB di Azure.
 
 ```sql
 USE ImportFromExcel;
@@ -210,66 +219,77 @@ BULK INSERT Data_bi FROM 'C:\Temp\data.csv'
 GO
 ```
 
-Per altre informazioni, vedere gli argomenti seguenti:
--   [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
--   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
+Per altre informazioni ed esempi per SQL Server e il database SQL di Azure, vedere gli argomenti seguenti:
+
+- [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
 ## <a name="bcp"></a> Strumento BCP
 
 BCP è un programma eseguibile dal prompt dei comandi. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` nella tabella di database `Data_bcp` esistente.
 
-Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare BCP per eseguire l'importazione. BCP non legge direttamente i file di Excel.
+Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare BCP per eseguire l'importazione. BCP non legge direttamente i file di Excel. Usarlo per eseguire l'importazione in SQL Server o nel database SQL da un file di testo (CSV) salvato nella risorsa di archiviazione locale.
+
+> [!IMPORTANT]
+> Per un file di testo (CSV) archiviato in Archiviazione BLOB di Azure, usare BULK INSERT o OPENROWSET. Per alcuni esempi, vedere [Esempi](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ```console
 bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 ```
 
 Per altre informazioni su BCP, vedere gli argomenti seguenti:
--   [Importare ed esportare dati per operazioni bulk usando l'utilità bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
--   [Utilità bcp](../../tools/bcp-utility.md)
--   [Preparare i dati per l'importazione o l'esportazione bulk](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+
+- [Importare ed esportare dati per operazioni bulk usando l'utilità bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [Utilità bcp](../../tools/bcp-utility.md)
+- [Preparare i dati per l'importazione o l'esportazione bulk](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
 ## <a name="adf-wiz"></a> Copia guidata (Azure Data Factory)
+
 È possibile importare i dati salvati come file di testo seguendo le varie pagine della Copia guidata di Azure Data Factory.
 
 Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare Azure Data Factory per eseguire l'importazione. Azure Data Factory non legge direttamente i file di Excel.
 
 Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti:
--   [Copia guidata di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
--   [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+
+- [Copia guidata di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Azure Data Factory
+
 Se si ha familiarità con Azure Data Factory e si preferisce non eseguire la Copia guidata, creare una pipeline con un'attività di copia dal file di testo a SQL Server o al database SQL di Azure.
 
 Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessario esportare i dati Excel come testo prima di usare Azure Data Factory per eseguire l'importazione. Azure Data Factory non legge direttamente i file di Excel.
 
 Per altre informazioni sull'uso di questi sink e origini di Data Factory, vedere gli argomenti seguenti:
--   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
--   [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
--   [Database SQL di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+
+- [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
+- [Database SQL di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti seguenti:
--   [Spostare dati con l'attività di copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
--   [Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+
+- [Spostare dati con l'attività di copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
+- [Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Errori comuni
 
-###  <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0" non è stato registrato
-Questo errore si verifica perché non è installato il provider OLE DB. Installarlo da [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Assicurarsi di installare la versione a 64 bit se Windows e SQL Server sono entrambi a 64 bit. 
+### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0" non è stato registrato
 
-Testo dell'errore completo: 
+Questo errore si verifica perché non è installato il provider OLE DB. Installarlo da [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Assicurarsi di installare la versione a 64 bit se Windows e SQL Server sono entrambi a 64 bit.
+
+Testo dell'errore completo:
 
 ```
 Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile creare un'istanza del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)".
+## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile creare un'istanza del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)"
 
 Indica che Microsoft OLE DB non è stato configurato correttamente. Eseguire il codice Transact-SQL seguente per risolvere il problema:
 
-```sql 
-EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'AllowInProcess', 1   
+```sql
+EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'AllowInProcess', 1
 EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'DynamicParameters', 1
 ```
 
@@ -280,9 +300,9 @@ Msg 7302, Level 16, State 1, Line 3
 Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-### <a name="the-32-bit-ole-db-provider-microsoftaceoledb120-cannot-be-loaded-in-process-on-a-64-bit-sql-server"></a>Impossibile caricare il provider OLE DB a 32 bit "Microsoft.ACE.OLEDB.12.0" in-process in SQL Server a 64 bit.
+### <a name="the-32-bit-ole-db-provider-microsoftaceoledb120-cannot-be-loaded-in-process-on-a-64-bit-sql-server"></a>Impossibile caricare il provider OLE DB a 32 bit "Microsoft.ACE.OLEDB.12.0" in-process in SQL Server a 64 bit
 
-Ciò si verifica quando si installa una versione a 32 bit del provider OLE DB con SQL Server a 64 bit.  Per risolvere questo problema, disinstallare la versione a 32 bit e installare la versione a 64 bit del provider OLE DB. 
+Ciò si verifica quando si installa una versione a 32 bit del provider OLE DB con SQL Server a 64 bit. Per risolvere questo problema, disinstallare la versione a 32 bit e installare la versione a 64 bit del provider OLE DB.
 
 Testo dell'errore completo:
 
@@ -291,10 +311,11 @@ Msg 7438, Level 16, State 1, Line 3
 The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" cannot be loaded in-process on a 64-bit SQL Server.
 ```
 
-### <a name="the-ole-db-provider-microsoftaceoledb120-for-linked-server-null-reported-an-error-the-provider-did-not-give-any-information-about-the-error"></a>Il provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)" ha segnalato un errore. Il provider non ha fornito informazioni sull'errore.
-### <a name="cannot-initialize-the-data-source-object-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile inizializzare l'oggetto origine dei dati del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)".
+### <a name="the-ole-db-provider-microsoftaceoledb120-for-linked-server-null-reported-an-error-the-provider-did-not-give-any-information-about-the-error"></a>Il provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)" ha segnalato un errore. Il provider non ha fornito informazioni sull'errore
 
-Entrambi questi errori indicano in genere un problema di autorizzazione tra il processo di SQL Server e il file. Verificare che l'account che esegue il servizio SQL Server abbia l'autorizzazione di accesso completo al file. È consigliabile evitare di cercare di importare i file dal desktop. 
+### <a name="cannot-initialize-the-data-source-object-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile inizializzare l'oggetto origine dei dati del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)"
+
+Entrambi questi errori indicano in genere un problema di autorizzazione tra il processo di SQL Server e il file. Verificare che l'account che esegue il servizio SQL Server abbia l'autorizzazione di accesso completo al file. È consigliabile evitare di cercare di importare i file dal desktop.
 
 Testo degli errori completo:
 
@@ -308,7 +329,6 @@ Msg 7303, Level 16, State 1, Line 3
 Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-
-
 ## <a name="see-also"></a>Vedere anche
+
 [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

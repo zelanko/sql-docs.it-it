@@ -4286,6 +4286,8 @@
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
             - name: Modificare la modalità di compatibilità del database con Assistente ottimizzazione query
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: Aggiornamenti più recenti per SQL Server
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
     - name: Configurazione
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5064,10 +5066,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: Definire una relazione tra record logici
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: Configurare la sincronizzazione Web
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: Configurazione di IIS per la sincronizzazione Web
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: Configurare IIS 7 per la sincronizzazione Web
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: Risolvere i conflitti di dati
@@ -8368,6 +8366,8 @@
               href: azure-data-studio/schema-compare-extension.md
             - name: Estensione di PowerShell
               href: azure-data-studio/powershell-extension.md
+            - name: Estensione di istanza gestita (anteprima)
+              href: azure-data-studio/azure-sql-managed-instance-extension.md
             - name: Estensione di SandDance (anteprima)
               href: azure-data-studio/sanddance-extension.md
         - name: Creazione di estensioni

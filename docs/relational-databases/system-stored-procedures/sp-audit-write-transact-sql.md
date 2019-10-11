@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046145"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251976"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un evento di controllo definiti dall'utente per il **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
+  Aggiunge un evento di controllo definito dall'utente a **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argomenti  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Un parametro definito dall'utente e registrato nella **user_defined_event_id** colonna del log di controllo. *@user_defined_event_id* è di tipo **smallint**.  
+ Un parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. *\@user_defined_event_id è di* tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded` viene **bit**.  
+ Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded` è di **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Testo definito dall'utente e registrato nella nuova colonna user_defined_event_id del log di controllo. `@user_defined_information` viene **nvarchar (4000)** .  
+ Testo definito dall'utente e registrato nella nuova colonna user_defined_event_id del log di controllo. `@user_defined_information` è di **tipo nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Gli errori sono causati da parametri di input errati o da problemi di scrittura nel log di controllo di destinazione.  
   
 ## <a name="remarks"></a>Note  
- Quando la **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo server o una specifica del controllo del database, l'evento attivato da **sp_audit_write** verranno inclusi nel log di controllo.  
+ Quando **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo del server o a una specifica del controllo del database, l'evento attivato da **sp_audit_write** verrà incluso nel log di controllo.  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **pubblica** ruolo predefinito del database.  
+ È richiesta l'appartenenza al ruolo di database **public** .  
   
 ## <a name="examples"></a>Esempi  
   

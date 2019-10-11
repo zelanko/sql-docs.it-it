@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9cd9bb481ec54f9d99c80aba54241827c2a118cf
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471075"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252034"
 ---
-# <a name="sprxpredict"></a>sp_rxPredict  
+# <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Genera un valore stimato per un input specificato costituito da un modello di apprendimento automatico archiviato in un formato binario in un database SQL Server.
 
-Fornisce l'assegnazione dei punteggi ai modelli di apprendimento automatico R e Python in tempo quasi reale. `sp_rxPredict`è un `rxPredict` stored procedure fornito come wrapper per la funzione R in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) e [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)e la funzione [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Viene scritto in ed C++ è ottimizzato in modo specifico per le operazioni di assegnazione dei punteggi.
+Fornisce l'assegnazione dei punteggi ai modelli di apprendimento automatico R e Python in tempo quasi reale. `sp_rxPredict` è un stored procedure fornito come wrapper per la funzione R `rxPredict` in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) e [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)e la funzione [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Viene scritto in ed C++ è ottimizzato in modo specifico per le operazioni di assegnazione dei punteggi.
 
 Anche se il modello deve essere creato con R o Python, una volta serializzato e archiviato in un formato binario in un'istanza del motore di database di destinazione, può essere utilizzato da tale istanza del motore di database anche quando l'integrazione con R o Python non è installata. Per altre informazioni, vedere Assegnazione di [punteggi in tempo reale con sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
@@ -60,7 +60,7 @@ Per abilitare l'utilizzo del stored procedure, SQLCLR deve essere abilitato nell
 > [!NOTE]
 > Questa opzione presenta implicazioni di sicurezza per enabing. Utilizzare un'implementazione alternativa, ad esempio la funzione di [stima Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) , se non è possibile abilitare SQLCLR nel server.
 
-L'utente deve `EXECUTE` disporre dell'autorizzazione per il database.
+L'utente deve disporre dell'autorizzazione `EXECUTE` per il database.
 
 ### <a name="supported-algorithms"></a>Algoritmi supportati
 
@@ -109,7 +109,7 @@ Per creare ed eseguire il training del modello, usare uno degli algoritmi suppor
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python Trasformazioni fornite da microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Trasformazioni fornite da microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
@@ -120,7 +120,7 @@ Per creare ed eseguire il training del modello, usare uno degli algoritmi suppor
 
 I tipi di modello seguenti non sono supportati:
 
-+ Modelli con gli `rxGlm` algoritmi `rxNaiveBayes` o in RevoScaleR
++ Modelli che usano gli algoritmi `rxGlm` o `rxNaiveBayes` in RevoScaleR
 + Modelli PMML in R
 + Modelli creati con altre librerie di terze parti 
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Oltre a essere una query SQL valida, i dati di input in *@inputData* devono includere le colonne compatibili con le colonne nel modello archiviato.
+Oltre a essere una query SQL valida, i dati di input in *\@inputData* devono includere le colonne compatibili con le colonne nel modello archiviato.
 
-`sp_rxPredict`supporta solo i tipi di colonna .NET seguenti: Double, float, short, ushort, Long, ULONG e String. Potrebbe essere necessario filtrare i tipi non supportati nei dati di input prima di usarli per l'assegnazione dei punteggi in tempo reale. 
+`sp_rxPredict` supporta solo i tipi di colonna .NET seguenti: Double, float, short, ushort, Long, ULONG e String. Potrebbe essere necessario filtrare i tipi non supportati nei dati di input prima di usarli per l'assegnazione dei punteggi in tempo reale. 
 
   Per informazioni sui tipi SQL corrispondenti, vedere [mapping del tipo SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002516"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252119"
 ---
-# <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
+# <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Specifica un server di pubblicazione reindirizzato per una coppia server di pubblicazione/database esistente. Se il server di pubblicazione appartiene a un gruppo di disponibilità AlwaysOn, il server di pubblicazione reindirizzato è il nome del listener gruppo di disponibilità associato al gruppo di disponibilità.  
+  Specifica un server di pubblicazione reindirizzato per una coppia server di pubblicazione/database esistente. Se il database del server di pubblicazione appartiene a un gruppo di disponibilità Always On, il server di pubblicazione reindirizzato è il nome del listener del gruppo di disponibilità associato al gruppo di disponibilità.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,25 +40,25 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @original_publisher = ] 'original_publisher'` Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato il database. *original_publisher* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @original_publisher = ] 'original_publisher'` il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato originariamente il database. *original_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Il nome del database da pubblicare. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` il nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` Il nome gruppo di disponibilità del listener associato al gruppo di disponibilità che sarà il nuovo server di pubblicazione. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito. Quando il listener del gruppo di disponibilità è configurato per una porta non predefinita, specificare il numero della porta insieme al nome del listener, ad esempio `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` il nome del listener del gruppo di disponibilità associato al gruppo di disponibilità che sarà il nuovo server di pubblicazione. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Quando il listener del gruppo di disponibilità è configurato per una porta non predefinita, specificare il numero della porta insieme al nome del listener, ad esempio `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- **sp_redirect_publisher** viene usato per consentire a un server di pubblicazione di replica essere reindirizzati alla replica primaria corrente di un gruppo di disponibilità AlwaysOn associando la coppia server di pubblicazione/database con un listener gruppo di disponibilità. Eseguire **sp_redirect_publisher** dopo aver configurato il listener del gruppo di disponibilità per il gruppo di disponibilità che contiene il database pubblicato.  
+ **sp_redirect_publisher** viene utilizzato per consentire il reindirizzamento di un server di pubblicazione della replica al database primario corrente di un gruppo di disponibilità always on associando la coppia server di pubblicazione/database al listener di un gruppo di disponibilità. Eseguire **sp_redirect_publisher** dopo che il listener del gruppo di disponibilità è stato configurato per il gruppo di disponibilità che contiene il database pubblicato.  
   
- Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da un gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il *@redirected_publisher* parametro da rimuovere il reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento del server di pubblicazione, vedere [gestione di un Database di pubblicazione AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da un gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il parametro *\@redirected_publisher* per rimuovere Reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento del server di pubblicazione quando, vedere [gestione di un database &#40;di pubblicazione&#41;AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Permissions  
- Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per database di distribuzione o un membro di un elenco accesso pubblicazione per una pubblicazione definita associati al database di pubblicazione.  
+ Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** per il database di distribuzione oppure un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809876"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682066"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (anteprima)
 
@@ -44,15 +44,17 @@ Nome della vista materializzata.
 
 ## <a name="remarks"></a>Remarks
 
-Mentre vengono modificate le tabelle sottostanti nella definizione di una vista materializzata, tutte le modifiche incrementali apportate nelle tabelle di base vengono mantenute per la vista materializzata.  La selezione da una vista materializzata include l'analisi della struttura columnstore cluster per la vista materializzata e l'applicazione di queste modifiche incrementali.   Se il numero di modifiche incrementali mantenute è elevato, ciò influirà negativamente sulle prestazioni di selezione.  Gli utenti possono ricostruire la vista materializzata per ricreare la struttura columnstore cluster e consolidare tutte le modifiche incrementali nelle tabelle di base.
-  
+Per mantenere aggiornate le viste materializzate in base alle modifiche ai dati nelle tabelle di base, il motore del data warehouse aggiunge righe di rilevamento a ogni vista interessata per riflettere le modifiche. La selezione da una vista materializzata include l'analisi dell'indice columnstore cluster della vista e l'applicazione di modifiche incrementali.  Le righe di rilevamento (TOTAL_ROWS - BASE_VIEW_ROWS) non vengono eliminate finché gli utenti non ricompilano la vista materializzata.  
+
+Il rapporto di overhead viene calcolato come TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Se è alto, le prestazioni di SELECT risulteranno ridotte.  Gli utenti possono ricompilare la vista materializzata per ridurre il relativo rapporto di overhead.
+
 ## <a name="permissions"></a>Autorizzazioni  
   
 È richiesta l'autorizzazione VIEW DATABASE STATE.  
 
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi  
 
-Questo esempio restituisce lo spazio delta usato per una vista materializzata.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Questo esempio restituisce il rapporto di overhead di una vista materializzata.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ Output:
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0,0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. Questo esempio mostra come l'overhead della vista materializzata aumenta per effetto delle modifiche ai dati nelle tabelle di base
 
-</br>
+Creare una tabella
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+Inserire cinque righe in t1
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+Creare viste materializzate MV1
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+La selezione dalla vista materializzata restituisce due righe.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Controllare l'overhead della vista materializzata prima di eventuali modifiche ai dati nella tabella di base.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Output:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
+
+Aggiornare la tabella di base.  Questa query aggiorna 100 volte la stessa colonna nella stessa riga impostando lo stesso valore.  Il contenuto della vista materializzata non cambia.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+La selezione dalla vista materializzata restituisce lo stesso risultato dell'esempio precedente.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Di seguito è riportato l'output di DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  Alla vista materializzata sono state aggiunte 100 righe (total_row - base_view_rows) e il relativo valore di overhead_ratio è aumentato. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51.00000000000000000 |
+
+Dopo la ricompilazione della vista materializzata, vengono eliminate tutte le righe di rilevamento per le modifiche incrementali ai dati e il rapporto di overhead della vista viene ridotto.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Output
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
 
 ## <a name="see-also"></a>Vedere anche
 

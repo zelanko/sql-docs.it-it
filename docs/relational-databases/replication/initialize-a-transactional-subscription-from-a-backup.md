@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251098"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710296"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inizializzare una sottoscrizione transazionale da un backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251098"
   
     -   Se il valore è **1**, la pubblicazione supporta questa funzionalità.  
   
-    -   Se il valore è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **allow_initialize_from_backup** per **@property** e il valore **true** per **@value** .  
+    -   Se il valore è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **allow_initialize_from_backup** per `@property` e il valore **true** per `@value`.  
   
 2.  Per una nuova pubblicazione, eseguire [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **true** per **allow_initialize_from_backup**. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251098"
   
 5.  Nel database di pubblicazione del server di pubblicazione eseguire la stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specificare i parametri seguenti:  
   
-    -   **@sync_type** : valore **initialize with backup**.  
+    -   `@sync_type`: valore **initialize with backup**.  
   
-    -   **@backupdevicetype** : tipo di dispositivo di backup, ovvero **logical** (impostazione predefinita), **disk**o **tape**.  
+    -   `@backupdevicetype`: tipo di dispositivo di backup, ovvero **logical** (impostazione predefinita), **disk** o **tape**.  
   
-    -   **@backupdevicename** : dispositivo di backup logica o fisica da utilizzare per il ripristino.  
+    -   `@backupdevicename`: dispositivo di backup logico o fisico da usare per il ripristino.  
   
          Per un dispositivo logico, specificare il nome del dispositivo di backup indicato durante la creazione dello stesso tramite **sp_addumpdevice** .  
   
          Per un dispositivo fisico, specificare un nome e un percorso completo di file, ad esempio `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` o `TAPE = '\\.\TAPE0'`.  
   
-    -   (Facoltativo) **@password** : password specificata durante la creazione del set di backup.  
+    -   (Facoltativo) `@password`: password specificata durante la creazione del set di backup.  
   
-    -   (Facoltativo) **@mediapassword** : password specificata durante la formattazione del set di supporti.  
+    -   (Facoltativo) `@mediapassword`: password specificata durante la formattazione del set di supporti.  
   
-    -   (Facoltativo) **@fileidhint** : identificatore per il set di backup da ripristinare. Ad esempio, **1** indica il primo set di backup sul supporto, mentre **2** indica il secondo set di backup.  
+    -   (Facoltativo) `@fileidhint`: identificatore per il set di backup da ripristinare. Ad esempio, **1** indica il primo set di backup sul supporto, mentre **2** indica il secondo set di backup.  
   
-    -   (Facoltativo per i dispositivi a nastro) **@unload** : specificare il valore **1** (impostazione predefinita) se il nastro deve essere scaricato dall'unità al termine del ripristino e **0** in caso contrario.  
+    -   (Facoltativo per i dispositivi a nastro) `@unload`: specificare il valore **1** (impostazione predefinita) se il nastro deve essere scaricato dall'unità al termine del ripristino e **0** in caso contrario.  
   
 6.  (Facoltativo) Per una sottoscrizione pull, eseguire [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) e [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) nel database di sottoscrizione del Sottoscrittore. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   

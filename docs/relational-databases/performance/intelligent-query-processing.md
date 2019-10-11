@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65395c9ab5b97d27f38497b64bbab9c7b6a072a3
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553286"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713222"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -49,7 +49,7 @@ La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazion
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md), usando un singolo piano memorizzato nella cache. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 
-Per altre informazioni, vedere [Informazioni sui join adattivi](../../relational-databases/performance/joins.md#adaptive).
+Per altre informazioni, incluso come disabilitare i join adattivi senza modificare il livello di compatibilità, vedere [Informazioni sui join adattivi](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
 Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache. Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
@@ -95,7 +95,7 @@ La memoria concessa reale è conforme al limite di memoria per le query determin
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
@@ -123,7 +123,7 @@ L'hint per la query USE HINT ha la precedenza rispetto una configurazione con am
 
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità riga
 
-**Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] come funzionalità di anteprima pubblica
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
 
 > [!NOTE]
 > Il feedback delle concessioni di memoria in modalità riga è una funzionalità di anteprima pubblica.  
@@ -173,7 +173,6 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="interleaved-execution-for-mstvfs"></a>Esecuzione interleaved per funzioni con valori di tabella con più istruzioni
-
 Con l'esecuzione interleaved, il conteggio effettivo delle righe viene usato per adottare decisioni più mirate relativamente a un piano di query downstream. Per altre informazioni sulle funzioni con valori di tabella con più istruzioni, vedere [Funzione con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella con istruzioni multiple (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.   
@@ -238,14 +237,13 @@ Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano usando l'esecuzio
 È possibile forzare i piani che usano l'esecuzione interleaved. Il piano è la versione che presenta stime della cardinalità corrette sulla base dell'esecuzione iniziale.    
 
 ### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Disabilitazione dell'esecuzione interleaved senza modificare il livello di compatibilità
-
 È possibile disabilitare l'esecuzione interleaved nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  Per disabilitare l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
@@ -256,7 +254,7 @@ Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di que
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
@@ -280,11 +278,9 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
-
 ## <a name="table-variable-deferred-compilation"></a>Compilazione posticipata delle variabili di tabella
 
-> [!NOTE]
-> La compilazione posticipata delle variabili di tabella è una funzionalità di anteprima pubblica.  
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
 
 La compilazione posticipata delle variabili di tabella migliora la qualità del piano e le prestazioni generali per le query che fanno riferimento a variabili di tabella. Durante l'ottimizzazione e la compilazione iniziale, questa funzionalità propaga le stime della cardinalità basate sui conteggi effettivi delle righe di variabili di tabella. Queste informazioni accurate sui conteggi di righe ottimizzano le operazioni del piano downstream.
 
@@ -296,8 +292,7 @@ Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabe
 
 ## <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
-> [!NOTE]
-> L'inlining di funzioni definite dall'utente scalari è una funzionalità di anteprima pubblica.  
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
 
 L'inlining di funzioni definite dall'utente scalari trasforma automaticamente le [funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) in espressioni relazionali e le incorpora nella query SQL chiamante. Questa trasformazione migliora le prestazioni dei carichi di lavoro che sfruttano le funzioni definite dall'utente scalari. L'inlining di funzioni definite dall'utente scalari facilita l'ottimizzazione basata sui costi delle operazioni all'interno delle funzioni definite dall'utente. I risultati sono efficienti, orientati ai set e paralleli, al contrario dei piani di esecuzione seriale iterativi e poco efficienti. Questa funzionalità è abilitata per impostazione predefinita nel livello di compatibilità del database 150.
 
@@ -305,8 +300,7 @@ Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalar
 
 ## <a name="approximate-query-processing"></a>Elaborazione delle query approssimativa
 
-> [!NOTE]
-> **APPROX_COUNT_DISTINCT** è una funzionalità in anteprima pubblica.  
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
 
 L'elaborazione delle query approssimativa è una nuova famiglia di funzionalità, che aggrega set di dati di grandi dimensioni in cui la velocità di risposta è più importante della precisione assoluta. Un esempio è il calcolo di **COUNT(DISTINCT())** su 10 miliardi di righe, per la visualizzazione in un dashboard. In questo caso, la precisione assoluta non è importante, ma la velocità di risposta è fondamentale. La nuova funzione di aggregazione **APPROX_COUNT_DISTINCT** restituisce il numero approssimativo di valori univoci non Null in un gruppo.
 
@@ -314,13 +308,11 @@ Per altre informazioni, vedere [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sq
 
 ## <a name="batch-mode-on-rowstore"></a>Modalità batch per rowstore 
 
-> [!NOTE]
-> La modalità batch per rowstore è una funzionalità in anteprima pubblica.  
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica) 
 
 La modalità batch per rowstore abilita l'esecuzione in modalità batch per i carichi di lavoro analitici senza richiedere indici columnstore.  Questa funzionalità supporta l'esecuzione in modalità batch e i filtri bitmap per gli heap su disco e gli indici con albero B. La modalità batch per rowstore abilita il supporto per tutti gli operatori esistenti abilitati alla modalità batch.
 
 ### <a name="background"></a>Informazioni preliminari
-
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ha introdotto una nuova funzionalità per accelerare i carichi di lavoro analitici: gli indici columnstore. In ogni versione successiva sono stati estesi i casi d'uso e migliorate le prestazioni degli indici columnstore. Fino ad ora, tutte queste capacità sono state esposte e documentate come una singola funzionalità. Si creano gli indici columnstore nelle tabelle e il carico di lavoro di analisi diventa più veloce. Esistono tuttavia due set di tecnologie correlate ma distinte:
 - Con gli indici **columnstore**, le query analitiche accedono solo ai dati nelle colonne necessarie. La compressione di pagina nel formato columnstore è anche più efficace rispetto alla compressione di pagina negli indici **rowstore** tradizionali. 
 - Con l'elaborazione in **modalità batch**, gli operatori di query elaborano i dati in modo più efficiente, perché agiscono su un batch di righe invece che su una riga per volta. All'elaborazione in modalità batch sono associati numerosi altri miglioramenti per la scalabilità. Per altre informazioni sulla modalità batch, vedere [Modalità di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
@@ -342,7 +334,6 @@ Gli indici columnstore non sono un'opzione valida per alcune applicazioni. Un'ap
 Per alcuni carichi di lavoro ibridi analitico-transazionali, l'overhead per gli aspetti transazionali di un carico di lavoro è maggiore dei vantaggi offerti dagli indici columnstore. In tali scenari è possibile migliorare l'uso della CPU con l'elaborazione in modalità batch da sola. Ecco perché la modalità batch nella funzionalità rowstore prende in considerazione la modalità batch per tutte le query, indipendentemente da quali indici sono coinvolti.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>Carichi di lavoro che possono trarre vantaggio dalla modalità batch per rowstore
-
 I carichi di lavoro seguenti possono trarre vantaggio dalla modalità batch per rowstore:
 * Una parte significativa del carico di lavoro è costituita da query analitiche. In genere, queste query hanno operatori come join o aggregazioni che elaborano centinaia di migliaia di righe o più.
 * Il carico di lavoro è basato sulla CPU. Se il collo di bottiglia sono le operazioni di I/O, è comunque consigliabile prendere in considerazione un indice columnstore, se possibile.
@@ -352,7 +343,6 @@ I carichi di lavoro seguenti possono trarre vantaggio dalla modalità batch per 
 > La modalità batch per rowstore consente solo di ridurre l'utilizzo della CPU. Se il collo di bottiglia è relativo alle operazioni di I/O e i dati non sono già memorizzati nella cache (cache "a freddo"), la modalità batch per rowstore non ridurrà il tempo trascorso. Analogamente, se la memoria del computer non è sufficiente per memorizzare nella cache tutti i dati, un miglioramento delle prestazioni è improbabile.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>Che cosa cambia con la modalità batch per rowstore
-
 A parte passare al livello di compatibilità 150, non è necessario modificare nulla per abilitare la modalità batch per rowstore per i carichi di lavoro candidati.
 
 Anche se una query non coinvolge alcuna tabella con un indice columnstore, Query Processor si affida ora all'euristica per decidere se prendere in considerazione la modalità batch. L'euristica è costituita da questi controlli:
@@ -362,17 +352,19 @@ Anche se una query non coinvolge alcuna tabella con un indice columnstore, Query
 Se la modalità batch per rowstore viene usata, la modalità di esecuzione effettiva visualizzata nel piano di query è la **modalità batch**. L'operatore di analisi usa la modalità batch per gli heap su disco e gli indici albero B. Questa analisi in modalità batch può valutare i filtri bitmap in modalità batch. Nel piano è possibile vedere anche altri operatori della modalità batch. Alcuni esempi sono gli hash join, le aggregazioni basate su hash, gli ordinamenti, le aggregazioni finestra, i filtri, la concatenazione e gli operatori scalari di calcolo.
 
 ### <a name="remarks"></a>Remarks
+I piani di query non usano sempre la modalità batch. Query Optimizer potrebbe decidere che la modalità batch non è utile per la query. 
 
-* I piani di query non usano sempre la modalità batch. Query Optimizer potrebbe decidere che la modalità batch non è utile per la query. 
-* Lo spazio di ricerca di Query Optimizer cambia. Il piano in modalità riga eventualmente ottenuto potrebbe quindi non essere uguale a quello ottenuto a un livello di compatibilità inferiore e il piano in modalità batch eventualmente ottenuto potrebbe non essere uguale a quello ottenuto con un indice columnstore. 
-* I piani potrebbero anche cambiare per le query che combinano gli indici columnstore e rowstore a causa della nuova analisi rowstore in modalità batch.
-* Esistono attualmente alcune limitazioni per la nuova modalità batch per analisi di rowstore: 
-    * Non verrà applicata per le tabelle OLTP in memoria o per qualsiasi indice diverso da heap su disco e alberi B. 
-    * Non verrà neanche attivata in caso di recupero o filtro di una colonna LOB (Large Object). Questa limitazione include set di colonne di tipo sparse e colonne XML.
-* Esistono query per le quali la modalità batch non viene usata neppure con gli indici columnstore. Un esempio sono le query che richiedono cursori. Queste stesse esclusioni vengono estese anche alla modalità batch per rowstore.
+Lo spazio di ricerca di Query Optimizer cambia. Il piano in modalità riga eventualmente ottenuto potrebbe quindi non essere uguale a quello ottenuto a un livello di compatibilità inferiore e il piano in modalità batch eventualmente ottenuto potrebbe non essere uguale a quello ottenuto con un indice columnstore. 
+
+I piani potrebbero anche cambiare per le query che combinano gli indici columnstore e rowstore a causa della nuova analisi rowstore in modalità batch.
+
+Esistono attualmente alcune limitazioni per la nuova modalità batch per analisi di rowstore: 
+- Non verrà applicata per le tabelle OLTP in memoria o per qualsiasi indice diverso da heap su disco e alberi B. 
+- Non verrà neanche attivata in caso di recupero o filtro di una colonna LOB (Large Object). Questa limitazione include set di colonne di tipo sparse e colonne XML.
+
+Esistono query per le quali la modalità batch non viene usata neppure con gli indici columnstore. Un esempio sono le query che richiedono cursori. Queste stesse esclusioni vengono estese anche alla modalità batch per rowstore.
 
 ### <a name="configure-batch-mode-on-rowstore"></a>Configurare la modalità batch per rowstore
-
 La configurazione con ambito database **BATCH_MODE_ON_ROWSTORE** è attiva per impostazione predefinita. Disabilita la modalità batch per rowstore senza richiedere modifiche nel livello di compatibilità del database:
 
 ```sql

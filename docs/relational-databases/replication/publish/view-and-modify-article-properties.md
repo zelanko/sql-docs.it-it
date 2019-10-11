@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 61a55d8b72669fb83425e74b9888bd254b076378
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174309"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710807"
 ---
 # <a name="view-and-modify-article-properties"></a>Visualizzazione e modifica delle proprietà degli articoli
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "71174309"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di un articolo appartenente a una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), specificando il nome della pubblicazione per il parametro **\@publication** e il nome dell'articolo per il parametro **\@article**. Se non si specifica **\@article**, verranno restituite informazioni per tutti gli articoli nella pubblicazione.  
+1.  Eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), specificando il nome della pubblicazione per il parametro `@publication` e il nome dell'articolo per il parametro `@article`. Se `@article` viene omesso, verranno restituite informazioni su tutti gli articoli della pubblicazione.  
   
 2.  Eseguire [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) per gli articoli di tabella per elencare tutte le colonne disponibili nella tabella di base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Per modificare le proprietà di un articolo appartenente a una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), specificando la proprietà dell'articolo da modificare nel parametro **\@property** e il nuovo valore di questa proprietà nel parametro **\@value**.  
+1.  Eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), specificando la proprietà dell'articolo da modificare nel parametro `@property` e il nuovo valore di questa proprietà nel parametro `@value`.  
   
     > [!NOTE]  
-    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **\@force_invalidate_snapshot** e se la modifica richiede la reinizializzazione dei sottoscrittori, è necessario specificare anche il valore **1** per **\@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore `1` per `@force_invalidate_snapshot` e, se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore `1` per `@force_reinit_subscription`. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Per visualizzare le proprietà di un articolo appartenente a una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), specificando il nome della pubblicazione per il parametro **\@publication** e il nome dell'articolo per il parametro **\@article**. Se questi parametri vengono omessi, verranno restituite informazioni su tutti gli articoli della pubblicazione o del server di pubblicazione.  
+1.  Eseguire [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), specificando il nome della pubblicazione per il parametro `@publication` e il nome dell'articolo per il parametro `@article`. Se questi parametri vengono omessi, verranno restituite informazioni su tutti gli articoli della pubblicazione o del server di pubblicazione.  
   
 2.  Eseguire [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) per gli articoli di tabella per elencare tutte le colonne disponibili nella tabella di base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Per modificare le proprietà di un articolo appartenente a una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando la proprietà dell'articolo da modificare nel parametro **\@property** e il nuovo valore di questa proprietà nel parametro **\@value**.  
+1.  Eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando la proprietà dell'articolo da modificare nel parametro `@property` e il nuovo valore di questa proprietà nel parametro `@value`.  
   
     > [!NOTE]  
-    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **\@force_invalidate_snapshot** e se la modifica richiede la reinizializzazione dei sottoscrittori, è necessario specificare anche il valore **1** per **\@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore `1` per `@force_invalidate_snapshot` e, se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore `1` per `@force_reinit_subscription`. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio di replica transazionale vengono restituite le proprietà dell'articolo pubblicato.  

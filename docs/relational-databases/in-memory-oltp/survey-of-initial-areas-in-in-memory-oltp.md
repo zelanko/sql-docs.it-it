@@ -1,7 +1,7 @@
 ---
-title: 'Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL | Microsoft Docs'
+title: 'Sondaggio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661475"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712941"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -211,7 +212,7 @@ In Microsoft SQL Server prima di creare una tabella ottimizzata per la memoria �
   
 Nel database SQL di Azure non è necessario e non è possibile creare un FILEGROUP.  
 
-Lo script T-SQL di esempio seguente abilita un database per OLTP in memoria e configura tutte le impostazioni consigliate. Funziona con SQL Server e il database SQL di Azure: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
+Lo script T-SQL di esempio seguente abilita un database per OLTP in memoria e configura tutte le impostazioni consigliate. Funziona con SQL Server e il database SQL di Azure: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql).
 
 Si noti che non tutte le funzionalità di SQL Server sono supportate per i database con un filegroup MEMORY_OPTIMIZED_DATA. Per informazioni dettagliate sulle limitazioni, vedere: [Funzionalità di SQL Server non supportate per OLTP in memoria](unsupported-sql-server-features-for-in-memory-oltp.md)
   

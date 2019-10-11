@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 17e12a45f8f5aa9e94936a85f62d21c88ccb8c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134827"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823556"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "68134827"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68134827"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >**: consente di passare alla pagina **Riepilogo**.  
+ **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68134827"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
   
- **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
+ **Avanti >** : consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
   
@@ -134,102 +134,96 @@ ms.locfileid: "68134827"
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> Eliminazione di un'applicazione livello dati con PowerShell  
- **Eliminazione di un'applicazione livello dati mediante uno script di PowerShell**  
+##  <a name="DeleteDACPowerShell"></a> Utilizzo di PowerShell  
+
+1. Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da eliminare.  
   
-1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da eliminare.  
+1. Aprire un oggetto **ServerConnection** e connetterlo alla stessa istanza.  
   
-2.  Aprire un oggetto **ServerConnection** e connetterlo alla stessa istanza.  
+1. Utilizzare `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere gli eventi dell'aggiornamento dell'applicazione livello dati.  
   
-3.  Usare **add_DacActionStarted** e **add_DacActionFinished** per sottoscrivere gli eventi di aggiornamento dell'applicazione livello dati.  
+1. Specificare l'applicazione livello dati da eliminare.  
   
-4.  Specificare l'applicazione livello dati da eliminare.  
+1. Usare uno dei tre esempi, in base all'opzione di eliminazione appropriata:  
   
-5.  Utilizzare uno dei tre set di codice, in base all'opzione di eliminazione appropriata:  
+   - Per eliminare la registrazione dell'applicazione livello dati e lasciare intatto il database, usare il metodo `Unmanage`.  
+   - Per eliminare la registrazione dell'applicazione livello dati e scollegare il database, utilizzare il metodo `Uninstall` e specificare `DetachDatabase`.  
+   - Per eliminare la registrazione dell'applicazione livello dati ed eliminare il database, utilizzare il metodo `Uninstall` e specificare `DropDatabase`.
   
-    -   Per eliminare la registrazione dell'applicazione livello dati e lasciare intatto il database, usare il metodo **Unmanage()** .  
+### <a name="delete-the-dac-and-leave-the-database"></a>Eliminare l'applicazione livello dati e lasciare il database
+
+Nell'esempio seguente viene eliminata un'applicazione livello dati denominata `<myApplication>` usando il metodo `Unmanage` per eliminare l'applicazione livello dati lasciando intatto il database.  
   
-    -   Per eliminare la registrazione dell'applicazione livello dati e scollegare il database, usare il metodo **Uninstall()** e specificare **DetachDatabase**.  
-  
-    -   Per eliminare la registrazione dell'applicazione livello dati ed eliminare il database, usare il metodo **Uninstall()** e specificare **DropDatabase**.  
-  
-### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati conservando il database (PowerShell)  
- L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Unmanage()** per eliminare l'applicazione livello dati ma lasciare il database intatto.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Only delete the DAC definition from msdb, the associated database remains active.  
-$dacstore.Unmanage($dacName)  
-```  
+$dacStore.Unmanage($dacName)  
+```
   
- [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-detach-the-database"></a>Eliminare l'applicazione livello dati e scollegare il database
+
+Nell'esempio seguente viene eliminata un'applicazione livello dati denominata `<myApplication>` usando il metodo `Uninstall` per eliminare l'applicazione livello dati e scollegare il database.  
   
-### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati con scollegamento del database (PowerShell)  
- L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Uninstall()** per eliminare l'applicazione livello dati e scollegare il database.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and detach the associated database.  
-$dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
-```  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
+```
   
- [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-drop-the-database"></a>Eliminare l'applicazione livello dati ed eliminare il database
+
+Nell'esempio seguente viene eliminata un'applicazione livello dati denominata `<myApplication>` usando il metodo `Uninstall` per eliminare l'applicazione livello dati ed eliminare il database.  
   
-### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati con eliminazione del database (PowerShell)  
- L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Uninstall()** per eliminare l'applicazione livello dati ed eliminare il database.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and drop the associated database.  
-## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
-```  
-  
- [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   

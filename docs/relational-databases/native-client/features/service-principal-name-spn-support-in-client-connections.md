@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893308"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173681"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68893308"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Uso  
+## <a name="usage"></a>Utilizzo  
  Nella tabella seguente vengono descritti gli scenari più comuni in cui le applicazioni client possono abilitare l'autenticazione protetta.  
   
 |Scenario|Descrizione|  
@@ -72,7 +72,7 @@ ms.locfileid: "68893308"
  Poiché il nuovo comportamento di connessione viene implementato dal client, non è specifico di una determinata versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Server collegati e delega  
- Quando si creano server collegati, è possibile usare il parametro **@provstr** di [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) per specificare i nomi SPN del server e del server partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client È più semplice e affidabile stabilire connessioni che usano l'autenticazione Kerberos.  
+ Quando vengono creati server collegati, è possibile usare il parametro **\@provstr** di [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) per specificare i nomi SPN del server e del partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client È più semplice e affidabile stabilire connessioni che usano l'autenticazione Kerberos.  
   
  La delega con server collegati richiede l'autenticazione Kerberos.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68893308"
   
 -   Sicurezza: Il nome SPN specificato divulga le informazioni protette?  
   
--   Affidabilità Per consentire l'utilizzo di nomi SPN predefiniti, l'account del servizio in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cui viene eseguita l'istanza di deve disporre di privilegi sufficienti per aggiornare il Active Directory nel KDC.  
+-   Affidabilità Per consentire l'utilizzo di nomi SPN predefiniti, l'account del servizio in cui viene eseguita l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve disporre di privilegi sufficienti per aggiornare la Active Directory nel KDC.  
   
--   Praticità e trasparenza della posizione: In che modo verranno interessati i nomi SPN di un'applicazione se il database viene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spostato in un'istanza diversa? Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
+-   Praticità e trasparenza della posizione: Come saranno interessati i nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
 ## <a name="specifying-the-spn"></a>Definizione del nome SPN  
  È possibile specificare un nome SPN nelle finestre di dialogo e nel codice. In questa sezione viene descritto come specificare un nome SPN.  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140134"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711060"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140134"
   
      È inoltre possibile sostituire questa funzione con un valore diverso dal nome del Sottoscrittore o del server di distribuzione. In genere il valore di questa funzione viene sostituito con valori più significativi, ad esempio il nome o l'ID del venditore. Per ulteriori informazioni, vedere la sezione relativa alla sostituzione del valore di HOST_NAME() in questo argomento.  
   
- Il valore restituito dalla funzione di sistema viene confrontato con una colonna specificata nella tabella in cui viene applicato il filtro e i dati appropriati vengono scaricati nel Sottoscrittore. Il confronto viene effettuato quando la sottoscrizione è inizializzata, in modo che solo i dati appropriati siano contenuti nello snapshot iniziale, e ogni volta che la sottoscrizione viene sincronizzata. Per impostazione predefinita, se una modifica nel server di pubblicazione ha come conseguenza la rimozione di una riga da una partizione, la riga viene eliminata nel Sottoscrittore. Questo comportamento viene controllato tramite il parametro **@allow_partition_realignment** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ Il valore restituito dalla funzione di sistema viene confrontato con una colonna specificata nella tabella in cui viene applicato il filtro e i dati appropriati vengono scaricati nel Sottoscrittore. Il confronto viene effettuato quando la sottoscrizione è inizializzata, in modo che solo i dati appropriati siano contenuti nello snapshot iniziale, e ogni volta che la sottoscrizione viene sincronizzata. Per impostazione predefinita, se una modifica nel server di pubblicazione ha come conseguenza la rimozione di una riga da una partizione, la riga viene eliminata nel Sottoscrittore. Questo comportamento viene controllato tramite il parametro `@allow_partition_realignment` di [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 > [!NOTE]  
 >  Quando i confronti vengono effettuati per i filtri con parametri, vengono sempre utilizzate le regole di confronto del database. Se, ad esempio, nelle regole di confronto del database non viene fatta distinzione tra maiuscole e minuscole, mentre in quelle della colonna o della tabella sì, durante il confronto non viene fatta tale distinzione.  
   
-### <a name="filtering-with-susersname"></a>Applicazione del filtro con SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Applicazione del filtro con SUSER_SNAME()  
  Si consideri la tabella **Employee Table** nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . In questa tabella è inclusa la colonna **LoginID**, contenente l'account di accesso per ogni dipendente nel formato*dominio\account accesso*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  Il valore per uno dei dipendenti è, ad esempio, "adventure-works\john5". Quando l'agente di merge si connette al server di pubblicazione, utilizza l'account di accesso specificato durante la creazione della sottoscrizione, in questo caso "adventure-works\john5". L'agente di merge confronta quindi il valore restituito da SUSER_SNAME() con i valori nella tabella e scarica solo la riga che contiene un valore di "adventure-works\john5" nella colonna **LoginID** .  
   
-### <a name="filtering-with-hostname"></a>Applicazione del filtro con HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Applicazione del filtro con HOST_NAME()  
  Si consideri la tabella **HumanResources.Employee** . Si supponga che in questa tabella sia inclusa una colonna **ComputerName** con il nome del computer di ogni dipendente nel formato*nome_tipo di computer*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  Poiché è possibile sostituire il valore della funzione HOST_NAME(), per controllare l'accesso a partizioni di dati non è possibile utilizzare filtri che includano HOST_NAME(). Per controllare l'accesso a partizioni di dati, utilizzare SUSER_SNAME(), SUSER_SNAME() in combinazione con HOST_NAME() oppure filtri di riga statici.  
   
-#### <a name="overriding-the-hostname-value"></a>Sostituzione del valore di HOST_NAME()  
+#### <a name="overriding-the-host_name-value"></a>Sostituzione del valore di HOST_NAME()  
  Come già evidenziato, per impostazione predefinita HOST_NAME() restituisce il nome del computer che sta effettuando la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando vengono utilizzati filtri con parametri, è normale sostituire questo valore fornendo un valore durante la creazione di una sottoscrizione. La funzione HOST_NAME() restituisce quindi il valore specificato anziché il nome del computer.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Alla dipendente Pamela Ansman-Wolfe, ad esempio, è stato associato l'ID 280. Specificare il valore dell'ID del dipendente (280 nell'esempio) come valore di HOST_NAME() durante la creazione di una sottoscrizione per questo dipendente. Quando l'agente di merge si connette al server di pubblicazione, confronta il valore restituito da HOST_NAME() con i valori nella tabella e scarica solo la riga che contiene un valore di 280 nella colonna **EmployeeID** .  
   
 > [!IMPORTANT]
->  La funzione HOST_NAME() restituisce un valore **nchar** . Se la colonna nella clausola di filtro è di un tipo di dati numerico, come nell'esempio sopra riportato, è pertanto necessario utilizzare CONVERT. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere utilizzata per il parametro **@subset_filterclause** di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), ma in genere non può essere adottata nella Creazione guidata nuova pubblicazione. La procedura guidata esegue la clausola di filtro per la relativa convalida, ma tale operazione ha esito negativo poiché il nome del computer non può essere convertito in un tipo di dati **int**, i filtri con parametri vengono definiti filtri dinamici. Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
+>  La funzione HOST_NAME() restituisce un valore **nchar** . Se la colonna nella clausola di filtro è di un tipo di dati numerico, come nell'esempio sopra riportato, è pertanto necessario utilizzare CONVERT. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere usata per il parametro `@subset_filterclause` di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), ma in genere non può essere adottata nella Creazione guidata nuova pubblicazione. La procedura guidata esegue la clausola di filtro per la relativa convalida, ma tale operazione ha esito negativo poiché il nome del computer non può essere convertito in un tipo di dati **int**. Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
   
  **Per sostituire il valore di HOST_NAME()**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specificare un valore nella pagina **Valori HOST\_NAME\(\)** della Creazione guidata nuova sottoscrizione. Per altre informazioni sulla creazione di sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: specificare un valore per il parametro **@hostname** di [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (per le sottoscrizioni push) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (per le sottoscrizioni pull).  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: specificare un valore per il parametro `@hostname` di [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (per le sottoscrizioni push) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (per le sottoscrizioni pull).  
   
 -   Agente di merge: specificare un valore per il parametro **-Hostname** nella riga di comando o tramite un profilo agente. Per ulteriori informazioni sull'agente di merge, vedere [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Per ulteriori informazioni sui profili agenti, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

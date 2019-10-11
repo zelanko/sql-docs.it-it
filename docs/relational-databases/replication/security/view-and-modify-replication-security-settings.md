@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768405"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710745"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -252,10 +252,10 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>Per modificare tutte le istanze di una password archiviate in un server di replica  
   
-1.  Nel database master in un server della topologia di replica eseguire [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Specificare l'account di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o il nome di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per cui modificare la password per **@login** e la nuova password per l'account o il nome di accesso per **@password** . In questo modo viene modificata ogni istanza della password utilizzata da tutti gli agenti nel server quando si connettono ad altri server della topologia.  
+1.  Nel database master in un server della topologia di replica eseguire [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Specificare l'account di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o il nome di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per cui modificare la password per `@login` e la nuova password per l'account o il nome di accesso per `@password`. In questo modo viene modificata ogni istanza della password utilizzata da tutti gli agenti nel server quando si connettono ad altri server della topologia.  
   
     > [!NOTE]  
-    >  Per modificare l'account di accesso e la password solo per una connessione a un determinato server della topologia, ad esempio il server di distribuzione o il Sottoscrittore, specificare il nome di tale server per **@server** .  
+    >  Per modificare l'account di accesso e la password solo per una connessione a un determinato server della topologia, ad esempio il server di distribuzione o il Sottoscrittore, specificare il nome di tale server per `@server`.  
   
 2.  Ripetere il passaggio 1 in ogni server della topologia di replica in cui è necessario aggiornare la password.  
   
@@ -264,30 +264,30 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>Per modificare le impostazioni di sicurezza per l'agente snapshot  
   
-1.  Nel server di pubblicazione eseguire [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specificando **@publication** . Verranno restituite le impostazioni di sicurezza correnti per l'agente snapshot.  
+1.  Nel server di pubblicazione eseguire [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specificando `@publication`. Verranno restituite le impostazioni di sicurezza correnti per l'agente snapshot.  
   
-2.  Nel server di pubblicazione eseguire [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), specificando **@publication** e una o più delle seguenti impostazioni di sicurezza da modificare:  
+2.  Nel server di pubblicazione eseguire [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), specificando `@publication` e una o più delle seguenti impostazioni di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare **@job_login** e **@job_password** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare `@job_login` e `@job_password`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione, specificare il valore **1** o **0** per **@publisher_security_mode** .  
+    -   Per modificare la modalità di sicurezza usata per le connessioni al server di pubblicazione, specificare il valore **1** o **0** per `@publisher_security_mode`.  
   
-    -   Se viene modificata la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione da **1** a **0** oppure se viene modificato un nome di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per questa connessione, specificare **@publisher_login** e **@publisher_password** .  
+    -   Se viene modificata la modalità di sicurezza usata per le connessioni al server di pubblicazione da **1** a **0** oppure se viene modificato un nome di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato per questa connessione, specificare `@publisher_login` e `@publisher_password`.  
   
     > [!IMPORTANT]  
     >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>Per modificare le impostazioni di sicurezza per l'agente di lettura log  
   
-1.  Nel server di pubblicazione eseguire [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md), specificando **@publisher** . Verranno restituite le impostazioni di sicurezza correnti per l'agente di lettura log.  
+1.  Nel server di pubblicazione eseguire [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md), specificando `@publisher`. Verranno restituite le impostazioni di sicurezza correnti per l'agente di lettura log.  
   
-2.  Nel server di pubblicazione eseguire [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), specificando **@publication** e una o più delle seguenti impostazioni di sicurezza da modificare:  
+2.  Nel server di pubblicazione eseguire [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), specificando `@publication` e una o più delle seguenti impostazioni di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare **@job_login** e **@job_password** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare `@job_login` e `@job_password`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione, specificare il valore **1** o **0** per **@publisher_security_mode** .  
+    -   Per modificare la modalità di sicurezza usata per le connessioni al server di pubblicazione, specificare il valore **1** o **0** per `@publisher_security_mode`.  
   
-    -   Se viene modificata la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione da **1** a **0** oppure se viene modificato un nome di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per questa connessione, specificare **@publisher_login** e **@publisher_password** .  
+    -   Se viene modificata la modalità di sicurezza usata per le connessioni al server di pubblicazione da **1** a **0** oppure se viene modificato un nome di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato per questa connessione, specificare `@publisher_login` e `@publisher_password`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
@@ -297,17 +297,17 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di distribuzione per una sottoscrizione push  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), specificando **@publication** e **@subscriber** . Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di distribuzione eseguito nel server di distribuzione.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), specificando `@publication` e `@subscriber`. Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di distribuzione eseguito nel server di distribuzione.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specificando **@publication** , **@subscriber** , **@subscriber_db** , un valore **all** per **@article** , il nome della proprietà di sicurezza per **@property** e il nuovo valore della proprietà per **@value** .  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specificando `@publication`, `@subscriber`, `@subscriber_db**`, un valore `all` per `@article`, il nome della proprietà di sicurezza per `@property` e il nuovo valore della proprietà per `@value`.  
   
 3.  Ripetere il passaggio 2 per ognuna delle seguenti proprietà di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare un valore **distrib_job_password** per **@property** e una nuova password per **@value** . Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **distrib_job_login** per **@property** e il nuovo account di Windows per **@value** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare il valore **distrib_job_password** per `@property` e una nuova password per `@value`. Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **distrib_job_login** per `@property` e il nuovo account di Windows per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per la connessione al Sottoscrittore, specificare il valore **subscriber_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per la connessione al Sottoscrittore, specificare il valore **subscriber_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del Sottoscrittore o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **subscriber_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **subscriber_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del Sottoscrittore o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **subscriber_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **subscriber_login** per `@property` e il nuovo account di accesso per `@value`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
@@ -317,38 +317,38 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di distribuzione per una sottoscrizione pull  
   
-1.  Nel sottoscrittore eseguire [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md), specificando **@publication** . Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di distribuzione eseguito nel Sottoscrittore.  
+1.  Nel Sottoscrittore eseguire [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md), specificando `@publication`. Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di distribuzione eseguito nel Sottoscrittore.  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando **@publisher** , **@publisher_db** , **@publication** , il nome della proprietà di sicurezza per **@property** e il nuovo valore della proprietà per **@value** .  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando `@publisher`, `@publisher_db`, `@publication`, il nome della proprietà di sicurezza per `@property` e il nuovo valore della proprietà per `@value`.  
   
 3.  Ripetere il passaggio 2 per ognuna delle seguenti proprietà di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare un valore **distrib_job_password** per **@property** e una nuova password per **@value** . Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **distrib_job_login** per **@property** e il nuovo account di Windows per **@value** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare il valore **distrib_job_password** per `@property` e una nuova password per `@value`. Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **distrib_job_login** per `@property` e il nuovo account di Windows per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per la connessione al server di distribuzione, specificare il valore **distributor_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per la connessione al server di distribuzione, specificare il valore **distributor_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di distribuzione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **distributor_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **distributor_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di distribuzione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **distributor_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **distributor_login** per `@property` e il nuovo account di accesso per `@value`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di merge per una sottoscrizione push  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md), specificando **@publication** , **@subscriber** e **@subscriber_db** . Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di merge eseguito nel server di distribuzione.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md), specificando `@publication`, `@subscriber,` e `@subscriber_db`. Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di merge eseguito nel server di distribuzione.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md), specificando **@publication** , **@subscriber** , **@subscriber_db** , il nome della proprietà di sicurezza per **@property** e il nuovo valore della proprietà per **@value** .  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md), specificando `@publication`, `@subscriber`, `@subscriber_db`, il nome della proprietà di sicurezza per `@property` e il nuovo valore della proprietà per `@value`.  
   
 3.  Ripetere il passaggio 2 per ognuna delle seguenti proprietà di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare un valore **merge_job_password** per **@property** e una nuova password per **@value** . Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **merge_job_login** per **@property** e il nuovo account di Windows per **@value** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare il valore **merge_job_password** per `@property` e una nuova password per `@value`. Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **merge_job_login** per `@property` e il nuovo account di Windows per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per la connessione al Sottoscrittore, specificare il valore **subscriber_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per la connessione al Sottoscrittore, specificare il valore **subscriber_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del Sottoscrittore o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **subscriber_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **subscriber_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del Sottoscrittore o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **subscriber_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **subscriber_login** per `@property` e il nuovo account di accesso per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione, specificare il valore **publisher_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per le connessioni al server di pubblicazione, specificare il valore **publisher_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di pubblicazione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **publisher_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **publisher_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di pubblicazione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **publisher_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **publisher_login** per `@property` e il nuovo account di accesso per `@value`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
@@ -358,30 +358,30 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di merge per una sottoscrizione pull  
   
-1.  Nel sottoscrittore eseguire [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md), specificando **@publication** . Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di merge eseguito nel Sottoscrittore.  
+1.  Nel Sottoscrittore eseguire [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md), specificando ``@publication``. Verranno restituite le proprietà della sottoscrizione, incluse le impostazioni di sicurezza per l'agente di merge eseguito nel Sottoscrittore.  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando **@publisher** , **@publisher_db** , **@publication** , il nome della proprietà di sicurezza per **@property** e il nuovo valore della proprietà per **@value** .  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando `@publisher`, `@publisher_db`, `@publication`, il nome della proprietà di sicurezza per `@property` e il nuovo valore della proprietà per `@value`.  
   
 3.  Ripetere il passaggio 2 per ognuna delle seguenti proprietà di sicurezza da modificare:  
   
-    -   Per modificare l'account di Windows utilizzato per eseguire l'agente o solo la password per tale account, specificare un valore **merge_job_password** per **@property** e una nuova password per **@value** . When changing the account itself, repeat Step 2 specifying a value of **merge_job_login** per **@property** e il nuovo account di Windows per **@value** .  
+    -   Per modificare l'account di Windows usato per eseguire l'agente o solo la password per tale account, specificare il valore **merge_job_password** per `@property` e una nuova password per `@value`. Quando si modifica l'account stesso, ripetere il passaggio 2 specificando il valore **merge_job_login** per `@property` e il nuovo account di Windows per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per la connessione al server di distribuzione, specificare il valore **distributor_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per la connessione al server di distribuzione, specificare il valore **distributor_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di distribuzione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **distributor_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **distributor_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di distribuzione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **distributor_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **distributor_login** per `@property` e il nuovo account di accesso per `@value`.  
   
-    -   Per modificare la modalità di sicurezza utilizzata per le connessioni al server di pubblicazione, specificare il valore **publisher_security_mode** per **@property** e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per **@value** .  
+    -   Per modificare la modalità di sicurezza usata per le connessioni al server di pubblicazione, specificare il valore **publisher_security_mode** per `@property` e il valore **1** (autenticazione integrata di Windows) o **0** (autenticazione di SQL Server) per `@value`.  
   
-    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di pubblicazione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare un valore **publisher_password** per **@property** e la nuova password per **@value** . Ripetere il passaggio 2, specificando il valore **publisher_login** per **@property** e il nuovo account di accesso per **@value** .  
+    -   Quando si imposta l'autenticazione di SQL Server come modalità di sicurezza del server di pubblicazione o se si modificano le informazioni di accesso per l'autenticazione di SQL Server, specificare il valore **publisher_password** per `@property` e la nuova password per `@value`. Ripetere il passaggio 2, specificando il valore **publisher_login** per `@property` e il nuovo account di accesso per `@value`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>Per modificare impostazioni di sicurezza per l'agente snapshot e generare uno snapshot filtrato per un Sottoscrittore  
   
-1.  Nel server di pubblicazione eseguire [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md), specificando **@publication** . Nel set dei risultati Si noti il valore **job_name** per la partizione del Sottoscrittore da modificare.  
+1.  Nel server di pubblicazione eseguire [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md), specificando `@publication`. Nel set dei risultati Si noti il valore **job_name** per la partizione del Sottoscrittore da modificare.  
   
-2.  Nel server di pubblicazione eseguire [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), specificando **@publication** , il valore ottenuto nel passaggio 1 per **@dynamic_snapshot_jobname** e una nuova password per **@job_password** o nome di accesso e password per l'account di Windows utilizzato per eseguire l'agente per **@job_login** e **@job_password** .  
+2.  Nel server di pubblicazione eseguire [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), specificando `@publication`, il valore ottenuto nel passaggio 1 per `dynamic_snapshot_jobname` e una nuova password per `@job_password` o il nome di accesso e la password per l'account di Windows usato per eseguire l'agente per `@job_login` e `@job_password`.  
   
     > [!IMPORTANT]  
     >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -390,7 +390,7 @@ ms.locfileid: "68768405"
   
 1.  Nel server di distribuzione eseguire [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md). Verrà restituito l'account di Windows corrente utilizzato per eseguire l'agente di lettura coda.  
   
-    -   Nel server di distribuzione eseguire [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md), specificando le impostazioni dell'account di Windows per **@job_login** e **@job_passwsord** .  
+    -   Nel server di distribuzione eseguire [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md), specificando le impostazioni dell'account di Windows per `@job_login` e `@job_password`.  
   
     > [!NOTE]  
     >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica. A ogni database di distribuzione è associato un agente di lettura coda. La modifica delle impostazioni di sicurezza dell'agente influisce sulle impostazioni di tutte le pubblicazioni presenti in tutti i server di pubblicazione che utilizzano questo database di distribuzione.  
@@ -399,9 +399,9 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>Per modificare la modalità di sicurezza utilizzata da un Sottoscrittore ad aggiornamento immediato per la connessione al server di pubblicazione  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare **@publisher** , **@publication** , il nome del database di pubblicazione per **@publisher_db** e uno dei valori seguenti per **@security_mode** :  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare `@publisher`, `@publication`, il nome del database di pubblicazione per `@publisher_db`e uno dei valori seguenti per `@security_mode`:  
   
-    -   **0** per utilizzare l'autenticazione di SQL Server quando si eseguono aggiornamenti nel server di pubblicazione. Questa opzione richiede di specificare un account di accesso valido nel server di pubblicazione per **@login** e **@password** .  
+    -   **0** per utilizzare l'autenticazione di SQL Server quando si eseguono aggiornamenti nel server di pubblicazione. Questa opzione richiede di specificare un account di accesso valido nel server di pubblicazione per `@login` e `@password`.  
   
     -   **1** per utilizzare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .  
   
@@ -409,12 +409,12 @@ ms.locfileid: "68768405"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>Per modificare la password per un server di distribuzione remoto  
   
-1.  Nel database di distribuzione del server di distribuzione eseguire [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specificando la nuova password per questo account di accesso per **@password** .  
+1.  Nel database di distribuzione del server di distribuzione eseguire [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specificando la nuova password per questo account di accesso per `@password`.  
   
     > [!IMPORTANT]  
     >  Non modificare direttamente la password di **distributor_admin** .  
   
-2.  In ogni server di pubblicazione in cui viene utilizzato questo server di distribuzione remoto eseguire [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specificando la password indicata nel passaggio 1 per **@password** .  
+2.  In ogni server di pubblicazione in cui viene usato questo server di distribuzione remoto eseguire [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specificando la password indicata nel passaggio 1 per `@password`.  
   
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
   

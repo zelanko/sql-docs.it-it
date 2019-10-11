@@ -1,5 +1,5 @@
 ---
-title: Progettazione Query relazionale (SSAS) | Microsoft Docs
+title: Progettazione query relazionale (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070456"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251214"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
   Progettazione query relazionale consente di creare una query che specifica i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilizzare Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo la query e visualizzarne i risultati.  Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -203,7 +203,7 @@ ms.locfileid: "66070456"
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
 |![Esecuzione della query](media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
-|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Si noti che se una stored procedure restituisce più di un set di risultati, solo il primo set di risultati viene utilizzato per popolare il set di dati. Si noti inoltre che <br />                      **TableDirect** è disponibile solo per il tipo di origine dati OLE DB.|  
+|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Si noti che se un stored procedure restituisce più di un set di risultati, per popolare il set di dati viene utilizzato solo il primo set di risultati. Si noti anche che <br />                      **TableDirect** è disponibile solo per il tipo di origine dati OLE DB.|  
   
 #### <a name="command-type-text"></a>Tipo di comando Text  
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , per impostazione predefinita viene visualizzata la finestra Progettazione query relazionale. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Fare clic sul pulsante **Esegui** ( **!** ). Nella tabella seguente fornisce un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella **Definisci parametri Query** nella finestra di dialogo.  
+ Fare clic sul pulsante **Esegui** ( **!** ). Nella tabella seguente viene fornito un esempio di parametri `uspGetWhereUsedProductID` per i quali vengono forniti valori nella finestra di dialogo **Definisci parametri query** .  
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Tipo di comando TableDirect  
  Quando si seleziona **Tipo di comando TableDirect**, la finestra Progettazione query basata su testo mostra due riquadri, il riquadro Query e il riquadro Risultati. Quando si immette una tabella e si fa clic sul pulsante **Esegui** , vengono restituite tutte le colonne della tabella.  
