@@ -3,28 +3,28 @@ title: Esercitazione per i data scientist che usano il linguaggio R
 description: Esercitazione che illustra come creare una soluzione R end-to-end per l'analisi nel database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ad7f5a500f740e4a302f814ec9523dfb33ecc68b
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714659"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278271"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Esercitazione: Sviluppo SQL per gli esperti di dati R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa esercitazione per i data scientist, informazioni su come creare una soluzione end-to-end per la modellazione predittiva basata sul supporto delle funzionalità R in SQL Server 2016 o SQL Server 2017. Questa esercitazione usa un database [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server. 
 
-Si usa una combinazione di codice R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati e funzioni SQL personalizzate per compilare un modello di classificazione che indica la probabilità che il driver ottenga una mancia in una particolare corsa in taxi. È anche possibile distribuire il modello R [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in e usare i dati del server per generare punteggi basati sul modello.
+Si usa una combinazione di codice R, dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e funzioni SQL personalizzate per compilare un modello di classificazione che indica la probabilità che il driver possa ricevere una mancia in una determinata corsa in taxi. È anche possibile distribuire il modello R per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usare i dati del server per generare punteggi basati sul modello.
 
 Questo esempio può essere esteso a tutti i tipi di problemi della vita reale, ad esempio la stima delle risposte dei clienti alle campagne di vendita o la previsione di spese o presenze per gli eventi. Poiché il modello può essere richiamato da una stored procedure, è possibile incorporarlo facilmente in un'applicazione.
 
-Poiché la procedura dettagliata è progettata per introdurre gli sviluppatori [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]r in, quando possibile viene usato r. Tuttavia, ciò non significa che R sia necessariamente lo strumento migliore per ogni attività. In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe offrire prestazioni migliori, in particolare in attività quali l'aggregazione dei dati e la progettazione delle funzionalità.  Tali attività possono trarre vantaggio dalle nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ad esempio gli indici columnstore con ottimizzazione per la memoria. Si tenta di evidenziare possibili ottimizzazioni lungo il percorso.
+Poiché la procedura dettagliata è progettata per introdurre sviluppatori R per [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], viene usato R laddove possibile. Tuttavia, ciò non significa che R sia necessariamente lo strumento migliore per ogni attività. In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe offrire prestazioni migliori, in particolare in attività quali l'aggregazione dei dati e la progettazione delle funzionalità.  Tali attività possono trarre vantaggio dalle nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ad esempio gli indici columnstore con ottimizzazione per la memoria. Si tenta di evidenziare possibili ottimizzazioni lungo il percorso.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -38,18 +38,21 @@ Poiché la procedura dettagliata è progettata per introdurre gli sviluppatori [
 
 + Un IDE R, ad esempio RStudio o lo strumento RGUI incorporato incluso in R
 
-Si consiglia di eseguire questa procedura dettagliata in una workstation client. È necessario essere in grado di connettersi, nella stessa rete, a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer in cui è abilitato SQL Server e il linguaggio R. Per istruzioni sulla configurazione della workstation, vedere [configurare un client Data Science per lo sviluppo R](../r/set-up-a-data-science-client.md).
+Si consiglia di eseguire questa procedura dettagliata in una workstation client. È necessario essere in grado di connettersi, nella stessa rete, a un computer @no__t 0 con SQL Server e la lingua R abilitata. Per istruzioni sulla configurazione della workstation, vedere [configurare un client Data Science per lo sviluppo R](../r/set-up-a-data-science-client.md).
 
-In alternativa, è possibile eseguire la procedura dettagliata in un computer che include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia che un ambiente di sviluppo R, ma questa configurazione non è consigliata per un ambiente di produzione. Se è necessario inserire client e server nello stesso computer, assicurarsi di installare un secondo set di librerie Microsoft R per l'invio di script R da un client "remoto". Non usare le librerie R installate nei file di programma dell'istanza di SQL Server. In particolare, se si usa un solo computer, per supportare le operazioni client e server è necessaria la libreria RevoScaleR in entrambi i percorsi.
+In alternativa, è possibile eseguire la procedura dettagliata in un computer con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un ambiente di sviluppo R, ma questa configurazione non è consigliata per un ambiente di produzione. Se è necessario inserire client e server nello stesso computer, assicurarsi di installare un secondo set di librerie Microsoft R per l'invio di script R da un client "remoto". Non usare le librerie R installate nei file di programma dell'istanza di SQL Server. In particolare, se si usa un solo computer, per supportare le operazioni client e server è necessaria la libreria RevoScaleR in entrambi i percorsi.
 
 + C:\Programmi\Microsoft Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Programmi\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+> [!NOTE]
+> Se si usa [Machine Learning server](https://docs.microsoft.com/machine-learning-server/) o l' [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/), anziché R client, il percorso di RevoScaleR è C:\Program c:\programmi\microsoft\ml Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 
 ## <a name="additional-r-packages"></a>Pacchetti R aggiuntivi
 
-Questa procedura dettagliata richiede alcune librerie R che non sono installate per impostazione predefinita come [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]parte di. È necessario installare i pacchetti sia nel client in cui si sviluppa la soluzione sia nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer in cui si distribuisce la soluzione.
+Questa procedura dettagliata richiede alcune librerie R che non sono installate per impostazione predefinita come parte di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. È necessario installare i pacchetti sia nel client in cui si sviluppa la soluzione sia nel computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si distribuisce la soluzione.
 
 ### <a name="on-a-client-workstation"></a>In una workstation client
 
@@ -82,7 +85,7 @@ Sono disponibili diverse opzioni per l'installazione di pacchetti in SQL Server.
   ```
   Questo esempio usa la funzione grep di R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per ulteriori informazioni, vedere [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
-  Se si ritiene che i pacchetti siano già installati, controllare l'elenco dei pacchetti `installed.packages()`installati eseguendo.
+  Se si ritiene che i pacchetti siano già installati, controllare l'elenco dei pacchetti installati eseguendo `installed.packages()`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

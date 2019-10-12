@@ -1,5 +1,5 @@
 ---
-title: Rinominare gli account di accesso corrispondenti i nomi dei ruoli predefiniti del server | Microsoft Docs
+title: Rinominare gli account di accesso corrispondenti ai nomi di ruoli predefinito del server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092883"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278210"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Rinominare gli account di accesso con nomi uguali a quelli dei ruoli predefiniti del server
   Uno o più nomi di account di accesso definiti dall'utente sono uguali a nomi di ruoli predefiniti del server. I nomi dei ruoli predefiniti del server sono riservati. Prima di eseguire l'aggiornamento, rinominare gli account di accesso.  
@@ -60,10 +60,10 @@ ms.locfileid: "66092883"
   
 2.  Eliminare gli account di accesso.  
   
-3.  Usare la **sp_addlogin** procedure di sistema per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 il **@sid** parametro per ogni account di accesso corrispondente.  
+3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro **\@sid** per ogni account di accesso corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

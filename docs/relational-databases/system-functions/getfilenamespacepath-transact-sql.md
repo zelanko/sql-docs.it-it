@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab369b619bc0ad378292cf71573ab973dc056c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101434"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278338"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68101434"
   
 ## <a name="arguments"></a>Argomenti  
  *column-name*  
- Il nome della colonna del varbinary (max) **file_stream** in una tabella FileTable.  
+ Nome di colonna della colonna **FILE_STREAM** varbinary (max) in una tabella FileTable.  
   
- Il *-nome della colonna* valore deve essere un nome di colonna valido. Non può essere un'espressione o un valore convertito o di cui sia stato eseguito il cast da una colonna di un altro tipo di dati.  
+ Il valore del *nome della colonna* deve essere un nome di colonna valido. Non può essere un'espressione o un valore convertito o di cui sia stato eseguito il cast da una colonna di un altro tipo di dati.  
   
  *is_full_path*  
  Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* può avere uno dei valori seguenti:  
@@ -50,8 +50,8 @@ ms.locfileid: "68101434"
 |**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
   
- *@option*  
- Espressione Integer che definisce la formattazione del componente server del percorso. *@option* Può avere uno dei valori seguenti:  
+ *\@Opzione*  
+ Espressione Integer che definisce la formattazione del componente server del percorso. *\@Opzione* può avere uno dei valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -64,17 +64,17 @@ ms.locfileid: "68101434"
   
  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fa parte di un cluster di failover, il nome computer restituito come parte di questo percorso è il nome host virtuale per l'istanza cluster.  
   
- Quando il database appartiene a un gruppo di disponibilità Always On, il **FileTableRootPath** funzione restituisce il nome di rete virtuale (VNN) invece del nome computer.  
+ Quando il database appartiene a un gruppo di disponibilità Always On, la funzione **FileTableRootPath** restituisce il nome della rete virtuale (VNN) anziché il nome del computer.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Il percorso che il **GetFileNamespacePath** funzione restituisce un percorso di directory o file logico nel formato seguente:  
+ Il percorso restituito dalla funzione **GetFileNamespacePath** è una directory logica o un percorso di file nel formato seguente:  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- Questo percorso logico non corrisponde direttamente a un percorso NTFS fisico. Viene convertito al percorso fisico dal driver del filtro del FILESTREAM file system e l'agente di FILESTREAM. La separazione tra percorso logico e percorso fisico consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di riorganizzare i dati internamente senza incidere sulla validità del percorso.  
+ Questo percorso logico non corrisponde direttamente a un percorso NTFS fisico. Viene convertito nel percorso fisico dal driver di filtro file system di FILESTREAM e dall'agente FILESTREAM. La separazione tra percorso logico e percorso fisico consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di riorganizzare i dati internamente senza incidere sulla validità del percorso.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file in fase di esecuzione usando il **FileTableRootPath** e **GetFileNamespacePath** funzioni insieme, come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
+ Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file in fase di esecuzione usando le funzioni **FileTableRootPath** e **GetFileNamespacePath** insieme, come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -89,7 +89,7 @@ WHERE Name = N'document.docx';
 ## <a name="remarks"></a>Note  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti illustrano come chiamare le **GetFileNamespacePath** funzione per ottenere il percorso UNC per un file o directory in una tabella FileTable.  
+ Negli esempi seguenti viene illustrato come chiamare la funzione **GetFileNamespacePath** per ottenere il percorso UNC per un file o una directory in una tabella FileTable.  
   
 ```  
 -- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  

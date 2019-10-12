@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000802"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278188"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'database_name'`Nome del database da scollegare. *database_name* è un valore **sysname** e il valore predefinito è null.  
+`[ @dbname = ] 'database_name'` è il nome del database da scollegare. *database_name* è un valore **sysname** e il valore predefinito è null.  
   
-`[ @skipchecks = ] 'skipchecks'`Specifica se ignorare o eseguire UPDATE STATISTIC. *skipchecks* è un valore **nvarchar (10)** e il valore predefinito è null. Per ignorare UPDATE STATISTICs, specificare **true**. Per eseguire in modo esplicito UPDATE STATISTICs, specificare **false**.  
+`[ @skipchecks = ] 'skipchecks'` specifica se ignorare o eseguire UPDATE STATISTIC. *skipchecks* è un valore **nvarchar (10)** e il valore predefinito è null. Per ignorare UPDATE STATISTICs, specificare **true**. Per eseguire in modo esplicito UPDATE STATISTICs, specificare **false**.  
   
  Per impostazione predefinita, l'istruzione UPDATE STATISTICS viene eseguita per aggiornare le informazioni sui dati nelle tabelle e negli indici. L'esecuzione di UPDATE STATISTICS risulta utile per i database che devono essere spostati su supporti di sola lettura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato durante l'operazione di scollegamento del database. *Keepfulltextindexfile* è di **tipo nvarchar (10)** e il valore predefinito è **true**. Se *keepfulltextindexfile* è **false**, vengono eliminati tutti i file di indice full-text associati al database e i metadati dell'indice full-text, a meno che il database non sia di sola lettura. Se è NULL o **true**, vengono conservati i metadati correlati a full-text.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` specifica che il file di indice full-text associato al database che viene scollegato non verrà eliminato durante l'operazione di scollegamento del database. *Keepfulltextindexfile* è di **tipo nvarchar (10)** e il valore predefinito è **true**. Se *keepfulltextindexfile* è **false**, vengono eliminati tutti i file di indice full-text associati al database e i metadati dell'indice full-text, a meno che il database non sia di sola lettura. Se è NULL o **true**, vengono conservati i metadati correlati a full-text.  
   
 > [!IMPORTANT]
->  Il **@keepfulltextindexfile** parametro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
+>  Il parametro **\@keepfulltextindexfile** verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -68,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  Per informazioni su come visualizzare il database predefinito di tutti gli account di accesso, vedere [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se si dispone delle autorizzazioni necessarie, è possibile utilizzare [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) per assegnare un nuovo database predefinito a un account di accesso.  
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
  Non è possibile scollegare un database se una delle seguenti condizioni è vera:  
   
 -   Il database è attualmente in uso. Per ulteriori informazioni, vedere la sezione "Come ottenere l'accesso esclusivo" di seguito in questo argomento.  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Prima di impostare il database in modalità SINGLE_USER, verificare che l'opzione AUTO_UPDATE_STATISTICS_ASYNC sia impostata su OFF. Se l'opzione è impostata su ON, tramite il thread in background utilizzato per aggiornare le statistiche viene stabilita una connessione con il database che non sarà quindi accessibile in modalità utente singolo. Per altre informazioni, vedere [impostare un database in modalità utente singolo](../databases/set-a-database-to-single-user-mode.md).
 
- L'istruzione seguente `ALTER DATABASE` , ad esempio, [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] consente di ottenere l'accesso esclusivo al database dopo la disconnessione di tutti gli utenti correnti dal database.  
+ Ad esempio, l'istruzione `ALTER DATABASE` seguente consente di ottenere l'accesso esclusivo al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dopo la disconnessione di tutti gli utenti correnti dal database.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo **db_owner** del database.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database viene scollegato con *skipchecks* impostato su true.  
+ Nell'esempio seguente viene scollegato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con *skipchecks* impostato su true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
