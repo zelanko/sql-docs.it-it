@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559477"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041174"
 ---
 # <a name="performance-dashboard"></a>Performance Dashboard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Il report **Attese** filtra tutte le attese di inattività e sospensione. Per al
 I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato perché i dati nella DMV sottostante sono stati cancellati. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], informazioni dettagliate sulle query dispendiose sono reperibili in Query Store. 
 
 > [!NOTE]
-> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni `VIEW SERVER STATE` e `ALTER TRACE`. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.

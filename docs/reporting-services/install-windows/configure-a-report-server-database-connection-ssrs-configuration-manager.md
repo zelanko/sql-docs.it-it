@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264976"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239376"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
 
@@ -105,6 +105,13 @@ Se si configura la connessione di database per l'utilizzo dell'account del servi
 #### <a name="using-a-sql-server-login"></a>Utilizzo di un account di accesso di SQL Server
 
 È possibile specificare un singolo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al database del server di report. Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database del server di report si trova in un computer remoto, utilizzare IPSec per proteggere la trasmissione dei dati tra i server. Se si utilizza un account di accesso al database, è necessario aggiornare la connessione al database del server di report ogni volta che si modifica la password o l'account.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Quando si usa un Istanza gestita SQL di Azure per ospitare Reporting Services database 2019, il supporto è limitato all'uso di SQL Server credenziali di accesso per la connessione.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Autorizzazioni per il database
 

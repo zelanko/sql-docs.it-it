@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284594"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278292"
 ---
 # <a name="report-server-namespace-management-methods"></a>Metodi di gestione dello spazio dei nomi del server di report
   Il servizio Web di gestione del server report include metodi che è possibile utilizzare per gestire report, cartelle e risorse nel database del server di report.  
@@ -28,7 +28,7 @@ ms.locfileid: "63284594"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Annulla l'esecuzione di un processo.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Aggiunge una cartella al database del server di report o alla raccolta di SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Aggiunge un nuovo elemento a un database del server di report o alla raccolta di SharePoint. Questo metodo si applica ai tipi di elemento **Report**, **Model**, **Dataset**, **Component**, **Resource** e **DataSource**.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Crea una nuova sessione di modifica del report.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession (System. String, System. String, System. Byte [], ReportService2010. Warning [] @)|Crea una nuova sessione di modifica del report.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Rimuove un elemento dal database del server di report o dalla raccolta di SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Restituisce gli elementi nel database del server di report o nella raccolta di SharePoint che corrispondono ai criteri di ricerca specificati.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Genera un evento in base ai parametri forniti.|  

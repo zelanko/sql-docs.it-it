@@ -13,18 +13,26 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 2b939db6ac0f89075b39ba74eadb0e86e63e3980
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702817"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041217"
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug corretti
 
-Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire [!INCLUDE[msCoName](../../includes/msconame_md.md)] da ODBC driver 17 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,4 per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-1742-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.4.2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+ - Correzione di un problema per cui l'ID del processo e il nome dell'applicazione non vengono inviati correttamente al SQL Server (per l'analisi sys. dm _exec_sessions) (Linux)
+ - La dipendenza ridondante è stata rimossa in libuuid (Linux)
+ - Correzione di un bug con l'invio di dati UTF8 a SQL Server 2019
+ - Correzione di un bug in cui le impostazioni locali che terminano con "@euro" non sono state rilevate correttamente (Linux)
+ - La correzione per i dati XML viene restituita in modo non corretto quando viene recuperata come parametro di output durante l'utilizzo di Always Encrypted
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,4 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correzione per blocco intermittente quando è abilitato più set di risultati attivi (MARS)
 - Correggi la resilienza della connessione quando è abilitata la notifica asincrona
@@ -36,13 +44,13 @@ Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire [!
 - Correzione dell'importazione di colonne sql_variant contenenti più di 7992 byte con bcp
 - Correzione dell'invio della codifica corretta al server per i dati di tipo carattere Narrow
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,3 per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,3 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Perdita di memoria del gestore eventi di notifica trasmissione TCP
 - Correzione del problema di ridefinizione dell'enumerazione _SQL_FILESTREAM_DESIRED_ACCESS nel file di intestazione msodbcsql. h
 - Correzione della definizione del ACCESS_TOKEN mancante e della definizione correlata all'autenticazione nel file di intestazione msodbcsql. h per Linux
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,2 per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correzione di un messaggio di errore relativo all'autenticazione Azure Active Directory
 - Correzione del rilevamento della codifica quando le variabili di ambiente delle impostazioni locali sono impostate in modo diverso
@@ -55,7 +63,7 @@ Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire [!
 - Correzione di un problema relativo alla cache quando si usa l'autenticazione ADAL in Windows
 - Correzione di un problema che stava bloccando e sovrascrivendo i log di traccia in Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,1 per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,1 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correzione di un ritardo di 1 secondo durante la chiamata di SQLFreeHandle con MARS abilitato e dell'attributo di connessione "Encrypt = Yes"
 - Correzione di un errore 22003 arresto anomalo in SQLGetData Quando la dimensione del buffer passato è inferiore, i dati recuperati (Windows)
@@ -65,7 +73,7 @@ Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire [!
 - Correzione di un avviso nel programma di installazione di MacOS
 - Correzione dell'invio dello stato errato a SQL Server durante il tentativo di ripristino della sessione quando sono abilitati la resilienza della connessione e il pool di connessioni, causando la rimozione della sessione dal server
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC driver 17 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correzioni di bug nel driver ODBC [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correzione di un bug in cui quando si utilizza l'autenticazione Kerberos, BULK INSERT potrebbe non riuscire con l'errore "accesso negato"
 - Soluzione alternativa rimossa per un bug unixODBC presente nella versione seguente 2.3.1 (driver raddoppiato le dimensioni di alcuni buffer passati a unixODBC)

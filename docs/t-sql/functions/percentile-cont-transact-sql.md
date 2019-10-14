@@ -19,14 +19,14 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f14ab522a9ead9054868096841a5dc1840c95fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914369"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172976"
 ---
-# <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
+# <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calcola un percentile basato su una distribuzione continua del valore della colonna in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il risultato viene interpolato e potrebbe non essere uguale ad alcuno dei valori specifici nella colonna.  
@@ -93,9 +93,7 @@ Engineering            34.375       32.6923
 Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
+
 ### <a name="b-basic-syntax-example"></a>B. Esempio della sintassi di base  
  Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. È possibile che queste funzioni non restituiscano lo stesso valore. PERCENTILE_CONT esegue l'interpolazione del valore appropriato, che può esistere o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
   
