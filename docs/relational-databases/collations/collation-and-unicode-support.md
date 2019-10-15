@@ -275,7 +275,7 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Basso sorabo (Germania)|0x082e|0x0409|Latin1_General_CI_AS|
 |Lussemburghese (Lussemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedone (Macedonia, Ex Repubblica Jugoslava di Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedone (Macedonia del Nord)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malese (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malese (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Non disponibile a livello di server|
