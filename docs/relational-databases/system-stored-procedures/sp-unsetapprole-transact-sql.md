@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022237"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305165"
 ---
-# <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
+# <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Disattiva un ruolo applicazione e ripristina il contesto di sicurezza precedente.  
@@ -39,27 +39,27 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@cookie**  
- Specifica il cookie creato al momento dell'attivazione del ruolo applicazione. Il cookie viene creato da [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000**.  
+ **\@cookie**  
+ Specifica il cookie creato al momento dell'attivazione del ruolo applicazione. Il cookie viene creato da [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  
->  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.  
+>  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary (8000),** in modo che l'applicazione continui a funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione futura.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- Dopo un'applicazione l'attivazione di ruolo usando **sp_setapprole**, tale ruolo rimane attivo fino a quando l'utente si disconnette dal server o all'esecuzione **sp_unsetapprole**.  
+ Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole**, il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o esegue **sp_unsetapprole**.  
   
- Per una panoramica dei ruoli applicazione, vedere [i ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
+ Per una panoramica dei ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **pubblica** e conoscere il cookie salvato quando è stato attivato il ruolo applicazione.  
+ È richiesta l'appartenenza a **public** e la conoscenza del cookie salvato quando è stato attivato il ruolo applicazione.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>Attivazione di un ruolo applicazione con un cookie e ripristino del contesto precedente  
- Nell'esempio seguente viene attivato il ruolo applicazione `Sales11` con la password `fdsd896#gfdbfdkjgh700mM` e viene creato un cookie. L'esempio restituisce il nome dell'utente corrente e quindi Ripristina il contesto originale tramite l'esecuzione **sp_unsetapprole**.  
+ Nell'esempio seguente viene attivato il ruolo applicazione `Sales11` con la password `fdsd896#gfdbfdkjgh700mM` e viene creato un cookie. Nell'esempio viene restituito il nome dell'utente corrente, quindi viene ripristinato il contesto originale tramite l'esecuzione di **sp_unsetapprole**.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

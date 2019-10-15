@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046203"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305269"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Collega un database a un server.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile utilizzare CREATE DATABASE *database_name* FOR ATTACH invece. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] è invece consigliabile utilizzare CREATE DATABASE *database_name* for Connetti. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Per ricompilare più file di log quando uno o più di una nuova posizione, usare CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG.  
+>  Per ricompilare più file di log quando uno o più hanno un nuovo percorso, usare CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
 >  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbnam_ '` È il nome del database da collegare al server. Il nome deve essere univoco. *dbname* viene **sysname**, con un valore predefinito è NULL.  
+`[ @dbname = ] 'dbnam_ '` è il nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @filename1 = ] 'filename_n'` È il nome fisico, completo di percorso, di un file di database. *filename_n* viene **nvarchar(260)** , con un valore predefinito è NULL. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri partono **@filename1** e viene spostata alla **@filename16** . L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
+`[ @filename1 = ] 'filename_n'` è il nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da **\@filename1** e incrementano a **\@filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
   
 > [!NOTE]  
 >  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -63,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- Il **sp_attach_db** stored procedure deve essere eseguita solo sui database che sono stati precedentemente scollegati dal server di database tramite l'impostazione esplicita **sp_detach_db** operazione o in database copiati. Se è necessario specificare più di 16 file, usare CREATE DATABASE *database_name* FOR ATTACH oppure CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Il stored procedure **sp_attach_db** deve essere eseguito solo su database precedentemente scollegati dal server di database tramite un'operazione **sp_detach_db** esplicita o in database copiati. Se è necessario specificare più di 16 file, utilizzare CREATE DATABASE *database_name* for Connetti o create database *database_name* FOR_ATTACH_REBUILD_LOG. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Si presuppone che i file non specificati siano memorizzati nell'ultima posizione nota. Per utilizzare un file in una posizione diversa, è necessario specificare la nuova posizione.  
   
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.  
   
 ## <a name="permissions"></a>Permissions  
- Per informazioni su come gestire le autorizzazioni quando un database viene collegato, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Per informazioni sul modo in cui vengono gestite le autorizzazioni quando viene collegato un database, vedere [create database &#40;SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono collegati file da [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al server corrente.  

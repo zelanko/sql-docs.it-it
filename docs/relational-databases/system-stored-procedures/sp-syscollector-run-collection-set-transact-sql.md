@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010705"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304998"
 ---
-# <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
+# <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Avvia un set di raccolta se l'agente di raccolta è già abilitato e set di raccolta è configurato per la modalità di raccolta non in cache.  
@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collection_set_id = ] collection_set_id` È l'identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** e deve avere un valore se *nome* è NULL.  
+`[ @collection_set_id = ] collection_set_id` è l'identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
   
-`[ @name = ] 'name'` È il nome del set di raccolta. *nome* viene **sysname** e deve avere un valore se *collection_set_id* è NULL.  
+`[ @name = ] 'name'` è il nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- Entrambi *collection_set_id* oppure *nome* deve avere un valore, non possono essere entrambi NULL.  
+ Il *collection_set_id* o il *nome* deve avere un valore e non può essere null.  
   
- Questa procedura verrà avviare la raccolta e caricare i processi per set di raccolta specificata e avvierà immediatamente il processo dell'agente di raccolta se il set di raccolta ha relativi **@collection_mode** impostato su non in cache (1). Per altre informazioni, vedere [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Questa procedura consente di avviare i processi di raccolta e di caricamento per il set di raccolta specificato e avvierà immediatamente il processo dell'agente di raccolta se il set di raccolta ha la **@no__t 1collection_mode** impostata su non memorizzato nella cache (1). Per ulteriori informazioni, vedere [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  È possibile utilizzare sp_sycollector_run_collection_set anche per eseguire un set di raccolta senza una pianificazione.  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **dc_operator** (con autorizzazione EXECUTE) ruolo predefinito del database per eseguire questa procedura.  
+ Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database **dc_operator** (con autorizzazione Execute).  
   
 ## <a name="example"></a>Esempio  
  Avviare un set di raccolta utilizzandone l'identificatore.  

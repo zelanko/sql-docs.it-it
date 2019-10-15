@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys. PDW _nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,48 +12,48 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001143"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305233"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. Tutte le tabelle e indici contengono almeno una partizione, indipendentemente dal fatto che vengono partizionate in modo esplicito o meno.  
+  Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in un database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Tutte le tabelle e gli indici contengono almeno una partizione, indipendentemente dal fatto che siano partizionati in modo esplicito.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|ID della partizione. Valore univoco all'interno di un database.|  
-|object_id|`int`|ID dell'oggetto a cui appartiene la partizione. Ogni tabella o vista è costituita da almeno una partizione.|  
-|index_id|`int`|ID dell'indice all'interno dell'oggetto a cui appartiene la partizione.|  
-|partition_number|`int`|Numero di partizione in base 1 all'interno dell'indice o heap di appartenenza. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il valore di questa colonna è 1.|  
-|hobt_id|`bigint`|ID dell'heap di dati o dell'albero B contenente le righe per la partizione.|  
-|rows|`bigint`|Numero approssimativo di righe nella partizione. |  
-|data_compression|`int`|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|Indica lo stato di compressione per ogni partizione. I valori possibili sono NONE, ROW e PAGE.|  
-|pdw_node_id|`int`|Identificatore univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
+|partition_id|**bigint**|ID della partizione. Valore univoco all'interno di un database.|  
+|object_id|**int**|ID dell'oggetto a cui appartiene la partizione. Ogni tabella o vista è costituita da almeno una partizione.|  
+|index_id|**int**|ID dell'indice all'interno dell'oggetto a cui appartiene la partizione.|  
+|partition_number|**int**|Numero di partizione in base 1 all'interno dell'indice o heap di appartenenza. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il valore di questa colonna è 1.|  
+|hobt_id|**bigint**|ID del heap o albero B dati (HoBT) che contiene le righe per la partizione.|  
+|rows|**bigint**|Numero approssimativo di righe nella partizione. |  
+|data_compression|**int**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
+|data_compression_desc|**nvarchar(60)**|Indica lo stato di compressione per ogni partizione. I valori possibili sono NONE, ROW e PAGE.|  
+|pdw_node_id|**int**|Identificatore univoco di un nodo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione CONTROL SERVER.  
+ È richiesta l'autorizzazione `CONTROL SERVER`.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio A: Visualizzare le righe in ogni partizione all'interno di ogni distribuzione 
 
-Applicabile a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-Per visualizzare il numero di righe in ogni partizione all'interno di ogni distribuzione, usare [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
+Per visualizzare il numero di righe in ogni partizione all'interno di ogni distribuzione, utilizzare [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio B: Usa le viste di sistema per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio B: USA viste di sistema per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
 
-Applicabile a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Questa query restituisce il numero di righe in ogni partizione di ogni distribuzione della tabella `myTable`.  
  
-```  
+```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
     pnp.data_compression_desc, pnp.pdw_node_id  
 FROM sys.pdw_nodes_partitions AS pnp  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

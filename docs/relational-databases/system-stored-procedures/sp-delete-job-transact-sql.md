@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085333"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306276"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina un processo.  
@@ -42,31 +42,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` È il numero di identificazione del processo da eliminare. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` è il numero di identificazione del processo da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` È il nome del processo da eliminare. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` è il nome del processo da eliminare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Entrambi *job_id* oppure *job_name*deve essere specificato; non è possibile specificarli entrambi.  
+>  È necessario specificare *job_id* o *job_name*; non è possibile specificare entrambi.  
   
-`[ @originating_server = ] 'server'` Per uso interno.  
+`[ @originating_server = ] 'server'` per uso interno.  
   
-`[ @delete_history = ] delete_history` Specifica se eliminare la cronologia per il processo. *delete_history* viene **bit**, il valore predefinito è **1**. Quando *delete_history* viene **1**, la cronologia processo per il processo viene eliminata. Quando *delete_history* viene **0**, non viene eliminata la cronologia processo.  
+`[ @delete_history = ] delete_history` specifica se eliminare la cronologia per il processo. *delete_history* è di **bit**e il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia del processo viene eliminata. Quando *delete_history* è **0**, la cronologia del processo non viene eliminata.  
   
- Si noti che quando viene eliminato un processo e la cronologia non viene eliminata, le informazioni cronologiche per il processo non verranno visualizzati nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cronologia processo di interfaccia utente grafica dell'agente, ma le informazioni continueranno comunque a risiedere nel **sysjobhistory**nella tabella di **msdb** database.  
+ Si noti che quando un processo viene eliminato e la cronologia non viene eliminata, le informazioni cronologiche per il processo non verranno visualizzate nella cronologia dei processi dell'interfaccia utente grafica dell'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma le informazioni rimarranno comunque nella tabella **sysjobhistory** del **database msdb** database.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Specifica se eliminare le pianificazioni associate a questo processo se non sono associate a nessun altro processo. *delete_unused_schedule* viene **bit**, il valore predefinito è **1**. Quando *delete_unused_schedule* viene **1**, le pianificazioni associate a questo processo vengono eliminate se nessun altro processo fanno riferimento alla pianificazione. Quando *delete_unused_schedule* viene **0**, le pianificazioni non vengono eliminate.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` specifica se eliminare le pianificazioni associate a questo processo se non sono associate a un altro processo. *delete_unused_schedule* è di **bit**e il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, le pianificazioni associate a questo processo vengono eliminate se non vi sono altri processi che fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- Il **@originating_server** argomento è riservato per uso interno.  
+ L'argomento **\@originating_server** è riservato per uso interno.  
   
- Il **@delete_unused_schedule** argomento assicura la compatibilità con le versioni precedenti di SQL Server eliminando automaticamente le pianificazioni che non sono associate ad alcun processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere le pianificazioni che non sono associate a un processo, è necessario fornire il valore **0** come la **@delete_unused_schedule** argomento.  
+ L'argomento **\@delete_unused_schedule** fornisce la compatibilità con le versioni precedenti di SQL Server rimuovendo automaticamente le pianificazioni non associate a un processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere pianificazioni non associate a un processo, è necessario specificare il valore **0** come argomento **\@delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   

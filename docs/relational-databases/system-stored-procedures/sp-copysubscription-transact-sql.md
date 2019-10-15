@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771428"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304828"
 ---
-# <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
+# <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @filename = ] 'file_name'`Stringa che specifica il percorso completo, incluso il nome del file, in cui viene salvata una copia del file di dati (con estensione MDF). il *nome del file* è **nvarchar (260)** e non prevede alcun valore predefinito.  
+`[ @filename = ] 'file_name'` è la stringa che specifica il percorso completo, incluso il nome del file, in cui viene salvata una copia del file di dati (con estensione MDF). il *nome del file* è **nvarchar (260)** e non prevede alcun valore predefinito.  
   
-`[ @temp_dir = ] 'temp_dir'`Nome della directory che contiene i file temporanei. *temp_dir* è di **tipo nvarchar (260)** e il valore predefinito è null. Se è null, [!INCLUDE[msCoName](../../includes/msconame-md.md)] verrà utilizzata la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory dei dati predefinita. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
+`[ @temp_dir = ] 'temp_dir'` è il nome della directory che contiene i file temporanei. *temp_dir* è di **tipo nvarchar (260)** e il valore predefinito è null. Se è NULL, verrà utilizzata la directory dei dati predefinita [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato in **@filename** . *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da **@filename** , se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` è un flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato in **\@filename**. *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da **\@filename**, se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  

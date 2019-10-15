@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909070"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304743"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza le impostazioni di configurazione per Posta elettronica database.  
@@ -40,30 +40,30 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argomenti  
  [ **@parameter_name** =] **'***parameter_name***'**  
- Nome dell'impostazione di configurazione da recuperare. Quando specificato, viene restituito il valore dell'impostazione di configurazione nel **@parameter_value** parametro di OUTPUT. Se non si specifica **@parameter_name** è specificato, questa stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione di posta elettronica Database nell'istanza.  
+ Nome dell'impostazione di configurazione da recuperare. Quando specificato, il valore dell'impostazione di configurazione viene restituito nel parametro di output **\@parameter_value** . Se non si specifica **\@parameter_name** , questo stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione posta elettronica database nell'istanza di.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se non si specifica **@parameter_name** viene specificato, restituisce un set di risultati con le colonne seguenti.  
+ Se non si specifica **\@parameter_name** , restituisce un set di risultati con le colonne seguenti.  
   
 ||||  
 |-|-|-|  
 |Nome colonna|Tipo di dati|Descrizione|  
 |**paramName**|**nvarchar(256)**|Nome del parametro di configurazione.|  
-|**ParamValue**|**nvarchar(256)**|Valore del parametro di configurazione.|  
+|**paramValue**|**nvarchar(256)**|Valore del parametro di configurazione.|  
 |**description**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
   
 ## <a name="remarks"></a>Note  
- La stored procedure **sysmail_help_configure_sp** sono elencate le impostazioni di configurazione di posta elettronica Database corrente per l'istanza.  
+ Il stored procedure **sysmail_help_configure_sp** elenca le impostazioni di configurazione correnti del posta elettronica database per l'istanza.  
   
- Quando un **@parameter_name** viene specificato, ma non viene fornito alcun parametro di output per **@parameter_value** , questa stored procedure non genera alcun output.  
+ Quando si specifica **\@parameter_name** , ma non viene fornito alcun parametro di output per **\@parameter_value**, questo stored procedure non produce alcun output.  
   
- La stored procedure **sysmail_help_configure_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere richiamata con un nome in tre parti se il database corrente non è **msdb**.  
+ Il stored procedure **sysmail_help_configure_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere richiamata con un nome in tre parti se il database corrente non è **msdb**.  
   
 ## <a name="permissions"></a>Permissions  
- Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate le impostazioni di configurazione di Posta elettronica database per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure &#40;di posta elettronica database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 823cd652537cbba486ffd4e432f9413b43f05b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085097"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304892"
 ---
-# <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce i nomi e valori per un set specificato di proprietà su un **geometria** indice spaziale. È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
+  Restituisce i nomi e i valori per un set specificato di proprietà relative a un indice spaziale di **geometria** . È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
   
  I risultati vengono restituiti in un frammento XML in cui vengono visualizzati il nome e valore delle proprietà selezionate.  
   
@@ -45,21 +45,21 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vedere [argomenti e proprietà delle stored procedure per gli indici spaziali](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Proprietà  
- Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vedere [argomenti e proprietà delle stored procedure per gli indici spaziali](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permissions  
- Utente deve essere un membro del **pubblica** ruolo. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
+ L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
 ## <a name="remarks"></a>Note  
  Le proprietà che contengono valori NULL non sono incluse nel set XML restituito.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa `sp_help_spatial_geometry_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definiti nella tabella **geometry_col** per l'esempio di query specificata in **@qs** . L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
+ Nell'esempio seguente viene utilizzato `sp_help_spatial_geometry_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito sulla tabella **geometry_col** per l'esempio di query specificato in **\@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
- Un' [XQuery](../../xquery/xquery-basics.md) viene quindi eseguita nel set di risultati, la restituzione di una proprietà specifica.  
+ Viene quindi eseguita una [query XQuery](../../xquery/xquery-basics.md) sul set di risultati, restituendo una proprietà specifica.  
   
 ```  
 DECLARE @qs geometry  
@@ -69,17 +69,17 @@ EXEC sp_help_spatial_geometry_index_xml 'geometry_col', 'SIndx_SpatialTable_geom
 SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Simile a [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md), questa stored procedure consente di accedere a livello di codice più semplice per le proprietà di un indice spaziale e restituisce il set di risultati in XML.  
+ Analogamente a [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md), questa stored procedure fornisce un accesso più semplice a livello di codice alle proprietà di un indice spaziale e segnala il set di risultati in formato XML.  
   
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli argomenti e le proprietà di spaziale indicizzare le Stored procedure](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
- [Stored procedure di indice spaziale](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Argomenti e proprietà delle stored procedure dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
+ [Stored procedure per indici spaziali](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Nozioni fondamentali su XQuery](../../xquery/xquery-basics.md)   
+ [Nozioni di base su XQuery](../../xquery/xquery-basics.md)   
  [Guida di riferimento al linguaggio XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 6c96dd49b0fc9b92c645d5c12c5f5cf0fc50e023
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341985"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305254"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ Nome del prodotto dell'origine dati OLE DB da aggiungere come server collegato. 
 ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provider_name* deve essere univoco per il provider di OLE DB specificato installato nel computer corrente. *provider_name* è di **tipo nvarchar (128)** e il valore predefinito è null. Tuttavia, se *provider_name* viene omesso, viene utilizzato SQLNCLI. 
 
 > [!NOTE]
-> Con SQLNCLI viene reindirizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla versione più recente del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Il provider di OLE DB dovrebbe essere registrato con il PROGID specificato nel registro di sistema.
+> Con SQLNCLI viene reindirizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla versione più recente del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Il provider OLE DB deve essere registrato nel Registro di sistema con il valore PROGID specificato.
 
 > [!IMPORTANT] 
-> Il provider di OLE DB Microsoft precedente per SQL Server (SQLOLEDB) e il provider di OLE DB SQL Server Native Client (SQLNCLI) rimangono deprecati e non è consigliabile usarli per le nuove attività di sviluppo. Usare invece il nuovo [driver Microsoft OLE DB per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
+> Il provider Microsoft OLE DB per SQL Server (SQLOLEDB) e il provider OLE DB SQL Server Native Client (SQLNCLI) precedenti rimangono deprecati e non è consigliabile usarli per nuovi progetti di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
   
 [@datasrc =] *\'data_source @ no__t-3*          
  Nome dell'origine dati secondo la modalità di interpretazione del provider OLE DB. *data_source* è di **tipo nvarchar (** 4000 **)** . *data_source* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider di OLE DB.  
@@ -67,10 +67,10 @@ ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provi
 [@provstr =] *\'provider_string @ no__t-3*          
  Stringa di connessione specifica del provider OLE DB che consente di identificare un'origine dati univoca. *provider_string* è di **tipo nvarchar (** 4000 **)** e il valore predefinito è null. *provstr* viene passato a IDataInitialize o impostato come proprietà DBPROP_INIT_PROVIDERSTRING per inizializzare il provider di OLE DB.  
   
- Quando il server collegato viene creato con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, l'istanza può essere specificata utilizzando la parola chiave server come server =*ServerName*\\*NomeIstanza* per specificare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nomeserver* è il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione e *NomeIstanza* è il nome dell'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui verrà connesso l'utente.  
+ Quando il server collegato viene creato con il provider OLE DB client nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'istanza può essere specificata utilizzando la parola chiave SERVER come SERVER =*nomeserver*\\*NomeIstanza* per specificare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nomeserver* è il nome del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e *NomeIstanza* è il nome dell'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui verrà connesso l'utente.  
   
 > [!NOTE]
-> Per accedere a un database con mirroring, è necessario che la stringa di connessione contenga il nome del database, al fine di consentire i tentativi di failover da parte del provider di accesso ai dati. Il database può essere specificato nel **@provstr** parametro o. **@catalog** Facoltativamente, la stringa di connessione può specificare anche il nome di un partner di failover.  
+> Per accedere a un database con mirroring, è necessario che la stringa di connessione contenga il nome del database, al fine di consentire i tentativi di failover da parte del provider di accesso ai dati. Il database può essere specificato nel parametro **\@provstr** o **\@catalog** . Facoltativamente, la stringa di connessione può specificare anche il nome di un partner di failover.  
   
 [@catalog =] *\'catalog @ no__t-3*       
  Catalogo da utilizzare per una connessione al provider OLE DB *Catalog* è di **tipo sysname**e il valore predefinito è null. il *Catalogo* viene passato come proprietà DBPROP_INIT_CATALOG per inizializzare il provider di OLE DB. Quando il server collegato viene definito in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il catalogo si riferisce al database predefinito a cui viene eseguito il mapping del server collegato.  
@@ -86,22 +86,22 @@ ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provi
   
 |Origine dati OLE DB remota|Provider OLE DB|product_name|provider_name|data_source|location|provider_string|catalogo|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider di OLE DB di Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (impostazione predefinita)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider di OLE DB di Native Client||**SQLNCLI**|Nome di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (per l'istanza predefinita)|||Nome di database (facoltativo)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider di OLE DB di Native Client||**SQLNCLI**|NomeServer\\*NomeIstanza* (per un'istanza specifica)|||Nome di database (facoltativo)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (impostazione predefinita)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client||**SQLNCLI**|Nome di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (per l'istanza predefinita)|||Nome di database (facoltativo)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client||**SQLNCLI**|*nomeserver*\\*NomeIstanza* (per un'istanza specifica)|||Nome di database (facoltativo)|  
 |Oracle, versione 8 e successive|Provider Oracle per OLE DB|Any|**OraOLEDB.Oracle**|Alias per il database Oracle||||  
 |Access/Jet|Provider Microsoft OLE DB per Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Percorso completo del file di database Jet||||  
 |Origine dati ODBC|Provider Microsoft OLE DB per ODBC|Any|**MSDASQL**|DSN di sistema dell'origine dati ODBC||||  
 |Origine dati ODBC|Provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per ODBC|Any|**MSDASQL**|||Stringa di connessione ODBC||  
 |File system|Provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per il servizio di indicizzazione|Any|**MSIDXS**|Nome del catalogo del Servizio di indicizzazione||||  
 |Foglio di calcolo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|Provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Percorso completo del file di Excel||Excel 5.0||  
-|Database IBM DB2|Provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per DB2|Any|**DB2OLEDB**|||Vedere [!INCLUDE[msCoName](../../includes/msconame-md.md)] la documentazione del provider OLE DB per DB2.|Nome del catalogo del database DB2|  
+|Database IBM DB2|Provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per DB2|Any|**DB2OLEDB**|||Vedere [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider per la documentazione di DB2.|Nome del catalogo del database DB2|  
   
  <sup>1</sup> questo modo per configurare un server collegato impone che il nome del server collegato corrisponda al nome di rete dell'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare *data_source* per specificare il server.  
   
  <sup>2</sup> "any" indica che il nome del prodotto può essere qualsiasi elemento.  
   
- Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client è il provider utilizzato con se non viene specificato alcun nome di provider o se viene specificato come nome del prodotto. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anche se si specifica il nome del provider meno recente, SQLOLEDB, verrà modificato in SQLNCLI se persiste nel catalogo.  
+ Il provider di OLE DB Native Client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è il provider utilizzato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se non è specificato alcun nome di provider o se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene specificato come nome del prodotto. Anche se si specifica il nome del provider meno recente, SQLOLEDB, verrà modificato in SQLNCLI se persiste nel catalogo.  
   
  I parametri *data_source*, *location*, *provider_string*e *Catalog* identificano il database o i database a cui punta il server collegato. Se uno di questi parametri è NULL, la proprietà di inizializzazione OLE DB corrispondente non viene impostata.  
   
@@ -110,10 +110,10 @@ ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provi
  non è possibile eseguire **sp_addlinkedserver** in una transazione definita dall'utente.  
   
 > [!IMPORTANT]
-> Quando si crea un server collegato tramite **sp_addlinkedserver**, viene aggiunto un mapping automatico predefinito per tutti gli account di accesso locali. Per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider non, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso autenticati potrebbero essere in grado di accedere al provider con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'account del servizio. Si consiglia agli amministratori di considerare l'utilizzo di `sp_droplinkedsrvlogin <linkedserver_name>, NULL` per rimuovere il mapping globale.  
+> Quando si crea un server collegato tramite **sp_addlinkedserver**, viene aggiunto un mapping automatico predefinito per tutti gli account di accesso locali. Per i provider non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con autenticazione possono essere in grado di accedere al provider con l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si consiglia agli amministratori di considerare l'utilizzo di `sp_droplinkedsrvlogin <linkedserver_name>, NULL` per rimuovere il mapping globale.  
   
 ## <a name="permissions"></a>Permissions  
- L' `sp_addlinkedserver` istruzione richiede l' `ALTER ANY LINKED SERVER` autorizzazione. La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] finestra di dialogo **nuovo server collegato** viene implementata in modo da richiedere l'appartenenza al `sysadmin` ruolo predefinito del server.  
+ L'istruzione `sp_addlinkedserver` richiede l'autorizzazione `ALTER ANY LINKED SERVER`. La finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **nuovo server collegato** viene implementata in modo da richiedere l'appartenenza al ruolo predefinito del server `sysadmin`.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -139,10 +139,10 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
 
- Nell'esempio seguente viene creato un server `S1_instance1` collegato in un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client.  
+ Nell'esempio seguente viene creato un server collegato `S1_instance1` in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider di OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
  
 > [!IMPORTANT] 
-> SQL Server Native Client provider di OLE DB (SQLNCLI) rimane deprecato e non è consigliabile utilizzarlo per un nuovo lavoro di sviluppo. Usare invece il nuovo [driver Microsoft OLE DB per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
+> Il provider OLE DB per SQL Server Native Client (SQLNCLI) rimane deprecato e non è consigliabile usarlo per nuovi progetti di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -156,7 +156,7 @@ EXEC sp_addlinkedserver
  Il provider Microsoft.Jet.OLEDB.4.0 si connette al database di Microsoft Access che utilizza il formato 2002-2003. Nell'esempio seguente viene creato un server collegato denominato `SEATTLE Mktg`.  
   
 > [!NOTE]  
-> In questo esempio si presuppone [!INCLUDE[msCoName](../../includes/msconame-md.md)] che sia l'accesso sia il database **Northwind** di esempio siano installati e che il database **Northwind** si trovi in C:\MSOffice\Access\Samples.  
+> In questo esempio si presuppone che sia l'accesso [!INCLUDE[msCoName](../../includes/msconame-md.md)] che il database **Northwind** di esempio siano installati e che il database **Northwind** si trovi in C:\MSOffice\Access\Samples.  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -170,7 +170,7 @@ GO
  Il provider Microsoft.ACE.OLEDB.12.0 si connette al database di Microsoft Access che utilizza il formato 2007. Nell'esempio seguente viene creato un server collegato denominato `SEATTLE Mktg`.  
   
 > [!NOTE]  
-> In questo esempio si presuppone [!INCLUDE[msCoName](../../includes/msconame-md.md)] che sia l'accesso sia il database **Northwind** di esempio siano installati e che il database **Northwind** si trovi in C:\MSOffice\Access\Samples.  
+> In questo esempio si presuppone che sia l'accesso [!INCLUDE[msCoName](../../includes/msconame-md.md)] che il database **Northwind** di esempio siano installati e che il database **Northwind** si trovi in C:\MSOffice\Access\Samples.  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D. Utilizzo del provider Microsoft OLE DB per un foglio di calcolo di Excel  
- Per creare una definizione di server collegato utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] il provider di OLE DB per Jet per accedere a un foglio di calcolo di Excel nel formato 1997-2003, creare innanzitutto un intervallo denominato in Excel specificando le colonne e le righe del foglio di lavoro di Excel da selezionare. È quindi possibile fare riferimento al nome dell'intervallo come a un nome di tabella in una query distribuita.  
+ Per creare una definizione di server collegato utilizzando il provider di OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet per accedere a un foglio di calcolo di Excel nel formato 1997-2003, creare innanzitutto un intervallo denominato in Excel specificando le colonne e le righe del foglio di lavoro di Excel da selezionare. È quindi possibile fare riferimento al nome dell'intervallo come a un nome di tabella in una query distribuita.  
   
 ```sql  
 EXEC sp_addlinkedserver 'ExcelSource',  
@@ -287,9 +287,9 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Aggiungere un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] come server collegato per l'uso con query distribuite in database cloud e locali  
  È possibile aggiungere [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] come server collegato e quindi utilizzato con query distribuite che si estendono su database locali e cloud. Si tratta di un componente per le soluzioni ibride di database che si estendono su reti aziendali locali e sul cloud di Azure.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prodotto box contiene la funzionalità query distribuite, che consente di scrivere query per combinare i dati da origini dati locali e dati da origini remote, inclusi i dati provenienti da origini [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dati, definiti come server collegati. Ogni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (ad eccezione del database master virtuale) può essere aggiunto come singolo server collegato e quindi essere utilizzato direttamente nelle applicazioni di database come qualsiasi altro database.  
+ Il prodotto della casella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene la funzionalità query distribuita, che consente di scrivere query per combinare dati da origini dati locali e dati da origini remote, inclusi i dati provenienti da origini dati non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], definiti come server collegati. Ogni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (ad eccezione del database master virtuale) può essere aggiunto come singolo server collegato e quindi essere utilizzato direttamente nelle applicazioni di database come qualsiasi altro database.  
   
- I vantaggi offerti da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] includono gestibilità, disponibilità elevata, scalabilità, compatibilità con un modello di sviluppo noto e un modello di dati relazionale. I requisiti dell'applicazione di database determinano la modalità di utilizzo di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nel cloud. È possibile spostare contemporaneamente tutti i dati in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o spostare progressivamente alcuni dati mantenendo quelli rimanenti in locale. Per un'applicazione di database ibrido [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] di questo tipo, ora è possibile aggiungerli come server collegati e l'applicazione di database può emettere [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] query distribuite per combinare i dati provenienti da e dalle origini dati locali.  
+ I vantaggi offerti da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] includono gestibilità, disponibilità elevata, scalabilità, compatibilità con un modello di sviluppo noto e un modello di dati relazionale. I requisiti dell'applicazione di database determinano la modalità di utilizzo di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nel cloud. È possibile spostare contemporaneamente tutti i dati in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o spostare progressivamente alcuni dati mantenendo quelli rimanenti in locale. Per un'applicazione di database ibrido di questo tipo, è ora possibile aggiungere [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] come server collegati e l'applicazione di database può emettere query distribuite per combinare i dati da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e dalle origini dati locali.  
   
  Ecco un semplice esempio che illustra come connettersi a un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] usando le query distribuite:  
   
@@ -325,7 +325,7 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;per query distribuite Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;per query distribuite Transact&#41;-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   

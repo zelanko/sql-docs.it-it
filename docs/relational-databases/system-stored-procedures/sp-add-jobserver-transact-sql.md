@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078200"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305243"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Indirizza il processo specificato al server specificato.  
@@ -40,23 +40,23 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Il numero di identificazione del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` il numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` il nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @server_name = ] 'server'` Il nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)** , con un valore predefinito di N' (Local) '. *server* può essere rappresentata **(locale)** per un server locale o il nome di un server di destinazione esistente.  
+`[ @server_name = ] 'server'` il nome del server a cui indirizzare il processo. il *Server* è di **tipo nvarchar (30)** e il valore predefinito è n'(local)'. il *Server* può essere **(locale)** per un server locale oppure il nome di un server di destinazione esistente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- **@automatic_post** esiste **sp_add_jobserver**, ma non è elencato nella sezione argomenti. **@automatic_post** è riservato per uso interno.  
+ **\@automatic_post** esiste in **sp_add_jobserver**, ma non è elencato in argomenti. **\@automatic_post** è riservato per uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
@@ -71,7 +71,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_jobserver** per processi che implicano più server.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_jobserver** per i processi che coinvolgono più server.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124225"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305207"
 ---
-# <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+# <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fa in modo che l'istanza del server analizzi e carichi i dati dal file del thesaurus che corrisponde alla lingua per cui è specificato l'identificatore LCID. Questa stored procedure risulta utile dopo avere eseguito l'aggiornamento di un file del thesaurus. L'esecuzione **sp_fulltext_load_thesaurus_file** ha provocato la ricompilazione delle query full-text che utilizzano il thesaurus relativo all'identificatore LCID specificato.  
+  Fa in modo che l'istanza del server analizzi e carichi i dati dal file del thesaurus che corrisponde alla lingua per cui è specificato l'identificatore LCID. Questa stored procedure risulta utile dopo avere eseguito l'aggiornamento di un file del thesaurus. L'esecuzione di **sp_fulltext_load_thesaurus_file** comporta la ricompilazione di query full-text che utilizzano il thesaurus dell'LCID specificato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,14 +42,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Argomenti  
  *lcid*  
- Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli identificatori LCID delle lingue disponibili in un'istanza del server, usare il [Sys. fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista del catalogo.  
+ Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli LCID delle lingue disponibili in un'istanza del server, utilizzare la vista del catalogo [Transact- &#40;SQL&#41; sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- **@loadOnlyIfNotLoaded**  = *Azione*  
- Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *azione* è uno di:  
+ *azione*  =  **\@loadOnlyIfNotLoaded**  
+ Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *Action* è uno dei seguenti:  
   
 |Value|Definizione|  
 |-----------|----------------|  
-|**0**|Il file del thesaurus viene caricato indipendentemente dal fatto che sia già caricato. Si tratta del comportamento predefinito di **sp_fulltext_load_thesaurus_file**.|  
+|**0**|Il file del thesaurus viene caricato indipendentemente dal fatto che sia già caricato. Questo è il comportamento predefinito di **sp_fulltext_load_thesaurus_file**.|  
 |1|Il file del thesaurus viene caricato solo se non è ancora caricato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -59,12 +59,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  Nessuna  
   
 ## <a name="remarks"></a>Note  
- I file del thesaurus vengono caricati automaticamente da query full-text che utilizzano il thesaurus. Per evitare questo impatto sulle prestazioni di primo nella query full-text, è consigliabile eseguire **sp_fulltext_load_thesaurus_file**.  
+ I file del thesaurus vengono caricati automaticamente da query full-text che utilizzano il thesaurus. Per evitare questo primo influsso sulle prestazioni delle query full-text, è consigliabile eseguire **sp_fulltext_load_thesaurus_file**.  
   
- Uso [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' per aggiornare l'elenco di lingue registrate con ricerca full-text.  
+ Utilizzare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' per aggiornare l'elenco di lingue registrate con la ricerca full-text.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o l'amministratore di sistema può eseguire il **sp_fulltext_load_thesaurus_file** stored procedure.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o dell'amministratore di sistema possono eseguire il stored procedure **sp_fulltext_load_thesaurus_file** .  
   
  Solo gli amministratori di sistema possono aggiornare, modificare o eliminare i file del thesaurus.  
   

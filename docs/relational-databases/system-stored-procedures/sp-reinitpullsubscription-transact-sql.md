@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762342"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304919"
 ---
-# <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
+# <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Contrassegna una sottoscrizione pull o anonima transazionale per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione. Questa stored procedure viene eseguita nel database di sottoscrizione pull del Sottoscrittore.  
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` è il nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all, che contrassegna tutte le sottoscrizioni per la reinizializzazione.  
+`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all, che contrassegna tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** può essere chiamato dal Sottoscrittore per reinizializzare la sottoscrizione, durante la successiva esecuzione del agente di distribuzione.  
   
- Le sottoscrizioni di pubblicazioni create con un valore false **@immediate_sync** per non possono essere reinizializzate dal Sottoscrittore.  
+ Le sottoscrizioni di pubblicazioni create con un valore **false** per **\@immediate_sync** non possono essere reinizializzate dal Sottoscrittore.  
   
  È possibile reinizializzare una sottoscrizione pull eseguendo **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
   

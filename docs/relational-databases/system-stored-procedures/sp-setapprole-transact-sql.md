@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de85505295ceff98f404b2ba4c1effe3946fdbe5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104424"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304969"
 ---
-# <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
+# <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -45,27 +45,27 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argomenti
 
-`[ @rolename = ] 'role'` È il nome del ruolo applicazione definito nel database corrente. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
+`[ @rolename = ] 'role'` è il nome del ruolo applicazione definito nel database corrente. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. il *ruolo* deve esistere nel database corrente.  
   
-`[ @password = ] { encrypt N'password' }` È la password necessaria per attivare il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *la password* è possibile offuscare usando ODBC **crittografare** (funzione). Quando si usa la **crittografare** funzione, la password deve essere convertita in una stringa Unicode inserendo **N** prima della virgoletta.  
+`[ @password = ] { encrypt N'password' }` è la password necessaria per attivare il ruolo applicazione. *password* è di **tipo sysname**e non prevede alcun valore predefinito. la *password* può essere offuscata utilizzando la funzione ODBC **Encrypt** . Quando si utilizza la funzione **Encrypt** , la password deve essere convertita in una stringa Unicode inserendo **N** prima della prima virgoletta.  
   
- L'opzione crittografia non è supportato per le connessioni che usano **SqlClient**.  
+ L'opzione encrypt non è supportata per le connessioni che utilizzano **SqlClient**.  
   
 > [!IMPORTANT]  
-> ODBC **crittografare** funzione non supporta la crittografia. È consigliabile evitare l'utilizzo di questa funzione per proteggere le password trasmesse in rete. Per informazioni da trasmettere in rete, utilizzare i protocolli SSL o IPSec.
+> La funzione ODBC **Encrypt** non fornisce la crittografia. È consigliabile evitare l'utilizzo di questa funzione per proteggere le password trasmesse in rete. Per informazioni da trasmettere in rete, utilizzare i protocolli SSL o IPSec.
   
- **@encrypt = 'none'**  
+ **@encrypt =' none '**  
  Indica che non è richiesto l'utilizzo di tecniche di offuscamento. La password viene passata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come testo normale. Questa è l'impostazione predefinita.  
   
- **@encrypt= 'odbc'**  
- Specifica che ODBC eseguirà l'offuscamento della password usando ODBC **crittografare** funzione prima di inviare la password per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
+ **@encrypt =' ODBC '**  
+ Specifica che la password viene offuscata da ODBC tramite la funzione ODBC **Encrypt** prima di inviare la password al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
   
-`[ @fCreateCookie = ] true | false` Specifica se un cookie deve essere creato. **true** viene implicitamente convertito in 1. **false** viene implicitamente convertito in 0.  
+`[ @fCreateCookie = ] true | false` specifica se è necessario creare un cookie. **true** viene convertito in modo implicito in 1. **false** viene convertito in modo implicito in 0.  
   
-`[ @cookie = ] @cookie OUTPUT` Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** viene **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` specifica un parametro di output che conterrà il cookie. Il cookie viene generato solo se il valore di **\@fCreateCookie** è **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.
+> Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary (8000),** in modo che l'applicazione continui a funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione futura.
   
 ## <a name="return-code-values"></a>Valori restituiti
 
@@ -73,17 +73,17 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Note
 
- Dopo un'applicazione l'attivazione di ruolo usando **sp_setapprole**, tale ruolo rimane attivo fino a quando l'utente si disconnette dal server o all'esecuzione **sp_unsetapprole**. **sp_setapprole** può essere eseguita solo da direct [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. **sp_setapprole** non può essere eseguita all'interno di un'altra stored procedure o una transazione definita dall'utente.  
+ Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole**, il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o esegue **sp_unsetapprole**. **sp_setapprole** può essere eseguito solo tramite istruzioni Direct [!INCLUDE[tsql](../../includes/tsql-md.md)]. non è possibile eseguire **sp_setapprole** in un altro stored procedure o in una transazione definita dall'utente.  
   
- Per una panoramica dei ruoli applicazione, vedere [i ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
+ Per una panoramica dei ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
-> Per proteggere la password del ruolo dell'applicazione durante la trasmissione attraverso una rete, è consigliabile usare sempre una connessione crittografata quando si abilita un ruolo applicazione.
-> Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **crittografare** opzione non è supportato da **SqlClient**. Se è necessario archiviare credenziali, crittografarle con le funzioni CryptoAPI. Il parametro *password* viene archiviato come hash unidirezionale. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i criteri di complessità delle password non viene applicato dal **sp_addapprole**. Per applicare criteri di complessità delle password, usare [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+> Per proteggere la password del ruolo applicazione durante la trasmissione in una rete, è consigliabile utilizzare sempre una connessione crittografata quando si Abilita un ruolo applicazione.
+> L'opzione ODBC **encrypt** [!INCLUDE[msCoName](../../includes/msconame-md.md)] non è supportata da **SqlClient**. Se è necessario archiviare credenziali, crittografarle con le funzioni CryptoAPI. La *password* del parametro viene archiviata come hash unidirezionale. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i criteri di complessità delle password non vengono applicati da **sp_addapprole**. Per applicare i criteri di complessità delle password, utilizzare [Crea ruolo applicazione](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions
 
-Richiede l'appartenenza al **pubblica** e conoscere la password per il ruolo.  
+Richiede l'appartenenza a **public** e la conoscenza della password per il ruolo.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>Vedere anche
 
- [Stored procedure di sistema &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [Stored procedure di sicurezza &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [Stored &#40;procedure di sistema Transact-&#41; SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [stored procedure &#40;&#41; di sicurezza](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) Transact-SQL creazione del ruolo applicazione [ &#40;Transact&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) -SQL [Drop Application Role &#40; Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

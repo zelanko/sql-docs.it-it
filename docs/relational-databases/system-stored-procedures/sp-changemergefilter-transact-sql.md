@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124890"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304944"
 ---
-# <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
+# <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di modificare alcune proprietà del filtro di merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -43,53 +43,53 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` è il nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filtername = ] 'filtername'` È il nome corrente del filtro. *FilterName* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'` è il nome corrente del filtro. *FilterName* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È il nome della proprietà da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` è il nome della proprietà da modificare. *Property* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore*viene **nvarchar(1000)** , non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` è il nuovo valore per la proprietà specificata. *value*è di **tipo nvarchar (1000)** e non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Valore|Descrizione|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro join.<br /><br /> Questa opzione è necessaria per supportare i Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relazione tra record logici.|  
 ||**3**|Il filtro join è anche una relazione tra record logici.|  
-|**FilterName**||Nome del filtro.|  
+|**NomeFiltro**||Nome del filtro.|  
 |**join_articlename**||Nome dell'articolo di join.|  
 |**join_filterclause**||Clausola di filtro.|  
 |**join_unique_key**|**true**|Il join è basato su una chiave univoca.|  
 ||**false**|Il join non è basato su una chiave univoca.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` riconosce che l'azione eseguita da questo stored procedure può invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** significa che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, offre l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
+ **1** indica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot e, se sono presenti sottoscrizioni che richiedono un nuovo snapshot, consente di contrassegnare lo snapshot esistente come obsoleto e di generare un nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** il cui valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo di merge non provocano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** significa che le modifiche apportate all'articolo di merge causerà reinizializzazione delle sottoscrizioni esistenti e autorizza la reinizializzazione della sottoscrizione.  
+ **1** indica che le modifiche apportate all'articolo di merge comportano la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_changemergefilter** viene utilizzata nella replica di tipo merge.  
+ **sp_changemergefilter** viene utilizzata per la replica di tipo merge.  
   
- Per modificare il filtro in un articolo di merge, è necessario ricreare lo snapshot, se disponibile. Questa operazione viene eseguita impostando il **@force_invalidate_snapshot** al **1**. È inoltre necessario reinizializzare le eventuali sottoscrizioni esistenti dell'articolo. Questa operazione viene eseguita impostando il **@force_reinit_subscription** al **1**.  
+ Per modificare il filtro in un articolo di merge, è necessario ricreare lo snapshot, se disponibile. Questa operazione viene eseguita impostando il **\@force_invalidate_snapshot** su **1**. È inoltre necessario reinizializzare le eventuali sottoscrizioni esistenti dell'articolo. Questa operazione viene eseguita impostando il **\@force_reinit_subscription** su **1**.  
   
  Per utilizzare record logici, è necessario che la pubblicazione e gli articoli soddisfino alcuni requisiti. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changemergefilter**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

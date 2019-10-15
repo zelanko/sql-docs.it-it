@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b2812f8c0c544b7f82a1a4d8db1b4471c9aadadd
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199429"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305055"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,25 +41,25 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id`ID dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
+`[ @principal_id = ] principal_id` l'ID dell'utente o del ruolo del database nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
-`[ @principal_name = ] 'principal_name'`Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_name* di **' Public '** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
+`[ @principal_name = ] 'principal_name'` il nome dell'utente o del ruolo del database nel database **msdb** per l'associazione. *principal_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_name* di **' Public '** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
-`[ @profile_id = ] profile_id`ID del profilo per l'associazione. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` l'ID del profilo per l'associazione. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo per l'associazione. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` il nome del profilo per l'associazione. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @is_default = ] is_default`Specifica se il profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
+`[ @is_default = ] is_default` specifica se il profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- Per rendere pubblico un profilo, specificare un **@principal_id** valore pari a **0** o a **@principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
+ Per rendere pubblico un profilo, specificare un **\@principal_id** **0** o un **\@principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
   
- A un utente del database può essere associato un solo profilo predefinito. Quando **@is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
+ A un utente del database può essere associato un solo profilo predefinito. Quando **\@is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
   
- Quando **@is_default** è'**0**' e non esiste nessun'altra associazione, il stored procedure restituisce un errore.  
+ Quando **\@is_default** è'**0**' e non esiste nessun'altra associazione, il stored procedure restituisce un errore.  
   
  Il stored procedure **sysmail_add_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
@@ -67,9 +67,9 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Creazione di un'associazione, impostazione del profilo predefinito**  
+ **A. Creazione di un'associazione, impostazione del profilo predefinito @ no__t-0  
   
- Nell'esempio seguente viene creata un'associazione tra il profilo `AdventureWorks Administrator Profile` denominato e l'utente `ApplicationUser`del database **msdb** . Il profilo è il profilo predefinito per l'utente.  
+ Nell'esempio seguente viene creata un'associazione tra il profilo denominato `AdventureWorks Administrator Profile` e l'utente del database **msdb** `ApplicationUser`. Il profilo è il profilo predefinito per l'utente.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -78,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. Creazione di un profilo come profilo pubblico predefinito**  
+ **B. Creazione di un profilo come profilo pubblico predefinito @ no__t-0  
   
- Nell'esempio seguente il `AdventureWorks Public Profile` profilo viene reso il profilo pubblico predefinito per gli utenti nel database **msdb** .  
+ Nell'esempio seguente il profilo viene reso `AdventureWorks Public Profile` il profilo pubblico predefinito per gli utenti nel database **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -91,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Oggetti di configurazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Stored procedure &#40;di posta elettronica database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   
