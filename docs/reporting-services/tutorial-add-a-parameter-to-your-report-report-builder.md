@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041730"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252135"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
 In questa esercitazione viene aggiunto un parametro in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] per consentire ai lettori del report di filtrare i dati in base a uno o più valori. 
@@ -142,9 +142,9 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
     WHERE StoreID = (@StoreID)  
     ```  
   
-    Viene aperta la finestra di dialogo **WHERE** limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID* .  
+    La clausola **WHERE** limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *\@StoreID*.  
   
-4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID* .  
+4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Si aprirà la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *\@StoreID*.  
   
 5.  In **Valore parametro**digitare **200**.  
   
@@ -156,7 +156,7 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
   
 8.  Nel riquadro Dati report espandere la cartella **Parametri** .  
   
-Si noti che è ora presente un parametro del report denominato *@StoreID* e un riquadro Parametri in cui visualizzare i parametri del report.   
+Si noti che è ora presente un parametro del report denominato *\@StoreID* e un riquadro Parametri in cui è possibile visualizzare i parametri del report.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Dopo aver creato un parametro di report, è possibile impostare i valori predefi
   
 Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. Poiché l'identificatore del punto vendita è un intero, è possibile modificare il tipo di dati in Integer.  
   
-1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
+1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *\@StoreID*, quindi fare clic su **Proprietà parametri**.  
   
 2.  In **Messaggio di richiesta**digitare **Identificatore punto vendita?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
   
@@ -179,7 +179,7 @@ Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. P
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Fare clic su **Esegui** per visualizzare l'anteprima del report. Il visualizzatore di report visualizza il messaggio di richiesta **Store Identifier?** per *@StoreID* .  
+6.  Fare clic su **Esegui** per visualizzare l'anteprima del report. Il visualizzatore di report visualizza il messaggio di richiesta **Identificatore punto vendita?** per *\@StoreID*.  
   
 7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200**e quindi fare clic su **Visualizza report**.  
   
@@ -220,7 +220,7 @@ Dopo aver creato un set di dati per offrire i valori disponibili, modificare le 
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *@StoreID* e quindi fare clic su **Proprietà parametri**.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *\@StoreID*, quindi scegliere **Proprietà parametri**.  
   
 2.  Fare clic su **Valori disponibili**e quindi su **Ottieni valori da una query**.  
   
@@ -253,7 +253,7 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
   
 3.  Fare clic su **Valori predefiniti**e quindi su **Ottieni valori da una query**.  
   
@@ -265,13 +265,13 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 7.  Visualizzare l'anteprima del report.  
   
-For *@StoreID* , nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store" perché è il primo valore dal set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+Per *\@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store" perché è il primo valore del set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
   
 3.  Fare clic su **Valori predefiniti** > **Specifica valori** > **Aggiungi**. Verrà aggiunta una nuova riga di valori.  
   
@@ -281,7 +281,7 @@ For *@StoreID* , nel Visualizzatore di report viene visualizzato il valore "Cont
   
 6.  Visualizzare l'anteprima del report.  
   
-For *@StoreID* viene visualizzato "Contoso Catalog Store" poiché si tratta del nome visualizzato per l'identificatore di punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
+Nel visualizzatore di report per *\@StoreID* viene visualizzato "Contoso Catalog Store" poiché si tratta del nome visualizzato per l'identificatore di punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
 ## <a name="NameValue"></a>4d. Cercare una coppia nome/valore  
 Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
@@ -323,7 +323,7 @@ Quando un lettore ha delle domande su un report, è utile sapere quali valori di
   
 2.  Fare clic con il pulsante destro del mouse sul piè di pagina della pagina > **Inserisci** > **Casella di testo**. Trascinare la casella di testo accanto alla casella di testo con il timestamp. Fare clic sul quadratino di ridimensionamento laterale della casella di testo ed espanderla in larghezza.  
   
-3.  Trascinare il parametro *@StoreID* dal riquadro Dati report alla casella di testo. Nella casella di testo viene visualizzato `[@StoreID]`.  
+3.  Trascinare il parametro *\@StoreID* dal riquadro Dati report nella casella di testo. Nella casella di testo viene visualizzato `[@StoreID]`.  
   
 4.  Per visualizzare l'etichetta del parametro, fare clic nella casella di testo finché il cursore di inserimento non viene visualizzato dopo l'espressione esistente, immettere uno spazio, quindi trascinare un'altra copia del parametro dal riquadro dei dati del report nella casella di testo. Nella casella di testo viene visualizzato `[@StoreID] [@StoreID]`.  
   
@@ -371,7 +371,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
   
 3.  Selezionare **Consenti più valori**.  
   

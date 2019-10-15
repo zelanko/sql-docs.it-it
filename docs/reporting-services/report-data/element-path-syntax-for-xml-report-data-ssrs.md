@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573164"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173833"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per usare il percorso di elemento predefinito, lasciare vuota la query del set di dati o l'elemento **ElementPath** XML dell'elemento **Query** XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**Codifica**|Indica che il **valore** dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
 |**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto ( **{}** ), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
 |**Campo**|Specifica i dati recuperati come campo del set di dati.|  
-|**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo elemento Customer ID="1">\<, ad esempio, **ID** è un attributo e **@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
+|**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo dell'elemento \<Customer ID="1">, **ID** è un attributo e **\@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
 |**Value**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
 |**elemento**|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |**Tipo**|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
