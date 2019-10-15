@@ -48,7 +48,7 @@ ms.locfileid: "71952577"
   
 5.  Quando viene richiesto di eseguire il backup della chiave simmetrica, digitare un nome di file e un percorso per la copia di backup della chiave simmetrica, digitare una password per bloccare e sbloccare il file, quindi scegliere **OK**.  
   
-6.  Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione verranno aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6.  Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione verranno aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** , immettere le credenziali che dispongono dell'autorizzazione necessaria per connettersi al database, quindi scegliere **OK**.  
   
 7.  Quando viene richiesto di ripristinare la chiave simmetrica, digitare la password specificata al passaggio 5, quindi scegliere **OK**.  
   
