@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530857"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313688"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni controllo del server che indica lo stato corrente del controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

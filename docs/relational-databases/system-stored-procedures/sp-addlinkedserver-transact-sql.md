@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c96dd49b0fc9b92c645d5c12c5f5cf0fc50e023
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305254"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313751"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea un server collegato, il quale consente l'accesso a query distribuite ed eterogenee in origini dati OLE DB. Dopo la creazione di un server collegato tramite **sp_addlinkedserver**, le query distribuite possono essere eseguite su questo server. Se il server collegato viene definito come un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile eseguire stored procedure remote.  
   

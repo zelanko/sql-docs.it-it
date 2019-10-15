@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4: Gestione e visualizzazione dei risultati | Microsoft Docs'
+title: 'Attività 4: Mana e visualizzazione dei risultati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,83 +10,83 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489449"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313651"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
-  In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Visualizzare [fase di pulizia interattiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) per altri dettagli.  
+# <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Mana e visualizzazione dei risultati
+  In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Per ulteriori informazioni, vedere [fase di pulizia interattiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
-1.  Selezionare **Contact Email** dominio dall'elenco di domini.  
+1.  Selezionare **Contact email** Domain dall'elenco di domini.  
   
-2.  Passare al **valido** scheda nel riquadro di destra. Si noti che due indirizzi di posta elettronica manca la lettera ' alla fine. Questi due messaggi di posta elettronica che sono stati trovati non validi dalla regola di dominio che richiede tutti gli indirizzi di posta elettronica al termine **@adventure-works.com** (con del '). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
+2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con **\@adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
   
-3.  Nel **Correggi in** colonna, tipo di messaggio di posta elettronica a destra di indirizzi che terminano con **@adventure-works.com** (con del ').  
+3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con **\@adventure-Works.com** (con ' s').  
   
-     ![Le correzioni di regola di convalida posta elettronica](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "correzioni dalla regola di convalida posta elettronica")  
+     ![Correzioni dalle]correzioni della regola di convalida della posta elettronica(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "dalla regola di convalida della posta elettronica")  
   
-4.  Fare clic su **Approva** per entrambi i record approvare entrambe le modifiche. Quando si approva, i record vengono spostati i **con correzione** scheda. Anziché approvare separatamente ogni elemento, è possibile approvare tutte le modifiche contemporaneamente utilizzando il **Approva tutti i termini** pulsante della barra degli strumenti.  
+4.  Fare clic su **approva** per entrambi i record per approvare entrambe le modifiche. Quando si approva, i record vengono spostati nella scheda con **correzione** . Anziché approvare separatamente ogni elemento, è possibile approvare tutte le modifiche contemporaneamente usando il pulsante della barra degli strumenti **approva tutti i termini** .  
   
-5.  Passare al **New** scheda nel riquadro di destra. I valori in questa scheda sono quelli per i quali DQS non dispone ancora di informazioni sufficienti nella Knowledge Base per stabilire se sono corretti. Pertanto, non è possibile apportare o suggerire modifiche ai valori di dominio.  
+5.  Passare alla scheda **nuovo** nel riquadro destro. I valori in questa scheda sono quelli per i quali DQS non dispone ancora di informazioni sufficienti nella Knowledge Base per stabilire se sono corretti. Pertanto, non è possibile apportare o suggerire modifiche ai valori di dominio.  
   
-6.  Esaminare i valori per verificare che tutti i messaggi di posta elettronica deve terminare con **@adventure-works.com** e fare clic su **Approva tutti i termini** sulla barra degli strumenti. Spostano i valori approvati da questa scheda per il **corretti** scheda.  
+6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con **\@adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
   
-7.  Selezionare il **paese** dominio dall'elenco di domini.  
+7.  Selezionare il dominio **Country** dall'elenco dei domini.  
   
-8.  Passare al **con correzione** scheda nel riquadro destro e notare che **United State** valore viene corretto automaticamente per il **United States** con del ' alla fine. Questa regola non è stata definita per il **Country** dominio, tuttavia, in DQS viene **83%** certi che il valore corretto è **United States**. Il **Approva** pulsante viene selezionato automaticamente per tutte le **con correzione** elementi. È possibile eseguire l'override di questo comportamento e rifiutare una modifica.  
+8.  Passare alla scheda con **correzione** nel riquadro destro e notare che il valore **United State** viene corretto automaticamente in **Stati Uniti** con ' s'alla fine. Questa regola non è una regola definita per il dominio **Country** , ma DQS è il **83%** sicuro che il valore corretto sia **Stati Uniti**. Il pulsante **approva** viene selezionato automaticamente per tutti gli elementi **corretti** . È possibile eseguire l'override di questo comportamento e rifiutare una modifica.  
   
-9. Si noti che **Stati Uniti** è stato corretto in **Stati Uniti** perché sono sinonimi e **United States** è il valore iniziale (preferito).  
+9. Si noti che **USA** viene corretto **Stati Uniti** perché si tratta di sinonimi e **Stati Uniti** è il valore principale (preferito).  
   
-     ![Correzioni basate su sinonimi](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "correzioni basate su sinonimi")  
+     ![Correzioni basate sulle correzioni di sinonimi](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "in base ai sinonimi")  
   
-10. Si noti che il **Approva** pulsante è già selezionato per questi valori con correzione. Si tratta del comportamento predefinito per i valori con correzione. È possibile rifiutare le modifiche e quando si esegue questa operazione, il valore viene spostato il **valido** scheda.  
+10. Si noti che il pulsante **approva** è già selezionato per questi valori corretti. Si tratta del comportamento predefinito per i valori con correzione. È possibile rifiutare una modifica e, quando si esegue questa operazione, il valore viene spostato nella scheda **non valido** .  
   
-11. Selezionare **Supplier Name** dall'elenco di domini.  
+11. Selezionare **Supplier Name** nell'elenco di domini.  
   
-12. Passare al **con correzione** scheda nel riquadro di destra.  
+12. Passare alla scheda con **correzione** nel riquadro destro.  
   
-     ![Nomi fornitori con correzione](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "nomi fornitori con correzione")  
+     ![Correzione dei nomi dei fornitori](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corretti i nomi dei fornitori")  
   
-    1.  Si noti che **r. Datum corp** è stato corretto in **A. Datum Corporation** e il **motivo** è impostata su **relazione basata su termini. A. datum Corporation** è un valore di dominio noto a DQS perché è stato individuato durante il processo di individuazione delle informazioni. È pertanto DQS **certezza al 100%** di questa correzione.  
+    1.  Si noti che a **. Datum Corp.** è stato corretto in a **. Datum Corporation** e il **motivo** è impostato sulla relazione **Term. A. Datum Corporation @ no__t-0 è un valore di dominio noto in DQS perché è stato individuato durante il processo di individuazione delle informazioni. Pertanto, DQS è **sicuro del 100%** sulla correzione.  
   
-    2.  Si noti che **Lazy Country Storex** è stato corretto in **Lazy Country Store**, **livello di confidenza** è impostata su **100%** e il **Motivo** è impostata su **valore di dominio**. Durante il processo di individuazione della Knowledge Base, si imposta **Lazy Country Storex** come un errore con **Lazy Country Store** come il **correzione**, quindi viene eseguita DQS **100% certi** questa correzione.  
+    2.  Si noti **che Lazy Country Storex è stato** corretto in **Lazy Country Store**, il **livello di confidenza** è impostato su **100%** e il **motivo** è impostato sul **valore di dominio**. Durante il processo di individuazione delle informazioni, impostare **Lazy Country Storex** come errore con **Lazy Country Store** come **correzione**, in modo che DQS sia il **100% di sicurezza** per l'esecuzione di questa correzione.  
   
-    3.  DQS non abbia familiarità con gli altri valori nell'elenco, ma vengono individuate le correzioni per tali valori usando il **correttore ortografico** e vengono proposte le opportune correzioni. DQS è **non 100%** certi di queste correzioni, ma il livello di confidenza è superiore all'80%, ovvero il livello di soglia per correzioni automatiche in modo da DQS vengono proposte correzioni.  
+    3.  DQS non ha familiarità con gli altri valori nell'elenco, ma ha trovato le correzioni per questi valori usando il **controllo ortografico** e propone le correzioni appropriate. DQS non è sicuro del **100%** su queste correzioni, ma il livello di confidenza è superiore al 80%, che rappresenta il livello di soglia per l'esecuzione di correzioni, quindi DQS propone le correzioni.  
   
-13. Si noti che il **Approva** viene abilitata automaticamente per tutti i valori. È possibile sostituire il valore con correzione o rifiutare la modifica in base alle esigenze. Per impostazione predefinita il **Approve** pulsante è selezionato per tutti i valori nella **con correzione** scheda.  
+13. Si noti che l' **approvazione** viene abilitata automaticamente per tutti i valori. È possibile sostituire il valore con correzione o rifiutare la modifica in base alle esigenze. Per impostazione predefinita, il pulsante **approva** è selezionato per tutti i valori nella scheda con **correzione** .  
   
-14. Passare al **New** scheda.  
+14. Passare alla **nuova** scheda.  
   
-15. Si noti che **corp.** è stato corretto in **Corporation**, **co** è stato corretto in **aziendale**, e **Inc.** è stato corretto in **Incorporated**. Ad esempio, **Consolidate Inc.** è stato corretto in **Consolidate Incorporated** e **Consolidated CO.** è stato corretto in **Consolidated Company**, e **Frabrikam corp** è stato corretto in **Fabrikam Corporation**.  È possibile vedere che **relazione basata su termini** è indicato come il motivo. Queste modifiche vengono proposte tramite le relazioni basate su termini definite durante l'attività di gestione del dominio. È possibile modificare il **Correggi in** valori manualmente qui.  
+15. Si noti che **Corp.** è stato corretto in **Corporation**, **Co.** è stato corretto in **società**e **Inc.** è stato corretto in **incorporato**. Ad esempio, **consolidate Inc.** viene corretta per il consolidamento di consolidate **Incorporated** e **Consolidated Co.** viene corretto in **società consolidata**e **Frabrikam Corp.** viene corretto in **Fabrikam Corporation**.  È possibile osservare che la **relazione basata su termini** è indicata come motivo. Queste modifiche vengono proposte tramite le relazioni basate su termini definite durante l'attività di gestione del dominio. È possibile modificare manualmente i valori **corretti in** qui.  
   
-16. Scorrere l'elenco per visualizzare **Hunxgry Coyote Store** con una riga rossa ondulata. Fare doppio clic su di esso e fare clic su **Hungry Coyote Store** (con nessuna ' x'). Il **Correggi in** colonna viene popolata automaticamente con **Hungry Coyote Store**. Inoltre, è possibile digitare manualmente un valore nella colonna Correggi in.  
+16. Scorrere l'elenco per visualizzare **Hunxgry Coyote Store** con una linea rossa ondulata. Fare clic con il pulsante destro del mouse su di esso e scegliere **archivio Coyote** bloccati (senza ' x '). La colonna **Correggi in** deve essere popolata automaticamente con l' **archivio Coyote affamato**. Inoltre, è possibile digitare manualmente un valore nella colonna Correggi in.  
   
-17. Fare clic su **Approva tutti i termini** nella barra degli strumenti. I valori di dominio con il **Correggi in** Sposta valore specificato per il **con correzione** tab e i nuovi valori con non è associato alcun **Correggi in** spostano i valori la  **Corretto** scheda.  
+17. Fare clic su **approva tutti i termini** dalla barra degli strumenti. I valori di dominio con il valore **corretto a** specificato passano alla scheda con **correzione** e i nuovi valori senza i valori **corretti** associati passano alla scheda **corretta** .  
   
-18. Selezionare il **Address Validation** domain composita dall'elenco di domini.  
+18. Selezionare il dominio composito **Address Validation** dall'elenco di domini.  
   
-19. Nel riquadro destro passare al **corretti** scheda. Dovrebbe gli indirizzi che risultano corrette per il **Melissa Data - controllo indirizzo** servizio DQS nel **Azure Marketplace**.  
+19. Nel riquadro destro passare alla scheda **corretta** . Verranno visualizzati gli indirizzi che risultano corretti dal servizio **Melissa Data-Address Check** DQS in **Azure Marketplace**.  
   
-20. Passare al **con correzione** scheda.  
+20. Passare alla scheda con **correzione** .  
   
-21. Si noti che **lo stato** per il record con **City** come **Los Angeles** è impostata su **autorità di certificazione** ora. Si noti che nel **motivo** campo è quello **corretti dalla regola 'City-state Rule'** .  
+21. Si noti che lo **stato** del record con **City** As **Los Angeles** è impostato su **CA** Now. Si noti che il campo **reason** è **corretto dalla regola ' City-State Rule '** .  
   
-     ![Correzione regola City-state](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "correzione regola City-state")  
+     Correzione della regola di ![stato della città]per la correzione(../../2014/tutorials/media/et-managingandviewingresults-04.jpg "della regola di stato")  
   
-22. Si noti che il **Approva** pulsante di opzione è già selezionato per questo elemento nell'elenco. Si tratta del comportamento predefinito per gli elementi nel **con correzione** scheda.  
+22. Si noti che il pulsante di opzione **approva** è già selezionato per questo elemento nell'elenco. Questo è il comportamento predefinito per gli elementi nella scheda con **correzione** .  
   
-23. Passare al **suggeriti** scheda. Esaminare le modifiche suggerite per il **Melissa Data - controllo indirizzo** servizio.  
+23. Passare alla scheda **suggerito** . Esaminare le modifiche suggerite dal servizio **Melissa Data-Address Check** .  
   
-24. **Fare clic su Approva tutti i termini** nel pulsante della barra degli strumenti fare clic **OK** sul **conferma** finestra di messaggio.  
+24. **Fare clic su approva tutti i termini** sul pulsante della barra degli strumenti e fare clic su **OK** nella finestra di messaggio di **conferma** .  
   
-     ![Approva tutti i pulsante sulla barra degli strumenti di termini](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "approvare tutti i termini della barra degli strumenti pulsante")  
+     Pulsante della barra ![degli strumenti approva tutti i termini pulsante]della(../../2014/tutorials/media/et-managingandviewingresults-05.jpg "barra degli strumenti approva tutto")  
   
-25. Fare clic su **successivo** per passare alle **esportare** pagina.  
+25. Fare clic su **Avanti** per passare alla pagina **Esporta** .  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Esportazione dei risultati in un File di Excel di pulizia](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Attività 5: Esportazione dei risultati della pulizia in un file di Excel @ no__t-0  
   
   
