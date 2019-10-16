@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934762"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008459"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Aggiornare i database replicati o applicare patch
 
@@ -104,7 +104,7 @@ Questi passaggi illustrano l'ordine in cui i server di una topologia di replica 
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Procedura per la migrazione affiancata del server di distribuzione a Windows Server 2012 R2
-Se si prevede di aggiornare l'istanza di SQL Server a SQL 2016 o versione successiva e il sistema operativo corrente è Windows 2008 o 2008 R2, sarà necessario eseguire un aggiornamento affiancato del sistema operativo per portarlo a Windows Server 2012 R2 o versione successiva. Il motivo di questo aggiornamento intermedio del sistema operativo è che non è possibile installare SQL Server 2016 in un computer Windows Server 2008 o 2008 R2 e che Windows Server 2008/2008 R2 non supporta gli aggiornamenti sul posto per i cluster di failover. Eseguire i passaggi seguenti in un'istanza di SQL Server autonoma o in un'istanza del cluster di failover AlwaysOn.
+Se si prevede di aggiornare l'istanza di SQL Server a SQL Server 2016 o versione successiva e il sistema operativo corrente è Windows 2008 o 2008 R2, sarà necessario eseguire un aggiornamento affiancato del sistema operativo per portarlo a Windows Server R2 o versione successiva. Il motivo di questo aggiornamento intermedio del sistema operativo è che non è possibile installare SQL Server 2016 in un computer Windows Server 2008 o 2008 R2 e che Windows Server 2008 o 2008 R2 non supporta gli aggiornamenti sul posto direttamente in Windows Server 2016. Sebbene sia possibile eseguire un aggiornamento sul posto da Windows Server 2008 o 2008 R2 a Windows Server 2012 e quindi a Windows Server 2016, questa operazione non è in genere consigliata a causa del tempo di inattività e della complessità che impedisce un percorso di rollback semplice. Un aggiornamento affiancato è l'unico percorso di aggiornamento disponibile per le istanze SQL Server che fanno parte di un cluster di failover.  Eseguire i passaggi seguenti in un'istanza di SQL Server autonoma o in un'istanza del cluster di failover AlwaysOn.
 
 1. Configurare una nuova edizione e versione dell'istanza di SQL Server, autonoma o del cluster di failover AlwaysOn, come server di distribuzione in Windows Server 2012 R2 o 2016 specificando un nome diverso per il cluster Windows e per l'istanza del cluster di failover di SQL Server o per l'host autonomo. Mantenere la struttura di directory identica a quella del vecchio server di distribuzione per garantire che i file eseguibili degli agenti di replica, le cartelle di replica e i percorsi file del database si trovino nello stesso percorso nel nuovo ambiente. Ciò riduce la necessità di eseguire interventi successivi alla migrazione o all'aggiornamento.
 1. Verificare che la replica sia sincronizzata, quindi arrestare tutti gli agenti di replica. 

@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476310"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174655"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ Le dimensioni massime della cache dei set di risultati sono pari a 1 TB per ogni
 - Ogni 48 ore se il set di risultati non è stato usato.
 - Quando la cache dei set di risultati sta per raggiungere le dimensioni massime.
 
-Gli utenti possono svuotare manualmente la cache dei set di risultati per un database disattivando la funzionalità di cache dei set di risultati oppure con il comando `DBCC DROPRESULTSETCACHE`.   La sospensione di un database non svuoterà la cache dei set di risultati.  
+Per svuotare manualmente la cache dei set di risultati per un database, gli utenti possono usare una delle opzioni seguenti:
+
+- Disattivare la funzionalità di memorizzazione nella cache dei set di risultati per il database
+- Eseguire `DBCC DROPRESULTSETCACHE` mentre si è connessi al database 
+
+La sospensione di un database non svuoterà la cache dei set di risultati.  
 
 ## <a name="permissions"></a>Autorizzazioni
 

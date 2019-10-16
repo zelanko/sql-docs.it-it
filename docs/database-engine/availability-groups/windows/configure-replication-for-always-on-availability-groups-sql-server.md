@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988458"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251936"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurare la replica con i gruppi di disponibilità Always On
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988458"
   
  Il database di distribuzione non può trovarsi in un gruppo di disponibilità con SQL Server 2012 e SQL Server 2014. L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato con SQL 2016 e versioni successive. Per altre informazioni, vedere [Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
-1.  Configurare la distribuzione sul server di distribuzione. Se per la configurazione vengono usate stored procedure, eseguire **sp_adddistributor**. Utilizzare il parametro *@password* per identificare la password che sarà utilizzata quando un server di pubblicazione remoto si connette al server di distribuzione. La password sarà necessaria anche per ogni server di pubblicazione remoto quando viene configurato il server di distribuzione remoto.  
+1.  Configurare la distribuzione sul server di distribuzione. Se per la configurazione vengono usate stored procedure, eseguire **sp_adddistributor**. Usare il parametro *\@password* per identificare la password che verrà usata quando un server di pubblicazione remoto si connette al server di distribuzione. La password sarà necessaria anche per ogni server di pubblicazione remoto quando viene configurato il server di distribuzione remoto.  
   
     ```  
     USE master;  

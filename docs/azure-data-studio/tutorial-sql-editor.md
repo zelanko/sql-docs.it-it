@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959017"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278242"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 
    ![widget di ricerca rapida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modificare la colonna **Email** nella prima riga, digitare *orlando0@adventure-works.com* e premere **INVIO** per salvare la modifica.
+1. Modificare la colonna **Email** nella prima riga, digitare *orlando0\@adventure-works.com* e premere **Invio** per salvare la modifica.
 
    ![modifica dati](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ La stored procedure viene creata e il riquadro **RISULTATI** mostra il cliente r
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Salvare i risultati della query come JSON per testare la stored procedure setCustomer
 
-La stored procedure *setCustomer* creata nella sezione precedente richiede che i dati JSON vengano passati al parametro *@json_val* . Questa sezione illustra come ottenere un frammento di JSON formattato correttamente da passare al parametro, in modo da poter testare la stored procedure.
+La stored procedure *setCustomer* creata nella sezione precedente richiede che i dati JSON vengano passati al parametro *\@json_val*. Questa sezione illustra come ottenere un frammento di JSON formattato correttamente da passare al parametro, in modo da poter testare la stored procedure.
 
 1. Nella barra laterale **SERVER** fare clic con il pulsante destro del mouse sulla tabella *dbo.Customers* e scegliere **Seleziona le prime 1000 righe**.
 

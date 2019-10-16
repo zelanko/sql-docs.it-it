@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082406"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252180"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>Argomenti  
  WITH COOKIE = @*varbinary_variable*  
- Specifica il cookie creato in un'istruzione autonoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) corrispondente. *@varbinary_variable* è **varbinary(100)** .  
+ Specifica il cookie creato in un'istruzione autonoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) corrispondente. *\@varbinary_variable* è **varbinary(100)**.  
   
 ## <a name="remarks"></a>Remarks  
  È possibile specificare REVERT all'interno di un modulo, ad esempio una stored procedure o una funzione definita dall'utente, oppure come un'istruzione autonoma. Se specificata all'interno di un modulo, l'istruzione REVERT è applicabile solo alle istruzioni EXECUTE AS definite nel modulo. Ad esempio, la stored procedure seguente esegue un'istruzione `EXECUTE AS` seguita da un'istruzione `REVERT`.  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  Se specificata come istruzione autonoma, l'istruzione REVERT è applicabile alle istruzioni EXECUTE AS definite all'interno di un batch o una sessione. L'istruzione REVERT non ha alcun effetto se la corrispondente istruzione EXECUTE AS contiene la clausola WITH NO REVERT. In questo caso, il contesto di esecuzione rimane valido fino all'eliminazione della sessione.  
   
 ## <a name="using-revert-with-cookie"></a>Utilizzo di REVERT WITH COOKIE  
- L'istruzione EXECUTE AS usata per impostare il contesto di esecuzione di una sessione può includere la clausola facoltativa WITH NO REVERT COOKIE = @*varbinary_variable*. Quando questa istruzione viene eseguita, [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a @*varbinary_variable*. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene il valore *@varbinary_variable* corretto.  
+ L'istruzione EXECUTE AS usata per impostare il contesto di esecuzione di una sessione può includere la clausola facoltativa WITH NO REVERT COOKIE = @*varbinary_variable*. Quando questa istruzione viene eseguita, [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a @*varbinary_variable*. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente solo se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene il valore *\@varbinary_variable* corretto.  
   
- Questo meccanismo risulta utile in un ambiente in cui vengono utilizzati pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni tra più utenti finali. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS (in questo caso l'applicazione), il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato dall'utente finale che chiama l'applicazione. Dopo il ripristino del contesto di esecuzione l'applicazione può cambiare il contesto a un'altra entità.  
+ Questo meccanismo risulta utile in un ambiente in cui vengono utilizzati pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni tra più utenti finali. Poiché il valore passato a *\@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS (in questo caso l'applicazione), il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato dall'utente finale che chiama l'applicazione. Dopo il ripristino del contesto di esecuzione l'applicazione può cambiare il contesto a un'altra entità.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Non sono necessarie autorizzazioni.  

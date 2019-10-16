@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 669ed425772a311a1eb35531a4c80c785430ef12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119146"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278341"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-Se *date* viene specificato come variabile o colonna di tabella e per il tipo di dati della variabile o della colonna *datepart* non viene specificato, `DATENAME` restituirà l'errore 9810. In questo esempio la variabile *@t* ha un tipo di dati **time**. L'esempio ha esito negativo perché la parte della data year non è valida per il tipo di dati **time**:
+Se *date* viene specificato come variabile o colonna di tabella e per il tipo di dati della variabile o della colonna *datepart* non viene specificato, `DATENAME` restituirà l'errore 9810. In questo esempio la variabile *\@t* ha il tipo di dati **time**. L'esempio ha esito negativo perché la parte della data year non è valida per il tipo di dati **time**:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

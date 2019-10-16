@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076741"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278279"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "68076741"
 ## <a name="benefits-of-data-tier-applications"></a>Vantaggi delle applicazioni livello dati  
  Il ciclo di vita della maggior parte delle applicazioni di database prevede che gli sviluppatori e gli amministratori di database condividano e scambino script e note di integrazione ad hoc per le attività di aggiornamento e manutenzione dell'applicazione. Mentre questo concetto è accettabile per un numero contenuto di database, diventa rapidamente non impiegabile se i database crescono in termini di numero, dimensione e complessità.  
   
- Un'applicazione livello dati è uno strumento di produttività e gestione del ciclo di vita del database che offre allo sviluppo dichiarativo del database una distribuzione e una gestione semplificata. Uno sviluppatore può creare un database in un progetto di database di SQL Server Data Tools, quindi compilare il database in un pacchetto di applicazione livello dati per passarlo a un amministratore di database. Con DBA è possibile distribuire l'applicazione livello dati tramite SQL Server Management Studio in un'istanza di test o di produzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. In alternativa, l'amministratore di database può utilizzare il pacchetto di applicazione livello dati per aggiornare un database precedentemente distribuito tramite SQL Server Management Studio. Per completare il ciclo di vita, l'amministratore di database può estrarre il database in un pacchetto di applicazione livello dati e può passarlo a uno sviluppatore per riflettere rettifiche di test o produzione oppure per abilitare ulteriori modifiche di progettazione del database in risposta alle modifiche dell'applicazione.  
+ Un'applicazione livello dati è uno strumento di produttività e gestione del ciclo di vita del database che offre allo sviluppo dichiarativo del database una distribuzione e una gestione semplificata. Uno sviluppatore può creare un database in un progetto di database di SQL Server Data Tools e quindi compilare il database in un pacchetto di applicazione livello dati per passarlo a un amministratore di database. Con DBA è possibile distribuire l'applicazione livello dati tramite SQL Server Management Studio in un'istanza di test o di produzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. In alternativa, l'amministratore di database può utilizzare il pacchetto di applicazione livello dati per aggiornare un database precedentemente distribuito tramite SQL Server Management Studio. Per completare il ciclo di vita, l'amministratore di database può estrarre il database in un pacchetto di applicazione livello dati e può passarlo a uno sviluppatore per riflettere rettifiche di test o produzione oppure per abilitare ulteriori modifiche di progettazione del database in risposta alle modifiche dell'applicazione.  
   
  Il vantaggio di una distribuzione guidata dall'applicazione livello dati rispetto a un esercizio controllato da script consiste nel fatto che lo strumento consente all'amministratore di database di identificare e convalidare i comportamenti da database di origine e destinazione diversi. Durante gli aggiornamenti, lo strumento avverte l'amministratore di database nel caso in cui è possibile che si verifichi la perdita di dati e fornisce anche un piano di aggiornamento. L'amministratore di database può valutare il piano, quindi utilizzare lo strumento per procedere con l'aggiornamento.  
   
- Le applicazioni livello dati inoltre supportano il controllo delle versioni per consentire allo sviluppatore e all'amministratore di database di mantenere e gestire la derivazione del database tramite il ciclo di vita.  
+ Le applicazioni livello dati supportano anche il controllo delle versioni per consentire allo sviluppatore e all'amministratore di database di mantenere e gestire la derivazione del database tramite il ciclo di vita di questo.  
   
 ## <a name="dac-concepts"></a>Concetti di applicazione livello dati  
  Un'applicazione livello dati semplifica lo sviluppo, la distribuzione e la gestione degli elementi livello dati che supportano un'applicazione:  
@@ -43,7 +43,7 @@ ms.locfileid: "68076741"
   
 -   Affinché venga trattato come un'applicazione livello dati, è necessario che un database SQL Server venga registrato in modo esplicito da un'operazione dell'utente o in modo implicito da una delle operazioni dell'applicazione livello dati. Quando un database viene registrato, la versione dell'applicazione livello dati e le altre proprietà vengono registrate nei metadati del database. Viceversa, è possibile annullare la registrazione di un database e rimuovere le proprietà dell'applicazione livello dati.  
   
--   In generale, gli strumenti di applicazione livello dati sono in grado di leggere i file con estensione DACPAC generati dagli strumenti di applicazione livello dati delle versioni precedenti di SQL Server e di distribuire file DACPAC alle versioni precedenti di SQL Server. Tuttavia, gli strumenti di applicazione livello dati delle versioni precedenti non sono in grado di leggere i file con estensione DACPAC generati dagli strumenti di applicazioni livello dati delle versioni successive. In particolare:  
+-   In generale, gli strumenti di applicazione livello dati sono in grado di leggere i file pacchetto di applicazione livello dati generati dagli strumenti di applicazione livello dati delle versioni precedenti di SQL Server e di distribuire tali file a versioni precedenti di SQL Server. Tuttavia, gli strumenti di applicazione livello dati delle versioni precedenti non sono in grado di leggere i file con estensione DACPAC generati dagli strumenti di applicazioni livello dati delle versioni successive. In particolare:  
   
     -   Le operazioni dell'applicazione livello dati sono state introdotte con SQL Server 2008 R2. Oltre ai database SQL Server 2008 R2, gli strumenti supportano la generazione di file con estensione DACPAC da database SQL Server 2008, SQL Server 2005 e SQL Server 2000.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68076741"
   
 -   Un pacchetto di applicazione livello dati è un file di Windows con l'estensione .dacpac. Il file supporta un formato aperto composto da più sezioni XML che rappresentano i dettagli dell'origine del pacchetto di livello dati, gli oggetti nel database e altre funzionalità. Il file può essere decompresso da un utente avanzato tramite l'utilità DacUnpack.exe che viene fornita con il prodotto per controllare più da vicino ogni sezione.  
   
--   L'utente deve essere membro del ruolo dbmanager o disporre delle autorizzazioni CREATE DATABASE per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo dbmanager o disporre delle autorizzazioni DROP DATABASE per eliminare un database.  
+-   L'utente deve essere membro del ruolo **dbmanager** o avere le autorizzazioni **CREATE DATABASE** per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo **dbmanager** o avere le autorizzazioni **DROP DATABASE** per eliminare un database.  
   
 ## <a name="dac-tools"></a>Strumenti di applicazione livello dati  
  Un pacchetto di applicazione livello dati può essere perfettamente utilizzato in più strumenti forniti con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questi strumenti indirizzano i requisiti dei diversi tipi di utente utilizzando un pacchetto di applicazione livello dati come unità di interoperabilità.  
@@ -64,7 +64,7 @@ ms.locfileid: "68076741"
   
     -   Possono importare un pacchetto di applicazione livello dati in un progetto di database e continuare a progettare il database.  
   
-        SQL Server Data Tools supporta anche un Local DB per lo sviluppo di applicazioni di database client non connessi. Lo sviluppatore può creare uno snapshot del database locale per creare pacchetto di applicazione livello dati contenuto in un file con estensione .dacpac.  
+        SQL Server Data Tools supporta anche un Local DB per lo sviluppo di applicazioni di database client non connessi. Lo sviluppatore può creare uno snapshot del database locale per creare un pacchetto di applicazione livello dati contenuto in un file con estensione dacpac.  
   
     -   Lo sviluppatore può pubblicare autonomamente un progetto di database direttamente in un database, senza generare un pacchetto di applicazione livello dati. L'operazione di pubblicazione segue un comportamento simile all'operazione di distribuzione di altri strumenti.  
   
@@ -96,8 +96,7 @@ ms.locfileid: "68076741"
 -   **UPGRADE**: è possibile aggiornare un database usando un pacchetto di applicazione livello dati. L'aggiornamento è supportato anche su database non registrati in precedenza come applicazioni livello dati, ma come conseguenza dell'aggiornamento, il database verrà registrato in modo implicito.  
   
 ## <a name="bacpac"></a>BACPAC  
- Un BACPAC è un file di Windows con l'estensione .bacpac      che incapsula lo schema e i dati di un database. L'uso primario di un file BACPAC riguarda lo spostamento di un database da un server a un altro o la [migrazione di un database da un server locale al cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) e l'archiviazione di un database esistente in un formato aperto.  
-  
+ Un BACPAC è un file di Windows con estensione bacpac che incapsula lo schema e i dati di un database. L'uso primario di un file BACPAC riguarda lo spostamento di un database da un server a un altro o la [migrazione di un database da un server locale al cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) e l'archiviazione di un database esistente in un formato aperto.  
  Analogamente a DACPAC, BACPAC è un formato di file aperto. Il contenuto dello schema del BACPAC è identico a quello del pacchetto di applicazione livello dati. I dati in un file BACPAC sono archiviati nel formato JSON.  
   
  I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. L'uso primario di un pacchetto di applicazione livello dati consiste nella distribuzione di uno schema strettamente definito per gli ambienti di sviluppo, test e produzione. E anche il contrario: l'acquisizione dello schema di produzione e la relativa applicazione agli ambienti di test e di sviluppo.  

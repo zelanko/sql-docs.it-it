@@ -17,16 +17,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860544"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289292"
 ---
 # <a name="compare-execution-plans"></a>Confrontare i piani di esecuzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Questo argomento illustra come confrontare le analogie e le differenze tra i piani di esecuzione grafici effettivi usando la funzionalità di confronto tra i piani di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+Questo argomento illustra come confrontare le analogie e le differenze tra i piani di esecuzione grafici effettivi usando la funzionalità di confronto tra i piani di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa funzionalità è disponibile a partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]
 > I piani di esecuzione effettivi vengono generati dopo l'esecuzione di query [!INCLUDE[tsql](../../includes/tsql-md.md)] o batch. Un piano di esecuzione effettivo include quindi informazioni di runtime, ad esempio il numero di righe effettivo, le metriche relative all'utilizzo delle risorse e gli avvisi sul runtime, se disponibili. Per altre informazioni, vedere [Visualizzazione di un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).

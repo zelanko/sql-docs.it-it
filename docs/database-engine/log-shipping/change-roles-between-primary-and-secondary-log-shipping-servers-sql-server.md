@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057926"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008453"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ ms.locfileid: "68057926"
   
     3.  Nella finestra di dialogo **Impostazioni database secondario** selezionare **No, il database secondario è già inizializzato**.  
   
-4.  Se il monitoraggio del log shipping era abilitato nella relativa configurazione precedente, riconfigurare il monitoraggio per controllare la nuova configurazione per il log shipping.  Eseguire i comandi riportati di seguito, sostituendo *database_name* con il nome del database in uso:  
+4.  Se il monitoraggio del log shipping era abilitato nella relativa configurazione precedente, riconfigurare il monitoraggio per controllare la nuova configurazione per il log shipping.  Se si imposta threshold_alert_enabled su 1, viene generato un avviso quando viene superato il valore di restore_threshold. Eseguire i comandi riportati di seguito, sostituendo *database_name* con il nome del database in uso:  
   
     1.  **Nel nuovo server primario**  
   
          Eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] riportate di seguito:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68057926"
   
          Eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] riportate di seguito:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

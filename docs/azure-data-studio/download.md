@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 10/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 8151b3853da3a19785de8dcaf8d31c2d6768c558
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816623"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173156"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Azure Data Studio
 
@@ -29,9 +29,9 @@ Scaricare e installare la versione più recente, la *versione di ottobre*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
-|Windows|[Programma di installazione utente (scelta consigliata)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Programma di installazione di sistema](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2 ottobre 2019 |1.12.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2 ottobre 2019 |1.12.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|2 ottobre 2019 |1.12.0|
+|Windows|[Programma di installazione utente (scelta consigliata)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Programma di installazione di sistema](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|8 ottobre 2019 |1.12.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|8 ottobre 2019 |1.12.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|8 ottobre 2019 |1.12.1|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 

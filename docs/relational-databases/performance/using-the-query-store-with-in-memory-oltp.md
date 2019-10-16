@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986662"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251300"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso di Archivio query con OLTP in-memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Esistono tuttavia alcuni aspetti specifici di cui gli utenti dovranno tenere con
   
 -   Quando Archivio query è abilitato, vengono raccolte per impostazione predefinita statistiche relative a query, piani e tempi di compilazione. La raccolta delle statistiche di runtime non è tuttavia attivata, a meno che non venga abilitata in modo esplicito con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Quando si imposta *@new_collection_value* su 0, Archivio query arresta la raccolta delle statistiche di runtime per la procedura interessata o per l'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Quando si imposta *\@new_collection_value* su 0, Archivio query arresta la raccolta delle statistiche di runtime per la procedura interessata o per l'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Il valore configurato con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) non è persistente. Verificare di controllare e configurare nuovamente la raccolta delle statistiche dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

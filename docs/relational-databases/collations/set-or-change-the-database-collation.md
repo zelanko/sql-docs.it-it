@@ -1,7 +1,7 @@
 ---
 title: Impostare o modificare le regole di confronto del database | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,19 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140851"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289347"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
  
 > [!NOTE]
-> Le regole di confronto non possono essere modificate dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **Contenuto dell'articolo**  
   
@@ -51,30 +51,28 @@ ms.locfileid: "68140851"
   
 -   Se le regole di confronto specificate o adottate dall'oggetto cui viene fatto riferimento utilizzano una tabella codici non supportata dai sistemi operativi Windows, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene visualizzato un errore.  
 
--   Le regole di confronto non possono essere modificate dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+-   Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   È possibile trovare i nomi delle regole di confronto supportate in [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); oppure è possibile usare la funzione di sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+È possibile trovare i nomi delle regole di confronto supportate in [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); oppure è possibile usare la funzione di sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Quando si modificano le regole di confronto del database, è possibile modificare gli elementi seguenti:  
+Quando si modificano le regole di confronto del database, è possibile modificare gli elementi seguenti:  
   
-    -   Qualsiasi **char**, **varchar**, **text**, **nchar**, **nvarchar**o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
+-   Qualsiasi **char**, **varchar**, **text**, **nchar**, **nvarchar**o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
   
-    -   Tutti i parametri esistenti di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
+-   Tutti i parametri esistenti di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
   
-    -   I tipi di dati di sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
+-   I tipi di dati di sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
   
--   È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente utilizzando la clausola COLLATE dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Questa istruzione non consente di modificare le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario utilizzare la clausola COLLATE dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente usando la clausola `COLLATE` dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Questa istruzione **non consente di modificare** le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario usare la clausola `COLLATE` dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- CREATE DATABASE  
- È richiesta l'autorizzazione CREATE DATABASE per il database **master** oppure l'autorizzazione CREATE ANY DATABASE o ALTER ANY DATABASE.  
+ Per creare un nuovo database è richiesta l'autorizzazione `CREATE DATABASE` nel database **master** oppure l'autorizzazione `CREATE ANY DATABASE` o `ALTER ANY DATABASE`.  
   
- ALTER DATABASE  
- È richiesta l'autorizzazione ALTER per il database.  
+ Per modificare le regole di confronto di un database esistente è richiesta l'autorizzazione `ALTER` per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -113,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>Per modificare le regole di confronto del database  
@@ -136,7 +133,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

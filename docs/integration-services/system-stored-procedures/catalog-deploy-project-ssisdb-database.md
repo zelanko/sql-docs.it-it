@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281163"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251321"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (database SSISDB)
 
@@ -37,10 +37,10 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [@folder_name =] *folder_name*  
- Nome della cartella in cui è distribuito il progetto. *folder_name* è di tipo **nvarchar(128)** .  
+ Nome della cartella in cui è distribuito il progetto. *folder_name* è di tipo **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nome del progetto nuovo o aggiornato nella cartella. *project_name* è di tipo **nvarchar(128)** .  
+ Nome del progetto nuovo o aggiornato nella cartella. *project_name* è di tipo **nvarchar(128)**.  
   
  [@projectstream =] *projectstream*  
  Contenuto binario di un file di distribuzione progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (estensione ispac).  
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Parametro che fa riferimento a un oggetto inesistente, parametro che tenta di creare un oggetto già esistente o parametro non valido in alcuni altri modi  
   
--   Valore del parametro *@project_name* non corrispondente al nome del progetto nel file di distribuzione  
+-   Il valore del parametro *\@project_name* non corrispondente al nome del progetto nel file di distribuzione  
   
 -   Utente senza autorizzazioni sufficienti.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e23a11e1fdd2bef3e9fe646ad2b5e59d1aa03456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068273"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006083"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,10 +30,10 @@ ms.locfileid: "68068273"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché gli hint specificati in **@hints** non possono essere applicati all'istruzione specificata da **@stmt** o **@statement_start_offset**. Verificare che gli hint possano essere applicati all'istruzione.|  
+|Testo del messaggio|Impossibile creare la guida di piano %.\*ls' perché gli hint specificati in **\@hints** non possono essere applicati all'istruzione specificata da **\@stmt** o **\@statement_start_offset**. Verificare che gli hint possano essere applicati all'istruzione.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Gli hint specificati in **@hints** non possono essere applicati all'istruzione specificata da **@stmt** o **@statement_start_offset**.  
+Gli hint specificati in **\@hints** non possono essere applicati all'istruzione specificata da **\@stmt** o **\@statement_start_offset**.  
   
 ## <a name="user-action"></a>Azione dell'utente  
 Specificare hint che possono essere applicati all'istruzione.  

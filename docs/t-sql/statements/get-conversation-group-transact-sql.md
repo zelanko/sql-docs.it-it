@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211302"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252183"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211302"
  WAITFOR  
  Specifica che l'istruzione GET CONVERSATION GROUP deve rimanere in attesa dell'arrivo di un messaggio nella coda, se non sono presenti messaggi.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  Variabile utilizzata per archiviare l'ID del gruppo di conversazioni restituito dall'istruzione GET CONVERSATION GROUP. La variabile deve essere di tipo **uniqueidentifier**. Se non sono disponibili gruppi di conversazione, la variabile viene impostata su NULL.  
   
  FROM  
@@ -72,12 +72,12 @@ ms.locfileid: "70211302"
  Nome della coda da cui recuperare il gruppo di conversazioni.  
   
  TIMEOUT *timeout*  
- Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *@conversation_group_id* su NULL.  
+ Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *\@@conversation_group_id* su NULL.  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola ( **;** ), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Se la coda specificata nell'istruzione GET CONVERSATION GROUP non è disponibile, l'istruzione viene interrotta con un errore [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

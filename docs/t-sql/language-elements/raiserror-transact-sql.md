@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 704bcba5e6b21ade748c7a549f5b88c131fa578c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121877"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252042"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,8 +122,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Per convertire un valore nel tipo di dati **bigint** di [!INCLUDE[tsql](../../includes/tsql-md.md)], specificare **%I64d**.  
   
- *@local_variable*  
- Variabile di qualsiasi tipo di dati carattere valido contenente una stringa con la stessa formattazione di *msg_str*. *@local_variable* deve essere di tipo **char** o **varchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
+ *\@local_variable*  
+ Variabile di qualsiasi tipo di dati carattere valido contenente una stringa con la stessa formattazione di *msg_str*. *\@local_variable* deve essere di tipo **char** o **varchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
   
  *severity*  
  Livello di gravità definito dall'utente associato al messaggio. Se si usa *msg_id* per generare un messaggio definito dall'utente creato tramite sp_addmessage, la gravità specificata in RAISERROR ha la priorità sulla gravità specificata in sp_addmessage.  

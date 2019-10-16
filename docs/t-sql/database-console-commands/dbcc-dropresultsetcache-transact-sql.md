@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e0f4646d6c67931bbbede9b44b97a52251b1b024
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a46f94c1a6c490e157dfb0b90b2b5297afb6526f
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809917"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174863"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE (Transact-SQL)
 
@@ -37,7 +37,15 @@ DBCC DROPRESULTSETCACHE
 ## <a name="permissions"></a>Autorizzazioni
 
 Richiede l'appartenenza al ruolo predefinito del server DB_OWNER.
-  
+
+## <a name="remarks"></a>Remarks
+
+Questo comando svuota la cache del set di risultati per tutte le query.  
+
+Se si disattiva la funzionalità di memorizzazione nella cache dei set di risultati per un database, vengono eliminati anche tutti i risultati memorizzati nella cache.  
+
+La sospensione di un database per cui è stata abilitata la memorizzazione nella cache del set di risultati non elimina i risultati memorizzati nella cache.  
+
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

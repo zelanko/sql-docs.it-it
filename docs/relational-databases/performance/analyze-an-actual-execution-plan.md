@@ -1,7 +1,7 @@
 ---
 title: Analizzare un piano di esecuzione effettivo | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219578"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289329"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analizzare un piano di esecuzione effettivo
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Questo argomento descrive come generare piani di esecuzione grafici effettivi usando Analisi showplan di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+
+Questo argomento descrive come analizzare piani di esecuzione grafici effettivi usando la funzionalità di analisi dei piani di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa funzionalità è disponibile a partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. In genere è consigliabile [installare la versione di SSMS più recente](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
 > I piani di esecuzione effettivi vengono generati dopo l'esecuzione di query [!INCLUDE[tsql](../../includes/tsql-md.md)] o batch. Un piano di esecuzione effettivo include quindi informazioni di runtime, ad esempio il numero di righe effettivo, le metriche relative all'utilizzo delle risorse e gli avvisi sul runtime, se disponibili. Per altre informazioni, vedere [Visualizzazione di un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).

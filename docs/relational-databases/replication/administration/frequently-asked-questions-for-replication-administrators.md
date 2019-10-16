@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710395"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041203"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710395"
 ## <a name="logins-and-object-ownership"></a>Account di accesso e proprietà degli oggetti  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Gli account di accesso e le password vengono replicati?  
- No. Per trasferire account di accesso e password da un server di pubblicazione a uno o più Sottoscrittori, si potrebbe creare un pacchetto DTS.  
+ No. Per trasferire account di accesso e password da un server di pubblicazione a uno o più sottoscrittori, è possibile creare un pacchetto SSIS.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Cosa sono gli schemi e in che modo vengono replicati?  
  A partire da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* ha due significati:  
   
--   La definizione di un oggetto, come un'istruzione CREATE TABLE. Per impostazione predefinita, la replica copia le definizioni di tutti gli oggetti replicati nel Sottoscrittore.  
+-   La definizione di un oggetto, ad esempio un'istruzione `CREATE TABLE`. Per impostazione predefinita, la replica copia le definizioni di tutti gli oggetti replicati nel Sottoscrittore.  
   
--   Lo spazio dei nomi in cui viene creato un oggetto: \<Database>.\<Schema>.\<Oggetto>. Gli schemi vengono definiti utilizzando l'istruzione CREATE SCHEMA.  
+-   Lo spazio dei nomi in cui viene creato un oggetto: \<Database>.\<Schema>.\<Oggetto>. Gli schemi vengono definiti usando l'istruzione `CREATE SCHEMA`.  
   
 -   In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710395"
  Per la ricompilazione degli indici esistono diversi meccanismi. Possono essere utilizzati tutti, senza considerazioni speciali per la replica, con la seguente eccezione: le chiavi primarie sono necessarie nelle tabelle delle pubblicazioni transazionali, pertanto non è possibile eliminare e ricreare le chiavi primarie su queste tabelle.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>Come si aggiungono o si modificano gli indici nei database di pubblicazione e di sottoscrizione?  
- È possibile aggiungere gli indici nel server di pubblicazione o nei Sottoscrittori senza particolari considerazioni per la replica. Ricordare che gli indici possono influire sulle prestazioni. CREATE INDEX e ALTER INDEX non vengono replicati, pertanto se si aggiunge o si modifica un indice, ad esempio, nel server di pubblicazione, è necessario eseguire la stessa aggiunta o modifica nel Sottoscrittore se si desidera che venga riflessa in quest'ultimo.  
+ È possibile aggiungere gli indici nel server di pubblicazione o nei Sottoscrittori senza particolari considerazioni per la replica. Ricordare che gli indici possono influire sulle prestazioni. `CREATE INDEX` e `ALTER INDEX` non vengono replicate, pertanto se si aggiunge o si modifica un indice, ad esempio nel server di pubblicazione, è necessario eseguire la stessa aggiunta o modifica nel sottoscrittore se si vuole che venga riflessa in quest'ultimo.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>Come si spostano o si rinominano i file per i database interessati alla replica?  
  Nelle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]lo spostamento o la ridenominazione dei file di database richiede lo scollegamento e il ricollegamento del database. Poiché un database replicato non può essere scollegato, innanzitutto era necessario rimuovere la replica da questi database. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è possibile spostare o rinominare i file senza scollegare e ricollegare il database, senza alcun effetto sulla replica. Per altre informazioni sullo spostamento e la ridenominazione dei file, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710395"
  Eliminare in primo luogo l'articolo dalla pubblicazione usando [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** , quindi eliminarlo dal database usando `DROP <Object>`. Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Come si aggiungono o si eliminano colonne in una tabella pubblicata?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, se si esegue ALTER TABLE … DROP COLUMN nel server di pubblicazione, l'istruzione viene replicata ai Sottoscrittori e poi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, se si esegue `ALTER TABLE … DROP COLUMN` nel server di pubblicazione, l'istruzione viene replicata nei sottoscrittori e poi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Manutenzione della replica  
   

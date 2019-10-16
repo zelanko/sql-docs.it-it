@@ -1,6 +1,6 @@
 ---
 title: Specifiche di capacità massima per SQL Server | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687364"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008443"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687364"
 |Blocchi per ogni connessione||Numero massimo di blocchi per ogni server||  
 |Blocchi per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitato solo dalla memoria|Questo valore si riferisce all'allocazione di blocchi statici. I blocchi dinamici sono limitati solo dalla memoria.|  
 |Livelli di nidificazione delle stored procedure||32|Se una stored procedure accede a più di 64 database o a più di 2 database in interfoliazione, verrà generato un errore.|  
-|Sottoquery nidificate||32||  
+|Sottoquery nidificate||32||    
+|Transazioni nidificate||4\.294.967.296||     
 |Livelli di nidificazione dei trigger||32||  
 |Indici non cluster per tabella||999||  
 |Numero di espressioni distinte nella clausola GROUP BY quando è presente una delle seguenti opzioni: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  

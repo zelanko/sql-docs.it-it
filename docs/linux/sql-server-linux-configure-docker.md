@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988133"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278258"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore di SQL Server in Docker
 
@@ -25,6 +25,9 @@ Questo articolo illustra come configurare e usare l'[immagine del contenitore ms
 
 > [!NOTE]
 > Questo articolo è incentrato nello specifico sull'uso dell'immagine mssql-server-linux. L'immagine di Windows non è qui trattata, ma è possibile ottenere informazioni su di essa nella [pagina mssql-server-windows di Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+
+> [!IMPORTANT]
+> Prima di scegliere di eseguire un contenitore SQL Server per i casi d'uso di produzione, vedere i [criteri di supporto per i contenitori SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) per assicurarsi che l'esecuzione avvenga in una configurazione supportata.
 
 ## <a name="pull-and-run-the-container-image"></a>Effettuare il pull ed eseguire l'immagine del contenitore
 

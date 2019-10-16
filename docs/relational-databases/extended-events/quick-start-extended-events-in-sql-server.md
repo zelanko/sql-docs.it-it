@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016848"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251530"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 
@@ -109,11 +109,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
     ![Nuova sessione > Eventi > Configura > Filtro (predicato) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Fare clic sulla scheda **Filtro (predicato)** . Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
+7. Fare clic sulla scheda **Filtro (predicato)**. Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
 
 8. Scegliere **sqlserver.sql_text** dall'elenco a discesa **Campo**.
    - Per **Operatore** scegliere un operatore LIKE.
-   - Per **Valore** digitare **%SELECT%HAVING%** .
+   - Per **Valore** digitare **%SELECT%HAVING%**.
 
     > [!NOTE]
     > In questo nome in due parti, *sqlserver* è il nome del pacchetto e *sql_text* è il nome del campo. L'evento scelto in precedenza, *sql_statement_completed* , deve essere nello stesso pacchetto del campo scelto.
@@ -410,7 +410,7 @@ In **Esplora oggetti**di SSMS è possibile fare clic con il pulsante destro del 
 Esistono innumerevoli scenari in cui è possibile usare in maniera efficace gli eventi estesi. Gli articoli seguenti forniscono scenari di esempio che comportano l'uso dei blocchi acquisiti durante le query.
 
 
-Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei blocchi sono descritti negli articoli seguenti. Gli articoli illustrano anche alcune tecniche avanzate, ad esempio l'uso di **@dbid** e l'uso dinamico di `EXECUTE (@YourSqlString)`:
+Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei blocchi sono descritti negli articoli seguenti. Gli articoli illustrano anche alcune tecniche avanzate, ad esempio l'uso di **\@dbid** e l'uso di `EXECUTE (@YourSqlString)` dinamico:
 
 - [Cercare gli oggetti con il maggior numero di blocchi acquisiti](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Questo scenario usa l'elemento package0.histogram di destinazione, che elabora i dati dell'evento non elaborati prima di visualizzarli all'utente.

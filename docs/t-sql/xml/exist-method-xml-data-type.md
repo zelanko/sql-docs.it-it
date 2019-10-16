@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051310"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278151"
 ---
 # <a name="exist-method-xml-data-type"></a>Metodo exist() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ select @f;
   
 -   Il codice `cast as xs:date?` viene usato per il cast del valore al tipo **xs:date** ai fini del confronto.  
   
--   Il valore dell'attributo **@Somedate** non è tipizzato. Nell'operazione di confronto, viene eseguito il cast implicito del valore al tipo sul lato destro del confronto, il tipo **xs:date**.  
+-   Il valore dell'attributo **\@Somedate** non è tipizzato. Nell'operazione di confronto, viene eseguito il cast implicito del valore al tipo sul lato destro del confronto, il tipo **xs:date**.  
   
 -   Anziché **cast as xs:date()** è possibile usare la funzione costruttore **xs:date()** . Per altre informazioni, vedere [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md) (Funzioni costruttore &#40;XQuery&#41;).  
   
