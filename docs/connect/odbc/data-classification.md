@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263999"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041127"
 ---
 # <a name="data-classification"></a>Classificazione dei dati
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -57,19 +57,19 @@ SQLRETURN SQLGetDescField(
  *BufferLength*  
  Input Lunghezza del buffer di output in byte
 
- *StringLengthPtr* Output Puntatore al buffer in cui restituire il numero totale di byte disponibili da restituire in *ValuePtr*.
+ *StringLengthPtr* [output] puntatore al buffer in cui restituire il numero totale di byte disponibili per la restituzione in *ValuePtr*.
  
 > [!NOTE]
 > Se la dimensione del buffer è sconosciuta, può essere determinata chiamando SQLGetDescField con *ValuePtr* come null ed esaminando il valore di *StringLengthPtr*.
  
-Se le informazioni sulla classificazione dei dati non sono disponibili, verrà restituito un errore di campo del descrittore *non valido* .
+Se le informazioni sulla classificazione dei dati non sono disponibili, verrà restituito un errore di *campo del descrittore non valido* .
 
 Al completamento di una chiamata a SQLGetDescField, il buffer a cui punta *ValuePtr* conterrà i dati seguenti:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` e`cc cc` sono numeri interi multibyte, archiviati con il byte meno significativo all'indirizzo più basso.
+> `nn nn`, `tt tt` e `cc cc` sono numeri interi multibyte, archiviati con il byte meno significativo nell'indirizzo più basso.
 
 *`sensitivitylabel`* e *`informationtype`* sono entrambi nel formato
 
@@ -79,13 +79,13 @@ Al completamento di una chiamata a SQLGetDescField, il buffer a cui punta *Value
 
  `nn nn [n sensitivityprops]`
 
-Per ogni colonna *(c)* sono presenti *n* 4 byte *`sensitivityprops`* :
+Per ogni colonna *(c)* sono presenti @no__t *a 4 byte* *-3* :
 
  `ss ss tt tt`
 
-s-index nella *`sensitivitylabels`* matrice, `FF FF` se non con etichetta
+s-index nella matrice *`sensitivitylabels`* , `FF FF` se non è etichettata
 
-t-index nella *`informationtypes`* matrice, `FF FF` se non con etichetta
+t-index nella matrice *`informationtypes`* , `FF FF` se non è etichettato
 
 
 <br><br>
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Esempio di codice
-Applicazione di test che illustra come leggere i metadati di classificazione dei dati. In Windows può essere compilato usando `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` ed eseguito con una stringa di connessione e una query SQL (che restituisce colonne classificate) come parametri:
+Applicazione di test che illustra come leggere i metadati di classificazione dei dati. In Windows può essere compilata utilizzando `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` ed eseguita con una stringa di connessione e una query SQL (che restituisce colonne classificate) come parametri:
 
 ```
 #ifdef _WIN32
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>Versione supportata
+Microsoft ODBC driver 17,2 consente le informazioni di classificazione dei dati di recupero tramite `SQLGetDescField` se `FieldIdentifier` è impostato su `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+
+A partire dal driver ODBC Microsoft 17.4.1.1 è possibile recuperare la versione della classificazione dei dati supportata da un server tramite `SQLGetDescField` usando l'identificatore di campo `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). In 17.4.1.1 la versione di classificazione dei dati supportata è impostata su "2".
+
+ 
+
+A partire da 17.4.2.1, è stata introdotta la versione predefinita della classificazione dei dati impostata su "1" e il driver della versione sta segnalando a SQL Server come supportato. Il nuovo attributo di connessione `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) può consentire all'applicazione di modificare la versione supportata della classificazione dei dati da "1" fino al massimo supportato.  
+
+Esempio: 
+
+Per impostare la versione, questa chiamata deve essere eseguita immediatamente prima della chiamata a SQLConnect o SQLDriverConnect:
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+Il valore della versione attualmente supportata della classificazione dei dati può essere retirved tramite la chiamata a SQLGetConnectAttr: 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 
