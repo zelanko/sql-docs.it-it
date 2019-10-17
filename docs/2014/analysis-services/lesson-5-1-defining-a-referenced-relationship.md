@@ -118,7 +118,7 @@ ms.locfileid: "69493929"
   
      Si noti che la misura **Reseller Sales-Sales Amount** è ora dimensionata correttamente dall'attributo **Country-Region** della gerarchia definita dall'utente **Geographies** , come illustrato nella figura seguente.  
   
-     Finestra di ![dialogo Definisci relazione] Finestra di (../../2014/tutorials/media/l5-referencedrelationship-5.gif "dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Finestra di dialogo Definisci relazione")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione di una relazione di tipo Fatti](lesson-5-2-defining-a-fact-relationship.md)  

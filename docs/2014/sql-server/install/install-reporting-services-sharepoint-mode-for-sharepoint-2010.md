@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952523"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Installare la modalità SharePoint di Reporting Services per SharePoint 2010
@@ -31,7 +31,7 @@ ms.locfileid: "71952523"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisiti  
+##  <a name="bkmk_prereq"></a> Prerequisites  
   
 -   > [!IMPORTANT]  
     >  Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più richiesto o supportato per configurare e amministrare la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilizzare Amministrazione centrale SharePoint per configurare un server di report in modalità SharePoint. Per ulteriori informazioni, vedere la pagina relativa alla [gestione di un Reporting Services applicazione di servizio SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "71952523"
   
 -   Verificare che il servizio di **Amministrazione SharePoint 2010** sia avviato in Windows Server Manager.  
   
- ![Componenti SSRS in un'installazione di 1 server](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "componenti SSRS in un'installazione Server 1")  
+ ![Componenti SSRS in un'installazione Server 1](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "Componenti SSRS in un'installazione Server 1")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>Considerazioni sui database per una configurazione a server unico  
   
@@ -86,13 +86,13 @@ ms.locfileid: "71952523"
   
      Scegliere **Avanti**  
   
-     ![Installazione di funzionalità di SQL Server per impostazione ruolo](../../../2014/sql-server/install/media/rs-setuprole.gif "Installazione di funzionalità di SQL Server per impostazione ruolo")  
+     ![Installazione della funzionalità SQL Server per il ruolo di installazione](../../../2014/sql-server/install/media/rs-setuprole.gif "Installazione della funzionalità SQL Server per il ruolo di installazione")  
   
 9. Nella pagina **Selezione funzionalità** selezionare le opzioni seguenti:  
   
     -   **Reporting Services – SharePoint**  
   
-    -   **Reporting Services componente aggiuntivo per prodotti SharePoint 2010**. ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "l'opzione")installazione guidata per l'installazione del componente aggiuntivo è una novità della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   **Reporting Services componente aggiuntivo per prodotti SharePoint 2010**. ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "nOTE) L'opzione di installazione guidata per l'installazione del componente aggiuntivo è una novità della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   Se non si dispone già di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]di SQL Server, è anche possibile selezionare **Servizi motore di database** e **Strumenti di gestione - Completa** per un ambiente completo.  
   
@@ -197,11 +197,11 @@ ms.locfileid: "71952523"
   
 9. Nella sezione **Associazione applicazione Web** , selezionare l'applicazione Web di cui effettuare il provisioning per l'accesso dall'applicazione di servizio Reporting Services corrente. È possibile associare un'applicazione di servizio Reporting Services a una sola applicazione Web. Se tutte le applicazioni Web correnti sono già associate con un'applicazione di servizio Reporting Services, viene visualizzato un messaggio di avviso.  
   
-10. Fare clic su **OK**.  
+10. Scegliere **OK**.  
   
 11. Il completamento del processo di creazione dell'applicazione di servizio potrebbe richiedere diversi minuti. Al termine, verrà visualizzato un messaggio di conferma e un collegamento a una pagina di **provisioning di sottoscrizioni e avvisi** . Se si desidera utilizzare le funzionalità relative a sottoscrizioni e avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], completare il passaggio di provisioning. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenuto") correlato di PowerShell contenuto correlato di PowerShell per informazioni sull'uso di PowerShell per creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [per creare un'applicazione di servizio Reporting Services mediante PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![Contenuto correlato di PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Per informazioni sull'uso di PowerShell per creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [per creare un'applicazione di servizio Reporting Services mediante PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   
