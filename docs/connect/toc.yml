@@ -11,15 +11,135 @@
 - name: ADO.NET
   items:
     - name: Microsoft ADO.NET for SQL Server
-      href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo ADO.NET'
-      href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: 'Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET'
-      href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite ADO.NET'
-      href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET'
-      href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
+      href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+    - name: Introduzione al driver SqlClient
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+        - name: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo ADO.NET'
+          href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+        - name: 'Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET'
+          href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+        - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite ADO.NET'
+          href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+        - name: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET'
+          href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: Panoramica del driver SqlClient
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+        - name: Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
+          href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+        - name: Scaricare il provider di dati Microsoft SqlClient per SQL Server
+          href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: Ciclo di vita del supporto per il driver SqlClient
+          href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+        - name: Ricerca di informazioni aggiuntive sul driver SqlClient
+          href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: SQL Server e ADO.NET
+      href: ../connect/ado-net/sql/index.md
+      items:
+        - name: Sicurezza di SQL Server
+          href: ../connect/ado-net/sql/sql-server-security.md
+          items:
+            - name: Autenticazione in SQL Server
+              href: ../connect/ado-net/sql/authentication-sql-server.md
+            - name: Scenari di sicurezza delle applicazioni in SQL Server
+              href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+              items:
+                - name: Scrittura di istruzioni SQL dinamiche protette in SQL Server
+                  href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+            - name: Sicurezza di SQL Server Express
+              href: ../connect/ado-net/sql/sql-server-express-security.md
+        - name: Tipi di dati SQL Server e ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-types.md
+          items:
+            - name: SqlTypes e DataSet
+              href: ../connect/ado-net/sql/sqltypes-dataset.md
+            - name: Gestione dei valori NULL
+              href: ../connect/ado-net/sql/handle-null-values.md
+            - name: Confronto tra GUID e valori uniqueidentifier
+              href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+            - name: Dati relativi a data e ora
+              href: ../connect/ado-net/sql/date-time-data.md
+            - name: Tipi definiti dall'utente di grandi dimensioni
+              href: ../connect/ado-net/sql/large-udts.md
+            - name: Dati XML in SQL Server
+              href: ../connect/ado-net/sql/xml-data-sql-server.md
+              items:
+                - name: Valori di colonna SQL XML
+                  href: ../connect/ado-net/sql/sql-xml-column-values.md
+                - name: Specifica di valori XML come parametri
+                  href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+        - name: Dati binari e di grandi dimensioni di SQL Server
+          href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+          items:
+            - name: Modifica di dati con valori di grandi dimensioni (max) in ADO.NET
+              href: ../connect/ado-net/sql/modify-large-value-max-data.md
+            - name: Dati FILESTREAM
+              href: ../connect/ado-net/sql/filestream-data.md
+            - name: Inserimento di un'immagine da un file
+              href: ../connect/ado-net/sql/insert-image-file.md
+        - name: Operazioni sui dati di SQL Server in ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-operations.md
+          items:
+            - name: Operazioni di copia bulk in SQL Server
+              href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+              items:
+                - name: Installazione di esempio della copia bulk
+                  href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+                - name: Singole operazioni di copia bulk
+                  href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+                - name: Più operazioni di copia bulk
+                  href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+                - name: Transazioni e operazioni di copia bulk
+                  href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+            - name: MARS (Multiple Active Result Sets)
+              href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+              items:
+                - name: Abilitazione di MARS (Multiple Active Result Set)
+                  href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+                - name: Manipolazione dei dati
+                  href: ../connect/ado-net/sql/manipulate-data.md
+            - name: Operazioni asincrone
+              href: ../connect/ado-net/sql/asynchronous-operations.md
+              items:
+                - name: Applicazioni Windows tramite callback
+                  href: ../connect/ado-net/sql/windows-applications-callbacks.md
+                - name: Applicazioni ASP.NET tramite handle di attesa
+                  href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+                - name: Polling in applicazioni console
+                  href: ../connect/ado-net/sql/poll-console-applications.md
+            - name: Parametri con valori di tabella
+              href: ../connect/ado-net/sql/table-valued-parameters.md
+        - name: Funzionalità di SQL Server e ADO.NET
+          href: ../connect/ado-net/sql/sql-server-features-adonet.md
+          items:
+            - name: Enumerazione di istanze di SQL Server (ADO.NET)
+              href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+            - name: Statistiche del provider per SQL Server
+              href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+            - name: Istanze utente di SQL Server Express
+              href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+            - name: Mirroring del database in SQL Server
+              href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+            - name: Connessione di contesto
+              href: ../connect/ado-net/sql/context-connection.md
+            - name: Notifiche di query in SQL Server
+              href: ../connect/ado-net/sql/query-notifications-sql-server.md
+              items:
+                - name: Abilitazione di notifiche di query
+                  href: ../connect/ado-net/sql/enable-query-notifications.md
+                - name: SqlDependency in un'applicazione ASP.NET
+                  href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+                - name: Rilevamento di modifiche con SqlDependency
+                  href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+                - name: Esecuzione di SqlCommand con SqlNotificationRequest
+                  href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+            - name: Isolamento dello snapshot in SQL Server
+              href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+            - name: Supporto di SqlClient per il ripristino di emergenza a disponibilità elevata
+              href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+            - name: Supporto di SqlClient per Local DB
+              href: ../connect/ado-net/sql/sqlclient-support-localdb.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver per SQL Server
