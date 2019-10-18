@@ -1,6 +1,6 @@
 ---
-title: Introduzione a Database sperimentazione Assistant per gli aggiornamenti di SQL Server
-description: Introduzione a Database sperimentazione Assistant
+title: Introduzione a Database Experimentation Assistant per gli aggiornamenti SQL Server
+description: Inizia a usare Database Experimentation Assistant
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -12,153 +12,154 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e5affa5310c4443cd8458dfc987a506ada5982d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058956"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381765"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Introduzione a Database sperimentazione Assistant
+# <a name="get-started-with-database-experimentation-assistant"></a>Inizia a usare Database Experimentation Assistant
 
-Database sperimentazione Assistant DEA () è un oggetto test a / B soluzione per le modifiche in ambienti di SQL Server, ad esempio gli aggiornamenti o nuovi indici. DEA consente di valutare come il carico di lavoro nel server di origine (nell'ambiente corrente) eseguirà nuovo nell'ambiente in uso. DEA in modo semplificato che esegue un test a / B completando tre passaggi: 
+Database Experimentation Assistant (DEA) è una soluzione di test A/B per le modifiche in ambienti SQL Server, ad esempio aggiornamenti o nuovi indici. DEA consente di valutare il modo in cui il carico di lavoro nel server di origine (nell'ambiente corrente) sarà eseguito nel nuovo ambiente. DEA guida l'utente durante l'esecuzione di un test A/B completando tre passaggi: 
 
 - Acquisizione
-- riproduzione
+- Riproduzione
 - Analisi
 
-Questo articolo illustra questi passaggi.
+Questo articolo illustra questa procedura.
 
 ## <a name="capture"></a>Acquisizione
 
-Il primo passaggio di SQL Server A / B test consiste nell'acquisire una traccia nel server di origine. Il server di origine è in genere il server di produzione. I file di traccia di acquisire il carico di lavoro dell'intera query su tale server, inclusi i timestamp. In un secondo momento, questa riproduzione della traccia viene eseguita nel server di destinazione per l'analisi. Il report di analisi fornisce informazioni dettagliate sulla differenza nelle prestazioni del carico di lavoro tra i server di due destinazione.
+Il primo passaggio di SQL Server test A/B consiste nell'acquisire una traccia nel server di origine. Il server di origine è in genere il server di produzione. I file di traccia acquisiscono l'intero carico di lavoro di query su tale server, inclusi i timestamp. In seguito, questa traccia viene rieseguita nei server di destinazione per l'analisi. Il report di analisi fornisce informazioni sulle differenze di prestazioni del carico di lavoro tra i due server di destinazione.
 
 Considerazioni:
 
-- Prima di iniziare l'acquisizione della traccia, assicurarsi di eseguire il backup dei database da cui si esegue l'acquisizione una traccia.
-- Un utente DEA deve essere configurato per connettersi al database tramite l'autenticazione di Windows.
+- Prima di avviare l'acquisizione della traccia, assicurarsi di eseguire il backup dei database da cui si sta acquisendo una traccia.
+- È necessario configurare un utente di DEA per la connessione al database tramite l'autenticazione di Windows.
 - Un account del servizio SQL Server richiede l'accesso al percorso del file di traccia di origine.
+- Per determinare se le prestazioni di una query sono state migliorate o diminuite, la query deve essere eseguita almeno 15 volte durante il periodo di acquisizione.  
 
 Per acquisire una traccia nel server di origine:
 
-1. In DEA, passare a **acquisisce tutti** selezionando l'icona della fotocamera nel menu a sinistra.
+1. In DEA passare a **tutte le acquisizioni** selezionando l'icona della fotocamera nel menu a sinistra.
 
    ![Menu di spostamento a sinistra](./media/database-experimentation-assistant-get-started/dea-get-started-leftnav.png)
 
-1. Immettere o selezionare le informazioni seguenti:
+1. Immettere o selezionare le seguenti informazioni:
 
-   - **Nome traccia**: Il nome di file per il nuovo file di traccia che si sta creando. Evitare un nome di traccia che usa il rollover dei file convenzione di denominazione, ad esempio, CaptureName\_NNN.
-   - **Durata**: La durata per l'acquisizione.
-   - **Nome dell'istanza SQL Server**: Istanza di SQL Server da cui si desidera acquisire una traccia.
-   - **Nome del database**: Il nome del database nel computer che esegue SQL Server che si desidera acquisire una traccia di. Se lasciato vuoto, traccia viene acquisita da tutti i database nel server.
-   - **Percorso in cui archiviare i file di traccia di origine nel computer SQL Server**: Il percorso della cartella in cui si desidera salvare il file di traccia.
+   - **Nome traccia**: il nome del nuovo file di traccia che si sta creando. Evitare il nome di una traccia che usa la convenzione di denominazione dei file di rollover, ad esempio Capturename \_NNN.
+   - **Duration**: durata dell'acquisizione.
+   - **Nome istanza SQL Server**: istanza SQL Server da cui si desidera acquisire una traccia.
+   - **Nome database**: nome del database nel computer che esegue SQL Server di cui si desidera acquisire una traccia. Se viene lasciato vuoto, la traccia viene acquisita da tutti i database nel server.
+   - **Percorso per archiviare il file di traccia di origine nel computer SQL Server**: il percorso della cartella in cui si desidera salvare il file di traccia.
 
-1. Assicurarsi che il database di destinazione viene eseguito il backup. Quindi, selezionare la casella di controllo del database.
-1. Selezionare **avviare** per avviare l'acquisizione.
+1. Verificare che sia stato eseguito il backup del database di destinazione. Selezionare quindi la casella di controllo database.
+1. Selezionare **Start (avvia** ) per avviare l'acquisizione.
 
-È possibile visualizzare lo stato di avanzamento dell'acquisizione, tra cui ora di inizio, la durata e tempo rimanente. È anche possibile avviare una nuova acquisizione mentre si attende la fine dell'acquisizione. Al termine dell'operazione di acquisizione, usare il file di output di traccia per avviare la seconda fase: riproduzione di file di traccia nel server di destinazione.
+È possibile visualizzare lo stato di avanzamento dell'acquisizione, tra cui l'ora di inizio, la durata e il tempo rimanente. È anche possibile avviare una nuova acquisizione durante l'attesa del completamento dell'acquisizione. Al termine dell'acquisizione, utilizzare il file di traccia di output per avviare la seconda fase: riprodurre il file di traccia nei server di destinazione.
 
-Per domande comuni sull'acquisizione di traccia, vedere la [acquisire domande frequenti su](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
+Per domande frequenti sull'acquisizione di tracce, vedere le domande [frequenti sull'acquisizione](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
-## <a name="replay"></a>riproduzione
+## <a name="replay"></a>Riproduzione
 
-Il secondo passaggio di SQL Server A / B testing è riprodurre il file di traccia acquisiti per i server di destinazione. Quindi, raccogliere le tracce complete dalle riproduzioni per l'analisi. 
+Il secondo passaggio di SQL Server test A/B consiste nel riprodurre il file di traccia acquisito nei server di destinazione. Raccogliere quindi tracce estese dalle repliche per l'analisi. 
 
-Riprodurre il file di traccia nei due server di destinazione: uno che simula il server di origine (destinazione 1) e uno che simuli la modifica di proposta (destinazione 2). Le configurazioni di hardware di destinazione 1 e 2 di destinazione devono essere il più possibile simili in modo che SQL Server può analizzare in modo accurato l'effetto sulle prestazioni delle modifiche proposte.
+Il file di traccia viene riprodotto in due server di destinazione: uno che simula il server di origine (destinazione 1) e uno che simula la modifica proposta (destinazione 2). Le configurazioni hardware di target 1 e target 2 devono essere il più simile possibile, in modo SQL Server possibile analizzare accuratamente l'effetto sulle prestazioni delle modifiche proposte.
 
 Considerazioni:
 
-- Per l'esecuzione di riesecuzione, è necessario configurare le macchine per eseguire le tracce di riesecuzione distribuita (DReplay). Per altre informazioni, vedere [installazione di Distributed Replay controller e client](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
-- Assicurarsi di ripristinare i database nel server di destinazione usando il backup dal server di origine.
-- La memorizzazione nella cache di query in SQL Server può influire sui risultati della valutazione. È consigliabile riavviare il servizio SQL Server (MSSQLSERVER) nell'applicazione Servizi per migliorare la coerenza nei risultati della valutazione.
+- Per eseguire la riproduzione, i computer devono essere configurati per l'esecuzione di Riesecuzione distribuita (DReplay) tracce. Per ulteriori informazioni, vedere [riesecuzione distribuita controller e configurazione client](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
+- Assicurarsi di ripristinare i database nei server di destinazione usando il backup del server di origine.
+- La memorizzazione nella cache delle query in SQL Server può influire sui risultati della valutazione. Si consiglia di riavviare il servizio SQL Server (MSSQLSERVER) nell'applicazione dei servizi per migliorare la coerenza dei risultati della valutazione.
 
 Per riprodurre il file di traccia:
 
-1. In DEA, selezionare l'icona di riproduzione nel menu a sinistra per passare al **tutte le riproduzioni**. Elenco delle riproduzioni precedenti eseguiti durante la sessione, se presente, viene visualizzato. Per avviare una riproduzione di nuovo, selezionare **Replay nuovo**.
+1. In DEA selezionare l'icona Riproduci nel menu a sinistra per passare a **tutti i Riproduci**. Viene visualizzato l'elenco delle esecuzioni precedenti che vengono eseguite durante la sessione. Per avviare una nuova riproduzione, selezionare **nuova**riproduzione.
 
-1. Immettere o selezionare le informazioni seguenti:
+1. Immettere o selezionare le seguenti informazioni:
 
-   - **Nome di riproduzione**: Il nome di file per la traccia di riproduzione.
-   - **Nome computer del controller**: Nome del computer del controller di riesecuzione distribuita.
-   - **Percorso del file di traccia di origine nel controller**: Il percorso del file per il file di traccia di origine dal [acquisire](#capture).
-   - **Nome dell'istanza SQL Server**: Il nome dell'istanza di SQL Server in cui si desidera riprodurre la traccia di origine.
-   - **Percorso in cui archiviare i file di traccia di destinazione nel computer SQL Server**: Il percorso della cartella per il file di traccia di riproduzione risultante.
+   - **Nome riproduzione**: il nome del file per la traccia di riproduzione.
+   - **Nome computer controller**: il nome del computer del controller di riesecuzione distribuita.
+   - **Percorso del file di traccia di origine nel controller**: percorso del file di traccia di origine dall' [acquisizione](#capture).
+   - **SQL Server nome istanza**: il nome dell'istanza di SQL Server in cui riprodurre la traccia di origine.
+   - **Percorso per archiviare il file di traccia di destinazione nel computer SQL Server**: il percorso della cartella per il file di traccia della riproduzione risultante.
 
 1. Selezionare la casella di controllo per ripristinare il backup dal primo passaggio.
 
-1. Selezionare **avviare** per avviare la riproduzione. 
+1. Selezionare **Avvia** per avviare la riproduzione. 
 
-È possibile visualizzare lo stato della riproduzione. Dopo che riprodurre la traccia di origine su entrambi i server di destinazione, si è pronti per generare un report di analisi.
+È possibile visualizzare lo stato della riproduzione. Dopo aver riprodotto la traccia di origine in entrambi i server di destinazione, si è pronti per generare un report di analisi.
 
-Per domande frequenti sulla riproduzione, vedere la [domande frequenti di riproduzione](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
+Per domande frequenti sulla riproduzione, vedere le domande [frequenti sulla riproduzione](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 ## <a name="analysis"></a>Analisi
 
-Il passaggio finale consiste per generare un report di analisi tramite le tracce di riproduzione. Il report di analisi può aiutarti a ottenere informazioni sulle implicazioni sulle prestazioni della modifica proposta.
+Il passaggio finale consiste nel generare un report di analisi utilizzando le tracce di riproduzione. Il report di analisi può essere utile per ottenere informazioni sulle implicazioni relative alle prestazioni della modifica proposta.
 
 Considerazioni:
 
-- Se uno o più componenti risultano mancanti, viene visualizzata una pagina di prerequisiti con collegamenti per download quando si prova a generare un nuovo report di analisi (connessione a internet richiesta).
-- Per visualizzare un report che è stato generato in una versione precedente dello strumento, è prima necessario aggiornare lo schema.
+- Se uno o più componenti risultano mancanti, viene visualizzata una pagina dei prerequisiti con collegamenti per i download quando si tenta di generare un nuovo report di analisi (connessione Internet necessaria).
+- Per visualizzare un report generato in una versione precedente dello strumento, è necessario prima aggiornare lo schema.
 
 Per generare un report di analisi:
 
-1. Nel menu a sinistra, passare a **report di analisi**. Connettersi al computer che esegue SQL Server in cui vengono archiviati i database di report. Viene visualizzato un elenco di tutti i report nel server. Per creare un nuovo report, selezionare **nuovo Report**.
+1. Nel menu a sinistra passare a **report di analisi**. Connettersi al computer che esegue SQL Server in cui archiviare i database dei report. Viene visualizzato un elenco di tutti i report nel server. Per creare un nuovo report, selezionare **nuovo rapporto**.
 
 1. Immettere o selezionare le informazioni necessarie per generare un report:
 
-   - **Nome del report**: Il nome del report di analisi per creare.
-   - **Traccia per SQL Server di destinazione 1**: Il percorso del file di traccia da riprodurre nella destinazione 1.
-   - **Traccia per SQL Server di destinazione 2**: Il percorso per il file di traccia da riprodurre in 2 di destinazione.
+   - **Nome report**: nome del report di analisi da creare.
+   - **Trace for target 1 SQL Server**: percorso del file di traccia dalla riproduzione nella destinazione 1.
+   - **Trace for target 2 SQL Server**: percorso del file di traccia dalla riproduzione nella destinazione 2.
 
-1. Selezionare **avviare** per generare il report. Il nuovo report viene visualizzato nella parte superiore dell'elenco. L'icona accanto al report diventa un segno di spunta verde quando è stato generato il report.
+1. Selezionare **Avvia** per generare il report. Il nuovo report viene visualizzato nella parte superiore dell'elenco. L'icona accanto al report diventa un segno di spunta verde quando il report è stato generato.
 
-A questo punto, visualizzare il report di analisi per ottenere informazioni dettagliate fornite per l'oggetto test a / B.
+A questo punto, visualizzare il report di analisi per ottenere informazioni dettagliate fornite dal test A/B.
 
-Per domande frequenti sui report di analisi, vedere la [domande frequenti su analisi](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
+Per domande frequenti sui report di analisi, vedere le domande [frequenti sull'analisi](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
 
 ### <a name="analysis-report"></a>Report di analisi
 
-Nella prima pagina del report, vengono visualizzate informazioni sulla versione e compilazione per i server di destinazione in cui è stato eseguito l'esperimento. È possibile usare una soglia per regolare la sensibilità o la tolleranza dell'oggetto / analisi del Test di B. Per impostazione predefinita, la soglia è impostata nel percorso % 5. Qualsiasi miglioramento delle prestazioni che sono maggiore o uguale a % 5 è stato categorizzato come **migliorato**. Selezionare le opzioni nel menu a discesa per valutare il report utilizzando le soglie di prestazioni diverso.
+Nella prima pagina del report vengono visualizzate le informazioni sulla versione e sulla build per i server di destinazione in cui è stato eseguito l'esperimento. È possibile usare la soglia per regolare la sensibilità o la tolleranza dell'analisi di test A/B. Per impostazione predefinita, la soglia è impostata su 5%. Un miglioramento delle prestazioni superiore o uguale al 5% viene classificato come **migliorato**. Selezionare opzioni nel menu a discesa per valutare il report utilizzando diverse soglie per le prestazioni.
 
 ![Soglia](https://msdnshared.blob.core.windows.net/media/2017/03/threshold.jpg)
 
-Due grafici a torta vengono illustrate le implicazioni sulle prestazioni della differenza tra il server di due destinazione per il carico di lavoro. Il grafico a sinistra si basa sul conteggio delle esecuzioni. Il grafico a destra si basa su query distinte. Esistono cinque categorie possibili:
+Due grafici a torta mostrano le implicazioni sulle prestazioni della differenza tra i due server di destinazione per il carico di lavoro. Il grafico a sinistra è basato sul conteggio delle esecuzioni. Il grafico a destra si basa su query distinte. Sono disponibili cinque categorie possibili:
 
-- **Migliorato**:  Statisticamente, la query è stata eseguita meglio in 2 destinazione rispetto a destinazione 1.
-- **Danneggiato**: Statisticamente, la query è stata eseguita peggio in 2 destinazione rispetto a destinazione 1.
-- **Stesso**: Non c'è alcuna differenza statistica per la query tra destinazione 1 e 2 di destinazione.
-- **Non è possibile valutare**: Le dimensioni del campione per la query sono troppo piccola per l'analisi statistica. Per un test analysis B, DEA richiede le stesse query disponga di almeno 30 esecuzioni per ogni destinazione.
-- **Errore**: La query che hanno generato errore almeno una volta in una delle destinazioni.
+- **Migliorato**: statisticamente, la query è stata eseguita in modo migliore sulla destinazione 2 rispetto alla destinazione 1.
+- **Danneggiato**: statisticamente, la query è peggiorata nella destinazione 2 rispetto alla destinazione 1.
+- **Stesso**: non esiste alcuna differenza statistica per la query tra target 1 e target 2.
+- **Non è possibile valutare**: le dimensioni del campione per la query sono troppo ridotte per l'analisi statistica. Per l'analisi di test A/B, DEA richiede che le stesse query dispongano di almeno 30 esecuzioni in ogni destinazione.
+- **Errore**: errore della query almeno una volta in una delle destinazioni.
 
 ![Grafico a torta](./media/database-experimentation-assistant-get-started/dea-get-started-piechart.png)
 
-Selezionare una sezione per eseguire il drill-in una determinata categoria e ottenere le metriche delle prestazioni, tra cui il **non è possibile valutare** fetta di torta.
+Selezionare una sezione per eseguire il drill-down in una determinata categoria e ottenere le metriche delle prestazioni, incluso il **non può valutare** la sezione della torta.
 
-La pagina di drill-down per ottenere prestazioni una modifica categoria mostra un elenco delle query in tale categoria. Il **errore** pagina contiene tre schede:
+La pagina di drill-down per una categoria di modifiche delle prestazioni mostra un elenco di query nella categoria. La pagina di **errore** contiene tre schede:
 
-- **Nuovi errori**: Errori che venivano visualizzate in 2 di destinazione ma non nella destinazione 1.
-- **Gli errori esistenti**: Errori che venivano visualizzate in sia destinazione 1 e 2 di destinazione.
-- **Gli errori risolti**: Errori che venivano visualizzate su destinazione 1 ma non su 2 di destinazione.
+- **Nuovi errori**: errori visualizzati sulla destinazione 2 ma non sulla destinazione 1.
+- **Errori esistenti**: errori visualizzati sia nella destinazione 1 che nella destinazione 2.
+- **Errori risolti**: errori visualizzati nella destinazione 1 ma non nella destinazione 2.
 
    ![Pagina di errore](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
 
-Selezionare una query da passare a un **Comparison Summary** pagina per tale query.
+Selezionare una query per passare a una pagina di **Riepilogo del confronto** per la query.
 
-Il **confronto riepilogo** pagina Mostra le statistiche di riepilogo della query. Il riepilogo include il numero di esecuzioni, la durata media, valore medio della CPU, medio di letture/scritture e numero di errori.
+Nella pagina **Riepilogo confronto** vengono visualizzate le statistiche di riepilogo per la query. Il riepilogo include il numero di esecuzioni, la durata media, la CPU media, le letture e le Scritture significative e il conteggio degli errori.
 
 ![Statistiche di riepilogo](./media/database-experimentation-assistant-get-started/dea-get-started-summarystats.png)
 
-Se la query è un errore, il **informazioni sull'errore** scheda Mostra altre informazioni sull'errore. Il **le informazioni sulla pianificazione di Query** scheda Visualizza informazioni sui piani di query che vengono utilizzati per la query nella destinazione 1 e 2 di destinazione.
+Se la query è una query di errore, nella scheda **informazioni sull'errore** vengono visualizzate ulteriori informazioni sull'errore. Nella scheda **informazioni sul piano di query** vengono visualizzate informazioni sui piani di query utilizzati per la query nella destinazione 1 e nella destinazione 2.
 
 ![Piano di query](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
-In qualsiasi pagina del report di analisi, selezionare il **stampare** pulsante nella parte superiore destra per stampare tutti gli elementi che è visibile.
+In qualsiasi pagina del report di analisi, selezionare il pulsante **stampa** in alto a destra per stampare tutti gli elementi visibili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per informazioni su come generare un file di traccia che include un log di eventi che si verificano in un server, vedere [acquisire traccia](database-experimentation-assistant-capture-trace.md).
+- Per informazioni su come produrre un file di traccia con un log degli eventi che si verificano in un server, vedere [Capture Trace](database-experimentation-assistant-capture-trace.md).
 
-- Per un'introduzione di 19 minuti DEA e dimostrazione, guardare il video seguente:
+- Per un'introduzione di 19 minuti a DEA e dimostrazione, Guarda il video seguente:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
