@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68889604"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "68889604"
  In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per altre informazioni su altre modalità, vedere [modellazione &#40;tabulare&#41; SSAS tabulare](../../tabular-models/tabular-models-ssas.md) e [confronto tra le soluzioni &#40;tabulari e multidimensionali di SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Architettura di base  
- Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] di sono denominate "\\\<ServerName >\>< NomeIstanza". Nella figura seguente sono illustrate tutte le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] relazioni tra oggetti.  
+ Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sono denominate "\<ServerName > \\ < NomeIstanza \>". Nella figura seguente sono illustrate tutte le relazioni tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
   
  ![Relazioni di oggetti AMO in esecuzione](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relazioni di oggetti AMO in esecuzione")  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68889604"
  Ogni oggetto di database contiene uno o più oggetti cubo. Un cubo è definito dalle relative misure e dimensioni. Le misure e le dimensioni di un cubo derivano dalle tabelle e dalle viste della vista origine dati su cui il cubo si basa o che viene generata dalle definizioni delle misure e delle dimensioni.  
   
 ## <a name="object-inheritance"></a>Ereditarietà degli oggetti  
- Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "`Dimensions` contain `Hierarchies`", ad esempio, definisce la gerarchia di dimensione di un elemento. `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".  
+ Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "`Dimensions` contain `Hierarchies`", ad esempio, definisce la gerarchia della dimensione di un elemento. `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".  
   
  Se non viene sottoposto a override in modo esplicito, un elemento eredita i dettagli di tali gruppi di elementi ripetuti dal livello più elevato. `Translations` per `CubeDimension` corrisponde ad esempio a `Translations` del relativo elemento predecessore `Cube`.  
   
@@ -65,10 +65,10 @@ ms.locfileid: "68889604"
   
  I valori alfanumerici più piccoli disposti intorno al cubo rappresentano i membri delle dimensioni. Ad esempio, ground, Africa e 1st quarter sono rispettivamente membri delle dimensioni Route, Source e Time.  
   
-### <a name="measures"></a>Misure  
+### <a name="measures"></a>misure  
  I valori all'interno delle celle del cubo rappresentano le due misure Packages e Last. La misura Packages rappresenta il numero di confezioni importate. Per aggregare i fatti viene utilizzata la funzione `Sum`. La misura Last rappresenta la data di ricevimento. Per aggregare i fatti viene utilizzata la funzione `Max`.  
   
-### <a name="dimensions"></a>Dimensioni  
+### <a name="dimensions"></a>Dimensions  
  La dimensione Route rappresenta il mezzo di trasporto mediante il quale i beni importati giungono a destinazione. I membri di questa dimensione includono ground, nonground, air, sea, road e rail. La dimensione Source rappresenta le località in cui vengono prodotti i beni importati, ad esempio Africa o Asia. La dimensione Time rappresenta i trimestri e i semestri di un singolo anno.  
   
 ### <a name="aggregates"></a>Aggregazioni  
@@ -81,20 +81,20 @@ ms.locfileid: "68889604"
 ||||Pacchetti|||Ultimo|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|29-99 dicembre|Dec-22-99|29-99 dicembre|  
-||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
+|All Time|||25110|6547|18563|29-99 dicembre|22-99 dicembre|29-99 dicembre|  
+||1st half||11173|2977|8196|Jun-28-99|Giu-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
-|||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|29-99 dicembre|Dec-22-99|29-99 dicembre|  
+|||2nd quarter|6065|1525|4540|Jun-28-99|Giu-20-99|Jun-28-99|  
+||2nd half||13937|3570|10367|29-99 dicembre|22-99 dicembre|29-99 dicembre|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|29-99 dicembre|Dec-22-99|29-99 dicembre|  
+|||4th quarter|7818|2126|5692|29-99 dicembre|22-99 dicembre|29-99 dicembre|  
   
- Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:** [Aggregazioni e progettazioni delle aggregazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:** [aggregazioni e progettazioni delle aggregazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapping di misure, attributi e gerarchie  
  Le misure, gli attributi e le gerarchie del cubo di esempio derivano dalle colonne seguenti nelle tabelle dei fatti e delle dimensioni del cubo.  
   
-|Misura o attributo (livello)|Members|Tabella di origine|Colonna di origine|Valore della colonna di esempio|  
+|Misura o attributo (livello)|Membri|Tabella di origine|Colonna di origine|Valore della colonna di esempio|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Misura Packages|Non applicabile|ImportsFactTable|Pacchetti|12|  
 |Misura Last|Non applicabile|ImportsFactTable|Ultimo|May-03-99|  
@@ -119,11 +119,11 @@ ms.locfileid: "68889604"
   
  Nella tabella precedente ogni riga presenta gli stessi valori per le colonne **RouteKey**, **SourceKey**e **TimeKey** , a indicare che tali righe contribuiscono alla stessa cella del cubo.  
   
- Nell'esempio illustrato di seguito viene rappresentato un cubo molto semplice, in quanto contiene un solo gruppo di misure, e tutte le tabelle delle dimensioni vengono unite in join alla tabella dei fatti in uno schema star. Un altro schema comune è quello snowflake, in cui una o più tabelle delle dimensioni sono unite in join a un'altra tabella delle dimensioni, anziché direttamente alla tabella dei fatti. **Argomento correlato:** [Dimensioni &#40;Analysis Services dati&#41;multidimensionali](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ Nell'esempio illustrato di seguito viene rappresentato un cubo molto semplice, in quanto contiene un solo gruppo di misure, e tutte le tabelle delle dimensioni vengono unite in join alla tabella dei fatti in uno schema star. Un altro schema comune è quello snowflake, in cui una o più tabelle delle dimensioni sono unite in join a un'altra tabella delle dimensioni, anziché direttamente alla tabella dei fatti. **Argomento correlato:** [Dimensions &#40;Analysis Services-Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:** [Relazioni tra dimensioni](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:** [relazioni tra dimensioni](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Database modelli multidimensionali &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [Database di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

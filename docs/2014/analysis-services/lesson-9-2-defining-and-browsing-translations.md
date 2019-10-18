@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493784"
 ---
 # <a name="defining-and-browsing-translations"></a>Definizione ed esplorazione delle traduzioni
@@ -40,9 +40,9 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` nella colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
-6.  Nella riga relativa all'oggetto **didascalia** per l'attributo **Month Name** `Mes del Año` digitare la colonna **spagnolo (Spagna)** translation e `Mois d'Année` la colonna Traduzione in **francese (Francia)** .  
+6.  Nella riga relativa all'oggetto **didascalia** per l'attributo **Month Name** digitare `Mes del Año` nella colonna Traduzione in **spagnolo (Spagna)** e `Mois d'Année` nella colonna Traduzione in **francese (Francia)** .  
   
      Si noti che quando si immettono queste traduzioni, vengono visualizzati i puntini di sospensione ( **...** ). Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493784"
   
 8.  Selezionare **SpanishMonthName** nell'elenco **Colonne per la traduzione**, come illustrato nella figura seguente.  
   
-     Finestra di ![dialogo Traduzione dati attributo](../../2014/tutorials/media/l9-translations-4.gif " Finestra di dialogo Traduzione dati attributo")  
+     ![Finestra di dialogo Traduzione dati attributo](../../2014/tutorials/media/l9-translations-4.gif "Traduzione dati attributo - finestra di dialogo")  
   
 9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione ( **...** ) per la traduzione in **francese (Francia)** dell'attributo **Month Name** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69493784"
   
 2.  Sulla barra degli strumenti della scheda **Traduzioni** fare clic sul pulsante **Nuova traduzione** .  
   
-     Verrà visualizzato un elenco di lingue nella finestra di dialogo **Seleziona lingua**.  
+     Verrà visualizzato un elenco di lingue nella finestra di dialogo **Seleziona lingua** .  
   
 3.  Selezionare **Spagnolo (Spagna)** e fare clic su **OK**.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` nella colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
-6.  Nella riga relativa all'oggetto **didascalia** per il gruppo di misure **Internet Sales** digitare `Ventas del lnternet` la colonna Traduzione in **spagnolo (Spagna)** e `Ventes D'Internet` nella colonna Traduzione in **francese (Francia)** .  
+6.  Nella riga relativa all'oggetto **didascalia** per il gruppo di misure **Internet Sales** digitare `Ventas del lnternet` nella colonna Traduzione in **spagnolo (Spagna)** e `Ventes D'Internet` nella colonna Traduzione in **francese (Francia)** .  
   
-7.  Nella riga relativa all'oggetto **didascalia** per la misura Internet Sales-Sales `Cantidad de las Ventas del Internet` amount digitare la colonna **spagnolo (Spagna)** translation e `Quantité de Ventes d'Internet` nella colonna Traduzione in **francese (Francia)** .  
+7.  Nella riga relativa all'oggetto **didascalia** per la misura Internet Sales-Sales Amount digitare `Cantidad de las Ventas del Internet` nella colonna Traduzione in **spagnolo (spagna)** e `Quantité de Ventes d'Internet` nella colonna Traduzione in **francese (Francia)** .  
   
      I passaggi della procedura illustrano il processo di definizione delle traduzioni dei metadati per gli oggetti cubo.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "69493784"
   
      Si noti che gli elementi del riquadro Metadati vengono ripopolati. Quando gli elementi del riquadro Metadati sono stati ripopolati, si noti che la misura Internet Sales-Sales Amount non viene più visualizzata nella cartella di visualizzazione Vendite Internet, Viene invece visualizzato in spagnolo in una nuova cartella di visualizzazione denominata `Ventas del lnternet`, come illustrato nella figura seguente.  
   
-     ![Riquadro dei metadati](../../2014/tutorials/media/l9-translations-6.gif " ripopolato Riquadro dei metadati") ripopolato  
+     ![Riquadro dei metadati ripopolato](../../2014/tutorials/media/l9-translations-6.gif "Riquadro dei metadati ripopolato")  
   
-6.  Nel riquadro Metadati fare clic con il pulsante `Cantidad de las Ventas del Internet` destro del mouse e scegliere **Aggiungi a query**.  
+6.  Nel riquadro Metadati fare clic con il pulsante destro del mouse su `Cantidad de las Ventas del Internet` e quindi scegliere **Aggiungi a query**.  
   
-7.  Nel `Fecha`riquadro Metadati espandere, espandere **Fecha. Calendar date**, fare clic con il pulsante destro del mouse su **Fecha. Calendar date**, quindi selezionare **Aggiungi a filtro**.  
+7.  Nel riquadro Metadati espandere `Fecha`, espandere **Fecha. Calendar date**, fare clic con il pulsante destro del mouse su **Fecha. Calendar date**, quindi scegliere **Aggiungi a filtro**.  
   
 8.  Nel riquadro **Filtro** selezionare **CY 2007** come espressione di filtro.  
   
@@ -126,8 +126,8 @@ ms.locfileid: "69493784"
  [Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Traduzioni delle dimensioni](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
+ [Conversioni delle dimensioni](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)    
+ [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
  [Analysis Services &#40;traduzioni&#41;](translations-analysis-services.md)  
   
   
