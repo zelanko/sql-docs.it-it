@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "63035067"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
@@ -55,21 +55,21 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
-|level|Descrizione|  
+|level|Description|  
 |-----------|-----------------|  
 |0|L'output non include messaggi di traccia e di debug.|  
 |1|L'output include messaggi di gestione degli errori.|  
 |2|L'output include messaggi di avviso e di gestione degli errori.|  
-|**3**|L'output include messaggi informativi, di avviso e di gestione degli errori. Rappresenta il valore predefinito.|  
+|**3**|L'output include messaggi informativi, di avviso e di gestione degli errori. Si tratta del valore predefinito.|  
 |4|L'output include tutti i messaggi di debug e di traccia.|  
   
  **-logintimeout** _timeout_value_  
- Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* is **int** _._  
+ Specifica la quantità di tempo assegnata per il tentativo di accesso all'istanza del server prima del timeout del tentativo. Il valore predefinito è 15 secondi. *timeout_value* is **int** _._  
   
  **-querytimeout** _timeout_value_  
  Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int** _._  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Remarks  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  

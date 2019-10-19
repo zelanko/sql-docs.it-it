@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811044"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  L' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *indice columnstore in memoria* consente di archiviare e gestire i dati tramite l'archiviazione dei dati basata su colonne e l'elaborazione delle query basata su colonne. Gli indici columnstore sono ideali per i carichi di lavoro di data warehousing che eseguono principalmente caricamenti bulk e query di sola lettura. Usare l'indice columnstore per migliorare fino a **10 volte le prestazioni delle query** rispetto all'archiviazione tradizionale orientata alle righe e fino a **7 volte la compressione dei dati** rispetto alle dimensioni dei dati non compressi.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *indice columnstore in memoria* consente di archiviare e gestire i dati tramite l'archiviazione dei dati basata su colonne e l'elaborazione delle query basata su colonne. Gli indici columnstore sono ideali per i carichi di lavoro di data warehousing che eseguono principalmente caricamenti bulk e query di sola lettura. Usare l'indice columnstore per migliorare fino a **10 volte le prestazioni delle query** rispetto all'archiviazione tradizionale orientata alle righe e fino a **7 volte la compressione dei dati** rispetto alle dimensioni dei dati non compressi.  
   
 > [!NOTE]  
 >  L'indice columnstore cluster viene considerato lo standard per l'archiviazione di grandi tabelle dei fatti di data warehouse e si prevede venga utilizzato nella maggior parte degli scenari di data warehouse. Poiché l'indice columnstore cluster è aggiornabile, il carico di lavoro può eseguire molte operazioni di inserimento, aggiornamento ed eliminazione.  
@@ -90,7 +90,7 @@ ms.locfileid: "68811044"
   
 -   Richiede uno spazio di archiviazione aggiuntivo per archiviare una copia delle colonne dell'indice.  
   
--   Viene aggiornato ricompilando l'indice o cambiando le partizioni. Non è aggiornabile tramite le operazioni DML, ad esempio inserimento, aggiornamento ed eliminazione.  
+-   Viene aggiornato ricompilando l'indice o cambiando le partizioni. Non è aggiornabile tramite le operazioni DML, ad esempio INSERT, Update e DELETE.  
   
 -   Può essere combinato con altri indici nella tabella.  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811044"
   
 -   Ogni segmento di colonna è compresso e archiviato su un supporto fisico.  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![Segmento di colonna](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "segmento di colonna")  
   
  indice columnstore non cluster  
  Un indice *columnstore non cluster* è un indice di sola lettura creato in un indice cluster o in una tabella heap esistente. Contiene una copia di un subset di colonne, fino a includere tutte le colonne della tabella. La tabella è di sola lettura mentre contiene un indice columnstore non cluster.  
   
  Un indice columnstore non cluster consente di disporre di un indice columnstore per eseguire query di analisi e, contemporaneamente, operazioni di sola lettura nella tabella originale.  
   
- ![Indice columnstore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Indice columnstore non cluster")  
+ ![Indice columnstore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "indice columnstore non cluster")  
   
  indice columnstore cluster  
  Un *indice columnstore cluster* è l'archivio fisico per l'intera tabella ed è l'unico indice per la tabella. L'indice cluster è aggiornabile. È possibile eseguire nell'indice operazioni di inserimento, eliminazione e aggiornamento, nonché il caricamento bulk dei dati.  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![Indice columnstore cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "indice columnstore cluster")  
   
  Per ridurre la frammentazione dei segmenti di colonna e migliorare le prestazioni, l'indice columnstore può archiviare alcuni dati temporaneamente in una tabella rowstore, denominata deltastore, nonché un albero B di ID per le righe eliminate. Le operazioni deltastore sono gestite in modo automatico. Per tornare ai risultati della query corretti, l'indice columnstore cluster combina i risultati della query da columnstore e deltastore.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68811044"
   
  ![Caricamento di dati in un indice columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Caricamento di dati in un indice columnstore")  
   
- Una tabella con un indice columnstore non cluster è di sola lettura finché l'indice non viene eliminato o disabilitato. Per aggiornare la tabella e l'indice columnstore non cluster è possibile cambiare le partizioni. È inoltre possibile disabilitare l'indice, aggiornare la tabella, quindi ricompilare l'indice.  
+ Una tabella con un indice columnstore non cluster è di sola lettura finché l'indice non viene eliminato o disabilitato. Per aggiornare la tabella e l'indice columnstore non cluster è possibile attivare e disattivare le partizioni. È inoltre possibile disabilitare l'indice, aggiornare la tabella, quindi ricompilare l'indice.  
   
  Per ulteriori informazioni, vedere [Using Nonclustered Columnstore Indexes](indexes.md).  
   
