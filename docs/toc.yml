@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Panoramica
   items:
-    - name: Novità di SQL Server
+    - name: Novità
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: Edizioni e funzionalità
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: Script di distribuzione
               items:
                 - name: Script Python per il servizio Azure Kubernetes
@@ -8348,27 +8348,27 @@
         - name: Estensioni
           href: azure-data-studio/extensions.md
           items:
-            - name: Estensione di PostgreSQL (anteprima)
+            - name: Estensione PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (anteprima)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server Agent (anteprima)
+            - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: Estensione Server di gestione centrale di SQL Server (anteprima)
+            - name: Estensione Server di gestione centrale di SQL Server
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: Estensione dacpac di SQL Server (anteprima)
+            - name: Estensione SQL Server dacpac
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server Import (anteprima)
+            - name: SQL Server Import
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (anteprima)
+            - name: SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Estensione Confronto schema (anteprima)
+            - name: Estensione Confronto schema
               href: azure-data-studio/schema-compare-extension.md
             - name: Estensione di PowerShell
               href: azure-data-studio/powershell-extension.md
-            - name: Estensione di istanza gestita (anteprima)
+            - name: Estensione Istanza gestita
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Estensione di SandDance (anteprima)
+            - name: Estensione SandDance
               href: azure-data-studio/sanddance-extension.md
         - name: Creazione di estensioni
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: Anteprima di SQL Server 2019
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: Novità
           href: linux/sql-server-linux-whats-new.md
