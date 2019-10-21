@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809960"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586759"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 
@@ -76,7 +76,7 @@ il file MyAGCert.cer viene copiato nella cartella specificata nell'altro server.
 
 Si possono usare anche condivisioni SMB basate su Windows. Non è necessario che le condivisioni SMB siano basate su Linux, purché la parte client di Samba sia configurata correttamente nel server Linux che ospita [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e la condivisione abbia l'accesso corretto. Negli ambienti misti questa soluzione consente di sfruttare l'infrastruttura esistente per le distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Linux.
 
-È importante che la versione di Samba distribuita sia conforme a SMB 3.0. Da quando è stato aggiunto il supporto per SMB in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], è necessario che tutte le condivisioni supportino SMB 3.0. Se si usa Samba per la condivisione e non Windows Server, la condivisione basata su Samba dovrebbe usare Samba 4.0 o versione successiva. L'ideale è usare la versione 4.3 o successiva, che supporta SMB 3.1.1. Per informazioni su SMB e Linux, vedere [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+È importante che la versione di Samba distribuita sia conforme a SMB 3.0. Da quando è stato aggiunto il supporto per SMB in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], è necessario che tutte le condivisioni supportino SMB 3.0. Se si usa Samba per la condivisione e non Windows Server, la condivisione basata su Samba dovrebbe usare Samba 4.0 o versione successiva. L'ideale è usare la versione 4.3 o successiva, che supporta SMB 3.1.1. Per informazioni su SMB e Linux, vedere [SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 È infine possibile usare una condivisione NFS (Network File System). NFS non può essere usato nelle distribuzioni basate su Windows di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], ma solo per le distribuzioni basate su Linux.
 

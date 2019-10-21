@@ -1,7 +1,7 @@
 ---
 title: Uso di PIVOT e UNPIVOT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559414"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305171"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-I valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set di risultati finale. Pertanto è presente una colonna per ogni numero `EmployeeID` specificato nella clausola Pivot. In questo caso i dipendenti `164`, `198`, `223`, `231` e `233`. La colonna `PurchaseOrderID` funge da colonna dei valori, rispetto alla quale vengono raggruppate le colonne restituite nell'output finale, dette colonne di raggruppamento. In questo caso, le colonne di raggruppamento vengono aggregate dalla funzione `COUNT`. Si noti che viene visualizzato un messaggio di avviso che indica che eventuali valori Null visualizzati nella colonna `PurchaseOrderID` non sono stati considerati nel calcolo di `COUNT` per ogni dipendente.  
+I valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set di risultati finale. Pertanto è presente una colonna per ogni numero `EmployeeID` specificato nella clausola Pivot. In questo caso i dipendenti `250`, `251`, `256`, `257` e `260`. La colonna `PurchaseOrderID` funge da colonna dei valori, rispetto alla quale vengono raggruppate le colonne restituite nell'output finale, dette colonne di raggruppamento. In questo caso, le colonne di raggruppamento vengono aggregate dalla funzione `COUNT`. Si noti che viene visualizzato un messaggio di avviso che indica che eventuali valori Null visualizzati nella colonna `PurchaseOrderID` non sono stati considerati nel calcolo di `COUNT` per ogni dipendente.  
   
 > [!IMPORTANT]  
 >  Quando le funzioni di aggregazione sono usate con `PIVOT`, gli eventuali valori Null presenti nella colonna dei valori non vengono considerati nel calcolo di un'aggregazione.  
