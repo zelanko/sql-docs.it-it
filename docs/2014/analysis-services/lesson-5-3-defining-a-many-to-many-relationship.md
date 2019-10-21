@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493870"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
@@ -47,13 +47,13 @@ ms.locfileid: "69493870"
   
 6.  Scegliere **Layout automatico** dal menu **Formato**e quindi fare clic su **Diagramma**.  
   
-7.  Nella finestra Proprietà modificare la proprietà **FriendlyName** della tabella `SalesReason` **DimSalesReason** in, quindi modificare la proprietà **FriendlyName** della tabella **FactInternetSalesReason** in `InternetSalesReason`.  
+7.  Nella Finestra Proprietà modificare la proprietà **FriendlyName** della tabella **DimSalesReason** in `SalesReason`, quindi modificare la proprietà **FriendlyName** della tabella **FactInternetSalesReason** in `InternetSalesReason`.  
   
 8.  Nel riquadro **Tabelle** espandere **InternetSalesReason (dbo.FactInternetSalesReason)** , fare clic su **SalesOrderNumber**e quindi controllare la proprietà **DataType** per questa colonna dati nella finestra Proprietà.  
   
      Si noti che la colonna **SalesOrderNumber** è di tipo stringa.  
   
-9. Esaminare i tipi di dati per le altre colonne `InternetSalesReason` della tabella.  
+9. Esaminare i tipi di dati per le altre colonne della tabella `InternetSalesReason`.  
   
      Si noti che i tipi di dati delle altre due colonne della tabella sono tipi di dati numerici.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493870"
   
 2.  Fare clic con il pulsante destro del mouse su un punto qualsiasi all'interno del riquadro **Misure** e quindi scegliere **Nuovo gruppo di misure**. Per altre informazioni, vedere [Creare misure e gruppi di misure nei modelli multidimensionali](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-3.  Nella finestra di dialogo **nuovo gruppo di misure** , `InternetSalesReason` selezionare nell'elenco **selezionare una tabella dalla vista origine dati** , quindi fare clic su **OK**.  
+3.  Nella finestra di dialogo **nuovo gruppo di misure** selezionare `InternetSalesReason` nell'elenco **selezionare una tabella dalla vista origine dati** , quindi fare clic su **OK**.  
   
      Si noti che il gruppo di misure **Internet Sales Reason** viene visualizzato nel riquadro **Misure** .  
   
@@ -91,11 +91,11 @@ ms.locfileid: "69493870"
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definizione della dimensione molti-a-molti  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Dimensioni**e quindi scegliere **Nuova dimensione**.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Dimensioni**e scegliere **Nuova dimensione**.  
   
-2.  Nella pagina **Creazione guidata dimensione** fare clic su **Avanti**.  
+2.  Nella pagina iniziale di **Creazione guidata dimensione** fare clic su **Avanti**.  
   
-3.  Nella pagina **Selezione metodo di creazione** verificare che l'opzione **Usa una tabella esistente** sia selezionata e quindi fare clic su **Avanti**.  
+3.  Nella pagina **Selezione metodo di creazione** verificare che la pagina **Usa una tabella esistente** sia selezionata e fare clic su **Avanti**.  
   
 4.  Nella pagina **Impostazione informazioni origine** verificare che la vista origine dati [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 sia selezionata.  
   
@@ -107,21 +107,21 @@ ms.locfileid: "69493870"
   
 8.  Scegliere **Avanti**.  
   
-9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto all'attributo **Sales Reason Reason Type** , modificare il nome `Sales Reason Type`in, quindi fare clic su **Avanti**.  
+9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto all'attributo **Sales Reason Reason Type** , impostare il nome su `Sales Reason Type` e quindi fare clic su **Avanti**.  
   
 10. Nella pagina **Completamento procedura guidata** fare clic su **Fine** per creare la dimensione Sales Reason.  
   
 11. Scegliere **Salva tutti** dal menu **File**.  
   
-12. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Sales Reason** selezionare **Sales Reason Key**e quindi modificare la proprietà **Name** nel finestra Proprietà`Sales Reason.`  
+12. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Sales Reason** selezionare **Sales Reason Key**, quindi modificare la proprietà **Name** nel finestra Proprietà in `Sales Reason.`  
   
-13. Nel riquadro **gerarchie** di Progettazione dimensioni creare una gerarchia utente **Sales Reasons** che contiene il `Sales Reason Type` livello e il livello **Sales Reason** , in questo ordine.  
+13. Nel riquadro **gerarchie** di Progettazione dimensioni creare una gerarchia utente **Sales Reasons** che contenga il livello `Sales Reason Type` e il livello **Sales Reason** , in questo ordine.  
   
-14. Nella finestra Proprietà definire `All Sales Reasons` come valore per la proprietà **AllMemberName** della gerarchia Sales Reasons.  
+14. Nella Finestra Proprietà definire `All Sales Reasons` come valore per la proprietà **AllMemberName** della gerarchia Sales Reasons.  
   
 15. Definire `All Sales Reasons` come valore per la proprietà **AttributeAllMemberName** della dimensione Sales Reason.  
   
-16. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, come una dimensione del cubo, passare a **Progettazione cubi**. Fare clic con il pulsante destro del mouse nel riquadro **Dimensioni** della scheda **Struttura cubo** e selezionare **Aggiungi dimensione al cubo**.  
+16. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, come una dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
   
 17. Nella finestra di dialogo **Aggiungi dimensione al cubo** selezionare **Sales Reason** e quindi fare clic su **OK**.  
   
@@ -143,9 +143,9 @@ ms.locfileid: "69493870"
   
      Nella figura seguente vengono illustrate le modifiche apportate alla finestra di dialogo **Definisci relazione** .  
   
-     Finestra di ![dialogo Definisci relazione](../../2014/tutorials/media/l5-many-to-many-3.gif "dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-many-to-many-3.gif "Finestra di dialogo Definisci relazione")  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
      Si noti l'icona molti-a-molti che rappresenta la relazione tra la dimensione Sales Reason e il gruppo di misure Internet Sales.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493870"
   
 5.  Nel riquadro Metadati espandere **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**e **Australia**, fare clic con il pulsante destro del mouse su **Queensland**, quindi scegliere **Aggiungi a filtro**.  
   
-6.  Espandere ogni membro del `Sales Reason Type` livello per esaminare i valori in dollari associati a ogni motivo assegnato da un cliente in Queensland per l'acquisto di un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] prodotto su Internet.  
+6.  Espandere ogni membro del livello di `Sales Reason Type` per esaminare i valori in dollari associati a ogni motivo assegnato da un cliente in Queensland per l'acquisto di un prodotto [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] su Internet.  
   
      Si noti che la somma dei totali associati a ciascun motivo di vendita risulta maggiore delle vendite totali. Ciò si spiega con il fatto che alcuni clienti danno più motivi per i loro acquisti.  
   

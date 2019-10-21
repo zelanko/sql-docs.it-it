@@ -1,7 +1,7 @@
 ---
 title: Distribuire SQL Server cluster di Big data con disponibilità elevata
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability
-description: Informazioni su come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) a con disponibilità elevata.
+description: Informazioni su come distribuire SQL Server cluster di Big data con disponibilità elevata.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 43d651c46282d7de0ffdd60f326740e7821b9bbe
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823582"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542165"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire SQL Server cluster di Big data con disponibilità elevata
 
@@ -26,23 +26,23 @@ Inoltre, le altre attività amministrative come la configurazione degli endpoint
 
 Di seguito sono riportate alcune delle funzionalità abilitate dai gruppi di disponibilità:
 
-1. Se nel file di configurazione della distribuzione vengono specificate le impostazioni di disponibilità elevata, viene creato un `containedag` singolo gruppo di disponibilità denominato. Per impostazione predefinita `containedag` , in sono presenti tre repliche, inclusa quella primaria. Tutte le operazioni CRUD per il gruppo di disponibilità sono gestite internamente.
-1. Tutti i database vengono aggiunti automaticamente al gruppo di disponibilità, `master` tra `msdb`cui e. I database di configurazione di base non sono inclusi nel gruppo di disponibilità perché includono metadati a livello di istanza specifici di ogni replica.
+1. Se nel file di configurazione della distribuzione vengono specificate le impostazioni di disponibilità elevata, viene creato un singolo gruppo di disponibilità denominato `containedag`. Per impostazione predefinita, `containedag` è costituito da tre repliche, inclusa quella primaria. Tutte le operazioni CRUD per il gruppo di disponibilità sono gestite internamente.
+1. Tutti i database vengono aggiunti automaticamente al gruppo di disponibilità, inclusi `master` e `msdb`. I database di configurazione di base non sono inclusi nel gruppo di disponibilità perché includono metadati a livello di istanza specifici di ogni replica.
 1. Viene eseguito automaticamente il provisioning di un endpoint esterno per la connessione ai database del gruppo di disponibilità. Questo endpoint `master-svc-external` svolge il ruolo di listener del gruppo di disponibilità.
 1. Viene eseguito il provisioning di un secondo endpoint esterno per le connessioni di sola lettura alle repliche secondarie. 
 
 
-# <a name="deploy"></a>Distribuzione
+## <a name="deploy"></a>Distribuzione
 
 Per distribuire SQL Server Master in un gruppo di disponibilità:
 
-1. Abilitare la `hadr` funzionalità
+1. Abilitare la funzionalità `hadr`
 1. Specificare il numero di repliche per il gruppo di disponibilità (il valore minimo è 3)
 1. Configurare i dettagli del secondo endpoint esterno creato per le connessioni alle repliche secondarie di sola lettura
 
-Nei passaggi seguenti viene illustrato come creare un file di patch che include queste impostazioni e come applicarlo ai profili `aks-dev-test` di `kubeadm-dev-test` configurazione o. Questi passaggi illustrano un esempio di come applicare la patch `aks-dev-test` al profilo per aggiungere gli attributi a disponibilità elevata. Per una distribuzione in un cluster kubeadm, è possibile applicare una patch simile, ma assicurarsi *di usare* Deport per il **serviceType** nella sezione **endpoint** .
+Nei passaggi seguenti viene illustrato come creare un file di patch che include queste impostazioni e come applicarlo ai profili di configurazione `aks-dev-test` o `kubeadm-dev-test`. Questi passaggi illustrano un esempio di come applicare le patch al profilo `aks-dev-test` per aggiungere gli attributi a disponibilità elevata. Per una distribuzione in un cluster kubeadm, è possibile applicare una patch simile, ma assicurarsi *di usare* Deport per il **serviceType** nella sezione **endpoint** .
 
-1. Creazione di `patch.json` un file
+1. Creazione di un file di `patch.json`
 
     ```json
     {
@@ -99,7 +99,7 @@ A seconda del tipo di carico di lavoro che si vuole eseguire con SQL Server Mast
 
 ### <a name="connect-to-databases-on-the-primary-replica"></a>Connettersi ai database nella replica primaria
 
-Per le connessioni alla replica primaria, usare `sql-server-master` endpoint. Questo endpoint è anche il listener del gruppo di disponibilità. Tutte le connessioni si trovano nel contesto del gruppo di disponibilità. Ad esempio, una connessione predefinita che utilizza questo endpoint comporterà la connessione `master` al database all'interno del gruppo di disponibilità, `master` non il database dell'istanza di SQL Server.
+Per le connessioni alla replica primaria, usare `sql-server-master` endpoint. Questo endpoint è anche il listener del gruppo di disponibilità. Tutte le connessioni si trovano nel contesto del gruppo di disponibilità. Ad esempio, una connessione predefinita che utilizza questo endpoint comporterà la connessione al database `master` all'interno del gruppo di disponibilità, non l'istanza SQL Server `master` database.
 
 ```bash
 azdata bdc endpoint list -e sql-server-master -o table
@@ -115,7 +115,7 @@ azdata bdc endpoint list -e sql-server-master -o table
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Connettersi ai database nelle repliche secondarie
 
-Per le connessioni di sola lettura ai database nelle repliche secondarie, `sql-server-master-readonly` usare l'endpoint. Questo endpoint funge da servizio di bilanciamento del carico tra tutte le repliche secondarie. Specificare il contesto del database utente nella stringa di connessione.
+Per le connessioni di sola lettura ai database nelle repliche secondarie, usare l'endpoint `sql-server-master-readonly`. Questo endpoint funge da servizio di bilanciamento del carico tra tutte le repliche secondarie. Specificare il contesto del database utente nella stringa di connessione.
 
 ```bash
 azdata bdc endpoint list -e sql-server-master-readonly -o table
@@ -129,7 +129,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 Per alcune operazioni come l'impostazione delle configurazioni a livello di server o l'aggiunta manuale di un database al gruppo di disponibilità (nel caso in cui il database sia stato creato con un flusso di lavoro di ripristino), è necessaria una connessione all'istanza di. Per fornire questa connessione, esporre un endpoint esterno. Di seguito è riportato un esempio in cui viene illustrato come esporre l'endpoint e quindi aggiungere il database creato con un flusso di lavoro di ripristino al gruppo di disponibilità.
 
-- Determinare il pod che ospita la replica primaria connettendosi all' `sql-server-master` endpoint ed eseguire:
+- Determinare il pod che ospita la replica primaria connettendosi all'endpoint `sql-server-master` ed eseguire:
 
     ```sql
     SELECT @@SERVERNAME
@@ -137,19 +137,19 @@ Per alcune operazioni come l'impostazione delle configurazioni a livello di serv
 
 - Esporre l'endpoint esterno creando un nuovo servizio Kubernetes
 
-    Per un cluster kubeadm eseguire il comando seguente. Sostituire `podName` con il nome del server restituito nel passaggio precedente, `serviceName` con il nome preferito per il servizio Kubernetes creato e `namespaceName`* con il nome del cluster di integrazione applicativa dei dati.
+    Per un cluster kubeadm eseguire il comando seguente. Sostituire `podName` con il nome del server restituito nel passaggio precedente, `serviceName` con il nome preferito per il servizio Kubernetes creato e `namespaceName` * con il nome del cluster di integrazione applicativa dei dati.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
     ```
 
-    Per un'esecuzione del cluster AKS, eseguire lo stesso comando, ad eccezione del fatto che il tipo di servizio `LoadBalancer`creato sarà. Esempio: 
+    Per un cluster AKS eseguire lo stesso comando, ad eccezione del fatto che il tipo di servizio creato verrà `LoadBalancer`. Ad esempio 
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
     ```
 
-    Di seguito è riportato un esempio di questo comando eseguito su AKS, in cui il pod che `master-0`ospita il database primario è:
+    Di seguito è riportato un esempio di questo comando eseguito su AKS, in cui il pod che ospita il database primario è `master-0`:
 
     ```bash
     kubectl -n mssql-cluster expose pod master-0 --port=1533  --name=master-sql-0 --type=LoadBalancer
@@ -178,7 +178,7 @@ Per alcune operazioni come l'impostazione delle configurazioni a livello di serv
     ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
     ```
 
-    Nell'esempio seguente viene aggiunto un database `sales` denominato ripristinato nell'istanza:
+    Nell'esempio seguente viene aggiunto un database denominato `sales` ripristinato nell'istanza:
 
     ```sql
     ALTER DATABASE sales SET RECOVERY FULL;
@@ -190,11 +190,11 @@ Per alcune operazioni come l'impostazione delle configurazioni a livello di serv
 
 Questi sono i problemi noti e le limitazioni con i gruppi di disponibilità per SQL Server master nel cluster Big Data:
 
-- I database creati come risultato di flussi di lavoro `CREATE DATABASE` diversi `RESTORE`da `CREATE DATABASE FROM SNAPSHOT` like, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza](#instance-connect) di e aggiungere manualmente il database al gruppo di disponibilità.
-- Alcune operazioni come l'esecuzione di impostazioni di `sp_configure` configurazione del server con richiedono una connessione all'istanza master. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per connettersi all'istanza di SQL Server ed eseguire `sp_configure`.
+- I database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` come `RESTORE`, `CREATE DATABASE FROM SNAPSHOT` non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza](#instance-connect) di e aggiungere manualmente il database al gruppo di disponibilità.
+- Alcune operazioni, ad esempio l'esecuzione di impostazioni di configurazione del server con `sp_configure` richiedono una connessione all'istanza master. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per connettersi all'istanza di SQL Server ed eseguire `sp_configure`.
 - La configurazione della disponibilità elevata deve essere creata quando si distribuisce l'integrazione applicativa dei dati. Non è possibile abilitare la configurazione della disponibilità elevata con i gruppi di disponibilità dopo la distribuzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per ulteriori informazioni sull'utilizzo dei file di configurazione nelle distribuzioni Big Data cluster, vedere [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md#configfile).
+- Per ulteriori informazioni sull'utilizzo dei file di configurazione nelle distribuzioni Big Data cluster, vedere [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
 - Per ulteriori informazioni sulla funzionalità gruppi di disponibilità per SQL Server, vedere [Panoramica di gruppi di disponibilità always on (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2017).

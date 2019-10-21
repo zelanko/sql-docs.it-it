@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493889"
 ---
 # <a name="defining-named-sets"></a>Definizione dei set denominati
@@ -32,7 +32,7 @@ ms.locfileid: "69493889"
   
      Quando si definisce un nuovo calcolo nella scheda **Calcoli** ricordare che i calcoli vengono risolti seguendo l'ordine di visualizzazione del riquadro **Libreria script** . Il calcolo selezionato all'interno di tale riquadro al momento della creazione di un nuovo calcolo ne determina l'ordine di esecuzione. Un nuovo calcolo viene definito immediatamente dopo il calcolo selezionato.  
   
-3.  Nella casella **nome** modificare il nome del nuovo set `[Core Products]`denominato in.  
+3.  Nella casella **nome** modificare il nome del nuovo set denominato in `[Core Products]`.  
   
      Si noti nel riquadro **Libreria script** l'icona speciale che distingue un set denominato da un comando script o da un membro calcolato.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "69493889"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Definizione di un set denominato Large Resellers  
   
-1.  Fare clic con `[Core Products]` il pulsante destro del mouse sul riquadro **Libreria script** , quindi scegliere **nuovo set denominato**.  
+1.  Fare clic con il pulsante destro del mouse su `[Core Products]` nel riquadro **Libreria script** , quindi scegliere **nuovo set denominato**.  
   
-2.  Nella casella **nome** modificare il nome di questo set `[Large Resellers]`denominato in.  
+2.  Nella casella **nome** modificare il nome di questo set denominato in `[Large Resellers]`.  
   
 3.  Nella casella **espressione** Digitare `Exists()`.  
   
@@ -69,31 +69,31 @@ ms.locfileid: "69493889"
   
      Ora che è stato definito il primo set per l'espressione set Exists, è possibile aggiungere il secondo set, ovvero il set di membri della dimensione Reseller che contiene il maggior numero di dipendenti.  
   
-7.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione Reseller, espandere `Members`e quindi espandere **All Resellers**.  
+7.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione Reseller, espandere `Members`, quindi espandere **All Resellers**.  
   
      Si noti che i membri di questa gerarchia dell'attributo non sono raggruppati.  
   
 8.  Aprire Progettazione dimensioni per la dimensione **Reseller** e quindi fare clic su **Number of Employees** nel riquadro **Attributi** .  
   
-9. Nella `DiscretizationMethod` finestra Proprietà impostare la proprietà su **Automatic**, quindi `DiscretizationBucketCount` `5`modificare la proprietà in. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. Nella Finestra Proprietà impostare la proprietà `DiscretizationMethod` su **automatico**e quindi modificare la proprietà `DiscretizationBucketCount` in `5`. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 11. Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic su **Riconnetti** nella barra degli strumenti della scheda **Calcoli** .  
   
-12. Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione **Reseller** , espandere `Members`e quindi espandere **All Resellers**.  
+12. Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione **Reseller** , espandere `Members`, quindi espandere **All Resellers**.  
   
      Si noti che i membri di questa gerarchia di attributi sono ora contenuti in cinque gruppi, numerati da 0 a 4. Per visualizzare il numero di un gruppo, posizionare il puntatore sul gruppo per visualizzare una finestra popup. Per l'intervallo `2 -17`InfoTip deve contenere `[Reseller].[Number of Employees].&[0]`.  
   
-     I membri di questa gerarchia dell'attributo sono raggruppati perché la proprietà DiscretizationBucketCount è impostata `5` su e la proprietà DiscretizationMethod è impostata su **Automatic**.  
+     I membri di questa gerarchia dell'attributo sono raggruppati perché la proprietà DiscretizationBucketCount è impostata su `5` e la proprietà DiscretizationMethod è impostata su **Automatic**.  
   
 13. Nell'espressione set Exists contenuta nella casella **Espressione** aggiungere una virgola dopo la funzione Members e prima della parentesi di chiusura, quindi trascinare **83 - 100** dal riquadro **Metadati** e posizionarlo dopo la virgola.  
   
      È stata ora completata l'espressione set Exists che restituirà il set di membri che si interseca con i due set specificati, ovvero il set di tutti i rivenditori e il set dei rivenditori con un numero di dipendenti compreso tra 83 e 100, quando il set denominato Large Resellers viene posto su un'asse.  
   
-     Nell'immagine seguente viene illustrato il riquadro **espressioni** di calcolo `[Large Resellers]` per il set denominato.  
+     Nell'immagine seguente viene illustrato il riquadro **espressioni di calcolo** per il set denominato `[Large Resellers]`.  
   
-     ![Riquadro Espressioni di calcolo per [Large Resellers]] (../../2014/tutorials/media/l6-named-set-02.gif "Riquadro Espressioni di calcolo per [Large Resellers]")  
+     ![Riquadro Espressioni di calcolo per [Large Resellers]](../../2014/tutorials/media/l6-named-set-02.gif "Riquadro Espressioni di calcolo per [Large Resellers]")  
   
 14. Nella barra degli strumenti della scheda **Calcoli** fare clic su **Visualizzazione Script**e quindi controllare i due set denominati appena aggiunti allo script di calcolo.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493889"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>Esplorazione del cubo utilizzando i nuovi set denominati  
   
-1.  Nel menu **Compila** di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
+1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
   
 2.  Al termine delle operazioni di distribuzione, fare clic sulla scheda **Esplorazione** e fare clic su **Riconnetti**.  
   
@@ -117,25 +117,25 @@ ms.locfileid: "69493889"
   
 5.  Espandere la dimensione Product, quindi aggiungere Category e Subcategory all'area riga, come illustrato nell'immagine seguente.  
   
-     ![Membri dell'attributo Subcategory] (../../2014/tutorials/media/l6-named-set-03.gif "Membri dell'attributo Subcategory")  
+     ![Membri dell'attributo Subcategory](../../2014/tutorials/media/l6-named-set-03.gif "Membri dell'attributo Subcategory")  
   
 6.  Nel riquadro **Metadati** , nella dimensione **Product** trascinare **Core Products** nell'area filtro.  
   
      Si noti che nel cubo restano solo il membro **Bike** dell'attributo **Category** e i membri delle sottocategorie **Bike** , poiché il set denominato **Core Products** viene usato per definire un sottocubo. Questo sottocubo limita i membri dell'attributo **Category** nella dimensione **Product** all'interno del sottocubo ai membri del set denominato **Core Product** , come illustrato nella figura seguente.  
   
-     ![Membri del set denominato Core Product] (../../2014/tutorials/media/l6-named-set-04.gif "Membri del set denominato Core Product")  
+     ![Membri del set denominato Core Product](../../2014/tutorials/media/l6-named-set-04.gif "Membri del set denominato Core Product")  
   
 7.  Nel riquadro **Metadati** espandere **Reseller**, quindi aggiungere **Large Resellers** all'area filtro.  
   
      Si noti che la misura Reseller Sales Amount nel riquadro Dati visualizza solo gli importi di vendita per rivenditori di bici di grandi dimensioni. Si noti inoltre che ora il riquadro Filtro visualizza i due set denominati utilizzati per definire questo sottocubo specifico, come illustrato nella figura seguente.  
   
-     ![Riquadro filtro contenente due set denominati] (../../2014/tutorials/media/l6-named-set-05.gif "Riquadro filtro contenente due set denominati")  
+     ![Riquadro filtro contenente due set denominati](../../2014/tutorials/media/l6-named-set-05.gif "Riquadro filtro contenente due set denominati")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Lezione 7: Definizione degli indicatori &#40;di prestazioni chiave KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)    
  [Creare set denominati](multidimensional-models/create-named-sets.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493858"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
@@ -39,7 +39,7 @@ ms.locfileid: "69493858"
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Dimensioni**e scegliere **Nuova dimensione**.  
   
-2.  Nella pagina **Creazione guidata dimensione** fare clic su **Avanti**.  
+2.  Nella pagina iniziale di **Creazione guidata dimensione** fare clic su **Avanti**.  
   
 3.  Nella pagina **Selezione metodo di creazione** verificare che la pagina **Usa una tabella esistente** sia selezionata e fare clic su **Avanti**.  
   
@@ -63,21 +63,21 @@ ms.locfileid: "69493858"
   
 13. Scegliere **Salva tutti** dal menu **File**.  
   
-14. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order Details** , selezionare **Sales Order Number**, quindi modificare la proprietà **Name** nel finestra Proprietà`Item Description.`  
+14. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order Details** , selezionare **Sales Order Number**, quindi modificare la proprietà **Name** nel finestra Proprietà in `Item Description.`  
   
-15. Nella cella della proprietà **NameColumn** fare clic sul pulsante Sfoglia **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
+15. Nella cella della proprietà **NameColumn** fare clic sul pulsante Sfoglia **(...)** . Nella finestra di dialogo **colonna nome** selezionare **Product** dall'elenco **tabella di origine** , selezionare **EnglishProductName** per colonna di **origine**e quindi fare clic su **OK**.  
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   
-17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number`e modificare la proprietà **OrderBy** in **Key**.  
+17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number` e modificare la proprietà **OrderBy** in **Key**.  
   
-18. Nel riquadro **gerarchie** creare una gerarchia utente **Internet Sales Orders** contenente i livelli di `Order Number` **Descrizione dell'elemento** e, in questo ordine.  
+18. Nel riquadro **gerarchie** creare una gerarchia utente **Internet Sales Orders** contenente i livelli di `Order Number` e **Descrizione dell'elemento** , in questo ordine.  
   
 19. Nel riquadro **Attributi** selezionare **Internet Sales Order Details**e quindi controllare il valore della proprietà **StorageMode** nella finestra Proprietà.  
   
      Si noti che per impostazione predefinita la dimensione viene archiviata come una dimensione MOLAP. Sebbene la modifica della modalità di archiviazione in ROLAP consenta di risparmiare tempo di elaborazione e spazio di archiviazione, ciò avviene a discapito delle prestazioni delle query. Ai fini di questa esercitazione, verrà utilizzata la modalità di archiviazione MOLAP.  
   
-20. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial come dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
+20. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, come una dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
   
 21. Nella finestra di dialogo **Aggiungi dimensione al cubo**selezionare **Internet Sales Order Details** e fare clic su **OK**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493858"
   
      L'immagine seguente illustra le proprietà della relazione di tipo Fatti nella finestra di dialogo **Definisci relazione** .  
   
-     Finestra di ![dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "Finestra di dialogo Definisci relazione")  
   
 3.  Fare clic su **Annulla**.  
   

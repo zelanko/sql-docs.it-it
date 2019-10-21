@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313664"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542135"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare e assegnare un punteggio a un modello predittivo in Python con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Guida introduttiva: creare e assegnare un punteggio a un modello predittivo in Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa Guida introduttiva si creerà e si eseguirà il training di un modello predittivo usando Python, si salverà il modello in una tabella nell'istanza di SQL Server, quindi si userà il modello per stimare i valori dei nuovi dati usando [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Verranno create ed eseguite due stored procedure in esecuzione in SQL. Il primo usa il set di dati del fiore Iris classico e genera un modello Naive Bayes per stimare una specie di Iris in base alle caratteristiche floreali. La seconda procedura riguarda l'assegnazione dei punteggi: chiama il modello generato nella prima procedura per restituire un set di stime in base ai nuovi dati. Inserendo il codice in un stored procedure, le operazioni sono contenute, riutilizzabili e richiamabili da altre stored procedure e applicazioni client.
+Verranno create ed eseguite due stored procedure in esecuzione in SQL. Il primo usa il set di dati del fiore Iris classico e genera un modello Naive Bayes per stimare una specie di Iris in base alle caratteristiche floreali. La seconda procedura riguarda l'assegnazione dei punteggi: chiama il modello generato nella prima procedura per restituire un set di stime in base ai nuovi dati. Inserendo il codice Python in un stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 
 Completando questa Guida introduttiva, si apprenderà:
 
@@ -31,7 +31,7 @@ Completando questa Guida introduttiva, si apprenderà:
 > - Come passare input al codice tramite input nel stored procedure
 > - Modalità di utilizzo delle stored procedure per rendere operativo i modelli
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Questa Guida introduttiva richiede l'accesso a un'istanza di SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con il linguaggio Python installato.
 
@@ -43,7 +43,9 @@ Completando questa Guida introduttiva, si apprenderà:
 
 In questo passaggio verrà creato un stored procedure che genera un modello per la stima dei risultati.
 
-1. Aprire una nuova finestra di query in SSMS connessa al database **irissql** . 
+1. Aprire SSMS, connettersi all'istanza di SQL Server e aprire una nuova finestra query.
+
+1. Connettersi al database irissql.
 
     ```sql
     USE irissql
@@ -168,7 +170,7 @@ Ora che è stato creato, sottoposto a training e salvato un modello, procedere c
 
    Questo esempio è stato reso semplice usando il set di dati Python Iris per il training e l'assegnazione dei punteggi. Un approccio più comune consiste nell'eseguire una query SQL per ottenere i nuovi dati e passarli in Python come `InputDataSet`.
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questo esercizio si è appreso come creare stored procedure dedicate a diverse attività, in cui ogni stored procedure ha usato il sistema stored procedure `sp_execute_external_script` per avviare un processo Python. Gli input per il processo Python vengono passati a `sp_execute_external` come parametri. Sia lo script Python che le variabili di dati in un database di SQL Server vengono passati come input.
 

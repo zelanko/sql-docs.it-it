@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890830"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Raggruppamento automatico dei membri degli attributi
@@ -44,7 +44,7 @@ ms.locfileid: "69890830"
   
 4.  Nel riquadro **Attributi** selezionare **Yearly Income**.  
   
-5.  Nella Finestra Proprietà modificare il valore della proprietà **DiscretizationMethod** in **Automatic** e modificare il valore della proprietà `5` **DiscretizationBucketCount** in.  
+5.  Nella Finestra Proprietà modificare il valore della proprietà **DiscretizationMethod** in **Automatic** e modificare il valore della proprietà **DiscretizationBucketCount** in `5`.  
   
      Nella figura seguente vengono illustrate le proprietà modificate per **Yearly Income**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69890830"
   
 4.  Nel riquadro **Attributi** selezionare **Sick Leave Hours**.  
   
-5.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Clusters** e modificare il valore della proprietà `5` **DiscretizationBucketCount** in.  
+5.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Clusters** e modificare il valore della proprietà **DiscretizationBucketCount** in `5`.  
   
 6.  Nel riquadro **Attributi** selezionare **Vacation Hours**.  
   

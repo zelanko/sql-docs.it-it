@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005974"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542120"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare e assegnare un punteggio a un modello predittivo in R con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Guida introduttiva: creare e assegnare un punteggio a un modello predittivo in R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa Guida introduttiva si creerà e si eseguirà il training di un modello predittivo usando R, si salverà il modello in una tabella nell'istanza di SQL Server, quindi si userà il modello per stimare i valori dei nuovi dati usando [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Il modello che verrà usato in questa Guida introduttiva è un semplice modello lineare generalizzato (GLM) che consente di stimare la probabilità che un veicolo sia stato dotato di una trasmissione manuale. Si userà il set di dati **mtcars** incluso in R.
+Verranno create ed eseguite due stored procedure in esecuzione in SQL. Il primo usa il set di dati **mtcars** incluso in R e genera un modello GLM (Simple generalizzated Linear Model) che prevede la probabilità che un veicolo sia stato dotato di una trasmissione manuale. La seconda procedura riguarda l'assegnazione dei punteggi: chiama il modello generato nella prima procedura per restituire un set di stime in base ai nuovi dati. Inserendo il codice R in un stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 
 > [!TIP]
-> Se è necessario un aggiornamento sui modelli lineari, provare questa esercitazione che descrive il processo di adattamento di un modello usando rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Adattamento di modelli lineari)
+> Se è necessario un aggiornamento sui modelli lineari, provare questa esercitazione che descrive il processo di adattamento di un modello usando rxLinMod: [adattamento dei modelli lineari](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
-## <a name="prerequisites"></a>Prerequisiti
+Completando questa Guida introduttiva, si apprenderà:
+
+> [!div class="checklist"]
+> - Come incorporare il codice R in una stored procedure
+> - Come passare input al codice tramite input nel stored procedure
+> - Modalità di utilizzo delle stored procedure per rendere operativo i modelli
+
+## <a name="prerequisites"></a>Prerequisites
 
 - Questa Guida introduttiva richiede l'accesso a un'istanza di SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
 
@@ -41,7 +48,7 @@ Per creare il modello, è necessario creare dati di origine per il training, cre
 
 ### <a name="create-the-source-data"></a>Creare i dati di origine
 
-1. Aprire **SQL Server Management Studio** e connettersi all'istanza di SQL Server.
+1. Aprire SSMS, connettersi all'istanza di SQL Server e aprire una nuova finestra query.
 
 1. Creare una tabella per salvare i dati di training.
 
@@ -124,7 +131,7 @@ Successivamente, archiviare il modello in un database SQL per poterlo utilizzare
    ```
 
    > [!TIP]
-   > Se si esegue questo codice una seconda volta, si ottiene questo errore: "Violazione del vincolo PRIMARY KEY... Impossibile inserire la chiave duplicata nell'oggetto dbo. stopping_distance_models ". Un modo per evitare questo errore consiste nell'aggiornare il nome di ogni nuovo modello. È ad esempio possibile sostituire il nome con uno più descrittivo e includere il tipo di modello, il giorno della creazione e così via.
+   > Se si esegue questo codice una seconda volta, viene ricevuto questo errore: "violazione del vincolo di chiave primaria... Impossibile inserire la chiave duplicata nell'oggetto dbo. stopping_distance_models ". Un modo per evitare questo errore consiste nell'aggiornare il nome di ogni nuovo modello. È ad esempio possibile sostituire il nome con uno più descrittivo e includere il tipo di modello, il giorno della creazione e così via.
 
      ```sql
      UPDATE GLM_models
@@ -170,7 +177,7 @@ Per ottenere stime basate sul modello, scrivere uno script SQL che esegue le ope
 1. Ottiene i nuovi dati di input
 1. Chiama una funzione di stima R compatibile con tale modello
 
-Nel corso del tempo, la tabella potrebbe contenere più modelli R, tutti compilati con parametri o algoritmi diversi o sottoposti a training su subset diversi di dati. In questo esempio si userà il modello denominato `default model`.
+Nel corso del tempo, la tabella potrebbe contenere più modelli R, tutti compilati con parametri o algoritmi diversi o sottoposti a training su subset diversi di dati. In questo esempio verrà usato il modello denominato `default model`.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
