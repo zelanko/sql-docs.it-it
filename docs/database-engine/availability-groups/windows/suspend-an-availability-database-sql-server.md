@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013889"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517955"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013889"
   
 1.  Connettersi all'istanza del server che ospita la replica di cui si desidera sospendere il database. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
   
-2.  Sospendere il database usando l'istruzione [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)seguente:  
+2.  Sospendere il database usando l'istruzione [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) seguente:  
   
-     ALTER DATABASE *nome_database* SET HADR SUSPEND  
+     ALTER DATABASE *nome_database* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per sospendere un database**  

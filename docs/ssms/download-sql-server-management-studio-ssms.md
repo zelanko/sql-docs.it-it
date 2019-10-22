@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251400"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542218"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 SSMS è gratuito.
 
-## <a name="download-ssms-1831"></a>Scaricare SSMS 18.3.1
-
-**È ora disponibile SSMS 18.3.1, la nuova versione disponibile a livello generale di *SQL Server Management Studio* che offre il supporto per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
-
-**[Scaricare SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Scaricare SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione precedente di SSMS 18 con disponibilità generale, l'installazione di SSMS 18.3.1 esegue l'aggiornamento alla versione 18.3.1. Se è installata una versione di *anteprima* precedente di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.3.1.
 
@@ -59,6 +55,9 @@ Per commenti, suggerimenti o per segnalare problemi, il canale migliore per cont
 L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso.
 
 Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
+
+> [!Note]
+> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare questa pagina in [inglese](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). È possibile scaricare lingue diverse dal sito della versione inglese selezionando [available languages](#available-languages-ssms-1831) (lingue disponibili).
 
 ## <a name="available-languages-ssms-1831"></a>Lingue disponibili (SSMS 18.3.1)
 
@@ -76,7 +75,7 @@ SQL Server Management Studio 18.3.1:
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Classificazione dei dati | Aggiungere le informazioni di classificazione dei dati all'interfaccia utente delle proprietà della colonna (le opzioni *Tipo di informazioni*, *ID tipo di informazioni*, *Etichetta riservatezza* e *ID etichetta di riservatezza* non sono esposte nell'interfaccia utente di SSMS). |
 | IntelliSense/editor | Supporto aggiornato per le funzionalità aggiunte di recente a SQL Server 2019 (ad esempio, "ALTER SERVER CONFIGURATION"). |
-| Integration Services | Aggiunta di una nuova voce del menu di selezione `Tools > Migrate to Azure > Configure Azure-enabled DTExec` per richiamare le esecuzioni del pacchetto SSIS in Azure-SSIS Integration Runtime come attività di esecuzione del pacchetto SSIS nelle pipeline ADF. |
+| Integration Services | Aggiunta di una nuova voce del menu di selezione `Tools > Migrate to Azure > Configure Azure-enabled DTExec` per richiamare le esecuzioni del pacchetto Integration Services (SSIS) in Azure-SSIS Integration Runtime come attività di esecuzione del pacchetto SSIS nelle pipeline ADF. |
 | SMO/scripting | Aggiunta del supporto dello scripting del vincolo UNIQUE di Azure SQL Data Warehouse. |
 | SMO/scripting | Classificazione dei dati - Aggiunta del supporto per SQL versione 10 (SQL 2008) e versioni successive.  - Aggiunta del nuovo attributo di riservatezza 'rank' per SQL versione 15 (SQL 2019) e versioni successive e il database SQL di Azure. |
 

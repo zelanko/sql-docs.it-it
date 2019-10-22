@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9808157b943a45f9d23320d270752e7ec712c310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068285"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305891"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,10 +30,10 @@ ms.locfileid: "68068285"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_INVALID_STMT|  
-|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché l'istruzione specificata da **@stmt** o **@statement_start_offset** contiene un errore di sintassi o non può essere usata in una guida di piano. Specificare una singola istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida o una posizione di inizio valida dell'istruzione nel batch. Per ottenere una posizione di inizio valida, eseguire una query sulla colonna statement_start_offset nella funzione a gestione dinamica sys.dm_exec_query_stats.|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché l'istruzione specificata da **\@stmt** o **\@statement_start_offset** contiene un errore di sintassi o non può essere usata in una guida di piano. Specificare una singola istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida o una posizione di inizio valida dell'istruzione nel batch. Per ottenere una posizione di inizio valida, eseguire una query sulla colonna statement_start_offset nella funzione a gestione dinamica sys.dm_exec_query_stats.|  
   
 ## <a name="explanation"></a>Spiegazione  
-L'istruzione specificata da **@stmt** o **@statement_start_offset** contiene un errore di sintassi o non può essere usata in una guida di piano.  
+L'istruzione specificata da **\@stmt** o **\@statement_start_offset** contiene un errore di sintassi o non può essere usata in una guida di piano.  
   
 ## <a name="user-action"></a>Azione dell'utente  
 Specificare una singola istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida o una posizione di inizio valida dell'istruzione nel batch. Per ottenere una posizione di inizio valida, eseguire una query sulla colonna statement_start_offset nella funzione a gestione dinamica sys.dm_exec_query_stats.  

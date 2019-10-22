@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016224"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305001"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016224"
  AUTO  
  Questa opzione consente al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di selezionare la granularità dell'escalation dei blocchi appropriata per lo schema della tabella.  
   
--   Se la tabella è partizionata, sarà consentita l'escalation dei blocchi nella granularità a livello di heap o albero B (HoBT). Una volta eseguita l'escalation del blocco nel livello HoBT, non verrà eseguita alcuna successiva escalation del blocco nella granularità TABLE.  
-  
--   Se la tabella non è partizionata, l'escalation blocchi verrà eseguita nella granularità TABLE.  
+- Se la tabella è partizionata, sarà consentita l'escalation dei blocchi nella granularità a livello di heap o albero B (HoBT). In altre parole, l'escalation sarà consentita al livello di partizione. Una volta eseguita l'escalation del blocco nel livello HoBT, non verrà eseguita alcuna successiva escalation del blocco nella granularità TABLE.
+- Se la tabella non è partizionata, l'escalation blocchi viene eseguita nella granularità TABLE. 
   
  TABLE  
  L'escalation dei blocchi viene eseguita con una granularità a livello di tabella, indipendentemente dal fatto che la tabella sia o meno partizionata. TABLE rappresenta il valore predefinito.  

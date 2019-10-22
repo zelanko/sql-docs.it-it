@@ -20,12 +20,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4e806d8fe064023f0de54849bfaf9494f4a7feb2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9ae6f9aae067208eedd0ffe6218f703d55e3696f
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259629"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304922"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorizzazioni per SQLAgentOperatorRole  
 **SQLAgentOperatorRole** è il ruolo di database predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con privilegi di livello più alto. E include tutte le autorizzazioni dei ruoli **SQLAgentUserRole** e **SQLAgentReaderRole**. I membri di questo ruolo possono inoltre visualizzare proprietà di operatori e proxy e possono enumerare i proxy e gli avvisi disponibili sul server.  
   
-I membri del ruolo**SQLAgentOperatorRole** hanno autorizzazioni aggiuntive su pianificazioni e processi locali. Possono eseguire, arrestare o avviare tutti i processi locali e possono eliminare la cronologia processo di qualsiasi processo locale del server. Possono inoltre attivare o disabilitare tutte le pianificazioni e i processi locali del server. Per abilitare o disabilitare processi locali o pianificazioni, i membri di questo ruolo devono usare le stored procedure **sp_update_job** e **sp_update_schedule**. I membri del ruolo **@enabled** possono specificare solo i parametri che definiscono il nome o l'ID del processo o della pianificazione e il parametro **SQLAgentOperatorRole**. Se si specifica un qualsiasi altro parametro, l'esecuzione di queste stored procedure non viene portata a termine. I membri del ruolo**SQLAgentOperatorRole** non possono modificare la proprietà dei processi per ottenere l'accesso a processi di cui non sono già proprietari.  
+I membri del ruolo**SQLAgentOperatorRole** hanno autorizzazioni aggiuntive su pianificazioni e processi locali. Possono eseguire, arrestare o avviare tutti i processi locali e possono eliminare la cronologia processo di qualsiasi processo locale del server. Possono inoltre attivare o disabilitare tutte le pianificazioni e i processi locali del server. Per abilitare o disabilitare processi locali o pianificazioni, i membri di questo ruolo devono usare le stored procedure **sp_update_job** e **sp_update_schedule**. I membri del ruolo **SQLAgentOperatorRole** possono specificare solo i parametri che definiscono il nome o l'ID del processo o della pianificazione e il parametro **\@enabled**. Se si specifica un qualsiasi altro parametro, l'esecuzione di queste stored procedure non viene portata a termine. I membri del ruolo**SQLAgentOperatorRole** non possono modificare la proprietà dei processi per ottenere l'accesso a processi di cui non sono già proprietari.  
   
 I nodi **Processi**, **Avvisi**, **Operatori**e **Proxy** inclusi in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono visibili a membri del ruolo **SQLAgentOperatorRole**. Solo il nodo **Log degli errori** non è visibile ai membri di questo ruolo.  
   
@@ -101,7 +101,7 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Creazione/modifica/eliminazione|no|no|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|no|Sì (solo pianificazioni di proprietà)|no|  
 |Visualizzazione di un elenco (enumerazione)|Sì|Sì<br /><br />È possibile ottenere un elenco degli operatori disponibili da usare in **sp_notify_operator** e nella finestra di dialogo **Proprietà processo** di Management Studio.|Sì|Sì|Sì|Sì|  
-|Abilitazione/disabilitazione|no|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **@enabled** e **@job_id** (o **@job_name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **@enabled** e **@schedule_id** (o **@name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
+|Abilitazione/disabilitazione|no|no|Sì<br /><br />I membri del ruolo **SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **\@enabled** e **\@job_id** (o **\@job_name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|no|Sì<br /><br />I membri del ruolo**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **\@enabled** e **\@schedule_id** (o **\@name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
 |Visualizzazione di proprietà|Sì|Sì|Sì|Sì|Sì|Sì|  
 |Modifica di proprietà|no|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
 |Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  

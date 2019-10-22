@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553206"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545064"
 ---
 # <a name="oracle-source"></a>Origine Oracle
 
@@ -34,7 +34,7 @@ L'output degli errori include le colonne seguenti:
 
 - **Error Code** (Codice errore): numero che rappresenta il tipo di errore dell'errore corrente. Il codice di errore può essere generato da:
     - Server Oracle. Vedere la descrizione dettagliata dell'errore nella documentazione di Oracle Database.
-    - Runtime SSIS Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.
+    - Runtime SSIS. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.
 - **Error Column**(Colonna errore): numero della colonna di origine che causa gli errori di conversione.
 
 - **Error Data Columns** (Colonne dati errore): dati che causano l'errore.
@@ -54,7 +54,7 @@ Di seguito sono elencate le proprietà personalizzate dell'origine Oracle. Tutte
 |AccessMode|Integer (enumerazione)|Modalità utilizzata per accedere al database. I valori possibili sono **Table Name** e **SQL Command**. Il valore predefinito è **Table Name**.|
 |BatchSize|Valore intero|Dimensioni del batch per il caricamento bulk. Corrisponde al numero di record estratti come matrice. <br>Questa proprietà è impostata solo da **Editor avanzato**|
 |DefaultCodePage|Valore intero|Tabella codici da usare quando l'origine dati non dispone di informazioni sulla tabella codici. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
-|PreFetchCount|Valore intero|Numero di righe di cui è stata eseguita la prelettura (lookahead). <br>Questa proprietà è impostata solo da **Editor avanzato**.|
+|PreFetchCount|Valore intero|Numero di righe pre-recuperate. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
 |SqlCommand|String|Comando SQL da eseguire quando la proprietà AccessMode è impostata su SQL Command.|
 |TableName|String|Nome della tabella con i dati da usare quando la proprietà AccessMode è impostata su Table Name.|
 

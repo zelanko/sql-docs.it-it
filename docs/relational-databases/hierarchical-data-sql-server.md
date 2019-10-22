@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974246"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304958"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Esempio di utilizzo di una transazione serializzabile  
- Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che potrebbero voler essere controllati da un'applicazione, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiunta di più dipendenti con lo stesso ID. Questa situazione richiede pertanto il ricalcolo di **@last_child** . Il codice seguente calcola il nuovo valore del nodo all'interno di una transazione serializzabile:  
+ L'indice **Org_BreadthFirst** garantisce che per la determinazione di **\@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che un'applicazione potrebbe volere controllare, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiunta di più dipendenti con lo stesso ID. Questa situazione richiede pertanto il ricalcolo di **\@last_child**. Il codice seguente calcola il nuovo valore del nodo all'interno di una transazione serializzabile:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
- Un'altra operazione comune è lo spostamento di sottoalberi. La procedura descritta di seguito prende in considerazione il sottoalbero di **@oldMgr** e lo trasforma (includendo **@oldMgr** ) in un sottoalbero di **@newMgr** .  
+ Un'altra operazione comune è lo spostamento di sottoalberi. La procedura descritta di seguito prende in considerazione il sottoalbero di **\@oldMgr** e lo trasforma (includendo **\@oldMgr**) in un sottoalbero di **\@newMgr**.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

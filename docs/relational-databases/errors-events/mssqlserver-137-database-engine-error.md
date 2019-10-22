@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 729443d2e9a9758a6ebedb15ac981e945128fa17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002826"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305035"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -33,13 +33,13 @@ ms.locfileid: "68002826"
 |Testo del messaggio|Dichiarare la variabile scalare "%.*ls".|  
   
 ## <a name="explanation"></a>Spiegazione  
-Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e SELECT poiché non è stata dichiarata la variabile **@mycol** .  
+Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e SELECT poiché **\@mycol** non è stata dichiarata.  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-Una delle cause più complesse di questo errore include l'utilizzo di una variabile dichiarata al di fuori dell'istruzione EXECUTE. La variabile **@mycol** specificata nell'istruzione SELECT, ad esempio, è locale per l'istruzione SELECT, ma è esterna all'istruzione EXECUTE.  
+Una delle cause più complesse di questo errore include l'utilizzo di una variabile dichiarata al di fuori dell'istruzione EXECUTE. La variabile **\@mycol** specificata nell'istruzione SELECT, ad esempio, è locale per l'istruzione SELECT, ma è esterna all'istruzione EXECUTE.  
   
 USE AdventureWorks2012;  
   

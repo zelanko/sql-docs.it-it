@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941130"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313702"
 ---
 # <a name="extended-events-overview"></a>Panoramica degli eventi estesi
 
@@ -108,6 +108,23 @@ L'utilizzo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCL
 |Viene illustrato come utilizzare gli eventi estesi con Analisi eventi per Windows al fine di monitorare l'attività del sistema.|[Monitorare l'attività del sistema mediante gli eventi estesi](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |Uso delle viste catalogo e delle viste a gestione dinamica (DMV) per gli eventi estesi | [Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 | &nbsp; | &nbsp; |
+
+Usare la query Transact-SQL (T-SQL) seguente per elencare tutti i possibili eventi estesi e le relative descrizioni:
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Gli esempi di codice possono essere diversi per il database SQL di Azure
 

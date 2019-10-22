@@ -1,7 +1,7 @@
 ---
 title: Creare un controllo del server e una specifica del controllo del server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095189"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517981"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095189"
      Specifica il numero di file di controllo da creare, fino a un massimo di 2.147.483.647. Questa opzione è disponibile solo se non è selezionato **Senza limiti** .  
   
      **Dimensioni massime del file**  
-     Specifica la dimensione massima per un file di controllo in megabyte (MB), gigabyte (GB) o terabyte (TB). È possibile specificare una dimensione compresa tra 1024 MB e 2.147.483.647 TB. Se si seleziona la casella di controllo **Senza limiti** non si impono alcun limite alle dimensioni del file. Se si specifica un valore minore di 1024 MB, verrà restituito un errore. La casella di controllo **Senza limiti** è selezionata per impostazione predefinita.  
+     Specifica la dimensione massima per un file di controllo in megabyte (MB), gigabyte (GB) o terabyte (TB). È possibile specificare un numero fino a 2.147.483.647 TB. Se si seleziona la casella di controllo **Senza limiti** non si impono alcun limite alle dimensioni del file. La casella di controllo **Senza limiti** è selezionata per impostazione predefinita.  
   
      Casella di controllo**Riserva spazio su disco**  
      Indica che sul disco viene preallocata una quantità di spazio uguale alle dimensioni massime del file specificate. Questa impostazione può essere utilizzata solo se non è selezionata la casella di controllo **Senza limiti** in **Dimensioni massime file** . Questa casella di controllo non è selezionata per impostazione predefinita.  

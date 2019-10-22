@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823615"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304841"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ Specifica i metodi consentiti di escalation blocchi per una tabella.
 AUTO  
 Questa opzione consente al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di selezionare la granularità dell'escalation blocchi appropriata per lo schema della tabella.
 
-- Se la tabella è partizionata, l'escalation blocchi è consentita per la partizione. Una volta eseguita l'escalation del blocco al livello di partizione, non verrà eseguita alcuna successiva escalation del blocco nella granularità TABLE.
+- Se la tabella è partizionata, sarà consentita l'escalation dei blocchi nella granularità a livello di heap o albero B (HoBT). In altre parole, l'escalation sarà consentita al livello di partizione. Una volta eseguita l'escalation del blocco nel livello HoBT, non verrà eseguita alcuna successiva escalation del blocco nella granularità TABLE.
 - Se la tabella non è partizionata, l'escalation blocchi viene eseguita nella granularità TABLE.
 
 TABLE  

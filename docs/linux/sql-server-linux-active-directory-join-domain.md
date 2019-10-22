@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027346"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305283"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Aggiungere un host di SQL Server in Linux a un dominio di Active Directory
 
@@ -197,9 +197,9 @@ Per aggiungere un host di SQL Server a un dominio di Active Directory, seguire q
    ```
 
    > [!NOTE]
-   > - Se **id user@contoso.com** restituisce `No such user`, verificare che il servizio SSSD sia stato avviato correttamente eseguendo il comando `sudo systemctl status sssd`. Se il servizio è in esecuzione e viene ancora visualizzato l'errore, provare ad abilitare la registrazione dettagliata per SSSD. Per altre informazioni, vedere la documentazione di Red Hat relativa alla [risoluzione dei problemi di SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Se **id user\@contoso.com** restituisce `No such user`, verificare che il servizio SSSD sia stato avviato correttamente eseguendo il comando `sudo systemctl status sssd`. Se il servizio è in esecuzione e viene ancora visualizzato l'errore, provare ad abilitare la registrazione dettagliata per SSSD. Per altre informazioni, vedere la documentazione di Red Hat relativa alla [risoluzione dei problemi di SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Se **kinit user@CONTOSO.COM** restituisce `KDC reply did not match expectations while getting initial credentials`, verificare di avere specificato il nome dell'area di autenticazione in maiuscolo.
+   > - Se **kinit user\@CONTOSO.COM** restituisce `KDC reply did not match expectations while getting initial credentials`, verificare di avere specificato il nome dell'area di autenticazione in maiuscolo.
 
 Per altre informazioni, vedere la documentazione di Red Hat relativa all'[individuazione e aggiunta di domini di identità](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

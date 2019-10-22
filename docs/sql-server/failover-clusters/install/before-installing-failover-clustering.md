@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063994"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517938"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Prima di installare un cluster di failover di SQL Server è necessario selezionare l'hardware e il sistema operativo usati per l'esecuzione di SQL Server. È inoltre necessario configurare il clustering di failover di Windows Server (WSFC) ed esaminare le considerazioni relative alla rete, alla sicurezza e agli altri software che verranno eseguiti nel cluster di failover.  
   
- Se un cluster Windows dispone di un'unità disco locale e la stessa lettera di unità viene utilizzata anche in uno o più nodi del cluster come unità condivisa, non sarà possibile installare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in questa unità.  
+ Se un cluster Windows dispone di un'unità disco locale e la stessa lettera di unità viene utilizzata anche in uno o più nodi del cluster come unità condivisa, non sarà possibile installare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in questa unità. Questa restrizione si applica sia a istanze del cluster di failover di SQL Server sia a istanze autonome in un server che fa parte di un'istanza del cluster di failover di Windows.
   
  Potrebbe inoltre essere necessario rivedere gli argomenti seguenti per ulteriori informazioni su attività, funzionalità e concetti relativi al clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

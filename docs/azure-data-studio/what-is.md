@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822621"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545059"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
@@ -68,6 +68,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 - Si può eseguire la maggior parte delle attività amministrative tramite il terminale integrato usando sqlcmd o PowerShell
 - Si ha una necessità minima di esperienze di tipo procedura guidata
 - Non è necessario eseguire una configurazione amministrativa completa
+- Lo si vuole 
 
 **Usare SQL Server Management Studio se:**
 - Si dedica la maggior parte del tempo ad attività di amministrazione di database
@@ -117,6 +118,8 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Risultati in formato testo||Sì|
 |Visualizzatore spaziale||Sì|
 |SQLCMD||Sì|
+|Blocchi appunti|Sì||
+|Salvare una query come frammento di codice|Sì||
 
 ### <a name="operating-system-support"></a>Supporto nei sistemi operativi
 
@@ -139,6 +142,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup/ripristino|Sì|Sì|
+|Supporto per cluster Big Data|Sì||
 |Importazione file flat|Anteprima|Sì|
 |SQL Agent|Anteprima|Sì|
 |SQL Profiler|Anteprima|Sì|
@@ -160,6 +164,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Esplora modelli||Sì|
 |Valutazione della vulnerabilità||Sì|
 |Gestione XEvent||Sì|
+|Integrazione dell'API Valutazione SQL||Sì|
 
 ## <a name="next-steps"></a>Passaggi successivi
 

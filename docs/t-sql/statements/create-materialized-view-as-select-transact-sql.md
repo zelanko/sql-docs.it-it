@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109768"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545079"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (anteprima)
 
@@ -52,7 +52,7 @@ Questo articolo illustra l'istruzione T-SQL CREATE MATERIALIZED VIEW AS SELECT i
 
 Una vista materializzata rende persistenti i dati restituiti dalla query di definizione della vista e viene aggiornata automaticamente in caso di modifiche dei dati nelle tabelle sottostanti.   Migliora le prestazioni delle query complesse, in genere le query con join e aggregazioni, offrendo allo stesso tempo operazioni di manutenzione semplici.   Con la funzionalità di corrispondenza automatica del piano di esecuzione, non sarà necessario fare riferimento a una vista materializzata nella query per fare in modo che Query Optimizer prenda in considerazione la vista per la sostituzione.  Ciò consente ai progettisti dei dati di implementare le viste materializzate come un meccanismo per migliorare il tempo di risposta delle query, senza doverle modificare.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -111,8 +111,8 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
 Una vista materializzata nel data warehouse di Azure è molto simile a una vista indicizzata in SQL Server.  Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   Ecco altre considerazioni per la vista materializzata.  
  
 La vista materializzata supporta solo CLUSTERED COLUMNSTORE INDEX. 
- 
-È possibile eliminare una vista materializzata tramite DROP VIEW.  È possibile usare ALTER MATERIALIZED VIEW per disabilitare o ricostruire una vista materializzata.   
+
+Una vista materializzata non può fare riferimento ad altre viste.  
  
 È possibile creare viste materializzate su tabelle partizionate.  Sono supportate operazioni SPLIT/MERGE sulle tabelle a cui fanno riferimento le viste materializzate.  Le operazioni SWITCH non sono supportate sulle tabelle a cui fanno riferimento le viste materializzate. Se l'operazione viene tentata, l'utente visualizzerà l'errore `Msg 106104, Level 16, State 1, Line 9`
  
@@ -129,6 +129,8 @@ Le operazioni ALTER TABLE SWITCH non sono supportate sulle tabelle a cui fanno r
 Dopo la creazione, le viste materializzate sono visibili all'interno di SQL Server Management Studio nella cartella views dell'istanza di Azure SQL Data Warehouse.
 
 Gli utenti possono eseguire [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) e [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) per determinare lo spazio usato da una vista materializzata.  
+
+È possibile eliminare una vista materializzata tramite DROP VIEW.  È possibile usare ALTER MATERIALIZED VIEW per disabilitare o ricostruire una vista materializzata.   
 
 EXPLAIN PLAN e il piano di esecuzione stimato grafico in SQL Server Management Studio possono indicare se una vista materializzata viene presa in considerazione da Query Optimizer per l'esecuzione delle query. Il piano di esecuzione stimato grafico in SQL Server Management Studio può indicare se una vista materializzata viene presa in considerazione da Query Optimizer per l'esecuzione delle query.
 

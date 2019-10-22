@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031675"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586772"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ La pagina è l'unità di base per l'archiviazione dei dati in [!INCLUDE[ssNoVers
 
 L'unità di base per l'archiviazione dei dati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è la pagina. Lo spazio su disco allocato in un file di dati (con estensione mdf o ndf) di un database viene suddiviso logicamente in pagine numerate in modo sequenziale da 0 a n. Le operazioni di I/O su disco vengono eseguite al livello della pagina. Questo significa che SQL Server legge o scrive pagine di dati intere.
 
-Gli extent sono un gruppo di otto pagine fisicamente contigue e vengono utilizzati per gestire in maniera efficiente le pagine. Tutte le pagine sono archiviate in extent.
+Gli extent sono un gruppo di otto pagine fisicamente contigue e vengono utilizzati per gestire in maniera efficiente le pagine. Tutte le pagine sono organizzate in extent.
 
 ### <a name="pages"></a>Pagine
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la dimensione di una pagina è 8 KB. I database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono pertanto 128 pagine per megabyte. Ogni pagina inizia con un'intestazione di 96 byte utilizzata per archiviare informazioni di sistema relative alla pagina. Queste informazioni includono il numero della pagina, il tipo di pagina, la quantità di spazio disponibile nella pagina e l'ID dell'unità di allocazione dell'oggetto proprietario della pagina.
+In un libro normale tutto il contenuto è scritto nelle pagine. Analogamente a un libro, in SQL Server tutte le righe di dati vengono scritte in pagine. In un libro, tutte le pagine hanno le stesse dimensioni fisiche. Analogamente, in SQL Server tutte le pagine di dati hanno dimensioni uguali a 8 kilobyte. In un libro la maggior parte delle pagine contiene dati, ovvero il contenuto principale del libro, e alcune pagine contengono i metadati relativi al contenuto, ad esempio sommario e indice. Anche in questo caso, SQL Server non è diverso. La maggior parte delle pagine contiene righe di dati effettive archiviate dagli utenti, denominate pagine di dati, e pagine di testo/immagini (per casi speciali). Le pagine di indice contengono riferimenti agli indici relativi alla posizione dei dati e infine vi sono le pagine di sistema in cui sono archiviati diversi metadati relativi all'organizzazione dei dati (pagine PFS, GAM, SGAM, IAM, DCM, BCM). Vedere la tabella seguente per i tipi di pagina e la relativa descrizione.
+
+Come indicato, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la dimensione della pagina è di 8 KB. I database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono pertanto 128 pagine per megabyte. Ogni pagina inizia con un'intestazione di 96 byte utilizzata per archiviare informazioni di sistema relative alla pagina. Queste informazioni includono il numero della pagina, il tipo di pagina, la quantità di spazio disponibile nella pagina e l'ID dell'unità di allocazione dell'oggetto proprietario della pagina.
 
 Nella tabella seguente vengono elencati i tipi di pagina utilizzati nei file di dati di un database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
