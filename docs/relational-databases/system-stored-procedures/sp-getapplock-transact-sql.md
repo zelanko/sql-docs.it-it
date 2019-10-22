@@ -19,19 +19,19 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f87a62e744bcd6032c58cdb3b327b747e5343d2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717257"
 ---
-# <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
+# <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Acquisisce un blocco su una risorsa di applicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,30 +46,30 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @Resource=] '*resource_name*'  
- Stringa contenente un nome che identifica la risorsa di blocco. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* viene **nvarchar(255** non prevede alcun valore predefinito. Se una stringa di risorsa è più lunga **nvarchar(255**, esso verrà troncato a **nvarchar(255**.  
+ [@Resource =] '*resource_name*'  
+ Stringa contenente un nome che identifica la risorsa di blocco. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Se una stringa di risorsa è più lunga di **nvarchar (255)** , verrà troncata in **nvarchar (255)** .  
   
- *resource_name* è binario rispetto ed è pertanto tra maiuscole e minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.  
+ *resource_name* è un confronto binario e pertanto distingue tra maiuscole e minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.  
   
 > [!NOTE]  
 >  Dopo l'acquisizione di un blocco a livello di applicazione, è possibile recuperare solo i primi 32 caratteri in testo normale. La parte rimanente viene sottoposta a hashing.  
   
- [ @LockMode=] '*lock_mode*'  
- Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, o **esclusivo**.  
+ [@LockMode =] '*Lock_Mode*'  
+ Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Per altre informazioni, vedere [modalità di blocco](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner=] '*lock_owner*'  
- Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)** . Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando la *lock_owner* valore è **transazione**, predefinito o specificato in modo esplicito, sp_getapplock deve essere eseguito in una transazione.  
+ [@LockOwner =] '*lock_owner*'  
+ Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)** . Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando il valore *lock_owner* è **Transaction**, per impostazione predefinita o specificato in modo esplicito, sp_getapplock deve essere eseguito dall'interno di una transazione.  
   
- [ @LockTimeout=] '*valore*'  
- Valore di timeout del blocco espresso in millisecondi. Il valore predefinito è lo stesso come il valore restituito da@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un codice restituito-1 invece di attendere il blocco quando la richiesta non può essere soddisfatta immediatamente, specificare 0.  
+ [@LockTimeout =] '*valore*'  
+ Valore di timeout del blocco espresso in millisecondi. Il valore predefinito corrisponde al valore restituito da @ @LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un codice restituito-1 anziché attendere il blocco quando la richiesta non può essere concessa immediatamente, specificare 0.  
   
- [ @DbPrincipal=] '*database_principal*'  
- Utente, ruolo o ruolo applicazione al quale sono state assegnate autorizzazioni per un oggetto di un database. Il chiamante della funzione deve essere un membro del *database_principal*, dbo o db_owner ruolo predefinito del database per chiamare la funzione correttamente. Il valore predefinito è public.  
+ [@DbPrincipal =] '*database_principal*'  
+ Utente, ruolo o ruolo applicazione al quale sono state assegnate autorizzazioni per un oggetto di un database. Il chiamante della funzione deve essere un membro del ruolo predefinito del database *database_principal*, dbo o db_owner per chiamare la funzione correttamente. Il valore predefinito è public.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- \>= 0 (esito positivo), or < 0 (esito negativo)  
+ \> = 0 (esito positivo) o < 0 (esito negativo)  
   
-|Value|Risultato|  
+|valore|Risultato|  
 |-----------|------------|  
 |0|Il blocco è stato concesso in modo sincrono.|  
 |1|Il blocco è stato concesso dopo il rilascio di altri blocchi incompatibili.|  
@@ -78,8 +78,8 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La richiesta di blocco è stata scelta come vittima del deadlock.|  
 |-999|Indica un errore di convalida di un parametro o un altro errore di chiamata.|  
   
-## <a name="remarks"></a>Note  
- I blocchi acquisiti per una risorsa sono associati alla transazione o alla sessione corrente. I blocchi associati alla transazione corrente vengono rilasciati in corrispondenza del commit o del rollback della transazione. I blocchi associati alla sessione vengono rilasciati quando la sessione è disconnesso. Quando il server viene arrestato per qualsiasi motivo, tutti i blocchi vengono rilasciati.  
+## <a name="remarks"></a>Remarks  
+ I blocchi acquisiti per una risorsa sono associati alla transazione o alla sessione corrente. I blocchi associati alla transazione corrente vengono rilasciati in corrispondenza del commit o del rollback della transazione. I blocchi associati alla sessione vengono rilasciati al momento della disconnessione della sessione. Quando il server viene arrestato per qualsiasi motivo, vengono rilasciati tutti i blocchi.  
   
  La risorsa di blocco creata da sp_getapplock è valida per il database corrente nella sessione corrente. Ogni risorsa di blocco viene identificata tramite la combinazione dei valori seguenti:  
   
@@ -91,7 +91,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Solo un membro dell'entità di database specificata nel parametro @DbPrincipal può acquisire blocchi a livello di applicazione che specificano tale entità. I membri dei ruoli dbo e db_owner vengono considerati in modo implicito membri di tutti i ruoli.  
   
- È possibile rilasciare un blocco in modo esplicito tramite sp_releaseapplock. Se un'applicazione richiama sp_getapplock più volte per la stessa risorsa di blocco, per rilasciare il blocco è necessario richiamare sp_releaseapplock lo stesso numero di volte.  Quando un blocco viene aperto con la `Transaction` proprietario di blocco, di blocco viene rilasciato quando è stato eseguito il commit o il rollback della transazione.
+ È possibile rilasciare un blocco in modo esplicito tramite sp_releaseapplock. Se un'applicazione richiama sp_getapplock più volte per la stessa risorsa di blocco, per rilasciare il blocco è necessario richiamare sp_releaseapplock lo stesso numero di volte.  Quando viene aperto un blocco con il proprietario del blocco `Transaction`, il blocco viene rilasciato quando viene eseguito il commit o il rollback della transazione.
   
  Se sp_getapplock viene chiamata più volte per una stessa risorsa di blocco ma la modalità di blocco specificata in una delle richieste è diversa da quella già esistente, verrà eseguita un'unione delle due modalità di blocco. Nella maggior parte dei casi la modalità di blocco viene promossa in base alla modalità che risulta più restrittiva tra quella esistente e quella nuova. Tale modalità viene quindi mantenuta fino al rilascio definitivo del blocco, anche se vengono eseguite chiamate di rilascio del blocco prima di tale momento. Nella sequenza di chiamate seguente, ad esempio, la risorsa viene mantenuta in modalità `Exclusive` anziché in modalità `Shared`.  
   
@@ -111,7 +111,7 @@ GO
   
  Un deadlock con un blocco a livello di applicazione non comporta il rollback della transazione che ha richiesto il blocco. Le eventuali operazioni di rollback richieste a causa del valore restituito devono essere eseguite in modo manuale. È pertanto consigliabile includere nel codice il controllo degli errori, in modo che venga avviata un'istruzione ROLLBACK TRANSACTION o un'azione alternativa se vengono restituiti valori specifici, ad esempio -3.  
   
- Di seguito è fornito un esempio:  
+ Esempio:  
   
 ```  
 USE AdventureWorks2012;  
@@ -164,8 +164,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [@No__t_3 &#40;Transact-SQL&#41; APPLOCK_MODE](../../t-sql/functions/applock-mode-transact-sql.md)  
+ [@No__t_3 &#40;Transact-SQL&#41; APPLOCK_TEST](../../t-sql/functions/applock-test-transact-sql.md)  
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

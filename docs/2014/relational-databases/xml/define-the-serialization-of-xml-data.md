@@ -1,7 +1,7 @@
 ---
 title: Definire la serializzazione di dati XML | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637579"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688892"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
   Quando si esegue il cast esplicito o implicito del tipo di dati xml a un tipo SQL stringa o binario, il contenuto del tipo di dati xml verrà serializzato in base alle regole illustrate in questo argomento.  
@@ -31,13 +31,13 @@ ms.locfileid: "62637579"
 ## <a name="serialization-encoding"></a>Codifica della serializzazione  
  Se il tipo SQL di destinazione è VARBINARY, il risultato viene serializzato nel formato UTF-16 preceduto da un indicatore dell'ordine dei byte UTF-16, ma senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio:  
+ Ad esempio  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -45,27 +45,27 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  Se il tipo SQL di destinazione è NVARCHAR o NCHAR, il risultato viene serializzato nel formato UTF-16 non preceduto dall'indicatore dell'ordine dei byte e senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio:  
+ Ad esempio  
+  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+```  
+  
+ Risultato:  
   
 ```  
-select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
-```  
-  
- Questo è il risultato:  
-  
-```  
-<??/>  
+<Δ/>  
 ```  
   
  Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
- Ad esempio:  
+ Ad esempio  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Questo può comportare un errore, se i codici di regole di confronto correnti non può rappresentare il carattere Unicode??, o rappresenterà la codifica specifici.  
+ È possibile che si verifichi un errore se la tabella codici delle regole di confronto correnti non è in grado &#x10300;di rappresentare il carattere Unicode o se viene rappresentata nella codifica specifica.  
   
  Per la restituzione dei risultati XML al lato client, i dati verranno inviati con la codifica UTF-16. Il provider sul lato client esporrà quindi i dati in base alle regole delle relative API.  
   
@@ -87,38 +87,38 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
 -   Per proteggere i nodi di testo che contengono solo spazi vuoti, uno degli spazi vuoti (in genere l'ultimo) viene sostituito con l'entità rappresentata dal relativo riferimento a un carattere numerico. In questo modo, durante l'analisi il nodo di testo con spazi vuoti viene mantenuto, indipendentemente da come vengono gestiti gli spazi vuoti durante l'analisi.  
   
- Ad esempio:  
+ Ad esempio  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <a a="  
-    ????>">     
+    𐌀>">     
 </a>  
 ```  
   
  Se non si vuole applicare l'ultima regola relativa agli spazi vuoti, è possibile usare l'opzione esplicita CONVERT 1 quando si esegue il cast dal tipo **xml** a un tipo string o binary. Ad esempio, per evitare la sostituzione con entità, è possibile specificare quanto segue:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Si noti che il [metodo query() (tipo di dati xml)](/sql/t-sql/xml/query-method-xml-data-type) restituisce un'istanza del tipo di dati xml. Qualsiasi risultato del metodo **query()** per cui viene eseguito il cast a un tipo string o binary viene pertanto sostituito con entità in base alle regole descritte in precedenza. Per evitare che i valori stringa ottenuti vengano sostituiti con entità, è consigliabile usare invece il [metodo value() (tipo di dati xml)](/sql/t-sql/xml/value-method-xml-data-type) . Di seguito è riportato un esempio d'uso del metodo **query()** :  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 This example contains an entitized char: <.  
@@ -126,11 +126,11 @@ This example contains an entitized char: <.
   
  Di seguito è riportato un esempio d'uso del metodo **value()** :  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 This example contains an entitized char: <.  
@@ -141,7 +141,7 @@ This example contains an entitized char: <.
   
  Ad esempio, il valore xs:double 1.34e1 viene serializzato in 13.4, come illustrato nell'esempio seguente:  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
