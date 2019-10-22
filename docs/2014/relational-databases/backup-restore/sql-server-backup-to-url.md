@@ -1,7 +1,7 @@
 ---
 title: Backup di SQL Server nell'URL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/25/2016
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: backup-restore
@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1ecaf46ebf96ab5b8d06cb5eefb69ae50ff882e
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 0ebc7fb8d170ddac10f1a326b3c05a54a0896666
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175834"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688746"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
   Questo argomento introduce i concetti, i requisiti e i componenti necessari per usare il servizio di archiviazione BLOB di Azure come destinazione di backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e le eccezioni rilevanti e sono inclusi alcuni esempi di codice.  
@@ -23,7 +23,7 @@ ms.locfileid: "70175834"
 ## <a name="requirements-components-and-concepts"></a>Requisiti, componenti e concetti  
  **Contenuto della sezione:**  
   
--   [Sicurezza](#security)  
+-   [Security](#security)  
   
 -   [Introduzione ai componenti e ai concetti chiave](#intorkeyconcepts)  
   
@@ -39,51 +39,51 @@ ms.locfileid: "70175834"
   
 -   [Backup di SQL Server nell'URL tramite la Creazione guidata piano di manutenzione](sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [Ripristino da archiviazione di Azure tramite SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
+-   [Ripristino da Archiviazione di Azure mediante SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> Sicurezza  
+###  <a name="security"></a> Security  
  Di seguito sono riportati i requisiti e le considerazioni sulla sicurezza per il backup o il ripristino dai servizi di archiviazione BLOB di Azure.  
   
--   Quando si crea un contenitore per il servizio di archiviazione BLOB di Azure, è consigliabile impostare l'accesso su **privato**. Se si imposta l'accesso su privato, si limita l'accesso a utenti o account in grado di fornire le informazioni necessarie per l'autenticazione all'account Azure.  
+-   Quando si crea un contenitore per il servizio di archiviazione BLOB di Azure, è consigliabile impostare l'accesso su **privato**. In questo modo si limita l'accesso a utenti o account in grado di specificare le informazioni necessarie per l'autenticazione all'account di Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]richiede l'archiviazione del nome dell'account di Azure e della chiave di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso in una credenziale. Queste informazioni vengono usate per eseguire l'autenticazione all'account di Azure quando vengono eseguite operazioni di backup o ripristino.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede l'archiviazione del nome dell'account di Azure e della chiave di accesso in una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste informazioni vengono usate per eseguire l'autenticazione all'account di Azure quando vengono eseguite operazioni di backup o ripristino.  
   
 -   All'account utente usato per eseguire i comandi BACKUP o RESTORE deve essere associato il ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale** .  
   
 ###  <a name="intorkeyconcepts"></a> Introduzione ai componenti e ai concetti chiave  
- Le due sezioni seguenti introducono il servizio di archiviazione BLOB di Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i componenti usati durante il backup o il ripristino dal servizio di archiviazione BLOB di Azure. È importante comprendere i componenti e l'interazione tra di essi per eseguire un backup o il ripristino dal servizio di archiviazione BLOB di Azure.  
+ Le due sezioni seguenti introducono il servizio di archiviazione BLOB di Azure e i componenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usati per il backup o il ripristino dal servizio di archiviazione BLOB di Azure. È importante comprendere i componenti e l'interazione tra di essi per eseguire un backup o il ripristino dal servizio di archiviazione BLOB di Azure.  
   
- La creazione di un account Azure è il primo passaggio per questo processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Usa il **nome dell'account di archiviazione di Azure** e i relativi valori della **chiave di accesso** per autenticare e scrivere e leggere i BLOB nel servizio di archiviazione. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino. Per una procedura dettagliata completa per la creazione di un account di archiviazione e l'esecuzione di un ripristino semplice, vedere [esercitazione sull'uso del servizio di archiviazione di Azure per SQL Server backup e ripristino](https://go.microsoft.com/fwlink/?LinkId=271615).  
+ La creazione di un account Azure è il primo passaggio per questo processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il **nome dell'account di archiviazione di Azure** e i relativi valori della **chiave di accesso** per autenticare e scrivere e leggere i BLOB nel servizio di archiviazione. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino. Per una procedura dettagliata completa per la creazione di un account di archiviazione e l'esecuzione di un ripristino semplice, vedere [esercitazione sull'uso del servizio di archiviazione di Azure per SQL Server backup e ripristino](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![mapping dell'account di archiviazione alle credenziali SQL](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping dell'account di archiviazione alle credenziali SQL")  
   
 ###  <a name="Blob"></a>Servizio di archiviazione BLOB di Azure  
- **Account di archiviazione:** l'account di archiviazione è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Azure, creare prima un account di archiviazione di Azure. Il **nome dell'account di archiviazione** e le relative proprietà **chiave di accesso** sono necessari per eseguire l'autenticazione nel servizio di archiviazione BLOB di Azure e nei relativi componenti.  
+ **Account di archiviazione:** questo account è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Azure, creare prima un account di archiviazione di Azure. Il **nome dell'account di archiviazione** e le relative proprietà **chiave di accesso** sono necessari per eseguire l'autenticazione nel servizio di archiviazione BLOB di Azure e nei relativi componenti.  
   
- **Contenitore:** Un contenitore fornisce un raggruppamento di un set di BLOB e può archiviare un numero illimitato di BLOB. Per scrivere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup nel servizio BLOB di Azure, è necessario che sia stato creato almeno il contenitore radice.  
+ **Contenitore:** tramite un contenitore viene fornito un raggruppamento di un set di BLOB ed è possibile archiviare un numero illimitato di BLOB. Per scrivere un backup [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio BLOB di Azure, è necessario che sia stato creato almeno il contenitore radice.  
   
- **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Azure: BLOB in blocchi e di pagine. Nel backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il tipo di BLOB utilizzato è quello di pagine. I BLOB sono indirizzabili usando il formato di URL seguente\<: account di archiviazione https://>. blob. Core. Windows\<. NET/\<Container >/BLOB >  
+ **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Azure: BLOB in blocchi e di pagine. Nel backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il tipo di BLOB utilizzato è quello di pagine. I BLOB sono indirizzabili usando il formato di URL seguente: https://\<storage account >. blob. Core. Windows. NET/\<container >/\<blob >  
   
- ![Archiviazione BLOB di Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Archiviazione BLOB di Azure")  
+ ![Archiviazione BLOB di Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Archiviazione BLOB Azure")  
   
  Per altre informazioni sul servizio di archiviazione BLOB di Azure, vedere [come usare il servizio di archiviazione BLOB di Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
  Per ulteriori informazioni sui BLOB di pagine, vedere la pagina [Informazioni sui Blob in blocchi e sui Blob di pagine](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** un URL specifica un URI (Uniform Resource Identifier) in un file di backup univoco. L'URL viene utilizzato per specificare il percorso e il nome del file di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questa implementazione, l'unico URL valido è quello che punta a un BLOB di pagine in un account di archiviazione di Azure. L'URL deve puntare a un BLOB effettivo, non solo a un contenitore. Se il BLOB non è disponibile, viene creato. Se viene specificato un BLOB esistente, il BACKUP ha esito negativo, a meno che non sia stata specificata l'opzione "WITH FORMAT".  
+ **URL:** tramite un URL viene specificato un URI (Uniform Resource Identifier) in un file di backup univoco. L'URL viene utilizzato per specificare il percorso e il nome del file di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questa implementazione, l'unico URL valido è quello che punta a un BLOB di pagine in un account di archiviazione di Azure. L'URL deve puntare a un BLOB effettivo, non solo a un contenitore. Se il BLOB non è disponibile, viene creato. Se viene specificato un BLOB esistente, il BACKUP ha esito negativo, a meno che non sia stata specificata l'opzione "WITH FORMAT".  
   
 > [!WARNING]  
 >  Se si sceglie di copiare e caricare un file di backup nel servizio di archiviazione BLOB di Azure, usare il BLOB di pagine come opzione di archiviazione. I ripristini dai BLOB in blocchi non sono supportati. Il ripristino da un BLOB in blocchi non viene completato e viene visualizzato un errore.  
   
- Di seguito è riportato un valore URL di esempio: http [s\<]://AccountName.blob.Core.Windows.NET/\<Container >/filename. bak >. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
+ Di seguito è riportato un valore URL di esempio: http [s]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER >/\<FILENAME. bak >. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
   
- **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto usato per archiviare le informazioni di autenticazione necessarie per la connessione a una risorsa all'esterno di SQL Server.  Qui, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i processi di backup e ripristino usano le credenziali per eseguire l'autenticazione nel servizio di archiviazione BLOB di Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per ulteriori informazioni sulla modalità di visualizzazione, copia o rigenerazione dell'account di archiviazione **access keys**, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server.  In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i processi di backup e ripristino usano le credenziali per eseguire l'autenticazione nel servizio di archiviazione BLOB di Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per altre informazioni su come visualizzare, copiare o rigenerare le **access keys**dell'account di archiviazione, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Per istruzioni dettagliate sulla creazione di credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere l'esempio [Create a Credential](#credential) più avanti in questo argomento.  
   
- Per informazioni generali sulle credenziali, vedere la pagina [Credenziali](../security/authentication-access/credentials-database-engine.md)  
+ Per informazioni generali sulle credenziali, vedere [Credenziali](../security/authentication-access/credentials-database-engine.md)  
   
  Per informazioni o altri esempi in cui vengono utilizzate le credenziali, vedere [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
@@ -123,14 +123,14 @@ ms.locfileid: "70175834"
   
 |||||  
 |-|-|-|-|  
-|Istruzione di backup/ripristino|Supportato|Eccezioni|Commenti|  
-|BACKUP|???|BLOCKSIZE e MAXTRANSFERSIZE non sono supportate.|Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE|???||Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE FILELISTONLY|???||Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE HEADERONLY|???||Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE LABELONLY|???||Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE VERIFYONLY|???||Richiede la specifica di WITH CREDENTIAL|  
-|RESTORE REWINDONLY|???|||  
+|Istruzione di backup/ripristino|Supported|Eccezioni|Commenti|  
+|BACKUP|&#x2713;|BLOCKSIZE e MAXTRANSFERSIZE non sono supportate.|Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE|&#x2713;||Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE FILELISTONLY|&#x2713;||Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE HEADERONLY|&#x2713;||Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE LABELONLY|&#x2713;||Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE VERIFYONLY|&#x2713;||Richiede la specifica di WITH CREDENTIAL|  
+|RESTORE REWINDONLY|&#x2713;|||  
   
  Per la sintassi e informazioni generali sulle istruzioni di backup, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -140,35 +140,35 @@ ms.locfileid: "70175834"
   
 |||||  
 |-|-|-|-|  
-|Argomento|Supportato|Eccezione|Commenti|  
-|DATABASE|???|||  
-|LOG|???|||  
+|Argomento|Supported|Exception|Commenti|  
+|DATABASE|&#x2713;|||  
+|LOG|&#x2713;|||  
 ||  
-|TO (URL)|???|Diversamente da DISK e TAPE, l'URL non supporta la specifica o la creazione di un nome logico.|Questo argomento viene utilizzato per specificare il percorso URL del file di backup.|  
-|MIRROR TO|???|||  
+|TO (URL)|&#x2713;|Diversamente da DISK e TAPE, l'URL non supporta la specifica o la creazione di un nome logico.|Questo argomento viene utilizzato per specificare il percorso URL del file di backup.|  
+|MIRROR TO|&#x2713;|||  
 |**OPZIONI WITH:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL è supportato solo quando si usa l'opzione BACKUP TO URL per eseguire il backup nel servizio di archiviazione BLOB di Azure.|  
-|DIFFERENTIAL|???|||  
-|COPY_ONLY|???|||  
-|COMPRESSION&#124;NO_COMPRESSION|???|||  
-|DESCRIPTION|???|||  
-|NAME|???|||  
-|EXPIREDATE &#124; RETAINDAYS|???|||  
-|NOINIT &#124; INIT|???||Se utilizzata, questa opzione è ignorata.<br /><br /> L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, utilizzare l'argomento FORMAT.|  
-|NOSKIP &#124; SKIP|???|||  
-|NOFORMAT &#124; FORMAT|???||Se utilizzata, questa opzione è ignorata.<br /><br /> Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato WITH FORMAT. Il BLOB esistente viene sovrascritto quando viene specificato WITH FORMAT.|  
-|MEDIADESCRIPTION|???|||  
-|MEDIANAME|???|||  
-|BLOCKSIZE|???|||  
-|BUFFERCOUNT|???|||  
-|MAXTRANSFERSIZE|???|||  
-|NO_CHECKSUM &#124; CHECKSUM|???|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
-|STATS|???|||  
-|REWIND &#124; NOREWIND|???|||  
-|UNLOAD &#124; NOUNLOAD|???|||  
-|NORECOVERY &#124; STANDBY|???|||  
-|NO_TRUNCATE|???|||  
+|CREDENTIAL|&#x2713;||WITH CREDENTIAL è supportato solo quando si usa l'opzione BACKUP TO URL per eseguire il backup nel servizio di archiviazione BLOB di Azure.|  
+|DIFFERENTIAL|&#x2713;|||  
+|COPY_ONLY|&#x2713;|||  
+|COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
+|Description|&#x2713;|||  
+|NAME|&#x2713;|||  
+|EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
+|NOINIT &#124; INIT|&#x2713;||Se utilizzata, questa opzione è ignorata.<br /><br /> L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, utilizzare l'argomento FORMAT.|  
+|NOSKIP &#124; SKIP|&#x2713;|||  
+|NOFORMAT &#124; FORMAT|&#x2713;||Se utilizzata, questa opzione è ignorata.<br /><br /> Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato WITH FORMAT. Il BLOB esistente viene sovrascritto quando viene specificato WITH FORMAT.|  
+|MEDIADESCRIPTION|&#x2713;|||  
+|MEDIANAME|&#x2713;|||  
+|BLOCKSIZE|&#x2713;|||  
+|BUFFERCOUNT|&#x2713;|||  
+|MAXTRANSFERSIZE|&#x2713;|||  
+|NO_CHECKSUM &#124; CHECKSUM|&#x2713;|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|&#x2713;|||  
+|STATS|&#x2713;|||  
+|REWIND &#124; NOREWIND|&#x2713;|||  
+|UNLOAD &#124; NOUNLOAD|&#x2713;|||  
+|NORECOVERY &#124; STANDBY|&#x2713;|||  
+|NO_TRUNCATE|&#x2713;|||  
   
  Per altre informazioni sugli argomenti di backup, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -176,36 +176,36 @@ ms.locfileid: "70175834"
   
 |||||  
 |-|-|-|-|  
-|Argomento|Supportato|Eccezioni|Commenti|  
-|DATABASE|???|||  
-|LOG|???|||  
-|FROM (URL)|???||L'argomento FROM URL viene utilizzato per specificare il percorso URL del file di backup.|  
+|Argomento|Supported|Eccezioni|Commenti|  
+|DATABASE|&#x2713;|||  
+|LOG|&#x2713;|||  
+|FROM (URL)|&#x2713;||L'argomento FROM URL viene utilizzato per specificare il percorso URL del file di backup.|  
 |**WITH Options:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL è supportato solo quando si usa l'opzione RESTOre FROM URL per eseguire il ripristino dal servizio di archiviazione BLOB di Azure.|  
-|PARTIAL|???|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
-|LOADHISTORY|???|||  
-|MOVE|???|||  
-|REPLACE|???|||  
-|RESTART|???|||  
-|RESTRICTED_USER|???|||  
-|FILE|???|||  
-|PASSWORD|???|||  
-|MEDIANAME|???|||  
-|MEDIAPASSWORD|???|||  
-|BLOCKSIZE|???|||  
-|BUFFERCOUNT|???|||  
-|MAXTRANSFERSIZE|???|||  
-|CHECKSUM &#124; NO_CHECKSUM|???|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
-|FILESTREAM|???|||  
-|STATS|???|||  
-|REWIND &#124; NOREWIND|???|||  
-|UNLOAD &#124; NOUNLOAD|???|||  
-|KEEP_REPLICATION|???|||  
-|KEEP_CDC|???|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
+|CREDENTIAL|&#x2713;||WITH CREDENTIAL è supportato solo quando si usa l'opzione RESTOre FROM URL per eseguire il ripristino dal servizio di archiviazione BLOB di Azure.|  
+|PARTIAL|&#x2713;|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|&#x2713;|||  
+|LOADHISTORY|&#x2713;|||  
+|MOVE|&#x2713;|||  
+|REPLACE|&#x2713;|||  
+|RESTART|&#x2713;|||  
+|RESTRICTED_USER|&#x2713;|||  
+|FILE|&#x2713;|||  
+|PASSWORD|&#x2713;|||  
+|MEDIANAME|&#x2713;|||  
+|MEDIAPASSWORD|&#x2713;|||  
+|BLOCKSIZE|&#x2713;|||  
+|BUFFERCOUNT|&#x2713;|||  
+|MAXTRANSFERSIZE|&#x2713;|||  
+|CHECKSUM &#124; NO_CHECKSUM|&#x2713;|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|&#x2713;|||  
+|FILESTREAM|&#x2713;|||  
+|STATS|&#x2713;|||  
+|REWIND &#124; NOREWIND|&#x2713;|||  
+|UNLOAD &#124; NOUNLOAD|&#x2713;|||  
+|KEEP_REPLICATION|&#x2713;|||  
+|KEEP_CDC|&#x2713;|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|&#x2713;|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|&#x2713;|||  
   
  Per altre informazioni sugli argomenti di ripristino, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
@@ -220,7 +220,7 @@ ms.locfileid: "70175834"
   
     1.  **Nome file:** nome del file di backup.  
   
-    2.  **Credenziali SQL:** È possibile specificare una credenziale di SQL Server esistente o crearne una nuova facendo clic sul pulsante **Crea** accanto alla casella credenziali SQL.  
+    2.  **Credenziali SQL:** è possibile specificare le credenziali di SQL Server esistenti o crearne di nuove facendo clic su **Crea** accanto alla casella Credenziali SQL.  
   
         > [!IMPORTANT]  
         >  La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. SQL Server supporta attualmente la versione del profilo di pubblicazione 2.0. Per scaricare la versione supportata del profilo di pubblicazione, vedere [Download del profilo di pubblicazione 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
@@ -229,7 +229,7 @@ ms.locfileid: "70175834"
   
     3.  **Contenitore di archiviazione di Azure:** Nome del contenitore di archiviazione di Azure in cui archiviare i file di backup.  
   
-    4.  **Prefisso URL** Questa operazione viene compilata automaticamente utilizzando le informazioni specificate nei campi descritti nei passaggi precedenti. Se si modifica questo valore manualmente, assicurarsi che corrisponda alle altre informazioni fornite in precedenza. Se ad esempio si modifica l'URL di archiviazione, assicurarsi che le credenziali SQL siano impostate per l'autenticazione dello stesso account di archiviazione.  
+    4.  **Prefisso URL:** viene compilato automaticamente utilizzando le informazioni specificate nei campi descritti nei passaggi precedenti. Se si modifica questo valore manualmente, assicurarsi che corrisponda alle altre informazioni fornite in precedenza. Se ad esempio si modifica l'URL di archiviazione, assicurarsi che le credenziali SQL siano impostate per l'autenticazione dello stesso account di archiviazione.  
   
  Quando si seleziona un URL come destinazione, alcune opzioni nella pagina **Opzioni supporti** vengono disabilitate.  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla finestra di dialogo Backup database:  
   
@@ -279,7 +279,7 @@ ms.locfileid: "70175834"
 ###  <a name="credential"></a> Creare credenziali  
  L'esempio seguente crea una credenziale che archivia le informazioni di autenticazione di archiviazione di Azure.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "70175834"
 ###  <a name="complete"></a>Esecuzione del backup di un database completo  
  Nell'esempio seguente viene eseguito il backup del database AdventureWorks2012 nel servizio di archiviazione BLOB di Azure.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "70175834"
 ###  <a name="databaselog"></a>Backup del database e del log  
  Nell'esempio riportato di seguito viene eseguito il backup del database di esempio AdventureWorks2012 per il quale viene utilizzato, per impostazione predefinita, il modello di recupero con registrazione minima. Per consentire il backup del log, il database AdventureWorks2012 viene modificato per l'utilizzo del modello di recupero con registrazione completa. Nell'esempio viene quindi creato un backup completo del database nel BLOB di Azure e, dopo un periodo di attività di aggiornamento, viene eseguito il backup del log. In questo esempio viene creato il nome di un file di backup con un indicatore datetime.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "70175834"
 ###  <a name="filebackup"></a>Creazione di un backup completo del filegroup primario  
  Nell'esempio seguente viene creato un backup di file completo del filegroup primario.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "70175834"
 ###  <a name="differential"></a>Creazione di un backup differenziale del filegroup primario  
  Nell'esempio seguente viene creato un backup di file differenziale del filegroup primario.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "70175834"
 ###  <a name="restoredbwithmove"></a>Ripristinare un database e spostare i file  
  Per ripristinare un backup completo del database e spostare il database ripristinato nella directory C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, attenersi ai passaggi riportati di seguito.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "70175834"
 ###  <a name="PITR"></a> Ripristino temporizzato tramite STOPAT  
  Nell'esempio seguente viene ripristinato lo stato di un database in un momento preciso e viene illustrata un'operazione di ripristino.  
   
-1.  **Tsql**  
+1.  **TSQL**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
@@ -877,6 +877,6 @@ ms.locfileid: "70175834"
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Backup e ripristino di database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Esercitazione: SQL Server backup e ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

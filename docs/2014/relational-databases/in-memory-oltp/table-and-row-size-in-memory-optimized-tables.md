@@ -1,7 +1,7 @@
 ---
 title: Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 10/27/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: in-memory-oltp
@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466061"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688894"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
   Una tabella ottimizzata per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. In una tabella ottimizzata per la memoria, le righe non possono essere più lunghe di 8.060 byte. Comprendere le dimensioni di una tabella ottimizzata per la memoria è importante per capire se il computer dispone di una quantità di memoria sufficiente.  
@@ -34,7 +34,7 @@ ms.locfileid: "62466061"
   
  Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
- ![Tabella ottimizzata per la memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabella ottimizzata per la memoria.")  
+ ![Tabella con ottimizzazione per la memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabella con ottimizzazione per la memoria.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
   
  Le dimensioni in memoria di una tabella, in byte, vengono calcolate come segue:  
@@ -70,14 +70,14 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
  Nella tabella seguente viene descritto il calcolo delle dimensioni del corpo delle righe, fornito come [actual row body size] = SUM ([size of shallow types) + 2 + 2 * [number of deep type columns].  
   
-|`Section`|Dimensione|Commenti|  
+|Sezione|Dimensione|Commenti|  
 |-------------|----------|--------------|  
-|Colonne di tipo superficiale|SUM([size of shallow types])<br /><br /> **Dimensioni dei singoli tipi sono le seguenti:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisione < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Colonne di tipo superficiale|SUM([size of shallow types])<br /><br /> **Le dimensioni dei singoli tipi sono le seguenti:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisione < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisione > 18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Riempimento delle colonne superficiali|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni totali dei dati delle colonne superficiali sono un numero dispari.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Matrice di offset delle colonne di tipo approfondito|I valori possibili sono:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Matrice NULL|[number of nullable columns] / 8, arrotondato per eccesso ai byte completi.|La matrice dispone di un bit per ogni colonna che ammette i valori Null. Il valore viene arrotondato per eccesso ai byte completi.|  
 |Riempimento della matrice NULL|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Spaziatura interna|Se non sono disponibili colonne di tipo approfondito: 0<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Spaziatura interna|0 se non sono disponibili colonne di tipo approfondito<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Colonne di tipo approfondito a lunghezza fissa|SUM([size of fixed length deep type columns])<br /><br /> Le dimensioni di ogni colonna sono le seguenti:<br /><br /> i per char(i) e binary(i).<br /><br /> 2 * i per nchar(i)|Le colonne di tipo approfondito a lunghezza fissa sono le colonne di tipo char(i), nchar(i) o binary(i).|  
 |Colonne di tipo approfondito a lunghezza variabile [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Le dimensioni calcolate di ogni colonna sono le seguenti:<br /><br /> i per varchar(i) e varbinary(i)<br /><br /> 2 * i per nvarchar(i)|Questa riga si riferiva solo a [computed row body size].<br /><br /> Le colonne di tipo approfondito a lunghezza variabile sono le colonne di tipo varchar(i), nvarchar(i) o varbinary(i). Le dimensioni calcolate sono determinate dalla lunghezza massima (i) della colonna.|  
 |Colonne di tipo approfondito a lunghezza variabile [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Le dimensioni effettive di ogni colonna sono le seguenti:<br /><br /> n, dove n è il numero di caratteri archiviato nella colonna, per varchar(i).<br /><br /> 2 * n, dove n è il numero di caratteri archiviato nella colonna, per nvarchar(i).<br /><br /> n, dove n è il numero di byte archiviato nella colonna, per varbinary(i).|Questa riga si riferiva solo a [actual row body size].<br /><br /> Le dimensioni effettive sono determinate dai dati archiviati nelle colonne della riga.|  
@@ -113,24 +113,24 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
 -   Secondo bucket: (John, Parigi), (Jane, Praga)  
   
- Un timestamp di fine??? (infinito) indica che questa è la versione attualmente valida della riga. La riga non è stata aggiornata o eliminata dopo la scrittura di questa versione di riga.  
+ Un timestamp &#x221e; di fine (infinito) indica che si tratta della versione attualmente valida della riga. La riga non è stata aggiornata o eliminata dopo la scrittura di questa versione di riga.  
   
  Per un'ora maggiore di 200, la tabella contiene le righe seguenti:  
   
-|Nome|Città|  
+|Crea vista sottoscrizioni|City|  
 |----------|----------|  
 |John|Pechino|  
 |Jane|Praga|  
   
  Tuttavia, le eventuali transazioni attive con un'ora di inizio 100 rileveranno la seguente versione della tabella:  
   
-|Nome|Città|  
+|Crea vista sottoscrizioni|City|  
 |----------|----------|  
 |John|Parigi|  
 |Jane|Praga|  
 |Susan|Bogotà|  
   
-##  <a name="bkmk_ExampleComputation"></a> Esempio: Calcolo delle dimensioni di riga e tabella  
+##  <a name="bkmk_ExampleComputation"></a> Esempio: calcolo delle dimensioni della tabella e delle righe  
  Per gli indici hash il numero effettivo di bucket viene arrotondato alla più vicina potenza di 2. Ad esempio, se il valore di bucket_count specificato è 100.000, il numero effettivo di bucket per l'indice è 131.072.  
   
  Si consideri una tabella Orders con la definizione seguente:  
@@ -147,9 +147,9 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- Si noti che questa tabella include un indice hash e un indice non cluster (chiave primaria). Dispone inoltre di tre colonne a lunghezza fissa e una colonna a lunghezza variabile; una delle colonne ammette i valori Null (OrderDescription). Si supponga che la tabella Orders contenga 8379 righe e la lunghezza media dei valori della colonna OrderDescription sia 78 caratteri.  
+ Si noti che questa tabella include un indice hash e un indice non cluster (chiave primaria). Dispone inoltre di tre colonne a lunghezza fissa e una colonna a lunghezza variabile; una delle colonne ammette i valori Null (OrderDescription). Si supponga che la tabella Orders contenga 8379 righe e che la lunghezza media dei valori nella colonna OrderDescription sia di 78 caratteri.  
   
- Per determinare le dimensioni della tabella, è innanzitutto necessario determinare le dimensioni degli indici. Il valore di bucket_count per entrambi gli indici è specificato come 10.000. Ciò viene arrotondato per eccesso alla più vicina potenza di 2: 16384. Pertanto, le dimensioni totali degli indici della tabella Orders sono:  
+ Per determinare le dimensioni della tabella, è innanzitutto necessario determinare le dimensioni degli indici. Il valore di bucket_count per entrambi gli indici è specificato come 10.000. Questo valore viene arrotondato per eccesso alla più vicina potenza di 2: 16.384. Pertanto, le dimensioni totali degli indici della tabella Orders sono:  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   Il riempimento totale è 24 - 22 = 2 byte.  
   
--   Non sono disponibili colonne di tipo approfondito a lunghezza fissa (colonne di tipo approfondito a lunghezza fissa: 0.).  
+-   Non sono presenti colonne di tipo approfondito a lunghezza fissa (colonne di tipo approfondito a lunghezza fissa: 0).  
   
 -   Le dimensioni effettive della colonna di tipo approfondito sono 2 * 78 = 156. La sola colonna di tipo approfondito OrderDescription è di tipo nvarchar.  
   
