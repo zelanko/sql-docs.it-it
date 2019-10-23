@@ -72,12 +72,12 @@ ms.locfileid: "72252183"
  Nome della coda da cui recuperare il gruppo di conversazioni.  
   
  TIMEOUT *timeout*  
- Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *\@@conversation_group_id* su NULL.  
+ Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *\@conversation_group_id* su NULL.  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola ( **;** ), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Se la coda specificata nell'istruzione GET CONVERSATION GROUP non è disponibile, l'istruzione viene interrotta con un errore [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

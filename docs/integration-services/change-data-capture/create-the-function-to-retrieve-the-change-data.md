@@ -80,7 +80,7 @@ ms.locfileid: "72251980"
 > [!NOTE]  
 >  Per altre informazioni sulla sintassi di questa stored procedure e sui relativi parametri, vedere [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se il parametro *\@@supports_net_changes* è stato impostato durante la creazione dell'istanza di acquisizione, la stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
+ La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se il parametro *\@supports_net_changes* è stato impostato durante la creazione dell'istanza di acquisizione, la stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
   
  La stored procedure restituisce un set di risultati con due colonne:  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Informazioni sulle funzioni create dalla stored procedure e relativo utilizzo  
- Per ripercorrere sistematicamente la cronologia dei dati modificati acquisiti, le funzioni wrapper generate richiedono che il parametro *\@@end_time* di un intervallo sia il parametro *\@@start_time* dell'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
+ Per ripercorrere sistematicamente la cronologia dei dati modificati acquisiti, le funzioni wrapper generate richiedono che il parametro *\@end_time* di un intervallo sia il parametro *\@start_time* dell'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
   
 -   Eseguire il mapping dei valori di data e ora ai valori LSN utilizzati internamente.  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   Il valore data/ora di inizio e il valore data/ora di fine per l'intervallo. Mentre le funzioni wrapper utilizzano i valori di data e ora come endpoint per l'intervallo di query, le funzioni Change Data Capture utilizzano due valori LSN come endpoint.  
   
--   Il filtro di riga. Il parametro *\@@row_filter_option* è uguale sia per le funzioni wrapper che per le funzioni di Change Data Capture. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   Il filtro di riga. Il parametro *\@row_filter_option* è uguale sia per le funzioni wrapper che per le funzioni di Change Data Capture. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  Il set di risultati restituito dalle funzioni wrapper include i dati seguenti:  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono i seguenti: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
   
--   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *\@@update_flag_list*. Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
+-   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *\@update_flag_list*. Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
   
  Se il pacchetto chiama una funzione wrapper che esegue una query su tutte le modifiche, la funzione wrapper restituisce anche le colonne __CDC_STARTLSN e \__CDC_SEQVAL. Queste due colonne diventano rispettivamente la prima e la seconda colonna del set di risultati. La funzione wrapper ordina inoltre il set di risultati in base a queste due colonne.  
   

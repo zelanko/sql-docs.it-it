@@ -35,7 +35,7 @@ ms.locfileid: "72278306"
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
 ###  <a name="HowToIdentifySimilar"></a> Esempio: Trovare i documenti più simili a un altro documento  
- L'esempio seguente recupera i primi 10 candidati simili al candidato specificato da *\@@CandidateID* dalla tabella HumanResources.JobCandidate nel database di esempio AdventureWorks2012.  
+ L'esempio seguente recupera i primi 10 candidati simili al candidato specificato da *\@CandidateID* dalla tabella HumanResources.JobCandidate nel database di esempio AdventureWorks2012.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
