@@ -1,7 +1,7 @@
 ---
 title: Criteri di supporto per OLE DB Driver for SQL Server | Microsoft Docs
 description: Criteri di supporto per driver OLE DB per SQL Server
-ms.date: 02/12/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1ae0e332de1d1e673cfd4fff1e288acafa4a0619
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: b02789c787266a3370e3c5c9bfae50ea337d19db
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118144"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381856"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Criteri di supporto per driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,14 +25,14 @@ ms.locfileid: "71118144"
   Questo articolo illustra il modo in cui i vari componenti di accesso ai dati possono essere usati con OLE DB driver per SQL Server.  
 
 ## <a name="server-support"></a>Supporto server  
- OLE DB driver per SQL Server supporta le connessioni [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+ OLE DB driver per SQL Server supporta le connessioni ai [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## <a name="supported-operating-system-versions"></a>Versioni di sistema operativo supportate  
  Nella tabella seguente sono elencati i sistemi operativi che supportano OLE DB driver per SQL Server.  
 
 | Sistemi operativi supportati |  |
 |--------------------------------------|---------------------------------|   
-| Aggiornamento + di Microsoft Windows 8.1 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)[KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [aprile 2014 aggiornamento](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
+| Aggiornamento di Microsoft Windows 8.1 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)  + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Aggiornamento di Microsoft Windows Server 2012 R2 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)  + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
 
 
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  

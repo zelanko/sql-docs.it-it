@@ -1,18 +1,18 @@
 ---
 title: Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS | Microsoft Docs
-ms.date: 08/21/2018
+ms.date: 10/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2e8eb3d2f20392c1884c79455e8c3bdfdacd949
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0f4ff968ae8d6090756cc5751fda2aadbec3f98a
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891956"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313771"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS
 
@@ -88,9 +88,7 @@ ms.locfileid: "68891956"
 -   XML  
   
 -   ODBC  
-  
--   Microsoft BI Semantic Model per Power View: in un sito di SharePoint configurato per una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], questo tipo di origine dati è disponibile. Questo tipo di origine dati viene usato solo per le presentazioni [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Per altre informazioni, vedere il video relativo alla [creazione di modelli tabulari BI Semantic perfetti per Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
-  
+
  Per un elenco completo di origini dati e versioni supportate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="bkmk_connection_examples"></a> Esempi comuni di stringhe di connessione  
@@ -103,23 +101,21 @@ ms.locfileid: "68891956"
 |---------------------|-----------------|---------------------|  
 |Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |Istanza di SQL Server<br /><br /> Database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**.|  
-|Database SQL Server Express|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**.|  
 |Database SQL di Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Impostare il tipo di origine dati su **Database SQL di Microsoft Azure**. Per altre informazioni, vedere [Tipo di connessione SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Impostare il tipo di origine dati su **Microsoft SQL Server Parallel Data Warehouse**. Per altre informazioni, vedere [Tipo di connessione SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Database Analysis Services sul server locale|`data source=localhost;initial catalog=Adventure Works DW`|Impostare il tipo di origine dati su **Microsoft SQL Server Analysis Services**. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) e [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Database modello tabulare di Analysis Services con la prospettiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Impostare il tipo di origine dati su **Microsoft SQL Server Analysis Services**. Specificare il nome della prospettiva nell'impostazione cube=. Per altre informazioni, vedere [Prospettive &#40;SSAS tabulare&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
-|Origine dati del modello di report su un server di report configurato in modalità nativa|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Specificare l'URL del server di report o della raccolta documenti e il percorso di un modello pubblicato nello spazio dei nomi della cartella del server di report o della raccolta documenti.
-|Origine dati del modello di report su un server di report configurato in modalità integrata SharePoint|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Specificare l'URL del server di report o della raccolta documenti e il percorso di un modello pubblicato nello spazio dei nomi della cartella del server di report o della raccolta documenti.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Impostare il tipo di origine dati sul **Provider Microsoft OLE DB per OLAP Services 8.0**.<br /><br /> È possibile ottenere una connessione più veloce alle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impostando la proprietà **ConnectTo** su **8.0**. Per impostare questa proprietà, usare la finestra di dialogo **Proprietà connessione** nella scheda **Proprietà avanzate** .|  
 |Server Oracle|`data source=myserver`|Impostare il tipo di origine dati su **Oracle**. È necessario installare gli strumenti client Oracle nel computer di Progettazione report e nel server di report. Per altre informazioni, vedere [Tipo di connessione Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |Origine dati SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Impostare il tipo di origine dati su **SAP NetWeaver BI**. Per altre informazioni, vedere [Tipo di connessione SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Origine dati Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Impostare il tipo di origine dati su **Hyperion Essbase**. Per altre informazioni, vedere [Tipo di connessione Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Origine dati Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Impostare il tipo di origine dati su **Teradata**. La stringa di connessione è un indirizzo IP (Internet Protocol) nel formato in quattro campi, ognuno dei quali può contenere da una a tre cifre. Per altre informazioni, vedere [Tipo di connessione Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
 |Origine dati Teradata|`Database=` *\<nome database>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Impostare il tipo di origine dati su **Teradata**, analogamente all'esempio precedente. Utilizzare solo il database predefinito specificato nel tag Database e non individuare automaticamente le relazioni dei dati.|  
 |Origine dati XML, servizio Web|`data source=https://adventure-works.com/results.aspx`|Impostare il tipo di origine dati su **XML**. La stringa di connessione è un URL per un servizio Web che supporta Web Services Definition Language (WSDL). Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
-|Origine dati XML, documento XML|`https://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su **XML**. La stringa di connessione è un URL per il documento XML.|  
+|Origine dati XML, documento XML|`https://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su **XML**. La stringa di connessione è un URL per il documento XML. 
 |Origine dati XML, documento XML incorporato|*Vuoto*|Impostare il tipo di origine dati su **XML**. I dati XML vengono incorporati nella definizione del report.|  
 |Elenco SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Impostare il tipo di origine dati su **Elenco SharePoint**.|  
+| Power BI Premium DataSet (a partire da Reporting Services 2019) | Server = Power bi://API.powerbi.com/v1.0/MyOrg/<workspacename>; catalogo iniziale = <YourDatasetName> | Impostare il tipo di origine dati su **Microsoft SQL Server Analysis Services**. |
+
   
  Se non è possibile connettersi a un server di report usando **localhost**, verificare che il protocollo di rete per TCP/IP sia abilitato. Per altre informazioni, vedere [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   

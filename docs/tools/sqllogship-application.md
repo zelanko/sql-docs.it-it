@@ -13,17 +13,17 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68065447"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- ![Icona di collegamento all'argomento](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") Per le convenzioni della sintassi, vedere Guida di [ &#40;riferimento&#41;all'utilità del prompt dei comandi motore di database](../tools/command-prompt-utility-reference-database-engine.md).  
+ Per le convenzioni di sintassi, vedere ![Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento").  
   
 ## <a name="syntax"></a>Sintassi  
   
