@@ -20,29 +20,29 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918133"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782714"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-  Usare la **registrazione guidata dell'applicazione livello dati** o uno PowerShell di Windows script per compilare un livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel `msdb` database di sistema (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Utilizzare la **procedura guidata Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel database di sistema `msdb` ( **Master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati tramite la:**  [Procedura guidata Elimina applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati (DAC) tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
- Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
+ Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  La registrazione di un'applicazione livello dati può essere effettuata solo per un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. La registrazione di un'applicazione livello dati non può essere eseguita se è stata già registrata un'applicazione livello dati per il database. Se, ad esempio, il database è stato creato distribuendo un'applicazione livello dati, non è possibile eseguire la procedura guidata **Registra applicazione livello dati**.  
   
  Non è possibile registrare un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  La registrazione di un'applicazione livello dati in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] richiede almeno autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION per l'ambito del database, nonché autorizzazioni SELECT su **sys.sql_expression_dependencies**, oltre all'appartenenza al ruolo predefinito del server **dbcreator** . Possono registrare un'applicazione livello dati anche i membri del ruolo predefinito del server **sysadmin** o dell'account amministratore di sistema SQL Server predefinito denominato **sa** . La registrazione di un'applicazione livello dati che non contiene accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **dbmanager** o **serveradmin** . La registrazione di un'applicazione livello dati che contiene account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **loginmanager** o **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Utilizzo della procedura guidata Registra applicazione livello dati  
@@ -67,7 +67,7 @@ ms.locfileid: "62918133"
 ##  <a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la registrazione di un'applicazione livello dati.  
   
- **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
+ **Non visualizzare più questa pagina.** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
  **Avanti >** : consente di passare alla pagina **Imposta proprietà**.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62918133"
   
  **Nome applicazione** - Stringa che specifica il nome usato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
   
- **Versione** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel `msdb` del database e può essere visualizzata successivamente nel **Data-tier Applications** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versione** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel database di `msdb` e può essere visualizzata successivamente nel nodo **applicazioni livello dati** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Descrizione** - (Facoltativa). Testo che illustra lo scopo dell'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione viene archiviata nel `msdb` del database e può essere visualizzata successivamente nel **Data-tier Applications** nodo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descrizione** - (Facoltativa). Testo che illustra lo scopo dell'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione viene archiviata nel database di `msdb` e può essere visualizzata successivamente nel nodo **applicazioni livello dati** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Precedente** -verrà nuovamente visualizzato il **Introduzione** pagina.  
+ **\< indietro** : consente di tornare alla pagina **Introduzione** .  
   
  **Avanti >** : consente di verificare che sia possibile compilare un'applicazione livello dati dagli oggetti nel database e di visualizzare i risultati nella pagina **Convalida e riepilogo**.  
   
@@ -94,16 +94,16 @@ ms.locfileid: "62918133"
 ### <a name="retrieving-objects"></a>Recupero degli oggetti  
  **Recupero di oggetti database e server.** - Consente di visualizzare un indicatore di stato durante il recupero di tutti gli oggetti richiesti dal database e dall'istanza del Motore di database.  
   
- **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
+ **\< indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_ **.** _NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
+ **Controllo di**  _SchemaName_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_ **.** _NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
   
- **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
+ **\< indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62918133"
   
  **Salva report** consente di salvare una copia del report di convalida come file HTML. La cartella predefinita, **SQL Server Management Studio\DAC Packages** , si trova all'interno della cartella Documenti dell'account di Windows.  
   
- **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
+ **\< indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
@@ -143,10 +143,10 @@ ms.locfileid: "62918133"
 ### <a name="example-powershell"></a>Esempio (PowerShell)  
  Nell'esempio seguente viene registrato un database denominato MyDB come applicazione livello dati.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -164,5 +164,3 @@ $registerunit.Register()
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)  
-  
-  
