@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917915"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782666"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
   
-1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Per aggiornare un'applicazione livello dati:**  [Visualizzare il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizzare modifiche al database](#ViewDBChanges), [Visualizzare azioni di aggiornamento](#ViewUpgradeActions), [Confrontare le applicazioni livello dati](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisites  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="ViewDACContents"></a> Visualizza il contenuto di un'applicazione livello dati  
@@ -74,7 +74,7 @@ ms.locfileid: "62917915"
   
 4.  Per altre informazioni sull'uso della procedura guidata, vedere [Aggiornare un'applicazione livello dati](upgrade-a-data-tier-application.md).  
   
- **Visualizzare modifiche al database tramite PowerShell**  
+### <a name="view-database-changes-by-using-powershell"></a>Visualizzare modifiche al database tramite PowerShell
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da visualizzare.  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917915"
   
 4.  Utilizzare il metodo `GetDatabaseChanges()` per recuperare un oggetto `ChangeResults` e reindirizzare l'oggetto a un file di testo per generare un report semplice degli oggetti nuovi, eliminati e modificati.  
   
-### <a name="view-database-changes-example-powershell"></a>Visualizzare esempio di modifiche al database (PowerShell)  
- **Visualizzare esempio di modifiche al database (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>Visualizzare esempio di modifiche al database (PowerShell)
   
  Nell'esempio seguente vengono segnalate eventuali modifiche apportate al database in un'applicazione livello dati distribuita denominata MyApplicaiton.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Chiudere il flusso di file usato per leggere il file del pacchetto di applicazione livello dati.  
   
-### <a name="view-upgrade-actions-example-powershell"></a>Visualizzare esempio di azioni di aggiornamento (PowerShell)  
- **Visualizzare esempio di azioni di aggiornamento (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>Visualizzare esempio di azioni di aggiornamento (PowerShell)
   
  Nell'esempio seguente vengono segnalate le istruzioni Transact-SQL che sarebbero eseguite per l'aggiornamento di una'applicazione livello dati con nome MyApplicaiton allo schema definito in un file MyApplicationVNext.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -174,5 +172,3 @@ $fileStream.Close()
  [Applicazioni livello dati](data-tier-applications.md)   
  [Distribuire un'applicazione livello dati](deploy-a-data-tier-application.md)   
  [Aggiornare un'applicazione livello dati](upgrade-a-data-tier-application.md)  
-  
-  
