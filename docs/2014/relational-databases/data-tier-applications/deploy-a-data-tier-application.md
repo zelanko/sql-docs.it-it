@@ -22,24 +22,24 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918189"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783064"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
   È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati all'istanza esistente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando una procedura guidata o uno script di PowerShell. Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
   
--   **Prima di iniziare:**  [Utilità SQL Server&#41](#SQLUtility), [opzioni e impostazioni del Database](#DBOptSettings), [limitazioni e restrizioni](#LimitationsRestrictions), [prerequisiti](#Prerequisites), [sicurezza](#Security), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Utilità SQL Server](#SQLUtility), [Opzioni e impostazioni del database](#DBOptSettings), [Limitazioni e restrizioni](#LimitationsRestrictions), [Prerequisiti](#Prerequisites), [Sicurezza](#Security), [Autorizzazioni](#Permissions)  
   
--   **Per distribuire un'applicazione livello dati, utilizzando:**  [La distribuzione guidata di applicazione livello dati](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Per distribuire un'applicazione livello dati, usando:**  [procedura guidata Distribuisci applicazione livello dati](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Prima di iniziare  
  È possibile distribuire più volte lo stesso pacchetto di applicazione livello dati in una sola istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le distribuzioni devono, tuttavia, essere eseguite una alla volta. Il nome dell'istanza di applicazione livello dati specificato per ogni distribuzione deve essere univoco all'interno dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-###  <a name="SQLUtility"></a> Utilità SQL Server  
+###  <a name="SQLUtility"></a>Utilità SQL Server  
  Se si distribuisce un'applicazione livello dati in un'istanza gestita del Motore di database, il pacchetto di applicazione livello dati distribuito viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ###  <a name="DBOptSettings"></a> Opzioni e impostazioni del database  
@@ -54,16 +54,16 @@ ms.locfileid: "62918189"
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  È possibile distribuire un'applicazione livello dati a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che esegue [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Se si crea un'applicazione livello dati usando una versione successiva, è possibile che nell'applicazione in questione siano contenuti oggetti non supportati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Non è possibile distribuire tali applicazioni livello dati a istanze di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisites  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti possono contenere codice dannoso che potrebbe eseguire codice indesiderato Transact-SQL o causare errori modificando lo schema. Prima di usare un pacchetto proveniente da un'origine sconosciuta o non attendibile, decomprimerlo e controllare il codice, ad esempio le stored procedure o altro codice definito dall'utente. Per altre informazioni su come eseguire questi controlli, vedere [Validate a DAC Package](validate-a-dac-package.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un pacchetto di applicazione livello dati senza password. Quando il pacchetto viene distribuito o aggiornato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Un'applicazione livello dati può essere distribuita unicamente dai membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite gli account di accesso disponibili nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile distribuire un'applicazione livello dati usando l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . La distribuzione di un'applicazione livello dati con accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli loginmanager o serveradmin. Per la distribuzione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'appartenenza ai ruoli dbmanager o serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Tramite la distribuzione guidata di applicazione livello dati  
+##  <a name="UsingDeployDACWizard"></a>Utilizzo della procedura guidata Distribuisci applicazione livello dati  
  **Per distribuire un'applicazione livello dati tramite una procedura guidata**  
   
 1.  In **Esplora oggetti**espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
@@ -74,11 +74,11 @@ ms.locfileid: "62918189"
   
     -   [Pagina Introduzione](#Introduction)  
   
-    -   [Pagina Selezione pacchetto DAC](#Select_dac_package)  
+    -   [Pagina Seleziona pacchetto di applicazione livello dati](#Select_dac_package)  
   
     -   [Pagina Verifica criteri](#Review_policy)  
   
-    -   [Pagina Aggiorna configurazione](#Update_configuration)  
+    -   [Aggiorna pagina di configurazione](#Update_configuration)  
   
     -   [Pagina Riepilogo](#Summary)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "62918189"
 ##  <a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la distribuzione di un'applicazione livello dati.  
   
- **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
+ **Non visualizzare più questa pagina.** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
  **Avanti >** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati**.  
   
  **Annulla** consente di terminare la procedura guidata senza distribuire un'applicazione livello dati.  
   
-##  <a name="Select_dac_package"></a> Pagina Selezione pacchetto DAC  
+##  <a name="Select_dac_package"></a>Pagina Seleziona pacchetto di applicazione livello dati  
  Usare questa pagina per specificare il pacchetto di applicazione livello dati contenente l'applicazione livello dati da distribuire. La pagina passa attraverso tre stati.  
   
 ### <a name="select-the-dac-package"></a>Selezionare pacchetto di applicazione livello dati  
@@ -111,18 +111,18 @@ ms.locfileid: "62918189"
   
  **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
- **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
+ **Annulla**: consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
 ### <a name="validating-the-dac-package"></a>Convalida del pacchetto di applicazione livello dati  
  Viene visualizzato un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati. Se il pacchetto di applicazione livello dati viene convalidato, la procedura guidata continua con la versione finale della pagina **Seleziona pacchetto** in cui è possibile controllare il risultato della convalida. Se il file non è un pacchetto di applicazione livello dati valido, rimane visualizzata la pagina **Selezione pacchetto di applicazione livello dati**. Selezionare un altro pacchetto di applicazione livello dati valido o annullare la procedura guidata e generare un nuovo pacchetto di applicazione livello dati.  
   
  **Convalida del contenuto dell'applicazione livello dati**: indicatore di stato che segnala lo stato corrente del processo di convalida.  
   
- **\< Precedente** -torna allo stato iniziale del **Seleziona pacchetto** pagina.  
+ **\< indietro** : consente di tornare allo stato iniziale della pagina **Seleziona pacchetto** .  
   
  **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
- **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
+ **Annulla**: consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
 ##  <a name="Review_policy"></a> Pagina Verifica criteri  
  Usare questa pagina per controllare il risultato della valutazione degli eventuali criteri di selezione dei server dell'applicazione livello dati. I criteri di selezione dei server del pacchetto di applicazione livello dati sono facoltativi e sono assegnati al pacchetto di applicazione livello dati quando viene creato in Visual Studio. I facet dei criteri di selezione dei server vengono usati per specificare le condizioni che un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve soddisfare per ospitare il pacchetto DAC.  
@@ -133,13 +133,13 @@ ms.locfileid: "62918189"
   
  **Ignora le violazioni dei criteri** : usare questa casella di controllo per continuare la distribuzione se una o più delle condizioni dei criteri non sono soddisfatte. Selezionare questa opzione solo se si è sicuri che tutte le condizioni non soddisfatte non impediranno la distribuzione del pacchetto DAC.  
   
- **\< Precedente** -restituisce la **Seleziona pacchetto** pagina.  
+ **\< indietro** : consente di tornare alla pagina **Seleziona pacchetto** .  
   
  **Avanti >** : consente di passare alla pagina **Aggiorna configurazione**.  
   
- **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
+ **Annulla**: consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="Update_configuration"></a> Pagina Aggiorna configurazione  
+##  <a name="Update_configuration"></a>Aggiorna pagina di configurazione  
  Usare questa pagina per specificare i nomi dell'istanza di applicazione livello dati distribuita e del database creato dalla distribuzione e per impostare le opzioni del database.  
   
  **Nome database** : consente di specificare il nome del database da creare con la distribuzione. Il nome predefinito corrisponde al nome del database di origine da cui è stato estratto il pacchetto di applicazione livello dati. Il nome deve essere univoco all'interno dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ed essere conforme alle regole per gli identificatori del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -158,24 +158,24 @@ ms.locfileid: "62918189"
   
  **Percorso e nome file di log** : consente di specificare il percorso completo e il nome del file di log. La casella viene popolata con il percorso e il nome file predefiniti. Modificare la stringa nella casella per modificare l'impostazione predefinita oppure usare il pulsante **Sfoglia** per passare alla cartella in cui si desidera salvare il file di log.  
   
- **\< Precedente** -restituisce la **selezione pacchetto di applicazione livello dati** pagina.  
+ **\< indietro** : consente di tornare alla pagina **Seleziona pacchetto di applicazione livello dati** .  
   
  **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
- **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
+ **Annulla**: consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
  Usare questa pagina per controllare le azioni che verranno eseguite dalla procedura guidata durante la distribuzione del pacchetto di applicazione livello dati.  
   
  **Le impostazioni seguenti saranno usate per implementare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella finestra viene visualizzato il pacchetto di applicazione livello dati selezionato e il nome selezionato per l'istanza di applicazione livello dati distribuita. Nella finestra vengono inoltre visualizzate le impostazioni che verranno usate durante la creazione del database associato al pacchetto di applicazione livello dati.  
   
- **\< Precedente** -verrà nuovamente visualizzato il **Aggiorna configurazione** pagina per modificare le selezioni.  
+ **\< indietro** : consente di tornare alla pagina di **configurazione dell'aggiornamento** per modificare le selezioni effettuate.  
   
  **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Distribuisci DAC**.  
   
- **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
+ **Annulla**: consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="Deploy"></a> Pagina Distribuisci  
+##  <a name="Deploy"></a>Pagina Distribuisci  
  In questa pagina viene segnalato l'esito positivo o negativo dell'operazione di distribuzione.  
   
  **Distribuzione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per distribuire l'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
@@ -204,10 +204,10 @@ ms.locfileid: "62918189"
 ### <a name="example-powershell"></a>Esempio (PowerShell)  
  Nel seguente esempio viene distribuita un'applicazione livello dati denominata MyApplication su un'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando una definizione dell'applicazione livello dati in un pacchetto MyApplication.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -235,5 +235,3 @@ $fileStream.Close()
  [Applicazioni livello dati](data-tier-applications.md)   
  [Estrarre un'applicazione livello dati da un database](extract-a-dac-from-a-database.md)   
  [Identificatori del database](../databases/database-identifiers.md)  
-  
-  
