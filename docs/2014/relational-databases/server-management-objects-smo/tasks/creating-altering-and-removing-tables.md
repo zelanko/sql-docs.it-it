@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di tabelle | Documenti di Microsoft
+title: Creazione, modifica e rimozione di tabelle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb2c3a5163bdb5e69d67b0f8c27d2c77d21a7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63218249"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782388"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Creazione, modifica e rimozione di tabelle
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le tabelle sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table>. Nella gerarchia degli oggetti di SMO, l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table> si trova sotto l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Esempio  
- Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Creazione, modifica e rimozione di una tabella in Visual Basic  
  In questo esempio di codice viene creata una tabella che dispone di diverse colonne con tipi e scopi diversi. Nel codice vengono inoltre forniti esempi di come creare un campo di identità e una chiave primaria e di come modificare le proprietà delle tabelle.  
@@ -35,7 +35,7 @@ ms.locfileid: "63218249"
 ## <a name="creating-altering-and-removing-a-table-in-visual-c"></a>Creazione, modifica e rimozione di una tabella in Visual C#  
  In questo esempio di codice viene creata una tabella che dispone di diverse colonne con tipi e scopi diversi. Nel codice vengono inoltre forniti esempi di come creare un campo di identità e una chiave primaria e di come modificare le proprietà delle tabelle.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
         Server srv;   
@@ -82,7 +82,7 @@ ms.locfileid: "63218249"
 ## <a name="creating-altering-and-removing-a-table-in-powershell"></a>Creazione, modifica e rimozione di una tabella in PowerShell  
  In questo esempio di codice viene creata una tabella che dispone di diverse colonne con tipi e scopi diversi. Nel codice vengono inoltre forniti esempi di come creare un campo di identità e una chiave primaria e di come modificare le proprietà delle tabelle.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.Types")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63218249"
 CD \sql\localhost\default\Databases\  
   
 #And the database object corresponding to AdventureWorks2012.  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 #Create a SMO Table  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "Test_Table"  
@@ -107,16 +107,16 @@ $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumen
 $col2.Identity = $true  
 $col2.IdentitySeed = 1  
 $col2.IdentityIncrement = 1  
-$tb.Columns.Add($col2)   
+$tb.Columns.Add($col2)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Real  
 $col3 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Value", $Type  
-$tb.Columns.Add($col3)   
+$tb.Columns.Add($col3)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col4 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $col4.Nullable = $false  
-$tb.Columns.Add($col4)   
+$tb.Columns.Add($col4)
   
 #Create the table  
 $tb.Create()  
@@ -124,17 +124,14 @@ $tb.Create()
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col5 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"ExpiryDate", $Type  
 $col5.Nullable = $false  
-$tb.Columns.Add($col5)   
+$tb.Columns.Add($col5)
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $tb.Alter()  
   
-#Remove the table from the database.   
+#Remove the table from the database.
 $tb.Drop()  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.SqlServer.Management.Smo.Table>  
-  
-  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>

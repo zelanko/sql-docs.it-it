@@ -12,12 +12,12 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101036"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783247"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modificare l'estensione per il recapito predefinita di Reporting Services
   È possibile modificare le impostazioni di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per modificare l'estensione per il recapito predefinita visualizzata nell'elenco **Recapito** di una pagina di definizione della sottoscrizione. Ad esempio, è possibile modificare la configurazione in modo che, quando viene creata una nuova sottoscrizione, il recapito della condivisione file venga selezionato per impostazione predefinita al posto del recapito tramite posta elettronica. È inoltre possibile modificare l'ordine con cui sono elencate le estensioni per il recapito nell'interfaccia utente.  
@@ -29,11 +29,11 @@ ms.locfileid: "66101036"
 ## <a name="default-native-mode-report-server-configuration"></a>Configurazione dei server di report con modalità nativa predefinita  
  L'ordine con cui un'estensione per il recapito viene visualizzata nell'elenco **Recapito** di Gestione report dipende dall'ordine delle voci dell'estensione presenti nel file **RSReportServer.config** . Ad esempio, nell'immagine seguente Posta elettronica è visualizzato per primo ed è selezionato per impostazione predefinita.  
   
- ![Elenco predefinito di estensioni per il recapito](../media/ssrs-default-delivery.png "Elenco predefinito di estensioni per il recapito")  
+ ![elenco predefinito di estensioni per il recapito](../media/ssrs-default-delivery.png "elenco predefinito di estensioni per il recapito")  
   
  Di seguito è riportata la sezione predefinita **RSReportServer.config** che controlla l'estensione per il recapito predefinita e l'ordine di visualizzazione in Gestione Report. Si noti che Posta elettronica viene visualizzato per primo nel file ed è impostato come predefinito.  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -53,7 +53,7 @@ ms.locfileid: "66101036"
   
      Aprire il file RSReportServer.config in un editor di testo. Per altre informazioni sul file di configurazione, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Dopo la modifica della configurazione, l'interfaccia utente sarà simile all'immagine seguente:  
   
-     ![Elenco modificato di estensioni per il recapito](../media/ssrs-modified-delivery.png "Elenco modificato di estensioni per il recapito")  
+     ![elenco modificato di estensioni per il recapito](../media/ssrs-modified-delivery.png "elenco modificato di estensioni per il recapito")  
   
 2.  Modificare la sezione DeliveryUI in modo che somigli all'esempio seguente e prendere nota delle principali modifiche:  
   
@@ -85,9 +85,9 @@ ms.locfileid: "66101036"
   
      Il seguente evento viene scritto nel registro eventi di Windows durante la lettura della configurazione.  
   
-     **ID evento:** 109  
+     **Event ID:** 109  
   
-     **Origine:** Servizio Windows ReportServer (nome istanza)  
+     **Origine:** servizio del server di report di Windows (nome istanza)  
   
      Il file RSReportServer.config è stato modificato  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101036"
   
 2.  È possibile ignorare questo passaggio se si conosce già il nome dell'applicazione del servizio di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Usare le seguenti funzioni PowerShell per elencare le applicazioni del servizio di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nella farm di SharePoint.  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  Eseguire la funzione PowerShell seguente per verificare l'estensione per il recapito predefinita corrente per l'applicazione di servizio "ssrsapp" di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-    ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
-  
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ @No__t_1 [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ @No__t_1 [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
  [Recapito tramite condivisione file in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [Configurare un server di report per il &#40;recapito tramite posta elettronica Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
