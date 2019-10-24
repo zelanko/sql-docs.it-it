@@ -10289,14 +10289,18 @@
   items:
     - name: Panoramica
       items:
+        - name: Novità
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-whats-new-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-whats-new.md
         - name: Note sulla versione
           items:
-            - name: SQL Server 2017
-              href: linux/sql-server-linux-release-notes.md
             - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
-        - name: Novità
-          href: linux/sql-server-linux-whats-new.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-release-notes.md
         - name: Edizioni e funzionalità supportate
           href: linux/sql-server-linux-editions-and-components-2017.md
         - name: DOMANDE FREQUENTI
