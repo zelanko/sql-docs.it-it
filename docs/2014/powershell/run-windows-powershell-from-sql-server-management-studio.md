@@ -10,25 +10,24 @@ ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07f2e39421bdeb777af1e31fe414ec1fe2890c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6d71f1158ef73b84e5b04dcc9a1970bfd7dce35
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762432"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783099"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Esecuzione di Windows PowerShell da SQL Server Management Studio
-  È possibile avviare sessioni di Windows PowerShell da **Esplora oggetti** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Avvia Windows PowerShell, carica il `sqlps` modulo e imposta il contesto del percorso per il nodo associato nel **Esplora oggetti** struttura ad albero.  
+  È possibile avviare sessioni di Windows PowerShell da **Esplora oggetti** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] avvia Windows PowerShell, carica il modulo di `sqlps` e imposta il contesto del percorso sul nodo associato nell'albero di **Esplora oggetti** .  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Quando si specifica l'esecuzione di PowerShell per un oggetto in **Esplora oggetti**, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inizia una sessione di Windows PowerShell in cui sono stati caricati e registrati gli snap-in PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il percorso della sessione è preimpostato sulla posizione dell'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. Ad esempio, facendo clic con il pulsante destro del mouse sull'oggetto del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] in Esplora oggetti e selezionando **Avvia PowerShell**, il percorso di PowerShell viene impostato come segue:  
   
-```  
+```
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
 ```  
   
-## <a name="run-powershell"></a>Esecuzione di PowerShell  
- **Per eseguire PowerShell da SQL Server Management Studio**  
+## <a name="to-run-powershell-from-sql-server-management-studio"></a>Per eseguire PowerShell da SQL Server Management Studio 
   
 1.  Aprire **Esplora oggetti**.  
   
@@ -41,5 +40,3 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

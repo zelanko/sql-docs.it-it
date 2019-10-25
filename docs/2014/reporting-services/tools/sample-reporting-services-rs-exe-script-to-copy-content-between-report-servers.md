@@ -10,12 +10,12 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f8ccf455e9b20c4b8dffc4cc433ce68319a8251
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: fa0bfb3087710243c7506aee57af429a10068a66
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176154"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783282"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report
   Questo argomento presenta e descrive uno script RSS di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] di esempio tramite cui vengono copiati elementi di contenuto e impostazioni da un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a un altro server di report, tramite l'utilità **RS.exe** . RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], sia in modalità nativa che in modalità SharePoint. Lo script copia gli elementi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , ad esempio report e sottoscrizioni, da un server a un altro. Lo script supporta server di report in modalità nativa e in modalità SharePoint.  
@@ -76,7 +76,7 @@ ms.locfileid: "70176154"
   
 -   **AL** Server C  
   
-|Nome del server|Modalità server di report|  
+|Nome server|Modalità server di report|  
 |-----------------|------------------------|  
 |Server A|Nativo|  
 |Server B|SharePoint|  
@@ -87,26 +87,26 @@ ms.locfileid: "70176154"
 ###  <a name="bkmk_what_is_migrated"></a> Elementi e risorse di cui lo script esegue la migrazione  
  Lo script non sovrascrive elementi di contenuto esistenti con lo stesso nome.  Se lo script rileva nel server di destinazione elementi presenti nel server di origine con lo stesso nome, viene visualizzato un messaggio di errore per i singoli elementi e lo script continua. Nella tabella seguente sono elencati i tipi di contenuto e risorse di cui lo script può eseguire la migrazione nelle modalità del server di report di destinazione.  
   
-|Elemento|Migrato|SharePoint|Descrizione|  
+|Elemento|Migrato|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Password|**No**|**No**|**NON** viene eseguita la migrazione delle password. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione. Ad esempio, origini dati con credenziali archiviate.|  
-|Report personali|**No**|**No**|La funzionalità "Report personali" in modalità nativa è basata su singoli account di accesso utente, pertanto il servizio di scripting non ha accesso al contenuto di "Report personali" per utenti diversi dal parametro **–u** usato per eseguire lo script RSS. Inoltre, "report personali" non è una funzionalità della [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modalità SharePoint e gli elementi nelle cartelle non possono essere copiati in un ambiente SharePoint. Pertanto, lo script non copia gli elementi del report presenti nelle cartelle "Report personali" in un server di report in modalità nativa di origine. Per eseguire la migrazione del contenuto nelle cartelle "Report personali" con questo script, completare le operazioni seguenti:<br /><br /> 1) creare nuove cartelle nel Gestione report. Se lo si desidera, è possibile creare cartelle o sottocartelle per ogni utente.<br /><br /> 2) accedere come uno degli utenti con contenuto "Report personali".<br /><br /> 3) in Gestione report fare clic sulla cartella **report personali** .<br /><br /> 4) fare clic sulla visualizzazione **Dettagli** per la cartella.<br /><br /> 5) selezionare ogni report che si desidera copiare.<br /><br /> 6) fare clic su **Sposta** nella barra degli strumenti Gestione report.<br /><br /> 7) selezionare la cartella di destinazione desiderata.<br /><br /> 8) Ripetere i passaggi 2-7 per ogni utente.<br /><br /> 9) eseguire lo script.|  
+|Report personali|**No**|**No**|La funzionalità "Report personali" in modalità nativa è basata su singoli account di accesso utente, pertanto il servizio di scripting non ha accesso al contenuto di "Report personali" per utenti diversi dal parametro **–u** usato per eseguire lo script RSS. Inoltre, "Report personali" non è una funzionalità di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modalità SharePoint e gli elementi nelle cartelle non possono essere copiati in un ambiente SharePoint. Pertanto, lo script non copia gli elementi del report presenti nelle cartelle "Report personali" in un server di report in modalità nativa di origine. Per eseguire la migrazione del contenuto nelle cartelle "Report personali" con questo script, completare le operazioni seguenti:<br /><br /> 1) creare nuove cartelle nel Gestione report. Se lo si desidera, è possibile creare cartelle o sottocartelle per ogni utente.<br /><br /> 2) accedere come uno degli utenti con contenuto "Report personali".<br /><br /> 3) in Gestione report fare clic sulla cartella **report personali** .<br /><br /> 4) fare clic sulla visualizzazione **Dettagli** per la cartella.<br /><br /> 5) selezionare ogni report che si desidera copiare.<br /><br /> 6) fare clic su **Sposta** nella barra degli strumenti Gestione report.<br /><br /> 7) selezionare la cartella di destinazione desiderata.<br /><br /> 8) Ripetere i passaggi 2-7 per ogni utente.<br /><br /> 9) eseguire lo script.|  
 |Cronologia|**No**|**No**||  
-|Impostazioni di cronologia|Yes|Yes|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
-|Pianificazioni|sì|sì|Per eseguire la migrazione delle pianificazioni, è necessario che SQL Server Agent sia in esecuzione nel server di destinazione. Se SQL Server Agent non è in esecuzione nel server di destinazione, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|Ruoli e criteri di sistema|Yes|Yes|Per impostazione predefinita lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. Il comportamento predefinito è che gli elementi verranno copiatiti nel server di destinazione con il flag "Inherit Parent Permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio dalla modalità nativa alla modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'argomento [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)che segue. I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità**e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. i ruoli di migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
-|Origine dati condivisa|Yes|Yes|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Le credenziali **NON** sono copiate come parte dell'origine dati. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione.|  
-|Set di dati condiviso|Yes|Yes||  
-|Cartella|Yes|Yes|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
-|Report|Yes|Yes|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
-|Parametri|Yes|Yes||  
-|Sottoscrizioni|Yes|Yes||  
-|Impostazioni di cronologia|Yes|Yes|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
-|opzioni di elaborazione|Yes|Yes||  
-|opzioni di aggiornamento della cache|Yes|Yes|Le impostazioni dipendenti vengono migrate come parte di un elemento del catalogo. Di seguito è riportato un esempio dello script relativo alla migrazione di un report (con estensione rdl) e delle impostazioni correlate, ad esempio le opzioni di aggiornamento della cache:<br /><br /> Migrazione di parametri per il report TitleOnly.rdl: 0 elementi trovati.<br /><br /> Migrazione di sottoscrizioni per il report TitleOnly. rdl: 1 elemento trovato.<br /><br /> Migrazione della sottoscrizione Salva \\in \server\public\savedreports come TitleOnly... SUCCESS<br /><br /> Migrazione delle impostazioni di cronologia per il report TitleOnly. rdl... SUCCESS<br /><br /> Migrazione delle opzioni di elaborazione per il report TitleOnly. rdl... 0 elementi trovati.<br /><br /> Migrazione delle opzioni di aggiornamento della cache per il report TitleOnly. rdl... SUCCESS<br /><br /> Migrazione dei piani di aggiornamento della cache per il report TitleOnly. rdl: 1 elemento trovato.<br /><br /> Migrazione del piano di aggiornamento della cache titleonly_refresh735amM2F... SUCCESS|  
-|Piani di aggiornamento della cache|Yes|Yes||  
-|Immagini|Yes|Yes||  
-|Parti del report|Yes|Yes||  
+|Impostazioni di cronologia|sì|sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
+|Schedules|Sì|Sì|Per eseguire la migrazione delle pianificazioni, è necessario che SQL Server Agent sia in esecuzione nel server di destinazione. Se SQL Server Agent non è in esecuzione nel server di destinazione, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
+|Ruoli e criteri di sistema|sì|sì|Per impostazione predefinita lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. Il comportamento predefinito è che gli elementi verranno copiatiti nel server di destinazione con il flag "Inherit Parent Permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio dalla modalità nativa alla modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'argomento [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)che segue. I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità**e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. Ruoli di cui si esegue la migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
+|Origine dati condivisa|sì|sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Le credenziali **NON** sono copiate come parte dell'origine dati. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione.|  
+|Set di dati condiviso|sì|sì||  
+|Folder|sì|sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
+|Report|sì|sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
+|Parametri|sì|sì||  
+|Sottoscrizioni|sì|sì||  
+|Impostazioni di cronologia|sì|sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
+|opzioni di elaborazione|sì|sì||  
+|opzioni di aggiornamento della cache|sì|sì|Le impostazioni dipendenti vengono migrate come parte di un elemento del catalogo. Di seguito è riportato un esempio dello script relativo alla migrazione di un report (con estensione rdl) e delle impostazioni correlate, ad esempio le opzioni di aggiornamento della cache:<br /><br /> Migrazione di parametri per il report TitleOnly.rdl: 0 elementi trovati.<br /><br /> Migrazione di sottoscrizioni per il report TitleOnly.rdl: 1 elemento trovato.<br /><br /> Migrazione della sottoscrizione Salva in \\\server\public\savedreports come TitleOnly... SUCCESSO<br /><br /> Migrazione delle impostazioni di cronologia per il report TitleOnly. rdl... SUCCESSO<br /><br /> Migrazione delle opzioni di elaborazione per il report TitleOnly. rdl... 0 elementi trovati.<br /><br /> Migrazione delle opzioni di aggiornamento della cache per il report TitleOnly. rdl... SUCCESSO<br /><br /> Migrazione dei piani di aggiornamento della cache per il report TitleOnly.rdl: 1 elemento trovato.<br /><br /> Migrazione del piano di aggiornamento della cache titleonly_refresh735amM2F... SUCCESSO|  
+|Piani di aggiornamento della cache|sì|sì||  
+|Immagini|sì|sì||  
+|Parti del report|sì|sì||  
   
 ##  <a name="bkmk_required_permissions"></a> Autorizzazioni necessarie  
  Le autorizzazioni necessarie per leggere o scrivere elementi e risorse non sono le stesse per tutti i metodi utilizzati nello script. Nella tabella seguente sono riepilogati i metodi usati per ogni elemento o risorsa e vengono forniti collegamenti al contenuto correlato. Passare all'argomento specifico per visualizzare le autorizzazioni necessarie. Ad esempio nell'argomento del metodo ListChildren sono indicate le autorizzazioni necessarie:  
@@ -115,7 +115,7 @@ ms.locfileid: "70176154"
   
 -   **Autorizzazioni necessarie per la modalità SharePoint:** ViewListItems  
   
-|Elemento o risorsa|Source|Destinazione|  
+|Elemento o risorsa|Origine|Destinazione|  
 |----------------------|------------|------------|  
 |Elementi del catalogo|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
@@ -145,7 +145,9 @@ ms.locfileid: "70176154"
   
  Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ ```cmd
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"
+```
   
  **Note sull'utilizzo:**  
   
@@ -240,9 +242,9 @@ ms.locfileid: "70176154"
   
 ##  <a name="bkmk_parameter_description"></a> Descrizione dei parametri  
   
-|Parametro|DESCRIZIONE|Obbligatoria|  
+|Parametro|Description|Required|  
 |---------------|-----------------|--------------|  
-|**-s** Source_URL|URL del server di report di origine|Yes|  
+|**-s** Source_URL|URL del server di report di origine|sì|  
 |**-u** dominio\password **-p** password|Credenziali per il server di origine.|FACOLTATIVO, se non viene impostato vengono utilizzate le credenziali predefinite|  
 |**-v st**="SITE"||FACOLTATIVO Questo parametro viene utilizzato solo per i server di report in modalità SharePoint.|  
 |**- v f**="SOURCEFOLDER"|Impostato su "/" per eseguire la migrazione di tutti gli elementi o su un valore come "/cartella/sottocartella" per una migrazione parziale. Vengono copiati tutti gli elementi in questa cartella|FACOLTATIVO, l'impostazione predefinita è "/".|  
@@ -257,13 +259,13 @@ ms.locfileid: "70176154"
 ###  <a name="bkmk_native_2_native"></a> Da server di report in modalità nativa a server di report in modalità nativa  
  Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
 ```  
   
  Nell'esempio seguente viene aggiunta l'opzione di sicurezza:  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
@@ -272,14 +274,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
  ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> Da modalità nativa a modalità SharePoint - raccolta siti "bi"  
  Nell'esempio seguente viene eseguita la migrazione del contenuto da un server in modalità nativa a un server SharePoint contenente una raccolta siti "sites/bi" e una raccolta di documenti condivisi. Lo script crea cartelle nella raccolta di documenti di destinazione. Ad esempio, lo script crea cartelle "Reports" e "Data Sources" nella raccolta documenti di destinazione.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
@@ -290,7 +292,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   A un server **TargetServer** SharePoint contenente una raccolta siti "sites/bi" e una raccolta di documenti condivisi.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
@@ -299,30 +301,30 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   Da un server di report **SourceServer**in modalità nativa.  
   
--   In un server di report in modalità nativa di **TargetServer** in esecuzione in una macchina virtuale di Azure. Il **TargetServer** non è aggiunto al dominio di **sourceServer** e **User2** è un amministratore della macchina virtuale di Azure **TargetServer**.  
+-   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Azure. Il **TargetServer** non è aggiunto al dominio di **sourceServer** e **User2** è un amministratore della macchina virtuale di Azure **TargetServer**.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
->  Per informazioni su come usare Windows PowerShell per creare [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] server di report in macchine virtuali di Azure, vedere [usare PowerShell per creare una macchina virtuale di Azure con un server di report in modalità nativa](https://msdn.microsoft.com/library/dn449661.aspx).  
+>  Per informazioni su come usare Windows PowerShell per creare server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nelle macchine virtuali Azure, vedere [Usare PowerShell per creare una macchina virtuale di Azure con un server di report in modalità nativa](https://msdn.microsoft.com/library/dn449661.aspx).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a>Modalità SharePoint-raccolta siti "bi" in un server in modalità nativa in una macchina virtuale di Azure  
  Nell'esempio seguente viene eseguita la migrazione del contenuto:  
   
 -   Da un server di report **SourceServer** in modalità SharePoint contenente una raccolta siti "sites/bi" e una raccolta di documenti condivisi.  
   
--   In un server di report in modalità nativa di **TargetServer** in esecuzione in una macchina virtuale di Azure. Il **TargetServer** non è aggiunto al dominio di **sourceServer** e **User2** è un amministratore della macchina virtuale di Azure **TargetServer**.  
+-   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Azure. Il **TargetServer** non è aggiunto al dominio di **sourceServer** e **User2** è un amministratore della macchina virtuale di Azure **TargetServer**.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
 ##  <a name="bkmk_verification"></a> Verifica  
  Nella sezione sono riepilogati alcuni passaggi da eseguire nel server di destinazione per verificare la corretta migrazione di contenuto e criteri.  
   
-### <a name="schedules"></a>Pianificazioni  
+### <a name="schedules"></a>Schedules  
  Per verificare le pianificazioni nel server di destinazione:  
   
  **Modalità nativa**  
@@ -355,10 +357,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  Eseguire di nuovo lo script con il flag **-t** per visualizzare un messaggio simile al seguente:  
   
--   System.Exception: Non è stato possibile connettersi al server\<: http://ServerName >/ReportServer/ReportService2010.asmx---> System .NET. WebException: **La richiesta non è riuscita con stato HTTP 401: Non autorizzato**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage messaggio risposta WebResponse, Stream responseStream, Boolean asyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password Il dominio di stringa, Int32 timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fine dell'analisi dello stack dell'eccezione interna--  
+-   System.Exception: Impossibile connettersi al server: http://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Fine della traccia dello stack dell'eccezione interna ---  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
-  
-  
