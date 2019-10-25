@@ -13,12 +13,12 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62680256"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798271"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   In questo argomento si descrive come creare e definire un passaggio del processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui viene eseguito uno script ActiveX mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
@@ -27,7 +27,7 @@ ms.locfileid: "62680256"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un passaggio di processo Transact-SQL utilizzando:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62680256"
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -77,9 +77,8 @@ ms.locfileid: "62680256"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
-  
-              -- create an ActiveX Script job step written in VBScript that creates a restore point  
+    ```sql
+    -- create an ActiveX Script job step written in VBScript that creates a restore point  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -99,11 +98,9 @@ ms.locfileid: "62680256"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per creare un passaggio di processo Script ActiveX**  
   
  Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  
-  
-  

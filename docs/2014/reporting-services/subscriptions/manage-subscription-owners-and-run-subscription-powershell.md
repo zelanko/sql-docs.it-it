@@ -1,5 +1,5 @@
 ---
-title: Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione | Microsoft Docs
+title: Usare PowerShell per modificare ed elencare i proprietari delle sottoscrizioni Reporting Services ed eseguire una sottoscrizione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d83ee924a1df8db92b74be5a3282bd7b4d16cf11
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: ebb20180e96302ba2ee90e9ab90cb79be19b7e1b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500054"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796382"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione
   A partire da [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è possibile trasferire a livello di programmazione la proprietà di una sottoscrizione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -30,17 +30,17 @@ ms.locfileid: "67500054"
   
 -   [Come usare gli script](#bkmk_how_to)  
   
--   [Script: Elencare la proprietà di tutte le sottoscrizioni](#bkmk_list_ownership_all)  
+-   [Script: elencare la proprietà di tutte le sottoscrizioni](#bkmk_list_ownership_all)  
   
--   [Script: Elencare tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_list_all_one_user)  
+-   [Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico](#bkmk_list_all_one_user)  
   
--   [Script: Modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_change_all)  
+-   [Script: modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_change_all)  
   
--   [Script: Elencare tutte le sottoscrizioni associate a un report specifico](#bkmk_list_for_1_report)  
+-   [Script: elencare tutte le sottoscrizioni associate a un report specifico](#bkmk_list_for_1_report)  
   
--   [Script: Modificare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
+-   [Script: cambiare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
   
--   [Script: Eseguire (attivare) una singola sottoscrizione](#bkmk_run_1_subscription)  
+-   [Script: eseguire (attivare) una singola sottoscrizione](#bkmk_run_1_subscription)  
   
 ##  <a name="bkmk_how_to"></a> Come usare gli script  
   
@@ -57,23 +57,23 @@ ms.locfileid: "67500054"
   
  **Modalità nativa:**  
   
--   List Subscriptions: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription sul report e l'utente è proprietario della sottoscrizione) o ReadAnySubscription  
+-   Elencare le sottoscrizioni: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription nel report e l'utente è il proprietario della sottoscrizione) o ReadAnySubscription  
   
--   Modifica sottoscrizioni: L'utente deve essere un membro del gruppo BUILTIN\Administrators.  
+-   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
--   Elenco figli: ReadProperties sull'elemento  
+-   List Children: ReadProperties on Item  
   
--   Evento di attivazione: GenerateEvents (sistema)  
+-   Fire Event: GenerateEvents (System)  
   
  **Modalità SharePoint:**  
   
--   List Subscriptions: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts sul report e l'utente è proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione pianificata).  
+-   Elencare le sottoscrizioni: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts nel report e l'utente è il proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione temporizzata).  
   
--   Modifica sottoscrizioni: ManageWeb  
+-   Change Subscriptions: ManageWeb  
   
--   Elenco figli: ViewListItems  
+-   List Children: ViewListItems  
   
--   Evento di attivazione: ManageWeb  
+-   Fire Event: ManageWeb  
   
  Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
@@ -98,24 +98,24 @@ ms.locfileid: "67500054"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Script: Elencare la proprietà di tutte le sottoscrizioni  
+##  <a name="bkmk_list_ownership_all"></a> Script: elencare la proprietà di tutte le sottoscrizioni  
  Questo script permette di elencare tutte le sottoscrizioni in un sito. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile anche per la semplice verifica delle sottoscrizioni esistenti e dei relativi proprietari.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script
   
-```  
+```powershell
 # Parameters  
 #    server   - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
   
@@ -135,24 +135,24 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: Elencare tutte le sottoscrizioni appartenenti a un utente specifico  
+##  <a name="bkmk_list_all_one_user"></a> Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico  
  Questo script permette di elencare tutte le sottoscrizioni di proprietà di un utente specifico. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile se un utente abbandona l'organizzazione e si vuole verificare le sottoscrizioni appartenenti a tale utente, in modo da potere modificare il proprietario o eliminare la sottoscrizione.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[server]/reportserver" "/"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script  
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    server        - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -172,24 +172,24 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script: Modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico  
+##  <a name="bkmk_change_all"></a> Script: modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico  
  Questo script permette di cambiare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico, impostando il parametro relativo al nuovo proprietario.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current owner]" "[Domain]\[new owner]" "[server]/reportserver"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
@@ -242,24 +242,24 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script: Elencare tutte le sottoscrizioni associate a un report specifico  
+##  <a name="bkmk_list_for_1_report"></a> Script: elencare tutte le sottoscrizioni associate a un report specifico  
  Questo script permette di elencare tutte le sottoscrizioni associate a un report specifico. La sintassi del percorso del report è diversa in modalità SharePoint, che necessita di un URL completo. Nell'esempio di sintassi il nome usato per il report è "title only", che include uno spazio e quindi deve essere racchiuso da virgolette semplici.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportserver" "'/reports/title only'" "/"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script
   
-```  
+```powershell
 # Parameters:  
 #    server      - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    reportpath  - path to report in the report server, including report name e.g. /reports/test report >> pass in  "'/reports/title only'"  
@@ -280,24 +280,24 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Script: Modificare la proprietà di una sottoscrizione specifica  
+##  <a name="bkmk_change_all_1_subscription"></a> Script: cambiare la proprietà di una sottoscrizione specifica  
  Questo script permette di cambiare la proprietà di una sottoscrizione specifica. La sottoscrizione è identificata dal valore SubscriptionID passato nello script. È possibile usare uno degli script per elencare le sottoscrizioni per determinare il valore SubscriptionID corretto.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/reportserver" "/" "ac5637a1-9982-4d89-9d69-a72a9c3b3150"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script
   
-```  
+```powershell
 # Parameters:  
 #    newOwner       - DOMAIN\USER that will own the subscriptions you wish to change  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Script: Eseguire (attivare) una singola sottoscrizione  
+##  <a name="bkmk_run_1_subscription"></a> Script: eseguire (attivare) una singola sottoscrizione  
  Questo script eseguirà una sottoscrizione specifica usando il metodo FireEvent. Lo script eseguirà immediatamente la sottoscrizione, indipendentemente dalla pianificazione configurata per la sottoscrizione. EventType è verificato rispetto al set noto degli eventi definiti nel file di configurazione del server di report **rsreportserver.config** . Lo script usa il tipo di evento seguente per le sottoscrizioni standard:  
   
  `<Event>`  
@@ -339,22 +339,21 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  Lo script include logica di ritardo di tipo "`Start-Sleep -s 6`". Dopo l'attivazione dell'evento è quindi disponibile tempo per rendere disponibile lo stato aggiornato con il metodo ListSubscription.  
   
- **Sintassi in modalità nativa:**  
+### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e82-2d3c-4edd-a216-b97e51e26de9"  
 ```  
   
- **Sintassi in modalità SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Sintassi della modalità SharePoint
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
- **Script:**  
+### <a name="script"></a>Script
   
-```  
-  
+```powershell
 # Parameters  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    site           - use $null for a native mode server  
@@ -375,8 +374,7 @@ Write-Host "----- Subscription ($subscriptionid) status: "
 #get list of subscriptions and filter to the specific ID to see the Status and LastExecuted  
 Start-Sleep -s 6 # slight delay in processing so ListSubscription returns the updated Status and LastExecuted  
 $subscriptions = $rs2010.ListSubscriptions($site);   
-$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}  
-  
+$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -384,5 +382,3 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
  <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>   
  <xref:ReportService2010.ReportingService2010.ListChildren%2A>   
  <xref:ReportService2010.ReportingService2010.FireEvent%2A>  
-  
-  

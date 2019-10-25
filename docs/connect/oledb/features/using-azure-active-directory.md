@@ -1,7 +1,7 @@
 ---
 title: Uso di Azure Active Directory | Microsoft Docs per SQL Server
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68213558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381847"
 ---
 # <a name="using-azure-active-directory"></a>Uso di Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,18 +29,17 @@ A partire dalla versione 18.2.1, il driver Microsoft OLE DB per SQL Server conse
 - Autenticazione integrata di Azure Active Directory
 - ID e password di accesso SQL
 
-> [!NOTE]  
-> Quando si utilizzano le seguenti opzioni di Azure Active Directory con il driver OLE DB, verificare che sia stato installato il [Active Directory Authentication Library per SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) :
-> - ID di accesso e password Azure Active Directory
-> - Autenticazione integrata di Azure Active Directory
->
-> ADAL non è necessario per gli altri metodi di autenticazione o OLE DB operazioni.
+La versione 18,3 aggiunge il supporto per i metodi di autenticazione seguenti:
+- Autenticazione interattiva di Azure Active Directory
+- Autenticazione MSI di Azure Active Directory
 
 > [!NOTE]
-> L'utilizzo delle modalità di autenticazione `DataTypeCompatibility` seguenti con (o la proprietà corrispondente) `80` impostata su **non** è supportato:
+> L'utilizzo delle modalità di autenticazione seguenti con `DataTypeCompatibility` (o la proprietà corrispondente) impostata su `80` **non** è supportato:
 > - Autenticazione Azure Active Directory tramite ID e password di accesso
 > - Autenticazione Azure Active Directory usando il token di accesso
 > - Autenticazione integrata di Azure Active Directory
+> - Autenticazione interattiva di Azure Active Directory
+> - Autenticazione MSI di Azure Active Directory
 
 ## <a name="connection-string-keywords-and-properties"></a>Parole chiave e proprietà della stringa di connessione
 Per supportare l'autenticazione Azure Active Directory sono state introdotte le seguenti parole chiave della stringa di connessione:
@@ -54,20 +53,20 @@ Per ulteriori informazioni sulle nuove parole chiave/proprietà, vedere le pagin
 - [Utilizzo delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Proprietà di inizializzazione e di autorizzazione](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
-## <a name="encryption-and-certificate-validation"></a>Crittografia e convalida del certificato
+## <a name="encryption-and-certificate-validation"></a>Crittografia e convalida di certificati
 In questa sezione vengono descritte le modifiche apportate al comportamento di crittografia e convalida dei certificati. Queste modifiche sono effettive **solo** quando si usano le parole chiave della stringa di connessione del nuovo token di autenticazione o di accesso (o le proprietà corrispondenti).
 
 ### <a name="encryption"></a>Crittografia
-Per migliorare la sicurezza, quando vengono utilizzate le nuove proprietà/parole chiave di connessione, il driver sostituisce il valore di crittografia predefinito `yes`impostandola su. L'override si verifica al momento dell'inizializzazione dell'oggetto origine dati. Se la crittografia viene impostata prima dell'inizializzazione con qualsiasi mezzo, il valore viene rispettato e non viene sottoposto a override.
+Per migliorare la sicurezza, quando vengono utilizzate le nuove proprietà/parole chiave di connessione, il driver sostituisce il valore di crittografia predefinito impostandolo su `yes`. L'override si verifica al momento dell'inizializzazione dell'oggetto origine dati. Se la crittografia viene impostata prima dell'inizializzazione con qualsiasi mezzo, il valore viene rispettato e non viene sottoposto a override.
 
 > [!NOTE]   
-> Nelle applicazioni ADO e nelle applicazioni che ottengono l' `IDBInitialize` interfaccia tramite `IDataInitialize::GetDataSource`, il componente di `no`base che implementa l'interfaccia imposta in modo esplicito la crittografia sul valore predefinito. Di conseguenza, le nuove proprietà/parole chiave di autenticazione rispettano questa impostazione e il valore di crittografia **non** viene sottoposto a override. Pertanto, è **consigliabile** impostare `Use Encryption for Data=true` in modo esplicito queste applicazioni per eseguire l'override del valore predefinito.
+> Nelle applicazioni ADO e nelle applicazioni che ottengono l'interfaccia `IDBInitialize` tramite `IDataInitialize::GetDataSource`, il componente di base che implementa l'interfaccia imposta in modo esplicito la crittografia sul valore predefinito di `no`. Di conseguenza, le nuove proprietà/parole chiave di autenticazione rispettano questa impostazione e il valore di crittografia **non** viene sottoposto a override. Pertanto, è **consigliabile** impostare in modo esplicito `Use Encryption for Data=true` per eseguire l'override del valore predefinito.
 
 ### <a name="certificate-validation"></a>Convalida del certificato
-Per migliorare la sicurezza, le nuove proprietà/parole chiave di `TrustServerCertificate` connessione rispettano l'impostazione (e le parole chiave/proprietà della stringa di connessione corrispondenti) **indipendentemente dall'impostazione di crittografia client**. Di conseguenza, il certificato del server viene convalidato per impostazione predefinita.
+Per migliorare la sicurezza, le nuove proprietà/parole chiave di connessione rispettano l'impostazione di `TrustServerCertificate` (e le parole chiave/proprietà della stringa di connessione corrispondenti) **indipendentemente dall'impostazione della crittografia client**. Di conseguenza, il certificato del server viene convalidato per impostazione predefinita.
 
 > [!NOTE]   
-> La convalida `Value` `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` del certificato può anche essere controllata tramite il campo della voce del registro di sistema. I valori validi sono `0` o `1`. Il driver OLE DB sceglie l'opzione più sicura tra il registro di sistema e le impostazioni di proprietà/parole chiave di connessione. Ovvero, il driver convaliderà il certificato server purché almeno una delle impostazioni del registro di sistema/connessione consenta la convalida del certificato del server.
+> La convalida del certificato può anche essere controllata tramite il campo `Value` della voce del registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`. I valori validi sono `0` o `1`. Il driver OLE DB sceglie l'opzione più sicura tra il registro di sistema e le impostazioni di proprietà/parole chiave di connessione. Ovvero, il driver convaliderà il certificato server purché almeno una delle impostazioni del registro di sistema/connessione consenta la convalida del certificato del server.
 
 ## <a name="gui-additions"></a>Aggiunte GUI
 L'interfaccia utente grafica del driver è stata migliorata per consentire l'autenticazione Azure Active Directory. Per altre informazioni, vedere:
@@ -75,7 +74,7 @@ L'interfaccia utente grafica del driver è stata migliorata per consentire l'aut
 - [Configurazione di UDL (Universal Data Link)](../help-topics/data-link-pages.md)
 
 ## <a name="example-connection-strings"></a>Esempi di stringhe di connessione
-In questa sezione vengono illustrati esempi di parole chiave della stringa di connessione nuove `IDataInitialize::GetDataSource` ed `DBPROP_INIT_PROVIDERSTRING` esistenti da utilizzare con la proprietà e.
+In questa sezione vengono illustrati esempi di parole chiave della stringa di connessione nuove ed esistenti da usare con `IDataInitialize::GetDataSource` e `DBPROP_INIT_PROVIDERSTRING` proprietà.
 
 ### <a name="sql-authentication"></a>Autenticazione SQL
 - Utilizzo di `IDataInitialize::GetDataSource`:
@@ -89,7 +88,7 @@ In questa sezione vengono illustrati esempi di parole chiave della stringa di co
     - Deprecato:
         > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=yes
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>Autenticazione integrata di Windows tramite SSPI (Security Support Provider Interface)
+### <a name="integrated-windows-authentication-using-security-support-provider-interface-sspi"></a>Autenticazione integrata di Windows tramite SSPI (Security Support Provider Interface)
 
 - Utilizzo di `IDataInitialize::GetDataSource`:
     - Nuovo:
@@ -102,14 +101,14 @@ In questa sezione vengono illustrati esempi di parole chiave della stringa di co
     - Deprecato:
         > Server = [Server];D atabase = [database]; **Trusted_Connection = Yes**; Crittografia = Sì
 
-### <a name="aad-username-and-password-authentication-using-adal"></a>Autenticazione con nome utente e password di AAD con ADAL
+### <a name="azure-active-directory-username-and-password-authentication"></a>Autenticazione del nome utente e della password Azure Active Directory
 
 - Utilizzo di `IDataInitialize::GetDataSource`:
     > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Autenticazione = ActiveDirectoryPassword**; ID utente = [nomeutente]; Password = [password]; Usa crittografia per dati = true
 - Utilizzo di `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=yes
 
-### <a name="integrated-azure-active-directory-authentication-using-adal"></a>Autenticazione Azure Active Directory integrata con ADAL
+### <a name="azure-active-directory-integrated-authentication"></a>Autenticazione integrata di Azure Active Directory
 
 - Utilizzo di `IDataInitialize::GetDataSource`:
     > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Autenticazione = ActiveDirectoryIntegrated**; Usa crittografia per dati = true
@@ -121,7 +120,27 @@ In questa sezione vengono illustrati esempi di parole chiave della stringa di co
 - Utilizzo di `IDataInitialize::GetDataSource`:
     > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Token di accesso = [token di accesso]** ; Usa crittografia per dati = true
 - Utilizzo di `DBPROP_INIT_PROVIDERSTRING`:
-    > Fornire il token di `DBPROP_INIT_PROVIDERSTRING` accesso tramite non è supportato
+    > Fornire il token di accesso tramite `DBPROP_INIT_PROVIDERSTRING` non è supportato
+
+### <a name="azure-active-directory-interactive-authentication"></a>Autenticazione interattiva di Azure Active Directory
+
+- Utilizzo di `IDataInitialize::GetDataSource`:
+    > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Autenticazione = ActiveDirectoryInteractive**; ID utente = [nomeutente]; Usa crittografia per dati = true
+- Utilizzo di `DBPROP_INIT_PROVIDERSTRING`:
+    > Server = [Server];D atabase = [database]; **Autenticazione = ActiveDirectoryInteractive**; UID = [nomeutente]; Crittografia = Sì
+
+### <a name="azure-active-directory-msi-authentication"></a>Autenticazione MSI di Azure Active Directory
+
+- Utilizzo di `IDataInitialize::GetDataSource`:
+    - Identità gestita assegnata dall'utente:
+        > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Autenticazione = ActiveDirectoryMSI**; ID utente = [ID oggetto]; Usa crittografia per dati = true
+    - Identità gestita assegnata dal sistema:
+        > Provider = MSOLEDBSQL; origine dati = [Server]; catalogo iniziale = [database]; **Autenticazione = ActiveDirectoryMSI**; Usa crittografia per dati = true
+- Utilizzo di `DBPROP_INIT_PROVIDERSTRING`:
+    - Identità gestita assegnata dall'utente:
+        > Server = [Server];D atabase = [database]; **Autenticazione = ActiveDirectoryMSI**; UID = [ID oggetto]; Crittografia = Sì
+    - Identità gestita assegnata dal sistema:
+        > Server = [Server];D atabase = [database]; **Autenticazione = ActiveDirectoryMSI**; Crittografia = Sì
 
 ## <a name="code-samples"></a>Esempi di codice
 

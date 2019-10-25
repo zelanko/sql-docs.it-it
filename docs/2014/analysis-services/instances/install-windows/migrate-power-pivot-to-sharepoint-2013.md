@@ -10,12 +10,12 @@ ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1cdc1f10d53f11e06e37196d938667fb96327a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f792790e6bdc8c116c629910cdd64ec9aa0e6701
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888512"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797264"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Eseguire la migrazione di PowerPivot a SharePoint 2013
   
@@ -61,15 +61,15 @@ ms.locfileid: "68888512"
 ##  <a name="bkmk_backup_restore"></a> 2) Eseguire il backup, la copia e il ripristino dei database  
  Il processo di aggiornamento del database di SharePoint è una sequenza di passaggi per eseguire il backup, la copia e il ripristino dei database dell'applicazione di servizio e del contenuto correlati a PowerPivot nella farm di SharePoint 2013.  
   
-1.  **Impostare il database in sola lettura:** In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database e scegliere **proprietà**. Nella pagina **Opzioni** impostare la proprietà **Database di sola lettura** su **True**.  
+1.  **Impostare il database in sola lettura:** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database e scegliere **Proprietà**. Nella pagina **Opzioni** impostare la proprietà **Database di sola lettura** su **True**.  
   
-2.  **Backup:** Eseguire il backup di ogni database del contenuto e database dell'applicazione di servizio di cui si desidera eseguire la migrazione alla farm di SharePoint 2013. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database, fare clic su **Attività**e scegliere **Backup**.  
+2.  **Eseguire il backup:** eseguire il backup di ogni database del contenuto e database dell'applicazione di servizio di cui si desidera eseguire la migrazione alla farm di SharePoint 2013. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database, fare clic su **Attività**e scegliere **Backup**.  
   
 3.  Copiare i file di backup del database (con estensione bak) nel server di destinazione desiderato.  
   
-4.  **Ripristinare** Ripristinare i database nella destinazione [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Questo passaggio può essere completato utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+4.  **Eseguire il ripristino:** ripristinare i database nel [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]di destinazione. Questo passaggio può essere completato utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-5.  **Imposta database su lettura/scrittura:** Impostare il **database di sola lettura** su **false**.  
+5.  **Impostare il database in lettura/scrittura:** impostare **Database di sola lettura** su **False**.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Preparare le applicazioni Web e montare i database del contenuto  
  Per una spiegazione più dettagliata delle procedure riportate di seguito, vedere [aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
@@ -90,15 +90,15 @@ ms.locfileid: "68888512"
   
 -   **Montare i database del contenuto:**  
   
-     Utilizzare i cmdlet PowerShell nella shell di gestione di SharePoint 2013 per montare il database del contenuto migrato. È necessario montare solo i database di contenuto, non il database dell'applicazione di servizio: ![Contenuto correlato di PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
+     Utilizzare i cmdlet PowerShell nella shell di gestione di SharePoint 2013 per montare il database del contenuto migrato. Non è necessario montare il database dell'applicazione di servizio. solo i database di contenuto: ![contenuto correlato di PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
   
-    ```  
+    ```powershell
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
      Per ulteriori informazioni, vedere [collegamento o scollegamento di database del contenuto (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).  
   
-     **Stato al completamento del passaggio:**  Al termine dell'operazione di montaggio, gli utenti possono visualizzare i file presenti nel database del contenuto precedente. Di conseguenza, essi possono visualizzare e aprire le cartelle di lavoro nella raccolta documenti.  
+     **Stato al completamento del passaggio:**  al termine dell'operazione di montaggio, gli utenti possono visualizzare i file disponibili nel database del contenuto precedente. Di conseguenza, essi possono visualizzare e aprire le cartelle di lavoro nella raccolta documenti.  
   
     > [!TIP]  
     >  È possibile creare, a questo punto del processo di migrazione, nuove pianificazioni per le cartelle di lavoro migrate. Tuttavia, le pianificazioni vengono create nel nuovo database dell'applicazione di servizio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e non nel database copiato dalla farm SharePoint precedente. Pertanto, in esso non sarà contenuta alcuna pianificazione precedente. Dopo aver completato i passaggi seguenti per utilizzare il database precedente ed eseguire la migrazione delle pianificazioni precedenti, le nuove pianificazioni non saranno disponibili.  
@@ -106,9 +106,9 @@ ms.locfileid: "68888512"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Risolvere eventuali problemi durante il tentativo di montaggio di database  
  In questa sezione vengono riepilogati i possibili problemi riscontrati durante il montaggio del database.  
   
-1.  **Errori di autenticazione:** Se vengono visualizzati errori relativi all'autenticazione, controllare la modalità di autenticazione utilizzata dalle applicazioni Web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Errori di autenticazione:** se vengono visualizzati errori relativi all'autenticazione, controllare la modalità di autenticazione utilizzata nelle applicazioni Web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
-2.  **File PowerPivot. files mancanti:** Se vengono visualizzati errori correlati a PowerPivot. dll mancanti, **spPowerPivot. msi** non è stato installato o lo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] strumento di configurazione non è stato utilizzato per configurare PowerPivot.  
+2.  **File PowerPivot.File mancanti:** se vengono visualizzati errori relativi alla mancanza di file con estensione dll di PowerPivot, il file **spPowerPivot.msi** non è stato installato oppure [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] non è stato configurato con il relativo strumento di configurazione.  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>4) aggiornare le pianificazioni di PowerPivot  
  In questa sezione vengono illustrati i dettagli e le opzioni per eseguire la migrazione delle pianificazioni di PowerPivot. La migrazione di una pianificazione è un processo in due passaggi. In primo luogo, configurare l'applicazione di servizio PowerPivot per l'utilizzo del database dell'applicazione di servizio sottoposto a migrazione. In secondo luogo, scegliere una delle due opzioni per la migrazione della pianificazione.  
@@ -127,12 +127,12 @@ ms.locfileid: "68888512"
   
  Configurare l'applicazione di servizio PowerPivot per l'esecuzione della migrazione di pianificazioni di aggiornamenti.  
   
--   **Migrare pianificazioni opzione1: Amministratore della farm di SharePoint**  
+-   **Opzione 1. Eseguire la migrazione di pianificazioni: Amministratore della farm di SharePoint**  
   
-    1.  Nella gestione di SharePoint 2013 eseguire il `Set-PowerPivotServiceApplication` cmdlet con l' `-StartMigratingRefreshSchedules` opzione per abilitare la pianificazione automatica su richiesta ![](../../../reporting-services/media/rs-powershellicon.jpg "")migrazione del contenuto correlato di PowerShell contenuto correlato di PowerShell. Nello script di Windows PowerShell seguente si presuppone la presenza di un'unica applicazione di servizio PowerPivot.  
+    1.  Nella gestione di SharePoint 2013 eseguire il cmdlet `Set-PowerPivotServiceApplication` con l'opzione `-StartMigratingRefreshSchedules` per abilitare la migrazione della pianificazione su richiesta automatica ![contenuto correlato di PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell"). Nello script di Windows PowerShell seguente si presuppone la presenza di un'unica applicazione di servizio PowerPivot.  
   
-        ```  
-        $app=Get-PowerPivotServiceApplication  
+        ```powershell
+        $app = Get-PowerPivotServiceApplication  
         Set-PowerPivotServiceApplication $app -StartMigratingRefreshSchedules  
         ```  
   
@@ -140,29 +140,28 @@ ms.locfileid: "68888512"
   
     2.  Se si desidera controllare il valore corrente della proprietà StartMigratingRefreshSchedules, eseguire lo script PowerShell riportato di seguito. Tramite lo script viene eseguito il ciclo di tutti gli oggetti dell'applicazione di servizio PowerPivot e vengono visualizzati il nome e i valori delle proprietà:  
   
-        ```  
+        ```powershell
         $apps = Get-PowerPivotServiceApplication  
-        foreach ($app in $apps){}  
-        Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
+        foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```  
   
-     **Migrare pianificazioni opzione2: L'utente aggiorna ogni cartella di lavoro**  
+     **Opzione 2. Eseguire la migrazione di pianificazioni: Aggiornamento di ogni cartella di lavoro da parte dell'utente**  
   
     1.  Un'altra opzione per eseguire la migrazione delle pianificazioni consiste nell'abilitare l'aggiornamento delle pianificazioni per ogni cartella di lavoro. Passare alla raccolta documenti contenente le cartelle di lavoro.  
   
     2.  Aprire il menu di scelta rapida e fare clic su **Gestisci aggiornamento dati PowerPivot**.  
   
-    3.  Nella sezione relativa **all'aggiornamento delle pianificazioni** fare clic su **Abilita**.  
+    3.  Nella sezione relativa all'aggiornamento delle pianificazioni fare clic su **Abilita**.  
   
     4.  È possibile selezionare **Aggiorna anche appena possibile**. Tramite questa opzione viene aggiunta un'istanza di aggiornamento alla coda non appena si fa clic su OK. La pianificazione dell'aggiornamento regolare viene tuttavia attivata al momento opportuno.  
   
-    5.  Fare clic su **OK**. La cronologia di aggiornamento è ora visibile nella pagina degli aggiornamenti. La pianificazione verrà attivata al momento previsto.  
+    5.  Scegliere **OK**. La cronologia di aggiornamento è ora visibile nella pagina degli aggiornamenti. La pianificazione verrà attivata al momento previsto.  
   
  **SQL Server cartelle di lavoro di PowerPivot 2008 R2**  
   
 -   Le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non vengono aggiornate automaticamente se utilizzate in SQL Server 2012 SP1 2013 PowerPivot per SharePoint 2013. Dopo la migrazione di un database del contenuto in cui sono incluse cartelle di lavoro di SQL Server 2008 R2, è possibile utilizzare le cartelle di lavoro ma le pianificazioni non vengono aggiornate.  
   
--   Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
+-   Per altre informazioni, vedere [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
   
 ##  <a name="bkmk_additional_resources"></a> Risorse aggiuntive  
   
@@ -175,6 +174,4 @@ ms.locfileid: "68888512"
   
 -   [Pulire le preparazioni prima di un aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
+-   [Aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).

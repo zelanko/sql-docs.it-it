@@ -20,12 +20,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68887932"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797615"
 ---
 # <a name="dimension-relationships"></a>Relazioni tra dimensioni
   L'utilizzo delle dimensioni definisce le relazioni tra le dimensioni e i gruppi di misure di un cubo. Una dimensione di un cubo è un'istanza di una dimensione del database utilizzata in un cubo specifico. Spesso un cubo contiene dimensioni che non sono correlate direttamente a un gruppo di misure, ma che possono essere correlate indirettamente al gruppo di misure tramite un'altra dimensione o un altro gruppo di misure. Quando si aggiunge una dimensione o un gruppo di misure del database a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di determinare l'utilizzo della dimensione esaminando le relazioni tra le tabelle delle dimensioni e le tabelle dei fatti nella vista origine dati del cubo ed esaminando le relazioni tra gli attributi nelle dimensioni. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di configurare automaticamente le impostazioni delle dimensioni per le relazioni che è possibile rilevare.  
@@ -38,11 +38,11 @@ ms.locfileid: "68887932"
 ## <a name="reference-dimension-relationships"></a>Relazioni di tipo Riferimento  
  Una relazione di tipo Riferimento tra una dimensione del cubo e un gruppo di misure si verifica quando la colonna chiave della dimensione è unita in join direttamente alla tabella dei fatti tramite una chiave in un'altra tabella della dimensione, come illustrato nella figura seguente.  
   
- ![Diagramma logico, relazione tra dimensioni a cui si fa riferimento](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Diagramma logico, relazione tra dimensioni a cui si fa riferimento")  
+ ![Diagramma logico, relazione tra dimensioni a cui si fa riferimento](../../analysis-services/dev-guide/media/as-refdimension1.gif "Diagramma logico, relazione tra dimensioni a cui si fa riferimento")  
   
  Una relazione di tipo Riferimento rappresenta la relazione tra le tabelle delle dimensioni e una tabella dei fatti in una progettazione con schema snowflake. Quando le tabelle delle dimensioni sono connesse in uno schema snowflake, è possibile definire una singola dimensione utilizzando colonne di più tabelle oppure definire dimensioni diverse in base a tabelle delle dimensioni separate e quindi definire un collegamento tra di esse utilizzando l'impostazione della relazione di tipo Riferimento. Nella figura seguente è illustrata una tabella dei fatti denominata **InternetSales**e due tabelle delle dimensioni denominate **Customer** e **geography**, in uno schema a fiocco di neve.  
   
- ![Schema logico, relazione tra dimensioni a cui si fa riferimento](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Schema logico, relazione tra dimensioni a cui si fa riferimento")  
+ ![Schema logico, relazione tra dimensioni a cui si fa riferimento](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "Schema logico, relazione tra dimensioni a cui si fa riferimento")  
   
  È possibile creare una dimensione con la tabella **Customer** come tabella principale della dimensione e la tabella **geography** inclusa come tabella correlata. Viene quindi definita una relazione di tipo Regolare tra la dimensione e il gruppo di misure InternetSales.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "68887932"
   
  Come illustrato nella figura seguente, non è previsto alcun limite per il numero di dimensioni di riferimento che è possibile concatenare.  
   
- ![Diagramma logico, relazione tra dimensioni a cui si fa riferimento](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "Diagramma logico, relazione tra dimensioni a cui si fa riferimento")  
+ ![Diagramma logico, relazione tra dimensioni a cui si fa riferimento](../../analysis-services/dev-guide/media/as-refdimension2.gif "Diagramma logico, relazione tra dimensioni a cui si fa riferimento")  
   
  Per ulteriori informazioni sulle relazioni a cui si fa riferimento, vedere [definire una relazione di riferimento e le proprietà delle relazioni a cui si fa riferimento](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relazioni di tipo Fatti  
  Le dimensioni dei fatti, spesso denominate dimensioni degenerate, sono dimensioni standard create da colonne attributo di tabelle dei fatti anziché da colonne attributo di tabelle delle dimensioni. A volte, i dati dimensionali utili vengono archiviati in una tabella dei fatti per ridurre la duplicazione. Nel diagramma seguente, ad esempio, viene visualizzata la tabella dei fatti **FactResellerSales** dal database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
   
- ![Le colonne nella tabella dei fatti possono supportare dimensioni](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Le colonne nella tabella dei fatti possono supportare dimensioni")  
+ ![Le colonne nella tabella dei fatti possono supportare dimensioni](../../analysis-services/dev-guide/media/as-factdim.gif "Le colonne nella tabella dei fatti possono supportare dimensioni")  
   
  Nella tabella sono contenute informazioni sugli attributi non solo per ogni riga di un ordine emesso da un rivenditore, ma anche per l'ordine stesso. Gli attributi racchiusi nel diagramma precedente identificano le informazioni nella tabella **FactResellerSales** che possono essere utilizzate come attributi in una dimensione. In questo caso, due ulteriori informazioni, ovvero il numero di registrazione dello spedizioniere e il numero dell'ordine di acquisto emesso dal rivenditore, vengono rappresentate dalle colonne attributo CarrierTrackingNumber e CustomerPONumber. Queste informazioni sono interessanti. ad esempio, gli utenti sono sicuramente interessati a visualizzare informazioni aggregate, ad esempio il costo totale del prodotto, per tutti gli ordini spediti con un singolo numero di traccia. Senza una dimensione, tuttavia, non è possibile organizzare o aggregare i dati per questi due attributi.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887932"
 ## <a name="many-to-many-dimension-relationships"></a>Relazioni molti-a-molti  
  Nella maggior parte delle dimensioni, ogni fatto si unisce in join a un solo membro della dimensione e un singolo membro della dimensione può essere associato a più fatti. Nella terminologia dei database relazionali, questa viene definita una relazione uno-a-molti. Spesso, tuttavia, può essere utile unire in join un unico fatto a più membri della dimensione. Un cliente di una banca può ad esempio avere più conti (conti correnti, conti di risparmio, carta di credito e conti titoli) e ogni conto può avere più proprietari. La dimensione relativa ai clienti creata da una relazione di questo tipo includerebbe più membri correlati a un'unica transazione relativa al conto corrente.  
   
- ![Schema logico/relazione tra dimensioni molti-a-molti](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Schema logico/relazione tra dimensioni molti-a-molti")  
+ ![Schema logico/relazione tra dimensioni molti-a-molti](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Schema logico/relazione tra dimensioni molti-a-molti")  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di definire una relazione molti-a-molti tra una dimensione e una tabella dei fatti.  
   

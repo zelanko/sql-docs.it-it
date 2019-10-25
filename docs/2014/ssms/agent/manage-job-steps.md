@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893130"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798215"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
   Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
@@ -75,7 +75,7 @@ ms.locfileid: "68893130"
   
 -   Il codice di uscita del processo, restituito se il comando ha esito positivo.  
   
--   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, questo è il nome del programma e degli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, è necessario immettere il nome del programma e gli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  È necessario indicare il percorso completo del programma eseguibile se questo non è incluso in una directory specificata nel percorso di sistema o nel percorso per l'account utente con cui viene eseguito il passaggio di processo.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893130"
   
 -   Un file script di PowerShell esistente da aprire.  
   
- Il sottosistema PowerShell di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apre una sessione di PowerShell e carica gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Lo script di PowerShell usato come comando del passaggio di processo può fare riferimento al provider e ai cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Il sottosistema PowerShell di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent apre una sessione di PowerShell e carica gli snap-in di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Lo script di PowerShell usato come comando per il passaggio di processo può fare riferimento al provider e ai cmdlet di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Utilizzo di Script ActiveX come passaggi di processo  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Passaggi dei processi di replica  
@@ -195,24 +194,22 @@ Set oServer = nothing
   
  Per altre informazioni sulla creazione di passaggi di processo eseguiti come pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Descrizione**|**Argomento**|  
+|**Description**|**Argomento**|  
 |Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Creare un passaggio di processo CmdExec](create-a-cmdexec-job-step.md)|  
 |Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definire le opzioni del passaggio di processo Transact-SQL](define-transact-sql-job-step-options.md)|  
 |Viene descritto come creare un passaggio di processo dello script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Creare un passaggio di processo di Analysis Services](create-an-analysis-services-job-step.md)|  
 |Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Viene descritto come visualizzare informazioni dettagliate sui passaggi di processo nella finestra di dialogo Proprietà passaggio processo.|[Visualizzare informazioni sui passaggi di processo](view-job-step-information.md)|  
-|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Eliminare il log di un passaggio di processo](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. nella sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+  [Transact- &#40;SQL&#41; dbo. nella sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Creazione di processi](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108360"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796366"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108360"
   
 2.  Fare clic accanto al nome dell'applicazione di servizio oppure sulla colonna **Tipo** per selezionare l'intera riga, quindi fare clic su **Proprietà** sulla barra multifunzione di SharePoint.  
   
- Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [passaggio 3: Creare un'applicazione di servizio Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> Per aprire le pagine di gestione delle applicazioni di servizio  
  Per aprire le pagine di gestione di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
@@ -90,7 +90,7 @@ ms.locfileid: "66108360"
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
-|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. . I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per ulteriori informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
+|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. , I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per ulteriori informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Giorni di mantenimento del log di esecuzione|Il valore predefinito è 60 giorni.|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "66108360"
 ##  <a name="bkmk_managejobs"></a> Gestione processi  
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .  
   
- ![gestire processi in esecuzione](media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
+ ![gestire i processi in esecuzione](media/ssrs-manage-jobs.gif "gestire i processi in esecuzione")  
   
 ##  <a name="bkmk_keymgt"></a> Gestione chiavi  
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi  
@@ -125,7 +125,7 @@ ms.locfileid: "66108360"
 > [!IMPORTANT]  
 >  La modifica periodica della chiave di crittografia di Reporting Services è una procedura consigliata ai fini della sicurezza. È consigliabile modificare la chiave immediatamente dopo un aggiornamento della versione principale di Reporting Services. Modificando la chiave di crittografia di Reporting Services dopo un aggiornamento si riduce il rischio di ulteriori interruzioni del servizio rispetto invece all'eseguire questa operazione all'esterno del ciclo di aggiornamento.  
   
-|Pagina|Descrizione|  
+|Pagina|Description|  
 |----------|-----------------|  
 |Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. Valutare l'opportunità di archiviare il file della chiave in un computer distinto da quello che esegue [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  
@@ -149,8 +149,8 @@ ms.locfileid: "66108360"
   
  Di seguito è riportato un esempio del comando PowerShell per restituire l'elenco delle applicazioni di servizio di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con la proprietà UEAccount:  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
@@ -160,7 +160,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>* .  
+ Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>*.  
   
  **Password**  
  Digitare la password.  

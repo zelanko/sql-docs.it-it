@@ -10,12 +10,12 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103157"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796413"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  
@@ -39,13 +39,13 @@ ms.locfileid: "66103157"
 ##  <a name="bkmk_general"></a> Indicazioni generali per il log ULS  
  Nella tabella seguente sono elencate le categorie e i livelli degli eventi consigliati per il monitoraggio di un ambiente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Quando un evento viene registrato, in ogni voce sono inclusi l'ora di registrazione dell'evento, il nome del processo e l'ID del thread.  
   
-|Category|Level|Descrizione|  
+|Category|level|Description|  
 |--------------|-----------|-----------------|  
-|Database|Dettagliato|Registra eventi che comportano l'accesso al database.|  
-|Generale|Dettagliato|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
-|Office Server General|Eccezione|Registra errori di accesso.|  
-|Topologia|Dettagliato|Registra informazioni sull'utente corrente|  
-|web part|Dettagliato|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
+|database|Verbose|Registra eventi che comportano l'accesso al database.|  
+|Generale|Verbose|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
+|Office Server General|Exception|Registra errori di accesso.|  
+|Topologia|Verbose|Registra informazioni sull'utente corrente|  
+|web part|Verbose|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
   
 ##  <a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66103157"
   
  È possibile rivedere tutte le impostazioni del registro diagnostico della farm correnti con il cmdlet di PowerShell seguente:  
   
-```  
+```powershell
 Get-SPDiagnosticConfig  
 ```  
   
@@ -86,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **Prodotto:SQL Server Reporting Services**  
   
-2.  **Categoria:** Gli eventi correlati al server avrà i caratteri "ReportServer", all'inizio del nome. Ad esempio, "Runtime avvisi server di report". Questi eventi vengono registrati anche nei file di log del server di report.  
+2.  **Categoria:** per gli eventi correlati al server viene aggiunta al nome l'indicazione "server di report". Ad esempio, "Runtime avvisi server di report". Questi eventi vengono registrati anche nei file di log del server di report.  
   
-3.  **Categoria:** Gli eventi correlati a o comunicati da un componente front-end web non contengono "ReportServer". Ad esempio, "Proxy applicazione del servizio" Runtime avvisi server di report". Le voci relative al front-end Web contengono un valore CorrelationID, mentre le voci relative al server no.  
+3.  **Categoria:** gli eventi correlati a o comunicati da un componente front-end Web non contengono l'indicazione "server di report". Ad esempio, "Proxy applicazione del servizio" Runtime avvisi server di report". Le voci relative al front-end Web contengono un valore CorrelationID, mentre le voci relative al server no.  
   
 ##  <a name="bkmk_list"></a> Elenco di eventi di SQL Server Reporting Services  
  Nella tabella seguente sono elencati gli eventi nella categoria SQL Server Reporting Services:  
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||  
 |Rendering del server di report||  
 |Anteprima report del server di report||  
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: Copia di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
 |Processi in esecuzione del server di report||  
 |Richieste in esecuzione del server di report||  
 |Pianificazione del server di report||  
@@ -139,10 +139,10 @@ Get-SPDiagnosticConfig
 |Servizio condiviso|Voci di esempio:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Accesso MediumGranting ai database di contenuto.<br /><br /> Istanze MediumProvisioning per ReportingWebServiceApplication<br /><br /> Modifica dell'account del servizio MediumProcessing per ReportingWebServiceApplication<br /><br /> Autorizzazioni per database MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Visualizzare un file di log con PowerShell  
- ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")È possibile usare PowerShell per restituire un elenco di eventi correlati a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un file di log ULS. Digitare il comando seguente dalla shell di gestione SharePoint 2010 per ottenere un elenco filtrato di righe del file di log ULS, UESQL11SPOINT-20110606-1530.log, contenenti "**sql server reporting services**":  
+ ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") È possibile utilizzare PowerShell per restituire un elenco di eventi correlati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un file di log ULS. Digitare il comando seguente dalla shell di gestione SharePoint 2010 per ottenere un elenco filtrato di righe del file di log ULS, UESQL11SPOINT-20110606-1530.log, contenenti "**sql server reporting services**":  
   
-```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
+```powershell
+Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
  Sono inoltre disponibili numerosi strumenti che è possibile scaricare e che consentono di leggere i log ULS. Ad esempio, [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) o il [visualizzatore di log ULS di SharePoint](http://ulsviewer.codeplex.com/workitem/list/basic). Entrambi questi strumenti sono disponibili in CodePlex.  
@@ -153,5 +153,3 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  I file dei log di traccia si trovano in genere nella cartella **c:\Programmi\Common files\Microsoft Shared\Web Server Extensions\14\logs** , ma è possibile verificare o modificare il percorso dalla pagina **Registrazione diagnostica** in Amministrazione centrale SharePoint.  
   
  Per altre informazioni e istruzioni per la configurazione della registrazione diagnostica in un server SharePoint in Amministrazione centrale SharePoint 2010, vedere [Configurare le impostazioni della registrazione diagnostica (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
-  
-  

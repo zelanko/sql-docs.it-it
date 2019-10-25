@@ -1,5 +1,5 @@
 ---
-title: Gestione di utenti, ruoli e gli account di accesso | Microsoft Docs
+title: Gestione di utenti, ruoli e account di accesso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bac188dcc6eb26c1bca77ec292a096f4eac2f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226183"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796612"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestione di utenti, ruoli e account di accesso
   In SMO gli account di accesso sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
@@ -31,7 +31,7 @@ ms.locfileid: "63226183"
  I database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongono anche di ruoli che specificano un set di privilegi al livello del database che consentono a un utente di eseguire attività specifiche. A differenza dei ruoli del server, i ruoli del database non sono fissi, ma possono essere creati, modificati e rimossi. Privilegi e utenti possono essere assegnati a un ruolo del database per l'amministrazione bulk.  
   
 ## <a name="example"></a>Esempio  
- Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e alla [creazione di un progetto Visual C&#35; SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>Enumerazione di account di accesso e utenti associati in Visual Basic  
  A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio vengono creati un accesso e un utente nel database di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] per garantire la presenza di informazioni di mapping da enumerare.  
@@ -41,7 +41,7 @@ ms.locfileid: "63226183"
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerazione di account di accesso e utenti associati in Visual C#  
  A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio vengono creati un accesso e un utente nel database di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] per garantire la presenza di informazioni di mapping da enumerare.  
   
-```  
+```csharp
 {   
 Server srv = new Server();   
 //Iterate through each database and display.   
@@ -67,7 +67,7 @@ foreach ( Database db in srv.Databases) {
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Enumerazione di account di accesso e utenti associati in PowerShell  
  A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio vengono creati un accesso e un utente nel database di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] per garantire la presenza di informazioni di mapping da enumerare.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\Default\Databases  
   
@@ -77,7 +77,7 @@ CD \sql\localhost\Default\Databases
  "====="  
  "Login Mappings for the database: "+ $db.Name  
   
- #get the datatable containing the mapping from the smo database oject  
+ #get the datatable containing the mapping from the smo database object  
  $dt = $db.EnumLoginMappings()  
   
  #display the results  
@@ -86,8 +86,7 @@ CD \sql\localhost\Default\Databases
         foreach($col in $row.Table.Columns)  
       {  
         $col.ColumnName + "=" + $row[$col]  
-       }  
-  
+       }
      }  
  }  
 ```  
@@ -103,7 +102,7 @@ CD \sql\localhost\Default\Databases
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -171,7 +170,7 @@ public class A {
   
  Versione Visual Basic:  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
   
 Public Class A  
@@ -235,5 +234,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579974"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359409"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o un set di report, è possibile usare le caratteristiche della distribuzione disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare i report in un server di report. È possibile pubblicare report singoli o un progetto Server di Report che può includere più report e origini dati. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*anziché *pubblicare*. I due termini sono perfettamente equivalenti.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vengono fornite configurazioni del progetto per gestire la pubblicazione dei report. La configurazione specifica il percorso del server di report, la versione di SQL Server Reporting Services installata nel server di report, l'eventuale sovrascrittura delle origini dati pubblicate nel server di report e così via. Ad esempio, la configurazione "Debug" può pubblicare in un server diverso rispetto alla configurazione di "release". Oltre a usare le configurazioni fornite in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , è possibile crearne di nuove.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vengono fornite configurazioni del progetto per gestire la pubblicazione dei report. La configurazione specifica il percorso del server di report, la versione di SQL Server Reporting Services installata nel server di report, l'eventuale sovrascrittura delle origini dati pubblicate nel server di report e così via. Ad esempio, la configurazione "Debug" può pubblicare in un server diverso rispetto alla configurazione "release". Oltre a usare le configurazioni fornite in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , è possibile crearne di nuove.  
  
 ## <a name="requirements-to-publish"></a>Requisiti per la pubblicazione
 L'autorizzazione è determinata dalla sicurezza basata sui ruoli definita dall'amministratore del server di report. In genere le operazioni di pubblicazione vengono concesse tramite il **ruolo Server di pubblicazione**.  

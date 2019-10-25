@@ -17,12 +17,12 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814024"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797957"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
   È possibile sospendere un database di disponibilità in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si noti che è necessario eseguire un comando di sospensione nell'istanza del server in cui viene ospitato il database da sospendere o riprendere.  
@@ -45,7 +45,7 @@ ms.locfileid: "62814024"
   
      [Indicazioni](#Recommendations)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per sospendere un database tramite:**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "62814024"
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
  Un comando SUSPEND viene restituito non appena è stato accettato dalla replica che ospita il database di destinazione, ma la sospensione effettiva del database avviene in modo asincrono.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisites  
  È necessario essere connessi all'istanza del server che ospita il database che si desidera sospendere. Per sospendere un database primario e i database secondari corrispondenti, connettersi all'istanza del server che ospita la replica primaria. Per sospendere un database secondario lasciando disponibile il database primario, connettersi alla replica secondaria.  
   
-###  <a name="Recommendations"></a> Indicazioni  
- Durante i colli di bottiglia, potrebbe essere utile sospendere brevemente uno o più database secondari per migliorare temporaneamente le prestazioni sulla replica primaria. Finché un database secondario rimane sospeso, il log delle transazioni del database primario corrispondente non può essere troncato. Per questo motivo, i record del log si accumulano sul database primario. È pertanto consigliabile riprendere o rimuovere rapidamente un database secondario sospeso. Per altre informazioni, vedere [Completamento: Come evitare il riempimento del log delle transazioni](#FollowUp), più avanti in questo argomento.  
+###  <a name="Recommendations"></a> Raccomandazioni  
+ Durante i colli di bottiglia, potrebbe essere utile sospendere brevemente uno o più database secondari per migliorare temporaneamente le prestazioni sulla replica primaria. Finché un database secondario rimane sospeso, il log delle transazioni del database primario corrispondente non può essere troncato. Per questo motivo, i record del log si accumulano sul database primario. È pertanto consigliabile riprendere o rimuovere rapidamente un database secondario sospeso. Per ulteriori informazioni, vedere [Completamento: Come evitare il riempimento del log delle transazioni](#FollowUp), più avanti in questo argomento.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per il database.  
   
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
@@ -113,9 +113,8 @@ ms.locfileid: "62814024"
   
      Ad esempio, il seguente comando sospende la sincronizzazione dati per il database di disponibilità `MyDb3` nel gruppo di disponibilità `MyAg` nell'istanza del server denominata `Computer\Instance`.  
   
-    ```  
-    Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Suspend-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -125,7 +124,7 @@ ms.locfileid: "62814024"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Completamento: Come evitare il riempimento del log delle transazioni  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  In genere, quando su un database viene eseguito un checkpoint automatico, il relativo log delle transazioni viene troncato in corrispondenza di tale checkpoint dopo il successivo backup del log. Tuttavia, quando un database secondario viene sospeso, tutti i record del log correnti rimangono attivi sul database primario. Se il log delle transazioni si riempie, perché raggiunge le dimensioni massime o l'istanza del server esaurisce lo spazio, il database non può eseguire ulteriori aggiornamenti.  
   
  Per evitare il problema, effettuare una delle azioni seguenti:  
@@ -138,14 +137,12 @@ ms.locfileid: "62814024"
   
  **Per risolvere i problemi di un log delle transazioni pieno**  
   
--   [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Risolvere i problemi relativi a un log delle transazioni completo &#40;errore di SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
 -   [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
  [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
-  
-  

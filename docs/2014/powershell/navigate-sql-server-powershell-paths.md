@@ -10,12 +10,12 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762096"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797807"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
   Il provider [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell espone il set di oggetti in un'istanza di SQL Server in una struttura analoga a un percorso di file. È possibile utilizzare cmdlet di Windows PowerShell per spostarsi all'interno del percorso del provider e creare unità personalizzate per rendere più breve il percorso da digitare.  
@@ -25,7 +25,7 @@ ms.locfileid: "62762096"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subset di cmdlet del provider, illustrato nella tabella seguente.  
   
-|cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Descrizione|  
+|cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Consente di ottenere il nodo corrente.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Consente di modificare il nodo corrente.|  
@@ -61,7 +61,7 @@ ms.locfileid: "62762096"
 ### <a name="alias-example-powershell"></a>Esempio di alias (PowerShell)  
  È ad esempio possibile utilizzare uno dei set di cmdlet o alias seguenti per recuperare un elenco delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibili passando alla cartella SQLSERVER:\SQL e richiedendo l'elenco di elementi figlio per la cartella:  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Utilizzare Get-ChildItem  
- **Restituire informazioni utilizzando Get-ChildItem**  
+
+### <a name="return-information-by-using-get-childitem"></a>Restituire informazioni utilizzando Get-ChildItem
   
 1.  Passare al nodo per il quale si desidera un elenco di childrem  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Esempio di Get-ChildItem (PowerShell)  
  In questi esempi sono illustrate le informazioni restituite da Get-ChildItem per i nodi diversi in un percorso del provider SQL Server.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>Creare un'unità personalizzata  
- **Creare e utilizzare un'unità personalizzata**  
+
+### <a name="create-and-use-a-custom-drive"></a>Creare e utilizzare un'unità personalizzata
   
 1.  Utilizzare `New-PSDrive` per definire un'unità personalizzata. Utilizzare il parametro `Root` per specificare il percorso rappresentato dal nome di unità personalizzato.  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>Esempio di unità personalizzata (PowerShell)  
  Questo esempio crea un'unità virtuale denominata AWDB con mapping al nodo di una copia distribuita del database di esempio di AdventureWorks2012. L'unità virtuale è utilizzata quindi per passare a una tabella nel database.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -134,5 +135,3 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
  [Utilizzo di percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Conversione di URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

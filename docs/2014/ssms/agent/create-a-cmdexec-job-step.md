@@ -12,21 +12,21 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211470"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798163"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
   In questo argomento viene illustrato come creare e definire un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui viene utilizzato un programma eseguibile o un comando del sistema operativo tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un passaggio di processo di CmdExec utilizzando:**  
   
@@ -38,10 +38,10 @@ ms.locfileid: "68211470"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono creare passaggi di processo CmdExec. Questi passaggi di processo vengono eseguiti nel contesto dell'account di servizio SQL Server Agent a meno che l'utente **sysadmin** crei un account proxy. Gli utenti che non sono membri del ruolo **sysadmin** possono creare passaggi di processo CmdExec se hanno accesso a un account proxy CmdExec.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "68211470"
   
 4.  Nella finestra di dialogo **Nuovo passaggio di processo** digitare il nome del passaggio del processo nella casella **Nome passaggio**.  
   
-5.  Nell'elenco **Tipo** selezionare **Sistema operativo (CmdExec)** .  
+5.  Nell'elenco **Tipo** selezionare **Sistema operativo (CmdExec)**.  
   
 6.  Nell'elenco **Esegui come** selezionare l'account proxy con le credenziali che verranno utilizzate dal processo. Per impostazione predefinita, questi passaggi di processo vengono eseguiti nel contesto dell'account di servizio SQL Server Agent.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68211470"
   
 ##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
-#### <a name="to-create-a-cmdexec-job-step"></a>Per creare un passaggio del processo di CmdExec  
+### <a name="to-create-a-cmdexec-job-step"></a>Per creare un passaggio del processo di CmdExec  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211470"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
@@ -90,11 +90,10 @@ ms.locfileid: "68211470"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- **Per creare un passaggio del processo di CmdExec**  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+
+### <a name="to-create-a-cmdexec-job-step"></a>Per creare un passaggio del processo di CmdExec
   
  Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  
-  
-  

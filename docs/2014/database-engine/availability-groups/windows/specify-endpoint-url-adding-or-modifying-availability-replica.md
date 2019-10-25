@@ -1,5 +1,5 @@
 ---
-title: Specificare l'URL dell'Endpoint quando si aggiunge o modifica una Replica di disponibilità (SQL Server) | Microsoft Docs
+title: Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788462"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797971"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità (SQL Server)
   Per ospitare una replica di disponibilità per un gruppo di disponibilità, un'istanza del server deve possedere un endpoint del mirroring del database. L'istanza del server utilizza questo endpoint per rimanere in attesa dei messaggi [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dalle repliche di disponibilità ospitate da altre istanze del server. Per definire una replica di disponibilità per un gruppo di disponibilità, è necessario specificare l'URL dell'endpoint dell'istanza del server che ospiterà la replica. L'*URL dell'endpoint* identifica il protocollo di trasporto dell'endpoint del mirroring del database (TCP), l'indirizzo di sistema dell'istanza del server e il numero di porta associato all'endpoint.  
@@ -39,7 +39,7 @@ ms.locfileid: "62788462"
 ##  <a name="SyntaxOfURL"></a> Sintassi per un URL dell'endpoint  
  La sintassi per un URL dell'endpoint è la seguente:  
   
- TCP<strong>://</strong> *\<indirizzo_sistema>* <strong>:<strong> *\<porta>*  
+ TCP<strong>://</strong>*\<indirizzo_sistema>*<strong>:</strong>*\<porta>*  
   
  dove  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62788462"
   
     -   Poiché i nodi del cluster WSFC (Windows Server Failover Clustering) si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[** _<indirizzo_IPv6>_ **]** .  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[**_<indirizzo_IPv6>_**]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
     -   Il funzionamento del nome di dominio completo è garantito. Il nome di dominio completo è costituito da una stringa di indirizzo definita a livello locale che accetta forme diverse a seconda della posizione. Spesso ma non sempre, un nome di dominio completo è un nome composto che include un nome computer e una serie di segmenti di dominio separati da virgole, ad esempio:  
   
-         _nome_computer_ **.** _segmento_dominio_[... **.** _segmento_dominio_]  
+         _nome_computer_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[... **.** _segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.**_segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Per ulteriori informazioni, vedere [Individuazione del nome di dominio completo](#Finding_FQDN), più avanti in questo argomento.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "62788462"
   
      Nell'URL dell'endpoint solo il numero della porta identifica l'istanza del server associata all'endpoint del mirroring del database nel computer di destinazione. Nella figura seguente vengono illustrati gli URL dell'endpoint di due istanze del server su un unico computer. L'istanza predefinita utilizza la porta `7022` , mentre l'istanza denominata utilizza la porta `7033`. L'URL dell'endpoint di queste due istanze del server sono rispettivamente `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` e `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Si noti che l'indirizzo non include il nome dell'istanza del server.  
   
-     ![Indirizzi di rete del server per un'istanza predefinita](../../media/dbm-2-instances-ports-1-system.gif "Indirizzi di rete del server per un'istanza predefinita")  
+     ![Indirizzi di rete del server di un'istanza predefinita](../../media/dbm-2-instances-ports-1-system.gif "Indirizzi di rete del server di un'istanza predefinita")  
   
      Per individuare la porta attualmente associata all'endpoint di mirroring del database per un'istanza del server, utilizzare l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente:  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.TCP_endpoints  
     ```  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62788462"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilizzo di un nome di dominio completo  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilizzo di un nome di dominio completo  
  L'URL dell'endpoint seguente specifica un nome di dominio completo, `DBSERVER8.manufacturing.Adventure-Works.com`, e la porta `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -122,7 +122,7 @@ ms.locfileid: "62788462"
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per configurare un endpoint del mirroring del database**  
   
--   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Creazione di un endpoint del mirroring del &#40;Database per gruppi di disponibilità AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -132,9 +132,9 @@ ms.locfileid: "62788462"
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+-   [Specificare un indirizzo di rete del server &#40;mirroring del database&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Risolvere i problemi di configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Risolvere i problemi &#40;di&#41;configurazione gruppi di disponibilità AlwaysOn SQL Server eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Per visualizzare informazioni sull'endpoint del mirroring del database**  
   
@@ -148,11 +148,9 @@ ms.locfileid: "62788462"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
-  
-  

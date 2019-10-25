@@ -15,17 +15,17 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108708"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796398"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services
   Un aspetto importante della configurazione del server di report riguarda la creazione di una copia di backup della chiave simmetrica utilizzata per crittografare le informazioni riservate. La copia di backup della chiave è obbligatoria per molte operazioni di routine e consente di riutilizzare un database del server di report esistente in una nuova installazione.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  È necessario ripristinare la copia di backup della chiave di crittografia se si verifica uno degli eventi seguenti:  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66108708"
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
- **Modalità nativa:** Uno di Gestione configurazione Reporting Services o il **rskeymgmt** utilità.  
+ **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
   
- **Modalità SharePoint:** Pagine di amministrazione centrale SharePoint o PowerShell.  
+ **Modalità SharePoint:** pagine di Amministrazione centrale SharePoint o PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Eseguire il backup di server di report in modalità SharePoint  
  Per i server di report in modalità SharePoint è possibile utilizzare i comandi di PowerShell o le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Gestione chiavi" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "66108708"
   
 1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. È necessario utilizzare l'argomento di estrazione `-e` per copiare la chiave. Specificare un nome file e una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -102,11 +102,9 @@ ms.locfileid: "66108708"
   
 1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. Utilizzare l'argomento `-a` per ripristinare le chiavi. È necessario fornire un nome file completo e specificare una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

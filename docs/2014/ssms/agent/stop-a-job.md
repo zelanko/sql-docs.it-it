@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245812"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798148"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   In questo argomento viene illustrato l'arresto di un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un processo è una serie specificata di azioni eseguite da SQL Server Agent.  
@@ -28,7 +28,7 @@ ms.locfileid: "63245812"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per arrestare un processo utilizzando:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63245812"
   
 -   Per un processo multiserver, viene inviata un'istruzione STOP a tutti i server di destinazione del processo.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -61,7 +61,7 @@ ms.locfileid: "63245812"
   
 ##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
-#### <a name="to-stop-a-job"></a>Per arrestare un processo  
+### <a name="to-stop-a-job"></a>Per arrestare un processo  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63245812"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -79,11 +79,10 @@ ms.locfileid: "63245812"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- **Per arrestare un processo**  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+
+### <a name="to-stop-a-job"></a>Per arrestare un processo
   
  Chiamare il metodo `Stop` della classe `Job` usando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63075256"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798225"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   In questo argomento viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **Per assegnare ad altri utenti la proprietà di un processo usando:**  
   
@@ -43,13 +43,13 @@ ms.locfileid: "63075256"
   
  L'assegnazione di un processo a un altro account di accesso non garantisce che il nuovo proprietario disponga di autorizzazioni sufficienti per eseguire correttamente il processo.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per motivi di sicurezza, solo il proprietario del processo o un membro del ruolo **sysadmin** può modificare la definizione del processo. Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare la proprietà di un processo ad altri utenti ed eseguire qualsiasi processo, indipendentemente dal proprietario.  
   
 > [!NOTE]  
 >  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] , verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Utilizzo di SQL Server Management Studio  
@@ -70,9 +70,9 @@ ms.locfileid: "63075256"
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra query immettere le istruzioni seguenti che usano il [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) stored procedure di sistema. In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
+3.  Nella finestra query immettere le istruzioni seguenti che usano la stored procedure di [sistema &#40;Transact-SQL&#41; sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -83,13 +83,12 @@ ms.locfileid: "63075256"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> Utilizzo di SQL Server Management Objects  
- **Per assegnare ad altri utenti la proprietà di un processo**  
+##  <a name="SMOProc2"></a>Utilizzo di SQL Server Management Objects  
+
+### <a name="to-give-others-ownership-of-a-job"></a>Per assegnare ad altri utenti la proprietà di un processo
   
 1.  Chiamare la classe `Job` tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per un codice di esempio, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)   
- [Crea processi](create-jobs.md)  
-  
-  
+ [Creare processi](create-jobs.md)  

@@ -10,12 +10,12 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762348"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797759"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Specifica di istanze nel provider SQL Server PowerShell
   I percorsi specificati per il provider SQL Server PowerShell devono identificare l'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] e il computer sulla quale è in esecuzione. La sintassi per la specifica del computer e l'istanza devono conformarsi sia alle regole per gli identificatori di SQL Server che ai percorsi di Windows PowerShell.  
@@ -51,27 +51,27 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> Esempi, nomi del computer e dell'istanza  
  In questo esempio viene utilizzato localhost e DEFAULT per specificare l'istanza predefinita nel computer locale.  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  I caratteri parentesi in (local) vengono in genere gestiti da Windows PowerShell come comandi. È necessario:  
   
 -   Racchiudere la stringa del percorso tra virgolette.  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   Utilizzare caratteri di escape per la parentesi utilizzando il carattere apice inverso (`).  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   Codificare le parentesi utilizzando la rappresentazione esadecimale.  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
@@ -79,5 +79,3 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
  [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md)   
  [Provider PowerShell per SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

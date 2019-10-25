@@ -10,17 +10,17 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952135"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798326"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installazione di PowerPivot dal prompt dei comandi
   È possibile eseguire il programma di installazione dalla riga di comando per installare SQL Server PowerPivot per SharePoint. È necessario includere il parametro `/ROLE` nel comando ed escludere il parametro `/FEATURES`.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  SharePoint Server 2010 Enterprise Edition con Service Pack 1 (SP1) deve essere installato.  
   
  È necessario utilizzare account di dominio per eseguire il provisioning di Analysis Services.  
@@ -41,15 +41,15 @@ ms.locfileid: "71952135"
  A differenza delle versioni precedenti, tutte le attività di configurazione del server vengono eseguite successivamente all'installazione. In caso di automazione delle procedure di installazione e configurazione, è possibile utilizzare PowerShell per configurare il server. Per ulteriori informazioni, vedere [configurazione di PowerPivot mediante Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comando di esempio  
- Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 viene visualizzato `SPI_AS_ExistingFarm`.  
+ Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 viene illustrato `SPI_AS_ExistingFarm`.  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  Nell'esempio 2 viene illustrata l'opzione `SPI_AS_NewFarm`. Si noti che sono inclusi i parametri per eseguire il provisioning del Motore di database.  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
@@ -58,7 +58,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 1.  Copiare il comando seguente in Blocco note:  
   
-    ```  
+    ```cmd
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
@@ -77,14 +77,12 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
 2.  Il parametro `PID` viene omesso dal comando, di conseguenza viene installata la copia di valutazione. Se si desidera installare la Enterprise Edition, aggiungere il PID al comando Setup e fornire un codice Product Key valido.  
   
     ```  
-  
     /PID=<product key for an Enterprise installation>  
-  
     ```  
   
-3.  Sostituire i segnaposto per \<domain \ username > e \<StrongPassword > con account utente e password validi.  
+3.  Sostituire i segnaposto per \<dominio\nomeutente > e \<StrongPassword > con account utente e password validi.  
   
-     I parametri `/assvaccount` e **/ASSVCPASSWORD** vengono utilizzati per configurare l'istanza [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] nel server applicazioni. Sostituire questi segnaposto con informazioni sull'account valide.  
+     I parametri `/assvaccount` e **/ASSVCPASSWORD** vengono utilizzati per configurare l'istanza di [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] nel server applicazioni. Sostituire questi segnaposto con informazioni sull'account valide.  
   
      Il parametro **/ASSYSADMINACCOUNTS** deve essere impostato sull'identità dell'utente che esegue SQL Server installazione. È necessario specificare almeno un amministratore di sistema. Si noti che il programma di installazione di SQL Server non concede più autorizzazioni sysadmin automatiche ai membri del gruppo Administrators predefinito.  
   
@@ -107,5 +105,3 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226150"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796787"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concessione, revoca e negazione delle autorizzazioni
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> viene utilizzato per assegnare un set di autorizzazioni o una singola autorizzazione del server all'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Per le autorizzazioni al livello del server, l'utente autorizzato fa riferimento a un account di accesso. Gli account di accesso autenticati da Windows sono elencati come nomi utente di Windows. Quando viene eseguito questo esempio di codice, l'autorizzazione viene revocata all'utente autorizzato e ne viene verificata la rimozione con il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -28,12 +28,12 @@ ms.locfileid: "63226150"
  Le autorizzazioni per i database e gli oggetti di database possono essere assegnate analogamente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> e l'oggetto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Concessione delle autorizzazioni del server in Visual Basic  
  In questo esempio di codice vengono concesse le autorizzazioni Create Endpoint e Alter Any Endpoint all'account di accesso specificato, quindi le autorizzazioni vengono enumerate e visualizzate. Una delle autorizzazioni viene revocata e successivamente le autorizzazioni vengono nuovamente enumerate. In questo esempio si presuppone che l'account di accesso specificato disponga delle autorizzazioni specificate con cui iniziare.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Concessione delle autorizzazioni del server in Visual C#  
  In questo esempio di codice vengono concesse le autorizzazioni Create Endpoint e Alter Any Endpoint all'account di accesso specificato, quindi le autorizzazioni vengono enumerate e visualizzate. Una delle autorizzazioni viene revocata e successivamente le autorizzazioni vengono nuovamente enumerate. In questo esempio si presuppone che l'account di accesso specificato disponga delle autorizzazioni specificate con cui iniziare.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Concessione delle autorizzazioni del server in PowerShell  
  In questo esempio di codice vengono concesse le autorizzazioni Create Endpoint e Alter Any Endpoint all'account di accesso specificato, quindi le autorizzazioni vengono enumerate e visualizzate. Una delle autorizzazioni viene revocata e successivamente le autorizzazioni vengono nuovamente enumerate. In questo esempio si presuppone che l'account di accesso specificato disponga delle autorizzazioni specificate con cui iniziare.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -253,5 +253,3 @@ foreach ( $spi in $spis)
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

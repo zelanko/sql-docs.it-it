@@ -14,12 +14,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016050"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796416"
 ---
 # <a name="create-a-stored-procedure"></a>Creazione di una stored procedure
   In questo argomento viene descritta la procedura per la creazione di una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
@@ -27,9 +27,9 @@ ms.locfileid: "63016050"
 ##  <a name="Top"></a>   
 -   **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
   
--   **Per creare una stored procedure, usare:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare una stored procedure:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
   
 ##  <a name="Procedures"></a> Procedura: creazione di una stored procedure  
@@ -52,11 +52,11 @@ ms.locfileid: "63016050"
   
 5.  Nella finestra di dialogo **Imposta valori per parametri modello** immettere i seguenti valori per i parametri indicati.  
   
-    |Parametro|Value|  
+    |Parametro|valore|  
     |---------------|-----------|  
     |Autore|*Nome dell'utente*|  
     |Data di creazione|*Data corrente*|  
-    |Descrizione|Restituisce i dati dei dipendenti.|  
+    |Description|Restituisce i dati dei dipendenti.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -65,7 +65,7 @@ ms.locfileid: "63016050"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  Fare clic su **OK**.  
+6.  Scegliere **OK**.  
   
 7.  Nell' **editor di query**sostituire l'istruzione SELECT con l'istruzione seguente:  
   
@@ -98,38 +98,34 @@ ms.locfileid: "63016050"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene creata la stessa stored procedure precedente utilizzando un nome diverso.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
 4.  Per eseguire la stored procedure, copiare l'esempio seguente e incollarlo in una nuova finestra Query, quindi fare clic su **Esegui**. Notare che vengono mostrati metodi diversi per specificare i valori del parametro.  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

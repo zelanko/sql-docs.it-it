@@ -18,12 +18,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 373700d04bb7c3d7cc28a72f881714cef9913923
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 8f0adc5fc19c487c388289b5e361708a4b9db9d6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199450"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796671"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "71199450"
    
 |Nome colonna|Tipo di dati|Descrizione (sulla replica primaria)|  
 |-----------------|---------------|----------------------------------------|  
-|**database_id**|**int**|Identificatore del database.|  
+|**database_id**|**Int**|Identificatore del database.|  
 |**group_id**|**uniqueidentifier**|Identificatore del gruppo di disponibilità a cui appartiene il database.|  
 |**replica_id**|**uniqueidentifier**|Identificatore della replica di disponibilità all'interno del gruppo di disponibilità.|  
 |**group_database_id**|**uniqueidentifier**|Identificatore del database nel gruppo di disponibilità. L'identificatore è identico su ogni replica a cui è stato aggiunto questo database.|  
 |**is_local**|**bit**|Se il database di disponibilità è locale, uno di:<br /><br /> 0 = Il database non è locale rispetto all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Il database è locale rispetto all'istanza del server.|  
-|**is_primary_replica**|**bit**|Restituisce 1 se la replica è primaria o 0 se si tratta di una replica secondaria.<br /><br />**Si applica a:**  da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**is_primary_replica**|**bit**|Restituisce 1 se la replica è primaria, o 0 se si tratta di una replica secondaria nel gruppo di disponibilità a cui appartiene il database. Questa operazione non fa riferimento al database primario o secondario in un gruppo di disponibilità distribuito o a una relazione di replica geografica attiva.<br /><br />**Si applica a:**  da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**synchronization_state**|**tinyint**|Stato di spostamento dei dati, uno dei valori seguenti.<br /><br /> 0 = sincronizzazione non in corso. Per un database primario, indica che il database non è pronto per la sincronizzazione del log delle transazioni con i database secondari corrispondenti. Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.<br /><br /> 1 = sincronizzazione in corso. Per un database primario, indica che il database è pronto ad accettare una richiesta di analisi da un database secondario. Per un database secondario, indica che è in corso uno spostamento dati attivo per il database.<br /><br /> 2 = sincronizzato. Un database primario risulta essere nello stato SYNCHRONIZED anziché SYNCHRONIZING. Un database secondario con commit sincrono risulta essere nello stato sincronizzato se nella cache locale il database è pronto per il failover ed è in corso la sincronizzazione.<br /><br /> 3 = ripristino. Indica la fase del processo di rollback in cui un database secondario ottiene attivamente le pagine dal database primario.<br />**Attenzione:** Quando un database in una replica secondaria si trova nello stato REVERTING, il failover forzato sulla replica secondaria lascia il database in uno stato in cui non può essere avviato come database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.<br /><br /> 4 = inizializzazione in corso. Indica la fase di rollback in cui il log delle transazioni necessario a un database secondario per l'intercettazione dell'LSN di rollback viene fornito e finalizzato su una replica secondaria.<br />**Attenzione:** Quando un database in una replica secondaria si trova nello stato di INIZIALIZZAzione, il failover forzato sulla replica secondaria lascia il database in uno stato in cui non può essere avviato come database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Descrizione dello stato di spostamento dei dati, uno di:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = il commit della transazione non è sincronizzato rispetto a questo database.<br /><br /> 1 = il commit della transazione è sincronizzato rispetto a questo database.<br /><br /> Per un database in una replica di disponibilità con commit asincrono, questo valore è sempre 0.<br /><br /> Per un database in una replica di disponibilità con commit sincrono, questo valore è preciso solo nel database primario.|  
-|**synchronization_health**|**tinyint**|Riflette l'intersezione dello stato di sincronizzazione di un database aggiunto al gruppo di disponibilità nella replica di disponibilità e la modalità di disponibilità della replica di disponibilità (modalità con commit sincrono o asincrono), una delle valori seguenti.<br /><br /> 0 = non integro. Il **synchronization_state** del database è 0 (non in sincronizzazione).<br /><br /> 1 = parzialmente integro. Un database in una replica di disponibilità con commit sincrono è considerato parzialmente integro se **synchronization_state** è 1 (sincronizzazione).<br /><br /> 2 = integro. Un database in una replica di disponibilità con commit sincrono viene considerato integro se **synchronization_state** è 2 (Synchronized) e un database in una replica di disponibilità con commit asincrono viene considerato integro se **synchronization_state** è 1 (sincronizzazione).|  
+|**una**|**tinyint**|Riflette l'intersezione dello stato di sincronizzazione di un database aggiunto al gruppo di disponibilità nella replica di disponibilità e la modalità di disponibilità della replica di disponibilità (modalità con commit sincrono o asincrono), una delle valori seguenti.<br /><br /> 0 = non integro. Il **synchronization_state** del database è 0 (non in sincronizzazione).<br /><br /> 1 = parzialmente integro. Un database in una replica di disponibilità con commit sincrono è considerato parzialmente integro se **synchronization_state** è 1 (sincronizzazione).<br /><br /> 2 = integro. Un database in una replica di disponibilità con commit sincrono viene considerato integro se **synchronization_state** è 2 (Synchronized) e un database in una replica di disponibilità con commit asincrono viene considerato integro se **synchronization_state** è 1 (sincronizzazione).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrizione della **una** del database di disponibilità.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = Online<br /><br /> 1 = Ripristino in corso<br /><br /> 2 = Recupero in corso<br /><br /> 3 = Recupero in sospeso<br /><br /> 4 = Sospetto<br /><br /> 5 = Emergenza<br /><br /> 6 = Offline<br /><br /> **Nota:** Uguale alla colonna **stato** in sys. databases.|  
 |**database_state_desc**|**nvarchar(60)**|Descrizione della **database_state** della replica di disponibilità.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Nota:** Uguale alla colonna **state_desc** in sys. databases.|  
@@ -82,5 +82,5 @@ ms.locfileid: "71199450"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+- [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
 - [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)

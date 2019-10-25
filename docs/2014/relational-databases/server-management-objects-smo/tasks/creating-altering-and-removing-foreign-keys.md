@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021871"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796963"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Creazione, modifica e rimozione di chiavi esterne
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le chiavi esterne sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
@@ -27,7 +27,7 @@ ms.locfileid: "63021871"
  Le colonne che rappresentano la chiave esterna sono elencate nella proprietà dell'oggetto `Columns` dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La chiave primaria a cui la chiave esterna fa riferimento è rappresentata dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> che si trova nella tabella specificata nella proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Creazione, modifica e rimozione di una chiave esterna in Visual Basic  
  In questo esempio di codice viene illustrato come creare una relazione di chiave esterna tra una o più colonne in una tabella e una colonna chiave primaria in un'altra tabella.  
@@ -37,7 +37,7 @@ ms.locfileid: "63021871"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>Creazione, modifica e rimozione di una chiave esterna in Visual C#  
  In questo esempio di codice viene illustrato come creare una relazione di chiave esterna tra una o più colonne in una tabella e una colonna chiave primaria in un'altra tabella.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021871"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>Creazione, modifica e rimozione di una chiave esterna in PowerShell  
  In questo esempio di codice viene illustrato come creare una relazione di chiave esterna tra una o più colonne in una tabella e una colonna chiave primaria in un'altra tabella.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Esempio: Le chiavi esterne, chiavi primarie e colonne vincoli Unique  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Esempio: chiavi esterne, chiavi primarie e colonne con vincolo univoco  
  In questo esempio vengono illustrate le operazioni seguenti:  
   
 -   Individuazione di una chiave esterna in un oggetto esistente.  
@@ -103,7 +103,7 @@ $fk.Create()
   
  Versione C# di questo esempio:  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  Versione Visual Basic dell'esempio:  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

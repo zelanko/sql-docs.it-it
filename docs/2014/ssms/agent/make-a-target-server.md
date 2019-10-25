@@ -19,21 +19,21 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659839"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798190"
 ---
 # <a name="make-a-target-server"></a>Configurare un server di destinazione
   In questo argomento viene descritto come configurare un server di destinazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects (SMO).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per configurare un server di destinazione utilizzando:**  
   
@@ -45,10 +45,10 @@ ms.locfileid: "62659839"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  I processi distribuiti con passaggi associati a un proxy vengono eseguiti nel contesto dell'account proxy nel server di destinazione. Verificare che siano soddisfatte le condizioni seguenti, per assicurare che i passaggi di processo associati a un proxy vengano scaricati dal server master a quello di destinazione:  
   
--   La sottochiave del Registro di sistema di server master **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*nome_istanza*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) è impostato su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
+-   La sottochiave del registro di sistema del server master **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
   
 -   Nel server di destinazione deve esistere un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio del processo.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62659839"
   
      Per risolvere il problema, verificare che nel server di destinazione sia disponibile un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio di processo.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -96,7 +96,7 @@ ms.locfileid: "62659839"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio il server corrente viene integrato nel server master AdventureWorks1. L'ubicazione del server corrente è Building 21, Room 309, Rack 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,11 +105,9 @@ ms.locfileid: "62659839"
     GO;  
     ```  
   
-     Per altre informazioni, vedere [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+     Per ulteriori informazioni, vedere [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Usando SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>Utilizzo di SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
-  
-  

@@ -14,12 +14,12 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211326"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798184"
 ---
 # <a name="start-a-job"></a>Start a Job
   In questo argomento viene descritto come avviare l'esecuzione di un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
@@ -28,7 +28,7 @@ ms.locfileid: "68211326"
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per avviare un processo utilizzando:**  
   
@@ -40,12 +40,12 @@ ms.locfileid: "68211326"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
-#### <a name="to-start-a-job"></a>Per avviare un processo  
+### <a name="to-start-a-job"></a>Per avviare un processo  
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211326"
   
 ##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
-#### <a name="to-start-a-job"></a>Per avviare un processo  
+### <a name="to-start-a-job"></a>Per avviare un processo  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211326"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -80,9 +80,8 @@ ms.locfileid: "68211326"
   
  Per altre informazioni, vedere [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- **Per avviare un processo**  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+
+### <a name="to-start-a-job"></a>Per avviare un processo
   
  Chiamare il metodo `Start` della classe `Job` usando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

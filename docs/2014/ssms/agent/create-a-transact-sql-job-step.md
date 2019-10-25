@@ -14,23 +14,23 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 383a85bbbad6675c629f7789a09dca4cb0666559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 488e07e86ba5a7febcb0675611136a1e0d792007
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211445"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798262"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
   In questo argomento viene descritto come eliminare un passaggio del processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che esegue script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
   
  Gli script per passaggi di processo possono chiamare stored procedure e stored procedure estese. Un singolo passaggio di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere più batch e comandi GO incorporati. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](create-jobs.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un passaggio di processo Transact-SQL utilizzando:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211445"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -79,7 +79,7 @@ ms.locfileid: "68211445"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
@@ -93,11 +93,9 @@ ms.locfileid: "68211445"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per creare un passaggio di processo Transact-SQL**  
   
  Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione (SQL Server) | Microsoft Docs
+title: Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774794"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797837"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)
-  In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)].  
+  In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
 >  Per la maggior parte delle configurazioni comuni del listener, è possibile creare il listener del primo gruppo di disponibilità tramite cmdlet di PowerShell o istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] . Per ulteriori informazioni, vedere [Attività correlate](#RelatedTasks)più avanti in questo argomento.  
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In questo esempio, il client tenta di connettersi al listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. (È possibile omettere la porta se il listener del gruppo di disponibilità è in attesa sulla porta 1433).  La stringa di connessione ha il `ApplicationIntent` impostata su `ReadOnly`, rendendo questo un *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
+ In questo esempio, il client tenta di connettersi al listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. (È possibile omettere la porta se il listener del gruppo di disponibilità è in attesa sulla porta 1433).  La stringa di connessione ha la proprietà `ApplicationIntent` impostata su `ReadOnly`, rendendola una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
   
  Il database primario del gruppo di disponibilità elabora la richiesta di routing in sola lettura in ingresso e tenta di trovare una replica online in sola lettura che sia stata aggiunta alla replica primaria e configurata per il routing in sola lettura.  Il client riceve nuovamente le informazioni di connessione dal server della replica primaria e si connette alla replica in sola lettura identificata.  
   
@@ -184,7 +184,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
   
  Utilizzare lo strumento della riga di comando di Windows `setspn` per configurare il nome SPN.  Ad esempio, per configurare un nome SPNr per un gruppo di disponibilità denominato `AG1listener.Adventure-Works.com` ospitato in un set di istanze di SQL Server configurate per essere eseguite nell'account di dominio `corp/svclogin2`:  
   
-```  
+```cmd
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
@@ -192,7 +192,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Connettività Client AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [Connettività &#40;Client AlwaysOn SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,17 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduzione al listener del gruppo di disponibilità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog del team di SQL Server AlwaysOn)  
   
--   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Connettività Client AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [Connettività &#40;Client AlwaysOn SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
-  
-  
+ [Repliche secondarie attive: repliche &#40;secondarie leggibili gruppi di disponibilità AlwaysOn&#41; ](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Connessione di client a una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

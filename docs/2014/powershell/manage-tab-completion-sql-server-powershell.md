@@ -10,12 +10,12 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922952"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797793"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gestione del completamento alla pressione del tasto TAB (SQL Server PowerShell)
   Gli snap-in di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introducono tre variabili (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` e `$SqlServerIncludeSystemObjects`) per controllare il completamento alla pressione del tasto TAB di Windows PowerShell. Il completamento alla pressione del tasto TAB consente di ridurre la digitazione restituendo tabelle di elementi i cui nomi iniziano con la stringa che si sta digitando.  
@@ -42,7 +42,7 @@ ms.locfileid: "62922952"
 ### <a name="example-powershell"></a>Esempio (PowerShell)  
  Nell'esempio seguente vengono impostate tutte e tre le variabili e vengono elencate le relative impostazioni:  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
@@ -51,5 +51,3 @@ dir variable:sqlserver*
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

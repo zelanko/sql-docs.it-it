@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889604"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797643"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
   Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. La **modalità multidimensionale e di data mining** supporta OLAP e data mining tradizionali. La **modalità tabulare** supporta i modelli tabulari. La **modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services installata come PowerPivot per SharePoint, utilizzata per il caricamento e l'esecuzione di query sui modelli di dati di Excel o PowerPivot all'interno di una cartella di lavoro.  
@@ -26,9 +26,9 @@ ms.locfileid: "68889604"
  In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per altre informazioni su altre modalità, vedere [modellazione &#40;tabulare&#41; SSAS tabulare](../../tabular-models/tabular-models-ssas.md) e [confronto tra le soluzioni &#40;tabulari e multidimensionali di SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Architettura di base  
- Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sono denominate "\<ServerName > \\ < NomeIstanza \>". Nella figura seguente sono illustrate tutte le relazioni tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
+ Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sono denominate "\<nomeserver >\\< NomeIstanza\>". Nella figura seguente sono illustrate tutte le relazioni tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
   
- ![Relazioni di oggetti AMO in esecuzione](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relazioni di oggetti AMO in esecuzione")  
+ ![Relazioni di oggetti AMO in esecuzione](../../dev-guide/media/amo-runningobjects.gif "Relazioni di oggetti AMO in esecuzione")  
   
  Le classi di base rappresentano il set di oggetti minimo richiesto per la compilazione di un cubo. Tale set di oggetti minimo è costituito da una dimensione, un gruppo di misure e una partizione. L'utilizzo di un'aggregazione è facoltativo.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889604"
 ## <a name="example"></a>Esempio  
  Il cubo Imports contiene due misure, Packages e Last, e tre dimensioni correlate, Route, Source e Time.  
   
- ![Esempio di cubo 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Esempio di cubo 1")  
+ ![Esempio di cubo 1](../../dev-guide/media/cubeintro1.gif "Esempio di cubo 1")  
   
  I valori alfanumerici più piccoli disposti intorno al cubo rappresentano i membri delle dimensioni. Ad esempio, ground, Africa e 1st quarter sono rispettivamente membri delle dimensioni Route, Source e Time.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889604"
 ### <a name="aggregates"></a>Aggregazioni  
  Gli utenti aziendali di un cubo possono determinare il valore di qualsiasi misura per ogni membro di ogni dimensione, indipendentemente dal livello del membro all'interno della dimensione, perché in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] i valori vengono aggregati ai livelli superiori in base alle esigenze. I valori della misura nell'illustrazione precedente, ad esempio, possono essere aggregati in base a una gerarchia del calendario standard usando la gerarchia temporale temporale nella dimensione temporale, come illustrato nella figura seguente.  
   
- ![Diagramma delle misure organizzate lungo la dimensione temporale](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagramma delle misure organizzate lungo la dimensione temporale")  
+ ![Diagramma delle misure organizzate lungo la dimensione temporale](../../dev-guide/media/cubeintro2.gif "Diagramma delle misure organizzate lungo la dimensione temporale")  
   
  Oltre che in base a un'unica dimensione, le misure possono essere aggregate utilizzando combinazioni di membri di dimensioni diverse. Ciò consente agli utenti aziendali di valutare le misure di più dimensioni contemporaneamente. Se, ad esempio, un utente aziendale desidera analizzare ogni trimestre le importazioni giunte per via aerea dagli emisferi orientale e occidentale, potrà eseguire una query sul cubo per recuperare il set di dati seguente.  
   

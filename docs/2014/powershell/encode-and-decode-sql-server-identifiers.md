@@ -10,19 +10,19 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775065"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797765"
 ---
-# <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SQL Server
+# <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SLQ Server
   Gli identificatori delimitati di SQL Server possono contenere caratteri non supportati nei percorsi di Windows PowerShell. È possibile specificare questi caratteri codificando i valori esadecimali.  
   
 1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
   
-2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [decodifica un identificatore](#DecodeIdent)  
+2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [Decodifica di un identificatore](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  I caratteri non supportati nei nomi dei percorsi di Windows PowerShell possono essere rappresentati o codificati come il carattere "%" seguito dal valore esadecimale del modello di bit che rappresenta il carattere, come in " **%** xx". La codifica può sempre essere utilizzata per gestire i caratteri non supportati nei percorsi di Windows PowerShell.  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  In alternativa, è possibile usare **Encode-SqlName** per compilare un nome supportato da Windows PowerShell:  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,7 +67,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>Esempi (decodifica)  
  In questo esempio viene restituito "Table:Test":  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
@@ -75,5 +75,3 @@ Decode-SqlName "Table%3ATest"
  [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md)   
  [Provider PowerShell per SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

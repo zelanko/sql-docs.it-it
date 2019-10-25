@@ -16,12 +16,12 @@ ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792157"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797664"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Creare un join di una replica secondaria a un gruppo di disponibilità (SQL Server)
   In questo argomento si illustra come creare un join di una replica secondaria a un gruppo di disponibilità AlwaysOn utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Dopo l'aggiunta di una replica secondaria a un gruppo di disponibilità AlwaysOn, è necessario creare un join della replica secondaria al gruppo di disponibilità. L'operazione di join della replica deve essere eseguita nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui viene ospitata la replica secondaria.  
@@ -30,7 +30,7 @@ ms.locfileid: "62792157"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per preparare un database secondario tramite:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62792157"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   La replica primaria del gruppo di disponibilità deve essere attualmente online.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62792157"
 > [!IMPORTANT]  
 >  Se nessuno dei prerequisiti viene soddisfatto, l'operazione di join non viene completata. Al termine di un tentativo di join errato, potrebbe essere necessario connettersi all'istanza del server in cui è ospitata la replica primaria per rimuovere e aggiungere nuovamente la replica secondaria, prima di poter creare un join al gruppo di disponibilità. Per altre informazioni, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -86,9 +86,9 @@ ms.locfileid: "62792157"
   
      dove *nome_gruppo* è il nome del gruppo di disponibilità.  
   
-     Nell'esempio seguente viene creato un join della replica secondaria al gruppo di disponibilità `MyAG`.  
+     Nell'esempio seguente viene creato un join della replica secondaria al gruppo di disponibilità `MyAG` .  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG JOIN;  
     ```  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62792157"
   
      Ad esempio, tramite il comando seguente è possibile creare un join di una replica secondaria ospitata dall'istanza del server presente nel percorso specificato al gruppo di disponibilità denominato `MyAg`.  Questa istanza del server deve ospitare una replica secondaria in questo gruppo di disponibilità.  
   
-    ```  
+    ```powershell
     Join-SqlAvailabilityGroup -Path SQLSERVER:\SQL\SecondaryServer\InstanceName -Name 'MyAg'  
     ```  
   
@@ -120,13 +120,11 @@ ms.locfileid: "62792157"
 ##  <a name="FollowUp"></a> Completamento: Configurare i database secondari  
  Per ogni database nel gruppo di disponibilità, è necessario un database secondario nell'istanza del server in cui viene ospitata la replica secondaria. È possibile configurare i database secondari prima o dopo la creazione di un join di una replica secondaria a un gruppo di disponibilità, come indicato di seguito:  
   
-1.  Ripristinare i backup dei log e dei database recenti di ogni database primario nell'istanza del server in cui viene ospitata la replica secondaria, utilizzando RESTORE WITH NORECOVERY per ogni operazione di ripristino. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+1.  Ripristinare i backup dei log e dei database recenti di ogni database primario nell'istanza del server in cui viene ospitata la replica secondaria, utilizzando RESTORE WITH NORECOVERY per ogni operazione di ripristino. Per altre informazioni, vedere [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-2.  Creare un join di ogni database secondario al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+2.  Creare un join di ogni database secondario al gruppo di disponibilità. Per altre informazioni, vedere [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Risolvere i problemi di configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
-  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Risolvere i problemi &#40;di&#41;configurazione gruppi di disponibilità AlwaysOn SQL Server eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468270"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798075"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
   È possibile registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'utilità esistente di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per monitorarne le prestazioni e la configurazione come istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
@@ -62,7 +62,7 @@ ms.locfileid: "62468270"
   
 -   I dati FILESTREAM non sono supportati per il monitoraggio di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Per altre informazioni, vedere [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Per ulteriori informazioni, vedere la pagina relativa alle [specifiche di capacità massima per SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Per altre informazioni sui concetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62468270"
  Scegliere **Avanti**per continuare.  
   
 ##  <a name="Instance_name"></a> Specificare l'istanza di SQL Server  
- Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo connessione, fare clic su **Connetti.** Specificare il nome del computer e il nome dell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato Nomecomputer\nomeistanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Scegliere **Avanti**per continuare.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62468270"
 |L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere già registrata con nessun altro punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata è già gestita come parte di un'istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, non è possibile registrarla con un altro punto di controllo dell'utilità.|  
 |L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere già un punto di controllo dell'utilità.|Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata è già un punto di controllo dell'utilità diverso dal punto di controllo dell'utilità al quale si è connessi, non è possibile registrarla in questo punto di controllo dell'utilità.|  
 |L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati.|Ripetere l'installazione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|È necessario arrestare i set di raccolta nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Arrestare i set di raccolta preesistenti nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'agente di raccolta dati è disabilitato, abilitarlo, arrestare qualsiasi set di raccolta dati eseguito, quindi eseguire nuovamente le regole di convalida per l'operazione di creazione del punto di controllo dell'utilità.<br /><br /> Per abilitare l'agente di raccolta dati:<br /><br /> In Esplora oggetti espandere il nodo **Gestione** .<br /><br /> Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Abilita raccolta dati**.<br /><br /> Per arrestare un set di raccolta:<br /><br /> In Esplora oggetti espandere il nodo Gestione, espandere **Raccolta dati**, quindi **Set di raccolta dati di sistema**.<br /><br /> Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare e quindi scegliere **Arresta set di raccolta dati**.<br /><br /> In una finestra di messaggio verrà visualizzato il risultato di questa azione, mentre un cerchio rosso sull'icona del set di raccolta indicherà che il set di raccolta è stato arrestato.|  
+|È necessario arrestare i set di raccolta nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Arrestare i set di raccolta preesistenti nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'agente di raccolta dati è disabilitato, abilitarlo, arrestare qualsiasi set di raccolta dati eseguito, quindi eseguire nuovamente le regole di convalida per l'operazione di creazione del punto di controllo dell'utilità.<br /><br /> Per abilitare l'agente di raccolta dati:<br /><br /> In Esplora oggetti espandere il nodo **Gestione** .<br /><br /> Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Abilita raccolta dati**.<br /><br /> Per arrestare un set di raccolta:<br /><br /> In Esplora oggetti espandere il nodo Gestione, espandere **Raccolta dati**, quindi **Set di raccolta dati di sistema**.<br /><br /> Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare, quindi scegliere **Arrestare il set di raccolta dati**.<br /><br /> In una finestra di messaggio verrà visualizzato il risultato di questa azione, mentre un cerchio rosso sull'icona del set di raccolta indicherà che il set di raccolta è stato arrestato.|  
 |È necessario avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sull'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato automaticamente.|  
 |È necessario che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel punto di controllo dell'utilità sia avviato.|Avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel punto di controllo dell'utilità. Se il punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato automaticamente.|  
 |È necessario configurare correttamente WMI.|Per risolvere i problemi di configurazione WMI, vedere [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).|  
@@ -145,9 +145,9 @@ ms.locfileid: "62468270"
   
  Impostazioni istanza gestita  
   
--   Nome dell'istanza SQL Server: ComputerName\InstanceName  
+-   Nome istanza di SQL Server: NomeComputer\NomeIstanza  
   
--   Account Set di raccolta utilità: DomainName\UserName  
+-   Account set di raccolta utilità: NomeDominio\NomeUtente  
   
  Scegliere **Avanti**per continuare.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62468270"
 >   
 >  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, errore: 15404)  
+>  Ulteriori informazioni: Non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
 >   
 >  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -180,23 +180,23 @@ ms.locfileid: "62468270"
   
  Il processo di raccolta dati inizia immediatamente, ma possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità. La raccolta dati continua una volta ogni 15 minuti. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità**, scegliere quindi **Aggiorna[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic con il pulsante destro del mouse sul nome dell'istanza di** nella visualizzazione elenco, quindi scegliere **Aggiorna**.  
   
- Per rimuovere le istanze gestite da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco in **Contenuto Esplora utilità** , quindi scegliere **Rendi istanza non gestita**.  
+ Per rimuovere le istanze gestite da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco in **Contenuto Esplora utilità**, quindi scegliere **Rendi istanza non gestita**.  
   
 ##  <a name="PowerShell_enroll"></a> Registrazione di un'istanza di SQL Server tramite PowerShell  
  Usare l'esempio seguente per registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente:  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($SqlStoreConnection);  
-> $Instance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\ManagedInstanceName";  
-> $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $Instance.ConnectionContext.SqlConnectionObject;  
-> $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($SqlStoreConnection);  
+$Instance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\ManagedInstanceName";  
+$InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $Instance.ConnectionContext.SqlConnectionObject;  
+$ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
+ [Risoluzione dei problemi relativi a Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

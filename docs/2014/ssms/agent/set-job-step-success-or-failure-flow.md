@@ -15,19 +15,19 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033728"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798173"
 ---
-# <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
+# <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
   Quando si creano processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile specificare le azioni che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovrà intraprendere in caso di errore durante l'esecuzione del processo. Determinare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovrà eseguire in caso di esito positivo o negativo di ogni passaggio di processo. Attenersi quindi alla procedura riportata di seguito per configurare la logica del flusso di azioni del passaggio di processo utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo utilizzando:**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63033728"
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -80,7 +80,7 @@ ms.locfileid: "63033728"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -92,11 +92,10 @@ ms.locfileid: "63033728"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- **Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo**  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+
+### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
   
  Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

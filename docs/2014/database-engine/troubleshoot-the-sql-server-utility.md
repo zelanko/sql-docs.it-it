@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di utilità SQL Server | Microsoft Docs
+title: Risolvere i problemi relativi alla Utilità SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842527"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797782"
 ---
-# <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
-  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per altre informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dell'utilità, vedere [risolvere i problemi di integrità risorse di SQL Server &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+# <a name="troubleshoot-the-sql-server-utility"></a>Attività e funzionalità di Utilità SQL Server
+  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sull'attenuazione dei problemi di integrità delle risorse identificati da un punto di controllo dell'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Troubleshoot SQL Server Integrità risorse &#40;&#41;utilità SQL Server](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Operazione di registrazione di un'istanza di SQL Server in Utilità SQL Server non riuscita  
  Se ci si connette all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione utilizzando l'Autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e si specifica un account proxy che appartiene a un dominio Active Directory diverso dal dominio in cui si trova il punto di controllo dell'utilità, la convalida dell'istanza riesce, ma l'operazione di registrazione non riesce con il messaggio di errore seguente:  
   
  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, errore: 15404)  
+ Ulteriori informazioni: Non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
   
  Questo problema si verifica nello scenario di esempio seguente:  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842527"
   
 3.  L'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da registrare in Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è anche un membro di "Domain_1".  
   
-4.  Durante l'operazione di registrazione, connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] registrazione utilizzando "sa". Specificare un account proxy da "Domain_2".  
+4.  Durante l'operazione di registrazione, connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione utilizzando "sa". Specificare un account proxy da "Domain_2".  
   
 5.  La convalida riesce, ma la registrazione no.  
   
- La soluzione alternativa per questo problema, nell'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per registrare il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilità utilizzando "sa" e fornire un account proxy da "Domain_1".  
+ La soluzione alternativa per questo problema, utilizzando l'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione all'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando "sa" e fornire un account proxy da "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Convalida WMI non riuscita  
  Se WMI non è configurato correttamente in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le operazioni di creazione del punto di controllo dell'utilità e di registrazione dell'istanza gestita visualizzano un avviso, ma l'operazione non viene bloccata. Inoltre, se si modifica la configurazione dell'account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in modo che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent non disponga delle autorizzazioni per le classi WMI obbligatorie, la raccolta dati nell'istanza gestita interessata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene caricata nel punto di controllo dell'utilità. Ciò comporta la visualizzazione di icone grigie nel punto di controllo dell'utilità.  
@@ -48,9 +48,9 @@ ms.locfileid: "62842527"
   
  I messaggi di errore semplificati sono:  
   
- L'esecuzione del comando interrotto perché la variabile della shell "ErrorActionPreference" è impostata su Stop: Accesso negato.  
+ L'esecuzione del comando è stata arrestata perché la variabile della shell "ErrorActionPreference" è impostata sull'arresto: accesso negato.  
   
- ERRORE: \<Data e ora (MM/GG/AAAA hh.mm.ss) >: Eccezione rilevata durante la raccolta delle proprietà della cpu.  È probabile che una query WMI non sia riuscita.  AVVISO.  
+ ERRORE: \<data-ora (MM/GG/AAAA HH: MM: SS) >: è stata rilevata un'eccezione durante la raccolta delle proprietà della CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
   
  Per risolvere questo problema, verificare le impostazioni di configurazione seguenti:  
   
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Se la raccolta o il caricamento dei dati non riesce a causa di problemi di timeout, aggiornare la funzione dbo.fn_sysutility_mi_get_collect_script() nel database MSDB. In particolare, nella funzione "Invoke-BulkCopyCommand()" aggiungere la riga:  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  In **Esplora oggetti**di SSMS espandere il nodo **Sicurezza** , quindi espandere il nodo **Credenziali** .  
   
-    2.  Fare clic su **UtilityAgentProxyCredential_\<GUID >** e selezionare **proprietà**.  
+    2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_\<GUID >** e selezionare **Proprietà**.  
   
-    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali come desiderato per il **UtilityAgentProxyCredential_\<GUID >** credenziale.  
+    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **GUID di UtilityAgentProxyCredential_\<** Credential.  
   
     4.  Scegliere **OK** per confermare la modifica.  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   È necessario avviare e configurare per l'avvio automatico il servizio SQL Server Browser nel punto di controllo dell'utilità. Se l'organizzazione non consente l'utilizzo del servizio SQL Server Browser, utilizzare i passaggi seguenti per consentire a un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di connettersi al punto di controllo dell'utilità:  
   
-    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], fare clic su **avviare**, quindi fare clic su **Esegui...** .  
+    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fare clic sul pulsante **Start**, quindi scegliere **Esegui.**  
   
     2.  Digitare "cliconfg.exe" nella casella, quindi fare clic su **OK**.  
   
     3.  Se viene richiesto di consentire l'avvio di SQL Client Configuration Utility EXE, fare clic su**Continua**.  
   
-    4.  Nel **utilità di rete Client di SQL Server** finestra di dialogo, seleziona la **Alias** tab, quindi fare clic su **Aggiungi...** .  
+    4.  Nella finestra di dialogo **utilità di SQL Server rete client** selezionare la scheda **alias** , quindi fare clic su **Aggiungi.**  
   
     5.  Nella finestra di dialogo **Aggiungi configurazione libreria di rete** effettuare le operazioni seguenti:  
   
@@ -166,6 +166,4 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

@@ -15,12 +15,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c718fee71538fcd5d1babde72ab87746b3e4e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223337"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797043"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Creazione, modifica e rimozione di database
   In SMO un database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
@@ -28,7 +28,7 @@ ms.locfileid: "63223337"
  Non è necessario creare un oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> per modificarlo o rimuoverlo. È possibile fare riferimento al database tramite una raccolta.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Creazione, modifica e rimozione di un database in Visual Basic  
  In questo esempio di codice viene creato un nuovo database. I file e i filegroup del database vengono creati automaticamente.  
@@ -38,7 +38,7 @@ ms.locfileid: "63223337"
 ## <a name="creating-altering-and-removing-a-database-in-visual-c"></a>Creazione, modifica e rimozione di un database in Visual C#  
  In questo esempio di codice viene creato un nuovo database. I file e i filegroup del database vengono creati automaticamente.  
   
-```  
+```csharp
 {  
                 //Connect to the local, default instance of SQL Server.   
                 Server srv;  
@@ -59,16 +59,16 @@ ms.locfileid: "63223337"
 ## <a name="creating-altering-and-removing-a-database-in-powershell"></a>Creazione, modifica e rimozione di un database in PowerShell  
  In questo esempio di codice viene creato un nuovo database. I file e i filegroup del database vengono creati automaticamente.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 cd \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Create a new database  
 $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -argumentlist $srv, "Test_SMO_Database"  
 $db.Create()  
   
-#Reference the database and display the date when it was created.   
+#Reference the database and display the date when it was created.
 $db = $srv.Databases["Test_SMO_Database"]  
 $db.CreateDate  
   
@@ -78,5 +78,3 @@ $db.Drop()
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  

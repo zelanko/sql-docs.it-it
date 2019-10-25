@@ -12,21 +12,19 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43210110405eca5f44fc458311f90582f159aff6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790670"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797707"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Creare un gruppo di disponibilità (SQL Server PowerShell)
   In questo argomento si illustra come usare i cmdlet di PowerShell per creare e configurare un gruppo di disponibilità AlwaysOn usando PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *gruppo di disponibilità* permette di definire un set di database utente di cui sarà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
-  
 
-  
 > [!NOTE]  
 >  In alternativa all'uso dei cmdlet di PowerShell, è possibile usare la procedura guidata Crea gruppo di disponibilità o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per altre informazioni, vedere [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) o [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
@@ -37,23 +35,23 @@ ms.locfileid: "62790670"
   
 -   Prima di creare un gruppo di disponibilità, verificare che le istanze host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si trovino ognuna in un nodo WSCF (Windows Server Failover Clustering) diverso di un singolo cluster di failover WSFC. Inoltre, verificare che le istanze del server abbiano soddisfatto gli altri prerequisiti dell'istanza del server, che tutti gli altri requisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] siano soddisfatti e che si tengano presenti i consigli. Per altre informazioni è consigliabile leggere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
 ###  <a name="SummaryPSStatements"></a> Riepilogo delle attività e cmdlet di PowerShell corrispondenti  
  Nella tabella seguente sono elencate le attività di base necessarie per la configurazione di un gruppo di disponibilità e sono indicate le attività supportate dai cmdlet di PowerShell. È necessario eseguire le attività [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nell'ordine con cui sono elencate nella tabella.  
   
-|Attività|Cmdlet di PowerShell (se disponibile) o istruzione Transact-SQL|Posizione in cui eseguire l'attività **<sup>*</sup>**|  
+|Attività|Cmdlet di PowerShell (se disponibile) o istruzione Transact-SQL|Dove eseguire **<sup>*</sup> attività**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|Creare un endpoint del mirroring del database (una volta per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Eseguire in ogni istanza del server in cui non è presente l'endpoint del mirroring del database.<br /><br /> Nota: Per modificare un endpoint del mirroring di database esistente, usare `Set-SqlHadrEndpoint`.|  
+|Creare un endpoint del mirroring del database (una volta per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Eseguire in ogni istanza del server in cui non è presente l'endpoint del mirroring del database.<br /><br /> Nota: per modificare un endpoint del mirroring del database esistente, usare `Set-SqlHadrEndpoint`.|  
 |Creare un gruppo di disponibilità|Usare innanzitutto il cmdlet `New-SqlAvailabilityReplica` con il parametro `-AsTemplate` per creare un oggetto della replica di disponibilità in memoria per ognuna delle due repliche di disponibilità che si desidera includere nel gruppo di disponibilità.<br /><br /> Creare quindi il gruppo di disponibilità tramite il cmdlet `New-SqlAvailabilityGroup` e facendo riferimento agli oggetti replica di disponibilità.|Eseguire nell'istanza del server che dovrà ospitare la replica primaria iniziale.|  
 |Creare un join della replica secondaria al gruppo di disponibilità|`Join-SqlAvailabilityGroup`|Eseguire in ogni istanza del server in cui è ospitata una replica secondaria.|  
 |Preparare il database secondario|`Backup-SqlDatabase` e `Restore-SqlDatabase`|Creare i backup nell'istanza del server in cui è ospitata la replica primaria.<br /><br /> Ripristinare i backup in ogni istanza del server in cui è ospitata una replica secondaria, usando il parametro di ripristino `NoRecovery`. Se i percorsi di file differiscono tra i computer in cui sono ospitate la replica primaria e la replica secondaria di destinazione, usare anche il parametro di ripristino `RelocateFile`.|  
 |Avviare la sincronizzazione dei dati creando un join di ogni database secondario al gruppo di disponibilità|`Add-SqlAvailabilityDatabase`|Eseguire in ogni istanza del server in cui è ospitata una replica secondaria.|  
   
- **<sup>*</sup>**  Per eseguire un'attività specifica, impostare la directory (`cd`) alle istanze del server indicate.  
+ **<sup>*</sup>**  Per eseguire un'attività specifica, impostare la directory (`cd`) sull'istanza o sulle istanze del server indicate.  
   
 ###  <a name="PsProviderLinks"></a> Per impostare e usare il provider PowerShell per SQL Server  
   
@@ -88,7 +86,7 @@ ms.locfileid: "62790670"
 > [!NOTE]  
 >  Se gli account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] delle istanze del server sono eseguiti con account utente di dominio diversi, in ogni istanza del server creare un account di accesso per l'altra istanza del server e concedere a questo account l'autorizzazione CONNECT per l'endpoint del mirroring del database locale.  
   
-##  <a name="ExampleConfigureGroup"></a> Esempio: Usare PowerShell per creare un gruppo di disponibilità  
+##  <a name="ExampleConfigureGroup"></a> Esempio: Utilizzo di PowerShell per creare un gruppo di disponibilità  
  Nell'esempio di PowerShell seguente si crea e si configura un gruppo di disponibilità semplice denominato `MyAG` con due repliche di disponibilità e un database di disponibilità. Esempio:  
   
 1.  Viene eseguito il backup di `MyDatabase` e del relativo log delle transazioni.  
@@ -105,7 +103,7 @@ ms.locfileid: "62790670"
   
 7.  Viene creato un join del database secondario al gruppo di disponibilità.  
   
-```  
+```powershell
 # Backup my database and its log on the primary  
 Backup-SqlDatabase `  
     -Database "MyDatabase" `  
@@ -165,11 +163,11 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
 ```  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
- **Per configurare un'istanza del server per gruppi di disponibilità AlwaysOn**  
+ **Per configurare un'istanza del server per Gruppi di disponibilità AlwaysOn**  
   
 -   [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Creazione di un endpoint del mirroring del &#40;Database per gruppi di disponibilità AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
  **Per configurare le proprietà della replica e del gruppo di disponibilità**  
   
@@ -179,7 +177,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Configurare i criteri di Failover flessibili per controllare le condizioni per il Failover automatico (gruppi di disponibilità AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
+-   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico (Gruppi di disponibilità AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
 -   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -205,37 +203,37 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
- **Per risolvere i problemi di configurazione di gruppi di disponibilità AlwaysOn**  
+ **Per risolvere i problemi di configurazione Gruppi di disponibilità AlwaysOn**  
   
--   [Risolvere i problemi di configurazione di gruppi di disponibilità di AlwaysOn (SQL Server) eliminato](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Risolvere i problemi di configurazione Gruppi di disponibilità AlwaysOn (SQL Server) eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Risolvere i problemi di un'operazione di aggiunta File non riuscita &#40;gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Risolvere i problemi relativi a un'operazione &#40;di aggiunta file non riuscita gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   
-     [Su AlwaysON - HADRON serie: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Serie di apprendimento AlwaysON-HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Configurazione di AlwaysOn con PowerShell per SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
+     [Configurazione di AlwaysOn con SQL Server PowerShell](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
-     [SQL Server AlwaysOn Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Video:**  
   
-     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Serie Always On in Microsoft SQL Server nome in codice "Denali", parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione)  
+     [Microsoft SQL Server serie AlwaysOn di nome in codice "Denali", parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server serie AlwaysOn di nome in codice "Denali", parte 2: compilazione di una soluzione mission-critical a disponibilità elevata con AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -243,6 +241,4 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 ## <a name="see-also"></a>Vedere anche  
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

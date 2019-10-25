@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575570"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305041"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. Per distribuire un report usando la posta elettronica, 1) configurare il server di report per il recapito della posta elettronica e 2) definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Una singola sottoscrizione non può recapitare più report nello stesso messaggio di posta elettronica. È possibile, tuttavia, creare più sottoscrizioni.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575570"
   
 -   Invio di una notifica nel campo Oggetto di un messaggio di posta elettronica. Per impostazione predefinita, nel campo Oggetto nella definizione della sottoscrizione sono incluse le variabili seguenti che vengono sostituite da informazioni specifiche del report al momento dell'elaborazione della sottoscrizione:  
   
-     **@ReportName** indica il nome del report.  
+     **\@ReportName** specifica il nome del report.  
   
-     **@ExecutionTime** indica l'ora in cui il report è stato eseguito.  
+     **\@ExecutionTime** specifica l'ora in cui il report è stato eseguito.  
   
      È possibile utilizzare queste variabili in combinazione con testo statico o modificare il testo nel campo Oggetto per ogni sottoscrizione.  
   

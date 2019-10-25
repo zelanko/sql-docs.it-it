@@ -10,12 +10,12 @@ ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06e59cd00382610e330e2c288f44fda50244256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065115"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797935"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>Conversione di URN in percorsi di provider di SQL Server
   Il modello SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) consente di compilare URN (Uniform Resource Name) per gli oggetti. Ogni URN identifica in modo univoco un oggetto SMO e può essere convertito in un percorso di provider di SQL Server PowerShell tramite il cmdlet `Convert-UrnToPath`.  
@@ -35,7 +35,7 @@ ms.locfileid: "66065115"
   
  Per esempi dell'utilizzo del cmdlet, in Windows PowerShell eseguire:  
   
-```  
+```powershell
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
@@ -43,5 +43,3 @@ Get-Help Convert-UrnToPath -Examples
  [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)   
  [Provider PowerShell per SQL Server](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

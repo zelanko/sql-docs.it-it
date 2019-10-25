@@ -1,5 +1,5 @@
 ---
-title: Avviare, arrestare, sospendere, riprendere, riavviare il motore di Database, SQL Server Agent o servizio SQL Server Browser | Microsoft Docs
+title: Avviare, arrestare, sospendere, riprendere, riavviare il servizio motore di database, SQL Server Agent o SQL Server Browser | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808746"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797949"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser
   In questo argomento viene illustrato come avviare, i comandi arrestare, i comandi sospendere, i comandi riprendere o riavviare [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], i comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i comandi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], i comandi **net** da un prompt dei comandi, i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)], i comandi or PowerShell.  
@@ -56,7 +56,7 @@ ms.locfileid: "62808746"
   
     -   [Informazioni aggiuntive](#MoreInformation)  
   
-    -   [Sicurezza](#Security)  
+    -   [Security](#Security)  
   
 -   **Istruzioni relative all'utilizzo di:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62808746"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono programmi eseguibili che vengono eseguiti come servizi Windows. I programmi che vengono eseguiti come servizi Windows rimangono in esecuzione anche se sullo schermo del computer non viene rilevata alcuna attività.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] servizio**  
- Processo eseguibile dato da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può essere l'istanza predefinita (una per computer) o una delle molte istanze denominate del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Usare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare quali istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono installate nel computer. L'istanza predefinita (se installata) è indicata come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** . Le istanze denominate (se installate) sono indicate come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nome_istanza>)** . Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** .  
+ Processo eseguibile dato da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può essere l'istanza predefinita (una per computer) o una delle molte istanze denominate del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Usare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare quali istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono installate nel computer. L'istanza predefinita (se installata) è indicata come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. Le istanze denominate (se installate) sono indicate come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nome_istanza>)**. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato come **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent**  
  Servizio di Windows che esegue attività amministrative pianificate, ovvero processi e avvisi. Per altre informazioni, vedere [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -112,18 +112,18 @@ ms.locfileid: "62808746"
   
 -   Se l'esecuzione avviene su un cluster, il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà gestito al meglio tramite Amministrazione cluster.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](https://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
   
- L'arresto il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` comando richiede l'appartenenza al **sysadmin** o **serveradmin** ruoli predefiniti del server e non è trasferibile.  
+ L'arresto del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite il comando [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` richiede l'appartenenza al ruolo predefinito del server **sysadmin** o **serveradmin** e non è trasferibile.  
   
 ##  <a name="SSCMProcedure"></a> Utilizzo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Per avviare, arrestare, sospendere, riprendere o riavviare un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
 2.  Se viene visualizzata la finestra di dialogo **Controllo account utente** fare clic su **Sì**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62808746"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Per avviare, arrestare, sospendere, riprendere o riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser o un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
 2.  Se viene visualizzata la finestra di dialogo **Controllo account utente** fare clic su **Sì**.  
   
@@ -258,13 +258,13 @@ ms.locfileid: "62808746"
     SHUTDOWN;   
     ```  
   
--   Per arrestare immediatamente il [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire l'istruzione seguente.  
+-   Per arrestare immediatamente il [!INCLUDE[ssDE](../../includes/ssde-md.md)] , eseguire l'istruzione seguente.  
   
     ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Per altre informazioni sul `SHUTDOWN` istruzione, vedere [arresto &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Per ulteriori informazioni sull'istruzione `SHUTDOWN`, vedere [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808746"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Identificare il servizio che si desidera arrestare o avviare. Selezionare una delle righe seguenti. Sostituire `instancename` con il nome dell'istanza denominata.  
@@ -339,7 +338,5 @@ ms.locfileid: "62808746"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare SQL Server con la configurazione minima](start-sql-server-with-minimal-configuration.md)   
+ [Avvio di SQL Server con la configurazione minima](start-sql-server-with-minimal-configuration.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

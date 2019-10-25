@@ -17,21 +17,21 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211358"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798197"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   In questo argomento si illustra come impostare opzioni di notifica in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects, in modo che tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia possibile inviare notifiche agli operatori relative ai processi.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per notificare lo stato di un processo a un operatore mediante:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68211358"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a> Security  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -90,7 +90,7 @@ ms.locfileid: "68211358"
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  
     -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
@@ -102,11 +102,9 @@ ms.locfileid: "68211358"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per notificare lo stato di un processo a un operatore**  
   
  Usare la classe `Job` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

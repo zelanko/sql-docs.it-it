@@ -10,12 +10,12 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922962"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798048"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Caricare gli assembly SMO in Windows PowerShell
   In questo argomento viene descritta la modalità di caricamento assembly SMO (SQL Server Management Object, SMO) negli script di Windows PowerShell che non utilizzano il provider SQL Server PowerShell.  
@@ -29,17 +29,15 @@ ms.locfileid: "62922962"
   
 -   Se si desidera eseguire il porting del codice SMO da un altro linguaggio, ad esempio C# o Visual Basic, che non utilizza il provider o i cmdlet.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Esempio: Caricamento di SQL Server Management Objects  
+## <a name="example-loading-the-sql-server-management-objects"></a>Esempio: caricamento di SQL Server Management Objects  
  Il codice seguente consente di caricare gli assembly SMO.  
   
-```  
-#  
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
   
 $ErrorActionPreference = "Stop"  
   
-$sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
+$sqlpsreg = "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
 if (Get-ChildItem $sqlpsreg -ErrorAction "SilentlyContinue")  
 {  
@@ -81,11 +79,9 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

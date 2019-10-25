@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624362"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797852"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   **Invoke-PolicyEvaluation** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che segnala se un set di destinazioni di oggetti di SQL Server è conforme alle condizioni specificate in uno o più criteri della gestione basata su criteri.  
@@ -49,34 +49,34 @@ ms.locfileid: "67624362"
   
  Se i criteri vengono archiviati in un archivio criteri, è necessario passare un set di oggetti PSObject che punta ai criteri da valutare. Questo avviene in genere inoltrando tramite pipe a **Invoke-PolicyEvaluation**l'output di un cmdlet, ad esempio Get-Item, e non richiede la specifica del parametro **-Policy** . Ad esempio, se sono stati importati i criteri delle procedure consigliate Microsoft nell'istanza del motore di database, questo comando valuta i criteri **Stato del database** :  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  Questo esempio illustra l'uso di Where-Object per filtrare più criteri da un archivio criteri in base alla relativa proprietà **PolicyCategory** . Gli oggetti dall'output inoltrato tramite pipe di **Where-Object** vengono usati da **Invoke-PolicyEvaluation**.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  Se i criteri sono archiviati come file XML, è necessario usare il parametro **-Policy** per specificare il percorso e il nome per tutti i criteri. Se non si specifica un percorso nel parametro **-Policy** , **Invoke-PolicyEvaulation** usa l'impostazione corrente del percorso **sqlps** . Ad esempio, questo comando valuta uno dei criteri di Procedura consigliata di Microsoft installato con SQL Server rispetto al database predefinito per l'accesso:  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  Questo comando consente di eseguire la stessa operazione, solo che usa il percorso **sqlps** corrente per stabilire il percorso del file XML dei criteri:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  Questo esempio illustra l'uso del cmdlet **Get-ChildItem** per recuperare più file XML di criteri e inoltrare tramite pipe gli oggetti in **Invoke-PolicyEvaluation**:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** accetta un oggetto o una matrice di oggetti che rappresenta gli oggetti di SQL Server nel set di destinazioni. È possibile ad esempio creare una matrice di oggetti di classe <xref:Microsoft.SqlServer.Management.Smo.Database> da passare in **-TargetObjects**.  
   
--   **-TargetExpressions** consente di prendere una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. Tipo di oggetto è uno degli oggetti in una gerarchia di oggetti di SQL Server Management oggetto (SMO). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** consente di prendere una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. Il tipo di oggetto è uno degli oggetti in una gerarchia di oggetti SMO (SQL Server Management Object). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Specificare il parametro **-TargetObjects** o **-TargetExpression**, ma non entrambi.  
   
  In questo esempio viene utilizzato un oggetto Sfc.SqlStoreConnection per specificare il server di destinazione:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  In questo esempio viene usato **-TargetExpression** per identificare il database specifico da valutare:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>Valutazione di criteri di Analysis Services  
  Per valutare i criteri rispetto a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è necessario caricare e registrare un assembly in PowerShell, creare una variabile con un oggetto di connessione di Analysis Services e passarla al parametro **-TargetObject** . In questo esempio viene illustrata la valutazione dei criteri di configurazione della superficie di attacco di Procedure consigliate per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>Valutazione di criteri di Reporting Services  
  Per valutare criteri di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , è necessario caricare e registrare un assembly in PowerShell, creare una variabile con un oggetto di connessione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e passarla al parametro **-TargetObject** . In questo esempio viene illustrata la valutazione dei criteri di configurazione della superficie di attacco di Procedure consigliate per [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>Formattazione dell'output  
  Per impostazione predefinita, l'output di **Invoke-PolicyEvaluation** viene visualizzato nella finestra del prompt dei comandi sotto forma di breve report in formato leggibile. Usare il parametro **-OutputXML** per specificare che dal cmdlet venga generato invece un report dettagliato come file XML. **Invoke-PolicyEvaluation** usa lo schema SML-IF (Systems Modeling Language Interchange Format) affinché il file sia leggibile tramite i lettori SML-IF.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  
+ [Usare cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

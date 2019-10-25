@@ -1,5 +1,5 @@
 ---
-title: Il trasferimento dei dati | Microsoft Docs
+title: Trasferimento di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519180"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796544"
 ---
 # <a name="transferring-data"></a>Trasferimento di dati
   La classe <xref:Microsoft.SqlServer.Management.Smo.Transfer> è una classe di utilità che fornisce gli strumenti per trasferire oggetti e dati.  
   
  Gli oggetti nello schema del database vengono trasferiti eseguendo uno script generato sul server di destinazione. I dati <xref:Microsoft.SqlServer.Management.Smo.Table> vengono trasferiti con un pacchetto DTS creato dinamicamente.  
   
- L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> contiene tutte le funzionalità degli oggetti <xref:Microsoft.SqlServer.Management.Smo.Transfer> in DMO e altre funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tuttavia, in SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il <xref:Microsoft.SqlServer.Management.Smo.Transfer> dell'oggetto viene utilizzato il [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API per trasferire i dati. Inoltre, i metodi e le proprietà utilizzati per eseguire trasferimenti di dati si trovano nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> anziché nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>. Lo spostamento delle funzionalità dalle classi di istanze alle classi di utilità è coerente con un modello a oggetti semplificato poiché il codice per le attività specifiche viene caricato solo quando è richiesto.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> contiene tutte le funzionalità degli oggetti <xref:Microsoft.SqlServer.Management.Smo.Transfer> in DMO e altre funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tuttavia, in SMO in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> usa l'API [SqlBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) per trasferire i dati. Inoltre, i metodi e le proprietà utilizzati per eseguire trasferimenti di dati si trovano nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> anziché nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>. Lo spostamento delle funzionalità dalle classi di istanze alle classi di utilità è coerente con un modello a oggetti semplificato poiché il codice per le attività specifiche viene caricato solo quando è richiesto.  
   
  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer> non supporta trasferimenti di dati in un database di destinazione con una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> inferiore alla versione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62519180"
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-basic"></a>Trasferimento di schemi e dati da un database a un altro in Visual Basic  
  In questo esempio di codice viene illustrato come trasferire schemi e dati da un database all'altro utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```VBNET
+```vb
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
@@ -65,7 +65,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-c"></a>Trasferimento di schemi e dati da un database all'altro in Visual C#  
  In questo esempio di codice viene illustrato come trasferire schemi e dati da un database all'altro utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```  
+```csharp
 {  
             Server srv;  
             srv = new Server();  
@@ -95,7 +95,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-powershell"></a>Trasferimento di schemi e dati da un database all'altro in PowerShell  
  In questo esempio di codice viene illustrato come trasferire schemi e dati da un database all'altro utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -105,11 +105,11 @@ $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server
 $db = $srv.Databases["AdventureWorks2012"]  
   
 #Create a database to hold the copy of AdventureWorks  
-$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -argumentlist $srv, "AdventureWorksCopy"  
+$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -ArgumentList $srv, "AdventureWorksCopy"  
 $dbCopy.Create()  
   
 #Define a Transfer object and set the required options and properties.  
-$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -argumentlist $db  
+$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -ArgumentList $db  
   
 #Set this objects properties  
 $xfr.CopyAllTables = $true  
@@ -123,5 +123,3 @@ $xfr.CopySchema = $true
 #Script the transfer. Alternatively perform immediate data transfer with TransferData method.  
 $xfr.ScriptTransfer()  
 ```  
-  
-  
