@@ -1,5 +1,5 @@
 ---
-title: 'Recuperare colonne usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: 'Recuperare colonne tramite IRow:: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30acc0027c2456ff0194280c28a0ef97c1383a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110332"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907603"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +45,6 @@ ms.locfileid: "68110332"
   
 4.  Eseguire IRow::GetColumns () fino ad accedere a tutte le colonne necessarie. Alle colonne è necessario accedere in sequenza.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare l'interfaccia di IRow per consentire accesso diretto alle colonne di un'unica riga nel set di risultati. In questo esempio vengono illustrati gli aspetti seguenti:  
   
@@ -56,7 +54,7 @@ ms.locfileid: "68110332"
   
  Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la lunghezza effettiva della colonna. In questo caso è possibile chiamare nuovamente IRow->GetColumns sulla stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   

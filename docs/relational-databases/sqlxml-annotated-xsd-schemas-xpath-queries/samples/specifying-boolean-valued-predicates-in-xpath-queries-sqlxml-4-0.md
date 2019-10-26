@@ -1,5 +1,5 @@
 ---
-title: Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0) | Microsoft Docs
+title: Specifica di predicati con valori booleani nelle query XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43433aeaa1583d6aa66b1862e10c07158f21645e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027095"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907724"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare predicati con valori booleani nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare predicati con valori booleani nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di &#40;esempio per&#41;gli esempi XPath SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-multiple-predicates"></a>R. Specificare più predicati  
+### <a name="a-specify-multiple-predicates"></a>A. Specificare più predicati  
  Nella query XPath seguente vengono utilizzati più predicati per trovare informazioni sull'ordine per un ID ordine e un ID cliente specifici:  
   
 ```  
@@ -47,7 +47,7 @@ ms.locfileid: "68027095"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello BooleanValuedPredicatesA.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   
@@ -67,11 +67,9 @@ ms.locfileid: "68027095"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Here is the result:  
+     Il risultato è il seguente:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -92,22 +90,22 @@ ms.locfileid: "68027095"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>B. Specificare predicati successivi e nidificati  
- Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti i  **\<cliente >** gli elementi figlio del nodo di contesto che hanno entrambi un **SalesPersonID** attributo con il valore 277 e un **TerritoryID**attributo con un valore pari a 3:  
+### <a name="b-specify-successive-and-nested-predicates"></a>b. Specificare predicati successivi e nidificati  
+ Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti i **\<Customer >** elementi figlio del nodo di contesto con un attributo **SalesPersonID** con un valore 277 e un attributo **TerritoryID** con valore 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La query restituisce il  **\<cliente >** gli elementi che soddisfano entrambe le condizioni specificate nei predicati.  
+ La query restituisce gli elementi **\<Customer >** che soddisfano entrambe le condizioni specificate nei predicati.  
   
- Un collegamento per il **attributo** asse (@) può essere specificato e poiché il **figlio** è l'asse predefinito, può essere omesso dalla query:  
+ È possibile specificare un collegamento all'asse degli **attributi** (@) e, poiché l'asse **figlio** è quello predefinito, può essere omesso dalla query:  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. La query restituisce tutti i  **\<cliente >** elementi figlio del nodo di contesto che includono  **\<ordine >** gli elementi figlio con almeno un  **\<Ordine >** elemento con una **SalesPersonID** attributo valore 2.  
+ Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. La query restituisce tutti i **\<Customer >** elementi figlio del nodo di contesto che includono **\<order >** elementi figlio con almeno un elemento\<**Order >** con un valore dell'attributo **SalesPersonID** 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -115,7 +113,7 @@ ms.locfileid: "68027095"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello nestedSuccessive.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   
@@ -135,7 +133,7 @@ ms.locfileid: "68027095"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato un risultato parziale:  
   
@@ -170,13 +168,13 @@ ms.locfileid: "68027095"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Specificare un predicato di livello superiore  
- La query seguente restituisce il  **\<cliente >** nodi elemento figlio del nodo di contesto che hanno  **\<ordine >** gli elementi figlio. La query testa il percorso come predicato di livello superiore:  
+ La query seguente restituisce il **\<Customer >** nodi elemento figlio del nodo di contesto che hanno **\<order >** elementi figlio. La query testa il percorso come predicato di livello superiore:  
   
 ```  
 /child::Customer[child::Order]  
 ```  
   
- Il **figlio** è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
+ Il valore predefinito è l'asse **figlio** . È pertanto possibile specificare la query nel modo seguente:  
   
 ```  
 /Customer[Order]  
@@ -184,7 +182,7 @@ ms.locfileid: "68027095"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello TopLevelPredicate.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   
@@ -204,7 +202,7 @@ ms.locfileid: "68027095"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il risultato parziale:  
   

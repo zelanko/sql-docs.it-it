@@ -1,5 +1,5 @@
 ---
-title: Specifica di funzioni booleane in query XPath (SQLXML 4.0) | Documenti di Microsoft
+title: Specifica di funzioni booleane in query XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95569262bc55da45390705486871a73f0eb5f5ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027113"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907762"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Definizione di funzioni booleane in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare funzioni booleane in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare funzioni booleane in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di &#40;esempio per&#41;gli esempi XPath SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-## <a name="a-specify-the-not-boolean-function"></a>R. Definizione della funzione booleana not()  
- Questa query restituisce tutti i  **\<cliente >** elementi figlio del nodo di contesto che non hanno  **\<ordine >** gli elementi figlio:  
+## <a name="a-specify-the-not-boolean-function"></a>A. Definizione della funzione booleana not()  
+ Questa query restituisce tutti i **\<Customer >** gli elementi figlio del nodo di contesto che non hanno **\<order >** elementi figlio:  
   
 ```  
 /child::Customer[not(child::Order)]  
 ```  
   
- Il **figlio** è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
+ Il valore predefinito è l'asse **figlio** . È pertanto possibile specificare la query nel modo seguente:  
   
 ```  
 /Customer[not(Order)]  
@@ -45,7 +45,7 @@ ms.locfileid: "68027113"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (BooleanFunctionsA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -65,9 +65,7 @@ ms.locfileid: "68027113"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   
@@ -80,14 +78,14 @@ ms.locfileid: "68027113"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Definizione delle funzioni booleane true() e false()  
- Questa query restituisce tutte le  **\<cliente >** figli del nodo di contesto che non hanno  **\<ordine >** gli elementi figlio. In termini relazionali, questa query restituisce tutti i clienti che non hanno effettuato ordini.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>b. Definizione delle funzioni booleane true() e false()  
+ Questa query restituisce tutti gli elementi figlio **\<Customer >** elemento del nodo di contesto che non hanno **\<ordine >** elementi figlio. In termini relazionali, questa query restituisce tutti i clienti che non hanno effettuato ordini.  
   
 ```  
 /child::Customer[child::Order=false()]  
 ```  
   
- Il **figlio** è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
+ Il valore predefinito è l'asse **figlio** . È pertanto possibile specificare la query nel modo seguente:  
   
 ```  
 /Customer[Order=false()]  
@@ -113,7 +111,7 @@ ms.locfileid: "68027113"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (BooleanFunctionsB.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -133,7 +131,7 @@ ms.locfileid: "68027113"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   

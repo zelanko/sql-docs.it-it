@@ -1,5 +1,5 @@
 ---
-title: Chiama una Stored Procedure (OLE DB) | Microsoft Docs
+title: Chiamata di una stored procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de0a6213f27f4feb88949dd6062321ad30c2866
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031865"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907366"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - Chiamata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si usa il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile passare parametri a una stored procedure:  
+  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si usa il provider di OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, è possibile passare i parametri di un stored procedure:  
   
 -   Specificando il valore dei dati a livello di codice.  
   
@@ -79,10 +79,8 @@ ms.locfileid: "68031865"
   
 5.  Eseguire il comando usando **ICommand::Execute**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="methods-of-calling-a-stored-procedure"></a>Metodi per l'esecuzione di una chiamata a una stored procedure  
- Quando si esegue una stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta il:  
+ Quando si esegue un stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il provider di OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta:  
   
 -   Sequenza di escape ODBC CALL.  
   
@@ -97,9 +95,9 @@ ms.locfileid: "68031865"
   
  La sintassi generale per la chiamata a una stored procedure mediante la sequenza di escape ODBC CALL è:  
   
- {[ **? =** ]**chiamare**_procedure_name_[ **(** [*parametro*] [ **,** [*parametro*]]... **)** ]}  
+ {[ **? =** ]**chiama**_procedure_name_[ **(** [*parametro*] [ **,** [*parametro*]]... **)** ]}  
   
- Ad esempio:  
+ Ad esempio  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -110,7 +108,7 @@ ms.locfileid: "68031865"
   
  Quando la sequenza di escape RPC viene utilizzata per eseguire una stored procedure, il provider non chiama la funzione di supporto per determinare le informazioni sui parametri (come avviene nel caso della sintassi ODBC CALL). La sintassi RPC è più semplice della sintassi ODBC CALL, pertanto il comando viene analizzato più velocemente, migliorando le prestazioni. In questo caso, è necessario fornire le informazioni sui parametri eseguendo **ICommandWithParameters::SetParameterInfo**.  
   
- Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile richiedere i metadati della colonna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
+ Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire query sui metadati della colonna. IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
   
  Se si conoscono tutti i metadati dei parametri, la sequenza di escape RPC è la modalità consigliata per eseguire le stored procedure.  
   
@@ -120,10 +118,10 @@ ms.locfileid: "68031865"
 {rpc SalesByCategory}  
 ```  
   
- Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una Stored Procedure &#40;utilizzando la sintassi RPC&#41; e processo di codici restituiti e parametri di Output &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una &#40;stored procedure usando&#41; la sintassi RPC ed elaborare i codici &#40;restituiti&#41;e i parametri di output OLE DB](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
- La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+ La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB usa il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione dei comandi. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
  Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   

@@ -1,5 +1,5 @@
 ---
-title: Elaborare i risultati (ODBC) | Microsoft Docs
+title: Risultati processo (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd7e36ca2bad2e067d82fa5ad0751f2ef7aef34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee80b68bafa419472c5c650a270a20d4d54526bd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133437"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908183"
 ---
 # <a name="processing-results---process-results"></a>Elaborazione dei risultati - Elaborare i risultati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi recuperare i dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oppure [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi il recupero dei dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>Per elaborare i risultati  
   
@@ -59,12 +59,10 @@ L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la de
   
 6.  Se è disponibile un altro set di risultati, andare al passaggio 1.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Per annullare l'elaborazione di un set di risultati prima che [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) restituisca SQL_NO_DATA, chiamare [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Recuperare le informazioni sul Set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Recuperare le informazioni sul &#40;set di risultati ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

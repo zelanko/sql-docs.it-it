@@ -1,5 +1,5 @@
 ---
-title: Utilizzare le colonne Data-at-Execution (ODBC) | Documenti di Microsoft
+title: Utilizzare le colonne data-at-execution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 641310f127e37f00e096c5e9ed2da8ed4b09347f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 294c441ec2b27a33325aa10ce51513fa9613df47
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898425"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908202"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestione di colonne di tipo text e image - Usare colonne data-at-execution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,20 +43,18 @@ ms.locfileid: "67898425"
   
 4.  Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come leggere dati di tipo carattere variabili SQL_LONG mediante SQLGetData. Questo esempio non è supportato in IA64.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'esempio listato di codice.  
+ Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Eseguire il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato per eliminare la tabella utilizzata dall'esempio di codice.  
+ Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  
@@ -190,6 +188,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [La gestione di testo e immagine di procedure relative a colonne &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Procedure per la gestione di colonne di testo e &#40;di immagini ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

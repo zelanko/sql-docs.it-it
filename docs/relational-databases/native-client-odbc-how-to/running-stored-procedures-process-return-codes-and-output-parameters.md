@@ -1,5 +1,5 @@
 ---
-title: Elaborare codici restituiti e parametri di Output (ODBC) | Documenti di Microsoft
+title: Elaborare i codici restituiti e i parametri di output (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad37c3bd891c64715ac61ab0b06bb09fa3ff9ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f950c85ec3aa8200fc160bff73eb722555f770c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937486"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908171"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Esecuzione delle stored procedure - Elaborare i codici restituiti e i parametri di output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67937486"
 
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esecuzione di stored procedure come stored procedure remote. L'esecuzione di una stored procedure come stored procedure remota consente al driver e al server di ottimizzare le prestazioni di esecuzione della procedura.  
   
-  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
+  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) non restituisce SQL_NO_DATA. Se viene restituito un errore da un stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -36,26 +36,24 @@ ms.locfileid: "67937486"
   
 1.  Costruire un'istruzione SQL in cui venga utilizzata la sequenza di escape ODBC CALL. Nell'istruzione devono essere utilizzati marcatori di parametro per ogni parametro di input, di input/output e di output e per il valore restituito della procedura, se disponibile.  
   
-2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se disponibile).  
+2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni parametro di input, di input/output e di output e per il valore restituito della procedura, se disponibile.  
   
 3.  Eseguire l'istruzione con **SQLExecDirect**.  
   
-4.  Elaborare set di risultati fino **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA durante l'ultimo risultato di elaborazione del set o fino a quando **SQLMoreResults** restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  Elabora i set di risultati fino a quando **SQLFetch** o **SQLFetchScroll** restituisce SQL_NO_DATA durante l'elaborazione dell'ultimo set di risultati o fino a quando **SQLMoreResults** non restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un codice restituito e di un parametro di output. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice crea una stored procedure utilizzata dall'esempio.  
+ Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una stored procedure utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice consente di eliminare la stored procedure utilizzata dall'esempio.  
+ Il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Elimina il stored procedure usato da questo esempio.  
   
 ```  
 use AdventureWorks  
@@ -197,6 +195,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Chiamare le Stored procedure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[Chiamare stored procedure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

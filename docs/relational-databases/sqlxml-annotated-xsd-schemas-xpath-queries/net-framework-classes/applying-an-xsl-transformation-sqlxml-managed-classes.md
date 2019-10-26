@@ -1,5 +1,5 @@
 ---
-title: Applicare una trasformazione XSL (classi gestite SQLXML) | Microsoft Docs
+title: Applicazione di una trasformazione XSL (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934309"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908493"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Applicazione di una trasformazione XSL (classi gestite SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo esempio viene eseguita una query SQL sul database AdventureWorks. La trasformazione XSL viene applicata al risultato della query per generare una tabella a due colonne con i nomi e i cognomi dei dipendenti.  
   
- Xslpath-proprietà dell'oggetto SqlXmlCommand consente di specificare il file XSL e il relativo percorso di directory.  
+ La proprietà XslPath dell'oggetto SqlXmlCommand viene utilizzata per specificare il file XSL e il relativo percorso di directory.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  
@@ -95,7 +95,7 @@ class Test
   
  Per testare questo esempio, è necessario che nel computer sia installato [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   
-### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
+### <a name="to-test-the-application"></a>Per testare l'applicazione  
   
 1.  Salvare il foglio di stile XSL in un file (MyXSL.xsl).  
   
@@ -110,8 +110,6 @@ class Test
      Viene creato un file eseguibile (DocSample.exe).  
   
 4.  Al prompt dei comandi eseguire DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>Applicazione di una trasformazione XSL in .NET Framework  
  Anziché applicare una trasformazione XSL nel livello intermedio, come descritto precedentemente, in .NET Framework è possibile applicare una trasformazione XSL sul lato client. Nel codice C#  modificato seguente viene illustrato in che modo la trasformazione XSL viene applicata in .NET Framework.  

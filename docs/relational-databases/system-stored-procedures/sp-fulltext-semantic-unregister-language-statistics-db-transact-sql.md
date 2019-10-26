@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0443190e3febdb2730c7c8b8bc06786daf6fe7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124254"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909134"
 ---
-# <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
+# <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di annullare la registrazione di un database di statistiche lingua semantica esistente dall'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di eliminare tutti i metadati associati.  
   
  Questa istruzione non consente di scollegare il database o di rimuovere il file di database fisico dal file system. Dopo avere annullato la registrazione del database, è possibile scollegarlo ed eliminare il file di database fisico.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +44,10 @@ GO
  In questa procedura non è necessario utilizzare alcun argomento. Poiché un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un solo database di statistiche lingua semantica, non è necessario identificare il database.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
- No.  
+ nessuna.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Quando si annulla la registrazione di un database di statistiche lingua semantica, vengono rimossi anche tutti i metadati associati.  
@@ -58,12 +58,10 @@ GO
   
 2.  Rimuovere tutti i metadati associati al database di statistiche lingua semantica.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
-## <a name="metadata"></a>Metadata  
- Per informazioni sul database di statistiche lingua semantica installato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire una query sulla vista del catalogo [Sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+## <a name="metadata"></a>Metadati  
+ Per informazioni sul database Semantic Language Statistics installato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire una query sulla vista del catalogo [sys &#40;. FULLTEXT_SEMANTIC_LANGUAGE_STATISTICS_DATABASE Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Sicurezza  
   
@@ -71,7 +69,7 @@ GO
  Sono necessarie autorizzazioni CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come annullare la registrazione del database di statistiche lingua semantica chiamando **sp_fulltext_semantic_unregister_language_statistics_db**.  
+ Nell'esempio seguente viene illustrato come annullare la registrazione del database di Semantic Language Statistics chiamando **sp_fulltext_semantic_unregister_language_statistics_db**.  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  

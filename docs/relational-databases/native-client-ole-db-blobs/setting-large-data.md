@@ -1,5 +1,5 @@
 ---
-title: Impostazione dati di grandi dimensioni | Microsoft Docs
+title: Impostazione di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128870"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909466"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
@@ -56,8 +56,6 @@ ms.locfileid: "68128870"
 5.  Chiamare **GetNextRows** per recuperare le righe successive nel set di righe. Chiamare **GetData** per leggere i dati dal set di righe.  
   
 6.  Creare un oggetto di archiviazione contenente i dati, nonché l'indicatore di lunghezza, e quindi chiamare **IRowsetChange::SetData** (o **IRowsetChange::InsertRow**) con la funzione di accesso che associa la colonna BLOB per impostare i dati.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come impostare dati BLOB. Nell'esempio viene creata una tabella, viene aggiunto un record di esempio, viene recuperato il record nel set di righe e viene quindi impostato il valore del campo BLOB.  
@@ -724,7 +722,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Copiare i dati utilizzando IRowsetFastLoad (OLE DB) | Documenti di Microsoft
+title: Copia dati bulk tramite IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d166dd4f08ef46a87b1dc467453056ad88d84c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106741"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906661"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68106741"
   
  In un esempio completo viene illustrato l'uso di **IRowsetFastLoad** per eseguire una copia bulk dei record in una tabella. In questo esempio vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -44,17 +44,15 @@ ms.locfileid: "68106741"
   
 2.  Impostare su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifica del provider SQLOLEDB. Grazie a questa impostazione, la sessione appena creata consente al consumer di accedere a **IRowsetFastLoad**.  
   
-3.  Creare una sessione che richiede il **IOpenRowset** dell'interfaccia.  
+3.  Creare una sessione che richiede l'interfaccia **IOpenRowset** .  
   
 4.  Chiamare **IOpenRowset::OpenRowset** per aprire un set di righe che include tutte le righe della tabella (in cui devono essere copiati i dati usando l'operazione di copia bulk).  
   
-5.  Le associazioni necessarie e creare una funzione di accesso utilizzando **IAccessor:: CreateAccessor**.  
+5.  Eseguire le associazioni necessarie e creare una funzione di accesso usando **IAccessor:: CreateAccessor**.  
   
 6.  Configurare il buffer della memoria dal quale verranno copiati i dati nella tabella.  
   
-7.  Chiamare **IRowsetFastLoad:: InsertRow** per la copia di massa dei dati nella tabella.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Chiamare **IRowsetFastLoad:: InsertRow** per eseguire la copia bulk dei dati nella tabella.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  

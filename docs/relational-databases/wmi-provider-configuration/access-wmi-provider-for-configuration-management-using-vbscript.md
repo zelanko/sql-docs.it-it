@@ -1,5 +1,5 @@
 ---
-title: Modificare proprietà SQL Server Service avanzate utilizzando VBScript | Microsoft Docs
+title: Modificare le proprietà avanzate del servizio SQL Server tramite VBScript | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90632548114577475735a6dfca9244c84c09ab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139442"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909194"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Accedere al provider WMI per Gestione configurazione con VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "68139442"
 5.  Salvare il file.  
   
 6.  Eseguire lo script digitando **cscript test. vbs** al prompt dei comandi.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Esempio  
   

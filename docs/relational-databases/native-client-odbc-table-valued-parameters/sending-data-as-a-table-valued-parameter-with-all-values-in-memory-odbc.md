@@ -1,5 +1,5 @@
 ---
-title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Documenti di Microsoft
+title: Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf7d8b166a06d2b4c9973cf310b90f693ba1c6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129126"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907357"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare i &#40;parametri&#41;con valori di tabella ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Prerequisiti  
  Questa procedura presuppone che sia stata eseguita l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel server:  
@@ -90,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come verrebbero usati se i parametri della stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
+3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi, le colonne del valore della tabella vengono associate usando SQLBindParameter nello stesso modo in cui si trovano se fossero parametri del stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -123,8 +123,6 @@ from @Items
     ```  
   
 5.  Chiamare la routine:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     // Call the procedure.  

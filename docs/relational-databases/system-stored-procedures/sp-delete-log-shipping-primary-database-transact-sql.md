@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d1d1d341a12e417c118e6dfb64ecd9a5da5f2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009161"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909871"
 ---
-# <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Questa stored procedure rimuove il log shipping del database primario, compreso il processo di backup, e la cronologia locale e remota. Usare solo questa stored procedure dopo aver rimosso il database secondario tramite **sp_delete_log_shipping_primary_secondary**.  
+  Questa stored procedure rimuove il log shipping del database primario, compreso il processo di backup, e la cronologia locale e remota. Usare questa stored procedure solo dopo aver rimosso i database secondari con **sp_delete_log_shipping_primary_secondary**.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,38 +40,36 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` È il nome del database primario di log shipping. *database* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @database = ] 'database'` è il nome del database log shipping primario. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- No.  
+ nessuna.  
   
-## <a name="remarks"></a>Note  
- **sp_delete_log_shipping_primary_database** deve essere eseguita la **master** database nel server primario. Questa stored procedure esegue le operazioni seguenti:  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_log_shipping_primary_database** deve essere eseguito dal database **Master** nel server primario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Elimina il processo di backup per il database primario specificato.  
   
 2.  Rimuove il record di monitoraggio locale in **log_shipping_monitor_primary** nel server primario.  
   
-3.  Rimuove le voci corrispondenti nella **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
+3.  Rimuove le voci corrispondenti in **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
   
-4.  Se il server di monitoraggio è diverso dal server primario, rimuove il record di monitoraggio nel **log_shipping_monitor_primary** nel server di monitoraggio.  
+4.  Se il server di monitoraggio è diverso dal server primario, rimuove il record di monitoraggio in **log_shipping_monitor_primary** nel server di monitoraggio.  
   
-5.  Rimuove le voci corrispondenti nella **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** nel server di monitoraggio.  
+5.  Rimuove le voci corrispondenti in **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** sul server di monitoraggio.  
   
-6.  Rimuove la voce **log_shipping_primary_databases** per il database primario.  
+6.  Rimuove la voce in **log_shipping_primary_databases** per il database primario.  
   
-7.  Le chiamate **sp_delete_log_shipping_alert_job** nel server di monitoraggio.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Chiama **sp_delete_log_shipping_alert_job** sul server di monitoraggio.  
 
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo **sp_delete_log_shipping_primary_database** per eliminare il database primario **AdventureWorks2012**.  
+ Questo esempio illustra l'uso di **sp_delete_log_shipping_primary_database** per eliminare il database primario **AdventureWorks2012**.  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  

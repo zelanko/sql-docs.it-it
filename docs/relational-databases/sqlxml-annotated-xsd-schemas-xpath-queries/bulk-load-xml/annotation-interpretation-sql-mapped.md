@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mappato (SQLXML 4.0) | Documenti di Microsoft'
+title: 'SQL: mappato (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055407"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907141"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretazione delle annotazioni - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Caricamento Bulk XML elabora il **sql: mappata** annotazione nello schema XSD come che previsto è, se lo schema di mapping specifica **sql: mappata = "false"** per qualsiasi elemento o attributo, il caricamento Bulk XML non tentativo di archiviare i dati associati nella colonna corrispondente.  
+  Il caricamento bulk XML elabora l'annotazione **SQL: mappata** nello schema XSD come previsto, ovvero se nello schema di mapping viene specificato **SQL: mapping = "false"** per qualsiasi elemento o attributo, il caricamento bulk XML non tenta di archiviare i dati associati nel colonna corrispondente.  
   
- Caricamento Bulk XML ignora gli elementi e attributi non mappati (perché non sono descritti nello schema o perché vengono annotati nello schema XSD con **sql: mappata = "false"** ). Tutti i dati senza mapping va nella colonna di overflow, se tale colonna viene specificata utilizzando **SQL: overflow-campo**.  
+ Il caricamento bulk XML ignora gli elementi e gli attributi di cui non è stato eseguito il mapping (perché non sono descritti nello schema oppure perché sono annotati nello schema XSD con **SQL: mapping = "false"** ). Tutti i dati non mappati vengono inseriti nella colonna di overflow, se tale colonna viene specificata tramite **SQL: overflow-field**.  
   
  Si consideri, ad esempio, lo schema XSD seguente:  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055407"
 </xsd:schema>  
 ```  
   
- Poiché il **HomePhone** attributo specifica **sql: mappata = "false"** , il caricamento Bulk XML non è associato questo attributo alla colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento di massa XML memorizza i dati non utilizzati.  
+ Poiché l'attributo **HomePhone** specifica **SQL: mapping = "false"** , il caricamento bulk XML non esegue il mapping di questo attributo alla colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento bulk XML archivia i dati non utilizzati.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   
-1.  Creare la tabella seguente nel **tempdb** database:  
+1.  Creare la tabella seguente nel database **tempdb** :  
   
     ```  
     USE tempdb  
@@ -85,8 +85,6 @@ ms.locfileid: "68055407"
     ```  
   
 4.  Per eseguire il caricamento bulk XML, salvare ed eseguire questo esempio di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, Scripting Edition (VBScript) come file Sample.vbs:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

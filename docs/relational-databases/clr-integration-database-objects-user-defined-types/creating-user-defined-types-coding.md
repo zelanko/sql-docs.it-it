@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94662043d3801cc7088533d7f0fbadd638bec5b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 9a26fb1282eb9181af9b1b04f40fd7f7c45c688a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874808"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907472"
 ---
 # <a name="creating-user-defined-types---coding"></a>Creazione di tipi definiti dall'utente - Codifica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- Lo spazio dei nomi **Microsoft. SqlServer. Server** contiene gli oggetti necessari per diversi attributi del tipo definito dall'utente e lo spazio dei nomi **System. Data. SqlTypes** contiene le classi che rappresentano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati nativi disponibili per il assembly. Naturalmente, per il corretto funzionamento dell'assembly potrebbero essere necessari altri spazi dei nomi. Il tipo definito dall'utente **Point** usa anche lo spazio dei nomi **System. Text** per l'uso delle stringhe.  
+ Lo spazio dei nomi **Microsoft. SqlServer. Server** contiene gli oggetti necessari per diversi attributi del tipo definito dall'utente e lo spazio dei nomi **System. Data. SqlTypes** contiene le classi che rappresentano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati nativi disponibili per l'assembly. Naturalmente, per il corretto funzionamento dell'assembly potrebbero essere necessari altri spazi dei nomi. Il tipo definito dall'utente **Point** usa anche lo spazio dei nomi **System. Text** per l'uso delle stringhe.  
   
 > [!NOTE]  
 >  Gli C++ oggetti Visual Database, ad esempio i tipi definiti dall'utente, compilati con **/CLR: pure** non sono supportati per l'esecuzione.  
@@ -88,11 +88,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
- Oltre a specificare gli attributi per gli assembly in modo corretto, il tipo definito dall'utente deve supportare anche i valori Null. I tipi definiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'utente caricati in sono compatibili con i valori null, ma per consentire al tipo definito dall'utente di riconoscere un valore null, il tipo definito dall'utente deve implementare l'interfaccia **System. Data. SqlTypes. INullable** .  
+ Oltre a specificare gli attributi per gli assembly in modo corretto, il tipo definito dall'utente deve supportare anche i valori Null. I tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono compatibili con i valori null, ma affinché il tipo definito dall'utente riconosca un valore null, il tipo definito dall'utente deve implementare l'interfaccia **System. Data. SqlTypes. INullable** .  
   
  È necessario creare una proprietà denominata **IsNull**, che è necessaria per determinare se un valore è null dall'interno del codice CLR. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trova un'istanza Null di un tipo definito dall'utente, tale tipo viene reso persistente utilizzando i normali metodi di gestione dei valori Null. Se non è necessario, nel server non viene eseguita la serializzazione o la deserializzazione del tipo definito dall'utente. Non viene inoltre occupato spazio per l'archiviazione di un tipo definito dall'utente Null. La verifica della presenza di valori Null viene eseguita ogni volta che un tipo definito dall'utente viene importato da CLR. Questo significa che l'utilizzo del costrutto [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL per la verifica dei tipi definiti dall'utente Null dovrebbe funzionare sempre. La proprietà **IsNull** viene inoltre utilizzata dal server per verificare se un'istanza è null. Una volta stabilito che il tipo definito dall'utente è Null, il server è in grado di utilizzare la relativa funzionalità di gestione nativa dei valori Null.  
   
- Il metodo **Get ()** di **IsNull** non è in alcun modo speciale. Se una variabile  **\@** **Point**  **pènull,p.IsNullrestituirà,perimpostazionepredefinita,ilvalore"null"enon"1".\@** Questo è dovuto al fatto che l'attributo **SqlMethod (OnNullCall)** del metodo **IsNull get ()** è impostato su false. Poiché l'oggetto è **null**, quando la proprietà viene richiesta, l'oggetto non viene deserializzato, il metodo non viene chiamato e viene restituito il valore predefinito "null".  
+ Il metodo **Get ()** di **IsNull** non è in alcun modo speciale. Se una variabile punto **\@p** è **null**, **\@p. IsNull** restituirà, per impostazione predefinita, il valore "null" e non "1". Questo è dovuto al fatto che l'attributo **SqlMethod (OnNullCall)** del metodo **IsNull get ()** è impostato su false. Poiché l'oggetto è **null**, quando la proprietà viene richiesta, l'oggetto non viene deserializzato, il metodo non viene chiamato e viene restituito il valore predefinito "null".  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente la variabile `is_Null` è privata e mantiene lo stato Null per l'istanza del tipo definito dall'utente. Il codice deve gestire un valore appropriato per `is_Null`. Il tipo definito dall'utente deve avere anche una proprietà statica denominata **null** che restituisce un'istanza di valore null del tipo definito dall'utente. In questo modo il tipo definito dall'utente può restituire un valore Null se l'istanza è Null nel database.  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>È NULL rispetto a IsNull  
+### <a name="is-null-vs-isnull"></a>Confronto tra IS NULL e IsNull  
  Si consideri una tabella contenente i punti dello schema (ID int, location Point), dove **Point** è un tipo definito dall'utente CLR e le query seguenti:  
   
 ```  
@@ -155,7 +155,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- Entrambe le query restituiscono gli ID dei punti con posizioni non**null** . Nella Query 1 viene utilizzata la normale gestione dei valori Null e non è necessaria la deserializzazione dei tipi definiti dall'utente. La query 2, d'altra parte, deve deserializzare ogni oggetto non**null** e chiamare in CLR per ottenere il valore della proprietà **IsNull** . Ovviamente, l'utilizzo di **is null presenta** prestazioni migliori e non dovrebbe mai esserci un motivo per leggere la proprietà **IsNull** di un tipo [!INCLUDE[tsql](../../includes/tsql-md.md)] definito dall'utente dal codice.  
+ Entrambe le query restituiscono gli ID dei punti con posizioni non**null** . Nella Query 1 viene utilizzata la normale gestione dei valori Null e non è necessaria la deserializzazione dei tipi definiti dall'utente. La query 2, d'altra parte, deve deserializzare ogni oggetto non**null** e chiamare in CLR per ottenere il valore della proprietà **IsNull** . Ovviamente, l'utilizzo di **is null presenta** prestazioni migliori e non dovrebbe mai esserci un motivo per leggere la proprietà **IsNull** di un tipo definito dall'utente dal codice [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Quindi, qual è l'uso della proprietà **IsNull** ? Per prima cosa, è necessario determinare se un valore è **null** dall'interno del codice CLR. In secondo luogo, il server necessita di un modo per verificare se un'istanza è **null**, quindi questa proprietà viene utilizzata dal server. Una volta determinato che è **null**, può utilizzare la gestione nativa dei valori null per gestirla.  
   
@@ -493,7 +493,7 @@ public Int32 Y
  Quando si codificano i metodi UDT, è consigliabile valutare la possibilità che l'algoritmo utilizzato possa cambiare nel tempo. In questo caso è possibile creare una classe separata per i metodi utilizzati dal tipo definito dall'utente. Se l'algoritmo cambia, è possibile ricompilare la classe con il nuovo codice e caricare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza influire sul tipo definito dall'utente. In molti casi i tipi definiti dall'utente possono essere ricaricati utilizzando l'istruzione ALTER ASSEMBLY [!INCLUDE[tsql](../../includes/tsql-md.md)], anche se tale operazione potrebbe provocare problemi con i dati esistenti. Ad esempio, il tipo definito dall'utente **Currency** incluso nel database di esempio **AdventureWorks** usa una funzione **ConvertCurrency** per convertire i valori di valuta, implementati in una classe separata. È possibile che gli algoritmi di conversione cambino nel tempo in modo imprevedibile o che venga richiesta una nuova funzionalità. La separazione della funzione **ConvertCurrency** dall'implementazione di tipo definito dall'utente **Currency** offre una maggiore flessibilità durante la pianificazione di modifiche future.  
   
 ### <a name="example"></a>Esempio  
- La classe **Point** contiene tre metodi semplici per il calcolo della distanza: **Distance**, **DistanceFrom** e **DistanceFromXY**. Ogni restituisce un **valore Double** che calcola la distanza da **punto** a zero, la distanza da un punto specificato a un **punto**e la distanza tra le coordinate X e Y **specificate.** **Distance** e **DistanceFrom** ogni chiamata **DistanceFromXY**e illustrano come usare argomenti diversi per ogni metodo.  
+ La classe **Point** contiene tre metodi semplici per il calcolo della distanza, ovvero **distance**, **DistanceFrom** e **DistanceFromXY**. Ogni restituisce un **valore Double** che calcola la distanza da **punto** a zero, la distanza da un punto specificato a un **punto**e la distanza tra le coordinate X e Y **specificate.** **Distance** e **DistanceFrom** ogni chiamata **DistanceFromXY**e illustrano come usare argomenti diversi per ogni metodo.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La classe **Microsoft. SqlServer. Server. SqlMethodAttribute** fornisce attributi personalizzati che possono essere utilizzati per contrassegnare le definizioni dei metodi per specificare il determinismo, il comportamento della chiamata null e per specificare se un metodo è un mutatore. Per queste proprietà si presuppone l'uso dei valori predefiniti e l'attributo personalizzato viene utilizzato solo quando è necessario un valore non predefinito.  
   
 > [!NOTE]  
->  La classe **SqlMethodAttribute** eredita dalla classe **SqlFunctionAttribute** , quindi **SqlMethodAttribute** eredita i campi **FillRowMethodName** e **TableDefinition** da **SqlFunctionAttribute**. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma viene generato un errore relativo al tipo restituito **IEnumerable** in fase di esecuzione con il messaggio seguente: "Il metodo, la proprietà o il\<campo ' name >' nella\<classe ' Class >' nell'\<assembly ' assembly >' ha un tipo restituito non valido."  
+>  La classe **SqlMethodAttribute** eredita dalla classe **SqlFunctionAttribute** , quindi **SqlMethodAttribute** eredita i campi **FillRowMethodName** e **TableDefinition** da **SqlFunctionAttribute**. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma viene generato un errore relativo al tipo restituito **IEnumerable** in fase di esecuzione con il messaggio seguente: "metodo, proprietà o campo '\<Name >' nella classe '\<Class >' nell'assembly '\<il tipo restituito dell'assembly >' non è valido. "  
   
  Nella tabella seguente vengono descritte alcune delle proprietà **Microsoft. SqlServer. Server. SqlMethodAttribute** rilevanti che è possibile utilizzare nei metodi UDT e vengono elencati i valori predefiniti.  
   
@@ -574,7 +574,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- Il metodo **Rotate** viene decorato con l'attributo **SqlMethod** impostando l'oggetto **immutator** su **true** , in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa contrassegnare il metodo come metodo mutatore. Il codice imposta inoltre **OnNullCall** su **false**, che indica al server che il metodo restituisce un riferimento null (**Nothing** in Visual Basic) se uno dei parametri di input è un riferimento null.  
+ Il metodo **Rotate** viene decorato con l'impostazione dell'attributo **SqlMethod** e l'oggetto **immutator** su **true** , in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possibile contrassegnare il metodo come metodo mutatore. Il codice imposta inoltre **OnNullCall** su **false**, che indica al server che il metodo restituisce un riferimento null (**Nothing** in Visual Basic) se uno dei parametri di input è un riferimento null.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -600,7 +600,7 @@ public void Rotate(double anglex, double angley, double anglez)
  Quando si implementa un tipo definito dall'utente con un formato definito dall'utente, è necessario implementare i metodi di **lettura** e **scrittura** che implementano l'interfaccia Microsoft. SqlServer. Server. IBinarySerialize per gestire la serializzazione e la deserializzazione dei dati UDT. È inoltre necessario specificare la proprietà **MaxByteSize** di **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute**.  
   
 ### <a name="the-currency-udt"></a>Tipo definito dall'utente Currency  
- Il tipo definito dall'utente **Currency** è incluso negli esempi CLR che possono essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installati con, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a partire da.  
+ Il tipo definito dall'utente **Currency** è incluso negli esempi CLR che possono essere installati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Il tipo definito dall'utente **Currency** supporta la gestione di quantità di denaro nel sistema monetario di determinate impostazioni cultura. È necessario definire due campi: una **stringa** per **CultureInfo**, che specifica chi ha emesso la valuta (ad esempio, en-US) e un **numero decimale** per **CurrencyValue**, la quantità di denaro.  
   
@@ -608,13 +608,11 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Il codice eseguito in CLR confronta le impostazioni cultura separatamente dal valore della valuta. Per il codice [!INCLUDE[tsql](../../includes/tsql-md.md)], il confronto viene determinato dalle azioni seguenti:  
   
-1.  Impostare l'attributo **IsByteOrdered** su true, che indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a di utilizzare la rappresentazione binaria permanente sul disco per i confronti.  
+1.  Impostare l'attributo **IsByteOrdered** su true, che indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare la rappresentazione binaria permanente sul disco per i confronti.  
   
-2.  Utilizzare il metodo **Write** per il tipo definito dall'utente **Currency** per determinare il modo in cui il tipo definito dall'utente viene reso permanente sul disco e [!INCLUDE[tsql](../../includes/tsql-md.md)] pertanto la modalità di confronto e ordinamento dei valori UDT per le operazioni.  
+2.  Utilizzare il metodo **Write** per il tipo definito dall'utente **Currency** per determinare il modo in cui il tipo definito dall'utente viene reso permanente sul disco e pertanto il modo in cui i valori UDT vengono confrontati e ordinati per [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 3.  Salvare il tipo definito dall'utente **Currency** usando il formato binario seguente:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Salvare le impostazioni cultura come stringa codificata UTF-16 per i byte 0-19 con riempimento a destra con caratteri Null.  
   

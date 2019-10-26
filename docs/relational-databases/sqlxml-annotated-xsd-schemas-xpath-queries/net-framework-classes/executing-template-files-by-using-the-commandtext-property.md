@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di file modello tramite la proprietà CommandText | Documenti di Microsoft
+title: Esecuzione di file modello tramite la proprietà CommandText | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1cb0e0a39f0814051dbd5f2ce009526dd8558f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934250"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909732"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Esecuzione di file modello mediante la proprietà CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la CommandTextproperty. Anziché specificare la query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente, la proprietà CommandType è specificata come SqlXmlCommandType.TemplateFile.  
+  Questo esempio illustra il modo in cui è possibile specificare i file modello che sono costituiti da query SQL o XPath usando CommandTextproperty. Anziché specificare la query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente la proprietà CommandType viene specificata come SqlXmlCommandType. TemplateFile.  
   
  L'applicazione di esempio esegue questo modello:  
   
@@ -93,9 +93,7 @@ class Test
   
 5.  Al prompt dei comandi eseguire DocSample.exe.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Se si passa un parametro a un modello, il nome del parametro deve iniziare con simbolo di chiocciola (@); ad esempio, p.Name= "\@ContactID", dove p è un oggetto SqlXmlParameter.  
+ Se si passa un parametro a un modello, il nome del parametro deve iniziare con il simbolo di chiocciola (@); ad esempio, p.Name = "\@ContactID", dove p è un oggetto SqlXmlParameter.  
   
  Si tratta del modello aggiornato che accetta solo un parametro.  
   

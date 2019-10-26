@@ -1,5 +1,5 @@
 ---
-title: Recuperare righe mediante segnalibri (OLE DB) | Microsoft Docs
+title: Recuperare le righe usando i segnalibri (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a21ebe62cb9a62172ffc63e15ced0deb6a23b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908164"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908044"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperare righe utilizzando i segnalibri (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,16 +40,14 @@ ms.locfileid: "67908164"
   
 4.  Impostare il campo **dwFlag** della struttura di associazione sul flag DBCOLUMNSINFO_ISBOOKMARK della colonna che verrà utilizzata come segnalibro.  
   
-5.  Uso **IRowsetLocate:: GetRowsAt** per recuperare righe a partire dalla riga specificata da un offset dal segnalibro.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+5.  Usare **IRowsetLocate:: GetRowsAt** per recuperare le righe, a partire dalla riga specificata da un offset dal segnalibro.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare righe mediante un segnalibro. Questo esempio non è supportato in IA64.  
   
  In questo esempio la quinta riga viene recuperata dal set di risultati prodotto in seguito all'esecuzione di un'istruzione SELECT.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   

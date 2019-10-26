@@ -14,12 +14,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7235217173217b01b224e1772629dc3a7fc87ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908266"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909518"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la stored procedure con RPC e l'output del processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,22 +38,20 @@ ms.locfileid: "67908266"
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-4.  Creare una funzione di accesso per i parametri definiti tramite il **IAccessor:: CreateAccessor** (metodo). **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 5.  Completare la struttura DBPARAMS.  
   
 6.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-7.  Elaborare set di righe e rilasciarlo utilizzando il **IRowset:: Release** (metodo).  
+7.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
   
 8.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un set di righe, di un codice restituito e di un parametro di output. I set di risultati non vengono elaborati. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per creare la stored procedure usata dall'applicazione.  
   

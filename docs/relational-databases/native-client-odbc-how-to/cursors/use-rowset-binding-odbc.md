@@ -1,5 +1,5 @@
 ---
-title: Usare set di righe (ODBC) di associazione | Documenti di Microsoft
+title: Usare l'associazione di set di righe (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6e10c45331e1a2d4395506a0b687ecfd3510d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99c2f54ce648358cdbb47cda9893078d69087ad2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898571"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908223"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utilizzare l'associazione di set di righe (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67898571"
   
     -   Facoltativamente, allocare una matrice di R (o più) buffer di colonna per archiviare le lunghezze dei dati.  
   
-    -   Chiamare [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare la colonna valore dei dati e le matrici di lunghezza dati alla colonna del set di righe.  
+    -   Chiamare [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare il valore dei dati e le matrici di lunghezza dei dati della colonna alla colonna del set di righe.  
   
 2.  Chiamare [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi seguenti:  
   
@@ -47,9 +47,7 @@ ms.locfileid: "67898571"
   
 3.  Eseguire l'istruzione.  
   
-4.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera le righe R e trasferisce i dati nelle colonne delimitate.  
 
 ### <a name="to-use-row-wise-binding"></a>Per utilizzare l'associazione per riga  
   
@@ -69,15 +67,15 @@ ms.locfileid: "67898571"
   
     -   Impostare SQL_ATTR_PARAMS_STATUS_PTR affinché punti a una matrice [R] di variabili SQLUSSMALLINT per mantenere gli indicatori di stato della riga.  
   
-3.  Per ogni colonna nel set di risultati, chiamare [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) in modo da puntare il valore dei dati e il puntatore di lunghezza dati della colonna alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1.  
+3.  Per ogni colonna nel set di risultati, chiamare [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) per puntare il valore dei dati e il puntatore della lunghezza dei dati della colonna alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1.  
   
 4.  Eseguire l'istruzione.  
   
-5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
+5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera le righe R e trasferisce i dati nelle colonne delimitate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usando procedure per cursori &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [La modalità di implementazione dei cursori](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ Procedure [per l'utilizzo di cursori &#40;ODBC&#41; ](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [Modalità di implementazione di cursori](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Utilizzare i cursori &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

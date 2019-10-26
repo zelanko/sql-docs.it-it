@@ -1,5 +1,5 @@
 ---
-title: Il passaggio di parametri agli updategram (SQLXML 4.0) | Microsoft Docs
+title: Passaggio di parametri agli updategram (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,31 +17,31 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c557c96701ce9587125acccbb12f408d465a07b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc2617796c5abf7f94e85fc6397b780ea9c401c4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907825"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passaggio di parametri agli updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Gli updategram sono modelli e in quanto tali è possibile passare loro parametri. Per altre informazioni sul passaggio di parametri ai modelli, vedere [considerazioni sulla sicurezza degli Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
+  Gli updategram sono modelli e in quanto tali è possibile passare loro parametri. Per ulteriori informazioni sul passaggio di parametri ai modelli, vedere [considerazioni &#40;sulla sicurezza degli&#41;updategram SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
- Gli updategram consentono di passare NULL come valore di parametro. Per passare il valore di parametro NULL, si specifica la **nullvalue** attributo. Il valore assegnato per il **nullvalue** attributo viene quindi specificato come valore del parametro. e considerato come NULL dagli updategram.  
+ Gli updategram consentono di passare NULL come valore di parametro. Per passare il valore del parametro NULL, è necessario specificare l'attributo **NullValue** . Il valore assegnato all'attributo **NullValue** viene quindi fornito come valore del parametro. e considerato come NULL dagli updategram.  
   
 > [!NOTE]  
->  Nelle  **\<SQL: header >** e  **\<updg:header >** , è necessario specificare il **nullvalue** come non qualificato, mentre nella  **\<updg: Sync >** , si specifica il **nullvalue** come qualificato (ad esempio **updg: NullValue**).  
+>  In **\<SQL: header >** e **\<attributo updg: header >** è necessario specificare **NullValue** come non qualificato; mentre, nel **\<attributo updg: sync >** , si specifica la **NullValue** come Qualified (ad esempio, **attributo updg: NullValue**).  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nelle [requisiti per l'esecuzione di esempi di SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Prima di utilizzare gli esempi dell'updategram, si tenga presente quanto segue:  
   
--   Negli esempi viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per altri esempi di updategram che utilizzano schemi di mapping, vedere [specifica uno Schema di Mapping con annotazioni in un Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Negli esempi viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>R. Passaggio di parametri a un updategram  
- In questo esempio l'updategram modifica il cognome di un dipendente nella tabella HumanResources.Shift. L'updategram verrà passato due parametri: ShiftID, utilizzato in modo univoco un turno e assegnare un nome.  
+### <a name="a-passing-parameters-to-an-updategram"></a>A. Passaggio di parametri a un updategram  
+ In questo esempio l'updategram modifica il cognome di un dipendente nella tabella HumanResources.Shift. All'updategram vengono passati due parametri: ShiftID, utilizzato per identificare in modo univoco un turno, e Name.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -64,9 +64,7 @@ ms.locfileid: "68018492"
   
 1.  Copiare l'updategram sopra indicato in Blocco note e salvarlo in un file con il nome UpdategramWithParameters.xml.  
   
-2.  Preparare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) in [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo la `cmd.Properties("Output Stream").Value = outStream`:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  Preparare lo script di test SQLXML 4,0 (Sqlxml4test. vbs) nell' [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo la `cmd.Properties("Output Stream").Value = outStream`:  
 
     ```  
     cmd.NamedParameters = True  
@@ -75,7 +73,7 @@ ms.locfileid: "68018492"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>B. Passaggio di NULL come valore di parametro a un updategram  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>b. Passaggio di NULL come valore di parametro a un updategram  
  Durante l'esecuzione di un updategram, il valore "isnull" viene assegnato al parametro che si desidera impostare su NULL. L'updategram converte il valore di parametro "isnull" in NULL e lo elabora di conseguenza.  
   
  Nell'updategram seguente la qualifica di un dipendente viene impostata su NULL:  
@@ -101,7 +99,7 @@ ms.locfileid: "68018492"
   
 1.  Copiare l'updategram sopra indicato in Blocco note e salvarlo in un file con il nome UpdategramPassingNullvalues.xml.  
   
-2.  Preparare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) in [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo la `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Preparare lo script di test SQLXML 4,0 (Sqlxml4test. vbs) nell' [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo la `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -111,6 +109,6 @@ ms.locfileid: "68018492"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni &#40;sulla sicurezza dell'Updategram SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
