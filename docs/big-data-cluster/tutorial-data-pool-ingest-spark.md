@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653290"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916005"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con processi Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: inserire dati in un pool di dati SQL Server con processi Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come usare i processi Spark per caricare i dati nel [pool di dati](concept-data-pool.md) di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un oggetto. 
+Questa esercitazione illustra come usare i processi Spark per caricare i dati nel [pool di dati](concept-data-pool.md) di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna nel pool di dati.
@@ -32,7 +32,7 @@ In questa esercitazione si imparerà a:
 > [!TIP]
 > Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere i [pool di dati di esempio](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) in GitHub.
 
-## <a id="prereqs"></a> Prerequisiti
+## <a id="prereqs"></a> Prerequisites
 
 - [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
@@ -77,49 +77,54 @@ Questa procedura consente di creare una tabella esterna nel pool di dati denomin
 
 ## <a name="start-a-spark-streaming-job"></a>Avviare un processo di streaming Spark
 
-Il passaggio successivo consiste nella creazione di un processo di streaming Spark che carica dati clickstream Web dal pool di archiviazione (HDFS) nella tabella esterna creata nel pool di dati.
+Il passaggio successivo consiste nella creazione di un processo di streaming Spark che carica dati clickstream Web dal pool di archiviazione (HDFS) nella tabella esterna creata nel pool di dati. Questi dati sono stati aggiunti a/clickstream_data nei [dati di esempio di caricamento nel cluster Big Data](tutorial-load-sample-data.md).
 
 1. In Azure Data Studio connettersi all'istanza master del cluster Big Data. Per altre informazioni, vedere [Connettersi a un cluster Big Data](connect-to-big-data-cluster.md).
 
-1. Fare doppio clic sulla connessione del gateway HDFS/Spark nella finestra **Server**. Selezionare quindi **New Spark Job** (Nuovo processo Spark).
+2. Creare un nuovo notebook e selezionare Spark | Scala come kernel.
 
-   ![Nuovo processo Spark](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Eseguire il processo di inserimento Spark
+   1. Configurare i parametri del connettore Spark-SQL
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. Nella finestra **Nuovo processo** immettere un nome nel campo **Nome processo**.
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. Nell'elenco a discesa **File Jar/py** selezionare **HDFS**. Immettere quindi il seguente percorso di file JAR:
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Definire ed eseguire il processo Spark
+      * Ogni processo è costituito da due parti: readStream e writeStream. Di seguito viene creato un frame di dati usando lo schema definito in precedenza e quindi viene scritto nella tabella esterna nel pool di dati.
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. Nel campo **Classe principale** immettere `FileStreaming`.
-
-1. Nel campo **Argomenti** immettere il testo seguente, specificando la password per accedere all'istanza master di SQL Server nel segnaposto `<your_password>`. 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   Nella tabella seguente viene descritto ciascun argomento:
-
-   | Argomento | Descrizione |
-   |---|---|
-   | nome del server | SQL Server da usare per la lettura dello schema della tabella |
-   | numero di porta | Porta su cui è in ascolto SQL Server (valore predefinito: 1433) |
-   | userName | Nome utente di accesso a SQL Server |
-   | password | Password di accesso a SQL Server |
-   | nome del database | Database di destinazione |
-   | nome tabella esterna | Tabella da usare per i risultati |
-   | directory di origine per lo streaming | Deve essere un URI completo, ad esempio "hdfs:///clickstream_data" |
-   | formato di input | Può essere "CSV", "parquet" o "JSON" |
-   | abilita checkpoint | true o false |
-   | timeout | tempo di esecuzione del processo (in millisecondi) prima dell'uscita |
-
-1. Premere **INVIO** per inviare il processo.
-
-   ![Invio del processo Spark](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## <a name="query-the-data"></a>Eseguire una query sui dati
 
 Questa procedura dimostra che il processo di streaming Spark ha caricato i dati da HDFS nel pool di dati.
@@ -138,7 +143,24 @@ Questa procedura dimostra che il processo di streaming Spark ha caricato i dati 
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. È anche possibile eseguire query sui dati in Spark. Il codice seguente, ad esempio, stampa il numero di record nella tabella:
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## <a name="clean-up"></a>Eseguire la pulizia
 
 Usare il comando seguente per rimuovere gli oggetti di database creati in questa esercitazione.
