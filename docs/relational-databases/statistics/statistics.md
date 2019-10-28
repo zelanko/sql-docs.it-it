@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934110"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907074"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Più in dettaglio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cre
 
 Nel diagramma seguente viene illustrato un istogramma con sei intervalli. L'area a sinistra del primo valore limite superiore è il primo intervallo.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Istogramma") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 Per ogni passaggio dell'istogramma sopra citato:
 -   La riga in grassetto rappresenta il valore limite superiore (*range_high_key*) e il relativo numero di occorrenze (*equal_rows*).  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>Opzione AUTO_UPDATE_STATISTICS  
+#### <a name="auto_update_statistics-option"></a>Opzione AUTO_UPDATE_STATISTICS  
  Quando l'opzione per l'aggiornamento automatico delle statistiche, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), è impostata su ON, Query Optimizer determina se le statistiche potrebbero non essere aggiornate, quindi ne esegue l'aggiornamento qualora vengano usate da una query. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.  
   
 * Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia basata sulla percentuale di righe modificate, indipendente dal numero di righe nella tabella. La soglia è:
@@ -122,7 +122,7 @@ L'opzione AUTO_UPDATE_STATISTICS si applica a oggetti statistiche creati per ind
  
 Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](https://support.microsoft.com/help/2754171) (Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server).
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controll
 1.  Query Optimizer crea statistiche per gli indici in tabelle o viste, al momento della creazione dell'indice stesso. Tali statistiche vengono create nelle colonne chiave dell'indice. Se l'indice è filtrato, Query Optimizer crea statistiche filtrate nello stesso subset di righe specificato per l'indice filtrato. Per altre informazioni sugli indici filtrati, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  Quando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) è impostata su ON, Query Optimizer crea statistiche per le singole colonne nei predicati di query.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Per la maggior parte delle query, questi due metodi di creazione delle statistiche garantiscono la definizione di un piano di query di alta qualità. In alcuni casi, è possibile migliorare i piani di query creando statistiche aggiuntive con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Tali statistiche aggiuntive possono acquisire correlazioni statistiche che non vengono prese in considerazione in Query Optimizer durante la creazione di statistiche per indici o singole colonne. È possibile che nell'applicazione siano disponibili correlazioni statistiche aggiuntive nei dati della tabella che, se calcolate in un oggetto statistiche, possono consentire a Query Optimizer di migliorare i piani di query. Le statistiche filtrate per un subset di righe di dati o le statistiche multicolonna per le colonne dei predicati di query possono ad esempio migliorare il piano di query.  
   

@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352aa27fd759c14677ed2b674045c55e2b9c0896
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ad73aa54d05081827a99a5b14c5390a04f3782
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072997"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909265"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1073,8 +1073,6 @@ BEGIN TRANSACTION
   
 1.  Impostare una o entrambe le opzioni di database `READ_COMMITTED_SNAPSHOT` e `ALLOW_SNAPSHOT_ISOLATION` su ON.  
 2.  Impostazione del corretto livello di isolamento delle transazioni in un'applicazione:  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Quando l'opzione di database `READ_COMMITTED_SNAPSHOT` è ON, le transazioni che impostano il livello di isolamento Read Committed usano il controllo delle versioni delle righe.  
     -   Quando l'opzione di database `ALLOW_SNAPSHOT_ISOLATION` è ON, le transazioni possono impostare il livello di isolamento snapshot.  

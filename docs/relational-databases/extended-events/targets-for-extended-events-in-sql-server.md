@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009360"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907995"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 
@@ -73,7 +73,7 @@ Le istruzioni SELECT che restituiscono tali elenchi dalle visualizzazioni di sis
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>Destinazione etw_classic_sync_target
+## <a name="etw_classic_sync_target-target"></a>Destinazione etw_classic_sync_target
 
 
 Gli eventi estesi di SQL Server possono interagire con Event Tracing for Windows (ETW) per monitorare l'attività del sistema. Per altre informazioni, vedere:
@@ -91,7 +91,7 @@ Questa destinazione di ETW elabora *in modalità sincrona* i dati ricevuti, ment
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>Destinazione event_counter
+## <a name="event_counter-target"></a>Destinazione event_counter
 
 
 La destinazione event_counter calcola semplicemente la frequenza con cui si verifica ogni evento specificato.
@@ -107,7 +107,7 @@ A differenza di quasi tutte le altre destinazioni:
     - Il motore di database viene disconnesso da qualsiasi destinazione che risulta troppo lenta e che pertanto rischia di rallentare le prestazioni del motore. Questo è uno dei motivi per cui la maggior parte delle destinazioni elabora i dati *in modalità asincrona*.
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>Output di esempio acquisito da event_counter
+#### <a name="example-output-captured-by-event_counter"></a>Output di esempio acquisito da event_counter
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>Destinazione event_file
+## <a name="event_file-target"></a>Destinazione event_file
 
 
 La destinazione **event_file** scrive l'output della sessione eventi dal buffer in un file su disco:
@@ -161,7 +161,7 @@ La destinazione **event_file** scrive l'output della sessione eventi dal buffer 
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION con destinazione **event_file**
+#### <a name="create-event-session-with-event_file-target"></a>CREATE EVENT SESSION con destinazione **event_file**
 
 
 Di seguito è riportata l'estensione CREATE EVENT SESSION usata per eseguire il test. Una delle clausole ADD TARGET specifica una destinazione event_file.
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>Funzione sys.fn_xe_file_target_read_file
+#### <a name="sysfn_xe_file_target_read_file-function"></a>Funzione sys.fn_xe_file_target_read_file
 
 
 La destinazione event_file archivia i dati ricevuti in un formato binario che non è leggibile. Transact-SQL può riportare il contenuto del file con estensione xel eseguendo un'istruzione SELECT FROM sui dati restituiti dalla funzione [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) .
@@ -249,7 +249,7 @@ SELECT f.*
 Naturalmente, per vedere i dati del file con estensione xel è possibile anche usare manualmente l'interfaccia utente di SSMS:
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>Dati archiviati nella destinazione event_file
+#### <a name="data-stored-in-the-event_file-target"></a>Dati archiviati nella destinazione event_file
 
 
 Di seguito è illustrato il report dell'esecuzione di SELECT FROM sui dati restituiti da **sys.fn_xe_file_target_read_file**, in SQL Server 2016.
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>Destinazione pair_matching
+## <a name="pair_matching-target"></a>Destinazione pair_matching
 
 
 La destinazione pair_matching consente di individuare gli eventi iniziali che si verificano senza un evento finale corrispondente. Ad esempio, se si verifica un evento lock_acquired che non è seguito tempestivamente da un evento lock_released, questo può costituire un problema.
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>Esempio di pair_matching
+### <a name="example-of-pair_matching"></a>Esempio di pair_matching
 
 
 L'istruzione CREATE EVENT SESSION seguente specifica due eventi e due destinazioni. La destinazione pair_matching specifica due set di campi in modo da stabilire la corrispondenza tra gli eventi. La sequenza di campi delimitati da virgole assegnati a **begin_matching_columns=** e **end_matching_columns=** deve essere identica. Tra i campi indicati nel valore delimitato da virgole non sono consentiti caratteri di tabulazione o di nuova riga, ma possono essere usati gli spazi.
@@ -520,8 +520,6 @@ Per testare la sessione eventi, si è intenzionalmente impedito il rilascio di b
 3. Non si è intenzionalmente eseguita un'istruzione COMMIT TRANSACTION finché non si sono esaminate le destinazioni.
 4. Successivamente, dopo il testing, si è eseguita un'istruzione COMMIT TRANSACTION.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 La semplice destinazione **event_counter** ha fornito le righe di output seguenti. Poiché 52-50=2, l'output indica che, quando si esamina l'output della destinazione pair-matching, dovrebbero essere visibili due eventi lock_acquired non abbinati.
 
 
@@ -549,7 +547,7 @@ Le righe relative agli eventi lock_acquired non abbinati possono includere il te
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>Destinazione ring_buffer
+## <a name="ring_buffer-target"></a>Destinazione ring_buffer
 
 
 La destinazione ring_buffer è utile per eseguire in modo semplice e rapido il test degli eventi. Quando si arresta la sessione eventi, l'output archiviato viene rimosso.
@@ -557,7 +555,7 @@ La destinazione ring_buffer è utile per eseguire in modo semplice e rapido il t
 In questa sezione ring_buffer viene inoltre illustrato come usare l'implementazione Transact-SQL di XQuery per copiare il contenuto XML di ring_buffer in un set di righe relazionale più leggibile.
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION con ring_buffer
+#### <a name="create-event-session-with-ring_buffer"></a>CREATE EVENT SESSION con ring_buffer
 
 
 Questa istruzione CREATE EVENT SESSION che usa la destinazione ring_buffer non presenta caratteristiche particolari.
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Output XML ricevuto per lock_acquired da ring_buffer
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>Output XML ricevuto per lock_acquired da ring_buffer
 
 
 Quando è recuperato da un'istruzione SELECT, il contenuto è riportato in forma di stringa XML. Di seguito è riportata la stringa XML archiviata dalla destinazione ring_buffer durante il testing. Tuttavia, per limitare la quantità di codice XML visualizzata, sono stati cancellati tutti gli elementi tranne due &#x3c;event&#x3e;. Inoltre, per ogni elemento &#x3c;event&#x3e; sono stati eliminati diversi elementi &#x3c;data&#x3e; estranei.

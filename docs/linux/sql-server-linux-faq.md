@@ -3,16 +3,16 @@ title: Domande frequenti su SQL Server in Linux
 description: Questo articolo fornisce le risposte alle domande frequenti su SQL Server in esecuzione in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952637"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929910"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -32,7 +32,7 @@ Le sezioni seguenti contengono domande e risposte comuni per SQL Server in esecu
 
 1. **SQL Server in Linux è uguale alla versione per Windows?**
 
-   Il motore di database principale per SQL Server è lo stesso sia in Linux che in Windows. Tuttavia, alcune funzionalità non sono attualmente supportate in Linux. Per un elenco delle funzionalità non supportate in Linux, vedere [Funzionalità e servizi non supportati](sql-server-linux-release-notes.md#Unsupported). Vedere anche [Problemi noti](sql-server-linux-release-notes.md#known-issues). Se non diversamente specificato in questi elenchi, le altre funzionalità e servizi di SQL Server sono supportati in Linux.
+   Il motore di database principale per SQL Server è lo stesso sia in Linux che in Windows. Tuttavia, alcune funzionalità non sono attualmente supportate in Linux. Per un elenco delle funzionalità non supportate in Linux, vedere [Funzionalità e servizi non supportati](sql-server-linux-editions-and-components-2019.md#Unsupported). Vedere anche [Problemi noti](sql-server-linux-release-notes.md#known-issues). Se non diversamente specificato in questi elenchi, le altre funzionalità e servizi di SQL Server sono supportati in Linux.
 
 1. **Quali sono i criteri di supporto per SQL Server?**
 

@@ -15,12 +15,12 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70837481d5d1656e64eca99d8f98ddfde7e52f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e41abc4ab3f798a3ee970061ddc21539403ef6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126236"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907505"
 ---
 # <a name="modify-data-through-a-view"></a>Modificare i dati tramite una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,9 +53,7 @@ ms.locfileid: "68126236"
   
 5.  Per inserire una riga, scorrere fino alla fine delle righe e inserire i nuovi valori.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
+    > **IMPORTANTE** Non è possibile inserire una riga se la vista fa riferimento a più di una tabella di base.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

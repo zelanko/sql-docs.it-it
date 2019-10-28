@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72518003"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909315"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -134,8 +134,6 @@ Come detto in precedenza, il piano di query non ha più un operatore per la funz
 1. SQL Server ha dedotto il join implicito tra `CUSTOMER` e `ORDERS`, rendendolo esplicito tramite un operatore di join.
 2. SQL Server ha anche dedotto la clausola `GROUP BY O_CUSTKEY on ORDERS` implicita e ha usato IndexSpool + StreamAggregate per implementarla.
 3. SQL Server usa ora il parallelismo tra tutti gli operatori.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 A seconda della complessità della logica della funzione definita dall'utente, il piano di query generato risultante può essere anche più grande e più complesso. Come si può vedere, le operazioni all'interno della funzione definita dall'utente non sono più una black box. Query Optimizer è quindi in grado di determinare i costi di queste operazioni e di ottimizzarle. Poiché, poi, la funzione definita dall'utente non è più all'interno del piano, la chiamata iterativa a tale funzione viene sostituita da un piano che evita completamente il sovraccarico delle chiamate di funzione.
 

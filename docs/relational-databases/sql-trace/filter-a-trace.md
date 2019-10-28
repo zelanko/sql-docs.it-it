@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072892"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909489"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072892"
 2.  Identificare i dati e le colonne di dati contenenti le informazioni necessarie.  
   
 3.  Identificare un subset dei dati necessari e definire filtri in base a tale subset di dati.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Ad esempio, è possibile che si desideri filtrare solo gli eventi con durata superiore a un determinato intervallo. In tal caso, è possibile creare una traccia che include gli eventi per i quali il valore nella colonna **Duration** è maggiore di 300 millisecondi. Nella traccia non saranno inclusi gli eventi con durata inferiore a 300 millisecondi.  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811365"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907033"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811365"
 5.  Deselezionare **Mostra oggetti esistenti** nella parte inferiore della pagina a schede **Indicazioni** . Nella griglia verranno visualizzati solo gli oggetti di database cui si fa riferimento nell'indicazione. Usare la barra di scorrimento inferiore per visualizzare la colonna all'estremità destra nella griglia delle indicazioni e fare clic nella colonna **Definizione** per visualizzare o copiare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] che crea l'oggetto nel database.  
   
 6.  Se si desidera salvare tutti gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite cui vengono creati o eliminati tutti gli oggetti di database nell'indicazione in un file script, scegliere **Salva indicazioni** dal menu **Azioni** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare il riepilogo e i report relativi all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   

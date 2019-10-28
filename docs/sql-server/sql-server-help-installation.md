@@ -1,7 +1,7 @@
 ---
 title: Contenuto della Guida e Help Viewer per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2017
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c435ef5ee077d569d0b071f351a3b55400f9a72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb5b270acac06411d5758f49ce8037311727d62b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136371"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908012"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
@@ -171,7 +171,7 @@ Nella Guida appare sempre il contenuto più aggiornato.
 
 **Per visualizzare la Guida online di SQL Server in SSMS 17.x**
 
-- Fare clic su **Visualizza Guida** nel menu **?** . La documentazione di SQL Server 2016/2017 più recente da [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) viene visualizzata nel browser. 
+- Fare clic su **Visualizza Guida** nel menu **?** . La documentazione di SQL Server 2016/2017 più recente da [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/index.yml) viene visualizzata nel browser.
 
    ![Visualizza Guida](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

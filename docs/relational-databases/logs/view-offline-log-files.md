@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212313"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908561"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "70212313"
   
      Se si desidera connettersi a un computer remoto, effettuare le operazioni seguenti:  
   
-    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)**, quindi scegliere **Connetti a un altro computer**.  
+    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** , quindi scegliere **Connetti a un altro computer**.  
   
     2.  Nella finestra di dialogo **Cambio computer gestito** fare clic su **Altro computer**.  
   
     3.  Immettere il nome del computer remoto, quindi fare clic su **OK**.  
   
-3.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (**_NomeComputerRemoto_**)**, quindi scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (** _NomeComputerRemoto_ **)** , quindi scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo delle proprietà di **Controllo WMI** fare clic sulla scheda **Sicurezza** .  
   
@@ -86,8 +86,6 @@ ms.locfileid: "70212313"
 6.  Fare clic su **Sicurezza**.  
   
 7.  Verificare che l'account usato abbia l'autorizzazione **Abilita account** . Questa autorizzazione consente accesso in lettura a oggetti WMI.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="view-log-files"></a>Visualizzare file di log  
  Nella procedura seguente viene illustrato come visualizzare file di log offline tramite Server registrati. Nella procedura si suppone quanto segue:  

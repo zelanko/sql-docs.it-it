@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710314"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907242"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "71710314"
 3.  Configurare una pubblicazione di tipo merge per consentire la sincronizzazione Web.  
   
 4.  Configurare una o più sottoscrizioni per l'utilizzo della sincronizzazione Web.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  Se si intende replicare volumi elevati di dati o utilizzare tipi di dati di grandi dimensioni, ad esempio **varchar(max)** , leggere la sezione "Replica di volumi elevati di dati" in questo argomento.  

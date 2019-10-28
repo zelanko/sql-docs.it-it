@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47560883fa845abb2758c7d96b8892c1bebbde2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092145"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909274"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Risoluzione dei problemi per gli indici hash per tabelle ottimizzate per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,8 +116,6 @@ Il blocco di codice T-SQL seguente offre un modo semplice per testare un `SELECT
     A. Viene usato un operatore modulo per configurare il tasso di valori duplicati nella colonna StatusCode.  
     B. Il ciclo inserisce 262.144 righe in circa 1 minuto.  
 3. Con PRINT viene stampato un messaggio che chiede di eseguire l'istruzione SELECT precedente da **sys.dm_db_xtp_hash_index_stats**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769354"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907284"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ Questo processo crea la pubblicazione e la pone nello stato di *sincronizzazione
 1. Le transazioni vengono eseguite su oggetti replicati e contrassegnati "per la replica" nel log delle transazioni. 
 2. L'agente di lettura log esegue l'analisi del log delle transazioni ed esegue una ricerca delle transazioni contrassegnate "per la replica." Queste transazioni vengono quindi salvate nel database di distribuzione. 
 3. L'agente di distribuzione esegue un'analisi del database di distribuzione tramite il thread di lettura. Quindi, usando il thread di scrittura, questo agente si connette al sottoscrittore per applicare tali modifiche nel sottoscrittore.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Gli errori possono verificarsi in qualsiasi passaggio del processo. Trovare questi errori può essere l'aspetto più complesso della risoluzione dei problemi di sincronizzazione. Fortunatamente, l'uso di Monitoraggio replica semplifica questo processo. 
 

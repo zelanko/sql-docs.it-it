@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6ad5c38bd4d4bc48cffb44621639ea441f0adf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939473"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907571"
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "67939473"
     -   Se si modifica un join esistente è necessario apportare manualmente le modifiche.  
   
 3.  **Specificare le opzioni del join**  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Se la colonna che si unisce in join alla tabella filtrata è univoca, selezionare **Chiave univoca**. Se la colonna è univoca, per il processo di merge sono disponibili speciali procedure di ottimizzazione delle prestazioni.  
   

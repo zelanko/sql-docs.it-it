@@ -16,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512a32fbbc57b960369b052615973b999f378a90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfe3901465f1230de5eea3996adad499208f6619
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009378"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907414"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Usare il profiler XEvent di SQL Server Management Studio
 
@@ -50,8 +50,6 @@ Per accedere al profiler XEvent, seguire questa procedura:
    ![Sessione del profiler XE](media/xevents-xe-profiler-start-session.png)
 
 5. È ora possibile visualizzare gli eventi estesi.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![Visualizzatore del profiler XE](media/xevents-xe-profiler-start-viewer.png)
 

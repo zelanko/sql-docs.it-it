@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033726"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908874"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "68033726"
 1.  Ripristinare i dati.  
   
 2.  Ripristinare il log utilizzando l'opzione WITH RECOVERY per l'ultimo ripristino del log. Verrà attivata la modalità online per i dati ripristinati.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  In alcuni casi non è possibile eseguire il rollback di una transazione di cui non è stato eseguito il commit perché i dati necessari per il rollback sono offline durante l'avvio. In tali casi, la transazione viene posticipata. Per altre informazioni, vedere [Transazioni posticipate &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   

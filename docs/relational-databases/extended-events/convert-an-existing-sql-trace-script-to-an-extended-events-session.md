@@ -14,12 +14,12 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce6fe85cf8784176f44af9273663c7440fc9cc57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9763f3c25edeb68a7a2b06f3664aae6b79b7d38
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021908"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909405"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
 
@@ -36,8 +36,6 @@ ms.locfileid: "68021908"
 3.  Usare la funzione fn_trace_getfilterinfo per elencare i filtri e le azioni equivalenti degli eventi estesi da usare.  
   
 4.  Creare manualmente una sessione Eventi estesi, utilizzando gli eventi, le azioni e i predicati (filtri) equivalenti degli eventi estesi.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="to-obtain-the-trace-id"></a>Per ottenere l'ID della traccia  
   

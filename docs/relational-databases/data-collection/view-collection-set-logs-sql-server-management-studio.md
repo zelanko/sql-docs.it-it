@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24c587168f9778601e672141775f822b1b0362fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ad2257f18b73794fa788cefdd3e77e602e11b7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055481"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909630"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Visualizzazione dei log dei set di raccolta (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "68055481"
      Viene avviato il **Visualizzatore file di log**. Tutti i file di log di ogni set di raccolta vengono elencati e preselezionati nel nodo **Raccolta dati** del visualizzatore.  
   
 3.  Per visualizzare log di set di raccolta specifici, deselezionare la casella di controllo accanto a ciascun set di raccolta di cui non si desidera visualizzare il log. Le informazioni del log relative a tali set di raccolta vengono rimosse dal riquadro dettagli del **Visualizzatore file di log** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-view-a-specific-collection-set-log-file"></a>Per visualizzare il file di log di un set di raccolta specifico  
   

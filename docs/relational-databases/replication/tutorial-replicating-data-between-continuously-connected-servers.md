@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769408"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907709"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ In questa sezione viene creata una pubblicazione transazionale usando [!INCLUDE[
     ![Pagina "Completamento procedura guidata" con il nome della pubblicazione](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Dopo la creazione della pubblicazione, selezionare **Chiudi** per completare la procedura guidata. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Se quando si tenta di creare la pubblicazione SQL Server Agent non è in esecuzione, può essere visualizzato l'errore riportato di seguito, che indica che la pubblicazione è stata creata ma non è stato possibile avviare l'agente di snapshot. In questo caso, è necessario avviare SQL Server Agent e quindi avviare manualmente l'agente di snapshot. Le istruzioni sono descritte nella prossima sezione. 
 

@@ -17,12 +17,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 086cb367b0ca533fcdb54ae815ccda1c3ba0b7e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024926"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908111"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,8 +125,6 @@ ms.locfileid: "68024926"
 9. Nella pagina **Filtro** immettere l'espressione SQL che verrà usata per creare l'indice filtrato in **Espressione filtro**.  
   
 10. Fare clic su **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021936"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909419"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 
@@ -164,7 +164,7 @@ La visualizzazione dei dati viene aggiornata in base all'intervallo specificato.
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Visualizzare il file XEL con la funzione sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 Visualizzare il file XEL con la funzione sys.fn_xe_file_target_read_file
 
 
 Per l'elaborazione batch, la funzione di sistema seguente può generare il codice XML per i record in un file XEL:
@@ -180,8 +180,6 @@ Una volta che i dati di destinazione sono presenti in SSMS, è possibile esporta
 
 
 1. Spostare lo stato attivo sulla visualizzazione dei dati.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - Diventano immediatamente visibili una nuova barra degli strumenti e una nuova voce di menu per gli eventi estesi.
 
