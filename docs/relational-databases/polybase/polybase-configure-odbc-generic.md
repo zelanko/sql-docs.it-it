@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 697de72ce644ffdce721745b33cde3372edfb2c8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710665"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907599"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurare PolyBase per l'accesso a dati esterni in SQL Server
 
@@ -78,8 +78,6 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
     ```
 
 1. **Facoltativo:** Creare statistiche per una tabella esterna.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Per garantire prestazioni ottimali delle query, è consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni.
 
