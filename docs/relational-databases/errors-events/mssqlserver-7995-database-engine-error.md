@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8e8c1f982bfc912cac76207d81178037fb320f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007044"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906553"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -40,8 +40,6 @@ Il processo DBCC CHECKDB è composto dalle tre fasi seguenti:
 2.  Controlli di consistenza delle tabelle di sistema, che equivalgono all'esecuzione di DBCC CHECKTABLE in un elenco di piccole dimensioni di tabelle di base di sistema necessarie.  
   
 3.  Controllo di consistenza dei database completi.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 L'errore MSSQLEngine_7995 viene generato nella fase 2 e indica che DBCC CHECKDB ha rilevato errori che il comando non è in grado di correggere oppure che l'istruzione REPAIR non è stata specificata. DBCC CHECKDB non è in grado di continuare con la fase 3 poiché le tabelle di base di sistema in questione archiviano i metadati di tutti gli oggetti nel database oppure sono danneggiate.  
   

@@ -19,12 +19,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8390690ebbdef66d0a5c754e7a0e5db2f31437de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123523"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905515"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,48 +70,46 @@ ms.locfileid: "68123523"
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
+     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** _nome_funzione_.  
   
      **Database**  
-     The name of the database containing this function.  
+     Nome del database che contiene la funzione.  
   
      **Server**  
-     The name of the current server instance.  
+     Nome dell'istanza del server corrente.  
   
-     **User**  
-     The name of the user of this connection.  
+     **Utente**  
+     Nome dell'utente della connessione.  
   
-     **Created date**  
-     Displays the date the function was created.  
+     **Data creazione**  
+     Visualizza la data di creazione della funzione.  
   
-     **Execute As**  
-     Execution context for the function.  
+     **Esegui come**  
+     Contesto di esecuzione per la funzione.  
   
-     **Name**  
-     The name of the current function.  
+     **Nome**  
+     Nome della funzione corrente.  
   
      **Schema**  
-     Displays the schema that owns the function.  
+     Visualizza lo schema proprietario della funzione.  
   
-     **System object**  
-     Indicates whether the function is a system object. Values are True and False.  
+     **Oggetto di sistema**  
+     Indica se la funzione è un oggetto di sistema. I valori sono True e False.  
   
      **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     Indica se l'oggetto è stato creato con l'opzione ANSI NULLs.  
   
-     **Encrypted**  
-     Indicates whether the function is encrypted. Values are True and False.  
+     **Crittografata**  
+     Indica se la funzione è crittografata. I valori sono True e False.  
   
-     **Function Type**  
-     The type of user defined function.  
+     **Tipo di funzione**  
+     Tipo della funzione definita dall'utente.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **Identificatore delimitato**  
+     Indica se l'oggetto è stato creato con l'opzione quoted identifier.  
   
-     **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **Associata a schema**  
+     Indica se la funzione è associata allo schema. I valori sono True e False. Per informazioni sulle funzioni associate a schema, vedere la sezione relativa a SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

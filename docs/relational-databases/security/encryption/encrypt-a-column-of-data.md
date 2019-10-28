@@ -16,12 +16,12 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f30f1f2d4d3435c66792a462ba277fd00350f7
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383527"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902976"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
 2. Sulla barra Standard fare clic su **Nuova query**.  
   
 3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     USE AdventureWorks2012;  

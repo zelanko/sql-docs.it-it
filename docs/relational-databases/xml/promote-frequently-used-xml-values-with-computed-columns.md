@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4b68ca111fc14682f5e11a6a865d15c0356a954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995321"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905523"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,8 +172,6 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Creare un assembly e una funzione Transact-SQL definita dall'utente per avviare la classe CLR.  
   
 3.  Definire i trigger di inserimento, aggiornamento ed eliminazione utilizzando la funzione definita dall'utente per la manutenzione delle tabelle di proprietà.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  A tale scopo è innanzitutto necessario creare la funzione CLR di flusso. Il tipo di dati **xml** viene esposto come classe SqlXml gestita in ADO.NET e supporta il metodo **CreateReader()** , che restituisce un oggetto XmlReader.  
   

@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ce28c96de9dc15214bf44344b4fc5e9b73632e
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 233068e84dca3d7d61e10867443cf30bbf942a59
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680840"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798358"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "71680840"
 
 Crea credenziali del database. Le credenziali del database non sono mappata a un account di accesso al server o a un utente di database. Le credenziali vengono usate dal database per accedere al percorso esterno ogni volta che l'operazione eseguita dal database lo richiede.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -123,7 +123,8 @@ Azure Data Lake Store usa un'applicazione di Azure Active Directory per l'autent
 -- Create a db master key if one does not already exist, using your own password.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 
--- Create a database scoped credential.CREATE DATABASE SCOPED CREDENTIAL ADL_User
+-- Create a database scoped credential.
+CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
     SECRET = '<key>'

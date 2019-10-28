@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021069"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905239"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,8 +235,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Il nodo `b`, poiché viene applicato un predicato per il nodo`b` nell'espressione XQuery.  
   
 2.  **Principio 2**: per ottenere prestazioni ottimali, indicizzare tutti i nodi necessari per valutare una specifica espressione XQuery. Se si indicizzano solo alcuni nodi, l'indice XML selettivo migliora la valutazione delle sottoespressioni che includono solo nodi indicizzati.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Per migliorare le prestazioni dell'istruzione SELECT precedentemente illustrata, è possibile creare l'indice XML selettivo seguente:  
   

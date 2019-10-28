@@ -1,7 +1,7 @@
 ---
 title: Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dc38f28726067614acb12cb8daff01cf1b39e02
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: a6874476fc7309a4bfed118bff76430bed395587
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974329"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798442"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure
 
@@ -70,7 +70,10 @@ L'istruzione `OPENROWSET` aggiunge quindi il nome del contenitore (`week3`) alla
 SELECT * FROM OPENROWSET(
    BULK 'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;   
 ```
 
 Con `BULK INSERT`, usare il contenitore e la descrizione del file:
@@ -101,7 +104,10 @@ L'istruzione `OPENROWSET` non include il nome del contenitore nella descrizione 
 SELECT * FROM OPENROWSET(
    BULK 'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;
 ```
 
 Con `BULK INSERT`, non usare il nome del contenitore nella descrizione del file:

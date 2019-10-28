@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 328d61171c28f89083712c7f46c7b97394a7de84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8549b5a3a1675353ad0adce42fc63a460f893cae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137000"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905021"
 ---
 # <a name="change-resource-pool-settings"></a>Modificare le impostazioni del pool di risorse
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68137000"
 4.  Selezionare o fare doppio clic sulle celle della riga da modificare e immettere i nuovi valori.  
   
 5.  Per salvare le modifiche, fare clic su **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="ChgRPTSQL"></a> Modificare le impostazioni di un pool di risorse utilizzando Transact-SQL  
  **Per modificare le impostazioni di un pool di risorse utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

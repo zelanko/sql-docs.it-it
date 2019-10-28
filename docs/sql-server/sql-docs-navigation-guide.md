@@ -1,7 +1,7 @@
 ---
 title: Suggerimenti per l'esplorazione della documentazione di SQL Server
 description: Suggerimenti e consigli per esplorare la documentazione tecnica di SQL Server. Vengono illustrati elementi come la pagina hub, il sommario e l'intestazione, nonché come usare i percorsi di navigazione e il filtro della versione.
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621750"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904305"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server 
 
@@ -93,6 +93,6 @@ Se si riscontra un errore all'interno di un articolo, è possibile inviare comme
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Iniziare a usare la [documentazione tecnica di SQL Server](sql-server-technical-documentation.md). 
+- Iniziare a usare la [documentazione tecnica di SQL Server](index.yml).
 - Per altre informazioni sull'invio di commenti o suggerimenti o su come ottenere assistenza per SQL Server, vedere la pagina [Guida e commenti di SQL Server](sql-server-get-help.md). 
 - Per accedere rapidamente a tutti gli articoli di avvio rapido e alle esercitazioni, passare a [SQL Server: Centro formazione](../lp/sql-server/sql-education-center.md).
