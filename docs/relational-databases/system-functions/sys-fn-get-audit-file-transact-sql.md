@@ -21,19 +21,19 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542230"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989510"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Restituisce informazioni da un file di controllo creato da un controllo del server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \\ \*** raccogliere tutti i file di controllo nel percorso specificato.  
   
-    -   **\<path > \LoginsAudit_{GUID}** : raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
+    -   **\<percorso > \LoginsAudit_{GUID}** : raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** -raccoglie un file di controllo specifico.  
+    -   **\<percorso > \LoginsAudit_{GUID}_00_29384.sqlaudit** -raccoglie un file di controllo specifico.  
   
- - **Database SQL di Azure**:
+ - **Azure SQL data warehouse o database SQL di Azure**:
  
     Questo argomento viene usato per specificare un URL BLOB (incluso l'endpoint di archiviazione e il contenitore). Sebbene non supporti un carattere jolly asterisco, è possibile usare un prefisso di nome di file parziale (BLOB), anziché il nome del BLOB completo, per raccogliere più file (BLOB) che iniziano con questo prefisso. Ad esempio
  
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> /** 0DatabaseName 1 2: raccoglie tutti i file di controllo (BLOB) per il database specifico.    
+      - **\<Storage_endpoint\>/\<Container\>/\<nomeserver\>/\<Databasename\>** /: raccoglie tutti i file di controllo (BLOB) per il database specifico.    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 8 9FileName 0. xel** : raccoglie un file di controllo specifico (BLOB).
+      - **\<Storage_endpoint\>/\<Container\>/\<nomeserver\>/\<Databasename\>/\<auditname\>/\<CreationDate\>/\<FileName\>. xel** : raccoglie un file di controllo specifico (BLOB).
   
 > [!NOTE]  
 >  Se si passa un percorso senza un criterio del nome di file, verrà generato un errore.  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | Nome colonna | Digitare | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID dell'azione. Non ammette i valori NULL. |  
-| additional_information | **nvarchar(4000)** | Le informazioni univoche applicabili solo a un singolo evento vengono restituite in formato XML. Questo tipo di informazioni è contenuto in un numero ridotto di azioni controllabili.<br /><br /> Un livello di stack TSQL sarà visualizzato in formato XML per le azioni associate a tale stack. Il formato XML sarà:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica il livello di nidificazione corrente del frame. Il nome del modulo viene rappresentato in un formato composto da tre parti (nome_database, nome_schema e nome_oggetto)  Il nome del modulo verrà analizzato per evitare caratteri XML non validi, ad esempio `'\<'`, `'>'`, `'/'` `'_x'`. Verranno sottoposte a escape come `_xHHHH\_`. dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere.<br /><br /> Ammette i valori Null. Restituisce NULL quando non sono presenti informazioni aggiuntive segnalate dall'evento. |
+| additional_information | **nvarchar(4000)** | Le informazioni univoche applicabili solo a un singolo evento vengono restituite in formato XML. Questo tipo di informazioni è contenuto in un numero ridotto di azioni controllabili.<br /><br /> Un livello di stack TSQL sarà visualizzato in formato XML per le azioni associate a tale stack. Il formato XML sarà:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica il livello di nidificazione corrente del frame. Il nome del modulo viene rappresentato in un formato composto da tre parti (nome_database, nome_schema e nome_oggetto)  Il nome del modulo verrà analizzato per evitare caratteri XML non validi, ad esempio `'\<'`, `'>'`, `'/'``'_x'`. Verranno sottoposte a escape come `_xHHHH\_`. dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere.<br /><br /> Ammette i valori Null. Restituisce NULL quando non sono presenti informazioni aggiuntive segnalate dall'evento. |
 | affected_rows | **bigint** | **Si applica a**: solo database SQL di Azure<br /><br /> Numero di righe interessate dall'istruzione eseguita. |  
 | application_name | **nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire da 2017)<br /><br /> Nome dell'applicazione client che ha eseguito l'istruzione che ha causato l'evento di controllo |  
 | audit_file_offset | **bigint** | **Si applica a**: solo SQL Server<br /><br /> Offset del buffer nel file che contiene il record di controllo. Non ammette i valori Null. |  
