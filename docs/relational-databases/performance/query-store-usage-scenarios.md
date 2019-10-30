@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123215"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909813"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "70123215"
   
 -   Forzare il piano precedente dalla cronologia se ha dimostrato di essere più efficace. Usare il pulsante **Forza piano** in **Query regredite** per forzare un piano selezionato per la query.  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![utilizzo archivio query 1](../../relational-databases/performance/media/query-store-usage-1.png "utilizzo archivio query 1")  
   
  Per una descrizione dettagliata dello scenario fare riferimento al blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Query Store: la scatola nera del database).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70123215"
   
  Il modo più facile per iniziare l'esplorazione consiste nell'aprire **Prime query per consumo di risorse** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L'interfaccia utente viene suddivisa in tre riquadri: un istogramma che rappresenta le prime query per consumo di risorse (a sinistra), un riepilogo del piano per la query selezionata (a destra) e un piano di query visivo per il piano selezionato (in basso). Fare clic sul pulsante **Configura** per controllare il numero di query da analizzare e l'intervallo di tempo di interesse. È anche possibile scegliere tra diverse dimensioni di consumo delle risorse (durata, CPU, memoria, operazioni I/O, numero di esecuzione) e la baseline (Media, Min, Max, Totale, Deviazione standard).  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![utilizzo archivio query 2](../../relational-databases/performance/media/query-store-usage-2.png "utilizzo archivio query 2")  
   
  Esaminare il riepilogo del piano a destra per analizzare la cronologia di esecuzione e avere informazioni sui diversi piani e sulle statistiche di runtime. Usare il riquadro inferiore per esaminare i diversi piani o per eseguire un confronto visivo con il rendering in modalità affiancata (usare il pulsante Confronta).  
   
@@ -66,8 +66,6 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
 4.  Verificare che gli indici usati dalla query siano deframmentati.  
   
 5.  Valutare l'opportunità di riscrivere la query con costo elevato. Ad esempio, sfruttare i vantaggi associati alla parametrizzazione della query e ridurre l'utilizzo di SQL dinamico. Implementare la logica ottimale durante la lettura dei dati (applicare il filtro dei dati sul lato database, non sul lato applicazione).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>Test A/B  
  Usare Archivio query per confrontare le prestazioni del carico di lavoro prima e dopo la modifica dell'applicazione che si intende introdurre. L'elenco seguente contiene alcuni esempi in cui è possibile usare Archivio query per valutare l'impatto della modifica dell'ambiente o dell'applicazione sulle prestazioni del carico di lavoro:  
@@ -100,11 +98,11 @@ In qualsiasi scenario, applicare il flusso di lavoro seguente:
   
 La figura seguente mostra l'analisi di Archivio query (passaggio 4) in caso di creazione dell'indice mancante. Aprire il riquadro **Prime query per consumo di risorse** /Riepilogo piano per ottenere la visualizzazione per la query che dovrebbe essere interessata dalla creazione dell'indice:  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![utilizzo archivio query 3](../../relational-databases/performance/media/query-store-usage-3.png "utilizzo archivio query 3")  
   
 È anche possibile confrontare i piani prima e dopo la creazione dell'indice con il rendering in modalità affiancata, usando l'opzione della barra degli strumenti Confronta i piani per la query selezionata in una finestra separata, contrassegnata con un quadrato rosso nella barra degli strumenti.  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![utilizzo archivio query 4](../../relational-databases/performance/media/query-store-usage-4.png "utilizzo archivio query 4")  
   
 Nel piano prima della creazione dell'indice (plan_id = 1, sopra) manca l'hint per l'indice e si può vedere che Clustered Index Scan è l'operatore con il costo più elevato nella query (rettangolo rosso).  
   
@@ -117,7 +115,7 @@ Prima di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], gli utenti erano esp
   
 A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le modifiche di Query Optimizer sono associate al [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) più recente, quindi i piani non vengono modificati esattamente al momento di aggiornamento, ma quando un utente modifica `COMPATIBILITY_LEVEL` in un livello più recente. Questa funzionalità, in combinazione con Archivio query, offre un alto livello di controllo sulle prestazioni delle query nel processo di aggiornamento. Il flusso di lavoro di aggiornamento consigliato è illustrato nella figura seguente:  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![utilizzo archivio query 5](../../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5")  
   
 1.  Aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza modificare il livello di compatibilità del database. In questo modo non si espongono le modifiche più recenti di Query Optimizer, ma è possibile usare le funzionalità più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tra cui Query Store.  
   
@@ -141,7 +139,7 @@ Alcuni carichi di lavoro non includono query dominanti che è possibile ottimizz
   
  La visualizzazione**Prime query per consumo di risorse** fornisce la prima indicazione relativa alla natura ad hoc del carico di lavoro:  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![utilizzo archivio query 6](../../relational-databases/performance/media/query-store-usage-6.png "utilizzo archivio query 6")  
   
 Usare la metrica **Conteggio esecuzioni** per verificare se le prime query sono ad hoc (questa operazione richiede l'esecuzione di Archivio query con `QUERY_CAPTURE_MODE = ALL`). Dal diagramma precedente, è possibile vedere che il 90% delle **Prime query per consumo di risorse** viene eseguito una sola volta.  
   
@@ -158,7 +156,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 Si tratta di un potenziale risultato che può essere prodotto nel caso di carichi di lavoro con query ad hoc:  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![utilizzo archivio query 7](../../relational-databases/performance/media/query-store-usage-7.png "utilizzo archivio query 7")  
   
 Il risultato della query mostra che, nonostante il numero elevato di query e piani in Query Store, query_hash e query_plan_hash in realtà non sono diversi. Un rapporto molto maggiore di 1 tra i testi delle query univoci e gli hash delle query univoci indica che il carico di lavoro è un buon candidato per la parametrizzazione perché l'unica differenza tra le query è la costante letterale (parametro) fornita come parte del testo della query.  
   
@@ -200,7 +198,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Dopo aver applicato uno di questi passaggi, in **Prime query per consumo di risorse** viene visualizzata un'altra immagine del carico di lavoro.  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![utilizzo archivio query 8](../../relational-databases/performance/media/query-store-usage-8.png "utilizzo archivio query 8")  
   
 In alcuni casi, l'applicazione può generare un numero elevato di query diverse, che non sono adatte alla parametrizzazione automatica. In questo caso, viene visualizzato un numero elevato di query nel sistema, ma il rapporto tra le query univoche e il valore univoco `query_hash` è probabilmente prossimo a 1.  
   

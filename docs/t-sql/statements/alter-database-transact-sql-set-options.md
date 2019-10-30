@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586704"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890471"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -76,7 +76,7 @@ SET
 
 <option_spec> ::=
 {
-    <acceleratred_database_recovery>
+    <accelerated_database_recovery>
   | <auto_option>
   | <automatic_tuning_option>
   | <change_tracking_option>
@@ -108,8 +108,8 @@ SET
 
 <accelerated_database_recovery> ::=
 {
-ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
-[(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
+    ACCELERATED_DATABASE_RECOVERY = { ON | OFF }
+     [ ( PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name } ) ];
 }
 
 <auto_option> ::=
@@ -123,12 +123,12 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 <automatic_tuning_option> ::=
 {
-  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+    AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
+    CHANGE_TRACKING
    {
        = OFF
      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
@@ -137,10 +137,10 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 }
 
 <change_tracking_option_list> ::=
-   {
-       AUTO_CLEANUP = { ON | OFF }
-     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }
-   }
+{
+   AUTO_CLEANUP = { ON | OFF }
+ | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }
+}
 
 <containment_option> ::=
    CONTAINMENT = { NONE | PARTIAL }
@@ -271,7 +271,7 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }
@@ -870,7 +870,7 @@ Per l'utilizzo dell'opzione PAGE_VERIFY, è importante tenere presente quanto se
 - Quando un database utente o di sistema viene aggiornato a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva, il valore di PAGE_VERIFY (NONE o TORN_PAGE_DETECTION) rimane invariato. È consigliabile usare CHECKSUM.
 
     > [!NOTE]
-    > Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione di database PAGE_VERIFY è impostata su NONE per il database tempdb e non può essere modificata. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive il valore predefinito per il database tempdb è CHECKSUM per le nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si aggiorna un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene mantenuto il valore predefinito NONE. L'opzione può essere modificata. È consigliabile utilizzare CHECKSUM per il database tempdb.
+    > Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'opzione di database PAGE_VERIFY è impostata su NONE per il database TempDB e non può essere modificata. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive il valore predefinito per il database TempDB è CHECKSUM per le nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si aggiorna un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene mantenuto il valore predefinito NONE. L'opzione può essere modificata. È consigliabile utilizzare CHECKSUM per il database tempdb.
 
 - TORN_PAGE_DETECTION può consentire l'utilizzo di un numero più limitato di risorse, ma offre una protezione minore rispetto all'opzione CHECKSUM.
 - È possibile impostare PAGE_VERIFY senza attivare la modalità offline per il database, senza bloccarlo o senza impedire in altro modo la concorrenza nel database.
@@ -1088,7 +1088,7 @@ Quando si verifica uno di questi errori, viene visualizzato un messaggio di avvi
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_arithabort_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `IsArithmeticAbortEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }        
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }        
 
 Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1444,6 +1444,7 @@ SET
   | <temporal_history_retention>
 }
 ;
+
 <auto_option> ::=
 {
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
@@ -1453,7 +1454,8 @@ SET
 }
 
 <automatic_tuning_option> ::=
-{AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }
+{
+    AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
@@ -1461,12 +1463,12 @@ SET
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
-   {
-       = OFF
-     | = ON [ ( <change_tracking_option_list > [,...n] ) ]
-     | ( <change_tracking_option_list> [,...n] )
-   }
+    CHANGE_TRACKING
+    {
+        = OFF
+      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
+      | ( <change_tracking_option_list> [,...n] )
+    }
 }
 
 <change_tracking_option_list> ::=
@@ -1489,7 +1491,7 @@ SET
 <db_user_access_option> ::=
   { RESTRICTED_USER | MULTI_USER }
 
-<delayed_durability_option> ::=DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
+<delayed_durability_option> ::= DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 
 <parameterization_option> ::=
   PARAMETERIZATION { SIMPLE | FORCED }
@@ -1498,7 +1500,7 @@ SET
 {
   QUERY_STORE
   {
-    = OFF
+      = OFF
     | = ON [ ( <query_store_option_list> [,... n] ) ]
     | ( < query_store_option_list> [,... n] )
     | CLEAR [ ALL ]
@@ -1530,7 +1532,7 @@ SET
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }
@@ -2247,17 +2249,17 @@ SET
 
 <automatic_tuning_option> ::=
 {
-  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+    AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
-   {
+    CHANGE_TRACKING
+    {
        = OFF
      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
      | ( <change_tracking_option_list> [,...n] )
-   }
+    }
 }
 
 <change_tracking_option_list> ::=
@@ -2315,7 +2317,7 @@ SET
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }

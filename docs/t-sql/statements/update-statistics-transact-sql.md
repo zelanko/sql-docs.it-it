@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099801"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798414"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Aggiorna le statistiche di ottimizzazione query in una tabella o una vista indic
   
 Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso. Per le operazioni `UPDATE STATISTICS` è possibile usare tempdb per ordinare l'esempio di righe per la compilazione di statistiche.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -125,6 +125,9 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
  > Se viene eseguita AUTO_UPDATE_STATISTICS, usa la percentuale di campionamento persistente, qualora disponibile, o la percentuale di campionamento predefinito se non disponibile.
  > Il comportamento di RESAMPLE non è interessato da questa opzione.
  
+ > [!NOTE]
+ > Se la tabella viene troncata, per tutte le statistiche compilate in base alla struttura HoBT viene ripristinato l'uso della percentuale di campionamento predefinita.
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) espongono il valore di percentuale di campionamento persistente per la statistica selezionata.
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * L'opzione `MAXDOP` non è compatibile con le opzioni `STATS_STREAM`, `ROWCOUNT` e `PAGECOUNT`.
 * L'opzione `MAXDOP` è limitata dall'impostazione `MAX_DOP` del gruppo di carico di lavoro di Resource Governor, se in uso.
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
 Per informazioni sull'aggiornamento delle statistiche per tutte le tabelle interne e definite dall'utente nel database, vedere la stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Il comando riportato di seguito chiama ad esempio sp_updatestats per aggiornare tutte le statistiche per il database.  
   
 ```sql  

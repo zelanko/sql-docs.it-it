@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123556"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783300"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Vantaggi delle funzioni definite dall'utente
   
 ##  <a name="FunctionTypes"></a> Tipi di funzioni  
 **Funzioni scalari**  
- Le funzioni scalari definite dall'utente restituiscono un singolo valore di dati del tipo definito nella clausola RETURNS. Per una funzione scalare inline, non è disponibile alcun corpo della funzione. Il valore scalare corrisponde al risultato di una singola istruzione. Per una funzione scalare con istruzioni multiple, il corpo della funzione, definito in un blocco BEGIN...END, include una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un solo valore. Il tipo restituito può essere qualsiasi tipo di dati ad eccezione di **text**, **ntext**, **image**, **cursor**e **timestamp**. 
+ Le funzioni scalari definite dall'utente restituiscono un singolo valore di dati del tipo definito nella clausola RETURNS. Per una funzione scalare inline, il valore scalare restituito corrisponde al risultato di una singola istruzione. Per una funzione scalare con istruzioni multiple, il corpo della funzione può contenere una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un solo valore. Il tipo restituito può essere qualsiasi tipo di dati ad eccezione di **text**, **ntext**, **image**, **cursor**e **timestamp**. 
  **[Esempi.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Funzioni con valori di tabella**  

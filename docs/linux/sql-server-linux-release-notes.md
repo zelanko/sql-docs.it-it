@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278259"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930483"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -101,7 +101,7 @@ Questa è la versione Cumulative Update 16 (CU16) di [!INCLUDE[ssSQL17](../inclu
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| Supporto di MSDTC | Supporto di Microsoft Distributed Transaction Coordinator (MSDTC) per SQL Sever 2017. Per altre informazioni, vedere [Come configurare Microsoft Distributed Transaction Coordinator (MSDTC) in Linux](sql-server-linux-configure-msdtc.md). |
+| Supporto di MSDTC | Supporto per Microsoft Distributed Transaction Coordinator (MSDTC) per SQL Server 2017. Per altre informazioni, vedere [Come configurare Microsoft Distributed Transaction Coordinator (MSDTC) in Linux](sql-server-linux-configure-msdtc.md). |
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -392,7 +392,7 @@ Questa è la versione disponibile a livello generale (GA, General Availability) 
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
-I dettagli del pacchetto e i percorsi di download per i pacchetti RPM e Debian sono elencati nella tabella seguente. Non è necessario scaricare questi pacchetti direttamente se si seguono i passaggi illustrati nelle guide di installazione seguenti:
+I dettagli del pacchetto e i percorsi di download per i pacchetti RPM e Debian sono elencati nella tabella seguente. Non è necessario scaricare questi pacchetti direttamente se si usano le procedure delle guide di installazione seguenti:
 
 - [Installare il pacchetto di SQL Server](sql-server-linux-setup.md)
 - [Installare il pacchetto di ricerca full-text](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ I dettagli del pacchetto e i percorsi di download per i pacchetti RPM e Debian s
 | Pacchetto Red Hat RPM | 14.0.1000.169-2 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Pacchetto SLES RPM | 14.0.1000.169-2 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Pacchetto Ubuntu 16.04 Debian | 14.0.1000.169-2 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> Funzionalità e servizi non supportati
-
-Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento della versione disponibile a livello generale. Il supporto di queste funzionalità aumenterà nel corso del tempo.
-
-| Area | Funzionalità o servizio non supportato |
-|-----|-----|
-| **Motore di database** | Replica transazionale |
-| &nbsp; | Replica di tipo merge |
-| &nbsp; | Change Data Capture (vedere SQL Server Agent) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | Query distribuita con connessioni di terze parti |
-| &nbsp; | Server collegati a origini dati diverse da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | Stored procedure estese di sistema (XP_CMDSHELL e così via) |
-| &nbsp; | Filetable, FILESTREAM |
-| &nbsp; | Assembly CLR con il set di autorizzazioni EXTERNAL_ACCESS o UNSAFE |
-| &nbsp; | Estensione pool di buffer |
-| **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, Agente di lettura coda, SSIS, SSAS, SSRS |
-| &nbsp; | Avvisi |
-| &nbsp; | Agente di lettura log |
-| &nbsp; | Change Data Capture (CDC) |
-| &nbsp; | Backup gestito |
-| **Disponibilità elevata** | Mirroring del database  |
-| **Security** | Extensible Key Management |
-| &nbsp; | Autenticazione AD per i server collegati | 
-| &nbsp; | Autenticazione AD per i gruppi di disponibilità | 
-| &nbsp; | Strumenti AD di terze parti (Centrify, Vintela, Powerbroker) | 
-| **Services** | SQL Server Browser |
-| &nbsp; | R Services per SQL Server |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -470,8 +434,6 @@ Le sezioni seguenti descrivono i problemi noti della versione disponibile a live
 - Non è possibile spostare il database master con l'utilità mssql-conf. È possibile spostare altri database di sistema con mssql-conf.
 
 - Quando si ripristina un database di cui è stato eseguito un backup in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Windows, è necessario usare la clausola **WITH MOVE** nell'istruzione Transact-SQL.
-
-- Le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in esecuzione in Linux. I server collegati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono supportati solo se non coinvolgono il servizio DTC. Per altre informazioni, vedere [Le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione in Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Alcuni algoritmi (suite di crittografia) per Transport Layer Security (TLS) non funzionano correttamente con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. Ne derivano errori di connessione quando si prova a connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], oltre a problemi a stabilire le connessioni tra repliche nei gruppi di disponibilità elevata.
 
@@ -574,7 +536,7 @@ Le limitazioni seguenti si applicano a [!INCLUDE[ssManStudioFull](../includes/ss
 
 - I piani di manutenzione non sono supportati.
 
-- La data warehouse di gestione e l'agente di raccolta dati in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non sono supportati. 
+- Il data warehouse di gestione e l'agente di raccolta dati in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non sono supportati. 
 
 - I componenti dell'interfaccia utente di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con le opzioni Autenticazione di Windows o Registro eventi di Windows non funzionano con Linux. È comunque possibile usare queste funzionalità con altre opzioni, ad esempio gli account di accesso SQL. 
 

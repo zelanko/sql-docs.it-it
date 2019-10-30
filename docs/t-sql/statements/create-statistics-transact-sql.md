@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586746"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798384"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -163,8 +163,11 @@ CREATE STATISTICS statistics_name
  Si sconsiglia di specificare 0 PERCENT o 0 ROWS. Se si specifica 0 PERCENT o ROWS, l'oggetto statistiche viene creato ma non conterrà i dati delle statistiche.  
  
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
- Se **ON**, le statistiche mantengono la percentuale di campionamento di creazione per gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento. Se **OFF**, la percentuale di campionamento delle statistiche viene reimpostata sul campionamento predefinito per gli aggiornamenti successivi che non la specificano in modo esplicito. L'impostazione predefinita è **OFF**. 
+ Se **ON**, le statistiche mantengono la percentuale di campionamento di creazione per gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento. Se **OFF**, la percentuale di campionamento delle statistiche viene reimpostata sul campionamento predefinito per gli aggiornamenti successivi che non la specificano in modo esplicito. Il valore predefinito è **OFF**. 
  
+ > [!NOTE]
+ > Se la tabella viene troncata, per tutte le statistiche compilate in base alla struttura HoBT viene ripristinato l'uso della percentuale di campionamento predefinita.
+
  **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM **=** _stats_stream_  

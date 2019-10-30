@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057940"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905544"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057940"
   
      Nella figura seguente viene illustrato il modo in cui CHANGETABLE(CHANGES ...) viene utilizzata per ottenere modifiche.  
   
-     ![Esempio di output della query per il rilevamento delle modifiche](../../relational-databases/track-changes/media/queryoutput.gif "Esempio di output della query per il rilevamento delle modifiche")  
+     ![Esempio di output di query per il rilevamento delle modifiche](../../relational-databases/track-changes/media/queryoutput.gif "Esempio di output di query per il rilevamento delle modifiche")  
   
  Funzione CHANGE_TRACKING_CURRENT_VERSION()  
  Questa funzione viene utilizzata per ottenere la versione corrente che verrà utilizzata alla successiva esecuzione di query sulle modifiche. Tale versione è quella relativa all'ultima transazione di cui è stato eseguito il commit.  
@@ -207,8 +207,6 @@ ON
   
 4.  Ottenere le modifiche per la tabella SalesOrders utilizzando CHANGETABLE(CHANGES …).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Nel database sono in esecuzione due processi che possono influenzare i risultati restituiti dalle operazioni precedenti:  
   
 -   Il processo di pulizia viene eseguito in background e rimuove le informazioni sul rilevamento delle modifiche precedenti rispetto al periodo di memorizzazione specificato.  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  Per altre informazioni sulle transazioni snapshot, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>Pulizia e isolamento dello snapshot   
+Se si abilita l'isolamento dello snapshot e il rilevamento delle modifiche nello stesso database o in due database diversi all'interno della stessa istanza e se nei database con isolamento dello snapshot è presente una transazione aperta, il processo di pulizia può lasciare righe scadute in sys.syscommittab. Questo problema può verificarsi quando il processo di pulizia del rilevamento modifiche tiene conto di un limite minimo (corrispondente alla versione della pulizia sicura) a livello di istanza durante l'esecuzione della pulizia. Questa operazione viene eseguita per garantire che il processo di pulizia automatica del rilevamento modifiche non rimuova alcuna delle righe che possono essere necessarie per la transazione aperta nel database in cui è abilitato l'isolamento dello snapshot. Mantenere più brevi possibile l'isolamento dello snapshot Read committed e le transazioni di isolamento dello snapshot per garantire che le righe scadute in sys.syscommittab vengano eliminate in modo tempestivo. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>Alternative all'utilizzo dell'isolamento dello snapshot  
  Oltre all'isolamento dello snapshot, è possibile utilizzare metodi alternativi che tuttavia richiedono l'esecuzione di un numero maggiore di operazioni per garantire che tutti i requisiti relativi all'applicazione siano soddisfatti. Per garantire che il valore di *last_synchronization_version* sia valido e che i dati non vengano rimossi dal processo di pulizia prima dell'acquisizione delle modifiche, eseguire le operazioni seguenti:  
   

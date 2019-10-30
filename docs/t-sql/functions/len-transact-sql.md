@@ -20,12 +20,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653248"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798419"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Restituisce il numero di caratteri dell'espressione stringa specificata, esclusi
 > [!NOTE]  
 > Per restituire il numero di byte usati per rappresentare un'espressione, usare la funzione [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Usare [LEN](../../t-sql/functions/len-transact-sql.md) per restituire il numero di caratteri codificati in una determinata espressione stringa e [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) per restituire la dimensione in byte per un'espressione stringa specificata. Questi output possono variare a seconda del tipo di dati e del tipo di codifica usati nella colonna. Per altre informazioni sulle differenze di archiviazione tra tipi di codifica diversi, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+> Quando si usa [LEN](../../t-sql/functions/len-transact-sql.md) per restituire il numero di caratteri codificati o [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) per restituire le dimensioni in byte per un'espressione stringa specifica, l'output può variare a seconda del tipo di dati e del tipo di codifica usati nella colonna. Per altre informazioni sulle differenze di archiviazione tra tipi di codifica diversi, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono selezionati il numero di caratteri e i dati in `FirstName` per le persone residenti in `Australia`. In questo esempio viene utilizzato il database AdventureWorks.  

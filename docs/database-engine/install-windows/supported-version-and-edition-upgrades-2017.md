@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990807"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717222"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Aggiornamenti di versione ed edizione supportati per SQL Server 2017
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990807"
   
 ## <a name="unsupported-scenarios"></a>Scenari non supportati  
   
--   La presenza di istanze di versioni diverse di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] non è supportata. I numeri di versione dei componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)], di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere identici in un'istanza di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+-   La presenza di istanze di versioni diverse di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] non è supportata. I numeri di versione dei componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] devono essere identici in un'istanza di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] è disponibile solo per piattaforme a 64 bit. L'aggiornamento tra piattaforme diverse non è supportato. Non è possibile aggiornare un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'istanza a 64 bit nativa tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tuttavia, è possibile eseguire il backup o scollegare database da un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi ripristinarli o collegarli a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bit) se i database non sono pubblicati in replica. È necessario ricreare tutti gli account di accesso e gli altri oggetti utente nei database di sistema master, msdb e model.  
   

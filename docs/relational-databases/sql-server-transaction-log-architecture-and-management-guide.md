@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874205"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916062"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874205"
 
   
 ##  <a name="Logical_Arch"></a> Architettura logica del log delle transazioni  
- Il log delle transazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funziona in modo logico come se si trattasse di una stringa di record di log. Ogni record di log è identificato da un numero di sequenza del file di log (LSN). Ogni nuovo record di log viene scritto nell'estremità finale logica del log con un LSN maggiore di quello del record precedente. I record di log vengono archiviati in sequenza man mano che vengono creati. Ogni record di log contiene l'ID della transazione a cui appartiene. Tutti i record di log associati a ogni transazione sono collegati singolarmente in una catena tramite puntatori ai record precedenti che consentono di eseguire più rapidamente il rollback della transazione.  
+ Il log delle transazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funziona in modo logico come se si trattasse di una stringa di record di log. Ogni record di log è identificato da un numero di sequenza del file di log (LSN). Ogni nuovo record di log viene scritto nell'estremità finale logica del log con un LSN maggiore di quello del record precedente. I record di log vengono memorizzati in una sequenza seriale, dato che vengono creati in modo tale che se LSN2 è maggiore di LSN1, la modifica descritta dal record di log cui fa riferimento LSN2 si verifica dopo la modifica descritta dal record di log cui fa riferimento LSN1. Ogni record di log contiene l'ID della transazione a cui appartiene. Tutti i record di log associati a ogni transazione sono collegati singolarmente in una catena tramite puntatori ai record precedenti che consentono di eseguire più rapidamente il rollback della transazione.  
   
  Nei record di log relativi alle modifiche dei dati vengono registrate le operazioni logiche eseguite oppure immagini dei dati precedenti e successive alla modifica. Un'immagine precedente la modifica è una copia dei dati eseguita prima dell'operazione, mentre un'immagine successiva alla modifica è una copia dei dati eseguita dopo l'operazione.  
   
@@ -65,7 +65,9 @@ Nel log delle transazioni vengono registrati molti tipi di operazioni, tra cui:
   
  Nel log vengono registrate anche le operazioni di rollback. Ogni transazione riserva una determinata quantità di spazio nel log delle transazioni per garantire che nel log sia disponibile spazio sufficiente per supportare un rollback causato da un'istruzione di rollback esplicita o dal verificarsi di un errore. La quantità di spazio riservata varia in base alle operazioni eseguite nella transazione, ma in genere equivale alla quantità di spazio utilizzata per registrare nel log ogni operazione. Lo spazio riservato viene liberato al completamento della transazione.  
   
-<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log o *log attivo*. Questa sezione del log è necessaria per il recupero completo del database. Non è possibile troncare nessuna parte del log attivo. Il numero di sequenza del file di log (LSN) di questo primo record di log è anche detto **LSN minimo del recupero (*MinLSN*)** .  
+<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log, *log attivo* o *parte finale del log*. Questa sezione del log è necessaria per il [recupero](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery) completo del database. Non è possibile troncare nessuna parte del log attivo. Il numero di sequenza del file di log (LSN) di questo primo record di log è anche detto **LSN minimo del recupero (*MinLSN*)** . Per altre informazioni sulle operazioni supportate dal log delle transazioni, vedere [Log delle transazioni (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md).  
+
+Backup dei log e differenziali spostano il database ripristinato a un momento successivo, corrispondente a un LSN maggiore. 
   
 ##  <a name="physical_arch"></a> Architettura fisica del log delle transazioni  
 Del log delle transazioni di un database viene eseguito il mapping su uno o più file fisici. Concettualmente, il file di log è una stringa di record di log. Fisicamente, la sequenza di record di log viene archiviata in modo efficiente nel set di file fisici che implementano il log delle transazioni. È necessario che sia disponibile almeno un file di log per ogni database.  
@@ -231,14 +233,14 @@ Nella figura seguente viene illustrata una versione semplificata della parte fin
 LSN 148 è l'ultimo record del log delle transazioni. Quando è stato elaborato il checkpoint registrato in corrispondenza del numero LSN 147, era stato eseguito il commit di Tran 1 e Tran 2 era l'unica transazione attiva. Pertanto, il primo record di log di Tran 2 è il meno recente di una transazione attiva al momento dell'ultimo checkpoint e, di conseguenza, il numero MinLSN corrisponde a LSN 142, ovvero al record di inizio della transazione Tran 2.
 
 ### <a name="long-running-transactions"></a>Transazioni con esecuzione prolungata
-
-Il log attivo deve includere tutte le parti di tutte le transazioni di cui non è stato eseguito il commit. Se un'applicazione avvia una transazione e non ne esegue il commit o il rollback, il motore di database non fa aumentare il numero MinLSN. Ciò può causare due tipi di problemi:
+Il log attivo deve includere tutte le parti di tutte le transazioni di cui non è stato eseguito il commit. Un'applicazione che avvia una transazione e non ne esegue il commit o il rollback impedisce al [!INCLUDE[ssde_md](../includes/ssde_md.md)] di far aumentare il numero MinLSN. Ciò può causare due tipi di problemi:
 
 * Se il sistema viene arrestato dopo che la transazione ha eseguito numerose modifiche di cui non è stato eseguito il commit, la fase di recupero del riavvio successivo può richiedere tempi notevolmente più lunghi rispetto al valore specificato dall'opzione dell' **intervallo di recupero** .
 * È possibile che il log raggiunga dimensioni considerevoli in quanto non può essere troncato dopo il numero MinLSN. Ciò si verifica anche se il database utilizza il modello di recupero con registrazione minima, in base al quale il log delle transazioni viene in genere troncato in corrispondenza di ogni checkpoint automatico.
 
-### <a name="replication-transactions"></a>Transazioni di replica
+A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] è possibile evitare il ripristino di transazioni con esecuzione prolungata e i problemi descritti in precedenza usando il [recupero del database accelerato](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
+### <a name="replication-transactions"></a>Transazioni di replica
 L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutti i database configurati per la replica transazionale e copia le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione. Il log attivo deve contenere tutte le transazioni contrassegnate per la replica, ma non ancora recapitate al database di distribuzione. Se tali transazioni non vengono replicate tempestivamente, potrebbero impedire il troncamento del log. Per altre informazioni, vedere [Replica transazionale](../relational-databases/replication/transactional/transactional-replication.md).
 
 ## <a name="see-also"></a>Vedere anche 
@@ -249,6 +251,7 @@ Per altre informazioni sul log delle transazioni e sulle procedure consigliate, 
 [Backup di log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Configurare l'opzione di configurazione del server intervallo di recupero](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[Recupero del database accelerato](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

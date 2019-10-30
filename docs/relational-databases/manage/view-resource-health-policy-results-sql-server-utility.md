@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42832ef91f33bbe4e66ad82bc3498106502e7ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024454"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907530"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Visualizzazione dei risultati dei criteri di integrità delle risorse (Utilità SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +27,13 @@ ms.locfileid: "68024454"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) fare clic su **Visualizza**, quindi su **Esplora utilità** per visualizzare il riquadro di spostamento di Esplora utilità. Per visualizzare il riquadro del contenuto, fare clic su **Visualizza**, quindi su **Contenuto Esplora utilità**.  
   
-2.  Nel riquadro di spostamento fare clic su ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connetti a utilità**. Se non è stato creato un punto di controllo dell'utilità o se non sono state registrate istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+2.  Nel riquadro di spostamento fare clic su ![](../../relational-databases/manage/media/connect-to-utility.gif "Connetti a utilità")**Connetti a utilità**. Se non è stato creato un punto di controllo dell'utilità o se non sono state registrate istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 3.  Fare clic sul nodo del punto di controllo dell'utilità per visualizzare dati riepilogativi per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le applicazioni livello dati (fare clic con il pulsante destro del mouse per aggiornare i dati). I dati del dashboard vengono visualizzati nel riquadro del contenuto.  
   
 4.  Fare clic sul nodo **Istanze gestite** per visualizzare i dati della visualizzazione elenco per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (fare clic con il pulsante destro del mouse per aggiornare i dati). I dati della visualizzazione elenco vengono visualizzati nel riquadro del contenuto.  
   
 5.  Fare clic sul nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) per visualizzare i dati della visualizzazione elenco per le applicazioni del livello dati (fare clic con il pulsante destro del mouse per aggiornare i dati). I dati della visualizzazione elenco vengono visualizzati nel riquadro del contenuto.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

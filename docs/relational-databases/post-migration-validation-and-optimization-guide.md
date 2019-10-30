@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006130"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909153"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 
@@ -43,7 +43,7 @@ Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUD
 
 Modificare il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) in base alla versione di origine e seguire il flusso di lavoro consigliato per l'aggiornamento, come illustrato nell'immagine seguente:
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![utilizzo archivio query 5](../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5")  
 
 Per altre informazioni su questo argomento, vedere [Mantenere la stabilità delle prestazioni durante l'aggiornamento a SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -107,8 +107,6 @@ Alcuni esempi di predicati non SARGable:
   -   Ciò può richiedere il confronto del costrutto di codice definito dall'utente archiviato nel database, ad esempio stored procedure, funzioni o viste definite dall'utente, con le tabelle di sistema contenenti informazioni sui tipi di dati usati nelle tabelle sottostanti (ad esempio, [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Se non è possibile passare al punto precedente del codice, modificare il tipo di dati nella tabella in modo che corrisponda alla dichiarazione di variabile o parametro.
 3. Riflettere sull'utilità dei costrutti seguenti:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   Funzioni usate come predicati
   -   Ricerche con caratteri jolly

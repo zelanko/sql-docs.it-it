@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10a54ea4326c3fb3c1a9400568ac9aa7e904aa2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111796"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908434"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Ripristino e recupero di tabelle ottimizzate per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ogni da
   
 3.  **Rollback**. In questa fase, viene effettuato il rollback delle transazioni di cui non è stato eseguito il commit.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="process-for-improving-load-time"></a>Processo per migliorare il tempo di caricamento
 Il caricamento delle tabelle ottimizzate per la memoria può influire sul tempo necessario per il pieno recupero dell'operatività (RTO, Recovery Time Objective). Per migliorare il tempo di caricamento dei dati ottimizzati per la memoria dai file di dati e differenziali, il motore OLTP in memoria carica i file di dati e differenziali in parallelo nel modo seguente:  
   
@@ -59,7 +57,7 @@ Il caricamento delle tabelle ottimizzate per la memoria può influire sul tempo 
   
 -   **Flusso dei file di dati**. Dopo la creazione del filtro mappa differenziale, i file di dati vengono letti da un numero di thread equivalente al numero di CPU logiche. Ogni thread legge le righe di dati, controlla la mappa differenziale associata e inserisce una riga nella tabella solo se la riga non è stata contrassegnata come eliminata. In alcuni casi questa parte del recupero può essere basata sulla CPU, come illustrato in questo diagramma:  
   
-    ![Flusso dei dati alle tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Flusso dei dati alle tabelle ottimizzate per la memoria")  
+    ![Flusso di dati in tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Flusso di dati in tabelle ottimizzate per la memoria")  
   
 ## <a name="specific-cases-of-slow-load-times"></a>Casi specifici di tempi di caricamento lenti
 Le tabelle ottimizzate per la memoria possono in genere essere caricate in memoria alla velocità di I/O, ma il caricamento delle righe di dati in memoria è talvolta più lento. Alcuni casi specifici sono i seguenti:  

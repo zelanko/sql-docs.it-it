@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476220"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807461"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con variabili di ambiente in Linux
 
@@ -94,7 +94,7 @@ Per configurare Anteprima di SQL Server 2019 in Linux è possibile usare diverse
 Questo esempio esegue `mssql-conf setup` con variabili di ambiente configurate. Vengono specificate le variabili di ambiente seguenti:
 
 - **ACCEPT_EULA** consente di accettare il contratto di licenza con l'utente finale.
-- **MSSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
+- **MSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
 - **MSSQL_SA_PASSWORD** consente di impostare una password complessa.
 - **MSSQL_TCP_PORT** consente di configurare la porta TCP su cui è in ascolto SQL Server su 1234.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Questo comando Docker di esempio usa le variabili di ambiente seguenti per creare un nuovo contenitore di SQL Server:
 
 - **ACCEPT_EULA** consente di accettare il contratto di licenza con l'utente finale.
-- **MSSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
+- **MSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
 - **MSSQL_SA_PASSWORD** consente di impostare una password complessa.
 - **MSSQL_TCP_PORT** consente di configurare la porta TCP su cui è in ascolto SQL Server su 1234. Ciò significa che anziché eseguire il mapping della porta 1433 (impostazione predefinita) a una porta host, è necessario eseguire il mapping della porta TCP personalizzata con il comando `-p 1234:1234` riportato in questo esempio.
 

@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031634"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909572"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,23 +72,21 @@ ms.locfileid: "68031634"
   
 2.  Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.  
   
-     ![Selezione della tabella di cronologia nella pagina Selezione tabelle](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selezione della tabella di cronologia nella pagina Selezione tabelle")  
+     ![Selezione della tabella di cronologia nella pagina Selezionare le tabelle](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selezione della tabella di cronologia nella pagina Selezionare le tabelle")  
   
 3.  Nella finestra **Configura Azure** specificare le proprie credenziali di accesso. Accedere a Microsoft Azure o iscriversi per ottenere un account. Selezionare la sottoscrizione da usare e l'area di Azure. Creare quindi un nuovo server o selezionare un server esistente. Scegliere **Avanti**.  
   
-     ![Creare un nuovo server di Azure - Procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-4.png "Creare un nuovo server di Azure - Procedura guidata Estensione database")  
+     ![Creazione di un nuovo server di Azure - Procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Creazione di un nuovo server di Azure - Procedura guidata Stretch Database")  
   
 4.  Nella finestra **Credenziali protette** specificare una password per la chiave master del database per proteggere le credenziali del database SQL Server di origine e quindi fare clic su Avanti.  
   
-     ![Pagina Credenziali protette della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-6.png "Pagina Credenziali protette della procedura guidata Estensione database")  
+     ![Pagina Credenziali protette della procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Pagina Credenziali protette della procedura guidata Stretch Database")  
   
-5.  Nella finestra **Selezionare l'indirizzo IP** specificare l'intervallo di indirizzi IP per SQL Server per consentire al server di Azure di comunicare con SQL Server. Se si seleziona un server esistente per cui esiste già una regola del firewall, è qui sufficiente fare clic su Avanti per usare tale regola. Fare clic su **Avanti** e quindi su **Fine** per abilitare Estensione database ed estendere la tabella di cronologia temporale.  
+5.  Nella finestra **Selezionare l'indirizzo IP** specificare l'intervallo di indirizzi IP per SQL Server per consentire al server di Azure di comunicare con SQL Server. Se si seleziona un server esistente per cui esiste già una regola del firewall, è qui sufficiente fare clic su Avanti per usare tale regola. Fare clic su **Avanti** e quindi su **Fine** per abilitare Stretch Database ed estendere la tabella di cronologia temporale.  
   
-     ![Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database")  
+     ![Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database")  
   
 6.  Al termine della procedura guidata, verificare che il database sia stato abilitato per l'estensione. Notare le icone in Esplora oggetti che indicano che il database è stato esteso.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **NOTA** Se l'abilitazione del database per l'estensione ha esito negativo,controllare il log degli errori. Un errore comune consiste nella configurazione non corretta della regola del firewall.  
   
@@ -190,7 +188,7 @@ Con il passare del tempo, le nuove righe della tabella di cronologia verranno in
   
  La figura seguente illustra le attività ricorrenti di manutenzione della partizione. Vedere la procedura dettagliata più avanti.  
   
- ![Partizionamento2](../../relational-databases/tables/media/partitioning2.png "Partizionamento2")  
+ ![Partizionamento 2](../../relational-databases/tables/media/partitioning2.png "Partizionamento 2")  
   
  Ecco la procedura dettagliata per le attività ricorrenti di manutenzione della partizione:  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  Ecco prima di tutto una spiegazione visiva del significato delle opzioni RANGE LEFT e RANGE RIGHT:  
   
- ![Partizionamento3](../../relational-databases/tables/media/partitioning3.png "Partizionamento3")  
+ ![Partizionamento 3](../../relational-databases/tables/media/partitioning3.png "Partizionamento 3")  
   
  Quando si definisce una funzione di partizione come RANGE LEFT, i valori specificati corrispondono ai limiti superiori delle partizioni. Quando si usa RANGE RIGHT, i valori specificati sono i limiti inferiori delle partizioni. Quando si usa l'operazione MERGE RANGE per rimuovere un limite dalla definizione della funzione di partizione, l'implementazione sottostante rimuove anche la partizione che contiene il limite. Se tale partizione non è vuota, i dati verranno spostati nella partizione che è il risultato dell'operazione MERGE RANGE.  
   
@@ -357,7 +355,7 @@ COMMIT TRANSACTION
   
  Il diagramma seguente illustra come organizzare la logica di pulizia per una singola tabella, in modo da ridurre l'impatto sui carichi di lavoro in esecuzione.  
   
- ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
+ ![Diagramma script pulizia personalizzata](../../relational-databases/tables/media/customcleanupscriptdiagram.png "Diagramma script pulizia personalizzata")  
   
  Ecco alcune indicazioni generali per l'implementazione del processo. Pianificare la logica di pulizia in modo che venga eseguita ogni giorno ed eseguire l'iterazione su tutte le tabelle temporali che necessitano della pulizia dei dati. Usare SQL Server Agent o uno strumento diverso per pianificare questo processo:  
   

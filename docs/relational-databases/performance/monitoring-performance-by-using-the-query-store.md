@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163908"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909311"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163908"
 2.  Nella finestra di dialogo **Proprietà database** selezionare la pagina **Archivio query** .  
   
 3.  Nella casella **Modalità operativa (richiesta)** selezionare **Lettura/Scrittura**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
@@ -113,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Usare la funzionalità Query regredite  
 Dopo aver abilitato Query Store, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **Query Store**.  
   
-![Struttura ad albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Struttura ad albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS")   ![Struttura ad albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Struttura ad albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS") 
+![Albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS")   ![Albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS") 
   
 Selezionare **Query regredite** per aprire il riquadro **Query regredite** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nel riquadro Query regredite sono visualizzati i piani e le query presenti nell'archivio query. Usare le caselle a discesa nella parte superiore per filtrare le query in base a criteri diversi: **Durata (ms)** (predefinito), Tempo CPU (ms), Letture logiche (KB), Scritture logiche (KB), Letture fisiche (KB), Tempo CLR (ms), DOP, Utilizzo memoria (KB), Conteggio righe, Memoria log usata (KB), Memoria database temporaneo usata (KB) e Tempo di attesa (ms).  
 Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti che consentono di visualizzare la query di origine, forzare e annullare la forzatura di un piano di query, passare dai formati griglia ai grafici e viceversa, confrontare piani selezionati (se è selezionato più di un piano) e aggiornare la visualizzazione.  
@@ -133,7 +131,7 @@ Selezionare **Statistiche di attesa query** per aprire il riquadro **Statistiche
 
 Selezionare una categoria di attesa facendo clic sulla barra. Verrà visualizzata una vista dettagliata sulla categoria di attesa selezionata. Questo nuovo grafico a barre contiene le query che hanno contribuito a tale categoria di attesa. 
   
- ![Vista dettagliata delle statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Vista dettagliata delle statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS")
+ ![Visualizzazione dettagliata di Statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Visualizzazione dettagliata di Statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS")
 
 Usare la casella nella parte superiore per filtrare le query in base a diversi criteri di tempo di attesa per la categoria di attesa selezionata: medio, max, min, deviazione standard e **totale** (impostazione predefinita). Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti per visualizzare la query di origine, forzare e annullar e la forzatura di un piano di query e aggiornare la visualizzazione.  
 

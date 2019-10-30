@@ -17,14 +17,22 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768664"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908427"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come creare una sottoscrizione pull in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
@@ -64,8 +72,6 @@ ms.locfileid: "68768664"
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera creare una o più sottoscrizioni e scegliere **Nuove sottoscrizioni**.  
   
 4.  Completare i passaggi della Creazione guidata nuova sottoscrizione.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>Per creare una sottoscrizione pull dal Sottoscrittore  
   
@@ -123,7 +129,7 @@ ms.locfileid: "68768664"
   
     -   **\@subscriber_type**: specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
   
-    -   **\@subscription_priority**: specificare la priorità d,ella sottoscrizione (l'intervallo di valori consentito è compreso tra **0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
+    -   **\@subscription_priority**: specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra **0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
   
          Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

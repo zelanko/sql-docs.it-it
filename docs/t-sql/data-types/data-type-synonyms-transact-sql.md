@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927776"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689841"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Sinonimi dei tipi di dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ I sinonimi dei tipi di dati sono disponibili in [!INCLUDE[ssNoVersion](../../inc
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-I sinonimi dei tipi di dati possono essere usati in alternativa al nome del tipo di dati di base corrispondente in istruzioni DDL (Data Definition Language). Tali istruzioni includono CREATE TABLE, CREATE PROCEDURE e DECLARE *@variable* . I sinonimi non sono tuttavia visibili dopo la creazione dell'oggetto. In fase di creazione infatti all'oggetto viene assegnato il tipo di dati di base associato al sinonimo e la presenza del sinonimo nell'istruzione con cui è stato creato l'oggetto non viene registrata.
+I sinonimi dei tipi di dati possono essere usati in alternativa al nome del tipo di dati di base corrispondente in istruzioni DDL (Data Definition Language). Tali istruzioni includono CREATE TABLE, CREATE PROCEDURE e DECLARE *\@variable*. I sinonimi non sono tuttavia visibili dopo la creazione dell'oggetto. In fase di creazione infatti all'oggetto viene assegnato il tipo di dati di base associato al sinonimo e la presenza del sinonimo nell'istruzione con cui è stato creato l'oggetto non viene registrata.
   
 Agli oggetti che derivano dall'oggetto originale, ad esempio colonne del set di risultati o espressioni, viene assegnato il tipo di dati di base. Qualsiasi funzione per metadati che usa l'oggetto originale o qualsiasi oggetto derivato visualizzerà il tipo di dati di base, non il sinonimo, incluse:
 

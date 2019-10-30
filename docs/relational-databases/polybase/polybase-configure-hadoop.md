@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710636"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907573"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -60,12 +60,10 @@ Configurare prima di tutto SQL Server PolyBase per usare il provider di Hadoop s
 
 2. È necessario riavviare SQL Server mediante **services.msc**. Il riavvio di SQL Server comporta il riavvio di questi servizi:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    - Servizio spostamento dati di PolyBase per SQL Server  
    - Motore di PolyBase per SQL Server  
   
-   ![arrestare e avviare i servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrestare e avviare i servizi PolyBase in services.msc")  
+   ![arrestare e avviare servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrestare e avviare servizi PolyBase in services.msc")  
   
 ## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
 

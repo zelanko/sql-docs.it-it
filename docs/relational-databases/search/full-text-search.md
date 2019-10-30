@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082758"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930277"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md).  
@@ -111,7 +111,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 
     >[!NOTE]  
     >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, il motore di ricerca full-text si trova nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anziché in un servizio distinto. L'integrazione del motore di ricerca full-text nel motore di database consente di ottimizzare la gestibilità della ricerca full-text, l'esecuzione delle query miste e le prestazioni generali.  
- 
+
 -   **Writer di indici (indicizzatore).** Il writer di indici consente di compilare la struttura utilizzata per archiviare i token indicizzati.  
   
 -   **Strumento di gestione del daemon di filtri.** Lo strumento di gestione del daemon di filtri consente di monitorare lo stato dell'host del daemon di filtri per il motore di ricerca full-text.  

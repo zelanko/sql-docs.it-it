@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084083"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916024"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Per motivi correlati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes
   
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta molti tipi di checkpoint: automatici, indiretti, manuali e interni. Nella tabella seguente vengono riepilogati i tipi di **checkpoint**
   
-|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
+|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
 |----------|----------------------------------|-----------------|  
 |Automatico|EXEC sp_configure **'** intervallo di recupero **','** _secondi_ **'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione di configurazione del server **intervallo di recupero** . I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 50 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indiretto|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Il valore predefinito è 0 per le versioni precedenti, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
@@ -59,7 +59,7 @@ Per motivi correlati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes
 > Le transazioni di cui non è stato eseguito il commit con esecuzione prolungata aumentano il tempo di recupero per tutti i tipi di checkpoint.   
   
 ##  <a name="InteractionBwnSettings"></a> Interazione delle opzioni TARGET_RECOVERY_TIME e 'intervallo di recupero'  
- Nella tabella seguente viene riepilogata l'interazione tra l'impostazione del server **sp_configure'** intervallo di recupero **'** e l'impostazione del database ALTER DATABASE ... impostazione TARGET_RECOVERY_TIME.  
+ La tabella seguente riepiloga l'interazione tra l'impostazione **sp_configure '** intervallo di recupero **'** a livello di server e l'impostazione `ALTER DATABASE ... TARGET_RECOVERY_TIME` specifica del database.  
   
 |target_recovery_time|'intervallo di recupero'|Tipo di checkpoint utilizzato|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ Dopo un arresto anomalo del sistema, la quantità di tempo necessaria per recupe
 ###  <a name="PerformanceImpact"></a> Impatto dell'intervallo di recupero sulle prestazioni di recupero  
 In un sistema di elaborazione delle transazioni online (OLTP) che usa transazioni brevi, il tempo identificato da **intervallo di recupero** costituisce il fattore che influisce maggiormente sul tempo di recupero. L'opzione **intervallo di recupero** non influisce tuttavia sul tempo necessario per annullare una transazione con esecuzione prolungata. Il recupero di un database con una transazione con esecuzione prolungata può richiedere molto più tempo rispetto al valore indicato nell'impostazione **Intervallo di recupero**. 
  
-Ad esempio, se prima dell'interruzione dell'istanza del server sono stati eseguiti aggiornamenti con una transazione con esecuzione prolungata che hanno richiesto due ore, l'operazione di recupero durerà molto più a lungo rispetto al periodo di tempo specificato in **intervallo di recupero** per il recupero della transazione. Per informazioni sull'impatto di una transazione con esecuzione prolungata sul tempo di recupero, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+Ad esempio, se prima dell'interruzione dell'istanza del server sono stati eseguiti aggiornamenti con una transazione con esecuzione prolungata che hanno richiesto due ore, l'operazione di recupero durerà molto più a lungo rispetto al periodo di tempo specificato in **intervallo di recupero** per il recupero della transazione. Per informazioni sull'impatto di una transazione con esecuzione prolungata sul tempo di recupero, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 In genere, i valori predefiniti forniscono prestazioni di recupero ottimali. Tuttavia, la modifica dell'intervallo di recupero potrebbe migliorare le prestazioni nelle circostanze seguenti:  
   
@@ -92,7 +92,6 @@ In genere, i valori predefiniti forniscono prestazioni di recupero ottimali. Tut
 Se si decide di aumentare l'impostazione **recovery interval** , è consigliabile aumentarla gradualmente di piccoli incrementi e valutare l'effetto di ogni aumento incrementale sulle prestazioni del recupero. Questo approccio è importante perché man mano che l'impostazione **intervallo di recupero** viene aumentata, il recupero del database richiederà una quantità di tempo equivalente a tale impostazione. Ad esempio, se si imposta l'**intervallo di recupero** su 10 minuti, la procedura di recupero richiederà un tempo 10 volte superiore rispetto a quello che richiederebbe se l'**intervallo di recupero** fosse impostato su 1 minuto.  
   
 ##  <a name="IndirectChkpt"></a> Checkpoint indiretti
-  
 I checkpoint indiretti, nuovi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], offrono un'alternativa a livello di database configurabile ai checkpoint automatici. Per questa configurazione specificare l'opzione di configurazione del database **target recovery time**. Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 In caso di un arresto anomalo del sistema, i checkpoint indiretti consentono un tempo di recupero potenzialmente più veloce e più prevedibile rispetto ai checkpoint automatici. I checkpoint indiretti offrono i vantaggi riportati di seguito:  
   
@@ -111,7 +110,6 @@ Tuttavia, un carico di lavoro transazionale online su un database configurato pe
 > I database aggiornati sul posto o ripristinati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] useranno il comportamento precedente basato sui checkpoint automatici, a meno che non vengano modificati in modo esplicito per l'uso dei checkpoint indiretti.       
 
 ### <a name="ctp23"></a> Scalabilità migliorata per il checkpoint indiretto
-
 Nelle versioni precedenti a [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] è possibile riscontrare errori con l'utilità di pianificazione che non cede il controllo quando il database genera un numero elevato di pagine dirty, ad esempio `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una scalabilità migliorata per il checkpoint indiretto che consente di evitare questi errori nei database con un carico di lavoro eccessivo di `UPDATE`/`INSERT`.
   
 ##  <a name="EventsCausingChkpt"></a> Checkpoint interni  
@@ -129,7 +127,6 @@ I checkpoint interni vengono generati da vari componenti server per garantire ch
   
 -   Impostazione della modalità offline per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Per modificare l'intervallo di recupero su un'istanza del server**  
   
@@ -143,9 +140,7 @@ I checkpoint interni vengono generati da vari componenti server per garantire ch
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>Vedere anche  
 [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Architettura fisica del log delle transazioni](https://technet.microsoft.com/library/ms179355.aspx) (dalla documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , ma comunque applicabile)       
-  
-  
+[Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

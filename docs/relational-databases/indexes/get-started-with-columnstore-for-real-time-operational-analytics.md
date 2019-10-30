@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009496"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908029"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009496"
   
 -   **Latenza dei dati.** L'implementazione di ETL aggiunge un ritardo per l'esecuzione delle analisi. Se, ad esempio, il processo ETL viene eseguito al termine di ogni giornata lavorativa, le query di analisi verranno eseguite sui dati che risalgono ad almeno un giorno prima. Per molte aziende questo ritardo è inaccettabile, perché le loro attività dipendono dall'analisi dei dati in tempo reale. Ad esempio, il rilevamento di frodi richiede l'analisi in tempo reale sui dati operativi.  
   
- ![panoramica dell'analisi operativa in tempo reale](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "panoramica dell'analisi operativa in tempo reale")  
+ ![Panoramica dell'analisi operativa in tempo reale](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "Panoramica dell'analisi operativa in tempo reale")  
   
  L'analisi operativa in tempo reale offre una soluzione a questi problemi.   
         Non si verifica alcun ritardo durante l'esecuzione di analisi e carichi di lavoro OLTP nella stessa tabella sottostante.   Per gli scenari in cui è possibile usare l'analisi in tempo reale, i costi e la complessità vengono notevolmente ridotti eliminando la necessità di ETL e di acquistare e gestire un data warehouse separato.  
@@ -84,8 +84,6 @@ ms.locfileid: "70009496"
   
 3.  Non è necessario eseguire altre operazioni.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  A questo punto si è pronti per eseguire l'analisi operativa in tempo reale senza apportare modifiche all'applicazione.  Le query di analisi verranno eseguite sull'indice columnstore e le operazioni OLTP continueranno a essere eseguite su indici Btree OLTP. I carichi di lavoro OLTP continueranno a essere eseguiti, ma la gestione dell'indice columnstore determinerà un sovraccarico aggiuntivo. Vedere le ottimizzazioni delle prestazioni nella sezione successiva.  
   
 ## <a name="blog-posts"></a>Post di blog  
@@ -122,7 +120,7 @@ ms.locfileid: "70009496"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Esempio A: accesso a dati attivi da un indice Btree, dati meno attivi dall'indice columnstore  
  Questo esempio usa una condizione filtrata (accountkey > 0) per stabilire quali righe saranno presenti nell'indice columnstore. L'obiettivo è di progettare la condizione filtrata e le query successive per accedere a dati attivi, caratterizzati da modifiche frequenti, dall'indice Btree e di accedere ai dati meno attivi, che sono più stabili, dall'indice columnstore.  
   
- ![Indici combinati per dati attivi e meno attivi](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Indici combinati per dati attivi e meno attivi")  
+ ![Indici combinati per dati ad accesso frequente e molto frequente](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Indici combinati per dati ad accesso frequente e molto frequente")  
   
 > [!NOTE]  
 >  Query Optimizer prenderà in considerazione, ma non sempre sceglierà, l'indice columnstore per il piano di query. Quando Query Optimizer sceglie l'indice columnstore filtrato, combina in modo trasparente le righe dall'indice columnstore nonché le righe che non soddisfano la condizione filtrata per consentire l'analisi in tempo reale. Si tratta di un indice diverso da un normale indice filtrato non cluster che può essere usato solo nelle query limitate alle righe presenti nell'indice.  
@@ -165,7 +163,7 @@ Group By customername
   
  La query di analisi verrà eseguita con il piano di query seguente. Come si può notare, è possibile accedere alle righe che non soddisfano la condizione filtrata solo usando l'indice Btree cluster.  
   
- ![Piano della query](../../relational-databases/indexes/media/query-plan-columnstore.png "Piano della query")  
+ ![Piano di query](../../relational-databases/indexes/media/query-plan-columnstore.png "Piano di query")  
   
  Consultare il blog per informazioni dettagliate sull' [indice columnstore non cluster filtrato.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
   

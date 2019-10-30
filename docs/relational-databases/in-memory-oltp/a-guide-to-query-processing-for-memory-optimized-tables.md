@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811151"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908729"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Il piano stimato per la query è il seguente:  
   
- ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Piano di query per il join di tabelle basate su disco.")  
+ ![Piano di query per un hash join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Piano di query per un hash join di tabelle basate su disco.")  
 Piano di query per un hash join di tabelle basate su disco.  
   
  In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. L'operatore fisico **Hash Match** viene ora usato per l'operatore **Inner Join**. L'indice cluster di Order non è ordinato in base a CustomerID, quindi per un operatore **Merge Join** sarebbe necessario un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore **Hash Match** (75%) rispetto al costo dell'operatore **Merge Join** nell'esempio precedente (46%). In Query Optimizer l'operatore **Hash Match** è stato preso in considerazione anche nell'esempio precedente, con la conclusione, tuttavia, che l'operatore **Merge Join** avrebbe offerto prestazioni migliori.  
@@ -117,8 +117,6 @@ Pipeline di elaborazione delle query di SQL Server.
   
 6.  Access Methods recupera le righe dalle pagine dell'indice e dei dati nel pool di buffer e carica le pagine dal disco nel pool di buffer in base alle esigenze.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Per la prima query di esempio, il motore di esecuzione richiede ad Access Methods le righe dell'indice cluster di Customer e dell'indice non cluster di Order. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
@@ -126,7 +124,7 @@ Pipeline di elaborazione delle query di SQL Server.
   
  Il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato può essere utilizzato per accedere sia a tabelle ottimizzate per la memoria che a tabelle basate su disco. Nella figura seguente viene illustrata l'elaborazione delle query per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria:  
   
- ![Pipeline di elaborazione delle query per tsql interpretato.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Pipeline di elaborazione delle query per tsql interpretato.")  
+ ![Pipeline di elaborazione query per tsql interpretato.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Pipeline di elaborazione delle query per tsql interpretato.")  
 Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL interpretato alle tabelle ottimizzate per la memoria.  
   
  Come illustrato nella figura, la pipeline di elaborazione delle query rimane per lo più invariata:  
@@ -164,7 +162,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Il piano stimato è il seguente:  
   
- ![Piano di query per il join di tabelle ottimizzate per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Piano di query per il join di tabelle ottimizzate per la memoria.")  
+ ![Piano di query per il join di tabelle con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Piano di query per il join di tabelle ottimizzate per la memoria.")  
 Piano di query per il join di tabelle ottimizzate per la memoria.  
   
  Osservare le seguenti differenze del piano per la stessa query su tabelle basate su disco (figura 1):  
@@ -222,7 +220,7 @@ Compilazione nativa delle stored procedure.
   
  La chiamata di una stored procedure compilata in modo nativo viene convertita in chiamata a una funzione nella DLL.  
   
- ![Esecuzione di stored procedure compilate in modo nativo.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Execution of natively compiled stored procedures.")  
+ ![Esecuzione di stored procedure compilate in modo nativo.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Esecuzione di stored procedure compilate in modo nativo.")  
 Esecuzione di stored procedure compilate in modo nativo.  
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  

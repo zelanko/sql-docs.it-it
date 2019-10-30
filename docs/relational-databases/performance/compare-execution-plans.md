@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289292"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907662"
 ---
 # <a name="compare-execution-plans"></a>Confrontare i piani di esecuzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Quando viene eseguito il confronto di due piani di esecuzione, le aree del piano
 
 4.  I piani confrontati vengono aperti in una nuova finestra, uno nella parte superiore e uno nella parte inferiore per impostazione predefinita. La selezione predefinita corrisponderà alla prima occorrenza di un operatore o un nodo comune nei piani confrontati ma con differenze tra i due piani. Tutti gli operatori e i nodi evidenziati sono presenti in entrambi i piani confrontati. Se si seleziona un operatore evidenziato nei piani nella parte superiore o sinistra, viene selezionato automaticamente l'operatore corrispondente nei piani nella parte inferiore o destra. Se si seleziona l'operatore del nodo radice in uno dei piani confrontati (il nodo SELECT nell'immagine seguente), viene selezionato anche l'operatore del nodo radice corrispondente nell'altro piano confrontato.
 
-    ![Confronto tra due file di piano salvati](../../relational-databases/performance/media/plancomparison-plans.png "Confronto tra due file di piano salvati")  
+    ![Confronto dei piani di due file di piano salvati](../../relational-databases/performance/media/plancomparison-plans.png "Confronto dei piani di due file di piano salvati")  
 
      > [!TIP]
      > È possibile attivare o disattivare la visualizzazione del confronto tra i piani di esecuzione side-by-side facendo clic con il pulsante destro del mouse su un'area vuota del piano di esecuzione e selezionando **Attiva/Disattiva orientamento separatore**.
@@ -74,8 +74,6 @@ Quando viene eseguito il confronto di due piani di esecuzione, le aree del piano
     ![Finestra delle proprietà doppie](../../relational-databases/performance/media/plancomparison-properties.png "Finestra delle proprietà doppie")  
 
 6.  Nella parte inferiore viene aperta anche la finestra di navigazione di confronto **Analisi showplan**. Sono disponibili tre schede:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Nella scheda **Opzioni dell'istruzione** la selezione predefinita è *Evidenzia le operazioni simili* e gli stessi operatori o nodi evidenziati nei piani confrontati hanno lo stesso colore e motivo di linea. Per spostarsi tra aree simili nei piani confrontati, fare clic su un motivo di linea. È anche possibile scegliere di evidenziare le differenze nei piani anziché le analogie selezionando *Evidenzia gli operatori che non corrispondono a segmenti simili*. 
     
@@ -106,4 +104,4 @@ Quando viene eseguito il confronto di due piani di esecuzione, le aree del piano
 
 3.  Usare il pulsante **Confronta i piani per la query selezionata in una finestra separata** per avviare il confronto tra i piani. Sarà quindi possibile eseguire i passaggi da 4 a 6 della procedura *Per confrontare i piani di esecuzione*. 
 
-    ![Confronta showplan in Query Store](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Confronta showplan in Query Store") 
+    ![Confrontare showplan in Query Store](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Confrontare showplan in Query Store") 

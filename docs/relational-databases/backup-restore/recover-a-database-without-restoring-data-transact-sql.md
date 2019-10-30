@@ -1,7 +1,7 @@
 ---
 title: Recuperare un database senza ripristino dei dati (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033602"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916047"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recupero di un database senza ripristino dei dati (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033602"
   
  La sintassi dell'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per un ripristino di database con solo recupero è la seguente:  
   
- RESTORE DATABASE *nome_database* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  La clausola FROM **=** \<*DispositivoBackup>* non viene usata per i ripristini con solo recupero perché il backup non è necessario.  
+> La clausola FROM **=** \<*DispositivoBackup>* non viene usata per i ripristini con solo recupero perché il backup non è necessario.  
   
  **Esempio**  
   
  Nel seguente esempio viene recuperato il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] durante un'operazione di recupero senza eseguire il ripristino dei dati.  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,21 +60,21 @@ RESTORE DATABASE AdventureWorks2012
   
  Viene eseguito il ripristino a fasi di un database. Dopo il ripristino del filegroup primario, uno o più file non ripristinati sono consistenti con il nuovo stato del database, ad esempio perché è stato mantenuto l'accesso in sola lettura per un certo periodo di tempo. È pertanto sufficiente recuperare questi file senza eseguire un'operazione di copia dei dati.  
   
- Un'operazione di ripristino con solo recupero attiva la modalità online per i dati del filegroup offline. Non è prevista alcuna fase di copia dei dati, di rollforward o di rollback. Per informazioni sulle fasi del ripristino, vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ Un'operazione di ripristino con solo recupero attiva la modalità online per i dati del filegroup offline. Non è prevista alcuna fase di copia dei dati, di rollforward o di rollback. Per informazioni sulle fasi del ripristino, vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).  
   
  La sintassi dell'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per un ripristino del file con solo recupero è la seguente:  
   
- RESTORE DATABASE *nome_database* { FILE **=** _nome_file_logico_ | FILEGROUP **=** _nome_filegroup_logico_ }[ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **Esempio**  
   
  Nell'esempio riportato di seguito, viene illustrato un ripristino di file con solo recupero, dei file presenti in un filegroup secondario, `SalesGroup2`, nel database `Sales` . Il filegroup primario è già stato ripristinato durante la fase iniziale di un ripristino a fasi e `SalesGroup2` è consistente con il filegroup primario ripristinato. Per recuperare questo filegroup e attivare la modalità online, è sufficiente una singola istruzione.  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
-## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Esempi di completamento di uno scenario di ripristino frammentario con un ripristino con solo recupero  
+## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Esempi di completamento di uno scenario di ripristino a fasi con un ripristino con solo recupero  
  **Modello di recupero con registrazione minima**  
   
 -   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   

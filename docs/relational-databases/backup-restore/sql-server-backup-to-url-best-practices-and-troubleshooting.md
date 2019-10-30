@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176371"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717234"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176371"
   
 -   L'esecuzione di backup paralleli nello stesso BLOB comporta il mancato completamento di uno dei backup con conseguente errore **Inizializzazione non riuscita** .  
   
--   Utilizzare i log degli errori seguenti per facilitare la risoluzione degli errori di backup:  
+-   Se si usano BLOB di pagine, ad esempio `BACKUP... TO URL... WITH CREDENTIAL`, usare i log degli errori seguenti per facilitare la risoluzione degli errori di backup:  
   
     -   Impostare il flag di traccia 3051 per abilitare la registrazione in un log degli errori specifico con il formato seguente in:  
   

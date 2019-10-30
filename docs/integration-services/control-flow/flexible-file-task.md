@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298278"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807417"
 ---
 # <a name="flexible-file-task"></a>Attività File flessibili
 
@@ -35,7 +35,9 @@ L'attività File flessibili è un componente del [Feature Pack di SQL Server Int
 Per aggiungere un'attività File flessibili a un pacchetto, trascinarla dalla casella degli strumenti SSIS nel canvas di progettazione. Fare quindi doppio clic sull'attività oppure clic con il pulsante destro del mouse sull'attività e selezionare **Modifica** per aprire la finestra di dialogo dell'**editor attività File flessibili**.
 
 La proprietà **Operation** specifica l'operazione file da eseguire.
-Al momento è supportata solo l'operazione **Copia**.
+Attualmente sono supportate le operazioni seguenti:
+- Operazione **Copia**
+- Operazione **Elimina**
 
 Per l'operazione **Copia** sono disponibili le proprietà riportate di seguito.
 
@@ -48,6 +50,12 @@ Per l'operazione **Copia** sono disponibili le proprietà riportate di seguito.
 - **DestinationConnection:** specifica la gestione connessione di destinazione.
 - **DestinationFolderPath:** specifica il percorso della cartella di destinazione.
 - **DestinationFileName:** specifica il nome file di destinazione.
+
+Per l'operazione **Elimina** sono disponibili le proprietà riportate di seguito.
+- **ConnectionType:** specifica il tipo di gestione connessione.
+- **Connection:** specifica la gestione connessione.
+- **FolderPath:** specifica il percorso della cartella.
+- **FileName:** specifica il nome file. Se questa proprietà viene lasciata vuota, la cartella viene eliminata. Per Archiviazione BLOB di Azure l'eliminazione di cartelle non è supportata.
 
 ***Note sulla configurazione delle autorizzazioni dell'entità servizio***
 

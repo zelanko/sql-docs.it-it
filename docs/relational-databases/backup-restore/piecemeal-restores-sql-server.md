@@ -1,7 +1,7 @@
 ---
 title: Ripristini a fasi (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033665"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916001"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033665"
      In Enterprise Edition, qualsiasi filegroup secondario offline può essere ripristinato e recuperato mentre il database rimane online. Se un file di sola lettura specifico è coerente con il database e non è danneggiato, non è necessario ripristinarlo. Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Applicazione dei backup del log  
- Se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. Se il filegroup è di lettura/scrittura, per aggiornare il filegroup rispetto al file di log attuale è necessario che venga applicata una catena ininterrotta di backup del log all'ultimo ripristino completo o differenziale.  
+ Se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. Se il filegroup è di lettura/scrittura, per aggiornare il filegroup rispetto al file di log attuale è necessario che venga applicata una catena ininterrotta di backup del log all'ultimo ripristino completo o differenziale. Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Esempi  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033665"
   
 4.  Il backup differenziale seguito da tutti i backup ripristinati durante la sequenza del ripristino a fasi originale per ripristinare i dati fino al punto di recupero originale.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>Vedere anche  
  [Applicare backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

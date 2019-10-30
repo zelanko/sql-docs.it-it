@@ -11,19 +11,19 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251530"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798425"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Questo articolo è destinato agli sviluppatori SQL che non hanno familiarità con gli eventi estesi e vogliono creare una sessione eventi in pochi minuti. Usando gli eventi estesi, è possibile visualizzare i dettagli sulle operazioni interne del sistema e dell'applicazione SQL. Quando si crea una sessione di eventi estesi, si indica al sistema:
+Gli eventi estesi costituiscono un sistema di monitoraggio delle prestazioni leggero che consente di raccogliere i dati necessari per il monitoraggio e la risoluzione dei problemi in SQL Server. Per altre informazioni sull'architettura degli eventi estesi, vedere [Panoramica degli eventi estesi](extended-events.md).  Questo articolo è destinato agli sviluppatori SQL che non hanno familiarità con gli eventi estesi e vogliono creare una sessione eventi in pochi minuti. Usando gli eventi estesi, è possibile visualizzare i dettagli sulle operazioni interne del sistema e dell'applicazione SQL. Quando si crea una sessione di eventi estesi, si indica al sistema:
 
 - A quali occorrenze si è interessati.
 - La modalità desiderata di ricezione delle segnalazioni di dati.
@@ -109,11 +109,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
     ![Nuova sessione > Eventi > Configura > Filtro (predicato) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Fare clic sulla scheda **Filtro (predicato)**. Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
+7. Fare clic sulla scheda **Filtro (predicato)** . Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
 
 8. Scegliere **sqlserver.sql_text** dall'elenco a discesa **Campo**.
    - Per **Operatore** scegliere un operatore LIKE.
-   - Per **Valore** digitare **%SELECT%HAVING%**.
+   - Per **Valore** digitare **%SELECT%HAVING%** .
 
     > [!NOTE]
     > In questo nome in due parti, *sqlserver* è il nome del pacchetto e *sql_text* è il nome del campo. L'evento scelto in precedenza, *sql_statement_completed* , deve essere nello stesso pacchetto del campo scelto.

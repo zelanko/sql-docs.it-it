@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710745"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907976"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "71710745"
 4.  Le finestre di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** e **Proprietà database di distribuzione - \<Database>** . Per ulteriori informazioni sull'accesso a queste finestre di dialogo, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  La finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, [Visualizzazione e modifica delle proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Per modificare la password di un account utilizzato da uno o più agenti  
   
@@ -220,7 +218,7 @@ ms.locfileid: "71710745"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Per modificare le impostazioni di sicurezza per una sottoscrizione pull ad aggiornamento immediato  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi scegliere il pulsante delle proprietà ( **…** ) nella riga.  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi scegliere il pulsante delle proprietà ( **&#x2026;** ) nella riga.  
   
 2.  Nella finestra di dialogo **Immissione delle informazioni per la connessione** selezionare una delle seguenti opzioni:  
   

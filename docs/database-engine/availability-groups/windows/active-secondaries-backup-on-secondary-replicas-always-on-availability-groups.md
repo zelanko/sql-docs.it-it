@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991688"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807424"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Ripartire i backup supportati nelle repliche secondarie di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991688"
   
 -   **BACKUP DATABASE** supporta solo i backup completi di sola copia di database, file o filegroup quando viene eseguito nelle repliche secondarie. Si noti che tramite i backup di sola copia non viene influenzata la catena di log e non viene cancellata la mappa di bit differenziale.  
   
--   I backup differenziali non sono supportati nelle repliche secondarie.  
+-   I backup differenziali non sono supportati nelle repliche secondarie.
+
+-   I backup simultanei, ad esempio il backup del log delle transazioni nella replica primaria durante l'esecuzione di un backup completo del database nella replica secondaria, non sono attualmente supportati. 
   
 -   **BACKUP LOG** supporta solo i backup di log regolari (l'opzione COPY_ONLY non è supportata per i backup di log in repliche secondarie).  
   

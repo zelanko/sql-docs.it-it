@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251936"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689665"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurare la replica con i gruppi di disponibilità Always On
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251936"
         @security_mode = 1;  
     ```  
   
-3.  Configurare il server di pubblicazione remoto. Se per la configurazione del server di distribuzione vengono usate stored procedure, eseguire **sp_adddistpublisher**. Il parametro *@security_mode* viene usato per determinare in che modo la stored procedure di convalida del server di pubblicazione eseguita dagli agenti di replica si connette alla replica primaria corrente. Se impostato su 1, per connettersi alla replica primaria corrente viene utilizzata l'Autenticazione di Windows. Se impostato su 0, viene usata l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con i valori *@login* e *@password* specificati. L'account di accesso e la password specificati devono essere validi per ogni replica secondaria per consentire alla stored procedure di convalida di connettersi a tale replica.  
+3.  Configurare il server di pubblicazione remoto. Se per la configurazione del server di distribuzione vengono usate stored procedure, eseguire **sp_adddistpublisher**. Il parametro *\@security_mode* viene usato per determinare in che modo la stored procedure di convalida del server di pubblicazione eseguita dagli agenti di replica si connette alla replica primaria corrente. Se impostato su 1, per connettersi alla replica primaria corrente viene utilizzata l'Autenticazione di Windows. Se impostato su 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa l'autenticazione con i valori *\@login* e *\@password* specificati. L'account di accesso e la password specificati devono essere validi per ogni replica secondaria per consentire alla stored procedure di convalida di connettersi a tale replica.  
   
     > [!NOTE]  
     >  Se gli eventuali agenti di replica modificati vengono eseguiti in un computer diverso dal server di distribuzione, l'utilizzo dell'Autenticazione di Windows per la connessione alla replica primaria richiederà l'autenticazione Kerberos per consentire la configurazione per la comunicazione tra i computer host della replica. L'utilizzo di un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per la connessione alla replica primaria corrente non richiede l'autenticazione Kerberos.  
@@ -72,7 +72,7 @@ ms.locfileid: "72251936"
   
  **Configurare il server di pubblicazione nel server di pubblicazione originale**  
   
-1.  Configurare la distribuzione remota. Se per la configurazione del server di pubblicazione vengono usate stored procedure, eseguire **sp_adddistributor**. Specificare per *@password* lo stesso valore usato al momento dell'esecuzione di **sp_adddistrbutor** nel server di distribuzione per configurare la distribuzione.  
+1.  Configurare la distribuzione remota. Se per la configurazione del server di pubblicazione vengono usate stored procedure, eseguire **sp_adddistributor**. Specificare per *\@password* lo stesso valore usato al momento dell'esecuzione di **sp_adddistrbutor** nel server di distribuzione per configurare la distribuzione.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Se il parametro *@installed* è 0, è necessario aggiungere la replica all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Se il parametro *\@installed* è 0, è necessario aggiungere la replica all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="step4"></a> 4. Configurare gli host della replica secondaria come server di pubblicazione di replica  
- Una replica secondaria non può essere utilizzata come server di pubblicazione o di ripubblicazione della replica, ma è necessario configurare la replica in modo che dopo un failover possa essere utilizzata la replica secondaria. Nel server di distribuzione configurare la distribuzione per ogni host della replica secondaria. Specificare lo stesso database di distribuzione e la stessa directory di lavoro specificati quando il server di pubblicazione originale è aggiunto al server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, eseguire **sp_adddistpublisher** per associare i server di pubblicazione remoti al server di distribuzione. Se il parametro *@login* e *@password* sono stati utilizzati per il server di pubblicazione originale, specificare gli stessi valori per ognuno quando si aggiungono host della replica secondaria come server di pubblicazione.  
+ Una replica secondaria non può essere utilizzata come server di pubblicazione o di ripubblicazione della replica, ma è necessario configurare la replica in modo che dopo un failover possa essere utilizzata la replica secondaria. Nel server di distribuzione configurare la distribuzione per ogni host della replica secondaria. Specificare lo stesso database di distribuzione e la stessa directory di lavoro specificati quando il server di pubblicazione originale è aggiunto al server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, eseguire **sp_adddistpublisher** per associare i server di pubblicazione remoti al server di distribuzione. Se *\@login* e *\@password* sono stati usati per il server di pubblicazione originale, specificare gli stessi valori per ognuno quando si aggiungono host della replica secondaria come server di pubblicazione.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Configurare la distribuzione per ogni host della replica secondaria. Identificare il server di distribuzione del server di pubblicazione originale come server di distribuzione remoto. Usare la password specificata quando **sp_adddistributor** è stato eseguito inizialmente nel server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, il parametro *@password* per **sp_adddistributor** viene usato per specificare la password.  
+ Configurare la distribuzione per ogni host della replica secondaria. Identificare il server di distribuzione del server di pubblicazione originale come server di distribuzione remoto. Usare la password specificata quando **sp_adddistributor** è stato eseguito inizialmente nel server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, il parametro *\@password* di **sp_adddistributor** viene usato per specificare la password.  
   
 ```  
 EXEC sp_adddistributor   

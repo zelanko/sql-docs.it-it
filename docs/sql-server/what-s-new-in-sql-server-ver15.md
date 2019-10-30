@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952766"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807480"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -69,7 +69,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
 |Pool di buffer ibrido| Nuova funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] che consente di accedere direttamente ai file di database che si trovano in un dispositivo con memoria persistente, quando necessario. Vedere [Pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Metadati `tempdb` ottimizzati per la memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../relational-databases/in-memory-database.md), ovvero i metadati `tempdb` ottimizzati per la memoria, rimuovendo così in modo efficace questo collo di bottiglia e sbloccando un nuovo livello di scalabilità per i carichi di lavoro `tempdb` eccessivi. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Vedere [Metadati `tempdb` ottimizzati per la memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Metadati TempDB ottimizzati per la memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../relational-databases/in-memory-database.md), i metadati TempDB ottimizzati per la memoria, che rimuove in modo efficace questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro TempDB eccessivi. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Vedere [Metadati TempDB ottimizzati per la memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | Supporto di OLTP in memoria per snapshot del database | In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] è stato introdotto il supporto per la creazione di [snapshot di database](../relational-databases/databases/database-snapshots-sql-server.md) che includono filegroup ottimizzati per la memoria. |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 
 |Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Supporto per la codifica di caratteri UTF-8 |Supporta i caratteri UTF-8 per la codifica di importazione ed esportazione e come regole di confronto a livello di database o a livello di colonna per i dati stringa. Sono così supportate le applicazioni che si estendono su scala globale, in cui il requisito di fornire servizi e applicazioni di database multilingue globali è essenziale per soddisfare le esigenze dei clienti e le normative specifiche del mercato. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate consente il supporto UTF-8 per le tabelle esterne Polybase e per Always Encrypted.|
+|Supporto per la codifica di caratteri UTF-8 |Supporta i caratteri UTF-8 per la codifica di importazione ed esportazione e come regole di confronto a livello di database o a livello di colonna per i dati stringa. Sono così supportate le applicazioni che si estendono su scala globale, in cui il requisito di fornire servizi e applicazioni di database multilingue globali è essenziale per soddisfare le esigenze dei clienti e le normative specifiche del mercato. Vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La versione finale candidata di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] consente il supporto UTF-8 per le tabelle esterne Polybase e per Always Encrypted (al di fuori dell'uso con enclavi).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Estensioni del linguaggio
@@ -197,7 +197,7 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 |Supporto di Microsoft Distributed Transaction Coordinator (MSDTC) |[Come configurare MSDTC in Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |Supporto OpenLDAP per provider AD di terze parti |[Esercitazione: Usare l'autenticazione di Azure Active Directory con SQL Server in Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine Learning in Linux |[Configurare Machine Learning in Linux](../linux/sql-server-linux-setup-machine-learning.md) |
-|Miglioramenti di `tempdb` | Per impostazione predefinita, una nuova installazione di SQL Server in Linux crea più file di dati `tempdb` in base al numero di core logici (con un massimo di 8 file di dati). Questo non vale per gli aggiornamenti sul posto di una versione principale o secondaria. Ogni file `tempdb` è di 8 MB, con un aumento automatico di 64 MB. Questo comportamento è simile all'installazione predefinita di SQL Server in Windows. |
+|Miglioramenti di TempDB | Per impostazione predefinita, una nuova installazione di SQL Server in Linux crea più file di dati TempDB in base al numero di core logici (con un massimo di 8 file di dati). Questo non vale per gli aggiornamenti sul posto di una versione principale o secondaria. Ogni file TempDB è di 8 MB, con un aumento automatico di 64 MB. Questo comportamento è simile all'installazione predefinita di SQL Server in Windows. |
 | PolyBase in Linux | [Installare PolyBase](../relational-databases/polybase/polybase-linux-setup.md) in Linux per i connettori non Hadoop.<br/><br/>[Mapping dei tipi di PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Supporto di Change Data Capture (CDC) | Change Data Capture (CDC) è ora supportato in Linux per SQL Server 2019. |
 | &nbsp; | &nbsp; |

@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929816"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909294"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ ms.locfileid: "70929816"
   
  La figura seguente illustra i punti definiti dalle coordinate **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** del rettangolo di selezione. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
   
- ![Rettangolo di selezione contenente le coordinate e la cella 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.")  
+ ![Rettangolo di selezione contenente le coordinate e la cella 0](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.").  
   
  Un riquadro corrisponde ad alcune parti dei dati spaziali di un'applicazione. In base all'applicazione, il riquadro dell'indice può contenere tutti o solo una parte dei dati archiviati nella colonna spaziale. Solo le operazioni calcolate su oggetti che sono completamente inseriti nel riquadro traggono vantaggio dall'indice spaziale. Per ottenere il massimo vantaggio da un indice spaziale in una colonna **geometry** , è quindi necessario specificare un riquadro che contenga tutti o la maggior parte degli oggetti.  
   
@@ -170,15 +170,13 @@ ms.locfileid: "70929816"
   
 3.  Unione delle piramidi piatte per formare un piano non euclideo.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Nell'illustrazione seguente viene mostrata una vista schematica del processo di scomposizione a tre passaggi. Nelle piramidi, le linee punteggiate rappresentano i limiti dei quattro facet di ogni piramide. I passaggi 1 e 2 illustrano l'ellissoide geodetico, usando una linea verde orizzontale per rappresentare la linea della latitudine equatoriale e una serie di linee verdi verticali per rappresentare diverse linee della longitudine. Il passaggio 1 mostra le piramidi proiettate sui due emisferi. Il passaggio 2 mostra le piramidi appiattite. Il passaggio 3 illustra le piramidi bidimensionali, dopo che sono state combinate per formare un piano, mostrando un certo numero di linee longitudinali proiettate. Queste linee proiettate sono dritte e di lunghezza diversa, a seconda di dove cadono sulle piramidi.  
   
  ![Proiezione dell'ellissoide in un piano](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Proiezione dell'ellissoide in un piano")  
   
  Una volta che lo spazio è stato proiettato sul piano, questo viene scomposto in una gerarchia di griglie a quattro livelli. Livelli diversi possono utilizzare densità della griglia differenti. Nell'illustrazione seguente viene mostrato il piano dopo essere stato scomposto in una griglia a 1 livello 4x4. Ai fini dell'illustrazione, i livelli inferiori della gerarchia di griglie sono omessi. In effetti, il piano è completamente scomposto in una gerarchia di griglie a quattro livelli. Al termine del processo di scomposizione, i dati geografici vengono letti, riga per riga, dalla colonna relativa e il processo a mosaico viene eseguito per ogni oggetto.  
   
- ![Griglia geografica livello 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Griglia geografica livello 1")  
+ ![Griglia di geografia di livello 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Griglia di geografia di livello 1")  
   
 ##  <a name="methods"></a> Metodi supportati dagli indici spaziali  
   

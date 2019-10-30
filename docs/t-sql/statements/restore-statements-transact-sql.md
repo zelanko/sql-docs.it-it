@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082460"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916169"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -306,25 +306,23 @@ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non sono più disponibili
 
 ### <a name="restore-log"></a>RESTORE LOG
 
-È possibile includere un elenco di file in RESTORE LOG per consentire la creazione di file durante il roll forward. Questa procedura viene utilizzata quando il backup del log contiene record di log scritti al momento dell'aggiunta di un file al database.
+È possibile includere un elenco di file in RESTORE LOG per consentire la creazione di file durante il rollforward. Questa procedura viene utilizzata quando il backup del log contiene record di log scritti al momento dell'aggiunta di un file al database.
 
 > [!NOTE]
 > Per un database impostato per l'utilizzo del modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, nella maggior parte dei casi è necessario eseguire il backup della parte finale del log prima di ripristinare il database. Se si esegue il ripristino di un database senza aver prima eseguito il backup della parte finale del log si verificherà un errore, a meno che nell'istruzione RESTORE DATABASE non sia inclusa la clausola WITH REPLACE o WITH STOPAT, che deve consentire di specificare l'ora o la transazione verificatasi al termine del backup dei dati. Per altre informazioni sui backup della parte finale del log, vedere [Backup della parte finale del log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>Differenze tra RECOVERY e NORECOVERY
-
 Il rollback viene controllato dall'istruzione RESTORE tramite le opzioni [ RECOVERY | NORECOVERY ]:
 
-- NORECOVERY specifica che il rollback non deve essere eseguito. Questo consente la continuazione del roll forward con l'istruzione successiva nella sequenza.
+- NORECOVERY specifica che il rollback non viene eseguito. Questo consente la continuazione del rollforward con l'istruzione successiva nella sequenza.
 
   In questo caso, tramite la sequenza di ripristino è possibile ripristinare altri backup ed eseguirne il roll forward.
 
-- RECOVERY (opzione predefinita) indica che il rollback deve essere eseguito dopo il completamento del roll forward per il backup corrente.
+- RECOVERY è l'opzione predefinita e indica che il rollback verrà eseguito dopo il completamento del rollforward per il backup corrente.
 
-  Per il recupero del database è necessario che l'intero set di dati da ripristinare (*set di roll forward*) sia coerente con il database. Se il roll forward del set di roll forward non è stato eseguito a un livello sufficiente per garantirne la coerenza con il database e si specifica l'opzione RECOVERY, si verifica un errore nel [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+  Per il recupero del database è necessario che l'intero set di dati da ripristinare (*set di rollforward*) sia coerente con il database. Se il rollforward del set di rollforward non è stato eseguito a un livello sufficiente per assicurarne la coerenza con il database e si specifica l'opzione RECOVERY, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore. Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità
-
 I backup dei database **master**, **model** e **msdb** creati tramite una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
@@ -337,14 +335,11 @@ Dopo aver ripristinato un database di una versione precedente a [!INCLUDE[ssCurr
 Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.
 
 ## <a name="general-remarks"></a>Osservazioni generali
-
 Durante un ripristino offline, se il database specificato è in uso, l'istruzione RESTORE comporta la disconnessione degli utenti dopo un breve intervallo. Per il ripristino online di un filegroup non primario, il database può rimanere in uso a meno che il filegroup da ripristinare non venga portato offline. Tutti i dati del database specificato vengono sostituiti dai dati ripristinati.
-
-Per altre informazioni sul ripristino del database, vedere [Panoramica del ripristino e del recupero](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 È possibile eseguire operazioni di ripristino tra piattaforme diverse, e anche tra tipi di processore diversi, a condizione che il sistema operativo supporti le regole di confronto del database.
 
-È possibile riavviare un'operazione RESTORE dopo un errore. È inoltre possibile impostare l'istruzione RESTORE per continuare le operazioni anche in caso di errori e in questo caso viene eseguito il ripristino di tutti i dati possibili (vedere l'opzione CONTINUE_AFTER_ERROR).
+È possibile riavviare un'operazione RESTORE dopo un errore. È anche possibile impostare l'istruzione RESTORE per continuare le operazioni anche in caso di errori e in questo caso viene eseguito il ripristino di tutti i dati possibili (vedere l'opzione `CONTINUE_AFTER_ERROR`).
 
 Non è possibile utilizzare RESTORE in una transazione esplicita o implicita.
 
@@ -384,7 +379,6 @@ L'istruzione RESTORE consente inoltre di eseguire ripristini in posizioni altern
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse tabelle cronologiche per backup e ripristini in cui viene tenuta traccia dell'attività di backup e ripristino per ogni istanza del server. Quando si effettua un'operazione di ripristino, vengono modificate anche le tabelle di cronologia di backup. Per informazioni su queste tabelle, vedere [Informazioni sulla cronologia e sull'intestazione del backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
 ## <a name="REPLACEoption"></a> Impatto dell'opzione REPLACE
-
 L'opzione REPLACE deve essere utilizzata raramente e solo dopo un'attenta valutazione. In genere, il ripristino impedisce la sovrascrittura accidentale di un database con un altro. Se il database specificato in un'istruzione RESTORE esiste già nel server corrente e il GUID del gruppo di database specificato è diverso da quello registrato nel set di backup, il database non verrà ripristinato. Questa misura di sicurezza è importante.
 
 L'opzione REPLACE ignora diversi controlli di sicurezza importanti, eseguiti generalmente durante il ripristino. I controlli ignorati riguardano le operazioni seguenti:
@@ -402,21 +396,18 @@ L'opzione REPLACE ignora diversi controlli di sicurezza importanti, eseguiti gen
   In seguito a un errore, ad esempio, potrebbe essere consentita la sovrascrittura di file esistenti di tipo non corretto, ad esempio con estensione xls, o utilizzati da un altro database che non è online. Se i file vengono sovrascritti, può verificarsi la perdita di dati arbitrari, anche se il database ripristinato è completo.
 
 ## <a name="redoing-a-restore"></a>Ripetizione di un ripristino
-
-Non è possibile annullare gli effetti di un ripristino. È tuttavia possibile annullare gli effetti della copia e del roll forward dei dati, rieseguendo l'operazione file per file. Per ricominciare, ripristinare il file desiderato ed eseguire nuovamente il roll forward. Se, ad esempio, vengono ripristinati per errore troppi backup del log superando il punto previsto per l'interruzione del ripristino, è necessario riavviare la sequenza.
+Non è possibile annullare gli effetti di un ripristino. È tuttavia possibile annullare gli effetti della copia e del rollforward dei dati rieseguendo l'operazione file per file. Per ricominciare, ripristinare il file desiderato ed eseguire nuovamente il rollforward. Se, ad esempio, vengono ripristinati per errore troppi backup del log superando il punto previsto per l'interruzione del ripristino, è necessario riavviare la sequenza.
 
 È possibile interrompere e riavviare una sequenza di ripristino tramite il ripristino dell'intero contenuto dei file interessati.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Ripristino di un database a uno snapshot del database
-
-L'*operazione di ripristino del database* (specificata con l'opzione DATABASE_SNAPSHOT) consente di portare un database di origine completo in un momento anteriore nel tempo tramite il ripristino del momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati di quel momento presenti nello snapshot specificato del database. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione include la ricompilazione del log, pertanto non è possibile eseguire successivamente il roll forward di un database così ripristinato fino al punto di un errore utente specifico.
+L'*operazione di ripristino del database* (specificata con l'opzione DATABASE_SNAPSHOT) consente di portare un database di origine completo in un momento anteriore nel tempo tramite il ripristino del momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati di quel momento presenti nello snapshot specificato del database. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione di ripristino prevede la ricompilazione del log. Non è pertanto possibile eseguire successivamente il rollforward di un database ripristinato al punto dell'errore utente.
 
 La perdita di dati è limitata agli aggiornamenti del database eseguiti dopo la creazione dello snapshot. I metadati di un database così ripristinato corrispondono a quelli esistenti al momento della creazione dello snapshot. Il ripristino a uno snapshot causa tuttavia l'eliminazione di tutti i cataloghi full-text.
 
 Il ripristino da uno snapshot del database non è adatto per il recupero di supporti. A differenza di un normale set di backup, lo snapshot del database è una copia incompleta dei file del database. Se il database o lo snapshot del database è danneggiato, è improbabile che sia possibile eseguire il ripristino da uno snapshot. Anche quando possibile, è inoltre improbabile che il ripristino in caso di danneggiamento consenta di risolvere il problema.
 
 ### <a name="restrictions-on-reverting"></a>Restrizioni per il ripristino da snapshot
-
 Il ripristino da snapshot non è supportato nei casi seguenti:
 
 - Il database di origine contiene filegroup di sola lettura o compressi.
@@ -426,19 +417,18 @@ Il ripristino da snapshot non è supportato nei casi seguenti:
 Per altre informazioni, vedere [Ripristinare un database a uno snapshot del database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
 ## <a name="security"></a>Security
-
 Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I supporti protetti con password possono tuttavia essere sovrascritti con l'opzione FORMAT dell'istruzione BACKUP.
 
 > [!IMPORTANT]
 > Il livello di protezione garantito da questa password è vulnerabile. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.
+
 > [!NOTE]
 > Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 ### <a name="permissions"></a>Autorizzazioni
+Se il database da ripristinare non esiste, l'utente deve avere le autorizzazioni `CREATE DATABASE` per eseguire un'istruzione RESTORE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server `sysadmin` e `dbcreator` e al proprietario (`dbo`) del database. Per l'opzione `FROM DATABASE_SNAPSHOT`, il database esiste sempre.
 
-Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.
-
-Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.
+Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database `db_owner` non dispongono delle autorizzazioni per l'istruzione RESTORE.
 
 ## <a name="examples"></a> Esempi
 
@@ -625,7 +615,7 @@ Nell'esempio seguente viene ripristinato un database denominato `MyDatabase` che
 Il backup del database è il nono set di backup nel set di supporti in un dispositivo di backup logico denominato `MyDatabaseBackups`. Vengono quindi ripristinati tre backup del log, disponibili nei tre set di backup successivi (`10`, `11` e `12`) nel dispositivo `MyDatabaseBackups`, utilizzando `WITH NORECOVERY`. Dopo il ripristino dell'ultimo backup del log, il database viene recuperato.
 
 > [!NOTE]
-> Il recupero viene eseguito come passaggio distinto per ridurre la possibilità che questa operazione venga eseguita troppo presto, ovvero prima del ripristino di tutti i backup del log.
+> Il recupero viene eseguito come passaggio distinto per ridurre la possibilità che questa operazione venga eseguita troppo presto, ovvero prima del ripristino di tutti i backup del log. Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 Si noti che in `RESTORE DATABASE` sono disponibili due tipi di opzioni `FILE`. Le opzioni `FILE` che precedono il nome del dispositivo di backup specificano i nomi di file logici dei file di database da ripristinare dal set di backup, ad esempio `FILE = 'MyDatabase_data_1'`. Questo set di backup non è il primo backup del database nel set di supporti. La relativa posizione nel set di supporti viene pertanto indicata tramite l'opzione `FILE` nella clausola `WITH`, `FILE=9`.
 
@@ -683,7 +673,8 @@ Per altre informazioni, vedere [Ripristinare un database a uno snapshot del data
 
 I tre esempi seguenti prevedono l'uso del servizio di archiviazione di Microsoft Azure. Il nome dell'account di archiviazione è `mystorageaccount`, mentre Il contenitore per i file di dati è denominato `myfirstcontainer`. Il contenitore per i file di backup è denominato `mysecondcontainer`. Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura, eliminazione ed elenco per ogni contenitore. Le credenziali di SQL Server sono state create usando una firma di accesso condiviso associata ai criteri di accesso archiviati. Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-**K1. Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure** Un backup completo del database `Sales`, situato in `mysecondcontainer`, verrà ripristinato in `myfirstcontainer`. `Sales` attualmente non esiste nel server.
+**K1. Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure**    
+Un backup completo, disponibile in `mysecondcontainer`, del database `Sales` verrà ripristinato in `myfirstcontainer`. `Sales` attualmente non esiste nel server.
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>Ulteriori informazioni
 
-- [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Backup e ripristino di database di sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [Eseguire il backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Set di supporti, gruppi di supporti e set di backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Informazioni sulla cronologia e sull'intestazione del backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[Backup e ripristino di database di sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[Set di supporti, gruppi di supporti e set di backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[Informazioni sulla cronologia e sull'intestazione del backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -806,19 +798,17 @@ Si applicano le seguenti limitazioni:
 Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>Ripristino di un database crittografato
-
 Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## <a name="permissions"></a>Autorizzazioni
-
-Per eseguire RESTORE, l'utente deve avere le autorizzazioni CREATE DATABASE.
+Per eseguire l'istruzione RESTORE, l'utente deve avere le autorizzazioni `CREATE DATABASE`.
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.
+Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database `db_owner` non dispongono delle autorizzazioni per l'istruzione RESTORE.
 
 ## <a name="examples"></a> Esempi
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY specifica che vengono restituite solo le informazioni di inte
 I risultati di RESTORE HEADERONLY seguono il modello dei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il risultato ha più di 50 colonne, che non vengono usate tutte da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per una descrizione delle colonne nei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
 ## <a name="permissions"></a>Autorizzazioni
-
-È necessaria l'autorizzazione **CREATE ANY DATABASE**.
+È necessaria l'autorizzazione `CREATE ANY DATABASE`.
 
 È necessario un account di Windows con l'autorizzazione di accesso e lettura per la directory di backup. È anche necessario archiviare il nome e la password dell'account di Windows in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
@@ -983,14 +972,13 @@ In questa sezione, per appliance di origine si intende l'appliance da cui è sta
 - Non è possibile ripristinare un backup creato in un'appliance con hardware SQL Server 2012 PDW in un'appliance con hardware SQL Server 2008 R2. Ciò vale anche se l'appliance è stata originariamente acquistata con hardware SQL Server 2008 R2 PDW e ora esegue software SQL Server 2012 PDW.
 
 ## <a name="locking"></a>Utilizzo di blocchi
-
 Acquisisce un blocco esclusivo per l'oggetto DATABASE.
 
 ## <a name="examples"></a>Esempi
 
 ### <a name="a-simple-restore-examples"></a>A. Esempi di RESTORE semplici
 
-L'esempio seguente ripristina un backup completo nel database `SalesInvoices2013`. I file di backup sono archiviati nella directory \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full. Nell'appliance di destinazione non può essere già presente un database SalesInvoices2013. In caso contrario, questo comando avrà esito negativo e genererà un errore.
+L'esempio seguente ripristina un backup completo nel database `SalesInvoices2013`. I file di backup vengono archiviati nella directory `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Nell'appliance di destinazione non può essere già presente un database SalesInvoices2013. In caso contrario, questo comando avrà esito negativo e genererà un errore.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 L'esempio seguente ripristina un backup completo e quindi un backup differenziale nel database SalesInvoices2013
 
-Il backup completo del database viene ripristinato usando il backup completo archiviato nella directory '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Se il ripristino viene completato correttamente, il backup differenziale viene ripristinato nel database SalesInvoices2013. Il backup differenziale è archiviato nella directory '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'.
+Il backup completo del database viene ripristinato usando il backup completo archiviato nella directory `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Se il ripristino viene completato correttamente, viene ripristinato il backup differenziale nel database SalesInvoices2013. Il backup differenziale viene archiviato nella directory `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. Ripristino dell'intestazione del backup
 
-Questo esempio ripristina le informazioni di intestazione per il backup del database '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Il comando ha come risultato una riga di informazioni per il backup Invoices2013Full.
+Questo esempio ripristina le informazioni di intestazione per il backup del database `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Il comando ha come risultato una riga di informazioni per il backup Invoices2013Full.
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 È possibile usare le informazioni di intestazione per controllare il contenuto di un backup o per assicurarsi che l'appliance di ripristino di destinazione sia compatibile con l'appliance di backup di origine prima di tentare il ripristino del backup.
 
 ## <a name="see-also"></a>Vedere anche
-
-- [BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

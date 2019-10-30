@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710770"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908235"
 ---
 # <a name="republish-data"></a>Ripubblicazione dei dati
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710770"
   
 6.  Inizializzare le sottoscrizioni.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Se si utilizza la replica di tipo merge in una topologia di ripubblicazione, tutti i Sottoscrittori di ripubblicazione devono utilizzare sottoscrizioni server. Per altre informazioni sui tipi di sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
   
  Nell'illustrazione seguente il server di pubblicazione e il server di ripubblicazione operano entrambi come server di distribuzione locali. Se sono stati configurati per l'utilizzo di un server di distribuzione remoto, ogni server di distribuzione deve trovarsi allo stesso capo di un collegamento di comunicazione lento o costoso e operare come server di pubblicazione proprio. È necessario che i server di pubblicazione siano connessi ai server di distribuzione remoti tramite collegamenti di comunicazioni affidabili e ad alta velocità.  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![Ripubblicazione dei dati](../../relational-databases/replication/media/repl-06a.gif "Ripubblicazione dei dati")  
   
  Ogni server può operare sia come server di pubblicazione che come Sottoscrittore. Si consideri ad esempio la figura seguente, in cui la pubblicazione di una tabella ubicata a Londra deve essere distribuita in quattro diverse città degli Stati Uniti: Chicago, New York, San Diego e Seattle. Per la sottoscrizione della tabella pubblicata creata a Londra viene scelto il server di New York, in quanto risponde ai requisiti seguenti:  
   
