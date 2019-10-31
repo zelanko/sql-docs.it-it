@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714684"
@@ -73,7 +73,7 @@ Creare una stored procedure, *PredictTipBatchMode*, che genera più stime, passa
 
     + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella come dati **varbinary (max)** , archiviato nella variabile  _\@SQL lmodel2_e passato come parametro *mod* al sistema stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nell'  _\@input_della variabile SQL. Poiché i dati vengono recuperati dal database, vengono archiviati in un frame di dati denominato *InputDataSet*, che è solo il nome predefinito per i dati di input nella procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Se necessario, è possibile definire un altro nome di variabile utilizzando il parametro  *_\@input_data_1_name_* .
+    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nell'  _\@input_della variabile SQL. Poiché i dati vengono recuperati dal database, vengono archiviati in un frame di dati denominato *InputDataSet*, che è solo il nome predefinito per i dati di input nella procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Se necessario, è possibile definire un altro nome di variabile utilizzando il parametro *_\@input_data_1_name_* .
 
     + Per generare i punteggi, il stored procedure chiama la funzione rxPredict dalla libreria **RevoScaleR** .
 

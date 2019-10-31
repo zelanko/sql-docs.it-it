@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142838"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza la modalità di failover corrente di una sottoscrizione. Questa stored procedure viene eseguita in qualsiasi database del Sottoscrittore. Per altre informazioni sulle modalità di failover, vedere [le sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+  Visualizza la modalità di failover corrente di una sottoscrizione. Questa stored procedure viene eseguita in qualsiasi database del Sottoscrittore. Per ulteriori informazioni sulle modalità di failover, vedere [sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,32 +41,32 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione che partecipa l'aggiornamento del sottoscrittore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
+`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` è il nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione che fa parte di aggiornamento del sottoscrittore. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` è il nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Restituisce il valore intero della modalità di failover ed è un' **OUTPUT** parametro. *failover_mode_id* è un **tinyint** con valore predefinito è **0**. Viene restituito **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` restituisce il valore intero della modalità di failover ed è un parametro di **output** . *failover_mode_id* è di un **tinyint** e il valore predefinito è **0**. Restituisce **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
   
- [ **@failover_mode=** ] **'***failover_mode***' OUTPUT**  
- Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è un **nvarchar(10)** con valore predefinito è NULL. È un' **OUTPUT** parametro.  
+ [ **\@failover_mode =** ] **output '***failover_mode***'**  
+ Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è di **tipo nvarchar (10)** e il valore predefinito è null. È un parametro di **output** .  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**immediate**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
-|**queued**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
+|**immediato**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
+|**accodati**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_helpreplfailovermode** viene utilizzata nella replica snapshot o transazionale per le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode** viene utilizzato nella replica snapshot o transazionale per le quali le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_helpreplfailovermode**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [Transact &#40;-SQL sp_setreplfailovermode&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

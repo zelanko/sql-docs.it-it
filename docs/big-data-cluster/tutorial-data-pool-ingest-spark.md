@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049854"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182642"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: inserire dati in un pool di dati SQL Server con processi Spark
 
@@ -131,9 +131,9 @@ Il passaggio successivo consiste nella creazione di un processo di streaming Spa
 
 Questa procedura dimostra che il processo di streaming Spark ha caricato i dati da HDFS nel pool di dati.
 
-1. Prima di eseguire una query sui dati inseriti, controllare l'output della cronologia delle attività per verificare che il processo sia stato completato.
+1. Prima di eseguire query sui dati inseriti, esaminare lo stato di esecuzione di Spark, inclusi l'ID dell'app Yarn, l'interfaccia utente di Spark e i log del driver.
 
-   ![Cronologia processi Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Dettagli esecuzione Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Tornare alla finestra di query dell'istanza master di SQL Server aperta all'inizio di questa esercitazione.
 
