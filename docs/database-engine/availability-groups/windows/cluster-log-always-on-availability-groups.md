@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991289"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240760"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generare e analizzare CLUSTER. LOG per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Come risorsa cluster di failover, esistono interazioni esterne tra SQL Server, il servizio WSFC (Windows Server Failover Cluster) e la DLL risorse SQL Server (hadrres.dll) che non possono essere monitorati all'interno di SQL Server. CLUSTER.LOG è un log WSFC che consente di diagnosticare problemi all'interno del cluster WSFC o nella DLL risorse SQL Server.  
-  
- Il diagramma seguente illustra la relazione tra le applicazioni, ad esempio tra SQL Server e Windows Failover Cluster Manager che consentono di creare, eliminare le risorse del gruppo di disponibilità o modificarne lo stato.  
+  Come risorsa cluster di failover, esistono interazioni esterne tra SQL Server, il servizio WSFC (Windows Server Failover Cluster) e la DLL risorse SQL Server (hadrres.dll) che non possono essere monitorati all'interno di SQL Server. CLUSTER.LOG è un log WSFC che consente di diagnosticare problemi all'interno del cluster WSFC o nella DLL risorse SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Generare il log del cluster  
  È possibile generare i log dei cluster in due modi:  

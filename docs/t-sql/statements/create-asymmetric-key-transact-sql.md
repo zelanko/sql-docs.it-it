@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b017b3cccbce4f993723d24f952eb605ce36a376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064695"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68141103"
   
  Questa funzionalità non è compatibile con l'esportazione del database mediante Data Tier Application Framework (DACFx). Prima dell'esportazione, è necessario eliminare tutte le chiavi asimmetriche.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -129,7 +129,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### <a name="a-creating-an-asymmetric-key"></a>A. Creazione di una chiave asimmetrica  
  Nell'esempio seguente viene creata una chiave asimmetrica denominata `PacificSales09` tramite l'algoritmo `RSA_2048` e la chiave privata viene protetta con una password.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -139,7 +139,7 @@ GO
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. Creazione di una chiave asimmetrica da un file e concessione dell'autorizzazione a un utente  
  L'esempio seguente crea la chiave asimmetrica `PacificSales19` da una coppia di chiavi archiviata in un file e assegna la proprietà della chiave asimmetrica all'utente `Christina`. La chiave privata è protetta dalla chiave master del database, che deve essere creata prima della chiave asimmetrica.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -149,7 +149,7 @@ GO
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. Creazione di una chiave asimmetrica da un provider EKM  
  L'esempio seguente crea la chiave asimmetrica `EKM_askey1` da una coppia di chiavi archiviata in un provider EKM denominato `EKM_Provider1`. Crea anche una chiave in tale provider denominata `key10_user1`.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

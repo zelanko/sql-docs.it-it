@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064547"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Abilita un trigger DML, DDL o LOGON.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -80,7 +80,7 @@ Per abilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGO
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Abilitazione di un trigger DML in una tabella  
 Nell'esempio seguente il trigger `uAddress` creato nella tabella `Address` del database AdventureWorks viene disabilitato e quindi abilitato.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>B. Abilitazione di un trigger DDL  
 Nell'esempio seguente viene creato un trigger DDL `safety` con ambito database, che viene quindi disabilitato e poi abilitato.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +109,7 @@ Nell'esempio seguente vengono abilitati tutti i trigger DDL creati nell'ambito d
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

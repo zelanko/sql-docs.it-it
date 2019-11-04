@@ -28,19 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064575"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crea una chiave di crittografia della colonna (CEK, Column Encryption Key) con il set iniziale di valori, crittografati con le chiavi master della colonna (CMK, Column Master Key) specificate. Questo tipo di crittografia è un'operazione sui metadati. Una chiave di crittografia della colonna potrebbe avere fino a due valori, in modo da consentire la rotazione della chiave master della colonna. È necessario creare una chiave di crittografia della colonna prima che la funzionalità [Always Encrypted &#40;motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) crittografi una colonna nel database. Le chiavi di crittografia della colonna possono essere create anche tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di creare una chiave di crittografia della colonna è necessario definire una chiave master della colonna usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o l'istruzione [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,7 +94,7 @@ Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-cat
 ### <a name="a-creating-a-column-encryption-key"></a>A. Creazione di una chiave di crittografia della colonna  
 Nell'esempio seguente viene creata una chiave di crittografia della colonna denominata `MyCEK`.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>Creazione di una chiave di crittografia della colonna con due valori  
 Nell'esempio seguente viene creata una chiave di crittografia della colonna denominata `TwoValueCEK` con due valori.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

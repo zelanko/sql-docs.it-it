@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064560"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crea un oggetto metadati chiave master della colonna nel database. Una voce di metadati della chiave master di colonna rappresenta una chiave archiviata in un archivio chiavi esterno. La chiave protegge (crittografa) le chiavi di crittografia della colonna quando si usa la funzionalità [Always Encrypted &#40;motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Più chiavi master di colonna consentono la rotazione periodica delle chiavi per migliorare la sicurezza. Creare una chiave master di colonna in un archivio chiavi e l'oggetto metadati correlato nel database usando Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per i dettagli, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -192,7 +192,7 @@ WITH (
   
 Creare una voce di metadati per una chiave master di colonna. Alla chiave master di colonna hanno accesso le applicazioni client che usano il provider MSSQL_CNG_STORE:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 Creare una voce di metadati per una chiave master di colonna. La chiave master di colonna viene archiviata in Azure Key Vault per consentire alle applicazioni client che usano il provider AZURE_KEY_VAULT di accedere alla chiave master di colonna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 Creare una voce di metadati per una chiave master di colonna. La chiave master di colonna viene archiviata in un archivio chiavi master di colonna personalizzato:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Creazione di una chiave master della colonna abilitata da enclave  
 L'esempio seguente crea una voce di metadati per una chiave master di colonna abilitata per l'enclave. La chiave master di colonna abilitata per l'enclave viene archiviata in un archivio certificati per consentire alle applicazioni client che usano il provider MSSQL_CERTIFICATE_STORE di accedere alla chiave master di colonna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Creare una voce di metadati per una chiave master di colonna abilitata per l'enclave. La chiave master di colonna abilitata per l'enclave viene archiviata in Azure Key Vault per consentire alle applicazioni client che usano il provider AZURE_KEY_VAULT di accedere alla chiave master di colonna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

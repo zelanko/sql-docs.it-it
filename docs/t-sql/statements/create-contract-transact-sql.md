@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064645"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un nuovo contratto. Un contratto definisce i tipi di messaggio utilizzati in una conversazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)], nonché il lato della conversazione che può inviare messaggi di tale tipo. Ogni conversazione viene eseguita in base a un contratto. Il servizio di origine specifica il contratto per la conversazione all'avvio della conversazione stessa, mentre il servizio Target specifica i contratti accettati per le conversazioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -98,7 +98,7 @@ CREATE CONTRACT contract_name
   
  Nell'esempio seguente viene creato un contratto per il rimborso spese in base a tre tipi di messaggio.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

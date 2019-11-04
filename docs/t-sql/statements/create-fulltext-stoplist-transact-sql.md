@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064647"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67912767"
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate solo con il livello di compatibilità 100. Con livelli di compatibilità 80 e 90, queste istruzioni non sono supportate. Con tutti i livelli di compatibilità, tuttavia, l'elenco di parole non significative di sistema viene automaticamente associato ai nuovi indici full-text.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -86,7 +86,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. Creazione di un nuovo elenco di parole non significative full-text  
  Nell'esempio seguente viene creato un nuovo elenco di parole non significative full-text denominato `myStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +94,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. Copia di un elenco di parole non significative full-text da un elenco di parole non significative full-text esistente  
  Nell'esempio seguente viene creato un nuovo elenco di parole non significative full-text denominato `myStoplist2` copiando un elenco di parole non significative di AdventureWorks esistente denominato `Customers.otherStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. Copia di un elenco di parole non significative full-text dall'elenco di parole non significative full-text di sistema  
  Nell'esempio seguente viene creato un nuovo elenco di parole non significative full-text denominato `myStoplist3` copiando l'elenco di parole non significative di sistema.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

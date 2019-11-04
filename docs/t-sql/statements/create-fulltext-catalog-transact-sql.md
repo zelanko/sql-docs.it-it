@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 083408cbf75d027e5dc638b52199b6892adae73d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064659"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68052305"
 > [!IMPORTANT]  
 >  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Un catalogo full-text è un concetto logico che fa riferimento a un gruppo di indici full-text.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -106,7 +106,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono creati un catalogo full-text e un indice full-text.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

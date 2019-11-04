@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155841"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049926"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70155841"
 -   Utente basato su un certificato. Non può effettuare l'accesso, ma può firmare moduli ed è possibile concedergli autorizzazioni. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   Utente basato su una chiave asimmetrica. Non può effettuare l'accesso, ma può firmare moduli ed è possibile concedergli autorizzazioni. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -468,7 +468,7 @@ WITH
 
  Per creare un utente di Azure AD da un account di accesso di Azure AD, usare la sintassi seguente.
 
- Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](create-login-transact-sql.md#examples).
+ Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](create-login-transact-sql.md#examples-4).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

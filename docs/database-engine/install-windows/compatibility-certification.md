@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bc4ed369b51187a86e9436e6612522d6707a3d54
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142791"
 ---
 # <a name="compatibility-certification"></a>Certificazione di compatibilità
 
@@ -45,7 +45,7 @@ L'uso della certificazione di compatibilità è un approccio prezioso per la mod
 
 La possibilità di influire negativamente sulle funzionalità e sulle prestazioni rappresenta il principale fattore di rischio per qualsiasi aggiornamento. La certificazione di compatibilità offre una certa tranquillità per la gestione di questi rischi di aggiornamento:
 
--  Per quanto riguarda il comportamento di [!INCLUDE[tsql](../../includes/tsql-md.md)], qualsiasi modifica significa che la correttezza di un'applicazione deve essere ricertificata. L'impostazione del [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) garantisce tuttavia la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo per il database specificato e non per l'intero server. Mantenere il livello di compatibilità del database così com'è garantisce che le query dell'applicazione esistenti continuino a esibire lo stesso comportamento prima e dopo un aggiornamento del [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Per altre informazioni sul comportamento e sui livelli di compatibilità di [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+-  Per quanto riguarda il comportamento di [!INCLUDE[tsql](../../includes/tsql-md.md)], qualsiasi modifica significa che la correttezza di un'applicazione deve essere ricertificata. L'impostazione del [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) garantisce tuttavia la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo per il database specificato e non per l'intero server. Mantenere il livello di compatibilità del database così com'è garantisce che le query dell'applicazione esistenti continuino a esibire lo stesso comportamento prima e dopo un aggiornamento del [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Per altre informazioni sul comportamento e sui livelli di compatibilità di [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
 
 -  Per quanto riguarda le prestazioni, poiché vengono introdotti miglioramenti per Query Optimizer con ogni versione, è possibile che si verifichino differenze del piano di query tra versioni diverse del [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Le differenze del piano di query nell'ambito di un aggiornamento in genere rappresentano un rischio se è possibile che alcune modifiche possano essere dannose per una query o un carico di lavoro specifico. A sua volta, questo rischio è una motivazione per la ricertificazione, che può ritardare gli aggiornamenti e creare complicazioni per ciclo di vita e supporto. 
    La mitigazione dei rischi di aggiornamento è il motivo per cui i miglioramenti di Query Optimizer vengono vincolati al livello di compatibilità predefinito di una nuova versione. La certificazione di compatibilità include la **protezione della forma del piano di query**: il concetto di mantenere un livello di compatibilità del database subito dopo un aggiornamento del [!INCLUDE[ssde_md](../../includes/ssde_md.md)] significa che il modello di ottimizzazione delle query usato per la creazione di piani di query nella nuova versione è identico a quello precedente all'aggiornamento e la forma del piano di query deve rimanere invariata. 
@@ -53,7 +53,7 @@ La possibilità di influire negativamente sulle funzionalità e sulle prestazion
    > [!NOTE]
    > La **forma del piano di query** si riferisce alla rappresentazione visiva dei diversi operatori che costituiscono un piano di query. Sono inclusi operatori quali seeks, scans, joins e sorts, nonché le connessioni fra tali operatori, che indicano il flusso di dati e l'ordine delle operazioni. La forma del piano di query è determinata da Query Optimizer. Per altre informazioni, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
    
-   Per altre informazioni, vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+   Per altre informazioni, vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
    
 Se l'applicazione non richiede l'uso dei miglioramenti disponibili solo in un livello di compatibilità superiore, un approccio valido prevede l'aggiornamento del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e il mantenimento del livello di compatibilità del database precedente, senza dover ricertificare un'applicazione. Per altre informazioni, vedere [Livelli di compatibilità e aggiornamenti del motore di database](#compatibility-levels-and-database-engine-upgrades) di seguito in questo articolo.
 

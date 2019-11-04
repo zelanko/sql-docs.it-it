@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064636"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una funzione di aggregazione definita dall'utente la cui implementazione è definita in una classe di un assembly in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Affinché in [!INCLUDE[ssDE](../../includes/ssde-md.md)] la funzione di aggregazione venga associata alla relativa implementazione, l'assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che include l'implementazione deve innanzitutto essere caricato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istruzione CREATE ASSEMBLY.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  Nell'esempio viene creata la funzione di aggregazione `Concatenate`, ma prima che venga effettivamente creata la funzione di aggregazione, l'assembly `StringUtilities.dll` viene registrato nel database locale.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

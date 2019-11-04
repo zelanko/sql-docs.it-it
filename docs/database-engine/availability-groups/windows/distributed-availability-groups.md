@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907273"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049849"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-I gruppi di disponibilità distribuiti sono una nuova funzionalità introdotta in SQL Server 2016 come variante della funzionalità gruppi di disponibilità AlwaysOn esistente. Questo articolo illustra alcuni aspetti relativi ai gruppi di disponibilità distribuiti ed è complementare alla [documentazione di SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml) esistente.
+I gruppi di disponibilità distribuiti sono una nuova funzionalità introdotta in SQL Server 2016 come variante della funzionalità gruppi di disponibilità AlwaysOn esistente. Questo articolo illustra alcuni aspetti relativi ai gruppi di disponibilità distribuiti ed è complementare alla [documentazione di SQL Server](https://docs.microsoft.com/sql/sql-server/) esistente.
 
 > [!NOTE]
 > "DAG" non è l'abbreviazione ufficiale del termine *gruppo di disponibilità distribuito*, perché tale abbreviazione è già usata per la funzionalità gruppo di disponibilità dei database di Exchange. La funzionalità di Exchange non ha alcuna relazione con i gruppi di disponibilità distribuiti o i gruppi di disponibilità di SQL Server.
