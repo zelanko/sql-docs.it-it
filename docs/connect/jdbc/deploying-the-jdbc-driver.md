@@ -1,7 +1,7 @@
 ---
 title: Distribuzione del driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049840"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Distribuzione del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028114"
  Per decomprimere il file con estensione tar, spostarlo nella directory in cui si desidera installare il driver e digitare il comando seguente:  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>Note legali sulla ridistribuzione dei driver
+
+Le versioni 6,0, 6,2, 6,4 e 7,0 del driver JDBC sono ridistribuibili. Esaminare la clausola _Codice distribuibile_ nei contratti di licenza.
+
+Le versioni 4. x del driver JDBC sono obsolete e obsolete. Il supporto per 4. x è scaduto prima del 2018.
+
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

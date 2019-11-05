@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708716"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989570"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 
@@ -45,7 +45,7 @@ ms.locfileid: "71708716"
 
 L'utilità del **p**rogramma di **c**opia **b**ulk (**bcp**) esegue operazioni di copia bulk di dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente. L'utilità **bcp** può essere usata per importare un numero elevato di nuove righe nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per esportare dati dalle tabelle in file di dati. Ad eccezione del caso in cui venga usata con l'opzione **queryout** , l'utilità non richiede alcuna conoscenza di [!INCLUDE[tsql](../includes/tsql-md.md)]. Per importare dati in una tabella, è necessario utilizzare un file di formato creato per la tabella specifica oppure conoscere approfonditamente la struttura della tabella e i tipi di dati validi per le relative colonne.  
 
-![Icona di collegamento all'argomento](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") Per informazioni sulle convenzioni adottate per la sintassi di **bcp**, vedere [Convenzioni della sintassi Transact-SQL (Transact-SQL)&#40;Transact-SQL &#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icona di collegamento all'argomento](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") Per informazioni sulle convenzioni adottate per la sintassi di **bcp**, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
 > [!NOTE]
 > Se si esegue il backup dei dati con **bcp** , creare un file di formato per registrare il formato dei dati. I file di dati di**bcp**  **non includono** alcuna informazione sullo schema o sul formato. Di conseguenza, se si elimina una tabella o una vista e non è disponibile un file di formato, può non essere possibile importare i dati.
@@ -68,11 +68,11 @@ Il nuovo BCP supporta Azure AD autenticazione, incluso il supporto di Multi-Fact
 
 ### <a name="system-requirements"></a>Requisiti di sistema
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 Questo componente richiede sia [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17,3 per SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Per controllare il comando della versione BCP Execute `bcp /v` e verificare che sia in uso 15.0.1000.34 o versione successiva.
+Per controllare la versione BCP eseguire `bcp /v` comando e verificare che sia in uso 15.0.1000.34 o versione successiva.
 
 <table><th>Sintassi</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -214,18 +214,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > L'autenticazione integrata e interattiva di AAD non è attualmente supportata in Linux o macOS.
 
 > [!TIP]
->  Per verificare se la versione di bcp include il supporto per il tipo di autenticazione Azure Active Directory (AAD) **, bcp--** (BCP \<space > \<dash > \<dash >) e verificare che nell'elenco degli argomenti disponibili venga visualizzato-G.
+>  Per verificare se la versione di bcp include il supporto per il tipo di autenticazione Azure Active Directory (AAD) **, bcp--** (BCP\<space >\<Dash >\<Dash >) e verificare che nell'elenco degli argomenti disponibili venga visualizzato-G.
 
 - **Nome utente e password di Azure Active Directory:** 
 
     Quando si vuole usare nome utente e password di Azure Active Directory, è possibile fornire l'opzione **-G** e anche usare nome utente e password fornendo le opzioni **-U** e **-P** . 
 
-    Nell'esempio seguente vengono esportati i dati usando Azure AD nome utente e la password dove utente e password sono credenziali di AAD. L'esempio Esporta la tabella `bcptest` dal database `testdb` da Azure server `aadserver.database.windows.net` e archivia i dati nel file `c:\last\data1.dat`:
+    Nell'esempio seguente vengono esportati i dati usando Azure AD nome utente e la password dove utente e password sono credenziali di AAD. L'esempio Esporta la tabella `bcptest` dal database `testdb` da `aadserver.database.windows.net` server di Azure e archivia i dati nel `c:\last\data1.dat`file:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    Nell'esempio seguente vengono importati i dati usando Azure AD nome utente e la password, dove utente e password sono credenziali di AAD. Nell'esempio vengono importati i dati dal file `c:\last\data1.dat` alla tabella `bcptest` per database `testdb` nel server di Azure `aadserver.database.windows.net` con Azure AD utente/password:
+    Nell'esempio seguente vengono importati i dati usando Azure AD nome utente e la password, dove utente e password sono credenziali di AAD. Nell'esempio vengono importati i dati da file `c:\last\data1.dat` nella tabella `bcptest` per `testdb` di database nel server di Azure `aadserver.database.windows.net` utilizzando Azure AD utente/password:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +234,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password. Questa configurazione presuppone che l'account utente di Windows corrente (l'account con cui viene eseguito il comando bcp) sia federato con Azure AD: 
 
-    Nell'esempio seguente vengono esportati i dati utilizzando l'account Azure AD-Integrated. L'esempio Esporta la tabella `bcptest` dal database `testdb` usando Azure AD integrato da Azure server `aadserver.database.windows.net` e archivia i dati nel file `c:\last\data2.dat`:
+    Nell'esempio seguente vengono esportati i dati utilizzando l'account Azure AD-Integrated. Nell'esempio vengono esportate `bcptest` di tabella dal database `testdb` utilizzando Azure AD integrato da Azure server `aadserver.database.windows.net` e vengono archiviati i dati nel file `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    Nell'esempio seguente vengono importati i dati usando l'autenticazione Azure AD integrata. Nell'esempio vengono importati i dati dal file `c:\last\data2.txt` alla tabella `bcptest` per database `testdb` nel server di Azure `aadserver.database.windows.net` con Azure AD autenticazione integrata:
+    Nell'esempio seguente vengono importati i dati usando l'autenticazione Azure AD integrata. Nell'esempio vengono importati i dati da file `c:\last\data2.txt` nella tabella `bcptest` per `testdb` di database nel server di Azure `aadserver.database.windows.net` mediante Azure AD autenticazione integrata:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -268,7 +268,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   Se gli utenti Guest sono presenti in uno specifico Azure AD e fanno parte di un gruppo presente nel database SQL che dispone delle autorizzazioni di database per eseguire il comando bcp, viene usato l'alias utente Guest, ad esempio *keith0@adventureworks.com* .
+   Se gli utenti Guest sono presenti in un Azure AD specifico e fanno parte di un gruppo presente nel database SQL che dispone delle autorizzazioni di database per eseguire il comando bcp, viene usato l'alias utente Guest, ad esempio *keith0@adventureworks.com* .
   
 **-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> Specifica l'hint o gli hint da usare durante un'importazione in blocco di dati in una tabella o una vista.  
   
@@ -383,7 +383,7 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
   
  **-S** _**server\_name**_ [\\ _**instance\_name**_ ]<a name="S"></a> Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cui connettersi. Se non si specifica alcun server, l'utilità **bcp** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] del computer locale. È necessario specificare questa opzione se un comando **bcp** viene eseguito da un computer remoto in rete o in un'istanza denominata locale. Per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un server, specificare solo *server_name*. Per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare _server\_name_ **\\** _instance\_name_.  
   
- **-t**  _**campo \_term**_ <a name="t"></a>  
+ **-t**  _**campo\_termine**_ <a name="t"></a>  
  Specifica il carattere di terminazione del campo. Il valore predefinito è **\t** (carattere di tabulazione). Utilizzare questo parametro per specificare un carattere di terminazione del campo diverso da quello predefinito. Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se si specifica il carattere di terminazione del campo in notazione esadecimale nel comando bcp.exe, il valore verrà troncato in corrispondenza di 0x00. Se ad esempio si specifica 0x410041, verrà utilizzato 0x41.  

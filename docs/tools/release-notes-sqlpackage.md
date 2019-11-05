@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: ad2f4eaadfb2140facc5bebd8d1f70cf163d1380
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 11e10f4a29b15efbd2b0ee513080a2000ae7e2f1
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016884"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033045"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -35,6 +35,45 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="184-sqlpackage"></a>sqlpackage 18.4
+
+|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 ottobre 2019|18.4|15.0.4573.2|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108815)|29 ottobre 2019| 18,4|15.0.4573.2|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108814)|29 ottobre 2019| 18.4|15.0.4573.2|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2109019)|29 ottobre 2019| 18.4|15.0.4573.2|
+
+### <a name="features"></a>Funzionalità
+
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione | Aggiungere il supporto per la distribuzione a Azure SQL Data Warehouse (GA). | 
+| Piattaforma | SqlPackage .NET Core GA per macOS, Linux e Windows. | 
+| Security | Rimuovere la firma del codice SHA1. |
+| Distribuzione | Aggiungere il supporto per le nuove edizioni di database di Azure: GeneralPurpose, BusinessCritical, iperscale |
+| Distribuzione | Aggiungere il supporto Istanza gestita per utenti e gruppi di AAD. |
+| Distribuzione | Supportare il parametro/AccessToken per SqlPackage in .NET Core. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti 
+
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| ScriptDom |  Una regressione di analisi di ScriptDom è stata introdotta in 18.3.1, in cui ' RENAME ' viene erroneamente considerato come un token di primo livello, provocando un errore di analisi. Questo problema verrà risolto nella versione successiva di SqlPackage. | 
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues-for-net-core"></a>Problemi noti per .NET Core
+
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Importa |  Per i file con estensione bacpac con file compressi di dimensioni superiori a 4 GB, potrebbe essere necessario usare la versione .NET Core di SqlPackage per eseguire l'importazione.  Questo comportamento è dovuto al modo in cui .NET Core genera intestazioni zip, che anche se valide, non sono leggibili dalla versione .NET Framework completa di SqlPackage. | 
+| Distribuzione | Il parametro/p: Storage = file non è supportato. In .NET Core è supportata solo la memoria. | 
+| Always Encrypted | SqlPackage .NET Core non supporta le colonne Always Encrypted. | 
+| Security | SqlPackage .NET Core non supporta il parametro/UA per l'autenticazione a più fattori. | 
+| Distribuzione | Non sono supportati i file con estensione dacpac e bacpac V2 meno recenti che usano la serializzazione dei dati JSON. |
+| &nbsp; | &nbsp; |
+
 ## <a name="1831-sqlpackage"></a>sqlpackage 18.3.1
 
 |Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
@@ -48,7 +87,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Azure SQL Data Warehouse (anteprima) | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse. | 
+| Distribuzione | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse (anteprima). | 
 | Distribuzione | Aggiungere il parametro/p: DatabaseLockTimeout = (INT32 '60 ') a SqlPackage. | 
 | Distribuzione | Aggiungere il parametro/p: LongRunningCommandTimeout = (INT32) a SqlPackage. |
 | Esportazione/estrazione | Aggiungere il parametro/p: TempDirectoryForTableData = (STRING) a SqlPackage. |
@@ -62,7 +101,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | :-- | :------ |
 | Distribuzione | Correzione per ignorare gli indici automatici in modo che non vengano eliminati durante la distribuzione. | 
 | Always Encrypted | Correzione per la gestione di Always Encrypted colonne varchar. | 
-| Compilazione/distribuzione | Correzione per risolvere il metodo nodes () per i set di colonne XML.| 
+| Compilazione/Distribuzione | Correzione per risolvere il metodo nodes () per i set di colonne XML.| 
 | ScriptDom | Correggere altri casi in cui la stringa ' URL ' è stata interpretata come token di primo livello. | 
 | Grafico | Correzione del TSQL generato per i riferimenti pseudo colonna nei vincoli.  | 
 | Esportazione | Generare password casuali che soddisfino i requisiti di complessità. | 
@@ -83,19 +122,19 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Aggiunta del supporto di tabelle grafo per i vincoli di arco e le clausole dei vincoli di arco. | &nbsp; |
-| Abilitazione della regola di convalida del modello per il supporto di 32 colonne per le chiavi di indice per SQL Server 2016 e versioni successive. | &nbsp; |
+| Grafico | Aggiunta del supporto di tabelle grafo per i vincoli di arco e le clausole dei vincoli di arco. |
+| Distribuzione | Abilitazione della regola di convalida del modello per il supporto di 32 colonne per le chiavi di indice per SQL Server 2016 e versioni successive. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Correzione del reverse engineering di un database di SQL Server 2016 RTM a causa dell'uso di un hint per la query non supportato. | &nbsp; |
-| Correzione dell'ordine di distribuzione in modo che le istruzioni di modifica con chiusura automatica vengano eseguite prima delle istruzioni di creazione di filegroup. | &nbsp; |
-| Correzione della regressione di analisi ScriptDom in cui la stringa 'URL' veniva interpretata come un token di primo livello. | &nbsp; |
-| Correzione di un'eccezione per riferimento Null durante l'analisi di un'istruzione ALTER TABLE ADD INDEX. | &nbsp; |
-| Correzione del confronto dello schema per le colonne calcolate persistenti che ammettono valori Null che indica sempre differenze.| &nbsp; |
+| Distribuzione | Correzione del reverse engineering di un database di SQL Server 2016 RTM a causa dell'uso di un hint per la query non supportato. |
+| Distribuzione | Correzione dell'ordine di distribuzione in modo che le istruzioni di modifica con chiusura automatica vengano eseguite prima delle istruzioni di creazione di filegroup. |
+| ScriptDom | Correzione della regressione di analisi ScriptDom in cui la stringa 'URL' veniva interpretata come un token di primo livello. |
+| Distribuzione | Correzione di un'eccezione per riferimento Null durante l'analisi di un'istruzione ALTER TABLE ADD INDEX. | 
+| Confronto schema | Correzione del confronto dello schema per le colonne calcolate persistenti che ammettono valori Null che indica sempre differenze.|
 | &nbsp; | &nbsp; |
 
 ## <a name="181-sqlpackage"></a>sqlpackage 18.1
@@ -108,21 +147,21 @@ Versione di anteprima.
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Aggiunta del supporto per le regole di confronto UTF8. | &nbsp; |
-| Abilitazione degli indici columnstore non cluster su una vista indicizzata. | &nbsp; |
-| Passaggio a .NET Core 2.2. | &nbsp; |
-| Uso dell'archiviazione supportata dalla memoria per il confronto schema in .NET Core. | &nbsp; |
+| Distribuzione | Aggiunta del supporto per le regole di confronto UTF8. |
+| Distribuzione | Abilitazione degli indici columnstore non cluster su una vista indicizzata. |
+| Piattaforma | Passaggio a .NET Core 2.2. | 
+| Confronto schema | Uso dell'archiviazione supportata dalla memoria per il confronto schema in .NET Core. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Correzione delle prestazioni per usare lo strumento di stima della cardinalità legacy per le query di reverse engineering. | &nbsp; |
-| Correzione di un problema di prestazioni significativo di confronto schema durante la generazione di uno script. | &nbsp; |
-| Correzione della logica di rilevamento di deviazione dallo schema per ignorare alcune sessioni di eventi estesi (xevent). | &nbsp; |
-| Correzione dell'ordine di importazione per le tabelle grafo. | &nbsp; |
-| Correzione dell'esportazione di tabelle esterne con autorizzazioni per oggetti. | &nbsp; |
+| Prestazioni | Correzione delle prestazioni per usare lo strumento di stima della cardinalità legacy per le query di reverse engineering. | 
+| Prestazioni | Correzione di un problema di prestazioni significativo di confronto schema durante la generazione di uno script. | 
+| Confronto schema | Correzione della logica di rilevamento di deviazione dallo schema per ignorare alcune sessioni di eventi estesi (xevent). |
+| Grafico | Correzione dell'ordine di importazione per le tabelle grafo. | 
+| Esportazione | Correzione dell'esportazione di tabelle esterne con autorizzazioni per oggetti. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
@@ -131,9 +170,9 @@ Questa versione include le build di anteprima multipiattaforma di sqlpackage des
 
 | Problema noto | Dettagli |
 | :---------- | :------ |
-| Non sono supportati i collaboratori alla compilazione e alla distribuzione. | &nbsp; |
-| Non sono supportati i file con estensione dacpac e bacpac meno recenti che usano la serializzazione dei dati JSON. | &nbsp; |
-| Possibili errori di risoluzione dei file dacpac (ad esempio master.dacpac) nei riferimenti a causa di problemi con i file system con distinzione tra maiuscole e minuscole. | Una soluzione alternativa consiste nel convertire in maiuscolo il nome del file di riferimento (ad esempio MASTER.BACPAC). |
+| Distribuzione | Per .NET Core non sono supportati i collaboratori alla compilazione e alla distribuzione. | 
+| Distribuzione | Per .NET Core non sono supportati i file con estensione dacpac e bacpac meno recenti che usano la serializzazione dei dati JSON. | 
+| Distribuzione | Per .NET Core, possibili errori di risoluzione dei file dacpac (ad esempio master.dacpac) nei riferimenti a causa di problemi con i file system con distinzione tra maiuscole e minuscole. | Una soluzione alternativa consiste nel convertire in maiuscolo il nome del file di riferimento (ad esempio MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>sqlpackage 18.0
@@ -145,22 +184,22 @@ Build: &nbsp; 15.0.4200.1
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Aggiunta del supporto per il livello di compatibilità del database 150. | &nbsp; |
-| Aggiunta del supporto per le istanze gestite. | &nbsp; |
-| Aggiunta del parametro della riga di comando MaxParallelism per specificare il grado di parallelismo per le operazioni di database. | &nbsp; |
-| Aggiunta del parametro della riga di comando AccessToken per specificare un token di autenticazione quando ci si connette a SQL Server. | &nbsp; |
-| Aggiunta del supporto per lo streaming dei tipi di dati BLOB/CLOB per le importazioni. | &nbsp; |
-| Aggiunta del supporto per l'opzione 'INLINE' UDF scalare. | &nbsp; |
-| Aggiunta del supporto per la sintassi 'MERGE' nella tabella grafo. | &nbsp; |
+| Distribuzione | Aggiunta del supporto per il livello di compatibilità del database 150. | 
+| Distribuzione | Aggiunta del supporto per le istanze gestite. | 
+| Prestazioni | Aggiunta del parametro della riga di comando MaxParallelism per specificare il grado di parallelismo per le operazioni di database. | 
+| Security | Aggiunta del parametro della riga di comando AccessToken per specificare un token di autenticazione quando ci si connette a SQL Server. | 
+| Importa | Aggiunta del supporto per lo streaming dei tipi di dati BLOB/CLOB per le importazioni. | 
+| Distribuzione | Aggiunta del supporto per l'opzione 'INLINE' UDF scalare. | 
+| Grafico | Aggiunta del supporto per la sintassi 'MERGE' nella tabella grafo. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Correzione della pseudo-colonna non risolta per le tabelle grafo. | &nbsp; |
-| Correzione della creazione di un database con filegroup ottimizzati per la memoria quando vengono usate tabelle ottimizzate per la memoria. | &nbsp; |
-| Correzione dell'inclusione di proprietà estese per le tabelle esterne. | &nbsp; |
+| Grafico | Correzione della pseudo-colonna non risolta per le tabelle grafo. |
+| Distribuzione | Correzione della creazione di un database con filegroup ottimizzati per la memoria quando vengono usate tabelle ottimizzate per la memoria. |
+| Distribuzione | Correzione dell'inclusione di proprietà estese per le tabelle esterne. |
 | &nbsp; | &nbsp; |
 
 ## <a name="178-sqlpackage"></a>sqlpackage 17.8
@@ -172,16 +211,16 @@ Build: &nbsp; 14.0.4079.2
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Miglioramento dei messaggi di errore per gli errori di connessione, incluso il messaggio di eccezione SqlClient. | &nbsp; |
-| Supporto della compressione dell'indice negli indici a partizione singola per importazione/esportazione. | &nbsp; |
+| Diagnostica | Miglioramento dei messaggi di errore per gli errori di connessione, incluso il messaggio di eccezione SqlClient. |
+| Distribuzione | Supporto della compressione dell'indice negli indici a partizione singola per importazione/esportazione. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Risolto un problema di reverse engineering per set di colonne XML con SQL 2017 e versioni successive. | &nbsp; |
-| Risolto un problema a causa del quale le operazioni di scripting per il livello di compatibilità 140 erano ignorate per il database SQL di Azure. | &nbsp; |
+| Distribuzione | Risolto un problema di reverse engineering per set di colonne XML con SQL 2017 e versioni successive. | 
+| Distribuzione | Risolto un problema a causa del quale le operazioni di scripting per il livello di compatibilità 140 erano ignorate per il database SQL di Azure. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1741-sqlpackage"></a>sqlpackage 17.4.1
@@ -193,17 +232,17 @@ Build: &nbsp; 14.0.3917.1
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Aggiunta del parametro della riga di comando ThreadMaxStackSize per analizzare codice Transact-SQL con un numero elevato di istruzioni annidate. | &nbsp; |
-| Supporto delle regole di confronto del catalogo di database. | &nbsp; |
+| Importazione/Esportazione | Aggiunta del parametro della riga di comando ThreadMaxStackSize per analizzare codice Transact-SQL con un numero elevato di istruzioni annidate. |
+| Distribuzione | Supporto delle regole di confronto del catalogo di database. | 
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Quando si importa un file bacpac del database SQL di Azure in un'istanza locale, sono stati corretti gli errori causati dal _mancato supporto delle chiavi master di database senza password in questa versione di SQL Server_. | &nbsp; |
-| Correzione di un errore di pseudo-colonna non risolta per le tabelle grafo. | &nbsp; |
-| Correzione dell'uso di SchemaCompareDataModel con l'autenticazione SQL per confrontare gli schemi. | &nbsp; |
+| Importa | Sono stati corretti gli errori causati dal _mancato supporto delle chiavi master di database senza password in questa versione di SQL Server_. Tali errori si presentavano al momento dell'importazione di un file con estensione bacpac del database SQL di Azure in un'istanza locale. |
+| Grafico | Correzione di un errore di pseudo-colonna non risolta per le tabelle grafo. |
+| Confronto schema | Correzione dell'autenticazione SQL per confrontare gli schemi. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>sqlpackage 17.4.0
@@ -215,14 +254,14 @@ Build: &nbsp; 14.0.3881.1
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Aggiunta del supporto per i _criteri di conservazione temporali_ in SQL 2017+ e nel database SQL di Azure. | &nbsp; |
-| Aggiunta del parametro della riga di comando /DiagnosticsFile:"C:\Temp\sqlpackage.log" per specificare un percorso di file per salvare le informazioni di diagnostica. | &nbsp; |
-| Aggiunta del parametro della riga di comando /Diagnostics per registrare le informazioni di diagnostica nella console. | &nbsp; |
+| Distribuzione |  Aggiunta del supporto per i _criteri di conservazione temporali_ in SQL 2017+ e nel database SQL di Azure. | 
+| Diagnostica | Aggiunta del parametro della riga di comando /DiagnosticsFile:"C:\Temp\sqlpackage.log" per specificare un percorso di file per salvare le informazioni di diagnostica. | 
+| Diagnostica | Aggiunta del parametro della riga di comando /Diagnostics per registrare le informazioni di diagnostica nella console. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correzioni
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Non viene attivato un blocco in presenza di un livello di compatibilità del database non riconosciuto. | Viene invece presupposto l'uso della versione più recente del database SQL di Azure o della piattaforma locale. |
+| Distribuzione | Non viene attivato un blocco in presenza di un livello di compatibilità del database non riconosciuto. Viene invece presupposto l'uso della versione più recente del database SQL di Azure o della piattaforma locale. |
 | &nbsp; | &nbsp; |
