@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: sys. dm _exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,33 +22,35 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097882"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532786"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm _exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Nodi di calcolo di errori restituisce che si verificano in PolyBase.  
+  Restituisce gli errori che si verificano nei nodi di calcolo di base.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Id numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
-|source|**nvarchar(255)**|Descrizione di processo o thread di origine||  
-|type|**nvarchar(255)**|Tipo di errore.||  
-|create_time|**datetime**|L'ora dell'occorrenza errore||  
-|compute_node_id|**int**|Identificatore del nodo di calcolo specifico|Vedere di compute_node_id [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|Identificatore della query PolyBase, se presente.||  
-|spid|**int**|Identificatore della sessione SQL Server||  
-|thread_id|**int**|Identificatore numerico del thread su cui si è verificato l'errore.||  
-|details|nvarchar(4000)|Descrizione completa dei dettagli dell'errore.||  
+|error_id|`nvarchar(36)`|ID numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
+|origine|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
+|type|`nvarchar(255)`|Tipo di errore.||  
+|create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
+|compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm _exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  
+|spid|`int`|Identificatore della sessione di SQL Server||  
+|thread_id|`int`|Identificatore numerico del thread in cui si è verificato l'errore.||  
+|dettagli|nvarchar(4000)|Descrizione completa dei dettagli dell'errore.||
+|compute_pool_id|`int`|Identificatore univoco per il pool.|
+
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase con DMV di risoluzione dei problemi](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Risoluzione dei problemi di base con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Transact-SQL delle viste &#40;a gestione dinamica relative ai database&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

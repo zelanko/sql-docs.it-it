@@ -1,18 +1,18 @@
 ---
 title: Installare Generatore report | Microsoft Docs
-ms.date: 09/22/2016
+ms.date: 10/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0d991e088a9bd06c322c3d0c8839b0c9c29fc52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d311062f362f7414a3a6d337ccc45b722e0a6c4c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502952"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536152"
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un'app autonoma, installata nel computer in uso dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

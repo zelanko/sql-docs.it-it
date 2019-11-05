@@ -1,6 +1,6 @@
 ---
 title: Archiviare dati crittografati del server di report (Gestione configurazione SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513293"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988426"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chiavi di crittografia SSRS - Archiviare dati crittografati del server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] archivia i valori crittografati nel database del server di report e nei file di configurazione. La maggior parte dei valori crittografati è costituita da credenziali utilizzate per l'accesso a origini dei dati esterne dalle quali vengono recuperati i dati dei report. In questo argomento vengono descritti i valori crittografati, la funzionalità per la crittografia utilizzata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e altri tipi di dati riservati archiviati di cui è importante essere a conoscenza.  
@@ -51,6 +51,8 @@ ms.locfileid: "62513293"
  I dati nel database del server di report vengono crittografati con una chiave simmetrica. È disponibile una sola chiave simmetrica per ogni database del server di report. La chiave simmetrica viene a sua volta crittografata utilizzando la chiave pubblica di una coppia di chiavi asimmetriche generata da Windows. La chiave privata viene mantenuta dall'account del servizio Windows ReportServer.  
   
  In una distribuzione del server di report con scalabilità orizzontale, in cui più istanze del server di report condividono lo stesso database del server di report, viene utilizzata una sola chiave simmetrica per tutti i nodi del server di report. Ogni nodo deve avere una copia della chiave simmetrica condivisa. Al momento della configurazione della distribuzione con scalabilità orizzontale viene automaticamente creata una copia della chiave simmetrica per ogni nodo. Ogni nodo crittografa quindi la propria copia della chiave simmetrica utilizzando la chiave pubblica di una coppia di chiavi specifica del relativo account del servizio Windows. Per altre informazioni su come viene creata la chiave simmetrica per le distribuzioni a istanza singola e con scalabilità orizzontale, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ 
+ Inoltre, a partire da 2019, il database del server di report può essere configurato con Transparent Data Encryption in SQL Server per fornire protezione aggiuntiva per i dati inattivi.
   
 > [!NOTE]  
 >  Quando si modifica l'account del servizio Windows ReportServer, le chiavi asimmetriche potrebbero cessare di essere valide, ostacolando le operazioni del server. Per evitare il problema utilizzare sempre lo strumento di configurazione Reporting Services per modificare le impostazioni dell'account di servizio. Quando si utilizza lo strumento di configurazione, le chiavi vengono automaticamente aggiornate. Per altre informazioni, vedere [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

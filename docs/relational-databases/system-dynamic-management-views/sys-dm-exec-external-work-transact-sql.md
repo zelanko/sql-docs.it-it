@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
+title: sys. dm _exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,40 +22,41 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5afdfd4f9a5f66845ae6d3798910fc2c4bf5ab8a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097749"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532945"
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm _exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Restituisce informazioni sul carico di lavoro per ogni ruolo di lavoro, in ogni nodo di calcolo.  
+  Restituisce informazioni sul carico di lavoro per ogni thread di lavoro in ogni nodo di calcolo.  
   
- Eseguire una query sys.dm_exec_external_work per identificare le operazioni attivate per comunicare con l'origine dati esterna (ad esempio Hadoop o esterno di SQL Server).  
+ Eseguire una query su sys. dm _exec_external_work per identificare il lavoro da eseguire per comunicare con l'origine dati esterna, ad esempio Hadoop o External SQL Server.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificatore univoco per la query PolyBase associata.|Visualizzare *request_ID* nelle [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**int**|La richiesta è in esecuzione il thread di lavoro.|Visualizzare *step_index* nelle [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**int**|Passaggio nel piano di servizio migrazione del database in esecuzione il thread di lavoro.|Visualizzare [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**int**|Il nodo ruolo di lavoro è in corso.|Visualizzare [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Il tipo di lavoro esterno.|'File suddivisione'|  
-|work_id|**int**|ID della suddivisione effettiva.|Maggiore o uguale a 0.|  
-|input_name|**nvarchar(4000)**|Nome dell'input da leggere|Nome del file quando si usano Hadoop.|  
-|read_location|**bigint**|Offset o leggere la posizione.|Offset del file da leggere.|  
-|bytes_processed|**bigint**|Numero totale di byte elaborati dal thread di lavoro.|Maggiore o uguale a 0.|  
-|length|**bigint**|Lunghezza della divisione o del blocco HDFS in caso di Hadoop|Definibili dall'utente. Il valore predefinito è 64M|  
-|status|**nvarchar(32)**|Stato del ruolo di lavoro|In sospeso, l'elaborazione, operazione eseguita, non è riuscita, interrotto|  
-|start_time|**datetime**|Inizio del lavoro||  
-|end_time|**datetime**|Fine del lavoro||  
-|total_elapsed_time|**int**|Tempo totale espresso in millisecondi||  
-  
+|execution_id|`nvarchar(32)`|Identificatore univoco per la query di base associata.|Vedere *request_id* in [sys. dm _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Richiesta eseguita dal thread di lavoro.|Vedere *step_index* in [sys. dm _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Passaggio del piano DMS eseguito dal thread di lavoro.|Vedere [sys. dm _exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere [sys. dm _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|type|`nvarchar(60)`|Tipo di lavoro esterno.|' File Split '|  
+|work_id|`int`|ID della divisione effettiva.|Maggiore o uguale a 0.|  
+|input_name|`nvarchar(4000)`|Nome dell'input da leggere|Nome file quando si usa Hadoop.|  
+|read_location|`bigint`|Offset o percorso di lettura.|Offset del file da leggere.|  
+|bytes_processed|`bigint`|Byte totali elaborati da questo thread di lavoro.|Maggiore o uguale a 0.|  
+|length|`bigint`|Lunghezza del blocco Split o HDFS in caso di Hadoop|Definibile dall'utente. Il valore predefinito è 64M|  
+|status|`nvarchar(32)`|Stato del ruolo di lavoro|In sospeso, elaborazione, completato, non riuscito, interrotto|  
+|start_time|`datetime`|Inizio del lavoro||  
+|end_time|`datetime`|Fine del lavoro||  
+|total_elapsed_time|`int`|Tempo totale in millisecondi||
+|compute_pool_id|`int`|Identificatore univoco per il pool.|
+
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase con DMV di risoluzione dei problemi](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Risoluzione dei problemi di base con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Transact-SQL delle viste &#40;a gestione dinamica relative ai database&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

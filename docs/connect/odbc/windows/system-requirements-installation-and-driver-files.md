@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8e7098cbd454b37e7de0a221c55b86194f883c3
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 6ab9a4035e3a714e6725f28f7e4e370bf3fd0119
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032992"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisiti di sistema, installazione e file del driver
 
@@ -27,17 +27,17 @@ In questo articolo vengono illustrati i driver ODBC che si connettono a SQL Serv
 
 | Versione driver | Descrizione del supporto |
 | :------------- | :--------------------- |
-| Driver ODBC 11 per[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le connessioni a SQL Server 2014, SQL Server 2012 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
-| ODBC driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows | Può essere installato in un computer che dispone anche di una o più versioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di Native Client. |
-| ODBC driver 13 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le connessioni a SQL Server 2016, SQL Server 2014, SQL Server 2012 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], e [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
+| Driver ODBC 11 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le connessioni a SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
+| Driver ODBC 11 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows | Può essere installato in un computer che dispone anche di una o più versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. |
+| ODBC driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le connessioni a SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]e [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
 | Driver ODBC 13,1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], <br/> Oltre ai precedenti per 13 | Supporta SQL Server 2017. |
-| Driver ODBC 17 per[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le stesse versioni di database di 13,1. |
+| Driver ODBC 17 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supporta le stesse versioni di database di 13,1. |
 | ODBC Driver 17 for SQL Server | Supporta SQL Server 2019 a partire dalla versione del driver 17,3. |
 | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>Dettagli stringa di connessione
 
-Il nome del driver specificato in una stringa di connessione è `ODBC Driver 11 for SQL Server` o `ODBC Driver 13 for SQL Server` (per 13 e 13,1) o `ODBC Driver 17 for SQL Server`.
+Il nome del driver specificato in una stringa di connessione è `ODBC Driver 11 for SQL Server` o `ODBC Driver 13 for SQL Server` (sia per 13 che per 13,1) o `ODBC Driver 17 for SQL Server`.
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
@@ -46,6 +46,7 @@ Il nome del driver specificato in una stringa di connessione è `ODBC Driver 11 
 - Windows Server 2008 R2
 - Windows Server 2012
 - Windows Server 2012 R2
+- Windows Server 2016
 - Windows Vista SP2 &nbsp; _(solo driver ODBC 11)._
 - Windows 7
 - Windows 8
@@ -100,13 +101,13 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Strumenti da riga di comando: sqlcmd.exe e bcp.exe
 
-Gli `bcp.exe` strumenti `sqlcmd.exe` e per l'utilizzo con il driver possono essere scaricati in [Microsoft Command line utilities 11 per SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command line utilities 13 per SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)o [Microsoft Command line utilities 13,1 per SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). Il driver è un prerequisito per `sqlcmd.exe` l' `bcp.exe`installazione di e.
+È possibile scaricare gli strumenti `bcp.exe` e `sqlcmd.exe` per l'utilizzo con il driver [microsoft Command line utilities 11 per SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 per SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)o [Microsoft Command line utilities 13,1 per SQL Server ](https://www.microsoft.com/download/details.aspx?id=53591). Il driver è un prerequisito per l'installazione di `sqlcmd.exe` e `bcp.exe`.
   
-`bcp.exe`e `sqlcmd.exe` vengono installati nella sottocartella di `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` per la `110\Tools` versione 11 e `130\Tools` per 13 e 13,1.
+`bcp.exe` e `sqlcmd.exe` sono installati nella sottocartella `110\Tools` di `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` per la versione 11 e `130\Tools` per 13 e 13,1.
 
 Il driver specificato in un'applicazione che usa funzioni BCP deve essere della stessa versione fornita con il file di intestazione e la libreria usati per compilare l'applicazione stessa.  
 
-Ad esempio, quando si compila un'applicazione ODBC con `msodbcsql11.lib` e `msodbcsql.h`, utilizzare "driver = {ODBC driver 11 for SQL Server}" nella stringa di connessione.
+Ad esempio, quando si compila un'applicazione ODBC con `msodbcsql11.lib` e `msodbcsql.h`, utilizzare "DRIVER = {ODBC driver 11 for SQL Server}" nella stringa di connessione.
 
 ## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Componenti di Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows
 
