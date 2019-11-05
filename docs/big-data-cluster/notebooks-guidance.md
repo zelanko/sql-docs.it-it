@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958293"
@@ -45,7 +45,7 @@ Ci sono diversi modi per avviare un nuovo notebook.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Contesto di collegamento e kernel supportati
 
-L'installazione del notebook in Azure Data Studio supporta in modo nativo il kernel SQL. Se si è uno sviluppatore SQL e si vuole usare i notebook, si sceglierà questo kernel. 
+L'installazione del notebook in Azure Data Studio supporta in modo nativo il kernel SQL. Se si è uno sviluppatore SQL e si vogliono usare i notebook, si sceglierà questo kernel. 
 
 Il kernel SQL può essere usato anche per la connessione alle istanze del server PostgreSQL. Se si è uno sviluppatore PostgreSQL e si vuole connettere i notebook al server PostgreSQL, scaricare l'[**estensione PostgreSQL**](../azure-data-studio/postgres-extension.md) nel marketplace delle estensioni di Azure Data Studio e quindi avviare **New Notebook** (Nuovo notebook) per aprire un'istanza di un notebook per la connessione al server PostgreSQL.
 

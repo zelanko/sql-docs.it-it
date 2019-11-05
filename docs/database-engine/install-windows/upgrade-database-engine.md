@@ -1,7 +1,7 @@
 ---
 title: Aggiornare il motore di database | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122965"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531557"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122965"
 
     Per altre informazioni sulle nuove funzionalità e sui comportamenti migliorati disponibili dopo la modifica del livello di compatibilità del database, vedere [Differenze tra i livelli di compatibilità](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Scoprire le nuove funzionalità di SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
+5.  [Scoprire le nuove funzionalità di SQL Server](https://www.microsoft.com/sql-server/sql-server-2019). Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
   
   

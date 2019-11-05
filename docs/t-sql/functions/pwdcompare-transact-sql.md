@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2910ac2c0ba1390eb8d82900bb3c8d64947a6944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168773"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Esegue l'hashing di una password e confronta l'hash con l'hash di una password esistente. È possibile utilizzare PWDCOMPARE per eseguire la ricerca di password di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuote o di password comuni vulnerabili.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908367"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594311"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database **master** del server o una chiave asimmetrica protetta da un modulo EKM.  
+  Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database **master** del server o una chiave asimmetrica protetta da un modulo EKM.   
    
 ##  <a name="Restrictions"></a> Limitazioni e restrizioni  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +19,16 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266926"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532875"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+ *\<<una sola lettera>* . Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
   

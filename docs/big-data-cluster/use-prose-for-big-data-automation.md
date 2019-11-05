@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957681"
@@ -113,7 +113,7 @@ Per altre informazioni, vedere la [documentazione](https://aka.ms/prose-codeacce
 Un altro scenario comune è quello del rilevamento di modelli in una colonna di stringhe a scopo di pulizia o raggruppamento. Si potrebbe ad esempio avere una colonna di date con date in più formati diversi. Per standardizzare i valori, potrebbe essere necessario scrivere istruzioni condizionali usando espressioni regolari.
 
 
-|   |nome                      |BirthDate      |
+|   |Nome                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
