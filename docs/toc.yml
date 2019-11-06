@@ -14,13 +14,6 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: SQL Server 2016
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: Novità del motore di database
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: SQL Server 2017
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: SQL Server 2016
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: Edizioni e funzionalità
       items:
         - name: SQL Server 2019
@@ -32,7 +25,7 @@
     - name: Note sulla versione
       items:
         - name: SQL Server 2019
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: SQL Server 2017
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
@@ -45,11 +38,11 @@
           href: sql-server/sql-server-2012-release-notes.md
         - name: SQL Server 2008 R2 SP2
           href: sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Cluster Big Data
+- name: Cluster di Big Data
   items:
     - name: Panoramica
       items:
-        - name: Cluster di Big Data di SQL Server
+        - name: Cluster Big Data di SQL Server
           href: big-data-cluster/big-data-cluster-overview.md
         - name: Note sulla versione
           href: big-data-cluster/release-notes-big-data-cluster.md
@@ -57,7 +50,7 @@
       items:
         - name: Introduzione
           items:
-            - name: Distribuire un cluster Big Data
+            - name: Distribuzione
               href: big-data-cluster/deploy-get-started.md
             - name: Caricare dati di esempio
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +60,8 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Installare il modulo azdata
               items:
+                - name: Con Windows Installer
+                  href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: Con gestione pacchetti Linux
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
                 - name: Con pip
@@ -83,8 +78,14 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Distribuzioni offline
               href: big-data-cluster/deploy-offline.md
+            - name: Modalità Active Directory
+              href: big-data-cluster/deploy-active-directory.md
             - name: Distribuire con disponibilità elevata
-              href: big-data-cluster/deployment-high-availability.md
+              items:
+                - name: Istanza master
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: Nome del nodo HDFS e Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Cluster Kubernetes
               items:
                 - name: Servizio Azure Kubernetes
@@ -117,6 +118,10 @@
           href: big-data-cluster/concept-security.md
     - name: Guide pratiche
       items:
+        - name: Configurazione
+          items:
+            - name: Istanza master di SQL Server
+              href: big-data-cluster/configure-sql-server-master-instance.md
         - name: Virtualizzazione dei dati
           items:
             - name: Dati relazionali
@@ -137,6 +142,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: Montare S3 per la suddivisione in livelli HDFS
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: Gestire le autorizzazioni HDFS
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: Inserimento dati
           items:
             - name: Caricare i dati con curl
@@ -157,6 +164,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: Big Data/Machine Learning
           items:
+            - name: 'Usare Machine Learning Services (Python, R)'
+              href: big-data-cluster/machine-learning-services.md
             - name: Data wrangling con l'acceleratore di codice PROSE
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: Modelli di Machine Learning Spark con MLeap
@@ -165,9 +174,9 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: Integrare Spark con SQL Server
               href: big-data-cluster/spark-mssql-connector.md
-        - name: Gestire il cluster Big Data di SQL Server
+        - name: Gestione
           items:
-            - name: Connettersi a un cluster Big Data
+            - name: Connessione
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Visualizzare lo stato del cluster
               href: big-data-cluster/view-cluster-status.md
@@ -245,10 +254,6 @@
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-                - name: bdc pool
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc pool status
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark batch
@@ -4168,7 +4173,11 @@
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
         - name: Requisiti hardware e software
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: SQL Server 2019
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: SQL Server 2017 e versioni precedenti
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Considerazioni sulla sicurezza
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: Protocolli e librerie di rete
@@ -4247,6 +4256,8 @@
       items:
         - name: Certificazione di compatibilità
           href: database-engine/install-windows/compatibility-certification.md
+        - name: Aggiornamenti di versione ed edizione supportati per SQL Server 2019
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: Aggiornamenti di versione ed edizione supportati per SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: Aggiornamenti di versione ed edizione supportati per SQL Server 2016
@@ -8125,29 +8136,91 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: Crittografia
           items:
+            - name: Always Encrypted
+              items:
+                - name: Configure Always Encrypted using PowerShell (Configurare Always Encrypted usando PowerShell)
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: Configurare Always Encrypted tramite SSMS
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: Effettuare il provisioning delle chiavi Always Encrypted
+                  items:
+                    - name: Creare e archiviare le chiavi master della colonna
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: Effettuare il provisioning delle chiavi Always Encrypted con SSMS
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: Effettuare il provisioning delle chiavi Always Encrypted con PowerShell
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: Ruotare le chiavi Always Encrypted
+                  items:
+                    - name: Ruotare le chiavi Always Encrypted con SSMS
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: Ruotare le chiavi Always Encrypted con PowerShell
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: Configurare le colonne con Always Encrypted
+                  items:
+                    - name: Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: Configurare la crittografia delle colonne usando Always Encrypted con PowerShell
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: Eseguire query delle colonne usando Always Encrypted
+                  items:
+                    - name: Eseguire query delle colonne usando Always Encrypted con SSMS
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: Eseguire la migrazione di dati sensibili protetti con Always Encrypted
+                  items:
+                    - name: Esportare e importare database usando Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: Eseguire il backup e il ripristino di database usando Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: Eseguire la migrazione dei dati usando l'Importazione/Esportazione guidata
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: Caricamento bulk di dati crittografati in colonne tramite Always Encrypted
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: Sviluppare applicazioni usando Always Encrypted
+                  items:
+                    - name: Sviluppare applicazioni usando Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: Sviluppare applicazioni con .NET Framework
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: Always Encrypted con enclave sicuri
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: Configurare l'ambiente per supportare gli enclave e l'attestazione
+                  items:
+                    - name: Configurare gli enclave VBS con l'attestazione del servizio Sorveglianza host
+                      items:
+                        - name: Pianificare l'attestazione del servizio Sorveglianza host
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                - name: Gestire le chiavi per Always Encrypted con enclave sicuri
+                  items:
+                    - name: Gestire le chiavi abilitate per l'enclave
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: Effettuare il provisioning delle chiavi abilitate per l'enclave
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: Ruotare le chiavi abilitate per l'enclave
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: Configurare le colonne con Always Encrypted con enclave sicuri
+                  items:
+                    - name: Configurare la crittografia della colonna
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: Configurare la crittografia delle colonne sul posto con Transact-SQL
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri
+                  items:
+                    - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri con SSMS
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: Creare e usare indici sulle colonne abilitate per l'enclave
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: Sviluppare applicazioni usando Always Encrypted con enclave sicuri
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: Risolvere i problemi di Transparent Data Encryption
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: Configurare Always Encrypted
-              items:
-                - name: Configurare Always Encrypted con enclave sicuri
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: Configurare con SQL Server Management Studio
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: Configurare con PowerShell
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: Configurare le chiavi Always Encrypted
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: Ruotare le chiavi Always Encrypted
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: Configurare la crittografia della colonna
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: Creare e archiviare le chiavi master della colonna
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: Eseguire la migrazione dei dati sensibili
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: Sviluppare applicazioni con .NET Framework
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: Spostare un database protetto con TDE
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: Extensible Key Management
@@ -8255,14 +8328,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: Always Encrypted con enclave sicuri
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: Gestione delle chiavi
+                - name: Panoramica della gestione delle chiavi per Always Encrypted
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: Crittografia
+                - name: Crittografia Always Encrypted
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: Sviluppo client
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: Always Encrypted con enclave sicuri
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: Chiavi di crittografia
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8279,16 +8350,24 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: Esercitazioni
       items:
-        - name: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: Creare e usare indici in colonne Always Encrypted con gli enclavi sicuri
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: Proteggere i dati sensibili e archiviare le chiavi di crittografia nell'archivio certificati Windows >
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: Proteggere i dati sensibili e archiviare le chiavi di crittografia in Azure Key Vault >
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: Always Encrypted con enclave sicuri
+          items:
+            - name: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: Creare e usare indici in colonne Always Encrypted con gli enclavi sicuri
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: Riferimento
       items:
         - name: Pagina Autorizzazioni o Entità a protezione diretta
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: Procedura guidata Always Encrypted
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: Strumenti
   href: tools/overview-sql-tools.md
   items:
@@ -8350,8 +8429,8 @@
           items:
             - name: Estensione PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019
-              href: azure-data-studio/sql-server-2019-extension.md
+            - name: Estensione della virtualizzazione dei dati
+              href: azure-data-studio/data-virtualization-extension.md
             - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
             - name: Estensione Server di gestione centrale di SQL Server
@@ -10255,6 +10334,10 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: Funzionalità estese
+      items:
+        - name: Funzionalità e strumenti estesi
+          href: tools/download-sql-feature-packs.md
 - name: Esercitazioni
   items:
     - name: SQL Server
@@ -10352,8 +10435,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Configurare la replica
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: Machine Learning in un contenitore
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: Concetti
       items:
         - name: Installazione
@@ -12479,6 +12560,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: Cluster di Big Data
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: Change Data Capture
           items:
             - name: sys.dm_cdc_errors
@@ -12835,6 +12922,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys
