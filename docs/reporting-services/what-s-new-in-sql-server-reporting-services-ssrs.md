@@ -8,33 +8,29 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123116"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536277"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Informazioni sulle novità di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Questo articolo illustra le principali aree funzionali e viene aggiornato man mano che vengono rilasciati nuovi elementi.
-
-Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
+Informazioni sulle novità delle diverse versioni di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Questo articolo illustra le principali aree funzionali e viene aggiornato man mano che vengono rilasciati nuovi elementi.
 
 Per informazioni su Server di report di Power BI, vedere [Che cos'è Server di report di Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Scarica** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>Anteprima di SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services anteprima è disponibile per il download dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=100122).
+![Scarica](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download") **download**
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) è disponibile per il download dall'area download Microsoft.
 
 ### <a name="azure-sql-managed-instance-support"></a>Supporto per Istanza gestita di database SQL di Azure
 
@@ -48,11 +44,27 @@ Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download
 
 Quando si creano report, è possibile utilizzare le descrizioni comandi per specificare il testo per ogni elemento nel report. La tecnologia per la lettura dello schermo identifica queste descrizioni comandi in modo corretto.
 
+### <a name="azure-active-directory-application-proxy-support"></a>Supporto per Azure Active Directory Application Proxy
+
+Con Azure Active Directory Application Proxy, non è più necessario gestire il proxy applicazione Web per consentire l'accesso sicuro tramite le app Web o per dispositivi mobili.
+
+### <a name="transparent-database-encryption"></a>Crittografia trasparente del database
+
+SQL Server 2019 supporta ora la crittografia trasparente del database per il database di catalogo di SSRS per le edizioni Enterprise e standard. 
+
+### <a name="microsoft-report-builder-update"></a>Aggiornamento di Generatore report Microsoft
+
+La nuova versione rilasciata di Generatore report è completamente compatibile con le versioni 2016, 2017 e 2019 di Reporting Services. È compatibile anche con tutte le versioni rilasciate e supportate di Server di report di Power BI.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+![Scarica](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download") **download**
+
+Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ### <a name="comments-on-reports"></a>Commenti nei report
 
@@ -129,7 +141,7 @@ I report per dispositivi mobili di Reporting Services sono report dedicati, otti
 
 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]consente di creare e pubblicare report per dispositivi mobili di SQL Server nel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 Per altre informazioni, vedere [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -137,7 +149,7 @@ Per altre informazioni, vedere [Creare report per dispositivi mobili con SQL Ser
 
 L'app Power BI per dispositivi mobili per iOS su iPad e iPhone può ora visualizzare i report per dispositivi mobili di SQL Server ospitati nel server di report locale.  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 Non è possibile connettersi per impostazione predefinita senza modificare la configurazione. Per altre informazioni su come consentire all'app per dispositivi mobili di Power BI di connettersi al server di report, vedere [Abilitare un server di report per l'accesso a Power BI per dispositivi mobili](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 
@@ -165,7 +177,7 @@ Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Re
 
 **Report impaginati moderni:** è possibile progettare report impaginati moderni e accattivanti con nuovi stili attuali per grafici, misuratori, mappe e altre visualizzazioni dei dati.
 
-**Mappa ad albero e grafici radiali:** è possibile ottimizzare i report con una mappa ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Mappa ad albero e grafici radiali:** è possibile ottimizzare i report con mappe ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Incorporamento di report:** è ora possibile incorporare report per dispositivi mobili e report impaginati in altre pagine Web e applicazioni usando un iframe e i parametri URL.  
 
@@ -219,11 +231,11 @@ La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurren
 |||  
 |-|-|  
 |Nuovo|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **Riquadro Parametri personalizzato:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
-![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri")  
+![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **Supporto per valori DPI alti:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supporta il ridimensionamento e i dispositivi con valori DPI alti.  Per altre informazioni sui valori DPI alti, vedere le pagine seguenti:  
 
