@@ -23,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828045"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637829"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -110,7 +110,7 @@ ms.locfileid: "62828045"
   
 -   Specificare le colonne chiave di ordinamento in cui i dati sono ordinati.  
   
- Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+ Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
  Se è necessario ordinare i dati del flusso di dati, è possibile migliorare le prestazioni progettando il flusso di dati in modo che venga eseguito il minor numero possibile di operazioni di ordinamento. Il flusso di dati, ad esempio, usa una trasformazione Multicast per copiare il set di dati. Ordinare il set di dati una volta prima dell'esecuzione della trasformazione Multicast anziché ordinare più output in seguito alla trasformazione.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "62828045"
  Usare i suggerimenti inclusi in questa sezione per migliorare la prestazione delle trasformazioni Aggregazione, Ricerca fuzzy, Raggruppamento fuzzy, Ricerca, Merge Join e Dimensione a modifica lenta.  
   
 #### <a name="aggregate-transformation"></a>Trasformazione Aggregazione  
- La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un' **Raggruppa** operazione, impostare il `Keys` e `KeysScale` proprietà, rispettivamente. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un' **Distinct count** operazione, impostare il `CountDistinctKeys` e `CountDistinctScale` proprietà, rispettivamente.  
+ La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un'operazione **Group by** , impostare rispettivamente le proprietà `Keys` e `KeysScale`. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le proprietà `CountDistinctKeys` e `CountDistinctScale`.  
   
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828045"
 #### <a name="lookup-transformation"></a>Trasformazione Ricerca  
  È possibile ridurre al minimo le dimensioni dei dati di riferimento nella memoria immettendo un'istruzione SELECT per la ricerca delle sole colonne necessarie. Questa opzione garantisce prestazioni migliori rispetto alla selezione di un'intera tabella o vista, che restituisce invece una quantità elevata di dati non necessari.  
   
-#### <a name="merge-join-transformation"></a>Merge join - trasformazione  
+#### <a name="merge-join-transformation"></a>Trasformazione Merge join  
  Non è più necessario configurare il valore della proprietà `MaxBuffersPerInput`, in quanto Microsoft ha apportato modifiche che riducono il rischio di uso di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione  
@@ -143,12 +143,12 @@ ms.locfileid: "62828045"
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
- Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
+ Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Destinazioni  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
   
-#### <a name="sql-server-destination"></a>SQL Server - destinazione  
+#### <a name="sql-server-destination"></a>Destinazione SQL Server  
  Quando un pacchetto carica dati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer, usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tale destinazione è ottimizzata per caricamenti bulk ad alta velocità.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Test delle prestazioni delle destinazioni  
@@ -161,14 +161,14 @@ ms.locfileid: "62828045"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
   
--   Articolo tecnico [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899) (SQL Server 2005 Integration Services: una strategia per le prestazioni) in technet.microsoft.com  
+-   Articolo tecnico [SQL Server 2005 Integration Services: una strategia per ottimizzare le prestazioni](https://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
   
--   Articolo tecnico su [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900) (Integration Services: tecniche per l'ottimizzazione delle prestazioni) in technet.microsoft.com  
+-   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), disponibile su technet.microsoft.com  
   
 -   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
   

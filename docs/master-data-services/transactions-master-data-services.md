@@ -1,5 +1,5 @@
 ---
-title: Transazioni (Master Data Services) | Microsoft Docs
+title: Transazioni
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102603"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728897"
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
 
@@ -77,7 +77,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Impostazioni sistema  
- In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  In caso di importazione di dati in questa versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile specificare se registrare transazioni all'avvio della stored procedure. Per altre informazioni, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -93,7 +93,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |Annullare un'azione invertendo una transazione (solo amministratori).|[Invertire una transazione &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post di blog su [transazioni, problemi di convalida e pulizia della tabella di gestione temporanea](https://go.microsoft.com/fwlink/p/?LinkId=615374) nel sito msdn.com.  
+ Post di blog su [transazioni, problemi di convalida e pulizia della tabella di gestione temporanea](https://go.microsoft.com/fwlink/p/?LinkId=615374)nel sito msdn.com.  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

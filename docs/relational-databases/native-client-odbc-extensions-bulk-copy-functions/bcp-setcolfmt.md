@@ -18,22 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9615e455bee033af9f071bbb4a13ef3d98c81bf4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707515"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782332"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  La funzione **bcp_setcolfmt** sostituisce [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Quando si specificano le regole di confronto delle colonne, è necessario utilizzare la funzione **bcp_setcolfmt** . [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) può essere utilizzato per specificare più di un formato di colonna.  
+  La funzione **bcp_setcolfmt** sostituisce l' [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Quando si specificano le regole di confronto delle colonne, è necessario utilizzare la funzione **bcp_setcolfmt** . [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) può essere utilizzato per specificare più di un formato di colonna.  
   
  Questa funzione fornisce un approccio flessibile alla definizione del formato delle colonne in un'operazione di copia bulk. La funzione viene utilizzata per impostare singoli attributi di formato di colonna. Ogni chiamata a **bcp_setcolfmt** imposta un attributo di formato della colonna.  
   
- La funzione **bcp_setcolfmt** specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine, **bcp_setcolfmt** specifica il formato di un file di dati esistente utilizzato come origine dati di dati in una copia bulk in una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando viene utilizzato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_setcolfmt**.  
+ La funzione **bcp_setcolfmt** specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine, **bcp_setcolfmt** specifica il formato di un file di dati esistente utilizzato come origine dati di dati in una copia bulk in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando viene utilizzato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_setcolfmt**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +56,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  Una delle costanti di proprietà. Le costanti della proprietà sono definite nella tabella seguente.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Tipo di dati della colonna nel file utente. Se differisce dal tipo di dati della colonna corrispondente nella tabella del database, la copia bulk converte i dati, se possibile.<br /><br /> Il parametro BCP_FMT_TYPE viene enumerato in base ai token dei tipi di dati in sqlncli.h e non in base agli enumeratori dei tipi di dati C ODBC. È possibile, ad esempio, specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per specificare la rappresentazione predefinita dei dati per il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare questo parametro su 0.<br /><br /> Per una copia bulk dal SQL Server in un file, quando BCP_FMT_TYPE è SqlDecimal o SQLNUMERIC, se la colonna di origine non è **Decimal** o **numeric**, vengono utilizzate la precisione e la scala predefinite. In caso contrario, se la colonna di origine è **Decimal** o **numeric**, vengono utilizzate la precisione e la scala della colonna di origine.|  
 |BCP_FMT_INDICATOR_LEN|INT|Lunghezza in byte dell'indicatore (prefisso).<br /><br /> Lunghezza, espressa in byte, di un indicatore di lunghezza o Null nei dati della colonna. I valori validi per la lunghezza dell'indicatore sono 0 (quando non si utilizza alcun indicatore), 1, 2 o 4.<br /><br /> Per specificare l'utilizzo di un indicatore di copia bulk predefinito, impostare questo parametro su SQL_VARLEN_DATA.<br /><br /> Gli indicatori vengono visualizzati in memoria direttamente prima dei dati e nel file di dati immediatamente prima dei dati a cui si riferiscono.<br /><br /> Se si utilizzano più modalità per specificare la lunghezza delle colonne del file di dati, ad esempio un indicatore e una lunghezza di colonna massima o un indicatore e una sequenza di caratteri di terminazione, la copia bulk sceglie quella che comporta la copia del minor numero di dati.<br /><br /> I file di dati generati dalla copia bulk quando il formato dei dati non viene modificato dall'utente contengono indicatori se la lunghezza dei dati di colonna può variare o se la colonna può accettare NULL come valore.|  
@@ -69,14 +68,14 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  Puntatore al valore da associare alla *Proprietà*. Consente di impostare singolarmente ogni proprietà di formato di colonna.  
   
- *cbvalue*  
+ *cbValue*  
  Lunghezza in byte del buffer delle proprietà.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
- Questa funzione sostituisce la funzione **bcp_colfmt** . Tutte le funzionalità di **bcp_colfmt** sono disponibili nella funzione **bcp_setcolfmt** . Sono inoltre supportate le regole di confronto delle colonne. È consigliabile impostare gli attributi di formato di colonna seguenti nell'ordine indicato:  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione sostituisce la funzione **bcp_colfmt** . Tutte le funzionalità di **bcp_colfmt** sono disponibili nella **bcp_setcolfmt** funzione. Sono inoltre supportate le regole di confronto delle colonne. È consigliabile impostare gli attributi di formato di colonna seguenti nell'ordine indicato:  
   
  BCP_FMT_SERVER_COL  
   
@@ -98,15 +97,15 @@ RETCODE bcp_setcolfmt (
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **bcp_setcolfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente a cinque colonne, chiamare prima [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , quindi chiamare **bcp_setcolfmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare BCP_FMT_TYPE su 0, quindi impostare BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN e *cbValue* su 0, SQL_VARLEN_DATA e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **bcp_setcolfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente a cinque colonne, chiamare prima [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , quindi chiamare **bcp_setcolfmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare BCP_FMT_TYPE su 0 e impostare rispettivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN e *cbValue* su 0, SQL_VARLEN_DATA e 0. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
- La funzione **bcp_columns** deve essere chiamata prima di chiamare **bcp_setcolfmt**.  
+ Prima di chiamare **bcp_setcolfmt**, è necessario chiamare la funzione **bcp_columns** .  
   
  È necessario chiamare **bcp_setcolfmt** una volta per ogni proprietà di ogni colonna del file utente.  
   
  Non è necessario copiare tutti i dati di un file utente nella tabella di SQL Server. Per ignorare una colonna, specificarne il formato dei dati impostando il parametro BCP_FMT_SERVER_COL su 0. Se si desidera ignorare una colonna, è necessario specificarne il tipo.  
   
- La funzione [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) può essere utilizzata per salvare in modo permanente la specifica di formato.  
+ È possibile utilizzare la funzione [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per salvare in modo permanente la specifica di formato.  
   
 ## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_setcolfmt per le caratteristiche avanzate di data e ora  
  I tipi utilizzati con la proprietà BCP_FMT_TYPE per i tipi data/ora sono specificati nelle [modifiche della copia bulk per &#40;i tipi di data e ora avanzati&#41;OLE DB e ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

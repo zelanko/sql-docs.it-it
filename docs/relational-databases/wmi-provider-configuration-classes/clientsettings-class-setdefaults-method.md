@@ -1,6 +1,6 @@
 ---
-title: Metodo SetDefaults (classe ClientSettings) | Microsoft Docs
-ms.custom: ''
+title: Metodo sedefaults (ClientSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2b079d70a8fb70a2b28c139a862f0689bd33d5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072495"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657630"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - Metodo SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,5 +48,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   

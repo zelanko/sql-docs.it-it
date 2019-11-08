@@ -19,26 +19,25 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b58a6ae57d6a5f6b549a98f4a16871424615ae97
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708029"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785221"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  È possibile eseguire una copia bulk direttamente dalle variabili di programma. Dopo aver allocato le variabili in modo che contengano i dati per una riga e chiamando [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per avviare la copia bulk, chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna per specificare il percorso e il formato della variabile di programma da associare alla colonna. Riempire ogni variabile con i dati, quindi chiamare [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati al server. Ripetere il processo di riempimento delle variabili e chiamare **bcp_sendrow** fino a quando tutte le righe non sono state inviate al server, quindi chiamare [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per specificare che l'operazione è stata completata.  
+  È possibile eseguire una copia bulk direttamente dalle variabili di programma. Dopo aver allocato le variabili in modo che contengano i dati per una riga e chiamando [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per avviare la copia bulk, chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna per specificare il percorso e il formato della variabile di programma da associare alla colonna. Riempire ogni variabile con i dati, quindi chiamare [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati al server. Ripetere il processo di riempimento delle variabili e chiamando **bcp_sendrow** fino a quando tutte le righe non sono state inviate al server, quindi chiamare [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per specificare che l'operazione è stata completata.  
   
- Il parametro_pData_ di **bcp_bind**contiene l'indirizzo della variabile da associare alla colonna. I dati di ogni colonna possono essere archiviati in due modi:  
+ Il **bcp_bind**parametro_pData_ contiene l'indirizzo della variabile da associare alla colonna. I dati di ogni colonna possono essere archiviati in due modi:  
   
 -   Allocando una variabile in modo da contenere i dati.  
   
 -   Allocando una variabile indicatore seguita immediatamente dalla variabile dati.  
   
- La variabile indicatore indica la lunghezza dei dati per le colonne a lunghezza variabile e indica inoltre i valori NULL se la colonna ammette valori NULL. Se viene usata solo una variabile dati, l'indirizzo di questa variabile viene archiviato nel parametro_pData_ di **bcp_bind**. Se viene usata una variabile indicatore, l'indirizzo della variabile indicatore viene archiviato nel parametro_pData_ di **bcp_bind**. Le funzioni di copia bulk calcolano il percorso della variabile dati aggiungendo i parametri_cbIndicator_ e *pData* di **bcp_bind**.  
+ La variabile indicatore indica la lunghezza dei dati per le colonne a lunghezza variabile e indica inoltre i valori NULL se la colonna ammette valori NULL. Se viene utilizzata solo una variabile dati, l'indirizzo di questa variabile viene archiviato nel parametro **bcp_bind**_pData_ . Se viene utilizzata una variabile indicatore, l'indirizzo della variabile indicatore viene archiviato nel parametro **bcp_bind**_pData_ . Le funzioni di copia bulk calcolano il percorso della variabile dati aggiungendo i parametri **bcp_bind**_cbIndicator_ e *pData* .  
   
  **bcp_bind** supporta tre metodi per la gestione dei dati a lunghezza variabile:  
   
@@ -46,13 +45,13 @@ ms.locfileid: "71708029"
   
 -   Utilizzare variabili indicatore. Non appena un nuovo valore dei dati viene spostato nella variabile dati, archiviare la lunghezza del valore nella variabile indicatore. Se viene utilizzato uno degli altri due metodi, specificare 0 per *cbIndicator*.  
   
--   Utilizzare i puntatori ai caratteri di terminazione. Caricare il parametro **bcp_bind**_pTerm_ con l'indirizzo dello schema di bit che termina i dati. Se viene utilizzato uno degli altri due metodi, specificare NULL per *pTerm*.  
+-   Utilizzare i puntatori ai caratteri di terminazione. Caricare il **bcp_bind**parametro_pTerm_ con l'indirizzo dello schema di bit che termina i dati. Se viene utilizzato uno degli altri due metodi, specificare NULL per *pTerm*.  
   
- Tutti e tre questi metodi possono essere usati nella stessa chiamata **bcp_bind** , nel qual caso viene usata la specifica che comporta la copia della quantità minima di dati.  
+ Tutti e tre questi metodi possono essere utilizzati nella stessa chiamata di **bcp_bind** , nel qual caso viene utilizzata la specifica che comporta la copia del minor numero di dati.  
   
  Il parametro di_tipo_ **bcp_bind**utilizza gli identificatori dei tipi di dati DB-Library, non gli identificatori dei tipi di dati ODBC. Gli identificatori dei tipi di dati DB-Library sono definiti in sqlncli. h per l'utilizzo con la funzione ODBC **bcp_bind** .  
   
- Le funzioni di copia bulk non supportano tutti i tipi di dati C ODBC. Le funzioni di copia bulk, ad esempio, non supportano la struttura ODBC SQL_C_TYPE_TIMESTAMP, pertanto utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) per convertire i dati SQL_TYPE_TIMESTAMP ODBC in una variabile SQL_C_CHAR. Se quindi si usa **bcp_bind** con un parametro di tipo SQLCHARACTER per associare la variabile a una colonna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le funzioni di copia bulk convertono la clausola di escape timestamp nella variabile di *tipo* carattere nel formato DateTime appropriato.  
+ Le funzioni di copia bulk non supportano tutti i tipi di dati C ODBC. Le funzioni di copia bulk, ad esempio, non supportano la struttura ODBC SQL_C_TYPE_TIMESTAMP, pertanto utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) per convertire i dati SQL_TYPE_TIMESTAMP odbc in una variabile SQL_C_CHAR. Se quindi si usa **bcp_bind** con un parametro di tipo SQLCHARACTER per associare la variabile a una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** , le funzioni di copia bulk convertono la clausola di escape timestamp nella variabile di *tipo* carattere nel formato DateTime appropriato.  
   
  Nella tabella seguente vengono elencati i tipi di dati consigliati da utilizzare nel mapping da un tipo di dati SQL ODBC a un tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -86,7 +85,7 @@ ms.locfileid: "71708029"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non contiene tipi di dati **tinyint**con segno, **smallint**senza segno o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di tipi di dati con segno **tinyint**, senza segno **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -108,9 +107,9 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta direttamente i tipi di dati intervallo. Tuttavia, un'applicazione può archiviare le sequenze di escape dell'intervallo come stringhe di caratteri in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere. Tali valori potranno essere letti dall'applicazione per un utilizzo futuro ma non potranno essere utilizzati nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. Se si chiama [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** , viene recuperata una riga di dati dall'origine dati ODBC nelle variabili di programma e la chiamata di [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. La chiamata a [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** recupera quindi una riga di dati dall'origine dati ODBC nelle variabili di programma e chiamando [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Un'applicazione può usare la funzione [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) ogni volta che è necessario modificare l'indirizzo della variabile di dati specificata in origine nel parametro _pData_ di **bcp_bind** . Un'applicazione può usare la funzione [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) ogni volta che è necessario modificare la lunghezza dei dati specificata originariamente nel parametro **bcp_bind**_cbData_ .  
+ Un'applicazione può utilizzare la funzione [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) ogni volta che è necessario modificare l'indirizzo della variabile di dati originariamente specificata nel parametro **bcp_bind** _pData_ . Un'applicazione può utilizzare la funzione [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) ogni volta che è necessario modificare la lunghezza dei dati specificata originariamente nel parametro **bcp_bind**_cbData_ .  
   
  Non è possibile leggere i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle variabili di programma utilizzando la copia bulk. Non esiste una funzione simile a "bcp_readrow". È possibile solo inviare i dati dall'applicazione al server.  
   

@@ -1,6 +1,6 @@
 ---
-title: Proprietà InstanceName (classe ClientSettings) | Microsoft Docs
-ms.custom: ''
+title: Proprietà InstanceName (ClientSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa006ea5fa97609d39aa0809ba0467bffa630b80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905304"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660691"
 ---
 # <a name="clientsettings-class---instancename-property"></a>Classe ClientSettings - Proprietà InstanceName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,5 +42,5 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   

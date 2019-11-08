@@ -1,6 +1,6 @@
 ---
-title: Proprietà StartMode (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Proprietà StartMode (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006861"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660864"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Proprietà StartMode (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ object.StartMode [= value]
  Valore = 0. Servizio avviato dal caricatore del sistema operativo. Questa opzione è valida solo per i servizi del driver.  
   
  Sistema  
- Valore = 1. Servizio avviato per la **IoInitSystem** (metodo). Questa opzione è valida solo per i servizi del driver.  
+ Valore = 1. Servizio avviato dal metodo **IoInitSystem** . Questa opzione è valida solo per i servizi del driver.  
   
- Automatico  
+ Automatic  
  Valore = 2. Servizio da avviare automaticamente da Gestione controllo servizi durante l'avvio del sistema.  
   
- Manuale  
- Valore = 3. Servizio da avviare da Gestione Computer quando un processo chiama il **StartService** (metodo).  
+ Manual  
+ Valore = 3. Servizio da avviare da Gestione computer quando un processo chiama il metodo **StartService** .  
   
- Disabled  
+ Disabilitata  
  Valore = 4. Impossibile avviare il servizio.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

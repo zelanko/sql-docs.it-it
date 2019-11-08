@@ -1,5 +1,5 @@
 ---
-title: Estensione delle regole di business (Master Data Services) | Microsoft Docs
+title: Estensione delle regole business
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047416"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728682"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Estensione delle regole business (Master Data Services)
 
@@ -65,7 +65,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Schema**|**Permissions**|  
+|**Schema**|**Autorizzazioni**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -91,11 +91,11 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola business.  
   
-6.  Fare clic su **Aggiungi**.  
+6.  Scegliere **Aggiungi**.  
   
 7.  Eseguire le operazioni seguenti per creare uno script definito dall'utente come condizione.  
   
-    1.  Nel blocco **If** fare clic sul pulsante **Aggiungi** . Viene visualizzato un pannello.  
+    1.  Nel blocco **If** fare clic sul pulsante **Aggiungi** . Verrà visualizzato un pannello.  
   
     2.  Nell'elenco a discesa **Operatore** selezionare la funzione definita dall'utente in **Script definito dall'utente** .  
   

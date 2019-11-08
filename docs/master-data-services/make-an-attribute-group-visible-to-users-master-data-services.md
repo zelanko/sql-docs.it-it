@@ -1,5 +1,5 @@
 ---
-title: Rendere visibile un gruppo di attributi per gli utenti (Master Data Services) | Microsoft Docs
+title: Rendere visibile un gruppo di attributi per gli utenti
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce8d0490625780459ecafd8e9d346af0fc9bd1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054534"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729074"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
 
@@ -30,9 +30,9 @@ ms.locfileid: "68054534"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   È necessario che sia presente almeno un gruppo di attributi. Per altre informazioni, vedere [Creare un gruppo di attributi &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   È necessario che sia presente almeno un gruppo di attributi. Per altre informazioni, vedere [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Per rendere visibile un gruppo di attributi agli utenti  
   

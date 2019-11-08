@@ -1,5 +1,5 @@
 ---
-title: Escludere una regola di business (Master Data Services) | Microsoft Docs
+title: Escludere una regola business
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 333e147ebf74b8062852f838db4d1797ef6e457f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30088b6964ae8120bc5aa3c1cb401ec3d9bd1149
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915960"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728172"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Escludere una regola business (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "67915960"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-exclude-a-business-rule"></a>Per escludere una regola business  
   

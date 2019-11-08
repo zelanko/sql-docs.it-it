@@ -1,5 +1,5 @@
 ---
-title: Creare membri consolidati (Master Data Services) | Microsoft Docs
+title: Create a Consolidated Member
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45c7b5568028a74c806ff4fe39b6b8c48070d41c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcca8ec5850b7f787fa4fcb99f2c009a77b56b48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079720"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729610"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
 
@@ -48,13 +48,13 @@ ms.locfileid: "68079720"
   
 6.  Nel riquadro a sinistra selezionare un nodo radice o un membro consolidato in cui creare un membro consolidato.  
   
-7.  Fare clic su **Aggiungi**.  
+7.  Scegliere **Aggiungi**.  
   
 8.  Nel riquadro sulla destra, completare i campi.  
   
-9. facoltativo. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
+9. Facoltativa. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
   
-10. Fare clic su **OK**.  
+10. Scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

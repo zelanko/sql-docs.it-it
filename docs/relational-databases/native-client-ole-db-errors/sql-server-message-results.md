@@ -1,5 +1,5 @@
 ---
-title: Risultati di SQL Server messaggi | Documenti di Microsoft
+title: SQL Server risultati del messaggio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dc6cfb5388634e9e2f4281250dd7eb619102515
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3383dcd08ed5910d949608e521b3cd23f37aace8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106747"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790157"
 ---
 # <a name="sql-server-message-results"></a>Risultati dei messaggi di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] non generano istruzioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client rowset OLE DB provider o un conteggio di righe quando viene eseguito è influenzato:  
+  Le seguenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non generano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe del provider di OLE DB Native client o un conteggio delle righe interessate quando vengono eseguite:  
   
 -   PRINT  
   
@@ -38,11 +37,11 @@ ms.locfileid: "68106747"
   
 -   SET STATISTICS  
   
- Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. In caso di esecuzione, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce S_OK e i messaggi sono disponibili per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client.  
+ Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. Al completamento dell'esecuzione, il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client restituisce S_OK e i messaggi sono disponibili per il consumer del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce S_OK e include uno o più messaggi informativi disponibili in seguito all'esecuzione di molte [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni o l'esecuzione del consumer di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membro del provider OLE DB Native Client funzione.  
+ Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client restituisce S_OK e dispone di uno o più messaggi informativi disponibili dopo l'esecuzione di molte istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o dell'esecuzione del consumer di una funzione membro del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consumer OLE DB provider consentendo dinamico specifica del testo della query è necessario controllare interfacce degli errori dopo ogni esecuzione della funzione membro indipendentemente dal valore del codice restituito, la presenza o assenza di un restituito**IRowset** o **IMultipleResults** riferimenti all'interfaccia o un numero di righe modificate.  
+ Il consumer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB provider che consente di specificare dinamicamente il testo della query deve controllare le interfacce di errore dopo l'esecuzione di ogni funzione membro indipendentemente dal valore del codice restituito, dalla presenza o dall'assenza di un oggetto **IRowset restituito** o riferimento all'interfaccia **IMultipleResults** o conteggio delle righe interessate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [errori](../../relational-databases/native-client-ole-db-errors/errors.md)  
