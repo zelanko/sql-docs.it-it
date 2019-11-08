@@ -1,5 +1,5 @@
 ---
-title: Creare un modello (Master Data Services) | Microsoft Docs
+title: Creare un modello
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906650"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728488"
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67906650"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Per creare un modello  
   
@@ -55,21 +55,21 @@ ms.locfileid: "67906650"
   
  Per ogni modello creato, viene aggiunta una riga con otto colonne alla griglia. Le otto colonne sono:  
   
--   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello**, viene visualizzata l'immagine ![Aggiornamento](../master-data-services/media/mds-model-status-updating.png "Aggiornamento") che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine ![Errore](../master-data-services/media/mds-model-status-error.png "Errore"). In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello** , viene visualizzata l'immagine di ![aggiornamento](../master-data-services/media/mds-model-status-updating.png "Aggiornamento") , che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine dell' ![errore](../master-data-services/media/mds-model-status-error.png "Errore") . In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
--   **Nome**: Nome del modello.  
+-   **Nome**: nome del modello.  
   
--   **Descrizione**: La descrizione del modello.  
+-   **Descrizione**: descrizione del modello.  
   
--   **Giorni di conservazione log**: numero di giorni di conservazione del log per il modello.  
+-   **Giorni di conservazione log**: numero di giorni per i quali il log per il modello viene conservato.  
   
--   **Creato da**: Nome utente dell'utente che ha creato il modello.  
+-   **Creato da**: nome utente dell'utente che ha creato il modello.  
   
--   **Data e ora di creazione**: Data e ora di creazione del modello.  
+-   **Data e ora di creazione**: data e ora di creazione del modello.  
   
--   **Aggiornato da**: Nome utente dell'utente che ha aggiornato il modello per ultimo.  
+-   **Aggiornato da**: nome utente dell'ultimo utente che ha aggiornato l'attributo.  
   
--   **Data e ora di aggiornamento**: Data e ora dell'ultimo aggiornamento del modello.  
+-   **Data e ora di aggiornamento**: data e ora dell'ultimo aggiornamento del modello.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

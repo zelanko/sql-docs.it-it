@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126396"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633010"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
+# <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di visualizzare e modificare le informazioni nello schema che vengono escluse dall'elenco delle tabelle Oracle idonee per la pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,35 +39,32 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** = ] **'***publisher***'**  
- È il nome del non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ **@schema** =] **'***schema***'**  
- Nome dello schema. *lo schema* viene **sysname**, con un valore predefinito NULL.  
+`[ @schema = ] 'schema'` è il nome dello schema. *schema* è di **tipo sysname**e il valore predefinito è null.  
   
- [ **@operation** =] **'***operazione***'**  
- Operazione da eseguire nello schema. *operazione* viene **nvarchar(4)** , e può essere uno dei valori seguenti.  
+`[ @operation = ] 'operation'` è l'azione da intraprendere per questo schema. *Operation* è di **tipo nvarchar (4)** . i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**add**|Aggiunge lo schema specificato all'elenco di schemi non idonei per la pubblicazione.|  
-|**drop**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
+|**aggiungere**|Aggiunge lo schema specificato all'elenco di schemi non idonei per la pubblicazione.|  
+|**goccia**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
 |**Guida**|Restituisce l'elenco degli schemi non idonei per la pubblicazione.|  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**NomeSchema**|**sysname**|Nome dello schema non idoneo per la pubblicazione.|  
+|**SchemaName**|**sysname**|Nome dello schema non idoneo per la pubblicazione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_schemafilter** deve essere utilizzato solo per server di pubblicazione eterogenei.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_schemafilter** deve essere utilizzato solo per i Publisher eterogenei.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_schemafilter**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione possono eseguire **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

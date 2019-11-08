@@ -1,5 +1,5 @@
 ---
-title: Creare un indice (Master Data Services) | Microsoft Docs
+title: Creare un indice
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896867"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728427"
 ---
 # <a name="create-an-index-master-data-services"></a>Creare un indice (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67896867"
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Per creare un indice**  
   
@@ -52,20 +52,20 @@ ms.locfileid: "67896867"
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|Stato|Stato dell'indice.<br /><br /> Quando si fa clic su **Salva** viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'indice.<br /><br /> Se si verificano errori durante la creazione o la modifica di un indice viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
-|Name|Nome dell'indice.|  
+|Stato|Stato dell'indice.<br /><br /> Quando si fa clic su **Salva**, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") che indica che l'indice è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di un indice, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
+|Crea vista sottoscrizioni|Nome dell'indice.|  
 |Univoco|Specifica se l'indice è univoco.|  
 |Con attributi|Mostra i nomi visualizzati degli attributi su cui è definito l'indice.|  
   
  Quando si fa clic su un indice, vengono visualizzate le informazioni seguenti.  
   
--   **Creato da**: Nome dell'utente che ha creato l'indice.  
+-   **Creato da**: nome dell'utente che ha creato l'indice.  
   
--   **Il**: data e ora di creazione dell'indice.  
+-   **Il**: la data e l'ora di creazione dell'indice.  
   
--   **Aggiornato da**: nome dell'utente che ha aggiornato l'indice per ultimo.  
+-   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato l'indice.  
   
--   **Il**: data e ora dell'ultimo aggiornamento dell'indice.  
+-   **Il**: la data e l'ora dell'ultimo aggiornamento dell'indice.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare un indice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

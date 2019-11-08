@@ -1,5 +1,5 @@
 ---
-title: Contattare la creazione con CLR e XML | Microsoft Docs
+title: Creazione di contatti utilizzando CLR e XML | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753363"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637689"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Creazione di informazioni di contatto con CLR e XML
   L'esempio Contact per SQL Server offre interessanti utilità che costituiscono un ulteriore livello di funzionalità disponibile per il database di esempio AdventureWorks2012 di base. La prima utilità consente di creare record con informazioni di contatto per i diversi tipi di persone presenti nel database AdventureWorks2012. Le informazioni di contatto vengono specificate tramite XML e vengono passate a una stored procedure basata su C# o VB per creare il codice XML e inserirlo nelle tabelle appropriate con il database.  
@@ -23,7 +23,7 @@ ms.locfileid: "62753363"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   

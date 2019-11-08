@@ -1,6 +1,6 @@
 ---
-title: Aggiungere più condizioni a una regola di business (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere condizioni a una regola business
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047845"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728804"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
   
 > [!NOTE]  
 >  Se si crea una regola di business che usa l'operatore **OR** , considerare la possibilità di creare una regola separata per ogni istruzione condizionale che può essere valutata indipendentemente. È quindi possibile escludere regole in base alle esigenze, offrendo maggiore flessibilità e una più facile risoluzione dei problemi.  
@@ -33,7 +33,7 @@ ms.locfileid: "68047845"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente una regola business. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68047845"
   
 8.  Nel blocco **If** a sinistra dell'elenco a discesa dell'operatore logico selezionare **AND/OR/ NOT**.  
   
-9. Fare clic su **Aggiungi**. Viene visualizzato un pannello.  
+9. Scegliere **Aggiungi**. Verrà visualizzato un pannello.  
   
 10. Nell'elenco a discesa **Attributo** selezionare un attributo.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68047845"
     >  È possibile selezionare più condizioni e fare clic con il pulsante destro del mouse per raggrupparle o separarle all'interno di un operatore logico specifico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   

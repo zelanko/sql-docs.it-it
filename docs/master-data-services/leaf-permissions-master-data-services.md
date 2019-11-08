@@ -1,5 +1,5 @@
 ---
-title: Autorizzazioni per elementi foglia (Master Data Services) | Microsoft Docs
+title: Autorizzazioni per elementi foglia
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007198"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728082"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68007198"
   
 -   Le autorizzazioni assegnate agli attributi **Name** e **Code** non sono applicate.  
   
-|Autorizzazioni|Descrizione|  
+|Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri foglia e i relativi attributi.|  
 |**Creare**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
@@ -50,21 +50,21 @@ ms.locfileid: "68007198"
 ## <a name="attribute-permissions"></a>Autorizzazioni per attributi  
  Le autorizzazioni per gli attributi si applicano ai valori degli attributi per l'entità specifica. Gli utenti che dispongono solo delle autorizzazioni per gli attributi non possono aggiungere o rimuovere membri.  
   
-|Autorizzazioni|Descrizione|  
+|Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere gli attributi.|  
 |**Creare**|L'utente può assegnare valori durante la creazione di membri.|  
 |**Update**|L'utente può aggiornare gli attributi.|  
 |**Elimina**|Nessun effetto.|  
-|**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: È possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
+|**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
   
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
   
-|Nome|Codice|Subcategory (Aggiornamento)|  
+|Crea vista sottoscrizioni|codice|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain bike|  
-|Mountain-100|BK-M201|{5} Mountain bike|  
+|Mountain-100|BK-M101|Mountain bike {5}|  
+|Mountain-100|BK-M201|Mountain bike {5}|  
   
  Nel **Visualizzatore**è possibile aggiornare qualsiasi valore di attributo nella colonna Subcategory. Se non si dispone delle autorizzazioni per un attributo, l'attributo non viene visualizzato.  
   

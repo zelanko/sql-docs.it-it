@@ -1,5 +1,5 @@
 ---
-title: Testare le autorizzazioni di un utente (Master Data Services) | Microsoft Docs
+title: Testare le autorizzazioni&#39;di un utente
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085595"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728869"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Testare le autorizzazioni di un utente (Master Data Services)
 

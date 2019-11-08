@@ -1,6 +1,6 @@
 ---
-title: Disponibilità elevata e ripristino di emergenza per Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Disponibilità elevata e ripristino di emergenza
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874770"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728098"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -68,7 +68,7 @@ Nella figura 1 viene illustrata una configurazione tipica utilizzata principalme
 
 Nel data center del ripristino di emergenza esiste una replica secondaria con una relazione di commit asincrono con la replica primaria. Questo data center è in genere in un'area geografica diversa da quella del data center principale. La replica secondaria non ha il privilegio di voto.
 
-Questa configurazione viene usata per eseguire il ripristino nel caso in cui il data center principale sia in stato di emergenza, ad esempio in caso di incendio, terremoto e così via. La configurazione consente di ottenere disponibilità elevata e ripristino ad un costo relativamente basso.
+Questa configurazione viene usata per ottenere il ripristino in caso di emergenza del data center primario, ad esempio un incendio, un terremoto e così via. La configurazione consente di ottenere disponibilità elevata e ripristino di emergenza con costi relativamente ridotti.
 
 ![Configurazione tipica per un gruppo di disponibilità Always On](media/Fig1_TypicalConfig.png)
 
@@ -183,7 +183,7 @@ Note:
 
 - La funzionalità WSFC potrebbe non essere disponibile in tutte le edizioni di Windows Server. Assicurarsi che l'edizione in uso abbia questa funzionalità.
 
-- Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Guida dettagliata al cluster di failover: Configurare account in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
+- Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guida dettagliata del cluster di failover: Configurare gli account in Active Directory).
 
 Per altre informazioni su WSFC, vedere [Cluster di failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
 
@@ -298,7 +298,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
    Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere Figura 17.
 
-**Commit sincrono**: garantisce che se il commit di una transazione viene eseguito nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
+**Commit sincrono**: in questo modo si garantisce che se viene eseguito il commit di una transazione nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
 
 In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi sono nello stesso data center. Se sono in data center diversi, il commit sincrono può rallentare le prestazioni del database. Se questa casella di controllo non è selezionata, viene usato il commit asincrono.
 
@@ -323,7 +323,7 @@ In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi 
 
    Figura 18
 
-9. Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Fare clic su **Avanti** per continuare. Vedere Figura 19.
+9. Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Per continuare, fare clic su **Avanti** . Vedere Figura 19.
 
    Tale condivisione di rete verrà usata per archiviare il backup di database per creare le repliche secondarie. Se tale preferenza non è disponibile per l'organizzazione, scegliere un altro tipo di sincronizzazione dei dati. Per usare altre opzioni per creare repliche secondarie, vedere [SQL Server 2016 always on gruppo di disponibilità](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . Nella figura 17 vengono elencate anche altre opzioni.
 
@@ -331,7 +331,7 @@ In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi 
 
    Figura 19 
 
-10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Fare clic su **Avanti** per continuare.
+10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Per continuare, fare clic su **Avanti** .
 
 11. Nella pagina **Riepilogo** esaminare tutte le impostazioni di configurazione e fare clic su **Fine**. In questo modo verrà creato e configurato il gruppo di disponibilità.
 
@@ -385,7 +385,7 @@ La soluzione presentata in questo articolo richiede solo il database back-end di
 
    Per altre informazioni su Master Data Services, vedere [Master Data Services](../master-data-services-overview-mds.md).
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questo white paper è stato illustrato come configurare e configurare il database back-end Master Data Services come parte di un gruppo di disponibilità. Questa configurazione offre disponibilità elevata e ripristino di emergenza nel database back-end di Master Data Services. Per implementare questa configurazione, è necessario installare e configurare Windows Server failover cluster, AG e Master Data Services.
 

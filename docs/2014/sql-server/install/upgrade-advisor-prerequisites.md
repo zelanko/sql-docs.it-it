@@ -19,12 +19,12 @@ ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 095a69523d3383034689f62c45744f1e7fa0e908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091564"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632774"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Prerequisiti di Preparazione aggiornamento
   In questo argomento vengono descritti i requisiti software di Preparazione aggiornamento.  
@@ -34,13 +34,13 @@ ms.locfileid: "66091564"
   
 -   [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] SP1, [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] a partire da SP2, Windows 7 o [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
   
--   Windows Installer 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](https://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] a partire da .NET Framework 4. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è disponibile nel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto del prodotto e dal [sito Web di download di SDK, ridistribuibili e service pack](https://go.microsoft.com/fwlink/?LinkId=48882).  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] a partire da .NET Framework 4. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è disponibile sul supporto del prodotto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e sul [sito Web SDK, ridistribuibile e Service Pack scaricare](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
     -   Per eseguire l'installazione di .NET Framework 4 dai supporti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], individuare la radice dell'unità disco. Fare quindi doppio clic sulla cartella \redist, sulla cartella DotNetFrameworks ed eseguire dotNetFx40_Full_x86_x64.exe (sia per i sistemi operativi a 32 bit che per quelli a 64 bit).  
   
--   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom è un prerequisito per l'installazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento e non viene installato dall'installazione di preparazione aggiornamento. Il programma di installazione è necessario scaricare e installare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
+-   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom è un prerequisito per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor e non viene installato dal programma di installazione di preparazione aggiornamento. Per il programma di installazione è necessario scaricare e installare il [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom dal Feature Pack [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Installare Preparazione aggiornamento](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  

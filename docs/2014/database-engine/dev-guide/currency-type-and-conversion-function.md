@@ -1,5 +1,5 @@
 ---
-title: Tipo Currency e funzione di conversione | Microsoft Docs
+title: Tipo di valuta e funzione di conversione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753244"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637641"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo Currency e funzione di conversione
   In questo esempio viene definito un tipo di dati Currency definito dall'utente mediante C#. Questo tipo di dati definito dall'utente incapsula un importo e impostazioni cultura che consentono di determinare il modo corretto per rappresentare l'importo come valuta del paese delle impostazioni cultura in oggetto. Nell'esempio viene inoltre fornita una funzione di conversione di valuta che restituisce un'istanza del tipo di dati Currency definito dall'utente. Se il database AdventureWorks prevede un tasso di conversione da dollari US (USD) nella valuta associata alle impostazioni cultura specificate, la funzione di conversione restituisce un tipo di dati Currency definito dall'utente con conversione e impostazioni cultura corrispondenti alle impostazioni cultura specificate. In caso contrario, viene restituito un tipo di dati Currency definito dall'utente con l'importo originale in dollari USA e con le impostazioni cultura `en-us`. Nell'esempio viene illustrato come registrare assembly e metodi CLR (Common Language Runtime) e annullarne la registrazione mediante Transact-SQL.  
@@ -26,7 +26,7 @@ ms.locfileid: "62753244"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un utente (Master Data Services) | Microsoft Docs
+title: Aggiungere un utente
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047937"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729813"
 ---
 # <a name="add-a-user-master-data-services"></a>Aggiungere un utente (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68047937"
   
 4.  Facoltativamente, fare clic su **Controlla nomi**.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

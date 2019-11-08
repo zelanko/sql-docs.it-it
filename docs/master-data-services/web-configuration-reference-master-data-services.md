@@ -1,5 +1,5 @@
 ---
-title: Guida di riferimento alla configurazione Web (Master Data Services) | Microsoft Docs
+title: Guida di riferimento alla configurazione Web
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9d3cd20fc219a7159de0b271dafcc0e9fb2c3ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017275"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728827"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Guida di riferimento alla configurazione Web (Master Data Services)
 

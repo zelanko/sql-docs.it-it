@@ -1,5 +1,5 @@
 ---
-title: Conflitti di unione [Master Data Services] | Microsoft Docs
+title: Conflitti di unione
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092573"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729035"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflitti di unione [Master Data Services]
 

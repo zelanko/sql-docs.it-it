@@ -1,5 +1,5 @@
 ---
-title: Annotare una transazione (Master Data Services) | Microsoft Docs
+title: Annotare una transazione
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e12ef7cf4be0259029b6214bd821bf85f89df73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047785"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728795"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annotare una transazione (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]annotare una transazione quando si desidera fornire dettagli di supporto sulla transazione per scopi cronologici.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] annotare una transazione quando si desidera fornire dettagli di supporto sulla transazione per scopi cronologici.  
   
 > [!NOTE]  
 >  Non è possibile eliminare le annotazioni.  
@@ -32,7 +32,7 @@ ms.locfileid: "68047785"
   
 -   Per annotare le transazioni create, è necessario disporre dell'autorizzazione per accedere all'area funzionale **Visualizzatore** e almeno dell'autorizzazione **Update** per l'oggetto modello che si vuole annotare.  
   
--   Per annotare le transazioni per tutti gli utenti, è necessario disporre dell'autorizzazione per l'accesso all'area funzionale **Gestione versioni** ed essere un amministratore di modelli. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Per annotare le transazioni per tutti gli utenti, è necessario disporre dell'autorizzazione per l'accesso all'area funzionale **Gestione versioni** ed essere un amministratore di modelli. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Per annotare una transazione in Esplora  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68047785"
   
 4.  Nella casella **Annotazione** del riquadro **Annotazioni transazioni** digitare l'annotazione.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annotazioni &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   

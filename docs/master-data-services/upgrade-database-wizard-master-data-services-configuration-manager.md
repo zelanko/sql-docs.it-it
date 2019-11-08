@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento guidato database (Gestione configurazione Master Data Services) | Microsoft Docs
+title: Aggiornamento guidato database
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102574"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728906"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68102574"
 
   Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Action  
+## <a name="action"></a>Azione  
  Si tratta della pagina introduttiva della procedura guidata. Fare clic su **Avanti** per iniziare il processo di aggiornamento del database.  
   
 ## <a name="upgrade-review"></a>Controllo aggiornamento  

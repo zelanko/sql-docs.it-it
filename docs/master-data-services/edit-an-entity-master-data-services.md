@@ -1,5 +1,5 @@
 ---
-title: Modificare un'entità (Master Data Services) | Microsoft Docs
+title: Modificare un'entità
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729294"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modificare un'entità (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68086483"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-edit-an-entity"></a>Per modificare un'entità  
   
@@ -61,15 +61,15 @@ ms.locfileid: "68086483"
 ## <a name="status"></a>Stato  
  La colonna Stato nella griglia mostra lo stato dell'operazione sull'entità. Quando si fa clic su **Salva entità**, viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.  
   
- ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")  
+ ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento")  
   
  Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.  
   
- ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")  
+ ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore")  
   
  Quando lo stato è OK, viene visualizzata l'immagine seguente.  
   
- ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")  
+ ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Panoramica Esportazione di dati (Master Data Services) | Microsoft Docs
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904003"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728988"
 ---
-# <a name="overview-exporting-data-master-data-services"></a>Panoramica Esportazione di dati (Master Data Services)
+# <a name="overview-exporting-data-master-data-services"></a>Panoramica: Esportazione di dati (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Quest'articolo illustra i tipi di formati delle viste sottoscrizioni e descrive come determinare se è necessario modificare le viste a causa di modifiche agli oggetti modello.  
   
- Viene creata una vista sottoscrizioni per esportare i dati di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in un sistema di sottoscrizione, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il sistema di sottoscrizione viene usato per visualizzare i dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Per informazioni su come creare la vista sottoscrizioni, vedere [Creare una vista sottoscrizioni per esportare i dati &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ Viene creata una vista sottoscrizioni per esportare i dati di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in un sistema di sottoscrizione, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il sistema di sottoscrizione viene usato per visualizzare i dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Per informazioni su come creare la vista sottoscrizioni, vedere [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  Per altre informazioni sulle viste, vedere [Viste](../relational-databases/views/views.md).  
   

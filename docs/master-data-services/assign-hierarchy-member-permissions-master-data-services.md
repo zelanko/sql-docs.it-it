@@ -1,5 +1,5 @@
 ---
-title: Assegnare autorizzazioni ai membri della gerarchia (Master Data Services) | Microsoft Docs
+title: Assegnare autorizzazioni membri gerarchia
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9635db0e61f4283b10c75b883a995b1e2034c462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047686"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729778"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Assegnare autorizzazioni membri gerarchia (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68047686"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>Per assegnare autorizzazioni membri gerarchia  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68047686"
   
 4.  Fare clic sulla scheda **Membri gerarchia** .  
   
-5.  Selezionare un modello dall'elenco **Modello** .  
+5.  Dall'elenco **Modello** , selezionare un modello.  
   
 6.  Selezionare una versione dall'elenco **Versione** .  
   

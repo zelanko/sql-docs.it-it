@@ -1,5 +1,5 @@
 ---
-title: Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services) | Microsoft Docs
+title: Creazione ed esecuzione di una relazione di sincronizzazione delle entità
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906530"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729528"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67906530"
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario avere almeno l'accesso in lettura all'entità di origine e a tutti i relativi attributi e membri.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67906530"
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Quando si crea una relazione di sincronizzazione delle entità, tenere presente i fattori seguenti:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67906530"
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando si fa clic su **Salva** o si esegue una relazione di sincronizzazione, viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'attributo.<br /><br /> Se si verificano errori durante la creazione, la modifica o l'esecuzione di una relazione di sincronizzazione, viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
+|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando si fa clic su **Salva** o si esegue una relazione di sincronizzazione, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") che indica che la relazione di sincronizzazione è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione, la modifica o l'esecuzione di una relazione di sincronizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
 |Modello di origine|Nome del modello di origine.|  
 |Versione di origine|Nome della versione di origine.|  
 |Entità di origine|Nome dell'entità di origine.|  
@@ -110,15 +110,15 @@ ms.locfileid: "67906530"
   
  Quando si fa clic su un indice, vengono visualizzate le informazioni seguenti.  
   
--   **Last Attempt Error** (Errore ultimo tentativo): informazioni sugli errori dell'ultimo tentativo di sincronizzazione.  
+-   **Errore ultimo tentativo**: informazioni sugli errori dell'ultimo tentativo di sincronizzazione.  
   
--   **Creato da**: Nome dell'utente che ha creato la sincronizzazione.  
+-   **Creata da**: nome dell'utente che ha creato la sincronizzazione.  
   
--   **Il**: data e ora di creazione della sincronizzazione.  
+-   **Il**: la data e l'ora di creazione della sincronizzazione.  
   
--   **Aggiornato da**: nome dell'utente che ha aggiornato la sincronizzazione per ultimo.  
+-   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la sincronizzazione.  
   
--   **Il**: data e ora dell'ultimo aggiornamento della sincronizzazione.  
+-   **Il**: la data e l'ora dell'ultimo aggiornamento della sincronizzazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

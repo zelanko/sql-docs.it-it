@@ -1,5 +1,5 @@
 ---
-title: Modelli (Master Data Services) | Microsoft Docs
+title: Modelli
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079607"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727943"
 ---
 # <a name="models-master-data-services"></a>Modelli (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68079607"
   
  La seguente immagine illustra la relazione tra gli oggetti di un modello.  
   
- ![Gggetti in un modello Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Oggetti in un modello Master Data Services")  
+ ![Oggetti in un modello di Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Oggetti in un modello di Master Data Services")  
   
 > [!NOTE]  
 >  Anche le gerarchie derivate sono oggetti modello, ma non sono presenti nell'immagine. Le gerarchie derivate sono basate sulle relazioni tra gli attributi basati su dominio che esistono in un modello. Vedere [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md) per altre informazioni.  
@@ -59,7 +59,7 @@ ms.locfileid: "68079607"
 ## <a name="model-example"></a>Esempio di modello  
  Nell'esempio seguente, gli oggetti del modello Product raggruppano in modo logico i dati relativi al prodotto.  
   
- ![Esempio di dati master del modello del prodotto](../master-data-services/media/mds-conc-model.gif "Esempio di dati master del modello del prodotto")  
+ ![Esempio di dati master del modello di prodotto](../master-data-services/media/mds-conc-model.gif "Esempio di dati master del modello di prodotto")  
   
  Altri modelli comuni sono:  
   

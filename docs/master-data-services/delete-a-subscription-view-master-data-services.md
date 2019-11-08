@@ -1,5 +1,5 @@
 ---
-title: Eliminare una vista sottoscrizioni (Master Data Services) | Microsoft Docs
+title: Eliminare una vista sottoscrizioni
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094359"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729385"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Eliminare una vista sottoscrizioni (Master Data Services)
 
@@ -31,13 +31,13 @@ ms.locfileid: "68094359"
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione**. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-subscription-view"></a>Per eliminare una vista sottoscrizioni  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]fare clic su **Gestione integrazione**.  
   
-2.  Dalla barra dei menu scegliere **Crea viste**.  
+2.  Dalla barra dei menu, scegliere **Crea viste**.  
   
 3.  Nella pagina **Viste sottoscrizioni** selezionare la riga della vista da eliminare.  
   

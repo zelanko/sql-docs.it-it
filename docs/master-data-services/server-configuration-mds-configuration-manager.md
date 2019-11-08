@@ -1,5 +1,5 @@
 ---
-title: Configurazione del server (Gestione configurazione MDS) | Microsoft Docs
+title: Configurazione del server
 ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085665"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727900"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Configurazione del server (Gestione configurazione MDS)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085665"
 
   Usare la pagina **Configurazione server** per visualizzare le informazioni di configurazione per il computer server locale.  
   
-## <a name="server-configuration"></a>Configurazione server  
+## <a name="server-configuration"></a>Configurazione del server  
   
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  

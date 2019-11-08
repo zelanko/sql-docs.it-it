@@ -1,5 +1,5 @@
 ---
-title: Funzionalità deprecate di Master Data Services | Microsoft Docs
+title: Funzionalità deprecate di Master Data Services
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267027"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729351"
 ---
 # <a name="deprecated-master-data-services-features"></a>Funzionalità deprecate di Master Data Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "68267027"
   
 -   In Visualizzatore la pagina della gerarchia derivata ora mostra i membri non assegnati (inutilizzati) per ogni livello della gerarchia. I nodi inutilizzati vengono raggruppati per livello di gerarchia. I membri possono essere spostati tra i nodi Inutilizzato e Radice, mediante trascinamento o con operazioni di taglia e incolla.  
   
-     In Amministrazione sistema i nodi inutilizzati sono visibili nel riquadro **Anteprima** . In Sicurezza i nodi inutilizzati sono visibili nel riquadro **Autorizzazioni membri gerarchia** . A tutti i membri nel nodo **Radice** o **Inutilizzato** è possibile assegnare un'autorizzazione. È possibile assegnare autorizzazioni anche agli pseudo membri **Radice**, **Inutilizzato** e **Inutilizzato**.  
+     In Amministrazione sistema i nodi inutilizzati sono visibili nel riquadro **Anteprima** . In Sicurezza i nodi inutilizzati sono visibili nel riquadro **Autorizzazioni membri gerarchia** . A tutti i membri nel nodo **Radice** o **Inutilizzato** è possibile assegnare un'autorizzazione. È possibile assegnare autorizzazioni anche agli pseudo membri **Radice**, **Inutilizzato**e **Inutilizzato** .  
   
 -   La stored procedure mdm.udpConvertCollectionAndConsolidatedMembersToLeaf converte le gerarchie esplicite in gerarchie derivate ricorsive e converte i membri consolidati e della raccolta in membri foglia.  
   
@@ -53,7 +53,7 @@ Il tipo di log delle transazioni di entità "Attributo" è deprecato. Eseguire l
 * [Cronologia delle revisioni del membro](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post di blog [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373) (Deprecato: Gerarchie e raccolte esplicite) in msdn.com.  
+ Post di blog [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Deprecato: gerarchie esplicite e raccolte) su msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  

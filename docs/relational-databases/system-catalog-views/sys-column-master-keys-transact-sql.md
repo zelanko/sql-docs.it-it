@@ -1,7 +1,7 @@
 ---
-title: column_master_keys (Transact-SQL) | Microsoft Docs
+title: sys. column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,43 +22,46 @@ helpviewer_keywords:
 - sys.column_master_key_definitions catalog view
 - sys.column_master_keys catalog view
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ae8a4077c0fe4e3f6b7754b4fc53a401d03e355
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140063"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594526"
 ---
-# <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
+# <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni chiave master del database aggiunta tramite il [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione. Ogni riga rappresenta una chiave master di colonna (CMK).  
+  Restituisce una riga per ogni chiave master del database aggiunta usando l'istruzione [create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) . Ogni riga rappresenta una singola chiave master della colonna (CMK).  
     
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Il nome di CMK.|  
+|**name**|**sysname**|Nome del CMK.|  
 |**column_master_key_id**|**int**|ID della chiave master della colonna.|  
-|**create_date**|**datetime**|Data che Creazione chiave master della colonna.|  
-|**modify_date**|**datetime**|Data che ultima modifica della chiave master della colonna.|  
-|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio chiavi master della colonna che contiene la chiave CMK. I valori consentiti sono i seguenti:<br /><br /> MSSQL_CERTIFICATE_STORE - se l'archivio chiavi master della colonna è un certificato Store.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di tipo personalizzato.|  
-|**key_path**|**nvarchar(4000)**|Un percorso di specifiche dell'archivio di chiave master della colonna della chiave. Il formato del percorso dipende dal tipo archivio chiave master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master della colonna personalizzata, lo sviluppatore è responsabile della definizione è il percorso di una chiave per l'archivio chiavi master della colonna personalizzata.|  
-|**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è l'enclave abilitato, (se le chiavi di crittografia di colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di zone franche sicuri sul lato server). Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**signature**|**varbinary(max)**|Una firma digitale **key_path** e **allow_enclave_computations**, prodotto utilizzando la chiave master della colonna, che fa riferimento **key_path**.|
+|**create_date**|**datetime**|Data di creazione della chiave master della colonna.|  
+|**modify_date**|**datetime**|Data dell'Ultima modifica della chiave master della colonna.|  
+|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio delle chiavi master della colonna contenente CMK. I valori consentiti sono i seguenti:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio della chiave master della colonna è un archivio certificati.<br /><br /> Valore definito dall'utente, se l'archivio della chiave master della colonna è di un tipo personalizzato.|  
+|**key_path**|**nvarchar(4000)**|Percorso specifico dell'archivio della chiave master della colonna. Il formato del percorso dipende dal tipo di archivio delle chiavi master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master di colonna personalizzato, lo sviluppatore è responsabile della definizione di un percorso chiave per l'archivio delle chiavi master della colonna personalizzata.|  
+|**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è abilitata per l'enclave, (se le chiavi di crittografia della colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di enclave protette sul lato server). Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Firma digitale di **key_path** e **allow_enclave_computations**, prodotti usando la chiave master della colonna, a cui fa riferimento **key_path**.|
 
 
   
-## <a name="permissions"></a>Permissions  
- Richiede la **VIEW ANY COLUMN MASTER KEY** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Richiede l'autorizzazione **View any Column Master Key** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Gestisci chiavi per Always Encrypted con enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ 
   
   

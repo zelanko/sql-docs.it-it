@@ -1,5 +1,5 @@
 ---
-title: Attributi (Master Data Services) | Microsoft Docs
+title: Attributi
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047584"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728748"
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68047584"
   
  ![Entità Master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "Entità Master Data Services rappresentata come tabella")  
   
- Quando si crea un'entità che contiene molti attributi, è possibile organizzare gli attributi in gruppi di attributi. Per altre informazioni, vedere [Gruppi di attributi &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Quando si crea un'entità che contiene molti attributi, è possibile organizzare gli attributi in gruppi di attributi. Per altre informazioni, vedere [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Attributi obbligatori  
  Quando si crea un'entità, gli attributi Name e Code vengono creati automaticamente. L'attributo Code richiede un valore che deve essere univoco all'interno dell'entità. Gli attributi Name e Code non possono essere rimossi.  
@@ -45,7 +45,7 @@ ms.locfileid: "68047584"
   
 -   Attributi in formato libero che consentono l'immissione in formato libero di testo, numeri, date o collegamenti.  
   
--   Attributi basati su dominio, che vengono popolati dalle entità. Per altre informazioni, vedere [Attributi basati su dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Attributi basati su dominio, che vengono popolati dalle entità. Per altre informazioni, vedere [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Attributi di file che vengono utilizzati per archiviare file, documenti o immagini. Gli attributi di file hanno lo scopo di favorire la coerenza dei dati richiedendo che i file abbiano un'estensione specifica. Non è possibile garantire che gli attributi di file impediscano ad un utente malintenzionato di caricare un file di tipo diverso.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68047584"
 -   È possibile che un valore non esegua un *round trip* se è interessato un numero a virgola mobile. Si dice che un valore esegue un roundtrip se un'operazione converte un numero a virgola mobile originale in un altro formato, un'operazione inversa trasforma di nuovo il formato convertito in un numero a virgola mobile e il numero a virgola mobile finale è uguale al numero a virgola mobile originale. Il round trip potrebbe non riuscire perché una o più cifre meno significative vengono perse o modificate in una conversione.  
   
 ## <a name="attribute-examples"></a>Esempi di attributo  
- Nell'esempio seguente, l'entità ha gli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
+ Nell'esempio seguente l'entità dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
+ ![Tabella delle entità del prodotto bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella delle entità del prodotto bike")  
   
  Nell'esempio seguente l'entità Product include:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68047584"
   
  Subcategory è un'entità utilizzata come attributo basato su dominio di Product. Category è un'entità utilizzata come attributo basato su dominio di Subcategory. Come l'entità Product, le entità Category e Subcategory includono ciascuna gli attributi predefiniti Name e Code.  
   
- ![Struttura ad albero dell'entità prodotto](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità prodotto")  
+ ![Struttura ad albero dell'entità Product](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità Product")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

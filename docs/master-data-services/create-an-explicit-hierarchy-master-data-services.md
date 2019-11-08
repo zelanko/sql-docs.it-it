@@ -1,5 +1,5 @@
 ---
-title: Creare una gerarchia esplicita (Master Data Services) | Microsoft Docs
+title: Creare una gerarchia esplicita
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896909"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729513"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67896909"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario abilitare l'entità per le gerarchie esplicite e le raccolte.  
   
@@ -51,19 +51,19 @@ ms.locfileid: "67896909"
   
 6.  Nella casella **Nome** digitare un nome per la gerarchia.  
   
-7.  Facoltativamente, deselezionare la casella di controllo **Gerarchia obbligatoria** per creare una gerarchia come non obbligatoria. Per altre informazioni sui tipi di gerarchia, vedere [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
+7.  Facoltativamente, deselezionare la casella di controllo **Gerarchia obbligatoria** per creare una gerarchia come non obbligatoria. Per altre informazioni sui tipi di gerarchia, vedere [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
 8.  Fare clic su **Salva**.  
   
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni gerarchia esplicita creata, viene aggiunta una riga con sette colonne alla griglia. Di seguito sono descritte le colonne.  
   
-|Nome|Descrizione|  
+|Crea vista sottoscrizioni|Descrizione|  
 |----------|-----------------|  
-|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
-|Name|Il nome della gerarchia esplicita.|  
+|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ")|  
+|Crea vista sottoscrizioni|Il nome della gerarchia esplicita.|  
 |Obbligatorio|Specifica se la gerarchia esplicita è obbligatoria.|  
-|Created By (Creato da)|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
+|Creato da|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
 |Data creazione|Data e ora di creazione della gerarchia esplicita.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato la gerarchia esplicita.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento della gerarchia esplicita.|  

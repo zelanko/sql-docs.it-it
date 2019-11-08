@@ -1,5 +1,5 @@
 ---
-title: Raccolte (Master Data Services) | Microsoft Docs
+title: Raccolte
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da4ed587d3b77a4e2bc4eee782c6312eb2dc12ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941128"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728600"
 ---
 # <a name="collections-master-data-services"></a>Raccolte (Master Data Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "67941128"
  L'utente che crea una raccolta viene elencato automaticamente come proprietario. Gli amministratori possono creare altri attributi per la raccolta in base alle necessità.  
   
 ## <a name="subscription-views-for-collections"></a>Viste sottoscrizioni per le raccolte  
- Sono disponibili due tipi di viste sottoscrizioni che mostrano le raccolte. Il formato **Attributi raccolta** mostra un elenco di raccolte e degli attributi correlati alle raccolte (come descrizione o proprietario). Il formato **Raccolte** mostra tutti i membri di tutte le raccolte,, nonché il peso e l'ordinamento dei membri. Per altre informazioni, vedere [Panoramica: Esportazione di dati &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md).  
+ Sono disponibili due tipi di viste sottoscrizioni che mostrano le raccolte. Il formato **Attributi raccolta** mostra un elenco di raccolte e degli attributi correlati alle raccolte (come descrizione o proprietario). Il formato **Raccolte** mostra tutti i membri di tutte le raccolte,, nonché il peso e l'ordinamento dei membri. Per altre informazioni, vedere [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md).  
   
  Se si impostano valori di peso per membri specifici di una raccolta, questi valori sono disponibili nelle viste sottoscrizioni correlate.  
   

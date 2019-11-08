@@ -1,5 +1,5 @@
 ---
-title: Eliminare un attributo (Master Data Services) | Microsoft Docs
+title: Eliminare un attributo
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906368"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728336"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Eliminare un attributo (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67906368"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute"></a>Per eliminare un attributo  
   

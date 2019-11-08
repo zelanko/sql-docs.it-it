@@ -1,5 +1,5 @@
 ---
-title: Entità (Master Data Services) | Microsoft Docs
+title: Entità
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052046"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728160"
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
 
@@ -38,12 +38,12 @@ ms.locfileid: "68052046"
   
  Popolare l'entità con un elenco di dati master che si desidera gestire.  
   
- Le entità possono essere utilizzate per compilare gerarchie derivate, che sono gerarchie basate su livelli in base a più entità. Per altre informazioni, vedere [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Le entità possono essere utilizzate per compilare gerarchie derivate, che sono gerarchie basate su livelli in base a più entità. Per altre informazioni, vedere [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Le entità inoltre possono essere abilitate a contenere gerarchie esplicite (strutture incomplete basate su una sola entità) e raccolte (uniche combinazioni di subset di membri). Per altre informazioni, vedere [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) e [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="using-entities-as-constrained-lists"></a>Utilizzo di entità come elenchi vincolati  
- Quando gli utenti stanno assegnando gli attributi ai membri in un'entità, è possibile sceglierli da un elenco di valori vincolato. A tale scopo, utilizzare un'entità per popolare l'elenco di valori per l'attributo. Questa caratteristica è nota come attributo basato su dominio. Per altre informazioni, vedere [Attributi basati su dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+ Quando gli utenti stanno assegnando gli attributi ai membri in un'entità, è possibile sceglierli da un elenco di valori vincolato. A tale scopo, utilizzare un'entità per popolare l'elenco di valori per l'attributo. Questa caratteristica è nota come attributo basato su dominio. Per altre informazioni, vedere [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 ## <a name="base-entities"></a>Entità di base  
  Un'entità di base rappresenta un punto di partenza per gli utenti, durante lo spostamento tra oggetti nel modello. Un'entità di base determina il layout dello schermo quando un utente apre l'area funzionale **Visualizzatore** e fa clic su **Visualizzatore** sulla barra dei menu. Per specificare un'entità come entità di base, passare all'area funzionale **Amministrazione sistema** . Nella pagina **Vista modello** trascinare l'entità dal controllo albero sulla destra sul nome del modello nel controllo albero sulla sinistra.  
@@ -52,13 +52,13 @@ ms.locfileid: "68052046"
  È possibile concedere agli utenti l'autorizzazione per un'entità che include oggetti modello correlati. Per altre informazioni, vedere [Autorizzazioni per le entità &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Esempi di entità  
- L'esempio seguente illustra un'entità con questi attributi: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
+ Nell'esempio seguente viene illustrata un'entità che dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
+ ![Tabella delle entità del prodotto bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella delle entità del prodotto bike")  
   
  Nel seguente esempio, l'entità Product è l'entità centrale. L'entità Subcategory è un attributo basato su dominio dell'entità Product. L'entità Category è un attributo basato su dominio dell'entità Subcategory. StandardCost e ListPrice sono attributi in formato libero dell'entità Product mentre FilePhoto è un attributo di file dell'entità Product.  
   
- ![Struttura ad albero dell'entità prodotto](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità prodotto")  
+ ![Struttura ad albero dell'entità Product](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità Product")  
   
 > [!NOTE]  
 >  Si tratta di un esempio basato sull'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La struttura ad albero gerarchica mostra le relazioni tra le entità e gli attributi basati su dominio. Lo scopo è illustrare le relazioni anziché rappresentare i livelli di importanza.  

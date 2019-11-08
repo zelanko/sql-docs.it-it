@@ -1,5 +1,5 @@
 ---
-title: Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy | Microsoft Docs
+title: Distribuire un pacchetto di distribuzione di modelli (MDSModelDeploy)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7d2041effbc1e5bebb94a730d90c19e28e0a02be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906226"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728305"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy
 
@@ -39,7 +39,7 @@ ms.locfileid: "67906226"
   
 -   È necessario che sia già disponibile un pacchetto di distribuzione di modelli. Per altre informazioni, vedere  [Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Se si aggiorna un modello con i dati, lo stato della versione nella quale si esegue la distribuzione non può essere **Bloccato** o **Commit eseguito**.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "67906226"
   
     -   Se MDS non è stato installato nel percorso predefinito, cercare MDSModelDeploy.exe nel computer locale.  
   
-3.  facoltativo. Visualizzare le opzioni e la Guida.  
+3.  Facoltativa. Visualizzare le opzioni e la Guida.  
   
     -   Per visualizzare tutte le opzioni disponibili, digitare `MDSModelDeploy` e premere Invio.  
   
     -   Per visualizzare la Guida per un'opzione, digitare quanto segue, dove *OptionName* è il nome dell'opzione: `MDSModelDeploy help OptionName`.  
   
-4.  facoltativo. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
+4.  Facoltativa. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
   
     ```  
     MDSModelDeploy listservices  
@@ -96,7 +96,7 @@ ms.locfileid: "67906226"
   
  **Note:**  
   
--   Se una vista della sottoscrizione del pacchetto ha lo stesso nome di una vista della sottoscrizione in un modello esistente, viene visualizzato questo avviso: **Avviso: la vista delle sottoscrizioni del deployer è stata rinominata** e la vista viene creata come *modelname.subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
+-   Se una vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, viene visualizzato l'avviso: **la vista delle sottoscrizioni del deployer è stata rinominata** e la vista viene creata come *modelname.subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
   
 -   Il processo di distribuzione si svolge in quattro passaggi:  
   

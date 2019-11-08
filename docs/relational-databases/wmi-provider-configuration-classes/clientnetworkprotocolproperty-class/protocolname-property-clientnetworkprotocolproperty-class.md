@@ -1,6 +1,6 @@
 ---
-title: Proprietà ProtocolName (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Proprietà ProtocolName (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d55871443b94e84b49d13c432b568e7344f198f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af72a165ce506a4d3fdd13cb9b06535d5a0e8492
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072586"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660754"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>Proprietà ProtocolName (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome del protocollo a cui appartiene la proprietà.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  

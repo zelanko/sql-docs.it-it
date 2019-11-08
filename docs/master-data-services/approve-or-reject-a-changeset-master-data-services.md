@@ -1,5 +1,5 @@
 ---
-title: Approvare o rifiutare un insieme di modifiche (Master Data Services) | Microsoft Docs
+title: Approvare o rifiutare un insieme di modifiche
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5c45d59fbdeaeeb8a2fe37800d81a63051770924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728768"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Applicare e rifiutare un insieme di modifiche (Master Data Services)
 

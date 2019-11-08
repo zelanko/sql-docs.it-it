@@ -1,5 +1,5 @@
 ---
-title: 'Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS) | Microsoft Docs'
+title: Esempi di pacchetti di distribuzione di modelli
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727874"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68085639"
  Per istruzioni su come distribuire i pacchetti di modelli di esempio, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). I pacchetti di modelli di esempio vengono distribuiti con lo [strumento MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Aggiornamenti degli esempi in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Aggiornamenti di esempio in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  I pacchetti di esempio sono stati aggiornati per supportare le nuove funzionalità seguenti.  
 > 

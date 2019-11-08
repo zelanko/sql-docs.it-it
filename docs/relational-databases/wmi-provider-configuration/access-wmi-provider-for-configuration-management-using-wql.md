@@ -1,6 +1,6 @@
 ---
-title: Accedere ai Provider WMI per Gestione configurazione usando WQL | Microsoft Docs
-ms.custom: ''
+title: Utilizzare WQL per accedere al provider WMI
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139433"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658945"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accedere al provider WMI per la gestione della configurazione tramite WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "68139433"
   
 ### <a name="querying-services-using-wbemtest"></a>Esecuzione di query sui servizi mediante WBEMtest  
   
-1.  Dal **avviare** menu, fare clic su **eseguire**, quindi immettere **WBEMtest**.  
+1.  Dal menu **Start** fare clic su **Esegui**, quindi immettere **WBEMTest**.  
   
 2.  Viene visualizzata la finestra di dialogo WBEMtest.exe. Fare clic su **Connetti**.  
   
 3.  Nel primo campo di testo digitare lo spazio dei nomi del provider WMI per Gestione computer: root\Microsoft\SqlServer\ComputerManagement11. Fare clic su **Connetti**.  
   
-4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **Selezionare \* FROM SqlService.** Fare clic su **Applica**.  
+4.  Fare clic su **query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **selezionare \* da SqlService.** Fare clic su **Applica**.  
   
-5.  Ridefinire ulteriormente la query aggiungendo **in cui ServiceName = "MSSQLSERVER"** .  
+5.  Perfezionare ulteriormente la query aggiungendo **where ServiceName = "MSSQLSERVER"** .  
   
   

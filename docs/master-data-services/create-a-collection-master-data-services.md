@@ -1,5 +1,5 @@
 ---
-title: Creare una raccolta (Master Data Services) | Microsoft Docs
+title: Creare una raccolta
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d770d32ee60c2ec2407b5f0bc805b2ee3a5aa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079766"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728527"
 ---
 # <a name="create-a-collection-master-data-services"></a>Creare una raccolta (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una raccolta quando si vuole creare elenchi semplici di membri foglia e membri consolidati. Non è necessario includere nelle raccolte tutti i membri dell'entità.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare una raccolta quando si vuole creare elenchi semplici di membri foglia e membri consolidati. Non è necessario includere nelle raccolte tutti i membri dell'entità.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -51,7 +51,7 @@ ms.locfileid: "68079766"
   
 8.  Facoltativamente, digitare una descrizione per la raccolta nella casella **Descrizione** .  
   
-9. Fare clic su **OK**.  
+9. Scegliere **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

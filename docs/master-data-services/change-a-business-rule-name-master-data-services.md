@@ -1,5 +1,5 @@
 ---
-title: Modificare il nome di una regola business (Master Data Services) | Microsoft Docs
+title: Modificare il nome di una regola business
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047372"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728668"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modificare il nome di una regola business (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68047372"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente una regola business. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -57,6 +57,6 @@ ms.locfileid: "68047372"
 10. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore nella colonna **Stato della regola di business**è **Attiva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

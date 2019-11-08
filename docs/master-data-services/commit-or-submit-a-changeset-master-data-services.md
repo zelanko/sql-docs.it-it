@@ -1,5 +1,5 @@
 ---
-title: Eseguire il commit o inviare un insieme di modifiche (Master Data Services) | Microsoft Docs
+title: Eseguire il commit o inviare un insieme di modifiche
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fdd5667d0125eca7fb774340fcdf163def9a59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941071"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728573"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Eseguire il commit o inviare un insieme di modifiche (Master Data Services)
 

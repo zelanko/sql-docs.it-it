@@ -1,5 +1,5 @@
 ---
-title: Account di accesso, utenti e ruoli di database (Master Data Services) | Microsoft Docs
+title: Account di accesso, utenti e ruoli di database
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094408"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729489"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68094408"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi account di accesso, utenti e ruoli installati automaticamente nell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui è ospitato il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questi account di accesso, utenti e ruoli non devono essere modificati.  
   
-## <a name="logins"></a>Logins  
+## <a name="logins"></a>Account di accesso  
   
 |Account di accesso|Descrizione|  
 |-----------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "68094408"
 |Utente|Descrizione|  
 |----------|-----------------|  
 |**mds_clr_user**|Non usato. Esegue il mapping a mds_dlp_login.|  
-|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> \- Esegue il mapping a mds_email_login.<br /><br /> \- È membro del ruolo: DatabaseMailUserRole.|  
+|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> \- Esegue il mapping a mds_email_login.<br /><br /> \- È un membro del ruolo DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utenti del database Master Data Services  
   
@@ -54,13 +54,13 @@ ms.locfileid: "68094408"
   
 ## <a name="master-data-services-database-role"></a>Ruolo del database Master Data Services  
   
-|Role|Descrizione|Permissions|  
+|Ruolo|Descrizione|Autorizzazioni|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Il ruolo contiene l'account impostato in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando si crea un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e si definisce un account per il pool di applicazioni.|Autorizzazione EXECUTE per tutti gli schemi.<br /><br /> <br /><br /> Autorizzazioni ALTER, INSERT e SELECT per queste tabelle:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Autorizzazione SELECT per queste tabelle:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Autorizzazione SELECT per queste viste:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schemi  
   
-|Role|Descrizione|  
+|Ruolo|Descrizione|  
 |----------|-----------------|  
 |**mdm**|Contiene tutti gli oggetti di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e Service Broker diversi dalle funzioni contenute nello schema mdq.|  
 |**mdq**|Sono contenute le funzioni del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relative al filtro dei risultati dei membri in base a espressioni regolari o somiglianza e per la formattazione di messaggi di posta elettronica di notifica.|  

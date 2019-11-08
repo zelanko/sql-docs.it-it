@@ -1,5 +1,5 @@
 ---
-title: Creare una vista sottoscrizioni per esportare i dati (Master Data Services) | Microsoft Docs
+title: Creare una vista sottoscrizioni per esportare i dati
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896913"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728477"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67896913"
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione**. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>Per creare e modificare una vista sottoscrizioni  
   
@@ -67,8 +67,8 @@ ms.locfileid: "67896913"
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva** viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento della visualizzazione.<br /><br /> Se si verificano errori durante la creazione o la modifica di una vista viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
-|Nome|Nome della vista sottoscrizioni.|  
+|Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva**, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") , che indica che la vista è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di una visualizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
+|Crea vista sottoscrizioni|Nome della vista sottoscrizioni.|  
 |Modello|Nome del modello.|  
 |Version|Nome della versione.|  
 |Flag versione|Nome del flag di versione.|  
@@ -80,11 +80,11 @@ ms.locfileid: "67896913"
   
  Quando si fa clic su una vista, vengono visualizzate le informazioni seguenti.  
   
--   **Creato da**: Nome dell'utente che ha creato la vista.  
+-   **Creata da**: nome dell'utente che ha creato la vista.  
   
 -   **Il**: data e ora di creazione della vista.  
   
--   **Aggiornato da**: nome dell'utente che ha aggiornato la vista per ultimo.  
+-   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la vista.  
   
 -   **Il**: data e ora dell'ultimo aggiornamento della vista.  
   

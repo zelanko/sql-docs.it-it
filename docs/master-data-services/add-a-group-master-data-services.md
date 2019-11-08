@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un gruppo (Master Data Services) | Microsoft Docs
+title: Aggiungere un gruppo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 725e43685f56c2a52c585acb7624064c85e01b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047934"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728823"
 ---
 # <a name="add-a-group-master-data-services"></a>Aggiungere un gruppo (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "68047934"
   
 5.  Facoltativamente, fare clic su **Controlla nomi**.  
   
-6.  Fare clic su **OK**.  
+6.  Scegliere **OK**.  
   
     > [!NOTE]  
     >  Quando l'utente accede per la prima volta a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], il nome dell'utente viene aggiunto all'elenco di utenti di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  

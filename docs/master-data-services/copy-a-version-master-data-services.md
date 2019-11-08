@@ -1,5 +1,5 @@
 ---
-title: Copiare una versione (Master Data Services) | Microsoft Docs
+title: Copiare una versione
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079737"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728544"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiare una versione (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68079737"
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale Gestione versioni. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68079737"
 2.  Nella pagina **Gestisci versioni** selezionare la riga relativa alla versione che si vuole copiare.  
   
     > [!NOTE]  
-    >  In base a un'impostazione presente in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], è possibile copiare solo le versioni con lo stato **Commit eseguito**. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+    >  In base a un'impostazione presente in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], è possibile copiare solo le versioni con lo stato **Commit eseguito** . Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 3.  Fare clic su **Copia**.  
   

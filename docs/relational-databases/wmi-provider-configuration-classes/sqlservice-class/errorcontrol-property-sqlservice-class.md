@@ -1,6 +1,6 @@
 ---
-title: Proprietà ErrorControl (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Proprietà ErrorControl (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad022b2c0a4b2dda7a5de2265c67dd3608b5389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929686"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659656"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Proprietà ErrorControl (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ object.ErrorControl [= value]
  Critico  
  Il sistema tenta un riavvio con una configurazione valida.  
   
- Sconosciuto  
+ Unknown  
  La gravità è sconosciuta.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore indica l'azione intrapresa dal programma di avvio in caso di errore. Tutti gli errori vengono registrati dal computer.  
   
 ## <a name="see-also"></a>Vedere anche  

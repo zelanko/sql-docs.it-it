@@ -1,7 +1,7 @@
 ---
-title: Sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
+title: sys. workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,34 +12,34 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059332"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632969"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>Sys.workload_management_workload_classifiers (Transact-SQL)
+# <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
- Restituisce i dettagli per classificatori di carico di lavoro.  
+ Restituisce i dettagli per i classificatori del carico di lavoro.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID univoco del classificatore. Non ammette i valori Null||
-group_name|**sysname**|Nome del gruppo di carico di lavoro, la funzione di classificazione viene assegnato a. Non ammette i valori Null. |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Classi di risorse dinamiche</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
+group_name|**sysname**|Nome del gruppo di carico di lavoro a cui è assegnato il classificatore. Non ammette i valori Null. Joinable a sys. workload_management_workload_groups ||
 name|**sysname**|Nome del classificatore. Deve essere univoco per l'istanza. Non ammette i valori Null.||
-|importance|**sysname**|È l'importanza relativa di una richiesta in questo gruppo di carico di lavoro e nei gruppi del carico di lavoro per le risorse condivise.  Importanza specificata nella funzione di classificazione sostituisce l'impostazione di priorità di gruppo del carico di lavoro.|bassa, below_normal, normale, above_normal, elevato |
-|create_time|**datetime**|Ora che è stato creato il classificatore. Non ammette i valori Null.||
-modify_time|**datetime**|Ora del che ultima modifica la funzione di classificazione. Non ammette i valori Null.||
-is_enabled|**bit**|Indica se la funzione di classificazione è abilitato o meno. È abilitato per impostazione predefinita. Non ammette i valori Null.|0 = la funzione di classificazione non è abilitato </br> 1 = la funzione di classificazione è abilitata|
+|importance|**sysname**|È l'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise.  L'importanza specificata nel classificatore sostituisce l'impostazione di importanza del gruppo di carico di lavoro. Ammette i valori Null.  Se è null, viene utilizzata l'impostazione di importanza del gruppo di carico di lavoro.|Low, below_normal, Normal (impostazione predefinita), above_normal, High |
+|create_time|**datetime**|Ora di creazione del classificatore. Non ammette i valori Null.||
+modify_time|**datetime**|Ora dell'Ultima modifica del classificatore. Non ammette i valori Null.||
+is_enabled|**bit**|INTERNO||
 |&nbsp;||||
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione VIEW SERVER STATE.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
- Per un elenco di tutte le viste del catalogo per SQL Data Warehouse e Parallel Data Warehouse, vedere [viste del catalogo di Parallel Data Warehouse e SQL Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un classificatore di carico di lavoro, vedere [CLASSIFICATORE del carico di lavoro creare](../../t-sql/statements/create-workload-classifier-transact-sql.md). Per altre informazioni sulla classificazione del carico di lavoro, vedere [classificazione del carico di lavoro di SQL DATA Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ Per un elenco di tutte le viste del catalogo per SQL Data Warehouse e data warehouse parallele, vedere [SQL data warehouse e le viste del catalogo data warehouse parallele](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un classificatore del carico di lavoro, vedere [creare un classificatore del carico di lavoro](../../t-sql/statements/create-workload-classifier-transact-sql.md). Per ulteriori informazioni sulla classificazione del carico di lavoro, vedere [classificazione dei carichi di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

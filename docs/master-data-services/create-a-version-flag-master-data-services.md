@@ -1,5 +1,5 @@
 ---
-title: Creare un flag di versione (Master Data Services) | Microsoft Docs
+title: Creare un flag di versione
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25c52ac4dc179940f1a3c45fd5200cf3525c56f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906596"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729560"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Creare un flag di versione (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67906596"
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale Gestione versioni. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67906596"
   
 3.  Nella pagina **Gestisci flag di versione** nel campo **Modello** selezionare il modello per il quale si vuole creare un flag.  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Nella casella **Nome** digitare un nome.  
   

@@ -1,5 +1,5 @@
 ---
-title: Autorizzazioni per le aree funzionali (Master Data Services) | Microsoft Docs
+title: Autorizzazioni per aree funzionali
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b40f4053633c7ef50d14004f2f5f045c23cae4cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945257"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729207"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorizzazioni per aree funzionali (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67945257"
   
  Quando si assegnano autorizzazioni a un'area funzionale, si rende visibile un'area dell'interfaccia utente all'utente o al gruppo.  
   
- All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Un utente con le autorizzazioni di utente con privilegi elevati ha l'autorizzazione di amministratore per tutti i modelli e ha anche tutte le altre autorizzazioni per le aree funzionali.  

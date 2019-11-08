@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPColFmt (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b318557535552d910981bdb43c31973f0c845b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091134"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73765687"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Crea un'associazione tra variabili di programma e colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -43,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **BCPColFmt** viene usato per creare un'associazione tra i campi del file di dati BCP e le colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Accetta come parametri la lunghezza, il tipo, il carattere di terminazione e la lunghezza del prefisso di una colonna e imposta ciascuna di queste proprietà per i singoli campi.  
   
  Se l'utente sceglie la modalità interattiva, questo metodo viene chiamato due volte, una volta per impostare il formato della colonna in base ai valori predefiniti (che dipendono dal tipo di colonna del server) e una volta per impostare il formato in base al tipo di client selezionato durante la modalità interattiva, per ogni colonna.  
@@ -64,7 +63,7 @@ HRESULT BCPColFmt(
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e impostiamo *cbIndicator*, *cbUserData*, e *cbUserDataTerm*su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e impostare *cbIndicator*, *cbUserData*e *cbUserDataTerm* su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
 > [!NOTE]  
 >  Il metodo [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) deve essere chiamato prima di qualsiasi chiamata a **BCPColFmt**. È necessario chiamare **BCPColFmt** una volta per ogni colonna del file utente. Se **BCPColFmt** viene chiamato più di una volta per qualsiasi colonna del file utente, viene generato un errore.  
@@ -78,7 +77,7 @@ HRESULT BCPColFmt(
  Indice del campo nel file di dati dell'utente.  
   
  *eUserDataType*[in]  
- Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato di file di intestazione di Native Client (SQLNCLI. h) con BCP_TYPE_XXX, ad esempio, BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel file di intestazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli. h) con formato BCP_TYPE_XXX, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Se la colonna di origine non è decimal o numeric, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -121,7 +120,7 @@ HRESULT BCPColFmt(
  Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
- La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) prima della chiamata a questo metodo.  
+ La chiamata al metodo non era prevista. Ad esempio, il metodo [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) non è stato chiamato prima della chiamata a questo metodo.  
   
  E_INVALIDARG  
  L'argomento non è valido.  
@@ -130,7 +129,7 @@ HRESULT BCPColFmt(
  Errore di memoria insufficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

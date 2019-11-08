@@ -1,5 +1,5 @@
 ---
-title: Eliminare una gerarchia derivata (Master Data Services) | Microsoft Docs
+title: Eliminare una gerarchia derivata
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906459"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728370"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminare una gerarchia derivata (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "67906459"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>Per eliminare una gerarchia derivata  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67906459"
   
 2.  Scegliere **Gestisci** dalla barra dei menu e fare clic su **Gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
+3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
   
 4.  Selezionare la riga relativa alla gerarchia derivata che si desidera eliminare.  
   

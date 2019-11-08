@@ -1,5 +1,5 @@
 ---
-title: Creare un gruppo di attributi (Master Data Services) | Microsoft Docs
+title: Creare un gruppo di attributi
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 988d57ab3d0f86c3da1e45109a6ad818cecb894e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728447"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Creare un gruppo di attributi (Master Data Services)
 
@@ -31,9 +31,9 @@ ms.locfileid: "67906569"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   È necessario che esista almeno un attributo. Per altre informazioni, vedere [Creare un attributo di testo &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
+-   È necessario che esista almeno un attributo. Per altre informazioni, vedere [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-create-an-attribute-group"></a>Per creare un gruppo di attributi  
   

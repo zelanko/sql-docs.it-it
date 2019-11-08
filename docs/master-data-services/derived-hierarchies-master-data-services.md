@@ -1,5 +1,5 @@
 ---
-title: Gerarchie derivate (Master Data Services) | Microsoft Docs
+title: Gerarchie derivate
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084216"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728281"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Gerarchie derivate (Master Data Services)
 
@@ -62,12 +62,12 @@ ms.locfileid: "68084216"
   
  In una gerarchia derivata è possibile evidenziare la relazione tra Product e Subcategory, quindi tra Subcategory e Category. Quando si visualizzano i membri in questa gerarchia, ogni livello nell'albero contiene i membri della stessa entità.  
   
- ![Esempio di gerarchia derivata relativo alla mountain bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Esempio di gerarchia derivata relativo alla mountain bike")  
+ ![Esempio di gerarchia derivata mountain bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Esempio di gerarchia derivata mountain bike")  
   
  Questo tipo di gerarchia non consente lo spostamento di un membro in un livello non valido. È ad esempio possibile spostare la bicicletta Road-650 da una sottocategoria, Road Bikes, in un'altra, Mountain Bikes. Non è possibile spostare Road-650 direttamente in una categoria, ad esempio 1 {Bikes}. Ogni volta che si sposta un membro nell'albero gerarchico, il valore dell'attributo basato su dominio del membro viene modificato in modo da riflettere lo spostamento.  
   
 ## <a name="notes"></a>Note  
- Tutti i membri in un albero gerarchico derivato vengono ordinati per ID. Non è possibile modificare l'ordinamento.  
+ Tutti i membri di un albero gerarchico derivato vengono ordinati in base all'ID. Non è possibile modificare l'ordinamento.  
   
  Se un attributo basato su dominio di un membro è vuoto e l'attributo viene utilizzato per una gerarchia derivata, il membro non verrà visualizzato nella gerarchia. Creare regole business per richiedere il popolamento degli attributi. Per altre informazioni, vedere [Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

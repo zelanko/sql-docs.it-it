@@ -1,5 +1,5 @@
 ---
-title: Database Master Data Services | Microsoft Docs
+title: Database Master Data Services
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062745"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729044"
 ---
 # <a name="master-data-services-database"></a>Database Master Data Services
 
@@ -36,7 +36,7 @@ ms.locfileid: "68062745"
   
 -   Fornisce le viste per i sistemi di sottoscrizione per il quali è necessario il recupero di dati dal database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   

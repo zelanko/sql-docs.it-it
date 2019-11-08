@@ -1,5 +1,5 @@
 ---
-title: Regole di business (Master Data Services) | Microsoft Docs
+title: Regole business
 ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: aa05b563fc72f3908fe2ab796d77917d58b16636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047394"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728686"
 ---
 # <a name="business-rules-master-data-services"></a>Regole business (Master Data Services)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68047394"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare e pubblicare una nuova regola business.|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola di business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Creare una regola business affinché gli attributi dispongano di valori.|[Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
 |Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Inizializzare azioni basate su modifiche dei valori di attributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Creare una regola business per eseguire uno script definito dall'utente come condizione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  

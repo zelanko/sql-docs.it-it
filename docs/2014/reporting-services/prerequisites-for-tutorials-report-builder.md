@@ -10,12 +10,12 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b12f87b5abcceed4ae4557c8db1e4476760f72ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17c8b67d29cb82956a37bc3f83867161486a4f9e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108065"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637861"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Prerequisiti per le esercitazioni (Generatore report)
   Nelle esercitazioni di Generatore report si presuppone che l'utente sia in grado di visualizzare e salvare report in un server di report o in un sito di SharePoint integrato in un server di report. Per quanto riguarda i dati, in tutte le esercitazioni vengono utilizzate query letterali che devono essere elaborate da un'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -27,17 +27,17 @@ ms.locfileid: "66108065"
   
 -   Accesso a Generatore report di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . È possibile eseguire Generatore report utilizzando la versione autonoma di Generatore report o la versione ClickOnce, disponibile da Gestione report o da un sito di SharePoint. Per le versioni ClickOnce, l'unica differenza riguarda il primo passaggio, ovvero l'apertura di Generatore report.  
   
-     Per utilizzare Gestione Report, aprire Gestione Report e fare clic su **Generatore Report**. Per impostazione predefinita, l'URL per gestione Report è http://\<*servername*> / reports.  
+     Per utilizzare Gestione report, aprire Gestione report e fare clic su **Generatore report**. Per impostazione predefinita, l'URL per Gestione report è http://\<*nomeserver*>/Reports.  
   
-     Per utilizzare un sito di SharePoint, accedere al sito, fare clic sulla scheda Documenti, fare clic su Nuovo documento, quindi su Report di Generatore report nell'elenco a discesa. Ad esempio, http://\<nomeserver >/siti/mySite/reports. L'amministratore di SharePoint deve abilitare la caratteristica Report di Generatore report per ogni raccolta documenti.  
+     Per utilizzare un sito di SharePoint, accedere al sito, fare clic sulla scheda Documenti, fare clic su Nuovo documento, quindi su Report di Generatore report nell'elenco a discesa. Ad esempio, http://\<ServerName >/sites/mySite/reports. L'amministratore di SharePoint deve abilitare la caratteristica Report di Generatore report per ogni raccolta documenti.  
   
--   L'URL a un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server o un sito di SharePoint integrato con un [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] server di report. È necessario disporre dell'autorizzazione per il salvataggio e la visualizzazione di report, origini dati condivise, set di dati condivisi, parti di report e modelli. Per impostazione predefinita, l'URL per un server di report è http://\<nomeserver > / reportserver. Per impostazione predefinita, l'URL per un sito di SharePoint è http://\<nomesito > o http://\<server > / sito.  
+-   URL di un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] server di report o un sito di SharePoint integrato con un server di report di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. È necessario disporre dell'autorizzazione per il salvataggio e la visualizzazione di report, origini dati condivise, set di dati condivisi, parti di report e modelli. Per impostazione predefinita, l'URL per un server di report è http://\<ServerName >/ReportServer. Per impostazione predefinita, l'URL di un sito di SharePoint è http://\<SiteName > o http://\<server >/site.  
   
--   Il nome di un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] istanza e credenziali sufficienti per l'accesso in lettura a qualsiasi database. Per le query del set di dati delle esercitazioni vengono utilizzati dati letterali, ma per restituire i metadati necessari per un set di dati del report ogni query deve essere elaborata da un'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Ad esempio, nella stringa di connessione seguente viene specificato solo un server: `data source=<servername>`. È necessario disporre dell'accesso in lettura al database predefinito assegnato all'utente dall'amministratore di sistema che concede l'autorizzazione per l'accesso al server. È inoltre possibile specificare un database, come illustrato nella stringa di connessione seguente: `data source=<servername>;initial catalog=<database>`.  
+-   Nome di un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] istanza di e credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. Per le query del set di dati delle esercitazioni vengono utilizzati dati letterali, ma per restituire i metadati necessari per un set di dati del report ogni query deve essere elaborata da un'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Ad esempio, nella stringa di connessione seguente viene specificato solo un server: `data source=<servername>`. È necessario disporre dell'accesso in lettura al database predefinito assegnato all'utente dall'amministratore di sistema che concede l'autorizzazione per l'accesso al server. È inoltre possibile specificare un database, come illustrato nella stringa di connessione seguente: `data source=<servername>;initial catalog=<database>`.  
   
--   Per l'esercitazione in cui è inclusa una mappa, è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [piano di supporto dei Report mappa](plan-for-map-report-support.md) nelle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+-   Per l'esercitazione in cui è inclusa una mappa, è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per ulteriori informazioni, vedere [pianificare il supporto dei report mappa](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentazione [online](https://go.microsoft.com/fwlink/?LinkId=154888) di MSDN.Microsoft.com.  
   
--   L'esercitazione, [esercitazione: Creazione di report principali e drill-through &#40;Generatore Report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), viene utilizzato il set di dati dimostrativo di business intelligence business di Contoso. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
+-   L'esercitazione, [esercitazione: creazione di report drill- &#40;through&#41;e report principali Generatore report](tutorial-creating-drillthrough-and-main-reports-report-builder.md), usa il set di dati di Contoso Business Intelligence Demo. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
   
      L'altro file, ContosoBIdemoBAK.exe, è relativo al data warehouse ContosoDW, che non viene utilizzato in questa esercitazione.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66108065"
   
      È necessario avere accesso a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sulla quale installare il database OLAP.  
   
- L'amministratore del server di report deve concedere le autorizzazioni necessarie per il server di report, configurare i percorsi delle cartelle [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e configurare le opzioni predefinite di Generatore report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](install-uninstall-and-report-builder-support.md).  
+ L'amministratore del server di report deve concedere le autorizzazioni necessarie per il server di report, configurare i percorsi delle cartelle [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e configurare le opzioni predefinite di Generatore report. Per ulteriori informazioni, vedere [installazione, disinstallazione e supporto Generatore report](install-uninstall-and-report-builder-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)  
+ [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)  
   
   

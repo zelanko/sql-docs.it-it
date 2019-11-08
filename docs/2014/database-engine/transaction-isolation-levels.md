@@ -1,6 +1,6 @@
 ---
-title: Livelli di isolamento delle transazioni | Microsoft Docs
-ms.custom: ''
+title: Livelli di isolamento delle transazioni per le tabelle ottimizzate per la memoria | Microsoft Docs
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774129"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637780"
 ---
-# <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
+# <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Livelli di isolamento delle transazioni nelle tabelle con ottimizzazione per la memoria
+
   Di seguito sono indicati i livelli di isolamento supportati per le transazioni che accedono a tabelle ottimizzate per la memoria.  
   
 -   SNAPSHOT  
@@ -30,7 +31,7 @@ ms.locfileid: "62774129"
   
  Il livello di isolamento della transazione può essere specificato come parte del blocco atomico di una stored procedure compilata in modo nativo. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Quando si accede a tabelle ottimizzate per la memoria da codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato, è possibile specificare il livello di isolamento tramite hint a livello di tabella.  
   
- È necessario specificare il livello di isolamento delle transazioni quando si definisce una stored procedure compilata in modo nativo. È necessario specificare il livello di isolamento in hint di tabella quando si accede alle tabelle ottimizzate per la memoria da transazioni utente in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ È necessario specificare il livello di isolamento delle transazioni quando si definisce una stored procedure compilata in modo nativo. È necessario specificare il livello di isolamento in hint di tabella quando si accede alle tabelle ottimizzate per la memoria da transazioni utente in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato. Per ulteriori informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Il livello di isolamento READ COMMITTED è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit. READ COMMITTED non è valido nelle transazioni utente o in un blocco atomico. READ COMMITTED non è invece supportato con le transazioni utente implicite o esplicite. Il livello di isolamento READ_COMMITTED_SNAPSHOT è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit e solo se la query non accede alle tabelle basate su disco. Alle transazioni avviate tramite codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento SNAPSHOT non è inoltre consentito accedere alle tabelle ottimizzate per la memoria. Le transazioni che utilizzano codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento REPEATABLE READ o SERIALIZABLE devono accedere alle tabelle ottimizzate per la memoria utilizzando il livello di isolamento SNAPSHOT. Per altre informazioni su questo scenario, vedere [transazioni tra contenitori](cross-container-transactions.md).  
   
@@ -38,7 +39,7 @@ ms.locfileid: "62774129"
   
 -   Utilizzare in modo esplicito un hint superiore del livello di isolamento per accedere alla tabella ottimizzata per la memoria, ad esempio WITH (SNAPSHOT).  
   
--   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per altre informazioni sulle `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per ulteriori informazioni su `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [Opzioni &#40;alter database set Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  In alternativa, se il livello di isolamento della sessione è READ COMMITTED, è possibile utilizzare le transazioni in modalità autocommit.  
   

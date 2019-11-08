@@ -16,18 +16,17 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de206025249bb04fe35ced4f36213b8b8268ebaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031795"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758407"
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Un stored procedure ([stored procedure &#40;motore di database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure  
   
@@ -37,7 +36,7 @@ ms.locfileid: "68031795"
   
      DLL C o C++ scritte nell'API ODS (Open Data Services) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le stored procedure estese. L'API ODS amplia le funzionalità delle stored procedure per includere il codice C o C++.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Esecuzione di stored procedure &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   

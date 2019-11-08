@@ -1,5 +1,5 @@
 ---
-title: Rendere sicura un'applicazione Web Gestione dati master | Microsoft Docs
+title: Rendere sicura un'applicazione Web Gestione dati master
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028798"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729176"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Rendere sicura un'applicazione Web Gestione dati master
 
@@ -40,15 +40,15 @@ ms.locfileid: "69028798"
   
 3.  Nel riquadro **Azioni** fare clic su **Binding**.  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Nell'elenco selezionare **https**.  
   
 6.  Selezionare il certificato SSL.  
   
-7.  Fare clic su **OK**.  
+7.  Scegliere **OK**.  
   
-8.  facoltativo. Per rimuovere HTTP in modo che gli utenti possano accedere al sito solo tramite HTTPS, fare clic sulla riga con **http**. Fare clic su **Rimuovi** e nella finestra di dialogo di conferma fare clic su **Sì**.  
+8.  Facoltativa. Per rimuovere HTTP in modo che gli utenti possano accedere al sito solo tramite HTTPS, fare clic sulla riga con **http**. Fare clic su **Rimuovi** e nella finestra di dialogo di conferma fare clic su **Sì**.  
   
     > [!IMPORTANT]  
     >  È necessario modificare le configurazioni di basicHttp e wsHttpBinding dopo la rimozione di HTTP.  

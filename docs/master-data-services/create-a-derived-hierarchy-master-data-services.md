@@ -1,5 +1,5 @@
 ---
-title: Creare una gerarchia derivata (Master Data Services) | Microsoft Docs
+title: Creare una gerarchia derivata
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0bedc60665318e2ffd89ebfc6387bbb0432989f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079668"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729580"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Creare una gerarchia derivata (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "68079668"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-derived-hierarchy"></a>Per creare una gerarchia derivata  
   
@@ -42,9 +42,9 @@ ms.locfileid: "68079668"
   
 2.  Scegliere **Gestisci** dalla barra dei menu e fare clic su **Gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
+3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Nella pagina **Aggiungi gerarchia derivata** digitare un nome per la gerarchia nella casella **Nome gerarchia derivata** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68079668"
   
 8.  Continuare a trascinare entità o gerarchie fino a che la gerarchia non è completa.  
   
-9. Fare clic su **Indietro**.  
+9. Fare clic **Indietro**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   

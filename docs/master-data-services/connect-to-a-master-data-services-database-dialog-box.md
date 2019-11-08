@@ -1,6 +1,6 @@
 ---
-title: Finestra di dialogo Connessione a un database Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Connetti a un database MDS
+ms.custom: seo-lt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c728be0bd57d091b45349ac22bffab7c8ef1bd4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89b4f671bde13eddd781779bec5fc4ac48b3897b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076316"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728588"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Finestra di dialogo Connessione a un database Master Data Services
 
@@ -37,10 +37,10 @@ ms.locfileid: "68076316"
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Istanza di SQL Server**|Specificare il nome dell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui si vuole ospitare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Può corrispondere a un'istanza predefinita o denominata in un computer locale o remoto. Specificare le informazioni digitando quanto segue:<br /><br /> Un punto (.) per connettersi all'istanza predefinita nel computer locale.<br /><br /> Il nome server o l'indirizzo IP per connettersi all'istanza predefinita nel computer locale o remoto specificato.<br /><br /> Il nome server o l'indirizzo IP, nonché il nome dell'istanza per la connessione all'istanza denominata nel computer locale o remoto specificato. Specificare le informazioni nel formato *nome_server*\\*nome_istanza*.|  
-|**Tipo di autenticazione**|Selezionare il tipo di autenticazione da usare per la connessione all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata. Le credenziali usate per connettersi determinano i database visualizzati nell'elenco a discesa **Database Master Data Services** .<br /><br /> Nei tipi di autenticazione sono inclusi:<br /><br /> **Utente corrente - sicurezza integrata**: usa l'autenticazione integrata di Windows per connettersi con le credenziali dell'account utente di Windows corrente. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa le credenziali di Windows dell'utente che ha eseguito l'accesso al computer e ha aperto l'applicazione. Non è possibile specificare credenziali di Windows diverse nell'applicazione. Per connettersi con credenziali di Windows diverse, è necessario accedere al computer con il nome utente desiderato, quindi aprire [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Account di SQL Server**: usa un account di SQL Server per la connessione. Quando si seleziona questa opzione, i campi **Nome utente** e **Password** sono abilitati ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
+|**Tipo di autenticazione**|Selezionare il tipo di autenticazione da usare per la connessione all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata. Le credenziali usate per connettersi determinano i database visualizzati nell'elenco a discesa **Database Master Data Services** .<br /><br /> Nei tipi di autenticazione sono inclusi:<br /><br /> **Utente corrente - Sicurezza integrata**: usa l'autenticazione integrata di Windows per connettersi con le credenziali dell'account utente di Windows corrente. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa le credenziali di Windows dell'utente che ha eseguito l'accesso al computer e ha aperto l'applicazione. Non è possibile specificare credenziali di Windows diverse nell'applicazione. Per connettersi con credenziali di Windows diverse, è necessario accedere al computer con il nome utente desiderato, quindi aprire [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Account di SQL Server**: usa un account di SQL Server per la connessione. Quando si seleziona questa opzione, i campi **Nome utente** e **Password** sono abilitati ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
 |**Nome utente**|Specificare il nome dell'account utente che verrà utilizzato per connettersi all'istanza di SQL Server specificata. L'account deve far parte del ruolo **sysadmin** nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata:<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Utente corrente - Sicurezza integrata**, la casella **Nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows usato per l'accesso al computer.<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Account di SQL Server**, la casella **Nome utente** è abilitata ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
 |**Password**|Specificare la password associata all'account utente:<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Utente corrente - Sicurezza integrata**, la casella **Password** è di sola lettura e per la connessione vengono usate le credenziali dell'account utente di Windows specificato.<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Account di SQL Server**, la casella **Password** è abilitata ed è necessario specificare la password associata all'account utente specificato.|  
-|**Connect**|Stabilisce la connessione all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con le credenziali specificate.|  
+|**Connetti**|Stabilisce la connessione all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con le credenziali specificate.|  
 |**Database Master Data Services**|Consente di visualizzare i database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata in base ai criteri seguenti:<br /><br /> Quando l'utente è un membro del ruolo del server **sysadmin** per l'istanza specificata, vengono visualizzati tutti i database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] nell'istanza.<br /><br /> Quando l'utente è un membro del ruolo del database **db_owner** per qualsiasi database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] nell'istanza specificata, vengono visualizzati i database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br/> Per altre informazioni sui ruoli di SQL Server, vedere [Ruoli a livello di server](../relational-databases/security/authentication-access/server-level-roles.md) e [Ruoli a livello di database](../relational-databases/security/authentication-access/database-level-roles.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

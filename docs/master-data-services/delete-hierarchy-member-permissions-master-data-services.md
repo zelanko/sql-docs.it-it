@@ -1,5 +1,5 @@
 ---
-title: Eliminare le autorizzazioni dei membri della gerarchia (Master Data Services) | Microsoft Docs
+title: Eliminare le autorizzazioni membri gerarchia
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bdb6a9b2c7e42406443b802803723fae4c60a7c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c441545bc88ef28031815cecb2c0f441fa1ea6a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906293"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729361"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Eliminare le autorizzazioni membri gerarchia (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67906293"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>Per eliminare le autorizzazioni membri gerarchia  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67906293"
   
 4.  Fare clic sulla scheda **Membri gerarchia** .  
   
-5.  Selezionare un modello dall'elenco **Modello** .  
+5.  Dall'elenco **Modello** , selezionare un modello.  
   
 6.  Selezionare una versione dall'elenco **Versione** .  
   

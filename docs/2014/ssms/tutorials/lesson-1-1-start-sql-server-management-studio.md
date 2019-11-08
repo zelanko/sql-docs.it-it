@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188852"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632792"
 ---
 # <a name="start-sql-server-management-studio"></a>Avviare SQL Server Management Studio
   Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -24,12 +24,12 @@ ms.locfileid: "63188852"
   
 #### <a name="to-open-sql-server-management-studio"></a>Per aprire SQL Server Management Studio  
   
-1.  Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
+1.  Dal menu **Start** scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express è disponibile come download gratuito dal [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), ma ha un'interfaccia utente diversa da quella descritta in questa esercitazione.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express è disponibile come download gratuito dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), ma dispone di un'interfaccia utente diversa da quella descritta in questa esercitazione.  
   
-2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per la connessione, il **nome Server** finestra deve contenere il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, il **nome Server** casella deve essere contenuto anche il nome dell'istanza nel formato \< *nome_computer* > \\ < *instance_name*>.  
+2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per connettersi, nella casella **nome server** deve essere contenuto il nome del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, nella casella **nome server** deve essere contenuto anche il nome dell'istanza nel formato \<*computer_name*>\\ *<instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componenti di Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] offre informazioni in finestre dedicate a tipi di informazioni specifiche. Le informazioni di database vengono visualizzate in Esplora oggetti e nelle finestre dei documenti.  
@@ -46,7 +46,7 @@ ms.locfileid: "63188852"
   
      La finestra Server registrati verrà visualizzata sopra Esplora oggetti. In Server registrati sono elencati i server gestiti più di frequente. È possibile aggiungere e rimuovere server dall'elenco. Gli unici server elencati saranno le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in cui si esegue [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Se il server non viene visualizzato, nella finestra Server registrati, fare doppio clic su **motore di Database**, quindi fare clic su **Aggiorna registrazione Server locale**.  
+2.  Se il server non viene visualizzato, in Server registrati fare clic con il pulsante destro del mouse su **motore di database**, quindi scegliere **Aggiorna registrazione server locale**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Connettersi con Server registrati ed Esplora oggetti](../object/object-explorer.md)  

@@ -1,5 +1,5 @@
 ---
-title: Usa data e ora i tipi | Microsoft Docs
+title: Usare i tipi di data e ora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de540ec1ba30ea4cfe4ff45bcbe3a203eb0ceeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b77bb50620d106ff801241901f7054459806ef36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937440"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780324"
 ---
 # <a name="use-date-and-time-types"></a>Utilizzare tipi di data e ora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo esempio viene illustrato come inizializzare le strutture dati di data e ora aggiunte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Successivamente vengono preparati i valori di input e associati i parametri e viene eseguita la query. Per altre informazioni sull'utilizzo di questi tipi, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  In questo esempio viene illustrato come inizializzare le strutture dati di data e ora aggiunte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Successivamente vengono preparati i valori di input e associati i parametri e viene eseguita la query. Per ulteriori informazioni sull'utilizzo di questi tipi, vedere [miglioramenti &#40;di data e&#41;ora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  È necessaria anche un'origine dati ODBC denominata DateTime. Il database predefinito per DateTime deve essere tempdb. Tale origine dati deve essere basata sul driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -31,11 +30,11 @@ ms.locfileid: "67937440"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice crea una tabella utilizzata dall'esempio.  
+ Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una tabella utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice elimina la tabella utilizzata dall'esempio.  
+ Il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Elimina la tabella utilizzata dall'esempio.  
   
 ```sql
 use tempdb  

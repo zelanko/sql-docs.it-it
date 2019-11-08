@@ -1,5 +1,5 @@
 ---
-title: Configurare regole business per l'invio di notifiche (Master Data Services) | Microsoft Docs
+title: Configurare regole business per l'invio di notifiche
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fe7bdd3ab79987f4f45a4a50d818ce454914e608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941104"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728562"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurare regole business per l'invio di notifiche (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile configurare le regole di business per inviare notifiche agli utenti relative alle modifiche dei valori di attributo.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile configurare le regole di business per inviare notifiche agli utenti relative alle modifiche dei valori di attributo.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere alle aree funzionali **Amministrazione sistema** e **Autorizzazioni utenti e gruppi** . Se non si dispone dell'autorizzazione per l'area funzionale **Autorizzazioni utenti e gruppi** , non è possibile visualizzare l'elenco di utenti e gruppi cui inviare notifiche.  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente una regola business che utilizza un'azione di convalida. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67941104"
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
-5.  Nell'elenco a discesa **Tipo di membro** selezionare un tipo di membro.  
+5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro.  
   
 6.  Nella griglia selezionare la riga per la regola di business che si vuole modificare e fare clic su **Modifica**.  
   

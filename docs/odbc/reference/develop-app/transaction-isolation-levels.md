@@ -1,6 +1,6 @@
 ---
-title: Livelli di isolamento delle transazioni | Microsoft Docs
-ms.custom: ''
+title: Livelli di isolamento delle transazioni (ODBC) | Microsoft Docs
+ms.custom: seo-dt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83197b1b487db6c52a8fe9b7a57dd6af55c33571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e11a0d76fc4a2daece7b6f4f50761d40933792be
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985113"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637214"
 ---
-# <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
+# <a name="transaction-isolation-levels-odbc"></a>Livelli di isolamento delle transazioni (ODBC)
 I *Livelli di isolamento delle transazioni* sono una misura dell'esito positivo dell'isolamento delle transazioni. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza dei seguenti fenomeni:  
   
 -   **Letture dirty** Una *lettura dirty* si verifica quando una transazione legge dei dati di cui non è stato ancora eseguito il commit. Ad esempio, si supponga che transazione 1 aggiorni una riga. La transazione 2 legge la riga prima che transazione 1 esegua il commit dell'aggiornamento. Se la transazione 1 esegue il rollback della modifica, la transazione 2 avrà letto dei dati che sono considerati mai esistiti.  
@@ -37,25 +37,25 @@ I *Livelli di isolamento delle transazioni* sono una misura dell'esito positivo 
   
 -   **Righe fantasma** Una *riga fantasma* è una riga che corrisponde ai criteri di ricerca, ma non viene inizialmente visualizzata. Si supponga, ad esempio, che la transazione 1 legge un set di righe che soddisfano alcuni criteri di ricerca. La transazione 2 genera una nuova riga (tramite un aggiornamento o un'operazione di inserimento) che corrisponde ai criteri di ricerca della transazione 1. Se la transazione 1 riesegue l'istruzione che legge le righe, ottiene un diverso set di righe.  
   
- I quattro livelli di isolamento (come definito da SQL-92) sono definiti in termini di questi fenomeni. Nella tabella seguente, una "X" contrassegna ogni fenomeno che può verificarsi.  
+ I quattro livelli di isolamento delle transazioni (definiti da SQL-92) sono definiti in termini di questi fenomeni. Nella tabella seguente, una "X" contrassegna ogni fenomeno che può verificarsi.  
   
-|Livello di isolamento delle transazioni|Letture dirty|Letture non ripetibili|Righe fantasma|  
+|Livello di isolamento delle transazioni|Letture dirty|Letture non ripetibili|Fantasmi|  
 |---------------------------------|-----------------|-------------------------|--------------|  
-|Read Uncommitted|x|X|x|  
-|Read Committed|--|x|x|  
-|Repeatable Read|--|--|x|  
+|Read Uncommitted|X|X|X|  
+|Read Committed|--|X|X|  
+|Repeatable Read|--|--|X|  
 |Serializable|--|--|--|  
   
- La tabella seguente descrive modi semplici che un sistema DBMS potrebbe implementare livelli di isolamento delle transazioni.  
+ Nella tabella seguente vengono descritte le modalità semplici con cui un sistema DBMS può implementare i livelli di isolamento delle transazioni.  
   
 > [!IMPORTANT]  
->  La maggior parte dei DBMS consente di implementare schemi più complessi rispetto a questi per aumentare la concorrenza. Questi esempi vengono forniti solo a scopo illustrativo. In particolare, ODBC non prevede modalità specifico DBMS isolare le transazioni tra loro.  
+>  La maggior parte dei DBMS usa schemi più complessi di quelli per aumentare la concorrenza. Questi esempi vengono forniti solo a scopo illustrativo. In particolare, ODBC non prescrive il modo in cui determinati DBMS isolano le transazioni l'una dall'altra.  
   
-|isolamento delle transazioni|Implementazione possibili|  
+|Isolamento delle transazioni|Implementazione possibile|  
 |---------------------------|-----------------------------|  
-|Read Uncommitted|Le transazioni non sono isolate tra loro. Se il sistema DBMS supporta altri livelli di isolamento delle transazioni, ignora qualsiasi meccanismo viene utilizzato per implementare tali livelli. In modo da non influire negativamente su altre transazioni, le transazioni eseguite al livello Read Uncommitted sono in genere di sola lettura.|  
-|Read Committed|La transazione attende fino a quando le righe bloccate scrittura da altre transazioni vengono sbloccate; Ciò evita la lettura di tutti i dati "dirty".<br /><br /> Transazione mantiene un blocco di lettura (se legge solo la riga) o di scrittura di blocco (se si aggiorna o si elimina la riga) nella riga corrente per impedire che altre transazioni l'aggiornamento o eliminazione. La transazione rilascia i blocchi in lettura quando si sposta dalla riga corrente. Contiene dei blocchi di scrittura fino a quando non è stato eseguito il commit o rollback.|  
-|Repeatable Read|La transazione attende fino a quando le righe bloccate scrittura da altre transazioni vengono sbloccate; Ciò evita la lettura di tutti i dati "dirty".<br /><br /> La transazione mantiene i blocchi in lettura su tutte le righe che per i blocchi applicazione e di scrittura restituisce tutte le righe vengano inserimenti, aggiornamenti o eliminati. Ad esempio, se la transazione include l'istruzione SQL **selezionate \* FROM Orders**, i blocchi di lettura delle transazioni le righe come l'applicazione recupera li. Se la transazione include l'istruzione SQL **Elimina dagli ordini in cui lo stato = 'Chiuso'** , i blocchi di scrittura delle transazioni le righe come li elimina.<br /><br /> Dato che altre transazioni non possono aggiornare o eliminare queste righe, la transazione corrente evita le letture non ripetibili. La transazione rilascia i relativi blocchi quando viene eseguito il commit o rollback.|  
-|Serializable|La transazione attende fino a quando le righe bloccate scrittura da altre transazioni vengono sbloccate; Ciò evita la lettura di tutti i dati "dirty".<br /><br /> La transazione mantiene un blocco di lettura (se legge solo righe) o il blocco di scrittura (se è possibile aggiornare o eliminare righe) dell'intervallo di righe interessa. Ad esempio, se la transazione include l'istruzione SQL **selezionate \* FROM Orders**, l'intervallo è l'intera tabella Orders; i blocchi delle transazioni read-la tabella e non non consentire nuove righe da inserire al suo interno. Se la transazione include l'istruzione SQL **Elimina dagli ordini in cui lo stato = 'Chiuso'** , l'intervallo è tutte le righe con lo stato di "CLOSED"; i blocchi di scrittura delle transazioni tutte le righe di ordini di tabella con lo stato "CLOSED" e non non Consenti tutte le righe da inserire o aggiornare in modo che la riga risulta ha lo stato "CLOSED".<br /><br /> Dato che altre transazioni non possono aggiornare o eliminare le righe nell'intervallo, la transazione corrente evita le letture non ripetibili. Poiché le altre transazioni non è possibile inserire tutte le righe nell'intervallo, la transazione corrente consente di evitare eventuali righe fantasma. La transazione rilascia il blocco quando viene eseguito il commit o rollback.|  
+|Read Uncommitted|Le transazioni non sono isolate l'una dall'altra. Se il sistema DBMS supporta altri livelli di isolamento delle transazioni, ignorerà qualsiasi meccanismo utilizzato per implementare tali livelli. In modo che non influiscano negativamente sulle altre transazioni, le transazioni in esecuzione al livello Read uncommitted sono in genere di sola lettura.|  
+|Read Committed|La transazione resta in attesa fino a quando non vengono sbloccate le righe con blocco Write da altre transazioni. in questo modo si impedisce la lettura di dati "Dirty".<br /><br /> La transazione include un blocco di lettura (se legge solo la riga) o un blocco di scrittura (se la riga viene aggiornata o eliminata) nella riga corrente per impedire ad altre transazioni di aggiornarla o eliminarla. La transazione rilascia i blocchi di lettura quando si sposta dalla riga corrente. Include i blocchi di scrittura finché non viene eseguito il commit o il rollback.|  
+|Repeatable Read|La transazione resta in attesa fino a quando non vengono sbloccate le righe con blocco Write da altre transazioni. in questo modo si impedisce la lettura di dati "Dirty".<br /><br /> La transazione include i blocchi di lettura in tutte le righe restituite all'applicazione e scrive i blocchi in tutte le righe inserite, aggiornate o eliminate. Se, ad esempio, la transazione include l'istruzione SQL **SELECT \* from Orders**, la transazione Read-locks consente di bloccare le righe durante le operazioni di recupero da parte dell'applicazione. Se la transazione include l'istruzione SQL **Delete da Orders in cui status =' Closed '** , la transazione scrive i blocchi delle righe durante l'eliminazione.<br /><br /> Poiché le altre transazioni non possono aggiornare o eliminare queste righe, la transazione corrente evita le letture non ripetibili. La transazione rilascia i blocchi quando ne viene eseguito il commit o il rollback.|  
+|Serializable|La transazione resta in attesa fino a quando non vengono sbloccate le righe con blocco Write da altre transazioni. in questo modo si impedisce la lettura di dati "Dirty".<br /><br /> La transazione include un blocco di lettura (se legge solo le righe) o il blocco di scrittura (se può aggiornare o eliminare righe) nell'intervallo di righe a cui ha effetto. Se, ad esempio, la transazione include l'istruzione SQL **SELECT \* from Orders**, l'intervallo è costituito dall'intera tabella Orders. la transazione Read-blocca la tabella e non consente l'inserimento di nuove righe. Se la transazione include l'istruzione SQL **Delete da Orders in cui status =' Closed '** , l'intervallo è costituito da tutte le righe con lo stato "closed"; la transazione Write-blocca tutte le righe della tabella Orders con lo stato "CLOSED" e non consente l'inserimento o l'aggiornamento di righe in modo che la riga risultante abbia lo stato "CLOSED".<br /><br /> Poiché le altre transazioni non possono aggiornare o eliminare le righe nell'intervallo, la transazione corrente evita le letture non ripetibili. Poiché le altre transazioni non possono inserire righe nell'intervallo, la transazione corrente evita eventuali oggetti fantasma. La transazione rilascia il blocco quando ne viene eseguito il commit o il rollback.|  
   
- È importante notare che il livello di isolamento delle transazioni non influisce sulla possibilità di una transazione per visualizzare il proprio modifiche; le transazioni possono visualizzare sempre delle modifiche apportate. Ad esempio, che potrebbe consistere in una transazione di due **UPDATE** istruzioni, il primo dei quali genera il pagamento di tutti i dipendenti del 10% e il secondo dei quali imposta il pagamento di tutti i dipendenti tramite alcuni quantità massima di tale quantità. Ciò ha esito positivo come una singola transazione solo perché la seconda **UPDATE** istruzione è possibile visualizzare i risultati del primo.
+ È importante notare che il livello di isolamento della transazione non influisce sulla capacità di una transazione di visualizzare le proprie modifiche; le transazioni possono sempre visualizzare tutte le modifiche apportate. Una transazione, ad esempio, può essere costituita da due istruzioni **Update** , la prima delle quali genera il pagamento di tutti i dipendenti del 10% e la seconda imposta il pagamento di tutti i dipendenti su una quantità massima. Questa operazione ha esito positivo solo perché la seconda istruzione **Update** può visualizzare i risultati della prima.

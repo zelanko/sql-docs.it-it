@@ -1,5 +1,5 @@
 ---
-title: Modificare l'ordine degli attributi | Microsoft Docs
+title: Modificare l'ordine degli attributi
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052095"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728617"
 ---
 # <a name="change-the-order-of-attributes"></a>Modificare l'ordine degli attributi
 
@@ -28,7 +28,7 @@ ms.locfileid: "68052095"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Per modificare l'ordine di un attributo  
   

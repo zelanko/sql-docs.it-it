@@ -1,5 +1,5 @@
 ---
-title: Installare la versione autonoma di Generatore Report (Generatore Report) | Microsoft Docs
+title: Installare la versione autonoma di Generatore report (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c60455bf38fc0cb8efb3ce44e4121adfe099a393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108786"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637839"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installare la versione autonoma di Generatore report (Generatore report)
-  È possibile installare Generatore Report dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack di sul [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) o in un percorso come una cartella pubblica per cui dispone il file reportbuilder3_x86.msi, ovvero il pacchetto di Windows Installer per Generatore Report, è stato scaricato.  
+  È possibile installare Generatore report dalla [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack nell' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) o in un percorso, ad esempio cartella pubblica in cui è stato scaricato il file ReportBuilder3_x86. msi, il pacchetto Windows Installer per Generatore report.  
   
- È inoltre possibile eseguire un'installazione dalla riga di comando di Generatore report e immettere argomenti per la personalizzazione dell'installazione. Oltre i parametri intrinseci MSI standard, è possibile usare i parametri personalizzati di Generatore Report: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per Generatore report. REPORTSERVERURL specifica il server di report predefinito utilizzato da Generatore report per salvare i report.  
+ È inoltre possibile eseguire un'installazione dalla riga di comando di Generatore report e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile utilizzare i parametri personalizzati specifici di Generatore report: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per Generatore report. REPORTSERVERURL specifica il server di report predefinito utilizzato da Generatore report per salvare i report.  
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.  
   
@@ -29,46 +29,46 @@ ms.locfileid: "66108786"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>Per installare Generatore report dal sito di download  
   
-1.  Passare a [Generatore Report di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report della pagina Web.  
+1.  Passare a [Microsoft SQL Server 2012 Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore report della pagina Web.  
   
-2.  Fare clic su **X86 pacchetto**.  
+2.  Fare clic su **pacchetto x86**.  
   
-3.  Nel **del File da scaricare** finestra di dialogo, fare clic su **eseguire**.  
+3.  Nella finestra di dialogo **download del file** fare clic su **Esegui**.  
   
     > [!IMPORTANT]  
     >  Scaricare file solo da fonti attendibili.  
   
-4.  Nella finestra di dialogo di Internet Explorer, fare clic su **eseguiti**.  
+4.  Nella finestra di dialogo Internet Explorer fare clic su **Esegui**.  
   
     > [!IMPORTANT]  
     >  Eseguire file solo da fonti attendibili.  
   
 5.  Verrà avviata la procedura di installazione guidata di Generatore report per Microsoft SQL Server.  
   
-6.  Nel **l'installazione guidata di** pagina, fare clic su **successivo**.  
+6.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-7.  Nel **contratto di licenza** pagina, leggere il contratto e quindi selezionare la **accetto i termini del contratto di licenza** opzione. Scegliere **Avanti**.  
+7.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
   
-8.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
+8.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
   
-9. Nel **Selezione funzionalità** facoltativamente fare clic su **Sfoglia** o **spazio richiesto**. Scegliere **Avanti**.  
+9. Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
   
-    -   Fare clic su **esplorare** per visualizzare il percorso predefinito di Generatore Report e aggiornarlo.  
+    -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
         > [!NOTE]  
-        >  La cartella di installazione predefinite per Generatore Report è \<unità > Program Files\Microsoft SQL Server.  
+        >  La cartella di installazione predefinita per Generatore report è \<unità > Programmi\Microsoft SQL Server.  
   
-    -   Fare clic su **zio richiesto** per informazioni su quanto spazio su disco Generatore Report utilizza.  
+    -   Fare clic su **costo disco** per conoscere la quantità di spazio su disco utilizzata da Generatore report.  
   
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
+10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
   
     > [!NOTE]  
-    >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile anche eseguire questa operazione dal **opzioni** finestra di dialogo quando si lavora in Generatore Report.  
+    >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  
   
-11. Fare clic su **installare** per completare l'installazione di Generatore Report.  
+11. Fare clic su **Installa** per completare l'installazione di Generatore report.  
   
 ### <a name="to-install-report-builder-from-a-share"></a>Per installare Generatore report da una condivisione  
   
@@ -78,44 +78,44 @@ ms.locfileid: "66108786"
   
      Verrà avviata la procedura di installazione guidata di Generatore report per Microsoft SQL Server.  
   
-3.  Nel **l'installazione guidata di** pagina, fare clic su **successivo**.  
+3.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-4.  Nel **contratto di licenza** pagina, leggere il contratto e quindi selezionare la **accetto i termini del contratto di licenza** opzione. Scegliere **Avanti**.  
+4.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
   
-5.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
+5.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
   
-6.  Nel **Selezione funzionalità** facoltativamente fare clic su **Sfoglia** o **spazio richiesto**. Scegliere **Avanti**.  
+6.  Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
   
-    -   Fare clic su **esplorare** per visualizzare il percorso predefinito di Generatore Report e aggiornarlo.  
+    -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
         > [!NOTE]  
-        >  La cartella di installazione predefinite per Generatore Report è \<unità > Program Files\Microsoft SQL Server.  
+        >  La cartella di installazione predefinita per Generatore report è \<unità > Programmi\Microsoft SQL Server.  
   
-    -   Fare clic su **zio richiesto** per informazioni su quanto spazio su disco Generatore Report utilizza.  
+    -   Fare clic su **costo disco** per conoscere la quantità di spazio su disco utilizzata da Generatore report.  
   
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
+7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
   
     > [!NOTE]  
-    >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile anche eseguire questa operazione dal **opzioni** finestra di dialogo quando si lavora in Generatore Report.  
+    >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  
   
-8.  Fare clic su **installare** per completare l'installazione di Generatore Report.  
+8.  Fare clic su **Installa** per completare l'installazione di Generatore report.  
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>Per installare Generatore report dalla riga di comando  
   
-1.  Passare a [Generatore Report di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report.  
+1.  Passare a [Microsoft SQL Server 2012 Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore report.  
   
-2.  Fare clic su **X86 pacchetto**.  
+2.  Fare clic su **pacchetto x86**.  
   
 3.  Fare clic su Salva.  
   
-4.  Facoltativamente, selezionare il percorso per il salvataggio, per verificare i **Salva con nome** opzione è **pacchetto di Windows Installer**e quindi fare clic su **Salva**.  
+4.  Facoltativamente, passare al percorso in cui salvare, verificare che l'opzione **Salva con nome** sia **Windows Installer pacchetto**, quindi fare clic su **Salva**.  
   
 5.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-6.  Nella casella di testo Apri, digitare `cmd.`  
+6.  Nella casella di testo Apri digitare `cmd.`  
   
 7.  Nella finestra del prompt dei comandi, spostarsi sulla cartella in cui è stato salvato il file ReportBuilder3_x86.msi.  
   
@@ -123,14 +123,14 @@ ms.locfileid: "66108786"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     Le due opzioni specifiche dell'installazione di Generatore Report sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
+     Le due opzioni specifiche dell'installazione di Generatore report sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
 9. Per eseguire il comando, premere Invio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare, disinstallare e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md)   
- [Disinstallare la versione autonoma di Generatore Report &#40;Generatore Report&#41;](install-report-builder.md)  
+ [Installazione, disinstallazione e Generatore report del supporto](../install-uninstall-and-report-builder-support.md)   
+ [Disinstallare la versione autonoma di Generatore report &#40;Generatore report&#41;](install-report-builder.md)  
   
   

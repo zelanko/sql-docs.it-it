@@ -1,6 +1,6 @@
 ---
-title: Creare un pacchetto di distribuzione di modelli tramite la procedura guidata | Microsoft Docs
-ms.custom: ''
+title: Creazione di un pacchetto di distribuzione di modelli con la procedura guidata
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac16ab79970e642a2e13000babb9bc9ba8679442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947610"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729597"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Creare un pacchetto di distribuzione di modelli tramite la procedura guidata
 
@@ -32,7 +32,7 @@ ms.locfileid: "67947610"
   
 -   Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] è necessario avere l'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia disponibile un modello affinché sia possibile crearne un pacchetto. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   

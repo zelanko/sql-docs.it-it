@@ -1,5 +1,5 @@
 ---
-title: Modificare il nome di una gerarchia esplicita (Master Data Services) | Microsoft Docs
+title: Modificare il nome di una gerarchia esplicita
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e73afa32b07f6d66fc6689215733fea35548f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3604fe0fa1a2b15385ebea9d31550fc984c14a42
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006338"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728637"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia esplicita (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68006338"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>Per modificare il nome di una gerarchia esplicita.  
   

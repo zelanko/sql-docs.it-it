@@ -1,5 +1,5 @@
 ---
-title: Creare un amministratore di entità (Master Data Services) | Microsoft Docs
+title: Creare un amministratore di entità
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025075"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729540"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Creare un amministratore di entità (Master Data Services)
 

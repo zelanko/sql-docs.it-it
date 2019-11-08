@@ -1,6 +1,6 @@
 ---
-title: Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy | Microsoft Docs
-ms.custom: ''
+title: Creazione di un pacchetto di distribuzione di modelli (MDSModelDeploy)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906659"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728500"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy
 
@@ -58,11 +58,11 @@ ms.locfileid: "67906659"
   
  È necessario che sia disponibile un modello affinché sia possibile crearne un pacchetto. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
- Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Per creare un pacchetto di distribuzione modelli tramite MDSModelDeploy  
   
-1.  Aprire un prompt dei comandi con privilegi di amministratore.  
+1.  Aprire un prompt dei comandi dell'amministratore.  
   
 2.  Spostarsi sul percorso di MDSModelDeploy.exe.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "67906659"
   
     -   Se MDS non è stato installato nel percorso predefinito, cercare MDSModelDeploy.exe nel computer locale.  
   
-3.  Facoltativo. Visualizzare le opzioni e la Guida.  
+3.  Facoltativa. Visualizzare le opzioni e la Guida.  
   
     -   Per visualizzare tutte le opzioni disponibili, digitare `MDSModelDeploy` e premere Invio.  
   
     -   Per visualizzare la Guida per un'opzione, digitare quanto segue, dove *OptionName* è il nome dell'opzione: `MDSModelDeploy help OptionName`.  
   
-4.  facoltativo. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
+4.  Facoltativa. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
   
     ```  
     MDSModelDeploy listservices  

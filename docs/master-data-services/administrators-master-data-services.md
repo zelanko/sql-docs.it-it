@@ -1,5 +1,5 @@
 ---
-title: Amministratori (Master Data Services) | Microsoft Docs
+title: Administrators
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047807"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729798"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047807"
   Questo articolo descrive i tipi di amministratori di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: amministratori di modelli, amministratori di entità e utenti con privilegi avanzati.  
   
 ## <a name="model-administrators"></a>Amministratori di modelli  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un amministratore di modelli è un utente a cui è stata assegnata l'autorizzazione di **amministratore** per l'oggetto modello di livello superiore nella scheda **Oggetti modello** . Quando un utente ha l'autorizzazione di amministratore per un determinato modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per membri e oggetti del modello) vengono surclassate dall'autorizzazione di **amministratore** del modello e di fatto ignorate.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di modelli è un utente che dispone dell'autorizzazione di **amministratore** assegnata all'oggetto modello di livello superiore nella scheda **oggetti modello** . Quando un utente dispone delle autorizzazioni di amministratore per un particolare modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per oggetti e membri del modello) vengono trumpate dall'autorizzazione di **amministratore** del modello ed effettivamente ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68047807"
   
  Ogni modello può avere più amministratori. Ogni utente può essere un amministratore di uno, alcuni o tutti i modelli della distribuzione [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Amministratori di entità  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente per cui le autorizzazioni di amministratore sono assegnate all'oggetto entità nella scheda Oggetti modello. Quando un utente ha autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per membri e oggetti del modello) vengono sostituite dalle autorizzazioni di amministratore e ignorate.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente che dispone delle autorizzazioni di amministratore assegnate all'oggetto entità nella scheda oggetti modello. Quando un utente dispone di autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per oggetti e membri modello) sono sostituite dalle autorizzazioni di amministratore e vengono ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_enclave_send_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -19,17 +19,26 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661355"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593756"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Invia tutte le chiavi di crittografia della colonna abilitata per l'enclave nel database all'enclave utilizzata da [Always Encrypted con enclavi &#40;sicure motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Invia le chiavi di crittografia delle colonne, definite nel database, all'enclave protetta lato server utilizzata con [Always Encrypted con enclave sicure](../security/encryption/always-encrypted-enclaves.md).
+
+`sp_enclave_send_keys` Invia solo le chiavi che sono abilitate per l'enclave e crittografano le colonne che usano la crittografia casuale e contengono indici. Per una query utente normale, un driver client fornisce all'enclave le chiavi necessarie per i calcoli nella query. `sp_enclave_send_keys` Invia tutte le chiavi di crittografia della colonna definite nel database e utilizzate per le colonne crittografate degli indici. 
+
+`sp_enclave_send_keys` fornisce un modo semplice per inviare chiavi all'enclave e popolare la cache della chiave di crittografia della colonna per le operazioni di indicizzazione successive. Usare `sp_enclave_send_keys` per abilitare:
+- Un amministratore di database per la ricompilazione o la modifica di indici o statistiche per le colonne del database crittografato, se l'amministratore di database non ha accesso alle chiavi master della colonna. Vedere [richiamare operazioni di indicizzazione usando chiavi di crittografia di colonna memorizzate nella cache](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] per completare il ripristino degli indici nelle colonne crittografate. Vedere [ripristino del database](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- Un'applicazione che utilizza .NET Framework provider di dati per SQL Server eseguire il caricamento bulk dei dati nelle colonne crittografate.
+
+Per richiamare correttamente `sp_enclave_send_keys`, è necessario connettersi al database con i calcoli Always Encrypted e enclave abilitati per la connessione al database. È anche necessario avere accesso alle chiavi master della colonna, proteggere le chiavi di crittografia della colonna, si intende inviare ed è necessario disporre delle autorizzazioni per accedere Always Encrypted metadati della chiave nel database. 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,16 +59,9 @@ Questo stored procedure non restituisce alcun valore.
 
 Questa stored procedure non include set di risultati.
   
-## <a name="remarks"></a>Note
+## <a name="permissions"></a>Autorizzazioni
 
-**sp_enclave_send_keys** Invia le chiavi di crittografia della colonna abilitata per l'enclave all'enclave se vengono soddisfatte tutte le condizioni seguenti:
-
-- L'enclave è abilitata nell'istanza di SQL Server.
-- **sp_enclave_send_keys** è stato richiamato da un'applicazione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un driver client, che supporta always Encrypted con enclavi sicure usando una connessione di database con Always Encrypted e calcoli enclave abilitati.
-
-## <a name="permissions"></a>Permissions
-
- Richiedere le autorizzazioni **Visualizza definizione chiave di crittografia della colonna** e **Visualizza tutte le definizioni della chiave master della colonna** nel database.  
+ Richiedere le autorizzazioni `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` e `VIEW ANY COLUMN MASTER KEY DEFINITION` nel database.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -68,9 +70,8 @@ EXEC sp_enclave_send_keys;
 ```
 
 ## <a name="see-also"></a>Vedere anche
+- [Always Encrypted con enclave sicuri](../security/encryption/always-encrypted-enclaves.md) 
+ 
+- [Creazione e utilizzo di indici su colonne con Always Encrypted con enclave sicure](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
- [Always Encrypted con enclavi sicure &#40;motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Esercitazione: Creazione e utilizzo di indici su colonne abilitate per l'enclave mediante crittografia casuale](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [Richiamare le operazioni di indicizzazione utilizzando le chiavi di crittografia della colonna](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Indici nelle colonne abilitate per l'enclave usando la crittografia casuale](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Considerazioni per la migrazione di database e AlwaysOn](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
+- [Esercitazione: creare e usare indici nelle colonne abilitate per l'enclave usando la crittografia casuale](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

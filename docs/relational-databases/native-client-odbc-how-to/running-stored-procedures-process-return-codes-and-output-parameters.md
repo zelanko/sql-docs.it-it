@@ -14,16 +14,15 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f950c85ec3aa8200fc160bff73eb722555f770c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908171"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780657"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Esecuzione delle stored procedure - Elaborare i codici restituiti e i parametri di output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esecuzione di stored procedure come stored procedure remote. L'esecuzione di una stored procedure come stored procedure remota consente al driver e al server di ottimizzare le prestazioni di esecuzione della procedura.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "72908171"
   
 3.  Eseguire l'istruzione con **SQLExecDirect**.  
   
-4.  Elabora i set di risultati fino a quando **SQLFetch** o **SQLFetchScroll** restituisce SQL_NO_DATA durante l'elaborazione dell'ultimo set di risultati o fino a quando **SQLMoreResults** non restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
+4.  Elabora i set di risultati fino a quando **SQLFetch** o **SQLFetchScroll** non restituisce SQL_NO_DATA durante l'elaborazione dell'ultimo set di risultati o fino a quando **SQLMoreResults** non restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un codice restituito e di un parametro di output. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  

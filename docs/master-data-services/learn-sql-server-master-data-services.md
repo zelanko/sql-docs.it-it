@@ -1,5 +1,5 @@
 ---
-title: Informazioni su SQL Server Master Data Services | Microsoft Docs
+title: Informazioni su SQL Server Master Data Services
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007192"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729084"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
 
@@ -25,9 +25,9 @@ ms.locfileid: "68007192"
 
   
   
-## <a name="training"></a>Formazione  
-* Per esplorare le nuove funzionalità e le funzionalità introdotte [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare una [Self-Paced Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Accedi con l'account Microsoft sono obbligatorio).  
-* Per sviluppare un [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluzione per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e il [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare una [Lab Self-Paced](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
+## <a name="training"></a>Training  
+* Per esplorare le nuove funzionalità e le nuove funzionalità introdotte in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs) (è necessario l'accesso con il account Microsoft).  
+* Per sviluppare una soluzione [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e il [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
   
 ## <a name="videos"></a>Video  
 * Per scoprire le nuove funzionalità nella versione [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**guardare questo video**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
@@ -35,7 +35,7 @@ ms.locfileid: "68007192"
 ## <a name="samples"></a>Esempi  
 * Per altre informazioni su come creare una struttura dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] usando modelli, entità e gerarchie, provare i modelli di esempio inclusi nell'installazione di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Per istruzioni sulla distribuzione degli esempi, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Per informazioni sugli aggiornamenti di [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ai modelli di esempio, vedere [Esempi di SQL Server: pacchetti di distribuzione di modelli](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+    Per informazioni sugli aggiornamenti di [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ai modelli di esempio, vedere [Esempi SQL Server: Pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Per una dimostrazione di come personalizzare la modalità di interazione degli utenti con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare gli esempi di applicazione della console C# MDS inclusi con gli esempi di SQL Server. È possibile scaricare gli esempi di SQL Server come file ZIP da questo [repository GitHub](https://github.com/Microsoft/sql-server-samples).  
   

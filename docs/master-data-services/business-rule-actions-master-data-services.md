@@ -1,5 +1,5 @@
 ---
-title: Azioni della regola di business (Master Data Services) | Microsoft Docs
+title: Azioni Regola business
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5ea6b5f4f2c863cc5f8352e4822ac00c207057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047493"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729741"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
 
@@ -73,7 +73,7 @@ ms.locfileid: "68047493"
   
 ## <a name="see-also"></a>Vedere anche  
  [Condizioni della regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gerarchie esplicite (Master Data Services) | Microsoft Docs
+title: Gerarchie esplicite
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915956"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729261"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Gerarchie esplicite (Master Data Services)
 
@@ -75,11 +75,11 @@ ms.locfileid: "67915956"
 |Possono essere incomplete|Contengono sempre un numero coerente di livelli|  
   
 ## <a name="explicit-hierarchy-example"></a>Esempio di gerarchia esplicita  
- Nell'esempio seguente, l'entità Product contiene i membri foglia: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
+ Nell'esempio seguente, l'entità Product contiene i seguenti membri foglia: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
   
  Per riepilogare i membri foglia in corrispondenza di punti di consolidamento specifici, è possibile creare membri consolidati nell'entità Product. Inserire i membri consolidati nei livelli dell'albero gerarchico nel punto in cui si desidera riepilogare i membri foglia. Non sussistono limitazioni rispetto al punto di inserimento dei membri consolidati. Ogni membro (foglia o consolidato) può tuttavia essere utilizzato una sola volta.  
   
- ![Esempio di gerarchia esplicita relativo alla mountain bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Esempio di gerarchia esplicita relativo alla mountain bike")  
+ ![Esempio di gerarchia esplicita mountain bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Esempio di gerarchia esplicita mountain bike")  
   
  I membri consolidati possono essere utilizzati per raggruppare membri a qualsiasi livello e i membri consolidati vengono ordinati nell'ordine determinato dall'utente.  
   
