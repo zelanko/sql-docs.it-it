@@ -18,16 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907515"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785276"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizzo di file di dati e file di formato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Il programma per la copia bulk più semplice effettua le operazioni seguenti:  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72907515"
   
  Per eseguire la copia bulk dal set di risultati di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] anziché direttamente da una tabella o una vista:  
   
-1.  Chiamare **bcp_init** per specificare la copia bulk, ma specificare null come nome della tabella.  
+1.  Chiamare **bcp_init** per specificare la copia bulk, ma specificare null per il nome della tabella.  
   
 2.  Chiamare [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) con *EOPTION* impostato su BCPHINTS e *iValue* impostato su un puntatore a una stringa SQLTCHAR contenente l'istruzione Transact-SQL.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "72907515"
 
  L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] può essere qualsiasi istruzione che genera un set di risultati. Il file di dati creato contiene il primo set di risultati dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nella copia bulk viene ignorato qualsiasi set di risultati successivo al primo se tramite l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono generati più set di risultati.  
   
- Per creare un file di dati in cui i dati della colonna vengono archiviati in un formato diverso da quello della tabella, chiamare [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) per specificare il numero di colonne che verranno modificate, quindi chiamare [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna di cui si desidera modificare il formato. Questa operazione viene eseguita dopo la chiamata di **bcp_init** , ma prima della chiamata a **bcp_exec**. **bcp_colfmt** specifica il formato in cui i dati della colonna vengono archiviati nel file di dati. Può essere usato durante la copia bulk in o in uscita. È inoltre possibile utilizzare **bcp_colfmt** per impostare i terminatori di riga e di colonna. Se, ad esempio, i dati non contengono caratteri di tabulazione, è possibile creare un file delimitato da tabulazione utilizzando **bcp_colfmt** per impostare il carattere di tabulazione come carattere di terminazione per ogni colonna.  
+ Per creare un file di dati in cui i dati della colonna vengono archiviati in un formato diverso da quello della tabella, chiamare [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) per specificare il numero di colonne che verranno modificate, quindi chiamare [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna di cui si desidera modificare il formato. Questa operazione viene eseguita dopo aver chiamato **bcp_init** ma prima di chiamare **bcp_exec**. **bcp_colfmt** specifica il formato in cui i dati della colonna vengono archiviati nel file di dati. Può essere usato durante la copia bulk in o in uscita. È inoltre possibile utilizzare **bcp_colfmt** per impostare i terminatori di riga e di colonna. Se, ad esempio, i dati non contengono caratteri di tabulazione, è possibile creare un file delimitato da tabulazioni usando **bcp_colfmt** per impostare il carattere di tabulazione come carattere di terminazione per ogni colonna.  
   
- Quando si esegue la copia bulk e si usa **bcp_colfmt**, è possibile creare facilmente un file di formato che descrive il file di dati creato chiamando [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) dopo l'ultima chiamata a **bcp_colfmt**.  
+ Quando si esegue la copia bulk e si utilizza **bcp_colfmt**, è possibile creare facilmente un file di formato che descrive il file di dati creato chiamando [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) dopo l'ultima chiamata al **bcp_colfmt**.  
   
  Quando si esegue la copia bulk da un file di dati descritto da un file di formato, leggere il file di formato chiamando [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) dopo **bcp_init** ma prima di **bcp_exec**.  
   

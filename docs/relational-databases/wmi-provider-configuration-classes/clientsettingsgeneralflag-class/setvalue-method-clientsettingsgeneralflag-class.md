@@ -1,6 +1,6 @@
 ---
-title: Metodo SetValue (classe ClientSettingsGeneralFlag) | Microsoft Docs
-ms.custom: ''
+title: Metodo SetValue (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ea41844f5492174b67fedba6b9a2326af9a44eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089136"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660114"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Metodo SetValue (classe ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ object.SetValue(Value)
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  

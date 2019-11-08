@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Stored procedure (OLE DB) | Microsoft Docs
+title: Esecuzione di stored procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b139200b9c4e574fe79ab4a0306368a88b191d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031839"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759342"
 ---
 # <a name="stored-procedures---running"></a>Stored procedure - Esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Durante l'esecuzione di istruzioni, la chiamata a una stored procedure nell'origine dati, in alternativa all'esecuzione o alla preparazione diretta di un'istruzione nell'applicazione client, può offrire i vantaggi seguenti:  
   
@@ -38,7 +37,7 @@ ms.locfileid: "68031839"
   
 -   Maggior numero di funzionalità.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta tre dei meccanismi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usano stored procedure per restituire i dati:  
+ Il provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB supporta tre meccanismi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedure utilizzano per restituire i dati:  
   
 -   Ogni istruzione SELECT nella procedura genera un set di risultati.  
   
@@ -48,11 +47,11 @@ ms.locfileid: "68031839"
   
  L'applicazione deve essere in grado di gestire tutti questi output dalle stored procedure.  
   
- Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. In caso del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, i parametri di output e codici restituiti non vengono forniti fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
+ Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. Nel caso del provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB, i parametri di output e i codici restituiti non vengono forniti fino a quando il consumer non ha recuperato o annullato i set di risultati restituiti dal stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
   
  I provider utilizzano la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY per segnalare la restituzione di parametri di output e valori. Questa proprietà è inclusa nel set di proprietà DBPROPSET_DATASOURCEINFO.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e parametri di output non vengono restituiti fino a quando il set di risultati viene elaborato o rilasciato.  
+ Il provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e i parametri di output non vengono restituiti finché il set di risultati non viene elaborato o rilasciato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

@@ -1,6 +1,6 @@
 ---
-title: Proprietà ProtocolDisplayName (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Proprietà ProtocolDisplayName (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ffea0e2043e600eea2995b3cd047d97a30a8d7b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6941d2b6ad7417a6193318ab94d90a37d4a77ea
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223376"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660263"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Proprietà ProtocolDisplayName (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ottiene il nome visualizzato del protocollo di rete client specificato per il [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  Ottiene il nome visualizzato del protocollo di rete client specificato dalla [configurazione dei protocolli client](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,9 +42,9 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome visualizzato del protocollo di rete del client.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e le librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

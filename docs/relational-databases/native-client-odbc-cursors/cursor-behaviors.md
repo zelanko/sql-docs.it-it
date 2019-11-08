@@ -1,5 +1,5 @@
 ---
-title: Comportamenti dei cursori | Microsoft Docs
+title: Comportamenti del cursore | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -21,18 +21,17 @@ ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac0e2585398eb3e3d47edea769c75d512bc4d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06a19a173fdd6f70b19e9a63c214616909708eec
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134095"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784727"
 ---
 # <a name="cursor-behaviors"></a>Comportamenti dei cursori
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC supporta le opzioni ISO per la specifica del comportamento dei cursori mediante lo scorrimento e la sensibilità. Questi comportamenti vengono specificati impostando le opzioni SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY su una chiamata a [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa queste opzioni richiedendo cursori server con le caratteristiche seguenti.  
+  ODBC supporta le opzioni ISO per la specifica del comportamento dei cursori mediante lo scorrimento e la sensibilità. Questi comportamenti vengono specificati impostando le opzioni SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY in una chiamata a [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa queste opzioni richiedendo cursori server con le caratteristiche seguenti.  
   
 |Impostazioni del comportamento del cursore|Caratteristiche del cursore server richieste|  
 |------------------------------|---------------------------------------------|  
@@ -43,15 +42,15 @@ ms.locfileid: "68134095"
 |SQL_NONSCROLLABLE e SQL_INSENSITIVE|Set di risultati predefinito (forward only, di sola lettura)|  
 |SQL_NONSCROLLABLE e SQL_UNSPECIFIED|Set di risultati predefinito (forward only, di sola lettura)|  
   
- La concorrenza ottimistica basata sulla versione richiede una **timestamp** colonna nella tabella sottostante. Se il controllo della concorrenza ottimistica basata sulla versione è richiesto in una tabella che non è un **timestamp** colonna, il server usa basato sui valori della concorrenza ottimistica.  
+ Per la concorrenza ottimistica basata sulla versione è richiesta una colonna **timestamp** nella tabella sottostante. Se è richiesto il controllo della concorrenza ottimistica basata sulla versione in una tabella che non dispone di una colonna di tipo **timestamp** , il server utilizza la concorrenza ottimistica basata sui valori.  
   
 ## <a name="scrollability"></a>Scorrimento  
- Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_SCROLLABLE, il cursore supporta tutti i valori diversi per il *FetchOrientation* del parametro [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_NONSCROLLABLE, il cursore supporta solo un *FetchOrientation* valore di SQL_FETCH_NEXT.  
+ Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_SCROLLABLE, il cursore supporta tutti i valori diversi per il parametro *FetchOrientation* di [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_NONSCROLLABLE, il cursore supporta solo un valore *FetchOrientation* di SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilità  
  Quando SQL_ATTR_CURSOR_SENSITIVITY è impostato su SQL_SENSITIVE, il cursore riflette le modifiche dei dati apportate dall'utente corrente di cui è stato eseguito il commit da altri utenti. Quando SQL_ATTR_CURSOR_SENSITIVITY è impostato su SQL_INSENSITIVE, il cursore non riflette le modifiche dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei cursori (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [alle proprietà dei cursori](properties/cursor-properties.md) 
+ Utilizzo delle [proprietà del cursore](properties/cursor-properties.md) [cursori (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
   
   

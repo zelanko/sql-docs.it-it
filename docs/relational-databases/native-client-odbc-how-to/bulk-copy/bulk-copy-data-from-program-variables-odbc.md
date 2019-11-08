@@ -14,18 +14,17 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2ce54f4ad05abb25b0b8c40a359a072a2c60ae6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2617a25d2e038db365f369fe498d2196c0900142
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908255"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781911"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Eseguire una copia bulk di dati da variabili di programma (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire la copia bulk dei dati dalle variabili di programma a SQL Server utilizzando **bcp_bind** e **bcp_sendrow**. Per semplificare questo esempio, è stato rimosso il codice per il controllo degli errori.  
+  In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire una copia bulk dei dati dalle variabili di programma a SQL Server utilizzando **bcp_bind** e **bcp_sendrow**. Per semplificare questo esempio, è stato rimosso il codice per il controllo degli errori.  
   
  L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "72908255"
   
 8.  Dopo l'invio di tutte le righe, chiamare [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per completare l'operazione.  
 
- È possibile variare il percorso e la lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilizzare [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) per impostare varie opzioni di copia bulk. Usare [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) per inviare dati di tipo **Text**, **ntext**e **Image** in segmenti al server.  
+ È possibile variare il percorso e la lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilizzare [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) per impostare varie opzioni di copia bulk. Utilizzare [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) per inviare dati di tipo **Text**, **ntext**e **Image** in segmenti al server.  
   
 ## <a name="example"></a>Esempio  
  Questo esempio non è supportato in IA64.  
@@ -305,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- Procedure [per la copia bulk con il driver ODBC di SQL Server &#40;procedure&#41; di ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+ Procedure [per la copia bulk con il driver ODBC di SQL Server &#40;procedure&#41; di ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Copia bulk da variabili di programma](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

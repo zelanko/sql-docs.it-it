@@ -1,5 +1,5 @@
 ---
-title: Traccia (Master Data Services) | Microsoft Docs
+title: Traccia
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263978"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727850"
 ---
 # <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
 
@@ -64,9 +64,9 @@ ms.locfileid: "68263978"
     |-------------|-----------------|  
     |Time|La data e l'ora della voce di traccia.|  
     |CorrelationID|Per ogni richiesta viene assegnato un ID di correlazione. Tutte le tracce attivate dalla richiesta condividono lo stesso ID di correlazione.<br /><br /> Quando si verifica un errore nell'interfaccia utente, l'ID di correlazione viene visualizzato nel messaggio di errore.|  
-    |Operation|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
+    |Operazione|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
     |Level|Livello di questa voce di traccia.|  
-    |`Message`|Corpo del messaggio della traccia|  
+    |Message|Corpo del messaggio della traccia|  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Post di blog sulla [risoluzione dei problemi relativi al miglioramento della registrazione](https://go.microsoft.com/fwlink/p/?LinkId=615377)su msdn.com.  
