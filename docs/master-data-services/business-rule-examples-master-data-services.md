@@ -1,5 +1,5 @@
 ---
-title: Esempi di regole di business (Master Data Services) | Microsoft Docs
+title: Esempi di regole di business
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047466"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728704"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Esempi di regole di business (Master Data Services)
 
