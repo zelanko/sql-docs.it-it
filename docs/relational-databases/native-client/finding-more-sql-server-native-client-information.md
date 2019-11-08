@@ -1,5 +1,5 @@
 ---
-title: Ricerca di ulteriori informazioni su SQL Server Native Client | Documenti di Microsoft
+title: Ricerca di altre informazioni SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b025cad8d248c4a2e801010546e7443c42216a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e4817a7ed9b4fa8d3d9f8c24e9b6944cba8ef
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046765"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761171"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Ricerca di ulteriori informazioni su SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e sugli altri tipi di programmazione per l'accesso ai dati, vedere le risorse online seguenti:  
   

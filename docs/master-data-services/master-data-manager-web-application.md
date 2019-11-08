@@ -1,5 +1,5 @@
 ---
-title: Applicazione Web Gestione dati master | Microsoft Docs
+title: Applicazione Web Gestione dati master
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: be12690eac91a8e9c7746e12bc01fd64f35ba7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729093"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
 
@@ -26,9 +26,9 @@ ms.locfileid: "68054488"
 > [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
 > 
-> **Non è possibile creare un sito Web MDS?**
+> **Impossibile creare un sito Web di MDS**
 > >Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
-> [Non è possibile creare un sito Web MDS tramite un account con privilegi limitati in SQL Server 2016](https://aka.ms/mdssupport) 
+> [Impossibile creare un sito Web di MDS tramite un account con privilegi limitati in SQL Server 2016](https://aka.ms/mdssupport) 
   
  L'area funzionale Esplora risorse dell'applicazione Web è la sola area non utilizzata dagli amministratori. Esplora risorse è pensata per quegli utenti che aggiornano i dati master frequentemente. Questi utenti dispongono delle autorizzazioni per i dati necessari per l'esecuzione dei processi.  
   

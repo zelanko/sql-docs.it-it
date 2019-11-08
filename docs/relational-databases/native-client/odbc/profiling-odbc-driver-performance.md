@@ -1,5 +1,5 @@
 ---
-title: Profilatura delle prestazioni del Driver ODBC | Microsoft Docs
+title: Profilatura delle prestazioni del driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913155"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760714"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può eseguire il profiling di due tipi di dati sulle prestazioni:  
   
@@ -45,7 +44,7 @@ ms.locfileid: "67913155"
   
 -   Connettendosi a un'origine dati che specifica la registrazione.  
   
--   La chiamata [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare gli attributi specifici del driver che controllano il profiling.  
+-   Chiamata di [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare attributi specifici del driver che controllano la profilatura.  
   
  Ogni processo dell'applicazione ottiene la propria copia del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mentre il profiling è globale per la combinazione di copia del driver e processo dell'applicazione. Quando il profiling viene attivato in un'applicazione, vengono registrate le informazioni per tutte le connessioni attive nel driver a partire da tale applicazione. Vengono anche incluse le connessioni che non hanno specificamente richiesto il profiling.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "67913155"
   
  Se un'applicazione avvia il profiling in un file di log e una seconda applicazione tenta di avviare il profiling nello stesso file di log, la seconda applicazione non potrà eseguire la registrazione dei dati del profiling. Se la seconda applicazione avvia il profiling dopo che la prima applicazione ha scaricato il driver, la seconda applicazione sovrascriverà il file di log della prima applicazione.  
   
- Se un'applicazione si connette a un'origine dati con il profiling abilitato, il driver restituisce SQL_ERROR se l'applicazione chiama **SQLSetConnectOption** per avviare la registrazione. Una chiamata a **SQLGetDiagRec** restituisce quindi le informazioni seguenti:  
+ Se un'applicazione si connette a un'origine dati con la profilatura abilitata, il driver restituisce SQL_ERROR se l'applicazione chiama **SQLSetConnectOption** per avviare la registrazione. Una chiamata a **SQLGetDiagRec** restituisce quindi quanto segue:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -86,9 +85,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Numero di istruzioni SELECT elaborate dopo SQL_PERF_START.|  
 |SQLSelectRows|Numero di righe selezionate dopo SQL_PERF_START.|  
 |Transazioni|Numero di transazioni utente dopo SQL_PERF_START, inclusi i rollback. Quando un'applicazione ODBC è in esecuzione con SQL_AUTOCOMMIT_ON, ogni comando viene considerato una transazione.|  
-|SQLPrepares|Numerosi [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) chiamate dopo SQL_PERF_START.|  
-|ExecDirects|Numerosi **SQLExecDirect** chiamate dopo SQL_PERF_START.|  
-|SQLExecutes|Numerosi **SQLExecute** chiamate dopo SQL_PERF_START.|  
+|SQLPrepares|Numero di chiamate di [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) dopo SQL_PERF_START.|  
+|ExecDirects|Numero di chiamate a **SQLExecDirect** dopo SQL_PERF_START.|  
+|SQLExecutes|Numero di chiamate **SQLExecute** dopo SQL_PERF_START.|  
 |CursorOpens|Numero di volte in cui il driver ha aperto un cursore server dopo SQL_PERF_START.|  
 |CursorSize|Numero di righe nei set di risultati aperti dai cursori dopo SQL_PERF_START.|  
 |CursorUsed|Numero di righe effettivamente recuperate tramite il driver dai cursori dopo SQL_PERF_START.|  
@@ -101,7 +100,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Numero di handle di istruzione attualmente aperti in tutte le connessioni aperte nel driver.|  
 |MaxOpenStmt|Numero massimo di handle di istruzione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumOpenStmt|Numero di handle di istruzione aperti dopo SQL_PERF_START.|  
-|**Statistiche di connessione:**||  
+|**Statistiche connessione:**||  
 |CurrentConnectionCount|Numero corrente di handle di connessione attivi aperti dall'applicazione nel server.|  
 |MaxConnectionsOpened|Numero massimo di handle di connessione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumConnectionsOpened|Somma del numero di handle di connessione aperti dopo SQL_PERF_START.|  
@@ -122,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Procedure relative alle prestazioni del Driver ODBC di profilatura &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native client &#40; &#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [Procedure per la profilatura delle prestazioni del &#40;driver ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Risincronizzazione delle righe | Microsoft Docs
+title: Risincronizzazione di righe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,17 @@ ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c477b2e7aa3f6c310fb7c985c611f737d2b3c6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd994f7ec89f154f106df25190819b227495f290
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103537"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788728"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Aggiornamento dei dati nei set di righe - Risincronizzazione delle righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta **IRowsetResynch** su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportato dal cursore solo set di righe. **IRowsetResynch** non è disponibile su richiesta. Il consumer deve richiedere l'interfaccia prima di aprire il set di righe.  
+  Il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta **IRowsetResynch** solo nei set di righe supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori. **IRowsetResynch** non è disponibile su richiesta. Il consumer deve richiedere l'interfaccia prima di aprire il set di righe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dei dati nei set di righe](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  

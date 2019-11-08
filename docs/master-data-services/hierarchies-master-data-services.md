@@ -1,5 +1,5 @@
 ---
-title: Gerarchie (Master Data Services) | Microsoft Docs
+title: Gerarchie
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945239"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729229"
 ---
 # <a name="hierarchies-master-data-services"></a>Gerarchie (Master Data Services)
 

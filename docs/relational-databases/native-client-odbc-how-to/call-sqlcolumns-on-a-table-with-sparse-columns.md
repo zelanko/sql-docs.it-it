@@ -1,5 +1,5 @@
 ---
-title: Chiamare SQLColumns in una tabella con colonne di tipo Sparse | Microsoft Docs
+title: Chiamare SQLColumns in una tabella con colonne di tipo sparse | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,22 +12,21 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987597"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781703"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chiamare SQLColumns su un tabella con colonne di tipo sparse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In questo esempio viene illustrato come chiamare SQLColumns in una tabella con colonne di tipo sparse definite tramite ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Per ulteriori informazioni sulla funzionalità colonne di tipo sparse, vedere [supporto di colonne di tipo sparse in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C++. Modificare "MyServer" impostando un nome di server valido. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h. Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
@@ -36,7 +35,7 @@ ms.locfileid: "67987597"
   
  Eseguire la compilazione con /EHsc /D, "UNICODE" e odbc32.lib.  
   
- Il secondo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice consente di eliminare la tabella creata da questo esempio.  
+ Il secondo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Elimina la tabella creata da questo esempio.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

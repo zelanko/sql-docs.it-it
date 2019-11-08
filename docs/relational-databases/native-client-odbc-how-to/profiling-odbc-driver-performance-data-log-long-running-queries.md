@@ -13,16 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbcb19a3f5ad2d281306eb1cd22f3018d7f9e1c2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908182"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780928"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilatura dei dati sulle prestazioni del driver ODBC - Registrare query a lunga esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione di query con esecuzione prolungata. Durante l'esecuzione dell'esempio, viene creato Odbcqry.log, contenente un elenco di query la cui esecuzione supera un intervallo impostato dall'applicazione. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "72908182"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Per registrare dati di query con esecuzione prolungata a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il percorso completo e il nome file del file di log di query con esecuzione prolungata. Ad esempio  
+1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il percorso completo e il nome file del file di log di query con esecuzione prolungata. Esempio:  
   
     ```  
     C:\\Odbcqry.log  

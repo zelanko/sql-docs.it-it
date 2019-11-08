@@ -23,30 +23,29 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 353377b16ad88cbb7bf3604d33a1a42272f60631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f376710dbcdd09daf664e9eee20533c5372641
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106865"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790229"
 ---
 # <a name="return-codes"></a>Codici restituiti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Al livello più elementare, una funzione membro può avere esito positivo o negativo. A un livello più approfondito, una funzione può avere esito positivo, ma tale esito potrebbe non corrispondere alle previsioni dello sviluppatore dell'applicazione.  
   
  Per altre informazioni sui codici restituiti OLE DB, vedere [Codici restituiti (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzione membro del provider OLE DB Native Client restituisce S_OK, la funzione ha avuto esito positivo.  
+ Quando una funzione membro del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB restituisce S_OK, la funzione ha esito positivo.  
   
- Quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzione membro del provider OLE DB Native Client restituisce S_OK, le macro OLE/COM HRESULT FAILED e IS_ERROR possono determinare l'esito positivo o negativo complessivo di una funzione.  
+ Quando una funzione membro del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB non restituisce S_OK, l'operazione di decompressione HRESULT OLE/COM non è riuscita e le macro IS_ERROR possono determinare l'esito positivo o negativo complessivo di una funzione.  
   
- Se FAILED o IS_ERROR restituisce TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client ha la certezza che l'esecuzione della funzione membro non è riuscita. Se FAILED o IS_ERROR restituisce FALSE e il valore HRESULT diverso da S_OK, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client ha la certezza che la funzione ha avuto esito positivo in un certo senso. Il consumer può recuperare informazioni dettagliate su questo "esito positivo con informazioni" restituito dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfacce di errore del provider OLE DB Native Client. Inoltre, nel caso in cui una funzione non riesce in modo chiaro (la macro FAILED restituisce TRUE), informazioni dettagliate sull'errore sono disponibili dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfacce di errore del provider OLE DB Native Client.  
+ Se ha ESITo negativo o IS_ERROR restituisce TRUE, il consumer del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client garantisce che l'esecuzione della funzione membro non sia riuscita. Se ha ESITo negativo o IS_ERROR restituisce FALSE e HRESULT non è uguale S_OK, il consumer del provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ha la certezza che la funzione abbia avuto esito positivo. Il consumer può recuperare informazioni dettagliate su questo ritorno "success with information" dalle interfacce di errore del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB. Inoltre, nel caso in cui una funzione abbia esito negativo (la macro non riuscita restituisce TRUE), le informazioni dettagliate sugli errori sono disponibili nelle interfacce di errore del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer del provider OLE DB per Client nativi verificano comunemente il valore restituito HRESULT DB_S_ERRORSOCCURRED "esito positivo con informazioni". Le funzioni membro che restituiscono DB_S_ERRORSOCCURRED definiscono in genere uno o più parametri che forniscono al consumer i valori di stato. Poiché è possibile che le uniche informazioni a disposizione del consumer siano quelle restituite nei parametri dei valori di stato, è necessario implementare la logica dell'applicazione per il recupero dei valori di stato quando essi sono disponibili.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i consumer del provider OLE DB di Native Client incontrano in genere il DB_S_ERRORSOCCURRED HRESULT restituito "success with information". Le funzioni membro che restituiscono DB_S_ERRORSOCCURRED definiscono in genere uno o più parametri che forniscono al consumer i valori di stato. Poiché è possibile che le uniche informazioni a disposizione del consumer siano quelle restituite nei parametri dei valori di stato, è necessario implementare la logica dell'applicazione per il recupero dei valori di stato quando essi sono disponibili.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzioni membro del provider OLE DB Native Client non restituiscono il codice di esito positivo S_FALSE. Tutti i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzioni membro del provider OLE DB Native Client restituiscono sempre S_OK per indicare l'esito positivo.  
+ Le funzioni membro del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB non restituiscono il codice di esito positivo S_FALSE. Tutte le funzioni membro del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB restituiscono sempre S_OK per indicare l'esito positivo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [errori](../../relational-databases/native-client-ole-db-errors/errors.md)  

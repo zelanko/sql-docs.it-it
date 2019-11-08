@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 855bc71e1a7ad7c0d462d16e266f392128b04519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a123717631084a61a33bbd8b106f95a51a831b9e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051024"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763028"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Restituisce lo stato di un'operazione in esecuzione in modo asincrono.  
   
@@ -68,16 +67,16 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION: l'oggetto si trova in una fase di popolamento. Anche se il set di righe viene inizializzato completamente e l'intervallo completo di interfacce è disponibile per l'oggetto, nel set di righe potrebbero essere presenti altre righe non ancora popolate. Sebbene *pulProgress* e *pulProgressMax* possano basarsi sul numero di righe popolate, in genere si basano sulla quantità di tempo o di lavoro necessaria per popolare il set di righe. Un chiamante deve pertanto utilizzare queste informazioni come stima approssimativa del tempo che potrebbe essere necessario e non dell'eventuale conteggio delle righe. Questa fase viene restituita solo durante il popolamento di un set di righe. Non viene restituita mai durante l'inizializzazione di un oggetto origine dati o l'esecuzione di un comando che aggiorna, elimina o inserisce righe.  
   
- DBASYNCHPHASE_COMPLETE: tutta l'elaborazione asincrona dell'oggetto è stata completata. **Issasynchstatus:: GetStatus** restituisce un HRESULT che indica il risultato dell'operazione. In genere, si tratta dell'oggetto HRESULT che sarebbe stato restituito se l'operazione fosse stata chiamata in modo sincrono. Se l'operazione asincrona è il risultato della chiamata a **ICommand::Execute** per un comando che aggiorna, elimina o inserisce righe, *pulProgress* e *pulProgressMax* sono uguali al numero totale di righe interessate dal comando. Se *cParamSets* è maggiore di 1, indica il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione. Se *peAsynchPhase* è un puntatore Null, non viene restituito alcun codice di stato.  
+ DBASYNCHPHASE_COMPLETE: tutta l'elaborazione asincrona dell'oggetto è stata completata. **ISSAsynchStatus:: GetStatus** restituisce un valore HRESULT che indica il risultato dell'operazione. In genere, si tratta dell'oggetto HRESULT che sarebbe stato restituito se l'operazione fosse stata chiamata in modo sincrono. Se l'operazione asincrona è il risultato della chiamata a **ICommand::Execute** per un comando che aggiorna, elimina o inserisce righe, *pulProgress* e *pulProgressMax* sono uguali al numero totale di righe interessate dal comando. Se *cParamSets* è maggiore di 1, indica il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione. Se *peAsynchPhase* è un puntatore Null, non viene restituito alcun codice di stato.  
   
- DBASYNCHPHASE_CANCELED: l'elaborazione asincrona dell'oggetto è stata interrotta. **Issasynchstatus:: GetStatus** restituisce DB_E_CANCELED. Se l'operazione asincrona è il risultato della chiamata a **ICommand::Execute** per un comando che aggiorna, elimina o inserisce righe, *pulProgress* è uguale al numero totale di righe, per tutti i set di parametri, interessate dal comando prima dell'annullamento.  
+ DBASYNCHPHASE_CANCELED: l'elaborazione asincrona dell'oggetto è stata interrotta. **ISSAsynchStatus:: GetStatus** restituisce DB_E_CANCELED. Se l'operazione asincrona è il risultato della chiamata a **ICommand::Execute** per un comando che aggiorna, elimina o inserisce righe, *pulProgress* è uguale al numero totale di righe, per tutti i set di parametri, interessate dal comando prima dell'annullamento.  
   
  *ppwszStatusText*[in/out]  
  Puntatore alla memoria contenente informazioni aggiuntive sull'operazione. Un provider può usare questo valore per distinguere tra elementi differenti di un'operazione, ad esempio le diverse risorse a cui si accede. Questa stringa viene localizzata in base alla proprietà DBPROP_INIT_LCID dell'oggetto origine dati.  
   
  Se *ppwszStatusText* è non Null nell'input, il provider restituisce lo stato associato allo specifico elemento identificato da *ppwszStatusText*. Se *ppwszStatusText* non indica un elemento di *eOperation*, il provider restituisce S_OK con *pulProgress* e *pulProgressMax* impostati sullo stesso valore. Se il provider non distingue tra elementi basati su un identificatore testuale, imposta *ppwszStatusText* su NULL e restituisce informazioni sull'operazione nel suo complesso. In caso contrario, se *ppwszStatusText* è non Null nell'input, il provider lascia *ppwszStatusText* invariato.  
   
- Se *ppwszStatusText* è null per input, i set di provider *ppwszStatusText* su un valore che indica ulteriori informazioni sull'operazione o su NULL se tali informazioni non sono disponibili o se  **Issasynchstatus:: GetStatus** restituisce un errore. Quando *ppwszStatusText* è Null nell'input, il provider alloca memoria per la stringa di stato e restituisce l'indirizzo a tale memoria. Il consumer rilascia la memoria con **IMalloc::Free** quando la stringa non è più necessaria.  
+ Se *ppwszStatusText* è null per l'input, il provider imposta *ppwszStatusText* su un valore che indica ulteriori informazioni sull'operazione o su null se tali informazioni non sono disponibili o se **ISSAsynchStatus:: GetStatus** restituisce un errore. Quando *ppwszStatusText* è Null nell'input, il provider alloca memoria per la stringa di stato e restituisce l'indirizzo a tale memoria. Il consumer rilascia la memoria con **IMalloc::Free** quando la stringa non è più necessaria.  
   
  Se *ppwszStatusText* è Null nell'input, non viene restituita alcuna stringa di stato e il provider restituisce informazioni sugli elementi dell'operazione o sull'operazione in generale.  
   
@@ -97,19 +96,19 @@ HRESULT GetStatus(
  L'elaborazione asincrona è stata annullata durante l'inizializzazione dell'oggetto origine dati. L'oggetto origine dati si trova in uno stato non inizializzato.  
   
  E_INVALIDARG  
- Il *hChapter* parametro non è corretto.  
+ Il parametro *hChapter* non è corretto.  
   
  E_UNEXPECTED  
- **Issasynchstatus:: GetStatus** è stato chiamato su un oggetto origine dati, e **IDBInitialize:: Initialize** non è stato chiamato sull'oggetto origine dati.  
+ **ISSAsynchStatus:: GetStatus** è stato chiamato su un oggetto origine dati e **IDBInitialize:: Initialize** non è stato chiamato sull'oggetto origine dati.  
   
- **Issasynchstatus:: GetStatus** è stato chiamato su un set di righe **ITransaction:: commit** oppure **ITransaction:: Abort** è stato chiamato e l'oggetto è in uno stato non valido.  
+ **ISSAsynchStatus:: GetStatus** è stato chiamato su un set di righe, **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato e l'oggetto è in uno stato non valido.  
   
- **Issasynchstatus:: GetStatus** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
+ **ISSAsynchStatus:: GetStatus** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
  E_FAIL  
  Si è verificato un errore specifico del provider.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il comportamento del metodo **ISSAsynchStatus::GetStatus** è identico a quello del metodo **IDBAsynchStatus::GetStatus** con l'eccezione che se viene interrotta l'inizializzazione di un oggetto origine dati, viene restituito E_UNEXPECTED anziché DB_E_CANCELED (anche se [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). Questo accade perché l'oggetto origine dati non rimane nello stato non valido in seguito a un'interruzione, allo scopo di consentire altri tentativi di inizializzazione.  
   
  Se il set di righe viene inizializzato o popolato in modo asincrono, deve supportare questo metodo.  
@@ -122,10 +121,10 @@ HRESULT GetStatus(
   
  Il provider non è obbligato a garantire una maggiore accuratezza, anche se questa è auspicabile quando sono possibili stime accettabili del completamento. L'impegno per ottenere questo risultato migliorerà la qualità dell'interfaccia utente perché è probabile che questa funzione venga utilizzata principalmente per fornire all'utente dettagli sullo stato. La soddisfazione dell'utente aumenta proporzionalmente alla qualità dei dettagli relativi a un'attività impercettibile e con esecuzione prolungata.  
   
- Se si chiama **ISSAsynchStatus::GetStatus** su un oggetto origine dati inizializzato o su un set di righe popolato oppure si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con *pulProgress* e *pulProgressMax* impostati sullo stesso valore. Se **issasynchstatus:: GetStatus** viene chiamato su un oggetto creato dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, entrambi *pulProgress* e *pulProgressMax* indicano il numero totale di righe interessate dal comando.  
+ Se si chiama **ISSAsynchStatus::GetStatus** su un oggetto origine dati inizializzato o su un set di righe popolato oppure si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con *pulProgress* e *pulProgressMax* impostati sullo stesso valore. Se **ISSAsynchStatus:: GetStatus** viene chiamato su un oggetto creato a partire dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, sia *pulProgress* che *pulProgressMax* indicano il numero totale di righe interessate dal comando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [OLE DB &#40;ISSAsynchStatus&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

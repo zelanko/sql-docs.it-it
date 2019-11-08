@@ -1,5 +1,5 @@
 ---
-title: Bloccare una versione (Master Data Services) | Microsoft Docs
+title: Bloccare una versione
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 693eeda37e65dbf1d83fdf59eaf546e711827b7e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131847"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728053"
 ---
 # <a name="lock-a-version-master-data-services"></a>Bloccare una versione (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]bloccare una versione di un modello per evitare modifiche ai membri del modello e ai relativi attributi.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] bloccare una versione di un modello per evitare modifiche ai membri del modello e ai relativi attributi.  
   
 > [!NOTE]  
 >  Quando viene bloccata una versione, gli utenti con privilegi avanzati e gli amministratori del modello possono continuare ad aggiungere, modificare e rimuovere membri. Gli altri utenti con autorizzazione per il modello possono solo visualizzare membri.  
@@ -32,7 +32,7 @@ ms.locfileid: "68131847"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Lo stato della versione deve essere **Aperto**.  
   

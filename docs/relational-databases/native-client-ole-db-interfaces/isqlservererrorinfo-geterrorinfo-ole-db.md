@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Documenti di Microsoft
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 434a5abdcd04037ff61f51dc16884854d9438cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9ba54dd905127dc87cb3c14f74036c78daae1a1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051049"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789365"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Restituisce un puntatore a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO struttura contenente la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dettagli errore.  
+  Restituisce un puntatore a una struttura SSERRORINFO del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB contenente i dettagli dell'errore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce l'interfaccia degli errori **ISQLServerErrorInfo** . Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
+ Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce l'interfaccia degli errori **ISQLServerErrorInfo** . Questa interfaccia restituisce dettagli di un errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusi la gravità e lo stato.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,13 +52,13 @@ HRESULT GetErrorInfo(
  Il metodo è riuscito.  
   
  E_INVALIDARG  
- Entrambi i *ppSSErrorInfo* o *ppErrorStrings* argomento era NULL.  
+ L'argomento *ppSSErrorInfo* o *ppErrorStrings* è null.  
   
  E_OUTOFMEMORY  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider non è riuscito ad allocare memoria sufficiente per completare la richiesta.  
+ Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client non è riuscito ad allocare memoria sufficiente per completare la richiesta.  
   
-## <a name="remarks"></a>Note  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
+## <a name="remarks"></a>Osservazioni  
+ Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
   
  La struttura SSERRORINFO viene definita nel modo seguente:  
   
@@ -77,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |*pwszMessage*|Messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il messaggio viene restituito attraverso il metodo **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si è verificato l'errore.|  
@@ -90,7 +89,7 @@ SSERRORINFO;
  I puntatori nella struttura fanno riferimento agli indirizzi nella stringa restituita nell'argomento *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISQLServerErrorInfo per la &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

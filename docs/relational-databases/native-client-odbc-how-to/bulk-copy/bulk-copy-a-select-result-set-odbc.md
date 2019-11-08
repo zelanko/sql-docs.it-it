@@ -15,16 +15,15 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c73b98d623490d9885188a5d71fd5caac02e4c4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3909c8d8b8df5b5bcdb17945eee547e81f73f004
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908094"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781989"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Eseguire una copia bulk di un set di risultati SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Nell'esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire la copia bulk del set di risultati di un'istruzione SELECT. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
@@ -49,11 +48,11 @@ ms.locfileid: "72908094"
   
     -   Direzione della copia: DB_OUT.  
   
-5.  Chiamare [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare EOPTION su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR contenente l'istruzione SELECT.  
+5.  Chiamare [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare EOPTION su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR che contiene l'istruzione SELECT.  
   
 6.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
 
- Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati in altri tipi di dati usando [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per ulteriori informazioni, vedere [creare un file &#40;di formato per la&#41;copia bulk ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
+ Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati in altri tipi di dati utilizzando [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per ulteriori informazioni, vedere [creare un file &#40;di formato per la&#41;copia bulk ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

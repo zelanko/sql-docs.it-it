@@ -1,5 +1,5 @@
 ---
-title: Membri (Master Data Services) | Microsoft Docs
+title: Membri
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728011"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]i membri sono i dati master fisici. Ad esempio, un membro può essere una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i membri sono i dati master fisici. Ad esempio, un membro può essere una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.  
   
 ## <a name="how-members-relate-to-other-model-objects"></a>Correlazione tra membri e altri oggetti modello  
  I membri possono essere considerati come righe in una tabella. I membri correlati sono contenuti in un'entità e ogni membro è definito da valori di attributo.  
@@ -53,12 +53,12 @@ ms.locfileid: "68092588"
 -   Nelle gerarchie esplicite i membri consolidati possono essere elementi padre di altri membri all'interno della gerarchia o possono essere elementi figlio.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Utilizzare gerarchie e raccolte per organizzare i membri  
- Le gerarchie e le raccolte possono essere utilizzate per raggruppare i membri per l'esecuzione di report o analisi. Per altre informazioni, vedere [Gerarchie &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) e [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ Le gerarchie e le raccolte possono essere utilizzate per raggruppare i membri per l'esecuzione di report o analisi. Per altre informazioni, vedere [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) e [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Esempio di membro  
  Nell'esempio seguente ogni membro è costituito da un valore di attributo Name, Code, Subcategory StandardCost, ListPrice e FilePhoto.  
   
- ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
+ ![Tabella delle entità del prodotto bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella delle entità del prodotto bike")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

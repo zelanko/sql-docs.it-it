@@ -10,18 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b7360fdb5cc5e36a9d21b4821a2bf1e176ad97
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176320"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761569"
 ---
-# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connessione a un database SQL di Azure tramite SQL Server Native Client
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connessione a un database SQL di Azure usando SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Per un esempio che illustra come connettersi a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [sviluppo: Procedure (database SQL di Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Per un esempio che illustra come connettersi a un [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere procedure [per lo sviluppo (database SQL di Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemi noti correlati alla connessione a un database SQL  
  Di seguito sono elencati i problemi noti che si verificano durante la connessione a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

@@ -13,16 +13,15 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907357"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790803"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare i &#40;parametri&#41;con valori di tabella ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   

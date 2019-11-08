@@ -1,5 +1,5 @@
 ---
-title: Creare un File di formato di copia di massa (ODBC) | Documenti di Microsoft
+title: Creazione di un file di formato per la copia bulk (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a892e91685e90867f8825dbe46d7dd336cb8fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4085375ac361bb7ae40e0d69bea919a1ac431dc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987647"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781711"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Creare un file di formato per la copia bulk (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per creare un file di dati e un file di formato. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
@@ -46,28 +45,28 @@ ms.locfileid: "67987647"
   
     -   Nome di un file di dati per la ricezione di eventuali messaggi di errore della copia bulk (specificare NULL se non si desidera che venga creato un file dei messaggi).  
   
-    -   La direzione della copia: DB_OUT nel file tabella o della vista.  
+    -   Direzione della copia: DB_OUT nel file dalla tabella o dalla vista.  
   
 5.  Chiamare [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) per impostare il numero di colonne.  
   
-6.  Chiamare [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna per definirne le caratteristiche del file di dati.  
+6.  Chiamare [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna per definirne le caratteristiche nel file di dati.  
   
-7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati deve essere creato dall'operazione di copia bulk.  
+7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati che deve essere creato dall'operazione di copia bulk.  
   
 8.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
   
  L'esecuzione di un'operazione di copia bulk in questo modo determina la creazione di un file di dati che contiene i dati oggetto della copia bulk e un file di formato che descrive il layout del file di dati.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per creare la tabella che verrà usato l'esempio di codice.  
+ Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella che verrà utilizzata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e odbcbcp.lib.  
   
- Eseguire il terzo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per eliminare la tabella utilizzata dall'esempio di codice.  
+ Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  
@@ -216,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ Procedure [per la copia bulk con il driver ODBC di SQL Server &#40;procedure&#41; di ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Uso di file di dati e file di formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

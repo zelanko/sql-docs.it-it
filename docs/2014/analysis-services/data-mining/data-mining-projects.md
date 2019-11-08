@@ -1,5 +1,5 @@
 ---
-title: Progetti di Data Mining | Microsoft Docs
+title: Progetti di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085062"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705291"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
   Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
@@ -62,7 +62,7 @@ ms.locfileid: "66085062"
   
  Ad esempio, un solo progetto di data mining può contenere un riferimento a più origini dati, ciascuna delle quali supporta più viste origine dati. A sua volta, ogni vista origine dati può supportare più strutture di data mining, ciascuna con molti modelli di data mining correlati.  
   
- Inoltre, il progetto potrebbe includere algoritmi plug-in, assembly personalizzati o stored procedure personalizzate; questi oggetti tuttavia non vengono descritti in questo argomento. Per altre informazioni, vedere [Guida per sviluppatori di &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Inoltre, il progetto potrebbe includere algoritmi plug-in, assembly personalizzati o stored procedure personalizzate; questi oggetti tuttavia non vengono descritti in questo argomento. Per ulteriori informazioni, vedere [la Guida &#40;per gli&#41;sviluppatori Analysis Services](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -70,7 +70,7 @@ ms.locfileid: "66085062"
   
  Un progetto di data mining può fare riferimento a più origini dati. Anche se un modello di data mining può utilizzare una sola origine dati alla volta, il progetto può avere più modelli tratti da origini dati diverse.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportati dati da più provider esterni e nel data mining di SQL Server è possibile utilizzare sia dati relazionali sia dati del cubo come origine dati. Tuttavia, se si sviluppano entrambi i tipi di modelli di progetti basati su origini relazionali e modelli basati su cubi OLAP, si potrebbe essere utile svilupparli e gestirli in progetti separati.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportati dati da più provider esterni e nel data mining di SQL Server è possibile utilizzare sia dati relazionali sia dati del cubo come origine dati. Tuttavia, se si sviluppano entrambi i tipi di progetti (modelli basati su origini relazionali e modelli basati su cubi OLAP), potrebbe essere necessario svilupparli e gestirli in progetti distinti.  
   
 -   In genere i modelli basati su un cubo OLAP devono essere sviluppati all'interno della soluzione di progettazione OLAP. Ciò è dovuto al fatto che i modelli basati su un cubo devono elaborare il cubo per aggiornare i dati. In genere è necessario utilizzare dati del cubo solo quando si tratta del mezzo principale di archiviazione dati e accesso o quando si richiedono le aggregazioni, le dimensioni e gli attributi creati dal progetto multidimensionale.  
   
@@ -160,9 +160,7 @@ ms.locfileid: "66085062"
   
  Queste visualizzazioni sono temporanee e vengono chiuse senza essere salvate quando si esce dalla sessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pertanto, se è necessario esportare tali visualizzazioni in un'altra applicazione per una presentazione o un'ulteriore analisi, usare i comandi **Copia** forniti in ogni scheda o riquadro dell'interfaccia del visualizzatore.  
   
- I componenti aggiuntivi Data mining per Excel forniscono inoltre un modello di Visio che è possibile utilizzare per rappresentare i modelli in un diagramma di Visio e annotare e modificare il diagramma utilizzando gli strumenti di Visio. Per altre informazioni, vedere [Componenti aggiuntivi Data mining di Microsoft SQL Server 2008 SP2 per Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
-  
-
+ I componenti aggiuntivi Data mining per Excel forniscono inoltre un modello di Visio che è possibile utilizzare per rappresentare i modelli in un diagramma di Visio e annotare e modificare il diagramma utilizzando gli strumenti di Visio. Per altre informazioni, vedere [Componenti aggiuntivi Data mining di Microsoft SQL Server 2008 SP2 per Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  Dopo avere creato un modello, è possibile analizzare i risultati e decidere quali modelli offrono prestazioni ottimali.  
@@ -173,7 +171,7 @@ ms.locfileid: "66085062"
   
  Si noti che questi report e grafici non sono archiviati con il progetto o nel database di ssASnoversion, pertanto se è necessario conservare o duplicare i risultati, è necessario salvarli o creare script degli oggetti tramite DMX o AMO. È inoltre possibile utilizzare stored procedure per la convalida incrociata.  
   
- Per altre informazioni, vedere [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md).  
+ Per altre informazioni, vedere [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 
   
@@ -202,10 +200,10 @@ ms.locfileid: "66085062"
 |Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di data mining](data-mining-model-viewers.md)|  
 |Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)|  
 |Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[Elaborazione di oggetti di data mining](processing-data-mining-objects.md)|  
-|Vengono fornite ulteriori informazioni su Analysis Services|[Database di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Vengono fornite ulteriori informazioni su Analysis Services|[Database modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Designer](data-mining-designer.md)   
+ [Progettazione modelli di data mining](data-mining-designer.md)   
  [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Database dell'area di lavoro &#40;SSAS tabulare&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   

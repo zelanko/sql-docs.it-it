@@ -1,5 +1,5 @@
 ---
-title: Creazione di un set di righe con IOpenRowset | Documenti di Microsoft
+title: Creazione di un set di righe con IOpenRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,17 @@ ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba14712d80e970c9abb995ddbf6d172951c3d414
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd80b90a8c40551344773ab7c5e95a539c21eefb
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105098"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788991"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Creazione di un set di righe con IOpenRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la **IOpenRowset:: OPENROWSET** metodo con le restrizioni seguenti:  
+  Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB supporta il metodo **IOpenRowset:: OPENROWSET** con le restrizioni seguenti:  
   
 -   Una vista o una tabella di base deve essere specificata in una struttura del database (DBID) a cui punta il parametro *pTableID*.  
   

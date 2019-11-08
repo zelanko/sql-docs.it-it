@@ -1,5 +1,5 @@
 ---
-title: Disconnessione da un'origine dei dati | Documenti di Microsoft
+title: Disconnessione da un'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,18 +24,17 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f915a802236394cb732959c6fbf898e9d2b2e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5a7cb061c308508b0ab5d489dcabb4b25f93883
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784756"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Disconnessione da un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Quando un'applicazione ha terminato di utilizzare un'origine dati, viene chiamato **SQLDisconnect**. **SQLDisconnect** libera le istruzioni allocate nella connessione e disconnette il driver dell'origine dati. Dopo la disconnessione, l'applicazione può chiamare [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) per liberare l'handle di connessione. Prima di uscire, un'applicazione chiama inoltre **SQLFreeHandle** per liberare l'handle di ambiente.  
+  Quando un'applicazione ha terminato di usare un'origine dati, chiama **SQLConnect**. **SQLConnect** libera tutte le istruzioni allocate sulla connessione e disconnette il driver dall'origine dati. Dopo la disconnessione, l'applicazione può chiamare [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) per liberare l'handle di connessione. Prima di uscire, un'applicazione chiama anche **SQLFreeHandle** per liberare l'handle di ambiente.  
   
  Dopo la disconnessione, un'applicazione può riutilizzare l'handle di connessione allocato per connettersi a un'origine dati diversa oppure per riconnettersi alla stessa origine dati. La decisione di rimanere connessi anziché disconnettersi e riconnettersi in un secondo momento richiede la valutazione da parte del writer dell'applicazione dei costi relativi di ogni opzione. Connettersi e rimanere connessi a un'origine dati può essere relativamente costoso, a seconda del supporto di connessione utilizzato. Nella valutazione vanno considerati anche la probabilità di dover eseguire operazioni aggiuntive sulla stessa origine dati e il tempo richiesto. È inoltre possibile che un'applicazione debba utilizzare più di una connessione.  
   

@@ -16,16 +16,15 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1ee4536769ea1531a11ca3d57f049310ade042
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707597"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782062"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>Estensioni del driver SQL Server - Funzioni di copia bulk
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   ODBC (Open Database Connectivity) è un'API Microsoft Win32 utilizzata dalle applicazioni per l'accesso ai dati delle origini dati ODBC. Nella guida di riferimento al driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non sono documentate tutte le chiamate alle funzioni di ODBC. Vengono infatti prese in esame solo le funzioni che, se utilizzate con il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, presentano comportamenti o parametri specifici del driver.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "71707597"
   
  Un'applicazione in cui vengono utilizzate le chiamate alla funzione API BCP dovrebbe essere collegata alla libreria (con estensione lib) fornita con il driver (con estensione dll) utilizzato dall'applicazione. Un'applicazione BCP non dovrebbe essere collegata a più di una libreria del driver.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)  
   

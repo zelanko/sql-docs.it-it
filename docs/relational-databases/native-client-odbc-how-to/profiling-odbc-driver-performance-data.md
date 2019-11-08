@@ -1,5 +1,5 @@
 ---
-title: Profiling dei dati sulle prestazioni del Driver (ODBC) | Microsoft Docs
+title: Dati sulle prestazioni del driver del profilo (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,39 +13,38 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1136efd8102268623de9caa6be6e4ed77930dcec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133418"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780667"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Profilatura dei dati sulle prestazioni del driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione delle statistiche relative alle prestazioni. L'esempio crea un file: odbcperf illustra la creazione di un file di log delle prestazioni dei dati e visualizzazione dei dati sulle prestazioni direttamente dalla struttura di dati (la struttura SQLPERF è definita in Odbcss. h.). L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
+  In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione delle statistiche relative alle prestazioni. Nell'esempio viene creato un file: odbcperf. log. in questo esempio viene illustrata la creazione di un file di log dei dati sulle prestazioni e la visualizzazione dei dati sulle prestazioni direttamente dalla struttura dei dati SQLPERF (la struttura SQLPERF è definita in ODBCs. h.). L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Per registrare i dati relativi alle prestazioni del driver tramite Amministratore ODBC  
   
-1.  Nelle **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origine dati (ODBC)** . In alternativa, è possibile richiamare odbcad32.exe.  
+1.  Nel **Pannello di controllo**fare doppio clic su **strumenti di amministrazione** , quindi fare doppio clic su **origini dati (ODBC)** . In alternativa, è possibile richiamare odbcad32.exe.  
   
-2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
+2.  Fare clic sulla scheda DSN **utente**, **DSN di sistema**o **DSN su file** .  
   
 3.  Fare clic sull'origine dati per cui registrare le prestazioni.  
   
-4.  Fare clic su **configurare**.  
+4.  Fare clic su **Configura**.  
   
-5.  In Microsoft SQL Server di configurazione DSN guidata passare alla pagina contenente **statistiche del driver ODBC nel file di log**.  
+5.  Nella procedura guidata Microsoft SQL Server configurazione DSN, passare alla pagina contenente **le statistiche del driver ODBC di log nel file di log**.  
   
-6.  Selezionare **statistiche del driver ODBC nel file di log**. Nella casella immettere il nome del file in cui si desidera salvare le statistiche. Facoltativamente, fare clic su **esplorare** sfogliare il file system per il registro delle statistiche.  
+6.  Selezionare **registra statistiche driver ODBC nel file di log**. Nella casella immettere il nome del file in cui si desidera salvare le statistiche. Facoltativamente, fare clic su **Sfoglia** per visualizzare il file System per il registro delle statistiche.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Per registrare i dati relativi alle prestazioni del driver a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il nome di file e percorso completo del file di log dei dati sulle prestazioni. Ad esempio:  
+1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. Esempio:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -53,20 +52,20 @@ ms.locfileid: "68133418"
   
 2.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_START per avviare la registrazione dei dati sulle prestazioni.  
   
-3.  Facoltativamente, è possibile chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_LOG_NOW e NULL per scrivere un record delimitato da tabulazioni dei dati sulle prestazioni per il file di log dei dati sulle prestazioni. Questa operazione può essere eseguita più volte durante l'esecuzione dell'applicazione.  
+3.  Facoltativamente, chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_LOG_NOW e null per scrivere un record delimitato da tabulazioni dei dati sulle prestazioni nel file di log dei dati sulle prestazioni. Questa operazione può essere eseguita più volte durante l'esecuzione dell'applicazione.  
   
 4.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_STOP per arrestare la registrazione dei dati sulle prestazioni.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>Per estrarre i dati relativi alle prestazioni in un'applicazione  
   
-1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_START per avviare la profilatura i dati sulle prestazioni.  
+1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_START per avviare la profilatura dei dati sulle prestazioni.  
   
-2.  Chiamare [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) con SQL_COPT_SS_PERF_DATA e l'indirizzo di un puntatore a una struttura SQLPERF. La prima di tali chiamate imposta il puntatore sull'indirizzo di una struttura SQLPERF valida che contiene i dati relativi alle prestazioni correnti. Il driver non aggiorna continuamente i dati nella struttura delle prestazioni. L'applicazione deve ripetere la chiamata a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) ogni volta che deve aggiornare la struttura con i dati sulle prestazioni più recenti.  
+2.  Chiamare [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) con SQL_COPT_SS_PERF_DATA e l'indirizzo di un puntatore a una struttura SQLPERF. La prima di tali chiamate imposta il puntatore sull'indirizzo di una struttura SQLPERF valida che contiene i dati relativi alle prestazioni correnti. Il driver non aggiorna continuamente i dati nella struttura delle prestazioni. L'applicazione deve ripetere la chiamata a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) ogni volta che è necessario aggiornare la struttura con dati sulle prestazioni più recenti.  
   
 3.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_STOP per arrestare la registrazione dei dati sulle prestazioni.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -242,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative alle prestazioni del Driver ODBC di profilatura &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ Procedure [per la profilatura delle prestazioni del &#40;driver&#41; ODBC ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [Profilatura delle prestazioni del driver ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Proprietà SqlServiceType (classe SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Proprietà SqlServiceType (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b69a61f184738f72fce32920d8aeedd62797eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139456"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658961"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>Proprietà SqlServiceType (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ object.SetBoolValue(NumValue)
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore uint32 che specifica il tipo di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I possibili valori restituiti sono i seguenti:  
   
-|type|Definizione|  
+|Tipo|Definizione|  
 |----------|----------------|  
 |*1*|MSSQLSERVER è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*2*|SQLSERVERAGENT è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|  
@@ -54,11 +54,11 @@ object.SetBoolValue(NumValue)
 |*5*|MSSQLServerOLAPService è il servizio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer è il servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
-|*8*|NsService è il [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] servizio di notifica.|  
-|*9*|MSSQLFDLauncher è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio Utilità di avvio del Daemon filtri Full-text.|  
-|*10*|SQLPBENGINE è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio motore Polybase.|  
-|*11*|SQLPBDMS è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Data Movement service.|  
-|*12*|MSSQLLaunchpad è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio Launchpad.|  
+|*8*|NsService è il servizio di notifica [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)].|  
+|*9*|MSSQLFDLauncher è il servizio Utilità di avvio del daemon filtri full-text di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|*10*|SQLPBENGINE è il servizio motore di base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|*11*|SQLPBDMS è il servizio di spostamento dati di base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|*12*|MSSQLLaunchpad è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] launchpad.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

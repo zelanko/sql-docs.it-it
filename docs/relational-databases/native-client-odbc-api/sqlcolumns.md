@@ -14,37 +14,36 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113551"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787409"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLColumns** restituisce SQL_SUCCESS se esistono o meno valori per il *CatalogName*, *NomeTabella*, oppure *ColumnName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
+  **SQLColumns** restituisce SQL_SUCCESS se sono presenti o meno valori per i parametri *CatalogName*, *TableName*o *ColumnName* . **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
 > [!NOTE]  
 >  Per i tipi di valori di grandi dimensioni, tutti i parametri della lunghezza verranno restituiti con un valore di SQL_SS_LENGTH_UNLIMITED.  
   
- **SQLColumns** può essere eseguito su un cursore server statico. Un tentativo di eseguire **SQLColumns** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
+ **SQLColumns** può essere eseguito su un cursore del server statico. Il tentativo di eseguire **SQLColumns** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO indicante che il tipo di cursore è stato modificato.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la segnalazione di informazioni relative alle tabelle sui server collegati mediante l'accettazione di un nome in due parti per il *CatalogName* parametro: *Linked_server_name*.  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *CatalogName* : *linked_server_name. catalog_name*.  
   
- Per ODBC 2. *x* le applicazioni non utilizzano caratteri jolly nelle *NomeTabella*, **SQLColumns** restituisce informazioni riguardo a qualsiasi tabella il cui nome corrisponde a *TableName*e sono di proprietà dell'utente corrente. Se l'utente corrente non possiede alcuna tabella il cui nome corrisponde la *TableName* parametro **SQLColumns** restituisce informazioni su qualsiasi tabella appartenente ad altri utenti in cui il nome della tabella corrisponde il  *TableName* parametro. Per ODBC 2. *x* applicazioni con caratteri jolly **SQLColumns** restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* applications **SQLColumns** restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o se vengono utilizzati i caratteri jolly.  
+ Per ODBC 2. *x* le applicazioni che non utilizzano caratteri jolly in *TableName*, **SQLColumns** restituisce informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente. Se l'utente corrente non è proprietario di alcuna tabella il cui nome corrisponde al parametro *TableName* , **SQLColumns** restituisce informazioni su qualsiasi tabella di proprietà di altri utenti in cui il nome della tabella corrisponde al parametro *TableName* . Per ODBC 2. *x* applicazioni che utilizzano caratteri jolly, **SQLColumns** restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* applicazioni **SQLColumns** restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o dal fatto che vengano utilizzati caratteri jolly.  
   
  Nella tabella seguente vengono elencate le colonne restituite dal set di risultati:  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i **varchar (max)** i tipi di dati.|  
-|TYPE_NAME|Restituisce "varchar", "varbinary" o "nvarchar" per il **varchar (max)** , **varbinary (max)** , e **nvarchar (max)** i tipi di dati.|  
-|COLUMN_SIZE|Restituisce SQL_SS_LENGTH_UNLIMITED per **varchar (max)** i tipi di dati, che indica che la dimensione della colonna è illimitata.|  
-|BUFFER_LENGTH|Restituisce SQL_SS_LENGTH_UNLIMITED per **varchar (max)** i tipi di dati, che indica che la dimensione del buffer è illimitata.|  
-|SQL_DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i **varchar (max)** i tipi di dati.|  
+|DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i tipi di dati **varchar (max)** .|  
+|TYPE_NAME|Restituisce "varchar", "varbinary" o "nvarchar" per i tipi di dati **varchar (max)** , **varbinary (max)** e **nvarchar (max)** .|  
+|COLUMN_SIZE|Restituisce SQL_SS_LENGTH_UNLIMITED per i tipi di dati **varchar (max)** che indicano che le dimensioni della colonna sono illimitate.|  
+|BUFFER_LENGTH|Restituisce SQL_SS_LENGTH_UNLIMITED per i tipi di dati **varchar (max)** che indicano che le dimensioni del buffer sono illimitate.|  
+|SQL_DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i tipi di dati **varchar (max)** .|  
 |CHAR_OCTET_LENGTH|Restituisce la lunghezza massima di una colonna di tipo carattere o binario. Restituisce 0 per indicare che la dimensione è illimitata.|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|Restituisce il nome del catalogo nel quale è definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|Restituisce il nome dello schema nel quale è definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, questa variabile contiene una stringa vuota.|  
@@ -53,46 +52,46 @@ ms.locfileid: "68113551"
 |SS_UDT_SCHEMA_NAME|Nome dello schema contenente il tipo definito dall'utente.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nome completo dell'assembly del tipo definito dall'utente.|  
   
- Per tipi definiti dall'utente, la colonna TYPE_NAME esistente viene utilizzata per indicare il nome del tipo in questione; pertanto nessuna colonna aggiuntiva appositamente deve essere aggiunti al set di risultati dei **SQLColumns** oppure [SQLProcedureColumns](../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md). DATA_TYPE per un parametro o una colonna con tipo definito dall'utente è SQL_SS_UDT.  
+ Per i tipi definiti dall'utente, la colonna TYPE_NAME esistente viene utilizzata per indicare il nome del tipo definito dall'utente. non è pertanto necessario aggiungere altre colonne al set di risultati di **SQLColumns** o [SQLProcedureColumns](../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md). DATA_TYPE per un parametro o una colonna con tipo definito dall'utente è SQL_SS_UDT.  
   
  Per il tipo definito dall'utente dei parametri, è possibile utilizzare i nuovi descrittori specifici del driver definiti precedentemente per ottenere o impostare le proprietà di metadati aggiuntive di un tipo definito dall'utente, nel caso in cui il server restituisca o richieda queste informazioni.  
   
- Quando un client si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e chiama SQLColumns, usando i valori NULL o con caratteri jolly per il parametro di input del catalogo non restituirà informazioni provenienti dagli altri cataloghi. Verranno invece restituite solo informazioni relative al catalogo corrente. Il client può prima chiamare SQLTables per determinare in quale catalogo si trova la tabella desiderata. Il client può quindi utilizzare tale valore di catalogo per il parametro di input del catalogo nella chiamata a SQLColumns per recuperare informazioni sulle colonne della tabella.  
+ Quando un client si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e chiama SQLColumns, l'utilizzo di valori NULL o Wild Card per il parametro di input del catalogo non restituirà informazioni da altri cataloghi. Verranno invece restituite solo informazioni relative al catalogo corrente. Il client può prima chiamare SQLTables per determinare in quale catalogo si trova la tabella desiderata. Il client può quindi utilizzare tale valore del catalogo per il parametro di input del catalogo nella chiamata a SQLColumns per recuperare informazioni sulle colonne della tabella.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns e parametri con valori di tabella  
- Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per altre informazioni, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Di seguito sono indicate le colonne che sono state aggiunte per i parametri con valori di tabella:  
+ Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Di seguito sono indicate le colonne che sono state aggiunte per i parametri con valori di tabella:  
   
 |Nome colonna|Tipo di dati|Sommario|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Per una colonna in TABLE_TYPE, SQL_TRUE se la colonna è una colonna calcolata. In caso contrario, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE se la colonna è una colonna Identity. In caso contrario, SQL_FALSE.|  
   
- Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di&#41;tabella ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>Supporto di SQLColumns per le caratteristiche avanzate di data e ora  
  Per informazioni sui valori restituiti per i tipi data/ora, vedere [metadati del catalogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [miglioramenti &#40;di data e ora&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Supporto di SQLColumns per tipi CLR definiti dall'utente di grandi dimensioni  
- **SQLColumns** supporta grandi CLR tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** supporta i tipi CLR definiti dall'utente (UDT) di grandi dimensioni. Per ulteriori informazioni, vedere [tipi &#40;CLR definiti dall'utente di grandi&#41;dimensioni ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Supporto di SQLColumns per colonne di tipo sparse  
- Due [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne specifiche sono stati aggiunti al set di risultati per SQLColumns:  
+ Al set di risultati per SQLColumns sono state aggiunte due colonne specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**smallint**|SQL_TRUE se una colonna è di tipo sparse. In caso contrario, SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**smallint**|Se la colonna è il **column_set** colonna sql_true; in caso contrario, SQL_FALSE.|  
+|SS_IS_SPARSE|**Smallint**|SQL_TRUE se una colonna è di tipo sparse. In caso contrario, SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**Smallint**|Se la colonna è la colonna **column_set** , questo è SQL_TRUE; in caso contrario, SQL_FALSE.|  
   
- In conformità con la specifica ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET vengono visualizzati prima tutte le colonne specifiche del driver che sono stati aggiunti al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le versioni precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e dopo tutte le colonne richieste da ODBC stesso.  
+ In conformità con la specifica ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET vengono visualizzati prima di tutte le colonne specifiche del driver che sono state aggiunte alle versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e dopo tutte le colonne richieste da ODBC stesso.  
   
- Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per altre informazioni, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Per altre informazioni sulle colonne di tipo sparse in ODBC, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Per ulteriori informazioni sulle colonne di tipo sparse in ODBC, vedere [colonne di tipo &#40;sparse supportano ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
+   [funzione SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)  
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

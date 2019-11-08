@@ -1,5 +1,5 @@
 ---
-title: Data-at-Execution e Text, ntext o Image colonne | Microsoft Docs
+title: Colonne data-at-execution e di tipo text, ntext o image | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,18 +23,17 @@ ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae1060b6128a9adc67bfa79d127fd279c8f08905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ffc786a8891ceffdfc3bc835374c4833ce9dca1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128937"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790484"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Colonne data-at-execution di tipo text, ntext o image
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC data-at-execution è una caratteristica che consente alle applicazioni di utilizzare quantità estremamente elevate di dati su colonne o parametri associati. Quando si recuperano grandi **testo**, **ntext**, o **immagine** colonne, un'applicazione potrebbe non essere in grado di allocare un buffer molto grande, associare la colonna nel buffer e recuperare semplicemente la riga. Durante l'aggiornamento di dimensioni molto grandi **testo**, **ntext**, o **immagine** colonne, l'applicazione potrebbe non essere in grado di allocare un buffer molto grande, associarlo a un marcatore di parametro in un SQL semplicemente istruzione e quindi eseguire l'istruzione. In questi casi, l'applicazione deve utilizzare [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) oppure [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) con le relative opzioni data-at-execution.  
+  ODBC data-at-execution è una caratteristica che consente alle applicazioni di utilizzare quantità estremamente elevate di dati su colonne o parametri associati. Quando si recuperano colonne di tipo **Text**, **ntext**o **Image** di dimensioni molto grandi, un'applicazione potrebbe non essere in grado di allocare semplicemente un buffer enorme, associare la colonna al buffer e recuperare la riga. Quando si aggiornano colonne di tipo **Text**, **ntext**o **Image** di dimensioni molto grandi, l'applicazione potrebbe non essere in grado di allocare semplicemente un buffer enorme, associarlo a un marcatore di parametro in un'istruzione SQL ed eseguire l'istruzione. In questi casi, l'applicazione deve utilizzare [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) o [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) con le opzioni data-at-execution.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di colonne di tipo text e image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

@@ -1,5 +1,5 @@
 ---
-title: Distribuire un pacchetto di distribuzione di modelli tramite la procedura guidata | Microsoft Docs
+title: Distribuire un pacchetto di distribuzione di modelli (procedura guidata)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906243"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729401"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Distribuire un pacchetto di distribuzione di modelli tramite la procedura guidata
 
@@ -36,7 +36,7 @@ ms.locfileid: "67906243"
   
 -   È necessario che sia già disponibile un pacchetto di distribuzione di modelli. Per altre informazioni, vedere [Creare un pacchetto di distribuzione di modelli tramite la procedura guidata](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>Per distribuire un pacchetto di distribuzione di modelli di soli oggetti modello  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67906243"
   
  **Note:**  
   
--   Se una vista della sottoscrizione del pacchetto ha lo stesso nome di una vista della sottoscrizione in un modello esistente, viene visualizzato questo avviso: **Avviso: la vista delle sottoscrizioni del deployer è stata rinominata**. Inoltre, la vista viene creata come *modelname.subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
+-   Se la vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, viene visualizzato l'avviso: **la vista delle sottoscrizioni del deployer è stata rinominata**. Inoltre, la vista viene creata come *modelname.subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
   
 -   Il processo di distribuzione si svolge in quattro passaggi:  
   

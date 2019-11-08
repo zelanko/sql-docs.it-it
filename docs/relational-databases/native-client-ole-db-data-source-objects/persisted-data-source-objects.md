@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati persistenti | Microsoft Docs
+title: Oggetti origine dati permanente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,21 +16,20 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59985a7ca5ed382682777c84e971c86c95570c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128561"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73771475"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta gli oggetti di origine dati persistente con il **IPersistFile** interfaccia.  
+  Il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta oggetti origine dati salvati in modo permanente con l'interfaccia **IPersistFile** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Rendere persistente l'inizializzazione dell'origine dati:**  
+ **A. rende permanente l'inizializzazione dell'origine dati:**  
   
  In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
   
@@ -141,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Usare l'inizializzazione dell'origine dati persistente:**  
+ **B. utilizzo dell'inizializzazione dell'origine dati permanente:**  
   
  In questo esempio viene utilizzato un oggetto origine dati persistente con proprietà di inizializzazione aggiuntive che forniscono un account di accesso e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -232,6 +231,6 @@ HRESULT InitFromPersistedDS
  Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti origine dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Oggetti &#40;origine dati OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

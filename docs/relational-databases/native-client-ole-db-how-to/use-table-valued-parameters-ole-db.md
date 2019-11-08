@@ -11,16 +11,15 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109966"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789694"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utilizzare parametri con valori di tabella (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva. In questo esempio vengono creati gli elementi seguenti:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68109966"
   
 -   Descrizione della gestione degli errori per errori SQLNCLI11.  
   
- Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [SQL Server Native client &#40;&#41;di parametri con valori](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)di tabella.  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) consente di creare il database usato dall'esempio.  

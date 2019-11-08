@@ -14,24 +14,23 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131445"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786477"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client specifica i campi di diagnostica aggiuntivi seguenti per **SQLGetDiagField**. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
+  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client specifica i campi di diagnostica aggiuntivi seguenti per **SQLGetDiagField**. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
   
 |Campo del record di diagnostica|Descrizione|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Segnala il numero di riga di una stored procedure che genera un errore. Il valore di SQL_DIAG_SS_LINE è significativo solo se SQL_DIAG_SS_PROCNAME restituisce un valore. Il valore viene restituito come numero intero senza segno a 16 bit.|  
 |SQL_DIAG_SS_MSGSTATE|Stato di un messaggio di errore. Per informazioni sullo stato del messaggio di errore, vedere [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Il valore viene restituito come numero intero con segno a 32 bit.|  
-|SQL_DIAG_SS_PROCNAME|Nome della stored procedure che genera un errore, se appropriato. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere determinata chiamando [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) che richiede il valore di SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_PROCNAME|Nome della stored procedure che genera un errore, se appropriato. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere determinato chiamando [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) richiedendo il valore per SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|Livello di gravità del messaggio di errore associato. Il valore viene restituito come numero intero con segno a 32 bit.|  
 |SQL_DIAG_SS_SRVNAME|Nome del server in cui si è verificato l'errore. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) viene definita dalla macro SQL_MAX_SQLSERVERNAME in sqlncli.h.|  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68131445"
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client segnala i codici di funzione dinamica aggiuntivi seguenti che identificano l'ultima istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentata. Il codice di funzione dinamica viene restituito nell'intestazione (record 0) del set di record di diagnostica ed è pertanto disponibile a ogni esecuzione, indipendentemente dall'esito di quest'ultima.  
   
-|Codice di funzione dinamica|Source|  
+|Codice di funzione dinamica|Origine|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  
@@ -63,7 +62,7 @@ ms.locfileid: "68131445"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Istruzione DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Istruzione BACKUP o DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Istruzione DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Viene restituito anche per un'istruzione CHECKPOINT se il **trunc. log sul chkpt.** opzione di database è attiva.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Restituito anche per un'istruzione CHECKPOINT se il file **tronca. log in chkpt.** l'opzione di database è on.|  
 |SQL_DIAG_DFC_SS_GOTO|Istruzione per il controllo di flusso GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Istruzione INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Istruzione KILL|  
@@ -98,12 +97,12 @@ ms.locfileid: "68131445"
 |SQL_DIAG_DFC_SS_WRITETEXT|Istruzione WRITETEXT|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField e parametri con valori di tabella  
- SQLGetDiagField può essere utilizzato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
+ SQLGetDiagField può essere usato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
   
- Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di&#41;tabella ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
+   [funzione SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)  
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

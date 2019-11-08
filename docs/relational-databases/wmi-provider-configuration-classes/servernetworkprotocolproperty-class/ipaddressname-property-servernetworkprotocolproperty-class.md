@@ -1,6 +1,6 @@
 ---
-title: Proprietà IPAddressName (classe ServerNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Proprietà IPAddressname (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b70780de9977a682b62fa01a4087fc7fc6726b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfce86c61e2eea1306e1dbd46859f5486413dd4f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044335"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660559"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>Proprietà IPAddressName (classe ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.IPAddressName [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'indirizzo IP.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -14,21 +14,20 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d616ff1fb72b3f8afd618afa7bea7a873a6342e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103331bfff23e5fd315baf37407d385523a7b63d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131034"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785364"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLStatistics** può essere eseguito su un cursore statico. Un tentativo di eseguire **SQLStatistics** su un cursore aggiornabile (dinamico o gestito da keyset) restituirà SQL_SUCCESS_WITH_INFO a indicare che il tipo di cursore è stato modificato.  
+  **SQLStatistics** può essere eseguito su un cursore statico. Il tentativo di eseguire **SQLStatistics** su un oggetto aggiornabile (gestito da keyset o dinamico) restituisce SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
+   [funzione SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)  
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzare avanzate caratteristiche di data e ora (OLE DB) | Microsoft Docs
+title: Utilizzare le funzionalità avanzate di data e ora (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14790203925575ef08f2ab84e2b1f355d970448d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbb7d307bfe1e57b0ad5a73580f12535bb7ffd92
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110014"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789762"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usare le funzionalità avanzate di data e ora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. L'esempio Usa i quattro nuovi tipi data e ora (**data**, **ora**, **datetime2**, e **datetimeoffset**) per eseguire i comandi con i parametri e recuperare risultati di set di righe.  
+  In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Nell'esempio vengono utilizzati i quattro nuovi tipi di data e ora (**date**, **Time**, **datetime2**e **DateTimeOffset**) per eseguire i comandi con parametri e recuperare i risultati del set di righe.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

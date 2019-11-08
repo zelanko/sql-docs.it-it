@@ -17,16 +17,15 @@ ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2469e7a76e0a92004c0718c568c8433f72b83a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45dd62bfcf1006bd675259c279b1f85a64ea630a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106906"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73769455"
 ---
-# <a name="errors"></a>Errors
+# <a name="errors"></a>Errori
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Gli oggetti OLE/COM segnalano gli errori tramite il codice restituito HRESULT delle funzioni membro oggetto. Un HRESULT OLE/COM è una struttura costituita da pacchetti di byte. OLE fornisce macro che risolvono i riferimenti dei membri di struttura.  
   
@@ -34,11 +33,11 @@ ms.locfileid: "68106906"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può restituire più errori. Un'applicazione può recuperare gli errori del server uno alla volta chiamando [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) insieme a ISQLErrorInfo e IErrorRecords.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider espone OLE DB avanzata record **IErrorInfo**, personalizzato **ISQLErrorInfo**e le specifiche del provider [ISQLServerErrorInfo per la ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfacce per oggetti error.  
+ Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB espone il OLE DB **IErrorInfo**migliorato per i record, il **ISQLErrorInfo**personalizzato e le interfacce dell'oggetto errore [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) specifiche del provider.  
   
- Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti alla tracciatura errore aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [accesso a informazioni diagnostiche nel registro eventi di esteso](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti apportati alla traccia degli errori aggiunta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Codici restituiti](../../relational-databases/native-client-ole-db-errors/return-codes.md)  
   

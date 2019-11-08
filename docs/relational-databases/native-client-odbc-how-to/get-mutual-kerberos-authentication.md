@@ -1,5 +1,5 @@
 ---
-title: Ottenere l'autenticazione Kerberos reciproca | Documenti di Microsoft
+title: Ottenere l'autenticazione Kerberos reciproca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +11,21 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8713c25e4c1bf62e205db33e0b1b7c0bcf6a959f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898451"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782810"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Ottenere l'autenticazione Kerberos reciproca
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Nell'esempio viene illustrato come ottenere l'autenticazione Kerberos reciproca tramite ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per ulteriori informazioni, vedere il [supporto SPN &#40;&#41; del nome dell'entità servizio nelle connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

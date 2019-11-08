@@ -11,16 +11,15 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a89e8b96c64e741c5fb68f5a699e170ef0f28b96
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d5a11109e0f2febee3b71e677f1e8081fb168654
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874794"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73767801"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In questo esempio viene creata una tabella con tre colonne, ovvero una colonna di tipo sparse, una colonna non di tipo sparse e una colonna ColumnSet. Nell'esempio vengono quindi visualizzati i flag OLE DB che indicano i metadati della colonna e del catalogo per la colonna non di tipo sparse e per quella ColumnSet.  
   

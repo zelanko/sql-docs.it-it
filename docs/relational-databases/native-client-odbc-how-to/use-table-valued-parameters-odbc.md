@@ -1,5 +1,5 @@
 ---
-title: Usare parametri con valori di tabella (ODBC) | Documenti di Microsoft
+title: Utilizzare parametri con valori di tabella (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7773341cfa8ffde9998d5aa8dfc85414b885929
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937401"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780027"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utilizzare parametri con valori di tabella (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In questo esempio viene illustrata la modalità di utilizzo di parametri con valori di tabella per inserire più righe con più colonne e una chiamata al server.  
   
- Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Per ulteriori esempi di parametri con valori di tabella, vedere [esempi di programmazione parametri ODBC Table-Valued](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di&#41;tabella ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Per altri esempi di utilizzo di parametri con valori di tabella, vedere [esempi di programmazione di parametri con valori di tabella ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Esempio  
  È necessaria un'origine dati ODBC denominata TVPDemo. Il database predefinito per TVPDemo può essere qualsiasi database di test disponibile nel computer. Tale origine dati deve essere basata sul driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

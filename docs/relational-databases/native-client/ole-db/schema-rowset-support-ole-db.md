@@ -1,5 +1,5 @@
 ---
-title: Supporto di set di righe dello schema (OLE DB) | Documenti di Microsoft
+title: Supporto per set di righe dello schema (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7e0d5f2e0da418918141779e8bdce24f32f19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913006"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759549"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta inoltre che restituiscono informazioni sullo schema da un server collegato durante l'elaborazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
+  Il provider OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta inoltre la restituzione di informazioni sullo schema da un server collegato durante l'elaborazione di [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
   
 > [!NOTE]  
 >  Benché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, non vengono restituiti metadati per i sinonimi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Nelle tabelle seguenti sono i rowset dello schema di elenco e le colonne di restrizione supportate dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client.  
+ Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne di restrizione supportate dal provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB.  
   
 |Set di righe dello schema|Colonne di restrizione|  
 |-------------------|-------------------------|  
@@ -53,13 +52,13 @@ ms.locfileid: "67913006"
 |DBSCHEMA_TABLES|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |DBSCHEMA_TABLES_INFO|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Supporto di query distribuite nei set di righe dello schema](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Uso dei tipi definiti dall'utente](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

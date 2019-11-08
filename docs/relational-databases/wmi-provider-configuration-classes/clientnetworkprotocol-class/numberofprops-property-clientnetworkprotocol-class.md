@@ -1,6 +1,6 @@
 ---
-title: Proprietà NumberOfProps (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Proprietà NumberOfProps (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd9af62ed825ff97b9d63965386567db9a34a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056185a68e7657b261ec6d4c5ae659eaa54b22a8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079073"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660828"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Proprietà NumberOfProps (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ottiene il numero di proprietà del client di protocollo di rete specificato per il [metodo SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
+  Ottiene il numero di proprietà del protocollo di rete del client specificato dal [Metodo SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ object.NumberOfProps [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore uint32 che specifica il numero di proprietà del protocollo di rete del client.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  

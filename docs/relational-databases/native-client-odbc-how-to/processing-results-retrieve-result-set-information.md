@@ -1,5 +1,5 @@
 ---
-title: Recuperare informazioni sul Set di risultati (ODBC) | Microsoft Docs
+title: Recuperare informazioni sul set di risultati (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b99d0b97179899b804a31b48a1334172e214f9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2d998dd8b4444298ff67abc8369993d17e26f55
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133438"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780332"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>Elaborazione dei risultati - Recuperare le informazioni sul set di risultati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-get-information-about-a-result-set"></a>Per recuperare informazioni su un set di risultati  
@@ -32,15 +31,15 @@ ms.locfileid: "68133438"
   
 2.  Per ogni colonna del set di risultati, effettuare le operazioni seguenti:  
   
-    -   Chiamare [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) per ottenere informazioni sulla colonna dei risultati.  
+    -   Chiamare [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) per ottenere informazioni sulla colonna risultato.  
   
      Oppure  
   
-    -   Chiamare [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) per ottenere informazioni del descrittore specifiche sulla colonna dei risultati.  
+    -   Chiamare [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) per ottenere informazioni specifiche sul descrittore sulla colonna risultato.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Elaborare i risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[ODBC risultati &#40;processo&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[Determinazione delle caratteristiche di un Set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[Determinazione delle caratteristiche di un set &#40;di risultati ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

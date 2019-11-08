@@ -1,6 +1,6 @@
 ---
-title: Proprietà PropertyValType (classe ServerNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Proprietà PropertyValType (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- PropertyValType Property (ServerNetworkProtocolProperty Class)
+- PropertyValType Property (ServerNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb4daf3fda674de6f7fab730cdc6245312c5a0dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2a74e515d2dddd58242e4760e3dd33c2c5031f5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019919"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659934"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyValType (classe ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.PropertyValType [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che specifica il tipo di dati del valore della proprietà. Viene restituito 0 per un valore string e 1 per un tipo numerico.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

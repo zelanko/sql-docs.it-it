@@ -1,6 +1,6 @@
 ---
-title: Proprietà AcceptStop (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Proprietà AcceptStop (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff1d3f0a184c928a103abeaa6e957ebd5f9ba314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 956151208b93a848219cdac2d897f132511e411d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929764"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659806"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Proprietà AcceptStop (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ object.AcceptStop [= value]
   
 ## <a name="parts"></a>Parti  
  *object*  
- Oggetto [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) oggetto che rappresenta il servizio  
+ Oggetto della [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore booleano che specifica se il servizio può essere arrestato: **true** se il servizio può essere arrestato, o **false** se non è possibile arrestare il servizio.  
+ Valore booleano che specifica se il servizio può essere arrestato: **true** se il servizio può essere arrestato o **false** se il servizio non può essere arrestato.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

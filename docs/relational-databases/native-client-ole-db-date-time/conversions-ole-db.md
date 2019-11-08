@@ -1,5 +1,5 @@
 ---
-title: Le associazioni e le conversioni (OLE DB) | Documenti di Microsoft
+title: Associazioni e conversioni (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,21 @@ ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bbc5b6f9c4cae1cef3a1052a8ce20c97057e3e5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107093"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770767"
 ---
 # <a name="conversions-ole-db"></a>Conversioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questa sezione viene illustrato come eseguire la conversione tra **datetime** e **datetimeoffset** valori. Le conversioni descritte in questa sezione sono già disponibili in OLE DB o costituiscono un'estensione coerente di OLE DB.  
+  In questa sezione viene illustrato come eseguire la conversione tra valori **DateTime** e **DateTimeOffset** . Le conversioni descritte in questa sezione sono già disponibili in OLE DB o costituiscono un'estensione coerente di OLE DB.  
   
  Il formato di valori letterali e stringhe per date e ore in OLE DB segue in genere lo standard ISO e non dipende dalle impostazioni locali del client. Un'eccezione è rappresentata da DBTYPE_DATE, che utilizza come standard l'automazione OLE. Poiché, tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client esegue conversioni tra tipi solo quando i dati vengono trasmessi al o dal client, un'applicazione non può forzare in alcun modo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per eseguire conversioni tra DBTYPE_DATE e formati stringa. In caso contrario, le stringhe utilizzano i formati indicati di seguito. Il testo tra parentesi indica un elemento facoltativo.  
   
--   Il formato di **datetime** e **datetimeoffset** stringhe è:  
+-   Il formato delle stringhe **DateTime** e **DateTimeOffset** è il seguente:  
   
      *aaaa*-*mm*-*gg*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +37,14 @@ ms.locfileid: "68107093"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   Il formato di **data** è di stringhe:  
+-   Il formato delle stringhe di **Data** è:  
   
      *aaaa*-*mm*-*gg*  
   
 > [!NOTE]  
 >  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Di conseguenza, alcune conversioni eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versioni successive differiscono dalla specifica OLE DB.  
   
- Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per altre informazioni, vedere la "i formati di dati: Sezione stringhe e valori letterali"in [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per ulteriori informazioni, vedere la sezione "formati di dati: stringhe e valori letterali" in [supporto dei tipi di dati per OLE DB miglioramenti di data e ora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Di seguito vengono fornite le regole di conversione generali:  
   
@@ -65,7 +64,7 @@ ms.locfileid: "68107093"
   
 -   Se si verifica un troncamento di secondi o di secondi frazionari durante la conversione dal server al client, viene impostato lo stato DBSTATUS_S_TRUNCATED.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Conversioni eseguite da client a server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
  Vengono descritte le conversioni di data/ora eseguite tra un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva).  
   
