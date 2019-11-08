@@ -1,5 +1,5 @@
 ---
-title: Provider WMI per classi di Gestione configurazione | Microsoft Docs
+title: Classi del provider WMI per la gestione della configurazione
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a7ac0d4975890a6aa949bac1050a4bb7cefe00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139413"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658931"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Classi del provider WMI per la gestione della configurazione
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

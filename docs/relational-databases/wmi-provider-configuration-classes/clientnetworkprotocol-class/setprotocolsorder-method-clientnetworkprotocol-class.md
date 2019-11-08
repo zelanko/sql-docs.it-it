@@ -1,6 +1,6 @@
 ---
-title: Metodo SetProtocolsOrder (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Metodo SetProtocolsOrder (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 714154456bcdf2a5202148c46cc9b52b376c7f8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88becd0d5a137d88b446e18fa0ef0798524bc0c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040799"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659459"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Metodo SetProtocolsOrder (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ object.SetProtocolsOrder(ProtocolOrderList)
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli Client](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configurazione di protocolli di rete Client e le librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurare i protocolli Client](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

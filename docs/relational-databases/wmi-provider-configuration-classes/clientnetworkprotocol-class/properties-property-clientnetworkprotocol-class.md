@@ -1,6 +1,6 @@
 ---
-title: Proprietà Properties (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Proprietà Properties (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 533c1dacc0635233ac3696b907861c30fd556931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fcca87157b2f6f7fe881c35b72ea54d965e095c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040952"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659253"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Proprietà Properties (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.Properties [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Matrice di oggetti della [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresentano le proprietà supportate dal protocollo di rete del client corrente a cui fa riferimento la proprietà **OrderValue** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e le librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare un insieme di modifiche (Master Data Services) | Microsoft Docs
+title: Creare un insieme di modifiche
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3e15590e2d8f8e3317c8d116ebbeac7049fb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079748"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729623"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Creare un insieme di modifiche (Master Data Services)
 

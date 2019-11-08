@@ -1,5 +1,5 @@
 ---
-title: I dati di accesso di esempio in-Process | Microsoft Docs
+title: Esempio di accesso ai dati in-process | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9854218e66d3edfe10f4220a5ac662cccc6f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781139"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637748"
 ---
 # <a name="in-process-data-access-sample"></a>Esempio In-Process Data Access
   Nell'esempio `InProcessDataAccess` sono incluse varie funzioni semplici che illustrano diverse caratteristiche del provider di accesso ai dati in-process CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "62781139"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -355,7 +355,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) verifica l'esempio mettendo alla prova le stored procedure e funzioni definite in questo esempio.  
+ Nell'[!INCLUDE[tsql](../../includes/tsql-md.md)] seguente (`test.sql`) viene testato l'esempio eseguendo le stored procedure e la funzione definite nell'esempio.  
   
 ```  
 USE AdventureWorks;  

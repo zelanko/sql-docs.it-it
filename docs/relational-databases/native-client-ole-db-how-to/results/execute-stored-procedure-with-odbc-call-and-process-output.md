@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908269"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789863"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con la chiamata ODBC e l'output del processo
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con ODBC CALL e l'output del processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati dei parametri di output sono disponibili quando **IMultipleResults::GetResult** restituisce DB_S_NORESULT o l'interfaccia **IMultipleResults** viene completamente rilasciata, a seconda dell'evento che si verifica per primo.  
   
@@ -36,20 +35,20 @@ ms.locfileid: "67908269"
   
 2.  Creare un set di associazioni (uno per ogni marcatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-3.  Creare una funzione di accesso per i parametri definiti tramite il **IAccessor:: CreateAccessor** (metodo). **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+3.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 4.  Completare la struttura DBPARAMS.  
   
 5.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-6.  Elaborare set di righe e rilasciarlo utilizzando il **IRowset:: Release** (metodo).  
+6.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
   
 7.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un set di righe, di un codice restituito e di un parametro di output. I set di risultati non vengono elaborati. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per creare la stored procedure usata dall'applicazione.  
   

@@ -1,5 +1,5 @@
 ---
-title: UDT Utilities | Microsoft Docs
+title: Utilità UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780217"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637725"
 ---
 # <a name="udt-utilities"></a>UDT Utilities
   L'esempio UDT Utilities include una serie di funzioni di utilità, quali funzioni per l'esposizione dei metadati dell'assembly a Transact-SQL, funzioni di flusso di esempio con valori di tabella per la restituzione dei tipi di un assembly sotto forma di tabella e funzioni per la restituzione di campi, metodi e proprietà di un tipo di dati definito dall'utente. Le tecnologie illustrate comprendono funzioni di flusso con valori di tabella, API di reflection .NET Framework e il richiamo di funzioni con valori di tabella da Transact-SQL.  
@@ -23,9 +23,9 @@ ms.locfileid: "62780217"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
--   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in cui è disponibile in Codeplex [sito Web](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] disponibile nel [sito Web](https://go.microsoft.com/fwlink/?linkid=62796) CodePlex  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   

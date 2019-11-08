@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781172"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637650"
 ---
 # <a name="hello-world-ready-sample"></a>Esempio Hello World Ready
   Nell'esempio Hello World Ready vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure basata sull'integrazione con CLR semplice e internazionalizzata. Un componente internazionalizzato può essere facilmente localizzato in diverse lingue per diversi mercati in tutto il mondo senza dover modificare il codice sorgente del componente. Nell'esempio viene illustrato anche come restituire dati tramite un parametro di output e tramite un record costruito dinamicamente dalla stored procedure e restituito al client. L'esempio è quasi identico all'esempio Hello World, ad eccezione del fatto che la localizzazione di questa applicazione è molto più semplice e sicura. Per modificare il testo localizzato è necessario effettuare le operazioni seguenti:  
   
-1.  Modifica di un file XML (il file con estensione`resx` file) per la lingua desiderata nella directory delle risorse  
+1.  Modifica di un file XML (.`resx` file) per le impostazioni cultura specifiche nella directory delle risorse  
   
 2.  Compilazione del file delle risorse nella lingua tramite `resgen`  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781172"
   
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62781172"
   
 4.  In c:\MySample creare il file `messages.resx` e copiare il codice di esempio nel file.  
   
-5.  In c:\MySample creare il file `messages.de.resx` salvando il file `messages.resx` come `messages.de.resx` dopo aver modificato la riga  
+5.  In c:\MySample creare il file `messages.de.resx` salvando il file `messages.resx` come `messages.de.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62781172"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  In c:\MySample creare il file `messages.es.resx` salvando il file `messages.resx` come `messages.es.resx` dopo aver modificato la riga  
+6.  In c:\MySample creare il file `messages.es.resx` salvando il file `messages.resx` come `messages.es.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62781172"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  In c:\MySample creare il file `messages.fr.resx` salvando il file `messages.resx` come `messages.fr.resx` dopo aver modificato la riga  
+7.  In c:\MySample creare il file `messages.fr.resx` salvando il file `messages.resx` come `messages.fr.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62781172"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  In c:\MySample creare il file `messages.fr-FR.resx` salvando il file `messages.resx` come `messages.fr-FR.resx` dopo aver modificato la riga  
+8.  In c:\MySample creare il file `messages.fr-FR.resx` salvando il file `messages.resx` come `messages.fr-FR.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62781172"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. In c:\MySample creare il file `messages.it.resx` salvando il file `messages.resx` come `messages.it.resx` dopo aver modificato la riga  
+9. In c:\MySample creare il file `messages.it.resx` salvando il file `messages.resx` come `messages.it.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62781172"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. In c:\MySample creare il file `messages.ja.resx` salvando il file `messages.resx` come `messages.ja.resx` dopo aver modificato la riga  
+10. In c:\MySample creare il file `messages.ja.resx` salvando il file `messages.resx` come `messages.ja.resx` dopo la modifica della riga  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   

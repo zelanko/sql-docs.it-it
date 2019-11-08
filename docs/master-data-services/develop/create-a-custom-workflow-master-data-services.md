@@ -1,5 +1,5 @@
 ---
-title: Creare un flusso di lavoro personalizzato (Master Data Services) | Microsoft Docs
+title: Creare un flusso di lavoro personalizzato
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033952"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729327"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
 
@@ -63,7 +63,7 @@ ms.locfileid: "68033952"
   
 3.  Aggiungere 'using Microsoft.MasterDataServices.Core.Workflow;' al file di codice C#.  
   
-4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
+4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
 5.  Implementare l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Viene chiamato il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> da SQL Server MDS Workflow Integration Service per avviare il flusso di lavoro.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68033952"
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:  
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Esempio:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -144,7 +144,7 @@ ms.locfileid: "68033952"
   
 1.  Utilizzare lo snap-in Servizi per arrestare il servizio.  
   
-2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo: Microsoft.MasterDataServices.Workflow.exe-console.  
+2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiornare il membro e applicare di nuovo le regole business. I log dettagliati vengono visualizzati nella finestra della console.  
   

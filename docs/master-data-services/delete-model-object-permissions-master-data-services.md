@@ -1,5 +1,5 @@
 ---
-title: Eliminare le autorizzazioni per oggetti modello (Master Data Services) | Microsoft Docs
+title: Eliminare le autorizzazioni per oggetti modello
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906287"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728320"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminare le autorizzazioni per oggetti modello (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67906287"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-model-object-permissions"></a>Per eliminare le autorizzazioni dell'oggetto modello  
   

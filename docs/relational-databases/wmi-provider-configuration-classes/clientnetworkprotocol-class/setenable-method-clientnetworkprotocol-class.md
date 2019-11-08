@@ -1,6 +1,6 @@
 ---
-title: Metodo SetEnable (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Metodo seenable (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2db233072eac18e0166eff524308a7ff0782eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3f92e3b417b3f669cc621e2d29c8ece24183af4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040848"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660120"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Metodo SetEnable (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Abilita il protocollo di rete client specificato dal [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  Abilita il protocollo di rete del client specificato dalla [configurazione dei protocolli client](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,9 +42,9 @@ object.SetEnableMethod()
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e le librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

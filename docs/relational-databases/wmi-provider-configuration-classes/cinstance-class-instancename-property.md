@@ -1,6 +1,6 @@
 ---
-title: Proprietà InstanceName (classe CInstance) | Microsoft Docs
-ms.custom: ''
+title: Proprietà InstanceName (CInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db02313d2e22b9cb7232349362c857f58867bdbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044448"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659627"
 ---
 # <a name="cinstance-class---instancename-property"></a>Classe CInstance - Proprietà InstanceName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  

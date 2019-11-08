@@ -1,6 +1,6 @@
 ---
-title: Proprietà ProtocolName (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Proprietà ProtocolName (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 753a3ddfe1e7d808380464ef5010bbe5a18ac18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: beb51ea7270fdbeb96dc858c2ef4e65c386726ff
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040888"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660237"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Proprietà ProtocolName (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ottiene il nome del protocollo di rete corrente specificato per il [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  Ottiene il nome del protocollo di rete corrente specificato dalla [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,11 +40,11 @@ object.ProtocolName [= value]
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore stringa che specifica il nome del client corrente rete protocollo a cui fanno riferimento le [metodo SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
+ Valore stringa che specifica il nome del protocollo di rete del client corrente a cui fa riferimento il [Metodo SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e le librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

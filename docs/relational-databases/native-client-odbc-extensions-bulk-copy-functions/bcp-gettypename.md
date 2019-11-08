@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707461"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782651"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Restituisce il nome del tipo SQL per il nome di un tipo di token specificato.  
   
@@ -50,7 +49,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Valori di codice restituiti  
  Una stringa che contiene il nome del tipo SQL che corrisponde al tipo BCP. Se viene specificato un tipo BCP non valido, viene restituita una stringa vuota.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I token del tipo BCP vengono definiti nel file di intestazione sqlncli.h e nella libreria sqlncli11.lib.  
   
  Nella tabella seguente viene specificato quali sono i possibili tipi BCP, se si tratta di tipi max e l'output previsto.  
@@ -78,8 +77,8 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|No|**Varbinary**|  
 |**SQLIMAGE**|Prima o dopo|**Immagine**|  
 |**SQLINTN**|Prima o dopo|**int-null**|  
-|**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
-|**SQLMONEYN**|Prima o dopo|**money-null**|  
+|**SQLDATETIMN**|Prima o dopo|**DateTime-null**|  
+|**Sqlmoneyn**|Prima o dopo|**Money-null**|  
 |**SQLFLTN**|Prima o dopo|**float-null**|  
 |**SQLAOPSUM**|Prima o dopo|**Sum**|  
 |**SQLAOPAVG**|Prima o dopo|**Avg**|  
@@ -95,17 +94,17 @@ RETCODE bcp_gettypename (
 |**SQLNTEXT**|Prima o dopo|**Ntext**|  
 |**SQLVARIANT**|Prima o dopo|**sql_variant**|  
 |**SQLINT8**|Prima o dopo|**Bigint**|  
-|**SQLCHARACTER**|Yes|**ntext**|  
-|**SQLBIGCHAR**|Yes|**ntext**|  
-|**SQLBIGVARCHAR**|Yes|**ntext**|  
-|**SQLVARCHAR**|Yes|**ntext**|  
-|**SQLBINARY**|Yes|**varbinary(max)**|  
-|**SQLBIGBINARY**|Yes|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|Yes|**varbinary(max)**|  
-|**SQLVARBINARY**|Yes|**varbinary(max)**|  
-|**SQLNCHAR**|Yes|**nvarchar(max)**|  
-|**SQLNVARCHAR**|Yes|**nvarchar(max)**|  
-|**SQLXML**|Yes|**Xml**|  
+|**SQLCHARACTER**|Sì|**varchar(max)**|  
+|**SQLBIGCHAR**|Sì|**varchar(max)**|  
+|**SQLBIGVARCHAR**|Sì|**varchar(max)**|  
+|**SQLVARCHAR**|Sì|**varchar(max)**|  
+|**SQLBINARY**|Sì|**varbinary(max)**|  
+|**SQLBIGBINARY**|Sì|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|Sì|**varbinary(max)**|  
+|**SQLVARBINARY**|Sì|**varbinary(max)**|  
+|**SQLNCHAR**|Sì|**nvarchar(max)**|  
+|**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
+|**SQLXML**|Sì|**Xml**|  
 |**SQLUDT**|Prima o dopo|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  

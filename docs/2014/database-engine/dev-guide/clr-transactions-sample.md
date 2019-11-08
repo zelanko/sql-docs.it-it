@@ -1,5 +1,5 @@
 ---
-title: Esempio CLR Transactions | Microsoft Docs
+title: Esempio di transazioni CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754069"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637750"
 ---
 # <a name="clr-transactions-sample"></a>Esempio CLR Transactions
   In questo esempio viene illustrato il controllo delle transazioni tramite le API gestite dello spazio dei nomi `System.Transactions` . In particolare, viene utilizzata la classe `System.Transactions.TransactionScope` per stabilire un limite della transazione al fine di garantire che i valori delle scorte non vengano rettificati a meno che siano presenti scorte sufficienti per soddisfare la richiesta. Se le scorte sono sufficienti, si garantisce che il trasferimento dal magazzino o da una posizione a un'altra avvenga in modo atomico. La registrazione automatica in una transazione distribuita viene dimostrata registrando le modifiche alle scorte in un database di controllo presente in un'istanza distinta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "62754069"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
