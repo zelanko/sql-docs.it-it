@@ -1,24 +1,24 @@
 ---
-title: Creare e archiviare chiavi master della colonna (Always Encrypted) | Microsoft Docs
+title: Creare e archiviare chiavi master della colonna per Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902958"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594431"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Creare e archiviare chiavi master della colonna (Always Encrypted)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creare e archiviare chiavi master della colonna per Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Le*chiavi master della colonna* proteggono le chiavi usate in Always Encrypted per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio attendibile e devono essere accessibili alle applicazioni che le richiedono per crittografare o decrittografare i dati e agli strumenti per la configurazione di Always Encrypted e la gestione delle chiavi di Always Encrypted.
@@ -35,24 +35,16 @@ Esistono due categorie generali di archivi da considerare: gli *archivi chiavi l
 
 * Gli**archivi chiavi locali** possono essere usati solo dalle applicazioni nei computer che contengono l'archivio chiavi locale. In altre parole, è necessario replicare l'archivio chiavi e la chiave per ogni computer che esegue l'applicazione. Un esempio di archivio chiavi locale è l'archivio certificati Windows. Quando si usa un archivio chiavi locale, è necessario verificare che l'archivio chiavi esista in ogni computer che ospita l'applicazione e che il computer contenga le chiavi master della colonna richieste dall'applicazione per accedere ai dati protetti con Always Encrypted. Quando si esegue il provisioning di una chiave master della colonna per la prima volta o quando si modifica (ruota) la chiave, è necessario verificare che la chiave venga distribuita a tutti i computer che ospitano una o più applicazioni.
 
-* Gli**archivi chiavi centralizzati** vengono usati dalle applicazioni in più computer. Un esempio di archivio chiavi centralizzato è un [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Un archivio chiavi centralizzato in genere facilita la gestione delle chiavi perché non è necessario avere più copie delle chiavi master della colonna in più computer. È necessario verificare che le applicazioni siano configurate per la connessione all'archivio chiavi centralizzato.
+* Gli**archivi chiavi centralizzati** vengono usati dalle applicazioni in più computer. Un esempio di archivio chiavi centralizzato è un [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Un archivio chiavi centralizzato in genere facilita la gestione delle chiavi perché non è necessario avere più copie delle chiavi master della colonna in più computer. Verificare che le applicazioni siano configurate per la connessione all'archivio chiavi centralizzato.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>Quali sono gli archivi chiavi supportati nei driver dei client abilitati per Always Encrypted?
 
 I driver dei client abilitati per Always Encrypted sono driver dei client di SQL Server con un supporto predefinito che consente di incorporare Always Encrypted nelle applicazioni client. I driver abilitati per Always Encrypted includono alcuni provider predefiniti per gli archivi chiavi più diffusi. Alcuni driver consentono anche di implementare e registrare un provider di archivio della chiave master della colonna personalizzato, in modo che sia possibile usare qualsiasi archivio chiavi, anche se non è disponibile un provider predefinito specifico. Quando si sceglie tra un provider predefinito e un provider personalizzato considerare che l'utilizzo un provider predefinito in genere implica meno modifiche alle applicazioni. In alcuni casi, è richiesta solo la modifica a una stringa di connessione del database.
 
-I provider predefiniti disponibili dipendono dal driver, dalla versione del driver e dal sistema operativo selezionati.  Consultare la documentazione di Always Encrypted per il driver specifico per determinare quali archivi chiavi sono supportati in modo predefinito e se il driver supporta provider di archivi chiavi personalizzati.
+I provider predefiniti disponibili dipendono dal driver, dalla versione del driver e dal sistema operativo selezionati.  Consultare la documentazione di Always Encrypted per il driver specifico per determinare quali archivi chiavi sono supportati in modo predefinito e se il driver supporta provider di archivi chiavi personalizzati - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md).
 
-- [Sviluppare applicazioni usando Always Encrypted con il provider di dati .NET Framework per SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>Strumenti supportati
-
-È possibile usare [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) e il [modulo SqlServer PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) per configurare Always Encrypted e gestire le chiavi di Always Encrypted. Per un elenco degli archivi chiavi supportati da questo strumento, vedere:
-
-- [Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configure Always Encrypted using PowerShell (Configurare Always Encrypted usando PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>Quali archivi chiavi sono supportati negli strumenti SQL?
+SQL Server Management Studio e il modulo PowerShell SqlServer supportano solo chiavi master della colonna archiviate in Azure Key Vault, nell'archivio certificati Windows e negli archivi di chiavi che implementano l'API CNG (Cryptography Next Generation) o CAPI (Cryptography API). 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Creazione di chiavi master della colonna nell'archivio certificati Windows    
 
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Creare un certificato autofirmato usando SQL Server Management Studio (SSMS)
 
-Per informazioni dettagliate, vedere [Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+Per informazioni dettagliate, vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Per un'esercitazione dettagliata che usa SQL Server Management Studio e archivia le chiavi di Always Encrypted nell'archivio certificati Windows, vedere l' [esercitazione guidata su Always Encrypted (archivio certificati Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -113,7 +105,7 @@ Per concedere all'utente l'autorizzazione di *lettura* per un certificato archiv
 
 L'insieme di credenziali delle chiavi di Azure contribuisce a proteggere i segreti e le chiavi di crittografia e rappresenta una scelta valida per l'archiviazione delle chiavi master della colonna per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Per creare una chiave nell' [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), è necessario una [sottoscrizione di Azure](https://azure.microsoft.com/free/) e un insieme di credenziali delle chiavi di Azure.
 
-#### <a name="using-powershell"></a>Utilizzo di PowerShell
+### <a name="using-powershell"></a>Utilizzo di PowerShell
 
 L'esempio seguente crea un nuovo insieme di credenziali delle chiavi di Azure e una chiave, quindi concede le autorizzazioni all'utente desiderato.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>Utilizzo di SQL Server Management Studio (SSMS)
 
+Per informazioni dettagliate su come creare una chiave master della colonna in Azure Key Vault tramite SSMS, vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Per un'esercitazione dettagliata che usa SSMS e archivia le chiavi di Always Encrypted in un insieme di credenziali delle chiavi di Azure, vedere l' [esercitazione guidata su Always Encrypted (insieme di credenziali delle chiavi di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi dell'insieme di credenziali delle chiavi di Azure ad applicazioni e utenti
@@ -144,7 +137,7 @@ Per eseguire il provisioning delle chiavi di crittografia della colonna protette
 
 #### <a name="using-powershell"></a>Utilizzo di PowerShell
 
-Per consentire a utenti e applicazioni l'accesso alle chiavi effettive in Azure Key Vault è necessario impostare i criteri di accesso all'insieme di credenziali ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+Per consentire a utenti e applicazioni di accedere alle chiavi effettive in Azure Key Vault, è necessario impostare i criteri di accesso all'insieme di credenziali ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
 
-Vedere [Provisioning Column Master using SQL Server Management Studio (SSMS) (Provisioning delle chiavi master della colonna con SQL Server Management Studio)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2).
-
+Vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi CNG a utenti e applicazioni
 
@@ -206,7 +198,10 @@ Vedere la documentazione per il modulo di protezione hardware e il provider di a
 
 Una chiave master della colonna per Always Encrypted può essere archiviata in un archivio chiavi che implementa l'API Cryptography (CAPI). In genere, questo tipo di archivio è un modulo di protezione hardware (HSM), ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia. I moduli di protezione hardware vengono generalmente forniti come schede plug-in o dispositivi esterni collegati direttamente a un computer (HSM locale) o a un server di rete.
 
-Per rendere disponibile un modulo di protezione hardware alle applicazioni di un determinato computer, è necessario installare e configurare un provider del servizio di crittografia (CSP) che implementa CAPI nel computer. Un driver del client Always Encrypted, ovvero un provider di archivio della chiave master della colonna interno al driver, usa il provider del servizio di crittografia per crittografare e decrittografare le chiavi di crittografia della colonna, protette con la chiave master della colonna archiviata nell'archivio chiavi. Nota: CAPI è un'API legacy deprecata. Se è disponibile un provider di archiviazione chiavi per il modulo di protezione hardware, è necessario usare quello invece di CSP/CAPI.
+Per rendere disponibile un modulo di protezione hardware alle applicazioni di un determinato computer, è necessario installare e configurare un provider del servizio di crittografia (CSP) che implementa CAPI nel computer. Un driver del client Always Encrypted, ovvero un provider di archivio della chiave master della colonna interno al driver, usa il provider del servizio di crittografia per crittografare e decrittografare le chiavi di crittografia della colonna, protette con la chiave master della colonna archiviata nell'archivio chiavi. 
+
+> [!NOTE]
+> CAPI è un'API legacy deprecata. Se è disponibile un provider di archiviazione chiavi per il modulo di protezione hardware, è necessario usare quello invece di CSP/CAPI.
 
 Un provider del servizio di crittografia deve supportare l'algoritmo RSA da usare con Always Encrypted.
 
@@ -220,25 +215,15 @@ Una chiave master della colonna deve essere una chiave asimmetrica, ovvero una c
 Vedere la documentazione per il modulo di protezione hardware.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>Utilizzo di SQL Server Management Studio (SSMS)
-Vedere la sezione sul provisioning delle chiavi master della colonna in Configuring Always Encrypted using SQL Server Management Studio (Configurazione di Always Encrypted con SQL Server Management Studio).
+Vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi CNG a utenti e applicazioni
 Vedere la documentazione per il modulo di protezione hardware e il provider del servizio di crittografia per informazioni su come configurare il provider del servizio di crittografia in un computer e su come concedere l'accesso al modulo di protezione hardware a utenti e applicazioni.
  
- 
 ## <a name="next-steps"></a>Next Steps  
+- [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Effettuare il provisioning di chiavi Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Configure Always Encrypted Keys using PowerShell (Configurare le chiavi di Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotate Always Encrypted Keys using PowerShell (Ruotare le chiavi di Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurare Always Encrypted usando SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>Risorse aggiuntive  
-
-- [Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (Motore di database)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Sviluppare applicazioni usando Always Encrypted con il provider di dati .NET Framework per SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted Blog (Blog su Always Encrypted)](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>Vedere anche 
+- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

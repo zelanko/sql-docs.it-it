@@ -1,7 +1,7 @@
 ---
-title: Procedura guidata Always Encrypted | Microsoft Docs
+title: Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2016
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,67 +9,106 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
-- sql.swb.alwaysencryptedwizard.masterkey.f1
+- sql13.swb.alwaysencryptedwizard.masterkey.f1
 helpviewer_keywords:
 - Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e45ddec1a380ea6ea867fb0306cca4176786fbf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043147"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594509"
 ---
-# <a name="always-encrypted-wizard"></a>Procedura guidata Always Encrypted
+# <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili archiviati in un database di SQL Server. Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi).  Per una descrizione completa della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+La procedura guidata Always Encrypted è un potente strumento che consente di impostare la configurazione [Always Encrypted](always-encrypted-database-engine.md) desiderata per le colonne di database selezionate. In base alla configurazione corrente e alla configurazione di destinazione desiderata, la procedura guidata è in grado di crittografare una colonna, rimuovere la crittografia o riapplicarla, ad esempio una nuova chiave di crittografia della colonna o un tipo di crittografia diverso da quello in uso, configurato per la colonna. È possibile configurare più colonne in una singola sessione della procedura guidata.
+
+La procedura guidata consente di crittografare le colonne con chiavi di crittografia della colonna esistenti. In alternativa, si può scegliere di generare una nuova chiave di crittografia della colonna oppure sia una nuova chiave di crittografia della colonna che una nuova chiave master di colonna. 
+
+La procedura guidata funziona spostando i dati all'esterno del database ed eseguendo operazioni di crittografia all'interno del processo di SSMS. La procedura guidata crea una o più nuove tabelle con la configurazione di crittografia desiderata nel database, carica tutti i dati dalle tabelle originali, esegue le operazioni di crittografia richieste, carica i dati nelle nuove tabelle e quindi scambia le tabelle originali con le nuove tabelle.
+
+> [!NOTE]
+> L'esecuzione di operazioni di crittografia può richiedere molto tempo. Durante questo periodo, il database non è disponibile per la scrittura di transazioni. Per le operazioni di crittografia in tabelle di grandi dimensioni, lo strumento consigliato è PowerShell. Vedere [Configurare la crittografia delle colonne usando Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md).
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicuro, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md). Si noti che la procedura guidata non supporta la crittografia sul posto.
+
+::: moniker-end
+
+Usare PowerShell è una procedura consigliata 
+
+ - Per una procedura dettagliata completa che spiega come configurare Always Encrypted con la procedura guidata e come usarlo in un'applicazione client, vedere le esercitazioni seguenti sul database SQL di Azure:
+    - [Proteggere i dati sensibili nel database SQL di Azure con Always Encrypted e le chiavi master di colonna nell'archivio certificati di Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+    - [Proteggere i dati sensibili nel database SQL di Azure con Always Encrypted e le chiavi master di colonna in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+
+ - Per informazioni sull'uso della procedura guidata, vedere il video relativo alla [protezione dei dati sensibili con Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Vedere anche il blog del team di sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sulla [procedura guidata per la crittografia di SSMS e su come abilitare Always Encrypted in pochi semplici passaggi](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
+ - Per altre informazioni sulle chiavi Always Encrypted, vedere [Panoramica della gestione delle chiavi per Always Encrypted](overview-of-key-management-for-always-encrypted.md).
+ - Per informazioni sui tipi di crittografia supportati in Always Encrypted, vedere [Selezione della crittografia deterministica o casuale](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
- - Per una procedura dettagliata completa che spiega come configurare Always Encrypted con la procedura guidata e come usarlo in un'applicazione client, vedere [Esercitazione database SQL: Proteggere i dati sensibili con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ ## <a name="permissions"></a>Autorizzazioni
+Per eseguire operazioni di crittografia tramite la procedura guidata sono necessarie le autorizzazioni **VIEW ANY COLUMN MASTER KEY DEFINITION** e **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**. È inoltre necessario avere le autorizzazioni per accedere alle chiavi master di colonna in uso negli archivi che contengono le chiavi:
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni get, unwrapKey e verify per l'insieme di credenziali contenente la chiave master della colonna.
+- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+
+Inoltre, se si stanno creando nuove chiavi tramite la procedura guidata, è necessario avere le autorizzazioni aggiuntive elencate in [Effettuare il provisioning delle chiavi master di colonna con la finestra di dialogo Nuova chiave master della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Effettuare il provisioning delle chiavi di crittografia di colonna con la finestra di dialogo Nuova chiave di crittografia della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
+
+## <a name="open-the-always-encrypted-wizard"></a>Aprire la procedura guidata Always Encrypted
+È possibile avviare la procedura guidata a tre livelli diversi: 
+- A livello di database, se si vogliono crittografare più colonne situate in tabelle diverse.
+- A livello di tabella, se si vogliono crittografare più colonne situate nella stessa tabella.
+- A livello di colonna, se si vuole crittografare una specifica colonna.
  
- - Per informazioni sull'uso della procedura guidata, vedere il video relativo alla [protezione dei dati sensibili con Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Vedere anche il blog del team di sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sulla [procedura guidata per la crittografia di SSMS e su come abilitare Always Encrypted in pochi semplici passaggi](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
- 
- - **Autorizzazioni:** per eseguire query su colonne crittografate e selezionare chiavi usando la procedura guidata è necessario avere le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Per creare nuove chiavi, sono necessarie anche le autorizzazioni `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
- 
- #### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Always Encrypted
- 
- 1.  Connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il componente Esplora oggetti di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+ 1. Connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il componente Esplora oggetti di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
- 2.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, quindi fare clic su **Crittografa colonne**.  
+ 2. Per crittografare:
+     1. Più colonne situate in una tabella diversa in un database, fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi selezionare **Crittografa colonne**.
+     1. Più colonne situate nella stessa tabella, passare alla tabella, fare clic con il pulsante destro del mouse su di essa, quindi selezionare **Crittografa colonne**.
+     1. Una singola colonna, passare alla colonna, fare clic con il pulsante destro del mouse su di essa, quindi selezionare **Crittografa colonne**.
+
+
    
  ## <a name="column-selection-page"></a>Pagina Selezione colonna
- - Individuare una tabella e una colonna e quindi selezionare un tipo di crittografia (deterministico o casuale) e una chiave di crittografia per le colonne selezionate. Per decrittografare una colonna attualmente crittografata, selezionare **Testo non crittografato**. Per applicare una nuova chiave di crittografia a una colonna, selezionare una chiave di crittografia diversa e la procedura guidata decrittograferà la colonna per puoi crittografarla nuovamente con la nuova chiave. La crittografia di tabelle temporali e in memoria è supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ma non può essere configurata con questa procedura guidata.  
- 
-## <a name="master-key-configuration-page"></a>Pagina Configurazione della chiave master  
- - Creare una nuova chiave master della colonna nell'archivio certificati di Windows o in Insieme di credenziali delle chiavi di Azure. Per altre informazioni, fare clic di seguito sui collegamenti nella sezione Archiviazione della chiave.  
- 
- - Se si sceglie una chiave di crittografia della colonna generata automaticamente nella pagina Selezione colonna, è necessario configurare una chiave master della colonna con cui verrà crittografata la chiave di crittografia della colonna generata. Se esiste già una chiave master della colonna definita nel database, è possibile selezionarla. (Per usare una chiave master della colonna esistente, è necessario avere l'autorizzazione per accedere alla chiave.) In alternativa, è possibile generare una nuova chiave master della colonna nell'archivio chiavi selezionato (archivio certificati di Windows o Insieme di credenziali delle chiavi di Azure) e definire la chiave nel database.  
- 
- ### <a name="key-storage"></a>**Archiviazione della chiave**  
- 
- - Scegliere la posizione in cui verrà archiviata la chiave master della colonna.  
- 
-   - **Archiviazione di una chiave master nell'archivio certificati di Windows** Per altre informazioni, vedere [Using Certificate Stores (Uso degli archivi certificati)](/windows/desktop/SecCrypto/using-certificate-stores)  
- 
-   - **Archiviazione di una chiave master nell'insieme di credenziali delle chiavi di Azure** Per altre informazioni, vedere [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
- 
- - Per generare una chiave master della colonna nell'insieme di credenziali delle chiavi di Azure, l'utente deve avere le autorizzazioni **WrapKey**, **UnwrapKey**, **Verify**e **Sign** per l'insieme di credenziali delle chiavi. Potrebbero essere necessarie anche le autorizzazioni **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**e **Restore** . Per altre informazioni, vedere [Che cos'è Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).  
- 
- - La procedura guidata supporta solo queste due opzioni. I moduli di protezione hardware e gli archivi dei clienti devono essere configurati con [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
- 
- ## <a name="always-encrypted-terms"></a>Terminologia relativa Always Encrypted  
- 
- - La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di raggruppamento, filtro di uguaglianza e join di tabelle in base ai valori crittografati, ma può anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. Questa vulnerabilità aumenta quando è presente un piccolo set di possibili valori crittografati, ad esempio True/False o area geografica Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
- 
- - La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce le ricerche di uguaglianza, il raggruppamento, l'indicizzazione e il join su colonne crittografate.  
+In questa pagina è possibile selezionare le colonne da crittografare, crittografare nuovamente o decrittografare, oltre che definire la configurazione di crittografia di destinazione per le colonne selezionate.
 
- - Le**chiavi master della colonna** proteggono le chiavi usate per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio attendibile. Le informazioni sulle chiavi master della colonna, incluso il relativo percorso, vengono archiviate nel database in viste del catalogo di sistema.  
+Per crittografare una colonna in testo non crittografato, selezionare un tipo di crittografia (**Deterministica** o **Casuale**) e una chiave di crittografia per la colonna. 
 
- - Le**chiavi di crittografia della colonna** vengono usate per crittografare dati sensibili archiviati nelle colonne del database. Tutti i valori presenti in una colonna possono essere crittografati usando una chiave di crittografia di singola colonna. I valori crittografati delle chiavi di crittografia della colonna vengono archiviati nel database in viste del catalogo di sistema. È consigliabile archiviare le chiavi di crittografia della colonna in un percorso sicuro/attendibile per il backup.  
+Per modificare un tipo di crittografia o per ruotare (modificare) una chiave di crittografia della colonna per una colonna già crittografata, selezionare il tipo di crittografia desiderato e la chiave. 
 
- ## <a name="see-also"></a>Vedere anche  
- - [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- - [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+Se si vuole che la procedura guidata crittografi o ricrittografi una o più colonne usando una nuova chiave di crittografia della colonna, selezionare una chiave il cui nome contiene **(Nuova)** . La procedura guidata genererà la chiave.
+
+Per decrittografare una colonna attualmente crittografata, selezionare il tipo di crittografia **Testo non crittografato**.
+
+
+> [!NOTE]
+> La procedura guidata non supporta le operazioni di crittografia in tabelle temporali e in memoria. È possibile creare tabelle temporali o in memoria vuote usando Transact-SQL e inserire dati usando l'applicazione.
+
+## <a name="master-key-configuration-page"></a>Pagina Configurazione della chiave master
+Se per qualsiasi colonna nella pagina precedente è stata selezionata una chiave di crittografia della colonna generata automaticamente, in questa pagina occorre selezionare una chiave master di colonna esistente oppure configurare una nuova chiave master di colonna che crittograferà la chiave di crittografia della colonna. 
+
+Quando si configura una nuova chiave master di colonna, è possibile selezionare una chiave esistente nell'archivio certificati di Windows o in Azure Key Vault e fare in modo che la procedura guidata crei nel database solo un oggetto metadati per la chiave. In alternativa, si può scegliere di generare nel database sia la chiave che l'oggetto metadati che descrive la chiave. 
+
+Per altre informazioni sulla creazione e l'archiviazione delle chiavi master di colonna nell'archivio certificati di Windows, in Azure Key Vault o in altri archivi di chiavi, vedere [Creare e archiviare chiavi master della colonna per Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+
+> [!TIP]
+> La procedura guidata consente di esplorare e creare chiavi solo nell'archivio certificati Windows e in Azure Key Vault. Inoltre, genera automaticamente i nomi delle nuove chiavi e degli oggetti metadati del database che descrivono le chiavi. Per avere un maggiore controllo sulla modalità di provisioning delle chiavi e più possibilità di scelta per un archivio chiavi contenente una chiave master della colonna, è possibile usare le finestre di dialogo **Nuova chiave master della colonna** e **Nuova chiave di crittografia della colonna** per creare le chiavi, quindi eseguire la procedura guidata e selezionare le chiavi create. Vedere [Effettuare il provisioning delle chiavi master di colonna con la finestra di dialogo Nuova chiave master della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Effettuare il provisioning delle chiavi di crittografia di colonna con la finestra di dialogo Nuova chiave di crittografia della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
+
+## <a name="next-steps"></a>Next Steps
+- [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
+
+## <a name="see-also"></a>Vedere anche  
+ - [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Panoramica della gestione delle chiavi per Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Configurare Always Encrypted usando SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [Effettuare il provisioning di chiavi Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md)
+ - [Configurare la crittografia delle colonne usando Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
+ - [Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati](configure-always-encrypted-using-dacpac.md)

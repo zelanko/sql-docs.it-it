@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893408"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536237"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -110,7 +110,7 @@ Questo parametro è necessario per gli scenari ibridi del sistema operativo. In 
 
 ## <a name="remarks"></a>Remarks
 
-In CTP 3.0 **PARAMETERS** e **ENVIRONMENT_VARIABLES** non sono supportati.
+**PARAMETERS** e **ENVIRONMENT_VARIABLES** non sono attualmente supportati.
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -120,7 +120,7 @@ Per modificare una libreria è necessaria un'altra autorizzazione, `ALTER ANY EX
 
 ### <a name="execute-external-script-permission"></a>Autorizzazione EXECUTE EXTERNAL SCRIPT
 
-In SQL Server 2019 saranno introdotte le autorizzazioni EXECUTE EXTERNAL SCRIPT in modo da concedere l'esecuzione dello script esterno in linguaggi specifici. In precedenza era disponibile solo l'autorizzazione del database EXECUTE ANY EXTERNAL SCRIPT, che non concedeva l'autorizzazione di esecuzione in un linguaggio specifico.
+È possibile usare le autorizzazioni EXECUTE EXTERNAL SCRIPT in modo da concedere l'esecuzione dello script esterno in linguaggi specifici. Questa autorizzazione è diversa dall'autorizzazione di database EXECUTE ANY EXTERNAL SCRIPT, che non concede l'autorizzazione di esecuzione in un linguaggio specifico.
 
 In questo modo gli utenti non-**dbo** devono avere l'autorizzazione per eseguire un linguaggio specifico:
 

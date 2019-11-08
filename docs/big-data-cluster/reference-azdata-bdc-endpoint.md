@@ -5,24 +5,24 @@ description: Articolo di riferimento per i comandi azdata bdc endpoint.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dfbbf9c7b26fda5c426c6e2bf2915f2bb49926a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 9f5f5c25def3408d9b8ed396536e34cc9b247a7a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155248"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531819"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | Elenca gli endpoint per il cluster di Big Data.
@@ -30,25 +30,22 @@ Questo articolo è un articolo di riferimento per **azdata**.
 Elenca gli endpoint per il cluster di Big Data.
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-                         
-```
-### <a name="optional-parameters"></a>Parametri facoltativi
+       ```
+### Optional Parameters
 #### `--endpoint-name -e`
-Nome dell'endpoint del cluster di Big Data.
-### <a name="global-arguments"></a>Argomenti globali
+Big data cluster endpoint name.
+### Global Arguments
 #### `--debug`
-Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
+Increase logging verbosity to show all debug logs.
 #### `--help -h`
-Visualizza questo messaggio della guida ed esce.
+Show this help message and exit.
 #### `--output -o`
-Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Increase logging verbosity. Use --debug for full debug logs.
 
-## <a name="next-steps"></a>Passaggi successivi
+## Next steps
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

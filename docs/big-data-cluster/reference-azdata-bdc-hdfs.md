@@ -5,27 +5,27 @@ description: Articolo di riferimento per i comandi azdata bdc hdfs.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d63d0cbd9d3d36d2d76d5b1fa01337d17084306d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: e20e7574109ccce4caa6b4d9fd84a4fef65cf0fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155228"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531781"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
-[stato HDFS BDC azdata](reference-azdata-bdc-hdfs-status.md) | Comandi per lo stato del servizio HDFS.
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Comandi relativi allo stato del servizio HDFS.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | La shell HDFS è una semplice shell dei comandi interattiva per file system HDFS.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Elenca lo stato del file o della directory specificata.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Determina se un file o una directory esiste realmente.  Restituisce True se esiste; in caso contrario, False.
@@ -37,6 +37,7 @@ Questo articolo è un articolo di riferimento per **azdata**.
 [azdata bdc hdfs rmr](#azdata-bdc-hdfs-rmr) | Rimuove in modo ricorsivo un file o una directory.
 [azdata bdc hdfs chmod](#azdata-bdc-hdfs-chmod) | Modifica l'autorizzazione sul file o sulla directory specificata.
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Modifica il proprietario o il gruppo del file specificato.
+[azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Copia un file o una directory tra il computer locale e HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Gestire il montaggio di archivi remoti in HDFS.
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 La shell HDFS è una semplice shell dei comandi interattiva per file system HDFS.
@@ -56,15 +57,14 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 Elenca lo stato del file o della directory specificata.
 ```bash
 azdata bdc hdfs ls --path -p 
-                   
-```
+ ```
 ### <a name="examples"></a>Esempi
 Stato dell'elenco.
 ```bash
@@ -81,17 +81,16 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 Determina se un file o una directory esiste realmente.  Restituisce True se esiste; in caso contrario, False.
 ```bash
 azdata bdc hdfs exists --path -p 
-                       
-```
-### <a name="examples"></a>Esempi
-Verificare la presenza di file o directory.
+     ```
+### Examples
+Check for file or directory existance.
 ```bash
 azdata bdc hdfs exists --path '/tmp'
 ```
@@ -106,17 +105,16 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 Crea una directory nel percorso specificato.
 ```bash
 azdata bdc hdfs mkdir --path -p 
-                      
-```
-### <a name="examples"></a>Esempi
-Creare una directory.
+    ```
+### Examples
+Make directory.
 ```bash
 azdata bdc hdfs mkdir --path '/tmp'
 ```
@@ -131,7 +129,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -158,7 +156,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -185,7 +183,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -215,15 +213,14 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 Rimuove un file o una directory.
 ```bash
 azdata bdc hdfs rm --path -p 
-                   
-```
+ ```
 ### <a name="examples"></a>Esempi
 Rimuove un file o una directory.
 ```bash
@@ -240,15 +237,14 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 Rimuove in modo ricorsivo un file o una directory.
 ```bash
 azdata bdc hdfs rmr --path -p 
-                    
-```
+  ```
 ### <a name="examples"></a>Esempi
 Rimuovere una directory in modo ricorsivo.
 ```bash
@@ -265,7 +261,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -292,7 +288,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -322,12 +318,37 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-bdc-hdfs-cp"></a>azdata bdc hdfs cp
+Copia un file o una directory tra il computer locale e HDFS.  Se l'input è una directory, viene copiato l'intero albero di directory.  Se il file o la directory di destinazione esiste già, il comando ha esito negativo.  Per specificare la directory HDFS remota, anteporre il prefisso "hdfs:" al percorso
+```bash
+azdata bdc hdfs cp --from-path -f 
+                   --to-path -t
+```
+### <a name="examples"></a>Esempi
+Copia di un file o di una directory tra il computer locale e HDFS.
+```bash
+azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+```
+### <a name="required-parameters"></a>Parametri obbligatori
+#### `--from-path -f`
+Nome del percorso da cui eseguire la copia.  Anteporre il prefisso "hdfs:" al percorso per indicare un percorso HDFS.
+#### `--to-path -t`
+Nome del percorso in cui eseguire la copia.  Anteporre il prefisso "hdfs:" al percorso per indicare un percorso HDFS.
+### <a name="global-arguments"></a>Argomenti globali
+#### `--debug`
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
+#### `--help -h`
+Visualizza questo messaggio della guida ed esce.
+#### `--output -o`
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
+#### `--query -q`
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+#### `--verbose`
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

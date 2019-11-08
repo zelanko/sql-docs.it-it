@@ -1,57 +1,60 @@
 ---
-title: Connetti a cluster di Big Data Master e HDFS
+title: Connettersi a cluster Big Data master e HDFS
 description: Informazioni su come connettersi all'istanza master di SQL Server e al gateway HDFS/Spark per un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 0717226ee785df568d4cea75511e65acb728c592
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652427"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532237"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Connettersi a un cluster Big Data di SQL Server con Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come connettersi a un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] da Azure Data Studio.
+Questo articolo descrive come connettersi a un[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] da Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Un [cluster Big Data di SQL Server 2019](deployment-guidance.md) distribuito.
 - [Strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
    - **kubectl**
+   - **azdata**
 
 ## <a id="master"></a> Connettersi al cluster
 
 Per connettersi a un cluster Big Data con Azure Data Studio, stabilire una nuova connessione all'istanza master di SQL Server nel cluster. Questa procedura descrive come connettersi all'istanza master usando Azure Data Studio.
 
-1. Dalla riga di comando trovare l'indirizzo IP dell'istanza master con il comando seguente:
+1. Individuare l'istanza master di SQL Server:
 
    ```
-   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
+   azdata bdc endpoint list -e sql-server-master
    ```
 
    > [!TIP]
-   > Per impostazione predefinita, il nome del cluster Big data è **mssql-cluster**, a meno che il nome non sia stato personalizzato in un file di configurazione della distribuzione. Per altre informazioni, vedere [Configurare le impostazioni di distribuzione per cluster Big Data](deployment-custom-configuration.md#clustername).
+   > Per altre informazioni su come recuperare gli endpoint, vedere [Recuperare gli endpoint](deployment-guidance.md#endpoints).
 
 1. In Azure Data Studio premere **F1** > **Nuova connessione**.
 
 1. In **Tipo di connessione** selezionare **Microsoft SQL Server**.
 
-1. Digitare l'indirizzo IP dell'istanza master di SQL Server in **Nome server** (ad esempio: **\<Indirizzo IP\>,31433**).
+1. Digitare il nome dell'endpoint trovato per l'istanza master di SQL Server nella casella di testo **Nome server**, ad esempio: **\<Indirizzo_IP\>, 31433**. 
 
-1. Immettere il **Nome utente** e la **Password** di un account di accesso SQL.
+1. Scegliere il tipo di autenticazione. Per un'istanza master di SQL Server in esecuzione all'interno di cluster Big Data, sono supportati solo i tipi **Autenticazione di Windows** e **Account di accesso SQL**. 
+
+1. Immettere **Nome utente** e **Password** di un account di accesso SQL. Se si usa l'autenticazione di Windows, questa operazione non è necessaria.
 
    > [!TIP]
-   > Per impostazione predefinita, il nome utente è **SA** e, se non è stata modificata, la password corrisponde alla variabile di ambiente **MSSQL_SA_PASSWORD** usata durante la distribuzione.
+   > Per impostazione predefinita, durante la distribuzione di cluster Big Data il nome utente **SA** è disabilitato. Durante la distribuzione viene eseguito il provisioning di un nuovo utente sysadmin con nome corrispondente alla variabile di ambiente **AZDATA_USERNAME** e password corrispondente alla variabile di ambiente **AZDATA_PASSWORD** usate durante la distribuzione.
 
 1. Modificare il **Nome database** di destinazione in uno dei database relazionali.
 
@@ -69,4 +72,4 @@ A partire dalla versione di febbraio 2019 di Azure Data Studio, la connessione a
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vedere [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)la pagina relativa a.
+Per altre informazioni sui [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

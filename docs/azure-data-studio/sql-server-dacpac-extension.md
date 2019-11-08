@@ -1,27 +1,25 @@
 ---
 title: Estensione SQL Server dacpac
 titleSuffix: Azure Data Studio
-description: Installare e usare l'estensione SQL Server dacpac (anteprima) per Azure Data Studio
+description: Installare e usare l'estensione SQL Server dacpac per Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783336"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532424"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>Estensione dacpac di SQL Server (anteprima)
+# <a name="sql-server-dacpac-extension"></a>Estensione SQL Server dacpac
 
 La **procedura guidata applicazione livello dati**  rappresenta un'esperienza di procedura guidata facile da usare per distribuire ed estrarre file dacpac e importare ed esportare file bacpac.
-
-Questa funzionalità è attualmente disponibile in versione di anteprima iniziale. Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Funzionalità
@@ -60,3 +58,4 @@ Per avviare la procedura guidata, fare clic con il pulsante destro del mouse sul
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sui dacpac, [vedere la documentazione.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).

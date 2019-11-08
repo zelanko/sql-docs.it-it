@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 090e854f59e1d2be7291c8c759ef89c8311fd0a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471121"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536252"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ Carica file di pacchetti R, Python o Java in un database dal flusso di byte o da
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 sono supportati il linguaggio R e la piattaforma Windows. In SQL Server 2019 CTP 2.4 e versioni successive sono supportati R, Python e linguaggi esterni nelle piattaforme Windows e Linux.
+> In SQL Server 2017 sono supportati il linguaggio R e la piattaforma Windows. In SQL Server 2019 e versioni successive sono supportati R, Python e linguaggi esterni nelle piattaforme Windows e Linux.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"

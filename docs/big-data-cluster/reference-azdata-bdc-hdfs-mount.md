@@ -5,24 +5,24 @@ description: Articolo di riferimento per i comandi azdata bdc hdfs mount.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d0e248c3a19a032571e77e1250faf82d331630e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 43796ca3dc02804472298b17f8ddaeed946df5bb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155240"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531841"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
 [azdata bdc hdfs mount create](#azdata-bdc-hdfs-mount-create) | Crea montaggi di archivi remoti in HDFS.
@@ -59,17 +59,16 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
 Elimina montaggi di archivi remoti in HDFS.
 ```bash
 azdata bdc hdfs mount delete --mount-path -m 
-                             
-```
-### <a name="examples"></a>Esempi
-Eliminare il montaggio creato nel percorso /mounts/adlsv2/data per un account di archiviazione di ADLS Gen 2.
+           ```
+### Examples
+Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```
@@ -84,17 +83,16 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
 Stato del montaggio (o dei montaggi).
 ```bash
 azdata bdc hdfs mount status [--mount-path -m] 
-                             
-```
-### <a name="examples"></a>Esempi
-Ottenere lo stato del montaggio in base al percorso
+           ```
+### Examples
+Get mount status by path
 ```bash
 azdata bdc hdfs mount status --mount-path /mounts/hdfs
 ```
@@ -113,17 +111,16 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
 Aggiorna il contenuto di un montaggio in HDFS.
 ```bash
 azdata bdc hdfs mount refresh --mount-path -m 
-                              
-```
-### <a name="examples"></a>Esempi
-Aggiornare il montaggio creato in corrispondenza di: /mounts/adlsv2/data.
+            ```
+### Examples
+Refresh mount created at /mounts/adlsv2/data.
 ```bash
 azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 ```
@@ -138,12 +135,10 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

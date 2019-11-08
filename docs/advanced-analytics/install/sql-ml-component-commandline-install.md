@@ -1,90 +1,106 @@
 ---
-title: Installazione del prompt dei comandi di componenti R e Python
-description: Eseguire SQL Server installazione della riga di comando per aggiungere il linguaggio R e l'integrazione di Python a un'istanza del motore di database SQL Server.
+title: Installazione dei componenti R e Python dal prompt dei comandi
+description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere l'integrazione di Python e del linguaggio R a un'istanza del motore di database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
-ms.translationtype: MT
+ms.openlocfilehash: c89d1a0fb08e61cd6d42ac66339ccc6aa5eeef5b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271943"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594363"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare SQL Server componenti R e Python di Machine Learning dalla riga di comando
+# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo fornisce le istruzioni per l'installazione dei componenti di SQL Server machine learning da una riga di comando:
+Questo articolo contiene le istruzioni per installare dalla riga di comando i componenti di SQL Server per il Machine Learning:
 
 + [Nuova istanza nel database](#indb)
-+ [Aggiungi a un'istanza del motore di database esistente](#add-existing)
++ [Aggiungere a un'istanza del motore di database esistente](#add-existing)
 + [Installazione invisibile all'utente](#silent)
 + [Nuovo server autonomo](#shared-feature)
 
-È possibile specificare un'interazione invisibile, di base o completa con l'interfaccia utente del programma di installazione. Questo articolo integra l' [installazione SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), coprendo i parametri univoci per i componenti di R e Python Machine Learning.
+È possibile specificare l'interazione automatica, di base o completa con l'interfaccia utente del programma di installazione. Questo articolo è un'integrazione dell'articolo [Installare SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) in cui sono illustrati i parametri specifici dei componenti R e Python per il Machine Learning.
 
-## <a name="pre-install-checklist"></a>Elenco di controllo pre-installazione
+## <a name="pre-install-checklist"></a>Elenco di controllo preliminare all'installazione
 
-+ Eseguire comandi da un prompt dei comandi con privilegi elevati. 
++ Eseguire i comandi da un prompt dei comandi con privilegi elevati. 
 
-+ Un'istanza del motore di database è necessaria per le installazioni nel database. Non è possibile installare solo le funzionalità di R o Python, sebbene sia possibile [aggiungerle in modo incrementale a un'istanza esistente](#add-existing). Se si vuole solo R e Python senza il motore di database, installare il [server autonomo](#shared-feature).
++ Per le installazioni nel database è necessaria un'istanza del motore di database. Non è possibile installare solo le funzionalità di R o Python, ma è possibile [aggiungerle in modo incrementale a un'istanza esistente](#add-existing). Se si vuole limitare l'installazione a R e Python senza il motore di database, installare il [server autonomo](#shared-feature).
 
-+ Non installare in un cluster di failover. Il meccanismo di sicurezza usato per isolare i processi R e Python non è compatibile con un ambiente cluster di failover di Windows Server.
++ Non eseguire l'installazione in un cluster di failover. Questo requisito dipende dal fatto che il meccanismo di sicurezza usato per isolare i processi R e Python non è compatibile con un ambiente di cluster di failover Windows Server.
 
-+ Non installare in un controller di dominio. Il Machine Learning Services parte del programma di installazione avrà esito negativo.
++ Non eseguire l'installazione in un controller di dominio. La parte del programma di installazione relativa a Machine Learning Services avrà esito negativo.
 
-+ Evitare di installare istanze autonome e nel database nello stesso computer. Un server autonomo eseguirà la competizione per le stesse risorse, compromettendo le prestazioni di entrambe le installazioni.
++ Evitare di installare nello stesso computer istanze autonome e nel database. Un server autonomo entrerebbe in competizione per le stesse risorse, con effetti negativi sulle prestazioni di entrambe le installazioni.
 
 
 ## <a name="command-line-arguments"></a>Argomenti della riga di comando
 
-L'argomento FEATUREs è obbligatorio, così come i contratti di licenza. 
+L'argomento FEATURES e quelli relativi all'accettazione delle condizioni di licenza sono obbligatori. 
 
 In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q o la modalità non interattiva semplice tramite il parametro /QS. L'opzione /QS indica semplicemente lo stato di avanzamento, non accetta alcun input e non consente di visualizzare eventuali messaggi di errore. Il parametro /QS è supportato solo quando viene specificato /Action=install.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Argomenti | Descrizione |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | Installa la versione nel database: R Services per SQL Server (in-database).  |
-| /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server R Server (standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
-| /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R Open Source. |
-| /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti di Python. |
-| /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'utilizzo di SQL Server.|
-| /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB del componente R. |
+| /FEATURES = AdvancedAnalytics | Installa la versione nel database: SQL Server R Services (In-Database).  |
+| /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server R Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
+| /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R open source. |
+| /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti Python. |
+| /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso di SQL Server.|
+| /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB dei componenti R. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 | Argomenti | Descrizione |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | Installa la versione nel database: SQL Server Machine Learning Services (in-database).  |
-| /FEATURES = SQL_INST_MR | Associare questo insieme a AdvancedAnalytics. Installa la funzionalità R (in-database), inclusi Microsoft R Open e i pacchetti R proprietari. |
-| /FEATURES = SQL_INST_MPY | Associare questo insieme a AdvancedAnalytics. Installa la funzionalità Python (in-database), inclusi Anaconda e i pacchetti Python proprietari. |
-| /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server Machine Learning Server (standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
-| /FEATURES = SQL_SHARED_MPY | Installa la funzionalità Python per la versione autonoma: SQL Server Machine Learning Server (standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
-| /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R Open Source. |
-| /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti di Python. |
-| /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'utilizzo di SQL Server.|
-| /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB del componente R. |
-| /MPYCACHEDIRECTORY | Riservato per usi futuri. Utilizzare% TEMP% per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione Internet. |
+| /FEATURES = AdvancedAnalytics | Installa la versione nel database: SQL Server Machine Learning Services (In-Database).  |
+| /FEATURES = SQL_INST_MR | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità R (In-Database), inclusi Microsoft R Open e i pacchetti R proprietari. |
+| /FEATURES = SQL_INST_MPY | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Python (In-Database), inclusi Anaconda e i pacchetti Python proprietari. |
+| /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
+| /FEATURES = SQL_SHARED_MPY | Installa la funzionalità Python per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
+| /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R open source. |
+| /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti Python. |
+| /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso di SQL Server.|
+| /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB dei componenti R. |
+| /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Usare %TEMP% per archiviare i file CAB dei componenti Python per l'installazione in computer privi di connessione Internet. |
 ::: moniker-end
 
-## <a name="indb"></a>Installazioni di istanze nel database
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+| Argomenti | Descrizione |
+|-----------|-------------|
+| /FEATURES = AdvancedAnalytics | Installa la versione nel database: SQL Server Machine Learning Services (In-Database).  |
+| /FEATURES = SQL_INST_MR | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità R (In-Database), inclusi Microsoft R Open e i pacchetti R proprietari. |
+| /FEATURES = SQL_INST_MPY | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Python (In-Database), inclusi Anaconda e i pacchetti Python proprietari. |
+| /FEATURES = SQL_INST_MJAVA | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Java (In-Database), incluso Open JRE. |
+| /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
+| /FEATURES = SQL_SHARED_MPY | Installa la funzionalità Python per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
+| /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R open source. |
+| /IACCEPTPYTHONLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti Python. |
+| /IACCEPTSQLSERVERLICENSETERMS | Indica che sono state accettate le condizioni di licenza per l'uso di SQL Server.|
+| /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB dei componenti R. |
+| /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Usare %TEMP% per archiviare i file CAB dei componenti Python per l'installazione in computer privi di connessione Internet. |
+::: moniker-end
 
-Le analisi nel database sono disponibili per le istanze del motore di database, necessarie per aggiungere la funzionalità **AdvancedAnalytics** all'installazione. È possibile installare un'istanza del motore di database con Advanced Analytics o [aggiungerla a un'istanza esistente](#add-existing). 
+## <a name="indb"></a> Installazioni di istanze nel database
 
-Per visualizzare le informazioni sullo stato di avanzamento senza la richiesta interattiva sullo schermo, usare l'argomento/QS.
+Le funzionalità di analisi nel database sono disponibili per le istanze del motore di database, che sono quindi necessarie per aggiungere la funzionalità **AdvancedAnalytics** all'installazione. È possibile installare un'istanza del motore di database insieme alla funzionalità di analisi avanzata oppure [aggiungere questa funzionalità a un'istanza esistente](#add-existing). 
+
+Per visualizzare le informazioni sullo stato di avanzamento senza messaggi interattivi sullo schermo, usare l'argomento /qs.
 
 > [!IMPORTANT]
-> Dopo l'installazione, restano due passaggi di configurazione aggiuntivi. L'integrazione non è completa fino a quando non vengono eseguite queste attività. Per istruzioni, vedere [attività di post-installazione](#post-install) .
+> Dopo l'installazione, restano da eseguire due passaggi di configurazione aggiuntivi. L'integrazione non è completata fino a quando queste attività non sono state eseguite. Per istruzioni, vedere [Configurazione successiva all'installazione](#post-install).
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning Services: motore di database, Advanced Analytics con Python e R
+### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning Services: motore di database e funzionalità di analisi avanzata con Python e R
 
-Per un'installazione simultanea dell'istanza del motore di database, specificare il nome dell'istanza e un account di accesso Administrator (Windows). Includere le funzionalità per l'installazione dei componenti di base e della lingua, oltre all'accettazione di tutte le condizioni di licenza.
+Per un'installazione simultanea dell'istanza del motore di database, specificare il nome dell'istanza e un account di accesso Administrator (Windows). Includere le funzionalità per l'installazione dei componenti di base e dei linguaggi e quelle per l'accettazione di tutte le condizioni di licenza.
 
 ```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
@@ -92,7 +108,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
 ```
 
-Questo è lo stesso comando, ma con un SQL Server account di accesso in un motore di database usando l'autenticazione mista.
+Di seguito è riportato lo stesso comando, ma con un account di accesso SQL Server in un motore di database che usa l'autenticazione mista.
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
@@ -100,7 +116,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
 ```
 
-Questo esempio è solo Python, mostrando che è possibile aggiungere una lingua omettendo una funzionalità.
+Di seguito è riportato un esempio con solo Python per mostrare che è possibile aggiungere un solo linguaggio omettendo una funzionalità.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
@@ -110,9 +126,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>R Services per SQL Server: motore di database e analisi avanzata con R
+### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: motore di database e funzionalità di analisi avanzata con R
 
-Per un'installazione simultanea dell'istanza del motore di database, specificare il nome dell'istanza e un account di accesso Administrator (Windows). Includere le funzionalità per l'installazione dei componenti di base e della lingua, oltre all'accettazione di tutte le condizioni di licenza.
+Per un'installazione simultanea dell'istanza del motore di database, specificare il nome dell'istanza e un account di accesso Administrator (Windows). Includere le funzionalità per l'installazione dei componenti di base e dei linguaggi e quelle per l'accettazione di tutte le condizioni di licenza.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
@@ -121,39 +137,39 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a>Configurazione successiva all'installazione (obbligatorio)
+## <a name="post-install"></a> Configurazione successiva all'installazione (obbligatoria)
 
 Si applica solo alle installazioni nel database.
 
-Al termine dell'installazione, si disporrà di un'istanza del motore di database con R e Python, i pacchetti Microsoft R e Python, Microsoft R Open, Anaconda, strumenti, esempi e script che fanno parte della distribuzione. 
+Al termine dell'installazione, saranno disponibili un'istanza del motore di database con R e Python, i pacchetti Microsoft per R e Python, Microsoft R Open, Anaconda, strumenti, esempi e script che fanno parte della distribuzione. 
 
-Per completare l'installazione sono necessarie altre due attività:
+Per completare l'installazione è necessario eseguire altre due attività:
 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1. Riavviare il servizio motore di database.
+1. Riavviare il servizio del motore di database.
 
-1. Machine Learning Services SQL Server: Abilitare gli script esterni prima di poter usare la funzionalità. Seguire le istruzioni in [Install SQL Server Machine Learning Services (in-database)](sql-machine-learning-services-windows-install.md) come passaggio successivo. 
+1. SQL Server Machine Learning Services: abilitare gli script esterni prima di poter usare la funzionalità. Come passaggio successivo, seguire le istruzioni riportate in [Installare SQL Server Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1. Riavviare il servizio motore di database.
+1. Riavviare il servizio del motore di database.
 
-1. R Services per SQL Server: Abilitare gli script esterni prima di poter usare la funzionalità. Seguire le istruzioni in [Install R Services per SQL Server (in-database)](sql-r-services-windows-install.md) come passaggio successivo. 
+1. SQL Server R Services: abilitare gli script esterni prima di poter usare la funzionalità. Come passaggio successivo, seguire le istruzioni riportate in [Installare SQL Server R Services (In-Database)](sql-r-services-windows-install.md). 
 ::: moniker-end
 
-## <a name="add-existing"></a>Aggiungi analisi avanzata a un'istanza del motore di database esistente
+## <a name="add-existing"></a> Aggiungere la funzionalità di analisi avanzata a un'istanza del motore di database esistente
 
-Quando si aggiunge l'analisi avanzata nel database a un'istanza del motore di database esistente, specificare il nome dell'istanza. Ad esempio, se in precedenza è stato installato un motore di database SQL Server 2017 e Python, è possibile usare questo comando per aggiungere R.
+Quando si aggiunge la funzionalità di analisi avanzata nel database a un'istanza del motore di database esistente, specificare il nome dell'istanza. Se, ad esempio, in precedenza è stato installato un motore di database SQL Server 2017 o versione successiva insieme a Python, è possibile usare questo comando per aggiungere R.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a>Installazione invisibile all'utente
+## <a name="silent"></a> Installazione invisibile all'utente
 
-Un'installazione invisibile all'utente evita la verifica dei percorsi dei file con estensione cab. Per questo motivo, è necessario specificare il percorso in cui devono essere decompressi i file con estensione cab. Per Python, i file CAB devono trovarsi in% TEMP *. Per R, è possibile impostare il percorso della cartella usando la directory Temp.
+Nell'installazione invisibile all'utente viene omessa la verifica dei percorsi dei file con estensione cab. Per questo motivo, è necessario specificare il percorso in cui devono essere decompressi questi file. Per Python, i file CAB devono trovarsi in %TEMP*. Per R, è possibile impostare il percorso usando la directory temp.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
@@ -162,9 +178,9 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a>Installazioni Server autonome
+## <a name="shared-feature"></a> Installazioni del server autonomo
 
-Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database. Negli esempi seguenti viene illustrata la sintassi valida per l'installazione del server autonomo.
+Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database. Gli esempi seguenti mostrano la sintassi valida per l'installazione del server autonomo.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server Machine Learning Server supporta Python e R in un server autonomo:
@@ -175,7 +191,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 ```
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server R Server è solo R:
+SQL Server R Server supporta solo R:
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
@@ -183,19 +199,19 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 ```
 ::: moniker-end
 
-Al termine dell'installazione, sono disponibili un server, pacchetti Microsoft, distribuzioni open source di R e Python, strumenti, esempi e script che fanno parte della distribuzione. 
+Al termine dell'installazione, saranno disponibili un server, pacchetti Microsoft, distribuzioni open source di R e Python, strumenti, esempi e script che fanno parte della distribuzione. 
 
-Per aprire una finestra della console R, passare `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` a e fare doppio clic su **RGui. exe**. Non si ha familiarità con R? Provare questa esercitazione: [Comandi R di base e funzioni RevoScaleR: 25 esempi](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)comuni.
+Per aprire una finestra della console R, passare a `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` e fare doppio clic su **RGui.exe**. Non si ha familiarità con R? Provare questa esercitazione: [Comandi R di base e funzioni RevoScaleR: 25 esempi comuni](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
-Per aprire un comando Python, passare a `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` e fare doppio clic su **Python. exe**.
+Per aprire un comando Python, passare a `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` e fare doppio clic su **python.exe**.
 
 ## <a name="get-help"></a>Supporto
 
 Serve aiuto per l'installazione o l'aggiornamento? Per le risposte alle domande più comuni e ai problemi noti, vedere l'articolo seguente:
 
-* [Domande frequenti sull'installazione e sull'aggiornamento-Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+* [Domande frequenti sull'installazione e sull'aggiornamento per Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Per verificare lo stato di installazione dell'istanza di e risolvere i problemi comuni, provare questi report personalizzati.
+Per controllare lo stato di installazione dell'istanza e risolvere i problemi comuni, provare questi report personalizzati.
 
 * [Report personalizzati per SQL Server](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 

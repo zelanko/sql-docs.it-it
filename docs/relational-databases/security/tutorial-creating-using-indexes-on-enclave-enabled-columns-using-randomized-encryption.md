@@ -1,7 +1,7 @@
 ---
-title: "Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale | Microsoft Docs"
+title: "Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale | Microsoft Docs"
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126804"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592336"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 In questa esercitazione viene illustrato come creare e usare gli indici sulle colonne abilitate per l'enclave tramite la crittografia casuale supportata in [Always Encrypted con enclave sicuri](encryption/always-encrypted-enclaves.md). L'esercitazione spiega:
 
@@ -172,5 +172,7 @@ In questo passaggio verrà creato un indice su una colonna crittografata, operan
    1. Nella scheda **Statistiche query dinamiche** (nella parte inferiore della finestra di query) è possibile osservare che la query usa l'indice.
 
 ## <a name="next-steps"></a>Passaggi successivi
+- [Esercitazione: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- Per informazioni su altri casi d'uso per Always Encrypted con enclave sicuri, vedere [Configurare Always Encrypted con enclave sicuri](encryption/configure-always-encrypted-enclaves.md).
+## <a name="see-also"></a>Vedere anche
+- [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](encryption/always-encrypted-enclaves-create-use-indexes.md)

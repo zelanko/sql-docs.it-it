@@ -5,42 +5,43 @@ description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
-ms.translationtype: MT
+ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304739"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531694"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.
 [azdata bdc delete](#azdata-bdc-delete) | Elimina un cluster Big Data.
+[azdata bdc upgrade](#azdata-bdc-upgrade) | Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL Server.
 [azdata bdc config](reference-azdata-bdc-config.md) | Comandi di configurazione.
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | Comandi dell'endpoint.
 [azdata bdc debug](reference-azdata-bdc-debug.md) | Comandi di debug.
-[azdata bdc status](reference-azdata-bdc-status.md) | Comandi di stato BDC.
+[azdata bdc status](reference-azdata-bdc-status.md) | Comandi di stato del cluster Big Data.
 [azdata bdc control](reference-azdata-bdc-control.md) | Comandi del servizio di controllo.
-[SQL BDC azdata](reference-azdata-bdc-sql.md) | Comandi del servizio SQL.
+[azdata bdc sql](reference-azdata-bdc-sql.md) | Comandi del servizio sql.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Comandi del servizio HDFS.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Comandi del servizio Spark.
-[Gateway BDC azdata](reference-azdata-bdc-gateway.md) | Comandi del servizio gateway.
-[app BDC azdata](reference-azdata-bdc-app.md) | Comandi del servizio app.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
+[azdata bdc gateway](reference-azdata-bdc-gateway.md) | Comandi del servizio gateway.
+[azdata bdc app](reference-azdata-bdc-app.md) | Comandi del servizio app.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-Creare un cluster di SQL Server Big Data: è richiesta la configurazione Kubernetes nel sistema insieme alle variabili di ambiente seguenti [' CONTROLLER_USERNAME ',' CONTROLLER_PASSWORD ',' MSSQL_SA_PASSWORD ',' KNOX_PASSWORD '].
+Crea un cluster Big Data di SQL Server. È necessaria la configurazione di Kubernetes nel sistema in uso con le variabili di ambiente seguenti ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +70,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
-Profilo di configurazione del cluster di Big data, usato per la distribuzione del cluster: [' AKS-dev-test ',' kubeadm-prod ',' minikube-dev-test ',' kubeadm-dev-test ']
+Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://go.microsoft.com/fwlink/?LinkId=2002534.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". È possibile visualizzare le condizioni di licenza per azdata all'indirizzo https://aka.ms/eula-azdata-en. È possibile visualizzare le condizioni di licenza per il cluster Big Data per le diverse edizioni agli indirizzi seguenti: Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292, Standard: https://go.microsoft.com/fwlink/?linkid=2104294, Developer: https://go.microsoft.com/fwlink/?linkid=2104079.
 #### `--node-label -l`
 Etichetta del nodo del cluster Big data, usata per definire i nodi in cui eseguire la distribuzione.
 #### `--force -f`
@@ -84,17 +85,17 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
-Eliminare il cluster di SQL Server Big Data: è richiesta la configurazione Kubernetes nel sistema.
+Elimina il cluster Big Data di SQL Server. È necessaria la configurazione di Kubernetes nel sistema in uso.
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
 ```
 ### <a name="examples"></a>Esempi
-Eliminazione dell'integrazione applicativa dei dati.
+Eliminazione di un cluster Big Data.
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
@@ -112,12 +113,45 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
+Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL Server. Le immagini aggiornate si basano sull'immagine Docker passata. Se le immagini aggiornate provengono da un repository di immagini Docker diverso rispetto alle immagini attualmente distribuite, è necessario anche il parametro "repository".
+```bash
+azdata bdc upgrade --name -n 
+                   --tag -t  
+                   [--repository -r]
+```
+### <a name="examples"></a>Esempi
+Aggiornamento del cluster Big Data con un nuovo tag immagine "cu2" dallo stesso repository.
+```bash
+azdata bdc upgrade -t cu2
+```
+Aggiornamento del cluster Big Data con nuove immagini con tag "cu2" dal nuovo repository "foo/bar/baz".
+```bash
+azdata bdc upgrade -t cu2 -r foo/bar/baz
+```
+### <a name="required-parameters"></a>Parametri obbligatori
+#### `--name -n`
+Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
+#### `--tag -t`
+Tag dell'immagine Docker di destinazione a cui aggiornare tutti i contenitori del cluster.
+### <a name="optional-parameters"></a>Parametri facoltativi
+#### `--repository -r`
+Repository Docker da cui tutti i contenitori del cluster devono trarre le proprie immagini.
+### <a name="global-arguments"></a>Argomenti globali
+#### `--debug`
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
+#### `--help -h`
+Visualizza questo messaggio della guida ed esce.
+#### `--output -o`
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
+#### `--query -q`
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+#### `--verbose`
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

@@ -1,7 +1,8 @@
 ---
-title: Always Encrypted (motore di database) | Microsoft Docs
+title: Always Encrypted | Microsoft Docs
+description: Panoramica di Always Encrypted, che supporta la crittografia lato client trasparente e il confidential computing in SQL Server e nel database SQL di Azure
 ms.custom: ''
-ms.date: 04/24/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,37 +14,43 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903164"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593990"
 ---
-# <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
+# <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Crittografia sempre attiva](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted è una funzionalità progettata per proteggere dati sensibili, ad esempio numeri di carta di credito, codici fiscali, passaporti, ecc. archiviati in database [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi). Garantendo l'impossibilità di accesso ai dati crittografati da parte di amministratori di database locali, operatori di database cloud o altri utenti con privilegi elevati ma non autorizzati, Crittografia sempre attiva consente ai clienti di archiviare in modo sicuro i dati sensibili su cui non esercitano un controllo diretto. In questo modo le organizzazioni possono crittografare i dati inattivi e in uso per l'archiviazione in Azure, delegare l'amministrazione di database locali a terze parti o ridurre i requisiti di nulla osta di sicurezza per il proprio personale DBA.  
-  
+ Always Encrypted è una funzionalità progettata per proteggere dati sensibili, ad esempio numeri di carta di credito, codici fiscali, passaporti, ecc. archiviati in database [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati e può visualizzarli e chi gestisce i dati, ma non può accedervi. Garantendo l'impossibilità di accesso ai dati crittografati da parte di amministratori di database locali, operatori di database cloud o altri utenti con privilegi elevati ma non autorizzati, Always Encrypted consente ai clienti di archiviare in modo sicuro i dati sensibili su cui non esercitano un controllo diretto. In questo modo le organizzazioni possono archiviare i dati in Azure e delegare l'amministrazione di database locali a terze parti o ridurre i requisiti di nulla osta di sicurezza per il proprio personale DBA.
+
+ Always Encrypted fornisce funzionalità di confidential computing consentendo al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] di elaborare alcune query sui dati crittografati, mantenendo al tempo stesso la riservatezza dei dati e fornendo i vantaggi a livello di sicurezza illustrati in precedenza. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] e in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supporta il confronto di uguaglianza tramite la crittografia deterministica. Vedere [Selezione della crittografia deterministica o casuale](#selecting--deterministic-or-randomized-encryption). 
+
+  > [!NOTE] 
+  > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], gli enclavi sicuri estendono sensibilmente le funzionalità di confidential computing di Always Encrypted con criteri di ricerca, altri operatori di confronto e crittografia sul posto. Vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md).
+
  Crittografia sempre attiva esegue la crittografia trasparente alle applicazioni. A questo scopo, un driver abilitato per Crittografia sempre attiva installato nel computer client esegue automaticamente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver esegue la crittografia dei dati in colonne sensibili prima di passarli a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e riscrive automaticamente le query in modo da mantenere la semantica per l'applicazione. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, archiviati in colonne del database crittografato, contenuti nei risultati delle query.  
   
- Always Encrypted è disponibile in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted è limitato all'edizione Enterprise. Per una presentazione di Channel 9 che include Crittografia sempre attiva, vedere il video relativo al [mantenimento della protezione dei dati sensibili con Crittografia sempre attiva](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+ Always Encrypted è disponibile in tutte le edizioni di [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], a partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], e in tutti i livelli di servizio di [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted è limitato all'edizione Enterprise. Per una presentazione di Channel 9 che include Crittografia sempre attiva, vedere il video relativo al [mantenimento della protezione dei dati sensibili con Crittografia sempre attiva](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+
   
 ## <a name="typical-scenarios"></a>Scenari tipici  
   
 ### <a name="client-and-data-on-premises"></a>Client e dati in locale  
- Un cliente ha un'applicazione client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , entrambi in esecuzione in locale presso la propria sede aziendale. Il cliente vuole affidare a un fornitore esterno la gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per proteggere i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il cliente usa Crittografia sempre attiva per garantire la separazione dei compiti tra amministratori di database e amministratori di applicazioni. Il cliente archivia i valori di testo non crittografato delle chiavi di Crittografia sempre attiva in un archivio di chiavi attendibili al quale l'applicazione client può accedere. Gli amministratori di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non hanno accesso alle chiavi e, quindi, non possono decrittografare i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un cliente ha un'applicazione client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , entrambi in esecuzione in locale presso la propria sede aziendale. Il cliente vuole affidare a un fornitore esterno la gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per proteggere i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il cliente usa Crittografia sempre attiva per garantire la separazione dei compiti tra amministratori di database e amministratori di applicazioni. Il cliente archivia i valori di testo non crittografato delle chiavi di Always Encrypted in un archivio di chiavi attendibili al quale l'applicazione client può accedere. Gli amministratori di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non hanno accesso alle chiavi e, quindi, non possono decrittografare i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Client locale con dati in Azure  
  Un cliente ha un'applicazione client locale presso la propria sede aziendale. L'applicazione usa dati sensibili archiviati in un database ospitato in Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale in Microsoft Azure). Il cliente usa Always Encrypted e archivia le relative chiavi in un archivio attendibile ospitato localmente, per assicurarsi che gli amministratori cloud di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] non abbiano accesso ai dati sensibili.  
   
 ### <a name="client-and-data-in-azure"></a>Client e dati in Azure  
- Un cliente ha un'applicazione client, ospitata in Microsoft Azure, ad esempio in un ruolo di lavoro o in un ruolo Web, che usa dati sensibili anch'essi archiviati in Microsoft Azure, in un database SQL o SQL Server in esecuzione in una macchina virtuale di Microsoft Azure. Sebbene Always Encrypted non assicura isolamento completo dei dati dagli amministratori di cloud perché sia i dati sia le chiavi sono esposti agli amministratori di cloud della piattaforma che ospita il livello client, il cliente tuttavia può beneficiare della riduzione della superficie di attacco della sicurezza (i dati nel database sono sempre crittografati).  
+ Un cliente ha un'applicazione client, ospitata in Microsoft Azure, ad esempio in un ruolo di lavoro o in un ruolo Web, che usa dati sensibili anch'essi archiviati in Microsoft Azure, in un database SQL o SQL Server in esecuzione in una macchina virtuale di Microsoft Azure. Sebbene Always Encrypted non assicuri isolamento completo dei dati dagli amministratori di cloud, perché sia i dati sia le chiavi sono esposti agli amministratori di cloud della piattaforma che ospita il livello client, il cliente tuttavia può beneficiare della riduzione della superficie di attacco della sicurezza (i dati nel database sono sempre crittografati).  
  
 ## <a name="how-it-works"></a>Funzionamento
 
@@ -57,9 +64,9 @@ Successivamente, il driver contatta l'archivio chiavi, che contiene la chiave ma
 
 Il server elabora il set di risultati e per ogni colonna crittografata incluso nel set dei risultati, il driver allega i metadati di crittografia per la colonna, includendo le informazioni sull'algoritmo di crittografia e sulla chiavi corrispondenti. Il driver tenta innanzitutto di trovare la chiave di crittografia della colonna in testo non crittografato nella cache locale ed esegue solo un round alla chiave master della colonna, se non può trovarla nella cache. Successivamente, il driver decrittografa i risultati e restituisce valori in testo non crittografato per l'applicazione.
 
- Il driver del client interagisce con un archivio chiavi, che contiene la chiave master di colonna, tramite il provider di archivio chiavi della colonna, il quale è un componente software sul lato client che incapsula un archivio chiavi contenente la chiave master della colonna. I provider dei tipi più comuni di archivi chiavi sono disponibili nelle librerie di driver lato client di Microsoft o come download autonomi. È anche possibile implementare un provider personalizzato. Le funzionalità Always Encrypted, compresi i provider predefiniti di archivio chiavi master della colonna, variano in base a una libreria di driver e alla relativa versione. 
+ Il driver del client interagisce con un archivio chiavi, che contiene la chiave master di colonna, tramite il provider di archivio chiavi della colonna, il quale è un componente software sul lato client che incapsula un archivio chiavi contenente la chiave master della colonna. I provider dei tipi più comuni di archivi chiavi sono disponibili nelle librerie di driver lato client di Microsoft o come download autonomi. È anche possibile implementare un provider personalizzato. Le funzionalità Always Encrypted, compresi i provider di archivio chiavi master della colonna predefiniti, variano in base a una libreria di driver e alla relativa versione. 
 
-Per informazioni dettagliate su come sviluppare applicazioni che usano Always Encrypted con driver client particolari, vedere [Always Encrypted (sviluppo di client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
+Per informazioni dettagliate su come sviluppare applicazioni che usano Always Encrypted con driver client particolari, vedere [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md).
 
 ## <a name="remarks"></a>Remarks
 
@@ -86,16 +93,15 @@ Per aggiornare correttamente la colonna, procedere come segue:
  >[!IMPORTANT]
  > In questo scenario, i dati verranno decrittografati quando vengono inviati di nuovo al server perché la colonna di destinazione è di tipo varchar regolare e non accetta dati crittografati. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a>Selezione della crittografia deterministica o casuale  
+## <a name="selecting--deterministic-or-randomized-encryption"></a> Selezione della crittografia deterministica o casuale  
  Il motore di database non agisce mai sui dati in testo non crittografato archiviati in colonne crittografate, ma supporta alcune query sui dati crittografati, a seconda del tipo di crittografia per la colonna. Crittografia sempre attiva supporta due tipi di crittografia: crittografia casuale e crittografia deterministica.  
   
-- La crittografia deterministica genera sempre lo stesso valore crittografato per ogni valore specifico di testo non crittografato. L'uso della crittografia deterministica consente le ricerche di punti, join di uguaglianza, raggruppamento e indicizzazione di colonne crittografate. Tuttavia potrebbe anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando i modelli della colonna crittografata, soprattutto se è incluso un set piccolo di possibili valori crittografati, ad esempio True/False o le aree Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.
+- La crittografia deterministica genera sempre lo stesso valore crittografato per ogni valore specifico di testo non crittografato. L'uso della crittografia deterministica consente le ricerche di punti, join di uguaglianza, raggruppamento e indicizzazione di colonne crittografate. Tuttavia, può anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando gli schemi presenti nella colonna crittografata, soprattutto in presenza di un set di possibili valori crittografati di dimensioni ridotte, ad esempio True/False o Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.
 
 - La crittografia casuale usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce le ricerche, il raggruppamento, l'indicizzazione e il join su colonne crittografate.
 
-La crittografia deterministica è consigliata per le colonne che verranno usate come parametri di ricerca o di raggruppamento, ad esempio un numero identificativo rilasciato da un ente pubblico. Usare la crittografia casuale per dati quali i commenti di analisi riservate, che non sono raggruppati con altri record e non vengono usati per il join di tabelle.
-Per informazioni dettagliate sugli algoritmi crittografici di Always Encrypted, vedere [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md). 
-
+La crittografia deterministica è consigliata per le colonne che verranno usate come parametri di ricerca o di raggruppamento. Ad esempio un numero identificativo rilasciato da un ente pubblico. Usare la crittografia casuale per dati quali i commenti di analisi riservate, che non sono raggruppati con altri record e non vengono usati per il join di tabelle.
+Per informazioni dettagliate sugli algoritmi di crittografia di Always Encrypted, vedere [Crittografia Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md).
 
 ## <a name="configuring-always-encrypted"></a>Configurazione di Always Encrypted
 
@@ -107,6 +113,9 @@ Per informazioni dettagliate sugli algoritmi crittografici di Always Encrypted, 
 |Creazione di metadati della chiave nel database.|Sì|Sì|Sì|
 |Creazione di nuove tabelle con colonne crittografate|Sì|Sì|Sì|
 |Crittografia dei dati esistenti nelle colonne selezionate del database|Sì|Sì|no|
+
+> [!NOTE]
+> [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md), introdotto in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], supporta la crittografia dei dati esistenti con Trasact-SQL. Elimina inoltre la necessità di spostare i dati all'esterno del database per le operazioni di crittografia.
 
 > [!NOTE]
 > Accertarsi di eseguire il provisioning delle chiavi o gli strumenti di crittografia dei dati in un ambiente protetto o in un computer diverso da quello che ospita il database. Altrimenti potrebbero verificarsi delle perdite di chiavi o dati sensibili verso l'ambiente del server, e questo ridurrebbe i benefici dell'uso di Always Encrypted.  
@@ -137,7 +146,9 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
   
 -   Le query possono eseguire il confronto delle uguaglianze sulle colonne crittografate usando la crittografia deterministica, ma non altre operazioni, come ad esempio maggiore/minore di, criteri di ricerca usando l'operatore LIKE o operazioni aritmetiche.  
   
--   Le query sulle colonne crittografate con la crittografia casuale non possono eseguire operazioni su una qualsiasi di tali colonne. L'indicizzazione di colonne crittografate usando la crittografia casuale non è supportata.  
+-   Le query sulle colonne crittografate con la crittografia casuale non possono eseguire operazioni su alcuna di tali colonne. L'indicizzazione di colonne crittografate usando la crittografia casuale non è supportata.  
+ > [!NOTE] 
+ > [Always Encrypted con enclavi sicuri](always-encrypted-enclaves.md), introdotto in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], risolve la limitazione precedente abilitando l'uso di criteri di ricerca, operatori di confronto e indicizzazione nelle colonne che usano la crittografia casuale.
 
 -   Una chiave di crittografia della colonna può avere fino a due valori crittografati differenti, ciascuno crittografato con una chiave master della colonna diversa. Questa operazione facilita la rotazione delle chiavi master della colonna.  
   
@@ -145,48 +156,48 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
 
 -   Dopo aver modificato la definizione di un oggetto codificato, eseguire [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) per aggiornare i metadati di Always Encrypted per l'oggetto.
   
-Always Encrypted non è supportata per le colonne con le caratteristiche seguenti. Ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni:  
+Always Encrypted non è supportato per le colonne con le caratteristiche seguenti. Ad esempio, se alla colonna si applica una delle condizioni seguenti, non è possibile usare la clausola `ENCRYPTED WITH` in `CREATE TABLE/ALTER TABLE` per una colonna:  
   
--   Colonne che usano uno dei seguenti tipi di dati: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, tipi definiti dall'utente.  
-- Colonne FILESTREAM  
-- Colonne con la proprietà IDENTITY  
-- Colonne con proprietà ROWGUIDCOL  
-- Colonne stringa (varchar, char e così via) con regole di confronto non BIN2  
-- Colonne che sono chiavi per gli indici non cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)  
-- Colonne che sono chiavi per gli indici cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)  
-- Colonne che sono chiavi per gli indici full-text contenenti colonne con crittografia casuale e deterministica  
-- Colonne a cui fanno riferimento colonne calcolate (quando l'espressione esegue operazioni non supportate per Crittografia sempre attiva)  
-- Set di colonne di tipo sparse  
-- Colonne a cui fanno riferimento statistiche  
-- Colonne che usano il tipo di alias  
-- Colonne di partizionamento  
-- Colonne con vincoli predefiniti  
-- Colonne a cui fanno riferimento vincoli univoci quando si usa la crittografia casuale (la crittografia deterministica è supportata)  
-- Colonne di chiavi primarie quando si usa la crittografia casuale (la crittografia deterministica è supportata)  
-- Colonne di riferimento in vincoli di chiave esterna quando si usa la crittografia casuale o la crittografia deterministica, se le colonne a cui si fa riferimento e di riferimento usano chiavi o algoritmi diversi  
-- Colonne a cui fanno riferimento vincoli CHECK  
-- Colonne in tabelle che usano l'acquisizione dei dati delle modifiche  
-- Colonne chiave primaria in tabelle contenenti il rilevamento delle modifiche  
-- Colonne che vengono mascherate (con la maschera dati dinamica)  
+-   Colonne che usano uno dei tipi di dati seguenti: `xml`, `timestamp`/`rowversion`, `image`, `ntext`, `text`, `sql_variant`, `hierarchyid`, `geography`, `geometry`, alias, tipi definiti dall'utente.  
+- Colonne `FILESTREAM`  
+- Colonne con la proprietà `IDENTITY`.  
+- Colonne con la proprietà `ROWGUIDCOL`.  
+- Colonne stringa (`varchar`, `char` e così via) con regole di confronto non BIN2.  
+- Colonne che sono chiavi per gli indici non cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate).  
+- Colonne che sono chiavi per gli indici cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate).  
+- Colonne che sono chiavi per gli indici full-text contenenti colonne con crittografia casuale e deterministica.  
+- Colonne calcolate.
+- Colonne a cui fanno riferimento colonne calcolate (quando l'espressione esegue operazioni non supportate per Always Encrypted).  
+- Set di colonne di tipo sparse.  
+- Colonne a cui fanno riferimento statistiche.  
+- Colonne che usano il tipo di alias.  
+- Colonne di partizionamento.  
+- Colonne con vincoli predefiniti.  
+- Colonne a cui fanno riferimento vincoli univoci quando si usa la crittografia casuale (la crittografia deterministica è supportata).  
+- Colonne di chiavi primarie quando si usa la crittografia casuale (la crittografia deterministica è supportata).  
+- Colonne di riferimento in vincoli di chiave esterna quando si usa la crittografia casuale o la crittografia deterministica, se le colonne a cui si fa riferimento e di riferimento usano chiavi o algoritmi diversi.  
+- Colonne a cui fanno riferimento vincoli CHECK.  
+- Colonne in tabelle che usano l'acquisizione dei dati delle modifiche.  
+- Colonne chiave primaria in tabelle con rilevamento delle modifiche.  
+- Colonne che vengono mascherate (con Dynamic Data Masking).  
 - Colonne in tabelle di estensione database. (le tabelle con colonne crittografate con Crittografia sempre attiva possono essere abilitate per l'estensione).  
-- Colonne in tabelle esterne (PolyBase) (nota: l'uso di tabelle esterne e di tabelle con colonne crittografate nella stessa query è supportato)  
+- Colonne in tabelle esterne (PolyBase) (nota: l'uso di tabelle esterne e di tabelle con colonne crittografate nella stessa query è supportato).  
 - I parametri con valori di tabella per le colonne crittografate non sono supportati.  
 
 Le clausole seguenti non possono essere usate per le colonne crittografate:
 
-- FOR XML
-- FOR JSON PATH
+- `FOR XML`
+- `FOR JSON PATH`
 
 Le funzionalità seguenti non sono supportate nelle colonne crittografate:
 
 - Replica transazionale o di tipo merge
-- Query distribuite (server collegati, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
+- Query distribuite (server collegati, `OPENROWSET`(T-SQL), `OPENDATASOURCE`(T-SQL))
 
 Requisiti degli strumenti
 
-- SQL Server Management Studio può decrittografare i risultati recuperati da colonne crittografate se la connessione viene effettuata con *column encryption setting=enabled* nella scheda **Proprietà aggiuntive** della finestra di dialogo **Connetti al server** . È necessario almeno SQL Server Management Studio versione 17 per l'inserimento, l'aggiornamento o l'applicazione di un filtro alle colonne crittografate. Per le stringhe di connessione da usare nelle applicazioni client, vedere [Always Encrypted (sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-
-- Le connessioni crittografate da `sqlcmd` richiedono almeno la versione 13.1, disponibile nell' [Area download](https://go.microsoft.com/fwlink/?LinkID=825643).
+- Per eseguire query che decrittografano i risultati recuperati da colonne crittografate oppure eseguono operazioni di inserimento, aggiornamento o filtro su colonne crittografate, è consigliabile usare SQL Server Management Studio versione 18 o successiva. 
+- Richiede `sqlcmd` versione 13.1 o successiva, disponibile nell'[Area download](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Autorizzazioni per il database  
@@ -211,11 +222,11 @@ Requisiti degli strumenti
   
 -   Le autorizzazioni si applicano alle azioni tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] (finestre di dialogo e procedura guidata) o PowerShell.  
   
--   Le due autorizzazioni *VIEW* sono necessarie quando si selezionano colonne crittografate, anche se l'utente non ha l'autorizzazione di decrittografare le colonne.  
+-   Le due autorizzazioni *VIEW* sono necessarie quando si selezionano colonne crittografate, anche se l'utente non ha l'autorizzazione per decrittografare le colonne.  
   
 -   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], entrambi le autorizzazioni *VIEW* sono assegnate per impostazione predefinita al ruolo predefinito del database `public` . Un amministratore di database può scegliere di revocare (o negare) le autorizzazioni *VIEW* per il ruolo `public` e assegnarle a specifici ruoli o utenti per implementare un controllo con maggiori restrizioni.  
   
--   In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], le autorizzazioni *VIEW* non sono assegnate per impostazione predefinita al ruolo predefinito del database `public` . In questo modo specifici strumenti esistenti (che usano le versioni precedenti di DacFx) funzionano correttamente. Di conseguenza, per usare le colonne crittografate (anche senza decrittografarle) un amministratore del database deve concedere esplicitamente le due autorizzazioni *VIEW* .  
+-   In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], le autorizzazioni *VIEW* non sono assegnate per impostazione predefinita al ruolo predefinito del database `public`. In questo modo specifici strumenti esistenti (che usano le versioni precedenti di DacFx) funzionano correttamente. Di conseguenza, per usare le colonne crittografate (anche senza decrittografarle) un amministratore del database deve concedere esplicitamente le due autorizzazioni *VIEW* .  
 
   
 ## <a name="example"></a>Esempio  
@@ -224,7 +235,7 @@ Requisiti degli strumenti
 - [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = 'MSSQL_CERTIFICATE_STORE',   
@@ -253,22 +264,20 @@ CREATE TABLE Customers (
 GO  
   
 ```  
-  
 ## <a name="see-also"></a>Vedere anche  
-[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-[CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
-[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-[Procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Migrare dati sensibili protetti da Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-[Always Encrypted &#40;sviluppo client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-[Crittografia Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-[Configurare Always Encrypted tramite SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-[Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
+- [Configurare Always Encrypted tramite SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
+- [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+- [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md) 
+- [Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted](always-encrypted-wizard.md)
+- [Crittografia Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+- [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+- [column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+- [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)  
+- [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+- [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+- [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+- [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   

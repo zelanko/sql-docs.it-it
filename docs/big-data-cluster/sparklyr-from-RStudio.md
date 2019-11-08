@@ -1,40 +1,40 @@
 ---
 title: Usare sparklyr da RStudio
 titleSuffix: SQL Server big data clusters
-description: Connettersi a Big Data cluster usando sparklyr da RStudio.
+description: Connettersi a un cluster Big Data usando sparklyr da RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653327"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531623"
 ---
-# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usare sparklyr nel cluster SQL Server Big Data
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usare sparklyr in un cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr fornisce un'interfaccia R per Apache Spark. Sparklyr è un modo comune per gli sviluppatori R di usare Spark. Questo articolo descrive come usare sparklyr in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usando rstudio.
+Sparklyr offre un'interfaccia R per Apache Spark e costituisce quindi lo strumento più usato dagli sviluppatori R per usare Spark. Questo articolo descrive come usare sparklyr in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] tramite RStudio.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- [Distribuire un cluster SQL Server 2019 Big Data](quickstart-big-data-cluster-deploy.md).
+- [Distribuire un cluster Big Data di SQL Server 2019](quickstart-big-data-cluster-deploy.md).
 
-### <a name="install-rstudio-desktop"></a>Installare RStudio desktop
+### <a name="install-rstudio-desktop"></a>Installare RStudio Desktop
 
-Installare e configurare **rstudio desktop** con i passaggi seguenti:
+Installare e configurare **RStudio Desktop** seguendo questa procedura:
 
-1. Se si esegue un client Windows, [scaricare e installare R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
+1. Se è in esecuzione un client Windows, [scaricare e installare R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
 
-1. [Scaricare e installare rstudio desktop](https://www.rstudio.com/products/rstudio/download/).
+1. [Scaricare e installare RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
-1. Al termine dell'installazione, eseguire i comandi seguenti all'interno di RStudio desktop per installare i pacchetti necessari:
+1. Al termine dell'installazione, eseguire i comandi seguenti all'interno di RStudio Desktop per installare i pacchetti necessari:
 
    ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -42,14 +42,14 @@ Installare e configurare **rstudio desktop** con i passaggi seguenti:
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## <a name="connect-to-spark-in-a-big-data-cluster"></a>Connettersi a Spark in un cluster di Big Data
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>Connettersi a Spark in un cluster Big Data
 
-È possibile usare sparklyr per connettersi da un client al cluster Big Data usando Livio e il gateway HDFS/Spark. 
+È possibile usare sparklyr per connettere un client al cluster Big Data usando Livio e il gateway HDFS/Spark. 
 
 In RStudio creare uno script R e connettersi a Spark come nell'esempio seguente:
 
 > [!TIP]
-> Per i `<USERNAME>` valori `<PASSWORD>` e, usare il nome utente (ad esempio la radice) e la password impostati durante la distribuzione del cluster Big Data. Per i `<IP>` valori `<PORT>` e, vedere la documentazione relativa alla [connessione a un cluster Big Data](connect-to-big-data-cluster.md).
+> Per i valori `<AZDATA_USERNAME>` e `<AZDATA_PASSWORD>`, usare il nome utente (ad esempio, la radice) e la password impostati durante la distribuzione del cluster Big Data. Per i valori `<IP>` e `<PORT>`, vedere la documentazione relativa alla [connessione a un cluster Big Data](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -57,7 +57,7 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "<username>", password = "<password>")
+config <- livy_config(user = "<AZDATA_USERNAME>", password = "<AZDATA_PASSWORD>")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
@@ -68,7 +68,7 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 ## <a name="run-sparklyr-queries"></a>Eseguire query sparklyr
 
-Dopo la connessione a Spark, è possibile eseguire sparklyr. L'esempio seguente esegue una query sul set di dati Iris usando sparklyr:
+Dopo aver effettuato la connessione a Spark, è possibile eseguire sparklyr. Nell'esempio seguente viene eseguita una query sul set di dati Iris usando sparklyr:
 
 ```r
 iris_tbl <- copy_to(sc, iris)
@@ -80,9 +80,9 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>Calcoli R distribuiti
 
-Una funzionalità di sparklyr è la possibilità di [distribuire calcoli R](https://spark.rstudio.com/guides/distributed-r/) con [spark_apply](https://spark.rstudio.com/reference/spark_apply/).
+Sparklyr offre la possibilità di [distribuire calcoli R](https://spark.rstudio.com/guides/distributed-r/) tramite [spark_apply](https://spark.rstudio.com/reference/spark_apply/).
 
-Poiché i cluster Big Data usano le connessioni Livio, è necessario `packages = FALSE` impostare nella chiamata a **spark_apply**. Per altre informazioni, vedere la [sezione Livio](https://spark.rstudio.com/guides/distributed-r/#livy) della documentazione di sparklyr sui calcoli R distribuiti. Con questa impostazione, è possibile usare solo i pacchetti R già installati nel cluster Spark nel codice R passato a **spark_apply**. Nell'esempio seguente viene illustrata questa funzionalità:
+I cluster Big Data usano connessioni Livio ed è quindi necessario impostare `packages = FALSE` nella chiamata a **spark_apply**. Per altre informazioni, vedere la [sezione su Livy](https://spark.rstudio.com/guides/distributed-r/#livy) della documentazione di sparklyr relativa ai calcoli R distribuiti. Con questa impostazione, nel codice R passato a **spark_apply** è possibile usare solo i pacchetti R già installati nel cluster Spark. Nell'esempio seguente viene illustrata questa funzionalità:
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui cluster Big Data, vedere [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)la pagina relativa a.
+Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

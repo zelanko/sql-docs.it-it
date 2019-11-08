@@ -3,28 +3,28 @@ title: Configurare i repository Linux per SQL Server 2017 e 2019
 description: Selezionare e configurare i repository di origine per SQL Server 2019 e SQL Server 2017 in Linux. Il repository di origine influisce sulla versione di SQL Server che viene applicata durante l'installazione e l'aggiornamento.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/11/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967528"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531326"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare i repository per l'installazione e l'aggiornamento di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **Red Hat (RHEL)** .
+Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **Red Hat (RHEL)**.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **SUSE (SLES)** .
+Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **SUSE (SLES)**.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -32,24 +32,25 @@ Questo articolo descrive come configurare il repository corretto per le installa
 ::: zone-end
 
 > [!TIP]
-> L'anteprima di SQL Server 2019 è ora disponibile. Per provarla, usare questo articolo per configurare il nuovo repository **mssql-server-preview**. Eseguire quindi l'installazione seguendo le istruzioni nella [guida all'installazione](sql-server-linux-setup.md).
+> SQL Server 2019 è ora disponibile. Per provarlo, configurare il nuovo repository **mssql-server-2019** seguendo le indicazioni di questo articolo. Eseguire quindi l'installazione seguendo le istruzioni nella [guida all'installazione](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repository
 
-Quando si installa SQL Server in Linux, è necessario configurare un repository Microsoft. Questo repository viene usato per acquisire il pacchetto del motore di database, **mssql-server**, e i pacchetti di SQL Server correlati. Attualmente esistono tre repository principali:
+Quando si installa SQL Server in Linux, è necessario configurare un repository Microsoft. Questo repository viene usato per acquisire il pacchetto del motore di database, **mssql-server**, e i pacchetti di SQL Server correlati. Esistono attualmente cinque repository principali:
 
-| Archivio | nome | Descrizione |
+| Archivio | Nome | Descrizione |
 |---|---|---|
-| **Anteprima (2017)** | **mssql-server** | Repository di SQL Server 2017 CTP e RC (sospeso). |
-| **Anteprima (2019)** | **mssql-server-preview** | Repository di SQL Server 2019 (anteprima) e RC. |
-| **CU** | **mssql-server-2017** | Repository di SQL Server 2017 (aggiornamento cumulativo). |
-| **GDR** | **mssql-server-2017-gdr** | Repository di SQL Server 2017 GDR solo per aggiornamenti critici. |
+| **2019** | **mssql-server-2019** | Repository di SQL Server 2019 (aggiornamento cumulativo). |
+| **2019 GDR** | **mssql-server-2019-gdr** | Repository di SQL Server 2019 GDR solo per aggiornamenti critici. |
+| **2019 (anteprima)** | **mssql-server-preview** | Repository di SQL Server 2019 (anteprima) e RC. |
+| **2017** | **mssql-server-2017** | Repository di SQL Server 2017 (aggiornamento cumulativo). |
+| **2017 GDR** | **mssql-server-2017-gdr** | Repository di SQL Server 2017 GDR solo per aggiornamenti critici. |
 
 ## <a id="cuversusgdr"></a> Aggiornamento cumulativo e GDR
 
 È importante sottolineare che esistono due tipi principali di repository per ogni distribuzione:
 
-- **Aggiornamenti cumulativi (CU)** : il repository degli aggiornamenti cumulativi (CU) contiene pacchetti per la versione di base di SQL Server e le eventuali correzioni di bug o i miglioramenti apportati successivamente al rilascio. Gli aggiornamenti cumulativi sono specifici di una versione finale, ad esempio SQL Server 2017. Vengono rilasciati a cadenza regolare.
+- **Aggiornamenti cumulativi (CU)**: il repository degli aggiornamenti cumulativi (CU) contiene pacchetti per la versione di base di SQL Server e le eventuali correzioni di bug o i miglioramenti apportati successivamente al rilascio. Gli aggiornamenti cumulativi sono specifici di una versione finale, ad esempio SQL Server 2019. Vengono rilasciati a cadenza regolare.
 
 - **GDR**: il repository GDR contiene i pacchetti per la versione di base di SQL Server e solo le correzioni critiche e gli aggiornamenti della sicurezza a partire da tale versione. Questi aggiornamenti vengono aggiunti anche alla versione CU successiva.
 
@@ -144,10 +145,11 @@ Se necessario, rimuovere il repository precedente. Usare uno dei comandi seguent
 
 | Archivio | Comando da rimuovere |
 |---|---|
-| **Anteprima (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 | **Anteprima (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+| **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
+| **2019 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019-gdr'`|
+| **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **2017 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ::: zone-end
 
@@ -157,10 +159,11 @@ Se necessario, rimuovere il repository precedente. Usare uno dei comandi seguent
 
 | Archivio | Comando da rimuovere |
 |---|---|
-| **Anteprima (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 | **Anteprima (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-| **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
@@ -172,9 +175,10 @@ Configurare il nuovo repository da usare per le installazioni e gli aggiornament
 
 | Archivio | Versione | Comando |
 |---|---|---|
-| **Anteprima (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -184,9 +188,10 @@ Configurare il nuovo repository da usare per le installazioni e gli aggiornament
 
 | Archivio | Versione | Comando |
 |---|---|---|
-| **Anteprima (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -204,9 +209,10 @@ Configurare il nuovo repository da usare per le installazioni e gli aggiornament
 
    | Archivio | Versione | Comando |
    |---|---|---|
-   | **Anteprima (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
-   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. Eseguire **apt-get update**.
 

@@ -1,35 +1,33 @@
 ---
 title: Eseguire la distribuzione con uno script Python
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come usare uno script di distribuzione per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] distribuire (anteprima) in Azure Kubernetes Service (AKS).
+description: Informazioni su come usare uno script di distribuzione per distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) nel servizio Azure Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653235"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531927"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In questa esercitazione si userà uno script di distribuzione Python di esempio per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] la distribuzione in Azure Kubernetes Service (AKS).
+In questa esercitazione si usa uno script di distribuzione Python di esempio per distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] nel servizio Azure Kubernetes.
 
 > [!TIP]
-> Il servizio Azure Kubernetes è solo una delle opzioni per ospitare Kubernetes per il cluster Big Data. Per informazioni sulle altre opzioni di distribuzione e su come personalizzare le opzioni di distribuzione, vedere [How to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] deploy on Kubernetes](deployment-guidance.md).
+> Il servizio Azure Kubernetes è solo una delle opzioni per ospitare Kubernetes per il cluster Big Data. Per informazioni sulle altre opzioni di distribuzione e su come personalizzarle, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).
 
 La distribuzione predefinita di cluster Big Data usata in questo articolo è costituita da un'istanza SQL master, un'istanza del pool di calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati vengono salvati in modo permanente usando i volumi permanenti Kubernetes che usano le classi di archiviazione predefinite del servizio Azure Kubernetes. La configurazione predefinita usata in questa esercitazione è adatta per ambienti di sviluppo e test.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Una sottoscrizione di Azure.
 - [Strumenti per Big Data](deploy-big-data-tools.md):
@@ -72,7 +70,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
 
 1. Quando richiesto, immettere le informazioni seguenti:
 
-   | Value | Descrizione |
+   | valore | Descrizione |
    |---|---|
    | **ID sottoscrizione di Azure** | ID della sottoscrizione di Azure da usare per il servizio Azure Kubernetes. È possibile elencare tutte le sottoscrizioni e i relativi ID eseguendo `az account list` da un'altra riga di comando. |
    | **Gruppo di risorse di Azure** | Nome del gruppo di risorse di Azure da creare per il cluster del servizio Azure Kubernetes. |
@@ -81,7 +79,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Nodi del ruolo di lavoro** | Numero di nodi del ruolo di lavoro nel cluster del servizio Azure Kubernetes (il valore predefinito è **1**). |
    | **Nome cluster** | Nome del cluster del servizio Azure Kubernetes e del cluster Big Data. Il nome del cluster Big Data deve contenere solo caratteri alfanumerici minuscoli e non spazi (il valore predefinito è **sqlbigdata**). |
    | **Password** | Password per il controller, il gateway HDFS/Spark e l'istanza master (il valore predefinito è **MySQLBigData2019**). |
-   | **Utente del controller** | Nome utente per l'utente del controller (il valore predefinito è **admin**). |
+   | **Nome utente** | Nome utente per l'utente del controller (il valore predefinito è **admin**). |
 
 I parametri seguenti sono necessari per i partecipanti al programma early adopter per il cluster Big Data di SQL Server 2019: **nome utente Docker**, e **password Docker**. A partire dalla versione CTP 3.2 non sono più richiesti.
 
@@ -89,7 +87,7 @@ I parametri seguenti sono necessari per i partecipanti al programma early adopte
    > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.
 
    > [!NOTE]
-   > L'account `sa` è un amministratore di sistema nell'istanza master di SQL Server la cui creazione avviene durante l'installazione. Dopo aver creato la distribuzione, la variabile di ambiente `MSSQL_SA_PASSWORD` diventa individuabile eseguendo `echo $MSSQL_SA_PASSWORD` nel contenitore dell'istanza master. Per motivi di sicurezza, modificare la password di `sa` nell'istanza master dopo la distribuzione. Per altre informazioni, vedere [Modificare la password dell'account SA](../linux/quickstart-install-connect-docker.md#sapassword).
+   > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Solo l'utente supportato per il gateway (Knox) è la **radice** e la password è identica a quella indicata in precedenza.
 
 1. Lo script si avvierà creando un cluster del servizio Azure Kubernetes con i parametri specificati. Questo passaggio richiede alcuni minuti.
 
@@ -113,7 +111,7 @@ Dopo 10 o 20 minuti, si riceverà una notifica che indica che il pod del control
 ```
 
 > [!IMPORTANT]
-> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. Se si verificano problemi con la distribuzione, vedere [monitoraggio e risoluzione [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]dei ](cluster-troubleshooting-commands.md)problemi.
+> L'intera distribuzione può richiedere molto tempo, necessario per scaricare le immagini dei contenitori per i componenti del cluster Big Data. Non dovrebbero tuttavia essere necessarie diverse ore. In caso di problemi durante la distribuzione, vedere [Monitoraggio e risoluzione dei problemi dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Esaminare il cluster
 
@@ -151,7 +149,7 @@ Aprire una nuova finestra di comando per usare **kubectl** durante il processo d
    ```
 
 > [!TIP]
-> Per ulteriori informazioni su come monitorare e risolvere i problemi relativi a una distribuzione, vedere [monitoraggio e risoluzione dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)problemi.
+> Per informazioni dettagliate su come monitorare una distribuzione e risolvere i relativi problemi, vedere [Monitoraggio e risoluzione dei problemi di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="connect-to-the-cluster"></a>Stabilire la connessione al cluster
 
@@ -166,7 +164,7 @@ Il cluster Big Data di SQL Server è ora distribuito nel servizio Azure Kubernet
 
 ## <a name="clean-up"></a>Eseguire la pulizia
 
-Se si esegue il [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] test in Azure, è necessario eliminare il cluster AKS al termine per evitare addebiti imprevisti. Non rimuovere il cluster se si intende continuare a usarlo.
+Se si sta testando [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, al termine dell'operazione è necessario eliminare il cluster del servizio Azure Kubernetes per evitare l'addebito di costi imprevisti. Non rimuovere il cluster se si intende continuare a usarlo.
 
 > [!WARNING]
 > La procedura seguente consente di eliminare il cluster del servizio Azure Kubernetes, rimuovendo anche il cluster Big Data di SQL Server. Se si hanno un database o dati HDFS da conservare, eseguire il backup dei dati prima di eliminare il cluster.
@@ -179,7 +177,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Lo script di distribuzione ha consentito di configurare il servizio Azure Kubernetes e di distribuire un cluster Big Data di SQL Server 2019. È anche possibile scegliere di personalizzare le distribuzioni future tramite installazioni manuali. Per altre informazioni sul modo in cui vengono distribuiti Big Data cluster e su come personalizzare le distribuzioni, vedere [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
+Lo script di distribuzione ha consentito di configurare il servizio Azure Kubernetes e di distribuire un cluster Big Data di SQL Server 2019. È anche possibile scegliere di personalizzare le distribuzioni future tramite installazioni manuali. Per altre informazioni sulle modalità di distribuzione dei cluster Big Data e su come personalizzare le distribuzioni, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).
 
 Ora che il cluster Big Data di SQL Server è stato distribuito, è possibile caricare i dati di esempio ed esplorare le esercitazioni:
 

@@ -4,29 +4,29 @@ description: Questo articolo descrive la procedura dettagliata per la configuraz
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923833"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531297"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive come configurare la memoria persistente per SQL Server in Linux. Il supporto della memoria persistente in Linux è stato introdotto in Anteprima di SQL Server 2019.
+Questo articolo descrive come configurare la memoria persistente per SQL Server in Linux. Il supporto della memoria persistente in Linux è stato introdotto in SQL Server 2019.
 
 ## <a name="overview"></a>Panoramica
 
 SQL Server 2016 ha introdotto il supporto per i DIMM non volatili e un'ottimizzazione denominata [Memorizzazione della cache del file LDF in NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Queste ottimizzazioni riducono il numero di operazioni necessarie per finalizzare i buffer dei log in una risorsa di archiviazione permanente. Questa operazione sfrutta l'accesso diretto di Windows Server a un dispositivo di memoria permanente in modalità DAX.
 
-Anteprima di SQL Server 2019 estende il supporto dei dispositivi con memoria persistente a Linux, garantendo il riconoscimento completo dei file di dati e dei log delle transazioni all'interno della memoria persistente. Per riconoscimento si intende il metodo di accesso al dispositivo di archiviazione tramite operazioni `memcpy()` efficienti sullo spazio utente. Invece di passare attraverso il file system e lo stack di archiviazione, SQL Server si avvale del supporto DAX in Linux per inserire direttamente i dati nei dispositivi, riducendo la latenza.
+SQL Server 2019 estende il supporto dei dispositivi con memoria persistente a Linux, garantendo il riconoscimento completo dei file di dati e dei log delle transazioni all'interno della memoria persistente. Per riconoscimento si intende il metodo di accesso al dispositivo di archiviazione tramite operazioni `memcpy()` efficienti sullo spazio utente. Invece di passare attraverso il file system e lo stack di archiviazione, SQL Server si avvale del supporto DAX in Linux per inserire direttamente i dati nei dispositivi, riducendo la latenza.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Abilitare il riconoscimento dei file di database
 Per abilitare il riconoscimento dei file di database in SQL Server in Linux, seguire questa procedura:

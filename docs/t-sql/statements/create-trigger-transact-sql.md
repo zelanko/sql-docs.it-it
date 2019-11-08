@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190371"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168756"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ I trigger LOGON vengono attivati in risposta all'evento LOGON generato quando vi
 > [!NOTE]  
 >  In questo articolo viene illustrata l'integrazione di CLR di .NET Framework in SQL Server. L'integrazione di CLR non si applica al database SQL di Azure.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -206,9 +206,7 @@ Assicura che le tabelle a cui si fa riferimento in un trigger non possano essere
 Questa opzione è necessaria per i trigger sulle tabelle ottimizzate per la memoria e non è supportata per i trigger su tabelle tradizionali.  
   
 FOR | AFTER  
-AFTER specifica che il trigger DML viene attivato solo al termine dell'avvio di tutte le operazioni specificate nell'istruzione di trigger SQL. Perché il trigger venga attivato, è anche necessario che siano stati completati tutti i controlli dei vincoli e le operazioni referenziali di propagazione.  
-  
-AFTER è il tipo di trigger predefinito quando FOR è l'unica parola chiave specificata.  
+FOR o AFTER specifica che il trigger DML viene attivato solo al termine dell'avvio di tutte le operazioni specificate nell'istruzione di trigger SQL. Perché il trigger venga attivato, è anche necessario che siano stati completati tutti i controlli dei vincoli e le operazioni referenziali di propagazione.  
   
 Non è possibile definire trigger i AFTER sulle viste.  
   

@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278190"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988435"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ Questa funzione restituisce un intero che rappresenta l'elemento *datepart* spec
   
 Vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e delle funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -119,19 +119,15 @@ Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valor
 ## <a name="week-and-weekday-datepart-arguments"></a>Argomenti datepart per settimana e giorno feriale
 Per un argomento *datepart* **week** (**wk**, **ww**) o **weekday** (**dw**), il valore restituito `DATEPART` dipende dal valore impostato da [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week**_datepart_. Esempio:
+Il 1° gennaio di qualsiasi anno definisce il numero iniziale per ***week** _datepart_. Esempio:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 dove *xxxx* è un anno.
   
-Questa tabella indica il valore restituito per gli argomenti *datepart* **week** e **weekday** per
+Nella tabella seguente è riportato il valore restituito per **week** e **weekday** *datepart* per '2007-04-21' per ogni argomento SET DATEFIRST. L'1 gennaio 2007 cade di lunedì. Il 21 aprile 2007 cade di sabato. Per l'inglese Stati Uniti,
 
-'2007-04-21 '
-
-per ogni argomento SET DATEFIRST. L'1 gennaio 2007 cade di lunedì. Il 21 aprile 2007 cade di sabato. Per l'inglese Stati Uniti,
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 funge da valore predefinito. Dopo avere impostato DATEFIRST, usare questa istruzione SQL suggerita per i valori della tabella di datepart:
 

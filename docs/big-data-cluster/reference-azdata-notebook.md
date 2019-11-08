@@ -5,24 +5,24 @@ description: Articolo di riferimento per i comandi azdata notebook.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118157"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531666"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Visualizza un notebook.  Opzione per arrestare subito un errore di esecuzione della cella.
@@ -56,22 +56,19 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Questo comando crea una directory temporanea ed esegue al suo interno il notebook specificato come directory di lavoro.
-
->[!NOTE]
->Verificata rispetto a azdata v 15.0.1900: Esegui il comando supportato solo per i notebook Python 3.
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### <a name="examples"></a>Esempi
 Eseguire un notebook.
@@ -87,11 +84,14 @@ Percorso di directory da usare per l'output del notebook.  Il notebook con i dat
 #### `--output-html`
 Flag facoltativo che indica se convertire ulteriormente il notebook di output in formato HTML.  Crea un secondo file di output.
 #### `--arguments -a`
-Elenco facoltativo di argomenti del notebook da inserire nell'esecuzione del notebook.  Codificata come dizionario JSON.  Esempio:' {"Name": "value", "name2": "value2"}'
+Elenco facoltativo di argomenti del notebook da inserire nell'esecuzione del notebook.  Codificati come dizionario JSON.  Esempio: '{"name":"value", "name2":"value2"}'
 #### `--interactive -i`
-Eseguire un notebook in modalità interattiva.
+Consente di eseguire un notebook in modalità interattiva.
 #### `--clear -c`
-In modalità interattiva deselezionare la console prima di eseguire il rendering di una cella.
+In modalità interattiva cancellare il contenuto del riquadro della console prima di eseguire il rendering di una cella.
+#### `--timeout -t`
+Secondi di attesa per il completamento dell'esecuzione. Il valore-1 indica un'attesa infinita.
+`600`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -102,10 +102,8 @@ Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefin
 #### `--query -q`
 Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

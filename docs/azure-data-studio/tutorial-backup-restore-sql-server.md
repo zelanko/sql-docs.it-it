@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 11/04/2019
+ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959106"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532443"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino di database con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,11 +31,11 @@ In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos](../include
 
 Per questa esercitazione è necessario il database *TutorialDB* di SQL Server. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
-- [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+* [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 Questa esercitazione richiede la connessione a un database di SQL Server. Azure Data Studio non esegue il backup e ripristino di database SQL di Azure poiché in essi sono già previsti backup automatici. Per informazioni dettagliate, vedere [informazioni sui backup automatici deI database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
-## <a name="backup-a-database"></a>Eseguire il backup di un database
+## <a name="back-up-a-database"></a>Eseguire il backup del database
 
 1. Aprire il dashboard del database TutorialDB (aprire la barra laterale **SERVER** premendo **CTRL + G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**).
 
@@ -50,41 +50,30 @@ Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** s
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>Visualizzare lo stato e lo script di backup
 
-1. Aprire la barra laterale **Cronologia attività** facendo clic sull'icona dell'orologio sulla *barra delle azioni* oppure premere **CTRL + T**.
+1. Viene visualizzato il riquadro **Cronologia attività** oppure premere **CTRL + T**.
 
    ![Cronologia attività](./media/tutorial-backup-restore-sql-server/task-history.png)
 
 2. Per visualizzare lo script di backup nell'editor, fare clic con il pulsante destro del mouse su **Backup di database riuscito** e scegliere **Script**.
 
-   ![script di backup](./media/tutorial-backup-restore-sql-server/task-script.png) 
+   ![script di backup](./media/tutorial-backup-restore-sql-server/task-script.png)
 
 ## <a name="restore-a-database-from-a-backup-file"></a>Ripristinare un database da un file di backup.
 
-
-1. Aprire la barra laterale **SERVER** (**CTRL +G**), fare clic con il pulsante destro del mouse sul server e scegliere **Gestisci**. 
+1. Aprire la barra laterale **SERVER** (**CTRL +G**), fare clic con il pulsante destro del mouse sul server e scegliere **Gestisci**.
 
 2. Aprire la finestra di dialogo **Ripristina database**  (fare clic su  **Ripristina** nel widget **Attività**).
 
-2. Nel campo **Ripristina da** selezionare **File di backup**. 
+   ![Attività di ripristino](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
-3. Fare clic sui puntini di sospensione (...) nel campo **Percorso file di backup** e selezionare il file di backup più recente per *TutorialDB*.
+3. Nel campo **Ripristina da** selezionare **File di backup**.
 
-3. Digitare **TutorialDB_Restored** nel campo **Database di destinazione** della sezione **Destinazione** per ripristinare il file di backup in un nuovo database.
+4. Fare clic sui puntini di sospensione (...) nel campo **Percorso file di backup** e selezionare il file di backup più recente per *TutorialDB*.
+
+5. Digitare **TutorialDB_Restored** nel campo **Database di destinazione** della sezione **Destinazione** per ripristinare il file di backup in un nuovo database. Selezionare quindi **Ripristina**.
 
    ![ripristino](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. Fare clic su **Ripristina**.
-
-5. Per visualizzare lo stato dell'operazione di ripristino, premere **CTRL + T** per aprire la barra laterale **Cronologia attività**.
+6. Per visualizzare lo stato dell'operazione di ripristino, premere **CTRL + T** per aprire **Cronologia attività**.
 
    ![ripristino](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
-
-
-In questa esercitazione sono state illustrate le procedure per:
-> [!div class="checklist"]
-> * Eseguire il backup di un database 
-> * Visualizzare lo stato dell'operazione di backup
-> * Generare lo script usato per eseguire il backup
-> * Ripristinare un database
-> * Visualizzare lo stato dell'attività di ripristino
-

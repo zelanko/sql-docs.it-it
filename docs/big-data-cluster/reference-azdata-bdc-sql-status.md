@@ -1,55 +1,55 @@
 ---
-title: riferimento allo stato SQL BDC azdata
+title: Informazioni di riferimento su azdata bdc sql status
 titleSuffix: SQL Server big data clusters
-description: Articolo di riferimento per i comandi di stato SQL BDC azdata.
+description: Articolo di riferimento per i comandi azdata bdc sql status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5c2cdd924f266400125080d21d0461d5f599190
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 81c1a84ea196e7f986f9427605de575f59a3152c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158256"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531705"
 ---
-# <a name="azdata-bdc-sql-status"></a>stato SQL BDC azdata
+# <a name="azdata-bdc-sql-status"></a>azdata bdc sql status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
-[Visualizzazione stato SQL BDC azdata](#azdata-bdc-sql-status-show) | Stato del servizio SQL Server.
-## <a name="azdata-bdc-sql-status-show"></a>Visualizzazione stato SQL BDC azdata
-Stato del servizio SQL Server.
+[azdata bdc sql status show](#azdata-bdc-sql-status-show) | Stato del servizio sql-server.
+## <a name="azdata-bdc-sql-status-show"></a>azdata bdc sql status show
+Stato del servizio sql-server.
 ```bash
 azdata bdc sql status show [--resource -r] 
                            [--all -a]
 ```
 ### <a name="examples"></a>Esempi
-Ottenere lo stato del servizio SQL.
+Recupero dello stato del servizio sql.
 ```bash
 azdata bdc sql status show
 ```
-Ottenere lo stato del servizio SQL con tutte le istanze.
+Recupero dello stato del servizio sql con tutte le istanze.
 ```bash
 azdata bdc sql status show --all
 ```
-Ottenere lo stato della risorsa Master all'interno del servizio SQL.
+Recupero dello stato della risorsa master all'interno del servizio sql.
 ```bash
 azdata bdc sql status show --resource master
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--resource -r`
-Ottenere questa risorsa in questo servizio.
+Consente di ottenere la risorsa specificata in questo servizio.
 #### `--all -a`
-Mostra tutte le istanze di ogni risorsa all'interno del servizio.
+Visualizza tutte le istanze di ogni risorsa all'interno del servizio.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -58,12 +58,10 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

@@ -3,17 +3,17 @@ title: Configurare le impostazioni di SQL Server con variabili di ambiente
 description: Questo articolo descrive come usare variabili di ambiente per configurare impostazioni di SQL Server 2017 specifiche in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807461"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531316"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con variabili di ambiente in Linux
 
@@ -28,7 +28,7 @@ Per configurare SQL Server 2017 in Linux è possibile usare diverse variabili di
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Per configurare Anteprima di SQL Server 2019 in Linux è possibile usare diverse variabili di ambiente. Queste variabili vengono usate in due scenari:
+Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di ambiente. Queste variabili vengono usate in due scenari:
 
 ::: moniker-end
 
@@ -136,13 +136,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Se si esegue Docker in Linux o macOS, usare la sintassi seguente con virgolette singole:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 Se si esegue Docker in Windows, usare la sintassi seguente con virgolette doppie:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end

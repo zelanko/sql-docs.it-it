@@ -1,26 +1,24 @@
 ---
 title: Estensione Confronto schema
 titleSuffix: Azure Data Studio
-description: Installare e usare l'estensione Confronto schema (anteprima) per Azure Data Studio
+description: Installare e usare l'estensione Confronto schema per Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381786"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532539"
 ---
-# <a name="schema-compare-extension-preview"></a>Estensione Confronto schema (anteprima)
+# <a name="schema-compare-extension"></a>Estensione Confronto schema
 L'estensione Confronto schema consente di confrontare facilmente due definizioni di database e di applicare le differenze dall'origine alla destinazione.
-
-Questa funzionalità è attualmente disponibile in versione di anteprima iniziale. Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Funzionalità
@@ -72,3 +70,4 @@ Può essere noioso gestire e sincronizzare manualmente versioni di database dive
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni su Confronto schema, [consultare la documentazione di riferimento](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).

@@ -1,30 +1,30 @@
 ---
 title: Eseguire l'aggiornamento a una nuova versione
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come eseguire l'aggiornamento [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) a una nuova versione.
+description: Informazioni su come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) a una nuova versione.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bb1bf33c9ccb342e6afc4d22d67463791c0d67b6
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 90bfaaa1a8cb6fd42081d8afa5feff13f9aec37c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688269"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531957"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come eseguire l'aggiornamento [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce informazioni su come eseguire l'aggiornamento di un cluster Big Data di SQL Server a una nuova versione. La procedura descritta in questo articolo fa riferimento in modo specifico all'aggiornamento tra versioni di anteprima.
+Questo articolo fornisce informazioni su come eseguire l'aggiornamento di un cluster Big Data di SQL Server a una nuova versione. La procedura descritta in questo articolo fa riferimento in modo specifico all'aggiornamento da una versione di anteprima alla versione di aggiornamento del servizio SQL Server 2019.
 
 ## <a name="backup-and-delete-the-old-cluster"></a>Eseguire il backup del cluster ed eliminarlo
 
-Attualmente, l'unico modo per aggiornare un cluster Big Data a una nuova versione consiste nel rimuovere manualmente il cluster e ricrearlo. Ogni versione ha una versione univoca di `azdata` che non è compatibile con la versione precedente. Se un cluster precedente doveva scaricare un'immagine in un nuovo nodo, è possibile che l'immagine più recente non fosse compatibile con le immagini precedenti del cluster. Per eseguire l'aggiornamento alla versione più recente, seguire questa procedura:
+Attualmente non è disponibile alcun aggiornamento sul posto per i cluster Big Data e l'unico modo per eseguire l'aggiornamento a una nuova versione consiste nel rimuovere manualmente il cluster e quindi ricrearlo. In ogni versione è presente una versione univoca di `azdata` che non è compatibile con la versione precedente. Inoltre, se un cluster di una versione precedente deve scaricare un'immagine del contenitore in un nuovo nodo, l'immagine più recente potrebbe non essere compatibile con quelle meno recenti nel cluster. Si noti che l'immagine più recente viene ottenuta solo se si usa il tag di immagine `latest` nel file di configurazione della distribuzione per le impostazioni del contenitore. Per impostazione predefinita, ogni versione include un tag di immagine specifico corrispondente alla versione di SQL Server. Per eseguire l'aggiornamento alla versione più recente, seguire questa procedura:
 
 1. Prima di eliminare il cluster precedente, eseguire il backup dei dati nell'istanza master di SQL Server e in HDFS. Per l'istanza master di SQL Server è possibile usare [Backup e ripristino di SQL Server](data-ingestion-restore-database.md). Per HDFS, è [possibile copiare i dati con `curl`](data-ingestion-curl.md).
 
@@ -35,20 +35,18 @@ Attualmente, l'unico modo per aggiornare un cluster Big Data a una nuova version
    ```
 
    > [!Important]
-   > Usare la versione di `azdata` che corrisponde al cluster. Non eliminare un cluster precedente con la versione più recente di `azdata`.
+   > Usare la versione di `azdata` corrispondente al cluster in uso. Non eliminare un cluster di una versione precedente con la versione più recente di `azdata`.
 
    > [!Note]
-   > Se si emette un comando `azdata bdc delete`, tutti gli oggetti creati all'interno dello spazio dei nomi identificato con il nome del cluster Big Data verranno eliminati, ma non lo spazio dei nomi stesso. È possibile riutilizzare lo spazio dei nomi per le distribuzioni successive, purché sia vuoto e che non siano state create altre applicazioni all'interno di.
+   > L'invio di un comando `azdata bdc delete` comporterà l'eliminazione di tutti gli oggetti creati all'interno dello spazio dei nomi identificato con il nome del cluster Big Data, ma non lo spazio dei nomi stesso. È possibile riutilizzare lo spazio dei nomi per le distribuzioni successive, purché sia vuoto e non siano state create altre applicazioni al suo interno.
 
-1. Prima della versione CTP 3,2, `azdata` veniva chiamato `mssqlctl`. Se sono installate versioni precedenti di `mssqlctl` o `azdata`, è importante disinstallare prima di installare la versione più recente di `azdata`.
-
-   Per CTP 2.3 o versione successiva, eseguire il comando seguente. Sostituire `ctp3.1` nel comando con la versione di `mssqlctl` in cui si sta disinstallando. Se la versione è precedente a CTP 3.1, aggiungere un trattino prima del numero di versione (ad esempio, `ctp-2.5`).
+1. Disinstallare la versione precedente di `azdata`
 
    ```powershell
-   pip3 uninstall -r https://aka.ms/azdata
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Installare la versione più recente di `azdata`. I comandi seguenti consentono di installare `azdata` per la versione finale candidata:
+1. Installare la versione più recente di `azdata`. I comandi seguenti installano `azdata` dalla versione più recente:
 
    **Windows:**
 
@@ -63,11 +61,11 @@ Attualmente, l'unico modo per aggiornare un cluster Big Data a una nuova version
    ```
 
    > [!IMPORTANT]
-   > Per ogni versione, viene modificato il percorso di `azdata`. Anche se in precedenza è stato installato `azdata` o `mssqlctl`, è necessario reinstallare dal percorso più recente prima di creare il nuovo cluster.
+   > Il percorso della versione `n-1` di `azdata` cambia per ogni versione. Anche se `azdata` è già stato installato, è necessario reinstallarlo dal percorso più recente prima di creare il nuovo cluster.
 
 ## <a id="azdataversion"></a> Verificare la versione di azdata
 
-Prima di distribuire un nuovo cluster di Big Data, verificare di usare la versione più recente di `azdata` con il parametro `--version`:
+Prima di distribuire un nuovo cluster Big Data, assicurarsi di usare la versione più recente di `azdata` con il parametro `--version`:
 
 ```bash
 azdata --version
@@ -75,8 +73,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Installare la nuova versione
 
-Dopo aver rimosso il cluster di Big Data precedente e aver installato la versione più recente `azdata`, distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per ulteriori informazioni, vedere [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
+Dopo aver rimosso il cluster Big Data precedente e aver installato la versione più recente di `azdata`, distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per altre informazioni, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui cluster Big Data, vedere [che cosa sono [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md)

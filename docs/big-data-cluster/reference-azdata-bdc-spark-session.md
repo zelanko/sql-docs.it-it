@@ -5,24 +5,24 @@ description: Articolo di riferimento per i comandi azdata bdc spark session.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e8f4103511085bd834d9970e399604c7082ec0b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708594"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531735"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Questo articolo è un articolo di riferimento per **azdata**. 
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | Crea una nuova sessione Spark.
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>Esempi
 Crea una sessione.
 ```bash
-azdata bdc spark session create --session-kind pyspark
+azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--session-kind -k`
@@ -91,7 +91,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>Esempi
 Elenca tutte le sessioni attive.
 ```bash
-azdata bdc spark session list
+azdata spark session list
 ```
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
@@ -112,19 +112,18 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Ottiene le informazioni sulla sessione per una sessione Spark attiva con l'ID specificato.  L'ID della sessione viene restituito da "spark session create".
 ```bash
 azdata bdc spark session info --session-id -i 
-                              
-```
-### <a name="examples"></a>Esempi
-Ottenere informazioni sulla sessione con ID 0.
+            ```
+### Examples
+Get session info for session with ID of 0.
 ```bash
-azdata bdc spark session info --session-id 0
+azdata spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--session-id -i`
@@ -137,19 +136,18 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Ottiene le voci di log per una sessione Spark attiva con l'ID specificato.  L'ID della sessione viene restituito da "spark session create".
 ```bash
 azdata bdc spark session log --session-id -i 
-                             
-```
-### <a name="examples"></a>Esempi
-Ottenere il log per la sessione con ID 0.
+           ```
+### Examples
+Get session log for session with ID of 0.
 ```bash
-azdata bdc spark session log --session-id 0
+azdata spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--session-id -i`
@@ -162,19 +160,18 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Ottiene lo stato di una sessione Spark attiva con l'ID specificato.  L'ID della sessione viene restituito da "spark session create".
 ```bash
 azdata bdc spark session state --session-id -i 
-                               
-```
-### <a name="examples"></a>Esempi
-Ottenere lo stato della sessione con ID 0.
+             ```
+### Examples
+Get session state for session with ID of 0.
 ```bash
-azdata bdc spark session state --session-id 0
+azdata spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--session-id -i`
@@ -187,19 +184,18 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Elimina una sessione Spark interattiva. L'ID della sessione viene restituito da "spark session create".
 ```bash
 azdata bdc spark session delete --session-id -i 
-                                
-```
-### <a name="examples"></a>Esempi
-Eliminare una sessione.
+              ```
+### Examples
+Delete a session.
 ```bash
-azdata bdc spark session delete --session-id 0
+azdata spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--session-id -i`
@@ -218,6 +214,4 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
-
-- Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

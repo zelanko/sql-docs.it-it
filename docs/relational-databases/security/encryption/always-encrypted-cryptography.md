@@ -1,7 +1,7 @@
 ---
 title: Crittografia Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043295"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594409"
 ---
-# <a name="always-encrypted-cryptography"></a>Crittografia sempre attiva
+# <a name="always-encrypted-cryptography"></a>Crittografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Il documento descrive gli algoritmi e i meccanismi di crittografia necessari per derivare il materiale crittografico usato dalla funzionalità [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "68043295"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chiavi, archivi di chiavi e algoritmi di crittografia delle chiavi
  Always Encrypted usa due tipi di chiavi: chiavi master di colonna e chiavi di crittografia di colonna.  
   
- La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi che resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l'[archivio certificati Windows](/windows/desktop/SecCrypto/using-certificate-stores) e moduli di protezione hardware.  Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
+ La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi. Resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l' [archivio certificati Windows](/windows/desktop/SecCrypto/using-certificate-stores) e moduli di protezione hardware. Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
   
  La chiave CEK (Column Encryption Key, chiave di crittografia della colonna) è una chiave di crittografia del contenuto, ovvero una chiave usata per proteggere i dati, protetta da una chiave CMK.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68043295"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- Nella crittografia deterministica l'IV non è generato casualmente ma derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
+ Nella crittografia deterministica l'IV non è generato casualmente ma viene derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -67,12 +67,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- Il troncamento del valore HMAC viene eseguito per riempire 1 blocco di dati come necessario per l'IV.
+ Il troncamento del valore HMAC viene eseguito per riempire un blocco di dati come necessario per l'IV.
 Di conseguenza, la crittografia deterministica genera sempre lo stesso testo crittografato per un determinato testo non crittografato, consentendo di dedurre se due valori di testo non crittografato sono uguali confrontando i relativi valori del testo crittografato. Questa limitata intercettazione delle informazioni consente al sistema di database di supportare il confronto delle uguaglianze per i valori delle colonne crittografate.  
   
  La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l’uso di un valore IV predefinito.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
  Dopo avere calcolato l'IV viene generato il testo crittografato **AES_256_CBC** :  
   
 ```  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/D (non supportato)|  
   
 ## <a name="net-reference"></a>Guida di riferimento a .NET  
- Per altre informazioni sugli algoritmi illustrati in questo documento, vedere i file **SqlAeadAes256CbcHmac256Algorithm.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** della [Guida di riferimento a .NET](https://referencesource.microsoft.com/).  
+ Per i dettagli sugli algoritmi illustrati in questo documento, vedere i file **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** nella [Guida di riferimento a .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;client development&#41; (Always Encrypted - sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Sviluppare applicazioni usando Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
