@@ -1,6 +1,6 @@
 ---
-title: Sys. database_connection_stats (Database SQL di Azure) | Microsoft Docs
-ms.custom: ''
+title: sys.database_connection_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -18,32 +18,33 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940231"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844473"
 ---
-# <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
+# <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene le statistiche relative [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che fornisce una panoramica delle connessioni al database riuscite e gli errori. Per altre informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene statistiche per gli eventi di **connettività** del database [!INCLUDE[ssSDS](../../includes/sssds-md.md)], offrendo una panoramica delle connessioni al database riuscite ed errori. Per altre informazioni sugli eventi di connettività, vedere tipi di evento in [sys &#40;. event_log database&#41;SQL di Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistiche|type|Descrizione|  
+|Statistiche|Tipo|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al relativo **start_time** nella stessa riga.|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />' 2011-09-28 16:05:00'<br />' 2011-09-28 16:10:00'|  
+|**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al **start_time** corrispondente nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
-|**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Questa è la somma dei **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
+|**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Si tratta della somma di **connection_failure_count**, **terminated_connection_count**e **throttled_connection_count**e non include gli eventi deadlock.|  
 |**connection_failure_count**|**int**|Numero di errori di accesso.|  
-|**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni chiuse.|  
-|**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni limitate.|  
+|**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni chiuse.|  
+|**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni limitate.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="event-aggregation"></a>Aggregazione evento
 
@@ -55,9 +56,9 @@ ms.locfileid: "67940231"
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
-### <a name="interval-starttime-and-endtime"></a>start_time e end_time dell'intervallo
+### <a name="interval-start_time-and-end_time"></a>start_time e end_time dell'intervallo
 
- Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* oppure _dopo_**start_time** e _prima_  **end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
+ Un evento è incluso in un intervallo di aggregazione quando l'evento si verifica *in* o _dopo_**start_time** e _prima_**end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
   
 ```  
   
@@ -72,25 +73,25 @@ start_time                    end_time
   
 ### <a name="data-retention"></a>Mantenimento dei dati
 
- I dati in questa vista vengono mantenuti per un massimo di 30 giorni o meno, a seconda del numero di database e il numero di eventi univoci generati da ciascun database. Per prolungare il mantenimento di queste informazioni, copiare i dati in un database separato. Dopo aver creato una copia iniziale della vista, le relative righe possono essere aggiornate quando i dati vengono accumulati. Per mantenere aggiornata la copia dei dati, eseguire periodicamente un'analisi delle righe della tabella per cercare un eventuale aumento del numero di eventi di righe esistenti e per identificare le righe nuove (è possibile effettuare questa operazione per le righe univoche mediante le ore di inizio e di fine), quindi aggiornare la copia dei dati con queste modifiche.  
+ I dati in questa vista vengono conservati per un massimo di 30 giorni o meno, a seconda del numero di database e del numero di eventi univoci generati da ogni database. Per prolungare il mantenimento di queste informazioni, copiare i dati in un database separato. Dopo aver creato una copia iniziale della vista, le relative righe possono essere aggiornate quando i dati vengono accumulati. Per mantenere aggiornata la copia dei dati, eseguire periodicamente un'analisi delle righe della tabella per cercare un eventuale aumento del numero di eventi di righe esistenti e per identificare le righe nuove (è possibile effettuare questa operazione per le righe univoche mediante le ore di inizio e di fine), quindi aggiornare la copia dei dati con queste modifiche.  
   
 ### <a name="errors-not-included"></a>Errori non inclusi
 
  In questa vista non possono essere incluse tutte le informazioni relative a connessioni ed errori:  
   
-- In questa vista non include tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli errori che possono verificarsi, solo quelli specificati in tipi di evento nel database [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Questa vista non include tutti gli errori [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database che possono verificarsi, ma solo quelli specificati nei tipi di evento in [sys &#40;. event_log database&#41;SQL di Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-- Se si verifica un errore di computer all'interno di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Data Center, una piccola quantità di dati potrebbe essere mancante dalla tabella eventi.  
+- Se si verifica un errore del computer all'interno del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] datacenter, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
   
 - Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
- Gli utenti che dispongono dell'autorizzazione di accesso di **master** database hanno accesso in lettura a questa visualizzazione.  
+ Gli utenti con l'autorizzazione per accedere al database **Master** hanno accesso in sola lettura a questa vista.  
   
 ## <a name="example"></a>Esempio
 
- Nell'esempio seguente viene illustrata una query del **Sys. database_connection_stats** per restituire un riepilogo delle connessioni al database che si sono verificate tra mezzogiorno del 9/25/2011 e mezzogiorno del 9/28 o 2011 (UTC). Per impostazione predefinita, i risultati della query vengono ordinati **start_time** (ordine crescente).  
+ Nell'esempio seguente viene illustrata una query di **sys. database_connection_stats** per restituire un riepilogo delle connessioni del database che si sono verificate tra mezzogiorno il 9/25/2011 e mezzogiorno il 9/28/2011 (UTC). Per impostazione predefinita, i risultati della query vengono ordinati in base **start_time** (ordine crescente).  
   
 ```sql
 SELECT *  
@@ -100,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>Vedere anche
 
- [Risoluzione dei problemi di connessione al Database SQL di Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Risolvere i problemi di connessione al database SQL di Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

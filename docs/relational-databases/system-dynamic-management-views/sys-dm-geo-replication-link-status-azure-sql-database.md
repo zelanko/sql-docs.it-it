@@ -1,6 +1,6 @@
 ---
-title: DM geo_replication_link_status (Database SQL di Azure) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_geo_replication_link_status
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -17,42 +17,43 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8302de76b45ca09e86c87c29ab99c30898168de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900881"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843894"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
+# <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni collegamento di replica tra i database primari e secondari in una relazione di replica geografica. Sono inclusi i database primari e secondari. Se esiste più di un collegamento di replica continua per un determinato database primario, questa tabella contiene una riga per ogni relazione. La vista viene creata in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
+  Contiene una riga per ogni collegamento di replica tra i database primari e secondari in una relazione di replica geografica. Sono inclusi i database primari e secondari. Se esiste più di un collegamento di replica continua per un determinato database primario, questa tabella contiene una riga per ogni relazione. La vista viene creata in tutti i database, incluso il Master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID univoco del collegamento di replica.|  
-|partner_server|**sysname**|Nome del server di Database SQL che contiene il database collegato.|  
+|partner_server|**sysname**|Nome del server di database SQL contenente il database collegato.|  
 |partner_database|**sysname**|Nome del database collegato nel server di database SQL collegato.|  
-|last_replication|**datetimeoffset**|Il timestamp dell'acknowledgement dell'ultima transazione per il database secondario in base all'orologio di database primario. Questo valore è disponibile nel database primario.|  
-|replication_lag_sec|**int**|Differenza di tempo in secondi tra il valore last_replication e il timestamp del commit della transazione nella replica primaria in base all'orologio di database primario.  Questo valore è disponibile nel database primario.|  
-|replication_state|**tinyint**|Lo stato della replica geografica per questo database, uno di:.<br /><br /> 1 = Seeding. La destinazione di replica geografica è in fase di seeding, ma i due database non ancora sincronizzati. Fino al completamento del seeding non è possibile connettersi al database secondario. Rimozione di database secondario dal server primario verrà annullata l'operazione di seeding.<br /><br /> 2 = recupero. Il database secondario è in uno stato transazionale coerente e sempre sincronizzato con il database primario.<br /><br /> 4 = degli elementi sospesi. Non è presente una relazione di copia continua attiva. Questo stato indica in genere che la larghezza di banda disponibile per l'interlink è insufficiente per il livello di attività di transazione nel database primario. La relazione di copia continua tuttavia rimane invariata.|  
+|last_replication|**datetimeoffset**|Timestamp dell'ultima conferma della transazione da parte del database secondario in base all'orologio del database primario. Questo valore è disponibile solo nel database primario.|  
+|replication_lag_sec|**int**|Differenza di tempo in secondi tra il valore last_replication e il timestamp del commit di tale transazione nel database primario in base all'orologio del database primario.  Questo valore è disponibile solo nel database primario.|  
+|replication_state|**tinyint**|Stato della replica geografica per il database, uno dei seguenti:.<br /><br /> 1 = seeding. È in corso il seeding della destinazione di replica geografica, ma i due database non sono ancora sincronizzati. Fino al completamento del seeding, non è possibile connettersi al database secondario. Se si rimuove il database secondario dalla replica primaria, l'operazione di seeding viene annullata.<br /><br /> 2 = aggiornamento. Il database secondario è in uno stato coerente a livello di transazione ed è costantemente sincronizzato con il database primario.<br /><br /> 4 = sospesa. Non è presente una relazione di copia continua attiva. Questo stato indica in genere che la larghezza di banda disponibile per l'interlink è insufficiente per il livello di attività di transazione nel database primario. La relazione di copia continua tuttavia rimane invariata.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|role|**tinyint**|Ruolo replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = database secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
+|ruolo|**tinyint**|Ruolo replica geografica, uno dei seguenti:<br /><br /> 0 = primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 non = Nessun direct sono consentite connessioni al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = all sono consentite connessioni ai database nella replica secondaria; ication per l'accesso di sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutti|  
-|last_commit|**datetimeoffset**|Ora dell'ultima transazione di commit nel database. Se recuperata nel database primario, indica l'ultima ora di commit nel database primario. Se recuperata nel database secondario, indica l'ultima ora di commit nel database secondario. Se recuperata nel database secondario quando la replica primaria del collegamento di replica è verso il basso, indica fino a quando non punto in cui il database secondario viene aggiornato rispetto.|
+|secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = nessuna connessione diretta è consentita al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella REPL secondaria; ication per l'accesso in sola lettura.|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutto|  
+|last_commit|**datetimeoffset**|Ora dell'ultima transazione di cui è stato eseguito il commit nel database. Se recuperato nel database primario, indica l'ora dell'ultimo commit nel database primario. Se recuperata nel database secondario, indica l'ora dell'ultimo commit nel database secondario. Se viene recuperato nel database secondario quando il collegamento primario del collegamento di replica è inattivo, indica fino a che punto il database secondario non è stato aggiornato.|
   
 > [!NOTE]  
->  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4.2), la riga per il database nel **DM geo_replication_link_status** visualizzazione scomparirà.  
+>  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4,2), la riga relativa a tale database nella vista **sys. dm_geo_replication_link_status** scomparirà.  
   
-## <a name="permissions"></a>Permissions  
- Eseguire una query qualsiasi account con autorizzazione view_database_state **DM geo_replication_link_status**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Qualsiasi account con autorizzazione view_database_state può eseguire una query su **sys. dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Esempio  
- Mostrare intervalli di replica e ora dell'ultima replica di database secondari.  
+ Mostra i ritardi di replica e l'ora dell'ultima replica dei database secondari.  
   
 ```  
 SELECT   
@@ -64,8 +65,8 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER DATABASE &#40;Database SQL di Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [Sys. geo_replication_links &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [DM operation_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER database &#40;database&#41; SQL di Azure](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [sys. geo_replication_links &#40;database&#41; SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys. dm_operation_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

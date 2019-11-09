@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021322"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882344"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
   Dopo aver creato una pubblicazione, è possibile modificare la maggior parte delle proprietà della pubblicazione stessa e degli articoli. In alcuni casi è necessario rigenerare lo snapshot e/o reinizializzare le sottoscrizioni. In questo argomento vengono fornite informazioni su tutte le proprietà che, se modificate, richiedono l'esecuzione di una o entrambe le azioni.  
@@ -45,10 +45,10 @@ ms.locfileid: "63021322"
 |Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo.|**sp_droparticle**|Tutti i parametri.|È possibile eliminare gli articoli prima di creare le sottoscrizioni. È possibile utilizzare le stored procedure per eliminare una sottoscrizione in un articolo. Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], è necessario eliminare, ricreare e sincronizzare l'intera sottoscrizione. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Modifica di un filtro colonne.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica di un filtro colonne.|**sp_articlecolumn**|**\@colonna**<br /><br /> **operazione \@**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Aggiunta di un filtro di riga.|**sp_articlefilter**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Eliminazione di un filtro di riga.|**sp_articlefilter**|**@article**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Modifica di un filtro di riga.|**sp_articlefilter**|**@filter_clause**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Eliminazione di un filtro di riga.|**sp_articlefilter**|**articolo \@**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica di un filtro di riga.|**sp_articlefilter**|**\@filter_clause**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica di un filtro di riga.|**sp_changearticle**|**filter**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica delle opzioni dello schema.|**sp_changearticle**|**schema_option**|Nuovo snapshot.|  
 |Modifica della modalità di gestione delle tabelle nel Sottoscrittore prima dell'applicazione dello snapshot.|**sp_changearticle**|**pre_creation_cmd**|Nuovo snapshot.|  
@@ -56,7 +56,7 @@ ms.locfileid: "63021322"
 |Modifica dei comandi INSERT, UPDATE o DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del nome della tabella di destinazione.|**sp_changearticle**|**dest_table**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del proprietario della tabella di destinazione (schema).|**sp_changearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Modifica dei mapping dei tipi di dati (si applica solo alla pubblicazione Oracle).|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica dei mapping dei tipi di dati (si applica solo alla pubblicazione Oracle).|**sp_changearticlecolumndatatype**|**tipo di \@**<br /><br /> **lunghezza \@**<br /><br /> **precisione \@**<br /><br /> **scalabilità \@**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Proprietà della pubblicazione per la replica di tipo merge  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63021322"
 |Modifica della posizione degli script pre- o post-snapshot.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nuovo snapshot (necessario anche se si modifica il contenuto dello script).<br /><br /> È necessario eseguire la reinizializzazione per applicare il nuovo script al Sottoscrittore.|  
 |Aggiunta di un filtro join o di un record logico.|**sp_addmergefilter**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un filtro join o di un record logico.|**sp_dropmergefilter**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Modifica di un filtro join o di un record logico.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica di un filtro join o di un record logico.|**sp_changemergefilter**|**Proprietà \@**<br /><br /> **\@value**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Disabilitazione dell'utilizzo di filtri con parametri (per l'abilitazione dei filtri con parametri non sono necessarie particolari azioni).|**sp_changemergepublication**|Impostazione del valore **false** per **dynamic_filters**.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Abilitazione o disabilitazione dell'utilizzo di partizioni pre-calcolate.|**sp_changemergepublication**|**use_partition_groups**|Nuovo snapshot.|  
 |Abilitazione o disabilitazione dell'ottimizzazione delle partizioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] .|**sp_changemergepublication**|**keep_partition_changes**|Reinizializzazione delle sottoscrizioni.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63021322"
 |Eliminazione di un articolo al quale è associato l'ultimo filtro con parametri nella pubblicazione.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un articolo padre in un filtro join o in un record logico con l'effetto collaterale di eliminare il join correlato.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un articolo in tutte le altre circostanze.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.|  
-|Inclusione di un filtro colonna non pubblicato precedentemente.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Inclusione di un filtro colonna non pubblicato precedentemente.|**sp_mergearticlecolumn**|**\@colonna**<br /><br /> **operazione \@**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Aggiunta, eliminazione o modifica di un filtro di riga.|**sp_changemergearticle**|**subset_filterclause**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.<br /><br /> Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.<br /><br /> Se a un articolo non è associato alcun filtro di join, è possibile eliminarlo e aggiungerlo nuovamente con un filtro di riga diverso, evitando di dover reinizializzare l'intera sottoscrizione. Per altre informazioni sull'aggiunta e l'eliminazione di articoli, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Modifica delle opzioni dello schema.|**sp_changemergearticle**|**schema_option**|Nuovo snapshot.|  
 |Modifica del rilevamento dal livello di colonna al livello di riga (per la modifica inversa dal livello di riga al livello di colonna non sono necessarie particolari azioni).|**sp_changemergearticle**|Impostazione del valore **false** per **column_tracking**.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  

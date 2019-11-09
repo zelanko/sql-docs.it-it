@@ -15,12 +15,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212081"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882172"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Impostazione del periodo di scadenza per le sottoscrizioni
   In questo argomento si illustra come impostare il periodo di scadenza per le sottoscrizioni in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il periodo di scadenza per le sottoscrizioni determina il periodo tempo che deve trascorrere prima che una sottoscrizione scada e venga rimossa. Per altre informazioni, vedere [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "68212081"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Il periodo di scadenza della sottoscrizione viene inoltre denominato *periodo di memorizzazione della pubblicazione*. La pulizia dei metadati di replica di tipo merge dipende da questa impostazione:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68212081"
   
     -   È possibile specificare che le sottoscrizioni non devono scadere, ma è consigliabile non utilizzare questo valore, perché impedisce l'eliminazione dei metadati.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Impostare il periodo di scadenza per le sottoscrizioni nella pagina **Generale** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Per impostare il periodo di scadenza per le sottoscrizioni  
@@ -58,16 +58,16 @@ ms.locfileid: "68212081"
   
 2.  Se le sottoscrizioni avranno una scadenza, specificarne il periodo di tempo.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  Per impostare questo valore quando viene creata una pubblicazione o per modificarlo in un secondo momento, è possibile utilizzare le stored procedure di replica.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Per impostare il periodo di scadenza per una sottoscrizione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il periodo di scadenza desiderato per la sottoscrizione, in ore, per **@retention** . Il periodo di scadenza predefinito è 336 ore. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
+1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il periodo di scadenza desiderato per la sottoscrizione, in ore, per **\@retention**. Il periodo di scadenza predefinito è 336 ore. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Per impostare il periodo di scadenza per una sottoscrizione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il valore desiderato per il periodo di scadenza della sottoscrizione per **@retention** . Specificare per **@retention_period_unit** le unità in cui esprimere il periodo di scadenza, che possono essere una delle seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il valore desiderato per il periodo di scadenza della sottoscrizione per **\@retention**. Specificare per **\@retention_period_unit** le unità in cui esprimere il periodo di scadenza, che possono essere una delle seguenti:  
   
     -   **1** = Settimana  
   
@@ -79,11 +79,11 @@ ms.locfileid: "68212081"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Per modificare il periodo di scadenza per una sottoscrizione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare **retention** per **@property** e il nuovo periodo di scadenza della sottoscrizione, in ore, per **@value** .  
+1.  Nel server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare **retention** per **\@property** e il nuovo periodo di scadenza della sottoscrizione, in ore, per **\@value**.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Per modificare il periodo di scadenza per una sottoscrizione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando **@publication** e **@publisher** . Si noti il valore di **retention_period_unit** nel set di risultati, che può essere uno dei seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando **\@publication** e **\@publisher**. Si noti il valore di **retention_period_unit** nel set di risultati, che può essere uno dei seguenti:  
   
     -   **0** = giorno  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68212081"
   
     -   **3** = Anno  
   
-2.  Nel server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare **retention** per **@property** e il nuovo periodo di scadenza della sottoscrizione, come testo basato sull'unità del periodo di memorizzazione indicata nel passaggio 1, per **@value** .  
+2.  Nel server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare **retention** per **\@property** e il nuovo periodo di scadenza della sottoscrizione, come testo basato sull'unità del periodo di memorizzazione indicata nel passaggio 1, per **\@value**.  
   
-3.  (Facoltativo) Nel server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare **retention_period_unit** per **@property** e una nuova unità per il periodo di scadenza della sottoscrizione per **@value** .  
+3.  (Facoltativo) Nel server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare **retention_period_unit** per **\@property** e una nuova unità per il periodo di scadenza della sottoscrizione per **\@value**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   

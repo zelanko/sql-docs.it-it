@@ -15,14 +15,14 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865029"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882284"
 ---
-# <a name="delete-a-publication"></a>Eliminazione di una pubblicazione
+# <a name="delete-a-publication"></a>Delete a Publication
   In questo argomento viene descritto come eliminare una pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  **Contenuto dell'argomento**  
@@ -35,7 +35,7 @@ ms.locfileid: "62865029"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Eliminare le pubblicazioni dalla cartella **Pubblicazioni locali** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>Per eliminare una pubblicazione  
@@ -46,7 +46,7 @@ ms.locfileid: "62865029"
   
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione che si desidera eliminare e quindi scegliere **Elimina**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile eliminare pubblicazioni a livello di programmazione tramite le stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione eliminato.  
   
 > [!NOTE]  
@@ -58,10 +58,10 @@ ms.locfileid: "62865029"
   
     -   Per eliminare una singola pubblicazione, eseguire [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) nel database di pubblicazione del server di pubblicazione.  
   
-    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare il valore `tran` per **@type** . (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **@force** . (Facoltativo) Specificare il nome del database per **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
+    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare il valore `tran` per **\@tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
   
         > [!NOTE]  
-        >  Specificando il valore **1** per **@force** , è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  
+        >  Specificando il valore **1** per **\@force**, è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  
   
 2.  (Facoltativo) Se il database non contiene altre pubblicazioni, eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) per disabilitare la pubblicazione del database corrente usando la replica snapshot o transazionale.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "62865029"
   
     -   Per eliminare una singola pubblicazione, eseguire [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) nel database di pubblicazione del server di pubblicazione.  
   
-    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare il valore `merge` per **@type** . (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **@force** . (Facoltativo) Specificare il nome del database per **@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
+    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare il valore `merge` per **\@tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
   
         > [!NOTE]  
-        >  Specificando il valore **1** per **@force** , è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  
+        >  Specificando il valore **1** per **\@force**, è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  
   
 2.  (Facoltativo) Se il database non contiene altre pubblicazioni, eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) per disabilitare la pubblicazione del database corrente usando la replica di tipo merge.  
   
@@ -104,17 +104,17 @@ ms.locfileid: "62865029"
   
 4.  Controllare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> per verificare che la pubblicazione sia esistente. Se il valore di questa proprietà è `false`, le proprietà di pubblicazione sono state definite in modo non corretto nel passaggio 3 oppure la pubblicazione non esiste.  
   
-5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Facoltativo) Se per il database non esistono altre pubblicazioni transazionali, è possibile disabilitare il database per la pubblicazione transazionale come illustrato di seguito:  
   
     1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'istanza di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> restituita al passaggio 1.  
   
-    2.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, verificare che il database esista.  
+    2.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se il metodo restituisce `false`, verificare che il database esista.  
   
     3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> su `false`.  
   
-    4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Chiudere le connessioni.  
   
@@ -128,17 +128,17 @@ ms.locfileid: "62865029"
   
 4.  Controllare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> per verificare che la pubblicazione sia esistente. Se il valore di questa proprietà è `false`, le proprietà di pubblicazione sono state definite in modo non corretto nel passaggio 3 oppure la pubblicazione non esiste.  
   
-5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Facoltativo) Se per il database non esistono altre pubblicazioni di tipo merge, è possibile disabilitare il database per la pubblicazione di tipo merge come illustrato di seguito:  
   
     1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'istanza di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> restituita al passaggio 1.  
   
-    2.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, verificare che il database esista.  
+    2.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se il metodo restituisce `false`, verificare che il database esista.  
   
     3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> su `false`.  
   
-    4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Chiudere le connessioni.  
   

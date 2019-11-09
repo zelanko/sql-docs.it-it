@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704763"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882352"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
   Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
@@ -76,11 +76,11 @@ ms.locfileid: "62704763"
     > [!WARNING]  
     >  `MaxCmdsInTran` non è stato progettato per essere sempre abilitato. Sono disponibili casi di risoluzione in cui qualcuno ha accidentalmente eseguito un numero elevato di operazioni DML in una singola transazione (causando ritardi nella distribuzione dei comandi fino a che l'intera transazione è in database di distribuzione, blocchi mantenuti e così via). Se periodicamente si verifica questa situazione, è necessario esaminare le applicazioni e trovare un modo per ridurre le dimensioni della transazione.  
   
--   Usare la **- SubscriptionStreams** parametro dell'agente di distribuzione.  
+-   Usare il parametro **-SubscriptionStreams** per l'agente di distribuzione.  
   
      Il parametro **-SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
   
-     È possibile specificare un valore per questo parametro di agente usando **@subscriptionstreams** di [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     È possibile specificare un valore per questo parametro di agente usando il **\@SubscriptionStreams** di [SP_ADDSUBSCRIPTION &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumentare il valore del parametro **-ReadBatchSize** per l'agente di lettura log.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "62704763"
   
 -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md)  
   
   

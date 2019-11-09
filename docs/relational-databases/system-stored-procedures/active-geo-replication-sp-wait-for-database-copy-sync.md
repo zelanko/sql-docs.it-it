@@ -1,6 +1,6 @@
 ---
-title: sp_wait_for_database_copy_sync (Database SQL di Azure) | Microsoft Docs
-ms.custom: ''
+title: sp_wait_for_database_copy_sync
+titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
@@ -16,17 +16,18 @@ ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ff5b859b9bddce216e4f6bed343611ec155ffbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078347"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844399"
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replica geografica attiva - sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replica geografica attiva-sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Questa procedura è determinata da una relazione della [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] tra un database primario e uno secondario. Chiama il **sp_wait_for_database_copy_sync** fa sì che l'applicazione in attesa finché tutte le transazioni vengono replicate e riconosciute dal database secondario attivo. Eseguire **sp_wait_for_database_copy_sync** nel database primario.  
+  Questa procedura è determinata da una relazione della [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] tra un database primario e uno secondario. La chiamata del **sp_wait_for_database_copy_sync** fa sì che l'applicazione attenda finché tutte le transazioni di cui è stato eseguito il commit non vengono replicate e riconosciute dal database secondario attivo. Eseguire **sp_wait_for_database_copy_sync** solo sul database primario.  
   
 ||  
 |-|  
@@ -40,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @target_server =] 'nome_server'  
+ [@target_server =] ' server_name '  
  Nome del server di database SQL che ospita il database secondario attivo. server_name è di tipo sysname e non prevede alcun valore predefinito.  
   
- [ @target_database =] 'database_name'  
+ [@target_database =] ' database_name '  
  Nome del database secondario attivo. database_name è di tipo sysname e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -55,16 +56,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Il collegamento al nome del server o al database specificato non viene trovato.  
   
--   La connettività dell'interlink viene persa. **sp_wait_for_database_copy_sync** verrà restituito dopo il timeout della connessione.  
+-   La connettività dell'interlink viene persa. **sp_wait_for_database_copy_sync** restituirà dopo il timeout della connessione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente nel database primario può chiamare questa stored procedure di sistema. L'account di accesso deve essere un utente in entrambi i database primario e secondario attivo.  
   
-## <a name="remarks"></a>Note  
- Tutte le transazioni completate prima di un **sp_wait_for_database_copy_sync** chiamata vengono inviati al database secondario attivo.  
+## <a name="remarks"></a>Osservazioni  
+ Tutte le transazioni di cui è stato eseguito il commit prima di una chiamata **sp_wait_for_database_copy_sync** vengono inviate al database secondario attivo.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene richiamato **sp_wait_for_database_copy_sync** per garantire che tutte le transazioni vengono eseguito il commit al database primario db0 vengano inviate al database secondario attivo in ubfyu5ssyt di server di destinazione.  
+ Nell'esempio seguente viene richiamato **sp_wait_for_database_copy_sync** per assicurarsi che venga eseguito il commit di tutte le transazioni nel database primario, DB0, inviato al relativo database secondario attivo nel server di destinazione ubfyu5ssyt.  
   
 ```  
 USE db0;  
@@ -74,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [continuous_copy_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Funzioni e viste a gestione dinamica la replica geografica &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [sys. dm_continuous_copy_status &#40;database&#41; SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Viste a gestione dinamica e funzioni &#40;per la replica geografica database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

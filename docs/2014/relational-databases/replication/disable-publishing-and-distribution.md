@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721454"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882379"
 ---
 # <a name="disable-publishing-and-distribution"></a>Disabilitazione della pubblicazione e della distribuzione
   In questo argomento viene descritto come disabilitare la pubblicazione e la distribuzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -56,7 +56,7 @@ ms.locfileid: "62721454"
   
 -   Per disabilitare la pubblicazione e la distribuzione, è necessario che tutti i database di distribuzione e pubblicazione siano online. Se esistono *snapshot del database* per i database di distribuzione o di pubblicazione, è necessario eliminarli prima di disabilitare la pubblicazione e la distribuzione. Uno snapshot di database rappresenta una copia offline di sola lettura di un database e non è correlato a uno snapshot di replica. Per altre informazioni, vedere [Snapshot del database &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  È possibile disabilitare la pubblicazione e la distribuzione utilizzando la Disabilitazione guidata pubblicazione e distribuzione.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Per disabilitare la pubblicazione e la distribuzione  
@@ -67,7 +67,7 @@ ms.locfileid: "62721454"
   
 3.  Eseguire i vari passaggi della Disabilitazione guidata pubblicazione e distribuzione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  La pubblicazione e la distribuzione della replica possono essere disabilitate a livello di programmazione tramite le stored procedure di replica.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Per disabilitare la pubblicazione e la distribuzione  
@@ -87,7 +87,7 @@ ms.locfileid: "62721454"
 7.  Nel server di distribuzione eseguire [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) per rimuovere la designazione di server di distribuzione dal server.  
   
     > [!NOTE]  
-    >  Se prima dell'esecuzione di [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server di distribuzione viene eliminato, è necessario impostare il parametro **@no_checks** su **1**. Se un server di pubblicazione o un database di distribuzione è offline o non è raggiungibile, il parametro **@ignore_distributor** può essere impostato su **1** in modo che possa essere eliminato. Tuttavia, gli eventuali oggetti di pubblicazione e distribuzione rimasti devono essere rimossi manualmente.  
+    >  Se prima dell'esecuzione di [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server di distribuzione viene eliminato, è necessario impostare il parametro **\@no_checks** su **1**. Se un server di pubblicazione o un server di distribuzione è offline o non raggiungibile, è possibile impostare il parametro **\@ignore_distributor** su **1** in modo che sia possibile eliminarlo. Tuttavia, gli oggetti di pubblicazione e distribuzione rimanenti devono essere rimossi manualmente.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio di script vengono rimossi oggetti della replica dal database di sottoscrizione.  
@@ -112,11 +112,11 @@ ms.locfileid: "62721454"
   
 5.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dell'oggetto e verificare che il server di pubblicazione esista. Se il metodo restituisce `false`, il nome del server di pubblicazione impostato al passaggio 4 non è corretto oppure il server di pubblicazione non è utilizzato da questo server di distribuzione.  
   
-6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Passare il valore `true` per *forzare* se il server di pubblicazione e server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare non esistano più pubblicazioni nel Server di pubblicazione.  
+6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passare il valore `true` per *Force* se il server di pubblicazione e il server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare che le pubblicazioni non esistano più nel server di pubblicazione.  
   
 7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 3.  
   
-8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Passare il valore `true` per *forzare* rimuova tutti gli oggetti di replica nel server di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e i database di distribuzione siano stati disinstallati.  
+8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passare il valore `true` per *Force* per rimuovere tutti gli oggetti di replica nel server di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e che i database di distribuzione siano stati disinstallati.  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene rimossa la registrazione del server di pubblicazione nel database di distribuzione, viene eliminato il database di distribuzione e viene disinstallato il database di distribuzione.  
@@ -132,7 +132,7 @@ ms.locfileid: "62721454"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
+ [Concetti di base relativi a RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
+ [Concetti di base relativi alle stored procedure del sistema di replica](concepts/replication-system-stored-procedures-concepts.md)  
   
   
