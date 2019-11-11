@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 2a0777bc6d51ca99da3e52fc533306b49390d173
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951780"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593945"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -60,7 +60,7 @@ ms.locfileid: "71951780"
   
  Ad esempio, l'estensione per i dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è OLEDB-MD.  
   
- Molti provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard di terze parti possono essere scaricati dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=51456) e dai siti dei rispettivi produttori. È anche possibile eseguire ricerche nel forum pubblico relativo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per ottenere informazioni sui provider di dati di terze parti.  
+ Molti provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard di terze parti possono essere scaricati dall' [Area download Microsoft](https://www.microsoft.com/download/default.aspx) e dai siti dei rispettivi produttori. È anche possibile eseguire ricerche nel forum pubblico relativo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per ottenere informazioni sui provider di dati di terze parti.  
   
 > [!NOTE]  
 >  I provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard non supportano necessariamente tutte le funzionalità offerte dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Alcuni provider di dati OLE DB e driver ODBC possono inoltre essere utilizzati per creare e visualizzare in anteprima i report, tuttavia non sono progettati per supportare i report pubblicati in un server di report. Il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Jet non è ad esempio supportato sul server di report. Per altre informazioni, vedere [Estensioni per l'elaborazione dati e provider di dati .NET Framework &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "71951780"
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Vedere la documentazione di Hyperion per il supporto della piattaforma|S|N/D|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|S|N/D|  
 |Database relazionale Oracle|[Oracle](#OracleClient)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Richiede componenti client Oracle 12c o versione successiva.|S|N/D|Oracle 11g, 11g R2, 12c|S|S|  
 |Teradata |[Teradata](#Teradata)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende il provider di dati .NET per Teradata da Teradata.<br /><br /> Richiede il provider di dati .NET per Teradata da Teradata.<br /><br /> Vedere la documentazione di Teradata per il supporto della piattaforma.|S|N/D|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|S|N|  
-|Database relazionale DB2|Nome dell'estensione per i dati registrati e personalizzati||Host Integration (HI) Server 2004<br /><br /> Vedere la [documentazione di HI Server](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|S|N/D|N/D|S|N|  
+|Database relazionale DB2|Nome dell'estensione per i dati registrati e personalizzati||Host Integration (HI) Server 2004<br /><br /> |S|N/D|N/D|S|N|  
 |Origine dati OLE DB generica|OLEDB|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Tutte le origini dei dati che supportano OLE DB.<br /><br /> Vedere la documentazione dell'origine dati per il supporto della piattaforma.|S|N/D|Tutte le origini dei dati che supportano OLE DB. Vedere la [nota](#OLEDBStandard).|S|N/D|  
 |Origine dati ODBC generica|[ODBC](#ODBCGeneric)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualsiasi origine dati che supporti ODBC.<br /><br /> Vedere la documentazione dell'origine dati per il supporto della piattaforma.|S|N/D|Qualsiasi origine dati che supporti ODBC. Vedere la [nota](#ODBCGeneric).|S|S|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71951780"
 > [!NOTE]
 >  L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non è attualmente supportata.  
   
- Per altre informazioni sulle estensioni per l'elaborazione dati supportate da Generatore report, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) nella [documentazione relativa a Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+ Per ulteriori informazioni sulle estensioni per l'elaborazione dati supportate da Generatore report, vedere [Data Connections, Data Sources, and Connection Strings in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Estensione per l'elaborazione dati di Microsoft SQL Server  
  Il tipo di origine dati **Microsoft SQL Server** esegue il wrapping ed estende il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e basate su [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]e può essere eseguita su di esse.  
@@ -235,7 +235,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  I parametri denominati sono supportati da questa estensione. Per Oracle versione 11g o successiva, i parametri multivalore sono supportati. Per i parametri senza nome dipendenti dalla posizione, usare l'estensione per l'elaborazione dati OLE DB con il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Oracle. Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://support.microsoft.com/kb/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
- È possibile recuperare i dati da stored procedure con più parametri di input, tuttavia la stored procedure deve restituire un solo cursore di output. Per altre informazioni, vedere la sezione Oracle in [Recupero di dati mediante DataReader](https://go.microsoft.com/fwlink/?LinkId=81758).  
+ È possibile recuperare i dati da stored procedure con più parametri di input, tuttavia la stored procedure deve restituire un solo cursore di output. Per ulteriori informazioni, vedere la pagina relativa alla [restituzione di risultati con i REF CURSOR Oracle](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "recuperare dati mediante DataReader".
   
  Per altre informazioni, vedere [Tipo di connessione Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -290,7 +290,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  Le credenziali specificate dipendono dall'implementazione utilizzata dall'applicazione client. Per altre informazioni, vedere [Tipo di connessione Elenco Microsoft SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Estensione per l'elaborazione dati XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md).
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -304,13 +304,13 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  Per altre informazioni, vedere [Tipo di connessione Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere [Interfaccia utente di Progettazione query Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
- Per altre informazioni su [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)(Uso di SQL Server 2005 Reporting Services con Hyperion Essbase).  
+ Per altre informazioni su [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)(Uso di SQL Server 2005 Reporting Services con Hyperion Essbase). 
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77fb9b25594f2367ec52d75e0232371866b63a71
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500089"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594027"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -44,11 +44,11 @@ ms.locfileid: "66500089"
   
 -   Utente di Windows corrente (nota anche come sicurezza integrata).  
   
--   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su msdn.microsoft.com.  
+-   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Credenziali archiviate e credenziali fornite dall'utente non sono supportate. Se la sicurezza integrata di Windows è disabilitata, non è possibile utilizzarla per recuperare dati. Se si specificano credenziali archiviate o fornite dall'utente, si verificherà un errore in fase di esecuzione.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Query  
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. In un report viene elaborato solo il primo set di risultati recuperato da una query.  
@@ -113,7 +113,7 @@ ms.locfileid: "66500089"
   
          `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- Per altre informazioni sulla sintassi di query, vedere [Sintassi di query XML per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
+ Per ulteriori informazioni sulla sintassi di query, vedere [XML query sintassi per i dati &#40;del&#41;report XML SSRS](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
  Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66500089"
   
  È possibile specificare un percorso di elemento utilizzando una sintassi XML simile a XQuery.  
   
- Per altre informazioni sulla sintassi di query, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
+ Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
 ##  <a name="Parameters"></a> Parametri  
  La query non viene analizzata per identificare parametri.  
@@ -165,7 +165,7 @@ ms.locfileid: "66500089"
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
 ## <a name="see-also"></a>Vedere anche  

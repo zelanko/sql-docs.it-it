@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575495"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593761"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Amministrare un database del server di report (modalità nativa SSRS)
   In una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzati due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Per impostazione predefinita, i database sono denominati ReportServer e ReportServerTempdb. ReportServerTempdb viene creato con il database primario del server di report e viene utilizzato per l'archiviazione di dati temporanei, informazioni sulla sessione e report memorizzati nella cache.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575495"
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili vari strumenti per l'amministrazione dei database del server di report.  
   
--   Per eseguire il backup o il ripristino del database del server di report, per spostare un database del server di report o per recuperare un database del server di report, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] o le utilità della riga di comando del database. Per istruzioni, vedere [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nella documentazione online di SQL Server.  
+-   Per eseguire il backup o il ripristino del database del server di report, per spostare un database del server di report o per recuperare un database del server di report, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] o le utilità della riga di comando del database. Seguire le istruzioni disponibili in [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Per copiare il contenuto del database esistente in un altro database del server di report, è possibile collegare una copia di un database del server di report e utilizzarla con una diversa istanza del server di report. In alternativa, è possibile creare ed eseguire uno script che utilizza le chiamate SOAP per ricreare il contenuto del server di report in un nuovo database. È possibile usare l'utilità **rs** per eseguire lo script.  
   

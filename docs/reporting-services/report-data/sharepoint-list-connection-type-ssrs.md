@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499977"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593950"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -90,7 +90,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  La selezione di campi da più elenchi non è supportata. È possibile creare un set di dati per ogni elenco e selezionare campi da ogni set di dati. Se gli elenchi includono un campo comune, sarà possibile usare la funzione Lookup in un'area di dati tablix associata a un set di dati per recuperare un valore dall'altro set di dati non associato all'area di dati. Per altre informazioni, vedere [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtri applicati**  Consente di limitare i dati restituiti dall'elenco SharePoint, prima di essere restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
   
@@ -98,7 +98,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
 -   **Risultati query**  Vengono visualizzate le righe di esempio restituite quando viene eseguita la query. Se i valori dell'elenco SharePoint vengono frequentemente modificati sul sito di SharePoint, i valori visualizzati nel riquadro dei risultati della query potrebbero differire da quelli visualizzati nel report.  
   
--   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtri applicati**  Consente di limitare i dati restituiti dall'elenco SharePoint, prima di essere restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
   
@@ -178,7 +178,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
 
 ## <a name="see-also"></a>Vedere anche

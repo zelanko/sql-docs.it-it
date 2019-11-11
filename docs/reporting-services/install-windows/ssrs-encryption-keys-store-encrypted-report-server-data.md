@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988426"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593472"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chiavi di crittografia SSRS - Archiviare dati crittografati del server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] archivia i valori crittografati nel database del server di report e nei file di configurazione. La maggior parte dei valori crittografati è costituita da credenziali utilizzate per l'accesso a origini dei dati esterne dalle quali vengono recuperati i dati dei report. In questo argomento vengono descritti i valori crittografati, la funzionalità per la crittografia utilizzata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e altri tipi di dati riservati archiviati di cui è importante essere a conoscenza.  
@@ -33,7 +33,7 @@ ms.locfileid: "72988426"
   
 -   Credenziali archiviate utilizzate da un server di report per la connessione a origini dei dati esterne da cui vengono recuperati i dati di un report.  
   
-     Questi valori vengono definiti quando si esegue la configurazione delle informazioni sulle origini dei dati per un report, quindi vengono archiviati come valori crittografati in un database del server di report. Il server di report utilizza una chiave simmetrica per crittografare e decrittografare questi dati. Per altre informazioni sulle credenziali archiviate, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Questi valori vengono definiti quando si esegue la configurazione delle informazioni sulle origini dei dati per un report, quindi vengono archiviati come valori crittografati in un database del server di report. Il server di report utilizza una chiave simmetrica per crittografare e decrittografare questi dati. Per altre informazioni sulle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 -   Account di esecuzione automatica utilizzato dal server di report per la connessione ad altri computer al fine di recuperare file di immagine o dati esterni utilizzati in un report.  
   

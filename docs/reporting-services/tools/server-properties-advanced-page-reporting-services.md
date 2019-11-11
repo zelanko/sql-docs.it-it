@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908256"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638021"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2e193f4ebbcca98fd27657618ef2e1a7f7ef92
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500196"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593877"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
-  È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Contenuto dell'argomento:  
   
@@ -62,13 +62,13 @@ ms.locfileid: "67500196"
   
 ##  <a name="bkmk_mgtStudio"></a> Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)  
   
-1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di  .  
   
 2.  Fare clic con il pulsante destro del mouse sul nodo del server di report, quindi scegliere **Proprietà**.  
   
-3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nella documentazione online di .  
   
-4.  Nel **sicurezza** nella sezione **EnableRemoteErrors**, selezionare **True**.  
+4.  Nella sezione **sicurezza** , in **EnableRemoteErrors**, selezionare **true**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

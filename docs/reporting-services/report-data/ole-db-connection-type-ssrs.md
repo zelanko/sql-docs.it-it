@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6682aeeaf5daedee04757381131464bcaf379f50
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: a00f7dc1d38f687f2a21c7ba7bf07e41987beee1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499566"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593966"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo di connessione OLE DB (SSRS)
   Per includere dati da un provider di dati OLE DB, è necessario disporre di un set di dati basato su un'origine dati del report di tipo OLE DB. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -39,7 +39,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Caratteri speciali in una password  
  Se si configura l'origine dati OLE DB per la richiesta di una password o l'inclusione della password nella stringa di connessione e un utente immette la password con caratteri speciali, ad esempio segni di punteggiatura, è possibile che alcuni driver dell'origine dati sottostante non supportino la convalida dei caratteri speciali. In tal caso, quando si elabora il report verrà visualizzato un messaggio che indica che la password non è valida.  
@@ -57,13 +57,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Esempio:  
   
--   [Provider OLE DB per Analysis Services &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
-  
--   [Utilizzo del provider di dati .NET Framework per Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
+-   [Provider OLE DB per Analysis Services &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
+)  
+   
   
 -   [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
- Per altre informazioni sui provider dati OLE DB specifici, vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sui provider dati OLE DB specifici, vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a  inclusa nella documentazione online di .  
   
   
 ##  <a name="HowTo"></a> Procedure  
@@ -91,7 +91,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

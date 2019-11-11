@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447374"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594110"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "62447374"
   
 -   Impostare proprietà avanzate per gli URL per definire altri URL.  
   
- Per altre informazioni sul modo in cui gli URL vengono archiviati e gestiti o per problemi di interoperabilità, vedere [Informazioni su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Installare Reporting Services e Internet Information Services side-by-side &#40;SSRS in modalità nativa&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) nella documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
+ Per altre informazioni sul modo in cui gli URL vengono archiviati e gestiti o per problemi di interoperabilità, vedere [Informazioni su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Installare Reporting Services e Internet Information Services side-by-side &#40;SSRS in modalità nativa&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) nella documentazione in linea di . Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Prima di creare o modificare un URL, tenere presenti gli aspetti seguenti:  
@@ -143,7 +143,7 @@ ms.locfileid: "62447374"
   
  Consente di specificare il nome completo del computer per cui viene registrato il certificato. Il nome specificato deve essere identico al nome per cui viene registrato il certificato.  
   
- Per utilizzare questa opzione, è necessario disporre di un certificato installato. È inoltre necessario modificare l'impostazione di configurazione UrlRoot nel file RSReportServer.config in modo che specifichi il nome completo del computer per il quale viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Per utilizzare questa opzione, è necessario disporre di un certificato installato. È inoltre necessario modificare l'impostazione di configurazione UrlRoot nel file RSReportServer.config in modo che specifichi il nome completo del computer per il quale viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Per impostare proprietà avanzate in un URL  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225671"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593853"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale
   È possibile eseguire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione con scalabilità orizzontale configurando più server di report per l'utilizzo di un database del server di report condiviso. L'appartenenza a una distribuzione con scalabilità orizzontale si basa sull'archiviazione o meno da parte del server di report di una chiave di crittografia nel database del server di report. Per controllare l'appartenenza alla distribuzione con scalabilità orizzontale, aggiungere e rimuovere chiavi di crittografia per istanze del server di report specifiche. La rimozione di nodi dalla distribuzione può essere eseguita in qualsiasi ordine. Per l'aggiunta di nodi a una distribuzione è necessario unire in join tutte le nuove istanze di un server di report che fa già parte della distribuzione.  
@@ -58,7 +58,7 @@ ms.locfileid: "63225671"
     ```  
 4. Riavviare il servizio Windows per Reporting Services.
   
- Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nella documentazione online di .
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   

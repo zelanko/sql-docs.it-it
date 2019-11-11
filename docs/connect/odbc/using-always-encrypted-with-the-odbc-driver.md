@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702699"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594371"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito po
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitare Always Encrypted con enclave sicuri
 
-A partire dalla versione 17,4, il driver supporta Always Encrypted con enclave sicure. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione `ColumnEncryption` successiva, impostare il DSN, la stringa di connessione o l'attributo di connessione sul nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17,4 sono supportati solo il tipo di enclave di [sicurezza basato sulla virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione `VBS-HGS`del [servizio sorveglianza host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indicato da,. per usarlo, specificare l'URL del server di attestazione, ad esempio:
+A partire da .NET Framework versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione successiva, impostare il DSN `ColumnEncryption`, la stringa di connessione o l'attributo di connessione sul nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17,4, è supportato solo il tipo di enclave di [sicurezza basato sulla virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione del [servizio sorveglianza host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indicato da `VBS-HGS`. per usarlo, specificare l'URL del server di attestazione, ad esempio:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -364,7 +364,7 @@ Per ottenere il valore di testo non crittografato di una chiave ECEK, il driver 
 
 ODBC Driver for SQL Server viene fornito con i provider di archivi chiavi predefiniti seguenti:
 
-| nome | Descrizione | Nome del provider (metadati) |Disponibilità|
+| Nome | Descrizione | Nome del provider (metadati) |Disponibilità|
 |:---|:---|:---|:---|
 |Insieme di credenziali chiave di Azure |Archivia le chiavi master della colonna in un'istanza di Azure Key Vault | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Archivio certificati Windows|Archivia le chiavi master della colonna in locale nell'archivio chiavi Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -590,7 +590,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 ### <a name="connection-string-keywords"></a>Parole chiave per le stringhe di connessione
 
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*Type*,*data* (versione 17,4 e successive) consente di Always Encrypted con il *tipo*di protocollo di attestazione e l'enclave protetta e *i dati*di attestazione associati. <br><br>Il valore predefinito è `Disabled`.|
 |`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -600,7 +600,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 ### <a name="connection-attributes"></a>Attributi di connessione
 
-|nome|Tipo|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disabilita Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Abilita Always Encrypted<br> puntatore al *tipo*, stringa di*dati* --(versione 17,4 e successive) abilitata con l'enclave sicura|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connessione|[Set] Prova a caricare CEKeystoreProvider<br>[Get] Restituisce un nome CEKeystoreProvider|
@@ -610,7 +610,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 ### <a name="statement-attributes"></a>Attributi di istruzione
 
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted è disabilitato per l'istruzione <br>`SQL_CE_RESULTSETONLY` (1) -- Solo decrittografia. I set di risultati e i valori restituiti sono decrittografati e i parametri non sono crittografati <br>`SQL_CE_ENABLED` (3) -- Always Encrypted è abilitato e usato sia per i parametri che per i risultati|
 
@@ -620,7 +620,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 byte)|0|Quando 0 (impostazione predefinita): la decisione di crittografare questo parametro è determinata dalla disponibilità dei metadati di crittografia.<br><br>Quando diverso da zero: se sono disponibili metadati di crittografia per questo parametro, viene crittografato. In caso contrario, la richiesta ha esito negativo con l'errore [CE300] [Microsoft][ODBC Driver 13 for SQL Server]La crittografia obbligatoria è stata specificata per un parametro ma non sono stati forniti metadati di crittografia dal server.|
 
-### <a name="bcpcontrol-options"></a>Opzioni bcp_control
+### <a name="bcp_control-options"></a>Opzioni bcp_control
 
 |Nome opzione|Valore predefinito|Descrizione|
 |-|-|-|
@@ -631,4 +631,3 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 - [Always Encrypted (Motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Blog sulla Crittografia sempre attiva](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

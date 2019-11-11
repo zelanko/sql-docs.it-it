@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502940"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593317"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
   
--   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nella documentazione online di SQL Server.  
-  
+-   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Recuperare file di immagine esterni utilizzati nel report. Se si desidera utilizzare un file di immagine che non è accessibile tramite l'accesso anonimo, sarà possibile configurare l'account per l'esecuzione automatica dei report e concedere a tale account l'autorizzazione di accesso al file desiderato.  
   
  L'esecuzione automatica del report si riferisce a qualsiasi processo di esecuzione del report avviato da un evento che può essere sia un evento determinato dalla pianificazione, sia un evento di aggiornamento dei dati, piuttosto che da una richiesta dell'utente. Il server di report utilizza l'account per l'esecuzione automatica del report per accedere al computer che ospita l'origine dei dati esterna. Tale account è necessario perché le credenziali dell'account del servizio del server di report non vengono mai utilizzate per la connessione ad altri computer.  
@@ -56,8 +56,8 @@ ms.locfileid: "65502940"
   
      **rsconfig -e -u\<dominio/nome utente> -p\<password>**  
   
- **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.  
-  
+ **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.
+ 
 ### <a name="how-account-information-is-stored"></a>Modalità di archiviazione delle informazioni sull'account  
  Quando si imposta l'account, le impostazioni seguenti vengono specificate come valori crittografati nel file RSreportserver.config in un'istanza locale o remota del server di report:  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502940"
  Le informazioni relative all'account vengono rimosse dal file RSReportServer.config.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services (modalità nativa SSRS)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Gestione configurazione Reporting Services (modalità nativa SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
