@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500294"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592309"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati del report (Generatore report e SSRS)
   Un set di dati consente di specificare i dati che si desidera utilizzare da una connessione dati. È basato su una connessione dati salvata nel report come origine dati incorporata o come riferimento a un'origine dati condivisa su un server di report. Nel set di dati è inclusa una query che specifica un set di campi. Quando si trascinano questi campi nell'area di progettazione, è possibile creare espressioni che restituiscono i dati effettivi quando si esegue il report.  
@@ -73,7 +73,7 @@ ms.locfileid: "66500294"
   
 -   Un set di risultati restituito da qualsiasi provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] registrato e configurato.  
   
--   Dati da un modello di report progettato per una specifica origine dati, con entità, relazioni di entità e campi predefiniti. Per altre informazioni, vedere "Utilizzo di modelli di report come origini dati" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+-   Dati da un modello di report progettato per una specifica origine dati, con entità, relazioni di entità e campi predefiniti. Per ulteriori informazioni, vedere "set di dati del report" nella [documentazione relativa a Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Quando il report viene elaborato in fase di esecuzione, il set di risultati effettivi restituito per una query può includere zero o più righe. È anche possibile che le colonne definite nella query non siano presenti nell'origine dati. Per i valori Null restituiti dall'origine dati viene eseguito il mapping al valore [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] System.DBNull.Value **di**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66500294"
 |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
 |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
   
- Per altre informazioni sulla creazione di set di dati, vedere [Creazione di un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e la sezione dedicata agli [strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+ Per altre informazioni sulla creazione di set di dati, vedere [Creazione di un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md) nella [documentazione relativa a Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="SortGroupFilter"></a> Filtro, ordinamento e raggruppamento di dati in un set di dati  
  I dati in un set di dati provengono dall'esecuzione di un comando di query su un'origine dati esterna. La sintassi del comando di query per un'estensione per i dati consente di determinare se i dati possono essere ordinati o raggruppati. L'ordinamento e il raggruppamento vengono eseguiti nella query prima del recupero dei dati per un report. L'operazione di filtro viene eseguita invece dopo il recupero dei dati per un report.  

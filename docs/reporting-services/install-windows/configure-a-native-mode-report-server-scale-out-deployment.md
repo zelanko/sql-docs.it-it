@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500578"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593861"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
 
@@ -93,9 +93,9 @@ Il problema sarà intermittente perché solo il server che ha creato l'attività
   
 2.  Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configurare l'URL del servizio Web ReportServer, l'URL del portale Web e il database del server di report. Per altre informazioni, vedere [Configurare un server di report &#40;modalità nativa di Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configurare l'URL del servizio Web ReportServer, l'URL del portale Web e il database del server di report. Per altre informazioni, vedere [Configurare un server di report &#40;modalità nativa di Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)
   
-4.  Verificare che il server di report sia operativo. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Verificare che il server di report sia operativo. Per altre informazioni, vedere [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>Per installare e configurare la seconda istanza del server di report  
   
@@ -146,7 +146,7 @@ Il problema sarà intermittente perché solo il server che ha creato l'attività
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare un Account del servizio](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[Configurare un account di servizio](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

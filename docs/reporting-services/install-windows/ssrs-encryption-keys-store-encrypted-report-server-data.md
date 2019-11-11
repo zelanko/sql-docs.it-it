@@ -33,7 +33,7 @@ ms.locfileid: "73593472"
   
 -   Credenziali archiviate utilizzate da un server di report per la connessione a origini dei dati esterne da cui vengono recuperati i dati di un report.  
   
-     Questi valori vengono definiti quando si esegue la configurazione delle informazioni sulle origini dei dati per un report, quindi vengono archiviati come valori crittografati in un database del server di report. Il server di report utilizza una chiave simmetrica per crittografare e decrittografare questi dati. Per altre informazioni sulle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+     Questi valori vengono definiti quando si esegue la configurazione delle informazioni sulle origini dei dati per un report, quindi vengono archiviati come valori crittografati in un database del server di report. Il server di report utilizza una chiave simmetrica per crittografare e decrittografare questi dati. Per altre informazioni sulle credenziali archiviate, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 -   Account di esecuzione automatica utilizzato dal server di report per la connessione ad altri computer al fine di recuperare file di immagine o dati esterni utilizzati in un report.  
   

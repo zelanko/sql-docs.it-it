@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499584"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593384"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
   Generatore report e Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]forniscono entrambi una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che semplificano la creazione di una query per specificare i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -40,11 +40,11 @@ ms.locfileid: "66499584"
   
  Nella figura seguente è illustrata la finestra Progettazione query con interfaccia grafica nell'utilizzo con tabelle o viste.  
   
- ![Progettazione con interfaccia grafica per le query](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Progettazione con interfaccia grafica per le query")  
+ ![Finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Progettazione query con interfaccia grafica")  
   
  Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica quando viene utilizzata con stored procedure o funzioni con valori di tabella.  
   
- ![Stored procedure in finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Stored procedure in finestra Progettazione query con interfaccia grafica")  
+ ![Stored procedure nella finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Stored procedure nella finestra Progettazione query con interfaccia grafica")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66499584"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
- Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](../../t-sql/transact-sql-reference-database-engine.md) nella [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
  Nella tabella seguente sono elencate le aggregazioni per le quali vengono fornite brevi descrizioni.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66499584"
   
 -   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra.  
   
 -   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   

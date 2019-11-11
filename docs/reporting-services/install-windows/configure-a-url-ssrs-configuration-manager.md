@@ -31,7 +31,7 @@ ms.locfileid: "73594110"
   
 -   Impostare proprietà avanzate per gli URL per definire altri URL.  
   
- Per altre informazioni sul modo in cui gli URL vengono archiviati e gestiti o per problemi di interoperabilità, vedere [Informazioni su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Installare Reporting Services e Internet Information Services side-by-side &#40;SSRS in modalità nativa&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) nella documentazione in linea di . Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
+ Per altre informazioni sul modo in cui gli URL vengono archiviati e gestiti o per problemi di interoperabilità, vedere [Informazioni su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Installare Reporting Services e Internet Information Services side-by-side &#40;SSRS in modalità nativa&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Prima di creare o modificare un URL, tenere presenti gli aspetti seguenti:  

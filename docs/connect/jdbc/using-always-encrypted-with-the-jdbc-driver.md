@@ -153,7 +153,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 Il driver JDBC crea automaticamente un'istanza di SQLServerColumnEncryptionJavaKeyStoreProvider quando queste credenziali sono presenti nelle proprietà di connessione.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Creazione di una chiave master della colonna per l'archivio chiavi Java
-SQLServerColumnEncryptionJavaKeyStoreProvider può essere usato con i tipi di archivio chiavi JKS o PKCS12. Per creare o importare una [chiave da usare](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) con questo provider, usare l' utilità per la chiave Java. La chiave deve avere la stessa password dell'archivio chiavi. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata usando l'utilità di chiave:
+SQLServerColumnEncryptionJavaKeyStoreProvider può essere usato con i tipi di archivio chiavi JKS o PKCS12. Per creare o importare una chiave da usare con questo provider, usare l'utilità [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) Java. La chiave deve avere la stessa password dell'archivio chiavi. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata usando l'utilità di chiave:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks

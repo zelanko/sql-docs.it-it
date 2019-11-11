@@ -62,11 +62,11 @@ ms.locfileid: "73593877"
   
 ##  <a name="bkmk_mgtStudio"></a> Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)  
   
-1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di  .  
+1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Fare clic con il pulsante destro del mouse sul nodo del server di report, quindi scegliere **Proprietà**.  
   
-3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nella documentazione online di .  
+3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
 4.  Nella sezione **sicurezza** , in **EnableRemoteErrors**, selezionare **true**.  
   

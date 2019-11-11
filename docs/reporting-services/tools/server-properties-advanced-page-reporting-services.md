@@ -1,5 +1,5 @@
 ---
-title: Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs
+title: Pagina Avanzate delle proprietà del server - Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/06/2019
 ms.locfileid: "73638021"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>Pagina Avanzate delle proprietà del server - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,7 +93,7 @@ Indica se la risposta alla richiesta del client può essere esposta quando il fl
 
 **AccessControlMaxAge** Specifica il numero di secondi durante i quali i risultati della richiesta preliminare possono essere memorizzati nella cache. Il valore predefinito è 600 (10 minuti).
 
-**AllowedResourceExtensionsForUpload (solo Server di report di Power BI e Reporting Services 2017 e versioni successive)** Set di estensioni delle risorse che possono essere caricate nel server di report. Non è necessario includere le estensioni per i tipi di file predefiniti, ad esempio &ast;.rdl e &ast;.pbix. Il valore predefinito è "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+**AllowedResourceExtensionsForUpload** (solo Server di report di Power BI e Reporting Services 2017 e versioni successive) Set di estensioni delle risorse che possono essere caricate nel server di report. Non è necessario includere le estensioni per i tipi di file predefiniti, ad esempio &ast;.rdl e &ast;.pbix. Il valore predefinito è "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
 **RestrictedResourceMimeTypeForUpload** Set di tipi MIME a cui gli utenti non sono autorizzati a caricare il contenuto. Tutte le risorse già archiviate con un tipo MIME con restrizioni possono essere scaricate solo come un'applicazione o un flusso di ottetti anziché essere aperte/eseguite dal browser.  Per impostazione predefinita, nell'elenco non sono presenti elementi limitati, ma è consigliabile che le organizzazioni lo popolano per offrire l'esperienza più sicura.
 

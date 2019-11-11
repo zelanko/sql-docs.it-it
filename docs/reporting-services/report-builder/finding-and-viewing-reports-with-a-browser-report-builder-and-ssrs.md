@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580747"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594001"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
   È possibile utilizzare qualsiasi browser supportato per visualizzare un report tramite una connessione diretta a un server di report. A ogni report è associato un indirizzo URL che rimanda a un server di report. È possibile immettere l'indirizzo Web di un report per aprirlo in una finestra del browser indipendentemente da un'applicazione Web. Il report viene aperto in formato HTML e include la barra degli strumenti del report, pertanto è possibile navigare tra le pagine o effettuare ricerche nei valori dei dati all'interno del report. È possibile impostare i parametri nell'URL per nascondere la barra degli strumenti o selezionare il formato di output del report.  
@@ -22,13 +22,13 @@ ms.locfileid: "65580747"
   
  Se non si conosce l'indirizzo Web di un report, è possibile utilizzare l'indirizzo Web del server di report e quindi esplorare la gerarchia delle cartelle del server di report per selezionare il report che si desidera visualizzare. Nella figura seguente viene illustrata una gerarchia di cartelle visualizzata in una finestra del browser.  
   
- ![Cartelle in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Cartelle in un browser")  
+ ![Cartelle visualizzate in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Cartelle visualizzate in un browser")  
 Cartelle visualizzate in un browser  
   
 > [!NOTE]  
 >  Se si accede a un report tramite un dispositivo palmare, per aprire il report sarà necessario utilizzare un browser. Gestione report non è supportato nei dispositivi palmari.  
   
- Per ulteriori informazioni sui tipi di browser che è possibile utilizzare, vedere "Tipi di browser supportati da Reporting Services" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+ Per ulteriori informazioni sui tipi di browser che è possibile utilizzare, vedere [supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ Cartelle visualizzate in un browser
   
  Il limite massimo per un URL in Internet Explorer è 2.083 caratteri. Per ulteriori informazioni, vedere [Lunghezza massima degli URL in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Per ulteriori informazioni sull'accesso a un report tramite un URL, incluse le informazioni sulla sintassi dell'URL, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) all'interno della documentazione online di SQL Server.  
+ Per altre informazioni sull'accesso a un report tramite un URL, comprese le informazioni sulla sintassi dell'URL, vedere [Accesso con URL](../../reporting-services/url-access-ssrs.md).  
   
   

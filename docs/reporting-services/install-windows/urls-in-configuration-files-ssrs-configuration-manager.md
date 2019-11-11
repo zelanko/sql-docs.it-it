@@ -25,7 +25,7 @@ ms.locfileid: "73593933"
 #### <a name="urls-for-application-access"></a>URL per l'accesso alle applicazioni  
  Gli URL vengono utilizzati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per configurare gli URL, è necessario utilizzare lo strumento di configurazione di Reporting Services. Lo strumento crea le prenotazioni URL per ogni applicazione in HTTP.SYS e aggiunge voci per gli URL nella sezione **URLReservations** di RSReportServer.config.  
   
--   Per visualizzare le descrizioni di ogni elemento della sezione **URLReservations** , vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di  .  
+-   Per visualizzare le descrizioni di ogni elemento della sezione **URLReservations**, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 -   Per altre informazioni sulla sintassi dell'elemento **UrlString** in particolare, vedere [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   

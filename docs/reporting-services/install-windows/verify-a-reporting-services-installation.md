@@ -104,7 +104,7 @@ ms.locfileid: "73593925"
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Per verificare che Progettazione report sia installato e in esecuzione  
   
-1.  Aprire [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e creare un nuovo progetto basato su un tipo di progetto server di report. Per altre informazioni sull'uso della Creazione guidata progetto server di report, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) nella documentazione online di SQL Server.  
+1.  Aprire [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e creare un nuovo progetto basato su un tipo di progetto server di report. Per altre informazioni sull'uso della Creazione guidata progetto server di report, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 2.  Se si sono installati esempi di report, aprire i file di progetto dei report di esempio e pubblicare i report in un server di report.  
   

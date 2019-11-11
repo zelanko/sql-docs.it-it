@@ -129,7 +129,7 @@ ms.locfileid: "73594027"
   
  È possibile specificare un percorso di elemento utilizzando una sintassi XML simile a XQuery.  
   
- Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+ Per altre informazioni, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
 ##  <a name="Parameters"></a> Parametri  
  La query non viene analizzata per identificare parametri.  
@@ -165,7 +165,7 @@ ms.locfileid: "73594027"
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -45,7 +45,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Richiedere all'utente le credenziali. Questa opzione supporta solo la sicurezza integrata di Windows.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
   
  Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -81,7 +81,7 @@ data source=<server name>;initial catalog=<database name>
   
  È possibile recuperare dati anche da un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal tipo di origine dati OLE DB. Per altre informazioni, vedere [Tipo di connessione OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
- Per altre informazioni sulle piattaforme e le versioni supportate, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Per altre informazioni sulle versioni supportate, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="Related"></a> Sezioni correlate  
@@ -102,7 +102,7 @@ data source=<server name>;initial catalog=<database name>
  [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Vengono fornite informazioni su campi aggiuntivi che sono disponibili tramite il provider di dati XMLA.  
   
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

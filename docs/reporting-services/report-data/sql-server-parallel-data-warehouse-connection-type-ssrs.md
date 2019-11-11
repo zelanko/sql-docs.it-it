@@ -78,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornisce il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati riepilogativi. Le funzionalità relative al linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , inclusi il raggruppamento e le aggregazioni.  
   
- Per altre informazioni sul linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ###  <a name="QueryText"></a> Utilizzo di query di tipo Text  
  Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[DWsql](../../includes/dwsql-md.md)] per definire i dati in un set di dati. Le query utilizzare per recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] corrispondono a quelle utilizzate per recuperare dati da istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non vengono eseguite all'interno di un'applicazione [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . La query [!INCLUDE[DWsql](../../includes/dwsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  
@@ -150,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
 
 ## <a name="next-steps"></a>Passaggi successivi

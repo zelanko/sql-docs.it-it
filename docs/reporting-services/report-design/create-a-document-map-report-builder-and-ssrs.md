@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581568"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593678"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
 
@@ -108,9 +108,9 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
 4.  Incollare l'URL nel portale Web e premere INVIO. Verrà avviata l'esecuzione del report e la mappa documento verrà nascosta.  
   
 > [!NOTE]  
->  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
->  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+  >  Per altre informazioni, vedere [Accesso con URL](../url-access-ssrs.md). 
 
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

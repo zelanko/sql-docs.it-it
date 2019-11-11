@@ -79,7 +79,7 @@ La finestra Progettazione query basata su testo supporta le due modalità seguen
   
 Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni sul linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="QueryText"></a> Utilizzo di query di tipo Text
 
@@ -193,7 +193,7 @@ Vengono fornite informazioni sui set di dati incorporati e condivisi.
 [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
 Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
-[Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+[Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
 Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
 ## <a name="see-also"></a>Vedere anche

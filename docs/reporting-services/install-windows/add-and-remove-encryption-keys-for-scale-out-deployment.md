@@ -58,7 +58,7 @@ ms.locfileid: "73593853"
     ```  
 4. Riavviare il servizio Windows per Reporting Services.
   
- Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nella documentazione online di .
+ Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500417"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593830"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
   Per includere dati da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]che consente di recuperare dati multidimensionali da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -47,7 +47,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **Visualizzazione Query** Trascinare dimensioni, membri, proprietà dei membri, misure e indicatori di prestazioni chiave (KPI) dal riquadro Visualizzatore metadati al riquadro Query per compilare una query MDX. È possibile modificare il testo MDX direttamente nel riquadro Query. Trascinare i membri calcolati dal riquadro Membri calcolati al riquadro Query per definire altri campi del set di dati.  
   
-     Per altre informazioni, vedere [Interfaccia utente di Progettazione query Hyperion Essbase &#40;Generatore report&#41;](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
+     Per altre informazioni, vedere [Interfaccia utente di Progettazione query Hyperion Essbase &#40;Generatore report&#41;](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
 -   Importare una query MDX esistente da un report. Usare il pulsante di query **Importa** per cercare un file con estensione rdl e importare una query. È possibile importare una query da un report che contiene un set di dati incorporato basato sull'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . L'importazione di una query MDX direttamente da un file con estensione mdx non è supportata.  
   
@@ -56,8 +56,10 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  L'estensione per l'elaborazione dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] supporta proprietà estese dei campi del set di dati. Si tratta di valori che sono disponibili nell'origine dati esterna e non nel riquadro dei dati del report. Per altre informazioni, vedere [Proprietà di campo estese](#Extended) più avanti in questo argomento.  
   
   
-##  <a name="Parameters"></a> Per includere parametri di query, creare un filtro nell'area del filtro in Progettazione query e contrassegnarlo come parametro. Viene creato automaticamente un set di dati per fornire i valori disponibili di ogni filtro. Per impostazione predefinita, tali set di dati non vengono visualizzati nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
-  
+##  <a name="Parameters"></a> Parametri di query  
+
+ Per includere parametri di query, creare un filtro nell'area del filtro in Progettazione query e contrassegnarlo come parametro. Viene creato automaticamente un set di dati per fornire i valori disponibili di ogni filtro. Per impostazione predefinita, tali set di dati non vengono visualizzati nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
+
  Per impostazione predefinita, i dati di ogni parametro di report sono di tipo **Text**. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
@@ -104,7 +106,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Osservazioni  
- Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md). 
   
  Per altre informazioni, vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)(Uso di SQL Server 2005 Reporting Services con Hyperion Essbase).  
   
@@ -134,8 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi generata dalla query del set di dati.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Fornisce informazioni approfondite sul supporto della piattaforma e della versione per ogni estensione per i dati.  
   
  [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Vengono fornite informazioni dettagliate sull'utilizzo di questa estensione per i dati.  

@@ -41,7 +41,7 @@ Per configurare un server di report per il recapito tramite posta elettronica, e
 
 - Utilizzare Gestione configurazione Reporting Services se si specifica soltanto un server SMTP e un account utente con autorizzazione a inviare posta elettronica. Si tratta delle impostazioni minime necessarie per la configurazione dell'estensione per il recapito tramite posta elettronica di Server report.
 
-- Utilizzare un editor di testo per specificare impostazioni aggiuntive nel file RSreportserver.config (facoltativo). Questo file contiene tutte le impostazioni di configurazione per il recapito tramite posta elettronica del server di report. È necessario specificare impostazioni aggiuntive in questi file se si utilizza un server SMTP locale o se il recapito tramite posta elettronica è limitato a host specifici. Per altre informazioni sulla ricerca e la modifica dei file di configurazione, vedere [Modificare un file di configurazione di Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di SQL Server.
+- Utilizzare un editor di testo per specificare impostazioni aggiuntive nel file RSreportserver.config (facoltativo). Questo file contiene tutte le impostazioni di configurazione per il recapito tramite posta elettronica del server di report. È necessario specificare impostazioni aggiuntive in questi file se si utilizza un server SMTP locale o se il recapito tramite posta elettronica è limitato a host specifici. Per altre informazioni sulla ricerca e la modifica dei file di configurazione, vedere [Modificare un file di configurazione di Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > Le impostazioni della posta elettronica del server di report sono basate su CDO. Per ulteriori informazioni su impostazioni specifiche, fare riferimento alla documentazione di CDO.
@@ -77,7 +77,7 @@ Per configurare un server di report per il recapito tramite posta elettronica, e
 6. Nel file rsreportserver.config è anche possibile impostare campi aggiuntivi per la configurazione della posta elettronica.
 
 ## <a name="example-report-server-e-mail-configuration"></a>Esempio di configurazione della posta elettronica del server di report
-Nell'esempio seguente vengono illustrate le impostazioni nel file RSreportserver.config per un server SMTP remoto. Per informazioni sulle descrizioni delle impostazioni e i valori validi, vedere [File di configurazione Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di SQL Server.
+Nell'esempio seguente vengono illustrate le impostazioni nel file RSreportserver.config per un server SMTP remoto. Per informazioni sulle descrizioni delle impostazioni e i valori validi, vedere [File di configurazione Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
 ```
 <RSEmailDPConfiguration>

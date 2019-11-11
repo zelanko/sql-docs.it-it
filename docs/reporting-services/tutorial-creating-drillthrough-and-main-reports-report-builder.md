@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294729"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637989"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
 In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
@@ -25,7 +25,7 @@ L'illustrazione visualizza l'aspetto del report finale e come viene visualizzato
 Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
-Questa esercitazione richiede accesso al cubo Contoso Sales per i report principali e drill-through. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP, Online Analytical Processing) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
+Questa esercitazione richiede accesso al cubo Contoso Sales per i report principali e drill-through. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP, Online Analytical Processing) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
   
 L'altro file, ContosoBIdemoBAK.exe, è relativo al data warehouse ContosoDW, che non viene utilizzato in questa esercitazione.  
   
@@ -106,7 +106,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode(Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
+    > Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -397,7 +397,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode (Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
+    > Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -681,5 +681,5 @@ Eseguire il report principale, quindi fare clic su valori nella colonna della ca
 5.  Facoltativamente, esplorare le altre categorie di prodotto facendo clic sui nomi.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esercitazioni sul Generatore report](../reporting-services/report-builder-tutorials.md)  
+[Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
   

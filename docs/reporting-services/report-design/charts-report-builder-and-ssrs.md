@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581619"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593797"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
 Informazioni sull'uso delle aree dati dei grafici per consentire agli utenti dei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] di interpretare a colpo d'occhio grandi volumi di dati aggregati.  
@@ -48,7 +48,7 @@ Maggiore è la cura dedicata all'interpretazione e alla preparazione dei dati pr
 ##  <a name="SimilarMatrix"></a> Perché un grafico è simile a una matrice  
  Per comprendere l'utilizzo dei grafici è possibile confrontarli con le matrici.  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
   
  Dal punto di vista concettuale, l'organizzazione è identica:  
   
@@ -80,7 +80,7 @@ Maggiore è la cura dedicata all'interpretazione e alla preparazione dei dati pr
 ##  <a name="DatasetConsiderations"></a> Considerazioni sul set di dati prima della creazione di un grafico  
  I grafici forniscono una visualizzazione di riepilogo dei dati. Tuttavia, nel caso di set di dati di grandi dimensioni, le informazioni di un grafico possono risultare nascoste o illeggibili. I punti dati mancanti o Null, i tipi di dati non appropriati per il tipo di grafico e applicazioni avanzate quale la combinazione di grafici con tabelle possono influire sulla leggibilità di un grafico. Prima di progettare un grafico, è opportuno preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza.  
   
- È possibile includere nel report il numero di grafici desiderato. Un grafico, così come qualsiasi altra area dati, ad esempio una matrice o una tabella, è associato a un unico set di dati. Se si desidera visualizzare più set di dati nello stesso grafico, è possibile creare un set di dati aggiuntivo che usa un'istruzione JOIN o UNION nella query SQL prima di aggiungere dati al grafico. Per altre informazioni sull'istruzione JOIN e UNION, vedere la documentazione online o un altro riferimento SQL.  
+ È possibile includere nel report il numero di grafici desiderato. Un grafico, così come qualsiasi altra area dati, ad esempio una matrice o una tabella, è associato a un unico set di dati. Se si desidera visualizzare più set di dati nello stesso grafico, è possibile creare un set di dati aggiuntivo che usa un'istruzione JOIN o UNION nella query SQL prima di aggiungere dati al grafico.  
   
  Pre-aggregare i dati nella query del set di dati se i dati di dettaglio non sono necessari o utili. Per visualizzare più chiaramente ogni punto dati, ridurre il numero di categorie nel set di dati. È possibile filtrare il set di dati o aggiungere una condizione alla query per ridurre il numero di righe restituite. 
   

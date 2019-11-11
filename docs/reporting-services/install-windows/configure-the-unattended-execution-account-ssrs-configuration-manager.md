@@ -56,7 +56,7 @@ ms.locfileid: "73593317"
   
      **rsconfig -e -u\<dominio/nome utente> -p\<password>**  
   
- **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.
+ **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
 ### <a name="how-account-information-is-stored"></a>Modalità di archiviazione delle informazioni sull'account  
  Quando si imposta l'account, le impostazioni seguenti vengono specificate come valori crittografati nel file RSreportserver.config in un'istanza locale o remota del server di report:  
