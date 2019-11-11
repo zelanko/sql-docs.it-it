@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503633"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593789"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestione configurazione Reporting Services (modalità nativa)
 
@@ -60,7 +60,7 @@ Per utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/s
 
 - Il servizio WMI (Windows Management Instrumentation) deve essere attivato e in esecuzione nel server di report che si sta configurando. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza il provider WMI del server di report per la connessione ai server di report locali e remoti. Se si sta configurando un server di report remoto, il computer deve consentire l'accesso remoto a WMI. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
 
-- Prima di poter connettersi a un'istanza remota del server di report e configurarla, è necessario abilitare il passaggio delle chiamate di Strumentazione gestione Windows (WMI) attraverso Windows Firewall. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+- Prima di poter connettersi a un'istanza remota del server di report e configurarla, è necessario abilitare il passaggio delle chiamate di Strumentazione gestione Windows (WMI) attraverso Windows Firewall. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
 Gestione configurazione Reporting Services viene installata automaticamente quando si installa SQL Server Reporting Services.
 

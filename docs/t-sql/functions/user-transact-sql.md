@@ -23,19 +23,19 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927618"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844316"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Consente l'inserimento in una tabella di un valore fornito dal sistema per il nome utente di database dell'utente corrente quando non è stato specificato alcun valore predefinito.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ USER
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **char**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  USER è caratterizzata dalle stesse funzionalità della funzione di sistema USER_NAME.  

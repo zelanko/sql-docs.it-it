@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652339"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593552"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Creare un database del server di report in modalità nativa
 
@@ -67,7 +67,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 6.  Riavviare il servizio.  
   
-7.  Aprire il software firewall e la porta di attesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per l'istanza predefinita, il numero di porta per le connessioni TCP/IP è in genere 1433. Per altre informazioni, vedere [Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Aprire il software firewall e la porta di attesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per l'istanza predefinita, il numero di porta per le connessioni TCP/IP è in genere 1433. Per altre informazioni, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Per creare un database del server di report locale  
   
@@ -111,7 +111,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 7.  Esaminare le informazioni incluse nella pagina Riepilogo per verificare che le impostazioni siano corrette, quindi scegliere **Avanti**.  
   
-8.  Verificare la connessione selezionando un URL nella pagina URL server di report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, viene visualizzata la gerarchia di cartelle del server di report. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Verificare la connessione selezionando un URL nella pagina URL server di report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, viene visualizzata la gerarchia di cartelle del server di report. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Modificare le credenziali di database
 

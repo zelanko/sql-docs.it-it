@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940121"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843706"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quali sono le funzioni del database SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
 |[Funzioni per i metadati](metadata-functions-transact-sql.md)|Restituiscono informazioni sul database e sugli oggetti di database.|  
 |[Funzioni di sicurezza](security-functions-transact-sql.md)|Restituiscono informazioni sugli utenti e sui ruoli.|  
 |[Funzioni per i valori stringa](string-functions-transact-sql.md)|Eseguono operazioni sui valori di input di tipo stringa (**char** o **varchar**) e restituiscono un valore stringa o numerico.|  
-|[Funzioni di sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Eseguono operazioni e restituiscono informazioni su valori, oggetti e impostazioni in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funzioni di sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Eseguono operazioni e restituiscono informazioni su valori, oggetti e impostazioni in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funzioni statistiche di sistema](system-statistical-functions-transact-sql.md)|Restituiscono informazioni statistiche sul sistema.|  
 |[Funzioni per i valori text e image](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
   

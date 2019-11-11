@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514420"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594070"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gli URL vengono usati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per poter usare una delle due applicazioni, è necessario configurare almeno un URL per il servizio Web e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -33,7 +33,7 @@ ms.locfileid: "62514420"
 |Nome host|Una rete TCP/IP utilizza un indirizzo IP per identificare in modo univoco un dispositivo in rete. È presente un indirizzo IP fisico per ogni scheda di rete installata in un computer. Se l'indirizzo IP viene risolto in un'intestazione host, è possibile specificare l'intestazione host. Se il server di report viene distribuito in una rete aziendale, è possibile utilizzare il nome di rete del computer.|  
 |Port|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  
 |Directory virtuale|Una porta viene spesso condivisa da più servizi o applicazioni Web. Per tale motivo, un URL del server di report include sempre una directory virtuale corrispondente all'applicazione che riceve la richiesta. È necessario specificare nomi delle directory virtuali univoci per ogni applicazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in attesa sullo stesso indirizzo IP e sulla stessa porta.|  
-|Impostazioni SSL|È possibile configurare gli URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per l'utilizzo di un certificato SSL esistente precedentemente installato nel computer. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Impostazioni SSL|È possibile configurare gli URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per l'utilizzo di un certificato SSL esistente precedentemente installato nel computer. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>URL predefiniti  
  Quando si accede a un server di report o a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] dal relativo URL, quest'ultimo deve includere il nome host e non l'indirizzo IP. In una rete TCP/IP l'indirizzo IP verrà risolto in un nome host o nel nome di rete del computer. Se per configurare gli URL sono stati utilizzati i valori predefiniti, dovrebbe essere possibile accedere al servizio Web ReportServer utilizzando gli URL che specificano come nome host il nome del computer o localhost:  
@@ -57,7 +57,7 @@ ms.locfileid: "62514420"
  All'account del servizio del server di report vengono concesse in modo esclusivo le autorizzazioni per ogni endpoint URL. Solo tale account dispone dei diritti necessari per accettare le richieste indirizzate agli URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per l'account vengono creati e gestiti elenchi di controllo di accesso discrezionale (DACL, Discretionary Access Control List) quando si configura l'identità del servizio tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se si modifica l'account del servizio, lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiornerà tutte le prenotazioni URL create per includere le nuove informazioni sull'account. Per altre informazioni, vedere [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Autenticazione delle richieste client inviate a un URL del server di report  
- Per impostazione predefinita, il tipo di autenticazione supportato negli endpoint URL è l'autenticazione di Windows. Si tratta dell'estensione di sicurezza predefinita. Se si implementa un provider di autenticazione personalizzata o basata su form, è necessario modificare le impostazioni di autenticazione nel server di report. Se si desidera, è inoltre possibile modificare le impostazioni di autenticazione di Windows in modo che corrispondano al sottosistema di autenticazione utilizzato nella rete. Per altre informazioni, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Per impostazione predefinita, il tipo di autenticazione supportato negli endpoint URL è l'autenticazione di Windows. Si tratta dell'estensione di sicurezza predefinita. Se si implementa un provider di autenticazione personalizzata o basata su form, è necessario modificare le impostazioni di autenticazione nel server di report. Se si desidera, è inoltre possibile modificare le impostazioni di autenticazione di Windows in modo che corrispondano al sottosistema di autenticazione utilizzato nella rete. Per altre informazioni, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

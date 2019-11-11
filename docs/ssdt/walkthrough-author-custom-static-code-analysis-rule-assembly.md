@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140936"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659543"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server
 Questa procedura dettagliata illustra i passaggi necessari per creare una regola di analisi del codice di SQL Server. La regola creata in questa procedura dettagliata viene usata per evitare le istruzioni WAITFOR DELAY in stored procedure, trigger e funzioni.  
@@ -67,7 +67,7 @@ A questo punto aggiungere le classi di supporto che verranno usate dalla regola.
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Creazione delle classi supporto per le regole personalizzate di analisi del codice  
 Prima di creare la classe per la regola stessa, aggiungere al progetto una classe visitor e una classe attribute. Queste classi possono rivelarsi utili per la creazione di altre regole personalizzate.  
   
-La prima classe da definire è la classe WaitForDelayVisitor, derivata da [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx). Questa classe fornisce l'accesso alle istruzioni WAITFOR DELAY nel modello. Le classi visitor usano le API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fornite da SQL Server. In questa API il codice Transact\-SQL viene rappresentato come un albero sintattico astratto e le classi visitor possono essere utili per trovare oggetti di sintassi specifici quali le istruzioni WAITFORDELAY. Può essere difficile trovarle usando il modello a oggetti, poiché non sono associate a una proprietà o a una relazione di un oggetto specifico, mentre è facile trovarle con il modello visitor e l'API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+La prima classe da definire è la classe WaitForDelayVisitor, derivata da [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Questa classe fornisce l'accesso alle istruzioni WAITFOR DELAY nel modello. Le classi visitor usano le API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fornite da SQL Server. In questa API il codice Transact\-SQL viene rappresentato come un albero sintattico astratto e le classi visitor possono essere utili per trovare oggetti di sintassi specifici quali le istruzioni WAITFORDELAY. Può essere difficile trovarle usando il modello a oggetti, poiché non sono associate a una proprietà o a una relazione di un oggetto specifico, mentre è facile trovarle con il modello visitor e l'API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Definizione della classe WaitForDelayVisitor  
   
@@ -249,7 +249,7 @@ A questo punto aggiungere un file di risorse che definirà il nome della regola,
   
 6.  Definire quattro stringhe di risorse come segue:  
   
-    |nome|valore|  
+    |Nome|valore|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|L'istruzione WAITFOR DELAY è stata trovata in {0}.|  
     |AvoidWaitForDelay_RuleName|Evitare di usare istruzioni WaitFor Delay in stored procedure, funzioni e trigger.|  
@@ -494,7 +494,7 @@ Dopo avere aggiunto le classi helper che verranno usate dalla regola di analisi 
   
 3.  Fare clic su **Firma assembly**.  
   
-4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>**.  
+4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>** .  
   
 5.  Nella finestra di dialogo **Crea chiave con nome sicuro** in **Nome file di chiave** digitare MyRefKey.  
   

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142865"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659089"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY Specifica che il backup è un *backup di sola copia* che non influisce
 
 Il comportamento predefinito prevede che la compressione dei backup non venga applicata. Questa impostazione predefinita può essere modificata impostando l'opzione di configurazione del server [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Per informazioni sulla visualizzazione del valore corrente di questa opzione, vedere [Visualizzare o modificare le proprietà del server](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Per informazioni sull'uso della compressione dei backup con i database con [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), vedere la sezione [Osservazioni](#general-remarks).
-
 COMPRESSION abilita in modo esplicito la compressione dei backup.
 
 NO_COMPRESSION disabilita in modo esplicito la compressione dei backup.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > Per i database con [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) con un singolo file di dati, `MAXTRANSFERSIZE` predefinito è 65536 (64 KB). Per i database senza crittografia TDE, `MAXTRANSFERSIZE` predefinito è 1048576 (1 MB) quando viene usato il backup su disco e 65536 (64 KB) quando viene usata una VDI o un nastro.
-> Per informazioni sull'uso della compressione dei backup con i database con crittografia TDE, vedere la sezione [Osservazioni](#general-remarks).
 
 **Opzioni di gestione degli errori**
 

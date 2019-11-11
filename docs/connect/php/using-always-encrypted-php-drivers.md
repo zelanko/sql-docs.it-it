@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: v-mabarw
-ms.openlocfilehash: 08165bf0f60265e34f6b8022fd00e11dda47f672
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 60f4ee3839b91b60b950c1f3a6a351592a9581b2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258644"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593623"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con i driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +55,7 @@ L'abilitazione di Always Encrypted non è sufficiente per l'esito positivo della
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recupero e modifica di dati nelle colonne crittografate
 
-Dopo aver abilitato Always Encrypted in una connessione, è possibile usare le API SQLSRV standard (vedere il [riferimento all'API del driver sqlsrv](../../connect/php/sqlsrv-driver-api-reference.md)) o le API PDO_SQLSRV (vedere le informazioni di [riferimento sulle API del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) per recuperare o modificare i dati nelle colonne di database crittografate. Supponendo che l'applicazione abbia le autorizzazioni necessarie per il database e che possa accedere alla chiave master della colonna, il driver crittografa tutti i parametri di query che puntano a colonne crittografate e decrittografa i dati recuperati dalle colonne crittografate, comportandosi in modo trasparente per l'applicazione come se le colonne non fossero crittografate.
+Dopo aver abilitato Always Encrypted in una connessione, è possibile usare le API SQLSRV standard (vedere informazioni di [riferimento sulle API del driver sqlsrv](../../connect/php/sqlsrv-driver-api-reference.md)) o API PDO_SQLSRV (vedere le informazioni di [riferimento sulle api del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) per recuperare o modificare i dati nelle colonne di database crittografate. Supponendo che l'applicazione abbia le autorizzazioni necessarie per il database e che possa accedere alla chiave master della colonna, il driver crittografa tutti i parametri di query che puntano a colonne crittografate e decrittografa i dati recuperati dalle colonne crittografate, comportandosi in modo trasparente per l'applicazione come se le colonne non fossero crittografate.
 
 Se la funzionalità Always Encrypted non è abilitata, le query con parametri destinati alle colonne crittografate hanno esito negativo. I dati possono essere comunque recuperati dalle colonne crittografate, a condizione che non presentino parametri destinati alle colonne crittografate. Il driver tuttavia non tenta alcuna decrittografia e l'applicazione riceve i dati binari crittografati, sotto forma di matrici di byte.
 
@@ -96,11 +96,11 @@ Gli esempi seguenti illustrano come usare i driver SQLSRV e PDO_SQLSRV per inser
   -   Per il driver PDO_SQLSRV, l'utente non ha la possibilità di impostare in modo esplicito il tipo SQL di un parametro. Il driver PDO_SQLSRV consente automaticamente all'utente di determinare il tipo SQL quando si associa un parametro.
  -   Per i driver che determinano il tipo SQL, si applicano alcune limitazioni:
   -   Driver SQLSRV:
-   -   Se l'utente desidera che il driver determini i tipi SQL per le colonne crittografate, l'utente deve `sqlsrv_prepare` utilizzare `sqlsrv_execute`e.
-   -   Se `sqlsrv_query` si preferisce, l'utente è responsabile della specifica dei tipi SQL per tutti i parametri. Il tipo SQL specificato deve includere la lunghezza della stringa per i tipi di stringa e la scala e la precisione per i tipi decimali.
+   -   Se l'utente desidera che il driver determini i tipi SQL per le colonne crittografate, l'utente deve utilizzare `sqlsrv_prepare` e `sqlsrv_execute`.
+   -   Se `sqlsrv_query` è preferibile, l'utente è responsabile della specifica dei tipi SQL per tutti i parametri. Il tipo SQL specificato deve includere la lunghezza della stringa per i tipi di stringa e la scala e la precisione per i tipi decimali.
   -   Driver PDO_SQLSRV:
-   -   L'attributo `PDO::SQLSRV_ATTR_DIRECT_QUERY` Statement non è supportato in una query con parametri.
-   -   L'attributo `PDO::ATTR_EMULATE_PREPARES` Statement non è supportato in una query con parametri.
+   -   L'attributo Statement `PDO::SQLSRV_ATTR_DIRECT_QUERY` non è supportato in una query con parametri.
+   -   L'attributo Statement `PDO::ATTR_EMULATE_PREPARES` non è supportato in una query con parametri.
    
 Driver SQLSRV e [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
 ```
@@ -218,18 +218,18 @@ Questa sezione descrive categorie di errori comuni che si verificano quando si e
 #### <a name="unsupported-data-type-conversion-errors"></a>Errori di conversione dei tipi di dati non supportati
 
 Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. Per l'elenco dettagliato delle conversioni dei tipi supportati, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Per evitare errori di conversione dei tipi di dati, eseguire le operazioni seguenti:
- -   Quando si usa il driver sqlsrv `sqlsrv_prepare` con `sqlsrv_execute` e il tipo SQL, insieme alle dimensioni della colonna e il numero di cifre decimali del parametro viene determinato automaticamente.
- -   Quando si usa il driver PDO_SQLSRV per eseguire una query, viene determinato automaticamente anche il tipo SQL con le dimensioni della colonna e il numero di cifre decimali del parametro
- -   Quando si usa il driver sqlsrv `sqlsrv_query` con per eseguire una query:
+ -   Quando si usa il driver SQLSRV con `sqlsrv_prepare` e `sqlsrv_execute` il tipo SQL, insieme alle dimensioni della colonna e il numero di cifre decimali del parametro viene determinato automaticamente.
+ -   Quando si utilizza il driver PDO_SQLSRV per eseguire una query, viene determinato automaticamente anche il tipo SQL con le dimensioni della colonna e il numero di cifre decimali del parametro
+ -   Quando si usa il driver SQLSRV con `sqlsrv_query` per eseguire una query:
   -   Il tipo SQL del parametro è esattamente lo stesso del tipo della colonna di destinazione oppure è supportata la conversione dal tipo SQL al tipo della colonna.
   -   La precisione e la scala dei parametri destinati alle colonne dei tipi di dati `decimal` e `numeric` di SQL Server sono uguali a quelle configurate per la colonna di destinazione.
   -   La precisione dei parametri destinati alle colonne dei tipi di dati `datetime2`, `datetimeoffset` e `time` di SQL Server non è maggiore della precisione per la colonna di destinazione nelle query che modificano la colonna di destinazione.
- -   Non usare gli attributi `PDO::SQLSRV_ATTR_DIRECT_QUERY` dell'istruzione PDO_SQLSRV o `PDO::ATTR_EMULATE_PREPARES` in una query con parametri
+ -   Non usare gli attributi di istruzione PDO_SQLSRV `PDO::SQLSRV_ATTR_DIRECT_QUERY` o `PDO::ATTR_EMULATE_PREPARES` in una query con parametri
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Errori causati dal passaggio di testo non crittografato anziché di valori crittografati
 
 Qualsiasi valore destinato a una colonna crittografata deve essere crittografato prima di essere inviato al server. Il tentativo di inserire, modificare o filtrare in base a un valore di testo non crittografato in una colonna crittografata genera un errore. Per evitare tali errori, verificare che:
- -   Always Encrypted è abilitato (nella stringa di connessione impostare la `ColumnEncryption` parola chiave su `Enabled`).
+ -   Always Encrypted è abilitato (nella stringa di connessione impostare la parola chiave `ColumnEncryption` su `Enabled`).
  -   Per inviare i dati destinati alle colonne crittografate venga usata l'associazione dei parametri. Nell'esempio seguente viene illustrata una query che filtra in modo errato un valore letterale/costante in una colonna crittografata (SSN):
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -245,7 +245,7 @@ Considerato che Always Encrypted è una tecnologia di crittografia lato client, 
 
 Se Always Encrypted è abilitato per una connessione, per impostazione predefinita il driver ODBC chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per verificare se sono presenti parametri da crittografare e, in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro in modo da consentire al driver di crittografarli.
 
-Poiché i driver PHP consentono all'utente di associare un parametro in un'istruzione preparata senza fornire il tipo SQL, quando si associa un parametro in una connessione Always Encrypted abilitata, i driver PHP chiamano [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) sul parametro per ottenere il tipo SQL, dimensioni della colonna e cifre decimali. I metadati vengono quindi usati per chiamare [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). Queste chiamate `SQLDescribeParam` aggiuntive non richiedono round trip aggiuntivi al database poiché il driver ODBC ha già archiviato le informazioni sul lato client quando `sys.sp_describe_parameter_encryption` è stato chiamato.
+Poiché i driver PHP consentono all'utente di associare un parametro in un'istruzione preparata senza fornire il tipo SQL, quando si associa un parametro in una connessione Always Encrypted abilitata, i driver PHP chiamano [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) sul parametro per ottenere il tipo SQL, le dimensioni della colonna e le cifre decimali. I metadati vengono quindi usati per chiamare [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). Queste chiamate `SQLDescribeParam` aggiuntive non richiedono round trip aggiuntivi al database poiché il driver ODBC ha già archiviato le informazioni sul lato client quando è stato chiamato `sys.sp_describe_parameter_encryption`.
 
 Il comportamento precedente garantisce all'applicazione client un elevato livello di trasparenza: non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al driver nei parametri.
 
@@ -271,16 +271,16 @@ ODBC Driver for SQL Server in Windows include un provider di archivio chiavi mas
 
 ### <a name="using-azure-key-vault"></a>Uso di Azure Key Vault
 
-Azure Key Vault offre un modo per archiviare le chiavi di crittografia, le password e altri segreti usando Azure e può essere usato per archiviare le chiavi per Always Encrypted. Il driver ODBC per SQL Server (versione 17 e successive) include un provider dell'archivio chiavi master incorporato per Azure Key Vault. Le seguenti opzioni di connessione gestiscono la `KeyStoreAuthentication`configurazione `KeyStorePrincipalId`di Azure Key Vault `KeyStoreSecret`:, e. 
- -   `KeyStoreAuthentication`può assumere uno dei due valori stringa possibili: `KeyVaultPassword` e `KeyVaultClientSecret`. Questi valori controllano il tipo di credenziali di autenticazione usate con le altre due parole chiave.
- -   `KeyStorePrincipalId`accetta una stringa che rappresenta un identificatore per l'account che cerca di accedere al Azure Key Vault. 
+Azure Key Vault offre un modo per archiviare le chiavi di crittografia, le password e altri segreti usando Azure e può essere usato per archiviare le chiavi per Always Encrypted. Il driver ODBC per SQL Server (versione 17 e successive) include un provider dell'archivio chiavi master incorporato per Azure Key Vault. Le seguenti opzioni di connessione gestiscono la configurazione di Azure Key Vault: `KeyStoreAuthentication`, `KeyStorePrincipalId`e `KeyStoreSecret`. 
+ -   `KeyStoreAuthentication` possibile assumere uno dei due valori stringa possibili: `KeyVaultPassword` e `KeyVaultClientSecret`. Questi valori controllano il tipo di credenziali di autenticazione usate con le altre due parole chiave.
+ -   `KeyStorePrincipalId` accetta una stringa che rappresenta un identificatore per l'account che cerca di accedere al Azure Key Vault. 
      -   Se `KeyStoreAuthentication` è impostato su `KeyVaultPassword`, `KeyStorePrincipalId` deve essere il nome di un utente di Azure ActiveDirectory.
      -   Se `KeyStoreAuthentication` è impostato su `KeyVaultClientSecret`, `KeyStorePrincipalId` deve essere un ID client dell'applicazione.
- -   `KeyStoreSecret`accetta una stringa che rappresenta un segreto delle credenziali. 
+ -   `KeyStoreSecret` accetta una stringa che rappresenta un segreto delle credenziali. 
      -   Se `KeyStoreAuthentication` è impostato su `KeyVaultPassword`, `KeyStoreSecret` deve essere la password dell'utente. 
      -   Se `KeyStoreAuthentication` è impostato su `KeyVaultClientSecret`, `KeyStoreSecret` deve essere il segreto dell'applicazione associato all'ID client dell'applicazione.
 
-Tutte e tre le opzioni devono essere presenti nella stringa di connessione per utilizzare Azure Key Vault. Inoltre, `ColumnEncryption` deve essere impostato su `Enabled`. Se `ColumnEncryption` è impostato su `Disabled` ma sono presenti le opzioni Azure Key Vault, lo script verrà eseguito senza errori, ma non verrà eseguita alcuna crittografia.
+Tutte e tre le opzioni devono essere presenti nella stringa di connessione per utilizzare Azure Key Vault. Inoltre, è necessario impostare `ColumnEncryption` su `Enabled`. Se `ColumnEncryption` è impostato su `Disabled` ma le opzioni di Azure Key Vault sono presenti, lo script continuerà senza errori, ma non verrà eseguita alcuna crittografia.
 
 Gli esempi seguenti illustrano come connettersi a SQL Server usando Azure Key Vault.
 
@@ -297,7 +297,7 @@ $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "Co
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV: uso di un account Azure Active Directory:
+PDO_SQLSRV: uso di un account di Azure Active Directory:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -317,12 +317,12 @@ SQLSRV e PDO_SQLSRV:
  -   Quando si usa la funzionalità Always Encrypted e le impostazioni locali non UTF8 in Linux e macOS (ad esempio "en_US. ISO-8859-1 "), l'inserimento di dati null o una stringa vuota in una colonna char (n) crittografata potrebbe non funzionare a meno che non sia stata installata la tabella codici 1252 nel sistema
  
 Solo SQLSRV:
- -   Utilizzo `sqlsrv_query` di per il parametro di associazione senza specificare il tipo SQL
- -   Utilizzo `sqlsrv_prepare` di per l'associazione di parametri in un batch di istruzioni SQL  
+ -   Utilizzo di `sqlsrv_query` per il parametro di associazione senza specificare il tipo SQL
+ -   Utilizzo di `sqlsrv_prepare` per l'associazione di parametri in un batch di istruzioni SQL  
  
 Solo PDO_SQLSRV:
- -   `PDO::SQLSRV_ATTR_DIRECT_QUERY`attributo Statement specificato in una query con parametri
- -   `PDO::ATTR_EMULATE_PREPARE`attributo Statement specificato in una query con parametri
+ -   `PDO::SQLSRV_ATTR_DIRECT_QUERY` attributo di istruzione specificato in una query con parametri
+ -   `PDO::ATTR_EMULATE_PREPARE` attributo di istruzione specificato in una query con parametri
  -   associazione di parametri in un batch di istruzioni SQL
  
 I driver PHP ereditano inoltre le limitazioni imposte dal driver ODBC per SQL Server e il database. Vedere [limitazioni del driver ODBC quando si usano always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Always Encrypted dettagli della funzionalità](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  

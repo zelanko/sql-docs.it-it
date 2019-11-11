@@ -10,12 +10,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e91b3225087f7dac04e81f50a987ee441d110d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35d35caf3bf1d16696b88dcba9b81c2274be7234
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652215"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637845"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 
@@ -38,7 +38,7 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint  
  Per scaricare e installare il componente aggiuntivo, vedere l'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   [Componente aggiuntivo Microsoft® SQL Server 2014 Reporting Services per Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=324852)  
+-   [Componente aggiuntivo Microsoft® SQL Server 2014 Reporting Services per Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=42294)  
   
  La versione [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] del componente aggiuntivo è disponibile anche nell'Installazione guidata di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
   
@@ -53,7 +53,7 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 -   **Componente aggiuntivo SP1:** [Componente aggiuntivo Microsoft® SQL Server® 2012 SP1 Reporting Services per Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583) (https://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint 2010
 

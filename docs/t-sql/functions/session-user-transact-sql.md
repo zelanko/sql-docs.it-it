@@ -23,19 +23,19 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffda5a599b9ef54f1e36e2d45d0c6c24117ba050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022209"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843337"
 ---
-# <a name="sessionuser-transact-sql"></a>SESSION_USER (Transact-SQL)
+# <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SESSION_USER restituisce il nome utente del contesto corrente nel database corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ SESSION_USER
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>A. Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
  Nell'esempio seguente viene dichiarata una variabile di tipo `nchar`, viene assegnato il valore corrente di `SESSION_USER` a tale variabile e quindi vengono restituite la variabile e una descrizione.  
   
 ```  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>B. Utilizzo della funzione SESSION_USER con vincoli DEFAULT  
+### <a name="b-using-session_user-with-default-constraints"></a>B. Utilizzo della funzione SESSION_USER con vincoli DEFAULT  
  Nell'esempio seguente viene creata una tabella che utilizza `SESSION_USER` come vincolo `DEFAULT` per il nome della persona che registra la ricezione di una spedizione.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C: Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
  Nell'esempio seguente viene restituito l'utente della sessione corrente.  
   
 ```  
@@ -152,7 +152,7 @@ SELECT SESSION_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
