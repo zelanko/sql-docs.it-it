@@ -29,9 +29,9 @@ ms.locfileid: "71952049"
   
  Per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usare i supporti di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Per istruzioni sugli scenari di distribuzione avanzati, vedere l'elenco di controllo [Deployment: Reporting Services, Power View e PowerPivot per SharePoint @ no__t-0 e [Deployment elenco di controllo: Scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm di SharePoint 2010 @ no__t-0.  
+ Per istruzioni sugli scenari di distribuzione avanzati, vedere elenco di controllo per la [distribuzione: Reporting Services, Power View e PowerPivot per SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [l'elenco di controllo per la distribuzione: scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm di SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Installare PowerPivot per SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
  [Installazione del provider OLE DB Analysis Services nei server di SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
