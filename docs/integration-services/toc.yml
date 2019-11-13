@@ -1466,7 +1466,7 @@
     - name: Gestione connessione Oracle
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Origine Oracle
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Destinazione Oracle
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Supporto dei tipi di dati
