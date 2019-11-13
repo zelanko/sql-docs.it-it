@@ -1,5 +1,5 @@
 ---
-title: Sys. partition_functions (Transact-SQL) | Microsoft Docs
+title: sys. partition_functions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e65e33e8fc11bbe01497758542d3b332a862a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410c52ff5a6e38e96db990713f8564c6463cfb80
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125325"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981749"
 ---
-# <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
+# <a name="syspartition_functions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una riga per ogni funzione di partizione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,21 +36,21 @@ ms.locfileid: "68125325"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della funzione di partizione. Valore univoco all'interno del database.|  
 |**function_id**|**int**|ID della funzione di partizione. Valore univoco all'interno del database.|  
-|**type**|**char(2)**|Tipo di funzione.<br /><br /> R = Intervallo|  
+|**tipo**|**char(2)**|Tipo di funzione.<br /><br /> R = Intervallo|  
 |**type_desc**|**nvarchar(60)**|Tipo di funzione.<br /><br /> RANGE|  
-|**fan-out**|**int**|Numero di partizioni create dalla funzione.|  
+|**fanout**|**int**|Numero di partizioni create dalla funzione.|  
 |**boundary_value_on_right**|**bit**|Per il partizionamento per intervalli.<br /><br /> 1 = Il valore limite è incluso nell'intervallo RIGHT del limite.<br /><br /> 0 = LEFT.|  
-|**is_system**||**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'oggetto viene utilizzato per i frammenti dell'indice full-text.<br /><br /> 0 = L'oggetto non viene utilizzato per i frammenti dell'indice full-text.|  
+|**is_system**||**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 1 = L'oggetto viene utilizzato per i frammenti dell'indice full-text.<br /><br /> 0 = L'oggetto non viene utilizzato per i frammenti dell'indice full-text.|  
 |**create_date**|**datetime**|Data di creazione della funzione.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica della funzione eseguita mediante un'istruzione ALTER.|  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo delle funzioni di partizione &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
+ [Viste &#40;del catalogo delle funzioni di partizione&#41; Transact-SQL](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [Sys. partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
+ [sys. partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   
   

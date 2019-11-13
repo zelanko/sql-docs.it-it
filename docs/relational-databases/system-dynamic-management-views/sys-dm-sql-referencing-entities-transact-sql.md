@@ -1,5 +1,5 @@
 ---
-title: DM sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090659"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982346"
 ---
-# <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
+# <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni entità nel database corrente che fa riferimento a un'altra entità definita dall'utente in base al nome. Una dipendenza tra due entità viene creata quando un'entità, detta il *entità con riferimenti*, viene visualizzato in base al nome in un'espressione SQL persistente di un'altra entità, denominata la *che fanno riferimento a entità*. Ad esempio, se un tipo definito dall'utente (UDT) è specificato come entità con riferimenti, questa funzione restituisce ogni entità definita dall'utente che nella propria definizione fa riferimento a quel tipo in base al nome. La funzione non restituisce entità negli altri database che possono fare riferimento all'entità specificata. Questa funzione deve essere eseguita nel contesto del database master perché restituisca un trigger DDL a livello di server come entità di riferimento.  
+  Restituisce una riga per ogni entità nel database corrente che fa riferimento a un'altra entità definita dall'utente in base al nome. Una dipendenza tra due entità viene creata quando un'entità, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità, detta *entità di riferimento*. Ad esempio, se un tipo definito dall'utente (UDT) è specificato come entità con riferimenti, questa funzione restituisce ogni entità definita dall'utente che nella propria definizione fa riferimento a quel tipo in base al nome. La funzione non restituisce entità negli altri database che possono fare riferimento all'entità specificata. Questa funzione deve essere eseguita nel contesto del database master perché restituisca un trigger DDL a livello di server come entità di riferimento.  
   
  È possibile usare questa funzione a gestione dinamica per creare un report sui seguenti tipi di entità del database corrente che fanno riferimento all'entità specificata:  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68090659"
   
 -   Trigger DDL a livello di server  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,14 +63,14 @@ sys.dm_sql_referencing_entities (
  *schema_name.referenced*_*entity_name*  
  Nome dell'entità a cui si fa riferimento.  
   
- *schema_name* è obbligatoria, tranne quando la classe di riferimento è PARTITION_FUNCTION.  
+ *schema_name* è necessario tranne quando la classe a cui si fa riferimento è PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* viene **nvarchar(517)** .  
+ *schema_name. referenced_entity_name* è di **tipo nvarchar (517)** .  
   
- *< Referenced_class >* :: = {oggetto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *< referenced_class >* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
   
- *< referenced_class >* viene **nvarchar**(60).  
+ *< referenced_class >* è di **tipo nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -96,39 +96,39 @@ sys.dm_sql_referencing_entities (
   
  Restituisce un errore quando l'entità a cui si fa riferimento specificata è una stored procedure numerata.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Yes|  
-|visualizzazione|Yes|Yes|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
-|stored procedure CLR|No|Yes|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
-|Funzione CLR definita dall'utente|No|Yes|  
+|Tabella|Sì*|Sì|  
+|Visualizza|Sì|Sì|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
+|stored procedure CLR|No|Sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
+|Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
-|Stored procedure estese|No|Yes|  
-|Coda|No|Yes|  
-|Sinonimo|No|Yes|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
-|Raccolta di XML Schema|No|Yes|  
-|partition (funzione)|No|Yes|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
+|Stored procedure estese|No|Sì|  
+|Coda|No|Sì|  
+|Sinonimo|No|Sì|  
+|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
+|Raccolta di XML Schema|No|Sì|  
+|Funzione di partizione|No|Sì|  
   
- \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
+ \* una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)], un tipo definito dall'utente o una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo DEFAULT.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   È richiesta l'autorizzazione CONTROL per l'oggetto a cui viene fatto riferimento. Quando l'entità a cui si fa riferimento è una funzione di partizione, è necessaria l'autorizzazione CONTROL per il database.  
   
--   Richiede l'autorizzazione SELECT per DM sql_referencing_entities. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public.  
+-   È richiesta l'autorizzazione SELECT per sys. dm_sql_referencing_entities. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public.  
   
 ### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -142,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>R. Restituzione delle entità che fanno riferimento a un'entità specificata  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Restituzione delle entità che fanno riferimento a un'entità specificata  
  Nell'esempio seguente vengono restituite le entità nel database corrente che fanno riferimento alla tabella specificata.  
   
 ```sql  
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Restituzione delle entità che fanno riferimento a un tipo specificato  
- Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il `dbo.Flag` tipo viene usato anche nella definizione di diverse colonne di `HumanResources.Employee` tabella; tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito nella tabella, viene restituita alcuna riga per il `HumanResources.Employee`nella tabella.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Restituzione delle entità che fanno riferimento a un tipo specificato  
+ Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il tipo di `dbo.Flag` viene inoltre utilizzato nella definizione di diverse colonne nella tabella `HumanResources.Employee`. Tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, di un vincolo CHECK o di un vincolo DEFAULT nella tabella, non viene restituita alcuna riga per la tabella `HumanResources.Employee`.  
   
 ```sql  
 USE AdventureWorks2012;  

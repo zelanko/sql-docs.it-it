@@ -1,5 +1,5 @@
 ---
-title: La funzione CONTAINSTABLE (Transact-SQL) | Microsoft Docs
+title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -33,23 +33,23 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64540608739f0257425eec042e4b701606170c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042923"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983206"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una tabella contenente una o più righe o nessuna riga per le colonne che includono corrispondenze più o meno esatte di singole parole e frasi, della prossimità delle parole a una certa distanza l'una dall'altra o di corrispondenze ponderate. CONTAINSTABLE viene utilizzata la [clausola FROM](../../t-sql/queries/from-transact-sql.md) di un [!INCLUDE[tsql](../../includes/tsql-md.md)] un'istruzione SELECT e viene fatto riferimento come se fosse un normale nome di tabella. Esegue una ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri.  
+  Restituisce una tabella contenente una o più righe o nessuna riga per le colonne che includono corrispondenze più o meno esatte di singole parole e frasi, della prossimità delle parole a una certa distanza l'una dall'altra o di corrispondenze ponderate. CONTAINSTABLE viene utilizzato nella [clausola from](../../t-sql/queries/from-transact-sql.md) di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] Select e viene fatto riferimento a come se fosse un normale nome di tabella. Esegue una ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri.  
   
- CONTAINSTABLE è utile per gli stessi tipi di corrispondenze come le [predicato CONTAINS](../../t-sql/queries/contains-transact-sql.md) e utilizza le stesse condizioni di ricerca CONTAINS.  
+ CONTAINSTABLE è utile per gli stessi tipi di corrispondenze del [predicato CONTAINS](../../t-sql/queries/contains-transact-sql.md) e utilizza le stesse condizioni di ricerca di Contains.  
   
  Tuttavia, a differenza di CONTAINS, le query che utilizzano la funzione CONTAINSTABLE restituiscono un valore di classificazione della pertinenza (RANK) e una chiave full-text (KEY) per ogni riga.  Per informazioni sulle forme di ricerca full-text supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -114,9 +114,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>Argomenti  
  *table*  
- Nome di una tabella indicizzata full-text. *tabella* può essere un una, due, tre o nome oggetto di database in quattro parti. L'esecuzione della ricerca in una vista può interessare solo una tabella di base con indicizzazione full-text.  
+ Nome di una tabella indicizzata full-text. *Table* può essere un nome di oggetto di database costituito da una, due, tre o quattro parti. L'esecuzione della ricerca in una vista può interessare solo una tabella di base con indicizzazione full-text.  
   
- *tabella* non è possibile specificare un nome di server e non può essere usato nelle query su server collegati.  
+ la *tabella* non può specificare un nome di server e non può essere utilizzata nelle query sui server collegati.  
   
  *column_name*  
  Nome di una o più colonne indicizzate per la ricerca full-text. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)** .  
@@ -125,29 +125,29 @@ CONTAINSTABLE
  Viene indicato che è possibile specificare più colonne, separate da virgola. *column_list*deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  \*  
- Specifica che tutti full-text in colonne con indicizzazione *tabella* deve essere utilizzato per cercare la condizione di ricerca specificato. La lingua di tutte le colonne della tabella deve essere la stessa, a meno che non sia specificato *language_term*.  
+ Specifica che tutte le colonne con indicizzazione full-text nella *tabella* devono essere utilizzate per cercare la condizione di ricerca specificata. La lingua di tutte le colonne della tabella deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  LANGUAGE *language_term*  
- È la lingua le cui risorse verranno utilizzate per l'interruzione delle parole, stemming e del thesaurus e parole non significative (o [parola non significativa](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) per la rimozione come parte della query. Questo parametro è facoltativo e può essere specificato come valore stringa, intero o esadecimale corrispondente all'identificatore delle impostazioni locali (LCID) di una lingua. Se si specifica *language_term*, la lingua rappresentata dall'argomento verrà applicata a tutti gli elementi della condizione di ricerca. Se non si specifica alcun valore, verrà utilizzata la lingua full-text della colonna.  
+ Lingua le cui risorse verranno utilizzate per la rimozione di parole, stemming e thesaurus e la rimozione di parole non significative (o [parola non significativa](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) nell'ambito della query. Questo parametro è facoltativo e può essere specificato come valore stringa, intero o esadecimale corrispondente all'identificatore delle impostazioni locali (LCID) di una lingua. Se si specifica *language_term*, la lingua rappresentata dall'argomento verrà applicata a tutti gli elementi della condizione di ricerca. Se non si specifica alcun valore, verrà utilizzata la lingua full-text della colonna.  
   
  Se documenti di lingue diverse vengono archiviati insieme come oggetti BLOB in una singola colonna, l'identificatore delle impostazioni locali (LCID) di un documento specifico determina la lingua da utilizzare per indicizzarne il contenuto. Se quando si esegue una query su una colonna di questo tipo si specifica *LANGUAGE**language_term*, è possibile aumentare la probabilità di una corrispondenza soddisfacente.  
   
- Quando specificato come stringa, *language_term* corrisponde alla **alias** valore della colonna nel [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) visualizzazione compatibilità.  La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
+ Quando viene specificato come stringa, *language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La stringa deve essere racchiusa tra virgolette singole, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
   
  Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirà in Unicode.  
   
  Se la lingua specificata non è valida o non vi sono risorse installate corrispondenti a tale lingua, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. Per usare le risorse della lingua neutra, specificare 0x0 per *language_term*.  
   
  *top_n_by_rank*  
- Specifica che solo le *n* corrispondenze di pertinenza maggiore in ordine decrescente, vengono restituite. Si applica solo quando un valore intero, *n*, viene specificato. Se il parametro *top_n_by_rank* viene combinato con altri parametri, la query potrebbe restituire un numero inferiore di righe rispetto al numero di righe effettivamente corrispondenti a tutti i predicati. *top_n_by_rank* consente di migliorare le prestazioni delle query richiamando solo le occorrenze più attinenti.  
+ Specifica che vengono restituite solo le *n* corrispondenze con classificazione più alta, in ordine decrescente. Si applica solo quando viene specificato un valore integer, *n*. Se il parametro *top_n_by_rank* viene combinato con altri parametri, la query potrebbe restituire un numero inferiore di righe rispetto al numero di righe effettivamente corrispondenti a tutti i predicati. *top_n_by_rank* consente di aumentare le prestazioni delle query richiamando solo i riscontri più rilevanti.  
   
  <contains_search_condition>  
- Specifica il testo da cercare in *column_name* e le condizioni della ricerca. Per informazioni sulle condizioni di ricerca, vedere [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ Specifica il testo da cercare in *column_name* e le condizioni della ricerca. Per informazioni sulle condizioni di ricerca, [vedere &#40;Contains Transact&#41;-SQL](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I predicati e le funzioni full-text possono essere utilizzati in una singola tabella, specificata in modo implicito nel predicato FROM. Per cercare in più tabelle, utilizzare una tabella unita in join nella clausola FROM, che consente di eseguire una ricerca in un set di risultati prodotto da due o più tabelle.  
   
- La tabella restituita include una colonna denominata **chiave** che contiene valori chiave full-text. Ogni tabella indicizzata full-text è una colonna i cui valori sono necessariamente univoci e i valori restituiti nella **chiave** colonna sono i valori chiave full-text delle righe che soddisfano i criteri di selezione specificati nella ricerca del predicato contains condizione. Il **TableFulltextKeyColumn** proprietà, ottenuta dalla funzione OBJECTPROPERTYEX, fornisce l'identità di questa colonna chiave univoca. Per ottenere l'ID della colonna associata alla chiave full-text dell'indice full-text, utilizzare **Sys. fulltext_indexes**. Per altre informazioni, vedere [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La tabella restituita include una colonna denominata **Key** che contiene i valori della chiave full-text. Ogni tabella con indicizzazione full-text include una colonna i cui valori sono garantiti univoci e i valori restituiti nella colonna **chiave** sono i valori chiave full-text delle righe che corrispondono ai criteri di selezione specificati nella condizione di ricerca Contains. La proprietà **TableFulltextKeyColumn** , ottenuta dalla funzione OBJECTPROPERTYEX, fornisce l'identità della colonna chiave univoca. Per ottenere l'ID della colonna associata alla chiave full-text dell'indice full-text, utilizzare **sys. fulltext_indexes**. Per ulteriori informazioni, vedere [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Per ottenere le righe desiderate dalla tabella originale, specificare un join per le righe CONTAINSTABLE. La forma tipica della clausola FROM per un'istruzione SELECT che utilizza la funzione CONTAINSTABLE è la seguente:  
   
@@ -158,19 +158,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- La tabella restituita dalla funzione CONTAINSTABLE include una colonna denominata **RANK**. Il **RANK** colonna è un valore (da 0 a 1000) per ogni riga che indica come una riga corrispondente ai criteri selezionati. Questo valore di pertinenza viene normalmente utilizzato nell'istruzione SELECT in uno dei modi seguenti:  
+ La tabella prodotta da CONTAINSTABLE include una colonna denominata **Rank**. La colonna Rank è un valore (compreso tra 0 e 1000) per ogni riga che indica il **livello** di corrispondenza tra una riga e i criteri di selezione. Questo valore di pertinenza viene normalmente utilizzato nell'istruzione SELECT in uno dei modi seguenti:  
   
 -   Nella clausola ORDER BY per ottenere le righe a cui sono stati assegnati i valori di pertinenza massimi nelle prime posizioni della tabella.  
   
 -   Nell'elenco di selezione per visualizzare il valore di pertinenza assegnato a ogni riga.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione sono disponibili solo per gli utenti che dispongono dei privilegi appropriati per l'istruzione SELECT nella tabella o nelle colonne della tabella a cui viene fatto riferimento.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example"></a>R. Esempio semplice  
- Nell'esempio seguente crea e popola una tabella semplice delle due colonne, elenco di 3 provincie e i colori nei flag. L'it crea e popola un catalogo full-text e un indice nella tabella. L'oggetto **CONTAINSTABLE** viene illustrata la sintassi. In questo esempio viene illustrato come il valore di pertinenza cresce superiore quando il valore di ricerca viene soddisfatto più volte. Nell'ultima query, Tanzanie che contiene sia verde e nera ha priorità più alta rispetto a Italia che contengono solo uno dei colori sottoposti a query.  
+### <a name="a-simple-example"></a>A. Esempio semplice  
+ Nell'esempio seguente viene creata e popolata una semplice tabella di due colonne, che elenca 3 contee e i colori nei rispettivi flag. Consente di creare e popolare un indice e un catalogo full-text nella tabella. Viene quindi illustrata la sintassi **CONTAINSTABLE** . In questo esempio viene illustrata la crescita del valore di rango superiore quando il valore di ricerca viene soddisfatto più volte. Nell'ultima query, Tanzania che contiene sia il verde che il nero hanno un rango superiore rispetto all'Italia, che contiene solo uno dei colori sottoposti a query.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -190,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>B. Restituzione di valori di rango  
+### <a name="b-returning-rank-values"></a>b. Restituzione di valori di rango  
  Nell'esempio seguente viene eseguita una ricerca dei nomi di prodotto che includono le parole "frame", "wheel" o "tire". Ogni parola viene ponderata in modo diverso. Per ogni riga restituita corrispondente ai criteri di ricerca, viene illustrata la prossimità relativa (valore di rango assegnato) della corrispondenza. Le righe di rango superiore vengono restituite per prime.  
   
 ```  
@@ -211,9 +211,9 @@ GO
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.|  
   
- Nell'esempio seguente viene utilizzato NEAR per cercare "`bracket`" e "`reflector`" vicini nella tabella `Production.Document`. Vengono restituite solo le righe con un valore di pertinenza pari o superiori a 50.  
+ Nell'esempio seguente viene utilizzato NEAR per cercare "`bracket`" e "`reflector`" vicini nella tabella `Production.Document`. Vengono restituite solo le righe con valore di pertinenza pari a 50 o superiore.  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +232,7 @@ GO
 > [!NOTE]  
 >  Se una query full-text non specifica un valore intero come distanza massima, un documento che contiene solo riscontri il cui gap è maggiore di 100 termini logici non soddisferà i requisiti NEAR e il relativo rango sarà pari a 0.  
   
-### <a name="d-returning-top-5-ranked-results-using-topnbyrank"></a>D. Restituzione dei primi 5 valori con pertinenza maggiore utilizzando top_n_by_rank  
+### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. Restituzione dei primi 5 valori con pertinenza maggiore utilizzando top_n_by_rank  
  Nell'esempio seguente viene restituita la descrizione dei primi 5 prodotti la cui colonna `Description` include la parola "aluminum" accanto alla parola "light" o "lightweight".  
   
 ```  
@@ -278,10 +278,10 @@ GO
 ```  
   
 > [!NOTE]  
->  Il linguaggio *language_term* argumentis non necessari per l'uso di *top_n_by_rank.*  
+>  Il linguaggio *language_term* argomento non è obbligatorio per l'utilizzo di *top_n_by_rank.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Limitare i risultati della ricerca mediante RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
+ [Limitare i risultati della ricerca con RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
  [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   

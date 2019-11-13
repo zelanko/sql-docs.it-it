@@ -1,5 +1,5 @@
 ---
-title: data_spaces (Transact-SQL) | Microsoft Docs
+title: sys. data_spaces (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f165789bc0965278f74acd00270d2b92e9e69f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 203c16e818d8a53cd025065d9c49ef8c5aeebcfd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940270"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983185"
 ---
-# <a name="sysdataspaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
+# <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contiene una riga per ogni spazio dati. Può essere un filegroup, uno schema di partizione o un filegroup di dati FILESTREAM.  
@@ -36,22 +36,22 @@ ms.locfileid: "67940270"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nome dello spazio dati, univoco all'interno del database.|  
 |data_space_id|**int**|Numero identificativo dello spazio dati, univoco all'interno del database.|  
-|type|**char(2)**|Tipo di spazio dati:<br /><br /> FG = filegroup<br /><br /> FD = filegroup di dati FILESTREAM<br /><br /> FX = filegroup di tabelle con ottimizzazione per la memoria<br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PS = schema di partizione|  
-|type_desc|**nvarchar(60)**|Descrizione del tipo di spazio dati:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
+|type|**char(2)**|Tipo di spazio dati:<br /><br /> FG = filegroup<br /><br /> FD = filegroup di dati FILESTREAM<br /><br /> FX = filegroup di tabelle con ottimizzazione per la memoria<br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> PS = schema di partizione|  
+|type_desc|**nvarchar(60)**|Descrizione del tipo di spazio dati:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = spazio dati predefinito. Viene utilizzato quando non si specifica un filegroup o una partizione in un'istruzione CREATE TABLE o CREATE INDEX.<br /><br /> 0 = non è lo spazio dati predefinito.|  
-|is_system|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Lo spazio dei dati viene utilizzato per i frammenti dell'indice full-text.<br /><br /> 0 = Lo spazio dei dati non viene utilizzato per i frammenti dell'indice full-text.|  
+|is_system|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 1 = Lo spazio dei dati viene utilizzato per i frammenti dell'indice full-text.<br /><br /> 0 = Lo spazio dei dati non viene utilizzato per i frammenti dell'indice full-text.|  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo public. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo public. Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spazi dei dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)   
+   [Transact &#40;-SQL&#41; per spazi dati](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [L'esecuzione di query nel catalogo di sistema SQL Server domande frequenti](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Domande frequenti sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056304"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982113"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Acquisisce dati diagnostici e informazioni di integrità su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare potenziali errori. La procedura viene eseguita in modalità di ripetizione e i risultati vengono inviati periodicamente. Può essere richiamata da una connessione normale o di applicazione livello dati.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica l'intervallo di tempo in cui la stored procedure verrà eseguita ripetutamente per inviare informazioni sull'integrità.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica l'intervallo di tempo in cui il stored procedure viene eseguito ripetutamente per inviare informazioni sull'integrità.  
   
- *repeat_interval_in_seconds* viene **int** con il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
+ *repeat_interval_in_seconds* è di **tipo int** e il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
   
  Se questo parametro non viene specificato o se il valore specificato è 0, la stored procedure restituirà i dati una sola volta, quindi verrà chiusa.  
   
@@ -59,32 +59,32 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
-|**component_type**|**sysname**|Indica se la riga contiene le informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> instance<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**nome_componente**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
+|**component_type**|**sysname**|Indica se la riga contiene informazioni per il componente a livello di istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *nome \<del gruppo di disponibilità >*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Sconosciuto<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
+|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: sconosciuto<br /><br /> 1: Pulisci<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
   
  Di seguito sono riportate le descrizioni dei cinque componenti:  
   
--   **system**: Raccoglie i dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **System**: raccoglie i dati da una prospettiva di sistema su spinlock, condizioni di elaborazione gravi, attività non cedenti, errori di pagina e utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **risorsa**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **risorsa**: raccoglie i dati dal punto di vista delle risorse su memoria fisica e virtuale, pool di buffer, pagine, cache e altri oggetti memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **query_processing**: Raccoglie i dati da una prospettiva di elaborazione delle query in cui il thread di lavoro, attività, tipi di attesa, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **query_processing**: raccoglie i dati da una prospettiva di elaborazione delle query sui thread di lavoro, le attività, i tipi di attesa, le sessioni con utilizzo intensivo della CPU e le attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **io_subsystem**: Raccoglie i dati in fase di IO. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
+-   **io_subsystem**: raccoglie i dati su io. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
   
--   **gli eventi**: Raccoglie i dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, incluse informazioni dettagliate sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, dalla memoria, il monitoraggio dell'utilità di pianificazione, pool di buffer, gli spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
+-   **eventi**: raccoglie dati e superfici attraverso la stored procedure sugli errori e gli eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, la memoria insufficiente, il monitoraggio dell'utilità di pianificazione, il pool di buffer, gli spinlock, la sicurezza e la connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **\<nome del gruppo di disponibilità >** : Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
+-   **\<nome del gruppo di disponibilità >** : raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup").  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
   
 Nella tabella seguente viene eseguito il mapping dei componenti agli stati di integrità associati.  
   
-|Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
+|Components|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
 |resource|x|x|x||  
@@ -95,9 +95,9 @@ Nella tabella seguente viene eseguito il mapping dei componenti agli stati di in
 La (x) in ogni riga rappresenta gli stati di integrità validi per il componente. Ad esempio, lo stato di io_subsystem potrà essere pulito o avviso. Non verranno visualizzati gli stati di errore.  
  
 > [!NOTE]
-> Esecuzione di stored procedure sp_server_diagnostics interno viene implementato in un thread con priorità alta preemptive.
+> L'esecuzione di sp_server_diagnostics procedura interna è implementata in un thread preemptive con priorità alta.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  

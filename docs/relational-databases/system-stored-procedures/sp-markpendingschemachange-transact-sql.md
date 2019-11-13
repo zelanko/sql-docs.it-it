@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a4d8864c28cb3569d4177103d10dd4d3da9b2e3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56ed176d8b4b29e1ed4caafabd0893b7a33b1293
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029979"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962387"
 ---
-# <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
+# <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Stored procedure utilizzata per un migliore supporto delle pubblicazioni di tipo merge, in quanto consente agli amministratori di selezionare le modifiche dello schema in sospeso da ignorare, in modo che non vengano replicate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -40,23 +40,22 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @schemaversion = ] schemaversion` Identifica una modifica dello schema in sospeso. *SchemaVersion* viene **int**, con valore predefinito è **0**. Uso [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
+`[ @schemaversion = ] schemaversion` identifica una modifica dello schema in sospeso. *SchemaVersion* è di **tipo int**e il valore predefinito è **0**. Utilizzare [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
   
-`[ @status = ] 'status'` È di fatto una modifica dello schema in sospeso verrà ignorata. *lo stato* viene **nvarchar(10)** con valore predefinito è **active**. Se il valore di *lo stato* viene **ignorato**, quindi non verrà replicata la modifica dello schema selezionato.  
+`[ @status = ] 'status'` indica se una modifica dello schema in sospeso verrà ignorata. *status* è di **tipo nvarchar (10)** e il valore predefinito è **Active**. Se il valore di *status* viene **ignorato**, la modifica dello schema selezionata non verrà replicata.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_markpendingschemachange** viene usato con la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_markpendingschemachange** viene utilizzato con la replica di tipo merge.  
   
- **sp_markpendingschemachange** è una stored procedure progettata per il supporto della replica di tipo merge e deve essere utilizzata solo quando altre azioni correttive, ad esempio la reinizializzazione, non sono stato possibile risolvere la situazione o sono troppo onerosi in condizioni delle prestazioni.  
+ **sp_markpendingschemachange** è un stored procedure progettato per supportare la replica di tipo merge e deve essere utilizzato solo quando altre azioni correttive, ad esempio la reinizializzazione, non riescono a correggere la situazione o sono troppo onerose in termini di prestazioni.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_markpendingschemachange**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_markpendingschemachange**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

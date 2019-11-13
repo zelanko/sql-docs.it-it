@@ -20,20 +20,20 @@ ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd33a84393fb88e0a2a8cdf4d04df6da9883ba28
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a01dc7df9a8269190ae1c1c3cf05de3adaecc662
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262637"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982318"
 ---
-# <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
+# <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce informazioni sulle transazioni a livello di database.  
   
 > [!NOTE]  
->  Chiamare questa DMV dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_tran_database_transactions**.  
+>  Per chiamare questa DMV da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys. dm_pdw_nodes_tran_database_transactions**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -41,27 +41,27 @@ ms.locfileid: "68262637"
 |database_id|**int**|ID del database associato alla transazione.|  
 |database_transaction_begin_time|**datetime**|Ora in cui il database viene coinvolto nella transazione. In particolare, si tratta dell'ora del primo record di log nel database per la transazione.|  
 |database_transaction_type|**int**|1 = Transazione di lettura/scrittura<br /><br /> 2 = Transazione di sola lettura<br /><br /> 3 = Transazione di sistema|  
-|database_transaction_state|**int**|1 = La transazione non è stata inizializzata.<br /><br /> 3 = La transazione è stata inizializzata ma non ha generato alcun record di log.<br /><br /> 4 = La transazione ha generato record di log.<br /><br /> 5 = La transazione è stata preparata.<br /><br /> 10 = È stato eseguito il commit della transazione.<br /><br /> 11 = È stato eseguito il rollback della transazione.<br /><br /> 12 = L'esecuzione del commit della transazione è in corso. (Il record del log viene generato, ma non è stato materializzato o persistente.)|  
+|database_transaction_state|**int**|1 = La transazione non è stata inizializzata.<br /><br /> 3 = La transazione è stata inizializzata ma non ha generato alcun record di log.<br /><br /> 4 = La transazione ha generato record di log.<br /><br /> 5 = La transazione è stata preparata.<br /><br /> 10 = È stato eseguito il commit della transazione.<br /><br /> 11 = È stato eseguito il rollback della transazione.<br /><br /> 12 = L'esecuzione del commit della transazione è in corso. (Il record di log viene generato ma non è stato materializzato o reso permanente).|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|database_transaction_log_record_count|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di record di log generati nel database per la transazione.|  
-|database_transaction_replicate_record_count|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di record di log generati nel database per la transazione che viene replicato.|  
-|database_transaction_log_bytes_used|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di byte finora utilizzati nel log del database per la transazione.|  
-|database_transaction_log_bytes_reserved|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di byte riservati all'utilizzo nel log del database per la transazione.|  
-|database_transaction_log_bytes_used_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di byte finora utilizzati nel log del database per le transazioni di sistema per conto della transazione.|  
-|database_transaction_log_bytes_reserved_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di byte riservati per l'utilizzo nel log del database per le transazioni di sistema per conto della transazione.|  
-|database_transaction_begin_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di sequenza del file di log (LSN) del record di inizio per la transazione nel log del database.|  
-|database_transaction_last_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del log registrato più di recente per la transazione nel log del database.|  
-|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del punto di salvataggio più recente per la transazione nel log del database.|  
-|database_transaction_commit_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del record di log del commit per la transazione nel log del database.|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN fino al quale è stato eseguito il rollback più recente. Se nessun rollback ha avuto luogo, il valore sarà MaxLSN.|  
-|database_transaction_next_undo_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del record successivo da annullare.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
+|database_transaction_log_record_count|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di record di log generati nel database per la transazione.|  
+|database_transaction_replicate_record_count|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di record di log generati nel database per la transazione replicata.|  
+|database_transaction_log_bytes_used|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte finora utilizzati nel log del database per la transazione.|  
+|database_transaction_log_bytes_reserved|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte riservati all'utilizzo nel log del database per la transazione.|  
+|database_transaction_log_bytes_used_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte finora utilizzati nel log del database per le transazioni di sistema per conto della transazione.|  
+|database_transaction_log_bytes_reserved_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte riservati per l'utilizzo nel log del database per le transazioni di sistema per conto della transazione.|  
+|database_transaction_begin_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di sequenza del file di log (LSN) del record di inizio per la transazione nel log del database.|  
+|database_transaction_last_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del log registrato più di recente per la transazione nel log del database.|  
+|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del punto di salvataggio più recente per la transazione nel log del database.|  
+|database_transaction_commit_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record di log del commit per la transazione nel log del database.|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN fino al quale è stato eseguito il rollback più recente. Se non si è verificato alcun rollback, il valore è MaxLSN.|  
+|database_transaction_next_undo_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record successivo da annullare.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
+Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_tran_active_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   

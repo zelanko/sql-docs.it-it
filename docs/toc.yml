@@ -1759,7 +1759,7 @@
               href: relational-databases/tables/table-properties-ssms.md
             - name: Proprietà delle colonne
               href: relational-databases/tables/column-properties-general-page.md
-    - name: Rilevamento modifiche
+    - name: Rilevare le modifiche
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
         - name: Change Data Capture
@@ -7809,7 +7809,7 @@
               href: master-data-services/change-an-attribute-group-name-master-data-services.md
             - name: Eliminare un gruppo di attributi
               href: master-data-services/delete-an-attribute-group-master-data-services.md
-            - name: Rilevamento delle modifiche
+            - name: Rilevamento modifiche
               href: master-data-services/change-tracking-master-data-services.md
               items:
                 - name: Aggiungere attributi ad un gruppo rilevamento modifiche
@@ -13182,7 +13182,7 @@
               href: relational-databases/system-functions/sys-fn-all-changes-capture-instance-transact-sql.md
             - name: sys.fn_net_changes_<capture_instance>
               href: relational-databases/system-functions/sys-fn-net-changes-capture-instance-transact-sql.md
-        - name: Rilevamento delle modifiche
+        - name: Rilevamento modifiche
           href: relational-databases/system-functions/change-tracking-functions-transact-sql.md
           items:
             - name: CHANGETABLE

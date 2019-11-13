@@ -22,22 +22,22 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059097"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982985"
 ---
-# <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
+# <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Legge file creati dalla destinazione asincrona dei file degli eventi estesi. Viene restituito un evento per riga in formato XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accettare i risultati della traccia generati in formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Estesi supportano solo gli eventi i risultati della traccia in formato XEL. È consigliabile utilizzare SQL Server Management Studio per leggere i risultati della traccia in formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accettano i risultati della traccia generati in formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gli eventi estesi supportano solo i risultati della traccia in formato XEL. È consigliabile utilizzare SQL Server Management Studio per leggere i risultati della traccia in formato XEL.    
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,22 +48,22 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argomenti  
  *path*  
- Percorso dei file da leggere. *percorso* può contenere caratteri jolly e può includere il nome di un file. *percorso* viene **nvarchar(260)** . Non prevede alcun valore predefinito. Nel contesto del Database SQL di Azure, questo valore è un URL HTTP a un file in archiviazione di Azure.
+ Percorso dei file da leggere. il *percorso* può contenere caratteri jolly e includere il nome di un file. *path* è di **tipo nvarchar (260)** . Non prevede alcun valore predefinito. Nel contesto del database SQL di Azure, questo valore è un URL HTTP di un file in archiviazione di Azure.
   
  *mdpath*  
- Il percorso del file di metadati che corrisponde al file o ai file specificati dal *percorso* argomento. *mdpath* viene **nvarchar(260)** . Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
+ Percorso del file di metadati che corrisponde al file o ai file specificati dall'argomento *path* . *mdpath* è di **tipo nvarchar (260)** . Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non richiede la *mdpath* parametro. È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non richiede il parametro *mdpath* . È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
   
  *initial_file_name*  
- Il primo file da leggere dal *percorso*. *initial_file_name* viene **nvarchar(260)** . Non prevede alcun valore predefinito. Se **null** è specificato come argomento di tutti i file trovati in *percorso* vengono letti.  
+ Primo file da leggere dal *percorso*. *initial_file_name* è di **tipo nvarchar (260)** . Non prevede alcun valore predefinito. Se viene specificato **null** come argomento, vengono letti tutti i file trovati nel *percorso* .  
   
 > [!NOTE]  
->  *initial_file_name* e *initial_offset* sono argomenti accoppiati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
+>  *initial_file_name* e *initial_offset* sono argomenti abbinati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
   
  *initial_offset*  
- Utilizzato per specificare l'ultimo offset letto precedentemente e consente di ignorare tutti gli eventi fino all'offset (incluso). L'enumerazione degli eventi inizia dopo l'offset specificato. *initial_offset* viene **bigint**. Se **null** viene specificato come argomento l'intero file verrà letto.  
+ Utilizzato per specificare l'ultimo offset letto precedentemente e consente di ignorare tutti gli eventi fino all'offset (incluso). L'enumerazione degli eventi inizia dopo l'offset specificato. *initial_offset* è di tipo **bigint**. Se viene specificato **null** come argomento, viene letto l'intero file.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -75,18 +75,18 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Contenuto dell'evento in formato XML. Non ammette i valori Null.|  
 |file_name|**nvarchar(260)**|Nome del file che contiene l'evento. Non ammette i valori Null.|  
 |file_offset|**bigint**|Offset del blocco nel file che contiene l'evento. Non ammette i valori Null.|  
-|timestamp_utc|**datetime2**|**Si applica a** : da [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
+|timestamp_utc|**datetime2**|**Si applica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
-## <a name="remarks"></a>Note  
- Leggere i risultati di grandi dimensioni imposta eseguendo **Sys. fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] può comportare un errore. Usare la **risultati in un File** modalità (**Ctrl + Maiusc + F**) per esportare set di risultati di grandi dimensioni in un file e invece di leggere il file con un altro strumento.  
+## <a name="remarks"></a>Osservazioni  
+ La lettura di set di risultati di grandi dimensioni tramite l'esecuzione di **sys. fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] può causare un errore. Usare i **Risultati in modalità file** (**CTRL + MAIUSC + F**) per esportare set di risultati di grandi dimensioni in un file e leggere il file con un altro strumento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-data-from-file-targets"></a>R. Recupero di dati da destinazioni di file  
+### <a name="a-retrieving-data-from-file-targets"></a>A. Recupero di dati da destinazioni di file  
  Nell'esempio seguente vengono restituite tutte le righe di tutti i file. Nell'esempio le destinazioni di file e i metafile si trovano nella cartella della traccia in C:\unità.  
   
 ```  

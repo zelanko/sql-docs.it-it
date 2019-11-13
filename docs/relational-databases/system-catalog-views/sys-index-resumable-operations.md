@@ -1,7 +1,7 @@
 ---
 title: sys. index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,18 +19,18 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227201"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980308"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys. index_resumable_operations** è una vista di sistema che monitora e controlla lo stato di esecuzione corrente per la ricompilazione indici ripristinabili.  
-**Si applica a**: SQL Server 2017 e database SQL di Azure
+**sys. index_resumable_operations** è una vista di sistema che monitora e controlla lo stato di esecuzione corrente per la ricompilazione o la creazione di indici ripristinabili.  
+**Si applica a**: SQL Server (2017 e versioni successive) e al database SQL di Azure
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -48,13 +48,13 @@ ms.locfileid: "71227201"
 |**percent_complete**|**real**|Stato dell'operazione di indice completato in% (non nullable).|
 |**page_count**|**bigint**|Numero totale di pagine di indice allocate dall'operazione di compilazione dell'indice per i nuovi indici di mapping e non nullable.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="example"></a>Esempio
 
- Elencare tutte le operazioni di ricompilazione dell'indice ripristinabili in stato di sospensione.
+ Elencare tutte le operazioni di creazione o ricompilazione di indici ripristinabili in stato di sospensione.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

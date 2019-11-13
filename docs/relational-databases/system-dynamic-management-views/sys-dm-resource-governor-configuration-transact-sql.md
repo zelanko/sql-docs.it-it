@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 00b425e5efd441868bfa763fe544827bd7279dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d37a6ad94056007dd7c941d53ce52b4b84498a9
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067793"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983297"
 ---
-# <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
+# <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga che contiene lo stato corrente di configurazione in memoria di Resource Governor.  
@@ -33,11 +33,11 @@ ms.locfileid: "68067793"
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|ID della funzione di classificazione attualmente utilizzata da Resource Governor. Restituisce un valore di 0 se non è utilizzata alcuna funzione. Non ammette i valori Null.<br /><br /> **Nota:** Questa funzione viene usata per classificare le nuove richieste e utilizza regole per indirizzare le richieste al gruppo di carico di lavoro appropriato. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|classifier_function_id|**int**|ID della funzione di classificazione attualmente utilizzata da Resource Governor. Restituisce un valore di 0 se non è utilizzata alcuna funzione. Non ammette i valori Null.<br /><br /> **Nota:** Questa funzione viene utilizzata per classificare le nuove richieste e utilizza le regole per indirizzare queste richieste al gruppo di carico di lavoro appropriato. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_reconfiguration_pending|**bit**|Indica se le modifiche a un gruppo o a un pool sono state realizzate o meno con l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE, senza che siano state applicate alla configurazione in memoria. Il valore restituito è uno dei seguenti:<br /><br /> 0 - Non è richiesta un'istruzione di riconfigurazione.<br /><br /> 1 - È richiesta un'istruzione di riconfigurazione o un riavvio del server per applicare le modifiche di configurazione in sospeso.<br /><br /> **Nota:** Il valore restituito è sempre 0 quando Resource Governor è disabilitato.<br /><br /> Non ammette i valori Null.|  
-|max_outstanding_io_per_volume|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero massimo di operazioni di I/O in sospeso per volume.|  
+|max_outstanding_io_per_volume|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Numero massimo di operazioni di I/O in sospeso per volume.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa vista a gestione dinamica mostra la configurazione in memoria. Per vedere i metadati di configurazione memorizzati, utilizzare la vista del catalogo corrispondente.  
   
  Nell'esempio seguente viene illustrato come ottenere e confrontare i valori dei metadati archiviati e i valori in memoria della configurazione di Resource Governor.  
@@ -61,7 +61,7 @@ sys.dm_resource_governor_configuration;
 go  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Vedere anche  

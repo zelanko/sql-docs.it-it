@@ -20,12 +20,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313733"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983179"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "72313733"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID del file all'interno del database.|  
 |**file_guid**|**uniqueidentifier**|GUID del file.<br /><br /> NULL = il database è stato aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valido per SQL Server 2005 e versioni precedenti).|  
-|**type**|**tinyint**|Tipo di file:<br /><br /> 0 = Righe (include file di cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] indicheranno un tipo di file 0).|  
-|**type_desc**|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS (include file di cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (cataloghi full-text precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|**tipo**|**tinyint**|Tipo di file:<br/><br /> 0 = righe<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = full-text|  
+|**type_desc**|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Il valore può essere uguale o maggiore di 0. Un valore uguale a 0 rappresenta il file di log del database, mentre un valore maggiore di 0 rappresenta l'ID del filegroup in cui è archiviato il file di dati.|  
 |**name**|**sysname**|Nome logico del file nel database.|  
 |**physical_name**|**nvarchar(260)**|Nome del file del sistema operativo. Se il database è ospitato da una [replica secondaria leggibile](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indica il percorso del file del database di replica primaria. Per il percorso file corretto di un database secondario leggibile, eseguire una query su [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Stato del file:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|**state_desc**|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md).|  
+|**state_desc**|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [File States](../../relational-databases/databases/file-states.md) (Stati del file).|  
 |**size**|**int**|Dimensioni del file in pagine da 8 KB.<br /><br /> 0 = Non applicabile<br /><br /> Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Per i contenitori del filegroup FILESTREAM, le dimensioni riflettono le dimensioni correnti utilizzate del contenitore.|  
 |**max_size**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Non è consentito alcun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Per i contenitori del filegroup FILESTREAM, max_size riflette la dimensione massima del contenitore.<br /><br /> Si noti che i database aggiornati con dimensioni illimitate del file di log segnaleranno-1 per le dimensioni massime del file di log.|  
 |**growth**|**int**|0 = La dimensione del file è fissa e non aumenterà.<br /><br /> > 0 = il file aumenterà automaticamente.<br /><br /> Se is_percent_growth = 0, il valore dell'aumento di dimensioni è espresso in unità di pagine da 8 KB, con arrotondamento ai 64 KB successivi.<br /><br /> Se is_percent_growth = 1, il valore dell'aumento di dimensioni è espresso come percentuale (numero intero).|  
@@ -67,8 +67,8 @@ ms.locfileid: "72313733"
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.database_files subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non rispecchiare lo spazio su disco effettivamente disponibile.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Esempi  
 L'istruzione seguente restituisce il nome, le dimensioni del file e la quantità di spazio vuoto per ogni file di database.
@@ -79,14 +79,14 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Per altre informazioni sull'uso di [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [determinazione delle dimensioni del database nel database SQL di Azure V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) nel Blog del team di consulenza clienti di SQL.
+Per altre informazioni sull'uso di [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [determinazione delle dimensioni del database in database SQL di Azure V12 nel](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) Blog del team di consulenza clienti di SQL.
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Stati File](../../relational-databases/databases/file-states.md)   
+   [Stati file](../../relational-databases/databases/file-states.md)  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

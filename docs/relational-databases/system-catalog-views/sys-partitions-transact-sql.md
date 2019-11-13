@@ -20,12 +20,12 @@ ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d56671fd3c1dbd38cc2ff4bc4d9f4331e5484b91
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2531dde9237734d3c6eb4b3ea96ed2ac18e9d399
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305030"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982803"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "72305030"
 |partition_number|**int**|Numero di partizione in base 1 all'interno dell'indice o dell'heap di appartenenza. Per le tabelle o gli indici non partizionati, il valore di questa colonna è 1.|  
 |hobt_id|**bigint**|Indica l'ID del heap o albero B di dati (HoBT) che contiene le righe per la partizione.|  
 |rows|**bigint**|Indica il numero approssimativo di righe nella partizione.|  
-|filestream_filegroup_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'ID del filegroup FILESTREAM archiviato su questa partizione.|  
-|data_compression|**tinyint**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Nota:** Gli indici full-text verranno compressi in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|filestream_filegroup_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica l'ID del filegroup FILESTREAM archiviato su questa partizione.|  
+|data_compression|**tinyint**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNStore: **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive<br />4 = COLUMNSTORE_ARCHIVE: **si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive<br /><br /> **Nota:** Gli indici full-text verranno compressi in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |data_compression_desc|**nvarchar(60)**|Indica lo stato di compressione per ogni partizione. I valori possibili per le tabelle rowstore sono NONE, ROW e PAGE. I valori possibili per le tabelle columnstore sono COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 185ad0ad33419b20fffae9bff3e5562761ea7b31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771167"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962385"
 ---
-# <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
+# <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Consente di visualizzare o modificare le proprietà del [!INCLUDE[msCoName](../../includes/msconame-md.md)] server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. Questa stored procedure viene eseguita nel database di distribuzione.  
+  Consente di visualizzare o modificare le proprietà del server di pubblicazione non [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa stored procedure viene eseguita nel database di distribuzione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +39,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** = ] **'***publisher***'**  
- Nome del server di pubblicazione eterogeneo. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione eterogeneo. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ **@propertyname** =] **'***PropertyName***'**  
- Nome della proprietà da impostare. *PropertyName* è di **tipo sysname**. i possibili valori sono i seguenti.  
+`[ @propertyname = ] 'propertyname'` è il nome della proprietà da impostare. *PropertyName* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Il valore **Enabled** indica che è possibile creare Xactset, che è l'impostazione predefinita. Il valore **disabled** indica che i Xactset esistenti vengono elaborati da non vengono creati nuovi Xactset.|  
 |**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Il valore **Enabled** indica che il processo Xactset viene eseguito periodicamente per creare Xactset nel server di pubblicazione. Il valore **disabled** indica che i Xactset vengono creati solo dal agente di lettura log quando esegue il polling del server di pubblicazione per le modifiche.|  
@@ -53,7 +51,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Quando *PropertyName* viene omesso, vengono restituite tutte le proprietà impostabili.  
   
- [ **@propertyvalue** =] **'***PropertyValue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  Nuovo valore per la proprietà. *PropertyValue* è di **tipo sysname**e il valore predefinito è null. Quando *PropertyValue* viene omesso, viene restituita l'impostazione corrente per la proprietà.  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -66,8 +64,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_publisherproperty** viene utilizzato nella replica transazionale per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_publisherproperty** viene utilizzata per la replica transazionale per i publisher non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando viene specificato solo *Publisher* , il set di risultati include le impostazioni correnti per tutte le proprietà che è possibile impostare.  
   
@@ -77,7 +75,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Quando si modifica la proprietà **xactsetjobinterval** per un processo in esecuzione, è necessario riavviare il processo per rendere effettivo il nuovo intervallo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione possono eseguire **sp_publisherproperty**.  
   
 ## <a name="see-also"></a>Vedere anche  
