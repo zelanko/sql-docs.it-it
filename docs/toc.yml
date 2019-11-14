@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: Failover e modalità di failover
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: Criteri di failover flessibili per failover automatico
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: Solo scalabilità in lettura
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: Reindirizzamento delle connessioni in lettura/scrittura
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Note sulla versione
       items:
-        - name: compatibilità con versioni precedenti
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: Funzionalità sospese in SQL Server
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Funzionalità deprecate in SQL Server 2019
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: Funzionalità deprecate in SQL Server 2017
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: Funzionalità deprecate in SQL Server 2016
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: Funzionalità sospese in SQL Server
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Modifiche di rilievo in SQL Server 2019
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: Modifiche di rilievo in SQL Server 2017
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: Modifiche di rilievo in SQL Server 2016
@@ -4779,9 +4779,9 @@
         - name: Panoramica
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: compatibilità con versioni precedenti
               href: relational-databases/replication/replication-backward-compatibility.md
-            - name: Caratteristiche deprecate
+            - name: Funzionalità deprecate
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: Modifiche di rilievo
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md

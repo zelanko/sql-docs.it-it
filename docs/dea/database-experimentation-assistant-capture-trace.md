@@ -1,7 +1,7 @@
 ---
-title: Acquisire una traccia in Database Experimentation Assistant per gli aggiornamenti SQL Server
-description: Acquisire una traccia in Database Experimentation Assistant
-ms.custom: ''
+title: Acquisire una traccia per gli aggiornamenti di SQL Server
+description: Acquisire una traccia in Database Experimentation Assistant per gli aggiornamenti SQL Server
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653812"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056597"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
@@ -29,18 +29,18 @@ La memorizzazione nella cache delle query in SQL Server potrebbe influire sui ri
 
 ## <a name="create-a-trace-capture"></a>Creare un'acquisizione di traccia
 
-1. In DEA selezionare l'icona di menu nel menu a sinistra. Nel menu espanso selezionare Acquisisci **tracce** accanto all'icona della fotocamera.
+1. In DEA selezionare l'icona di menu nel menu a sinistra. Nel menu espanso selezionare **Acquisisci tracce** accanto all'icona della fotocamera.
 
     ![Selezionare Acquisisci tracce nel menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
 1. In **nuova acquisizione**immettere o selezionare le informazioni seguenti:
 
-    - **Nome istanza SQL Server**: Immettere un nome per il computer in cui è in esecuzione SQL Server in cui si desidera acquisire una traccia del server.
-    - **Nome database**: Immettere un nome per un database in cui avviare una traccia del database. Se non si specifica un database, la traccia viene acquisita in tutti i database del server.
-    - **Nome file di traccia**: Immettere un nome per il file di traccia per l'acquisizione.
-    - **Dimensioni file massime (MB)** : Selezionare le dimensioni del rollover per i file. Quando necessario, viene creato un nuovo file in base alle dimensioni del file selezionato. Le dimensioni consigliate per il rollover sono 200 MB.
-    - **Durata (in minuti)** : Consente di selezionare l'intervallo di tempo (in minuti) in cui si desidera che l'acquisizione di traccia venga eseguita.
-    - **Percorso per archiviare il file di traccia di output**: Consente di selezionare il percorso di destinazione del file di traccia. 
+    - **Nome istanza SQL Server**: immettere un nome per il computer che esegue SQL Server in cui si desidera acquisire una traccia del server.
+    - **Nome database**: immettere un nome per un database in cui avviare una traccia del database. Se non si specifica un database, la traccia viene acquisita in tutti i database del server.
+    - **Nome file di traccia**: immettere un nome per il file di traccia per l'acquisizione.
+    - **Dimensioni file massime (MB)** : selezionare le dimensioni del rollover per i file. Quando necessario, viene creato un nuovo file in base alle dimensioni del file selezionato. Le dimensioni consigliate per il rollover sono 200 MB.
+    - **Durata (in min)** : selezionare l'intervallo di tempo (in minuti) in cui si desidera che l'acquisizione di traccia venga eseguita.
+    - **Percorso per archiviare il file di traccia di output**: selezionare il percorso di destinazione per il file di traccia. 
 
     > [!NOTE]
     > Il percorso del file di traccia deve trovarsi nel computer in cui è in esecuzione SQL Server. Se il servizio SQL Server non è impostato per un account specifico, potrebbe essere necessario che il servizio disponga delle autorizzazioni di scrittura per la cartella specificata per il file di traccia da scrivere.
@@ -125,7 +125,7 @@ Se viene visualizzato un errore durante l'esecuzione di un'acquisizione di tracc
 - Verificare che il nome del computer in cui è in esecuzione SQL Server sia valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
 - Verificare che la configurazione del firewall non blocchi le connessioni al computer in cui è in esecuzione SQL Server.
 - Verificare che l'utente disponga delle autorizzazioni elencate nel post di Blog relativo alla [riproduzione delle domande frequenti](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
-- Verificare che il nome della traccia non segua la convenzione di rollover standard\_(Capture 1). In alternativa, provare i nomi di\_traccia come Capture 1a o Capture1.
+- Verificare che il nome della traccia non segua la convenzione di rollover standard (acquisizione\_1). In alternativa, provare i nomi di traccia come Capture\_1A o Capture1.
 
 Di seguito sono riportati alcuni possibili errori che possono essere visualizzati e le soluzioni per risolverli:
 

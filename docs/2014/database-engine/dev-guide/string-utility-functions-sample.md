@@ -1,5 +1,5 @@
 ---
-title: Esempio di funzioni di utilità di stringhe | Microsoft Docs
+title: Esempio di funzioni di utilità stringa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780586"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054852"
 ---
 # <a name="string-utility-functions-sample"></a>Esempio String Utility Functions
   L'esempio String Utilities include una funzione di flusso con valori di tabella, scritta in Visual C# e Visual Basic, che consente di dividere una stringa delimitata da virgole in una tabella con una colonna, nonché una funzione di aggregazione che consente di convertire una colonna stringa in una stringa delimitata da virgole.  Vengono inoltre implementate una funzione scalare e una funzione con valori di tabella che garantiscono funzionalità di ricerca e sostituzione di espressioni regolari.  
   
  Per implementare una funzione di flusso con valori di tabella, creare un metodo per la restituzione di un oggetto che implementi l'interfaccia `IEnumerable`. Il metodo `IEnumerable` deve essere collegato tramite un attributo a un altro metodo per la compilazione delle righe della funzione con valori di tabella.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/download/details.aspx?id=42299)Express  
   
--   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://archive.codeplex.com/?p=SqlServerSamples)  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   

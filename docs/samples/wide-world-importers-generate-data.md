@@ -1,6 +1,5 @@
 ---
-title: WideWorldImporters generano dati - database SQL di esempio | Microsoft Docs
-ms.custom: ''
+title: Generare dati in esempi SQL WideWorldImporters
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,24 +8,25 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38ba117051ad10d788c2357dfb70d36c2b5e50d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091274"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056277"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generazione di dati WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Le versioni rilasciate dei database WideWorldImporters e WideWorldImportersDW dispongono i dati da 1 gennaio 2013, fino al giorno in cui i database sono stati generati.
+Le versioni rilasciate dei database WideWorldImporters e WideWorldImportersDW hanno dati del 1 ° gennaio 2013, fino al giorno in cui i database sono stati generati.
 
-Quando si usano questi database di esempio, si potrebbe voler includere dati di esempio più recenti.
+Quando si usano questi database di esempio, potrebbe essere necessario includere dati di esempio più recenti.
 
-## <a name="data-generation-in-wideworldimporters"></a>Generazione di dati in WideWorldImporters
+## <a name="data-generation-in-wideworldimporters"></a>Generazione dei dati in WideWorldImporters
 
 Per generare dati di esempio fino alla data corrente:
 
-1. Se non è ancora stato fatto, installare una versione pulita del database WideWorldImporters. Per istruzioni sull'installazione, vedere [installazione e configurazione](wide-world-importers-oltp-install-configure.md).
+1. Se non è ancora stato fatto, installare una versione pulita del database WideWorldImporters. Per le istruzioni di installazione, vedere [installazione e configurazione](wide-world-importers-oltp-install-configure.md).
 2. Eseguire l'istruzione seguente nel database:
 
     ```
@@ -38,33 +38,33 @@ Per generare dati di esempio fino alla data corrente:
             @AreDatesPrinted = 1;
     ```
 
-    Questa istruzione aggiunge dati di acquisto e vendita di esempio per il database, fino alla data corrente. Visualizza lo stato di avanzamento della generazione di dati al giorno. Generazione di dati può richiedere circa 10 minuti per ogni anno che necessita di dati. A causa di un fattore casuale la generazione di dati, esistono alcune differenze nei dati che viene generati tra le esecuzioni.
+    Questa istruzione consente di aggiungere al database i dati di esempio relativi a vendite e acquisti, fino alla data corrente. Visualizza lo stato di avanzamento della generazione dei dati in base al giorno. La generazione dei dati può richiedere circa 10 minuti per ogni anno che necessita di dati. A causa di un fattore casuale nella generazione dei dati, esistono alcune differenze nei dati generati tra le esecuzioni.
 
-    Per aumentare o diminuire la quantità di dati generati per gli ordini al giorno, modificare il valore del parametro `@AverageNumberOfCustomerOrdersPerDay`. Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume degli ordini per giorni del fine settimana.
+    Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il parametro `@AverageNumberOfCustomerOrdersPerDay`. Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
 
-## <a name="import-generated-data-in-wideworldimportersdw"></a>Dati di importazione generata in WideWorldImportersDW
+## <a name="import-generated-data-in-wideworldimportersdw"></a>Importare i dati generati in WideWorldImportersDW
 
-Per importare i dati di esempio fino alla data corrente nel database OLAP WideWorldImportersDW:
+Per importare dati di esempio fino alla data corrente nel database OLAP WideWorldImportersDW:
 
-1. Eseguire la logica di generazione dei dati nel database OLTP WideWorldImporters usando i passaggi nella sezione precedente.
-2. Se non è ancora stato fatto, installare una versione pulita del database WideWorldImportersDW. Per istruzioni sull'installazione, vedere [installazione e configurazione](wide-world-importers-oltp-install-configure.md).
-3. Reinizializzare il database OLAP eseguendo l'istruzione seguente nel database:
+1. Eseguire la logica di generazione dei dati nel database OLTP WideWorldImporters usando la procedura descritta nella sezione precedente.
+2. Se non è ancora stato fatto, installare una versione pulita del database WideWorldImportersDW. Per le istruzioni di installazione, vedere [installazione e configurazione](wide-world-importers-oltp-install-configure.md).
+3. Eseguire nuovamente il seeding del database OLAP eseguendo l'istruzione seguente nel database:
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. Eseguire la *ETL.ispac giornaliero* pacchetto SQL Server Integration Services per importare i dati nel database OLAP. Per informazioni su come eseguire il processo ETL, vedere [flusso di lavoro ETL WideWorldImporters](wide-world-importers-perform-etl.md).
+4. Eseguire il pacchetto di SQL Server Integration Services *ETL. ispac giornaliero* per importare i dati nel database OLAP. Per informazioni su come eseguire il processo ETL, vedere [Workflow ETL wideworldimporters](wide-world-importers-perform-etl.md).
 
-## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>Generare i dati in WideWorldImportersDW per il test delle prestazioni
+## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>Generare dati in WideWorldImportersDW per il test delle prestazioni
 
-WideWorldImportersDW arbitrariamente può aumentare la dimensione dei dati per il test delle prestazioni. Ad esempio, è possibile aumentare le dimensioni dei dati da utilizzare con indice columnstore cluster.
+WideWorldImportersDW può aumentare arbitrariamente le dimensioni dei dati per il test delle prestazioni. Ad esempio, può aumentare la dimensione dei dati da usare con l'indicizzazione columnstore cluster.
 
-Una delle difficoltà consiste nel mantenere le dimensioni del download sufficientemente ridotto da scaricare con facilità, ma grandi dimensioni sufficienti per illustrare le caratteristiche delle prestazioni di SQL Server. Ad esempio, si ottengono vantaggi significativi per gli indici columnstore solo quando si lavora con un numero elevato di righe. 
+Una delle difficoltà consiste nel ridurre le dimensioni del download abbastanza piccolo da scaricare facilmente, ma sufficientemente grande da dimostrare SQL Server funzionalità di prestazioni. Ad esempio, i vantaggi significativi per gli indici columnstore vengono realizzati solo quando si lavora con un numero maggiore di righe. 
 
-È possibile usare la `Application.Configuration_PopulateLargeSaleTable` procedura per aumentare il numero di righe il `Fact.Sale` tabella. Le righe vengono inserite nell'anno di calendario 2012 per evitare che entrino in conflitto con i dati del World Wide Importers esistenti che inizia l'1 gennaio 2013.
+È possibile utilizzare la procedura `Application.Configuration_PopulateLargeSaleTable` per aumentare il numero di righe nella tabella `Fact.Sale`. Le righe vengono inserite nell'anno di calendario 2012 per evitare la collisione con i dati esistenti dell'importatore mondiale che iniziano il 1 ° gennaio 2013.
 
-### <a name="procedure-details"></a>Dettagli di procedure
+### <a name="procedure-details"></a>Dettagli procedura
 
 #### <a name="name"></a>Name
 
@@ -72,10 +72,10 @@ Una delle difficoltà consiste nel mantenere le dimensioni del download sufficie
 
 #### <a name="parameters"></a>Parametri
 
-  `@EstimatedRowsFor2012` **bigint** (valore predefinito è 12000000)
+  `@EstimatedRowsFor2012` **bigint** (il cui valore predefinito è 12 milioni)
 
 #### <a name="result"></a>Risultato
 
-Circa il numero necessario di righe viene inserito le `Fact.Sale` tabella l'anno 2012. La procedura limita artificialmente il numero di righe a 50.000 al giorno. È possibile modificare questa limitazione, ma la limitazione consente di evitare overinflations accidentale della tabella.
+Approssimativamente il numero di righe richiesto viene inserito nella tabella `Fact.Sale` dell'anno 2012. La procedura limita artificialmente il numero di righe a 50.000 al giorno. È possibile modificare questa limitazione, ma la limitazione consente di evitare Sovrainflazione accidentali della tabella.
 
-La procedura si applica anche se si non sia già stato applicato l'indicizzazione di columnstore cluster.
+La procedura applica anche l'indicizzazione columnstore cluster se non è già stata applicata.

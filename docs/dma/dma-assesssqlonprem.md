@@ -1,7 +1,8 @@
 ---
-title: Eseguire una valutazione della migrazione SQL Server (Data Migration Assistant) | Microsoft Docs
+title: Eseguire una valutazione della migrazione SQL Server
+titleSuffix: Data Migration Assistant
 description: Informazioni su come usare Data Migration Assistant per valutare una SQL Server locale prima di eseguire la migrazione a un altro SQL Server o al database SQL di Azure
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892636"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056630"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione SQL Server con Data Migration Assistant
 
@@ -110,7 +111,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
     ![Aggiungere origini e avviare la valutazione](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Visualizzare i risultati
+## <a name="view-results"></a>Visualizzazione dei risultati
 
 La durata della valutazione dipende dal numero di database aggiunti e dalle dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database non appena sono disponibili.
 
@@ -140,7 +141,7 @@ Per il database SQL di Azure, le valutazioni forniscono problemi di blocco della
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Valutare un patrimonio di dati per la conformità della destinazione
 
-Se si vuole estendere ulteriormente queste valutazioni all'intera proprietà dei dati e trovare la conformità relativa di SQL Server istanze e database per la migrazione al database SQL di Azure, caricare i risultati nell'hub di Azure migrate selezionando **carica per Azure migrate** .
+Se si vuole estendere ulteriormente queste valutazioni all'intera proprietà dei dati e trovare la conformità relativa di SQL Server istanze e database per la migrazione al database SQL di Azure, caricare i risultati nell'hub di Azure migrate selezionando **carica per Azure migrate**.
 
 In questo modo è possibile visualizzare i risultati consolidati nel progetto di hub Azure migrate.
 

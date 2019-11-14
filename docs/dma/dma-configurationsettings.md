@@ -1,7 +1,7 @@
 ---
-title: Configurare le impostazioni per Data Migration Assistant (SQL Server) | Microsoft Docs
+title: Configurare le impostazioni per Data Migration Assistant
 description: Informazioni su come configurare le impostazioni per il Data Migration Assistant aggiornando i valori nel file di configurazione
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345244"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056546"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
@@ -82,7 +82,7 @@ A partire da Data Migration Assistant v 2.0, se si verifica questo problema, è 
 Durante la valutazione, Data Migration Assistant estrae l'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può avere esito negativo con timeout per database di dimensioni molto grandi o se il server è sotto carico. A partire dalla migrazione dei dati v 1.0, è possibile modificare i valori di configurazione seguenti per evitare errori. 
 
 > [!NOTE]
-> Per impostazione &lt;predefinita&gt; , l'intera voce DACFx è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
+> Per impostazione predefinita, l'intera voce &lt;DACFx&gt; è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Durante la valutazione, Data Migration Assistant estrae l'applicazione livello d
 
 - databaseLockTimeout
 
-   Questo parametro equivale a [impostare il periodo\_di timeout\_del blocco del blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) in *millisecondi*. (Valore predefinito = 5000)
+   Questo parametro equivale a impostare il timeout di timeout [\_\_di blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) , espresso in *millisecondi*. (Valore predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Soglia di raccomandazione
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: soglia di raccomandazione
 
 Con [SQL Server stretch database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)è possibile estendere dinamicamente i dati transazionali caldi e freddi da Microsoft SQL Server 2016 ad Azure. Stretch Database è destinato a database transazionali con grandi quantità di dati a freddo. La raccomandazione Stretch Database, in base alle indicazioni sulle funzionalità di archiviazione, identifica innanzitutto le tabelle che ritiene trarranno vantaggio da questa funzionalità e quindi identifica le modifiche che devono essere apportate per abilitare la tabella per questa funzionalità.
 

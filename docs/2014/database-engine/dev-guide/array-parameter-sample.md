@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753733"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055908"
 ---
 # <a name="array-parameter-sample"></a>Esempio Array Parameter
   Talvolta può risultare utile creare, aggiornare o eliminare un set di righe in un database. Sono disponibili diversi modi per eseguire queste operazioni. Uno di questi consiste nel passare una matrice di informazioni da un client a una stored procedure basata sull'integrazione con CLR nel server mediante un tipo di dati per l'integrazione con CLR definito dall'utente. La natura di tale tipo di dati limita a 8.000 byte le dimensioni dei dati forniti al server. Questa opzione non è pertanto utile in caso di dati complessi o di grandi dimensioni. Se i dati disponibili sono semplici e di piccole dimensioni, questa opzione risulta più efficace rispetto alla chiamata di una stored procedure per ogni riga. Passando una matrice, l'ordine dei dati viene mantenuto per le applicazioni in cui tale ordine è importante. Nell'esempio sono inclusi gli elementi seguenti:  
@@ -26,12 +26,12 @@ ms.locfileid: "62753733"
   
 3.  L'applicazione console `TestArrayParameter`, che crea un'istanza del tipo di dati definito dall'utente `ContactTypeNames` sulla base dei parametri della riga di comando passati e quindi richiama la stored procedure `usp_EnsureContactTypeNames` passando l'istanza del tipo di dati definito dall'utente come parametro.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/download/details.aspx?id=42299)Express  
   
--   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://archive.codeplex.com/?p=SqlServerSamples)  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   

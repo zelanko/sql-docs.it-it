@@ -1,7 +1,7 @@
 ---
-title: Eseguire Data Migration Assistant dalla riga di comando (SQL Server) | Microsoft Docs
+title: Esegui Data Migration Assistant dalla riga di comando
 description: Informazioni su come eseguire Data Migration Assistant dalla riga di comando per valutare SQL Server database per la migrazione
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028708"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056623"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Esegui Data Migration Assistant dalla riga di comando
 
@@ -43,19 +43,19 @@ DmaCmd.exe /AssessmentName="string"
 |Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Come usare il testo della Guida di dmacmd. exe        | N
-|`/AssessmentName`     |   Nome del progetto di valutazione   | Y
-|`/AssessmentDatabases`     | Elenco delimitato da spazi di stringhe di connessione. Il nome del database (catalogo iniziale) fa distinzione tra maiuscole e minuscole. | Y
-|`/AssessmentSourcePlatform`     | Piattaforma di origine per la valutazione: <br>Valori supportati per la valutazione: SqlOnPrem, RdsSqlServer (impostazione predefinita) <br>Valori supportati per la valutazione della conformità della destinazione: SqlOnPrem, RdsSqlServer (impostazione predefinita), Cassandra (anteprima)   | N
+|`/AssessmentName`     |   Nome del progetto di valutazione   | S
+|`/AssessmentDatabases`     | Elenco delimitato da spazi di stringhe di connessione. Il nome del database (catalogo iniziale) fa distinzione tra maiuscole e minuscole. | S
+|`/AssessmentSourcePlatform`     | Piattaforma di origine per la valutazione: <br>Valori supportati per assessment: SqlOnPrem, RdsSqlServer (impostazione predefinita) <br>Valori supportati per la valutazione della conformità della destinazione: SqlOnPrem, RdsSqlServer (impostazione predefinita), Cassandra (anteprima)   | N
 |`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione:  <br> Valori supportati per la valutazione: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (impostazione predefinita)  <br> Valori supportati per la valutazione della conformità della destinazione: ManagedSqlServer (impostazione predefinita), CosmosDB (anteprima)   | N
 |`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità delle funzionalità. Se la piattaforma di origine è RdsSqlServer, la valutazione della parità delle funzionalità non è supportata per la piattaforma di destinazione AzureSqlDatabase  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | Y <br> È necessario specificare AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations.
-|`/AssessmentEvaluateRecommendations`     | Suggerimenti sulle funzionalità di esecuzione        | Y <br> (È necessario specificare AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations)
+|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | S <br> È necessario specificare AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations.
+|`/AssessmentEvaluateRecommendations`     | Suggerimenti sulle funzionalità di esecuzione        | S <br> (È necessario specificare AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations)
 |`/AssessmentOverwriteResult`     | Sovrascrivi il file di risultati    | N
-|`/AssessmentResultJson`     | Percorso completo del file dei risultati JSON     | Y <br> (È necessario specificare AssessmentResultJson o AssessmentResultCsv)
-|`/AssessmentResultCsv`    | Percorso completo del file dei risultati CSV   | Y <br> (È necessario specificare AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultJson`     | Percorso completo del file dei risultati JSON     | S <br> (È necessario specificare AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultCsv`    | Percorso completo del file dei risultati CSV   | S <br> (È necessario specificare AssessmentResultJson o AssessmentResultCsv)
 |`/Action`    | Usare SkuRecommendation per ottenere le raccomandazioni dello SKU, usare AssessTargetReadiness per eseguire la valutazione della conformità della destinazione.   | N
-|`/SourceConnections`    | Elenco delimitato da spazi di stringhe di connessione. Il nome del database (catalogo iniziale) è facoltativo. Se non viene specificato alcun nome di database, vengono valutati tutti i database nell'origine.   | Y <br> (Obbligatorio se Action è' AssessTargetReadiness ')
-|`/TargetReadinessConfiguration`    | Percorso completo del file XML che descrive i valori per il nome, le connessioni di origine e il file di risultati.   | Y <br> (È necessario specificare TargetReadinessConfiguration o SourceConnections)
+|`/SourceConnections`    | Elenco delimitato da spazi di stringhe di connessione. Il nome del database (catalogo iniziale) è facoltativo. Se non viene specificato alcun nome di database, vengono valutati tutti i database nell'origine.   | S <br> (Obbligatorio se Action è' AssessTargetReadiness ')
+|`/TargetReadinessConfiguration`    | Percorso completo del file XML che descrive i valori per il nome, le connessioni di origine e il file di risultati.   | S <br> (È necessario specificare TargetReadinessConfiguration o SourceConnections)
 |`/FeatureDiscoveryReportJson`    | Percorso del report JSON di individuazione delle funzionalità. Se questo file viene generato, può essere usato per eseguire nuovamente la valutazione della conformità della destinazione senza connettersi all'origine. | N
 |`/ImportFeatureDiscoveryReportJson`    | Percorso del report JSON di individuazione delle funzionalità creato in precedenza. Questo file verrà usato anziché le connessioni di origine.   | N
 
@@ -250,23 +250,23 @@ Questi comandi supportano i consigli per le opzioni di distribuzione di database
 
 |Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU usando la riga di comando DMA | Y
-|`/SkuRecommendationInputDataFilePath` | Percorso completo del file del contatore delle prestazioni raccolto dal computer che ospita i database | Y
-|`/SkuRecommendationTsvOutputResultsFilePath` | Percorso completo del file dei risultati TSV | Y <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
-|`/SkuRecommendationJsonOutputResultsFilePath` | Percorso completo del file dei risultati JSON | Y <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
-|`/SkuRecommendationHtmlResultsFilePath` | Percorso completo del file dei risultati HTML | Y <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
-|`/SkuRecommendationPreventPriceRefresh` | Impedisce l'aggiornamento del prezzo. Usare se è in esecuzione in modalità offline (ad esempio, true). | Y <br> (Selezionare questo argomento per i prezzi statici o tutti gli argomenti riportati di seguito devono essere selezionati per ottenere i prezzi più recenti)
-|`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi, ad esempio "USD") | Y <br> (Per i prezzi più recenti)
-|`/SkuRecommendationOfferName` | Nome dell'offerta, ad esempio "MS-AZR-0003P"). Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | Y <br> (Per i prezzi più recenti)
-|`/SkuRecommendationRegionName` | Nome dell'area (ad esempio "Westus") | Y <br> (Per i prezzi più recenti)
-|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | Y <br> (Per i prezzi più recenti)
-|`/SkuRecommendationDatabasesToRecommend` | Elenco separato da spazi di database da consigliare (ad esempio "Database1" "Database2" "Database3"). I nomi fanno distinzione tra maiuscole e minuscole e devono essere racchiusi tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
-|`/AzureAuthenticationTenantId` | Tenant di autenticazione. | Y <br> (Per i prezzi più recenti)
-|`/AzureAuthenticationClientId` | ID client dell'app AAD usata per l'autenticazione. | Y <br> (Per i prezzi più recenti)
-|`/AzureAuthenticationInteractiveAuthentication` | Impostare su true per visualizzare la finestra. | Y <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser"). | Y <br>(Per i prezzi più recenti) <br> (Scegliere una delle 3 opzioni di autenticazione-opzione 2)
-|`/AzureAuthenticationCertificateThumbprint` | Impostare sull'identificazione personale del certificato. | Y <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 2)
-|`/AzureAuthenticationToken` | Impostare sul token del certificato. | Y <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 3)
+|`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU usando la riga di comando DMA | S
+|`/SkuRecommendationInputDataFilePath` | Percorso completo del file del contatore delle prestazioni raccolto dal computer che ospita i database | S
+|`/SkuRecommendationTsvOutputResultsFilePath` | Percorso completo del file dei risultati TSV | S <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
+|`/SkuRecommendationJsonOutputResultsFilePath` | Percorso completo del file dei risultati JSON | S <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
+|`/SkuRecommendationHtmlResultsFilePath` | Percorso completo del file dei risultati HTML | S <br> (Richiede il formato TSV o JSON o il percorso del file HTML)
+|`/SkuRecommendationPreventPriceRefresh` | Impedisce l'aggiornamento del prezzo. Usare se è in esecuzione in modalità offline (ad esempio, true). | S <br> (Selezionare questo argomento per i prezzi statici o tutti gli argomenti riportati di seguito devono essere selezionati per ottenere i prezzi più recenti)
+|`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationOfferName` | Nome dell'offerta (ad esempio, "MS-AZR-0003P"). Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationRegionName` | Nome dell'area (ad esempio "Westus") | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationDatabasesToRecommend` | Elenco di database separati da spazi da consigliare (ad esempio "Database1" "Database2" "Database3"). I nomi fanno distinzione tra maiuscole e minuscole e devono essere racchiusi tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
+|`/AzureAuthenticationTenantId` | Tenant di autenticazione. | S <br> (Per i prezzi più recenti)
+|`/AzureAuthenticationClientId` | ID client dell'app AAD usata per l'autenticazione. | S <br> (Per i prezzi più recenti)
+|`/AzureAuthenticationInteractiveAuthentication` | Impostare su true per visualizzare la finestra. | S <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser". | S <br>(Per i prezzi più recenti) <br> (Scegliere una delle 3 opzioni di autenticazione-opzione 2)
+|`/AzureAuthenticationCertificateThumbprint` | Impostare sull'identificazione personale del certificato. | S <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 2)
+|`/AzureAuthenticationToken` | Impostare sul token del certificato. | S <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Esempi di valutazioni dello SKU con l'interfaccia della riga di comando
 

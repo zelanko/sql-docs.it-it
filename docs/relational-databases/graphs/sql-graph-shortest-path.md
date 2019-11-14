@@ -17,50 +17,50 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
+ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035886"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056406"
 ---
-# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
+# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Specifica una condizione di ricerca per un grafico, che viene eseguita la ricerca in modo ricorsivo o ripetutamente. SHORTEST_PATH può essere utilizzata all'interno di corrispondenza con graph nodo e le tabelle bordi, nell'istruzione SELECT. 
+  Specifica una condizione di ricerca per un grafo, in cui viene eseguita la ricerca in modo ricorsivo o ripetitivo. Nell'istruzione SELECT è possibile usare SHORTEST_PATH per la corrispondenza con il nodo del grafico e le tabelle Edge. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Percorso più breve
 La funzione SHORTEST_PATH consente di trovare:    
-* Un percorso più breve tra due nodi determinato/entità
-* Singola origine percorsi più brevi.
-* Percorso più breve di più nodi di origine a più nodi di destinazione.
+* Un percorso più breve tra due nodi/entità specificati
+* Percorsi più brevi di origine singola.
+* Percorso più breve da più nodi di origine a più nodi di destinazione.
 
-Accetta un modello di lunghezza arbitraria come input e restituisce un percorso più breve che esiste tra due nodi. Questa funzione può essere usata solo all'interno di MATCH. La funzione restituisce solo un percorso più breve tra due nodi specificati. Se è presente, due o più percorsi più brevi della stessa lunghezza tra qualsiasi coppia di nodi di origine e di destinazione, il funzione restituisce solo un percorso che è stato trovato prima durante l'attraversamento. Si noti che, una serie di lunghezza arbitraria può essere specificata solo all'interno di una funzione SHORTEST_PATH. 
+Accetta un modello di lunghezza arbitrario come input e restituisce un percorso più breve esistente tra due nodi. Questa funzione può essere usata solo all'interno di MATCH. La funzione restituisce un solo percorso più breve tra due nodi specificati. Se esiste, due o più percorsi più brevi della stessa lunghezza tra qualsiasi coppia di nodi di origine e di destinazione, la funzione restituisce un solo percorso trovato per primo durante l'attraversamento. Si noti che un modello di lunghezza arbitraria può essere specificato solo all'interno di una funzione SHORTEST_PATH. 
 
-Vedere le [MATCH (grafo SQL)](../../t-sql/queries/match-sql-graph.md) per la sintassi. 
+Per la sintassi, fare riferimento alla [corrispondenza (grafo SQL)](../../t-sql/queries/match-sql-graph.md) . 
 
-## <a name="for-path"></a>PER PERCORSO
-PER percorso deve essere utilizzato con qualsiasi nome di tabella nodi o archi nella clausola FROM, che farà parte di un modello di lunghezza arbitraria. PER il percorso indica al motore che la tabella nodi o archi restituirà un insieme ordinato che rappresenta l'elenco di nodi o bordi trovati nel percorso attraversato. Gli attributi da tali tabelle non possono essere proiettati direttamente nella clausola SELECT. Per proiettare gli attributi da tali tabelle, funzioni di aggregazione tracciato del grafico deve essere utilizzato.  
+## <a name="for-path"></a>PER IL PERCORSO
+PER PATH deve essere usato con qualsiasi nome di tabella Node o Edge nella clausola FROM, che parteciperà a un modello di lunghezza arbitraria. PER PATH indica al motore che la tabella Node o Edge restituirà una raccolta ordinata che rappresenta l'elenco di nodi o bordi trovati lungo il percorso attraversato. Gli attributi di queste tabelle non possono essere proiettati direttamente nella clausola SELECT. Per proiettare gli attributi da queste tabelle, è necessario utilizzare le funzioni di aggregazione del percorso grafico.  
 
 ## <a name="arbitrary-length-pattern"></a>Modello di lunghezza arbitraria
-Questo modello include i nodi e bordi che devono essere attraversati ripetutamente fino a raggiunta il nodo desiderato o finché il numero massimo di iterazioni come specificato nel modello viene soddisfatta. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata di nodi e bordi attraversati lungo il percorso dal nodo di inizio per il nodo di fine. Questo è un modello di sintassi di espressione regolare lo stile e sono supportati i quantificatori due modello seguente:
+Questo modello include i nodi e i bordi che devono essere attraversati ripetutamente fino a raggiungere il nodo desiderato o fino a quando non viene soddisfatto il numero massimo di iterazioni specificato nel criterio. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata dei nodi e dei bordi attraversati lungo il percorso dal nodo iniziale al nodo finale. Si tratta di un modello di sintassi di tipo espressione regolare e sono supportati i due quantificatori di criteri seguenti:
 
-* **'+'** : Ripetere il criterio una o più volte. Terminare non appena viene trovato un percorso più breve.
-* **{1,n}** : Ripetere il criterio da una a "n" volte. Terminare non appena viene trovato un più breve.
+* **' +'** : Ripetere il modello 1 o più volte. Terminare non appena viene trovato un percorso più breve.
+* **{1, n}** : ripetere il modello da 1 a' n'volte. Termina non appena viene rilevata una più breve.
 
-## <a name="lastnode"></a>LAST_NODE
-Funzione LAST_NODE() consente la concatenazione di due schemi di attraversamento di lunghezza arbitraria. Può essere utilizzato negli scenari in cui:    
-* Più modelli di percorso più breve vengono utilizzati in una query e un modello in cui inizia l'ultimo nodo dello schema precedente.
-* Due modelli di percorso più brevi di tipo merge nel LAST_NODE() stesso.
+## <a name="last_node"></a>LAST_NODE
+La funzione LAST_NODE () consente il concatenamento di due modelli di attraversamento di lunghezza arbitraria. Può essere usato in scenari in cui:    
+* In una query vengono usati più modelli di percorso più brevi e un modello inizia in corrispondenza dell'ultimo nodo del modello precedente.
+* Due modelli di percorso più brevi si uniscono nello stesso LAST_NODE ().
 
-## <a name="graph-path-order"></a>Ordine di percorso grafico
-Ordine di percorso grafico relativo all'ordine dei dati nel percorso di output. Inizia sempre l'ordine di percorso di output nella parte del modello aggiungendo i nodi/bordi che vengono visualizzati nella parte ricorsiva di non ricorsiva. L'ordine in cui viene attraversato il grafico durante l'ottimizzazione o l'esecuzione di query non ha nulla a che fare con l'ordine nell'output. Analogamente, la direzione della freccia nel modello ricorsivo non influisce l'ordine di percorso grafico. 
+## <a name="graph-path-order"></a>Ordine percorso grafico
+L'ordine del percorso del grafo si riferisce all'ordine dei dati nel percorso di output. L'ordine del percorso di output inizia sempre in corrispondenza della parte non ricorsiva del modello seguito dai nodi/bordi visualizzati nella parte ricorsiva. L'ordine in cui il grafico viene attraversato durante l'ottimizzazione o l'esecuzione della query non ha nulla a che fare con l'ordine stampato nell'output. Analogamente, anche la direzione della freccia nel modello ricorsivo non influisce sull'ordine del tracciato del grafico. 
 
 ## <a name="graph-path-aggregate-functions"></a>Funzioni di aggregazione percorso grafico
-Poiché i nodi e bordi coinvolta nel criterio di lunghezza arbitraria restituito una raccolta (di nodo/i e uno o più spigoli attraversato in tale percorso), gli utenti non è possibile proiettare gli attributi con la sintassi tablename.attributename convenzionale. Per una query in cui è necessaria per proiettare i valori di attributo da tabelle nodi o archi intermediate, nel percorso attraversato, utilizzare le seguenti funzioni di aggregazione percorso grafico: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX e COUNT. La sintassi generale per usare queste funzioni di aggregazione nella clausola SELECT è:
+Poiché i nodi e i bordi che coinvolgono il modello di lunghezza arbitraria restituiscono una raccolta (dei nodi e dei bordi attraversati in tale percorso), gli utenti non possono proiettare gli attributi direttamente usando la sintassi tablename. AttributeName convenzionale. Per le query in cui è necessario per proiettare i valori di attributo dalle tabelle dei nodi intermedi o dei bordi, nel percorso attraversato usare le funzioni di aggregazione del percorso grafico seguenti: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX e COUNT. La sintassi generale per utilizzare queste funzioni di aggregazione nella clausola SELECT è la seguente:
 
 ```
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
@@ -79,46 +79,46 @@ Poiché i nodi e bordi coinvolta nel criterio di lunghezza arbitraria restituito
 
 ```
 
-### <a name="stringagg"></a>STRING_AGG
-La funzione STRING_AGG accetta un'espressione e il separatore come input e restituisce una stringa. Gli utenti possono usare questa funzione nella clausola SELECT agli attributi di progetto dai nodi intermedi o del bordo del percorso attraversato. 
+### <a name="string_agg"></a>STRING_AGG
+La funzione STRING_AGG accetta un'espressione e un separatore come input e restituisce una stringa. Gli utenti possono utilizzare questa funzione nella clausola SELECT per proiettare gli attributi dai nodi intermedi o dai bordi del percorso attraversato. 
 
-### <a name="lastvalue"></a>LAST_VALUE
-Al progetto gli attributi dall'ultimo nodo del percorso attraversato, funzione di aggregazione LAST_VALUE possono essere utilizzati. È possibile specificare alias di tabella edge come input per questa funzione, solo i nomi delle tabelle di nodo o gli alias possono essere utilizzati.
+### <a name="last_value"></a>LAST_VALUE
+Per proiettare gli attributi dall'ultimo nodo attraversato, è possibile usare LAST_VALUE funzione di aggregazione. Non è possibile specificare alias della tabella Edge come input per questa funzione. è possibile usare solo nomi o alias di tabella del nodo.
 
-**Ultimo nodo**: L'ultimo nodo corrisponde al nodo che viene visualizzato per ultimo nel percorso attraversato, indipendentemente dalla direzione della freccia nel predicato di corrispondenza. Ad esempio: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. In questo caso l'ultimo nodo nel percorso sarà l'ultimo nodo visitato P. 
+**Ultimo nodo**: l'ultimo nodo fa riferimento al nodo che viene visualizzato per ultimo nel percorso attraversato, indipendentemente dalla direzione della freccia nel predicato di corrispondenza. Esempio: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Qui l'ultimo nodo del percorso sarà l'ultimo nodo P visitato. 
 
-Mentre, ultimo nodo è l'ultimo nodo ennesima nel percorso grafico di output per questo modello: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di output per questo modello: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
-Questa funzione restituisce la somma dei valori di attributo specificato nodo/Microsoft edge o un'espressione che è disponibile nel percorso attraversato.
+Questa funzione restituisce la somma dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="count"></a>COUNT
-Questa funzione restituisce il numero di valori non null dell'attributo desiderato nodo/Microsoft edge nel percorso. La funzione COUNT supporta il '\*' operatore con un alias di tabella nodi o bordi. Senza l'alias della tabella nodi o archi, l'utilizzo di \* è ambiguo e verrà generato un errore.
+Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l'operatore '\*' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo di \* è ambiguo e genera un errore.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
 ### <a name="avg"></a>MEDIO
-Restituisce la media dei valori di attributo specificato nodo/Microsoft edge o un'espressione che è disponibile nel percorso attraversato.
+Restituisce la media dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="min"></a>MIN
-Restituisce il valore minimo da valori di attributo specificato nodo/Microsoft edge o espressione che appare nel percorso attraversato.
+Restituisce il valore minimo dall'espressione o dai valori di attributo node/Edge forniti visualizzati nel percorso attraversato.
 
 ### <a name="max"></a>MAX
-Restituisce il valore massimo da valori di attributo specificato nodo/Microsoft edge o espressione che appare nel percorso attraversato.
+Restituisce il valore massimo dai valori o dall'espressione dell'attributo node/Edge fornito visualizzato nel percorso attraversato.
 
-## <a name="remarks"></a>Note  
-funzione shortest_path può essere utilizzata solo all'interno di MATCH.     
-LAST_NODE è supportato solo all'interno di shortest_path.     
-Ricerca percorso più breve ponderato, tutti i percorsi o tutti i percorsi più brevi non è supportata.         
-In alcuni casi, i piani non validi possono essere generati per le query con numero maggiore di hop, con conseguente maggiore i tempi di esecuzione di query. Uso di un hint di join hash può essere utile.    
+## <a name="remarks"></a>Osservazioni  
+shortest_path funzione può essere usata solo all'interno di MATCH.     
+LAST_NODE è supportato solo all'interno shortest_path.     
+La ricerca del percorso più breve ponderato, di tutti i percorsi o di tutti i percorsi più brevi non è supportata.         
+In alcuni casi, è possibile che vengano generati piani danneggiati per le query con un numero maggiore di hop, il che comporta tempi di esecuzione delle query più elevati. L'uso di un hint di hash join può essere utile.    
 
 
 ## <a name="examples"></a>Esempi 
-Per le query di esempio illustrate in questo caso, si userà ot utilizzano il nodo e creare le tabelle edge in [esempio grafo SQL](./sql-graph-sample.md)
+Per le query di esempio illustrate di seguito, verrà usato il nodo e le tabelle Edge create in [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>R.  Individuare il percorso più breve tra 2 persone
- Nell'esempio seguente, troviamo un percorso più breve tra Jacob e Alice. È necessario il nodo /People/Person ed edge FriendOf creati dallo script di esempio di grafico. 
+### <a name="a--find-shortest-path-between-2-people"></a>A.  Trova il percorso più breve tra due persone
+ Nell'esempio seguente viene trovato il percorso più breve tra Jacob e Alice. Sono necessari il nodo Person e amica Edge creati dallo script di esempio Graph. 
 
  ```
 SELECT PersonName, Friends
@@ -137,8 +137,8 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Individuare il percorso più breve da un determinato nodo per tutti gli altri nodi nel grafico. 
- Nell'esempio seguente consente di trovare tutte le persone che Jacob è connesso a nel grafico e il percorso più breve a partire da Jacob tutti i destinatari. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  Trova il percorso più breve da un nodo specificato a tutti gli altri nodi del grafico. 
+ Nell'esempio seguente vengono individuate tutte le persone a cui Giacobbe è connesso nel grafico e il percorso più breve che inizia da Jacob a tutti gli utenti. 
 
  ```
 SELECT
@@ -152,8 +152,8 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
  ```
 
-### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Contare il numero di hop/livelli attraversate per passare da una persona a altra nel grafico.
- Nell'esempio seguente consente di trovare il percorso più breve tra Jacob e Alice e stampa il numero di hop che è necessario per passare da Jacob ad Alice. 
+### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Contare il numero di hop/livelli attraversati per passare da una persona a un'altra nel grafico.
+ Nell'esempio seguente viene individuato il percorso più breve tra Jacob e Alice e viene stampato il numero di hop necessari per passare da Jacob ad Alice. 
 
  ```
  SELECT PersonName, Friends, levels
@@ -173,8 +173,8 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Trovare persone 1-3 hop lontano da un utente specifico
-Nell'esempio seguente consente di trovare il percorso più breve tra Jacob e tutte le persone che si è connesso agli hop graph 1-3 lontano da quest'ultimo. 
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Trova persone 1-3 hop lontani da un determinato utente
+Nell'esempio seguente viene individuato il percorso più breve tra Giacobbe e tutte le persone a cui è connesso nel grafico 1-3 hop a distanza. 
 
 ```
 SELECT
@@ -188,8 +188,8 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2){1,3}))
 AND Person1.name = 'Jacob'
 ```
 
-### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Trovare persone esattamente 2 hop lontano da un utente specifico
-Nell'esempio seguente consente di trovare il percorso più breve tra Jacob e persone che hanno esattamente 2 hop lontano da quest'ultimo nel grafico. 
+### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Trovare persone esattamente 2 hop da una determinata persona
+Nell'esempio seguente viene individuato il percorso più breve tra Giacobbe e le persone che sono esattamente 2 hop a distanza dal grafico. 
 
 ```
 SELECT PersonName, Friends
@@ -209,7 +209,7 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [MATCH (grafo SQL)](../../t-sql/queries/match-sql-graph.md)    
+ [Corrispondenza (grafo SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)     

@@ -1,7 +1,7 @@
 ---
-title: Valutare l'idoneità di una SQL Server la migrazione di un oggetto dati al database SQL di Azure | Microsoft Docs
+title: Valutazione della conformità SQL Server per eseguire la migrazione al database SQL di Azure
+titleSuffix: Data Migration Assistant
 description: Informazioni su come usare Data Migration Assistant per eseguire la migrazione di un SQL Server Data estate per la migrazione al database SQL di Azure
-ms.custom: ''
 ms.date: 07/16/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -15,12 +15,13 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: b3f47cee5cc091c52faa98438d22b88a18a06f03
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8261b38d57502584efbeee8d6bbcd0b1823d3786
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702826"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056696"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
 
@@ -57,12 +58,12 @@ Un progetto Azure Migrate viene usato per archiviare i metadati di individuazion
 
     È possibile creare un progetto Azure Migrate in una delle aree geografiche.
 
-    | **Area geografica**  | **Area località di archiviazione** |
+    | **Geography**  | **Area località di archiviazione** |
     | ------------- | ------------- |
     | Asia | Asia sudorientale o Asia orientale |
-    | Europa | Europa meridionale o Europa occidentale |
-    | Regno Unito | Regno Unito meridionale o Regno Unito occidentale |
-    | Stati Uniti | Stati Uniti centrali o Stati Uniti occidentali 2 |
+    | Europe | Europa meridionale o Europa occidentale |
+    | United Kingdom | Regno Unito meridionale o Regno Unito occidentale |
+    | United States | Stati Uniti centrali o Stati Uniti occidentali 2 |
 
     La geografia specificata per il progetto viene usata solo per archiviare i metadati raccolti dalle macchine virtuali locali. È possibile selezionare qualsiasi area di destinazione per la migrazione effettiva.
 
@@ -71,11 +72,11 @@ Un progetto Azure Migrate viene usato per archiviare i metadati di individuazion
    > [!NOTE]
    > Quando si crea un progetto, è necessario aggiungere almeno uno strumento di valutazione o migrazione.
 
-8. Nella **scheda **Seleziona strumento di valutazione** Azure migrate: La valutazione** del database viene visualizzata come strumento di valutazione da aggiungere. Se non è attualmente necessario uno strumento di valutazione, selezionare la casella **di controllo Ignora l'aggiunta di uno strumento di valutazione per il momento** . Selezionare **Avanti**.
+8. Nella scheda **Seleziona strumento di valutazione** **Azure migrate: database Assessment** viene visualizzato come strumento di valutazione da aggiungere. Se non è attualmente necessario uno strumento di valutazione, selezionare la casella **di controllo Ignora l'aggiunta di uno strumento di valutazione per il momento** . Fare clic su **Avanti**.
 
     ![Azure Migrate selezionare la scheda strumento di valutazione](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. Nella **scheda **Seleziona strumento di migrazione** Azure migrate: La migrazione** del database viene visualizzata come strumento di migrazione da aggiungere. Se non è attualmente necessario uno strumento di migrazione, selezionare il **Skip aggiungere uno strumento di migrazione per il momento**. Selezionare **Avanti**.
+9. Nella scheda **Seleziona strumento di migrazione** **Azure migrate: la migrazione del database** viene visualizzata come strumento di migrazione da aggiungere. Se non è attualmente necessario uno strumento di migrazione, selezionare il **Skip aggiungere uno strumento di migrazione per il momento**. Fare clic su **Avanti**.
 
     ![Azure Migrate-selezionare la scheda strumento di migrazione](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -87,7 +88,7 @@ Un progetto Azure Migrate viene usato per archiviare i metadati di individuazion
 
 ## <a name="assess-and-upload-assessment-results"></a>Valutare e caricare i risultati della valutazione
 
-Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nella **Azure migrate: Casella di** valutazione del database, istruzioni per il download e l'uso dello strumento Data Migration Assistant.
+Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nella casella **Azure migrate: database Assessment** , le istruzioni per il download e l'uso dello strumento Data Migration Assistant display.
 
    ![Aggiunta dello strumento di valutazione Azure Migrate](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
@@ -96,12 +97,12 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
 ### <a name="create-an-assessment"></a>Creare una valutazione
 
-1. A sinistra, selezionare l' **+** icona e quindi selezionare il tipo di **progetto** di valutazione
+1. A sinistra selezionare l'icona **+** , quindi selezionare il **tipo di progetto** Assessment
 2. Specificare il nome del progetto, quindi selezionare il server di origine e i tipi di server di destinazione.
 
     Se si sta aggiornando l'istanza di SQL Server locale a una versione successiva di SQL Server o a SQL Server ospitata in una macchina virtuale di Azure, impostare il tipo di server di origine e di destinazione su **SQL Server**. Impostare il tipo di server di destinazione su **istanza gestita di database SQL di Azure** per una valutazione della conformità della destinazione del database SQL di Azure (PaaS).
 
-3. Selezionare **Create**.
+3. Selezionare **Crea**.
 
    ![Interfaccia Azure Migrate-Data Migration Assistant](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -115,7 +116,7 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
    ![Schermata delle opzioni di Azure Migrate-Data Migration Assistant-Assessment](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. Selezionare **Avanti**.
+2. Fare clic su **Avanti**.
 
 ### <a name="add-databases-to-assess"></a>Aggiungere i database da valutare
 
@@ -158,9 +159,9 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
    ![Azure Migrate-verificare i risultati di conformità](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
-    **Istanze di database valutate**:  Numero di istanze di SQL Server valutate finora.
-    **Database valutati**: Numero totale di database valutati in una o più istanze di SQL Server la valutazione dei **database è pronta per**il database SQL:  Numero di database pronti per la migrazione al database SQL di Azure (PaaS).
-    **Database pronti per la macchina virtuale SQL di Azure**:  Il numero di database è costituito da uno o più blocchi di migrazione nel database SQL di Azure (PaaS), ma è pronto per la migrazione ad Azure SQL Server macchine virtuali.
+    **Istanze di database valutate**: numero di istanze di SQL Server valutate finora.
+    **Database valutati**: numero totale di database valutati in una o più istanze di SQL Server la valutazione dei **database è pronta per**il database SQL: numero di database pronti per la migrazione al database SQL di Azure (PaaS).
+    **Database pronti per la macchina virtuale SQL di Azure**: il numero di database è costituito da uno o più blocchi di migrazione nel database SQL di Azure (PaaS), ma è pronto per la migrazione ad Azure SQL Server macchine virtuali.
 
 3. Selezionare **istanze di database valutate** per ottenere SQL Server visualizzazione a livello di istanza.
 
@@ -181,5 +182,5 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 ## <a name="see-also"></a>Vedere anche
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-* [Data Migration Assistant: Impostazioni di configurazione](../dma/dma-configurationsettings.md)
-* [Data Migration Assistant: Procedure consigliate](../dma/dma-bestpractices.md)
+* [Data Migration Assistant: impostazioni di configurazione](../dma/dma-configurationsettings.md)
+* [Data Migration Assistant: procedure consigliate](../dma/dma-bestpractices.md)

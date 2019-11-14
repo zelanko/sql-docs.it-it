@@ -1,7 +1,6 @@
 ---
-title: Introduzione a Database Experimentation Assistant per gli aggiornamenti SQL Server
-description: Inizia a usare Database Experimentation Assistant
-ms.custom: ''
+title: Inizia a usare Database Experimentation Assistant
+description: Database Experimentation Assistant (DEA) è una soluzione di test A/B per le modifiche in ambienti SQL Server, ad esempio aggiornamenti o nuovi indici.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381765"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056709"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Inizia a usare Database Experimentation Assistant
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Introduzione a Database Experimentation Assistant (SQL Server)
 
 Database Experimentation Assistant (DEA) è una soluzione di test A/B per le modifiche in ambienti SQL Server, ad esempio aggiornamenti o nuovi indici. DEA consente di valutare il modo in cui il carico di lavoro nel server di origine (nell'ambiente corrente) sarà eseguito nel nuovo ambiente. DEA guida l'utente durante l'esecuzione di un test A/B completando tre passaggi: 
 
@@ -48,7 +48,7 @@ Per acquisire una traccia nel server di origine:
 
 1. Immettere o selezionare le seguenti informazioni:
 
-   - **Nome traccia**: il nome del nuovo file di traccia che si sta creando. Evitare il nome di una traccia che usa la convenzione di denominazione dei file di rollover, ad esempio Capturename \_NNN.
+   - **Nome traccia**: il nome del nuovo file di traccia che si sta creando. Evitare il nome di una traccia che usa la convenzione di denominazione dei file di rollover, ad esempio Capturename\_NNN.
    - **Duration**: durata dell'acquisizione.
    - **Nome istanza SQL Server**: istanza SQL Server da cui si desidera acquisire una traccia.
    - **Nome database**: nome del database nel computer che esegue SQL Server di cui si desidera acquisire una traccia. Se viene lasciato vuoto, la traccia viene acquisita da tutti i database nel server.

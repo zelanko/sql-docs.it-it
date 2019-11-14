@@ -1,7 +1,7 @@
 ---
-title: Procedure consigliate per Data Migration Assistant (SQL Server) | Microsoft Docs
-description: Informazioni sulle procedure consigliate per la migrazione dei database di SQL Server con Data Migration Assistant
-ms.custom: ''
+title: Procedura consigliate per Data Migration Assistant
+description: Informazioni sulle procedure consigliate per la migrazione di database SQL Server con Data Migration Assistant
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061777"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056551"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Le procedure consigliate per l'esecuzione di Data Migration Assistant
-Questo articolo fornisce alcune procedure consigliate per l'installazione, valutazione e migrazione.
+# <a name="best-practices-for-running-data-migration-assistant"></a>Procedure consigliate per l'esecuzione di Data Migration Assistant
+In questo articolo vengono fornite alcune informazioni sulle procedure consigliate per l'installazione, la valutazione e la migrazione.
 
-## <a name="installation"></a>Installazione
-Non è possibile installare ed eseguire Data Migration Assistant direttamente nel computer host SQL Server.
+## <a name="installation"></a>Installation
+Non installare ed eseguire il Data Migration Assistant direttamente nel computer host SQL Server.
 
 ## <a name="assessment"></a>Valutazione
-- Eseguire valutazioni su database di produzione durante i periodi non di punta.
-- Eseguire la **problemi di compatibilità** e **nuove funzionalità consigliate** valutazioni separatamente per ridurre la durata della valutazione.
+- Eseguire valutazioni nei database di produzione durante gli orari non di punta.
+- Per ridurre la durata della valutazione, è possibile eseguire separatamente i **problemi di compatibilità** e le nuove valutazioni dei **consigli sulle funzionalità** .
 
 ## <a name="migration"></a>Migrazione
-- Eseguire la migrazione di un server durante i periodi non di punta.
+- Eseguire la migrazione di un server durante gli orari non di punta.
 
-- Durante la migrazione di un database, specificare una posizione singola condivisione accessibile dal server di origine e il server di destinazione e se possibile, evitare un'operazione di copia. Un'operazione di copia può introdurre ritardo in base alla dimensione del file di backup. L'operazione di copia aumenta anche la possibilità che la migrazione avrà esito negativo a causa di un passaggio aggiuntivo. Quando viene fornita un'unica posizione, Data Migration Assistant consente di ignorare l'operazione di copia.
+- Quando si esegue la migrazione di un database, fornire un singolo percorso di condivisione accessibile al server di origine e al server di destinazione e, se possibile, evitare un'operazione di copia. Un'operazione di copia può presentare un ritardo in base alle dimensioni del file di backup. Anche l'operazione di copia aumenta le probabilità che una migrazione abbia esito negativo a causa di un passaggio aggiuntivo. Quando viene fornita una singola posizione, Data Migration Assistant ignora l'operazione di copia.
  
-    Inoltre, assicurarsi che per fornire le autorizzazioni corrette per la cartella condivisa per evitare errori durante la migrazione. Le autorizzazioni corrette vengono specificate nello strumento. Se un'istanza di SQL Server viene eseguito con le credenziali del servizio di rete, assegnare le autorizzazioni corrette per la cartella condivisa per l'account del computer per l'istanza di SQL Server.
+    Assicurarsi inoltre di fornire le autorizzazioni corrette per la cartella condivisa per evitare errori di migrazione. Le autorizzazioni corrette sono specificate nello strumento. Se un'istanza di SQL Server viene eseguita con le credenziali del servizio di rete, assegnare le autorizzazioni corrette per la cartella condivisa all'account del computer per l'istanza di SQL Server.
 
-- Abilita Crittografa connessione durante la connessione al server di origine e destinazione. Crittografia mediante SSL aumenta la sicurezza dei dati trasmessi tra le reti tra l'istanza di SQL Server, è utile soprattutto quando la migrazione di account di accesso SQL e Data Migration Assistant. Se non viene utilizzata la crittografia SSL e la rete è compromessa da un utente malintenzionato, l'account di accesso SQL migrato a è stato possibile ottenere intercettati e/o modificate in immediatamente dall'autore dell'attacco.
+- Abilitare la connessione Encrypt durante la connessione ai server di origine e di destinazione. L'utilizzo della crittografia SSL aumenta la protezione dei dati trasmessi attraverso le reti tra Data Migration Assistant e l'istanza SQL Server, che risulta particolarmente utile in caso di migrazione degli account di accesso SQL. Se la crittografia SSL non viene usata e la rete viene compromessa da un utente malintenzionato, gli account di accesso SQL di cui è in corso la migrazione potrebbero essere intercettati e/o modificati immediatamente dall'autore dell'attacco.
 
-    Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. Abilitazione della crittografia del rallentamento delle prestazioni perché il sovraccarico aggiuntivo che è necessario per crittografare e decrittografare i pacchetti. Per altre informazioni, consultare [crittografia delle connessioni a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. L'abilitazione della crittografia rallenta le prestazioni perché il sovraccarico aggiuntivo necessario per crittografare e decrittografare i pacchetti. Per ulteriori informazioni, vedere Crittografia delle [connessioni a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
