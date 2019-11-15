@@ -1,22 +1,22 @@
 ---
-title: Cosa sono le estensioni del linguaggio?
-titleSuffix: SQL Server Language Extensions
-description: Informazioni sulle estensioni del linguaggio di SQL Server 2019 (anteprima) che eseguono script esterni all'interno di SQL Server.
+title: Cosa sono le estensioni del linguaggio di SQL Server?
+titleSuffix: ''
+description: Le estensioni del linguaggio sono una funzionalità di SQL Server usata per l'esecuzione di codice esterno. Java è supportato in SQL Server 2019. I dati relazionali possono essere usati nel codice esterno tramite il framework di estendibilità.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589025"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658823"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>Cosa sono le estensioni del linguaggio di SQL Server (anteprima)?
+# <a name="what-is-sql-server-language-extensions"></a>Cosa sono le estensioni del linguaggio di SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le estensioni del linguaggio sono una funzionalità di SQL Server usata per l'esecuzione di codice esterno. I dati relazionali possono essere usati nel codice esterno tramite il [framework di estendibilità](concepts/extensibility-framework.md).

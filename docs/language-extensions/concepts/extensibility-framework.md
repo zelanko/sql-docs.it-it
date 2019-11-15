@@ -1,26 +1,26 @@
 ---
 title: Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
-titleSuffix: SQL Server Language Extensions
-description: Supporto del codice esterno per il motore di database di SQL Server, con architettura doppia per l'esecuzione di un linguaggio esterno sui dati relazionali.
+titleSuffix: ''
+description: Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. Java è supportato in SQL Server 2019. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589085"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658877"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Le estensioni di linguaggio di SQL Server hanno un framework di estendibilità per l'esecuzione di codice esterno, ad esempio Java nel server. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
+Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. Java è supportato in SQL Server 2019. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 
 ## <a name="background"></a>Informazioni preliminari
 

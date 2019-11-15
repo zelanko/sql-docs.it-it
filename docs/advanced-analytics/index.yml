@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Documentazione di SQL Server Machine Learning Services (Python e R)
-summary: Informazioni su come usare SQL Server Machine Learning Services per eseguire script Python e R su dati relazionali. Esercitazioni, esempi di codice, guide all'installazione e altri documenti in cui viene illustrato come.
+title: Documentazione di Machine Learning Services per SQL Server (Python e R)
+summary: Informazioni su come usare Machine Learning Services per SQL Server per eseguire script Python e R su dati relazionali attraverso le esercitazioni, gli esempi di codice, le guide all'installazione e altra documentazione disponibile.
 metadata:
-  title: Documentazione di SQL Server Machine Learning Services (Python, R)-esercitazioni, guide introduttive e guide all'installazione
-  description: Informazioni su come usare SQL Server Machine Learning Services per eseguire script Python e R su dati relazionali. Esercitazioni, esempi di codice, guide all'installazione e altri documenti in cui viene illustrato come.
+  title: "Documentazione di Machine Learning Services per SQL Server (Python, R): esercitazioni, avvii rapidi e guide all'installazione"
+  description: Informazioni su come usare Machine Learning Services per SQL Server per eseguire script Python e R su dati relazionali attraverso le esercitazioni, gli esempi di codice, le guide all'installazione e altra documentazione disponibile.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,7 +12,7 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: it-IT
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199395"
@@ -21,7 +21,7 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Che cos'è SQL Server Machine Learning Services (Python e R)?
+    - text: Che cos'è Machine Learning Services per SQL Server (Python e R)?
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
@@ -29,7 +29,7 @@ landingContent:
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: Come eseguire R/Python in SQL Server con Machine Learning Services
+    - text: Come eseguire codice R o Python in SQL Server con Machine Learning Services
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
 - title: Introduzione a Python
   linkLists:
@@ -39,15 +39,15 @@ landingContent:
       url: tutorials/quickstart-python-create-script.md
     - text: Gestire input e output
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: Usare le strutture di dati Python in SQL Server
+    - text: Usare le strutture dei dati Python in SQL Server
       url: tutorials/quickstart-python-data-structures.md
     - text: Eseguire il training del primo modello e usarlo
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Prevedere il noleggio di sci con regressione lineare
+    - text: Prevedere il noleggio di sci tramite la regressione lineare
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: Categorizzazione dei clienti con il clustering k-means
+    - text: Categorizzazione dei clienti tramite clustering K-means
       url: tutorials/python-clustering-model.md
 - title: Introduzione a R
   linkLists:
@@ -57,7 +57,7 @@ landingContent:
       url: tutorials/quickstart-r-create-script.md
     - text: Gestire input e output
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
-    - text: Usare le strutture di dati R in SQL Server
+    - text: Usare le strutture dei dati R in SQL Server
       url: tutorials/quickstart-r-data-types-and-objects.md
     - text: Eseguire il training del primo modello e usarlo
       url: tutorials/quickstart-r-train-score-model.md
@@ -67,7 +67,7 @@ landingContent:
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
     - text: Usare Machine Learning Services in R Tools
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Installa Machine Learning Services
+- title: Installare Machine Learning Services
   linkLists:
   - linkListType: get-started
     links:
@@ -93,7 +93,7 @@ landingContent:
       url: concepts/extension-r.md
   - linkListType: concept
     links:
-    - text: Sicurezza per il Framework di estendibilità
+    - text: Sicurezza per il framework di estendibilità
       url: concepts/security.md
 - title: Gestire pacchetti Python e R
   linkLists:

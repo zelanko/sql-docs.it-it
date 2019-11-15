@@ -1,7 +1,7 @@
 ---
 title: Che cosa sono i cluster Big Data?
 titleSuffix: SQL Server Big Data Clusters
-description: Informazioni sui [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) che vengono eseguiti in Kubernetes e offrono opzioni di scalabilità orizzontale sia per dati relazionali che per i dati HDFS.
+description: Informazioni sui cluster Big Data di SQL Server che vengono eseguiti in Kubernetes e offrono opzioni di scale-out per dati relazionali e HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532513"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706665"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -56,7 +56,7 @@ I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 
 
 La gestione e il monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
 
-È possibile usare Azure Data Studio per eseguire un'ampia gamma di attività sul cluster Big Data. Tutto questo viene reso possibile dalla nuova **estensione di SQL Server 2019 (anteprima)** . L'estensione offre quanto segue:
+È possibile usare Azure Data Studio per eseguire un'ampia gamma di attività sul cluster Big Data. Tutto questo viene reso possibile dalla nuova **estensione di SQL Server 2019**. L'estensione offre quanto segue:
 
 - Frammenti predefiniti per attività di gestione comuni.
 - Possibilità di esplorare HDFS, caricare file, visualizzare file in anteprima e creare directory.

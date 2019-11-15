@@ -1,20 +1,20 @@
 ---
-title: Tipi di dati Java supportati in SQL Server 2019
+title: Tipi di dati Java
 titleSuffix: SQL Server Language Extensions
 description: Eseguire il mapping di tipi di dati da Java a SQL Server per strutture di dati di input e output e per parametri di input in sp_execute_external_script.
 author: dphansen
 ms.author: davidph
-ms.date: 09/05/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9daca9c607befe077fcccec20385a36c82b04c6f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "73588835"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658830"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Tipi di dati Java e SQL Server supportati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

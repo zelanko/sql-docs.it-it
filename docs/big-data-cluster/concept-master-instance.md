@@ -1,7 +1,7 @@
 ---
 title: Che cos'è l'istanza master?
 titleSuffix: SQL Server big data clusters
-description: Questo articolo descrive l'istanza master di SQL Server in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
+description: Questo articolo descrive l'istanza master di SQL Server in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652272"
@@ -20,7 +20,7 @@ ms.locfileid: "69652272"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive il ruolo dell' *istanza master di SQL Server* in un cluster Big Data per SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data per gestire la connettività, le query con scalabilità orizzontale, i metadati e i database utente e i servizi di machine learning.
+Questo articolo descrive il ruolo dell'*istanza master di SQL Server* in un cluster Big Data per SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data per gestire connettività, query con scalabilità orizzontale, database utente e metadati e Machine Learning Services.
 
 L'istanza master di SQL Server offre le funzionalità seguenti:
 
@@ -53,7 +53,7 @@ Nell'ambito di un cluster Big Data di SQL Server, Machine Learning Services sar�
 
 SQL Server 2019 semplifica l'unione di Big Data ai dati dimensionali generalmente archiviati nel database aziendale. Il valore dei Big Data aumenta notevolmente se questi non sono disponibili solo parzialmente in un'organizzazione, ma sono inclusi anche in report, dashboard e applicazioni. Allo stesso tempo, i data scientist possono continuare a usare gli strumenti dell'ecosistema Spark/HDFS e hanno semplice accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ l'istanza master di SQL Server.
 
-Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], è possibile eseguire altre operazioni con i data Lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] è possibile eseguire molte più operazioni con i data lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
 
 * Compilare applicazioni che utilizzano dati di data lake aziendali.
 * Riflettere su tutti i dati con query Transact-SQL.
@@ -67,7 +67,7 @@ Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere le risorse seguenti:
+Per altre informazioni sui [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere le risorse seguenti:
 
-- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
-- [Workshop: Architettura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

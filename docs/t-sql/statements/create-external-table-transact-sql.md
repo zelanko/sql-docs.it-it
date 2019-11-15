@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227144"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882387"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Panoramica: Database SQL di Azure
 
-Nel database SQL di Azure crea una tabella esterna per [query elastiche](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) per l'uso con il database SQL di Azure.
-
-Usare una tabella esterna per creare una tabella esterna per l'uso con una query elastica.
+Nel database SQL di Azure crea una tabella esterna per [query elastiche](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) (in anteprima).
 
 Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -661,7 +659,7 @@ Al contrario, nello scenario di importazione, ad esempio SELECT INTO FROM EXTERN
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
-Poiché si trovano in un altro database SQL, i dati per una tabella esterna possono essere modificati o rimossi in qualsiasi momento. Per questo motivo, non si garantisce che i risultati delle query in una tabella esterna siano deterministici. La stessa query può restituire risultati diversi ogni volta che viene eseguita su una tabella esterna. Analogamente, una query può non riuscire se i dati esterni vengono spostati o rimossi.
+L'accesso ai dati tramite una tabella esterna non rispetta la semantica di isolamento all'interno di SQL Server. Ciò significa che l'esecuzione di query su una tabella esterna non impone alcun blocco o isolamento dello snapshot. I dati restituiti possono quindi cambiare se i dati nell'origine dati esterna cambiano.  La stessa query può restituire risultati diversi ogni volta che viene eseguita su una tabella esterna. Analogamente, una query può non riuscire se i dati esterni vengono spostati o rimossi.
 
 È possibile creare più tabelle esterne che fanno tutte riferimento a origini dati esterne differenti.
 
@@ -674,6 +672,24 @@ Costrutti e operazioni non supportati:
 
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
+
+Solo i predicati letterali definiti in una query possono essere propagati nell'origine dati esterna. Questo rappresenta una differenza rispetto ai server collegati e all'accesso a posizioni in cui è possibile usare predicati determinati durante l'esecuzione di query, ad esempio in combinazione con un ciclo annidato in un piano di query. Ciò porta spesso alla copia in locale dell'intera tabella esterna e quindi al join della tabella stessa.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+L'uso di tabelle esterne impedisce l'uso del parallelismo nel piano di query.
+
+Le tabelle esterne vengono implementate come query remote e, di conseguenza, il numero stimato di righe restituite è in genere pari a 1000. Esistono altre regole basate sul tipo di predicato usato per filtrare la tabella esterna. Si tratta di stime basate su regole anziché di stime basate sui dati effettivi della tabella esterna. Lo strumento di ottimizzazione non accede all'origine dati remota per ottenere una stima più accurata.
 
 ## <a name="locking"></a>Utilizzo di blocchi
 

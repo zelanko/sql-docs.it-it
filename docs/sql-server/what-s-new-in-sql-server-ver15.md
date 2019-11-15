@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593881"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844561"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -153,6 +153,7 @@ Tradizionalmente, quando un processo di estrazione, trasformazione e caricamento
 |:---|:---|
 |Always Encrypted con enclave sicuri|Estende la funzionalità Always Encrypted con crittografia sul posto e calcoli avanzati abilitando i calcoli sui dati di testo non crittografato all'interno di un enclave sicuro sul lato server. La crittografia sul posto migliora le prestazioni e l'affidabilità delle operazioni di crittografia (crittografia delle colonne, rotazione delle chiavi di crittografia delle colonne e così via) in quanto evita di spostare i dati all'esterno del database.<br><br> Il supporto per i calcoli avanzati (criteri di ricerca e operazioni di confronto) consente l'uso della funzionalità Always Encrypted con un set molto più ampio di scenari e applicazioni che richiedono la protezione dei dati sensibili, oltre a funzionalità più avanzate nelle query Transact-SQL. Vedere [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Gestione dei certificati in Gestione configurazione SQL Server|Vedere [Gestione dei certificati (Gestione configurazione SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
+|Individuazione dati e classificazione|Individuazione dati e classificazione fornisce funzionalità avanzate, integrate in modo nativo in SQL Server, per classificare, etichettare e proteggere i dati sensibili nei database. La classificazione dei dati più sensibili, come ad esempio i dati aziendali, finanziari, medici, personali e così via, può avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione. Possono costituire l'infrastruttura per:<ul><li>Contribuire a soddisfare i requisiti in materia di privacy e di conformità alle normative</li><li>Supportare vari scenari di sicurezza, quali il monitoraggio (controllo) e gli avvisi in caso di accesso anomalo ai dati sensibili</li><li>Semplificare l'identificazione della posizione dei dati sensibili nell'organizzazione, in modo che gli amministratori possano adottare le misure necessarie per proteggere il database</li></ul>Anche il [controllo](../relational-databases/security/auditing/sql-server-audit-database-engine.md) è stato migliorato e il log di controllo ora include un nuovo campo denominato `data_sensitivity_information`, che registra le classificazioni (etichette punteggio) di riservatezza dei dati effettivi restituiti dalla query. Per dettagli ed esempi vedere [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Disponibilità elevata
@@ -226,14 +227,6 @@ Il modo più semplice per iniziare a lavorare con [!INCLUDE[ssNoVersion](../incl
 |Cluster di failover di Windows Server| È possibile configurare la disponibilità elevata per Machine Learning Services in un cluster di failover di Windows Server.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| Nuova funzionalità o aggiornamento | Dettagli |
-|:---|:---|
-|Supporto dei database dell'istanza gestita del database SQL di Azure| Ospitare [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] in un'istanza gestita. Vedere [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]Installazione e configurazione](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|Nuovi controlli HTML| I controlli HTML sostituiscono tutti i componenti di Silverlight precedenti. La dipendenza da Silverlight è stata rimossa.|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 Questa versione introduce nuove funzionalità e miglioramenti per le prestazioni, la governance delle risorse e il supporto di client.
@@ -246,6 +239,23 @@ Questa versione introduce nuove funzionalità e miglioramenti per le prestazioni
 |Impostazioni delle proprietà per la governance delle risorse| Questa versione include nuove impostazioni di memoria: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit e OLAP\Query\RowsetSerializationLimit per la governance delle risorse. Per altre informazioni, vedere le [impostazioni di memoria](/analysis-services/server-properties/memory-properties).|
 |Impostazione di governance per gli aggiornamenti della cache di Power BI | Questa versione introduce la proprietà ClientCacheRefreshPolicy, che esegue l'override della memorizzazione nella cache dei dati dei riquadri del dashboard e dei dati del report per il caricamento iniziale del report Live Connect da parte del servizio Power BI. Per altre informazioni, vedere [Proprietà generali](/analysis-services/server-properties/general-properties). |
 | Collegamento online  | Il collegamento online può essere usato per la sincronizzazione di repliche di sola lettura negli ambienti con scalabilità orizzontale delle query locali. Per altre informazioni, vedere [Collegamento online](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+In questa versione sono state introdotte nuove funzionalità per migliorare le operazioni sui file.
+
+| Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+|Attività File flessibili |Eseguire operazioni sui file in file system locale, Archiviazione BLOB di Azure e Azure Data Lake Storage Gen2. Vedere [Attività File flessibili](../integration-services/control-flow/flexible-file-task.md).|
+|Origine e destinazione di File flessibili |Leggere e scrivere dati per Archiviazione BLOB di Azure e Azure Data Lake Storage Gen2. Vedere [Origine di File flessibili](../integration-services/data-flow/flexible-file-source.md) e [Destinazione di File flessibili](../integration-services/data-flow/flexible-file-destination.md). |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+|Supporto dei database dell'istanza gestita del database SQL di Azure| Ospitare [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] in un'istanza gestita. Vedere [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]Installazione e configurazione](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Nuovi controlli HTML| I controlli HTML sostituiscono tutti i componenti di Silverlight precedenti. La dipendenza da Silverlight è stata rimossa.|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653281"
@@ -23,9 +23,9 @@ ms.locfileid: "69653281"
 Questa esercitazione illustra come usare uno script per caricare dati di esempio in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Questi dati di esempio vengono usati anche da molte altre esercitazioni disponibili nella documentazione.
 
 > [!TIP]
-> È possibile trovare altri esempi per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] nel repository GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Si trovano nel percorso **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> È possibile trovare esempi aggiuntivi per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] nel repository GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Si trovano nel percorso **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Un cluster Big Data distribuito](deployment-guidance.md)
 - [Strumenti per Big Data](deploy-big-data-tools.md)

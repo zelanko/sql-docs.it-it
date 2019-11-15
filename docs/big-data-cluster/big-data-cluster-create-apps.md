@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532517"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706697"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come distribuire un'app in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ Questo articolo descrive come distribuire e gestire uno script R e Python come a
 
 - Un'unica utilità della riga di comando per gestire cluster e app.
 - Distribuzione semplificata di app con controllo granulare tramite file di specifiche.
-- Supporto per l'hosting di tipi di applicazione aggiuntivi: SSIS e MLeap (novità in CTP 2.3).
+- Supporto per l'hosting di tipi di applicazione aggiuntivi: SSIS e MLeap.
 - [Estensione di Visual Studio Code](app-deployment-extension.md) per gestire la distribuzione di applicazioni.
 
 Le applicazioni vengono distribuite e gestite tramite l'utilità della riga di comando `azdata`. Questo articolo fornisce alcuni esempi su come distribuire app dalla riga di comando. Per informazioni sull'uso in Visual Studio Code, fare riferimento a [Estensione di Visual Studio Code](app-deployment-extension.md).
@@ -43,7 +43,7 @@ Sono supportati i tipi seguenti di app:
 
 ## <a name="capabilities"></a>Capabilities
 
-In SQL Server 2019 (anteprima) è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
+In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
 
 |Comando |Descrizione |
 |:---|:---|

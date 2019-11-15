@@ -1,62 +1,63 @@
 ---
-title: Monitorare l'esecuzione di script Python e R usando DMV
-description: Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni di Python e R in SQL Server Machine Learning Services.
+title: Monitorare script tramite DMV
+description: Usare DMV (viste a gestione dinamica) per monitorare l'esecuzione di script esterni Python ed R in Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "71713184"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727761"
 ---
-# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorare SQL Server Machine Learning Services mediante le viste a gestione dinamica (DMV)
+# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorare Machine Learning Services per SQL Server tramite DMV
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Usare le viste a gestione dinamica (DMV) per monitorare l'esecuzione di script esterni (Python e R), le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in SQL Server Machine Learning Services.
+Usare DMV (viste a gestione dinamica) per monitorare l'esecuzione di script esterni (Python ed R) e le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in Machine Learning Services per SQL Server.
 
-In questo articolo si troveranno i DMV specifici per SQL Server Machine Learning Services. Sono inoltre disponibili query di esempio che mostrano:
+In questo articolo vengono presentate le DMV specifiche per Machine Learning Services per SQL Server. Sono anche disponibili query di esempio che mostrano:
 
-+ Impostazioni e opzioni di configurazione per Machine Learning
-+ Sessioni attive che eseguono Python o script esterni
-+ Statistiche di esecuzione per il runtime esterno per Python e R
-+ Contatori delle prestazioni per gli script esterni
++ Impostazioni e opzioni di configurazione per l'apprendimento automatico
++ Sessioni attive che eseguono script Python o R esterni
++ Statistiche di esecuzione per il runtime esterno per Python ed R
++ Contatori delle prestazioni per script esterni
 + Utilizzo della memoria per il sistema operativo, SQL Server e i pool di risorse esterne
-+ Configurazione della memoria per SQL Server e pool di risorse esterne
-+ Resource Governor pool di risorse, inclusi i pool di risorse esterni
-+ Pacchetti installati per Python e R
++ Configurazione della memoria per SQL Server e i pool di risorse esterne
++ Pool di risorse di Resource Governor, inclusi i pool di risorse esterne
++ Pacchetti installati per Python ed R
 
-Per informazioni più generali su DMV, vedere [viste a gestione dinamica del sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+Per informazioni più generali sulle DMV, vedere [DMV di sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
-> È anche possibile usare i report personalizzati per monitorare SQL Server Machine Learning Services. Per altre informazioni, vedere [monitorare l'apprendimento automatico usando report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> È anche possibile usare report personalizzati per monitorare Machine Learning Services per SQL Server. Per altre informazioni, vedere [Monitorare l'apprendimento automatico tramite report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="dynamic-management-views"></a>DMV
 
-Per il monitoraggio dei carichi di lavoro di Machine Learning in SQL Server, è possibile usare le viste a gestione dinamica seguenti. Per eseguire una query su DMV, è necessario `VIEW SERVER STATE` autorizzazione per l'istanza di.
+Per il monitoraggio dei carichi di lavoro di apprendimento automatico in SQL Server, è possibile usare DMV seguenti. Per eseguire una query sulle DMV, è necessaria l'autorizzazione `VIEW SERVER STATE` per l'istanza.
 
-| Vista a gestione dinamica | Digitare | Description |
+| Vista a gestione dinamica | Tipo | Descrizione |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Esecuzione | Restituisce una riga per ogni account di lavoro attivo che esegue uno script esterno. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Esecuzione | Restituisce una riga per ogni tipo di richiesta di script esterni. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Esecuzione | Restituisce una riga per contatore delle prestazioni gestito dal server. Se si usa la condizione di ricerca `WHERE object_name LIKE '%External Scripts%'`, è possibile usare queste informazioni per vedere il numero di script eseguiti, gli script eseguiti con la modalità di autenticazione o il numero di chiamate R o Python rilasciate nell'istanza complessiva. |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Restituisce informazioni sullo stato corrente del pool di risorse esterne in Resource Governor, la configurazione corrente dei pool di risorse e le statistiche del pool di risorse. |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Restituisce le informazioni di affinità della CPU relative alla configurazione corrente del pool di risorse esterne in Resource Governor. Restituisce una riga per utilità di pianificazione in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], dove è stato eseguito il mapping di ogni utilità di pianificazione a un singolo processore. Utilizzare questa vista per eseguire il monitoraggio delle condizioni di un'utilità di pianificazione oppure per identificare eventuali attività sfuggite al controllo. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Esecuzione | Restituisce una riga per contatore delle prestazioni gestito dal server. Se si usa la condizione di ricerca `WHERE object_name LIKE '%External Scripts%'`, è possibile usare queste informazioni per identificare il numero di script eseguiti, gli script eseguiti con ogni modalità di autenticazione o il numero di chiamate R o Python effettuate complessivamente nell'istanza. |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Restituisce informazioni sullo stato del pool di risorse esterne corrente in Resource Governor, la configurazione corrente dei pool di risorse e le statistiche del pool di risorse. |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Restituisce informazioni sull'affinità della CPU relative alla configurazione corrente del pool di risorse esterne in Resource Governor. Restituisce una riga per utilità di pianificazione in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], dove è stato eseguito il mapping di ogni utilità di pianificazione a un singolo processore. Utilizzare questa vista per eseguire il monitoraggio delle condizioni di un'utilità di pianificazione oppure per identificare eventuali attività sfuggite al controllo. |
 
-Per informazioni sul monitoraggio di istanze di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], vedere [viste del catalogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) e [Resource Governor viste a gestione dinamica correlate](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Per informazioni sul monitoraggio di istanze di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], vedere [Viste del catalogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) e [DMV correlate a Resource Governor](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Impostazioni e configurazione
 
-Visualizzare l'impostazione di installazione Machine Learning Services e le opzioni di configurazione.
+Visualizzare le impostazioni di installazione e le opzioni di configurazione di Machine Learning Services.
 
-![Output delle impostazioni e della query di configurazione](media/dmv-settings-and-configuration.png "Output delle impostazioni e della query di configurazione")
+![Output della query delle impostazioni e della configurazione](media/dmv-settings-and-configuration.png "Output della query delle impostazioni e della configurazione")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste e sulle funzioni utilizzate, vedere [sys. dm _server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)e [ServerProperty](../../t-sql/functions/serverproperty-transact-sql.md).
+Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste e sulle funzioni usate, vedere [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -78,12 +79,12 @@ WHERE name = 'external scripts enabled';
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
-| IsMLServicesInstalled | Restituisce 1 se per l'istanza è installato SQL Server Machine Learning Services. In caso contrario, restituisce 0. |
+| IsMLServicesInstalled | Restituisce 1 se Machine Learning Services per SQL Server è installato per l'istanza. In caso contrario, restituisce 0. |
 | ExternalScriptsEnabled | Restituisce 1 se gli script esterni sono abilitati per l'istanza. In caso contrario, restituisce 0. |
-| ImpliedAuthenticationEnabled | Restituisce 1 se è abilitata l'autenticazione implicita. In caso contrario, restituisce 0. La configurazione per l'autenticazione implicita viene verificata verificando l'esistenza di un account di accesso per SQLRUserGroup. |
-| IsTcpEnabled | Restituisce 1 se il protocollo TCP/IP è abilitato per l'istanza di. In caso contrario, restituisce 0. Per ulteriori informazioni, vedere la pagina relativa alla [configurazione predefinita del protocollo di rete SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+| ImpliedAuthenticationEnabled | Restituisce 1 se l'autenticazione implicita è abilitata. In caso contrario, restituisce 0. La configurazione per l'autenticazione implicita viene controllata verificando l'esistenza di un account di accesso per SQLRUserGroup. |
+| IsTcpEnabled | Restituisce 1 se il protocollo TCP/IP è abilitato per l'istanza. In caso contrario, restituisce 0. Per altre informazioni, vedere [Configurazione predefinita dei protocolli di rete di SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
 
 ## <a name="active-sessions"></a>Sessioni attive
 
@@ -91,7 +92,7 @@ Visualizzare le sessioni attive che eseguono script esterni.
 
 ![Output della query delle impostazioni attive](media/dmv-active-sessions.png "Output della query delle impostazioni attive")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste a gestione dinamica utilizzate, vedere [sys. dm _exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys. dm _external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)e [sys. dm _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulle DMV usate, vedere [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -106,15 +107,15 @@ ON s.session_id = r.session_id;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
 | session_id | Identifica la sessione associata a ogni connessione principale attiva. |
 | blocking_session_id | ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata. |
 | status | Stato della richiesta. |
 | database_name | Nome del database corrente per ogni sessione. |
-| login_name | SQL Server nome di accesso in cui è attualmente in esecuzione la sessione. |
+| login_name | Nome dell'account di accesso SQL Server con cui la sessione è attualmente in esecuzione. |
 | wait_time | Se la richiesta è momentaneamente bloccata, in questa colonna viene restituita la durata dell'attesa corrente espressa in millisecondi. Non ammette i valori Null. |
-| wait_type | Se la richiesta è momentaneamente bloccata, in questa colonna viene restituito il tipo di attesa. Per informazioni sui tipi di attese, vedere [sys. dm _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| wait_type | Se la richiesta è momentaneamente bloccata, in questa colonna viene restituito il tipo di attesa. Per informazioni sui tipi di attesa, vedere [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
 | last_wait_type | Se la richiesta è stata precedentemente bloccata, questa colonna restituisce il tipo dell'ultima attesa. |
 | total_elapsed_time | Tempo totale, in millisecondi, trascorso dall'arrivo della richiesta. |
 | cpu_time | Tempo della CPU utilizzato dalla richiesta, espresso in millisecondi. |
@@ -127,11 +128,11 @@ La query restituisce le colonne seguenti:
 
 ## <a name="execution-statistics"></a>Statistiche di esecuzione
 
-Visualizzare le statistiche di esecuzione per il runtime esterno per R e Python. Sono attualmente disponibili solo le statistiche delle funzioni del pacchetto RevoScaleR, revoscalepy o microsoftml.
+Visualizzare le statistiche per il runtime esterno per R e Python. Sono attualmente disponibili solo le statistiche sulle funzioni dei pacchetti RevoScaleR, revoscalepy o microsoftml.
 
-![Output della query statistiche di esecuzione](media/dmv-execution-statistics.png "Output della query statistiche di esecuzione")
+![Output della query delle statistiche di esecuzione](media/dmv-execution-statistics.png "Output della query delle statistiche di esecuzione")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulla vista a gestione dinamica utilizzata, vedere [sys. dm _external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). La query restituisce solo le funzioni che sono state eseguite più di una volta.
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulla DMV usata, vedere [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). La query restituisce solo le funzioni che sono state eseguite più di una volta.
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -142,7 +143,7 @@ ORDER BY language, counter_name;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
 | language | Nome del linguaggio di script esterni registrato. |
 | counter_name | Nome di una funzione di script esterni registrata. |
@@ -150,11 +151,11 @@ La query restituisce le colonne seguenti:
 
 ## <a name="performance-counters"></a>Contatori delle prestazioni
 
-Consente di visualizzare i contatori delle prestazioni correlati all'esecuzione di script esterni.
+Visualizzare i contatori delle prestazioni correlati all'esecuzione di script esterni.
 
 ![Output della query dei contatori delle prestazioni](media/dmv-performance-counters.png "Output della query dei contatori delle prestazioni")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulla vista a gestione dinamica utilizzata, vedere [sys. dm _os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulla DMV usata, vedere [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
 ```sql
 SELECT counter_name, cntr_value
@@ -162,25 +163,25 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys. dm _os_performance_counters** restituisce i contatori delle prestazioni seguenti per gli script esterni:
+**sys.dm_os_performance_counters** restituisce i contatori delle prestazioni seguenti per gli script esterni:
 
-| Contatore | Description |
+| Contatore | Descrizione |
 |---------|-------------|
 | Total Executions | Numero di processi esterni avviati da chiamate locali o remote. |
-| Parallel Executions | Numero di volte in cui uno script includeva la specifica _\@parallel_ e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] era in grado di generare e utilizzare un piano di query parallelo. |
-| Streaming Executions | Numero di volte in cui è stata richiamata la funzionalità di streaming. |
+| Parallel Executions | Numeri di volte in cui uno script ha incluso la specifica _\@parallel_ e [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è stato in grado di generare e usare un piano di query parallelo. |
+| Streaming Executions | Numero di volte in cui è stata richiamata la funzionalità dei flussi. |
 | SQL CC Executions | Numero di script esterni eseguiti in cui è stata creata un'istanza remota della chiamata e SQL Server è stato usato come contesto di calcolo. |
-| Auth. accessi impliciti | Numero di volte in cui è stata effettuata una chiamata di loopback ODBC utilizzando l'autenticazione implicita. ovvero il [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ha eseguito la chiamata per conto dell'utente che ha inviato la richiesta di script. |
+| Implied Auth. Logins | Numero di volte in cui è stata effettuata una chiamata loopback ODBC tramite l'autenticazione implicita, ovvero in cui [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ha eseguito la chiamata per conto dell'utente che ha inviato la richiesta di script. |
 | Total Execution Time (ms) | Tempo trascorso tra la chiamata e il completamento della chiamata. |
-| Execution Errors | Numero di volte in cui gli script hanno segnalato errori. Questo conteggio non include errori di R o Python. |
+| Execution Errors | Numero di volte in cui gli script hanno segnalato errori. Questo conteggio non include gli errori di R o Python. |
 
 ## <a name="memory-usage"></a>Utilizzo della memoria
 
-Visualizzare le informazioni sulla memoria usata dal sistema operativo, SQL Server e i pool esterni.
+Visualizzare informazioni sulla memoria usata dal sistema operativo, da SQL Server e dai pool esterni.
 
-![Output della query sull'utilizzo della memoria](media/dmv-memory-usage.png "Output della query sull'utilizzo della memoria")
+![Output della query sull'utilizzo di memoria](media/dmv-memory-usage.png "Output della query sull'utilizzo di memoria")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste a gestione dinamica utilizzate, vedere [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) e [sys. dm _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulle DMV usate, vedere [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) e [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -192,19 +193,19 @@ FROM sys.dm_os_sys_info;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
-| physical_memory_kb | Quantità totale di memoria fisica nel computer. |
+| physical_memory_kb | Quantità totale di memoria fisica disponibile nel computer. |
 | committed_kb | Memoria di cui è stato eseguito il commit in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. |
-| external_pool_peak_memory_kb | Somma della quantità massima di memoria utilizzata, in kilobyte, per tutti i pool di risorse esterni. |
+| external_pool_peak_memory_kb | Somma della quantità massima di memoria usata, in kilobyte, per tutti i pool di risorse esterne. |
 
 ## <a name="memory-configuration"></a>Configurazione della memoria
 
-Visualizzare informazioni sulla configurazione della memoria massima in percentuale di SQL Server e pool di risorse esterne. Se SQL Server è in esecuzione con il valore predefinito `max server memory (MB)`, viene considerato come 100% della memoria del sistema operativo.
+Visualizzare informazioni sulla configurazione della memoria massima in percentuale di SQL Server e dei pool di risorse esterne. Se SQL Server è in esecuzione con il valore predefinito di `max server memory (MB)`, questo valore viene considerato il 100% della memoria del sistema operativo.
 
-![Output dalla query di configurazione della memoria](media/dmv-memory-configuration.png "Output dalla query di configurazione della memoria")
+![Output della query di configurazione della memoria](media/dmv-memory-configuration.png "Output della query di configurazione della memoria")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste utilizzate, vedere [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulle viste usate, vedere [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -221,18 +222,18 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
-| NAME | Nome del pool di risorse esterno o SQL Server. |
-| max_memory_percent | Quantità massima di memoria che può essere utilizzata da SQL Server o dal pool di risorse esterne. |
+| NAME | Nome del pool di risorse esterne o di SQL Server. |
+| max_memory_percent | Memoria massima che può essere usata da SQL Server o dal pool di risorse esterne. |
 
 ## <a name="resource-pools"></a>Pool di risorse
 
-In [SQL Server Resource Governor](../../relational-databases/resource-governor/resource-governor.md), un [pool di risorse](../../relational-databases/resource-governor/resource-governor-resource-pool.md) rappresenta un subset delle risorse fisiche di un'istanza di. È possibile specificare limiti sulla quantità di CPU, i/o fisico e memoria che le richieste dell'applicazione in ingresso, inclusa l'esecuzione di script esterni, possono usare nel pool di risorse. Consente di visualizzare i pool di risorse utilizzati per SQL Server e gli script esterni.
+In [Resource Governor di SQL Server](../../relational-databases/resource-governor/resource-governor.md) un [pool di risorse](../../relational-databases/resource-governor/resource-governor-resource-pool.md) rappresenta un subset delle risorse fisiche di un'istanza. È possibile specificare limiti per la quantità di CPU, I/O fisico e memoria che può essere usata dalle richieste dell'applicazione in ingresso, inclusa l'esecuzione di script esterni, nel pool di risorse. Visualizzare i pool di risorse usati per SQL Server e gli script esterni.
 
 ![Output dalla query dei pool di risorse](media/dmv-resource-pools.png "Output dalla query dei pool di risorse")
 
-Eseguire la query seguente per ottenere questo output. Per ulteriori informazioni sulle viste a gestione dinamica utilizzate, vedere [sys. dm _resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) e [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Eseguire la query seguente per ottenere questo output. Per altre informazioni sulle DMV usate, vedere [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) e [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
@@ -246,22 +247,22 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
-| pool_name | Nome del pool di risorse. I pool di risorse SQL Server sono preceduti da `SQL Server` e i pool di risorse esterne sono preceduti da `External Pool`.
-| total_cpu_usage_hours | Utilizzo cumulativo della CPU in millisecondi dal momento in cui sono state reimpostate le statistiche di Resource Govenor. |
+| pool_name | Nome del pool di risorse. I nomi dei pool di risorse di SQL Server sono preceduti da `SQL Server`, mentre quelli dei pool di risorse esterne sono preceduti da `External Pool`.
+| total_cpu_usage_hours | Utilizzo cumulativo della CPU, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. |
 | read_io_completed_total | Il totale degli I/O di lettura completati dalla reimpostazione delle statistiche di Resource Govenor. |
 | write_io_completed_total | Il totale degli I/O di scrittura completati dalla reimpostazione delle statistiche di Resource Govenor. |
 
 ## <a name="installed-packages"></a>Pacchetti installati
 
-È possibile visualizzare i pacchetti R e Python installati in SQL Server Machine Learning Services eseguendo uno script R o Python che li restituisce.
+È possibile visualizzare i pacchetti R e Python installati in Machine Learning Services per SQL Server eseguendo uno script R o Python che li restituisce.
 
 ### <a name="installed-packages-for-r"></a>Pacchetti installati per R
 
-Visualizzare i pacchetti R installati in SQL Server Machine Learning Services.
+Visualizzare i pacchetti R installati in Machine Learning Services per SQL Server.
 
-![Output dei pacchetti installati per la query R](media/dmv-installed-packages-r.png "Output dei pacchetti installati per la query R")
+![Output della query dei pacchetti installati per R](media/dmv-installed-packages-r.png "Output della query dei pacchetti installati per R")
 
 Eseguire la query seguente per ottenere questo output. La query usa uno script R per determinare i pacchetti R installati con SQL Server.
 
@@ -273,21 +274,21 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
     , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
 ```
 
-Le colonne restituite sono:
+Le colonne restituite sono le seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Versione | Versione del pacchetto. |
 | Dipende da | Elenca i pacchetti da cui dipende il pacchetto installato. |
 | Licenza | Licenza per il pacchetto installato. |
-| LibPath | Directory in cui è possibile trovare il pacchetto. |
+| LibPath | Directory in cui si trova il pacchetto. |
 
 ### <a name="installed-packages-for-python"></a>Pacchetti installati per Python
 
-Visualizzare i pacchetti Python installati in SQL Server Machine Learning Services.
+Visualizzare i pacchetti Python installati in Machine Learning Services per SQL Server.
 
-![Output della query sui pacchetti installati per Python](media/dmv-installed-packages-python.png "Output della query sui pacchetti installati per Python")
+![Output della query dei pacchetti installati per Python](media/dmv-installed-packages-python.png "Output della query dei pacchetti installati per Python")
 
 Eseguire la query seguente per ottenere questo output. La query usa uno script Python per determinare i pacchetti Python installati con SQL Server.
 
@@ -299,18 +300,18 @@ OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.ge
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
-Le colonne restituite sono:
+Le colonne restituite sono le seguenti:
 
-| colonna | Description |
+| colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Versione | Versione del pacchetto. |
-| Percorso | Directory in cui è possibile trovare il pacchetto. |
+| Percorso | Directory in cui si trova il pacchetto. |
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 + [Gestione e monitoraggio delle soluzioni di apprendimento automatico](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-+ [Eventi estesi per Machine Learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
-+ [Viste a gestione dinamica relative a Resource Governor](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
-+ [Viste a gestione dinamica di sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-+ [Monitorare Machine Learning usando report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
++ [Eventi estesi per l'apprendimento automatico](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
++ [DMV correlate a Resource Governor](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [DMV di sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
++ [Monitorare l'apprendimento automatico tramite report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

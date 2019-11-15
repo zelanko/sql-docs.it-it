@@ -1,5 +1,5 @@
 ---
-title: Configurare le funzionalità compatibili di SQL Server con Stretch Database | Microsoft Docs
+title: Configurare le funzionalità compatibili di SQL Server
 ms.date: 03/14/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136285"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844574"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurare le funzionalità compatibili di SQL Server con Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653496"
@@ -453,4 +453,4 @@ Usare il file JSON seguente come riferimento per la struttura e le impostazioni 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su come utilizzare e personalizzare i file di configurazione della distribuzione, vedere [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md#configfile).
+Per altre informazioni su come usare e personalizzare file di configurazione delle distribuzioni, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md#configfile).

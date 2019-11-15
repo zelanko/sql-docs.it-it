@@ -1,7 +1,7 @@
 ---
 title: Ripristinare un database
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come ripristinare un database nell'istanza master di una [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Questo articolo illustra come ripristinare un database nell'istanza master di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652231"
@@ -20,7 +20,7 @@ ms.locfileid: "69652231"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come ripristinare un database esistente nell'istanza master di una [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il metodo consigliato prevede l'uso di un approccio di tipo: backup, copia e ripristino.
+Questo articolo descrive come ripristinare un database esistente nell'istanza master di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il metodo consigliato prevede l'uso di un approccio di tipo: backup, copia e ripristino.
 
 ## <a name="backup-your-existing-database"></a>Eseguire il backup di un database esistente
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere la panoramica seguente:
+Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere la panoramica seguente:
 
-- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
+- [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

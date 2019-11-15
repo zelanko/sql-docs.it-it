@@ -1,6 +1,7 @@
 ---
-title: Novità
-description: Annunci di nuove funzionalità per ogni versione di SQL Server 2016 R Services, R Server e SQL Server Machine Learning Services.
+title: Novità di Machine Learning Services per SQL Server
+titleSuffix: ''
+description: Annunci di nuove funzionalità per ogni versione di Machine Learning Services per SQL Server e di R Services per SQL Server 2016.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532565"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707439"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità di SQL Server Machine Learning Services
 
@@ -28,7 +29,7 @@ In ogni versione di SQL Server vengono aggiunte funzionalità di Machine Learnin
 In questa versione sono state aggiunte le funzionalità più richieste per le operazioni di Machine Learning R e Python in SQL Server. Per altre informazioni su tutte le funzionalità di questa versione, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) e [Note sulla versione per SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 > [!NOTE]
-> Per la documentazione sulle novità in Java in SQL Server 2019, vedere [Novità delle estensioni di linguaggio di SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+> Per la documentazione sulle novità di Java in SQL Server 2019, vedere [Novità nelle estensioni del linguaggio di SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
 Di seguito sono elencate le nuove funzionalità per SQL Server Machine Learning Services:
 

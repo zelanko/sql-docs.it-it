@@ -1,34 +1,35 @@
 ---
-title: Lezione 3 eseguire il training e il salvataggio di un modello usando R e T-SQL
-description: Esercitazione che illustra come eseguire il training, la serializzazione e il salvataggio di un modello R usando SQL Server stored procedure e funzioni T-SQL.
+title: 'Esercitazione su R + T-SQL: Eseguire il training del modello'
+description: Esercitazione che illustra come eseguire il training, la serializzazione e il salvataggio di un modello R usando stored procedure di SQL Server e funzioni T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f23f4c350855b71a3633587bb3c092988fe89fef
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 406f8e1c60c5820f9edaaf7760b7aeed321d2611
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715331"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724460"
 ---
-# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lezione 3: Eseguire il training e salvare un modello usando T-SQL
+# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lezione 3: Eseguire il training e il salvataggio di un modello usando T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo fa parte di un'esercitazione per sviluppatori SQL sull'uso di R in SQL Server.
 
-In questa lezione verrà illustrato come eseguire il training di un modello di apprendimento automatico usando R. Verrà eseguito il training del modello utilizzando le funzionalità dei dati create nella lezione precedente, quindi il modello sottoposto a training viene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] salvato in una tabella. In questo caso, i pacchetti R sono già installati con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], quindi è possibile eseguire tutte le operazioni da SQL.
+In questa lezione verrà illustrato come eseguire il training di un modello di Machine Learning usando R. Si eseguirà il training del modello usando le caratteristiche dei dati create nella lezione precedente e quindi si salverà il modello sottoposto a training in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo caso, i pacchetti R sono già installati con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], quindi è possibile eseguire tutte le operazioni da SQL.
 
-## <a name="create-the-stored-procedure"></a>Creare il stored procedure
+## <a name="create-the-stored-procedure"></a>Creare la stored procedure
 
-Quando si chiama R da T-SQL, si usa il stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Tuttavia, per i processi ripetuti spesso, ad esempio la ripetizione del training di un modello, è più semplice incapsulare la chiamata a sp_execute_exernal_script in un altro stored procedure.
+Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Per i processi che vengono ripetuti spesso, come la ripetizione del training di un modello, è tuttavia più semplice incapsulare la chiamata a sp_execute_exernal_script in un'altra stored procedure.
 
-1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aprire una nuova finestra **query** .
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aprire una nuova finestra **Query**.
 
-2. Eseguire l'istruzione seguente per creare il stored procedure **RxTrainLogitModel**. Questo stored procedure definisce i dati di input e USA **rxLogit** da RevoScaleR per creare un modello di regressione logistica.
+2. Eseguire l'istruzione seguente per creare la stored procedure **RxTrainLogitModel**. Questa stored procedure definisce i dati di input e usa **rxLogit** di RevoScaleR per creare un modello di regressione logistica.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -59,21 +60,21 @@ Quando si chiama R da T-SQL, si usa il stored procedure di sistema [sp_execute_e
     GO
     ```
 
-    - Per assicurarsi che alcuni dati vengano lasciati a test del modello, il 70% dei dati viene selezionato in modo casuale dalla tabella dei dati del taxi a scopo di training.
+    - Per assicurarsi che rimangano dati disponibili per testare il modello, viene selezionato in modo casuale il 70% dei dati della tabella relativa ai dati dei taxi da usare per il training.
 
-    - La query SELECT usa la funzione scalare personalizzata *fnCalculateDistance* per calcolare la distanza diretta tra la posizione di salita e discesa dei passeggeri. I risultati della query vengono archiviati nella variabile `InputDataset`di input R predefinita.
+    - La query SELECT usa la funzione scalare personalizzata *fnCalculateDistance* per calcolare la distanza diretta tra la posizione di salita e discesa dei passeggeri. I risultati della query vengono archiviati nella variabile di input R predefinita `InputDataset`.
   
-    - Lo script r chiama la funzione **rxLogit** , che è una delle funzioni R avanzate incluse in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per creare il modello di regressione logistica.
+    - Lo script R chiama la funzione **rxLogit**, ovvero una delle funzioni R avanzate incluse in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per creare il modello di regressione logistica.
   
         La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_, _trip_distance_, _trip_time_in_secs_e _direct_distance_.
   
-    - Il modello sottoposto a training, salvato nella `logitObj`variabile R, viene serializzato e restituito come parametro di output.
+    - Il modello sottoposto a training salvato nella variabile R `logitObj` viene serializzato e restituito come parametro di output.
 
-## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>Eseguire il training e distribuire il modello R usando il stored procedure
+## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>Eseguire il training e la distribuzione del modello R usando la stored procedure
 
-Poiché il stored procedure include già una definizione dei dati di input, non è necessario fornire una query di input.
+Poiché la stored procedure include già una definizione dei dati di input, non è necessario specificare una query di input.
 
-1. Per eseguire il training e distribuire il modello R, chiamare il stored procedure e inserirlo nella tabella di database _nyc_taxi_models_, in modo da poterlo usare per le stime future:
+1. Per eseguire il training e la distribuzione del modello R, chiamare la stored procedure e inserirla nella tabella di database _nyc_taxi_models_, in modo che sia possibile farne uso per stime future:
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -81,15 +82,15 @@ Poiché il stored procedure include già una definizione dei dati di input, non 
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
-2. Osservare la finestra **messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per i messaggi che verrebbero inviati al flusso **stdout** di R, come questo messaggio: 
+2. Esaminare la finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare i messaggi che verrebbero inoltrati al flusso **stdout** di R, come il seguente: 
 
-    "Messaggi STDOUT dallo script esterno: Righe lette: 1193025, totale righe elaborate: 1193025, tempo totale blocco: 0,093 secondi "
+    "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
-    È anche possibile visualizzare messaggi specifici per la singola funzione, `rxLogit`, che visualizza le variabili e le metriche di test generate come parte della creazione del modello.
+    Possono venire visualizzati anche messaggi specifici per la singola funzione, `rxLogit`, con informazioni sulle variabili e sulle metriche di test generate come parte della creazione del modello.
 
-3.  Al termine dell'istruzione, aprire la tabella *nyc_taxi_models*. L'elaborazione dei dati e l'adattamento del modello potrebbero richiedere alcuni minuti.
+3.  Dopo il completamento dell'istruzione, aprire la tabella *nyc_taxi_models*. L'elaborazione dei dati e l'adattamento del modello possono richiedere un po' di tempo.
 
-    È possibile notare che è stata aggiunta una nuova riga che contiene il modello serializzato nel _modello_ di colonna e il nome del modello **RxTrainLogit_model** nel _nome_della colonna.
+    È possibile notare che è stata aggiunta una nuova riga nuova contenente il modello serializzato nella colonna _model_ e il nome del modello **RxTrainLogit_model** nella colonna _name_.
 
     ```sql
     model                        name
@@ -97,13 +98,13 @@ Poiché il stored procedure include già una definizione dei dati di input, non 
     0x580A00000002000302020....  RxTrainLogit_model
     ```
 
-Nel passaggio successivo verrà usato il modello sottoposto a training per generare stime.
+Nel passaggio successivo si userà il modello sottoposto a training per generare stime.
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Lezione 4: Stimare potenziali risultati usando un modello R in un stored procedure](../tutorials/sqldev-operationalize-the-model.md)
+[Lezione 4: Stimare i risultati potenziali usando un modello R in una stored procedure](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Lezione 2: Creare funzionalità di dati usando funzioni R e T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lezione 2: Creare caratteristiche dei dati usando funzioni T-SQL e R](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

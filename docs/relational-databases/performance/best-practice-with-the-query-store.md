@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142779"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervallo di scaricamento dati (minuti)** : definisce la frequenza in secondi per salvare in modo permanente le statistiche di runtime raccolte su disco. Il valore predefinito è 900 secondi, che corrisponde a 15 minuti. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per salvare i dati in modo permanente prima dell'arresto di un database.
+ **Intervallo di scaricamento dati (minuti)** : definisce la frequenza per salvare in modo permanente le statistiche di runtime raccolte su disco. È espresso in minuti nell'interfaccia utente grafica (GUI), ma in [!INCLUDE[tsql](../../includes/tsql-md.md)] è espresso in secondi. Il valore predefinito è 900 secondi, ovvero 15 minuti nell'interfaccia utente grafica. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per salvare i dati in modo permanente prima dell'arresto di un database.
  
 > [!NOTE]
 > L'uso del flag di traccia 7745 impedisce la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altre informazioni, vedere la sezione [Usare i flag di traccia nei server cruciali per migliorare il ripristino di emergenza](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervallo di raccolta statistiche**: definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 60 minuti. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi. Tenere presente che il valore influisce direttamente sulle dimensioni dei dati di Query Store. Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di raccolta statistiche**:  
+ **Intervallo di raccolta statistiche**: definisce il livello di granularità delle statistiche di runtime raccolte, espresso in minuti. Il valore predefinito è 60 minuti. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi. Tenere presente che il valore influisce direttamente sulle dimensioni dei dati di Query Store. Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di raccolta statistiche**:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Soglia per query non aggiornate (giorni)** : criteri di pulizia basati sul tempo che controllano il periodo di conservazione di statistiche di runtime persistenti e query inattive. Per impostazione predefinita, Query Store è configurato in modo da conservare i dati per 30 giorni, che per alcuni scenari potrebbe essere un periodo eccessivamente lungo.  
+ **Soglia per query non aggiornate (giorni)** : criteri di pulizia basati sul tempo, che controllano il periodo di conservazione di statistiche di runtime persistenti e query inattive, espresso in giorni. Per impostazione predefinita, Query Store è configurato in modo da conservare i dati per 30 giorni, che per alcuni scenari potrebbe essere un periodo eccessivamente lungo.  
   
  Evitare di conservare i dati cronologici che non si intende usare. Questo accorgimento riduce il ricorso allo stato di sola lettura. Le dimensioni dei dati di Query Store e il tempo necessario per rilevare e limitare il problema saranno più prevedibili. Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure lo script seguente per configurare i criteri di pulizia basati sul tempo:  
   
@@ -199,7 +199,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
  L'immagine seguente mostra come trovare le viste dell'archivio query:  
   
-   ![Viste di query Store](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Viste di Query Store")  
+   ![Viste di Query Store](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Viste di Query Store")  
   
  La tabella seguente illustra quando usare ognuna delle viste dell'archivio query:  
   
@@ -220,7 +220,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
 -   Se la query è stata eseguita con più piani e l'ultimo piano è notevolmente peggiore rispetto al piano precedente, è possibile ricorrere al meccanismo di uso forzato del piano. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a forzare il piano in query optimizer. Se l'uso forzato del piano ha esito negativo, viene generato un XEvent e a query optimizer viene richiesto di ottimizzare in modo normale.
   
-       ![Piano forzato da Query Store](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![Forzatura del piano di Query Store](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
        > [!NOTE]
        > Nella figura precedente sono illustrate forme diverse per piani di query specifici, con i significati seguenti per ogni stato possibile:<br />  
@@ -235,7 +235,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 
 -   Si può concludere che la query sia priva di un indice per l'esecuzione ottimale. Queste informazioni vengono rese disponibili all'interno del piano di esecuzione query. Creare l'indice mancante e verificare le prestazioni della query usando Query Store.  
   
-       ![Visualizzazione del piano in Query Store](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![Visualizzare il piano di Query Store](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  Se si esegue il carico di lavoro in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], iscriversi a Index Advisor per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per ricevere automaticamente indicazioni relative agli indici.
   

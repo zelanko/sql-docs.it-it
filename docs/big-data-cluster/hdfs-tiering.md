@@ -1,7 +1,7 @@
 ---
 title: Configurare la suddivisione in livelli HDFS
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come configurare la suddivisione in livelli di HDFS per montare un Azure Data Lake Storage esterno file system in HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in un.
+description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un'istanza di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652321"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706052"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurare la suddivisione in livelli di HDFS in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurare la suddivisione in livelli HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-La suddivisione in livelli HDFS offre la possibilità di montare in HDFS un file system esterno compatibile con HDFS. Questo articolo illustra come configurare la suddivisione in livelli di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] HDFS per (anteprima). Al momento, è supportata la connessione ad Azure Data Lake Storage Gen2 e Amazon S3. 
+La suddivisione in livelli HDFS offre la possibilità di montare in HDFS un file system esterno compatibile con HDFS. Questo articolo illustra come configurare la suddivisione in livelli HDFS per i cluster Big Data di SQL Server. Al momento, è supportata la connessione ad Azure Data Lake Storage Gen2 e Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Panoramica della suddivisione in livelli HDFS
 
@@ -38,7 +38,7 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 
 La suddivisione in livelli HDFS supporta l'aggiornamento. Aggiornare un montaggio esistente per ottenere lo snapshot più recente dei dati remoti.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Cluster Big Data distribuito](deployment-guidance.md)
 - [Strumenti per Big Data](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ La suddivisione in livelli HDFS supporta l'aggiornamento. Aggiornare un montaggi
 
 ## <a id="issues"></a> Problemi noti e limitazioni
 
-L'elenco seguente fornisce problemi noti e limitazioni correnti quando si usa la suddivisione in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]livelli di HDFS in:
+L'elenco seguente illustra i problemi noti e le attuali limitazioni quando si usa la suddivisione in livelli HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 
 - Se il montaggio rimane bloccato in uno stato `CREATING` per molto tempo, è molto probabile che abbia avuto esito negativo. In questo caso, annullare il comando ed eliminare il montaggio, se necessario. Verificare che i parametri e le credenziali siano corretti prima di riprovare.
 
@@ -76,4 +76,4 @@ L'elenco seguente fornisce problemi noti e limitazioni correnti quando si usa la
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).
+Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

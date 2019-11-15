@@ -1,7 +1,7 @@
 ---
 title: Estensione per la distribuzione di app
 titleSuffix: SQL Server big data clusters
-description: Distribuire uno script Python o R come applicazione in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima).
+description: Distribuire uno script Python o R come applicazione in cluster Big Data di SQL Server.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653581"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707141"
 ---
-# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come usare Visual Studio Code per distribuire le applicazioni in[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Come usare Visual Studio Code per distribuire applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come distribuire le applicazioni in un cluster di Big Data SQL Server usando il codice di Microsoft Visual Studio con l'estensione di distribuzione dell'app. Questa funzionalità è stata introdotta in CTP 2.3. 
+Questo articolo descrive come distribuire applicazioni in un cluster Big Data di SQL Server usando Microsoft Visual Studio Code con l'estensione per la distribuzione di app.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [SQL Server cluster Big Data](big-data-cluster-overview.md) CTP 2,3 o versione successiva
+- [Cluster Big Data di SQL Server](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Funzionalità
+## <a name="capabilities"></a>Capabilities
 
 Questa estensione supporta le attività seguenti in Visual Studio Code:
 
@@ -44,11 +44,11 @@ Nelle sezioni seguenti viene descritto il processo di installazione e viene forn
 
 ### <a name="install"></a>Installazione
 
-Installare prima di tutto l'estensione di distribuzione dell'app in Visual Studio Code:
+Per prima cosa, installare l'estensione per la distribuzione di app in Visual Studio Code:
 
-1. Scaricare l'estensione per la [distribuzione dell'app](https://aka.ms/app-deploy-vscode) per installare l'estensione come parte del Visual Studio Code.
+1. Scaricare l'[estensione per la distribuzione di app](https://aka.ms/app-deploy-vscode) per installarla come parte di Visual Studio Code.
 
-1. Avviare Visual Studio Code e passare alla barra laterale estensioni.
+1. Avviare Visual Studio Code e passare alla barra laterale Estensioni.
 
 1. Fare clic sul menu di scelta rapida `Install from vsix` nella parte superiore della barra laterale e selezionare `…`.
 
@@ -56,7 +56,7 @@ Installare prima di tutto l'estensione di distribuzione dell'app in Visual Studi
 
 1. Individuare il file `sqlservbdc-app-deploy.vsix` scaricato e selezionarlo per installarlo.
 
-Al termine dell'installazione dell'estensione per la distribuzione dell'app cluster SQL Server Big Data, verrà richiesto di ricaricare Visual Studio Code. A questo punto verrà visualizzato il SQL Server App di integrazione applicativa dei dati nel Visual Studio Code sidebar.
+Al termine dell'installazione dell'estensione per la distribuzione di app per cluster Big Data di SQL Server, verrà chiesto di ricaricare Visual Studio Code. A questo punto, verrà visualizzato lo strumento di esplorazione delle app BDC per SQL Server nella barra laterale di Visual Studio Code.
 
 ### <a name="app-explorer"></a>Strumento di esplorazione delle app
 
@@ -64,40 +64,40 @@ Fare clic sull'estensione nella barra laterale per caricare un pannello laterale
 
 ![Strumento di esplorazione delle app](media/vs-extension/app_explorer.png)
 
-#### <a name="connect-to-cluster"></a>Connetti a cluster
+#### <a name="connect-to-cluster"></a>Connettersi al cluster
 
 Per connettersi all'endpoint del cluster, usare uno dei metodi seguenti:
 
 - Fare clic sulla barra di stato nella parte inferiore che indica `SQL Server BDC Disconnected`.
 - In alternativa, fare clic sul pulsante `Connect to Cluster` nella parte superiore che raffigura una freccia che punta a una porta.
 
-Visual Studio Code richiede l'endpoint, il nome utente e la password appropriati.
+Visual Studio Code chiede l'endpoint, il nome utente e la password appropriati.
 
-L'endpoint da connettere è l' `Cluster Management Service` endpoint con la porta 30080.
+L'endpoint da connettere è il `Cluster Management Service` con la porta 30080.
 
-È anche possibile trovare questo endpoint dalla riga di comando tramite 
+Questo endpoint può essere trovato anche digitando il comando seguente nella riga di comando: 
 
 ```
 azdata bdc endpoint list
 ```
 
-Uno degli altri modi per ottenere queste informazioni è fare clic con il pulsante destro del mouse su Gestisci nel server in Azure Data Studio in cui si troveranno gli endpoint dei servizi elencati.
+In alternativa, è possibile trovare questa informazione facendo clic con il pulsante destro del mouse sull'opzione **Gestisci** nel server di Azure Data Studio, che consentirà di visualizzare gli endpoint dei servizi elencati.
 
-![Endpoint ADS](media/vs-extension/ads_end_point.png)
+![Endpoint di ADS](media/vs-extension/ads_end_point.png)
 
 Dopo aver trovato l'endpoint da usare, connettersi al cluster.
 
 ![Nuova connessione](media/vs-extension/connect_to_cluster.png)
 
- Se vengono fornite le credenziali corrette e l'endpoint dell'app, Visual Studio Code notifica che è stata stabilita la connessione al cluster e che tutte le app distribuite vengono popolate nella barra laterale. Se la connessione riesce, l'endpoint e il nome utente vengono salvati in `./sqldbc` come parte del profilo utente. Password e token non vengono mai salvati. Quando si esegue di nuovo l'accesso, il prompt viene precompilato con l'host e il nome utente salvati, ma è sempre necessario immettere una password. Se si vuole connettersi a un endpoint del cluster diverso, fare semplicemente clic di nuovo su `New Connection`. La connessione verrà chiusa automaticamente se si chiude Visual Studio Code o se si apre un'area di lavoro diversa e sarà necessario riconnettersi.
+ Se vengono forniti le credenziali e l'endpoint dell'app corretti, Visual Studio Code segnala che è stata stabilita la connessione al cluster e nella barra laterale è possibile visualizzare tutte le app distribuite. Se la connessione riesce, l'endpoint e il nome utente vengono salvati in `./sqldbc` come parte del profilo utente. Password e token non vengono mai salvati. Quando si esegue di nuovo l'accesso, il prompt viene precompilato con l'host e il nome utente salvati, ma è sempre necessario immettere una password. Se si vuole connettersi a un endpoint del cluster diverso, fare semplicemente clic di nuovo su `New Connection`. La connessione viene automaticamente chiusa se si chiude Visual Studio Code o se si apre un'area di lavoro diversa ed è necessario riconnettersi.
 
 ### <a name="app-template"></a>Modello di app
 
-È necessario *aprire l'area di lavoro* in Visual Studio Code in cui si vuole salvare gli artefatti dell'app.
+È necessario ora *aprire l'area di lavoro* di Visual Studio Code in cui si desidera salvare gli artefatti dell'app.
 
-Per distribuire una nuova app da uno dei modelli, fare clic sul pulsante `New App Template` nel riquadro `App Specifications`, in cui viene chiesto di immettere il nome, il runtime e il percorso in cui si vuole inserire la nuova app nel computer locale. Il nome e la versione specificati devono essere un'etichetta DNS-1035 e devono contenere caratteri alfanumerici minuscoli o '-', iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+Per distribuire una nuova app da uno dei modelli, fare clic sul pulsante `New App Template` nel riquadro `App Specifications`, in cui viene chiesto di immettere il nome, il runtime e il percorso in cui si vuole inserire la nuova app nel computer locale. Il nome e la versione specificati devono essere costituiti da un'etichetta DNS-1035 ed essere composti da caratteri alfanumerici minuscoli o da'-', iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 
-È consigliabile inserirla nell'area di lavoro Visual Studio Code corrente per poter usare la funzionalità completa dell'estensione, ma è possibile posizionarla in qualsiasi punto della file system locale.
+È consigliabile inserirla nell'area di lavoro corrente di Visual Studio Code per poter usare la funzionalità completa dell'estensione, ma è possibile posizionarla in qualsiasi punto del file system locale.
 
 ![Nuovo modello di app](media/vs-extension/new_app_template.png)
 
@@ -105,7 +105,7 @@ Al termine, viene eseguito lo scaffolding automatico di un nuovo modello di app 
 
 ![Modello di app caricato](media/vs-extension/loading_app_template.png)
 
-Il modello è una semplice `helloworld` app che viene definita come indicato di seguito nel riquadro specifiche dell'app:
+Il modello è una semplice app `helloworld` definita nel modo seguente nel riquadro delle specifiche dell'app:
 
 - **spec.yaml**
    - Indica al cluster come distribuire l'app
@@ -114,7 +114,7 @@ Il modello è una semplice `helloworld` app che viene definita come indicato di 
 
 Il codice sorgente dell'app si trova nella cartella dell'area di lavoro.
 
-- **nome file di origine**
+- **nome del file di origine**
    - Questo è il file del codice sorgente in base a quanto specificato da `src` in `spec.yaml`
    - Include una funzione denominata `handler` che viene considerata `entrypoint` dell'app, come mostrato in `spec.yaml`. Accetta un input stringa denominato `msg` e restituisce un output stringa denominato `out`. Questi vengono specificati in `inputs` e `outputs` del file `spec.yaml`.
 
@@ -149,9 +149,9 @@ Nel riquadro laterale saranno disponibili gli elementi seguenti:
 - parametri di output
 - collegamenti
   - swagger
-  - details
+  - dettagli
 
-Se si fa `Links`clic su, si noterà che è possibile accedere `swagger.json` al dell'app distribuita, in modo che sia possibile scrivere i propri client che chiamano l'app:
+Se si fa clic su `Links`, si noterà che è possibile accedere al file `swagger.json` dell'app distribuita, in modo da poter scrivere i propri client che chiamano l'app:
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -184,7 +184,7 @@ Quando si chiama un'app distribuita, se uno o più dei parametri di input sono i
 - Vettore
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matrix
+- Matrice
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object
@@ -199,9 +199,9 @@ Per eliminare un'app, è sufficiente fare clic sul pulsante del cestino accanto 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni, vedere come integrare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] le app distribuite nelle applicazioni in uso in [applicazioni in cluster Big Data](big-data-cluster-consume-apps.md) . È anche possibile fare riferimento agli esempi aggiuntivi disponibili in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy) per provare l'estensione.
+Per altre informazioni su come integrare app distribuite in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nelle proprie applicazioni, vedere [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md). È anche possibile fare riferimento agli esempi aggiuntivi disponibili in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy) per provare l'estensione.
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md).
+Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 
 L'obiettivo è rendere utile questa estensione e qualunque commento o suggerimento sarà bene accetto. Inviarli al [team di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).

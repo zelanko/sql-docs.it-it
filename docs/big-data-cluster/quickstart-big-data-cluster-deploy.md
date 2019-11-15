@@ -1,7 +1,7 @@
 ---
 title: Eseguire la distribuzione con uno script Python
-titleSuffix: SQL Server big data clusters
-description: Informazioni su come usare uno script di distribuzione per distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) nel servizio Azure Kubernetes.
+titleSuffix: SQL Server Big Data Clusters
+description: Informazioni su come usare uno script di distribuzione per distribuire cluster Big Data di SQL Server nel servizio Azure Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531927"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706353"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
@@ -80,8 +80,6 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Nome cluster** | Nome del cluster del servizio Azure Kubernetes e del cluster Big Data. Il nome del cluster Big Data deve contenere solo caratteri alfanumerici minuscoli e non spazi (il valore predefinito è **sqlbigdata**). |
    | **Password** | Password per il controller, il gateway HDFS/Spark e l'istanza master (il valore predefinito è **MySQLBigData2019**). |
    | **Nome utente** | Nome utente per l'utente del controller (il valore predefinito è **admin**). |
-
-I parametri seguenti sono necessari per i partecipanti al programma early adopter per il cluster Big Data di SQL Server 2019: **nome utente Docker**, e **password Docker**. A partire dalla versione CTP 3.2 non sono più richiesti.
 
    > [!IMPORTANT]
    > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.

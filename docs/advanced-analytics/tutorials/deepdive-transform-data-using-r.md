@@ -1,26 +1,27 @@
 ---
-title: Trasformare i dati usando RevoScaleR rxDataStep
-description: Esercitazione dettagliata su come trasformare i dati usando il linguaggio R in SQL Server.
+title: Trasformare i dati con RevoScaleR
+description: Esercitazione dettagliata su come trasformare dati usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c76bdf56febd06ecba6f2d9d11f1710eefdc23e6
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715509"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727166"
 ---
-# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Trasformare i dati usando R (esercitazione SQL Server e RevoScaleR)
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Trasformare i dati con R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione vengono fornite informazioni sulle funzioni **RevoScaleR** per la trasformazione dei dati in varie fasi dell'analisi.
+In questa lezione vengono fornite informazioni sulle funzioni di **RevoScaleR** per la trasformazione dei dati in varie fasi dell'analisi.
 
 > [!div class="checklist"]
 > * Usare **rxDataStep** per creare e trasformare un subset di dati
@@ -32,26 +33,26 @@ Sebbene non siano specificamente destinate allo spostamento dei dati, le funzion
 
 La funzione [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) elabora i dati un blocco alla volta, leggendo da un'origine dati e scrivendo su un'altra. È possibile specificare le colonne da trasformare, le trasformazioni da caricare e così via.
 
-Per rendere interessante questo esempio, è possibile usare una funzione di un altro pacchetto R per trasformare i dati. Il pacchetto **Boot** è uno dei pacchetti "consigliati", per questo **Boot** è incluso in ogni distribuzione di R, ma non viene caricato automaticamente all'avvio. Pertanto, il pacchetto dovrebbe essere già disponibile nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di configurata per l'integrazione con R.
+Per rendere più interessante questo esempio, verrà usata una funzione da un altro pacchetto R per la trasformazione dei dati. Il pacchetto **Boot** è uno dei pacchetti "consigliati", per questo **Boot** è incluso in ogni distribuzione di R, ma non viene caricato automaticamente all'avvio. Di conseguenza, il pacchetto deve essere già disponibile nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurata per l'integrazione con R.
 
-Dal pacchetto di **avvio** usare la funzione **inv. logit**, che calcola l'inverso di un logit. Vale a dire, la funzione **inv.logit** converte una funzione logit di nuovo in una probabilità nella scala [0,1].
+Dal pacchetto **Boot** si attingerà alla funzione **inv.logit**, che calcola l'inverso di una funzione logit. Vale a dire, la funzione **inv.logit** converte una funzione logit di nuovo in una probabilità nella scala [0,1].
 
 > [!TIP] 
 > Un altro modo per ottenere stime in questa scala consiste nell'impostare il parametro *type* su **response** nella chiamata originale a **rxPredict**.
 
-1. Per iniziare, `ccScoreOutput`creare un'origine dati che contenga i dati destinati alla tabella.
+1. Iniziare creando un'origine dati per contenere i dati destinati alla tabella `ccScoreOutput`.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. Aggiungere un'altra origine dati per conservare i dati per la `ccScoreOutput2`tabella.
+2. Aggiungere un'altra origine dati per contenere i dati per la tabella `ccScoreOutput2`.
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    Nella nuova tabella, archiviare tutte le variabili della tabella precedente `ccScoreOutput` , oltre alla variabile appena creata.
+    La nuova tabella conterrà tutte le variabili della tabella `ccScoreOutput` precedente, più la variabile appena creata.
   
 3. Impostare il contesto di calcolo sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -59,7 +60,7 @@ Dal pacchetto di **avvio** usare la funzione **inv. logit**, che calcola l'inver
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Usare la funzione **rxSqlServerTableExists** per verificare se la tabella `ccScoreOutput2` di output esiste già e, in tal caso, usare la funzione **rxSqlServerDropTable** per eliminare la tabella.
+4. Usare la funzione **rxSqlServerTableExists** per verificare se la tabella di output `ccScoreOutput2` esiste già e in tal caso usare la funzione **rxSqlServerDropTable** per eliminare la tabella.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -75,7 +76,7 @@ Dal pacchetto di **avvio** usare la funzione **inv. logit**, che calcola l'inver
         overwrite = TRUE)
     ```
 
-    Quando si definiscono le trasformazioni applicate a ogni colonna, è possibile specificare anche eventuali pacchetti di R aggiuntivi necessari per eseguire le trasformazioni.  Per ulteriori informazioni sui tipi di trasformazioni che è possibile eseguire, vedere [How to transform and subset data using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    Quando si definiscono le trasformazioni applicate a ogni colonna, è possibile specificare anche eventuali pacchetti di R aggiuntivi necessari per eseguire le trasformazioni.  Per altre informazioni sui tipi di trasformazioni che è possibile eseguire, vedere [How to transform and subset data using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform) (Come trasformare e creare subset di dati con RevoScaleR).
   
 6. Chiamare **rxGetVarInfo** per visualizzare un riepilogo delle variabili nel set di dati nuovo.
   
@@ -99,7 +100,7 @@ Var 9: ccFraudProb, Type: numeric
 
 I punteggi della funzione logit originali vengono mantenuti, ma una nuova colonna, *ccFraudProb*, è stata aggiunta, nella quale i punteggi della funzione logit sono rappresentati come valori tra 0 e 1.
 
-Si noti che le variabili di fattore sono state scritte nella `ccScoreOutput2` tabella come dati di tipo carattere. Se si vuole usarle come fattori nelle analisi successive, specificare i livelli tramite il parametro *colInfo* .
+Osservare come le variabili di fattore siano state scritte nella tabella `ccScoreOutput2` come dati di tipo carattere. Se si vuole usarle come fattori nelle analisi successive, specificare i livelli tramite il parametro *colInfo* .
 
 ## <a name="next-steps"></a>Passaggi successivi
 

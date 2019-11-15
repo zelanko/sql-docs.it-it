@@ -1,19 +1,20 @@
 ---
-title: Installare i componenti R e Python senza accesso a Internet
-description: Installazione offline dei componenti R e Python per il Machine Learning in un'istanza di SQL Server isolata dietro un firewall di rete.
+title: Eseguire l'installazione senza accesso a Internet
+description: Installare i componenti R e Python per Machine Learning in computer isolati da un firewall di rete.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 9b37851e2becaeddb754339ed6fe850007e97a19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727551"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installare i componenti R e Python per il Machine Learning in SQL Server senza accesso a Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

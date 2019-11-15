@@ -1,7 +1,7 @@
 ---
-title: Scrivere funzioni R avanzate
+title: 'Avvio rapido: Scrivere funzioni R'
 titleSuffix: SQL Server Machine Learning Services
-description: Questa Guida introduttiva illustra come scrivere una funzione R per un calcolo statistico avanzato con SQL Server Machine Learning Services.
+description: Questo argomento di avvio rapido illustra come scrivere una funzione R per il calcolo statistico avanzato con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,38 +9,39 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006032"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726889"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Scrivere funzioni R avanzate con SQL Server Machine Learning Services
+# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Scrivere funzioni R avanzate con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa Guida introduttiva descrive come incorporare funzioni matematiche e di utilità R in un stored procedure SQL con SQL Server Machine Learning Services. Le funzioni statistiche avanzate complesse da implementare in T-SQL possono essere eseguite in R con una sola riga di codice.
+Questo argomento di avvio rapido descrive come incorporate funzioni matematiche e di utilità R in una stored procedure SQL con Machine Learning Services per SQL Server. Le funzioni statistiche avanzate complesse da implementare in T-SQL possono essere eseguite in R con una singola riga di codice.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- Questa Guida introduttiva richiede l'accesso a un'istanza di SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
+- Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
 
-  L'istanza di SQL Server può trovarsi in una macchina virtuale di Azure o in locale. È sufficiente tenere presente che la funzionalità di scripting esterno è disabilitata per impostazione predefinita, pertanto potrebbe essere necessario abilitare l'esecuzione di [script esterni](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificare che **launchpad di SQL Server servizio** sia in esecuzione prima di iniziare.
+  L'istanza di SQL Server può essere in una macchina virtuale di Azure o in locale. Tenere presente che la funzionalità di scripting esterno è disabilitata per impostazione predefinita, quindi potrebbe essere necessario [abilitare lo scripting esterno](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificare che il **servizio Launchpad di SQL Server** sia in esecuzione prima di iniziare.
 
-- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script R. È possibile eseguire questi script utilizzando qualsiasi strumento di gestione del database o query, purché sia possibile connettersi a un'istanza di SQL Server ed eseguire una query T-SQL o stored procedure. Questa Guida introduttiva usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script R. È possibile eseguire questi script usando qualsiasi strumento di gestione del database o di query, purché possa connettersi a un'istanza di SQL Server, nonché eseguire una query T-SQL o una stored procedure. In questo argomento di avvio rapido viene usato [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Creare una stored procedure per generare numeri casuali
 
-Per semplicità, usare il pacchetto R `stats`, che viene installato e caricato per impostazione predefinita in SQL Server Machine Learning Services con R installato. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
+Per semplicità, usare il pacchetto R `stats`, che viene installato e caricato per impostazione predefinita in Machine Learning Services per SQL Server con R installato. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
 
-Ad esempio, il codice R seguente restituisce 100 numeri su una media di 50, data una deviazione standard di 3.
+Ad esempio, il codice R seguente restituisce 100 numeri, in una media di 50, in base alla deviazione standard 3.
 
 ```R
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-Per chiamare questa riga di R da T-SQL, aggiungere la funzione R nel parametro di script R di `sp_execute_external_script`, come segue:
+Per chiamare questa riga di codice R da T-SQL, aggiungere la funzione R nel parametro di script R di `sp_execute_external_script`, come illustrato di seguito:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -53,7 +54,7 @@ EXECUTE sp_execute_external_script
 
 Si vuole semplificare la generazione di un set diverso di numeri casuali?
 
-Questa operazione è facile se combinata con SQL Server. Definire un stored procedure che ottiene gli argomenti dall'utente, quindi passarli nello script R come variabili.
+Questa operazione è facile se eseguita in combinazione con SQL Server. Si definisce una stored procedure che ottiene gli argomenti dall'utente e quindi si passano tali argomenti nello script R come variabili.
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -87,7 +88,7 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usare funzioni di utilità R per la risoluzione dei problemi
 
-Il pacchetto **utils** , installato per impostazione predefinita, offre un'ampia gamma di funzioni di utilità per l'analisi dell'ambiente R corrente. Queste funzioni possono essere utili se si individuano discrepanze nel modo in cui il codice R viene eseguito in SQL Server e in ambienti esterni.
+Il pacchetto **utils**, installato per impostazione predefinita, offre un'ampia gamma di funzioni di utilità per analizzare l'ambiente R corrente. Queste funzioni possono essere utili se si riscontrano discrepanze nell'esecuzione del codice R in SQL Server e in ambienti esterni.
 
 Ad esempio, è possibile usare la funzione R `memory.limit()` per ottenere memoria per l'ambiente R corrente. Poiché il pacchetto `utils` viene installato, ma non viene caricato per impostazione predefinita, prima di tutto è necessario usare la funzione `library()` per caricarlo.
 
@@ -103,15 +104,15 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> Molti utenti vogliono usare le funzioni di temporizzazione del sistema in R, ad esempio `system.time` e `proc.time`, per acquisire il tempo usato dai processi R e analizzare i problemi di prestazioni. Per un esempio, vedere l'esercitazione [creare funzionalità di dati](../tutorials/walkthrough-create-data-features.md) in cui le funzioni temporali R sono incorporate nella soluzione.
+> Molti utenti preferiscono usare le funzioni di calcolo del tempo di sistema in R, come `system.time` e `proc.time`, per acquisire il tempo usato dai processi R e analizzare i problemi di prestazioni. Per un esempio, vedere l'esercitazione [Creare caratteristiche dei dati](../tutorials/walkthrough-create-data-features.md) in cui le funzioni di calcolo del tempo R sono incorporate nella soluzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per creare un modello di Machine Learning usando R in SQL Server, seguire questa Guida introduttiva:
+Per creare un modello di Machine Learning usando R in SQL Server, seguire questo argomento di avvio rapido:
 
 > [!div class="nextstepaction"]
-> [Creare e assegnare un punteggio a un modello predittivo in R con SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+> [Creare un modello predittivo e assegnare punteggi in R con Machine Learning Services per SQL Server](quickstart-r-train-score-model.md)
 
-Per ulteriori informazioni su SQL Server Machine Learning Services, vedere:
+Per altre informazioni su Machine Learning Services per SQL Server, vedere:
 
-- [Che cos'è SQL Server Machine Learning Services (Python e R)?](../what-is-sql-server-machine-learning.md)
+- [Che cos'è Machine Learning Services per SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md)

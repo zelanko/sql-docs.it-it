@@ -1,7 +1,7 @@
 ---
 title: Configurare il servizio Azure Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come configurare Azure Kubernetes Service (AKS) per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni.
+description: Informazioni su come configurare il servizio Azure Kubernetes per le distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
 ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/16/2019
 ms.locfileid: "71016894"
@@ -20,7 +20,7 @@ ms.locfileid: "71016894"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come configurare Azure Kubernetes Service (AKS) per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni.
+Questo articolo descrive come configurare il servizio Azure Kubernetes per le distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
 Il servizio Azure Kubernetes semplifica la creazione, la configurazione e la gestione di un cluster di macchine virtuali preconfigurate con un cluster Kubernetes per l'esecuzione di applicazioni in contenitori. In questo modo è possibile usare le competenze esistenti o fare affidamento sulle vaste esperienze della community, in continua crescita, per distribuire e gestire applicazioni basate su contenitori in Microsoft Azure.
 
@@ -29,7 +29,7 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 > [!TIP]
 > È anche possibile usare uno script per distribuire il servizio Azure Kubernetes e un cluster Big Data in un unico passaggio. Per altre informazioni, vedere come eseguire questa operazione in uno [script Python](quickstart-big-data-cluster-deploy.md) o in un [notebook](deploy-notebooks.md) di Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Distribuire gli strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
@@ -37,9 +37,9 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
    - **Estensione di SQL Server 2019**
    - **Interfaccia della riga di comando di Azure**
 
-- Versione minima 1,13 per il server Kubernetes. Per il servizio Azure Kubernetes, è necessario usare il parametro `--kubernetes-version` per specificare una versione diversa rispetto a quella predefinita.
+- Server Kubernetes versione 1.13 o successiva. Per il servizio Azure Kubernetes, è necessario usare il parametro `--kubernetes-version` per specificare una versione diversa rispetto a quella predefinita.
 
-- Per garantire una distribuzione corretta e un'esperienza ottimale durante la convalida degli scenari di base in AKS, è possibile usare un singolo nodo o un cluster AKS a più nodi, con queste risorse disponibili:
+- Per garantire una distribuzione corretta e un'esperienza ottimale durante la convalida degli scenari di base in AKS, è possibile usare un singolo nodo o un cluster AKS multinodo, con le seguenti risorse disponibili:
    - 8 vCPU in tutti i nodi
    - 64 GB di memoria per macchina virtuale
    - 24 o più dischi collegati in tutti i nodi
@@ -81,7 +81,7 @@ Usare la versione più recente disponibile di Kubernetes. La versione più recen
 
 Prima di eseguire il comando, aggiornare lo script. Sostituire `<Azure data center>` con la posizione del cluster.
 
-   **bash**
+   **Bash**
 
    ```bash
    az aks get-versions \
@@ -109,7 +109,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
    Assicurarsi di creare il cluster del servizio Azure Kubernetes nello stesso gruppo di risorse usato nelle sezioni precedenti.
 
-   **bash:**
+   **Bash:**
 
    ```bash
    az aks create --name kubcluster \
@@ -165,4 +165,4 @@ Se si verificano problemi durante la creazione di un servizio Azure Kubernetes c
 
 Tramite i passaggi in questo articolo è stato configurato un cluster Kubernetes nel servizio Azure Kubernetes. Il passaggio successivo consiste nel distribuire un cluster Big Data di SQL Server 2019 nel cluster Kubernetes del servizio Azure Kubernetes. Per altre informazioni su come distribuire i cluster Big Data, vedere l'articolo seguente:
 
-[Come eseguire la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] distribuzione in Kubernetes](deployment-guidance.md)
+[Come distribuire[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md)

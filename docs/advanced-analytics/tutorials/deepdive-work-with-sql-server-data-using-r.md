@@ -1,38 +1,39 @@
 ---
-title: Creare un database e le autorizzazioni per le esercitazioni di RevoScaleR
-description: Esercitazione dettagliata su come creare un database di SQL Server per le esercitazioni di R.
+title: Database per le esercitazioni su RevoScaleR
+description: Esercitazione dettagliata su come creare un database SQL Server per le esercitazioni su R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14c07b5b2ebf30f23083921f210563bc2cb83dbf
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715536"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727127"
 ---
-# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creare un database e le autorizzazioni (esercitazione SQL Server e RevoScaleR)
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creare un database e le autorizzazioni (esercitazioni su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-La lezione uno riguarda la configurazione di un database di SQL Server e le autorizzazioni necessarie per completare questa esercitazione. Utilizzare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o un altro editor di query per completare le attività seguenti:
+Nella prima lezione viene descritta la configurazione di un database SQL Server e vengono illustrate le autorizzazioni necessarie per completare questa esercitazione. Usare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o a un altro editor di query per completare le attività seguenti:
 
 > [!div class="checklist"]
-> * Creare un nuovo database per archiviare i dati per il training e assegnare un punteggio a due modelli R
-> * Creazione di un account di accesso utente del database con autorizzazioni per la creazione e l'utilizzo di oggetti di database
+> * Creare un nuovo database in cui archiviare i dati per il training e l'assegnazione dei punteggi di due modelli R
+> * Creare un account di accesso per un database con autorizzazioni per la creazione e l'utilizzo di oggetti di database
   
 ## <a name="create-the-database"></a>Creare il database
 
-Per questa esercitazione è necessario un database per l'archiviazione di dati e codice. Se non si è un amministratore, chiedere all'amministratore di database di creare il database e l'accesso per l'utente. Sono necessarie le autorizzazioni per scrivere e leggere i dati e per eseguire gli script R.
+Per questa esercitazione è necessario un database per l'archiviazione di dati e codice. Se non si dispone dei diritti di amministratore, chiedere all'amministratore dei database di creare il database e impostare un account di accesso. Saranno necessarie le autorizzazioni per scrivere e leggere i dati e per eseguire script R.
 
-1. In SQL Server Management Studio connettersi a un'istanza del database abilitata per R.
+1. In SQL Server Management Studio connettersi a un'istanza di database con supporto per R.
 
-2. Fare clic con il pulsante destro del mouse su **database**e scegliere **nuovo database**.
+2. Fare clic con il pulsante destro del mouse su **Database** e scegliere **Nuovo database**.
   
 2. Digitare un nome per il nuovo database: RevoDeepDive.
   
@@ -43,7 +44,7 @@ Per questa esercitazione è necessario un database per l'archiviazione di dati e
   
 2. Nella nuova finestra **Query** , eseguire i comandi seguenti per creare gli account utente e assegnarli al database usato in questa esercitazione. Assicurarsi di modificare il nome del database, se necessario.
 
-3. Per verificare l'account di accesso, selezionare il nuovo database, espandere **sicurezza**ed espandere **utenti**.
+3. Per verificare che l'account di accesso sia stato creato, espandere **Sicurezza** e quindi **Utenti**.
   
 **utente di Windows**
   
@@ -73,11 +74,11 @@ GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-## <a name="assign-permissions"></a>Assegnare autorizzazioni
+## <a name="assign-permissions"></a>Assegnare le autorizzazioni
 
-Questa esercitazione illustra le operazioni DDL e script R, inclusa la creazione e l'eliminazione di tabelle e stored procedure e l'esecuzione di script R in un processo esterno in SQL Server. In questo passaggio assegnare autorizzazioni per consentire queste attività.
+Questa esercitazione illustra lo script R e le operazioni DDL, tra cui la creazione e l'eliminazione di tabelle e stored procedure e l'esecuzione di uno script R in un processo esterno di SQL Server. In questo passaggio vengono assegnate le autorizzazioni necessarie per poter eseguire queste attività.
 
-Questo esempio si basa sul presupposto di un account di accesso SQL (DDUser01), ma se è stato creato un account di accesso di Windows, utilizzarlo.
+Questo esempio presuppone che sia stato creato un account di accesso SQL (DDUser01), ma se è stato creato un account di accesso Windows, usare quest'ultimo.
 
 ```sql
 USE RevoDeepDive
@@ -88,7 +89,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
 GO
 ```
 
-## <a name="troubleshoot-connections"></a>Risolvere i problemi relativi alle connessioni
+## <a name="troubleshoot-connections"></a>Risolvere i problemi delle connessioni
 
 In questa sezione sono elencati alcuni problemi comuni che possono verificarsi durante l'impostazione del database.
 
@@ -98,15 +99,15 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
   
     Se non si vogliono installare altri strumenti di gestione del database, è possibile creare una connessione di test per l'istanza di SQL Server usando l' [Amministrazione origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) in Pannello di controllo. Se il database è configurato correttamente e il nome utente e la password specificati sono corretti, sarà possibile visualizzare il database appena creato e selezionarlo come database predefinito.
   
-    Le cause più comuni degli errori di connessione includono le connessioni remote non sono abilitate per il server e il protocollo Named Pipes non è abilitato. Per ulteriori suggerimenti sulla risoluzione dei problemi, vedere questo articolo: [Risolvere i problemi di connessione al motore di database SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Gli errori di connessione si verificano solitamente se le connessioni remote non sono abilitate per il server o se il protocollo Named Pipes non è abilitato. Per altri suggerimenti sulla risoluzione dei problemi, vedere questo articolo: [Risolvere i problemi di connessione al motore di database di SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Il nome della tabella datareader è preceduto dal prefisso it. Perché?**
   
-    Quando si specifica lo schema predefinito per questo utente come **db_datareader**, tutte le tabelle e gli altri nuovi oggetti creati da questo utente hanno come prefisso il nome *dello schema* . Uno schema è una sorta di cartella. Può essere aggiunto a un database per organizzare gli oggetti. Lo schema definisce anche i privilegi dell'utente all'interno del database.
+    Se si specifica che lo schema predefinito per questo utente è **db_datareader**, tutte le tabelle e gli altri nuovi oggetti creati da questo utente saranno preceduti da un prefisso costituito da questo nome di *schema*. Uno schema è una sorta di cartella. Può essere aggiunto a un database per organizzare gli oggetti. Lo schema definisce anche i privilegi dell'utente all'interno del database.
   
-    Quando lo schema è associato a un nome utente specifico, l'utente è il _proprietario dello schema_. Ogni volta che si crea un oggetto, l'oggetto sarà sempre creato in base al proprio schema, a meno che non si chieda specificatamente di crearlo in un altro schema.
+    Se lo schema è associato a un nome utente specifico, l'utente diventa il _proprietario dello schema_. Ogni volta che si crea un oggetto, l'oggetto sarà sempre creato in base al proprio schema, a meno che non si chieda specificatamente di crearlo in un altro schema.
   
-    Se, ad esempio, si crea una tabella con il nome **TestData**e lo schema predefinito è **db_datareader**, la tabella viene creata con il nome `<database_name>.db_datareader.TestData`.
+    Ad esempio, se si crea una tabella con il nome **TestData** e lo schema predefinito è **db_datareader**, la tabella verrà creata con il nome `<database_name>.db_datareader.TestData`.
   
     Per questo motivo, un database può contenere più tabelle con lo stesso nome, purché le tabelle appartengano a schemi diversi.
    
@@ -114,9 +115,9 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
   
 - **Non ho privilegi DLL. Posso comunque seguire l'esercitazione**?
   
-    Sì, ma è necessario chiedere a un utente di precaricare i dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle tabelle e andare avanti alla lezione successiva. Le funzioni che richiedono privilegi DDL vengono chiamate nell'esercitazione laddove possibile.
+    Sì, ma è necessario chiedere a un altro utente di precaricare i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e passare direttamente alla lezione successiva. In questa esercitazione le funzioni che richiedono privilegi DDL sono espressamente indicate (laddove possibile).
 
-    Chiedere inoltre all'amministratore di concedere l'autorizzazione, eseguire qualsiasi SCRIPT esterno. È necessario per l'esecuzione di script R, sia in `sp_execute_external_script`remoto che tramite.
+    Chiedere inoltre all'amministratore di ricevere l'autorizzazione EXECUTE ANY EXTERNAL SCRIPT, necessaria per l'esecuzione dello script R, in remoto o tramite `sp_execute_external_script`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

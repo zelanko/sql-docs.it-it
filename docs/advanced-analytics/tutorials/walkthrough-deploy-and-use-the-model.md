@@ -1,40 +1,41 @@
 ---
-title: Distribuire un modello R per le stime in SQL Server
-description: Esercitazione che illustra come distribuire un modello R su SQL Server per l'analisi nel database.
+title: 'Esercitazione su R: Distribuire il modello'
+description: Esercitazione che illustra come distribuire un modello R in SQL Server per l'analisi nel database.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714684"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73723704"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Distribuire il modello R e usarlo in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questa lezione si apprenderà come distribuire modelli R in un ambiente di produzione chiamando un modello sottoposto a training da un stored procedure. È possibile richiamare il stored procedure da R o qualsiasi linguaggio di programmazione dell'applicazione [!INCLUDE[tsql](../../includes/tsql-md.md)] che supporti ( C#ad esempio, Java, Python e così via) e usare il modello per eseguire stime sulle nuove osservazioni.
+In questa lezione si apprenderà come distribuire modelli R in un ambiente di produzione chiamando un modello sottoposto a training da una stored procedure. Sarà quindi possibile richiamare la stored procedure da R o da qualsiasi linguaggio di programmazione di applicazioni che supporti [!INCLUDE[tsql](../../includes/tsql-md.md)] (ad esempio C#, Java, Python e così via) e usare il modello per creare stime sulle nuove osservazioni.
 
 Questo articolo illustra i due modi più comuni per usare un modello per l'assegnazione dei punteggi:
 
 > [!div class="checklist"]
-> * La modalità di assegnazione dei **punteggi batch** genera più stime
-> * La modalità di assegnazione dei **punteggi singoli** genera stime una alla volta
+> * La **modalità di assegnazione dei punteggi batch** genera più stime
+> * La **modalità di assegnazione dei punteggi singoli** genera stime una alla volta
 
-## <a name="batch-scoring"></a>Punteggio batch
+## <a name="batch-scoring"></a>Assegnazione dei punteggi batch
 
-Creare una stored procedure, *PredictTipBatchMode*, che genera più stime, passando una query o una tabella SQL come input. Viene restituita una tabella di risultati, che è possibile inserire direttamente in una tabella o scrivere in un file.
+Creare una stored procedure che genera più stime, *PredictTipBatchMode*, passando una query o una tabella SQL come input. Viene restituita una tabella di risultati, che è possibile inserire direttamente in una tabella o scrivere in un file.
 
 - Ottiene un set di dati di input come query SQL
 - Chiama il modello di regressione logistica di cui è stato eseguito il training e che è stato salvato nella lezione precedente
-- Consente di stimare la probabilità che il driver ottenga qualsiasi suggerimento diverso da zero
+- Stima la probabilità che il tassista riceva una mancia diversa da zero
 
-1. In Management Studio aprire una nuova finestra di query ed eseguire lo script T-SQL seguente per creare il stored procedure PredictTipBatchMode.
+1. In Management Studio aprire una nuova finestra di query ed eseguire lo script T-SQL seguente per creare la stored procedure PredictTipBatchMode.
   
     ```sql
     USE [NYCTaxi_Sample]
@@ -71,15 +72,15 @@ Creare una stored procedure, *PredictTipBatchMode*, che genera più stime, passa
     END
     ```
 
-    + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella come dati **varbinary (max)** , archiviato nella variabile  _\@SQL lmodel2_e passato come parametro *mod* al sistema stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Usare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella sotto forma di dati **varbinary(max)** , archiviato nella variabile SQL _\@lmodel2_ e passato come parametro *mod* alla stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nell'  _\@input_della variabile SQL. Poiché i dati vengono recuperati dal database, vengono archiviati in un frame di dati denominato *InputDataSet*, che è solo il nome predefinito per i dati di input nella procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Se necessario, è possibile definire un altro nome di variabile utilizzando il parametro *_\@input_data_1_name_* .
+    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nella variabile SQL _\@input_. I dati recuperati dal database vengono archiviati in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input della stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Se necessario, è possibile definire un altro nome di variabile usando il parametro *_\@input_data_1_name_* .
 
-    + Per generare i punteggi, il stored procedure chiama la funzione rxPredict dalla libreria **RevoScaleR** .
+    + Per generare i punteggi, la stored procedure chiama la funzione rxPredict dalla libreria **RevoScaleR**.
 
-    + Il valore restituito *Score*è la probabilità, dato il modello, che il driver ottiene un suggerimento. Facoltativamente, è possibile applicare facilmente un filtro ai valori restituiti per categorizzare i valori restituiti nei gruppi "Tip" e "No Tip".  Una probabilità inferiore a 0,5, ad esempio, potrebbe significare che è improbabile una mancia.
+    + Il valore restituito, *Score*, è la probabilità, dato il modello, che il conducente ottenga una mancia. Facoltativamente, si può applicare facilmente un filtro ai valori restituiti per suddividerli in gruppi "con mancia" o "senza mancia".  Ad esempio, una probabilità minore dello 0,5 indica che probabilmente non verrà data alcuna mancia.
   
-2.  Per chiamare il stored procedure in modalità batch, è necessario definire la query necessaria come input per l'stored procedure. Di seguito è riportata la query SQL, che è possibile eseguire in SSMS per verificarne il funzionamento.
+2.  Per chiamare la stored procedure in modalità batch, è necessario definire la query necessaria come input per la stored procedure. Di seguito è riportata la query SQL, che è possibile eseguire in SSMS per verificarne il funzionamento.
 
     ```sql
     SELECT TOP 10
@@ -107,23 +108,23 @@ Creare una stored procedure, *PredictTipBatchMode*, che genera più stime, passa
     q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
-4. Per eseguire il stored procedure da R, chiamare il metodo sqlQuery del pacchetto **RODBC** e usare la connessione `conn` SQL definita in precedenza:
+4. Per eseguire la stored procedure da R, chiamare il metodo **sqlQuery** del pacchetto **RODBC** e usare la connessione SQL `conn` definita in precedenza:
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    Se viene ricevuto un errore ODBC, verificare la presenza di errori di sintassi e indicare se è presente il numero corretto di virgolette. 
+    Se si riceve un errore ODBC, controllare se sono presenti errori di sintassi e se è usato il numero corretto di virgolette. 
     
-    Se si verifica un errore di autorizzazione, verificare che l'account di accesso sia in grado di eseguire il stored procedure.
+    Se si riceve un errore di autorizzazione, verificare che l'account di accesso possa eseguire la stored procedure.
 
-## <a name="single-row-scoring"></a>Assegnazione di punteggi a riga singola
+## <a name="single-row-scoring"></a>Assegnazione dei punteggi alle singole righe
 
-La modalità di assegnazione dei punteggi singoli genera stime una alla volta, passando un set di singoli valori al stored procedure come input. I valori corrispondono alle funzionalità del modello, utilizzate dal modello per creare una stima, o generano un altro risultato, ad esempio un valore di probabilità. È quindi possibile restituire tale valore all'applicazione o all'utente.
+La modalità di assegnazione dei punteggi singoli genera stime una alla volta, passando un set di singoli valori alla stored procedure come input. I valori corrispondono alle caratteristiche nel modello, che il modello usa per creare una stima o per generare un altro risultato, ad esempio un valore di probabilità. È quindi possibile restituire tale valore all'applicazione o all'utente.
 
-Quando si chiama il modello per la stima in base alla riga, si passa un set di valori che rappresentano le funzionalità per ogni singolo case. Il stored procedure restituisce quindi una singola stima o probabilità. 
+Quando si chiama il modello per una stima riga per riga, si passa un set di valori che rappresentano le caratteristiche per ogni singolo caso. La stored procedure restituisce quindi una singola stima o probabilità. 
 
-Il stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta come input più parametri che rappresentano i valori delle funzionalità, ad esempio il numero di passeggeri e la distanza della corsa, punteggiano queste funzionalità usando il modello R archiviato e restituisce la probabilità del suggerimento.
+La stored procedure *PredictTipSingleMode* dimostra questo approccio. Accetta come input più parametri che rappresentano i valori delle caratteristiche, ad esempio il numero di passeggeri e la distanza della corsa, assegna un punteggio alle caratteristiche usando il modello R archiviato e restituisce la probabilità della mancia.
 
 1. Eseguire l'istruzione Transact-SQL seguente per creare la stored procedure.
 
@@ -191,23 +192,23 @@ Il stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta co
     END
     ```
 
-2. In SQL Server Management Studio, è possibile utilizzare la [!INCLUDE[tsql](../../includes/tsql-md.md)] procedura **Exec** (o **Execute**) per chiamare il stored procedure e passargli gli input necessari. Provare ad esempio a eseguire questa istruzione in Management Studio:
+2. In SQL Server Management Studio è possibile usare la procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (o **EXECUTE**) per chiamare la stored procedure e passarle gli input necessari. Provare ad esempio a eseguire questa istruzione in Management Studio:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    I valori passati qui sono, rispettivamente, per le variabili _numero passeggeri\__ , _trip_distance_, _tempo\_\_di viaggio in\_secondi_, _latitudine\_di ritiro_, _Longitudine\__ di prelievo, _Latitudine abbandono\__ e _Longitudine abbandono\__ .
+    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
 
-3. Per eseguire la stessa chiamata dal codice R, è sufficiente definire una variabile R contenente l'intera chiamata di stored procedure, come questa:
+3. Per eseguire questa stessa chiamata dal codice R, è sufficiente definire una variabile R contenente l'intera chiamata alla stored procedure, come la seguente:
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    I valori passati qui sono, rispettivamente, per le variabili _numero passeggeri\__ , _distanza corsa\__ , _tempo\_\_di viaggio in\_secondi_, _pickup\_ Latitudine_, _\_prelievo Longitudine_, _latitudine\_abbandono_e _Longitudine\_abbandono_.
+    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
 
-4. Chiamare `sqlQuery` (dal pacchetto **RODBC** ) e passare la stringa di connessione, insieme alla variabile di stringa contenente la chiamata stored procedure.
+4. Chiamare `sqlQuery` dal pacchetto **RODBC** e passare la stringa di connessione e la variabile di stringa contenente la chiamata alla stored procedure.
 
     ```R
     # predict with stored procedure in single mode
@@ -215,18 +216,18 @@ Il stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta co
     ```
 
     >[!TIP]
-    > R Tools per Visual Studio (RTVS) offre una grande integrazione con SQL Server e R. Per altri esempi sull'uso di RODBC con una connessione SQL Server, vedere questo articolo: [Uso di SQL Server e R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > R Tools per Visual Studio (RTVS) offre un'ottima integrazione con SQL Server e R. Per altri esempi sull'uso di RODBC con una connessione SQL Server, vedere questo articolo: [Usare SQL Server e R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che si è appreso come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati e salvare in modo permanente i modelli R sottoposti a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]training, dovrebbe essere relativamente semplice creare nuovi modelli basati su questo set di dati. Ad esempio, è possibile provare a creare questi modelli aggiuntivi:
+Dopo aver appreso come usare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aver salvato permanentemente i modelli R sottoposti a training in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], risulterà semplice creare nuovi modelli basati sul set di dati. Ad esempio, è possibile provare a creare i modelli seguenti:
 
 + Un modello di regressione che stima l'importo della mancia
-+ Un modello di classificazione multiclasse che stima se il suggerimento è grande, medio o piccolo
++ Un modello di classificazione multiclasse che stima l'importo piccolo, medio o grande della mancia
 
-Potrebbe inoltre essere necessario esplorare questi esempi e risorse aggiuntivi:
+Può inoltre essere utile esplorare questi esempi e risorse aggiuntivi:
 
 + [Scenari di analisi scientifica dei dati e modelli di soluzioni](data-science-scenarios-and-solution-templates.md)
 + [Analisi avanzata nel database](sqldev-in-database-r-for-sql-developers.md)
-+ [Guide alle procedure Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server risorse aggiuntive](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Guide pratiche su Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [Risorse aggiuntive su Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

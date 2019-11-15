@@ -1,7 +1,7 @@
 ---
 title: Eseguire il debug e la diagnosi delle applicazioni Spark
 titleSuffix: SQL Server big data clusters
-description: Usare il server cronologia Spark per eseguire il debug e la diagnosi delle [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]applicazioni Spark in esecuzione in.
+description: Usare il server cronologia Spark per il debug e la diagnosi delle applicazioni Spark in esecuzione in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878698"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706113"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Eseguire il [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] debug e la diagnosi delle applicazioni Spark nel server di cronologia Spark
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Eseguire il debug e la diagnosi delle applicazioni Spark di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nel server cronologia Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce indicazioni su come usare il server cronologia Spark esteso per eseguire il debug e la diagnosi delle applicazioni Spark in un cluster Big Data di SQL Server 2019 (anteprima). Le funzionalità di debug e diagnosi sono integrate nel server cronologia Spark e basate su tecnologia Microsoft. L'estensione include le schede relative a dati, grafici e diagnosi. Nella scheda relativa ai dati gli utenti possono esaminare i dati di input e di output del processo Spark. Nella scheda relativa ai grafici gli utenti possono esaminare il flusso di dati e riprodurre il grafico del processo. Nella scheda relativa alla diagnosi l'utente può vedere le analisi relative ad asimmetria dei dati, sfasamento dell'ora e utilizzo dell'executor.
+Questo articolo fornisce indicazioni su come usare il server cronologia Spark esteso per eseguire il debug e la diagnosi delle applicazioni Spark in un cluster Big Data di SQL Server. Le funzionalità di debug e diagnosi sono integrate nel server cronologia Spark e basate su tecnologia Microsoft. L'estensione include le schede relative a dati, grafici e diagnosi. Nella scheda relativa ai dati gli utenti possono esaminare i dati di input e di output del processo Spark. Nella scheda relativa ai grafici gli utenti possono esaminare il flusso di dati e riprodurre il grafico del processo. Nella scheda relativa alla diagnosi l'utente può vedere le analisi relative ad asimmetria dei dati, sfasamento dell'ora e utilizzo dell'executor.
 
 ## <a name="get-access-to-spark-history-server"></a>Ottenere l'accesso al server cronologia Spark
 
 L'esperienza utente del server cronologia Spark open source è stata migliorata con alcune informazioni, tra cui dati specifici dei processi e visualizzazione interattiva del grafico del processo e dei flussi di dati per i cluster Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire l'interfaccia utente Web del server cronologia Spark tramite l'URL
-Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. Si noti che in un'autenticazione di base (nome utente/password) Big Data configurazione del cluster, è necessario fornire la **radice** utente quando viene richiesto di accedere agli endpoint del gateway (Knox). Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
+Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. In un'installazione di cluster Big Data con autenticazione di base (nome utente/password), è necessario specificare la **radice** dell'utente quando viene chiesto di accedere agli endpoint del gateway (Knox). Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Selezionare l'ID processo e quindi fare clic su **Grafico** nel menu degli strum
 
     ![ID processo nei grafici](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ In questo caso viene lasciata l'opzione **Stato** come valore predefinito. L'utente può controllare il flusso di dati selezionando **Leggi** o **scritto** nell'elenco a discesa di **visualizzazione**.
++ In questo caso viene lasciata l'opzione **Stato** come valore predefinito. L'utente può esaminare il flusso di dati selezionando **Read** (Lettura) o **Dati scritti** nell'elenco a discesa **Visualizza**.
 
     ![Visualizzazione grafici](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -203,5 +203,6 @@ Il server cronologia Spark presenta i problemi noti seguenti:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Introduzione a[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Configurare le impostazioni di Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Introduzione ai cluster Big Data di SQL Server](../big-data-cluster/deploy-get-started.md)
+* Configurare le impostazioni di Spark
+* [Configurare le impostazioni di Spark](/azure/hdinsight/spark/apache-spark-settings/)

@@ -1,82 +1,83 @@
 ---
-title: Scaricare gli script e i dati demo di NYC taxi per Embedded R e Python
-description: Istruzioni per il download dei dati di esempio relativi ai taxi di New York City e la creazione di un database. I dati vengono usati nelle esercitazioni SQL Server linguaggio Python e R che illustrano come incorporare gli script in SQL Server stored procedure e funzioni T-SQL.
+title: Dati demo di NYC Taxi per le esercitazioni
+description: Istruzioni per il download dei dati di esempio relativi ai taxi di New York City e la creazione di un database. I dati vengono usati nelle esercitazioni relative ai linguaggi Python e R per SQL Server che illustrano come incorporare gli script in stored procedure di SQL Server e funzioni T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5b60397bb3581ba2d210a6b4469184306145c8a
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714861"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727162"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo di NYC taxi per SQL Server esercitazioni su Python e R
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo NYC Taxi per le esercitazioni su Python e R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo illustra come configurare un database di esempio costituito da dati pubblici di [New York City taxi e limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono usati in varie esercitazioni di R e Python per l'analisi nel database in SQL Server. Per velocizzare l'esecuzione del codice di esempio, è stato creato un campione rappresentativo dell'1% dei dati. Nel sistema, il file di backup del database è leggermente superiore a 90 MB, fornendo 1,7 milioni righe nella tabella dati primaria.
+Questo articolo illustra come configurare un database di esempio costituito da dati pubblici della [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono usati in varie esercitazioni su R e Python per l'analisi nel database in SQL Server. Per velocizzare l'esecuzione del codice di esempio, abbiamo creato un campione rappresentativo dell'1% dei dati. Nel sistema dell'utente il file di backup del database è leggermente superiore a 90 MB, fornendo 1,7 milioni di righe nella tabella dati primaria.
 
-Per completare questo esercizio, è necessario disporre di [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento in grado di ripristinare un file di backup del database ed eseguire query T-SQL.
+Per completare questo esercizio, è necessario avere [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento in grado di ripristinare un file di backup del database ed eseguire query T-SQL.
 
-Le esercitazioni e le guide introduttive che usano questo set di dati includono quanto segue:
+Le esercitazioni e le guide di avvio rapido che usano questo set di dati includono:
 
-+ [Informazioni sulle analisi nel database con R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Informazioni sulle analisi nel database con Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Informazioni sull'analisi nel database mediante R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
++ [Informazioni sull'analisi nel database mediante Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="download-files"></a>Download dei file
+## <a name="download-files"></a>Scaricare i file
 
-Il database di esempio è un file SQL Server 2016 BAK ospitato da Microsoft. È possibile ripristinarlo in SQL Server 2016 e versioni successive. Il download del file inizia immediatamente quando si fa clic sul collegamento. 
+Il database di esempio è un file BAK di SQL Server 2016 ospitato da Microsoft. È possibile ripristinarlo in SQL Server 2016 e versioni successive. Il download del file inizia subito dopo aver fatto clic sul collegamento. 
 
-Dimensioni del file pari a circa 90 MB.
+Le dimensioni del file sono di circa 90 MB.
 
 1. Fare clic su [NYCTaxi_Sample. bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) per scaricare il file di backup del database.
 
-2. Copiare il file nella cartella C:\Programmi\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup
+2. Copiare il file nella cartella C:\Programmi\Microsoft SQL Server\MSSQL-nome_istanza\MSSQL\Backup.
 
-3. In Management Studio fare clic con il pulsante destro del mouse su **database** e scegliere **Ripristina file e gruppi di file**.
+3. In Management Studio fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina file e filegroup**.
 
 4. Immettere *NYCTaxi_Sample* come nome del database.
 
-5. Fare clic su **da dispositivo** e quindi aprire la pagina Selezione file per selezionare il file di backup. Fare clic su **Aggiungi** per selezionare NYCTaxi_Sample. bak.
+5. Fare clic su **Da dispositivo** e quindi aprire la pagina di selezione file per selezionare il file di backup. Fare clic su **Aggiungi** per selezionare NYCTaxi_Sample.bak.
 
 6. Selezionare la casella di controllo **Ripristina** e fare clic su **OK** per ripristinare il database.
 
 ## <a name="review-database-objects"></a>Esaminare gli oggetti di database
    
-Verificare che gli oggetti di database esistano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell' [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]istanza di utilizzando. Verranno visualizzati il database, le tabelle, le funzioni e le stored procedure.
+Verificare l'esistenza degli oggetti di database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si dovrebbero vedere il database, le tabelle, le funzioni e le stored procedure.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-### <a name="objects-in-nyctaxisample-database"></a>Oggetti nel database NYCTaxi_Sample
+### <a name="objects-in-nyctaxi_sample-database"></a>Oggetti nel database NYCTaxi_Sample
 
-La tabella seguente riepiloga gli oggetti creati nel database demo di NYC taxi.
+La tabella seguente riepiloga gli oggetti creati nel database demo NYC Taxi.
 
 |**Nome oggetto**|**Tipo oggetto**|**Descrizione**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | database | Crea un database e due tabelle:<br /><br />tabella dbo. nyctaxi_sample: Contiene il set di dati principale di NYC taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati NYC Taxi viene inserito in questa tabella.<br /><br />tabella _taxi_models dbo. NYC: Usato per salvare in modo permanente il modello di analisi avanzata con training.|
-|**fnCalculateDistance** |funzione a valori scalari | Calcola la distanza diretta tra i percorsi di prelievo e di abbandono. Questa funzione viene usata nelle [funzionalità di creazione dei dati](sqldev-create-data-features-using-t-sql.md), [training e salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md) e [rendere operativo del modello R](sqldev-operationalize-the-model.md).|
-|**fnEngineerFeatures** |funzione con valori di tabella | Crea nuove funzionalità di dati per il training del modello. Questa funzione viene usata nelle [funzionalità create data](sqldev-create-data-features-using-t-sql.md) e [rendere operativo il modello R](sqldev-operationalize-the-model.md).|
+|**NYCTaxi_Sample** | Database | Crea un database e due tabelle:<br /><br />Tabella dbo.nyctaxi_sample: contiene il set di dati NYC Taxi principale. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Un campione dell'1% del set di dati NYC Taxi è inserito in questa tabella.<br /><br />Tabella dbo.nyc_taxi_models: viene usata per salvare il modello di analisi avanzata sottoposto a training.|
+|**fnCalculateDistance** |funzione a valori scalari | Calcola la distanza diretta tra le posizioni di salita e discesa del passeggero. Questa funzione viene usata in [Creare caratteristiche di dati](sqldev-create-data-features-using-t-sql.md), [Eseguire il training e il salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md) e [Eseguire stime usando R incorporato in una stored procedure](sqldev-operationalize-the-model.md).|
+|**fnEngineerFeatures** |funzione con valori di tabella | Crea nuove caratteristiche di dati per il training del modello. Questa funzione viene usata in [Creare caratteristiche di dati](sqldev-create-data-features-using-t-sql.md) e [Eseguire stime usando R incorporato in una stored procedure](sqldev-operationalize-the-model.md).|
 
 
-Le stored procedure vengono create usando R e script Python disponibili in varie esercitazioni. Nella tabella seguente sono riepilogate le stored procedure che è possibile aggiungere facoltativamente al database demo di NYC taxi quando si esegue lo script da diverse lezioni.
+Le stored procedure vengono create usando script R e Python disponibili in varie esercitazioni. La tabella seguente riepiloga le stored procedure che è possibile aggiungere facoltativamente al database demo NYC Taxi quando si eseguono gli script delle varie lezioni.
 
 |**Stored procedure**|**Lingua**|**Descrizione**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | Chiama la funzione RevoScaleR rxHistogram per tracciare l'istogramma di una variabile e quindi restituisce il tracciato come oggetto binario. Questa stored procedure viene utilizzata per [esplorare e visualizzare i dati](sqldev-explore-and-visualize-the-data.md).|
-|**RPlotRHist** |R| Crea una rappresentazione grafica usando la funzione cron e salva l'output come file PDF locale. Questa stored procedure viene utilizzata per [esplorare e visualizzare i dati](sqldev-explore-and-visualize-the-data.md).|
-|**RxTrainLogitModel**  |R| Effettua il training di un modello di regressione logistica chiamando un pacchetto R. Il modello consente di stimare il valore della colonna indicata. Viene eseguito un training usando il 70% dei dati selezionati casualmente. L'output della stored procedure corrisponde al modello con training, che viene salvato nella tabella nyc_taxi_models. Questa stored procedure viene utilizzata per [il training e il salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md).|
-|**RxPredictBatchOutput**  |R | Chiama il modello sottoposto a training per creare stime utilizzando il modello. La stored procedure accetta una query come parametro di input e restituisce una colonna di valori numerici contenente i punteggi per le righe di input. Questa stored procedure viene utilizzata per [stimare i risultati potenziali](sqldev-operationalize-the-model.md).|
-|**RxPredictSingleRow**  |R| Chiama il modello sottoposto a training per creare stime utilizzando il modello. Questa stored procedure accetta una nuova osservazione come input, con i singoli valori della funzionalità passati come parametri in linea, e restituisce un valore che stima il risultato in base alla nuova osservazione. Questa stored procedure viene utilizzata per [stimare i risultati potenziali](sqldev-operationalize-the-model.md).|
+|**RxPlotHistogram** |R | Chiama la funzione rxHistogram di RevoScaleR per tracciare l'istogramma di una variabile e restituisce il tracciato come oggetto binario. Questa stored procedure viene usata in [Esplorare e visualizzare i dati](sqldev-explore-and-visualize-the-data.md).|
+|**RPlotRHist** |R| Crea un elemento grafico tramite la funzione Hist e salva l'output come file PDF locale. Questa stored procedure viene usata in [Esplorare e visualizzare i dati](sqldev-explore-and-visualize-the-data.md).|
+|**RxTrainLogitModel**  |R| Esegue il training di un modello di regressione logistica mediante la chiamata di un pacchetto R. Il modello consente di stimare il valore della colonna indicata. Viene eseguito un training usando il 70% dei dati selezionati casualmente. L'output della stored procedure corrisponde al modello con training, che viene salvato nella tabella nyc_taxi_models. Questa stored procedure viene usata in [Eseguire il training e il salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md).|
+|**RxPredictBatchOutput**  |R | Chiama il modello con training per creare stime tramite il modello. La stored procedure accetta una query come parametro di input e restituisce una colonna di valori numerici contenente i punteggi per le righe di input. Questa stored procedure viene usata in [Stimare i risultati potenziali](sqldev-operationalize-the-model.md).|
+|**RxPredictSingleRow**  |R| Chiama il modello con training per creare stime tramite il modello. Questa stored procedure accetta una nuova osservazione come input, con i singoli valori della funzionalità passati come parametri in linea, e restituisce un valore che stima il risultato in base alla nuova osservazione. Questa stored procedure viene usata in [Stimare i risultati potenziali](sqldev-operationalize-the-model.md).|
 
-## <a name="query-the-data"></a>Eseguire query sui dati
+## <a name="query-the-data"></a>Eseguire una query sui dati
 
 Come passaggio di convalida, eseguire una query per confermare che i dati sono stati caricati.
 
-1. In Esplora oggetti, in database, fare clic con il pulsante destro del mouse sul database **NYCTaxi_Sample** e avviare una nuova query.
+1. In Esplora oggetti fare clic con il pulsante destro del mouse sul database **NYCTaxi_Sample** in Database e avviare una nuova query.
 
 2. Eseguire alcune query semplici:
 
@@ -84,9 +85,9 @@ Come passaggio di convalida, eseguire una query per confermare che i dati sono s
     SELECT TOP(10) * FROM dbo.nyctaxi_sample;
     SELECT COUNT(*) FROM dbo.nyctaxi_sample;
     ```
-Il database contiene 1,7 milioni righe.
+Il database contiene 1,7 milioni di righe.
 
-3. All'interno del database è presente una tabella **nyctaxi_sample** che contiene il set di dati. La tabella è stata ottimizzata per i calcoli basati su set con l'aggiunta di un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md). Eseguire questa istruzione per generare un riepilogo rapido della tabella.
+3. All'interno del database è presente una tabella **nyctaxi_sample** che contiene il set di dati. La tabella è stata ottimizzata per i calcoli basati su set con l'aggiunta di un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md). Eseguire questa istruzione per generare un breve riepilogo per la tabella.
 
     ```sql
     SELECT DISTINCT [passenger_count]
@@ -98,11 +99,11 @@ Il database contiene 1,7 milioni righe.
     ````
 I risultati dovrebbero essere simili a quelli mostrati nello screenshot seguente.
 
-  ![Informazioni di riepilogo tabella](media/nyctaxidatatablesummary.png "Risultati query")
+  ![Informazioni di riepilogo della tabella](media/nyctaxidatatablesummary.png "Risultati query")
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-I dati di esempio di NYC taxi sono ora disponibili per l'apprendimento pratico.
+I dati di esempio NYC Taxi sono ora disponibili per l'apprendimento pratico.
 
-+ [Informazioni sulle analisi nel database con R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Informazioni sulle analisi nel database con Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Informazioni sull'analisi nel database mediante R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
++ [Informazioni sull'analisi nel database mediante Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)

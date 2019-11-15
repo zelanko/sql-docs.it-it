@@ -1,7 +1,7 @@
 ---
 title: Che cos'è la distribuzione di applicazioni?
 titleSuffix: Big Data Clusters for SQL Server 2019
-description: Questo articolo descrive la distribuzione di applicazioni in un cluster di Big data per SQL Server 2019.
+description: Questo articolo descrive la distribuzione delle applicazioni in un cluster Big Data per SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653001"
@@ -61,12 +61,12 @@ Un'applicazione può essere eseguita anche mediante un servizio Web RESTful. Per
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su come creare ed eseguire applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere gli argomenti seguenti:
+Per altre informazioni su come creare ed eseguire applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere gli argomenti seguenti:
 
 - [Distribuire applicazioni con azdata](big-data-cluster-create-apps.md)
 - [Distribuire applicazioni usando l'estensione per la distribuzione di app](app-deployment-extension.md)
 - [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md)
 
-Per ulteriori informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere la panoramica seguente:
+Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere la panoramica seguente:
 
-- [Che cosa [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sono?](big-data-cluster-overview.md)
+- [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

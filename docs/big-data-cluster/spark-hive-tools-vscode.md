@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653721"
@@ -23,14 +23,14 @@ Informazioni su come usare Spark & Hive Tools per Visual Studio Code per creare 
 È possibile installare Spark & Hive Tools nelle piattaforme supportate da Visual Studio Code, tra cui Windows, Linux e macOS. Di seguito sono illustrati i prerequisiti per le diverse piattaforme.
 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare i passaggi in questo articolo, è necessario quanto segue:
 
 - Un cluster Big Data di SQL Server. Vedere [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono è necessario solo per Linux e macOS.
-- [Configurare l'ambiente PySpark Interactive per Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
+- [Configurare l'ambiente interattivo PySpark per Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
 - Una directory locale denominata **SQLBDCexample**.  Questo articolo usa **C:\SQLBDC\SQLBDCexample**.
 
 ## <a name="install-spark--hive-tools"></a>Installare Spark & Hive Tools
@@ -51,11 +51,11 @@ Dopo aver completato i prerequisiti, è possibile installare Spark & Hive Tools 
 
 ## <a name="open-work-folder"></a>Aprire la cartella di lavoro
 
-Completare i passaggi seguenti per aprire una cartella di lavoro e creare un file in Visual Studio Code:
+Completare la procedura seguente per aprire una cartella di lavoro e creare un file in Visual Studio Code:
 
-1. Dalla barra dei menu passare a **file** > **Apri cartella...** C:\SQLBDC\SQLBDCexample, quindi selezionare il pulsante **Seleziona cartella** .  >  La cartella viene visualizzata nella vista di **Explorer** a sinistra.
+1. Dalla barra dei menu passare a **File** > **Apri cartella** > **C:\SQLBDC\SQLBDCexample** e quindi fare clic sul pulsante **Seleziona cartella**. La cartella verrà visualizzata nella visualizzazione **Explorer** a sinistra.
 
-2. Dalla visualizzazione **Esplora risorse** selezionare la cartella **SQLBDCexample**e quindi l'icona **nuovo file** accanto alla cartella di lavoro.
+2. Dalla visualizzazione **Explorer** selezionare la cartella, **SQLBDCexample** e quindi l'icona **Nuovo file** accanto alla cartella di lavoro.
 
    ![Nuovo file](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Prima di poter inviare script ai cluster da Visual Studio Code, è necessario co
 
 ## <a name="set-default-cluster"></a>Impostare il cluster predefinito
 
-1. Aprire nuovamente la cartella **SQLBDCexample** creata in [precedenza](#open-work-folder) , se chiusa.  
+1. Aprire di nuovo la cartella **SQLBDCexample** creata [in precedenza](#open-work-folder), se è stata chiusa.  
 
 2. Selezionare il file **HelloWorld.py** creato [in precedenza](#open-work-folder). Il file verrà aperto nell'editor di script.
 
@@ -132,7 +132,7 @@ Prima di poter inviare script ai cluster da Visual Studio Code, è necessario co
 
 È possibile inviare query PySpark interattive seguendo questa procedura:
 
-1. Riaprire la cartella **SQLBDCexample** creata in [precedenza](#open-work-folder) se chiusa.  
+1. Aprire di nuovo la cartella **SQLBDCexample** creata [in precedenza](#open-work-folder), se è stata chiusa.  
 
 2. Selezionare il file **HelloWorld.py** creato [in precedenza](#open-work-folder). Il file verrà aperto nell'editor di script.
 
@@ -157,9 +157,9 @@ Prima di poter inviare script ai cluster da Visual Studio Code, è necessario co
    > ![Estensione Python per PySpark interattivo disabilitata](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
-## <a name="submit-pyspark-batch-job"></a>Inviare un processo batch PySpark
+## <a name="submit-pyspark-batch-job"></a>Inviare il processo batch PySpark
 
-1. Riaprire la cartella **SQLBDCexample** creata in [precedenza](#open-work-folder) se chiusa.  
+1. Aprire di nuovo la cartella **SQLBDCexample** creata [in precedenza](#open-work-folder), se è stata chiusa.  
 
 2. Selezionare il file **HelloWorld.py** creato [in precedenza](#open-work-folder). Il file verrà aperto nell'editor di script.
 
@@ -167,7 +167,7 @@ Prima di poter inviare script ai cluster da Visual Studio Code, è necessario co
 
 4. Fare clic con il pulsante destro del mouse sull'editor di script e scegliere **Spark: PySpark Batch** (Spark: Batch PySpark) oppure usare i tasti di scelta rapida **CTRL+ALT+H**. 
 
-5. Selezionare il cluster se non è stato specificato un cluster predefinito. Dopo aver inviato un processo Python, i log di invio vengono visualizzati nella finestra **OUTPUT** in Visual Studio Code. Vengono visualizzati anche l'**URL dell'interfaccia utente di Spark** e l'**URL dell'interfaccia utente di Yarn**. È possibile aprire l'URL in un Web browser per tenere traccia dello stato del processo.
+5. Selezionare il cluster se non è stato specificato un cluster predefinito. Dopo aver inviato un processo Python, i log di invio vengono visualizzati nella finestra **OUTPUT** in Visual Studio Code. Vengono visualizzati anche i valori di **Spark UI URL** (URL UI Spark) e **Yarn UI URL** (URL UI Yarn). È possibile aprire l'URL in un Web browser per tenere traccia dello stato del processo.
 
    ![Risultato dell'invio del processo Python](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
 
@@ -180,7 +180,7 @@ La configurazione di [Apache Livy](https://livy.incubator.apache.org/) è suppor
 #### <a name="method-1"></a>Metodo 1
 
 1. Dalla barra dei menu passare a **File** > **Preferenze** > **Impostazioni**.  
-2. Nella casella di testo **Impostazioni ricerca** immettere **HDInsight Job Sumission: Livy Conf** (Invio processo HDInsight: Conf. Livy).  
+2. Nella casella di testo **Impostazioni di ricerca** immettere **HDInsight Job Sumission: Livy Conf** (Invio processo HDInsight: Conf. Livy).  
 3. Selezionare **Edit in settings.json** (Modifica in settings.json) per il risultato della ricerca pertinente.
 
 #### <a name="method-2"></a>Metodo 2
@@ -200,36 +200,36 @@ Inviare un file e osservare che la cartella `.vscode` viene aggiunta automaticam
 
 **Corpo della richiesta**
 
-| name | description | type |
+| NAME | description | Tipo |
 | :- | :- | :- |
-| file | File contenente l'applicazione da eseguire | percorso (obbligatorio) |
-| proxyUser | Utente da rappresentare durante l'esecuzione del processo | string |
+| file | File contenente l'applicazione da eseguire | Percorso (obbligatorio) |
+| proxyUser | Utente da rappresentare quando si esegue il processo | string |
 | className | Classe principale Java/Spark dell'applicazione | string |
-| args | Argomenti della riga di comando per l'applicazione | elenco di stringhe |
-| jars | file JAR da usare in questa sessione | Elenco di stringhe |
-| pyFiles | File di Python da usare in questa sessione | Elenco di stringhe |
-| files | file da usare in questa sessione | Elenco di stringhe |
+| args | Argomenti della riga di comando per l'applicazione | Elenco di stringhe |
+| jars | File jar da usare in questa sessione | Elenco di stringhe |
+| pyFiles | File Python da usare in questa sessione | Elenco di stringhe |
+| files | File da usare in questa sessione | Elenco di stringhe |
 | driverMemory | Quantità di memoria da usare per il processo del driver | string |
-| driverCores | Numero di core da usare per il processo del driver | int |
-| executorMemory | Quantità di memoria da usare per ogni processo executor | string |
-| executorCores | Numero di core da usare per ogni executor | int |
-| numExecutors | Numero di executor da avviare per questa sessione | int |
+| driverCores | Numero di core da usare per il processo del driver | INT |
+| executorMemory | Quantità di memoria da usare per un processo executor | string |
+| executorCores | Numero di core da usare per ogni executor | INT |
+| numExecutors | Numero di executor da avviare per questa sessione | INT |
 | archives | Archivi da usare in questa sessione | Elenco di stringhe |
-| queue | Nome della coda a cui YARN viene effettuato l'invio | string |
-| name | Nome della sessione | string |
-| conf | Proprietà di configurazione di Spark | Mapping della chiave = val |
+| coda | Nome della coda YARN dove è stato eseguito l'invio | string |
+| NAME | Nome della sessione | string |
+| conf | Proprietà di configurazione Spark | Mappa di chiave=valore |
 
 #### <a name="response-body"></a>Corpo della risposta
 
 Oggetto batch creato.
 
-| name | description | type |
+| NAME | description | Tipo |
 | :- | :- | :- |
-| id | ID sessione | int |
-| appId | ID applicazione della sessione | string |
-| appInfo | Informazioni dettagliate sull'applicazione | Mapping della chiave = val |
-| log | Righe di log | elenco di stringhe |
-| state | Stato batch | string |
+| id | ID della sessione | INT |
+| appId | ID applicazione della sessione | String |
+| appInfo | Informazioni dettagliate sull'applicazione | Mappa di chiave=valore |
+| log | Righe di log | Elenco di stringhe |
+| state | Stato del batch | string |
 
 >[!NOTE]
 >La configurazione di Livy assegnata verrà visualizzata nel riquadro di output quando si invia lo script.
@@ -238,10 +238,10 @@ Oggetto batch creato.
 
 Spark & Hive Tools per Visual Studio Code supporta le funzionalità seguenti:
 
-- **Completamento automatico di IntelliSense**. Vengono visualizzati suggerimenti per parole chiave, metodi, variabili e così via. Le diverse icone rappresentano tipi diversi di oggetti.
+- **Completamento automatico di IntelliSense**. Popup con suggerimenti per parole chiave, metodi, variabili e così via. Le diverse icone rappresentano tipi diversi di oggetti.
 
     ![Tipi di oggetti IntelliSense in Spark & Hive Tools per Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-auto-complete-objects.png)
-- **Marcatori di errore di IntelliSense**. Il servizio di linguaggio sottolinea gli errori di modifica nello script Hive.     
+- **Marcatori di errore di IntelliSense**. Il servizio di linguaggio sottolinea gli errori nello script Hive.     
 - **Evidenziazioni della sintassi**. Il servizio di linguaggio usa colori diversi per distinguere variabili, parole chiave, tipi di dati, funzioni e così via. 
 
     ![Evidenziazioni della sintassi in Spark & Hive Tools per Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-syntax-highlights.png)
@@ -255,4 +255,4 @@ Spark & Hive Tools per Visual Studio Code supporta le funzionalità seguenti:
 3. Esaminare la visualizzazione **OUTPUT** per verificare.  
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per ulteriori informazioni sul cluster SQL Server Big Data e sugli scenari correlati, [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)vedere.
+Per altre informazioni sui cluster Big Data di SQL Server e sugli scenari correlati, vedere [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

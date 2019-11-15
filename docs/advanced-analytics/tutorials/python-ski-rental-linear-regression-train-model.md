@@ -1,46 +1,47 @@
 ---
-title: 'Esercitazione per Python: Train Model (regressione lineare)'
-description: In questa esercitazione si userà Python e la regressione lineare in SQL Server Machine Learning Services per prevedere il numero di noleggi di sci. Si eseguirà il training di un modello di regressione lineare in Python.
+title: 'Esercitazione su Python: Eseguire il training del modello'
+description: In questa esercitazione si useranno Python e la regressione lineare in Machine Learning Services per SQL Server per stimare il numero di noleggi di sci. Si eseguirà quindi il training di un modello di regressione lineare in Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30f390681dc63d6de9a95e805b6cc8f273b2b8d7
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242549"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727051"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Esercitazione per Python: Eseguire il training di un modello di regressione lineare in SQL Server Machine Learning Services
+# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Esercitazione su Python: Eseguire il training di un modello di regressione lineare in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nella terza parte di questa serie di esercitazioni in quattro parti si eseguirà il training di un modello di regressione lineare in Python. Nella parte successiva di questa serie verrà distribuito questo modello in un database di SQL Server con Machine Learning Services.
+Nella terza parte di questa serie di esercitazioni in quattro parti verrà eseguito il training di un modello di regressione lineare in Python. Nella parte successiva della serie questo modello verrà distribuito in un database di SQL Server con Machine Learning Services.
 
-L'articolo spiega come:
+In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Eseguire il training di un modello di regressione lineare
-> * Eseguire stime tramite il modello di regressione lineare
+> * Eseguire stime tramite un modello di regressione lineare
 
-Nella [prima parte](python-ski-rental-linear-regression.md)si è appreso come ripristinare il database di esempio.
+Nella [prima parte](python-ski-rental-linear-regression.md) si è appreso come ripristinare il database di esempio.
 
-Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md)si è appreso come caricare i dati da SQL Server in un frame di dati Python e preparare i dati in Python.
+Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md) si è appreso come caricare i dati da SQL Server in un frame di dati Python e come preparare i dati in Python.
 
-Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md), si apprenderà come archiviare il modello in SQL Server, quindi creare stored procedure dagli script Python sviluppati in parti due e tre. Le stored procedure vengono eseguite in SQL Server per eseguire stime basate sui nuovi dati.
+Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si apprenderà come archiviare il modello in SQL Server e creare stored procedure dagli script Python sviluppati nella seconda e nella terza parte. Le stored procedure verranno quindi eseguite in SQL Server per eseguire stime basate sui nuovi dati.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* Nella terza parte di questa esercitazione si presuppone che sia stata completata la [parte 1](python-ski-rental-linear-regression.md) e i relativi prerequisiti.
+* Per poter eseguire la terza parte di questa esercitazione si presuppone che sia stata completata la [prima parte](python-ski-rental-linear-regression.md) e i rispettivi prerequisiti.
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 
-Per stimare, è necessario trovare una funzione (modello) che meglio descriva la dipendenza tra le variabili nel set di dati. Questa operazione ha chiamato il training del modello. Il set di dati di training sarà un subset dell'intero set di dati del frame di dati Pandas **che è stato** creato nella seconda parte di questa serie.
+Per eseguire una stima, è necessario trovare una funzione (modello) che descriva al meglio la dipendenza tra le variabili del set di dati. In questo modo viene eseguito il training del modello. Il set di dati di training sarà costituito da un subset dell'intero set di dati del frame di dati pandas **df** creato nella seconda parte di questa serie.
 
-Si eseguirà il training del modello **lin_model** usando un algoritmo di regressione lineare.
+Verrà eseguito il training del modello **lin_model** usando un algoritmo di regressione lineare.
 
 ```python
 # Store the variable we'll be predicting on.
@@ -63,16 +64,16 @@ lin_model = LinearRegression()
 lin_model.fit(train[columns], train[target])
 ```
 
-Verranno visualizzati risultati simili ai seguenti.
+I risultati visualizzati saranno simili ai seguenti:
 
 ```results
 Training set shape: (362, 7)
 Testing set shape: (91, 7)
 ```
 
-## <a name="make-predictions"></a>Eseguire stime
+## <a name="make-predictions"></a>Effettuare stime
 
-Usare una funzione Predict per stimare i conteggi di noleggio usando il modello **lin_model**.
+Usare una funzione Predict per stimare il numero di noleggi usando il modello **lin_model**.
 
 ```python
 # Generate our predictions for the test set.
@@ -100,9 +101,9 @@ Computed error: 3.59831533436e-26
 Nella terza parte di questa serie di esercitazioni sono stati completati i passaggi seguenti:
 
 * Eseguire il training di un modello di regressione lineare
-* Eseguire stime tramite il modello di regressione lineare
+* Eseguire stime tramite un modello di regressione lineare
 
 Per distribuire il modello di Machine Learning creato, seguire la quarta parte di questa serie di esercitazioni:
 
 > [!div class="nextstepaction"]
-> [Esercitazione per Python: Distribuire un modello di Machine Learning](python-ski-rental-linear-regression-deploy-model.md)
+> [Esercitazione su Python: Distribuire un modello di Machine Learning](python-ski-rental-linear-regression-deploy-model.md)

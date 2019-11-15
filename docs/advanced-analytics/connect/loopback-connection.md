@@ -1,6 +1,6 @@
 ---
-title: Connessione loopback a SQL Server da uno script Python o R
-description: Informazioni su come usare una connessione loopback per connettersi di nuovo a SQL Server tramite ODBC per leggere o scrivere dati da uno script Python o R eseguito da sp_execute_external_script. Questa operazione può essere usata quando non è possibile usare gli argomenti InputDataSet e OutputDataSet di sp_execute_external_script.
+title: Connessione loopback di SQL Server
+description: Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite ODBC per leggere o scrivere dati da uno script Python o R eseguito da sp_execute_external_script. Questo approccio è utile quando non è possibile usare gli argomenti InputDataSet e OutputDataSet di sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/21/2019
@@ -8,28 +8,29 @@ ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b4ce483df2d38e5e2549d054c02b6c797837f3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69657488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727595"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connessione loopback a SQL Server da uno script Python o R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Informazioni su come usare una connessione loopback per connettersi di nuovo a SQL Server tramite [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) per leggere o scrivere dati da uno script Python o R eseguito `sp_execute_external_script`da. Questa operazione può essere utilizzata quando si utilizzano gli argomenti **InputDataSet** e `sp_execute_external_script` **OutputDataSet** di non sono possibili.
+Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) per leggere o scrivere dati da uno script Python o R eseguito da `sp_execute_external_script`sp_execute_external_script. Questo approccio è utile quando non è possibile usare gli argomenti **InputDataSet** e **OutputDataSet** di `sp_execute_external_script`.
 
 ## <a name="connection-string"></a>Stringa di connessione
 
 Per eseguire una connessione loopback, è necessario usare una stringa di connessione corretta. Gli argomenti obbligatori comuni sono il nome del [driver ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md), l'indirizzo del server e il nome del database.
 
-### <a name="connection-string-on-windows"></a>Stringa di connessione per Windows
+### <a name="connection-string-on-windows"></a>Stringa di connessione in Windows
 
 Per l'autenticazione in SQL Server in Windows, lo script Python o R può usare l'attributo della stringa di connessione **Trusted_Connection** per eseguire l'autenticazione con lo stesso utente che ha eseguito sp_execute_external_script.
 
-Di seguito è riportato un esempio della stringa di connessione loopback per Windows:
+Ecco un esempio della stringa di connessione loopback in Windows:
 
 ``` 
 "Driver=SQL Server;Server=.;Database=nameOfDatabase;Trusted_Connection=Yes;"
@@ -37,27 +38,27 @@ Di seguito è riportato un esempio della stringa di connessione loopback per Win
 
 ### <a name="connection-string-on-linux"></a>Stringa di connessione in Linux
 
-Per l'autenticazione in SQL Server in Linux, lo script Python o R deve usare gli attributi **ClientCertificate** e **CLIENTKEY vuoto** del driver ODBC per l'autenticazione con lo stesso utente che ha `sp_execute_external_script`eseguito. Questa operazione richiede l'uso della versione [più recente del driver ODBC](../../connect/odbc/download-odbc-driver-for-sql-server.md) 17.4.1.1.
+Per l'autenticazione in SQL Server in Linux, lo script Python o R deve usare gli attributi **ClientCertificate** e **ClientKey** del driver ODBC per eseguire l'autenticazione con lo stesso utente che ha eseguito `sp_execute_external_script`. Questa operazione richiede l'uso del [driver ODBC più recente](../../connect/odbc/download-odbc-driver-for-sql-server.md), ovvero la versione 17.4.1.1.
 
-Di seguito è riportato un esempio della stringa di connessione loopback in Linux:
+Ecco un esempio della stringa di connessione loopback in Linux:
 
 ```
 "Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
 ```
 
-L'indirizzo del server, il percorso del file del certificato client e il percorso del file di `sp_execute_external_script` chiave client sono univoci per ogni e possono essere ottenuti tramite l'API **rx_get_sql_loopback_connection_string ()** per Python o  **rxGetSqlLoopbackConnectionString ()** per R.
+L'indirizzo del server, il percorso del file del certificato client e il percorso del file di chiave client sono univoci per ogni `sp_execute_external_script` e possono essere ottenuti usando l'API **rx_get_sql_loopback_connection_string()** per Python o **rxGetSqlLoopbackConnectionString()** per R.
 
-Per ulteriori informazioni sugli attributi della stringa di connessione, vedere le [parole chiave e gli attributi delle stringhe di connessione e DSN](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC driver for SQL Server.
+Per altre informazioni sugli attributi della stringa di connessione, vedere [Parole chiave e attributi per la stringa di connessione e DSN](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC Driver for SQL Server.
 
-## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Genera la stringa di connessione con revoscalepy per Python
+## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generare la stringa di connessione con revoscalepy per Python
 
-È possibile usare l'API **rx_get_sql_loopback_connection_string ()** in [revoscalepy](../python/ref-py-revoscalepy.md) per generare una stringa di connessione corretta per una connessione loopback in uno script Python.
+È possibile usare l'API **rx_get_sql_loopback_connection_string()** in [revoscalepy](../python/ref-py-revoscalepy.md) per generare una stringa di connessione corretta per una connessione loopback in uno script Python.
 
-Accetta gli argomenti seguenti:
+Sono accettati gli argomenti seguenti:
 
 | Argomento | Descrizione |
 |-|-|
-| name_of_database | Nome del database a cui deve essere effettuata la connessione |
+| name_of_database | Nome del database al quale deve essere eseguita la connessione |
 | odbc_driver | Nome del driver ODBC |
 
 ### <a name="examples"></a>Esempi
@@ -97,15 +98,15 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-## <a name="generate-connection-string-with-revoscaler-for-r"></a>Genera la stringa di connessione con RevoScaleR per R
+## <a name="generate-connection-string-with-revoscaler-for-r"></a>Generare la stringa di connessione con RevoScaleR per R
 
-È possibile usare l'API **rxGetSqlLoopbackConnectionString ()** in [RevoScaleR](../r/ref-r-revoscaler.md) per generare una stringa di connessione corretta per una connessione loopback in uno script R.
+È possibile usare l'API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) per generare una stringa di connessione corretta per una connessione loopback in uno script R.
 
-Accetta gli argomenti seguenti:
+Sono accettati gli argomenti seguenti:
 
 | Argomento | Descrizione |
 |-|-|
-| nameOfDatabase | Nome del database a cui deve essere effettuata la connessione |
+| nameOfDatabase | Nome del database al quale deve essere eseguita la connessione |
 | odbcDriver | Nome del driver ODBC |
 
 ### <a name="examples"></a>Esempi
@@ -145,6 +146,6 @@ GO
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-+ [Driver Microsoft ODBC per SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
++ [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
 + [revoscalepy](../python/ref-py-revoscalepy.md)
 + [RevoScaleR](../r/ref-r-revoscaler.md)

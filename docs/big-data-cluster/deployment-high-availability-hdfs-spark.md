@@ -1,7 +1,7 @@
 ---
 title: Distribuire HDFS o Spark con disponibilità elevata
-titleSuffix: Deploy HDFS or Spark with high availability
-description: Informazioni su come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (anteprima) con disponibilità elevata.
+titleSuffix: SQL Server Big Data Clusters
+description: Informazioni su come distribuire un cluster Big Data di SQL Server con disponibilità elevata.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd8aa5d124e7dc6c7d37bb44c9b64129f8fa564
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532017"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706341"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Distribuire il nodo NameNode di HDFS e i servizi Spark condivisi in una configurazione a disponibilità elevata
 

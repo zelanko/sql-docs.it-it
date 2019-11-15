@@ -2,20 +2,20 @@
 title: Estensione di virtualizzazione dei dati
 titleSuffix: Azure Data Studio
 description: Estensione di virtualizzazione dei dati per Azure Data Studio
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532550"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801124"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Estensione di virtualizzazione dei dati per Azure Data Studio
 
@@ -70,13 +70,13 @@ Per installare l'estensione di virtualizzazione dei dati, aprire Azure Data Stud
 
 ## <a name="release-notes-v0102"></a>Note sulla versione (v 0.10.2)
 ### <a name="sql-server-2019-support"></a>Supporto di SQL Server 2019
-Il supporto per SQL Server 2019 è stato aggiornato. Dopo la connessione a un'istanza del cluster Big Data di SQL Server, nell'albero di esplorazione viene visualizzata una nuova cartella _Servizi dati_. Questa offre punti di avvio per azioni quali l'apertura di un nuovo notebook sulla connessione, l'invio di processi Spark e l'uso di HDFS. Si noti che per alcune azioni, ad esempio _creare dati esterni_ su un file o una cartella HDFS, è necessario installare l'estensione _SQL Server 2019 Preview_.
+Il supporto per SQL Server 2019 è stato aggiornato. Dopo la connessione a un'istanza del cluster Big Data di SQL Server, nell'albero di esplorazione viene visualizzata una nuova cartella _Servizi dati_. Questa offre punti di avvio per azioni quali l'apertura di un nuovo notebook sulla connessione, l'invio di processi Spark e l'uso di HDFS. Per alcune azioni, ad esempio _creare dati esterni_ su un file o una cartella HDFS, è necessario installare l'estensione _SQL Server 2019_.
 
 ### <a name="notebook-support"></a>Supporto di notebook
 In questa versione sono stati apportati aggiornamenti significativi all'interfaccia utente per i notebook. L'obiettivo è quello di semplificare la lettura dei notebook condivisi con l'utente. Sono state rimosse tutte le caselle di contorno intorno alle celle, a meno che non siano selezionate o evidenziate con il mouse, aggiungendo il supporto del passaggio del mouse per semplificare le azioni a livello di cella senza bisogno di selezionare una cella. Lo stato di esecuzione è ora più chiaro grazie all'aggiunta del conteggio delle esecuzioni, di un pulsante _Arresta esecuzione_ animato e altro ancora. Sono state aggiunge scelte rapide da tastiera per _New Notebook_ (Nuovo notebook) (`Ctrl+Shift+N`), _Run Cell_ (Esegui cella) (`F5`), _New Code Cell_ (Nuova cella di codice) (`Ctrl+Shift+C`), _New Text Cell_ (Nuova cella di testo) (`Ctrl+Shift+T`). In futuro, cercheremo di fare in modo che tutte le azioni chiave si possano lanciare tramite scelta rapida da tastiera, quindi ogni suggerimento sulle combinazioni mancanti è il benvenuto.
 
 Altri miglioramenti e correzioni includono:
-* L'estensione _SQL Server 2019 Preview_ ora richiede agli utenti di selezionare una directory di installazione per le dipendenze Python. Non include più Python nel `.vsix file`, riducendo così le dimensioni complessive dell'estensione. Le dipendenze Python supportano i kernel Spark e Python3.
+* L'estensione _SQL Server 2019_ richiede ora agli utenti di selezionare una directory di installazione per le dipendenze Python. Non include più Python nel `.vsix file`, riducendo così le dimensioni complessive dell'estensione. Le dipendenze Python supportano i kernel Spark e Python3.
 * È stato aggiunto il supporto per l'avvio di un nuovo notebook dalla riga di comando. L'avvio con gli argomenti `--command=notebook.command.new --server=myservername` dovrebbe aprire un nuovo notebook e connettersi a questo server.
 * Correzioni delle prestazioni per notebook con codice di lunghezza elevata nelle celle. Se le celle di codice sono lunghe più di 250 righe, viene aggiunta una barra di scorrimento.
 * Miglioramento del supporto per i file con estensione ipynb. È ora supportata la versione 3 o successiva. Si noti che, al salvataggio, i file verranno aggiornati alla versione 4 o successiva.

@@ -1,38 +1,39 @@
 ---
-title: Eseguire query e modificare i dati SQL Server usando RevoScaleR
-description: Esercitazione dettagliata su come eseguire una query e modificare i dati usando il linguaggio R in SQL Server.
+title: Modificare dati SQL con RevoScaleR
+description: Esercitazione dettagliata su come modificare ed eseguire query sui dati usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bcf782e509263b087cfc599758ae9492b888aed
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715521"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727190"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Eseguire query e modificare i dati di SQL Server (esercitazione SQL Server e RevoScaleR)
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Modificare ed eseguire query sui dati di SQL Server (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Nella lezione precedente i dati sono stati caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo passaggio è possibile esplorare e modificare i dati usando **RevoScaleR**:
+Nella lezione precedente sono stati caricati i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo passaggio è possibile esplorare e modificare i dati usando **RevoScaleR**:
 
 > [!div class="checklist"]
-> * Restituisce informazioni di base sulle variabili
-> * Creazione di dati categorici da dati non elaborati
+> * Restituire informazioni di base sulle variabili
+> * Creare dati categorici da dati non elaborati
 
-I dati categorici o le *variabili di fattore*sono utili per le visualizzazioni dei dati esplorativi. È possibile usarli come input per gli istogrammi per ottenere un'idea di quali dati variabili sono simili.
+I dati categorici, o *variabili di fattore*, sono particolarmente utili per le visualizzazioni esplorative dei dati. È possibile usarli come input di istogrammi per avere un'idea dell'aspetto dei dati variabili.
 
-## <a name="query-for-columns-and-types"></a>Eseguire una query per le colonne e i tipi
+## <a name="query-for-columns-and-types"></a>Eseguire query per colonne e tipi
 
-Usare un IDE R o RGui. exe per eseguire lo script R. 
+Usare un IDE R o RGui.exe per eseguire lo script R. 
 
-Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati. È possibile utilizzare la funzione [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e specificare l'origine dati che si desidera analizzare. A seconda della versione di **RevoScaleR**, è anche possibile usare [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati. È possibile usare la funzione [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e specificare l'origine dati da analizzare. A seconda della versione di **RevoScaleR**, è possibile usare anche [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -52,15 +53,15 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## <a name="create-categorical-data"></a>Creazione di dati categorici
+## <a name="create-categorical-data"></a>Creare dati categorici
 
-Tutte le variabili vengono archiviate come numeri interi, ma alcune variabili rappresentano dati categorici, denominate *variabili di fattore* in R. Ad esempio, lo *stato* della colonna contiene numeri usati come identificatori per gli stati 50 e il distretto di Columbia. Per facilitare la comprensione dei dati, sostituire i numeri con un elenco di codici di stato.
+Tutte le variabili vengono archiviate come valori interi, ma alcune variabili rappresentano dati relativi alle categorie denominati *variabili di fattore* in R. Ad esempio, la colonna *stato* contiene numeri che rappresentano gli identificatori di 50 stati, più District of Columbia. Per facilitare la comprensione dei dati, sostituire i numeri con un elenco di codici di stato.
 
-In questo passaggio viene creato un vettore di stringa contenente le abbreviazioni, quindi viene mappato questi valori categorici agli identificatori di tipo Integer originali. Si usa quindi la nuova variabile nell'argomento *colInfo* per specificare che la colonna deve essere gestita come fattore. Ogni volta che si analizzano i dati o lo si sposta, vengono utilizzate le abbreviazioni e la colonna viene gestita come fattore.
+In questo passaggio si creerà un vettore di stringhe contenente le abbreviazioni e si eseguirà il mapping dei valori di categoria agli identificatori interi originali. Si userà quindi la nuova variabile nell'argomento *colInfo* per specificare che la colonna deve essere gestita come fattore. Ogni volta che si analizzano o si spostano i dati, vengono usate le abbreviazioni e la colonna viene gestita come fattore.
 
 Il mapping della colonna alle abbreviazioni prima di usarla come fattore consente di migliorare anche le prestazioni. Per altre informazioni, vedere [R e ottimizzazione dei dati](../r/r-and-data-optimization-r-services.md).
 
-1. Per iniziare, creare una variabile R, *stateAbb*, e definire il vettore di stringhe da aggiungere, come indicato di seguito.
+1. Iniziare creando la variabile R *stateAbb* e definendo il vettore di stringhe da aggiungere alla variabile come segue.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -95,7 +96,7 @@ Il mapping della colonna alle abbreviazioni prima di usarla come fattore consent
     )
     ```
   
-3. Per creare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati che usa i dati aggiornati, chiamare la funzione **RxSqlServerData** come in precedenza, ma aggiungere l'argomento *colInfo* .
+3. Per creare l'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa i dati aggiornati, chiamare la funzione **RxSqlServerData** come in precedenza, ma aggiungere l'argomento *colInfo*.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

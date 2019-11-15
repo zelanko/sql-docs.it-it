@@ -1,7 +1,7 @@
 ---
 title: Eseguire query su dati esterni in Oracle
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come eseguire query sui dati Oracle da un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Si creerà una tabella esterna con i dati di Oracle e si eseguirà quindi una query.
+description: Questa esercitazione illustra come eseguire una query su dati Oracle da un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Si creerà una tabella esterna con i dati di Oracle e si eseguirà quindi una query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
 ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71708359"

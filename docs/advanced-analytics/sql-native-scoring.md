@@ -1,51 +1,52 @@
 ---
-title: Assegnazione di punteggi nativi usando l'istruzione T-SQL PREDICT
-description: Generare stime usando la funzione T-SQL PREDICT, assegnando un punteggio agli input DTA rispetto a un modello con training preliminare scritto in R o Python su SQL Server.
+title: Assegnazione dei punteggi nativa tramite T-SQL PREDICT
+description: Generare stime usando la funzione T-SQL PREDICT, assegnando punteggi agli input di dati in base a un modello con training preliminare scritto in R o Python in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714954"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727291"
 ---
-# <a name="native-scoring-using-the-predict-t-sql-function"></a>Assegnazione di punteggi nativi mediante la funzione PREDICT T-SQL
+# <a name="native-scoring-using-the-predict-t-sql-function"></a>Assegnazione dei punteggi nativa tramite la funzione T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Il Punteggio nativo usa la [funzione Predict T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) e C++ le funzionalità di estensione native di SQL Server 2017 per generare valori di stima o *punteggi* per i nuovi input di dati in tempo quasi reale. Questa metodologia offre la velocità di elaborazione più rapida possibile per i carichi di lavoro di previsione e di stima, ma include i requisiti della piattaforma e della libreria: solo C++ le funzioni di RevoScaleR e revoscalepy hanno implementazioni.
+L'assegnazione dei punteggi nativa si basa sulla [funzione T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) e sulle funzionalità di estensione C++ native di SQL Server 2017 per generare valori di stima o *punteggi* per i nuovi input di dati in tempo quasi reale. Questa metodologia assicura la velocità di elaborazione più rapida possibile per i carichi di lavoro di previsione e stima, ma prevede alcuni requisiti relativi alla piattaforma e alla libreria: solo le funzioni di RevoScaleR e revoscalepy hanno implementazioni in C++.
 
-Per il Punteggio nativo è necessario disporre di un modello già sottoposto a training. In SQL Server 2017 Windows o Linux o nel database SQL di Azure è possibile chiamare la funzione PREDICT in Transact-SQL per richiamare il Punteggio nativo sui nuovi dati forniti come parametro di input. La funzione PREDICT restituisce i punteggi sugli input dei dati forniti.
+Per l'assegnazione dei punteggi nativa è necessario disporre di un modello già sottoposto a training. In SQL Server 2017 per Windows o Linux o nel database SQL di Azure è possibile chiamare la funzione PREDICT in Transact-SQL per richiamare l'assegnazione dei punteggi nativa per i nuovi dati forniti come parametro di input. La funzione PREDICT restituisce i punteggi rispetto agli input di dati forniti.
 
-## <a name="how-native-scoring-works"></a>Funzionamento del Punteggio nativo
+## <a name="how-native-scoring-works"></a>Funzionamento dell'assegnazione dei punteggi nativa
 
-Il Punteggio nativo USA C++ le librerie native di Microsoft in grado di leggere un modello già sottoposto a training, archiviato in precedenza in un formato binario speciale o salvato su disco come flusso di byte non elaborati e genera punteggi per i nuovi input di dati forniti. Poiché il modello viene sottoposto a training, pubblicato e archiviato, può essere usato per l'assegnazione dei punteggi senza dover chiamare l'interprete R o Python. Di conseguenza, l'overhead di più interazioni di processo viene ridotto, ottenendo prestazioni di stima molto più veloci negli scenari di produzione aziendali.
+L'assegnazione dei punteggi nativa si basa sulle librerie C++ native di Microsoft in grado di leggere un modello già sottoposto a training, archiviato in precedenza in un formato binario speciale o salvato su disco come flusso di byte non elaborati, e generare punteggi per i nuovi input di dati forniti. Poiché il modello viene sottoposto a training, pubblicato e archiviato, può essere usato per l'assegnazione dei punteggi senza dover chiamare l'interprete R o Python. Di conseguenza, il sovraccarico delle interazioni di più processi viene ridotto, comportando prestazioni di stima molto più veloci negli scenari di produzione aziendali.
 
-Per usare il Punteggio nativo, chiamare la funzione PREDICT T-SQL e passare gli input obbligatori seguenti:
+Per usare l'assegnazione dei punteggi nativa, chiamare la funzione T-SQL PREDICT e passare gli input richiesti seguenti:
 
 + Modello compatibile basato su un algoritmo supportato.
-+ Dati di input, in genere definiti come query SQL.
++ Dati di input, definiti in genere come query SQL.
 
-La funzione restituisce le stime per i dati di input, insieme alle colonne di dati di origine che si desidera passare.
+La funzione restituisce le stime per i dati di input, insieme alle eventuali colonne di dati di origine da passare.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-PREDICT è disponibile in tutte le edizioni del motore di database SQL Server 2017 e abilitato per impostazione predefinita, inclusi SQL Server Machine Learning Services in Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o database SQL di Azure. Non è necessario installare R, Python o abilitare funzionalità aggiuntive.
+PREDICT è disponibile in tutte le edizioni del motore di database di SQL Server 2017 ed è abilitato per impostazione predefinita, inclusi Machine Learning Services per SQL Server in Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o il database SQL di Azure. Non è necessario installare R o Python, né abilitare funzionalità aggiuntive.
 
-+ Il training del modello deve essere eseguito in anticipo utilizzando uno degli algoritmi **RX** supportati elencati di seguito.
++ Il training del modello deve essere eseguito in anticipo tramite uno degli algoritmi **rx** supportati elencati di seguito.
 
-+ Serializzare il modello usando [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) per R e [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per Python. Queste funzioni di serializzazione sono state ottimizzate per supportare il Punteggio rapido.
++ Serializzare il modello usando [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) per R e [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per Python. Queste funzioni di serializzazione sono state ottimizzate per supportare l'assegnazione rapida dei punteggi.
 
 <a name="bkmk_native_supported_algos"></a> 
 
 ## <a name="supported-algorithms"></a>Algoritmi supportati
 
-+ modelli revoscalepy
++ Modelli revoscalepy
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
@@ -61,12 +62,12 @@ PREDICT è disponibile in tutte le edizioni del motore di database SQL Server 20
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-Se è necessario usare modelli di MicrosoftML o MicrosoftML, usare il [punteggio in tempo reale con sp_rxPredict](real-time-scoring.md).
+Se è necessario usare modelli di MicrosoftML o microsoftml, usare l'[assegnazione dei punteggi in tempo reale con sp_rxPredict](real-time-scoring.md).
 
-I tipi di modello non supportati includono i tipi seguenti:
+I tipi di modelli non supportati includono i seguenti:
 
 + Modelli contenenti altre trasformazioni
-+ Modelli che usano `rxGlm` gli `rxNaiveBayes` algoritmi o negli equivalenti RevoScaleR o revoscalepy
++ Modelli che usano gli algoritmi `rxGlm` o `rxNaiveBayes` negli equivalenti RevoScaleR o revoscalepy
 + Modelli PMML
 + Modelli creati con altre librerie open source o di terze parti
 
@@ -76,7 +77,7 @@ In questo esempio viene creato un modello e quindi viene chiamata la funzione di
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Passaggio 1. Preparare e salvare il modello
 
-Eseguire il codice seguente per creare il database di esempio e le tabelle obbligatorie.
+Eseguire il codice seguente per creare il database di esempio e le tabelle richieste.
 
 ```sql
 CREATE DATABASE NativeScoringTest;
@@ -93,7 +94,7 @@ CREATE TABLE iris_rx_data (
 GO
 ```
 
-Usare l'istruzione seguente per popolare la tabella dati con i dati del set di dati **Iris** .
+Usare l'istruzione seguente per popolare la tabella dati con i dati del set di dati **iris**.
 
 ```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
@@ -105,7 +106,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-A questo punto, creare una tabella per archiviare i modelli.
+Creare ora una tabella per archiviare i modelli.
 
 ```sql
 DROP TABLE IF EXISTS ml_models;
@@ -116,7 +117,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-Il codice seguente crea un modello basato sul set di dati **Iris** e lo salva nella tabella denominata **Models**.
+Il codice seguente crea un modello basato sul set di dati **iris** e lo salva nella tabella denominata **models**.
 
 ```sql
 DECLARE @model varbinary(max);
@@ -134,7 +135,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> Assicurarsi di usare la funzione [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) di RevoScaleR per salvare il modello. La funzione R `serialize` standard non è in grado di generare il formato richiesto.
+> Assicurarsi di usare la funzione [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) da RevoScaleR per salvare il modello. La funzione `serialize` R standard non è in grado di generare il formato richiesto.
 
 Per visualizzare il modello archiviato in formato binario, è possibile eseguire un'istruzione come la seguente:
 
@@ -145,7 +146,7 @@ FROM ml_models;
 
 ### <a name="step-2-run-predict-on-the-model"></a>Passaggio 2. Eseguire PREDICT sul modello
 
-Tramite la semplice istruzione PREDICT seguente viene ottenuta una classificazione dal modello di albero delle decisioni utilizzando la funzione di assegnazione dei **punteggi nativa** . Consente di stimare le specie Iris in base agli attributi forniti, alla lunghezza e alla larghezza dei petali.
+Con la semplice istruzione PREDICT seguente si ottiene una classificazione dal modello di albero delle decisioni usando la funzione di **assegnazione dei punteggi nativa**. Consente di stimare le specie di iris in base agli attributi specificati, ovvero lunghezza e larghezza dei petali.
 
 ```sql
 DECLARE @model varbinary(max) = (
@@ -159,14 +160,14 @@ SELECT d.*, p.*
 go
 ```
 
-Se viene generato l'errore, "si è verificato un errore durante l'esecuzione della funzione PREDICT. Il modello è danneggiato o non è valido ", in genere significa che la query non ha restituito un modello. Controllare se il nome del modello è stato digitato correttamente o se la tabella Models è vuota.
+Se si ottiene l'errore "Si è verificato un errore durante l'esecuzione della funzione PREDICT. Il modello è danneggiato o non è valido", in genere significa che la query non ha restituito un modello. Verificare se il nome del modello è stato digitato correttamente o se la tabella models è vuota.
 
 > [!NOTE]
-> Poiché le colonne e i valori restituiti da **Predict** possono variare in base al tipo di modello, è necessario definire lo schema dei dati restituiti utilizzando una clausola **with** .
+> Poiché le colonne e i valori restituiti da **PREDICT** possono variare in base al tipo di modello, è necessario definire lo schema dei dati restituiti usando una clausola **WITH**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per una soluzione completa che includa il Punteggio nativo, vedere questi esempi del team di sviluppo di SQL Server:
+Per una soluzione completa che include l'assegnazione dei punteggi nativa, vedere questi esempi del team di sviluppo di SQL Server:
 
-+ Distribuire lo script ML: [Uso di un modello Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Distribuire lo script ML: [Uso di un modello R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Distribuzione dello script ML: [Uso di un modello Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Distribuzione dello script ML: [Uso di un modello R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

@@ -1,26 +1,27 @@
 ---
-title: Creare funzionalità di dati usando funzioni T-SQL e Python
-description: Esercitazione che illustra come aggiungere calcoli alle stored procedure per l'uso nei modelli di apprendimento automatico di Python.
+title: 'Python + T-SQL: Caratteristiche dei dati'
+description: Esercitazione che illustra come aggiungere calcoli alle stored procedure per l'uso nei modelli di Machine Learning Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715490"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725202"
 ---
-# <a name="create-data-features-using-t-sql"></a>Creare funzionalità di dati con T-SQL
+# <a name="create-data-features-using-t-sql"></a>Creare caratteristiche dei dati usando T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dopo l'esplorazione dei dati, sono state raccolte alcune informazioni dettagliate dai dati e si è pronti per passare alla *progettazione di funzionalità*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico della modellazione di analisi avanzata.
+Dopo l'esplorazione dei dati sono state raccolte alcune informazioni dettagliate e si è pronti a passare alla *progettazione delle caratteristiche*. Questo processo di creazione di caratteristiche dai dati non elaborati è un passaggio critico nella modellazione dell'analisi avanzata.
 
-Questo articolo fa parte di un'esercitazione [relativa all'analisi Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
+Questo articolo fa parte dell'esercitazione [Analisi Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 In questo passaggio si apprenderà come creare funzionalità dai dati non elaborati tramite una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tale funzione verrà quindi chiamata da una stored procedure per creare una tabella contenente i valori della funzionalità.
 
@@ -30,9 +31,9 @@ I valori di distanza inclusi nei dati originali si basano sulla distanza registr
 
 Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolare la distanza con la formula dell'emisenoverso e una seconda funzione T-SQL personalizzata, _fnEngineerFeatures_, per creare una tabella contenente tutte le funzionalità.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare la distanza della corsa con fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare la distanza della corsa usando fnCalculateDistance
 
-1.  La funzione _fnCalculateDistance_ va scaricata e registrata con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte della preparazione per questa procedura dettagliata. Esaminare il codice.
+1.  La funzione _fnCalculateDistance_ va scaricata e registrata con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte della preparazione per questa procedura dettagliata. Dedicare un attimo di tempo a esaminare il codice.
   
     In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]espandere **Programmabilità**, **Funzioni** e quindi **Funzioni a valori scalari**.
     Fare clic con il pulsante destro del mouse su _fnCalculateDistance_e selezionare **Modifica** per aprire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] in una nuova finestra Query.
@@ -67,7 +68,7 @@ Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolar
 
 Per aggiungere il valore calcolato a una tabella da usare per il training del modello è possibile usare un'altra funzione, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Salvare le funzionalità con _fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>Salvare le caratteristiche usando _fnEngineerFeatures_
 
 1.  Osservare il codice della funzione T-SQL personalizzata _fnEngineerFeatures_, creata in preparazione a questa procedura dettagliata.
   
@@ -107,13 +108,13 @@ Per aggiungere il valore calcolato a una tabella da usare per il training del mo
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. Questo è il motivo per cui la progettazione delle funzionalità è importante.
+    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. È per questo che la progettazione delle caratteristiche è importante.
 
-Nel passaggio successivo si apprenderà come usare queste funzionalità di dati per creare ed eseguire il training di un modello di apprendimento automatico usando Python.
+Nel passaggio successivo si apprenderà come usare queste caratteristiche dei dati per la creazione e il training di un modello di Machine Learning con Python.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Eseguire il training e salvare un modello Python usando T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Eseguire il training e il salvataggio di un modello Python usando T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 

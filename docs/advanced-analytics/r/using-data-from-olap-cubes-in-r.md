@@ -1,42 +1,44 @@
 ---
-title: Uso di dati da cubi OLAP in R
+title: Uso dei dati dai cubi OLAP in R
+description: Questo articolo descrive l'API olapR, oltre a una panoramica di OLAP e MDX per gli utenti R che potrebbero non essere esperti di database per cubi multidimensionali.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec50ee1b10a51e16b72d7ffc110448dcf016a13f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 2da5cbf0fd3fbc5b8fe1105261fff98625d590e5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714970"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727320"
 ---
-# <a name="using-data-from-olap-cubes-in-r"></a>Uso di dati da cubi OLAP in R
+# <a name="using-data-from-olap-cubes-in-r"></a>Uso dei dati dai cubi OLAP in R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Il pacchetto olapr è un pacchetto R, fornito da Microsoft per l'uso con Machine Learning Server e SQL Server, che consente di eseguire query MDX per ottenere dati da cubi OLAP. Con questo pacchetto non è necessario creare server collegati o pulire i set di righe bidimensionali; è possibile ottenere dati OLAP direttamente da R.
+Il pacchetto **olapR** è un pacchetto R, fornito da Microsoft per l'uso con Machine Learning Server e SQL Server, che consente di eseguire query MDX per ottenere dati da cubi OLAP. Con questo pacchetto, non è necessario creare server collegati o ripulire set di righe bidimensionali, ma è possibile ottenere i dati OLAP direttamente da R.
 
-Questo articolo descrive l'API, oltre a una panoramica di OLAP e MDX per gli utenti R che potrebbero non essere nuovi per i database di cubi multidimensionali.
+Questo articolo descrive l'API, oltre a una panoramica di OLAP e MDX per gli utenti R che potrebbero non essere esperti di database per cubi multidimensionali.
 
 > [!IMPORTANT]
-> Un'istanza di Analysis Services può supportare i cubi multidimensionali convenzionali o i modelli tabulari, ma un'istanza di non è in grado di supportare entrambi i tipi di modelli. Pertanto, prima di tentare di compilare una query MDX su un cubo, verificare che l'istanza di Analysis Services contenga modelli multidimensionali.
+> Un'istanza di Analysis Services può supportare i cubi multidimensionali convenzionali o i modelli tabulari, ma non entrambi i tipi di modelli. Pertanto, prima di tentare di creare una query MDX su un cubo, verificare che l'istanza di Analysis Services contenga modelli multidimensionali.
 
 ## <a name="what-is-an-olap-cube"></a>Che cos'è un cubo OLAP?
 
-OLAP è breve per l'elaborazione analitica online. Le soluzioni OLAP sono ampiamente usate per l'acquisizione e l'archiviazione di dati aziendali critici nel tempo. I dati OLAP vengono utilizzati per l'analisi aziendale da un'ampia gamma di strumenti, dashboard e visualizzazioni. Per ulteriori informazioni, vedere [elaborazione analitica in linea](https://en.wikipedia.org/wiki/Online_analytical_processing).
+OLAP è l'acronimo di Online Analytical Processing, ovvero elaborazione analitica online. Le soluzioni OLAP sono ampiamente usate per l'acquisizione e l'archiviazione dei dati aziendali critici nel tempo. I dati OLAP vengono utilizzati per l'analisi aziendale da un'ampia gamma di strumenti, dashboard e visualizzazioni. Per altre informazioni, vedere [Online analytical processing](https://en.wikipedia.org/wiki/Online_analytical_processing) (Elaborazione analitica online).
 
-Microsoft fornisce [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), che consente di progettare, distribuire ed eseguire query sui dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. Le _dimensioni_ sono simili ai facet dei dati o ai fattori in R: si usano le dimensioni per identificare alcuni subset di dati specifici che si desidera riepilogare o analizzare. Ad esempio, l'ora è una dimensione importante, quindi molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da usare durante il sezionamento e il riepilogo dei dati. 
+Microsoft offre [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), che consente di progettare, distribuire ed eseguire query sui dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. Le _dimensioni_ sono simili a facet dei dati o ai fattori in R: si usano le dimensioni per identificare alcuni subset di dati particolari da riepilogare o analizzare. Ad esempio, il tempo rappresenta una dimensione importante, quindi molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da usare durante il sezionamento e il riepilogo dei dati. 
 
-Per motivi di prestazioni, un database OLAP spesso calcola i riepiloghi(o aggregazioni) in anticipo e li archivia per un recupero più rapido. I riepiloghi sono basati su *misure*, che rappresentano formule che possono essere applicate ai dati numerici. Si utilizzano le dimensioni per definire un subset di dati, quindi si calcola la misura su tali dati. È ad esempio possibile utilizzare una misura per calcolare le vendite totali per una determinata linea di prodotti in più trimestri meno le imposte, per segnalare i costi di spedizione medi per uno specifico fornitore, i salari cumulativi da inizio anno a pagamento e così via.
+Per motivi di prestazioni, un database OLAP spesso calcola i riepiloghi (o _aggregazioni_) in anticipo e li archivia per un recupero più rapido. I riepiloghi sono basati sulle *misure*, che rappresentano le formule che possono essere applicate ai dati numerici. Si usano le dimensioni per definire un subset di dati, quindi si calcola la misura su tali dati. È ad esempio possibile usare una misura per calcolare le vendite totali per una determinata linea di prodotti in più trimestri a netto delle imposte, per creare report dei costi di spedizione medi per uno specifico fornitore, per calcolare il totale delle retribuzioni corrisposte fino a una determinata data e così via.
 
-MDX, short for Multidimensional Expressions, è il linguaggio utilizzato per l'esecuzione di query sui cubi. Una query MDX contiene in genere una definizione dei dati che include una o più dimensioni e almeno una misura, sebbene le query MDX possano essere notevolmente più complesse e includano finestre in sequenza, medie cumulative, somme, rango o percentile. 
+MDX, acronimo di Multidimensional Expression ovvero espressione MDX, è il linguaggio usato per l'esecuzione di query sui cubi. Una query MDX contiene in genere una definizione dei dati che include una o più dimensioni e almeno una misura, sebbene le query MDX possano diventare notevolmente più complesse e includere finestre mobili, medie cumulative, somme, ranghi o percentili. 
 
 Di seguito sono riportati alcuni altri termini che possono risultare utili quando si inizia a creare query MDX:
 
-+ Il sezionamento accetta un subset del cubo utilizzando i valori di una singola dimensione.
++ Il *sezionamento* consente di creare un subset del cubo usando valori da una singola dimensione.
 
 + *Estrazione* crea un sottocubo specificando un intervallo di valori in più dimensioni.
 
@@ -48,48 +50,48 @@ Di seguito sono riportati alcuni altri termini che possono risultare utili quand
 
 + *Pivot* ruota il cubo o la selezione di dati.
 
-## <a name="how-to-use-olapr-to-create-mdx-queries"></a>Come usare olapr per creare query MDX
+## <a name="how-to-use-olapr-to-create-mdx-queries"></a>Come usare olapR per creare query MDX
 
 Nell'articolo seguente vengono forniti esempi dettagliati della sintassi per la creazione o l'esecuzione di query su un cubo:
 
 + [Come creare query MDX con R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)
 
-## <a name="olapr-api"></a>API olapr
+## <a name="olapr-api"></a>API olapR
 
 Il pacchetto **olapR** supporta due metodi per la creazione di query MDX:
 
-- **Utilizzare il Generatore MDX.** Usare le funzioni R nel pacchetto per generare una semplice query MDX, scegliendo un cubo e quindi impostando gli assi e i filtri dei dati. Si tratta di un modo semplice per compilare una query MDX valida se non si ha accesso agli strumenti OLAP tradizionali o se non si ha una conoscenza approfondita del linguaggio MDX.
+- **Usare il Generatore MDX.** Usare le funzioni R nel pacchetto per generare una semplice query MDX, scegliendo un cubo e quindi impostando gli assi e i filtri dei dati. Questo è un modo semplice per creare query MDX valide anche se non si ha accesso agli strumenti OLAP tradizionali o in mancanza di conoscenze approfondite del linguaggio MDX.
 
-    Non è possibile creare tutte le query MDX utilizzando questo metodo, perché MDX può essere complesso. Questa API supporta tuttavia la maggior parte delle operazioni più comuni e utili, tra cui Slice, dadi, drill-down, rollup e pivot in N dimensioni.
+    Non è possibile creare tutte le query MDX usando questo metodo, perché il linguaggio MDX può essere complesso. Tuttavia, questa API supporta tutte le operazioni più comuni e utili, tra cui sezionamento, estrazione, drill-down, rollup e pivot nelle dimensioni N.
 
-+ **MDX ben formato per la copia e incolla.** Creare e incollare manualmente una query MDX. Questa opzione è ottimale se si dispone di query MDX esistenti che si desidera riutilizzare o se la query da compilare è troppo complessa per la gestione di **olapr** .
++ **Copiare e incollare codice MDX ben formato.** È possibile creare manualmente e quindi incollare qualsiasi espressione in una query MDX. Questo metodo è ottimale se sono disponibili query MDX esistenti da riutiizzare o se la query che si vuole creare è troppo complessa per la gestione con **olapR**.
 
-    Dopo aver compilato l'MDX usando qualsiasi utilità client, ad esempio SSMS o Excel, salvare la stringa di query. Fornire questa stringa MDX come argomento al gestore di *query SSAS* nel pacchetto **olapr** . Il provider invia la query al server Analysis Services specificato e restituisce i risultati a R. 
+    Dopo aver creato l'espressione MDX usando qualsiasi utilità client, ad esempio SSMS o Excel, salvare la stringa di query. Fornire questa stringa MDX come argomento al *gestore di query SSAS* nel pacchetto di **olapR**. Il provider invia la query al server di Analysis Services specificato e restituisce i risultati a R. 
 
-Per esempi su come compilare una query MDX o eseguire una query MDX esistente, vedere [come creare query MDX con R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
+Per esempi su come creare una query MDX o eseguire una query MDX esistente, vedere [Come creare query MDX con R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
 
 ## <a name="known-issues"></a>Problemi noti
 
-In questa sezione vengono elencati alcuni problemi noti e le domande comuni sul pacchetto olapr.
+In questa sezione vengono elencati alcuni problemi noti e domande comuni sul pacchetto **olapR**.
 
 ### <a name="tabular-model-support"></a>Supporto di modelli tabulari
 
-Se ci si connette a un'istanza di Analysis Services contenente un modello tabulare, `explore` la funzione segnala l'esito positivo con un valore restituito true. Tuttavia, gli oggetti modello tabulare sono diversi dagli oggetti multidimensionali e la struttura di un database multidimensionale è diversa da quella di un modello tabulare.
+Se ci si connette a un'istanza di Analysis Services contenente un modello tabulare, la funzione `explore` segnala l'esito positivo con il valore restituito TRUE. Tuttavia, gli oggetti modello tabulare sono diversi dagli oggetti multidimensionali e la struttura di un database multidimensionale è diversa da quella di un modello tabulare.
 
-Anche se DAX (Data Analysis Expressions) è il linguaggio usato in genere con i modelli tabulari, è possibile progettare query MDX valide su un modello tabulare, se si ha già familiarità con MDX. Non è possibile utilizzare i costruttori olapr per compilare query MDX valide su un modello tabulare.
+Anche se DAX (Data Analysis Expression) è il linguaggio usato in genere con i modelli tabulari, è possibile progettare query MDX valide su un modello tabulare, se si ha già familiarità con MDX. Non è possibile usare i costruttori olapR per creare query MDX valide su un modello tabulare.
 
-Tuttavia, le query MDX non sono un modo efficiente per recuperare dati da un modello tabulare. Se è necessario ottenere dati da un modello tabulare per l'uso in R, prendere in considerazione questi metodi:
+Tuttavia, le query MDX non sono un modo efficiente per recuperare dati da un modello tabulare. Se è necessario ottenere dati da un modello tabulare per l'uso in R, prendere invece in considerazione questi metodi:
 
-+ Abilitare DirectQuery sul modello e aggiungere il server come server collegato in SQL Server. 
-+ Se il modello tabulare è stato compilato in un data mart relazionale, ottenere i dati direttamente dall'origine.
++ Abilitare DirectQuery per il modello e aggiungere il server come server collegato in SQL Server. 
++ Se il modello tabulare è stato compilato su un data mart relazionale, ottenere i dati direttamente dall'origine.
 
 ### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>Come determinare se un'istanza contiene modelli tabulari o multidimensionali
 
-Una singola istanza di Analysis Services può contenere un solo tipo di modello, anche se può contenere più modelli. Il motivo è che esistono differenze fondamentali tra i modelli tabulari e i modelli multidimensionali che controllano il modo in cui i dati vengono archiviati ed elaborati. I modelli tabulari, ad esempio, vengono archiviati in memoria e sfruttano gli indici columnstore per eseguire calcoli molto veloci. Nei modelli multidimensionali i dati vengono archiviati su disco e le aggregazioni sono definite in anticipo e recuperate tramite query MDX.
+Una singola istanza di Analysis Services può contenere un solo tipo di modello, anche se può contenere più modelli. Il motivo è che esistono differenze fondamentali tra i modelli tabulari e i modelli multidimensionali dalle quali dipende la modalità di archiviazione ed elaborazione dei dati. I modelli tabulari, ad esempio, vengono archiviati in memoria e sfruttano gli indici columnstore per eseguire calcoli molto veloci. Nei modelli multidimensionali i dati vengono archiviati su disco e le aggregazioni vengono definite in anticipo e recuperate tramite query MDX.
 
-Se ci si connette a Analysis Services usando un client, ad esempio SQL Server Management Studio, è possibile stabilire immediatamente quale tipo di modello è supportato, esaminando l'icona del database.
+Se ci si connette ad Analysis Services usando un client, ad esempio SQL Server Management Studio, è possibile stabilire immediatamente quale tipo di modello è supportato, esaminando l'icona del database.
 
-È inoltre possibile visualizzare ed eseguire query sulle proprietà del server per determinare il tipo di modello supportato dall'istanza. La proprietà **modalità server** supporta due valori: _multidimensionale_ o _tabulare_.
+È anche possibile visualizzare ed eseguire query sulle proprietà del server per determinare il tipo di modello supportato dall'istanza. La proprietà **Modalità server** supporta due valori: _multidimensionale_ o _tabulare_.
 
 Per informazioni generali sui due tipi di modelli, vedere l'articolo seguente:
 
@@ -103,23 +105,23 @@ Per informazioni sull'esecuzione di query sulle proprietà del server, vedere l'
 
 Non è possibile scrivere nuovamente i risultati dei calcoli R personalizzati nel cubo.
 
-In generale, anche quando un cubo è abilitato per il writeback, sono supportate solo le operazioni limitate e potrebbe essere necessaria una configurazione aggiuntiva. Si consiglia di utilizzare MDX per operazioni di questo tipo.
+In generale, anche quando un cubo è abilitato per il writeback, sono supportate solo operazioni limitate e potrebbero essere necessari interventi di configurazione aggiuntivi. Si consiglia di usare MDX per operazioni di questo tipo.
 
 + [Dimensioni abilitate per la scrittura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
 + [Partizioni abilitate per la scrittura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
 + [Impostare l'accesso personalizzato ai dati delle celle](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
-### <a name="long-running-mdx-queries-block-cube-processing"></a>Query MDX con esecuzione prolungata blocco elaborazione cubi
+### <a name="long-running-mdx-queries-block-cube-processing"></a>Le query MDX con esecuzione prolungata bloccano l'elaborazione dei cubi
 
-Sebbene il pacchetto olapr esegua solo le operazioni di lettura, le query MDX con esecuzione prolungata possono creare blocchi che impediscono l'elaborazione del cubo. Testare sempre le query MDX in anticipo in modo da conoscere la quantità di dati da restituire.
+Sebbene il pacchetto **olapR** esegua solo operazioni di lettura, le query MDX con esecuzione prolungata possono creare blocchi che impediscono l'elaborazione del cubo. Testare sempre le query MDX in anticipo in modo da conoscere la quantità di dati da restituire.
 
-Se si tenta di connettersi a un cubo bloccato, è possibile che venga ricevuto un errore che indica che non è possibile raggiungere il SQL Server data warehouse. Le soluzioni suggerite includono l'abilitazione di connessioni remote, il controllo del nome del server o dell'istanza e così via. Tuttavia, si consideri la possibilità di una connessione aperta precedente.
+Se si tenta di connettersi a un cubo bloccato, è possibile che venga segnalato un errore che indica che non è possibile raggiungere il data warehouse di SQL Server. Le soluzioni suggerite includono l'abilitazione di connessioni remote, il controllo del nome del server o dell'istanza e così via. Tuttavia, si consideri la possibilità di una connessione aperta precedente.
 
-Un amministratore di SSAS può impedire problemi di blocco identificando e terminando le sessioni aperte. Una proprietà timeout può essere applicata anche a query MDX a livello di server per forzare la terminazione di tutte le query con esecuzione prolungata.
+Un amministratore di SSAS può impedire problemi di blocco identificando e terminando le sessioni aperte. È anche possibile applicare una proprietà di timeout a query MDX a livello di server per forzare la terminazione di tutte le query con esecuzione prolungata.
 
 ## <a name="resources"></a>Risorse
 
-Se non si ha familiarità con OLAP o con query MDX, vedere gli articoli di Wikipedia seguenti: 
+Se non si ha familiarità con OLAP o le query MDX, vedere questi articoli di Wikipedia: 
 
 + [Cubi OLAP](https://en.wikipedia.org/wiki/OLAP_cube)
 + [Query MDX](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)

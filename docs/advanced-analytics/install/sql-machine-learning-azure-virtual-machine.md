@@ -1,38 +1,39 @@
 ---
-title: Installare il linguaggio R e le funzionalità Python in una macchina virtuale di Azure
-description: Esegui soluzioni R e Python data science e Machine Learning in una macchina virtuale SQL Server nel cloud di Azure.
+title: Eseguire l'installazione in una macchina virtuale di Azure
+description: Eseguire soluzioni di data science e Machine Learning R e Python in una macchina virtuale SQL Server nel cloud di Azure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715878"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727620"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installare SQL Server Machine Learning Services con R e Python in una macchina virtuale di Azure
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installare Machine Learning Services per SQL Server con R e Python in una macchina virtuale di Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-È possibile installare l'integrazione di R e Python con Machine Learning Services in una macchina virtuale SQL Server in Azure, eliminando le attività di installazione e configurazione. Una volta distribuita la macchina virtuale, le funzionalità sono pronte per l'uso.
+È possibile installare l'integrazione di R e Python con Machine Learning Services in una macchina virtuale SQL Server in Azure, eliminando le attività di installazione e configurazione. Dopo la distribuzione della macchina virtuale, le funzionalità sono pronte per l'uso.
  
-Per istruzioni dettagliate, vedere [come effettuare il provisioning di una macchina virtuale Windows SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Per istruzioni dettagliate, vedere [Come effettuare il provisioning di una macchina virtuale SQL Server Windows nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-Il passaggio [Configura impostazioni SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) consente di aggiungere machine learning all'istanza.
+Nel passaggio [Configurare le impostazioni di SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) si aggiunge la funzionalità Machine Learning all'istanza.
 
 <a name="firewall"></a>
 
 ## <a name="unblock-the-firewall"></a>Sbloccare il firewall
 
-Per impostazione predefinita, il firewall nella macchina virtuale di Azure include una regola che blocca l'accesso alla rete per gli account utente locali.
+Per impostazione predefinita, il firewall della macchina virtuale di Azure include una regola che blocca l'accesso alla rete per gli account utente locali.
 
-È necessario disabilitare questa regola per assicurarsi che sia possibile accedere all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza da un client di Data Science remoto.  In caso contrario, il codice di apprendimento automatico non può essere eseguito nei contesti di calcolo che usano l'area di lavoro della macchina virtuale.
+È necessario disabilitare questa regola per consentire l'accesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un client di data science remoto.  In caso contrario, il codice di Machine Learning non può essere eseguito nei contesti di calcolo che usano l'area di lavoro della macchina virtuale.
 
-Per abilitare l'accesso dai client di data science remoto:
+Per consentire l'accesso da client di data science remoti:
 
 1. Nella macchina virtuale aprire Windows Firewall con protezione avanzata.
 2. Selezionare **Regole in uscita**
@@ -42,9 +43,9 @@ Per abilitare l'accesso dai client di data science remoto:
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>Abilitare i callback ODBC per i client remoti
 
-Se si prevede che i client che chiamano il server dovranno eseguire query ODBC come parte delle proprie soluzioni di apprendimento automatico, è necessario assicurarsi che la finestra di avvio possa effettuare chiamate ODBC per conto del client remoto. 
+Se si prevede che i client che chiamano il server debbano eseguire query ODBC nell'ambito delle soluzioni di Machine Learning, è necessario assicurarsi che Launchpad possa effettuare chiamate ODBC per conto del client remoto. 
 
-A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza. Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../security/create-a-login-for-sqlrusergroup.md).
+A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza. Per altre informazioni, vedere [Aggiungere SQLRUserGroup come utente del database](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
@@ -56,4 +57,4 @@ A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launc
   
 + Abilitare TCP/IP
 
-  TCP/IP è necessario per le connessioni loopback. Se viene ricevuto l'errore "DBNETLIB; SQL Server non esiste o l'accesso è negato ", abilitare TCP/IP nella macchina virtuale che supporta l'istanza di.
+  Il protocollo TCP/IP è necessario per le connessioni loopback. Se viene visualizzato l'errore "DBNETLIB: Server SQL inesistente o accesso negato", abilitare TCP/IP nella macchina virtuale che supporta l'istanza.

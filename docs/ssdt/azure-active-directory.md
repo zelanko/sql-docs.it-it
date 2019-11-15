@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2018
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssdt
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984692"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049895"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Supporto di Azure Active Directory in SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+
+In Visual Studio aprire **Esplora oggetti di SQL Server** nel menu **Visualizza** e selezionare **Aggiungi SQL Server**:
 
 ![Finestra di dialogo di connessione di SSDT](media/azure-active-directory/interactive.png)
 

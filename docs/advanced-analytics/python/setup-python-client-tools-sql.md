@@ -1,5 +1,5 @@
 ---
-title: Configurare un client di data science per lo sviluppo Python
+title: Configurare un client per data science Python
 description: Configurare un ambiente locale Python (Jupyter Notebook o PyCharm) per le connessioni remote a SQL Server Machine Learning Services con Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fb5881134b2498c8a362e1626a3744d843194a4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727526"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di data science per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

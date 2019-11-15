@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958285"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844269"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire notebook in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come aprire e salvare file di notebook in Azure Data Studio con SQL Server 2019 (anteprima). Illustra inoltre come modificare la connessione al cluster Big Data di SQL Server.
+Questo articolo descrive come aprire e salvare file di notebook in Azure Data Studio con SQL Server. Illustra inoltre come modificare la connessione al cluster Big Data di SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Questo articolo presuppone che si disponga già di un notebook che si vuole usare in Azure Data Studio. Se si vuole creare un notebook, vedere [Come usare i notebook in SQL Server 2019 (anteprima)](notebooks-guidance.md). Per poter usare i notebook in Azure Data Studio, è necessario soddisfare i prerequisiti seguenti:
+Questo articolo presuppone che si disponga già di un notebook che si vuole usare in Azure Data Studio. Se si vuole creare un notebook, vedere [Come usare i notebook in SQL Server](notebooks-guidance.md). Per poter usare i notebook in Azure Data Studio, è necessario soddisfare i prerequisiti seguenti:
 
 - [Distribuire un cluster Big Data](quickstart-big-data-cluster-deploy.md).
 - [Strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md):
@@ -80,4 +80,4 @@ Per modificare il cluster Big Data di SQL Server per un notebook:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook nella versione di anteprima di SQL Server 2019](notebooks-guidance.md).
+Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in SQL Server 2019](notebooks-guidance.md).

@@ -1,48 +1,49 @@
 ---
-title: 'Esercitazione per Python: Preparare i dati (regressione lineare)'
-description: In questa esercitazione si userà Python e la regressione lineare in SQL Server Machine Learning Services per prevedere il numero di noleggi di sci. Si preparano i dati da un database di SQL Server usando Python.
+title: 'Esercitazione su Python: Preparare i dati'
+description: In questa esercitazione si useranno Python e la regressione lineare in Machine Learning Services per SQL Server per stimare il numero di noleggi di sci. I dati verranno preparati da un database SQL Server tramite Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c4d5fb4ffc5049f7e1325267b7623dc195e9d8
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242499"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727061"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Esercitazione per Python: Preparare i dati per il training di un modello di regressione lineare in SQL Server Machine Learning Services
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Esercitazione su Python: Preparare i dati per il training di un modello di regressione lineare in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nella seconda parte di questa serie di esercitazioni in quattro parti, si preparano i dati da un database di SQL Server usando Python. Più avanti in questa serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di regressione lineare in Python con SQL Server Machine Learning Services.
+Nella seconda parte di questa serie di esercitazioni in quattro parti verranno preparati i dati da un database SQL Server tramite Python. Più avanti nel corso della serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di regressione lineare in Python con Machine Learning Services per SQL Server.
 
-L'articolo spiega come:
+In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
-> * Caricare i dati dal database SQL Server in un frame di dati **Pandas**
+> * Caricare i dati dal database SQL Server in un frame di dati **pandas**
 > * Preparare i dati in Python rimuovendo alcune colonne
 
-Nella [prima parte](python-ski-rental-linear-regression.md)si è appreso come ripristinare il database di esempio.
+Nella [prima parte](python-ski-rental-linear-regression.md) si è appreso come ripristinare il database di esempio.
 
-Nella [terza parte](python-ski-rental-linear-regression-train-model.md)verrà illustrato come eseguire il training di un modello di apprendimento automatico di regressione lineare in Python.
+Nella [terza parte](python-ski-rental-linear-regression-train-model.md) si apprenderà come eseguire il training di un modello di Machine Learning di regressione lineare in Python.
 
-Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md), si apprenderà come archiviare il modello in SQL Server, quindi creare stored procedure dagli script Python sviluppati in parti due e tre. Le stored procedure vengono eseguite in SQL Server per eseguire stime basate sui nuovi dati.
+Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si apprenderà come archiviare il modello in SQL Server e creare stored procedure dagli script Python sviluppati nella seconda e nella terza parte. Le stored procedure verranno quindi eseguite in SQL Server per eseguire stime basate sui nuovi dati.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* Nella seconda parte di questa esercitazione si presuppone che sia stata completata la [parte 1](python-ski-rental-linear-regression.md) e i relativi prerequisiti.
+* Per poter eseguire la seconda parte di questa esercitazione si presuppone che sia stata completata la [prima parte](python-ski-rental-linear-regression.md) e i rispettivi prerequisiti.
 
 ## <a name="explore-and-prepare-the-data"></a>Esplorare e preparare i dati
 
-Per usare i dati in Python, è necessario caricare i dati dal database SQL Server in un frame di dati Pandas.
+Per poter usare i dati in Python, sarà necessario caricare i dati dal database SQL Server in un frame di dati pandas.
 
-Creare un nuovo notebook Python in Azure Data Studio ed eseguire lo script seguente. Sostituire `<SQL Server>` con il nome del SQL Server.
+Creare un nuovo notebook Python in Azure Data Studio ed eseguire lo script seguente. Sostituire `<SQL Server>` con il nome dell'istanza personale di SQL Server.
 
-Lo script Python seguente importa il set di dati dalla tabella **dbo. rental_data** nel database a **un frame di**dati Pandas.
+Lo script Python seguente consente di importare il set di dati dalla tabella **dbo.rental_data** del database in un frame di dati pandas **df**.
 
 ```python
 import pandas as pd
@@ -96,7 +97,7 @@ columns = df.columns.tolist()
 columns = [c for c in columns if c not in ["Year"]]
 ```
 
-Verranno visualizzati risultati simili ai seguenti.
+I risultati visualizzati saranno simili ai seguenti:
 
 ```results
 Rows Processed: 453
@@ -116,10 +117,10 @@ Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
 
 Nella seconda parte di questa serie di esercitazioni sono stati completati i passaggi seguenti:
 
-* Caricare i dati dal database SQL Server in un frame di dati **Pandas**
+* Caricare i dati dal database SQL Server in un frame di dati **pandas**
 * Preparare i dati in Python rimuovendo alcune colonne
 
-Per eseguire il training di un modello di apprendimento automatico che usa i dati del database TutorialDB, seguire la terza parte di questa serie di esercitazioni:
+Per eseguire il training di un modello di Machine Learning che usa i dati del database TutorialDB, seguire la terza parte di questa serie di esercitazioni:
 
 > [!div class="nextstepaction"]
-> [Esercitazione per Python: Eseguire il training di un modello di regressione lineare](python-ski-rental-linear-regression-train-model.md)
+> [Esercitazione su Python: Eseguire il training di un modello di regressione lineare](python-ski-rental-linear-regression-train-model.md)

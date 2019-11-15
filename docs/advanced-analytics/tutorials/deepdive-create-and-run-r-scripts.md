@@ -1,57 +1,58 @@
 ---
-title: Esercitazione sulle statistiche di riepilogo di calcolo RevoScaleR
-description: Esercitazione dettagliata su come calcolare le statistiche di riepilogo statistico usando il linguaggio R su SQL Server.
+title: Statistiche di riepilogo in RevoScaleR
+description: Esercitazione dettagliata su come calcolare statistiche di riepilogo usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715577"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727301"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Statistiche di riepilogo di calcolo in R (esercitazione SQL Server e RevoScaleR)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Elaborare statistiche di riepilogo in R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Usa le origini dati stabilite e i contesti di calcolo creati nelle lezioni precedenti per eseguire script R ad alta potenza in questo. In questa lezione si useranno i contesti di calcolo del server locale e remoto per le attività seguenti:
+Usa le origini dati prestabilite e i contesti di calcolo creati nelle lezioni precedenti per eseguire script R ad alta potenza. In questa lezione si useranno contesti di calcolo di server locali e remoti per le attività seguenti:
 
 > [!div class="checklist"]
 > * Impostare il contesto di calcolo su SQL Server
-> * Ottenere statistiche di riepilogo sugli oggetti dati remoti
-> * Calcolare un riepilogo locale
+> * Ottenere statistiche di riepilogo sui Remote Data Object
+> * Elaborare un riepilogo locale
 
-Se sono state completate le lezioni precedenti, è necessario disporre di questi contesti di calcolo remoti: sqlcompute e sqlComputeTrace. In futuro sarà possibile utilizzare sqlcompute e il contesto di calcolo locale nelle lezioni successive.
+Se sono state completate le lezioni precedenti, dovrebbero essere disponibili i contesti di elaborazione seguenti: sqlcompute e sqlComputeTrace. Nelle lezioni seguenti si userà sqlCompute e il contesto di calcolo locale.
 
-Usare un IDE R o **Rgui** per eseguire lo script r in questa lezione.
+In questa lezione usare un'IDE R o **Rgui** per eseguire lo script R.
 
-## <a name="compute-summary-statistics-on-remote-data"></a>Calcolo delle statistiche di riepilogo sui dati remoti
+## <a name="compute-summary-statistics-on-remote-data"></a>Calcolare statistiche di riepilogo sui dati remoti
 
-Prima di poter eseguire qualsiasi codice R in modalità remota, è necessario specificare il contesto di calcolo remoto. Tutti i calcoli successivi avvengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato nel parametro sqlcompute .
+Prima di eseguire qualsiasi codice R in remoto, è necessario specificare il contesto di calcolo remoto. Tutti i calcoli successivi si svolgono nel computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicato nel parametro *sqlCompute*.
 
-Un contesto di calcolo rimane attivo fino a quando non viene modificato. Tuttavia, gli script R che *non possono essere* eseguiti in un contesto server remoto verranno eseguiti automaticamente in locale.
+Un contesto di calcolo resta attivo fino a quando non lo si modifica. Tuttavia, qualsiasi script R *non* eseguibile in un contesto server remoto verrà automaticamente eseguito in locale.
 
-Per verificare il funzionamento di un contesto di calcolo, generare statistiche di riepilogo sull'origine dati sqlFraudDS nel SQL Server remoto. Questo oggetto origine dati è stato creato nella [lezione 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) e rappresenta la tabella ccFraudSmall nel database RevoDeepDive. 
+Per vedere come funziona un contesto di calcolo, generare statistiche di riepilogo sull'origine dati sqlFraudDS nell'istanza remota di SQL Server. Questo oggetto origine dati è stato creato nella [lezione due](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) e rappresenta la tabella ccFraudSmall del database RevoDeepDive. 
 
-1. Passare il contesto di calcolo a sqlcompute creato nella lezione precedente:
+1. Impostare il contesto di calcolo sul parametro sqlCompute creato nella lezione precedente:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Chiamare la funzione [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) e passare gli argomenti obbligatori, ad esempio la formula e l'origine dati, e assegnare i risultati alla `sumOut`variabile.
+2. Chiamare la funzione [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) e passare gli argomenti obbligatori, ad esempio la formula e l'origine dati, e assegnare i risultati alla variabile `sumOut`.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Il linguaggio R fornisce molte funzioni di riepilogo, ma **rxSummary** in **RevoScaleR** supporta l'esecuzione in diversi contesti di calcolo remoti, tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle funzioni simili, vedere [riepiloghi dei dati con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    Con il linguaggio R sono disponibili molte funzioni di riepilogo. La funzione **rxSummary** in **RevoScaleR** supporta tuttavia l'esecuzione in diversi contesti remoti, tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle funzioni simili, vedere [Come riepilogare i dati tramite RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
 3. Stampare il contenuto di sumOut nella console.
   
@@ -59,7 +60,7 @@ Per verificare il funzionamento di un contesto di calcolo, generare statistiche 
     sumOut
     ```
     > [!NOTE]
-    > Se viene ricevuto un errore, attendere alcuni minuti per completare l'esecuzione prima di riprovare a eseguire il comando.
+    > Se si riceve un errore, attendere alcuni minuti per essere certi che l'esecuzione sia completata prima di riprovare a eseguire il comando.
 
 **Risultati**
 
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. Quando si estraggono i dati da SQL Server, è spesso possibile ottenere prestazioni migliori aumentando il numero di righe estratte per ogni lettura, supponendo che la dimensione del blocco aumentata possa essere adattata in memoria. Eseguire il comando seguente per aumentare il valore del parametro *rowsPerRead* nell'origine dati. In precedenza, il valore di *rowsPerRead* era impostato su 5000.
+2. Quando si estraggono dati da SQL Server, per ottenere prestazioni migliori è possibile aumentare il numero di righe estratte per ogni lettura, supponendo che la maggiore dimensione del blocco possa essere adattata in memoria. Eseguire il comando seguente per aumentare il valore del parametro *rowsPerRead* nell'origine dati. In precedenza, il valore di *rowsPerRead* era impostato su 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -102,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. Chiamare **rxSummary** sulla nuova origine dati.
+3. Chiamare **rxSummary** nella nuova origine dati.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -110,7 +111,7 @@ Number of valid observations: 10000
   
    I risultati effettivi devono corrispondere a quelli ottenuti con l'esecuzione di **rxSummary** nel contesto del computer con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'operazione potrebbe tuttavia essere più veloce o più lenta a seconda del tipo di connessione al database. Per essere analizzati, i dati vengono infatti trasferiti nel computer locale.
 
-4. Tornare al contesto di calcolo remoto per le varie lezioni successive.
+4. Tornare al contesto di calcolo remoto per affrontare le lezioni successive.
 
     ```R
     rxSetComputeContext(sqlCompute)

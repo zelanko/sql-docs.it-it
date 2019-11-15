@@ -1,7 +1,7 @@
 ---
 title: Configurare Kubernetes con kubeadm
-titleSuffix: SQL Server big data clusters
-description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16,04 o 18,04 (fisici o virtuali) per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni.
+titleSuffix: SQL Server Big Data Clusters
+description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16.04 o 18.04 (fisici o virtuali) per distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688306"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706369"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurare Kubernetes in più computer per distribuzioni di cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce un esempio di come usare **kubeadm** per configurare Kubernetes in più computer per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] le distribuzioni. In questo esempio la destinazione è rappresentata da più computer Ubuntu 16.04 o 18.04 LTS (fisici o virtuali). Se la distribuzione viene eseguita in una piattaforma Linux diversa, è necessario modificare alcuni dei comandi per adeguarli al sistema in uso.  
+Questo articolo fornisce un esempio di come usare **kubeadm** per configurare Kubernetes in più computer per distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. In questo esempio la destinazione è rappresentata da più computer Ubuntu 16.04 o 18.04 LTS (fisici o virtuali). Se la distribuzione viene eseguita in una piattaforma Linux diversa, è necessario modificare alcuni dei comandi per adeguarli al sistema in uso.  
 
 > [!TIP] 
 > Per gli script di esempio che configurano Kubernetes, vedere [Creare un cluster Kubernetes usando Kubeadm in Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Vedere anche [questo](deployment-script-single-node-kubeadm.md) argomento per uno script di esempio che automatizza la distribuzione di uno strumento kubeadm per nodo singolo in una macchina virtuale e quindi distribuisce una configurazione predefinita di un cluster Big Data.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Almeno 3 computer fisici o macchine virtuali Linux
 - Configurazione consigliata per singolo computer:
@@ -35,7 +35,7 @@ Vedere anche [questo](deployment-script-single-node-kubeadm.md) argomento per un
    - 100 GB di spazio di archiviazione
  
 > [!Important] 
-> Prima di avviare la distribuzione di Big Data cluster, verificare che gli orologi siano sincronizzati tra tutti i nodi Kubernetes a cui è destinata la distribuzione. Il cluster Big Data dispone di proprietà di integrità predefinite per diversi servizi che sono sensibili al tempo e gli sfasamento di clock possono causare lo stato non corretto.
+> Prima di avviare la distribuzione del cluster Big Data, assicurarsi che gli orologi siano sincronizzati tra tutti i nodi Kubernetes cui è destinata la distribuzione. Il cluster Big Data include proprietà di stato predefinite per diversi servizi che sono sensibili al tempo e le differenze di orario possono causare errori relativi allo stato.
 
 ## <a name="prepare-the-machines"></a>Preparare i computer
 

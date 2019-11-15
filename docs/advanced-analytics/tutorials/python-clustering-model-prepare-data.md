@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Preparare i dati per suddividere in categorie i clienti in Python'
-description: Nella seconda parte di questa serie di esercitazioni in quattro parti, si preparano i dati da un database di SQL Server per eseguire il clustering in Python con SQL Server Machine Learning Services.
+title: 'Esercitazione su Python: Preparare i dati dei cluster'
+description: Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database SQL Server per eseguire il clustering in Python con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,44 +9,45 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d91f3b9f1e3d1abe53d677d9f9058058d321d985
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294346"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727087"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Esercitazione: Preparare i dati per suddividere in categorie i clienti in Python con SQL Server Machine Learning Services
+# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Esercitazione: Preparare i dati per suddividere in categorie i clienti in Python con Machine Learning Services per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nella seconda parte di questa serie di esercitazioni in quattro parti, verranno ripristinati e preparati i dati da un database SQL tramite Python. Più avanti in questa serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di clustering in Python con SQL Server Machine Learning Services.
+Nella seconda parte di questa serie di esercitazioni in quattro parti verranno ripristinati e preparati i dati da un database SQL tramite Python. Più avanti nel corso della serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di clustering in Python con Machine Learning Services per SQL Server.
 
-L'articolo spiega come:
+In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
-> * Separare i clienti con dimensioni diverse con Python
+> * Separare i clienti in dimensioni diverse tramite Python
 > * Caricare i dati dal database SQL in un frame di dati Python
 
-Nella [prima parte](python-clustering-model.md), sono stati installati i prerequisiti e il database di esempio è stato ripristinato.
+Nella [prima parte](python-clustering-model.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
 
-Nella [terza parte](python-clustering-model-build.md)verrà illustrato come creare ed eseguire il training di un modello di clustering K-means in Python.
+Nella [terza parte](python-clustering-model-build.md) si apprenderà come creare ed eseguire il training di un modello di clustering K-Means in Python.
 
-Nella [quarta parte](python-clustering-model-deploy.md)verrà illustrato come creare un stored procedure in un database SQL in grado di eseguire il clustering in Python in base ai nuovi dati.
+Nella [quarta parte](python-clustering-model-deploy.md) si apprenderà come creare una stored procedure in un database SQL in grado di eseguire il clustering in Python in base ai nuovi dati.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* Nella seconda parte di questa esercitazione si presuppone che siano stati soddisfatti i prerequisiti della [**parte 1**](python-clustering-model.md).
+* Per poter eseguire la seconda parte di questa esercitazione si presuppone che siano stati soddisfatti i prerequisiti della [**prima parte**](python-clustering-model.md).
 
-## <a name="separate-customers"></a>Clienti distinti
+## <a name="separate-customers"></a>Separare i clienti
 
-Per preparare il clustering dei clienti, è necessario innanzitutto separare i clienti con le dimensioni seguenti:
+Per preparare il clustering dei clienti, occorre prima di tutto separare i clienti in base alle dimensioni seguenti:
 
-* **orderRatio** = rapporto ordine restituito (numero totale di ordini parzialmente o completamente restituiti rispetto al numero totale di ordini)
-* **itemsRatio** = restituzione elemento ratio (numero totale di elementi restituiti rispetto al numero di elementi acquistati)
-* **monetaryRatio** = rapporto quantità restituzione (quantità monetaria totale di elementi restituiti rispetto alla quantità acquistata)
-* **Frequency** = frequenza di ritorno
+* **orderRatio** = rapporto ordini di reso (numero totale di ordini parzialmente o completamente resi rispetto al numero totale di ordini)
+* **itemsRatio** = rapporto articoli resi (numero totale di articoli resi rispetto al numero di articoli acquistati)
+* **monetaryRatio** = rapporto importi resi (importo monetario totale di articoli resi rispetto all'importo di articoli acquistati)
+* **frequency** = frequenza dei resi
 
 Aprire un nuovo notebook in Azure Data Studio e immettere lo script seguente.
 
@@ -114,7 +115,7 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Caricare i dati in un frame di dati
 
-I risultati della query vengono restituiti a Python usando la funzione revoscalepy **RxSqlServerData** . Come parte del processo, verranno usate le informazioni sulle colonne definite nello script precedente.
+I risultati della query vengono restituiti a Python usando la funzione **RxSqlServerData** di revoscalepy. Nell'ambito del processo verranno usate le informazioni sulle colonne definite nello script precedente.
 
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
@@ -124,7 +125,7 @@ revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=Fa
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
 ```
 
-A questo punto, visualizzare l'inizio del frame di dati per verificarne l'aspetto corretto.
+Visualizzare ora l'inizio del frame di dati per verificare che sia corretto.
 
 ```python
 print("Data frame:", customer_data.head(n=5))
@@ -148,10 +149,10 @@ Se non si intende continuare con questa esercitazione, eliminare il database tpc
 
 Nella seconda parte di questa serie di esercitazioni sono stati completati i passaggi seguenti:
 
-* Separare i clienti con dimensioni diverse con Python
+* Separare i clienti in dimensioni diverse tramite Python
 * Caricare i dati dal database SQL in un frame di dati Python
 
-Per creare un modello di Machine Learning che usa i dati dei clienti, seguire la terza parte di questa serie di esercitazioni:
+Per creare un modello di Machine Learning che usa questi dati dei clienti, seguire la terza parte di questa serie di esercitazioni:
 
 > [!div class="nextstepaction"]
-> [Esercitazione: Creare un modello predittivo in Python con SQL Server Machine Learning Services](python-clustering-model-build.md)
+> [Esercitazione: Creare un modello predittivo in Python con Machine Learning Services per SQL Server](python-clustering-model-build.md)

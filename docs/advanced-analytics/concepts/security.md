@@ -1,156 +1,157 @@
 ---
-title: Panoramica della sicurezza per le estensioni R e Python
-description: Panoramica della sicurezza per il Framework di estendibilità in SQL Server Machine Learning Services. Sicurezza per account di accesso e account utente, servizio Launchpad di SQL Server, account di lavoro, esecuzione di più script e autorizzazioni per file.
+title: Panoramica della sicurezza per l'estendibilità
+description: Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server. Sicurezza per gli account di accesso e gli account utente, servizio Launchpad di SQL Server, account di lavoro, esecuzione di più script e autorizzazioni file.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5b0af74633fb13b9cfd0b187bc2b180d7fd87b4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: f2e2d696a09e5b5bb321da583efd76f580759ce6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715855"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727672"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Panoramica della sicurezza per il Framework di estendibilità in SQL Server Machine Learning Services
+# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo descrive l'architettura di sicurezza complessiva usata per integrare il motore di database di SQL Server e i componenti correlati con Extensibility Framework. Esamina le entità a protezione diretta, i servizi, l'identità del processo e le autorizzazioni. Per ulteriori informazioni sui concetti chiave e i componenti di estendibilità in SQL Server, vedere [architettura di estendibilità in SQL Server Machine Learning Services](extensibility-framework.md)].
+Questo articolo descrive l'architettura di sicurezza generale usata per integrare il motore di database di SQL Server e i componenti correlati con il framework di estendibilità. L'articolo esamina anche gli oggetti a protezione diretta, i servizi, l'identità dei processi e le autorizzazioni. Per altre informazioni sui concetti e i componenti principali dell'estendibilità in SQL Server, vedere [Architettura di estendibilità in Machine Learning Services per SQL Server](extensibility-framework.md)].
 
-## <a name="securables-for-external-script"></a>Entità a protezione diretta per script esterno
+## <a name="securables-for-external-script"></a>Oggetti a protezione diretta per lo script esterno
 
-Uno script esterno scritto in R o Python viene inviato come parametro di input a un [stored procedure di sistema](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) creato a questo scopo oppure è incluso in un stored procedure definito dall'utente. In alternativa, è possibile disporre di modelli di cui viene eseguita la preformazione e che vengono archiviati in un formato binario in una tabella di database, richiamabili in una funzione di [stima](../../t-sql/queries/predict-transact-sql.md) T-SQL.
+Uno script esterno scritto in R o Python viene inviato come parametro di input a una [stored procedure di sistema](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) creata a questo scopo oppure viene incluso tramite wrapping in una stored procedure definita dall'utente. In alternativa, possono essere presenti modelli già sottoposti a training e archiviati in un formato binario in una tabella di database, che possono essere chiamati in una funzione T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md).
 
-Poiché lo script viene fornito tramite gli oggetti dello schema del database, le stored procedure e le tabelle esistenti, non sono presenti nuove [entità a protezione diretta](../../relational-databases/security/securables.md) per SQL Server Machine Learning Services.
+Poiché lo script viene fornito tramite oggetti dello schema del database esistenti, stored procedure e tabelle, non esistono nuovi [oggetti a protezione diretta](../../relational-databases/security/securables.md) per Machine Learning Services per SQL Server.
 
-Indipendentemente dalla modalità di utilizzo dello script o, di come sono costituiti, gli oggetti di database verranno creati e probabilmente salvati, ma non viene introdotto alcun nuovo tipo di oggetto per l'archiviazione dello script. Di conseguenza, la possibilità di utilizzare, creare e salvare oggetti di database dipende in gran parte dalle autorizzazioni per i database già definite per gli utenti.
+Indipendente dal modo in cui gli script vengono usati o da cosa sono costituiti, vengono creati e probabilmente salvati oggetti di database, ma non viene introdotto alcun nuovo tipo di oggetto per l'archiviazione dello script. Di conseguenza, la capacità di utilizzare, creare e salvare oggetti di database dipende in buona parte dalle autorizzazioni del database già definite per gli utenti.
 
 <a name="permissions"></a>
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
-Il modello di sicurezza dei dati di SQL Server per gli account di accesso e i ruoli del database si estende allo script R e Python. Per eseguire script esterni che usano SQL Server dati o che vengono eseguiti con SQL Server come contesto di calcolo, è necessario un account di accesso SQL Server o utente di Windows. Gli utenti del database che dispongono delle autorizzazioni per eseguire una query ad hoc possono accedere agli stessi dati dallo script R o Python.
+Il modello di sicurezza dei dati di SQL Server degli account di accesso e dei ruoli del database si estende agli script R e Python. È necessario un account di accesso SQL Server o un account utente Windows per eseguire script esterni che usano dati di SQL Server o che vengono eseguiti con SQL Server come contesto di calcolo. Gli utenti di database che hanno le autorizzazioni necessarie per eseguire una query ad hoc possono accedere agli stessi dati dallo script R o Python.
 
-L'account di accesso o l'account utente identifica l' *entità di sicurezza*che potrebbe richiedere più livelli di accesso, a seconda dei requisiti di script esterni:
+L'account di accesso o l'account utente identifica l'*entità di sicurezza*, che può necessitare di più livelli di accesso, a seconda dei requisiti dello script esterno:
 
-+ Autorizzazione per accedere al database in cui sono abilitati gli script esterni.
-+ Autorizzazioni per la lettura di dati da oggetti protetti, ad esempio tabelle.
-+ Possibilità di scrivere nuovi dati in una tabella, ad esempio un modello, o i risultati dei punteggi.
-+ Possibilità di creare nuovi oggetti, ad esempio tabelle, stored procedure che usano lo script esterno o funzioni personalizzate che usano il processo R o Python.
-+ Diritto di installare nuovi pacchetti nel computer SQL Server o di usare i pacchetti forniti a un gruppo di utenti.
++ Autorizzazione di accesso al database in cui sono abilitati script esterni.
++ Autorizzazioni di lettura dei dati da oggetti protetti, ad esempio tabelle.
++ Capacità di scrivere nuovi dati in una tabella, ad esempio un modello, o i risultati di assegnazione dei punteggi.
++ Capacità di creare nuovi oggetti, ad esempio tabelle, stored procedure che usano lo script esterno o funzioni personalizzate che usano un processo R o Python.
++ Diritto di installare nuovi pacchetti nel computer SQL Server o usare i pacchetti forniti a un gruppo di utenti.
 
-Ogni persona che esegue uno script esterno utilizzando SQL Server come contesto di esecuzione deve essere mappata a un utente nel database. Anziché impostare individualmente le autorizzazioni utente del database, è possibile creare ruoli per gestire i set di autorizzazioni e assegnare gli utenti a tali ruoli, anziché impostare individualmente le autorizzazioni utente.
+Ogni persona che esegue uno script esterno tramite SQL Server come contesto di esecuzione deve essere mappata a un utente nel database. Invece di impostare singolarmente autorizzazioni utente del database, è possibile creare ruoli per gestire i set di autorizzazioni e assegnare gli utenti ai ruoli.
 
-Per ulteriori informazioni, vedere [concedere agli utenti le autorizzazioni per SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+Per altre informazioni, vedere [Concedere agli utenti l'autorizzazione per Machine Learning Services per SQL Server](../../advanced-analytics/security/user-permission.md).
 
-## <a name="permissions-when-using-an-external-client-tool"></a>Autorizzazioni quando si usa uno strumento client esterno
+## <a name="permissions-when-using-an-external-client-tool"></a>Autorizzazioni per l'uso di uno strumento client esterno
 
-Per gli utenti che usano R o Python in uno strumento client esterno è necessario che l'account di accesso o l'account sia mappato a un utente nel database, se è necessario eseguire uno script esterno nel database o accedere a dati e oggetti di database. Sono necessarie le stesse autorizzazioni se lo script esterno viene inviato da un client di data science remoto o eseguito usando un stored procedure T-SQL.
+Per gli utenti che usano R o Python in uno strumento client esterno, l'account utente o di accesso deve essere mappato a un utente nel database se questi utenti devono usare uno script esterno nel database o accedere a oggetti e dati del database. Sono necessarie le stesse autorizzazioni indipendentemente dal fatto che lo script esterno venga inviato da un client di data science remoto o eseguito tramite una stored procedure T-SQL.
 
-Si supponga, ad esempio, che sia stato creato uno script esterno eseguito nel computer locale e che si desideri eseguire lo script in SQL Server. È necessario assicurarsi che siano soddisfatte le condizioni seguenti:
+Ad esempio, si supponga di aver creato uno script esterno eseguito nel computer locale e di volerlo eseguire in SQL Server. È necessario assicurarsi che siano soddisfatte le condizioni seguenti:
 
 + Il database consente le connessioni remote.
-+ L'account di accesso SQL o l'account di Windows utilizzato per l'accesso al database è stato aggiunto al SQL Server a livello di istanza.
-+ L'account di accesso SQL o l'utente di Windows deve disporre dell'autorizzazione per eseguire script esterni. In genere, questa autorizzazione può essere aggiunta solo da un amministratore del database.
-+ L'account di accesso SQL o l'utente della finestra deve essere aggiunto come utente, con le autorizzazioni appropriate, in ogni database in cui lo script esterno esegue una delle operazioni seguenti:
-  + Recupero dei dati.
-  + Scrittura o aggiornamento dei dati.
++ L'account di accesso SQL o l'account Windows usato per l'accesso al database è stato aggiunto a SQL Server a livello di istanza.
++ L'account di accesso SQL o l'utente Windows deve avere l'autorizzazione necessaria per eseguire script esterni. In genere, questa autorizzazione può essere aggiunta solo da un amministratore del database.
++ L'account di accesso SQL o l'utente Windows deve essere aggiunto come utente, con le autorizzazioni appropriate, in ogni database in cui lo script esterno esegue una qualsiasi di queste operazioni:
+  + Recupero di dati.
+  + Scrittura o aggiornamento di dati.
   + Creazione di nuovi oggetti, ad esempio tabelle o stored procedure.
 
-Dopo aver eseguito il provisioning dell'account di accesso o dell'account utente di Windows e avere fornito le autorizzazioni necessarie, è possibile eseguire uno script esterno in SQL Server usando un oggetto origine dati in R o la libreria **revoscalepy** in Python oppure chiamando un stored procedure contiene lo script esterno.
+Dopo avere effettuato il provisioning dell'account di accesso o dell'account utente Windows e avere concesso le autorizzazioni necessarie, è possibile eseguire uno script esterno in SQL Server usando un oggetto origine dati in R o la libreria **revoscalepy** in Python oppure chiamando una stored procedure contenente lo script esterno.
 
-Ogni volta che viene avviato uno script esterno da SQL Server, la sicurezza del motore di database ottiene il contesto di sicurezza dell'utente che ha avviato il processo e gestisce i mapping dell'utente o dell'account di accesso agli oggetti a protezione diretta.
+Ogni volta che viene avviato uno script esterno da SQL Server, la sicurezza del motore di database ottiene il contesto di protezione dell'utente che ha avviato il processo e gestisce i mapping dell'utente o dell'account di accesso a oggetti a protezione diretta.
 
-Pertanto, tutti gli script esterni avviati da un client remoto devono specificare le informazioni relative all'account di accesso o all'utente come parte della stringa di connessione.
+Di conseguenza, tutti gli script esterni avviati da un client remoto devono specificare le informazioni sull'account di accesso o sull'utente all'interno della stringa di connessione.
 
 <a name="launchpad"></a>
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servizi usati nell'elaborazione esterna (Launchpad)
 
-Il Framework di estendibilità aggiunge un nuovo servizio NT all' [elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
-Il motore di database usa il servizio Launchpad di SQL Server per creare un'istanza di una sessione R o Python come processo separato. Il processo viene eseguito con un account con privilegi limitati. distinto da SQL Server, Launchpad e dall'identità utente in cui è stata eseguita la query stored procedure o host. L'esecuzione di script in un processo separato, con account con privilegi limitati, costituisce la base del modello di sicurezza e isolamento per R e Python in SQL Server.
+Il motore di database usa il servizio Launchpad di SQL Server per creare un'istanza di una sessione R o Python come processo separato. Il processo viene eseguito con un account con privilegi limitati, diverso da SQL Server, da Launchpad stesso e dall'identità utente con cui è stata eseguita la stored procedure o la query host. L'esecuzione dello script in un processo separato, con un account con privilegi limitati, è alla base del modello di sicurezza e di isolamento per R e Python in SQL Server.
 
-Oltre a avviare i processi esterni, Launchpad è anche responsabile del rilevamento dell'identità dell'utente chiamante e del mapping dell'identità all'account di lavoro con privilegi limitati usato per avviare il processo. In alcuni scenari, in cui script o codice richiama SQL Server per i dati e le operazioni, Launchpad è in genere in grado di gestire facilmente il trasferimento di identità. Lo script che contiene istruzioni SELECT o funzioni di chiamata e altri oggetti di programmazione avrà in genere esito positivo se l'utente chiamante dispone di autorizzazioni sufficienti.
+Oltre all'avvio di processi esterni, Launchpad è anche responsabile del rilevamento dell'identità dell'utente chiamante e del mapping dell'identità all'account di lavoro con privilegi limitati usato per avviare il processo. In alcuni scenari, in cui uno script o il codice richiama SQL Server per dati e operazioni, Launchpad può in genere gestire il trasferimento di identità in modo uniforme. Uno script che contiene istruzioni SELECT o che chiama funzioni e altri oggetti di programmazione riesce in genere se l'utente chiamante ha autorizzazioni sufficienti.
 
 > [!NOTE]
-> Per impostazione predefinita [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] , è configurato per l'esecuzione in **NT Service\MSSQLLaunchpad**, di cui viene effettuato il provisioning con tutte le autorizzazioni necessarie per eseguire script esterni. Per ulteriori informazioni sulle opzioni configurabili, vedere [configurazione del servizio launchpad di SQL Server](../security/sql-server-launchpad-service-account.md).
+> Per impostazione predefinita, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] è configurato per l'esecuzione in **NT Service\MSSQLLaunchpad**, di cui viene effettuato il provisioning con tutte le autorizzazioni necessarie per l'esecuzione di script esterni. Per altre informazioni sulle opzioni configurabili, vedere [Configurazione del servizio Launchpad di SQL Server](../security/sql-server-launchpad-service-account.md).
 
 <a name="sqlrusergroup"></a>
 
-## <a name="identities-used-in-processing-sqlrusergroup"></a>Identità utilizzate nell'elaborazione (SQLRUserGroup)
+## <a name="identities-used-in-processing-sqlrusergroup"></a>Identità usate nell'elaborazione (SQLRUserGroup)
 
-**SQLRUserGroup** (Gruppo di utenti con restrizioni SQL) viene creato dal programma di installazione di SQL Server e contiene un pool di account utente di Windows locali con privilegi limitati. Quando è necessario un processo esterno, Launchpad accetta un account di lavoro disponibile e lo usa per eseguire un processo. In particolare, Launchpad attiva un account di lavoro disponibile, ne esegue il mapping all'identità dell'utente chiamante ed esegue lo script nell'account di lavoro.
+**SQLRUserGroup** (gruppo di utenti SQL limitato) viene creato dal programma di installazione di SQL Server e contiene un pool di account utente Windows locali con privilegi limitati. Quando è necessario un processo esterno, Launchpad usa un account di lavoro disponibile per l'esecuzione del processo. Più in particolare, Launchpad attiva un account di lavoro disponibile, ne esegue il mapping all'identità dell'utente chiamante ed esegue lo script nell'account di lavoro.
 
-+ **SQLRUserGroup** è collegato a un'istanza specifica. Per ogni istanza in cui è stato abilitato Machine Learning è necessario un pool separato di account di lavoro. Gli account non possono essere condivisi tra istanze.
++ **SQLRUserGroup** è collegato a un'istanza specifica. Per ogni istanza in cui è stato abilitato l'apprendimento automatico è necessario un pool di account di lavoro separato. Gli account non possono essere condivisi tra istanze.
 
-+ La dimensione del pool di account utente è statica e il valore predefinito è 20, che supporta 20 sessioni simultanee. Il numero di sessioni di runtime esterne che possono essere avviate simultaneamente è limitato dalle dimensioni del pool di account utente. 
++ La dimensione del pool di account utente è statica e il valore predefinito è 20, ovvero il pool supporta 20 sessioni simultaneamente. Il numero delle sessioni di runtime esterne che possono essere avviate simultaneamente è limitato dalla dimensione di questo pool di account utente. 
 
-+ I nomi degli account di lavoro nel pool sono nel formato SqlInstanceName*nn*. Ad esempio, in un'istanza predefinita, **SQLRUserGroup** contiene gli account denominati MSSQLSERVER01, MSSQLSERVER02 e così via fino a MSSQLSERVER20.
++ I nomi degli account di lavoro nel pool usano il formato NomeIstanzaSQL*nn*. Ad esempio, in un'istanza predefinita **SQLRUserGroup** contiene gli account denominati MSSQLSERVER01, MSSQLSERVER02 e così via fino a MSSQLSERVER20.
 
-Le attività in parallelo non utilizzano account aggiuntivi. Se, ad esempio, un utente esegue un'attività di assegnazione dei punteggi che utilizza l'elaborazione parallela, viene riutilizzato lo stesso account di lavoro per tutti i thread. Se si intende usare in modo intensivo Machine Learning, è possibile aumentare il numero di account usati per eseguire gli script esterni. Per altre informazioni, vedere [modificare il pool di account utente per Machine Learning](../../advanced-analytics/administration/modify-user-account-pool.md).
+Le attività parallelizzate non usano account aggiuntivi. Ad esempio, se un utente esegue un'attività di assegnazione di punteggi che usa l'elaborazione parallela, viene riutilizzato lo stesso account di lavoro per tutti i thread. Se si intende fare un uso intenso dell'apprendimento automatico, è possibile aumentare il numero di account necessari per l'esecuzione di script esterni. Per altre informazioni, vedere [Modificare il pool di account utente per R Services per SQL Server](../../advanced-analytics/administration/modify-user-account-pool.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-### <a name="appcontainer-isolation-in-sql-server-2019"></a>Isolamento AppContainer in SQL Server 2019
+### <a name="appcontainer-isolation-in-sql-server-2019"></a>Isolamento di AppContainer in SQL Server 2019
 
-In SQL Server 2019, il programma di installazione non crea più account di lavoro per **SQLRUserGroup**. Viene invece realizzata l'isolamento tramite [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). In fase di esecuzione, quando viene rilevato uno script esterno in una stored procedure o una query, SQL Server chiama Launchpad con una richiesta per un'utilità di avvio specifica dell'estensione. Launchpad richiama l'ambiente di runtime appropriato in un processo con la relativa identità e crea un'istanza di un AppContainer per contenerlo. Questa modifica è vantaggiosa perché la gestione di account e password locali non è più necessaria. Inoltre, nelle installazioni in cui gli account utente locali non sono consentiti, l'eliminazione della dipendenza dell'account utente locale significa che è ora possibile usare questa funzionalità.
+In SQL Server 2019 il programma di installazione non crea più account di lavoro per **SQLRUserGroup**. L'isolamento viene invece ottenuto tramite [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). In fase di esecuzione, quando viene rilevato uno script esterno in una stored procedure o una query, SQL Server chiama Launchpad con una richiesta di un'utilità di avvio specifica dell'estensione. Launchpad richiama l'ambiente di runtime appropriato in un processo con la propria identità e crea un'istanza di un ambiente AppContainer per contenerlo. Questa modifica è utile perché la gestione degli account locali e delle password non è più necessaria. Inoltre, nelle installazioni in cui non sono consentiti account utente locali, l'eliminazione della dipendenza dall'account utente locale significa che è ora possibile usare questa funzionalità.
 
-Come implementato da SQL Server, AppContainers sono un meccanismo interno. Sebbene non venga visualizzata la prova fisica di AppContainers in Process Monitor, è possibile trovarli nelle regole del firewall in uscita create dal programma di installazione per impedire ai processi di effettuare chiamate di rete. Per ulteriori informazioni, vedere la pagina relativa alla [configurazione del firewall per SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
+In base all'implementazione in SQL Server, gli ambienti AppContainer sono meccanismi interni. Anche se non si può avere una prova fisica degli ambienti AppContainer nel monitoraggio dei processi, questi sono presenti nelle regole del firewall in uscita create dal programma di installazione per impedire ai processi di eseguire chiamate di rete. [Configurazione del firewall per Machine Learning Services per SQL Server](../../advanced-analytics/security/firewall-configuration.md).
 
 > [!Note]
-> In SQL Server 2019, **SQLRUserGroup** dispone solo di un membro che è ora il singolo account del servizio launchpad di SQL Server invece di più account di lavoro.
+> In SQL Server 2019 **SQLRUserGroup** include un solo membro, che è ora il singolo account del servizio Launchpad di SQL Server, anziché più account di lavoro.
 ::: moniker-end
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>Autorizzazioni concesse a SQLRUserGroup
 
-Per impostazione predefinita, i membri di **SQLRUserGroup** dispongono delle autorizzazioni di lettura ed esecuzione per i file nelle directory SQL Server **contenitori**, **R_SERVICES**e **PYTHON_SERVICES** , con accesso a file eseguibili, librerie e set di dati predefiniti in R e le distribuzioni di Python installate con SQL Server. 
+Per impostazione predefinita, i membri di **SQLRUserGroup** hanno autorizzazioni di lettura ed esecuzione per i file nelle directory **Binn**, **R_SERVICES** e **PYTHON_SERVICES** di SQL Server, con accesso a eseguibili, librerie e set di dati predefiniti nelle distribuzioni R e Python installate con SQL Server. 
 
-Per proteggere le risorse sensibili in SQL Server, è possibile definire facoltativamente un elenco di controllo di accesso (ACL) che nega l'accesso a **SQLRUserGroup**. Viceversa, è anche possibile concedere le autorizzazioni per le risorse di dati locali presenti nel computer host, oltre a SQL Server stesso. 
+Per proteggere risorse sensibili in SQL Server, è facoltativamente possibile definire un elenco di controllo di accesso che nega l'accesso a **SQLRUserGroup**. Al contrario, è possibile concedere autorizzazioni per le risorse dati locali presenti nel computer host, oltre che SQL Server stesso. 
 
-Per impostazione predefinita, **SQLRUserGroup** non dispone di un account di accesso al database o delle autorizzazioni per i dati. In alcuni casi, potrebbe essere necessario creare un account di accesso per consentire le connessioni di loopback, in particolare quando un'identità Windows attendibile è l'utente chiamante. Questa funzionalità è denominata [*autenticazione implicita*](#implied-authentication). Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+Per impostazione predefinita, **SQLRUserGroup** non ha un account di accesso al database o autorizzazioni per i dati. In alcuni casi, può essere necessario creare un account di accesso per consentire connessioni loopback, in particolare quando l'utente chiamante è un'identità Windows attendibile. Questo scenario è denominato [*autenticazione implicita*](#implied-authentication). Per altre informazioni, vedere [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="identity-mapping"></a>Mapping di identità
 
-Quando viene avviata una sessione, Launchpad mappa l'identità dell'utente chiamante a un account di lavoro. Il mapping di un utente di Windows esterno o di un account di accesso SQL valido a un account di lavoro è valido solo per la durata del stored procedure SQL che esegue lo script esterno. Le query parallele dallo stesso account di accesso sono mappate allo stesso account utente di lavoro.
+All'avvio di una sessione, Launchpad esegue il mapping dell'identità dell'utente chiamante a un account di lavoro. Il mapping di un utente Windows esterno o di un account di accesso SQL valido a un account di lavoro è consentito solo per la durata della stored procedure SQL che esegue lo script esterno. Le query parallele dallo stesso account di accesso sono mappate allo stesso account utente di lavoro.
 
-Durante l'esecuzione, Launchpad crea cartelle temporanee per archiviare i dati della sessione, eliminando i dati alla conclusione della sessione. Le directory sono con restrizioni di accesso. Per R, RLauncher esegue questa attività. Per Python, PythonLauncher esegue questa attività. Ogni singolo account di lavoro è limitato alla propria cartella e non può accedere ai file nelle cartelle sopra il proprio livello. Tuttavia, l'account di lavoro può leggere, scrivere o eliminare gli elementi figlio nella cartella di lavoro della sessione creata. Un amministratore del computer può visualizzare le directory create per ogni processo. Ogni directory è identificata dal relativo GUID di sessione.
+Durante l'esecuzione, Launchpad crea cartelle temporanee per l'archiviazione dei dati di sessione, eliminandole al termine della sessione. Le directory sono ad accesso limitato. Per R, questa attività viene eseguita da RLauncher. Per Python, questa attività viene eseguita da PythonLauncher. Ogni singolo account di lavoro è limitato alla propria cartella e non può accedere a file in cartelle di livello superiore. Tuttavia, l'account di lavoro può leggere, scrivere o eliminare figli all'interno della cartella di lavoro della sessione creata. Un amministratore del computer può visualizzare le directory create per ogni processo. Ogni directory è identificata dal relativo GUID di sessione.
 
 <a name="implied-authentication"></a>
 
-## <a name="implied-authentication-loop-back-requests"></a>Autenticazione implicita (richieste loop back)
+## <a name="implied-authentication-loop-back-requests"></a>Autenticazione implicita (richieste loopback)
 
-*L'autenticazione implicita* descrive il comportamento della richiesta di connessione in base al quale i processi esterni in esecuzione come account di lavoro con privilegi limitati vengono presentati come identità utente attendibile per SQL Server sulle richieste del ciclo per i dati o le operazioni. Come concetto, l'autenticazione implicita è univoca per l'autenticazione di Windows, in SQL Server stringhe di connessione che specificano una connessione trusted, sulle richieste provenienti da processi esterni, ad esempio R o Python script. Viene talvolta indicato anche come *ciclo indietro*.
+L'*autenticazione implicita* descrive il comportamento delle richieste di connessione in cui i processi esterni in esecuzione come account di lavoro con privilegi limitati vengono presentati come identità utente attendibile a SQL Server in richieste loopback di dati o operazioni. Concettualmente l'autenticazione implicita è univoca per l'autenticazione di Windows, nelle stringhe di connessione di SQL Server che specificano una connessione trusted e in richieste provenienti da processi esterni come uno script R o Python. A volte è anche nota come *loopback*.
 
-Le connessioni attendibili sono realizzabili da script R e Python, ma solo con la configurazione aggiuntiva. Nell'architettura di estendibilità, i processi R e Python vengono eseguiti con account di lavoro, ereditando le autorizzazioni dal **SQLRUserGroup**padre. Quando una stringa di connessione `Trusted_Connection=True`specifica, l'identità dell'account di lavoro viene presentata nella richiesta di connessione, che per impostazione predefinita è sconosciuta per SQL Server.
+Le connessioni trusted possono essere usate da script R e Python, ma solo con una configurazione aggiuntiva. Nell'architettura di estendibilità i processi R e Python vengono eseguiti con account di lavoro ed ereditano le autorizzazioni dal gruppo **SQLRUserGroup** padre. Quando una stringa di connessione specifica `Trusted_Connection=True`, l'identità dell'account di lavoro viene presentata nella richiesta di connessione, che per impostazione predefinita è sconosciuta a SQL Server.
 
-Per garantire la corretta connessione trusted, è necessario creare un account di accesso al database per **SQLRUserGroup**. Al termine di questa operazione, qualsiasi connessione trusted da qualsiasi membro di **SQLRUserGroup** dispone dei diritti di accesso per SQL Server. Per istruzioni dettagliate, vedere [aggiungere SQLRUserGroup a un account di accesso al database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+Perché le connessioni trusted riescano, è necessario creare un account di accesso al database per **SQLRUserGroup**. Una volta creato, tutte le connessioni trusted da qualsiasi membro di **SQLRUserGroup** avranno diritti di accesso a SQL Server. Per istruzioni dettagliate, vedere [Aggiungere SQLRUserGroup a un account di accesso al database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
-Le connessioni attendibili non sono la formulazione più utilizzata di una richiesta di connessione. Quando lo script R o Python specifica una connessione, può essere più comune usare un account di accesso SQL oppure un nome utente e una password completamente specificati se la connessione è a un'origine dati ODBC.
+Le connessioni trusted sono la formulazione più diffusa di una richiesta di connessione. Quando lo script R o Python specifica una connessione, può essere più comune usare un account di accesso SQL o un nome utente specificato completamente e una password se la connessione viene eseguita a un'origine dati ODBC.
 
-### <a name="how-implied-authentication-works-for-r-and-python-sessions"></a>Funzionamento dell'autenticazione implicita per le sessioni R e Python
+### <a name="how-implied-authentication-works-for-r-and-python-sessions"></a>Funzionamento dell'autenticazione implicita per sessioni R e Python
 
-Il diagramma seguente illustra l'interazione dei componenti di SQL Server con il runtime di R e il modo in cui esegue l'autenticazione implicita per R.
+Il diagramma seguente mostra l'interazione dei componenti di SQL Server con il runtime R e descrive come viene eseguita l'autenticazione implicita per R.
 
 ![Autenticazione implicita per R](../security/media/implied-auth-rsql.png)
 
-Il diagramma seguente illustra l'interazione dei componenti di SQL Server con il runtime di Python e il modo in cui esegue l'autenticazione implicita per Python.
+Il diagramma seguente mostra l'interazione dei componenti di SQL Server con il runtime Python e descrive come viene eseguita l'autenticazione implicita per Python.
 
 ![Autenticazione implicita per Python](../security/media/implied-auth-python2.png)
 
-## <a name="no-support-for-transparent-data-encryption-at-rest"></a>Nessun supporto per Transparent Data Encryption inattivi
+## <a name="no-support-for-transparent-data-encryption-at-rest"></a>Nessun supporto per Transparent Data Encryption con dati inattivi
 
-[Transparent Data Encryption (](../../relational-databases/security/encryption/transparent-data-encryption.md) Transparent Data Encryption) non è supportato per i dati inviati o ricevuti dal runtime di script esterno. Il motivo è che il processo esterno (R o Python) viene eseguito all'esterno del processo di SQL Server. I dati utilizzati dal runtime esterno non sono pertanto protetti dalle funzionalità di crittografia del motore di database. Questo comportamento non è diverso da qualsiasi altro client in esecuzione nel computer SQL Server che legge i dati dal database e crea una copia.
+La tecnologia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) non è supportata per i dati inviati o ricevuti dal runtime dello script esterno. Il motivo è che il processo esterno (R o Python) viene eseguito esternamente al processo di SQL Server. Di conseguenza, i dati usati dal runtime esterno non vengono protetti dalla funzionalità di crittografia del motore di database. Questo comportamento non è diverso da quello di qualsiasi altro client in esecuzione nel computer SQL Server che legge dati dal database ed esegue una copia.
 
-Di conseguenza, Transparent Data Encryption **non viene** applicato a tutti i dati utilizzati negli script R o Python, né a tutti i dati salvati su disco o ai risultati intermedi resi permanente. Tuttavia, altri tipi di crittografia, ad esempio la crittografia BitLocker di Windows o la crittografia di terze parti applicata a livello di file o di cartella, sono comunque validi.
+Di conseguenza, la tecnologia TDE **non** viene applicata ai dati usati in script R o Python, né ai dati salvati su disco o ai risultati intermedi permanenti. Tuttavia, altri tipi di crittografia, ad esempio la crittografia unità BitLocker di Windows o la crittografia di terze parti applicata a livello di file o cartella, saranno comunque validi.
 
-Nel caso di [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), i runtime esterni non hanno accesso alle chiavi di crittografia. Non è pertanto possibile inviare i dati agli script.
+Nel caso di [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), i runtime esterni non hanno accesso alle chiavi di crittografia. Di conseguenza, i dati non possono essere inviati agli script.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questo articolo sono stati appresi i componenti e il modello di interazione dell'architettura di sicurezza incorporata nel [Framework](../../advanced-analytics/concepts/extensibility-framework.md)di estendibilità. I punti chiave trattati in questo articolo includono lo scopo di Launchpad, SQLRUserGroup e account di lavoro, l'isolamento dei processi di R e Python e il modo in cui viene eseguito il mapping delle identità utente agli account di lavoro. 
+In questo articolo sono stati presentati i componenti e il modello di interazione dell'architettura di sicurezza integrata nel [framework di estendibilità](../../advanced-analytics/concepts/extensibility-framework.md). I concetti chiave presentati in questo articolo includono le finalità di Launchpad, SQLRUserGroup e gli account di lavoro, l'isolamento dei processi di R e Python e il mapping delle identità utente ad account di lavoro. 
 
-Come passaggio successivo, rivedere le istruzioni per la [concessione di autorizzazioni](../../advanced-analytics/security/user-permission.md). Per i server che utilizzano l'autenticazione di Windows, è necessario esaminare anche [Aggiungi SQLRUserGroup a un account di accesso al database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) per apprendere quando è necessaria una configurazione aggiuntiva.
+Come passaggio successivo, leggere le istruzioni per la [concessione delle autorizzazioni](../../advanced-analytics/security/user-permission.md). Per i server che usano l'autenticazione di Windows, vedere [Aggiungere SQLRUserGroup a un account di accesso al database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) per informazioni sui casi in cui sono necessarie attività di configurazione aggiuntive.

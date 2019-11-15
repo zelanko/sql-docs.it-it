@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067528"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049956"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Modifica le proprietà di un indice full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  Specifica se le modifiche (aggiornamenti, eliminazioni o inserimenti) apportate alle colonne della tabella coperte dall'indice full-text verranno propagate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'indice full-text. Le modifiche apportate ai dati tramite WRITETEXT e UPDATETEXT non vengono riflesse nell'indice full-text, pertanto non vengono registrate dalla funzione di rilevamento delle modifiche.  
   
 > [!NOTE]  
->  Per informazioni sull'interazione del rilevamento delle modifiche e del parametro WITH NO POPULATION, vedere la sezione "Osservazioni" più avanti in questo argomento.  
+>  Per altre informazioni, vedere [Interazioni del rilevamento delle modifiche con NO POPULATION](#change-tracking-no-population).
   
  MANUAL  
  Specifica che le modifiche rilevate verranno propagate manualmente chiamando l'istruzione ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] (*popolamento manuale*). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  Usare TYPE COLUMN e LANGUAGE con la clausola ADD per impostare queste proprietà su *column_name*. Se si aggiunge una colonna, è necessario ripopolare l'indice full-text della tabella per consentire il corretto funzionamento delle query full-text su tale colonna.  
   
 > [!NOTE]  
->  Il popolamento dell'indice full-text dopo l'aggiunta o l'eliminazione di una colonna varia a seconda che sia abilitato il rilevamento delle modifiche e sia specificato WITH NO POPULATION. Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
+>  Il popolamento dell'indice full-text dopo l'aggiunta o l'eliminazione di una colonna varia a seconda che sia abilitato il rilevamento delle modifiche e sia specificato WITH NO POPULATION. Per altre informazioni, vedere [Interazioni del rilevamento delle modifiche con NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Specifica il nome di una colonna della tabella, *type_column_name*, usato per contenere il tipo di documento per un documento **varbinary**, **varbinary(max)** o **image**. Questa colonna, nota come colonna di tipo, contiene un'estensione di file fornita dall'utente (doc, pdf, xls e così via). La colonna del tipo deve essere di tipo **char**, **nchar**, **varchar**o **nvarchar**.  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  Se l'opzione CHANGE_TRACKING è abilitata e si specifica WITH NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. Se l'opzione CHANGE_TRACKING è abilitata e non si specifica WITH NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un popolamento completo dell'indice.  
   
 > [!NOTE]  
->  Per ulteriori informazioni sull'interazione del rilevamento delle modifiche con WITH NO POPULATION, vedere la sezione "Osservazioni" più avanti in questo argomento.  
+>  Per altre informazioni, vedere [Interazioni del rilevamento delle modifiche con NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  L'aggiunta di un elenco delle proprietà di ricerca a un indice full-text richiede il ripopolamento dell'indice per indicizzare le proprietà di ricerca registrate per l'elenco delle proprietà di ricerca associato. Se si specifica WITH NO POPULATION quando si aggiunge l'elenco delle proprietà di ricerca, è necessario eseguire un popolamento sull'indice, in un momento appropriato.  
   
 > [!IMPORTANT]  
->  Se l'indice full-text è stato in precedenza associato a una ricerca diversa, è necessario ricostruire l'elenco delle proprietà per rendere coerente lo stato dell'indice. L'indice viene troncato immediatamente e rimane vuoto fino al termine del popolamento completo. Per ulteriori informazioni sulle situazioni in cui la modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione, vedere le osservazioni più avanti in questo argomento.  
+>  Se l'indice full-text è stato in precedenza associato a una ricerca diversa, è necessario ricostruire l'elenco delle proprietà per rendere coerente lo stato dell'indice. L'indice viene troncato immediatamente e rimane vuoto fino al termine del popolamento completo. Per altre informazioni, vedere [La modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione dell'indice](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  È possibile associare un elenco delle proprietà di ricerca specificato a più indici full-text nello stesso database.  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Per altre informazioni sugli elenchi delle proprietà di ricerca, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interazioni del rilevamento delle modifiche con NO POPULATION  
+## <a name="change-tracking-no-population"></a> Interazioni del rilevamento delle modifiche con NO POPULATION  
  Il popolamento dell'indice full-text dipende dal fatto che il rilevamento delle modifiche sia o meno abilitato e che si specifichi o meno WITH NO POPULATION nell'istruzione ALTER FULLTEXT INDEX. Nella tabella seguente è riepilogato il risultato di tale interazione.  
   
 |Rilevamento delle modifiche|WITH NO POPULATION|Risultato|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Per altre informazioni sul popolamento degli indici full-text, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>La modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione dell'indice  
+## <a name="change-search-property-rebuild-index"></a> La modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione dell'indice  
  La prima volta in cui un indice full-text viene associato a un elenco delle proprietà di ricerca, è necessario ripopolare l'indice per indicizzare i termini di ricerca specifici delle proprietà. I dati dell'indice esistenti non vengono troncati.  
   
  Se tuttavia si associa l'indice full-text a un elenco delle proprietà diverso, l'indice viene ricompilato. La ricompilazione immediata comporta il troncamento dell'indice full-text, ovvero la rimozione di tutti i dati esistenti, e l'indice deve essere ripopolato. Nel corso del popolamento, le query full-text sulla tabella di base eseguono ricerche solo nelle righe della tabella che sono già state indicizzate dal popolamento. I dati dell'indice ripopolato includeranno metadati dalle proprietà registrate dell'elenco delle proprietà di ricerca appena aggiunto.  

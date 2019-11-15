@@ -1,6 +1,6 @@
 ---
 title: Usare le funzioni di profiling del codice R
-description: Migliorare le prestazioni e ottenere risultati più veloci sui calcoli R su SQL Server usando le funzioni di profilatura R per restituire informazioni sulle chiamate di funzione interne.
+description: Migliorare le prestazioni e ottenere risultati più veloci per i calcoli R in SQL Server usando le funzioni di profilatura di R per restituire informazioni sulle chiamate di funzione interne.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
@@ -10,26 +10,26 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715008"
 ---
-# <a name="use-r-code-profiling-functions-to-improve-performance"></a>Usare le funzioni di profiling del codice R per migliorare le prestazioni
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>Migliorare le prestazioni tramite le funzioni di profilatura di R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Oltre a usare risorse e strumenti di SQL Server per monitorare l'esecuzione di script R, è possibile usare gli strumenti per le prestazioni forniti da altri pacchetti R per ottenere altre informazioni sulle chiamate di funzioni interne. 
 
 > [!TIP]
-> Questo articolo fornisce le risorse di base per iniziare. Per indicazioni di esperti, è consigliabile usare la sezione relativa alle *prestazioni* in ["Advanced R" di Hadley Wickham](http://adv-r.had.co.nz).
+> Questo articolo presenta alcune risorse di base per iniziare. Per linee guida per utenti esperti, è consigliabile vedere la sezione *Performance* (Prestazioni) in ["Advanced R" (R avanzato) di Hadley Wickham](http://adv-r.had.co.nz).
 
 ## <a name="using-rprof"></a>Uso di RPROF
 
-[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) è una funzione inclusa nel pacchetto di base [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), che viene caricato per impostazione predefinita. 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) è una funzione inclusa nel pacchetto di base [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), caricato per impostazione predefinita. 
 
 In generale, la funzione *rprof* opera scrivendo lo stack di chiamate in un file a intervalli specificati. È quindi possibile usare la funzione [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) per elaborare il file di output. Un vantaggio di *rprof* è il fatto di eseguire il campionamento, riducendo il carico delle prestazioni sul monitoraggio.
 
-Per usare il profiling R nel codice, chiamare questa funzione e specificarne i parametri, incluso il percorso del file di log che verrà scritto. È possibile attivare o disattivare il profiling nel codice. Nella sintassi seguente viene illustrato l'utilizzo di base: 
+Per usare il profiling R nel codice, chiamare questa funzione e specificarne i parametri, incluso il percorso del file di log che verrà scritto. È possibile attivare o disattivare il profiling nel codice. La sintassi seguente illustra l'utilizzo di base: 
 
 ```R
 # Specify profiling output file.
@@ -59,9 +59,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Debug e profiling in R
 
-La documentazione per Microsoft R Open, che è installata per impostazione predefinita, include un manuale sullo sviluppo di estensioni per il linguaggio R che illustra in dettaglio la profilatura [e il debug](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) . È possibile trovare la stessa documentazione nel computer in C:\Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\doc\manual.
+La documentazione per Microsoft R Open, installata per impostazione predefinita, include un manuale sullo sviluppo di estensioni per il linguaggio R che descrive [profilatura e debug](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in modo dettagliato. È possibile trovare la stessa documentazione nel computer in C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
 
 ## <a name="see-also"></a>Vedere anche
 
-+ [pacchetto utils R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R" di Hadley Wickham](http://adv-r.had.co.nz)
++ [Pacchetto utils di R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
++ ["Advanced R" (R avanzato) di Hadley Wickham](http://adv-r.had.co.nz)

@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903615"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727771"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903615"
 Questo articolo descrive come identificare e risolvere problemi di accesso alle chiavi di Azure Key Vault che hanno reso inaccessibile un database configurato per l'uso di [Transparent Data Encryption (TDE) con chiavi gestite dai clienti in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## <a name="introduction"></a>Introduzione
-Quando la tecnologia TDE è configurata per l'uso di una chiave gestita dal cliente in Azure Key Vault, per mantenere online il database è necessario disporre dell'accesso continuo alla protezione TDE.  Se il server SQL logico non ha più accesso alla protezione TDE gestita dal cliente in Azure Key Vault, un database negherà tutte le connessioni e risulterà inaccessibile nel portale di Azure.
+Quando la tecnologia TDE è configurata per l'uso di una chiave gestita dal cliente in Azure Key Vault, per mantenere online il database è necessario disporre dell'accesso continuo alla protezione TDE.  Se il server SQL logico non ha più accesso alla protezione TDE gestita dal cliente in Azure Key Vault, un database inizierà a negare tutte le connessioni con il messaggio di errore appropriato e cambierà lo stato in *Inaccessibile* nel portale di Azure.
 
-Per le prime 48 ore, se il problema sottostante di accesso alla chiave di Azure Key Vault viene risolto, il database verrà risanato e riportato online automaticamente.  Ciò significa che per tutti i casi di interruzione intermittente e temporanea della connessione di rete non è richiesta alcuna azione da parte dell'utente e il database viene riportato online automaticamente.  Nella maggior parte dei casi, per risolvere il problema sottostante di accesso alla chiave di Key Vault è necessario l'intervento dell'utente. 
+Per le prime 8 ore, se il problema sottostante di accesso alla chiave di Azure Key Vault viene risolto, il database verrà riparato e riportato online automaticamente. Ciò significa che per tutti i casi di interruzione intermittente e temporanea della connessione di rete non è richiesta alcuna azione da parte dell'utente e il database viene riportato online automaticamente. Nella maggior parte dei casi, per risolvere il problema sottostante di accesso alla chiave di Key Vault è necessario l'intervento dell'utente. 
 
-Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi.  Tutte le altre azioni sul database non sono consentite fino a quando non è stato ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online.   Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno supportata la modifica dell'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
+Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi. Tutte le altre azioni sul database non sono consentite fino a quando non viene ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online. Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno possibile modificare l'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
 
-Quando un database rimane inaccessibile per più di 48 ore, non verrà più eseguita la correzione automatica.  Se l'accesso alla chiave di Azure Key Vault richiesta è stato ripristinato, è necessario riconvalidare manualmente l'accesso per riportare online il database.  Il ripristino dello stato online del database dopo che questo è rimasto inaccessibile per più di 48 ore può richiedere una notevole quantità di tempo a seconda delle dimensioni del database e attualmente richiede un ticket di supporto. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il collegamento geografico se è stato configurato il ripristino di emergenza geografico, la cronologia del recupero temporizzato e i tag, andranno perse.  È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di risolvere entro 48 ore i problemi sottostanti relativi all'insieme di credenziali delle chiavi. 
-
+Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database e attualmente richiede un ticket di supporto. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il collegamento geografico se è stato configurato il ripristino di emergenza geografico, la cronologia del recupero temporizzato e i tag, andranno perse. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errori comuni che causano l'inaccessibilità dei database
 
@@ -176,13 +175,13 @@ Descrizione: il database non ha più accesso alla chiave di Azure Key Vault ed �
 
  
 
-**Evento registrato quando inizia il calcolo del tempo di attesa di 48 ore per la correzione automatica** 
+**Evento registrato quando inizia il calcolo del tempo di attesa di 8 ore per la riparazione automatica** 
 
 Nome evento: MakeDatabaseInaccessible 
 
 Stato: InProgress 
 
-Descrizione: il database rimane in attesa che l'accesso alla chiave di Azure Key Vault venga ristabilito dall'utente entro 48 ore.   
+Descrizione: il database rimane in attesa che l'accesso alla chiave di Azure Key Vault venga ristabilito dall'utente entro 8 ore.   
 
  
 
@@ -196,7 +195,7 @@ Descrizione: l'accesso del database alla chiave di Azure Key Vault è stato rist
 
  
 
-**Evento registrato quando il problema non è stato risolto entro 48 ore e l'accesso alla chiave di Azure Key Vault deve essere convalidato manualmente** 
+**Evento registrato quando il problema non è stato risolto entro 8 ore e l'accesso alla chiave di Azure Key Vault deve essere convalidato manualmente** 
 
 Nome evento: MakeDatabaseInaccessible 
 
