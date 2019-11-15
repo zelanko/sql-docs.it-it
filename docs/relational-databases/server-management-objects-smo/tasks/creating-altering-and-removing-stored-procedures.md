@@ -1,6 +1,6 @@
 ---
-title: Creazione, modifica e rimozione di stored procedure | Microsoft Docs
-ms.custom: ''
+title: Creazione, modifica e rimozione di stored procedure
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +13,19 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 902f2a4b2dd60b96f26ed8d93eff28471baeb63c
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148494"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095499"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Creazione, modifica e rimozione di stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le stored procedure sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono \@ il prefisso e devono essere creati singolarmente <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> utilizzando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> oggetti e aggiungendo <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> alla raccolta dell'oggetto.  
+ La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono il prefisso \@ e devono essere creati singolarmente utilizzando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> oggetti e aggiungendo alla raccolta <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
 ## <a name="example"></a>Esempio  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

@@ -1,6 +1,5 @@
 ---
-title: Conversioni eseguite da client a server | Microsoft Docs
-ms.custom: ''
+title: Conversioni eseguite da client a server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773050"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096006"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "73773050"
   
 ||||  
 |-|-|-|  
-|Tipo|Lunghezza (in caratteri)|Scala|  
+|Type|Lunghezza (in caratteri)|Scala|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

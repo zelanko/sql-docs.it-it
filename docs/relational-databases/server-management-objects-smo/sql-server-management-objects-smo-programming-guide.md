@@ -1,6 +1,6 @@
 ---
-title: Guida alla programmazione di SQL Server Management Objects (SMO) | Microsoft Docs
-ms.custom: ''
+title: Guida alla programmazione di SMO (SQL Server Management Objects)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd5a5e2aa8c9003c06ae80f1cf077a0f54f4e21
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148561"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095383"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guida alla programmazione di SMO (SQL Server Management Objects)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) è una raccolta di oggetti progettati per la programmazione di tutti gli aspetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] della gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) è una raccolta di oggetti progettati per la programmazione di tutti gli aspetti della gestione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|

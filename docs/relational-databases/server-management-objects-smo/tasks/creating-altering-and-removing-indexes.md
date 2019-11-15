@@ -1,6 +1,6 @@
 ---
-title: Creazione, modifica e rimozione di indici | Microsoft Docs
-ms.custom: ''
+title: Creazione, modifica e rimozione di indici
+ms.custom: seo-dt-2019
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566cec97b8c26f21602807b3dd36c307864f62ec
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148482"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095512"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
 
@@ -32,7 +32,7 @@ ms.locfileid: "70148482"
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Creazione di un indice composto non cluster in Visual Basic  
- In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> su **false** per un indice non cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Creazione di un indice composto non cluster in Visual C#  
- In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> su **false** per un indice non cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Creazione di un indice composto non cluster in PowerShell  
- In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> su **false** per un indice non cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

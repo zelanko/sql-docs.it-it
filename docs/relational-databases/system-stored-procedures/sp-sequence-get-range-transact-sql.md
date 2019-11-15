@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304770"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095334"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72304770"
   
  Per ulteriori informazioni sui numeri di sequenza, vedere [numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,25 +53,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>Argomenti  
 `[ @sequence_name = ] N'sequence'` il nome dell'oggetto sequenza. Lo schema è facoltativo. *SEQUENCE_NAME* è di **tipo nvarchar (776)** .  
   
-`[ @range_size = ] range_size` il numero di valori da recuperare dalla sequenza. **\@range_size è di** tipo **bigint**.  
+`[ @range_size = ] range_size` il numero di valori da recuperare dalla sequenza. **\@range_size** è di tipo **bigint**.  
   
-il parametro di output `[ @range_first_value = ] range_first_value` restituisce il primo valore (minimo o massimo) dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. **\@range_first_value** è di tipo **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
+`[ @range_first_value = ] range_first_value` parametro di output restituisce il primo valore (minimo o massimo) dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. **\@range_first_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-il parametro di output facoltativo `[ @range_last_value = ] range_last_value` restituisce l'ultimo valore dell'intervallo richiesto. **\@range_last_value** è di tipo **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
+`[ @range_last_value = ] range_last_value` parametro di output facoltativo restituisce l'ultimo valore dell'intervallo richiesto. **\@range_last_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-il parametro di output facoltativo `[ @range_cycle_count = ] range_cycle_count` restituisce il numero di volte in cui l'oggetto sequenza è stato ciclo per restituire l'intervallo richiesto. **\@range_cycle_count è di** **tipo int**.  
+`[ @range_cycle_count = ] range_cycle_count` parametro di output facoltativo restituisce il numero di volte in cui l'oggetto sequenza è stato riciclato per restituire l'intervallo richiesto. **\@range_cycle_count** è di **tipo int**.  
   
-il parametro di output facoltativo `[ @sequence_increment = ] sequence_increment` restituisce l'incremento dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. **\@sequence_increment** è di tipo **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
+`[ @sequence_increment = ] sequence_increment` parametro di output facoltativo restituisce l'incremento dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. **\@sequence_increment** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @sequence_min_value = ] sequence_min_value` parametro di output facoltativo restituisce il valore minimo dell'oggetto sequenza. **\@sequence_min_value** è di tipo **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
+`[ @sequence_min_value = ] sequence_min_value` parametro di output facoltativo restituisce il valore minimo dell'oggetto sequenza. **\@sequence_min_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @sequence_max_value = ] sequence_max_value` parametro di output facoltativo restituisce il valore massimo dell'oggetto sequenza. **\@sequence_max_value** è di tipo **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
+`[ @sequence_max_value = ] sequence_max_value` parametro di output facoltativo restituisce il valore massimo dell'oggetto sequenza. **\@sequence_max_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Note  
- sp_sequence_get_rangeis in sys. è possibile fare riferimento allo schema e come sys. sp_sequence_get_range.  
+## <a name="remarks"></a>Osservazioni  
+ sp_sequence_get_rangeis in sys. è possibile fare riferimento allo schema ed è possibile fare riferimento a sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Sequenze con riavvio  
  Se necessario, l'oggetto sequenza verrà riavviato il numero di volte opportuno a servire l'intervallo richiesto. Il numero di riavvii viene restituito al chiamante tramite il parametro `@range_cycle_count`.  
@@ -84,7 +84,7 @@ il parametro di output facoltativo `[ @sequence_increment = ] sequence_increment
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione UPDATE per l'oggetto sequenza o lo schema dell'oggetto sequenza.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,12 +105,11 @@ CREATE SEQUENCE Test.RangeSeq
 ;  
 ```  
   
-### <a name="a-retrieving-a-range-of-sequence-values"></a>R. Recupero di un intervallo di valori di sequenza  
+### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Recupero di un intervallo di valori di sequenza  
  Nell'istruzione seguente vengono ottenuti quattro numeri di sequenza dall'oggetto sequenza test. RangeSeq e viene restituito all'utente il primo numero di numeri.  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -121,8 +120,8 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>B. Restituzione di tutti i parametri di output  
- Nell'esempio seguente vengono restituiti tutti i valori di output della procedura sp_sequence_get_range.  
+### <a name="b-returning-all-output-parameters"></a>b. Restituzione di tutti i parametri di output  
+ Nell'esempio seguente vengono restituiti tutti i valori di output dalla procedura sp_sequence_get_range.  
   
 ```  
 DECLARE    

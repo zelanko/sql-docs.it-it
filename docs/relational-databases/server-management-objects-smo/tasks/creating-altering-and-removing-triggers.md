@@ -1,6 +1,6 @@
 ---
-title: Creazione, modifica e rimozione di trigger | Microsoft Docs
-ms.custom: ''
+title: Creazione, modifica e rimozione di trigger
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,16 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd2aa0bce55273295cfde3b15d2863d7e35f3d26
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: f4e6b81723b986974003d376b84dc7b53a96fb29
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911260"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094504"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Creazione, modifica e rimozione di trigger
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  In SMO i trigger sono rappresentati tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. Il [!INCLUDE[tsql](../../../includes/tsql-md.md)] codice che viene eseguito quando il trigger attivato viene impostato <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> dalla proprietà dell'oggetto trigger. Il tipo di trigger viene impostato tramite altre proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, ad esempio la proprietà <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Si tratta di una proprietà booleana che specifica se il trigger viene attivato da un **aggiornamento** dei record nella tabella padre.  
+  In SMO i trigger sono rappresentati tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. Il codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] eseguito quando il trigger attivato viene impostato dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> dell'oggetto trigger. Il tipo di trigger viene impostato tramite altre proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, ad esempio la proprietà <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Si tratta di una proprietà booleana che specifica se il trigger viene attivato da un **aggiornamento** dei record nella tabella padre.  
   
  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Trigger> rappresenta trigger DML (Data Manipulation Language) tradizionali. In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive sono supportati anche i trigger DDL (Data Definition Language). I trigger DDL sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> e dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>.  
   

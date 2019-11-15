@@ -1,6 +1,6 @@
 ---
-title: Creazione, modifica e rimozione di funzioni definite dall'utente | Microsoft Docs
-ms.custom: ''
+title: Creazione, modifica e rimozione delle funzioni definite dall'utente
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,16 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd6a7b8817e86207e9e8c8df2270344d5106ead3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148487"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095562"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Creazione, modifica e rimozione delle funzioni definite dall'utente
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  L' <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> oggetto fornisce funzionalità che consentono agli utenti di gestire a livello di codice le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] funzioni definite dall'utente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le funzioni definite dall'utente supportano parametri di input e di output e riferimenti diretti alle colonne delle tabelle.  
+  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> fornisce funzionalità che consentono agli utenti di gestire a livello di codice le funzioni definite dall'utente nei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Le funzioni definite dall'utente supportano parametri di input e di output e riferimenti diretti alle colonne delle tabelle.  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario registrare gli assembly all'interno di un database prima di poterli utilizzare in stored procedure, funzioni definite dall'utente, trigger e tipi di dati definiti dall'utente. In SMO questa funzionalità è supportata con l'oggetto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
@@ -65,7 +65,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Creazione di una funzione scalare definita dall'utente in Visual C#  
- In questo esempio di codice viene illustrato come creare e rimuovere una funzione scalare definita dall'utente con un parametro dell'oggetto <xref:System.DateTime> di input e un tipo restituito integer in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La funzione definita dall'utente viene creata nel database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Nell'esempio viene creata la funzione definita dall'utente. `ISOweek` (Indici per tabelle con ottimizzazione per la memoria). Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Affinché il calcolo venga eseguito correttamente, è necessario impostare l'opzione `DATEFIRST` del database su `1` prima di chiamare la funzione.  
+ In questo esempio di codice viene illustrato come creare e rimuovere una funzione scalare definita dall'utente con un parametro dell'oggetto <xref:System.DateTime> di input e un tipo restituito integer in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La funzione definita dall'utente viene creata nel database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Nell'esempio viene creata la funzione definita dall'utente. `ISOweek`. Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Affinché il calcolo venga eseguito correttamente, è necessario impostare l'opzione `DATEFIRST` del database su `1` prima di chiamare la funzione.  
   
 ```csharp  
 {  
@@ -101,7 +101,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Creazione di una funzione scalare definita dall'utente in PowerShell  
- In questo esempio di codice viene illustrato come creare e rimuovere una funzione scalare definita dall'utente con un parametro dell'oggetto <xref:System.DateTime> di input e un tipo restituito integer in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La funzione definita dall'utente viene creata nel database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Nell'esempio viene creata la funzione definita dall'utente. `ISOweek` (Indici per tabelle con ottimizzazione per la memoria). Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Affinché il calcolo venga eseguito correttamente, è necessario impostare l'opzione `DATEFIRST` del database su `1` prima di chiamare la funzione.  
+ In questo esempio di codice viene illustrato come creare e rimuovere una funzione scalare definita dall'utente con un parametro dell'oggetto <xref:System.DateTime> di input e un tipo restituito integer in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La funzione definita dall'utente viene creata nel database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Nell'esempio viene creata la funzione definita dall'utente. `ISOweek`. Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Affinché il calcolo venga eseguito correttamente, è necessario impostare l'opzione `DATEFIRST` del database su `1` prima di chiamare la funzione.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

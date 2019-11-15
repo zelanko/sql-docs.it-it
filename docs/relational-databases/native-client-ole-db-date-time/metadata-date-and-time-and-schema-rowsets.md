@@ -1,6 +1,5 @@
 ---
-title: Data e ora e set di righe dello schema | Microsoft Docs
-ms.custom: ''
+title: Data e ora e set di righe dello schema
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773509"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095369"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e dei tipi Date e Time
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo argomento vengono fornite informazioni sui set di righe COLUMNS e PROCEDURE_PARAMETERS. Tali informazioni fanno riferimento ai miglioramenti apportati alla data e all'ora di OLE DB per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -30,10 +30,10 @@ ms.locfileid: "73773509"
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|data|DBTYPE_DBDATE|Clear|0|  
+|data|DBTYPE_DBDATE|Cancella|0|  
 |time|DBTYPE_DBTIME2|Impostare|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Cancella|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Cancella|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Impostare|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Impostare|0..7|  
   

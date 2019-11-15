@@ -1,6 +1,6 @@
 ---
-title: Pianificazione delle attività amministrative automatiche in SQL Server Agent | Microsoft Docs
-ms.custom: ''
+title: Pianificazione delle attività amministrative automatiche in SQL Server Agent
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148324"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094383"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Pianificazione delle attività amministrative automatiche in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "70148324"
 ## <a name="examples"></a>Esempi  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Per i programmi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano Agent, è necessario includere l'istruzione **using** per qualificare lo spazio dei nomi Agent. Inserire l'istruzione dopo le altre istruzioni **using** , prima di qualsiasi dichiarazione nell'applicazione, ad esempio:
+Per i programmi che utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è necessario includere l'istruzione **using** per qualificare lo spazio dei nomi dell'agente. Inserire l'istruzione dopo le altre istruzioni **using** , prima di qualsiasi dichiarazione nell'applicazione, ad esempio:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
   
- Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre perché **operator** è [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] una parola chiave.  
+ Per la notifica dell'avviso è necessario un operatore. Il tipo di <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> richiede le parentesi quadre perché **operator** è una parola chiave [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
   
- Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre perché **operator** è [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] una parola chiave.  
+ Per la notifica dell'avviso è necessario un operatore. Il tipo di <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> richiede le parentesi quadre perché **operator** è una parola chiave [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -268,6 +268,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
- [Implementazione di processi](../../../ssms/agent/implement-jobs.md)  
+ [Implementare processi](../../../ssms/agent/implement-jobs.md)  
   
   

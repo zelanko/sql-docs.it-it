@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592f39e997574313e9e61e626a90aa3ac5fa310f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982330"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095375"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sui servizi SQL Server, Full-text e SQL Server Agent nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Per segnalare informazioni sullo stato di tali servizi, utilizzare la DMV.  
+  Restituisce informazioni sul servizio SQL Server, full-text, Launchpad di SQL Server (SQL Server 2017 +) e SQL Server Agent Services nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per segnalare informazioni sullo stato di tali servizi, utilizzare la DMV.  
   
  
 |Nome colonna|Tipo di dati|Descrizione|  

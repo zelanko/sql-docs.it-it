@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981851"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095862"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ Se un database non è `ONLINE`oppure `AUTO_CLOSE` è impostato su `ON` e il data
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT è ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT è OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT è locale<br /> 0 = CURSOR_DEFAULT è globale|  
 |**is_fulltext_enabled**|**bit**|1 = La funzionalità full-text è abilitata per il database<br /> 0 = La funzionalità full-text è disabilitata per il database|  
-|**is_trustworthy_on**|**bit**|1 = Database contrassegnato come attendibile<br /> 0 = Database non contrassegnato come attendibile|  
+|**is_trustworthy_on**|**bit**|1 = Database contrassegnato come attendibile<br /> 0 = Database non contrassegnato come attendibile<br /> Per impostazione predefinita, Service Broker è disabilitato per i database ripristinati o collegati, L'eccezione è rappresentata dal mirroring del database, in cui Service Broker viene abilitato dopo il failover.|  
 |**is_db_chaining_on**|**bit**|1 = Il concatenamento della proprietà tra database è impostato su ON<br /> 0 = Il concatenamento della proprietà tra database è impostato su OFF|  
 |**is_parameterization_forced**|**bit**|1 = La parametrizzazione è FORCED<br /> 0 = La parametrizzazione è SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = Il database include una chiave master crittografata<br /> 0 = Il database non include una chiave master crittografata|  
@@ -93,7 +93,7 @@ Se un database non è `ONLINE`oppure `AUTO_CLOSE` è impostato su `ON` e il data
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION è ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION è OFF|  
 |**is_cdc_enabled**|**bit**|1 = Database abilitato per l'acquisizione dei dati delle modifiche. Per ulteriori informazioni, vedere [sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indica se il database è crittografato (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET ENCRYPTION`). I possibili valori sono i seguenti:<br /> 1 = Crittografato<br /> 0 = Non crittografato<br /> Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Se è in corso la decrittografia del database, `is_encrypted` Visualizza un valore pari a 0. Per visualizzare lo stato del processo di crittografia, è possibile utilizzare la vista a gestione dinamica [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indica se il database rispetta le priorità di conversazione (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). I possibili valori sono i seguenti:<br /> 1 = HONOR_BROKER_PRIORITY è ON<br /> 0 = HONOR_BROKER_PRIORITY è OFF|  
+|**is_honor_broker_priority_on**|**bit**|Indica se il database rispetta le priorità di conversazione (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). I possibili valori sono i seguenti:<br /> 1 = HONOR_BROKER_PRIORITY è ON<br /> 0 = HONOR_BROKER_PRIORITY è OFF<br /> Per impostazione predefinita, Service Broker è disabilitato per i database ripristinati o collegati, L'eccezione è rappresentata dal mirroring del database, in cui Service Broker viene abilitato dopo il failover.|  
 |**replica_id**|**uniqueidentifier**|Identificatore univoco della replica di disponibilità di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] locale del gruppo di disponibilità, se presente, di cui fa parte il database.<br /> NULL = il database non fa parte di una replica di disponibilità di un gruppo di disponibilità.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificatore univoco del database all'interno di un Always On gruppo di disponibilità, se presente, in cui il database partecipa. **group_database_id** è lo stesso per il database nella replica primaria e in ogni replica secondaria in cui il database è stato aggiunto al gruppo di disponibilità.<br /> NULL = il database non fa parte di una replica di disponibilità in alcun gruppo di disponibilità.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|L'ID del pool di risorse per cui è stato eseguito il mapping al database. Questa pool di risorse controlla la memoria totale disponibile alle tabelle ottimizzate per la memoria nel database.<br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive|  
