@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049956"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981809"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON table_name
  Utilizzare la risorsa per la lingua neutra (0x0) per le colonne non BLOB e non XML che contengono dati di testo in più lingue oppure nei casi in cui la lingua del testo archiviato nella colonna è sconosciuta. Per i documenti archiviati in colonne di tipo XML o BLOB, in fase di indicizzazione verrà utilizzata la codifica di lingua del documento. Nelle colonne XML, ad esempio, la lingua è identificata dall'attributo xml:lang nei documenti XML. In fase di query, il valore precedentemente specificato in *language_term* diventa la lingua predefinita per le query full-text, a meno che non si specifichi *language_term* all'interno di una query full-text.  
   
  STATISTICAL_SEMANTICS  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Consente di creare la frase chiave aggiuntiva e gli indici di somiglianza dei documenti che fanno parte dell'indicizzazione semantica statistica. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -141,7 +141,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Per altre informazioni, vedere [Interazioni del rilevamento delle modifiche con NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Consente di abilitare o disabilitare l'indicizzazione semantica statistica per le colonne specificate. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -179,7 +179,7 @@ ALTER FULLTEXT INDEX ON table_name
  Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Modifica l'elenco delle proprietà di ricerca associate all'indice, se presente.  
   
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="change-tracking-no-population"></a> Interazioni del rilevamento delle modifiche con NO POPULATION  
  Il popolamento dell'indice full-text dipende dal fatto che il rilevamento delle modifiche sia o meno abilitato e che si specifichi o meno WITH NO POPULATION nell'istruzione ALTER FULLTEXT INDEX. Nella tabella seguente è riepilogato il risultato di tale interazione.  
   
-|Rilevamento delle modifiche|WITH NO POPULATION|Risultato|  
+|Rilevamento modifiche|WITH NO POPULATION|Risultato|  
 |---------------------|------------------------|------------|  
 |Non abilitato|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
 |Non abilitato|Specified|L'indice non viene popolato fino a quando non viene eseguita un'istruzione ALTER FULLTEXT INDEX...START POPULATION.|  
@@ -307,7 +307,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>B. Associazione di un elenco delle proprietà a un indice full-text  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Nell'esempio seguente l'elenco delle proprietà `DocumentPropertyList` viene associato all'indice full-text della tabella `Production.Document`. Questa istruzione ALTER FULLTEXT INDEX avvia un popolamento completo, che corrisponde al comportamento predefinito della clausola SET SEARCH PROPERTY LIST.  
   
@@ -324,7 +324,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>C. Rimozione di un elenco delle proprietà di ricerca  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene rimosso l'elenco delle proprietà `DocumentPropertyList` dall'indice full-text della tabella `Production.Document`. In questo esempio non è necessario affrettarsi a rimuovere le proprietà dall'indice, pertanto viene specificata l'opzione WITH NO POPULATION. Tuttavia, la ricerca a livello di proprietà non è più consentita in questo indice full-text.  
   

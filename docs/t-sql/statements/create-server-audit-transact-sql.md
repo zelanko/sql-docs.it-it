@@ -22,19 +22,19 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117139"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982997"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Viene creato un oggetto controllo del server utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  Indica il numero massimo di file da mantenere nel file system oltre al file corrente. Il valore *MAX_ROLLOVER_FILES* deve essere di tipo Integer o UNLIMITED. Il valore predefinito è UNLIMITED. Questo parametro viene valutato ogni volta che il controllo viene riavviato (quando l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene riavviata o quando il controllo viene disabilitato e quindi riabilitato) oppure quando è necessario un nuovo file perché è stato raggiunto il valore MAXSIZE. Quando *MAX_ROLLOVER_FILES* viene valutato, se il numero di file supera l'impostazione di *MAX_ROLLOVER_FILES*, viene eliminato il file meno recente. Di conseguenza, quando l'impostazione di *MAX_ROLLOVER_FILES* è 0, viene creato un nuovo file 0 ogni volta che l'impostazione di *MAX_ROLLOVER_FILES* viene valutata. Un solo file viene eliminato automaticamente quando viene valutata l'impostazione di *MAX_ROLLOVER_FILES*, pertanto quando il valore di *MAX_ROLLOVER_FILES* viene ridotto, il numero di file non verrà ridotto, a meno che i file obsoleti non vengano eliminati manualmente. Il numero massimo di file specificabili è 2.147.483.647.  
   
  MAX_FILES =*integer*  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Viene specificato il numero massimo di file di controllo che possono essere creati. Quando si raggiunge il limite, non viene eseguito il rollover del primo file. Quando viene raggiunto il limite MAX_FILES, qualsiasi azione che causa la generazione di eventi di controllo aggiuntivi ha esito negativo e viene visualizzato un errore.  
   
@@ -110,18 +110,18 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
  FAIL_OPERATION  
  Le azioni del database non vengono completate se provocano eventi controllati. Le azioni che non provocano eventi controllati possono continuare, ma non si verificano eventi controllati. Il controllo continua nel tentativo di registrare gli eventi e riprende se la condizione di errore viene risolta. Utilizzare questa opzione quando la gestione di un controllo completo è più importante dell'accesso completo al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
  AUDIT_GUID =*uniqueidentifier*  
  Per supportare alcuni tipi di scenari, ad esempio il mirroring del database, a un controllo deve essere associato un GUID specifico corrispondente a quello presente nel database con mirroring. Dopo che il controllo è stato creato, il GUID non può essere modificato.  
   
  predicate_expression  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Viene specificata l'espressione del predicato utilizzata per determinare se un evento deve essere o meno elaborato. Le espressioni del predicato possono essere composte da un massimo di 3000 caratteri, pertanto gli argomenti di tipo stringa risultano limitati.  
   
  event_field_name  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Nome del campo relativo all'evento che consente di identificare l'origine del predicato. I campi del controllo sono descritti in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). È possibile filtrare tutti i campi eccetto `file_name`, `audit_file_offset` e `event_time`.  
 
@@ -136,12 +136,12 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 
  number  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Qualsiasi tipo numerico incluso **decimal**. Le limitazioni sono la mancanza di memoria fisica disponibile o un numero troppo grande per essere rappresentato come un numero intero a 64 bit.  
   
  ' string '  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Stringa ANSI o Unicode come richiesto dal paragone del predicato. Non viene eseguita alcuna conversione del tipo di stringa implicita per le funzioni del paragone del predicato. Il passaggio del tipo non corretto comporta un errore.  
   

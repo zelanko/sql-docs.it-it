@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882387"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74057659"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -580,7 +580,8 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Panoramica: Database SQL di Azure
 
-Nel database SQL di Azure crea una tabella esterna per [query elastiche](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) (in anteprima).
+Nel database SQL di Azure crea una tabella esterna per [query elastiche](/azure/sql-database/sql-database-elastic-query-overview/) (in anteprima).
+
 
 Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -755,7 +756,7 @@ column_name <data_type>
     | REJECT_TYPE = value | percentage,  
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
-    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
 ```  

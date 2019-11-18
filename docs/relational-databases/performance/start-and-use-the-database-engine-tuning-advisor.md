@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113307"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983274"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68113307"
 
       ||  
       |-|  
-      |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+      |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
 
   
 -   Utilizzare la cache dei piani come carico di lavoro. In questo modo, è possibile evitare di dover creare manualmente un carico di lavoro. Per ulteriori informazioni, vedere [Ottimizzare un database](#Tune) di seguito in questo argomento.  

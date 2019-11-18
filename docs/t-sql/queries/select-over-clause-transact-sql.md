@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948331"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981701"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67948331"
   
 -   [Funzione NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specifica che i valori nella colonna specificata devono essere ordinati in ordine crescente o decrescente. ASC è l'ordinamento predefinito. I valori Null vengono considerati i valori in assoluto più piccoli.  
   
  ROWS | RANGE  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Limita ulteriormente le righe all'interno della partizione specificando i punti iniziali e finali. A tale scopo, è necessario specificare un intervallo di righe rispetto alla riga corrente in base all'associazione logica o all'associazione fisica. L'associazione fisica viene eseguita mediante la clausola ROWS.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS o RANGE richiede che venga specificata la clausola ORDER BY. Se ORDER BY contiene più espressioni di ordinamento, CURRENT ROW FOR RANGE considera tutte le colonne nell'elenco ORDER BY per la determinazione della riga corrente.  
   
  UNBOUNDED PRECEDING  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Specifica che la finestra inizia in corrispondenza della prima riga della partizione. UNBOUNDED PRECEDING può essere specificato solo come punto iniziale della finestra.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve precedere la riga corrente. Questa specifica non è consentita per RANGE.  
   
  CURRENT ROW  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Specifica che la finestra inizia o termina in corrispondenza della riga corrente quando viene utilizzato con ROWS o in corrispondenza del valore corrente quando viene utilizzato con RANGE. CURRENT ROW può essere specificato sia come punto iniziale che come punto finale.  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Utilizzato con ROWS o RANGE per specificare i punti limite inferiore (punto iniziale) e superiore (punto finale) della finestra. Il valore \<window frame bound> definisce il punto limite iniziale e il valore \<window frame bound> definisce il punto limite finale. Il limite superiore non può essere minore del limite inferiore.  
   
  UNBOUNDED FOLLOWING  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Specifica che la finestra termina in corrispondenza dell'ultima riga della partizione. UNBOUNDED FOLLOWING può essere specificato solo come punto finale della finestra. Ad esempio, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING definisce una finestra che inizia in corrispondenza della riga corrente e termina in corrispondenza dell'ultima riga della partizione.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve seguire la riga corrente. Quando \<unsigned value specification> FOLLOWING viene specificato come punto iniziale della finestra, il punto finale deve essere \<unsigned value specification> FOLLOWING. Ad esempio, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING definisce una finestra che inizia in corrispondenza della seconda riga successiva alla riga corrente e termina in corrispondenza della decima riga successiva alla riga corrente. Questa specifica non è consentita per RANGE.  
   
  valore letterale integer senza segno  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Valore letterale integer positivo (incluso 0) che specifica il numero di righe o valori che deve precedere o seguire la riga o il valore corrente. Questa specifica è valida solo per ROWS.  
   
@@ -188,7 +188,7 @@ Se viene specificato ROWS/RANGE e \<window frame preceding> viene usato come \<w
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  Nell'esempio seguente viene illustrato l'utilizzo della clausola OVER con la funzione ROW_NUMBER per visualizzare un numero di riga per ogni riga all'interno di una partizione. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione in base alla colonna `SalesYTD`. La clausola ORDER BY nell'istruzione SELECT determina l'ordine in cui viene restituito l'intero set di risultati della query.  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. Specifica della clausola ROWS  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene usata la clausola ROWS per definire una finestra su cui vengono calcolate le righe come la riga corrente e il numero *N* di righe che seguono (in questo esempio 1 riga).  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  L'esempio seguente restituisce ROW_NUMBER per i venditori in base alle rispettive quote di vendite assegnata.  
   
 ```sql  

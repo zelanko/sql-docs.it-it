@@ -1,6 +1,6 @@
 ---
-title: Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database | Microsoft Docs
-ms.custom: ''
+title: Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211257"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095773"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

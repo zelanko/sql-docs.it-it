@@ -1,6 +1,5 @@
 ---
-title: Usare l'output FOR JSON in SQL Server e nelle app client (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Usare l'output FOR JSON in SQL Server e nelle app client
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ddab9f3375a490e1c0d11912da89612320fa877
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b284052b049515aedc1541ae1cab6bf5719afe
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928041"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095922"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Usare l'output FOR JSON in SQL Server e nelle app client (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

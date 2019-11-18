@@ -20,19 +20,19 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024286"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982942"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il valore delle proprietà di indice o statistiche specificate in base al numero di identificazione della tabella, al nome dell'indice o delle statistiche e al nome della proprietà. Restituisce NULL per gli indici XML.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Le statistiche sono state generate mediante l'opzione AUTO_CREATE_STATISTICS di ALTER DATABASE.|1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsClustered**|Indice cluster.|1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsDisabled**|L'indice è disabilitato.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
-|**IsFulltextKey**|L'indice è la chiave di indicizzazione full-text e semantica per una tabella.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False o indice XML.<br /><br /> NULL = Input non valido.|  
+|**IsFulltextKey**|L'indice è la chiave di indicizzazione full-text e semantica per una tabella.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> 1 = True<br /><br /> 0 = False o indice XML.<br /><br /> NULL = Input non valido.|  
 |**IsHypothetical**|L'indice è ipotetico e non può essere utilizzato direttamente come percorso di accesso ai dati. Gli indici ipotetici contengono statistiche a livello di colonna e vengono gestiti e utilizzati da Ottimizzazione guidata motore di database.|1 = True<br /><br /> 0 = false o indice XML.<br /><br /> NULL = Input non valido.|  
-|**IsPadIndex**|All'indice è associata la quantità di spazio da lasciare aperto in ogni nodo interno.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False o indice XML.|  
-|**IsPageLockDisallowed**|Valore per il blocco di pagina impostato mediante l'opzione ALLOW_PAGE_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = il blocco di pagina è disattivato.<br /><br /> 0 = il blocco di pagina è attivato.<br /><br /> NULL = Input non valido.|  
-|**IsRowLockDisallowed**|Valore per il blocco di riga impostato tramite l'opzione ALLOW_ROW_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = il blocco di riga è disattivato.<br /><br /> 0 = il blocco di riga è attivato.<br /><br /> NULL = Input non valido.|  
+|**IsPadIndex**|All'indice è associata la quantità di spazio da lasciare aperto in ogni nodo interno.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> 1 = True<br /><br /> 0 = False o indice XML.|  
+|**IsPageLockDisallowed**|Valore per il blocco di pagina impostato mediante l'opzione ALLOW_PAGE_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> 1 = il blocco di pagina è disattivato.<br /><br /> 0 = il blocco di pagina è attivato.<br /><br /> NULL = Input non valido.|  
+|**IsRowLockDisallowed**|Valore per il blocco di riga impostato tramite l'opzione ALLOW_ROW_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> 1 = il blocco di riga è disattivato.<br /><br /> 0 = il blocco di riga è attivato.<br /><br /> NULL = Input non valido.|  
 |**IsStatistics**|*index_or_statistics_name* rappresenta le statistiche create dall'istruzione CREATE STATISTICS o dall'opzione AUTO_CREATE_STATISTICS di ALTER DATABASE.|1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsUnique**|Indice univoco.|1 = True<br /><br /> 0 = False o indice XML.|  
-|**IsColumnstore**|L'indice è un indice columnstore con ottimizzazione per la memoria xVelocity.|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|L'indice è un indice columnstore con ottimizzazione per la memoria xVelocity.|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|L'ottimizzazione dell'indice per gli inserimenti dell'ultima pagina è abilitata.|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Tipi restituiti  

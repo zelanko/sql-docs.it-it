@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026046"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926035"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ Con l'installazione di Local DB viene copiato un set di file minimo necessario p
 
 ## <a name="try-it-out"></a>Per provarlo: 
 
-- Per scaricare e installare Local DB di SQL Server Express, passare ai **[download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB è una funzionalità selezionabile durante l'installazione ed è disponibile quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto Local DB. Nel **programma di installazione di Visual Studio**, è possibile installare SQL Server Express Local DB nel contesto del carico di lavoro **Sviluppo per desktop .NET** o come componente singolo.
+- Per scaricare e installare Local DB di SQL Server Express, passare ai **[download di SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB è una funzionalità selezionabile durante l'installazione ed è disponibile quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto Local DB. Nel **programma di installazione di Visual Studio**, è possibile installare SQL Server Express Local DB nel contesto del carico di lavoro **Sviluppo per desktop .NET** o come componente singolo.
 
  >[!TIP]
  > È anche possibile installare Local DB insieme a Visual Studio. Durante l'installazione di Visual Studio selezionare il carico di lavoro **Sviluppo per desktop .NET**, che include SQL Server Express Local DB.
@@ -112,7 +112,7 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|nome|`LocalDBApp1`|
+|Nome|`LocalDBApp1`|
 |Versione|\<Versione corrente>|
 |Nome condiviso|""|
 |Proprietario|"\<utente di Windows>"|
@@ -122,7 +122,7 @@ REM Gather information about the instance of LocalDB
 |Nome pipe dell'istanza|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->Se nell'applicazione viene usata una versione di .NET precedente alla versione 4.0.2 è necessario connettersi direttamente alla named pipe di Local DB. Il valore Nome pipe dell'istanza è la named pipe su cui l'istanza di Local DB è in ascolto. La parte del nome pipe dell'istanza che segue LOCALDB# verrà modificata a ogni avvio dell'istanza di Local DB. Per connettersi all'istanza di Local DB tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], immettere il nome pipe dell'istanza nella casella **Nome server** della finestra di dialogo **Connetti al [!INCLUDE[ssDE](../../includes/ssde-md.md)]**. Dal programma personalizzato è possibile stabilire una connessione all'istanza di Local DB usando una stringa di connessione simile a `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
+>Se nell'applicazione viene usata una versione di .NET precedente alla versione 4.0.2 è necessario connettersi direttamente alla named pipe di Local DB. Il valore Nome pipe dell'istanza è la named pipe su cui l'istanza di Local DB è in ascolto. La parte del nome pipe dell'istanza che segue LOCALDB# verrà modificata a ogni avvio dell'istanza di Local DB. Per connettersi all'istanza di Local DB tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], immettere il nome pipe dell'istanza nella casella **Nome server** della finestra di dialogo **Connetti al [!INCLUDE[ssDE](../../includes/ssde-md.md)]** . Dal programma personalizzato è possibile stabilire una connessione all'istanza di Local DB usando una stringa di connessione simile a `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Connettersi a un'istanza condivisa di Local DB
 

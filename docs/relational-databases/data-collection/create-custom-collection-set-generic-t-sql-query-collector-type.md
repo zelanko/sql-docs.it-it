@@ -1,6 +1,6 @@
 ---
-title: Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico | Microsoft Docs
-ms.custom: ''
+title: Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a95ef0df9ecb24ca772e99b2b899d90432917c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b27dda40294185f923d74b61dfd1b10ce7301ba9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140764"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055580"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

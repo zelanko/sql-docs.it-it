@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064547"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980939"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DATABASE
 Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito database.  
   
 ALL SERVER  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito server. ALL SERVER si applica anche ai trigger LOGON.  
   
@@ -107,7 +107,7 @@ GO
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. Abilitazione di tutti i trigger definiti nello stesso ambito  
 Nell'esempio seguente vengono abilitati tutti i trigger DDL creati nell'ambito del server.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

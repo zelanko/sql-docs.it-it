@@ -22,12 +22,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16ae636e92d109ea8bc9f9ddd67f70a1657cb564
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388451"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095871"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68388451"
 
   Imposta una condizione per l'esecuzione ripetuta di un'istruzione o di un blocco di istruzioni di SQL. Le istruzioni vengono eseguite ripetutamente per tutto il tempo in cui la condizione specificata risulta vera. È possibile controllare l'esecuzione di istruzioni nel ciclo WHILE dall'interno del ciclo tramite le parole chiave BREAK e CONTINUE.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -104,12 +104,11 @@ SELECT LoginID, JobTitle
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
       Print '   ' + @EmployeeID + '      '+  @Title 
-      FETCH NEXT FROM Employee_Cursor;  
+      FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  

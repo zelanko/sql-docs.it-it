@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632893"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056488"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  Quando le regole del classificatore soddisfano le condizioni, name esegue il mapping della richiesta a un gruppo di carico di lavoro.  name è un sysname.  Può contenere fino a 128 caratteri e deve essere il nome di un gruppo di carico di lavoro valido al momento della creazione del classificatore.
 
- I gruppi del carico di lavoro disponibili sono reperibili nella vista del catalogo [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest).
+ I gruppi del carico di lavoro disponibili sono reperibili nella vista del catalogo [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
  *MEMBERNAME* ='security_account'*    
  Account di sicurezza aggiunto al ruolo.  Security_account è un sysname, senza impostazioni predefinite. Security_account può essere un utente del database, un ruolo del database, un account di accesso di Azure Active Directory o un gruppo di Azure Active Directory.

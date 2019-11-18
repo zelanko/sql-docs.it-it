@@ -24,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042046"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980990"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Rimuove uno o più trigger DML o DDL dal database corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,7 +74,7 @@ ON ALL SERVER
  Indica che l'ambito del trigger DDL corrisponde al database corrente. È necessario specificare DATABASE se tale argomento è stato specificato anche al momento della creazione o della modifica del trigger.  
   
  ALL SERVER  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Indica che l'ambito del trigger DDL corrisponde al server corrente. È necessario specificare ALL SERVER se tale valore è stato specificato anche al momento della creazione o della modifica del trigger. ALL SERVER si applica anche ai trigger LOGON.  
   

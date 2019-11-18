@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252212"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981001"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72252212"
   
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72252212"
   
 ## <a name="arguments"></a>Argomenti  
  Account di accesso  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica che il contesto di esecuzione da rappresentare è un account di accesso. L'ambito di rappresentazione è a livello di server.  
   
@@ -85,10 +85,10 @@ ms.locfileid: "72252212"
  COOKIE INTO @*varbinary_variable*  
  Specifica che è possibile ripristinare il contesto di esecuzione precedente solo se l'istruzione REVERT WITH COOKIE chiamante contiene il valore corretto per @*varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a @*varbinary_variable*. L'opzione **COOKIE INTO** può essere usata solo a livello ad hoc.  
   
- @*varbinary_variable* è **varbinary(8000)**.  
+ @*varbinary_variable* è **varbinary(8000)** .  
   
 > [!NOTE]  
->  Il parametro **OUTPUT** del cookie è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(100)**. Le applicazioni devono riservare **varbinary(8000)** in modo che siano in grado di funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione successiva.  
+>  Il parametro **OUTPUT** del cookie è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(100)** . Le applicazioni devono riservare **varbinary(8000)** in modo che siano in grado di funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione successiva.  
   
  CALLER  
  Se utilizzato all'interno di un modulo, specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto del chiamante del modulo.
@@ -129,7 +129,7 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
 ## <a name="using-with-no-revert"></a>Utilizzo di WITH NO REVERT  
  Se l'istruzione EXECUTE AS include la clausola facoltativa WITH NO REVERT, il contesto di esecuzione di una sessione non può essere ripristinato tramite REVERT oppure tramite l'esecuzione di un'altra istruzione EXECUTE AS. Il contesto impostato dall'istruzione rimane valido fino all'eliminazione della sessione.  
   
- Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore *@varbinary_variable*.  
+ Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore *@varbinary_variable* .  
   
  Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato da altri.  
   

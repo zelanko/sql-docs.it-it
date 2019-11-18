@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 71c2dc90dd54fa1f263de1d04915760dc7a34762
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064612"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981979"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -169,7 +169,7 @@ Sono necessarie le autorizzazioni seguenti per creare un assembly CLR con `CLR s
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Esempio A: creazione di un assembly da un file dll  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene presupposto che le applicazioni di esempio di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] siano installate nel percorso predefinito del computer locale e che l'applicazione di esempio HelloWorld.csproj sia compilata. Per altre informazioni, vedere [Esempio Hello World](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
@@ -184,7 +184,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Esempio B: creazione di un assembly dai bit dell'assembly  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Sostituire i bit di esempio, che non sono completi o validi, con i bit dell'assembly.  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843595"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981740"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Argomenti  
  **'** *login* **'**  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Nome dell'account di accesso dell'utente. *login* è di tipo **sysname**. Il parametro facoltativo *login* può essere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure un utente o un gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Se *login* viene omesso, vengono restituite informazioni sul contesto di sicurezza corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
  *Param2*  
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
  Specifica se il nome di accesso viene convalidato. *Param2* è di tipo **int** ed è facoltativo. Se *Param2* è 0, il nome di account di accesso non è convalidato. Se per *Param2* non è specificato 0, il nome di accesso di Windows viene considerato come identico al nome di account di accesso archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Utilizzo di SUSER_SID con un account di accesso specifico  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Utilizzo della funzione SUSER_SID con un nome utente di Windows  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'utente di Windows `London\Workstation1`.  
   
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Confronto tra il nome di account di accesso di Windows e il nome di account di accesso archiviato in SQL Server  
  Nell'esempio seguente viene illustrato come usare *Param2* per ottenere il SID da Windows e usarlo come input per la funzione `SUSER_SNAME`. In questo esempio viene fornito l'account di accesso nel formato archiviato in Windows (`TestComputer\User`) e viene restituito l'account di accesso nel formato nel quale è archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
