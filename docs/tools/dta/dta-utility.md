@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981800"
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,14 +219,14 @@ dta -d AdventureWorks2012 ...
  Specifica che il Query Store essere utilizzato come carico di lavoro. Verranno analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
      
   
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** _workload_trace_table_name_  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*] **.** [*owner_name*] **.** _table_name_ .  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  In questo caso, è importante specificare un tempo di ottimizzazione illimitato (`-A 0`). In caso contrario, Ottimizzazione guidata motore di database utilizza il tempo di ottimizzazione predefinito pari a 8 ore.
  
- **-I** _time_window_in_hours_    
+ **-I** _time_window_in_hours_   
    Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-IQ** (carico di lavoro di query Store). 
 ```  
 dta -iq -I 48  
@@ -273,7 +273,7 @@ dta -iq -I 48
 In questo caso DTA utilizzerà Query Store come origine del carico di lavoro e considererà solo le query eseguite con le ultime 48 ore.  
   ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
 
 
   
@@ -326,7 +326,7 @@ In questo caso DTA utilizzerà Query Store come origine del carico di lavoro e c
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** _server_name_ [ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  Specifica il nome del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi. Se si omette *server_name* , **dta** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria in caso di connessione a un'istanza denominata oppure quando si esegue **dta** da un computer remoto in rete.  
   
  **-s** _session_name_  
