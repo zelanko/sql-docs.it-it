@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383827"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982575"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un nuovo sinonimo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +69,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  Nome del nuovo sinonimo.  
   
  *server_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Indica il nome del server in cui è archiviato l'oggetto di base.  
   
@@ -150,7 +150,7 @@ GO
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. Creazione di un sinonimo per l'oggetto remoto  
  Nell'esempio seguente, l'oggetto di base, `Contact`, è contenuto in un server remoto denominato `Server_Remote`.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

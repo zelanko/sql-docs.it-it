@@ -23,19 +23,19 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2711a9b2bb1530b979a8294b2d3f9a08f764ec6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065958"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982865"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Modifica la password usata per crittografare la chiave privata di un certificato, rimuove la chiave privata o importa la chiave privata se non è presente. Modifica la disponibilità di un certificato per [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -87,7 +87,7 @@ ALTER CERTIFICATE certificate_name
  Se viene specificato solo un nome file, il file viene salvato nella cartella dei dati utente predefinita per l'istanza. Questa cartella potrebbe essere la cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per Local DB di SQL Server Express, la cartella dei dati utente predefinita per l'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
   
  BINARY ='*private_key_bits*'  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Bit della chiave privata specificati come costante binaria. Questi bit possono essere in formato crittografato. Se crittografati, l'utente deve fornire una password di decrittografia. I controlli dei criteri della password non vengono eseguiti su questa password. I bit della chiave privata devono essere in un formato di file PVK.  
   

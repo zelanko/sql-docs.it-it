@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049973"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982030"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  Viene specificato il numero massimo di file di controllo che possono essere creati. Quando si raggiunge il limite, non viene eseguito il rollover del primo file. Quando viene raggiunto il limite MAX_FILES, qualsiasi azione che causa la generazione di eventi di controllo aggiuntivi ha esito negativo e viene visualizzato un errore.  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Questa opzione consente di preallocare il file sul disco in base al valore MAXSIZE. Viene applicata solo se MAXSIZE non è uguale a UNLIMITED. Il valore predefinito è OFF.  
@@ -111,7 +111,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
  FAIL_OPERATION  
  Le azioni del database non vengono completate se provocano eventi controllati. Le azioni che non provocano eventi controllati possono continuare, ma non si verificano eventi controllati. Il controllo continua nel tentativo di registrare gli eventi e riprende se la condizione di errore viene risolta. Utilizzare questa opzione quando la gestione di un controllo completo è più importante dell'accesso completo al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.   
   
  STATE **=** { ON | OFF }  
  Consente di abilitare o disabilitare la raccolta dei record mediante il controllo. La modifica dello stato di un controllo in esecuzione (da ON a OFF) crea una voce che indica l'arresto del controllo, l'entità che ha arrestato il controllo e l'ora in cui si è verificata l'arresto.  
@@ -121,19 +121,19 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
  predicate_expression  
  Viene specificata l'espressione del predicato utilizzata per determinare se un evento deve essere o meno elaborato. Le espressioni del predicato possono essere composte da un massimo di 3000 caratteri, pertanto gli argomenti di tipo stringa risultano limitati.  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  event_field_name  
  Nome del campo relativo all'evento che consente di identificare l'origine del predicato. I campi del controllo sono descritti in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). È possibile controllare tutti i campi eccetto `file_name` e `audit_file_offset`.  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  number  
  Qualsiasi tipo numerico incluso **decimal**. Le limitazioni sono la mancanza di memoria fisica disponibile o un numero troppo grande per essere rappresentato come un numero intero a 64 bit.  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  ' string '  
  Stringa ANSI o Unicode come richiesto dal paragone del predicato. Non viene eseguita alcuna conversione del tipo di stringa implicita per le funzioni del paragone del predicato. Il passaggio del tipo non corretto comporta un errore.  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 ## <a name="remarks"></a>Remarks  
  È necessario specificare almeno una delle clausole TO, WITH o MODIFY NAME quando si chiama ALTER AUDIT.  

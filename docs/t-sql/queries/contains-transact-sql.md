@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902121"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982830"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "67902121"
   
  Per informazioni sulle forme di ricerca full-text supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -151,7 +151,7 @@ CONTAINS (
  Specifica che la query esegue ricerche in tutte le colonne con indicizzazione full-text nella tabella specificata nella clausola FROM per la condizione di ricerca indicata. Le colonne nella clausola CONTAINS devono appartenere a una singola tabella che include un indice full-text. La lingua di tutte le colonne della tabella deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  PROPERTY (*column_name*, '*property_name*')  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Specifica una proprietà di documento in cui cercare la condizione di ricerca specificata.  
   
@@ -246,7 +246,7 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
  Per altre informazioni sui termini di prossimità generici, vedere [Ricerca di parole vicine a un'altra parola con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
   
  Specifica una corrispondenza di parole o frasi e facoltativamente la distanza massima consentita tra termini di ricerca. È anche possibile specificare che i termini di ricerca devono essere trovati nell'ordine esatto in cui vengono specificati (\<match_order>).  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. Uso di CONTAINS con \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>A. Uso di CONTAINS con \<simple_term>  
  Nell'esempio seguente vengono trovati tutti i prodotti il cui prezzo è `$80.99` e contenenti la parola `Mountain`.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Uso di CONTAINS e di una frase con \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. Uso di CONTAINS e di una frase con \<simple_term>  
  Nell'esempio seguente vengono restituiti tutti i prodotti che contengono la frase `Mountain` o `Road`.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. Uso di CONTAINS con \<prefix_term>  
+### <a name="c-using-contains-with-prefix_term"></a>C. Uso di CONTAINS con \<prefix_term>  
  Nell'esempio seguente vengono restituiti tutti i nomi di prodotto della colonna `Name` contenenti almeno una parola che inizia con il prefisso chain.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. Uso di CONTAINS e OR con \<prefix_term>  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. Uso di CONTAINS e OR con \<prefix_term>  
  Nell'esempio seguente vengono restituite tutte le descrizioni di categoria contenenti stringhe con il prefisso `chain` o `full`.  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. Uso di CONTAINS con \<proximity_term>  
+### <a name="e-using-contains-with-proximity_term"></a>E. Uso di CONTAINS con \<proximity_term>  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  L'esempio seguente cerca nella tabella `Production.ProductReview` tutti i commenti che contengono la parola `bike` all'interno di 10 termini della parola `control` e nell'ordine specificato (ovvero dove "`bike`" precede "`control`").  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. Uso di CONTAINS con \<generation_term>  
+### <a name="f-using-contains-with-generation_term"></a>F. Uso di CONTAINS con \<generation_term>  
  Nell'esempio seguente viene eseguita la ricerca di tutti i prodotti con parole derivate da `ride`, ad esempio riding, ridden e così via.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. Uso di CONTAINS con \<weighted_term>  
+### <a name="g-using-contains-with-weighted_term"></a>G. Uso di CONTAINS con \<weighted_term>  
  Nell'esempio seguente viene eseguita la ricerca di tutti i nomi di prodotto contenenti la parola `performance`, `comfortable` o `smooth`. Ogni parola viene ponderata in modo diverso.  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. Query su una proprietà di documento  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Tramite la query seguente viene eseguita una ricerca su una proprietà indicizzata, `Title`, nella colonna `Document` della tabella `Production.Document`. La query restituisce solo documenti la cui proprietà `Title` contiene la stringa `Maintenance` o `Repair`.  
   

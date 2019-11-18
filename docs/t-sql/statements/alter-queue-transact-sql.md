@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5da8dd93022240d0d12543b0ee6cf756d70cae40
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73791327"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982050"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -104,12 +104,12 @@ WITH
  Specifica se la coda attiva la stored procedure. Se STATUS = ON, la coda avvia la stored procedure specificata con PROCEDURE_NAME quando il numero di procedure in esecuzione è minore di MAX_QUEUE_READERS e quando i messaggi arrivano nella coda più velocemente di quanto non vengano ricevuti dalle stored procedure. Se STATUS = OFF, la coda non attiva la stored procedure.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  Ricompila tutti gli indici della tabella interna della coda. Usare questa funzionalità quando si verificano problemi di frammentazione a causa di un carico elevato. MAXDOP è l'unica opzione di ricompilazione della coda supportata. L'operazione REBUILD viene sempre eseguita in modalità offline.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  Riorganizza tutti gli indici della tabella interna della coda.   
 A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una coda viene sempre eseguita in modalità offline perché i blocchi a livello di pagina sono disabilitati in modo esplicito nelle code.  
@@ -118,7 +118,7 @@ A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una 
 >  In linea generale, quando la frammentazione dell'indice è compresa tra il 5 e il 30%, è consigliabile riorganizzare l'indice. Se la frammentazione è superiore al 30%, ricompilare l'indice. Si tratta tuttavia di indicazioni di carattere generale, da considerare come punto di partenza per l'ambiente. Per determinare la percentuale di frammentazione dell'indice, usare [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). Vedere l'esempio G in tale articolo.  
   
  MOVE TO { *file_group* | "default" }  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  Sposta la tabella interna della coda (con i relativi indici) in un filegroup specificato dall'utente.  Il nuovo filegroup non deve essere di sola lettura.  
   
@@ -223,7 +223,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. Ricompilazione degli indici della coda  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene illustrata la ricompilazione degli indici della coda  
   
@@ -233,7 +233,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. Riorganizzazione degli indici della coda  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene illustrata la riorganizzazione degli indici della coda  
   
@@ -243,7 +243,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Spostamento della tabella interna della coda in un altro filegroup  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102117"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982403"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Controlla l'integrità di un vincolo specificato oppure di tutti i vincoli di una tabella specificata nel database corrente.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 I dati della query vengono archiviati in una tabella temporanea. Dopo che tutte le tabelle o tutti i vincoli richiesti sono stati controllati, viene restituito il set di risultati.
 L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KEY e CHECK, ma non l'integrità delle strutture di dati su disco di una tabella. Il controllo di queste strutture può essere eseguito tramite [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive
   
 Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<le anomalie riscontrate nel record di tabella temporale>.
   

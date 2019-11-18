@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e67b6e058304cf898d2818ab5a6ea2675e0c9825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071117"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982222"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68071117"
 
 Consente di aggiungere una o più righe a una tabella o a una vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni esempi, vedere [Esempi](#InsertExamples).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -143,14 +143,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Parola chiave facoltativa che può essere specificata tra INSERT e la tabella di destinazione.  
   
  *server_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Nome del server collegato in cui si trova la tabella o la vista. *server_name* può essere specificato come nome di [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o tramite la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
  Quando *nome_server* è specificato come server collegato, è obbligatorio specificare *database_name* e *schema_name*. Quando *server_name* viene specificato con OPENDATASOURCE, *database_name* e *schema_name* possono non essere validi per tutte le origini dati e non essere soggetti alle funzionalità del provider OLE DB che accede all'oggetto remoto.  
   
  *database_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Nome del database.  
   
@@ -165,7 +165,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. In un'istruzione INSERT eseguita in una vista a più tabelle, ad esempio, è necessario specificare un argomento *column_list* che faccia riferimento solo alle colonne di una sola tabella di base. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). L'utilizzo di queste funzioni è soggetto alle funzionalità del provider OLE DB che accede all'oggetto remoto.  
   
@@ -260,27 +260,27 @@ Clausola OUTPUT
  Qualsiasi clausola WHERE contenente un valore valido per \<search_condition> in grado di filtrare le righe restituite da \<dml_statement_with_output_clause>. Per altre informazioni, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Se usato in questo contesto, \<search_condition> non può contenere sottoquery, funzioni scalari definite dall'utente che eseguono l'accesso ai dati, funzioni di aggregazione, TEXTPTR o predicati di ricerca full-text. 
   
  DEFAULT VALUES  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Forza l'inserimento nella nuova riga dei valori predefiniti associati a ogni colonna.  
   
  BULK  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Utilizzato dagli strumenti esterni per caricare un flusso di dati binario. Questa opzione non è destinata all'uso con strumenti quali [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL o API di accesso ai dati come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  FIRE_TRIGGERS  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica che gli eventuali trigger di inserimento definiti nella tabella di destinazione vengano eseguiti durante l'operazione di caricamento del flusso di dati binario. Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica che tutti i vincoli sulla tabella o sulla vista di destinazione devono essere controllati durante l'operazione di caricamento del flusso di dati binario. Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica che le colonne vuote devono mantenere un valore null durante l'operazione di caricamento del flusso di dati binario. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
@@ -288,7 +288,7 @@ Clausola OUTPUT
  Specifica il numero approssimativo di kilobyte (KB) di dati per ogni batch come *kilobytes_per_batch*. Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Indica il numero approssimativo di righe di dati nel flusso di dati binario. Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -718,7 +718,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Inserimento di dati in una tabella remota tramite un server collegato  
  Nell'esempio seguente vengono inserite righe in una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql
 USE master;  
@@ -747,7 +747,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Inserimento di dati in una tabella remota tramite una funzione OPENQUERY  
  L'esempio seguente inserisce una riga in una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -760,7 +760,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. Inserimento di dati in una tabella remota tramite una funzione OPENDATASOURCE  
  L'esempio seguente inserisce una riga in una tabella remota tramite la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -853,7 +853,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. Utilizzo della funzione OPENROWSET con BULK per eseguire il caricamento bulk dei dati in una tabella  
  Nell'esempio seguente vengono inserite righe da un file di dati in una tabella specificando la funzione OPENROWSET. Per l'ottimizzazione delle prestazioni, viene specificato l'hint di tabella IGNORE_TRIGGERS. Per altri esempi, vedere [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  

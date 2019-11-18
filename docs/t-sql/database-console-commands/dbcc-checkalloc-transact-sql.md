@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102130"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056348"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Controlla la consistenza delle strutture di allocazione dello spazio su disco per il database specificato.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,7 +94,7 @@ I nomi di database devono essere conformi alle regole per gli [identificatori](.
  TABLOCK  
  Richiede l'acquisizione di un blocco esclusivo del database per l'esecuzione del comando DBCC.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Visualizza la quantità stimata di spazio in tempdb necessaria per l'esecuzione di DBCC CHECKALLOC quando vengono specificate tutte le altre opzioni.
   
 ## <a name="remarks"></a>Remarks  
@@ -150,7 +150,7 @@ DBCC CHECKALLOC fornisce inoltre per ogni indice e partizione di ogni file un ri
 |Partition ID|Solo per uso interno.|  
 |Alloc unit ID|Solo per uso interno.|  
 |Dati In-row|Pagine contenenti dati di indice o di heap.|  
-|Dati LOB|Pagine contenenti dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** e **image**.|  
+|Dati LOB|Pagine contenenti dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** e **image**.|  
 |Dati Row-overflow|Pagine contenenti dati di colonne a lunghezza variabile spostati all'esterno di righe.|  
   
 DBCC CHECKALLOC restituisce il set di risultati seguente (i valori possono variare), tranne quando viene specificata la parola chiave ESTIMATEONLY o NO_INFOMSGS.

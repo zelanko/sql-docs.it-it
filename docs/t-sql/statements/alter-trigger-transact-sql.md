@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155664"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983324"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Modifica la definizione di un trigger DML, DDL o LOGON precedentemente creato dall'istruzione CREATE TRIGGER. I trigger vengono creati tramite l'istruzione CREATE TRIGGER. Possono essere creati direttamente dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o dai metodi di assembly creati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) e caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sui parametri usati nell'istruzione ALTER TRIGGER, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -149,12 +149,12 @@ AS { sql_statement
  Applica l'ambito di un trigger DDL al database corrente. Se viene specificato questo parametro, il trigger viene attivato quando si verifica *event_type* o *event_group* nel database corrente.  
   
  ALL SERVER  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Applica l'ambito di un trigger DDL o LOGON al server corrente. Se viene specificato questo parametro, il trigger viene attivato quando si verifica *event_type* o *event_group* nel server corrente.  
   
  WITH ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Imposta la crittografia delle voci di sys.syscommentssys.sql_modules contenenti il testo dell'istruzione ALTER TRIGGER. Tramite il parametro WITH ENCRYPTION è possibile evitare la pubblicazione del trigger come parte della replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare WITH ENCRYPTION per i trigger CLR.  
   
@@ -202,7 +202,7 @@ AS { sql_statement
  Nome di un raggruppamento predefinito di eventi del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il trigger DDL viene attivato dopo l'esecuzione di qualsiasi evento del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] appartenente a *event_group*. I gruppi di eventi supportati dai trigger DDL sono elencati in [Gruppi di eventi DDL](../../relational-databases/triggers/ddl-event-groups.md). Dopo il completamento dell'esecuzione di ALTER TRIGGER, *event_group* funge anche da macro aggiungendo i tipi di evento che include alla vista del catalogo sys.trigger_events.  
   
  NOT FOR REPLICATION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Indica che il trigger non deve essere eseguito quando un agente di replica modifica la tabella coinvolta nel trigger.  
   
@@ -212,7 +212,7 @@ AS { sql_statement
  Per i trigger sulle tabelle ottimizzate per la memoria, un blocco ATOMIC è l'unica istruzione *sql_statement* consentita al livello superiore. L'unico codice T-SQL consentito all'interno del blocco ATOMIC è quello consentito nelle procedure native.  
   
  EXTERNAL NAME \<method_specifier>  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica il metodo di un'assembly da associare al trigger. Il metodo non deve accettare nessun argomento e restituire void. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly con visibilità dell'assembly. La classe non può essere nidificata.  
   

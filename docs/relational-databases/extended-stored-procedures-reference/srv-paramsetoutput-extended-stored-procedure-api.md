@@ -1,6 +1,6 @@
 ---
-title: srv_paramsetoutput (API Stored procedure estesa) | Microsoft Docs
-ms.custom: ''
+title: srv_paramsetoutput (API Stored procedure estesa)
+ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1060fb2babf5578eb161ec47802297deb94045f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 9695f087557abe6c86369e2fddbd5bbd55cf7be5
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005581"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119388"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ fNull
   
 -   L'argomento *cbLen* non è valido.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

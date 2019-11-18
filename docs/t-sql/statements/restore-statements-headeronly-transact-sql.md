@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742975"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983026"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Istruzioni RESTORE - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +38,7 @@ ms.locfileid: "68742975"
 > [!NOTE]  
 >  Per le descrizioni degli argomenti, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo di backup in formato stringa. I possibili valori sono i seguenti:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** Null|Identificatore univoco del set di backup, che lo identifica nei supporti.|  
 |**CompressedBackupSize**|**bigint**|Numero totale di byte del set di backup. Per i backup non compressi, questo valore corrisponde a quello di **BackupSize**.<br /><br /> Per calcolare la compressione, usare **CompressedBackupSize** e **BackupSize**.<br /><br /> Durante un aggiornamento di **msdb**, il valore è impostato per corrispondere al valore della colonna **BackupSize**.|  
-|**containment**|**tinyint** non Null|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica lo stato di indipendenza del database.<br /><br /> 0 = l'indipendenza del database è disabilitata<br /><br /> 1 = il database è in stato di indipendenza parziale|  
+|**containment**|**tinyint** non Null|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica lo stato di indipendenza del database.<br /><br /> 0 = l'indipendenza del database è disabilitata<br /><br /> 1 = il database è in stato di indipendenza parziale|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) alla versione corrente).<br /><br /> Algoritmo utilizzato per crittografare il backup. NO_Encryption indica che il backup non è stato crittografato. Se non è possibile determinare il valore corretto, usare NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) alla versione corrente).<br /><br /> L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Se il backup non è stato crittografato, questo valore è NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) alla versione corrente).<br /><br /> Tipo di componente di crittografia usato: certificato o chiave asimmetrica. Se il backup non è stato crittografato, questo valore è NULL.|  

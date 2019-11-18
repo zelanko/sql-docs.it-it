@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927198"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982080"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica una configurazione esistente del pool di risorse di Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,7 +74,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Specifica la larghezza di banda media massima della CPU ricevuta da tutte le richieste nel pool di risorse in caso di contesa di CPU. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
  CAP_CPU_PERCENT =*value*  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Specifica la capacità di CPU massima di destinazione per le richieste nel pool di risorse. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
@@ -82,7 +82,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  Data la natura statistica di governance della CPU, è possibile riscontrare occasionali picchi che superano il valore specificato in CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Associa il pool di risorse a utilità di pianificazione specifiche. Il valore predefinito è AUTO.  
   
@@ -105,12 +105,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  Specifica la memoria totale del server utilizzabile dalle richieste in questo pool di risorse. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.  
   
  Specifica il numero minimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *value* è compreso tra 0 e 2^31-1 (2,147,483,647). Specificare 0 per indicare che non è impostata alcuna soglia minima per il pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.  
   
  Specifica il numero massimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *value* è compreso tra 0 e 2^31-1 (2,147,483,647). Specificare 0 per impostare una soglia illimitata per il pool. Il valore predefinito è 0.  
   
@@ -151,7 +151,7 @@ GO
   
  Nell'esempio seguente per `CAP_CPU_PERCENT` viene impostato un limite di utilizzo massimo pari all'80%, mentre per `AFFINITY SCHEDULER` vengono impostati un valore singolo pari a 8 e un intervallo compreso tra 12 e 16.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 ```  
 ALTER RESOURCE POOL Pool25  

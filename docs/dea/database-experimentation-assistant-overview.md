@@ -2,7 +2,7 @@
 title: Panoramica dell'Database Experimentation Assistant
 description: Panoramica di Database Experimentation Assistant
 ms.custom: seo-lt-2019
-ms.date: 11/05/2019
+ms.date: 11/16/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 7180656f8a4779c43f4c691f583aaaf5fcbf86d0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056578"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127365"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Panoramica di Database Experimentation Assistant
 
@@ -53,53 +53,59 @@ Di seguito sono riportati alcuni prerequisiti per l'esecuzione di DEA:
 
 Nell'architettura dell'ambiente prerequisiti è consigliabile installare DEA nello *stesso computer del controller di riesecuzione distribuita*. Questa pratica evita le chiamate tra computer e semplifica la configurazione.
 
-### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>Configurazione richiesta per il confronto dei carichi di lavoro tramite DEA
+### <a name="required-configuration-for-workload-comparison-using-dea"></a>Configurazione richiesta per il confronto dei carichi di lavoro con DEA
 
 DEA si connette ai server di database tramite l'autenticazione di Windows. Assicurarsi che un utente che esegue DEA possa connettersi ai server di database (origine, destinazione e analisi) usando l'autenticazione di Windows.
 
-**Requisiti di configurazione di acquisizione**:
+**Acquisire i requisiti di configurazione**
+
+Per acquisire una traccia, è necessario che:
 
 - L'utente che esegue DEA può connettersi al server di database di origine usando l'autenticazione di Windows.
 - L'utente che esegue DEA dispone dei diritti sysadmin nel server di database di origine.
 - L'account del servizio che esegue il server di database di origine ha accesso in scrittura al percorso della cartella di traccia.
 
-Per ulteriori informazioni, vedere le [domande frequenti sull'acquisizione](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+Per ulteriori informazioni, vedere [domande frequenti sull'acquisizione di tracce](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
 
-**Requisiti di configurazione della riproduzione**: 
+**Requisiti di configurazione della riproduzione**
+
+Per riprodurre una traccia, è necessario che:
 
 - L'utente che esegue DEA può connettersi al server di database di destinazione tramite l'autenticazione di Windows.
 - L'utente che esegue DEA dispone dei diritti sysadmin nel server di database di destinazione.
 - L'account del servizio che esegue i server del database di destinazione ha accesso in scrittura al percorso della cartella di traccia.
 - L'account del servizio che esegue Riesecuzione distribuita client può connettersi al server di database di destinazione tramite l'autenticazione di Windows.
-- DEA comunica con il controller di Riesecuzione distribuita usando le interfacce COM. Verificare che le porte TCP siano aperte per le richieste in ingresso nel controller di Riesecuzione distribuita.
+- Le porte TCP vengono aperte per le richieste in ingresso nel controller di Riesecuzione distribuita. DEA comunica con il controller di Riesecuzione distribuita usando le interfacce COM.
 
-Per ulteriori informazioni, vedere le [domande frequenti sulla riproduzione](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+Per ulteriori informazioni, vedere [domande frequenti sulla riproduzione di tracce](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
 
-**Requisiti di configurazione dell'analisi**:
+**Requisiti di configurazione dell'analisi**
+
+Per eseguire l'analisi, è necessario:
 
 - L'utente che esegue DEA può connettersi al server di database di Analysis usando l'autenticazione di Windows.
 - L'utente che esegue DEA dispone dei diritti sysadmin nel server di database di origine.
 
-Per ulteriori informazioni, vedere le [domande frequenti sull'analisi](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+Per ulteriori informazioni, vedere [domande frequenti sui report di analisi](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
 
 ## <a name="set-up-telemetry"></a>Configurare la telemetria
 
-DEA dispone di una funzionalità abilitata per Internet che può inviare informazioni di telemetria a Microsoft. Microsoft raccoglie i dati di telemetria per migliorare l'esperienza del prodotto. La telemetria è facoltativa. Anche le informazioni raccolte vengono salvate nel computer per il controllo locale. È sempre possibile visualizzare gli elementi raccolti. Tutti i file di log di DEA vengono salvati nella cartella% Temp%\\DEA.
+DEA dispone di una funzionalità abilitata per Internet in grado di inviare informazioni di telemetria a Microsoft da utilizzare per migliorare l'esperienza del prodotto. Anche le informazioni raccolte vengono salvate nel computer per il controllo locale, in modo da poter visualizzare sempre gli elementi raccolti. Tutti i file di log di DEA vengono salvati nella cartella% Temp%\\DEA.
 
-È possibile decidere quali eventi vengono raccolti. Si decide inoltre se gli eventi raccolti vengono inviati a Microsoft. Sono disponibili quattro tipi di eventi:
+I dati di telemetria possono essere raccolti in quattro tipi di eventi:
 
 - **TraceEvent**: eventi di utilizzo per l'applicazione (ad esempio, "attivato arresta acquisizione").
 - **Eccezione**: eccezione generata durante l'utilizzo dell'applicazione.
 - **DiagnosticEvent**: registro eventi per facilitare la diagnosi quando si verificano problemi (*non* inviati a Microsoft).
 - **FeedbackEvent**: Commenti utente inviati tramite l'applicazione.
 
-Questi passaggi illustrano come scegliere quali eventi vengono raccolti e se gli eventi vengono inviati a Microsoft:
+La raccolta e l'invio di dati di telemetria sono facoltativi. Per specificare quali eventi vengono raccolti e se gli eventi raccolti vengono inviati a Microsoft, attenersi alla procedura seguente:
 
 1. Passare al percorso in cui è installato DEA (ad esempio, C:\\programmi (x86)\\Microsoft Corporation\\Database Experimentation Assistant).
-2. Aprire i due file. config: DEA. exe. config (per l'applicazione) e DEACmd. exe. config (per l'interfaccia della riga di comando).
-3. Per interrompere la raccolta di un tipo di evento, impostare il valore dell' *evento* (ad esempio, **TraceEvent**) su **false**. Per iniziare a raccogliere nuovamente l'evento, impostare il valore su **true**.
-4. Per arrestare il salvataggio delle copie locali degli eventi, impostare il valore di **TraceLoggerEnabled** su **false**. Per iniziare a salvare di nuovo le copie locali, impostare il valore su **true**.
-5. Per arrestare l'invio di eventi a Microsoft, impostare il valore di **AppInsightsLoggerEnabled** su **false**. Per iniziare a inviare nuovamente gli eventi a Microsoft, impostare il valore su **true**.
+2. Aprire e modificare i due file con estensione config **dea. exe. config** (per l'applicazione) e **DEACmd. exe. config** (per l'interfaccia della riga di comando) come indicato di seguito:
+    - Per interrompere la raccolta di un tipo di evento, impostare il valore dell' *evento* (ad esempio, **TraceEvent**) su **false**. Per iniziare a raccogliere nuovamente l'evento, impostare il valore su **true**.
+    - Per arrestare il salvataggio delle copie locali degli eventi, impostare il valore di **TraceLoggerEnabled** su **false**. Per iniziare a salvare di nuovo le copie locali, impostare il valore su **true**.
+    - Per arrestare l'invio di eventi a Microsoft, impostare il valore di **AppInsightsLoggerEnabled** su **false**. Per iniziare a inviare nuovamente gli eventi a Microsoft, impostare il valore su **true**.
 
 DEA è disciplinato dall' [informativa sulla privacy Microsoft](https://aka.ms/dea-privacy).
 
