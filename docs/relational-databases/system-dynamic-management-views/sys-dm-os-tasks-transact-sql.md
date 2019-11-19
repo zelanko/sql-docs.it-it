@@ -20,41 +20,41 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69fb7b1e0d9f98ec7d00441613a8887a81c4567c
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260422"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164903"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce una riga per ogni attività in corso nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sulle attività, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
+  Restituisce una riga per ogni attività in corso nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'attività è l'unità di base di esecuzione in SQL Server. Esempi di attività includono una query, un account di accesso, una disconnessione e attività di sistema come attività di pulizia fantasma, attività Checkpoint, writer di log, attività di rollforward parallela. Per ulteriori informazioni sulle attività, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
   
 > [!NOTE]  
-> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys. dm _pdw_nodes_os_tasks**.  
+> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys. dm_pdw_nodes_os_tasks**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Indirizzo di memoria dell'oggetto.|  
-|**task_state**|**nvarchar(60)**|Stato dell'attività. I possibili valori sono i seguenti:<br /><br /> IN SOSPESO in attesa di un thread di lavoro.<br /><br /> ESEGUIBILE Eseguibile, ma in attesa di ricevere un quantum.<br /><br /> ESECUZIONE in esecuzione nell'utilità di pianificazione.<br /><br /> SOSPESO Dispone di un thread di lavoro, ma è in attesa di un evento.<br /><br /> ESEGUITA Completato.<br /><br /> SPINLOOP Bloccato in uno spinlock.|  
+|**task_state**|**nvarchar(60)**|Stato dell'attività. I possibili valori sono i seguenti:<br /><br /> PENDING: in attesa di un thread di lavoro.<br /><br /> RUNNABLE: eseguibile, ma in attesa di ricevere un quantum.<br /><br /> RUNNING: esecuzione in corso nell'utilità di pianificazione.<br /><br /> SUSPENDED: è disponibile un thread di lavoro, ma è in attesa di un evento.<br /><br /> DONE: completato.<br /><br /> SPINLOOP: bloccato in uno spinlock.|  
 |**context_switches_count**|**int**|Numero di cambi di contesto dell'utilità di pianificazione completati dall'attività.|  
 |**pending_io_count**|**int**|Numero di I/O fisici eseguiti dall'attività.|  
 |**pending_io_byte_count**|**bigint**|Numero totale di byte degli I/O eseguiti dall'attività.|  
 |**pending_io_byte_average**|**int**|Numero medio di byte degli I/O eseguiti dall'attività.|  
-|**scheduler_id**|**int**|ID dell'utilità di pianificazione padre. Si tratta di un handle per le informazioni dell'utilità di pianificazione per l'attività. Per ulteriori informazioni, vedere [sys. dm _os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|**scheduler_id**|**int**|ID dell'utilità di pianificazione padre. Si tratta di un handle per le informazioni dell'utilità di pianificazione per l'attività. Per ulteriori informazioni, vedere [sys. DM_OS_SCHEDULERS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |**session_id**|**smallint**|ID della sessione associata all'attività.|  
 |**exec_context_id**|**int**|ID del contesto di esecuzione associato all'attività.|  
-|**request_id**|**int**|ID della richiesta dell'attività. Per ulteriori informazioni, vedere [sys. dm _exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary(8)**|Indirizzo di memoria del thread di lavoro che sta eseguendo l'attività.<br /><br /> NULL = Per poter essere eseguita, l'attività è in attesa di un thread di lavoro oppure l'esecuzione dell'attività è stata completata.<br /><br /> Per ulteriori informazioni, vedere [sys. dm _os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary(8)**|Indirizzo di memoria dell'host.<br /><br /> 0 = Per creare l'attività non è stato utilizzato alcun host. Ciò semplifica l'identificazione dell'host utilizzato per creare l'attività.<br /><br /> Per ulteriori informazioni, vedere [sys. dm _os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**request_id**|**int**|ID della richiesta dell'attività. Per ulteriori informazioni, vedere [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|**worker_address**|**varbinary(8)**|Indirizzo di memoria del thread di lavoro che sta eseguendo l'attività.<br /><br /> NULL = Per poter essere eseguita, l'attività è in attesa di un thread di lavoro oppure l'esecuzione dell'attività è stata completata.<br /><br /> Per ulteriori informazioni, vedere [sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|Indirizzo di memoria dell'host.<br /><br /> 0 = Per creare l'attività non è stato utilizzato alcun host. Ciò semplifica l'identificazione dell'host utilizzato per creare l'attività.<br /><br /> Per ulteriori informazioni, vedere [sys. dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
 |**parent_task_address**|**varbinary(8)**|Indirizzo di memoria dell'attività padre dell'oggetto.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions
-Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è richiesta l'autorizzazione `VIEW SERVER STATE`.   
-Nei livelli Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è necessaria l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli standard e Basic [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] richiede l'amministratore del **Server** o un account **amministratore Azure Active Directory** .   
+## <a name="permissions"></a>Autorizzazioni
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
+Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="examples"></a>Esempi  
   
@@ -62,7 +62,7 @@ Nei livelli Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è necessar
  Per le richieste eseguite in parallelo, vengono visualizzate più righe per la stessa combinazione di (\<**session_id**>, \<**request_id**>). Usare la query seguente per trovare l' [opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) per tutte le richieste attive.  
   
 > [!NOTE]  
->  Un **request_id** è univoco all'interno di una sessione.  
+>  Una **request_id** è univoca all'interno di una sessione.  
   
 ```  
 SELECT  
@@ -82,7 +82,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>B. Associazione di ID di sessione con thread di Windows  
+### <a name="b-associating-session-ids-with-windows-threads"></a>b. Associazione di ID di sessione con thread di Windows  
  È possibile utilizzare la query seguente per associare un valore di ID di sessione a un ID di thread di Windows. È possibile monitorare le prestazioni del thread utilizzando Performance Monitor di Windows. La query seguente non restituisce informazioni per le sessioni sospese.  
   
 ```  
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Viste &#40;a gestione dinamica relative al sistema operativo SQL Server Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+[SQL Server Transact-SQL &#40;&#41; delle viste a gestione dinamica relative al sistema operativo](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 

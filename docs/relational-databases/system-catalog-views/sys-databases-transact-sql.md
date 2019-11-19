@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095862"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165954"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Contiene una riga per ogni database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,7 +77,7 @@ Se un database non è `ONLINE`oppure `AUTO_CLOSE` è impostato su `ON` e il data
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT è ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT è OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT è locale<br /> 0 = CURSOR_DEFAULT è globale|  
 |**is_fulltext_enabled**|**bit**|1 = La funzionalità full-text è abilitata per il database<br /> 0 = La funzionalità full-text è disabilitata per il database|  
-|**is_trustworthy_on**|**bit**|1 = Database contrassegnato come attendibile<br /> 0 = Database non contrassegnato come attendibile<br /> Per impostazione predefinita, Service Broker è disabilitato per i database ripristinati o collegati, L'eccezione è rappresentata dal mirroring del database, in cui Service Broker viene abilitato dopo il failover.|  
+|**is_trustworthy_on**|**bit**|1 = Database contrassegnato come attendibile<br /> 0 = Database non contrassegnato come attendibile<br /> Per impostazione predefinita, i database ripristinati o collegati hanno la proprietà TRUSTWORTHY non abilitata.|  
 |**is_db_chaining_on**|**bit**|1 = Il concatenamento della proprietà tra database è impostato su ON<br /> 0 = Il concatenamento della proprietà tra database è impostato su OFF|  
 |**is_parameterization_forced**|**bit**|1 = La parametrizzazione è FORCED<br /> 0 = La parametrizzazione è SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = Il database include una chiave master crittografata<br /> 0 = Il database non include una chiave master crittografata|  
@@ -93,7 +94,7 @@ Se un database non è `ONLINE`oppure `AUTO_CLOSE` è impostato su `ON` e il data
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION è ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION è OFF|  
 |**is_cdc_enabled**|**bit**|1 = Database abilitato per l'acquisizione dei dati delle modifiche. Per ulteriori informazioni, vedere [sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indica se il database è crittografato (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET ENCRYPTION`). I possibili valori sono i seguenti:<br /> 1 = Crittografato<br /> 0 = Non crittografato<br /> Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Se è in corso la decrittografia del database, `is_encrypted` Visualizza un valore pari a 0. Per visualizzare lo stato del processo di crittografia, è possibile utilizzare la vista a gestione dinamica [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indica se il database rispetta le priorità di conversazione (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). I possibili valori sono i seguenti:<br /> 1 = HONOR_BROKER_PRIORITY è ON<br /> 0 = HONOR_BROKER_PRIORITY è OFF<br /> Per impostazione predefinita, Service Broker è disabilitato per i database ripristinati o collegati, L'eccezione è rappresentata dal mirroring del database, in cui Service Broker viene abilitato dopo il failover.|  
+|**is_honor_broker_priority_on**|**bit**|Indica se il database rispetta le priorità di conversazione (riflette l'ultimo stato impostato utilizzando la clausola `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). I possibili valori sono i seguenti:<br /> 1 = HONOR_BROKER_PRIORITY è ON<br /> 0 = HONOR_BROKER_PRIORITY è OFF<br /> Per impostazione predefinita, la priorità del broker è disattivata per i database ripristinati o collegati.|  
 |**replica_id**|**uniqueidentifier**|Identificatore univoco della replica di disponibilità di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] locale del gruppo di disponibilità, se presente, di cui fa parte il database.<br /> NULL = il database non fa parte di una replica di disponibilità di un gruppo di disponibilità.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificatore univoco del database all'interno di un Always On gruppo di disponibilità, se presente, in cui il database partecipa. **group_database_id** è lo stesso per il database nella replica primaria e in ogni replica secondaria in cui il database è stato aggiunto al gruppo di disponibilità.<br /> NULL = il database non fa parte di una replica di disponibilità in alcun gruppo di disponibilità.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|L'ID del pool di risorse per cui è stato eseguito il mapping al database. Questa pool di risorse controlla la memoria totale disponibile alle tabelle ottimizzate per la memoria nel database.<br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive|  
@@ -118,41 +119,47 @@ Se un database non è `ONLINE`oppure `AUTO_CLOSE` è impostato su `ON` e il data
 |**catalog_collation_type_desc**|**nvarchar(60)**|Impostazione delle regole di confronto del catalogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on è on</br>0 = is_result_set_caching_on è disattivato</br>**Si applica a**: Azure SQL data warehouse Gen2. Quando queste funzionalità vengono implementate in tutte le aree, controllare la versione distribuita nell'istanza e le ultime note sulla versione di [Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) per la disponibilità delle funzionalità.|
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni
+
  Se il chiamante di `sys.databases` non è il proprietario del database e il database non è `master` o `tempdb`, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono `ALTER ANY DATABASE` o `VIEW ANY DATABASE` autorizzazione a livello di server o `CREATE DATABASE` nel database di `master`. Il database a cui è connesso il chiamante può essere sempre visualizzato in `sys.databases`.  
   
 > [!IMPORTANT]  
 > Per impostazione predefinita, il ruolo public dispone dell'autorizzazione `VIEW ANY DATABASE`, consentendo a tutti gli account di accesso di visualizzare informazioni sul database. Per impedire a un account di accesso di rilevare un database, `REVOKE` l'autorizzazione `VIEW ANY DATABASE` da `public`o `DENY` l'autorizzazione `VIEW ANY DATABASE` per i singoli account di accesso.  
   
-## <a name="azure-sql-database-remarks"></a>Osservazioni sul database SQL di Azure  
+## <a name="azure-sql-database-remarks"></a>Osservazioni sul database SQL di Azure
+
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa vista è disponibile nel database di `master` e nei database utente. Nel database di `master` questa vista restituisce le informazioni sul database `master` e su tutti i database utente nel server. In un database utente questa vista restituisce informazioni solo sul database corrente e sul database master.  
   
  Utilizzare la vista `sys.databases` nel database `master` del server del [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] in cui viene creato il nuovo database. Una volta avviata la copia del database, è possibile eseguire una query sul `sys.databases` e sulle visualizzazioni `sys.dm_database_copies` dal database `master` del server di destinazione per recuperare ulteriori informazioni sullo stato di avanzamento della copia.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. Eseguire una query sulla vista sys.databases  
- Nell'esempio seguente vengono restituite alcune colonne disponibili nella vista `sys.databases`.  
+### <a name="a-query-the-sysdatabases-view"></a>R. Eseguire una query sulla vista sys.databases
+
+Nell'esempio seguente vengono restituite alcune colonne disponibili nella vista `sys.databases`.  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. Verificare lo stato di copia in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
- Nell'esempio seguente viene eseguita una query sulle viste `sys.databases` e `sys.dm_database_copies` per restituire informazioni su un'operazione di copia del database.  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. Verificare lo stato di copia in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+Nell'esempio seguente viene eseguita una query sulle viste `sys.databases` e `sys.dm_database_copies` per restituire informazioni su un'operazione di copia del database.  
   
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```sql  
+```sql
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
-```  
-### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. Verificare lo stato dei criteri di conservazione temporale in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
- Nell'esempio seguente viene eseguita una query sul `sys.databases` per restituire informazioni sull'abilitazione dell'attività di pulizia del periodo di memorizzazione temporale. Tenere presente che dopo l'operazione di ripristino la conservazione temporale è disabilitata per impostazione predefinita. Usare `ALTER DATABASE` per abilitarlo in modo esplicito.
+```
+
+### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. Verificare lo stato dei criteri di conservazione temporale in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+Nell'esempio seguente viene eseguita una query sul `sys.databases` per restituire informazioni sull'abilitazione dell'attività di pulizia del periodo di memorizzazione temporale. Tenere presente che dopo l'operazione di ripristino la conservazione temporale è disabilitata per impostazione predefinita. Usare `ALTER DATABASE` per abilitarlo in modo esplicito.
   
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -162,11 +169,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys.database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
- [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.dm_database_copies &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [sys.database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [Viste &#40;del catalogo di database e file-Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.dm_database_copies &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

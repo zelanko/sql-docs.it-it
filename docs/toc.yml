@@ -5808,7 +5808,7 @@
     - name: Database Experimentation Assistant
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: Introduzione
+        - name: Panoramica sul confronto dei carichi di lavoro
           href: dea/database-experimentation-assistant-get-started.md
         - name: Acquisire la traccia
           href: dea/database-experimentation-assistant-capture-trace.md

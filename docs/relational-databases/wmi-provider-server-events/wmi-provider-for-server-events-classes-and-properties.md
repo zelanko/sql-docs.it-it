@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660511"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164914"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Classi e proprietà del provider WMI per eventi del server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73660511"
  Se ad esempio si fa riferimento all'evento ALTER_DATABASE, si apprenderà che l'evento padre viene DDL_SERVER_LEVEL_EVENTS e le relative proprietà sono **TSQLCommand** e **DatabaseName**. L'evento eredita inoltre le proprietà **SQLInstance**, **posttime**, **nomecomputer**, **SPID**e **LoginName**. L'evento non dispone di eventi figli.  
   
 > [!NOTE]  
->  Le stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare le notifiche degli eventi. Testare le notifiche degli eventi per determinarne le risposte alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e **sp_addtype** stored procedure genereranno una notifica degli eventi creata in un evento di CREATE_TYPE. Per ulteriori informazioni, vedere[eventi DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Le stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare le notifiche degli eventi. Testare le notifiche degli eventi per determinarne le risposte alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e **sp_addtype** stored procedure genereranno una notifica degli eventi creata in un evento di CREATE_TYPE. Per ulteriori informazioni, vedere [eventi DDL](../../relational-databases/triggers/ddl-events.md).  
   
  **Eventi e gruppi di eventi del linguaggio di definizione dei dati**  
   

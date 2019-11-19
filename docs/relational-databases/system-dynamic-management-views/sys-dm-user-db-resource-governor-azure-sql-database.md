@@ -1,7 +1,7 @@
 ---
-title: sys. dm _user_db_resource_governance (Transact-SQL) | Microsoft Docs
+title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 11/17/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-database
@@ -20,100 +20,108 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ea07ba28efc4ac50fdeef04bb1b3643c359ead28
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176259"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165915"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm _user_db_resource_governance (Transact-SQL)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Restituisce le impostazioni di capacità e configurazione della governance delle risorse per un database di database SQL di Azure.  
+Restituisce le impostazioni di configurazione e capacità effettive utilizzate dai meccanismi di governance delle risorse nel database o nel pool elastico corrente.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|ID del database, univoco all'interno di un server di database SQL di Azure.|
-|**logical_database_guid**|uniqueidentifier|GUID logico per il database utente e rimane nel corso del ciclo di vita di un database utente.  Rinominare o impostare un database su un SLO diverso non modificherà il GUID. |
-|**physical_database_guid**|uniqueidentifier|GUID fisico per un database utente che rimane per tutta la durata dell'istanza fisica del database utente. Se si imposta su un SLO diverso, la colonna verrà modificata.|
+|**logical_database_guid**|uniqueidentifier|GUID logico per il database utente che rimane lungo il ciclo di vita di un database utente.  Se si rinomina il database o se ne modifica l'obiettivo del livello di servizio, questo valore non verrà modificato.|
+|**physical_database_guid**|uniqueidentifier|GUID fisico per un database utente che rimane per tutta la durata dell'istanza fisica del database utente. Se si modifica l'obiettivo del livello di servizio del database, questo valore verrà modificato.|
 |**server_name**|nvarchar|Nome del server logico.|
 |**database_name**|nvarchar|Nome del database logico.|
-|**slo_name**|nvarchar|Obiettivo del livello di servizio e generazione di hardware.|
+|**slo_name**|nvarchar|Obiettivo del livello di servizio, inclusa la generazione di hardware.|
 |**dtu_limit**|int|Limite DTU del database (NULL per vCore).|
 |**cpu_limit**|int|limite vCore del database (NULL per i database DTU).|
-|**min_cpu**|tinyint|Percentuale minima della CPU che può essere usata dal carico di lavoro dell'utente.|
-|**max_cpu**|tinyint|Percentuale massima della CPU che può essere usata dal carico di lavoro dell'utente.|
-|**cap_cpu**|tinyint|Limite della percentuale di CPU per i gruppi del carico di lavoro dell'utente.|
-|**min_cores**|smallint|Numero di CPU utilizzate da SQL.|
-|**max_dop**|smallint|Massimo grado di parallelismo utilizzato dal carico di lavoro dell'utente.|
-|**min_memory**|int|Percentuale minima della memoria che può essere usata dal carico di lavoro dell'utente.|
-|**max_memory**|int|Percentuale massima della memoria che può essere usata dal carico di lavoro dell'utente.|
-|**max_sessions**|int|Limite della sessione per il gruppo utenti.|
-|**max_memory_grant**|int|Concessione di memoria massima per ogni query nel carico di lavoro dell'utente, espressa in percentuale.|
-|**max_db_memory**|int|Limite massimo di memoria per il pool di buffer per il carico di lavoro database utente|
-|**govern_background_io**|bit|Indica se le Scritture in background vengono addebitate al gruppo di utenti.|
-|**min_db_max_size_in_mb**|bigint|Dimensioni minime massime del file di database, in MB.|
-|**max_db_max_size_in_mb**|bigint|Numero massimo di file di database, in MB.|
-|**default_db_max_size_in_mb**|bigint|Dimensioni massime predefinite del file di database, in MB.|
-|**db_file_growth_in_mb**|bigint|Aumento predefinito del file di database di Azure, in MB.|
-|**initial_db_file_size_in_mb**|bigint|Dimensioni predefinite del file di database, in MB.|
-|**log_size_in_mb**|bigint|Dimensioni del file di log predefinite, in MB.|
-|**instance_cap_cpu**|int|Limite della CPU a livello di istanza.|
-|**instance_max_log_rate**|bigint|Limite della velocità di generazione del log a livello di istanza, espresso in byte al secondo.|
-|**instance_max_worker_threads**|int|Limite di thread di lavoro a livello di istanza.|
+|**min_cpu**|tinyint|Valore MIN_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_cpu**|tinyint|Valore MAX_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**cap_cpu**|tinyint|Valore CAP_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**min_cores**|SMALLINT|Solo per uso interno.|
+|**max_dop**|SMALLINT|Valore MAX_DOP per il gruppo del carico di lavoro dell'utente. Vedere [creare un gruppo di carico di lavoro](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
+|**min_memory**|int|Valore MIN_MEMORY_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_memory**|int|Valore MAX_MEMORY_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_sessions**|int|Numero massimo di sessioni consentite nel gruppo del carico di lavoro dell'utente.|
+|**max_memory_grant**|int|Valore REQUEST_MAX_MEMORY_GRANT_PERCENT per il gruppo del carico di lavoro dell'utente. Vedere [creare un gruppo di carico di lavoro](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
+|**max_db_memory**|int|Solo per uso interno.|
+|**govern_background_io**|bit|Solo per uso interno.|
+|**min_db_max_size_in_mb**|bigint|Valore di max_size minimo per un file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**max_db_max_size_in_mb**|bigint|Valore max_size massimo per un file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**default_db_max_size_in_mb**|bigint|Valore predefinito max_size per un file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**db_file_growth_in_mb**|bigint|Incremento di crescita predefinito per un file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**initial_db_file_size_in_mb**|bigint|Dimensioni predefinite per il nuovo file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**log_size_in_mb**|bigint|Dimensioni predefinite per il nuovo file di log, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**instance_cap_cpu**|int|Solo per uso interno.|
+|**instance_max_log_rate**|bigint|Limite di velocità di generazione del log per l'istanza di SQL Server, in byte al secondo. Si applica a tutti i log generati dall'istanza, inclusi `tempdb` e altri database di sistema. In un pool elastico si applica al log generato da tutti i database nel pool.|
+|**instance_max_worker_threads**|int|Limite di thread di lavoro per l'istanza di SQL Server.|
 |**replica_type**|int|Tipo di replica, dove 0 è primario e 1 è secondario.|
 |**max_transaction_size**|bigint|Spazio di log massimo utilizzato da qualsiasi transazione, in KB.|
-|**checkpoint_rate_mbps**|int|Larghezza di banda Checkpoint, in Mbps.|
-|**checkpoint_rate_io**|int|Velocità di i/o Checkpoint in IOs al secondo.|
-|**last_updated_date_utc**|Datetime|Data e ora dell'Ultima modifica o riconfigurazione dell'ultima impostazione.|
-|**primary_group_id**|int|ID del gruppo di carico di lavoro utente primario.|
-|**primary_group_max_workers**|int|Limite di lavoro al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_min_log_rate**|bigint|Velocità minima dei log (byte al secondo) al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_max_log_rate**|bigint|Velocità massima di log (byte al secondo) al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_group_min_io**|int|I/o minimo al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_group_max_io**|int|I/o massimo al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_group_min_cpu**|float|Limite minimo di percentuale CPU al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_group_max_cpu**|float|Limite di percentuale massimo della CPU al livello del gruppo di carico di lavoro dell'utente primario.|
-|**primary_log_commit_fee**|int|Tariffa di commit per la gestione della frequenza dei log al livello del gruppo di carico di lavoro utente|
-|**primary_pool_max_workers**|int|Limite di lavoro a livello di pool di utenti primario.
-|**pool_max_io**|int|Limite massimo di i/o a livello di pool di utenti primario.|
-|**govern_db_memory_in_resource_pool**|bit|Indica se le dimensioni massime del pool di buffer sono regolate a livello del pool di risorse. Vengono in genere impostati per i database all'interno dei pool elastici.|
-|**volume_local_iops**|int|Limite di IOs al secondo per il volume locale (ad esempio C:, D:).|
-|**volume_managed_xstore_iops**|int|Limite di IOs al secondo per l'account di archiviazione remoto.|
-|**volume_external_xstore_iops**|int|Limite di IOs al secondo per l'account di archiviazione remoto usato dai backup e dalla telemetria del database SQL di Azure.|
-|**volume_type_local_iops**|int|Limite di IOs al secondo per tutti i volumi locali.|
-|**volume_type_managed_xstore_iops**|int|Limite di IOs al secondo per tutti gli account di archiviazione remoti utilizzati dall'istanza.|
-|**volume_type_external_xstore_iops**|int|Limite di IOs al secondo per tutti gli account di archiviazione remoti usati dai backup e dalla telemetria del database SQL di Azure per l'istanza.|
-|**volume_pfs_iops**|int|Limite di IOs al secondo per archiviazione file Premium.|
-|**volume_type_pfs_iops**|int|Limite di IOs al secondo per tutti i file di archiviazione Premium utilizzati dall'istanza.|
+|**checkpoint_rate_mbps**|int|Solo per uso interno.|
+|**checkpoint_rate_io**|int|Solo per uso interno.|
+|**last_updated_date_utc**|datetime|Data e ora dell'Ultima modifica o riconfigurazione dell'ultima impostazione, in formato UTC.|
+|**primary_group_id**|int|ID del gruppo di carico di lavoro per il carico di lavoro dell'utente nella replica primaria e nelle repliche secondarie.|
+|**primary_group_max_workers**|int|Limite thread di lavoro per il gruppo del carico di lavoro dell'utente.|
+|**primary_min_log_rate**|bigint|Velocità minima di log in byte al secondo a livello di gruppo del carico di lavoro dell'utente. La governance delle risorse non tenterà di ridurre la velocità del log al di sotto di questo valore.|
+|**primary_max_log_rate**|bigint|Frequenza massima di log in byte al secondo a livello di gruppo del carico di lavoro dell'utente. La governance delle risorse non consentirà la velocità del log superiore a questo valore.|
+|**primary_group_min_io**|int|Numero minimo di IOPS per il gruppo del carico di lavoro dell'utente. La governance delle risorse non tenterà di ridurre i IOPS al di sotto di questo valore.|
+|**primary_group_max_io**|int|Numero massimo di IOPS per il gruppo del carico di lavoro dell'utente. La governance delle risorse non consentirà IOPS al di sopra di questo valore.|
+|**primary_group_min_cpu**|float|Percentuale minima della CPU per il livello del gruppo di carico di lavoro dell'utente. La governance delle risorse non tenterà di ridurre l'utilizzo della CPU al di sotto di questo valore.|
+|**primary_group_max_cpu**|float|Percentuale massima della CPU per il livello del gruppo di carico di lavoro dell'utente. La governance delle risorse non consente l'utilizzo della CPU al di sopra di questo valore.|
+|**primary_log_commit_fee**|int|Costo di commit della governance della frequenza dei log per il gruppo di carico di lavoro dell'utente, in byte Una tariffa di commit aumenta le dimensioni di ogni i/o di log in base a un valore fisso ai fini dell'accounting solo della frequenza dei log. L'i/o del log effettivo nell'archiviazione non è aumentato.|
+|**primary_pool_max_workers**|int|Limite di thread di lavoro per il pool di risorse del carico di lavoro dell'utente.|
+|**pool_max_io**|int|Limite massimo di IOPS per il pool di risorse del carico di lavoro dell'utente.|
+|**govern_db_memory_in_resource_pool**|bit|Solo per uso interno.|
+|**volume_local_iops**|int|Solo per uso interno.|
+|**volume_managed_xstore_iops**|int|Solo per uso interno.|
+|**volume_external_xstore_iops**|int|Solo per uso interno.|
+|**volume_type_local_iops**|int|Solo per uso interno.|
+|**volume_type_managed_xstore_iops**|int|Solo per uso interno.|
+|**volume_type_external_xstore_iops**|int|Solo per uso interno.|
+|**volume_pfs_iops**|int|Solo per uso interno.|
+|**volume_type_pfs_iops**|int|Solo per uso interno.|
 |||
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Gli utenti possono accedere a questa DMV per la configurazione della governance delle risorse e le impostazioni di capacità per un database di database SQL di Azure. 
+Per una descrizione della governance delle risorse nel database SQL di Azure, vedere [limiti delle risorse del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
-> La maggior parte dei dati esposti da questa DMV è destinata al consumo interno ed è soggetta a modifiche.
+> La maggior parte dei dati restituiti da questa DMV è destinata al consumo interno ed è soggetta a modifiche in qualsiasi momento.
 
 ## <a name="examples"></a>Esempi
 
-Nell'esempio seguente vengono restituiti i dati della frequenza di log massimi dell'istanza ordinati in base al nome del database all'interno del server di database per un database singolo o in pool.
+La query seguente, eseguita nel contesto di un database utente, restituisce la velocità massima di log e il numero massimo di IOPS a livello del gruppo di carico di lavoro e del pool di risorse dell'utente. Per un singolo database, viene restituita una riga. Per un database in un pool elastico, viene restituita una riga per ogni database nel pool.
 
 ```
 SELECT database_name,
-       primary_max_log_rate
+       primary_group_id,
+       primary_max_log_rate,
+       primary_group_max_io,
+       pool_max_io
 FROM sys.dm_user_db_resource_governance
-ORDER BY database_name DESC;  
+ORDER BY database_name;  
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
+- [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
+- [sys. dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys. dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
+- [sys. dm_resource_governor_workload_groups_history_ex (database SQL di Azure)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [Governance della frequenza del log delle transazioni](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Limiti delle risorse DTU database singolo](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Limiti delle risorse vCore database singolo](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

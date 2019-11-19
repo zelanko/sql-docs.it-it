@@ -16,12 +16,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721260"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165017"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Esecuzione di script durante la sincronizzazione (programmazione Transact-SQL della replica)
   La replica supporta l'esecuzione di script su richiesta per i Sottoscrittori di pubblicazioni transazionali e di tipo merge. Con questa funzionalità lo script viene copiato nella directory di lavoro della replica e quindi viene applicato al Sottoscrittore tramite **sqlcmd** . Per impostazione predefinita, se si verifica un errore durante l'applicazione dello script per una sottoscrizione di una pubblicazione transazionale, l'agente di distribuzione verrà arrestato. È possibile specificare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] da eseguire a livello di programmazione tramite le stored procedure di replica.  
@@ -32,7 +32,7 @@ ms.locfileid: "62721260"
   
 2.  Salvare il file script in un percorso in cui sia accessibile all'agente snapshot per la pubblicazione.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Specificare **@publication** , il nome del file script con il percorso UNC completo creato nel passaggio 2 per **@scriptfile** e uno dei valori seguenti per **@skiperror** :  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Specificare **\@pubblicazione**, il nome del file di script con il percorso UNC completo creato nel passaggio 2 per **\@scriptfile**e uno dei valori seguenti per **\@SkipError**:  
   
     -   **0** : l'agente arresterà l'esecuzione dello script se viene rilevato un errore.  
   
