@@ -50,7 +50,7 @@ ms.locfileid: "73637816"
   
  Nella tabella seguente viene fornita una descrizione delle configurazioni hardware minima e consigliata per un server [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] autonomo che non fa parte della farm di SharePoint:  
   
-|Componente|Minimo|Consigliato|  
+|Componente|Minima|Consigliato|  
 |---------------|-------------|-----------------|  
 |Processore|Processore dual-core a 64 bit, 3 GHz.|16 core|  
 |RAM|8 GB di RAM|64 GB di RAM|  

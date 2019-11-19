@@ -38,7 +38,7 @@ ms.locfileid: "72798128"
   
 -   [Passaggio 6: Elenco di controllo per la post-disinstallazione](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> Prerequisiti  
   
 -   È necessario essere un amministratore della farm di SharePoint o dell'applicazione di servizio per disinstallare le funzionalità e le soluzioni della farm.  
   
