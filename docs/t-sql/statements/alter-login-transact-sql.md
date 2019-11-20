@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35fc3fb65347a7e7459df18495294a2491e270b4
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660812"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982098"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -372,7 +372,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -402,7 +402,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -615,7 +615,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e all'istanza gestita di database SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e all'istanza gestita di database SQL di Azure.
 
 ```sql
 ALTER LOGIN Mary5
@@ -645,7 +645,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e all'istanza gestita di database SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e all'istanza gestita di database SQL di Azure.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -778,7 +778,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -808,7 +808,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -967,7 +967,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -997,7 +997,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH

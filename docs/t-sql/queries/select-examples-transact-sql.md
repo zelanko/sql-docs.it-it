@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017614"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119210"
 ---
 # <a name="select-examples-transact-sql"></a>Esempi di istruzioni SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017614"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. Utilizzo di sottoquery correlate  
+## <a name="e-using-correlated-subqueries"></a>E. Utilizzo di sottoquery correlate
+Una query correlata è una query i cui valori dipendono dalla query esterna. Questa query può essere eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna.
+
  Nell'esempio seguente vengono illustrate query semanticamente equivalenti e viene evidenziata la differenza tra la parola chiave `EXISTS` e la parola chiave `IN`. Entrambi sono esempi di sottoquery valide che recuperano un'istanza del nome di ogni prodotto del modello "Long-sleeve logo jersey" e con valori `ProductModelID` uguali nelle tabelle `Product` e `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- Nell'esempio seguente viene utilizzata la parola chiave `IN` in una sottoquery correlata o ripetuta. È una query che dipende dalla query esterna. La query viene eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna. Questa query recupera un'istanza del nome e del cognome di ogni dipendente il cui bonus nella tabella `SalesPerson` corrisponde a `5000.00` e con numero di identificazione uguale nelle tabelle `Employee` e `SalesPerson`.  
+ Il prossimo esempio usa `IN` e recupera un'istanza del nome e del cognome di ogni dipendente il cui bonus nella tabella `SalesPerson` corrisponde a `5000.00` e con numero di identificazione uguale nelle tabelle `Employee` e `SalesPerson`.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

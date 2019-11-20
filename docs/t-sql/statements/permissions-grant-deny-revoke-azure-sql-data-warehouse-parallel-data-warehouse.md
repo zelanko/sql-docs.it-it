@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129372"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095582"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -241,9 +241,9 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Grafico delle autorizzazioni  
  Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN**.  
   
- ![Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici")  
+ ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza APS")  
   
- Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica a **apsdoc@microsoft.com** .  
+ Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica ad **apsdoc\@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Autorizzazioni predefinite  
  L'elenco seguente descrive le autorizzazioni predefinite:  

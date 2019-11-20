@@ -1,6 +1,5 @@
 ---
-title: File di formato per l'importazione o l'esportazione di dati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Formattare i file per importare ed esportare i dati
 ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,14 +14,15 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d20bfe453843fa8809cfc02c5bd34876dbd497
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680708"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055973"
 ---
-# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>File di formato per l'importazione o l'esportazione di dati (SQL Server)
+# <a name="format-files-to-import-or-export-data-sql-server"></a>Formattare i file per importare ed esportare i dati (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Quando si importando dati in blocco in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o si esportano dati in blocco da una tabella, è possibile usare un *file di formato* per archiviare le informazioni sul formato necessarie all'esportazione o all'importazione in blocco dei dati. Sono incluse informazioni sul formato per ogni campo in un file di dati relativo a quella tabella.

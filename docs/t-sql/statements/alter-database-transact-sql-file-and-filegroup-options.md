@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809792"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982843"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -55,20 +55,18 @@ Modifica i file e i filegroup associati al database. Consente inoltre di aggiung
 
 Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Fare clic su un prodotto.
+## <a name="click-a-product"></a>Fare clic su un prodotto
 
-Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_ ** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
-
-# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Sintassi
 
@@ -139,7 +137,7 @@ REMOVE FILE *logical_file_name* rimuove la descrizione del file logico da un'ist
 *logical_file_name* è il nome logico usato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file.
 
 > [!WARNING]
-> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).
 
 MODIFY FILE specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.
 
@@ -269,7 +267,7 @@ CONTAINS FILESTREAM specifica che il filegroup archivia BLOB FILESTREAM nel file
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
 
 Specifica che il filegroup archivia i dati con ottimizzazione per la memoria nel file system. Per altre informazioni, vedere [OLTP in memoria - Ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). È consentito un solo filegroup `MEMORY_OPTIMIZED_DATA` per ogni database. Per la creazione di tabelle con ottimizzazione per la memoria, il filegroup non può essere vuoto. Deve essere presente almeno un file. *filegroup_name* fa riferimento a un percorso. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente.
 
@@ -286,13 +284,13 @@ DEFAULT cambia il filegroup predefinito del database in *filegroup_name*. In un 
 
 NAME = *new_filegroup_name* cambia il nome del filegroup in *new_filegroup_name*.
 
-AUTOGROW_SINGLE_FILE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+AUTOGROW_SINGLE_FILE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Impostazione predefinita.
 
 AUTOGROW_ALL_FILES
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni di tutti i file del filegroup.
 
@@ -683,7 +681,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL\*_**<br />&nbsp;|
 
 &nbsp;
 

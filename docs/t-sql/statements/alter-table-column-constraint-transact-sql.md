@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070459"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982000"
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
+# <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Specifica le proprietà di un vincolo PRIMARY KEY, FOREIGN KEY, UNIQUE o CHECK incluso nella definizione di una nuova colonna aggiunta a una tabella tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68070459"
 > [!IMPORTANT]  
 >  WITH FILLFACTOR = *fillfactor* è documentata come unica opzione di indice per i vincoli PRIMARY KEY o UNIQUE solo per motivi di compatibilità con le versioni precedenti. Non sarà più documentata in questo senso nelle versioni future. È possibile specificare altre opzioni di indice nella clausola [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) di ALTER TABLE.  
   
- ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica il percorso di archiviazione dell'indice creato per il vincolo. Se si specifica *partition_scheme_name*, l'indice viene partizionato e viene eseguito il mapping delle partizioni ai filegroup specificati da *partition_scheme_name*. Se si specifica *filegroup* l'indice viene creato nel filegroup specificato. Se si specifica **"** default **"** o si omette ON, l'indice viene creato nello stesso filegroup della tabella. Se si specifica ON quando si aggiunge un indice cluster per un vincolo PRIMARY KEY o UNIQUE, l'intera tabella viene spostata nel filegroup specificato durante la creazione dell'indice cluster.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "68070459"
  Al contrario, se si specifica NO ACTION, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore e viene eseguito il rollback dell'azione di aggiornamento per la riga **Vendor** quando esiste almeno una riga nella tabella **ProductVendor** che fa riferimento a essa.  
   
  NOT FOR REPLICATION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Questa clausola può essere specificata per i vincoli FOREIGN KEY e CHECK. Se per un vincolo si specifica questa clausola, il vincolo non viene imposto quando gli agenti di replica eseguono le operazioni di inserimento, aggiornamento o eliminazione.  
   

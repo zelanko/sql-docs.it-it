@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14cbea00419743408b8ae15c34cefbb0dcaddb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914643"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982465"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle opzioni SET correnti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,11 +45,11 @@ ms.locfileid: "67914643"
 ## <a name="remarks"></a>Remarks  
  Le opzioni possono derivare dall'uso del comando **SET** o dal valore di **sp_configure user options**. I valori di sessione configurati con il comando **SET** sostituiscono le opzioni di **sp_configure**. Molti strumenti, come ad esempio [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], configurano automaticamente le opzioni impostate. A ogni utente è associata una funzione @@OPTIONS che rappresenta la configurazione.  
   
- Tramite l'istruzione SET è possibile modificare le opzioni di linguaggio e di esecuzione delle query per una sessione utente specifica. **@@OPTIONS** è in grado di rilevare solo le opzioni impostate su ON o OFF.  
+ Tramite l'istruzione SET è possibile modificare le opzioni di linguaggio e di esecuzione delle query per una sessione utente specifica. **\@\@OPTIONS** è in grado di rilevare solo le opzioni impostate su ON o OFF.  
   
- La funzione **@@OPTIONS** restituisce una mappa di bit delle opzioni, convertita in un numero intero in base 10 (decimale). Le impostazioni di bit vengono archiviate nei percorsi descritti in un tabella dell'argomento [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ La funzione **\@\@OPTIONS** restituisce una mappa di bit delle opzioni, convertita in un numero intero in base 10 (decimale). Le impostazioni di bit vengono archiviate nei percorsi descritti in un tabella dell'argomento [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Per decodificare il valore di **@@OPTIONS** , convertire il numero intero restituito da **@@OPTIONS** in binario e quindi cercare i valori nella tabella riportata in [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Se, ad esempio, `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice di Windows (**calc.exe**) per convertire il valore decimale `5496` in binario. Il risultato è `1010101111000`. I caratteri più a destra (binario 1, 2 e 4) corrispondono a 0. Ciò indica che i primi tre elementi della tabella sono impostati su OFF. Consultando la tabella, si noterà che si tratta di **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo, ovvero **ANSI_WARNINGS** nella posizione `1000`, è impostato su ON. Continuare a lavorare verso sinistra nella mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra corrispondono a 0, vengono troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
+ Per decodificare il valore di **\@\@OPTIONS**, convertire il numero intero restituito da **\@\@OPTIONS** in binario e quindi cercare i valori nella tabella riportata in [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Se, ad esempio, `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice di Windows (**calc.exe**) per convertire il valore decimale `5496` in binario. Il risultato è `1010101111000`. I caratteri più a destra (binario 1, 2 e 4) corrispondono a 0. Ciò indica che i primi tre elementi della tabella sono impostati su OFF. Consultando la tabella, si noterà che si tratta di **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo, ovvero **ANSI_WARNINGS** nella posizione `1000`, è impostato su ON. Continuare a lavorare verso sinistra nella mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra corrispondono a 0, vengono troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
   
 ## <a name="examples"></a>Esempi  
   

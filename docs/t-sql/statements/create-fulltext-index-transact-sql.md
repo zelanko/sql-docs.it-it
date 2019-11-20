@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912776"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981897"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un indice full-text per una tabella o una vista indicizzata di un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consentito un solo indice full-text per tabella o vista indicizzata e ogni indice full-text viene applicato a una singola tabella o vista indicizzata. Un indice full-text può contenere fino a 1024 colonne.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -103,7 +103,7 @@ Per le colonne di tipo non BLOB e non XML che contengono dati di testo in più l
 Per i documenti archiviati in colonne di tipo XML o BLOB, in fase di indicizzazione verrà utilizzata la codifica di lingua del documento. Nelle colonne XML, ad esempio, la lingua è identificata dall'attributo **xml:lang** nei documenti XML. In fase di query, il valore precedentemente specificato in *language_term* diventa la lingua predefinita per le query full-text, a meno che non si specifichi *language_term* all'interno di una query full-text.  
   
 STATISTICAL_SEMANTICS       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) 
   
 Consente di creare la frase chiave aggiuntiva e gli indici di somiglianza dei documenti che fanno parte dell'indicizzazione semantica statistica. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -143,7 +143,7 @@ Specifica che per l'indice full-text deve essere utilizzato l'elemento STOPLIST 
 Specifica il nome dell'elenco di parole non significative da associare all'indice full-text.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)  
   
 Associa un elenco di proprietà di ricerca all'indice.  
  
@@ -163,7 +163,7 @@ Si consiglia di utilizzare un tipo di dati integer per la colonna chiave indice 
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interazioni del rilevamento delle modifiche con NO POPULATION  
  Il popolamento dell'indice full-text dipende dal fatto che il rilevamento delle modifiche sia o meno abilitato e che si specifichi o meno WITH NO POPULATION nell'istruzione ALTER FULLTEXT INDEX. Nella tabella seguente è riepilogato il risultato di tale interazione.  
   
-|Rilevamento delle modifiche|WITH NO POPULATION|Risultato|  
+|Rilevamento modifiche|WITH NO POPULATION|Risultato|  
 |---------------------|------------------------|------------|  
 |Non abilitato|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
 |Non abilitato|Specified|L'indice non viene popolato fino a quando non viene eseguita un'istruzione ALTER FULLTEXT INDEX...START POPULATION.|  

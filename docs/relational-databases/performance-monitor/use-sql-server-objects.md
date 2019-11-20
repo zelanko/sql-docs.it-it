@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 468d9aabd58c8fcdca8403b1177eea92ced9212d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044836"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982179"
 ---
 # <a name="use-sql-server-objects"></a>Utilizzare oggetti di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rende disponibili oggetti e contatori utilizzabili in Monitoraggio di sistema per il monitoraggio dell'attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio un blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Ad esempio, l'oggetto **SQL Server Locks** contiene i contatori **Numero di blocchi critici deadlock/sec** e **Timeout blocchi/sec**.  
   
- Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:**_\<nome oggetto>_. I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$**_\<nome istanza>_**:**_\<nome contatore>_ o **SQLAgent$**_\<nome istanza>_**:**_\<nome contatore>_.  
+ Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:** _\<nome oggetto>_ . I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$** _\<nome istanza>_ **:** _\<nome contatore>_ o **SQLAgent$** _\<nome istanza>_ **:** _\<nome contatore>_ .  
   
  Per specificare gli oggetti e i contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da monitorare all'avvio di Monitoraggio di sistema, aggiungere o rimuovere i contatori nel grafico e salvare le impostazioni.  
   
@@ -99,14 +99,14 @@ ms.locfileid: "68044836"
 |[Nodo SQLServer:Buffer](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|Offre informazioni sulla frequenza con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede le pagine disponibili e vi accede.|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|Definisce un oggetto gestione metadati catalogo per SQL Server.| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Offre informazioni su Common Language Runtime (CLR).|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> Fornisce informazioni sui gruppi di righe e i segmenti per gli indici columnstore.|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).<br /><br /> Fornisce informazioni sui gruppi di righe e i segmenti per gli indici columnstore.|  
 |[SQLServer:Gestione cursori per tipo](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|Offre informazioni relative ai cursori.|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|Offre informazioni relative ai cursori.|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|Offre informazioni relative al mirroring del database.|  
 |[SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)|Offre informazioni su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la quantità di spazio di log libero o il numero di transazioni attive nel database. Possono essere presenti più istanze di questo oggetto.|  
 |[SQL Server:Deprecated Features](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|Conta il numero di volte in cui vengono utilizzate le caratteristiche deprecate.|  
 |[SQLServer:Exec Statistics](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|Offre informazioni relative alle statistiche di esecuzione.|  
-|[SQL Server:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> Offre informazioni sull'esecuzione dello script esterno.|  
+|[SQL Server:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).<br /><br /> Offre informazioni sull'esecuzione dello script esterno.|  
 |[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|Statistiche associate a FileTable e all'accesso non in transazioni.|  
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|Offre informazioni sull'attività dell'intero server, ad esempio il numero di utenti connessi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|Offre informazioni sulle repliche di disponibilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .|  

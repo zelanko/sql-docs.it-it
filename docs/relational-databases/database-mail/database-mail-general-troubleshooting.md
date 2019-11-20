@@ -1,6 +1,6 @@
 ---
-title: Risoluzione dei problemi generali relativi a Posta elettronica database con SQL Server | Microsoft Docs
-ms.custom: ''
+title: Risoluzione dei problemi generali relativi a Posta elettronica database
+ms.custom: seo-dt-2019
 ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 304306edc78229899b0660b99df6f6b78b60e6ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906080"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094553"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Procedure per la risoluzione dei problemi generali relativi a Posta elettronica database 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

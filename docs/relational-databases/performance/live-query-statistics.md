@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051878"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983246"
 ---
 # <a name="live-query-statistics"></a>Live Query Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68051878"
 > [!NOTE]
 > Internamente le statistiche sulle query dinamiche sfruttano la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive).  
   
 > [!WARNING]  
 > Questa funzionalità viene usata principalmente per la risoluzione dei problemi. L'uso di questa funzionalità può rallentare in parte le prestazioni complessive delle query, in particolare in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  

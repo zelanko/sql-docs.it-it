@@ -1,5 +1,5 @@
 ---
-title: Ripristinare i word breaker usati dalla ricerca alla versione precedente | Microsoft Docs
+title: Ripristinare i word breaker usati dalla ricerca alla versione precedente
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,14 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903803"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055191"
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente
+# <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Ripristinare i word breaker usati dalla ricerca alla versione precedente (ricerca di SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene installata e abilitata una versione dei word breaker e degli stemmer per tutte le lingue supportate dalla ricerca full-text, a eccezione del coreano. In questo articolo viene descritto come passare da questa versione dei componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente.  
   

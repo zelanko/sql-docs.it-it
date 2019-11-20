@@ -1,6 +1,5 @@
 ---
-title: Usare il formato nativo per importare o esportare dati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Usare il formato nativo per importare ed esportare dati
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908603"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055914"
 ---
-# <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usare il formato nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 L'utilizzo del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
 

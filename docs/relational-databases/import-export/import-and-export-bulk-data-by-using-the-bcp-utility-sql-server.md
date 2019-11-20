@@ -1,5 +1,5 @@
 ---
-title: Importare ed esportare dati per operazioni bulk usando l'utilità bcp (SQL Server) | Microsoft Docs
+title: Importare ed esportare dati bulk con bcp
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: data-movement
@@ -13,21 +13,21 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a1a510e717ebb962f39c3b0bb1a342ef52751d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 521ef35d9d06244c36395e96ab681a21abffe6ea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708002"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055987"
 ---
-# <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importazione ed esportazione di dati per operazioni bulk tramite l'utilità bcp (SQL Server)
+# <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>Importare ed esportare dati bulk con bcp (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Questo argomento offre una panoramica sull'uso dell'[utilità bcp](../../tools/bcp-utility.md) per l'esportazione di dati da qualsiasi posizione di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile usare un'istruzione SELECT, incluse le viste partizionate.  
+Questo argomento offre una panoramica sull'uso dell' [utilità bcp](../../tools/bcp-utility.md) per l'esportazione di dati da qualsiasi posizione di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile usare un'istruzione SELECT, incluse le viste partizionate.  
   
  L'utilità bcp (Bcp.exe) è uno strumento della riga di comando che utilizza l'API del programma per la copia bulk (BCP). L'utilità bcp consente di eseguire le operazioni seguenti:  
   

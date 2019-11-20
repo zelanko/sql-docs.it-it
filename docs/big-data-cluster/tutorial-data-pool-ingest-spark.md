@@ -1,7 +1,7 @@
 ---
 title: Inserire dati con processi Spark
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come inserire i dati nel pool di dati di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usando i processi Spark in Azure Data Studio.
+description: Questa esercitazione illustra come inserire dati nel pool di dati di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usando processi Spark in Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
-ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182642"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119202"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: inserire dati in un pool di dati SQL Server con processi Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con processi Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come usare i processi Spark per caricare i dati nel [pool di dati](concept-data-pool.md) di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
+Questa esercitazione illustra come usare processi Spark per caricare dati nel [pool di dati](concept-data-pool.md) di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 In questa esercitazione verranno illustrate le procedure per:
 
@@ -32,7 +32,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > [!TIP]
 > Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere i [pool di dati di esempio](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) in GitHub.
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
@@ -79,7 +79,7 @@ Questa procedura consente di creare una tabella esterna nel pool di dati denomin
 
 ## <a name="start-a-spark-streaming-job"></a>Avviare un processo di streaming Spark
 
-Il passaggio successivo consiste nella creazione di un processo di streaming Spark che carica dati clickstream Web dal pool di archiviazione (HDFS) nella tabella esterna creata nel pool di dati. Questi dati sono stati aggiunti a/clickstream_data nei [dati di esempio di caricamento nel cluster Big Data](tutorial-load-sample-data.md).
+Il passaggio successivo consiste nella creazione di un processo di streaming Spark che carica dati clickstream Web dal pool di archiviazione (HDFS) nella tabella esterna creata nel pool di dati. Questi dati sono stati aggiunti a /clickstream_data in [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md).
 
 1. In Azure Data Studio connettersi all'istanza master del cluster Big Data. Per altre informazioni, vedere [Connettersi a un cluster Big Data](connect-to-big-data-cluster.md).
 
@@ -99,8 +99,9 @@ Il passaggio successivo consiste nella creazione di un processo di streaming Spa
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -133,7 +134,7 @@ Questa procedura dimostra che il processo di streaming Spark ha caricato i dati 
 
 1. Prima di eseguire query sui dati inseriti, esaminare lo stato di esecuzione di Spark, inclusi l'ID dell'app Yarn, l'interfaccia utente di Spark e i log del driver.
 
-   ![Dettagli esecuzione Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
+   ![Dettagli di esecuzione di Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Tornare alla finestra di query dell'istanza master di SQL Server aperta all'inizio di questa esercitazione.
 

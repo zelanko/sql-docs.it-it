@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082324"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982914"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revoca le autorizzazioni concesse o negate per un utente di database, un ruolo del database o un ruolo applicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,7 +68,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifica la classe e il nome del ruolo per cui viene revocata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  APPLICATION ROLE ::*application_role*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica la classe e il nome del ruolo applicazione per cui viene revocata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
@@ -93,27 +93,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifica un ruolo del database.  
   
  *Application_role*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica un ruolo applicazione.  
   
  *Database_user_mapped_to_Windows_User*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un utente di Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un gruppo di Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un certificato.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a una chiave asimmetrica.  
   
@@ -180,7 +180,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revoca dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
  Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

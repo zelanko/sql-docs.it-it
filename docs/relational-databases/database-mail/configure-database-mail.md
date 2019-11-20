@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909495"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095708"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909495"
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
- Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di Microsoft SQL Server Agent, ad esempio, può inviare posta elettronica dall'indirizzo **SqlAgent@Adventure-Works.com** .  
+ Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di Microsoft SQL Server Agent, ad esempio, può inviare posta elettronica dall'indirizzo **SqlAgent\@Adventure-Works.com**.  
   
  **Nome visualizzato**  
  Consente di visualizzare o aggiornare il nome da visualizzare nei messaggi di posta elettronica inviati da questo account. Il nome visualizzato è facoltativo. Si tratta del nome visualizzato nei messaggi inviati da questo account. Un account di SQL Server Agent, ad esempio, può visualizzare il nome **SQL Server Agent Automated Mailer** nei messaggi di posta elettronica.  
   
  **Indirizzo risposte**  
- Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di SQL Server Agent, ad esempio, possono essere indirizzate all'amministratore del database **danw@Adventure-Works.com** .  
+ Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di SQL Server Agent, ad esempio, possono essere indirizzate all'amministratore del database **danw\@Adventure-Works.com**.  
   
  **Nome server**  
  Consente di visualizzare o aggiornare il nome del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.<nome_società>.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  

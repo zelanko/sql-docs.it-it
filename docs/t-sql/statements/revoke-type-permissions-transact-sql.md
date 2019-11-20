@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1932d5e174154d0c51d4693b49400aaf6282e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913910"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982896"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revoca le autorizzazioni per un tipo.  
   
-  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -81,27 +81,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifica un ruolo del database.  
   
  *Application_role*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica un ruolo applicazione.  
   
  *Database_user_mapped_to_Windows_User*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un utente di Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un gruppo di Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un certificato.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a una chiave asimmetrica.  
   

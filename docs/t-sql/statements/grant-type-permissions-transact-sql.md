@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b263463874113ce590da9bde57f15b4b03c13e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7695fda9dd287239f4ef88ea5c279e11a0b5abdd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071209"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982504"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Concede le autorizzazioni per un tipo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,27 +72,27 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  Specifica un ruolo del database.  
   
  *Application_role*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica un ruolo applicazione.  
   
  *Database_user_mapped_to_Windows_User*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un utente di Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un gruppo di Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un certificato.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a una chiave asimmetrica.  
   

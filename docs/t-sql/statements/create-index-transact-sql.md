@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1678db946145ae7780ed35fcf142f915aa2a8fa7
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: b09ea4349a710bad0ed228e6f16637878047e9bc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961953"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982205"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -97,7 +97,7 @@ Per altri tipi di indici, vedere:
 - [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)
 - [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -286,7 +286,7 @@ Gli indici filtrati non si applicano agli indici XML e full-text. Per gli indici
 
 ON *partition_scheme_name* **( _column_name_ )**      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica lo schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di un indice partizionato. È necessario che lo schema di partizione sia presente nel database e sia stato creato eseguendo [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifica la colonna in base alla quale verrà eseguita la partizione di un indice partizionato. La colonna deve corrispondere all'argomento della funzione di partizione usata da *partition_scheme_name* per tipo di dati, lunghezza e precisione. *column_name* non è limitato alle colonne nella definizione dell'indice. È possibile specificare qualsiasi colonna della tabella di base tranne quando si esegue la partizione di un indice UNIQUE. In questo caso il valore *column_name* deve essere scelto tra quelli usati come chiave univoca. Questa restrizione consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di verificare l'univocità dei valori di chiave all'interno di una singola partizione.
 
@@ -302,13 +302,13 @@ Per altre informazioni sul partizionamento degli indici, vedere [Tabelle e indic
 
 ON _filegroup_name_      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive)
 
 Crea l'indice specificato nel filegroup specificato. Se non viene specificata una posizione e la tabella o la vista non è partizionata, l'indice utilizzerà lo stesso filegroup della tabella o della vista sottostante. Il filegroup deve essere già esistente.
 
 ON **"** default **"**      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Crea l'indice specificato nello stesso filegroup o schema di partizione della tabella o della vista.
 
@@ -319,7 +319,7 @@ In questo contesto il termine default non rappresenta una parola chiave, È un i
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive)
 
 Specifica la posizione dei dati FILESTREAM per la tabella quando viene creato un indice cluster. La clausola FILESTREAM_ON consente di spostare i dati FILESTREAM in uno schema di partizione o in un filegroup FILESTREAM diverso.
 
@@ -357,7 +357,7 @@ Specifica le opzioni da usare quando si crea l'indice.
 
 PAD_INDEX = { ON | **OFF** }      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica il riempimento dell'indice. Il valore predefinito è OFF.
 
@@ -373,7 +373,7 @@ Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH PAD
 
 FILLFACTOR **=** _fillfactor_      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fillfactor* deve essere un valore intero compreso tra 1 e 100. Se *fillfactor* è 100, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea indici con pagine foglia riempite fino alla capacità massima.
 
@@ -386,7 +386,7 @@ Per altre informazioni, vedere [Specificare un fattore di riempimento per un ind
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF, tranne per il database SQL di Azure con servizio Hyperscale. Per tutte le operazioni di compilazione dell'indice in Hyperscale, SORT_IN_TEMPDB è sempre ON, indipendentemente dall'opzione specificata, a meno che non venga usata la ricompilazione dell'indice ripristinabile.
 
@@ -495,7 +495,7 @@ Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici onli
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Specifica se un'operazione sull'indice online è ripristinabile.
 
@@ -507,7 +507,7 @@ L'operazione sull'indice non è ripristinabile.
 
 MAX_DURATION **=** *time* [**MINUTES**] usato con **RESUMABLE = ON** (richiede **ONLINE = ON**)   
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indica il tempo (un valore intero specificato in minuti) di esecuzione di un'operazione sull'indice online ripristinabile prima di essere sospesa.
 
@@ -518,7 +518,7 @@ Indica il tempo (un valore intero specificato in minuti) di esecuzione di un'ope
 > Negli indici columnstore non sono supportate le ricompilazioni degli indici online ripristinabili.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.
 
@@ -529,7 +529,7 @@ OFF
 I blocchi di riga non vengono utilizzati.
 
 ALLOW_PAGE_LOCKS = { **ON** | OFF }      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.
 
@@ -545,7 +545,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](#sequential-keys).
 
 MAXDOP = *max_degree_of_parallelism*      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Sostituisce l'opzione di configurazione **max degree of parallelism** per la durata dell'operazione sull'indice. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.
 
@@ -580,7 +580,7 @@ L'indice o le partizioni specificate vengono compressi utilizzando la compressio
 Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. Se l'indice non è partizionato, l'argomento ON PARTITIONS genererà un errore. Se la clausola ON PARTITIONS non viene fornita, l'opzione DATA_COMPRESSION si applica a tutte le partizioni di un indice partizionato.
 
@@ -751,7 +751,7 @@ Per l'esecuzione di operazioni sugli indici online, è necessario attenersi alle
 Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 ### <a name="resumable-indexes"></a>Operazioni sull'indice ripristinabili
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Per l'esecuzione di operazioni sull'indice ripristinabili, è necessario attenersi alle indicazioni seguenti:
 
@@ -1051,7 +1051,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. Creare un indice partizionato
 Nell'esempio seguente viene creato un indice partizionato non cluster nello schema di partizione esistente `TransactionsPS1` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. In questo esempio si presuppone che sia stato installato l'esempio di indice partizionato.
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1101,7 +1101,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Creare, riprendere, sospendere e interrompere operazioni sull'indice ripristinabili
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1130,7 +1130,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>N. Sintassi di base
 Creare, riprendere, sospendere e interrompere operazioni sull'indice ripristinabili       
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809896"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982416"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Non è pertanto necessario eseguire i comandi DBCC CHECKALLOC, DBCC CHECKTABLE o
 >     
 > Poiché le opzioni di correzione DBCC non sono disponibili per le tabelle ottimizzate per la memoria, è necessario eseguire regolarmente il backup dei database e verificare i backup. Se i problemi di integrità dei dati si verificano in una tabella ottimizzata per la memoria, è necessario eseguire il ripristino dall'ultima copia di backup valida nota.    
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintassi    
     
@@ -161,7 +161,7 @@ DATA_PURITY
  Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base: [Risoluzione dell'errore DBCC 2570 in SQL Server 2005 e versioni successive](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e versioni successive).  
     
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usa il valore MAXDOP di Resource Governor descritto in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

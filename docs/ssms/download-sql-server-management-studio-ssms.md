@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843742"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097851"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 SSMS è gratuito.
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Scaricare SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>Scaricare SSMS
+
+**[![download](media/download-icon.png) Scaricare SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.4 esegue l'aggiornamento alla versione 18.4. Se è stata installata una versione di *anteprima* precedente di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.4.
 
@@ -81,7 +83,7 @@ SQL Server Management Studio 18.4:
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 50 regole di valutazione (vedere i dettagli su GitHub). |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di espressioni matematiche di base e confronti alle condizioni delle regole. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per l'oggetto RegisteredServer. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della modalità di archiviazione delle regole nel formato JSON e aggiornamento del meccanismo di applicazione delle sostituzioni/personalizzazioni. |
+| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della modalità di archiviazione delle regole nel formato JSON e aggiornamento del meccanismo di applicazione di sostituzioni/personalizzazioni. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento delle regole per supportare SQL in Linux. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento del formato JSON di RuleSet è aggiunta della versione SCHEMA. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento dell'output dei cmdlet per migliorare la leggibilità delle raccomandazioni. |

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713195"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982288"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ KEEPFIXED PLAN
 Impedisce a Query Optimizer di ricompilare una query in seguito a modifiche alle statistiche. Se si specifica KEEPFIXED PLAN, una query viene ricompilata solo se lo schema delle tabelle sottostanti cambia o se si esegue **sp_recompile** in tali tabelle.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive).  
   
 Impedisce alla query di usare un indice columnstore ottimizzato per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'uso dell'indice columnstore e un hint per l'indice per usare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882424"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926044"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funzioni definite dall'utente scalari T-SQL
 Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un unico valore di dati sono dette funzioni definite dall'utente scalari T-SQL. Le funzioni definite dall'utente T-SQL consentono di riusare e modulare il codice in più query [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo elegante. Alcuni calcoli (ad esempio regole business complesse) sono più facili da esprimere nella forma imperativa delle funzioni definite dall'utente. Le funzioni definite dall'utente consentono di creare una logica complessa senza richiedere l'esperienza necessaria per la scrittura di query SQL complesse.
@@ -134,7 +134,7 @@ Come detto in precedenza, il piano di query non ha più un operatore per la funz
 A seconda della complessità della logica della funzione definita dall'utente, il piano di query generato risultante può essere anche più grande e più complesso. Come si può vedere, le operazioni all'interno della funzione definita dall'utente non sono più una black box. Query Optimizer è quindi in grado di determinare i costi di queste operazioni e di ottimizzarle. Poiché, poi, la funzione definita dall'utente non è più all'interno del piano, la chiamata iterativa a tale funzione viene sostituita da un piano che evita completamente il sovraccarico delle chiamate di funzione.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisiti delle funzioni definite dall'utente scalari abilitate per l'inlining
-È possibile eseguire l'inlining di una funzione definita dall'utente scalare Transact-SQL se si verificano tutte le condizioni seguenti:
+<a name="requirements"></a> È possibile eseguire l'inlining di una funzione definita dall'utente scalare Transact-SQL se si verificano tutte le condizioni seguenti:
 
 - La funzione definita dall'utente è scritta con i costrutti seguenti:
     - `DECLARE`, `SET`: Dichiarazione e assegnazione di variabili.
@@ -165,7 +165,7 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 Per ogni funzione definita dall'utente scalare T-SQL, la vista del catalogo [Sys. sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) include la proprietà `is_inlineable`, che indica se una funzione definita dall'utente è idonea all'inlining o meno. 
 
 > [!NOTE]
-> La proprietà `is_inlineable` è derivata dai costrutti presenti nella definizione della funzione definita dall'utente. Non controlla se la funzione definita dall'utente supporta effettivamente l'inlining in fase di compilazione. Per altre informazioni, vedere le condizioni per l'inlining di seguito.
+> La proprietà `is_inlineable` è derivata dai costrutti presenti nella definizione della funzione definita dall'utente. Non controlla se la funzione definita dall'utente supporta effettivamente l'inlining in fase di compilazione. Per altre informazioni, vedere le [condizioni per l'inlining](#requirements).
 
 Il valore 1 indica che è idonea, mentre 0 indica il contrario. Questa proprietà ha un valore pari a 1 anche per tutte le funzioni con valori di tabella inline. Per tutti gli altri moduli, il valore è 0.
 
@@ -258,7 +258,7 @@ Come descritto in questo articolo, l'inlining di una funzione definita dall'uten
 1. Gli hint di join a livello di query possono non essere più validi, poiché l'inlining può introdurre nuovi join. È necessario usare hint di join locale.
 1. Non è possibile indicizzare le viste che fanno riferimento a funzioni definite dall'utente scalari. Se è necessario creare un indice per tali viste, disabilitare l'inlining per le funzioni definite dall'utente interessate.
 1. Con l'inlining di funzioni definite dall'utente possono presentarsi alcune differenze nel comportamento del [Dynamic Data Masking](../security/dynamic-data-masking.md). In determinate situazioni (a seconda della logica della funzione definita dall'utente), l'inlining può essere più conservativo rispetto alla maschera delle colonne di output. Negli scenari in cui le colonne a cui si fa riferimento in una funzione definita dall'utente non sono colonne di output, queste non vengono mascherate. 
-1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, il valore restituito dalla funzione predefinita cambia con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente.
+1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente.
 
 ## <a name="see-also"></a>Vedere anche
 [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

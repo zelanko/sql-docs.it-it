@@ -1,29 +1,31 @@
 ---
-title: Debugger Transact-SQL | Microsoft Docs
+title: Debugger Transact-SQL
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637998"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097932"
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di individuare errori nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] esaminandone il comportamento in fase di esecuzione. Dopo avere impostato la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sulla modalità di debug, è possibile sospendere l'esecuzione di righe specifiche di codice e controllare le informazioni e i dati utilizzati o restituiti da tali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="stepping-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
 

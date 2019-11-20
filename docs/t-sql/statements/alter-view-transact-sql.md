@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100975"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981945"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Modifica una vista creata in precedenza. È possibile utilizzare questa istruzione anche per le viste indicizzate. ALTER VIEW non influisce sulle stored procedure o i trigger dipendenti e non comporta modifiche delle autorizzazioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ AS select_statement
 >  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Se ad esempio si concedono autorizzazioni per la colonna **SalesOrderID** con un'istruzione CREATE VIEW, è possibile usare un'istruzione ALTER VIEW per rinominare la colonna **SalesOrderID**, ad esempio come **OrderRef**, e mantenere comunque le autorizzazioni associate alla vista che usa la colonna **SalesOrderID**.  
   
  ENCRYPTION  
- **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Crittografa le voci nella tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione ALTER VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   

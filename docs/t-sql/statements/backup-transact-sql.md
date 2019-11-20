@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659089"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982854"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,9 +244,9 @@ Specifica un file su disco o un dispositivo a nastri oppure un servizio di archi
 > [!NOTE]
 > Il dispositivo del disco NUL elimina tutte le informazioni inviate al dispositivo e deve essere usato solo per i test. Non è progettato per l'uso in produzione.
 > [!IMPORTANT]
-> Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è possibile eseguire un backup solo in un singolo dispositivo per i backup in URL. Per eseguire il backup in più dispositivi durante il backup nell'URL, è necessario usare le versioni da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ed è necessario usare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
+> Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è possibile eseguire un backup solo in un singolo dispositivo per i backup in URL. Per eseguire il backup in più dispositivi durante il backup nell'URL, è necessario usare l[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive ed è necessario usare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
 
-**URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e versioni successive).
 
 Non è necessario che un dispositivo disco sia presente prima che venga specificato in un'istruzione BACKUP. Se il dispositivo fisico è presente e si omette l'opzione INIT nell'istruzione BACKUP, il backup viene accodato al dispositivo.
 
@@ -279,10 +279,10 @@ Per altre informazioni, vedere "Gruppi di supporti in set di supporti con mirror
 
 Opzioni da utilizzare con un'operazione di backup.
 
-CREDENTIAL **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+CREDENTIAL **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e versioni successive).
 Usata solo quando si crea un backup nel servizio di archiviazione BLOB di Microsoft Azure.
 
-FILE_SNAPSHOT **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).
 
 Usato per creare uno snapshot di Azure dei file di database quando tutti i file di database di SQL Server vengono archiviati usando il servizio di archiviazione BLOB di Azure. Per altre informazioni, vedere [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acquisisce snapshot di Azure dei file di database (file di dati e file di log) in uno stato coerente. Un set coerente di snapshot di Azure costituisce un backup e viene registrato nel file di backup. L'unica differenza tra `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` e `BACKUP LOG TO URL WITH FILE_SNAPSHOT` è che quest'ultimo esegue anche il troncamento del log delle transazioni mentre il primo non esegue alcun troncamento. Con il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dopo il backup completo iniziale richiesto da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire la catena di backup, è necessario un solo backup del log delle transazioni per ripristinare un database nel punto nel tempo del backup del log delle transazioni. Inoltre, sono necessari solo due backup del log delle transazioni per ripristinare un database in un punto nel tempo compreso tra i due backup del log delle transazioni.
 

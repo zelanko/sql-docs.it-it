@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984776"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127354"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
+ Se il tipo di destinazione SQL è VARCHAR o CHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
  Esempio:  
   

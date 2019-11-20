@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532393"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063970"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -87,8 +87,10 @@ Il servizio Azure Kubernetes include [due classi di archiviazione predefinite](/
 
 I cluster Kubernetes distribuiti con `kubeadm` non includono una classe di archiviazione predefinita. È necessario creare classi di archiviazione personalizzate e volumi permanenti usando l'archiviazione locale o lo strumento di provisioning preferito, ad esempio [Rook](https://github.com/rook/rook). In questo caso, è necessario impostare `className` sulla classe di archiviazione configurata. 
 
-> [!NOTE]
->  Nel file di configurazione della distribuzione predefinito per kubeadm (`kubeadm-dev-test` o `kubeadm-prod`) non è specificato alcun nome di classe di archiviazione per l'archiviazione di dati e log. Prima della distribuzione, è necessario personalizzare il file di configurazione e impostare il valore di className, altrimenti le convalide precedenti alla distribuzione non riusciranno. La distribuzione prevede anche un passaggio di convalida che controlla l'esistenza della classe di archiviazione, ma non i volumi permanenti necessari. È necessario assicurarsi di creare volumi sufficienti in base alla scala del cluster. Per le dimensioni minime predefinite del cluster (scalabilità predefinita, nessuna disponibilità elevata), è necessario creare almeno 24 volumi permanenti. [Qui](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) è disponibile un esempio di come creare volumi permanenti tramite uno strumento di provisioning locale.
+> [!IMPORTANT]
+>  Nel file di configurazione della distribuzione predefinito per kubeadm (`kubeadm-dev-test` o `kubeadm-prod`) non è specificato alcun nome di classe di archiviazione per l'archiviazione di dati e log. Prima della distribuzione, è necessario personalizzare il file di configurazione e impostare il valore di `className`, altrimenti le convalide precedenti alla distribuzione non riusciranno. La distribuzione prevede anche un passaggio di convalida che controlla l'esistenza della classe di archiviazione, ma non i volumi permanenti necessari. È necessario assicurarsi di creare volumi sufficienti in base alla scala del cluster. Per le dimensioni minime predefinite del cluster (scalabilità predefinita, nessuna disponibilità elevata), è necessario creare almeno 24 volumi permanenti.
+>
+>[Creare un cluster Kubernetes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) presenta un esempio di come è possibile creare volumi permanenti usando lo strumento di provisioning locale. Questo esempio introduce l'archiviazione Kubernetes.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personalizzare le configurazioni di archiviazione per ogni pool

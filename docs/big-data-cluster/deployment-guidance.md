@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532054"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127377"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -68,6 +68,12 @@ kubectl config view
 > Se si esegue la distribuzione in un cluster Kubernetes a più nodi che è stato avviato automaticamente con `kubeadm`, prima di avviare la distribuzione del cluster Big Data assicurarsi che gli orologi siano sincronizzati tra tutti i nodi Kubernetes cui è destinata la distribuzione. Il cluster Big Data include proprietà di stato predefinite per diversi servizi che sono sensibili al tempo e le differenze di orario possono causare errori relativi allo stato.
 
 Dopo aver configurato il cluster Kubernetes, è possibile procedere con la distribuzione di un nuovo cluster Big Data di SQL Server. Se si esegue l'aggiornamento da una versione precedente, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="ensure-you-have-storage-configured"></a>Verificare che sia stata configurata l'archiviazione
+
+Per la maggior parte delle distribuzioni di cluster Big Data deve essere disponibile un archivio permanente. Al momento, è necessario assicurarsi di avere un piano per implementare un archivio permanente nel cluster Kubernetes prima di distribuire il cluster Big Data.
+
+Se si esegue la distribuzione nel servizio Azure Kubernetes, non occorre configurare l'archiviazione. Il servizio Azure Kubernetes fornisce classi di archiviazione predefinite con provisioning dinamico. È possibile personalizzare la classe di archiviazione (`default` o `managed-premium`) nel file di configurazione della distribuzione. I profili predefiniti usano una classe di archiviazione `default`. Se si esegue la distribuzione in un cluster Kubernetes distribuito con `kubeadm`, è necessario assicurarsi di disporre di spazio di archiviazione sufficiente per un cluster con la scala desiderata e configurato per l'uso. Se si desidera personalizzare la modalità d'uso dell'archiviazione, è necessario farlo prima di procedere. Vedere [Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Panoramica della distribuzione
 

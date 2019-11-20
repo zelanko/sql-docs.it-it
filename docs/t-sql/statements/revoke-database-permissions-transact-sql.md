@@ -17,19 +17,19 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d54baf32affef290334503d9c18c04a6c28c8d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082339"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983277"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE - autorizzazioni per database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Revoca le autorizzazioni concesse e negate per un database.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -85,27 +85,27 @@ permission | ALL [ PRIVILEGES ]
  Specifica un ruolo del database.  
   
  *Application_role*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica un ruolo applicazione.  
   
  *Database_user_mapped_to_Windows_User*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un utente di Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un gruppo di Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a un certificato.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica un utente del database sul quale viene eseguito il mapping a una chiave asimmetrica.  
   
@@ -132,7 +132,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
@@ -207,7 +207,7 @@ permission | ALL [ PRIVILEGES ]
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. Revoca dell'autorizzazione per la creazione di certificati  
  Nell'esempio seguente viene revocata l'autorizzazione `CREATE CERTIFICATE` per il database `AdventureWorks2012` all'utente `MelanieK`.  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
 ```  
 USE AdventureWorks2012;  
@@ -218,7 +218,7 @@ GO
 ### <a name="b-revoking-references-permission-from-an-application-role"></a>B. Revoca dell'autorizzazione REFERENCES a un ruolo applicazione  
  Nell'esempio seguente viene revocata l'autorizzazione `REFERENCES` per il database `AdventureWorks2012` al ruolo applicazione `AuditMonitor`.  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73168756"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982697"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -179,12 +179,12 @@ DATABASE
 Applica l'ambito di un trigger DDL al database corrente. Se viene specificato questo parametro, il trigger viene attivato quando si verifica *event_type* o *event_group* nel database corrente.  
   
 ALL SERVER  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Applica l'ambito di un trigger DDL o LOGON al server corrente. Se viene specificato questo parametro, il trigger viene attivato quando si verifica *event_type* o *event_group* nel server corrente.  
   
 WITH ENCRYPTION  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Occulta il testo dell'istruzione CREATE TRIGGER. Tramite il parametro WITH ENCRYPTION è possibile evitare la pubblicazione del trigger come parte della replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare WITH ENCRYPTION per i trigger CLR.  
   
@@ -236,7 +236,7 @@ Nome di un raggruppamento predefinito di eventi del linguaggio [!INCLUDE[tsql](.
 Dopo il completamento dell'esecuzione di CREATE TRIGGER, *event_group* funge anche da macro aggiungendo i tipi di eventi che include alla vista del catalogo sys.trigger_events.  
   
 NOT FOR REPLICATION  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Indica che il trigger non deve essere eseguito quando un agente di replica modifica la tabella coinvolta nel trigger.  
   
@@ -264,7 +264,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile aggior
   
 Per i trigger sulle tabelle ottimizzate per la memoria, un blocco ATOMIC è l'unica istruzione *sql_statement* consentita al livello superiore. L'unico codice T-SQL consentito all'interno del blocco ATOMIC è quello consentito nelle procedure native.  
   
-\< method_specifier > **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+\< method_specifier > **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Per un trigger CLR, specifica il metodo di un assembly da associare al trigger. Il metodo non deve accettare nessun argomento e restituire void. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly con visibilità dell'assembly. Se alla classe è stato assegnato un nome completo con lo spazio dei nomi le cui parti sono separate da '.', il nome della classe deve essere delimitato tramite [ ] o " ". La classe non può essere nidificata.  
   
@@ -512,7 +512,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Utilizzo di un trigger DDL con ambito server  
 Nell'esempio seguente viene utilizzato un trigger DDL per visualizzare un messaggio se si verifica un evento CREATE DATABASE nell'istanza del server corrente e viene utilizzata la funzione `EVENTDATA` per recuperare il testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente. Per altri esempi di utilizzo di EVENTDATA nei trigger DDL, vedere [Usare la funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -530,7 +530,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. Utilizzo di un trigger LOGON  
 Nell'esempio seguente di trigger LOGON viene negato il tentativo di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come membro dell'account di accesso *login_test* se esistono già tre sessioni utente in esecuzione con tale account di accesso.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql  
 USE master;  

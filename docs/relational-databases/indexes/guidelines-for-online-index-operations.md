@@ -1,7 +1,7 @@
 ---
 title: Linee guida per le operazioni sugli indici online | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909794"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981792"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per le operazioni sugli indici online
 
@@ -93,7 +93,7 @@ Operazioni sugli indici su larga scala, eseguite online oppure offline, possono 
 ## <a name="resumable-index-considerations"></a>Considerazioni sugli indici ripristinabili
 
 > [!NOTE]
-> L'opzione RESUMABLE per gli indici si applica a SQL Server (a partire da SQL Server 2017) (solo ricompilazione dell'indice) e al database SQL (creazione di un indice e ricompilazione dell'indice). Vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) (attualmente in anteprima pubblica per [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) e [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
+> L'opzione di indice ripristinabile per la creazione o ricompilazione di un indice si applica a SQL Server (ricompilazione dell'indice a partire da SQL Server 2017, con creazione dell'indice supportata anche in SQL Server 2019) e al database SQL. Vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) e [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
 Per eseguire operazioni di creazione o ricompilazione di un indice online ripristinabile, attenersi alle seguenti linee guida:
 

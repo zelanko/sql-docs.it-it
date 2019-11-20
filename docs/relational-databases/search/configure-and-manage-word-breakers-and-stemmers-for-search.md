@@ -1,5 +1,5 @@
 ---
-title: Configurare e gestire word breaker e stemmer per la ricerca | Microsoft Docs
+title: Configurare e gestire word breaker e stemmer per la ricerca
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388341"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056266"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurare e gestire word breaker e stemmer per la ricerca (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica esegue le due operazioni seguenti:
 
@@ -92,7 +93,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &
 ##  <a name="tshoot"></a> Risolvere i problemi relativi agli errori di timeout del word breaking  
  Un errore di timeout del word breaking può verificarsi in diverse situazioni. Per informazioni su queste situazioni e su come rispondere, vedere [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
-### <a name="info-about-the-mssqlserver30053-error"></a>Informazioni sull'errore MSSQLSERVER_30053
+### <a name="info-about-the-mssqlserver_30053-error"></a>Informazioni sull'errore MSSQLSERVER_30053
   
 |Proprietà|valore|
 |-|-|

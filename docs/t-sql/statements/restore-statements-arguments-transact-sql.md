@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141230"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982457"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Istruzioni RESTORE: argomenti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo illustra gli argomenti descritti nelle sezioni "Sintassi" dell'istruzione RESTORE {DATABASE|LOG} e del set di istruzioni ausiliarie associato: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. La maggior parte degli argomenti sono supportati solo da un subset di queste sei istruzioni. Informazioni dettagliate sono contenute nella descrizione dell'argomento.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
  Per informazioni sulla sintassi, vedere gli argomenti seguenti:  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Specifica che l'operazione di ripristino carica le informazioni nelle tabelle della cronologia di **msdb**. Per il singolo set di backup in corso di verifica, l'opzione LOADHISTORY consente di caricare le informazioni sui backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archiviati nel set di supporti nelle tabelle della cronologia di backup e di ripristino del database **msdb**. Per altre informazioni sulle tabelle della cronologia, vedere [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Le opzioni WITH generali sono tutte supportate nelle istruzioni RESTORE DATABASE e RESTORE LOG. Alcune di queste opzioni sono supportate anche da una o più istruzioni ausiliarie, come indicato di seguito.  
   
 ##### <a name="restore-operation-options"></a>Opzioni relative all'operazione di ripristino  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Supportato da:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e versioni successive
   
  Usato solo quando si ripristina un backup dal servizio Archiviazione BLOB di Microsoft Azure.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Supportato da:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
  Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti i nomi di directory FILESTREAM a livello di database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il confronto di univocità supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Specifica che dopo l'operazione RESTORE il nastro rimane caricato sull'unità nastro.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Questa opzione è pertinente solo se è stata eseguita la replica del database al momento della creazione del backup.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
 -   È necessario rinominare il server warm standby per utilizzare lo stesso nome del server primario.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Questa opzione è pertinente solo se il database è stato abilitato per Change Data Capture al momento della creazione del backup.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
  Per informazioni sull'uso di Change Data Capture con il mirroring del database, vedere [Change Data Capture e altre funzionalità di SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  Attiva o disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o imposta un nuovo identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Questa opzione è pertinente solo se [!INCLUDE[ssSB](../../includes/sssb-md.md)] è stato abilitato (attivato) per il database al momento della creazione del backup.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
  NEW_BROKER  
  Specifica che al database deve essere assegnato un nuovo identificatore di Service Broker. Poiché il database viene considerato una nuova istanza di Service Broker, tutte le conversazioni esistenti nel database vengono rimosse immediatamente senza generare messaggi di fine dialogo. Tutte le route che fanno riferimento all'identificatore di Service Broker precedente devono essere ricreate con il nuovo identificatore.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Supportato da:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) e solo per i modelli di recupero con registrazione minima delle operazioni bulk o con registrazione completa.  
   
  Per ripristinare un database fino a uno specifico punto nel tempo o fino a una specifica transazione, indicare il punto di recupero di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK. Un'ora o una transazione specifica viene sempre ripristinata da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK identica.  

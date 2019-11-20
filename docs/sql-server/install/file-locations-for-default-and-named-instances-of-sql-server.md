@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ed7b8afd15e4c78eb10476504d21db8c42caffb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028884"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055199"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Percorsi dei file per le istanze predefinite e denominate di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,14 +35,15 @@ ms.locfileid: "69028884"
 >  Non eliminare nessuna delle directory seguenti o il relativo contenuto: Binn, Data, Ftdata, HTML o 1033. Se necessario, è possibile eliminare altre directory; potrebbe non essere tuttavia possibile recuperare funzionalità o dati non più disponibili se prima non si disinstalla e quindi si reinstalla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non eliminare o modificare nessuno dei file htm disponibile nella directory HTML. Questi file sono necessari per il corretto funzionamento degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>File condivisi per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- I file comuni usati da tutte le istanze in un singolo computer sono installati nella cartella [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*unità*> è la lettera corrispondente all'unità in cui sono installati i componenti. Il valore predefinito è in genere l'unità C. \<*nnn*> indica la versione. La tabella seguente indica le versioni per i percorsi. 
+ I file comuni usati da tutte le istanze in un singolo computer sono installati nella cartella [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*unità*> è la lettera corrispondente all'unità in cui sono installati i componenti. Il valore predefinito è in genere l'unità C. _nnn_ indica la versione. La tabella seguente indica le versioni per i percorsi. \{nn} è il valore della versione usato nell'ID istanza e nel percorso del Registro di sistema. 
 
-|\<*nnn*>|Versione
-|-----|-----
-|140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
-|130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]
-|120|SQL Server 2014
-|110|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] 
+|Versione|\*nnn*|{nn}|
+|-----|-----|--------|
+|[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
+|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
+|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
+|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   
 ## <a name="file-locations-and-registry-mapping"></a>Percorsi dei file e mapping del Registro di sistema  
  Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene generato un ID istanza per ogni componente. I componenti server di questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono il [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -57,24 +58,22 @@ ms.locfileid: "69028884"
   
  Di seguito vengono indicati alcuni esempi di ID delle istanze predefinite utilizzati in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   MSSQL14.MSSQLSERVER per un'istanza predefinita di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   MSSQL\{nn}.MSSQLSERVER per un'istanza predefinita di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   MSAS14.MSSQLSERVER per un'istanza predefinita di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].  
+-   MSAS\{nn}.MSSQLSERVER per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.  
   
--   MSSQL14.MyInstance per un'istanza denominata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] il cui nome è "MyInstance".  
+-   MSSQL\{nn}.Istanza per un'istanza denominata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] il cui nome è "Istanza".  
   
-    >[!NOTE]
-    >Il numero a due cifre nel percorso dell'ID istanza indica il numero di versione. Negli esempi precedenti il numero di versione 14 è [!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]. 
 
  Di seguito viene indicata la struttura di directory per un'istanza denominata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che include [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], denominata "Istanza" e installata nelle directory predefinite:  
   
--   C:\Programmi\Microsoft SQL Server\MSSQL14.MyInstance\  
+-   C:\Programmi\Microsoft SQL Server\MSSQL\{nn}.Istanza\  
   
--   C:\Programmi\Microsoft SQL Server\MSAS14.MyInstance\  
+-   C:\Programmi\Microsoft SQL Server\MSAS\{nn}.Istanza\  
   
  È possibile specificare qualsiasi valore per l'ID istanza, evitando tuttavia caratteri speciali e parole chiave riservate.  
   
- È possibile specificare l'ID di un'istanza non predefinita durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se l'utente sceglie di modificare la directory di installazione predefinita, invece di \<Programmi>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene usato un \<percorso predefinito>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che gli ID delle istanze che iniziano con un carattere di sottolineatura (_) o che contengono il simbolo cancelletto (#) o il segno di dollaro ($) non sono supportati.  
+ È possibile specificare l'ID di un'istanza non predefinita durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se l'utente sceglie di modificare la directory di installazione predefinita, invece di \\{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato un \<percorso predefinito>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che gli ID delle istanze che iniziano con un carattere di sottolineatura (_) o che contengono il simbolo cancelletto (#) o il segno di dollaro ($) non sono supportati.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i componenti client non sono specifici dell'istanza e non dispongono pertanto di un ID istanza assegnato. Per impostazione predefinita, i componenti non specifici dell'istanza vengono installati in un'unica directory: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. Se si modifica il percorso di installazione di un componente condiviso, la modifica sarà valida anche per tutti gli altri componenti condivisi. Nelle successive installazioni i componenti non specifici dell'istanza verranno installati nella stessa directory dell'installazione originale.  
@@ -83,19 +82,19 @@ ms.locfileid: "69028884"
   
  L'hive del Registro di sistema viene creato in HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*ID_Istanza*> per i componenti specifici dell'istanza. Ad esempio,  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.Istanza  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.Istanza  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.Istanza  
   
  Nel Registro di sistema viene inoltre gestito un mapping degli ID istanza ai nomi delle istanze. Il mapping degli ID istanza in base ai nomi delle istanze è gestito nel modo seguente:  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "InstanceName"="MSSQL14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "\<InstanceName>"="MSSQL\{nn}"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "InstanceName"="MSAS14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "\<InstanceName>"="MSAS\{nn}"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "InstanceName"="MSRS14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "\<InstanceName>"="MSRS\{nn}"  
   
 ## <a name="specifying-file-paths"></a>Specifica dei percorsi dei file  
  Durante l'installazione è possibile modificare il percorso di installazione delle funzionalità seguenti:  
@@ -104,15 +103,15 @@ ms.locfileid: "69028884"
   
 |Componente|Percorso predefinito|Percorso configurabile o fisso|  
 |---------------|------------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] componenti server|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<IDIstanza>\ |Configurabile|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] file di dati|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<IDIstanza>\ |Configurabile|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<IDIstanza>\ |Configurabile|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di dati|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<IDIstanza>\ |Configurabile|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<IDIstanza>\Reporting Services\ReportServer\Bin\ |Configurabile|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione report|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<IDIstanza>\Reporting Services\ReportManager\ |Percorso fisso|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Directory di installazione>\140\DTS\\ <sup>1</sup> |Configurabile |  
-|Componenti client (ad eccezione di bcp.exe e sqlcmd.exe)|\<Directory di installazione>\140\Tools\\ <sup>1</sup> |Configurabile |  
-|Componenti client (bcp.exe e sqlcmd.exe)|\<Directory di installazione>\Client SDK\ODBC\110\Tools\Binn|Percorso fisso|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] componenti server|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<IDIstanza>\ |Configurabile|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] file di dati|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<IDIstanza>\ |Configurabile|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<IDIstanza>\ |Configurabile|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di dati|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<IDIstanza>\ |Configurabile|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<IDIstanza>\Reporting Services\ReportServer\Bin\ |Configurabile|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione report|\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<IDIstanza>\Reporting Services\ReportManager\ |Percorso fisso|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Directory di installazione>\nnn\DTS\\ <sup>1</sup> |Configurabile |  
+|Componenti client (ad eccezione di bcp.exe e sqlcmd.exe)|\<Directory di installazione>\nnn\Tools\\ <sup>1</sup> |Configurabile |  
+|Componenti client (bcp.exe e sqlcmd.exe)|\<Directory di installazione>\Client SDK\ODBC\nnn\Tools\Binn|Percorso fisso|  
 |Oggetti di replica e oggetti COM sul lato server|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Percorso fisso|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DLL del componente per il motore di run-time e il motore della pipeline Data Transformation Services e l'utilità della riga di comando **dtexec**|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Percorso fisso|  
 |DLL che forniscono supporto per connessioni gestite di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Percorso fisso|  
@@ -134,12 +133,12 @@ L'unità predefinita per i percorsi dei file è *systemdrive*, che in genere cor
   
  Se durante l'installazione si specifica un percorso di installazione per i componenti server o i file di dati, oltre al percorso specificato per i file di dati e di programma, verrà utilizzato l'ID istanza. L'ID istanza non viene utilizzato per gli strumenti e altri file condivisi, né per i file di dati e di programma di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ma solo per il repository di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Se si imposta un percorso di installazione per la caratteristica [!INCLUDE[ssDE](../../includes/ssde-md.md)] , nell'istallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale percorso verrà utilizzato come directory radice di tutte le cartelle specifiche dell'istanza per l'installazione, inclusi i file di dati SQL. In questo caso, se si imposta la radice su "C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<NomeIstanza>\MSSQL\\", le directory specifiche dell'istanza vengono aggiunte alla fine del percorso.  
+ Se si imposta un percorso di installazione per la caratteristica [!INCLUDE[ssDE](../../includes/ssde-md.md)] , nell'istallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale percorso verrà utilizzato come directory radice di tutte le cartelle specifiche dell'istanza per l'installazione, inclusi i file di dati SQL. In questo caso, se si imposta la radice su "C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<Nomeistanza>\MSSQL\\", le directory specifiche dell'istanza vengono aggiunte alla fine del percorso.  
   
  Se si utilizza la funzionalità di aggiornamento USESYSDB nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (modalità interfaccia utente del programma di installazione), è probabile che si verifichino le condizioni per un'installazione del prodotto in una struttura di cartelle ricorsiva, Ad esempio, \<*SQLProgramFiles*>\MSSQL14\MSSQL\MSSQL10_50\MSSQL\Data\\. Per utilizzare la funzionalità USESYSDB, impostare invece un percorso di installazione per la funzionalità dei file di dati SQL anziché per la funzionalità [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 > [!NOTE]
->  I file di dati si trovano in genere in una directory figlio denominata Data. Specificare ad esempio C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<NomeIstanza>\ per indicare il percorso radice della directory dei dati dei database di sistema durante l'aggiornamento quando i file di dati si trovano in C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<NomeIstanza>\MSSQL\Data.  
+>  I file di dati si trovano in genere in una directory figlio denominata Data. Specificare ad esempio C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<NomeIstanza>\ per indicare il percorso radice della directory dei dati dei database di sistema durante l'aggiornamento quando i file di dati si trovano in C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<NomeIstanza>\MSSQL\Data.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione Motore di database - Directory dati](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   

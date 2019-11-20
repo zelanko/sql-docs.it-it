@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882419"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055139"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -131,7 +131,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
 
 - Autenticazione con firme di accesso condiviso (SAS) *IDENTITY: costante con valore ‘Shared Access Signature’* 
-  *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
+  *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
   Autorizzazioni minime richieste: READ e LIST
 
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Se per ERRORFILE viene definito il percorso completo dell'account di archiviazio
   
 - Autenticazione con firme di accesso condiviso (SAS)
   - *IDENTITY: costante con valore ‘Shared Access Signature’*
-  - *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
+  - *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
   - Autorizzazioni minime richieste: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -277,7 +277,7 @@ I valori predefiniti del comando COPY sono i seguenti:
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY tratta ‘\n’ come ‘\r\n’ internamente. Per altre informazioni, vedere la sezione [ROWTERMINATOR]().
+> COPY tratta ‘\n’ come ‘\r\n’ internamente. Per altre informazioni, vedere la sezione ROWTERMINATOR.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>Vedere anche  
 
- [Panoramica del caricamento con SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Panoramica del caricamento con SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

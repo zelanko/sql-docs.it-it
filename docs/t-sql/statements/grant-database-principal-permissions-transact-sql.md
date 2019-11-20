@@ -25,12 +25,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065500"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982239"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68065500"
   Concede le autorizzazioni per un utente di database, un ruolo del database o un ruolo applicazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -91,7 +91,7 @@ GRANT permission [ ,...n ]
  Specifica un ruolo del database.  
   
  *Application_role*  
- **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica un ruolo applicazione.  
   
@@ -187,7 +187,7 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Concessione a un ruolo applicazione dell'autorizzazione IMPERSONATE per un utente  
  Nell'esempio seguente viene concessa l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AdventureWorks2012` del database `AccountsPayable17`.  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

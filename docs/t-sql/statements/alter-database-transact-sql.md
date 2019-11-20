@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff0c616342af9f00be56fbed3ecfb3d09dedb9ef
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532842"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982152"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -49,7 +49,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -127,11 +127,11 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > Questa opzione non è disponibile in un database indipendente.
 
-CURRENT **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
 Specifica che il database corrente in uso deve essere modificato.
 
-MODIFY NAME **=**_new_database_name_ rinomina il database con il nome specificato come *new_database_name*.
+MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name*.
 
 COLLATE *collation_name* specifica le regole di confronto per il database. In *collation_name* è possibile usare nomi di regole di confronto di Windows o SQL. Se omesso, al database vengono assegnate le regole di confronto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -142,8 +142,8 @@ Quando si creano database con regole di confronto diverse da quelle predefinite,
 
 Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**
-**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**\<delayed_durability_option> ::=** 
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
 
 Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -235,7 +235,7 @@ GO
 
 Nell'esempio seguente viene creato un database denominato `testdb` con le regole di confronto `SQL_Latin1_General_CP1_CI_A`S, quindi vengono modificate le regole di confronto del database `testdb` in `COLLATE French_CI_AI`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 USE master;
@@ -373,7 +373,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT Specifica che il database corrente in uso deve essere modificato.
 
-MODIFY NAME **=**_new_database_name_ rinomina il database con il nome specificato come *new_database_name*. Nell'esempio seguente il nome di un database `db1` viene modificato in `db2`:
+MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name*. Nell'esempio seguente il nome di un database `db1` viene modificato in `db2`:
 
 ```sql
 ALTER DATABASE db1

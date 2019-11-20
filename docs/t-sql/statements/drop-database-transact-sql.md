@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898098"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982198"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "67898098"
 
 Rimuove uno o più database utente o snapshot di database da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,7 +62,7 @@ Rimuove in modo condizionale il database solo se esiste già.
 *database_name* specifica il nome del database da rimuovere. Per visualizzare un elenco di database, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 *database_snapshot_name*
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 Specifica il nome di uno snapshot del database da rimuovere.
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. Rimozione di più database
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 Nell'esempio seguente vengono rimossi tutti i database elencati.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. Eliminazione di uno snapshot del database
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 Nell'esempio seguente viene rimosso uno snapshot di database, denominato `sales_snapshot0600`, senza influire sul database di origine.
 

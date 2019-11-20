@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680783"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982816"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Se si usano solo tabelle codici e colonne di tipo carattere, è necessario assic
 È difficile selezionare una tabella codici per i dati di tipo carattere in grado di supportare tutti i caratteri necessari per gli utenti di tutto il mondo. Il modo più semplice per gestire dati di tipo carattere in database internazionali consiste nell'usare sempre un tipo di dati che supporta Unicode. 
 
 ### <a name="unicode-data-types"></a>Tipi di dati Unicode
-Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), usare tipi di dati Unicode (**nchar**, **nvarchar** e **ntext**) anziché tipi di dati non Unicode (**char**, **varchar** e **text**). 
+Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive), usare tipi di dati Unicode (**nchar**, **nvarchar** e **ntext**) anziché tipi di dati non Unicode (**char**, **varchar** e **text**). 
 
 > [!NOTE]
 > Per i tipi di dati Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può rappresentare un massimo di 65.535 caratteri con UCS-2 o l'intera gamma Unicode (1.114.111 caratteri), se vengono usati caratteri supplementari. Per altre informazioni sull'abilitazione dei caratteri supplementari, vedere [Caratteri supplementari](#Supplementary_Characters).
@@ -473,7 +473,7 @@ Quando si spostano dati da un server a un client, le regole di confronto del ser
 > [!TIP]
 > È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
 >
-> Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
+> Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
  
 Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
  

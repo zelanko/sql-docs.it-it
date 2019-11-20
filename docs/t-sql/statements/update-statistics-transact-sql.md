@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798414"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982560"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) espongono il valore di percentuale di campionamento persistente per la statistica selezionata.
  
- **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) e versioni successive (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Forza la rielaborazione delle statistiche a livello foglia che coprono le partizioni specificate nella clausola ON PARTITIONS e successivamente ne determina il merge per compilare le statistiche globali. L'opzione WITH RESAMPLE è necessaria in quanto non è possibile eseguire il merge di statistiche di partizioni compilate con frequenze di campionamento differenti.  
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive
   
  ALL | COLUMNS | INDEX  
  Aggiornare tutte le statistiche esistenti, le statistiche create in una o più colonne o le statistiche create per gli indici. Se non si specifica nessuna delle opzioni, l'istruzione UPDATE STATISTICS aggiorna tutte le statistiche sulla tabella o sulla vista indicizzata.  
@@ -163,7 +163,7 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
 -   Statistiche create per le tabelle interne.  
 -   Statistiche create con indici spaziali o indici XML.  
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive
 
 MAXDOP = *max_degree_of_parallelism*  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

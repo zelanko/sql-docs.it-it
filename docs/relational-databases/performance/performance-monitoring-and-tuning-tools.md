@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113522"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962403"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113522"
   
 |Strumento|Descrizione|  
 |----------|-----------------|  
-|[Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Le funzioni predefinite consentono di visualizzare informazioni statistiche snapshot sull'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'avvio del server. Questi dati statistici vengono archiviati in contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefiniti. Ad esempio, **@@CPU_BUSY** indica la quantità di tempo dedicata dalla CPU all'esecuzione di codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **@@CONNECTIONS** indica il numero di connessioni o tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e **@@PACKET_ERRORS** indica il numero di pacchetti di rete trasferiti nelle connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Le funzioni predefinite consentono di visualizzare informazioni statistiche snapshot sull'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'avvio del server. Questi dati statistici vengono archiviati in contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefiniti. Ad esempio, **\@\@CPU_BUSY** indica la quantità di tempo dedicata dalla CPU all'esecuzione di codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **\@\@CONNECTIONS** indica il numero di connessioni o tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e **\@\@PACKET_ERRORS** indica il numero di pacchetti di rete trasferiti nelle connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Le istruzioni DBCC (Database Console Command) consentono di controllare le statistiche relative alle prestazioni e la consistenza logica e fisica di un database.|  
 |[Ottimizzazione guidata motore di database (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|Ottimizzazione guidata motore di database analizza gli effetti delle prestazioni delle istruzioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Ottimizzazione guidata motore di database offre consigli relativi ad aggiunta, rimozione o modifica di indici, viste indicizzate e partizionamento.|  
 |[Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090)|Database Experimentation Assistant è una nuova soluzione di test A/B per SQL Server. È utile per valutare una versione di destinazione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per un determinato carico di lavoro. Durante l'aggiornamento da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a qualsiasi versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Database Experimentation Assistant sarà in grado di fornire metriche per l'analisi comparata.|

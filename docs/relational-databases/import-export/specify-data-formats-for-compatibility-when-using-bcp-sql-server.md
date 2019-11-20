@@ -1,6 +1,5 @@
 ---
-title: Specificare i formati di dati per la compatibilità con bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Specificare i formati di dati per la compatibilità con bcp
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e56c9013afbfce762f35edb41d0b411c426028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062544"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055931"
 ---
-# <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)
+# <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Specificare i formati di dati per la compatibilità con bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Questo argomento descrive gli attributi del formato dati, prompt specifici di campo e l'archiviazione dei dati dei singoli campi in un file non in formato XML con il comando **bcp** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comprensione di questi concetti può risultare utile per l'esportazione bulk di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fini di importazione in un altro programma, ad esempio un altra applicazione di database. I formati di dati predefiniti (native, character o Unicode) nella tabella di origine potrebbero non essere compatibili con il layout di dati previsto dall'altra applicazione. In questo caso, quando si esportano i dati è necessario descriverne il layout.  
   

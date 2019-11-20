@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94572fb70e511cb99fc19deb77a86b4efb69673a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725925"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119232"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Esercitazioni sul linguaggio R per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

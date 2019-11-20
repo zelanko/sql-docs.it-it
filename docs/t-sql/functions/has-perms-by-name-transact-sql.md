@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019729"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982946"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Valuta l'autorizzazione valida dell'utente corrente per un'entità a protezione diretta. Una funzione correlata è [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
   
  *securable_class*  
- Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)**.  
+ Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)** .  
   
  Nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Espressione scalare facoltativa di tipo **sysname** che rappresenta il nome della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
 > [!NOTE]  
->  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le sottoentità a protezione diretta non possono usare le parentesi nella forma **'[**_nome secondario_**]'**. È necessario usare invece **'**_nome secondario_**'**.  
+>  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e successive, le sottoentità a protezione diretta non possono usare le parentesi nel formato **'[** _nome secondario_ **]'** . È necessario usare invece **'** _nome secondario_ **'** .  
   
  *sub-securable_class*  
  Espressione scalare facoltativa di tipo **nvarchar(60)** che rappresenta la classe della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Verifica dell'autorizzazione utente VIEW SERVER STATE a livello di server  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Verifica della capacità dell'utente di rappresentare (IMPERSONATE) l'entità server Ps  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

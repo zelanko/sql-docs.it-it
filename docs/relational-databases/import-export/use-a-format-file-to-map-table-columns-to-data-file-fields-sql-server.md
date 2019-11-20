@@ -1,6 +1,5 @@
 ---
-title: Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Eseguire il mapping tra le colonne della tabella e i campi del file di dati con un file di formato
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6530e51525b1fd1939b293001d99682d75e7a10e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908461"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056338"
 ---
-# <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
+# <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Un file di dati può includere campi disposti in un ordine diverso da quello delle colonne corrispondenti presenti nella tabella. In questo argomento vengono descritti file di formato sia non XML che XML, modificati per adattarli a un file di dati contenente campi disposti un ordine diverso da quello delle colonne della tabella. Il file di formato modificato esegue il mapping tra i campi dati e le colonne corrispondenti della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 

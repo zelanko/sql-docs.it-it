@@ -1,6 +1,6 @@
 ---
-title: Spostare un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Spostare un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067353"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095258"
 ---
-# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostare un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento si illustra come spostare un database scollegato in un'altra posizione e come ricollegarlo alla stessa istanza oppure a un'altra istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, è consigliabile spostare i database utilizzando la procedura di rilocazione pianificata ALTER DATABASE anziché la funzionalità di scollegamento e collegamento. Per altre informazioni, vedere [Spostare database utente](../../relational-databases/databases/move-user-databases.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68067353"
     > [!IMPORTANT]  
     >  Nel caso di un database di produzione, posizionare su dischi separati il database e il log delle transazioni.  
   
-     Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
+     Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
   
 3.  Collegare il database spostato e, facoltativamente, collegare il relativo log tramite l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   

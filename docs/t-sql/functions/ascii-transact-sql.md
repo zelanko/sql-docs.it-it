@@ -1,7 +1,7 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019762"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119185"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Restituisce il codice ASCII del carattere più a sinistra in un'espressione di caratteri.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,8 +51,11 @@ ASCII ( character_expression )
 ## <a name="remarks"></a>Remarks
 ASCII è l'acronimo di **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Si tratta di uno standard di codifica dei caratteri per i computer moderni. Per un elenco dei caratteri ASCII, vedere la sezione **Printable characters** (Caratteri stampabili) in [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
-## <a name="examples"></a>Esempi  
-L'esempio seguente presuppone l'uso del set di caratteri ASCII e restituisce il valore `ASCII` per 6 caratteri.
+ASCII è un set di caratteri a 7 bit. ASCII esteso o ASCII alto è un set di caratteri a 8 bit non gestito dalla funzione `ASCII`. 
+
+## <a name="examples"></a>Esempi 
+
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. L'esempio seguente presuppone l'uso del set di caratteri ASCII e restituisce il valore `ASCII` per 6 caratteri.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -62,18 +65,57 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>B. Questo esempio illustra come viene restituito correttamente un valore ASCII a 7 bit, ma non viene gestito un valore ASCII esteso a 8 bit.
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+Per verificare se i risultati precedenti sono mappati al punto di codice carattere corretto, usare i valori di output con la funzione `CHAR` o `NCHAR`:
+
+```sql
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+Dal risultato precedente si noti che il carattere per il punto di codice 195 è **Ã** e non **æ**. Ciò è dovuto al fatto che la funzione `ASCII` è in grado di leggere il primo flusso a 7 bit, ma non il bit aggiuntivo. Il punto di codice corretto per i carattere `æ` può essere trovato usando la funzione `UNICODE`, che è in grado di restituire il punto di codice carattere corretto:
+
+```sql
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
+```
+
 ## <a name="see-also"></a>Vedere anche
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

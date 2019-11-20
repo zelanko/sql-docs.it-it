@@ -18,12 +18,12 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721cc221643ed1e315566f32fde5a24752083738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114912"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983234"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY - autorizzazioni per database (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68114912"
 
 Nega le autorizzazioni per un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -71,7 +71,7 @@ AS \<database_principal> specifica un'entità di sicurezza da cui l'entità di s
 *Database_role* specifica un ruolo del database.
 
 *Application_role*
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Specifica un ruolo applicazione.
 
@@ -104,7 +104,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -115,7 +115,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|ALTER ANY SECURITY POLICY<br /> **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY SECURITY POLICY<br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -191,7 +191,7 @@ GO
 
 Nell'esempio seguente viene negata l'autorizzazione `REFERENCES` per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al ruolo applicazione `AuditMonitor`.
 
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
 USE AdventureWorks2012;

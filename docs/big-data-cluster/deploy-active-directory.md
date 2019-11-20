@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare un cluster Big Data di SQL Server i
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844306"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127446"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -107,7 +107,7 @@ L'account del servizio di dominio del cluster Big Data deve essere in grado di c
        - **Create Group objects** (Crea oggetti di gruppo)
        - **Delete Group objects** (Elimina oggetti di gruppo)
        - **Create User objects** (Crea oggetti utente)
-       - **Create User objects** (Crea oggetti utente)
+       - **Elimina oggetti utente**
 
     - Fare clic su **OK**.
 
@@ -197,8 +197,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 Oltre alle informazioni precedenti, è necessario fornire anche i nomi DNS per i diversi endpoint del cluster. In fase di distribuzione verranno automaticamente create le voci DNS che usano i nomi DNS specificati nel server DNS. Questi nomi verranno usati durante la connessione ai diversi endpoint del cluster. Se, ad esempio, il nome DNS per l'istanza master di SQL Server è `mastersql`, si userà `mastersql.contoso.local,31433` per connettersi all'istanza master dagli strumenti.

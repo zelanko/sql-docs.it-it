@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edff69f8dfae4047cf935a290c56d1192a03a41e
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6e2d7b8bf1df531183abef8078048f5828a1edee
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659547"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983287"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -86,7 +86,7 @@ ALTER USER userName
  Specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows. Non è possibile usare NULL con un utente di Windows.  
   
  PASSWORD **=** '*password*'  
- **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
@@ -94,7 +94,7 @@ ALTER USER userName
 > Questa opzione è disponibile solo per gli utenti contenuti. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
  OLD_PASSWORD **=** _'oldpassword'_  
- **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.  
   
@@ -102,7 +102,7 @@ ALTER USER userName
 > Questa opzione è disponibile solo per gli utenti contenuti.
   
  DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.  
   
@@ -110,7 +110,7 @@ ALTER USER userName
 > È possibile specificare questa opzione solo in un database indipendente e solo per utenti contenuti.
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.  
   
@@ -192,7 +192,7 @@ GO
 
  Nell'esempio seguente vengono modificate diverse opzioni per un utente del database indipendente in un'istruzione.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 ```sql
 ALTER USER Philip
@@ -275,7 +275,7 @@ ALTER USER userName
  Specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows. L'opzione NULL non può essere usata con un utente di Windows.  
   
  PASSWORD **=** '*password*'  
- **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
@@ -283,7 +283,7 @@ ALTER USER userName
 > Questa opzione è disponibile solo per gli utenti contenuti. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
   
  OLD_PASSWORD **=** _'oldpassword'_  
- **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.  
   
@@ -291,7 +291,7 @@ ALTER USER userName
 > Questa opzione è disponibile solo per gli utenti contenuti.
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati fra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.  
   

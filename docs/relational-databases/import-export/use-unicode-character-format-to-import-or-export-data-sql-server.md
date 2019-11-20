@@ -1,6 +1,5 @@
 ---
-title: Usare il formato carattere Unicode per importare o esportare dati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Usare il formato carattere Unicode per importare o esportare dati
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4598d636b570c04fa76931e416b3b24329b5da9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091476"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056315"
 ---
-# <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
+# <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usare il formato carattere Unicode per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 È consigliabile utilizzare il formato carattere Unicode per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS. Questo formato di dati consente di trasferire i dati da un server utilizzando una tabella codici diversa da quella del client che esegue l'operazione. In questi casi, l'utilizzo del formato di dati carattere Unicode offre i vantaggi seguenti:  
   

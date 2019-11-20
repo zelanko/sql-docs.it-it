@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149989"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056748"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
 -   Per scaricare [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
+-   Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
 >  Nell'ambito del piano di aggiornamento, è anche possibile considerare l'aggiornamento del database SQL di Azure o la virtualizzazione dell'ambiente SQL Server. Questi articoli non rientrano nell'ambito di questo articolo, ma di seguito sono riportati alcuni collegamenti:
@@ -95,11 +95,11 @@ I passaggi necessari per un nuovo aggiornamento di installazione variano leggerm
   
 -   **Ambiente di archiviazione associata:** se si dispone di un ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa l'archiviazione associata, il diagramma seguente e i collegamenti all'interno del diagramma guidano nella procedura necessaria per un nuovo aggiornamento dell'installazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Nuovo metodo di aggiornamento e installazione tramite backup e ripristino per l'archiviazione associata](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nuovo metodo di aggiornamento e installazione tramite backup e ripristino per l'archiviazione associata")  
+     ![Nuovo metodo di aggiornamento dell'installazione mediante backup e ripristino per l'archiviazione associata](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nuovo metodo di aggiornamento dell'installazione mediante backup e ripristino per l'archiviazione associata")  
   
 -   **Ambiente di archiviazione SAN:**  se si dispone di un ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa l'archiviazione SAN, il diagramma seguente e i collegamenti all'interno del diagramma guidano nella procedura necessaria per un nuovo aggiornamento dell'installazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN")  
+     ![Nuovo metodo di aggiornamento dell'installazione mediante collegamento e scollegamento per l'archiviazione SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuovo metodo di aggiornamento dell'installazione mediante collegamento e scollegamento per l'archiviazione SAN")  
   
 ## <a name="rolling-upgrade"></a>Aggiornamenti in sequenza  
  È necessario un aggiornamento in sequenza in ambienti di soluzioni SQL Server che includono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare in un determinato ordine al fine di ottimizzare i tempi di attività, ridurre i rischi e mantenere la funzionalità. Un aggiornamento in sequenza è essenzialmente l'aggiornamento di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ordine specifico, eseguendo un aggiornamento sul posto in ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente oppure eseguendo un nuovo aggiornamento dell'installazione per facilitare l'aggiornamento di hardware e/o sistema operativo come parte del progetto di aggiornamento. Esistono diversi scenari in cui è necessario usare il metodo di aggiornamento in sequenza. Questi scenari sono documentati negli articoli seguenti:  

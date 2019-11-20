@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902028"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981975"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -59,7 +59,7 @@ Questo articolo illustra anche le parole chiave seguenti che possono essere usat
 - APPLY
 - PIVOT
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Specifica una delle funzioni per i set di righe, ad esempio OPENROWSET, che restituisce un oggetto che è possibile utilizzare in sostituzione di un riferimento alla tabella. Per altre informazioni su un elenco delle funzioni per i set di righe, vedere [Funzioni per i set di righe &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Alias facoltativo da utilizzare in sostituzione del nome di colonna nel set di risultati. Gli alias di colonna sono consentiti solo nelle istruzioni SELECT che utilizzano la funzione OPENROWSET con l'opzione BULK. Quando si usa *bulk_column_alias*, specificare un alias per ogni colonna di tabella nello stesso ordine delle colonne nel file.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Consente di visualizzare un documento XML come set di righe. Per altre informazioni, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Specifica che venga restituita una determinata versione dei dati della tabella temporale indicata e della relativa tabella di cronologia con controllo delle versioni di sistema collegata  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Restituisce una tabella con un singolo record per ogni riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *\<date_time>* . Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *\<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *\<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *\<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe diventate attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Come sopra per la descrizione di **FROM \<start_date_time> TO \<end_date_time>** , tranne per il fatto che include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint \<end_date_time>.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Restituisce una tabella con i valori per tutte le versioni di record che sono state aperte e chiuse nell'intervallo di tempo specificato, definito dai due valori datetime per l'argomento CONTAINED IN. Sono incluse le righe diventate attive esattamente in corrispondenza del limite inferiore o che non sono più state attive esattamente in corrispondenza del limite superiore.  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Uso di FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>M. Uso di FOR SYSTEM_TIME  
   
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  L'esempio seguente usa l'argomento FOR SYSTEM_TIME AS OF date_time_literal_or_variable per restituire le righe di tabella correnti in data 1 gennaio 2014.  
   

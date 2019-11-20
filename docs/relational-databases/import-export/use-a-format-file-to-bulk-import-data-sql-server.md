@@ -1,6 +1,5 @@
 ---
-title: Usare un file di formato per l'importazione in blocco dei dati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Usare un file di formato per l'importazione bulk dei dati
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a64534cad9211bee7d10a1e6ef87d5d21b401f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116855"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056362"
 ---
-# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utilizzo di un file di formato per l'importazione bulk dei dati (SQL Server)
+# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usare un file di formato per l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk.  Un file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .

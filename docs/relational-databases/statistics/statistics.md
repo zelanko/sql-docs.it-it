@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907074"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982814"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Ad esempio, se la tabella contiene 2 milioni di righe, il calcolo sarà? sqrt (1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, usare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella.
+> A partire da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive con il [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, usare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella.
   
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e prima di eseguire un piano di query memorizzato nella cache. Prima di compilare una query, Query Optimizer usa le colonne, le tabelle e le viste indicizzate nel predicato di query per identificare le eventuali statistiche non aggiornate. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.  
   
@@ -153,7 +153,7 @@ Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controll
 * Statistiche create per le tabelle interne.  
 * Statistiche create con indici spaziali o indici XML.  
   
-**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive. 
   
 ## <a name="CreateStatistics"></a> Quando creare le statistiche  
  Query Optimizer crea già le statistiche nelle modalità seguenti:  

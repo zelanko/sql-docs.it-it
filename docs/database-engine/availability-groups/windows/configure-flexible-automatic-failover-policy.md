@@ -1,8 +1,7 @@
 ---
 title: Configurare criteri flessibili per il failover automatico di un gruppo di disponibilità
 description: Descrive come configurare criteri di failover flessibili per un gruppo di disponibilità Always On usando Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
-ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 11/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,21 +14,24 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 31968f84f6cfaad42d2f3c049a2213a60a66ffbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988487"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056677"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurare criteri flessibili per il failover automatico di un gruppo di disponibilità Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In questo argomento verrà descritto come configurare i criteri di failover flessibili per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un failover automatico per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
+  In questo argomento verrà descritto come configurare i criteri di failover flessibili per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in SQL Server. Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un [failover automatico](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
+
+   I criteri di failover flessibili di un gruppo di disponibilità vengono definiti in base al relativo livello delle condizioni di errore e alla soglia di Timeout controllo integrità. Quando viene rilevato che un gruppo di disponibilità ha superato il livello di condizione di errore o la soglia di Timeout controllo integrità, la DLL risorse del gruppo di disponibilità risponde al cluster WSFC (Windows Server Failover Clustering). Tramite il cluster WSFC viene quindi iniziato un failover automatico alla replica secondaria.  
  
-    > [!NOTE]  
-    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+  > [!NOTE]  
+  > Non è possibile configurare i criteri di failover flessibili di un gruppo di disponibilità tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  
 ## <a name="Limitations"></a> Limitazioni sui failover automatici  
@@ -50,6 +52,31 @@ ms.locfileid: "67988487"
 |----------|-----------------|  
 |Per configurare i criteri di failover flessibili per un nuovo gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare i criteri di un gruppo di disponibilità esistente|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
+
+##  <a name="HCtimeout"></a> Soglia di Timeout controllo integrità  
+ La DLL risorse di WSFC del gruppo di disponibilità esegue un *controllo di integrità* della replica primaria chiamando la stored procedure [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) sull'istanza di SQL Server che ospita la replica primaria. **sp_server_diagnostics** restituisce i risultati in un intervallo uguale a 1/3 della soglia di timeout controllo integrità per il gruppo di disponibilità. La soglia di timeout controllo integrità predefinita è 30 secondi, in base alla quale i risultati di **sp_server_diagnostics** vengono restituiti a intervalli di 10 secondi. Se la stored procedure **sp_server_diagnostics** risulta lenta o non restituisce informazioni, la DLL risorse attenderà per l'intero intervallo della soglia di timeout controllo integrità prima di determinare che la replica primaria non risponde. Se la replica primaria non risponde, viene avviato un failover automatico, se è attualmente supportato.  
+  
+> [!IMPORTANT]  
+>  **sp_server_diagnostics** non esegue controlli di integrità a livello di database.  
+  
+##  <a name="FClevel"></a> Livello delle condizioni di errore  
+ La possibilità che i dati di diagnostica e le informazioni sull'integrità restituiti da **sp_server_diagnostics** assicurino un failover automatico dipende dal livello di condizione di errore del gruppo di disponibilità. Il *livello di condizione di errore* specifica quale condizione di errore attiverà un failover automatico. I livelli delle condizioni di errore sono 5 e vanno dal livello meno restrittivo (livello 1), al livello più restrittivo (livello 5). Un dato livello di condizione include tutti i livelli meno restrittivi. Il livello più restrittivo, il livello 5, include le quattro condizioni meno restrittive e così via.  
+  
+> [!IMPORTANT]  
+>  I database danneggiati e quelli sospetti non vengono rilevati da alcun livello della condizione di errore. Pertanto, di un database danneggiato o sospetto, per un errore hardware, un danneggiamento dati o per altro problema, non viene mai attivato un failover automatico.  
+  
+ Nella tabella seguente vengono descritte le condizioni di errore corrispondenti a ciascun livello.  
+  
+|Level|Condizione di errore|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valore|Valore PowerShell|  
+|-----------|-----------------------|------------------------------|----------------------|  
+|Uno|In caso di server inaccessibile. Specifica che viene avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> Il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun acknowledgement dall'istanza del server. Per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On).<br /><br /> <br /><br /> Si tratta del livello meno restrittivo.|1|**OnServerDown**|  
+|Due|In caso di mancata risposta del server. Specifica che viene avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia Timeout controllo integrità specificata dall'utente per il gruppo di disponibilità.<br /><br /> La replica di disponibilità si trova in uno stato di errore.|2|**OnServerUnresponsive**|  
+|Tre|In caso di errori critici del server. Specifica che viene avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.<br /><br /> Si tratta del livello predefinito.|3|**OnCriticalServerError**|  
+|Quattro|In caso di errori con gravità moderata del server. Specifica che viene avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con gravità moderata, ad esempio una condizione persistente di memoria insufficiente nel pool di risorse interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|**OnModerateServerError**|  
+|Cinque|In qualsiasi condizione di errore qualificata. Specifica che viene avviato un failover automatico in caso di qualsiasi condizione di errore qualificata, tra cui:<br /><br /> Rilevamento di un deadlock nell'utilità di pianificazione.<br /><br /> Rilevamento di un deadlock irrisolvibile.<br /><br /> <br /><br /> Si tratta del livello più restrittivo.|5|**OnAnyQualifiedFailureConditions**|  
+  
+> [!NOTE]  
+>  La mancata risposta da parte di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alle richieste client non è rilevante per gruppi di disponibilità.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per configurare i criteri di failover flessibili**  
@@ -133,6 +160,19 @@ ms.locfileid: "67988487"
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+
+##  <a name="RelatedTasks"></a> Attività correlate  
+ **Per configurare il failover automatico**  
+  
+-   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md). Il failover automatico richiede la modalità di disponibilità con commit sincrono.  
+  
+-   [Modificare la modalità di failover di una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+  
+-   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
+  
+##  <a name="RelatedContent"></a> Contenuto correlato  
+  
+-   [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

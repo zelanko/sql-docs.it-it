@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122281"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981927"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ Termina un processo utente in base all'ID di sessione o all'unità di lavoro (UO
   
 KILL termina una connessione normale, operazione che arresta internamente le transazioni associate all'ID di sessione specificato. A volte può essere in uso [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). In tal caso, è anche possibile usare l'istruzione per terminare le transazioni distribuite orfane e in dubbio.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Si applica a**: (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
 Identifica l'ID dell'unità di lavoro delle transazioni distribuite. _UOW_ è un GUID che è possibile ottenere dalla colonna request_owner_guid della vista a gestione dinamica sys.dmtran_locks. È anche possibile ottenere il valore _UOW_ dal log degli errori o tramite il monitoraggio MS DTC. Per ulteriori informazioni sul monitoraggio di transazioni distribuite, vedere la documentazione di MS DTC.  
   

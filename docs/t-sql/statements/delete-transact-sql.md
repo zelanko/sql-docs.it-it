@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948054"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983243"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Rimuove una o più righe da una tabella o vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Alias specificato nella clausola FROM *table_source* che rappresenta la tabella o la vista da cui devono essere eliminate le righe.  
   
  *server_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Nome del server, che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), in cui è contenuta la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name*.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), in base alle funzionalità del provider.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Nell'esempio seguente viene illustrata una clausola WHERE più complessa. La clausola WHERE definisce due condizioni che devono essere soddisfatte per determinare le righe da eliminare. Il valore nella colonna `StandardCost` deve essere compreso tra `12.00` e `14.00` , mentre quello nella colonna `SellEndDate` deve essere Null. Nell'esempio viene anche stampato il valore dalla funzione **@@ROWCOUNT** per restituire il numero di righe eliminate.  
+ Nell'esempio seguente viene illustrata una clausola WHERE più complessa. La clausola WHERE definisce due condizioni che devono essere soddisfatte per determinare le righe da eliminare. Il valore nella colonna `StandardCost` deve essere compreso tra `12.00` e `14.00` , mentre quello nella colonna `SellEndDate` deve essere Null. Nell'esempio viene inoltre stampato il valore dalla funzione **\@\@ROWCOUNT** per restituire il numero di righe eliminate.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> Eliminazione di righe da una tabella remota  
  Negli esempi riportati in questa sezione viene illustrato come eliminare righe da una tabella remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota. Esiste una tabella remota in un server diverso o un'istanza di SQL Server.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminazione di dati da una tabella remota tramite un server collegato  
  Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Uso di OUTPUT con <from_table_name> in un'istruzione DELETE  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. Uso di OUTPUT con <from_table_name> in un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate alcune righe della tabella `ProductProductPhoto` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT` restituisce le colonne della tabella che si desidera eliminare, `DELETED.ProductID`, `DELETED.ProductPhotoID`e alcune colonne della tabella `Product` . Queste informazioni vengono utilizzate nella clausola `FROM` per specificare le righe da eliminare.  
   
 ```sql

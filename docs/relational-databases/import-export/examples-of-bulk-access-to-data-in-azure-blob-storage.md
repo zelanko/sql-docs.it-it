@@ -1,6 +1,6 @@
 ---
-title: Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure | Microsoft Docs
-ms.custom: ''
+title: Accesso bulk ai dati nell'archiviazione BLOB di Azure
+ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,13 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6874476fc7309a4bfed118bff76430bed395587
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798442"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056012"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure
 

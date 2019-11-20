@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000470"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981736"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68000470"
 È un tipo di dati speciale usato per archiviare un set di risultati per elaborazioni successive. Il tipo **table** viene principalmente usato per l'archiviazione temporanea di un set di righe restituito come set di risultati di una funzione con valori di tabella. È possibile dichiarare funzioni e variabili di tipo **table**. Le variabili di tipo **table** possono essere usate in funzioni, stored procedure e batch. Per dichiarare variabili di tipo **table**, usare [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   

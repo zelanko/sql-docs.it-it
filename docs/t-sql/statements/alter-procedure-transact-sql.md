@@ -23,19 +23,19 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927242"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982064"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Viene modificata una procedura creata in precedenza tramite l'istruzione CREATE PROCEDURE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -115,7 +115,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non memorizza nella cache un piano per la procedura e che la procedura viene ricompilata in fase di esecuzione.  
   
  ENCRYPTION  
- **Si applica a**: SQL Server (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Indica che il testo originale dell'istruzione ALTER PROCEDURE verrà convertito dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli utenti che non hanno accesso a tabelle di sistema o file del database non possono recuperare il testo offuscato. Il testo è tuttavia disponibile per gli utenti con privilegi che consentono l'accesso alle tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o l'accesso diretto a file del database. Gli utenti in grado di collegare un debugger al processo del server possono inoltre recuperare la procedura originale dalla memoria in fase di esecuzione. Per altre informazioni sull'accesso ai metadati di sistema, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -143,7 +143,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono il corpo della procedura. Per racchiudere le istruzioni è possibile usare le parole chiave facoltative BEGIN ed END. Per altre informazioni, vedere le sezioni Procedure consigliate, Osservazioni generali e Limitazioni e restrizioni in [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica il metodo di un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] affinché una stored procedure CLR vi faccia riferimento. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly. Se alla classe è stato assegnato un nome completo con lo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). Il metodo specificato deve essere un metodo statico della classe.  
   

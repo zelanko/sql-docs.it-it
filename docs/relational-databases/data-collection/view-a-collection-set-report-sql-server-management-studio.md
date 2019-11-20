@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un report sui set di raccolta (SQL Server Management Studio) | Microsoft Docs
+title: Visualizzare un report di un set di raccolta (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 548f6a6a75be51df2ea0de87f4eca91bebf8358b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd303efebcf988d07d068f5518dd340b9ae74fbc
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055506"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055558"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Visualizzare un report sui set di raccolta (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

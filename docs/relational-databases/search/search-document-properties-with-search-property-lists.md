@@ -1,5 +1,5 @@
 ---
-title: Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca | Microsoft Docs
+title: Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912979"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056103"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "67912979"
   
  Nella figura seguente viene illustrata una vista logica di un elenco di proprietà di ricerca in cui sono specificate due proprietà, Title e Keywords. Il nome dell'elenco di proprietà per Keywords è "Tags". Queste proprietà appartengono allo stesso set di proprietà il cui GUID è F29F85E0-4FF9-1068-AB91-08002B27B3D9. Gli identificatori di tipo integer della proprietà sono 2 per Title e 5 per Tags (Keywords). Tramite il motore di ricerca full-text viene arbitrariamente eseguito il mapping di ogni proprietà a un ID di proprietà interno univoco per l'elenco di proprietà di ricerca. L'ID di proprietà interno per la proprietà Title è 1, mentre per la proprietà Tags è 2.  
   
- ![Mapping dell'elenco di proprietà di ricerca con la tabella interna](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping dell'elenco di proprietà di ricerca con la tabella interna")  
+ ![Mapping dell'elenco di proprietà di ricerca alla tabella interna](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping dell'elenco di proprietà di ricerca alla tabella interna")  
   
  È probabile che l'ID di proprietà interno sia diverso dall'identificatore di tipo integer della proprietà relativo alla proprietà. Se una determinata proprietà viene registrata in più elenchi di proprietà di ricerca, è possibile che a ciascun elenco di proprietà di ricerca venga assegnato un ID di proprietà interno. L'ID di proprietà interno potrebbe essere, ad esempio, 4 in un elenco di proprietà di ricerca, 1 in un altro, 3 in un altro ancora e così via. Al contrario, l'identificatore di tipo integer della proprietà è intrinseco della proprietà stessa e rimane uguale ovunque venga utilizzata la proprietà.  
   
@@ -198,7 +199,7 @@ GO
   
     1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e preme CANC.  
   
-    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\***, quindi immette i valori per la nuova proprietà.  
+    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\*** , quindi immette i valori per la nuova proprietà.  
   
          Per informazioni su questi valori, vedere [Editor dell'elenco delle proprietà di ricerca](/sql/database-engine/search-property-list-editor). Per informazioni su come ottenere questi valori per le proprietà definite da Microsoft, vedere [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Per informazioni sulle proprietà definite da un fornitore di software indipendente (ISV, Independent Software Vendor), vedere la documentazione di tale fornitore.  
   
@@ -225,6 +226,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configurare e gestire filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Informazioni su Change Data Capture (SQL Server) | Microsoft Docs
+title: Informazioni su Change Data Capture
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058120"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095326"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68058120"
 ## <a name="change-data-capture-data-flow"></a>Flusso di dati di Change Data Capture  
  Nella figura seguente viene illustrato il flusso di dati principale per Change Data Capture.  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Flusso di dati di Change Data Capture](../../relational-databases/track-changes/media/cdcdataflow.gif "Flusso di dati di Change Data Capture")  
   
  L'origine dei dati delle modifiche per la funzionalità Change Data Capture è data dal log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Man mano che alle tabelle di origine con rilevamento vengono applicati inserimenti, aggiornamenti ed eliminazioni, le voci che descrivono tali modifiche vengono aggiunte al log. Il log viene utilizzato come input per il processo di acquisizione Il log viene letto e le informazioni relative alle modifiche vengono aggiunte alla tabella delle modifiche associata alla tabella con rilevamento. Per enumerare le modifiche visualizzate nelle tabelle delle modifiche in un intervallo specificato, sono disponibili diverse funzioni che restituiscono le informazioni in un set di risultati filtrato. Tale set di risultati viene utilizzato in genere da un processo dell'applicazione per aggiornare una rappresentazione dell'origine in alcuni ambienti esterni.  
   

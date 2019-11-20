@@ -1,6 +1,5 @@
 ---
-title: Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database | Microsoft Docs
-ms.custom: ''
+title: Creare un processo di SQL Server Agent per l'archiviazione di messaggi ed eventi di Posta elettronica database
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14089cb8f302fbfee3f3a58c3f28edf634cbaa10
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909231"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094500"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

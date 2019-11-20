@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000826"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982763"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ Crea una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common L
 
 Passare a [Semplici esempi](#Simple) per ignorare i dettagli della sintassi e ottenere un rapido esempio di una stored procedure di base.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -161,7 +161,7 @@ OR ALTER
  Il nome completo di una procedura o di una stored procedure temporanea globale, inclusi i simboli ##, non deve superare i 128 caratteri. Il nome completo di una stored procedure temporanea locale, incluso il simbolo #, non deve superare i 116 caratteri.  
   
  **;** *number*  
- **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Integer facoltativo usato per raggruppare le procedure con lo stesso nome. Tali procedure possono essere eliminate contemporaneamente tramite un'istruzione DROP PROCEDURE.  
   
@@ -216,7 +216,7 @@ RECOMPILE
  Per indicare al [!INCLUDE[ssDE](../../includes/ssde-md.md)] di ignorare i piani di singole query all'interno di una procedura, usare l'hint per la query RECOMPILE nella definizione della query. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ENCRYPTION  
- **Si applica a**: SQL Server (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il testo originale dell'istruzione CREATE PROCEDURE in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il testo offuscato non può essere recuperato da utenti che non hanno accesso a file di database o tabelle di sistema. Tale testo, tuttavia, è disponibile per gli utenti con privilegi di accesso a tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o con privilegi di accesso diretto a file del database. Inoltre, agli utenti che possono collegare un debugger al processo del server è consentito recuperare la procedura decrittografata dalla memoria in fase di esecuzione. Per altre informazioni sull'accesso ai metadati di sistema, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -232,7 +232,7 @@ EXECUTE AS *clause*
  Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 FOR REPLICATION  
- **Si applica a**: SQL Server (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica che la procedura viene creata per la replica. Di conseguenza, non può essere eseguita nel Sottoscrittore. Una procedura creata con l'opzione FOR REPLICATION viene usata come filtro di procedura ed eseguita solo durante la replica. Se viene specificata l'opzione FOR REPLICATION, non è possibile dichiarare alcun parametro. Inoltre, l'opzione FOR REPLICATION non può essere specificata per procedure CLR. L'opzione RECOMPILE viene ignorata per le procedure create con l'opzione FOR REPLICATION.  
   
@@ -242,7 +242,7 @@ FOR REPLICATION
  Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono il corpo della procedura. Per racchiudere le istruzioni è possibile usare le parole chiave facoltative BEGIN ed END. Per informazioni, vedere le sezioni Procedure consigliate, Osservazioni generali e Limitazioni e restrizioni riportate di seguito.  
   
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica il metodo di un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] affinché una procedura CLR vi faccia riferimento. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come una classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). Il metodo specificato deve essere un metodo statico della classe.  
   
@@ -252,7 +252,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 >  Le procedure CLR non sono supportate in un database indipendente.  
   
 ATOMIC WITH  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica l'esecuzione atomica di stored procedure. Viene eseguito il commit delle modifiche o il rollback di tutte le modifiche tramite la generazione di un'eccezione. Il blocco ATOMIC WITH è obbligatorio per le stored procedure compilate in modo nativo.  
   
@@ -277,22 +277,22 @@ Le operazioni BEGIN, ROLLBACK e COMMIT non possono essere usate in un blocco ato
  Determina se i valori Null sono supportati in un parametro. Il valore predefinito è NULL.  
   
 NATIVE_COMPILATION  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica che la procedura è compilata in modo nativo. NATIVE_COMPILATION, SCHEMABINDING ed EXECUTE AS possono essere specificati in qualsiasi ordine. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).  
   
 SCHEMABINDING  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Assicura che le tabelle a cui si fa riferimento in una procedura non possano essere eliminate o modificate. SCHEMABINDING è obbligatorio nelle stored procedure compilate in modo nativo. Per altre informazioni, vedere [stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md). Le restrizioni SCHEMABINDING sono uguali a quelle delle funzioni definite dall'utente. Per altre informazioni, vedere la sezione SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 LANGUAGE = [N] 'language'  
- **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Equivalente a un'opzione di una sessione [SET LANGUAGE &#40;Transact-SQL&#41; ](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'lingua' è obbligatorio.  
   
 TRANSACTION ISOLATION LEVEL  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Obbligatorio per stored procedure compilate in modo nativo. Specifica il livello di isolamento della transazione della stored procedure. Sono disponibili le opzioni seguenti:  
   
@@ -311,21 +311,21 @@ SNAPSHOT
  Specifica che i dati letti da qualsiasi istruzione in una transazione rappresenteranno la versione coerente dal punto di vista transazionale dei dati esistenti al momento dell'avvio della transazione.  
   
 DATEFIRST = *number*  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica il primo giorno della settimana come numero compreso tra 1 e 7. DATEFIRST è facoltativo. Se viene omesso, l'impostazione viene desunta dalla lingua specificata.  
   
  Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT = *format*  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica l'ordine delle parti della data relative a mese, giorno e anno per l'interpretazione di stringhe di caratteri date, smalldatetime, datetime, datetime2 e datetimeoffset. DATEFORMAT è facoltativo. Se viene omesso, l'impostazione viene desunta dalla lingua specificata.  
   
  Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Il commit delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, ovvero l'impostazione predefinita di SQL Server, oppure con durabilità ritardata.  
   
@@ -542,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. Creazione di una stored procedure CLR  
  L'esempio seguente crea la procedura `GetPhotoFromDB` che fa riferimento al metodo `GetPhotoFromDB` della classe `LargeObjectBinary` nell'assembly `HandlingLOBUsingCLR`. Prima della creazione della procedura, l'assembly `HandlingLOBUsingCLR` viene registrato nel database locale.  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (se si usa un assembly creato da *assembly_bits*)  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (se si usa un assembly creato da *assembly_bits*).  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -871,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>K. Utilizzo dell'opzione WITH ENCRYPTION  
  Nell'esempio seguente viene creata la procedura `HumanResources.uspEncryptThis`.  
   
-**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], database SQL.  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, database SQL.  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  

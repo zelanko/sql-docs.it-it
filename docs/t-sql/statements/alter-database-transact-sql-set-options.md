@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0959a1a81ad0c373e67d2b2549f8792703261078
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729904"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982749"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -296,7 +296,7 @@ SET
 Nome del database da modificare.
 
 CURRENT        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.
 
@@ -344,7 +344,7 @@ Query Optimizer non crea statistiche sulle singole colonne nei predicati di quer
 Per altre informazioni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Imposta AUTO_CREATE_STATISTICS su ON e INCREMENTAL su ON. Questa impostazione crea automaticamente statistiche incrementali ogni volta che sono supportate. Il valore predefinito è OFF. Per altre informazioni, vedere [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -445,7 +445,7 @@ OFF
 Disabilita il rilevamento delle modifiche per il database. Prima di disabilitare il rilevamento delle modifiche per il database, disabilitarlo per tutte le tabelle.
 
 **\<containment_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Consente di controllare le opzioni di indipendenza del database.
 
@@ -599,7 +599,7 @@ Consente la connessione al database a tutti gli utenti che dispongono di autoriz
 È possibile determinare lo stato di questa opzione esaminando la colonna `user_access` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `UserAccess` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<delayed_durability_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
 
 Determina se le transazioni sottoposte a commit sono completamente durevoli o durevoli posticipate.
 
@@ -649,7 +649,7 @@ Per impostare questa opzione, è necessaria l'autorizzazione `CONTROL SERVER` ne
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_trustworthy_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 DEFAULT_FULLTEXT_LANGUAGE        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Consente di specificare il valore della lingua predefinita per le colonne con indicizzazione full-text.
 
@@ -657,27 +657,27 @@ Consente di specificare il valore della lingua predefinita per le colonne con in
 > Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 DEFAULT_LANGUAGE        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Specifica la lingua predefinita per tutti i nuovi account di accesso creati. È possibile specificare la lingua indicando l'ID locale (lcid), il nome della lingua o l'alias di lingua. Per un elenco dei nomi e degli alias di lingua accettabili, vedere [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 NESTED_TRIGGERS        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Specifica se un trigger AFTER supporta la propagazione, ovvero un'azione che avvia un altro trigger, che a sua volta ne avvia un altro e così via. Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 TRANSFORM_NOISE_WORDS        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Consente di eliminare un messaggio di errore visualizzato nel caso in cui parole non significative impediscono l'esecuzione di un'operazione booleana in una query full-text. Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 TWO_DIGIT_YEAR_CUTOFF        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Specifica un numero intero compreso tra 1753 e 9999 che rappresenta l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre. Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 **\<FILESTREAM_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Consente di controllare le impostazioni per le tabelle FileTable.
 
@@ -700,7 +700,7 @@ Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti 
 Vedere [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 Controlla se il database può creare pagine iniziali usando un extent misto per le prime otto pagine di un indice o di una tabella.
 
@@ -727,7 +727,7 @@ Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la 
 L'impostazione corrente di questa opzione può essere determinata esaminando `is_parameterization_forced column` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 ON | **OFF** | CLEAR [ ALL ]        
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store. Per altre informazioni, vedere [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md).
@@ -889,7 +889,7 @@ Per altre informazioni sui messaggi di errore 823, 824 e 825, vedere:
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `page_verify_option` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsTornPageDetectionEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 Abilita o disabilita Stretch Database per il database. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -995,7 +995,7 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 > Quando si crea una tabella con **DURABILITY = SCHEMA_ONLY**, e successivamente si modifica **READ_COMMITTED_SNAPSHOT** usando **ALTER DATABASE**, i dati della tabella andranno perduti.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
 
 ON        
 Quando l'isolamento della transazione è impostato su un livello inferiore a SNAPSHOT, tutte le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria vengono eseguite con l'isolamento SNAPSHOT. I livelli di isolamento inferiori a SNAPSHOT sono, ad esempio, READ COMMITTED e READ UNCOMMITTED. Queste operazioni vengono eseguite indipendentemente dal fatto che venga impostato in modo esplicito il livello di isolamento della transazione a livello di sessione o che venga usata in modo implicito l'impostazione predefinita.
@@ -1150,7 +1150,7 @@ OFF
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**         
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive)
 
 Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
@@ -1317,7 +1317,7 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="e-enabling-the-query-store"></a>E. Abilitazione di Archivio query
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
 L'esempio seguente abilita Query Store e configura i relativi parametri.
 
@@ -3021,7 +3021,7 @@ Disabilita Query Store. OFF è il valore predefinito.
 > Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], è necessario eseguire il comando `ALTER DATABASE SET QUERY_STORE` dal database utente. L'esecuzione dell'istruzione da un'altra istanza del data warehouse non è supportata.
 
 **<result_set_caching_option> ::=**         
-**Si applica a**: Azure SQL Data Warehouse (anteprima)
+**Si applica a**: Azure SQL Data Warehouse  
 
 Controlla se il risultato della query viene memorizzato nella cache del database.
 

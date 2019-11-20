@@ -1,6 +1,5 @@
 ---
-title: Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Mantenere i valori Null o i valori predefiniti durante un'importazione bulk
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896674"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055960"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenere i valori Null o i valori predefiniti durante un'importazione bulk (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Per impostazione predefinita, durante l'importazione di dati in una tabella il comando [bcp](../../tools/bcp-utility.md) e l'istruzione [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) osservano gli eventuali valori predefiniti che sono stati specificati per le colonne della tabella.  Ad esempio, se un file di dati contiene un campo Null, verrà caricato nel campo il valore predefinito della colonna.  Il comando [bcp](../../tools/bcp-utility.md) e l'istruzione [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) consentono entrambi di specificare che dovranno essere mantenuti i valori Null.

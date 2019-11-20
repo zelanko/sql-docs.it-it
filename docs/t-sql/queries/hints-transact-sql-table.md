@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901967"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981768"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67901967"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -221,7 +221,7 @@ Quando si specifica FORCESEEK con parametri di indice, è opportuno considerare 
 > [!CAUTION]  
 > Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. Ciò potrebbe causare un errore `Plan cannot be generated` in più casi. In una versione futura le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
-FORCESCAN **Si applica a**: : da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 e versioni successive.
 Specifica che Query Optimizer deve usare solo un'operazione di analisi dell'indice come percorso di accesso alla tabella o alla vista a cui viene fatto riferimento. L'hint FORCESCAN può essere utile per le query in cui, a causa della valutazione errata (in difetto) del numero di righe interessate da parte di Query Optimizer, viene eseguita un'operazione di ricerca anziché di analisi. In questo caso, la quantità di memoria concessa per l'operazione è troppo ridotta, con conseguente calo delle prestazioni di query.  
   
 È possibile specificare FORCESCAN con o senza un hint INDEX. Quando viene specificato in combinazione con un hint per l'indice (`INDEX = index_name, FORCESCAN`), in Query Optimizer vengono presi in considerazione solo i percorsi di accesso all'analisi nell'indice specificato per accedere alla tabella a cui viene fatto riferimento. FORCESCAN può essere specificato con l'hint per l'indice INDEX(0) per forzare un'operazione di analisi delle tabelle nella tabella di base.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Equivale a HOLDLOCK. Rende i blocchi condivisi più restrittivi mantenendoli attivi fino al completamento di una transazione anziché rilasciarli non appena la tabella o la pagina dei dati richiesta non è più necessaria, indipendentemente dal completamento della transazione. L'analisi viene eseguita con la stessa semantica di una transazione eseguita con il livello di isolamento SERIALIZABLE. Per altre informazioni sui livelli di isolamento, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive. 
   
 Alla tabella ottimizzata per la memoria si accede con isolamento SNAPSHOT. SNAPSHOT può essere utilizzato solo con tabelle ottimizzate per la memoria (con tabelle basate su disco). Per altre informazioni, vedere [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
 Specifica il numero massimo di celle da usare per la suddivisione a mosaico di un oggetto geografico o di geometria. Il valore di *number* deve essere compreso tra 1 e 8192.  
   
 Questa opzione consente l'ottimizzazione dei tempi di esecuzione delle query raggiungendo un compromesso tra il tempo di esecuzione del filtro primario e secondario. Un numero maggiore riduce il tempo di esecuzione del filtro secondario, ma aumenta il tempo di esecuzione del filtro primario e un numero minore diminuisce tempo di esecuzione del filtro primario, ma aumenta l'esecuzione del filtro secondario. Per i dati spaziali più densi, un numero superiore dovrebbe dar luogo a un tempo di esecuzione più rapido fornendo un'approssimazione migliore del filtro primario e riducendo il tempo di esecuzione del filtro secondario. Per i dati di tipo sparse, un numero inferiore diminuirà il tempo di esecuzione del filtro primario.  

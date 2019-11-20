@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7352a7e2db64da959cbefaacee5c9f3d14a8a579
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809887"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982320"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Controlla l'integrità di tutte le pagine e le strutture che compongono la tabella o la vista indicizzata.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintassi    
     
@@ -123,7 +123,7 @@ DATA_PURITY
  Se si specifica PHYSICAL_ONLY, i controlli di integrità di colonna non vengono eseguiti.  
     
 MAXDOP  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e versioni successive).  
  
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il motore di database usa il valore MAXDOP di Resource Governor descritto in ALTER WORKLOAD GROUP (Transact-SQL). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     

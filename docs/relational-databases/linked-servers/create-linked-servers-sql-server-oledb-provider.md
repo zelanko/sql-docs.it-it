@@ -1,6 +1,5 @@
 ---
-title: Creare un provider di server collegati (motore di database di SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Creare provider di server collegati
 ms.date: 07/01/2019
 ms.prod: sql
 ms.technology: ''
@@ -10,12 +9,13 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929657"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096000"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Query distribuite di Microsoft SQL Server: Connettività OLE DB
 

@@ -13,19 +13,28 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2cb41bdf37c1f748178f98a56b7f8df857a377e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092977"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119447"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Archivio BLOB remoti (RBS) di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un componente aggiuntivo facoltativo che consente agli amministratori di database di archiviare oggetti binari di grandi dimensioni in soluzioni di archiviazione apposite anziché direttamente nel server di database principale.  
   
- Tale componente è incluso nei supporti di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ma non viene installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Tale componente è incluso nei supporti di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non viene installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cercare RBS.msi nel supporto di installazione per individuare il file di installazione.
+
+ Se non è disponibile il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile scaricare RBS in una delle posizioni seguenti:
+
+| Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | Percorso download RBS |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Pagina di download di RBS](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   

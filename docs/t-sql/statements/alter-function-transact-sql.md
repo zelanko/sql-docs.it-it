@@ -20,19 +20,19 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067489"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982856"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Modifica una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR esistente, creata in precedenza tramite l'istruzione CREATE FUNCTION, senza modificare le autorizzazioni o alterare eventuali trigger, stored procedure o funzioni dipendenti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -264,7 +264,7 @@ RETURNS return_data_type
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica il metodo di un assembly da associare alla funzione. *assembly_name* deve corrispondere a un assembly esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database corrente con visibilità attivata. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). *method_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come metodo statico nella classe specificata.  
   
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Definisce il tipo di dati della tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati.  
   
@@ -300,7 +300,7 @@ RETURNS return_data_type
  Specifica che la funzione avrà una o più opzioni seguenti.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Indica che nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono crittografate le colonne della vista del catalogo contenenti il testo dell'istruzione ALTER FUNCTION. Tramite il parametro ENCRYPTION è possibile evitare la pubblicazione della funzione come parte della replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare l'opzione ENCRYPTION per le funzioni CLR.  
   

@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034509"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982131"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] alcune modifiche vengono abilitate solo dopo che il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) è stato modificato. Questa operazione viene eseguita per diversi motivi:  
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, alcune modifiche vengono abilitate solo dopo la modifica del [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Questa operazione viene eseguita per diversi motivi:  
   
 - Poiché l'aggiornamento è un'operazione unidirezionale, in quanto non è possibile effettuare il downgrade del formato del file, è utile impostare l'abilitazione delle nuove funzionalità come un'operazione separata all'interno del database. È possibile ripristinare un'impostazione a un livello di compatibilità del database precedente.  Il nuovo modello riduce il numero di operazioni che devono essere eseguite durante un intervallo di interruzione.  
   
@@ -45,7 +45,7 @@ Il processo di aggiornamento per abilitare nuove funzionalità di Query Processo
   
 Il flusso di lavoro consigliato per aggiornare Query Processor alla versione più recente del codice è documentato nella [sezione Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server in Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), come illustrato di seguito.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![utilizzo archivio query 5](../../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5") 
 
 A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, gli utenti possono essere guidati nel flusso di lavoro consigliato con l'Assistente ottimizzazione query. Per altre informazioni, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

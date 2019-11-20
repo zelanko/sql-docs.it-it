@@ -29,19 +29,19 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948417"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981722"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le
  *filegroup*    
  Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore.   
  
- **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive.
   
 ## <a name="data-types"></a>Tipi di dati  
  L'attributo FILESTREAM non viene trasferito nella nuova tabella. Gli oggetti binari di grandi dimensioni FILESTREAM vengono copiati e archiviati nella nuova tabella come oggetti binari di grandi dimensioni di tipo **varbinary(max)** . Senza l'attributo FILESTREAM, il tipo di dati **varbinary(max)** è soggetto al limite di 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Creazione di una tabella specificando colonne provenienti da un'origine dei dati remota  
  Nell'esempio seguente vengono illustrati tre metodi per creare una nuova tabella nel server locale da un'origine dati remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota. Il nome del server collegato, `MyLinkServer,` viene specificato nella clausola FROM della prima istruzione SELECT...INTO e nella funzione OPENQUERY della seconda istruzione SELECT...INTO. La terza istruzione SELECT...INTO utilizza la funzione OPENDATASOURCE che specifica direttamente l'origine dei dati remota anziché utilizzare il nome del server collegato.  
   
- **Si applica a:**  da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Creare una nuova tabella come copia di un'altra tabella e caricarla in un filegroup specificato
 Nell'esempio seguente viene illustrato come creare una nuova tabella come copia di un'altra tabella e come caricarla in un filegroup specificato diverso dal filegroup predefinito dell'utente.
 
- **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
