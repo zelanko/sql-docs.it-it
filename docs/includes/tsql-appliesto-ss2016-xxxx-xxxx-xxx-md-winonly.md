@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73590893"
 ---
-**SI APPLICA A: ** ![sì ](media/yes.png)SQL Server (solo Windows a partire da 2016) ![no](media/no.png)Database SQL di Azure ![no](media/no.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse
+**SI APPLICA A:** ![sì ](media/yes.png)SQL Server (solo Windows a partire da 2016) ![no](media/no.png)Database SQL di Azure ![no](media/no.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse
