@@ -30,7 +30,7 @@ ms.locfileid: "73788625"
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
-|ID proprietà|Valore|  
+|ID proprietà|valore|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

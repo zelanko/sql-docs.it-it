@@ -60,16 +60,16 @@ ms.locfileid: "72797913"
   
  Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
   
- Specificare i parametri UpdateSource e UpdateEnabled per includere gli aggiornamenti più recenti del prodotto con l'installazione del prodotto principale. Fare riferimento all'esempio seguente per abilitare gli aggiornamenti del prodotto durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Specificare i parametri UpdateSource e UpdateEnabled per includere gli aggiornamenti più recenti del prodotto con l'installazione del prodotto principale. Fare riferimento all'esempio seguente per abilitare gli aggiornamenti del prodotto durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```cmd 
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ### <a name="installing-updates-after-installation"></a>Installazione degli aggiornamenti dopo l'installazione 
- In un'istanza installata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]si consiglia di applicare gli aggiornamenti della sicurezza e gli aggiornamenti critici più recenti, inclusi General Distribution Release (GDR) e Service Pack (SP). I singoli aggiornamenti cumulativi e aggiornamenti della sicurezza devono essere adottati secondo le esigenze e caso per caso. Valutare l'aggiornamento; se è necessario, applicarlo.  
+ In un'istanza installata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] si consiglia di applicare gli aggiornamenti della sicurezza e gli aggiornamenti critici più recenti, inclusi General Distribution Release (GDR) e Service Pack (SP). I singoli aggiornamenti cumulativi e aggiornamenti della sicurezza devono essere adottati secondo le esigenze e caso per caso. Valutare l'aggiornamento; se è necessario, applicarlo.  
   
- Applicare un aggiornamento dal prompt dei comandi sostituendo <package_name> con il nome del pacchetto di aggiornamento.  
+ Applicare un aggiornamento dal prompt dei comandi sostituendo <package_name> con il nome del pacchetto di aggiornamento:  
   
 -   Aggiornare una singola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tutti i componenti condivisi. L'istanza può essere specificata utilizzando il parametro InstanceName o InstanceID.  
   
@@ -77,7 +77,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance  
     ```  
   
--   Aggiornare solo i componenti condivisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+-   Aggiornare solo i componenti condivisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     ```  
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch  
@@ -92,7 +92,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 ##  <a name="startstop-sql-server-service"></a>Avviare/arrestare il servizio SQL Server  
  L'applicazione [sqlservr](../../tools/sqlservr-application.md) avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi.  
   
- È inoltre possibile utilizzare i servizi .NET per avviare e arrestare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ È inoltre possibile utilizzare i servizi .NET per avviare e arrestare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="enable-alwayson-availability-groups"></a>Abilitare Gruppi di disponibilità AlwaysOn  
  L'abilitazione per Gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza del server di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza. Per altre informazioni sulla gestione di Gruppi di disponibilità AlwaysOn, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 4.  In Gestione computer del computer con Server Core nell'albero della console fare clic su Servizi e applicazioni.  
   
-5.  Fare doppio clic su Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+5.  Fare doppio clic su Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 6.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager fare clic su servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic con il pulsante destro del mouse su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<nome istanza >), dove \<nome istanza > è il nome di un'istanza del server locale per cui si desidera abilitare Gruppi di disponibilità AlwaysOn, quindi fare clic su Proprietà.  
   
@@ -130,7 +130,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 9. Selezionare la casella di controllo Abilita gruppi di disponibilità AlwaysOn e scegliere OK.  
   
-10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Successivamente, è necessario riavviare manualmente il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo modo è possibile scegliere un'ora per il riavvio che meglio soddisfa le esigenze aziendali. Al riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AlwaysOn sarà abilitato e la proprietà del server IsHadrEnabled sarà impostata su 1.  
+10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Successivamente, è necessario riavviare manualmente il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo modo è possibile scegliere un'ora per il riavvio che meglio soddisfa le esigenze aziendali. Al riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], AlwaysOn sarà abilitato e la proprietà del server IsHadrEnabled sarà impostata su 1.  
   
 > [!NOTE]
 >  -   È necessario disporre dei diritti utente adeguati o essere stato delegato dell'autorità appropriata nel computer di destinazione per connettersi al computer.  
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 ### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>Utilizzo dei cmdlet di PowerShell per abilitare Gruppi di disponibilità AlwaysOn
 
- Il cmdlet di PowerShell, Enable-SqlAlwaysOn, viene utilizzato per abilitare Gruppi di disponibilità AlwaysOn in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la funzionalità Gruppi di disponibilità AlwaysOn viene abilitata durante l'esecuzione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario riavviare il servizio Motore di database affinché la modifica venga completata. A meno che non sia specificato il parametro -Force, il cmdlet richiede se si desidera riavviare il servizio; se annullato, non viene eseguita alcuna operazione.  
+ Il cmdlet di PowerShell, Enable-SqlAlwaysOn, viene utilizzato per abilitare Gruppi di disponibilità AlwaysOn in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la funzionalità Gruppi di disponibilità AlwaysOn viene abilitata durante l'esecuzione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario riavviare il servizio Motore di database affinché la modifica venga completata. A meno che non sia specificato il parametro -Force, il cmdlet richiede se si desidera riavviare il servizio; se annullato, non viene eseguita alcuna operazione.  
   
  Per la relativa esecuzione è necessario disporre delle autorizzazioni di amministratore.  
   
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 2.  Nella scheda **Applicazioni** fare clic su **Nuova attività**.  
   
-3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri** , quindi fare clic su **OK**. Verrà aperta la finestra di **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
+3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri**, quindi fare clic su **OK**. Verrà aperta la finestra di **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
   
 4.  Nella finestra di **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** eseguire lo script seguente per abilitare il protocollo TCP/IP:  
   
@@ -211,7 +211,7 @@ $Tcp
 ```  
   
 ##  <a name="sql-server-profiler"></a>SQL Server Profiler  
- In un computer remoto avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e selezionare Nuova traccia dal menu File. Tramite l'applicazione viene visualizzata la finestra di dialogo Connetti al server in cui è possibile specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che risiede nel computer con Server Core, a cui si desidera effettuare la connessione. Per altre informazioni, vedere [Avviare SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
+ In un computer remoto avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e selezionare Nuova traccia dal menu File. Tramite l'applicazione viene visualizzata la finestra di dialogo Connetti al server in cui è possibile specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], che risiede nel computer con Server Core, a cui si desidera effettuare la connessione. Per altre informazioni, vedere [Avviare SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
   
  Per altre informazioni sulle autorizzazioni richieste per eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   

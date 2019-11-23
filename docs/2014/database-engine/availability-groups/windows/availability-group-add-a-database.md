@@ -28,7 +28,7 @@ ms.locfileid: "72782896"
   
      [Prerequisiti e restrizioni](#Prerequisites)  
   
-     [Permissions](#Permissions)  
+     [Autorizzazioni](#Permissions)  
   
 -   **Per aggiungere un database a un gruppo di disponibilità utilizzando:**  
   
@@ -46,12 +46,12 @@ ms.locfileid: "72782896"
   
 -   È necessario che il database risieda nell'istanza del server che ospita la replica primaria e sia conforme ai prerequisiti e alle restrizioni per i database di disponibilità. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per aggiungere un database a un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -72,7 +72,7 @@ ms.locfileid: "72782896"
   
          Dopo avere utilizzato la finestra di dialogo **Proprietà gruppo di disponibilità** per aggiungere un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per aggiungere un database a un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -81,7 +81,7 @@ ms.locfileid: "72782896"
   
      ALTER AVAILABILITY GROUP *nome_gruppo* ADD DATABASE *nome_database* [,...*n*]  
   
-     dove *nome_gruppo* è il nome del gruppo di disponibilità e *nome_database* è il nome di un database da aggiungere al gruppo.  
+     dove *group_name* è il nome del gruppo di disponibilità e *database_name* è il nome di un database da aggiungere al gruppo.  
   
      Nell'esempio seguente viene aggiunto il database *MyDb3* al gruppo di disponibilità *MyAG* .  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72782896"
   
 3.  Dopo avere aggiunto un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per aggiungere un database a un gruppo di disponibilità**  
   
 1.  Spostarsi nella directory (`cd`) dell'istanza del server che ospita la replica primaria.  
@@ -137,7 +137,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Usare il dashboard &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)    
+ [Usare il dashboard &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

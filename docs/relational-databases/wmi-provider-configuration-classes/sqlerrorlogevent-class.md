@@ -85,7 +85,7 @@ Next
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Per connettersi a un file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite WMI, è necessario disporre delle autorizzazioni seguenti per i computer locali e remoti:  
   
 -   Accesso in lettura allo spazio dei nomi WMI **allo root\Microsoft\SqlServer\ComputerManagement10** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  

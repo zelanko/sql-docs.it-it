@@ -44,7 +44,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
  Se è **1**, **sp_dropdistributor** Elimina tutti gli oggetti di pubblicazione e distribuzione prima di disinstallare il server di distribuzione.  
   
-`[ @ignore_distributor = ] ignore_distributor` indica se questa stored procedure viene eseguita senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
+`[ @ignore_distributor = ] ignore_distributor` indica se il stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
   
  Se è **0**, **sp_dropdistributor** si connette al server di distribuzione e rimuove tutti gli oggetti di replica. Se **sp_dropdistributor** non è in grado di connettersi al server di distribuzione, il stored procedure ha esito negativo.  
   
@@ -53,17 +53,17 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropdistributor** viene utilizzato in tutti i tipi di replica.  
   
  Se nel server sono presenti altri oggetti editore o di distribuzione, **sp_dropdistributor** ha esito negativo a meno che **\@no_checks** non sia impostato su **1**.  
   
- Questa stored procedure deve essere eseguita dopo l'eliminazione del database di distribuzione eseguendo **sp_dropdistributiondb**.  
+ Questa stored procedure deve essere eseguita dopo l'eliminazione del database di distribuzione tramite l'esecuzione di **sp_dropdistributiondb**.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>Vedere anche  

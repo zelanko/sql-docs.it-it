@@ -52,7 +52,7 @@ Questo argomento offre una panoramica sull'uso dell'[utilità bcp](../../tools/b
   
 -   [Utilità bcp](../../tools/bcp-utility.md)  
   
--   [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+-   [Creare un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
@@ -60,22 +60,25 @@ Questo argomento offre una panoramica sull'uso dell'[utilità bcp](../../tools/b
   
 -   [Mantenimento dei valori Null o uso dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
 -   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
-[clausola &#40;SELECT Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)
+[Insert &#40;Transact-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)
+[clausola &#40;SELECT Transact-SQL&#41; ](/sql/t-sql/queries/select-clause-transact-sql)
 [utilità bcp](../../tools/bcp-utility.md)   
-[Preparare l'importazione bulk dei &#40;dati&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;BULK INSERT Transact-&#41;SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[importazione ed esportazione bulk dei &#40;dati&#41;SQL Server](bulk-import-and-export-of-data-sql-server.md)@no__t-[11 &#40; OPENROWSET Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[creare un file &#40;di formato&#41; SQL Server](create-a-format-file-sql-server.md)
+[Preparare l'importazione bulk dei &#40;dati&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[Bulk Insert &#40;Transact-&#41; SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
+eseguire l' [importazione e l' &#40;esportazione&#41; bulk dei dati SQL Server](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;Transact-SQL&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
+[creare un file &#40;di formato SQL Server&#41; ](create-a-format-file-sql-server.md)

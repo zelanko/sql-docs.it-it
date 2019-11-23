@@ -40,19 +40,19 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ \@sent_before = ] 'sent_before'`Elimina i messaggi di posta elettronica fino alla data e all'ora fornite come argomento *sent_before* . *sent_before* è di tipo **DateTime** e il valore predefinito è null. che indica tutte le date.  
+`[ \@sent_before = ] 'sent_before'` Elimina i messaggi di posta elettronica fino alla data e all'ora fornite come argomento *sent_before* . *sent_before* è di tipo **DateTime** con valore predefinito. che indica tutte le date.  
   
-`[ \@sent_status = ] 'sent_status'`Elimina i messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* è di tipo **varchar (8)** e non prevede alcun valore predefinito. Le voci valide vengono **inviate**, non **inviate**, **riprovate**e **non riuscite**. NULL indica tutti gli stati.  
+`[ \@sent_status = ] 'sent_status'` Elimina i messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* è di tipo **varchar (8)** e non prevede alcun valore predefinito. Le voci valide vengono **inviate**, non **inviate**, **riprovate**e **non riuscite**. NULL indica tutti gli stati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Posta elettronica database messaggi e i relativi allegati vengono archiviati nel database **msdb** . I messaggi devono essere eliminati periodicamente per evitare che il **database msdb** cresca più grande del previsto e sia conforme al programma di conservazione dei documenti delle organizzazioni. Utilizzare il stored procedure **sysmail_delete_mailitems_sp** per eliminare definitivamente i messaggi di posta elettronica dalle tabelle posta elettronica database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificati come argomento **sent_status** . È necessario fornire un argomento per  **\@sent_before** o  **\@sent_status**. Per eliminare tutti i messaggi, usare  **\@sent_before = getdate ()** .  
+## <a name="remarks"></a>Osservazioni  
+ Posta elettronica database messaggi e i relativi allegati vengono archiviati nel database **msdb** . I messaggi devono essere eliminati periodicamente per evitare che il **database msdb** cresca più grande del previsto e sia conforme al programma di conservazione dei documenti delle organizzazioni. Utilizzare la stored procedure **sysmail_delete_mailitems_sp** per eliminare definitivamente i messaggi di posta elettronica dalle tabelle posta elettronica database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificati come argomento **sent_status** . È necessario fornire un argomento per **\@sent_before** o **\@sent_status**. Per eliminare tutti i messaggi, utilizzare **\@sent_before = getdate ()** .  
   
- L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione della posta elettronica non comporta l'eliminazione delle voci corrispondenti in **sysmail_event_log**. Usare [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) per eliminare gli elementi dal log.  
+ L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione della posta elettronica non comporta l'eliminazione delle voci corrispondenti in **sysmail_event_log**. Utilizzare [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) per eliminare elementi dal log.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questo stored procedure viene concesso per l'esecuzione ai membri del ruolo predefinito del server **sysadmin** e **DatabaseMailUserRole**. I membri del ruolo predefinito del server **sysadmin** possono eseguire questa procedura per eliminare i messaggi di posta elettronica inviati da tutti gli utenti. I membri di **DatabaseMailUserRole** possono eliminare solo i messaggi di posta elettronica inviati da tale utente.  
   
 ## <a name="examples"></a>Esempi  
@@ -67,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>B. Eliminazione dei messaggi di posta elettronica meno recenti  
+### <a name="b-deleting-the-oldest-e-mails"></a>b. Eliminazione dei messaggi di posta elettronica meno recenti  
  Nell'esempio seguente vengono eliminati i messaggi di posta elettronica nel log di Posta elettronica database con una data anteriore a `October 9, 2005`.  
   
 ```  
@@ -89,6 +89,6 @@ GO
  [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
- [Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

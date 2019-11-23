@@ -107,7 +107,7 @@ ms.locfileid: "69493870"
   
 8.  Scegliere **Avanti**.  
   
-9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto all'attributo **Sales Reason Reason Type** , impostare il nome su `Sales Reason Type` e quindi fare clic su **Avanti**.  
+9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto all'attributo **Sales Reason Reason Type** , impostare il nome su `Sales Reason Type`e quindi fare clic su **Avanti**.  
   
 10. Nella pagina **Completamento procedura guidata** fare clic su **Fine** per creare la dimensione Sales Reason.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "69493870"
   
 15. Definire `All Sales Reasons` come valore per la proprietà **AttributeAllMemberName** della dimensione Sales Reason.  
   
-16. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, come una dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
+16. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial come dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
   
 17. Nella finestra di dialogo **Aggiungi dimensione al cubo** selezionare **Sales Reason** e quindi fare clic su **OK**.  
   

@@ -30,22 +30,22 @@ ms.locfileid: "70155539"
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Si noti Questo vale solo per il database SQL di Azure V11.**  
+  **Nota: questa opzione si applica solo al database SQL di Azure V11.**  
   
- Elenca il numero, il tipo e la durata dei database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Elenca il numero, il tipo e la durata dei database nel server [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  La vista **sys. database_usage** contiene le colonne seguenti.  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |time|Data di esecuzione degli eventi di utilizzo.|  
-|sku|Tipo di livello di servizio per il database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
+|sku|Tipo di livello di servizio per il database: **Web**, **Business**, **Basic**, **standard**, **Premium**|  
 |quantity|Numero massimo di database di un tipo SKU presente durante il giorno.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'accesso in sola lettura a questa vista è disponibile per tutti gli utenti che dispongono delle autorizzazioni per connettersi al database **Master** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La vista **sys. database_usage** restituisce una riga per ogni giorno della sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  

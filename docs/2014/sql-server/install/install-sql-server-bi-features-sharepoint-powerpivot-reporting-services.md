@@ -34,7 +34,7 @@ ms.locfileid: "71952145"
   
 -   [Panoramica dell'installazione](#bkmk_install_sharepoint2013_overview)  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  Oltre alle informazioni di questo argomento, in questa sezione del contenuto sono presenti i seguenti argomenti correlati.  
   
  [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)  
@@ -61,12 +61,12 @@ ms.locfileid: "71952145"
 |1|Solo SharePoint|Funzionalità native di Excel Services|Excel Services e altri servizi inclusi in SharePoint Server 2013.|  
 |**2**|SharePoint con Analysis Services in modalità SharePoint|Cartelle di lavoro interattive di PowerPivot nel browser|Installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint.<br /><br /> Registrare il server Analysis Services in Excel Services.|  
 |**3**|SharePoint con Reporting Services in modalità SharePoint|Power View|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.<br /><br /> Installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **(rsSharePoint.msi)** per SharePoint. Per ulteriori informazioni, vedere [installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41; ](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|Tutte le funzionalità di PowerPivot|Accedere alle cartelle di lavoro come origine dati dall'esterno della farm.<br /><br /> Pianificare l'aggiornamento dati.<br /><br /> Raccolta PowerPivot.<br /><br /> Dashboard di gestione.<br /><br /> Tipo di contenuto del file di collegamento BISM.|Distribuire il componente aggiuntivo PowerPivot per SharePoint 2013 **(spPowerPivot.msi)** . Per ulteriori informazioni, vedere quanto segue:<br /><br /> [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Per informazioni su come scaricare **spPowerPivot.msi**, vedere [Scaricare SQL Server 2014 PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
+|**4**|Tutte le funzionalità di PowerPivot|Accedere alle cartelle di lavoro come origine dati dall'esterno della farm.<br /><br /> Pianificare l'aggiornamento dati.<br /><br /> Raccolta PowerPivot.<br /><br /> Dashboard di gestione.<br /><br /> Tipo di contenuto del file di collegamento BISM.|Distribuire il componente aggiuntivo PowerPivot per SharePoint 2013 **(spPowerPivot.msi)** . Per altre informazioni, vedere quanto segue:<br /><br /> [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Per informazioni su come scaricare **spPowerPivot.msi**, vedere [Scaricare SQL Server 2014 PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
   
- Per ulteriori informazioni sull'abilitazione delle funzionalità di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere la pagina relativa a [SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
+ Per ulteriori informazioni sull'abilitazione delle funzionalità di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere la pagina relativa [all'SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a>Panoramica dell'installazione  
- Se si desidera utilizzare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], eseguire due volte l'Installazione guidata di SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono opzioni separate nella pagina **impostazione ruolo** dell'installazione guidata SQL Server.  
+ Se si desidera utilizzare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], eseguire due volte l'Installazione guidata di SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono scelte separate nella pagina **impostazione ruolo** dell'installazione guidata SQL Server.  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supporta sia SharePoint 2010 sia SharePoint 2013; tuttavia si utilizza un'architettura e un processo di installazione differenti a seconda della versione di SharePoint.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "71952145"
   
 ## <a name="see-also"></a>Vedere anche  
  [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Combinazioni supportate di SharePoint e Reporting Services server e del componente aggiuntivo &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
+ [Combinazioni supportate di SharePoint e Reporting Services server e del componente aggiuntivo &#40;SQL Server 2014&#41; ](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

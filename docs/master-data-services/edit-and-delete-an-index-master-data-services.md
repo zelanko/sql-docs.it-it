@@ -23,12 +23,12 @@ ms.locfileid: "73728221"
 
   È possibile modificare ed eliminare un indice creato in base agli attributi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Per modificare un indice**  
   

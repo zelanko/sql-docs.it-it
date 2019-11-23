@@ -20,7 +20,7 @@ ms.locfileid: "72797504"
 # <a name="configure-failureconditionlevel-property-settings"></a>Configurare le impostazioni della proprietà FailureConditionLevel
   Utilizzare la proprietà FailureConditionLevel per impostare le condizioni per il failover o il riavvio dell'istanza del cluster di failover AlwaysOn. Le modifiche apportate a questa proprietà vengono applicate immediatamente senza richiedere il riavvio del servizio cluster di failover di Windows Server (WSFC) o della risorsa istanza cluster di failover.  
   
--   **Prima di iniziare:**  [Impostazioni della proprietà FailureConditionLevel](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
 -   **Per configurare le impostazioni della proprietà FailureConditionLevel usando** [PowerShell](#PowerShellProcedure), [Gestione cluster di failover](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
@@ -29,12 +29,12 @@ ms.locfileid: "72797504"
 ###  <a name="Restrictions"></a> Impostazioni della proprietà FailureConditionLevel  
  Le condizioni di errore vengono impostate in base a un ordine crescente. In ognuno dei livelli 1-5 sono incluse tutte le condizioni dei livelli precedenti oltre alle proprie condizioni specifiche. Pertanto, in ogni livello la probabilità di un failover o di un riavvio è maggiore.  Per ulteriori informazioni, vedere la sezione "Determinazione di errori" nell'argomento [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md) .  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni ALTER SETTINGS e VIEW SERVER STATE.  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
   
 ### <a name="to-configure-failureconditionlevel-settings"></a>Per configurare le impostazioni FailureConditionLevel  
   
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability (Clustering e disponibilità elevata)](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -76,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 4.  Selezionare la scheda **Proprietà** , immettere il valore desiderato per la proprietà **FailureConditionLevel** , quindi fare clic su **OK** per applicare la modifica.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>Per configurare le impostazioni delle proprietà FailureConditionLevel
   
@@ -91,4 +91,4 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel =
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
+ [Criteri di failover per istanze del cluster di failover](failover-policy-for-failover-cluster-instances.md)  

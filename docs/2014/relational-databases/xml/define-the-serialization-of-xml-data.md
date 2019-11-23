@@ -31,7 +31,7 @@ ms.locfileid: "72688892"
 ## <a name="serialization-encoding"></a>Codifica della serializzazione  
  Se il tipo SQL di destinazione è VARBINARY, il risultato viene serializzato nel formato UTF-16 preceduto da un indicatore dell'ordine dei byte UTF-16, ma senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio  
+ Ad esempio:  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Se il tipo SQL di destinazione è NVARCHAR o NCHAR, il risultato viene serializzato nel formato UTF-16 non preceduto dall'indicatore dell'ordine dei byte e senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio  
+ Ad esempio:  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -59,7 +59,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
- Ad esempio  
+ Ad esempio:  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -87,7 +87,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Per proteggere i nodi di testo che contengono solo spazi vuoti, uno degli spazi vuoti (in genere l'ultimo) viene sostituito con l'entità rappresentata dal relativo riferimento a un carattere numerico. In questo modo, durante l'analisi il nodo di testo con spazi vuoti viene mantenuto, indipendentemente da come vengono gestiti gli spazi vuoti durante l'analisi.  
   
- Ad esempio  
+ Ad esempio:  
   
 ```sql
 declare @u NVARCHAR(50)  

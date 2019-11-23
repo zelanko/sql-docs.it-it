@@ -1,5 +1,5 @@
 ---
-title: 'Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica) | Microsoft Docs'
+title: Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità/Aggiungi replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,24 +21,24 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176049"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Aggiungi replica)
   In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
   
-|TAB|Breve descrizione|  
+|Scheda|Breve descrizione|  
 |---------|-----------------------|  
-|[Repliche](#ReplicasTab)|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà o ospita attualmente una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.<br /><br /> Suggerimento: Completare specificando tutte le repliche nella scheda **Repliche** prima di iniziare le altre schede.|  
+|[Repliche](#ReplicasTab)|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà o ospita attualmente una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.<br /><br /> Suggerimento: completare la specifica di tutte le repliche nella scheda **Repliche** prima di iniziare le altre schede.|  
 |[Endpoint](#EndpointsTab)|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente.|  
 |[Preferenze di backup](#BackupPreferencesTab)|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
-|[Listener](#Listener)|Utilizzare questa scheda, se disponibile, per creare un listener del gruppo di disponibilità. Per impostazione predefinita, non viene creato un listener.<br /><br /> Nota: Questa scheda è disponibile solo se si esegue la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
+|[Listener](#Listener)|Utilizzare questa scheda, se disponibile, per creare un listener del gruppo di disponibilità. Per impostazione predefinita, non viene creato un listener.<br /><br /> Nota: questa scheda è disponibile solo se si esegue la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
   
 ##  <a name="ReplicasTab"></a> Scheda Repliche  
  **Istanza del server**  
  Consente di visualizzare il nome dell'istanza del server che ospiterà la replica di disponibilità.  
   
- Se un'istanza del server utilizzata per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con secondario repliche in Azure.  
+ Se un'istanza del server utilizzata per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Azure.  
   
  **Ruolo iniziale**  
- Indica il ruolo che la nuova replica eseguirà inizialmente: **Primaria** o **Secondaria**.  
+ Indica il ruolo che verrà inizialmente svolto dalla nuova replica: **Primario** o **Secondario**.  
   
  **Failover automatico (fino a 2)**  
  Selezionare questa casella di controllo solo se si desidera che questa replica di disponibilità sia un partner di failover automatico. Per configurare il failover automatico, è necessario scegliere questa opzione per la replica primaria iniziale e per una replica secondaria. Per entrambe le repliche verrà utilizzata la modalità di disponibilità con commit sincrono. Il failover automatico è supportato solo da due repliche.  
@@ -56,7 +56,7 @@ ms.locfileid: "70176049"
  **No**  
  Non sono consentite connessioni dirette ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Questa è l'impostazione predefinita.  
   
- **Solo con finalità di lettura**  
+ **Solo finalità di lettura**  
  Sono consentite solo connessioni dirette di sola lettura ai database secondari di questa replica. Il database o i database secondari sono tutti disponibili per l'accesso in lettura.  
   
  **Sì**  
@@ -66,7 +66,7 @@ ms.locfileid: "70176049"
  Fare clic per aggiungere una replica secondaria al gruppo di disponibilità.  
   
  **Aggiungi replica Azure**  
- Fare clic per creare una macchina virtuale di Azure che esegue una replica secondaria nel gruppo di disponibilità. Questa opzione può essere applicata solo a un gruppo di disponibilità in un ambiente IT ibrido che contiene repliche locali. Per altre informazioni, vedere [disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Fare clic per creare una macchina virtuale di Azure che esegue una replica secondaria nel gruppo di disponibilità. Questa opzione può essere applicata solo a un gruppo di disponibilità in un ambiente IT ibrido che contiene repliche locali. Per altre informazioni, vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Rimuovi replica**  
  Fare clic per rimuovere la replica secondaria selezionata dal gruppo di disponibilità.  
@@ -74,7 +74,7 @@ ms.locfileid: "70176049"
 ##  <a name="EndpointsTab"></a> Scheda Endpoint  
  Per ogni istanza del server in cui verrà ospitata una replica di disponibilità, nella scheda **Endpoint** vengono visualizzati i valori effettivi dell'endpoint del mirroring del database esistente, se presente, oppure i valori suggeriti per un nuovo endpoint potenziale in cui verrebbe utilizzata l'autenticazione di Windows. Sia per gli endpoint esistenti che per quelli potenziali, nella griglia Valori endpoint vengono visualizzate le informazioni seguenti:  
   
- **Nome server**  
+ **Server Name**  
  Visualizza il nome di un'istanza del server che ospiterà una replica di disponibilità.  
   
  **URL endpoint**  
@@ -98,7 +98,7 @@ ms.locfileid: "70176049"
   
 -   Se ogni istanza del server è in esecuzione in un account del servizio di dominio, ovvero se nella colonna **Account del servizio SQL Server** è visualizzato un account del servizio di dominio per ogni istanza del server, fare clic su **Avanti**.  
   
--   Se un'istanza del server è in esecuzione in un account del servizio non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. In questo caso, facendo clic su **Avanti** viene visualizzata una finestra di dialogo di avviso. Fare clic su **No**per tornare alla scheda**Endpoint** . Lasciando aperta la pagina **Specifica repliche** della procedura guidata, apportare una delle modifiche seguenti a ogni istanza del server per la quale nella colonna **Account del servizio SQL Server** viene visualizzato un account del servizio non di dominio:  
+-   Se un'istanza del server è in esecuzione in un account del servizio non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. In questo caso, facendo clic su **Avanti** viene visualizzata una finestra di dialogo di avviso. fare clic su **No**per tornare alla scheda**endpoint** . Quando si esce dalla procedura guidata nella pagina **Specifica repliche** , apportare una delle modifiche seguenti a ogni istanza del server per la quale nella colonna **account del servizio SQL Server** viene visualizzato un account del servizio non di dominio:  
   
     -   Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un account di dominio. Per altre informazioni, vedere [Modificare l'account di avvio del servizio di SQL Server &#40;Gestione configurazione SQL Server&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70176049"
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
->  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie (Gruppi di disponibilità AlwaysOn](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)).  
+>  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per ulteriori informazioni, vedere [repliche secondarie attive: backup in repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Griglia Priorità di backup replica  
  Utilizzare la griglia **Priorità di backup replica** per specificare le priorità di backup per ciascuna replica del gruppo di disponibilità. La griglia include le colonne seguenti:  
@@ -140,7 +140,7 @@ ms.locfileid: "70176049"
  Specificare la preferenza per un[listener del gruppo di disponibilità](../../listeners-client-connectivity-application-failover.md)che fornirà un punto di connessione client. I valori possibili sono:  
   
  **Non creare ora un listener del gruppo di disponibilità.**  
- Selezionare questa opzione per ignorare questo passaggio. È possibile creare un listener in un secondo momento. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+ Selezionare questa opzione per ignorare questo passaggio. È possibile creare un listener in un secondo momento. Per altre informazioni, vedere [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Crea un listener del gruppo di disponibilità.**  
  Specificare le preferenze del listener per questo gruppo di disponibilità, nel modo seguente:  
@@ -196,20 +196,20 @@ ms.locfileid: "70176049"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utilizzare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
 -   [Creazione di un endpoint del mirroring del &#40;Database per gruppi di disponibilità AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

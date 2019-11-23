@@ -26,19 +26,19 @@ ms.locfileid: "73727832"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]convalidare una versione per applicare regole di business a tutti i membri nella versione del modello.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] convalidare una versione per applicare le regole di business a tutti i membri nella versione del modello.  
   
- In questa procedura viene illustrato come usare l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per convalidare i dati. Se si dispone dell'autorizzazione nel database MDS, è possibile utilizzare una stored procedure. Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
+ In questa procedura viene illustrato come usare l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per convalidare i dati. Se si dispone dell'autorizzazione nel database MDS, è possibile utilizzare una stored procedure. Per altre informazioni, vedere [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 > [!NOTE]  
 >  Tutti i membri devono superare la convalida prima che possa essere eseguito il commit di una versione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Lo stato della versione deve essere **Aperto** o **Bloccato**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73727832"
     > [!NOTE]  
     >  Quando non è più visualizzato l'indicatore di stato, la versione ha terminato la convalida.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   

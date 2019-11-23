@@ -47,31 +47,31 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] id` il numero di identificazione del proxy da modificare. *Proxy_id* è di **tipo int**e il valore predefinito è null.  
+`[ @proxy_id = ] id` il numero di identificazione del proxy da modificare. Il *proxy_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @proxy_name = ] 'proxy_name'` il nome del proxy da modificare. *Proxy_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @proxy_name = ] 'proxy_name'` il nome del proxy da modificare. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @credential_name = ] 'credential_name'` il nome delle nuove credenziali per il proxy. *Credential_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *credential_name* o *credential_id* .  
+`[ @credential_name = ] 'credential_name'` il nome delle nuove credenziali per il proxy. Il *credential_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *credential_name* o *credential_id* .  
   
-`[ @credential_id = ] credential_id` il numero di identificazione delle nuove credenziali per il proxy. *Credential_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *credential_name* o *credential_id* .  
+`[ @credential_id = ] credential_id` il numero di identificazione delle nuove credenziali per il proxy. Il *credential_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *credential_name* o *credential_id* .  
   
-`[ @new_name = ] 'new_name'` il nuovo nome del proxy. *New_name* è di **tipo sysname**e il valore predefinito è null. Quando viene specificato, la procedura modifica il nome del proxy in *new_name*. Quando questo argomento è NULL, il nome del proxy rimane invariato.  
+`[ @new_name = ] 'new_name'` il nuovo nome del proxy. Il *new_name* è di **tipo sysname**e il valore predefinito è null. Quando viene specificato, la procedura modifica il nome del proxy in *new_name*. Quando questo argomento è NULL, il nome del proxy rimane invariato.  
   
-`[ @enabled = ] is_enabled` indica se il proxy è abilitato. Il flag *is_enabled* è di **tinyint**e il valore predefinito è null. Quando *is_enabled* è **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo. Quando questo argomento è NULL, lo stato del proxy rimane invariato.  
+`[ @enabled = ] is_enabled` indica se il proxy è abilitato. Il flag di *is_enabled* è di **tinyint**e il valore predefinito è null. Quando *is_enabled* è **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo. Quando questo argomento è NULL, lo stato del proxy rimane invariato.  
   
 `[ @description = ] 'description'` la nuova descrizione del proxy. La *Descrizione* è di **tipo nvarchar (512)** e il valore predefinito è null. Quando questo argomento è NULL, la descrizione del proxy rimane invariata.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario specificare **\@proxy_name** o **\@proxy_id** . Se si specificano entrambi gli argomenti, devono riferirsi tutti e due allo stesso proxy per consentire la corretta esecuzione della stored procedure.  
   
  È necessario specificare **\@credential_name** o **\@credential_id** per modificare le credenziali per il proxy. Se si specificano entrambi gli argomenti, devono riferirsi alle stesse credenziali per consentire la corretta esecuzione della stored procedure.  
   
  Questa procedura modifica il proxy, ma non modifica l'accesso al proxy. Per modificare l'accesso a un proxy, usare **sp_grant_login_to_proxy** e **sp_revoke_login_from_proxy**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo di sicurezza predefinito **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -88,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementare SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)@no__t di sicurezza-1  
+ [Stored procedure &#40;SQL Server Agent Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Implementare SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  di sicurezza  
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

@@ -66,7 +66,7 @@ WHERE where_condition
  *event_property*  
  Proprietà di un evento. Gli esempi includono **posttime**, **SPID**e **LoginName**. Cercare ogni evento elencato in [classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) per determinare le proprietà che possiede. Ad esempio, l'evento DDL_DATABASE_LEVEL_EVENTS include le proprietà **DatabaseName** e **username** . Eredita inoltre le proprietà **SQLInstance**, **LoginName**, **posttime**, **SPID**e **ComputerName** dagli eventi padre.  
   
- **,** *... n*  
+ **,** *...n*  
  Indica che *event_property* possibile eseguire query più volte, separate da virgole.  
   
  \*  
@@ -116,14 +116,14 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-querying-for-events-at-the-server-scope"></a>A. Query su eventi nell'ambito server  
+### <a name="a-querying-for-events-at-the-server-scope"></a>R. Query su eventi nell'ambito server  
  Nella query WQL seguente vengono recuperate tutte le proprietà di evento per qualsiasi evento di traccia `SERVER_MEMORY_CHANGE` che si verifica sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>B. Query su eventi nell'ambito database  
+### <a name="b-querying-for-events-at-the-database-scope"></a>b. Query su eventi nell'ambito database  
  Nella query WQL seguente vengono recuperate proprietà di evento specifiche per qualsiasi evento che si verifica nel database `AdventureWorks` ed è incluso nel gruppo di eventi `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  

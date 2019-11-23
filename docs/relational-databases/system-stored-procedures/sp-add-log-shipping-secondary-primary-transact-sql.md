@@ -93,7 +93,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **sp_add_log_shipping_secondary_primary** deve essere eseguito dal database **Master** nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Genera un ID secondario per il server e il database primari specificati.  
@@ -110,11 +110,11 @@ sp_add_log_shipping_secondary_primary
   
     5.  Impostare l'ID del processo di ripristino nella voce **log_shipping_secondary** sull'ID processo del processo di ripristino.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio illustra l'uso di **sp_add_log_shipping_secondary_primary** stored procedure per configurare le informazioni per il database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sul server secondario.  
+ Questo esempio illustra l'uso della stored procedure **sp_add_log_shipping_secondary_primary** per configurare le informazioni per il database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server secondario.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   

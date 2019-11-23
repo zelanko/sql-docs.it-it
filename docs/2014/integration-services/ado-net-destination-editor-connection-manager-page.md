@@ -33,20 +33,20 @@ ms.locfileid: "70154027"
 3.  In **Editor destinazione ADO NET**fare clic su **Gestione connessione**.  
   
 ## <a name="static-options"></a>Opzioni statiche  
- **Connection manager**  
- Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
+ **Gestione connessione**  
+ Selezionare una gestione connessione esistente nell'elenco oppure crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovi**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione ADO.NET** .  
   
  **Tabella o vista**  
  Consente di selezionare una tabella o vista esistente nell'elenco oppure di creare una nuova tabella facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovi**  
  Consente di creare una nuova tabella o vista usando la finestra di dialogo **Crea tabella** .  
   
 > [!NOTE]  
->  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella**. Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Anteprima**  
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
@@ -66,7 +66,7 @@ ms.locfileid: "70154027"
 >  Per altre informazioni, vedere [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) e [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Articolo tecnico relativo [al caricamento rapido dei dati nel database SQL di Azure](https://go.microsoft.com/fwlink/?LinkId=244333), in sqlcat.com  
+ Articolo tecnico relativo alla [modalità rapida di caricamento di dati nel database SQL di Azure](https://go.microsoft.com/fwlink/?LinkId=244333) nel sito Web sqlcat.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

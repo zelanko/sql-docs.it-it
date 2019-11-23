@@ -26,7 +26,7 @@ ms.locfileid: "73705291"
 ##  <a name="bkmk_Overview"></a> Creazione di progetti di data mining  
  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]per compilare i progetti di data mining è possibile usare il modello **Progetto OLAP e data mining**. È inoltre possibile creare progetti di data mining a livello di codice tramite AMO. È possibile generare script dei singoli oggetti di data mining tramite ASSL (Analysis Services Scripting Language). Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- Se si crea un progetto di data mining all'interno di una soluzione esistente, per impostazione predefinita gli oggetti di data mining saranno distribuiti in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con lo stesso nome del file della soluzione. È possibile modificare il nome e il server di destinazione usando la finestra di dialogo **Proprietà progetto**. Per altre informazioni, vedere [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+ Se si crea un progetto di data mining all'interno di una soluzione esistente, per impostazione predefinita gli oggetti di data mining saranno distribuiti in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con lo stesso nome del file della soluzione. È possibile modificare il nome e il server di destinazione usando la finestra di dialogo **Proprietà progetto**. Per altre informazioni, vedere [Configure Analysis Services Project Properties &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
 >  Per compilare e distribuire correttamente il progetto, è necessario avere accesso a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità OLAP/data mining. Non è possibile sviluppare o distribuire soluzioni di data mining in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che supporta modelli tabulari, né è possibile utilizzare direttamente i dati da una cartella di lavoro di PowerPivot o da un modello tabulare che utilizza l'archivio dati in memoria. Per determinare se l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponibile supporta il data mining, vedere [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "73705291"
   
 
   
-###  <a name="bkmk_Structures"></a> Mining Structures  
+###  <a name="bkmk_Structures"></a> Strutture di data mining  
  Dopo aver creato l'origine dati e la vista origine dati, è necessario selezionare le colonne di dati più rilevanti per le esigenze aziendali, definendo *strutture di data mining* all'interno del progetto. Con una struttura di data mining si indica al progetto quali colonne di dati della vista origine dati devono effettivamente essere utilizzate nella modellazione, nel training e nei test.  
   
  Per aggiungere una nuova struttura di data mining, avviare la Creazione guidata modello di data mining. Con la procedura guidata viene automaticamente definita una struttura di data mining, viene avviato il processo di scelta dei dati e, facoltativamente, di aggiunta di un modello di data mining alla struttura. In una struttura di data mining si scelgono le tabelle e le colonne dalla vista origine dati o da un cubo OLAP e si definiscono le relazioni tra le tabelle, se i dati includono tabelle nidificate.  
@@ -132,7 +132,7 @@ ms.locfileid: "73705291"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> Modelli di data mining  
  Il modello di data mining definisce l'algoritmo o il metodo di analisi che verrà utilizzato per i dati. A ogni struttura di data mining si aggiunge uno o più modelli di data mining.  
   
  A seconda delle esigenze, è possibile combinare più modelli in un solo progetto o creare progetti separati per ogni tipo di modello o attività analitica.  

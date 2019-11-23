@@ -29,7 +29,7 @@ ms.locfileid: "72783358"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Questa caratteristica è supportata solo in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] o versioni successive.  
   
 > [!IMPORTANT]  
@@ -40,10 +40,10 @@ ms.locfileid: "72783358"
 > [!TIP]  
 >  Se questo aggiornamento rapido non viene installato, gli esempi in questo argomento restituiranno valori vuoti o NULL per NodeWeight.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>Per visualizzare le impostazioni NodeWeight  
   

@@ -44,9 +44,9 @@ ms.locfileid: "72796432"
   
 -   [Aggiornamento](#bkmk_upgrade)  
   
--   [RsCustomAction. exe](#bkmk_rscustomaction)  
+-   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> Prerequisiti  
  L'installazione del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rappresenta uno dei diversi passaggi necessari per l'integrazione di un server di report in un'istanza di un prodotto SharePoint. Per altre informazioni sul set di requisiti completo per l'utilizzo della modalità SharePoint, vedere [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Per ulteriori informazioni sull'installazione e la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Install Reporting Services SharePoint Mode for sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   
 -   Se si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm di SharePoint in cui sono presenti più applicazioni front-end Web, installare il componente aggiuntivo in ogni computer nella farm in cui è presente un server front-end Web. Eseguire questa operazione solo per i front-end Web che verranno utilizzati per accedere al contenuto del server di report.  
@@ -89,7 +89,7 @@ ms.locfileid: "72796432"
 ##  <a name="bkmk_3ways_to_install"></a> Panoramica sui metodi di installazione  
  È possibile installare il componente aggiuntivo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint mediante uno dei due metodi seguenti:  
   
--   **Installazione guidata:** ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "Si noti")con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il componente aggiuntivo può essere installato mediante l'installazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scegliere **Componente aggiuntivo Reporting Services per prodotti SharePoint** nella pagina **Selezione funzionalità** della procedura guidata.  
+-   **Installazione guidata:** ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "nota")con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il componente aggiuntivo può essere installato mediante l'installazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scegliere **Componente aggiuntivo Reporting Services per prodotti SharePoint** nella pagina **Selezione funzionalità** della procedura guidata.  
   
 -   **rsSharepoint.msi:** il file del componente aggiuntivo può essere installato direttamente dal supporto di installazione o scaricato e installato. Il file rsSharepoint.msi supporta sia l'installazione tramite interfaccia utente grafica che quella da riga di comando. È necessario eseguire il file con estensione msi con privilegi di amministratore aprendo innanzitutto una finestra del prompt dei comandi con autorizzazioni elevate ed eseguendo quindi rsSharepoint.msi dalla riga di comando. Per altre informazioni, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -111,11 +111,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
-     o Gestione configurazione  
+     Oppure  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. , Per ulteriori informazioni sull'installazione e la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, vedere [Install Reporting Services SharePoint Mode for sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. . Per ulteriori informazioni sull'installazione e la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, vedere [Install Reporting Services SharePoint Mode for sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 ###  <a name="bkmk_files_only_installation"></a> Installazione di tipo "solo file"  
  Per installare i file ignorando la fase di installazione delle azioni personalizzate, eseguire rssharepoint.msi dalla riga di comando con l'opzione SKIPCA:  
@@ -249,7 +249,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> File di log del programma di installazione  
- Durante l'esecuzione, il programma di installazione consente di registrare le informazioni in un file di log nella cartella **%temp%** per l'utente che ha installato il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ad esempio **c:\Users\\<nomeutente\>\AppData\Local\Temp**. Il nome del file è **RS_SP_\<numero>.log**, ad esempio **RS_SP_0.log**. Tutti gli errori nel log iniziano con la stringa "SSRSCustomActionError".  
+ Durante l'esecuzione, il programma di installazione consente di registrare le informazioni in un file di log nella cartella **%temp%** per l'utente che ha installato il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio **c:\Users\\<nomeutente\>\AppData\Local\Temp**. Il nome del file è **RS_SP_\<numero>.log**, ad esempio **RS_SP_0.log**. Tutti gli errori nel log iniziano con la stringa "SSRSCustomActionError".  
   
 > [!NOTE]  
 >  AppData è una cartella nascosta del sistema operativo Windows. Potrebbe essere necessario modificare le impostazioni delle cartelle di Esplora risorse per poter visualizzare file e cartelle nascosti.  
@@ -280,7 +280,7 @@ Rssharepoint.msi /?
   
 2.  Il risultato sarà simile al seguente:  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`(Indici per tabelle con ottimizzazione per la memoria).  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.  
   
 ##  <a name="bkmk_upgrade"></a> Aggiornamento  
  Se si dispone di un'installazione esistente del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è possibile eseguire l'aggiornamento alla versione corrente. Durante l'installazione del componente aggiuntivo verrà rilevata la versione esistente e verrà richiesto di confermare l'aggiornamento. Il messaggio sarà simile al seguente:  
@@ -294,7 +294,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  Nella tabella seguente vengono riepilogate le opzioni di rscustomaction.exe:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |i|Installazione delle azioni personalizzate. Consente di registrare i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. W3SVCservice verrà riavviato.|  
 |r|Repair|  

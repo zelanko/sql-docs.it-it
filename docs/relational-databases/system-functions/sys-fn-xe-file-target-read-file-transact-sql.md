@@ -86,7 +86,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-data-from-file-targets"></a>A. Recupero di dati da destinazioni di file  
+### <a name="a-retrieving-data-from-file-targets"></a>R. Recupero di dati da destinazioni di file  
  Nell'esempio seguente vengono restituite tutte le righe di tutti i file. Nell'esempio le destinazioni di file e i metafile si trovano nella cartella della traccia in C:\unità.  
   
 ```  

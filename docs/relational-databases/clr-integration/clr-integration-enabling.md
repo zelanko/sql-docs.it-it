@@ -21,7 +21,7 @@ ms.locfileid: "71680856"
 ---
 # <a name="clr-integration---enabling"></a>Integrazione CLR - Abilitazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare l'opzione **clr enabled** di **sp_configure** stored procedure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare l'opzione **clr enabled** del stored procedure **sp_configure** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  

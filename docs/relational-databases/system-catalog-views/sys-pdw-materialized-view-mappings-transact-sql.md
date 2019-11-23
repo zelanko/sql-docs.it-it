@@ -1,5 +1,5 @@
 ---
-title: sys. pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
+title: sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -29,7 +29,7 @@ Le colonne physical_name e object_id formano la chiave per questa vista del cata
   
 |Nome colonna|tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar (36)**|Nome fisico per la vista materializzata.|  
+|physical_name |**nvarchar(36)**|Nome fisico per la vista materializzata.|  
 |object_id  |**int**|ID oggetto per la vista materializzata. Vedere [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Autorizzazioni

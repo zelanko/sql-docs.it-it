@@ -26,7 +26,7 @@ ms.locfileid: "73728765"
 
   Assegnare autorizzazioni per aree funzionali per consentire a utenti e gruppi di accedere alle aree funzionali di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
@@ -47,7 +47,7 @@ ms.locfileid: "73728765"
   
 7.  Al termine, scegliere **Salva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

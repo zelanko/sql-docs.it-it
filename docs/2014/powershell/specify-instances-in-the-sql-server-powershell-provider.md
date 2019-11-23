@@ -20,9 +20,9 @@ ms.locfileid: "72797759"
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Specifica di istanze nel provider SQL Server PowerShell
   I percorsi specificati per il provider SQL Server PowerShell devono identificare l'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] e il computer sulla quale è in esecuzione. La sintassi per la specifica del computer e l'istanza devono conformarsi sia alle regole per gli identificatori di SQL Server che ai percorsi di Windows PowerShell.  
   
-1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Per specificare un'istanza:**  [Esempi](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il primo nodo che segue SQLSERVER:\SQL in un percorso del provider SQL Server è il nome del computer che esegue l'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)], ad esempio:  

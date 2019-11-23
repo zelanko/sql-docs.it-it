@@ -53,14 +53,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
- **\@automatic_post** esiste in **sp_add_jobserver**, ma non è elencato in argomenti. **\@automatic_post** è riservato per uso interno.  
+## <a name="remarks"></a>Osservazioni  
+ **\@automatic_post** esiste in **sp_add_jobserver**, ma non è elencato in argomenti. **\@automatic_post** è riservata per uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -90,7 +90,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. Assegnazione di un processo da eseguire su un server diverso  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. Assegnazione di un processo da eseguire su un server diverso  
  Nell'esempio seguente il processo multiserver `Weekly Sales Backups` viene assegnato al server `SEATTLE2`.  
   
 > [!NOTE]  

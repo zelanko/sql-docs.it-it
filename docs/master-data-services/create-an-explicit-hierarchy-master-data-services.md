@@ -28,12 +28,12 @@ ms.locfileid: "73729513"
   
  Dopo aver creato una gerarchia esplicita, è possibile aggiungervi membri nell'area funzionale **Esplora** .  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario abilitare l'entità per le gerarchie esplicite e le raccolte.  
   
@@ -58,17 +58,17 @@ ms.locfileid: "73729513"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni gerarchia esplicita creata, viene aggiunta una riga con sette colonne alla griglia. Di seguito sono descritte le colonne.  
   
-|Crea vista sottoscrizioni|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ")|  
-|Crea vista sottoscrizioni|Il nome della gerarchia esplicita.|  
+|Name|Il nome della gerarchia esplicita.|  
 |Obbligatorio|Specifica se la gerarchia esplicita è obbligatoria.|  
 |Creato da|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
 |Data creazione|Data e ora di creazione della gerarchia esplicita.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato la gerarchia esplicita.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento della gerarchia esplicita.|  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Creare membri consolidati &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   

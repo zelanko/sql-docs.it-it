@@ -54,16 +54,16 @@ ms.locfileid: "70154793"
  Per creare un set di supporti nei supporti di backup durante un'operazione di backup, formattare i supporti di backup. Per altre informazioni, vedere [Creazione di un nuovo set di supporti](#CreatingMediaSet)più avanti in questo argomento. Dopo la formattazione, ogni file o nastro include un'intestazione supporto per il set di supporti ed è pronto per la ricezione di contenuto di backup. Dopo la creazione dell'intestazione, l'operazione di backup continua e in tutti i dispositivi di backup specificati per l'operazione viene eseguito il backup dei dati specificati nel supporto di backup.  
   
 > [!NOTE]  
->  È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o versione successiva è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Gruppi di supporti  
  I backup creati su un singolo dispositivo senza mirroring o su un set di dispositivi con mirroring in un set di supporti costituiscono un *gruppo di supporti*. Il numero di gruppi di supporti disponibili in un set di supporti dipende dal numero di dispositivi di backup usati per il set di supporti. Ad esempio, se in un set di supporti vengono usati due dispositivi di backup di cui non è stato eseguito il mirroring, il set di supporti contiene due gruppi di supporti.  
   
 > [!NOTE]  
->  In un set di supporti viene eseguito il mirroring di ogni gruppo di supporti. Ad esempio, se si usano sei dispositivi di backup per formattare un set di supporti in cui vengono usati due mirror, sono disponibili tre gruppi di supporti, ognuno dei quali include due copie equivalenti dei dati di backup. Per altre informazioni sui set di supporti con mirroring, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  In un set di supporti viene eseguito il mirroring di ogni gruppo di supporti. Ad esempio, se si usano sei dispositivi di backup per formattare un set di supporti in cui vengono usati due mirror, sono disponibili tre gruppi di supporti, ognuno dei quali include due copie equivalenti dei dati di backup. Per altre informazioni sui set di supporti con mirroring, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
  A ogni nastro o disco in un gruppo di supporti viene assegnato un *numero di sequenza dei supporti*. Il numero di sequenza dei supporti per un disco è sempre 1. In un gruppo di supporti a nastro il numero di sequenza del nastro iniziale è 1, quello del secondo nastro è 2 e così via. Per altre informazioni, vedere [Utilizzo dei set e dei gruppi di supporti](#ConsiderationsForMediaSetFamilies).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70154793"
 -   Indicazione della presenza o meno di un'etichetta del supporto MTF o di una descrizione dei supporti nella descrizione del supporto.  
   
     > [!NOTE]  
-    >  Tutti i supporti usati per un'operazione di backup o ripristino usano un formato di backup standard [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] denominato conserva qualsiasi etichetta del supporto MTF scritta da un'altra applicazione ma non scrive le etichette dei supporti MTF.  
+    >  Tutti i supporti usati per un'operazione di backup o ripristino usano un formato di backup standard denominato [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserva qualsiasi etichetta del supporto MTF scritta da un'altra applicazione ma non scrive le etichette dei supporti MTF.  
   
 -   Etichetta del supporto MTF ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format) o descrizione del supporto (testo in formato libero).  
   
@@ -156,7 +156,7 @@ RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1',
 GO  
 ```  
   
- Per informazioni sulle tabelle della cronologia nelle quali sono archiviate le informazioni sui set di supporti e i relativi gruppi di supporti e set di backup, vedere [Informazioni sulla cronologia e sull'intestazione del backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
+ Per informazioni sulle tabelle della cronologia nelle quali sono archiviate le informazioni sui set di supporti e i relativi gruppi di supporti e set di backup, vedere [Backup History and Header Information &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
   
  Il numero di supporti di backup in un set di supporti dipende da numerosi fattori:  
   
@@ -210,7 +210,7 @@ GO
  I backup di Microsoft Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono condividere lo stesso supporto ma non sono interoperativi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ####  <a name="Overwriting"></a>Sovrascrittura di set di backup  

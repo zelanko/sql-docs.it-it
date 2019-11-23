@@ -28,7 +28,7 @@ ms.locfileid: "71952314"
   
  Il database del server di report deve supportare una modalità server specifica. La modalità predefinita è la modalità nativa, ma è anche possibile creare un database del server di report per la modalità integrata SharePoint, se si esegue il server di report in una distribuzione più ampia che include un prodotto o una tecnologia SharePoint. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fare clic su **Database** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fare clic su **Database** nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome SQL Server**  
@@ -47,7 +47,7 @@ ms.locfileid: "71952314"
  Consente di specificare le credenziali utilizzate dal server di report per eseguire la connessione al database. Tra i tipi di credenziali che è possibile specificare sono inclusi l'account del servizio, un utente di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulla selezione delle credenziali, vedere [configurare una connessione &#40;del database del server&#41;di report SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome utente**  
- Consente di specificare un account utente di dominio se si utilizzano le credenziali di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se si utilizzano le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizzano le credenziali di Windows, specificarle nel formato: *\<domain > \\ < account @ no__t-3*.  
+ Consente di specificare un account utente di dominio se si utilizzano le credenziali di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se si utilizzano le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizzano le credenziali di Windows, specificarle nel formato: *\<dominio >\\account <\>* .  
   
  **Password**  
  Consente di specificare la password per l'account.  
@@ -57,7 +57,7 @@ ms.locfileid: "71952314"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services Configuration Manager argomenti &#40;della Guida F1 @no__t modalità&#41;nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)-3  
+ [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

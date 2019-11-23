@@ -21,16 +21,16 @@ ms.locfileid: "73729074"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]rendere visibile un gruppo di attributi a utenti o gruppi quando si vuole che gli utenti dispongano di schede sopra alla griglia nell'area funzionale **Visualizzatore** .  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] rendere visibile un gruppo di attributi a utenti o gruppi quando si vuole che gli utenti dispongano di schede sopra alla griglia nell'area funzionale **Visualizzatore**.  
   
  Quando si crea un gruppo di attributi, questo viene automaticamente nascosto a tutti gli utenti ad eccezione di quello che lo creato.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente almeno un gruppo di attributi. Per altre informazioni, vedere [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   

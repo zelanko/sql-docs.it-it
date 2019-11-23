@@ -47,11 +47,11 @@ ms.locfileid: "73637839"
   
 6.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-7.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
+7.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Scegliere **Avanti**.  
   
-8.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
+8.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
   
-9. Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
+9. Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Scegliere **Avanti**.  
   
     -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73637839"
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
+10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
   
     > [!NOTE]  
     >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  
@@ -80,11 +80,11 @@ ms.locfileid: "73637839"
   
 3.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-4.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
+4.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Scegliere **Avanti**.  
   
-5.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
+5.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
   
-6.  Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
+6.  Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Scegliere **Avanti**.  
   
     -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "73637839"
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
+7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
   
     > [!NOTE]  
     >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  

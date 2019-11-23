@@ -57,6 +57,6 @@ ms.locfileid: "73728724"
 ## <a name="see-also"></a>Vedere anche  
  [Azioni Regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

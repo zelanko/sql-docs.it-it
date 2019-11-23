@@ -46,7 +46,7 @@ ms.locfileid: "72906094"
   
  In questi esempi vengono utilizzati modelli per specificare query XPath sullo schema di mapping XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
  In questo esempio un database contiene due tabelle:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -308,7 +308,7 @@ ms.locfileid: "72906094"
   
 ## <a name="see-also"></a>Vedere anche  
  [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
-  [Transact- &#40;SQL&#41; nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+   [Transact- &#40;SQL&#41; nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Utilizzo di schemi XSD con annotazioni &#40;nelle query SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

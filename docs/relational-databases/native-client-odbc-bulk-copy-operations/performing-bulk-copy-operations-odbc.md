@@ -52,7 +52,7 @@ ms.locfileid: "73785041"
 ## <a name="remarks"></a>Osservazioni  
  Quando bcp.exe viene utilizzato in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, potrebbero essere visualizzati errori nelle situazioni in cui non si presenta alcun errore nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Questo avviene perché nelle versioni successive bcp.exe non esegue più la conversione implicita dei tipi di dati. Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bcp.exe converte i dati numerici in un tipo di dati money, se la tabella di destinazione contiene tale tipo di dati. In tale situazione, tuttavia, bcp.exe tronca semplicemente i campi aggiuntivi. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se i tipi di dati non corrispondono tra il file e la tabella di destinazione, bcp. exe genererà un errore se sono presenti dati che devono essere troncati per adattarsi alla tabella di destinazione. Per risolvere questo errore, correggere i dati in modo che corrispondano al tipo di dati di destinazione. Se si desidera, è possibile utilizzare il file bcp.exe di una versione precedente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Uso di file di dati e file di formato](../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   

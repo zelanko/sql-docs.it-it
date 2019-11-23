@@ -101,22 +101,22 @@ sys.dm_sql_referencing_entities (
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
-|stored procedure CLR|No|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|No|Sì|  
+|Tabella|Sì*|Yes|  
+|Visualizza|Yes|Yes|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|stored procedure CLR|No|Yes|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
+|Funzione CLR definita dall'utente|No|Yes|  
 |Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
-|Stored procedure estese|No|Sì|  
-|Coda|No|Sì|  
-|Sinonimo|No|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
-|Raccolta di XML Schema|No|Sì|  
-|Funzione di partizione|No|Sì|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
+|Stored procedure estese|No|Yes|  
+|Coda|No|Yes|  
+|Sinonimo|No|Yes|  
+|Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
+|Raccolta di XML Schema|No|Yes|  
+|Funzione di partizione|No|Yes|  
   
  \* una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)], un tipo definito dall'utente o una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo DEFAULT.  
   
@@ -142,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Restituzione delle entità che fanno riferimento a un'entità specificata  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>R. Restituzione delle entità che fanno riferimento a un'entità specificata  
  Nell'esempio seguente vengono restituite le entità nel database corrente che fanno riferimento alla tabella specificata.  
   
 ```sql  

@@ -32,7 +32,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175981"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
-  L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze o per creare un backup logico o per creare una copia on-premise di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze o per creare un backup logico o per creare una copia on-premise di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di esportazione compila un nuovo file di esportazione dell'applicazione livello dati in due fasi.  
@@ -82,7 +82,7 @@ ms.locfileid: "70175981"
   
  **Opzioni**  
   
- **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+ **Non visualizzare più questa pagina.** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
  **Avanti** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati** .  
   
@@ -93,7 +93,7 @@ ms.locfileid: "70175981"
   
 -   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Salva in Azure** : crea un file BACPAC in un contenitore di Azure. È necessario connettersi a un contenitore di Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
+-   **Salva in Azure** : crea un file BACPAC in un contenitore Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
   
  Per specificare un subset di tabelle da esportare, usare l'opzione **Avanzate** .  
   

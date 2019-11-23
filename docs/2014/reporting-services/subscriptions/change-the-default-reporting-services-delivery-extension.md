@@ -112,8 +112,8 @@ ms.locfileid: "72783247"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- @No__t_1 [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
- @No__t_1 [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+   [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+   [file di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
  [Recapito tramite condivisione file in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Configurare un server di report per il &#40;recapito tramite posta elettronica Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

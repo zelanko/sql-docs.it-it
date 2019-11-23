@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  La soluzione applicazione Web viene inizialmente distribuita ad Amministrazione centrale, seguita dalle distribuzioni successive della soluzione a qualsiasi applicazione Web aggiuntiva che supporterà le richieste di dati PowerPivot. Per distribuire la soluzione applicazione Web in Amministrazione centrale, è necessario utilizzare lo strumento di configurazione PowerPivot o il cmdlet PowerShell. Per tutte le altre applicazioni Web, è possibile distribuire la soluzione applicazione Web manualmente utilizzando Amministrazione centrale o PowerShell.  
   
-|Soluzione|Description|  
+|Soluzione|Descrizione|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Consente di aggiungere il file Microsoft.AnalysisServices.SharePoint.Integration.dll all'assembly globale.<br /><br /> Consente di aggiungere il file Microsoft.AnalysisServices.ChannelTransport.dll all'assembly globale.<br /><br /> Consente di installare funzionalità e file di risorse nonché di registrare i tipi di contenuto.<br /><br /> Aggiunge modelli di raccolta per Raccolta PowerPivot e le raccolte di feed di dati.<br /><br /> Aggiunge pagine dell'applicazione per la configurazione dell'applicazione di servizio, il dashboard di gestione di PowerPivot, l'aggiornamento dati e la raccolta PowerPivot.|  
 |powerpivotwebapp.wsp|Aggiunge i file di risorse Microsoft.AnalysisServices.SharePoint.Integration.dll alla cartella delle estensioni per il server Web nel server Web front-end.<br /><br /> Aggiunge il servizio Web PowerPivot al server Web-front end.<br /><br /> Aggiunge la generazione di immagini di anteprima per Raccolta PowerPivot.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)    
+ [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

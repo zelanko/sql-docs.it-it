@@ -39,15 +39,15 @@ ms.locfileid: "73843868"
 |**start_time**|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di Reporting di 15 secondi.|  
 |**end_time**|**datetime2**|Ora UTC che indica la fine dell'intervallo di Reporting di 15 secondi.|  
 |**elastic_pool_name**|**nvarchar(128)**|Nome del pool di database elastici.|  
-|**avg_cpu_percent**|**Decimal (5, 2)**|Utilizzo medio del calcolo in percentuale del limite del pool.|  
-|**avg_data_io_percent**|**Decimal (5, 2)**|Utilizzo medio di I/O in percentuale in base al limite del pool.|  
-|**avg_log_write_percent**|**Decimal (5, 2)**|Utilizzo medio delle risorse di scrittura in percentuale del limite del pool.|  
-|**avg_storage_percent**|**Decimal (5, 2)**|Utilizzo medio dello spazio di archiviazione in percentuale del limite di archiviazione del pool.|  
-|**max_worker_percent**|**Decimal (5, 2)**|Numero massimo di ruoli di lavoro simultanei (richieste) in percentuale in base al limite del pool.|  
-|**max_session_percent**|**Decimal (5, 2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del pool.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Utilizzo medio del calcolo in percentuale del limite del pool.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilizzo medio di I/O in percentuale in base al limite del pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Utilizzo medio delle risorse di scrittura in percentuale del limite del pool.|  
+|**avg_storage_percent**|**decimal(5,2)**|Utilizzo medio dello spazio di archiviazione in percentuale del limite di archiviazione del pool.|  
+|**max_worker_percent**|**decimal(5,2)**|Numero massimo di ruoli di lavoro simultanei (richieste) in percentuale in base al limite del pool.|  
+|**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del pool.|  
 |**elastic_pool_dtu_limit**|**int**|Impostazione del DTU del pool elastico corrente per questo pool elastico durante questo intervallo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Impostazione limite massimo corrente di archiviazione del pool elastico per questo pool elastico in megabyte durante questo intervallo.|
-|**avg_allocated_storage_percent**|**Decimal (5, 2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Osservazioni
 

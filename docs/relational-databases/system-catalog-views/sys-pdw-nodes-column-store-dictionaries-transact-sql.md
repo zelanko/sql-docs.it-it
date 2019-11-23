@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 618a92cfd0f1602753b9fcfd61ac232eff5cecd4
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/14/2019
 ms.locfileid: "72305189"
@@ -31,13 +31,13 @@ ms.locfileid: "72305189"
 |**column_id**|**int**|ID della colonna columnstore.|  
 |**dictionary_id**|**int**|ID del dizionario.|  
 |**version**|**int**|Versione del formato del dizionario.|  
-|**type**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**|  
+|**tipo**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**|  
 |**last_id**|**int**|Ultimo ID dati nel dizionario.|  
 |**entry_count**|**bigint**|Numero di voci nel dizionario.|  
 |**on_disc_size**|**bigint**|Dimensioni del dizionario in byte.|  
 |**pdw_node_id**|**int**|Identificatore univoco di un nodo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  

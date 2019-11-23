@@ -31,7 +31,7 @@ ms.locfileid: "72304870"
   Aggiunge un utente del database al database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] usare [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  in alternativa, [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] usare [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +43,19 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login_ '` è il nome del gruppo di Windows, l'account di accesso di Windows o l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui eseguire il mapping al nuovo utente del database. I nomi dei gruppi di Windows e degli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *domain*\\*login*; ad esempio, **London\JoeB**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login_ '` è il nome del gruppo di Windows, l'account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di cui eseguire il mapping al nuovo utente del database. I nomi dei gruppi di Windows e degli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *dominio*\\*account di accesso*; ad esempio, **London\JoeB**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` è il nome del nuovo utente del database. *name_in_db* è una variabile di output con tipo di dati **sysname**e il valore predefinito è null. Se non è specificato, viene usato l' *account di accesso* . Se specificato come variabile di OUTPUT con valore NULL, **\@name_in_db** è impostato su *login*. *name_in_db* non deve essere già presente nel database corrente.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` è il nome del nuovo utente del database. *name_in_db* è una variabile di output con tipo di dati **sysname**e il valore predefinito è null. Se non è specificato, viene usato l' *account di accesso* . Se viene specificato come variabile di OUTPUT con valore NULL, **\@name_in_db** viene impostato su *login*. *name_in_db* non deve esistere già nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_grantdbaccess** chiama Create User, che supporta opzioni aggiuntive. Per informazioni sulla creazione di utenti del database, vedere [create user &#40;Transact&#41;-SQL](../../t-sql/statements/create-user-transact-sql.md). Per rimuovere un utente del database da un database, usare [drop user](../../t-sql/statements/drop-user-transact-sql.md).  
   
- non è possibile eseguire **sp_grantdbaccess** in una transazione definita dall'utente.  
+ Impossibile eseguire **sp_grantdbaccess** in una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** o al ruolo predefinito del database **db_accessadmin** .  
   
 ## <a name="examples"></a>Esempi  

@@ -39,22 +39,22 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @account_id = ] account_id`Numero di ID dell'account da eliminare. *account_id* è di **tipo int**e non prevede alcun valore predefinito. È necessario specificare *account_id* o *account_name* .  
+`[ @account_id = ] account_id` il numero ID dell'account da eliminare. *account_id* è di **tipo int**e non prevede alcun valore predefinito. È necessario specificare *account_id* o *account_name* .  
   
-`[ @account_name = ] 'account_name'`Nome dell'account da eliminare. *account_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *account_id* o *account_name* .  
+`[ @account_name = ] 'account_name'` il nome dell'account da eliminare. *account_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *account_id* o *account_name* .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa procedura elimina l'account specificato anche se è utilizzato da un profilo. Un profilo che non include account non è in grado di inviare correttamente messaggi di posta elettronica.  
   
  Il stored procedure **sysmail_delete_account_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -67,8 +67,8 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Oggetti di configurazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
  [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
  [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   

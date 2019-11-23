@@ -66,7 +66,7 @@ sp_describe_parameter_encryption
 |**database_id**|**int**|ID database.|  
 |**column_encryption_key_id**|**int**|ID della chiave di crittografia della colonna. Nota: questo ID indica una riga nella vista del catalogo [sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
 |**column_encryption_key_version**|**int**|Riservato per utilizzi futuri. Attualmente, contiene sempre 1.|  
-|**column_encryption_key_metadata_version**|**binario (8)**|Timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nome del provider per l'archivio delle chiavi che contiene la chiave master della colonna usata per produrre il valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_path**|**nvarchar(4000)**|Percorso della chiave master della colonna usato per produrre il valore crittografato della chiave di crittografia della colonna.|  

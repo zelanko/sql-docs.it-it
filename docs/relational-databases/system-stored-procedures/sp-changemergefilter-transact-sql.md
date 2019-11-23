@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro join.<br /><br /> Questa opzione è necessaria per supportare i Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relazione tra record logici.|  
@@ -66,13 +66,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|Il join è basato su una chiave univoca.|  
 ||**false**|Il join non è basato su una chiave univoca.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` riconosce che l'azione eseguita da questo stored procedure può invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` riconosce che l'azione eseguita da questo stored procedure può invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** indica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot e, se sono presenti sottoscrizioni che richiedono un nuovo snapshot, consente di contrassegnare lo snapshot esistente come obsoleto e di generare un nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** il cui valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` riconosce che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non provocano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -81,14 +81,14 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_changemergefilter** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_changemergefilter** viene utilizzata nella replica di tipo merge.  
   
  Per modificare il filtro in un articolo di merge, è necessario ricreare lo snapshot, se disponibile. Questa operazione viene eseguita impostando il **\@force_invalidate_snapshot** su **1**. È inoltre necessario reinizializzare le eventuali sottoscrizioni esistenti dell'articolo. Questa operazione viene eseguita impostando il **\@force_reinit_subscription** su **1**.  
   
  Per utilizzare record logici, è necessario che la pubblicazione e gli articoli soddisfino alcuni requisiti. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  

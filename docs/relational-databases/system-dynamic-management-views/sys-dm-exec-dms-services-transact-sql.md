@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_dms_services (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532929"
 ---
-# <a name="sysdm_exec_dms_services-transact-sql"></a>sys. dm _exec_dms_services (Transact-SQL)
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Include informazioni su tutti i servizi DMS in esecuzione nei nodi di calcolo di base. Viene elencata una riga per ogni istanza del servizio.  
@@ -37,7 +37,7 @@ ms.locfileid: "73532929"
 |Nome colonna|tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|ID numerico univoco associato al core DMS. Chiave per questa visualizzazione.|ID univoco.|  
-|compute_node_id|`int`|ID del nodo in cui è in esecuzione il servizio DMS|Vedere *compute_node_id* in [sys. dm _EXEC_COMPUTE_NODES &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|`int`|ID del nodo in cui è in esecuzione il servizio DMS|Vedere *compute_node_id* in [sys. DM_EXEC_COMPUTE_NODES &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |status|`nvarchar(32)`|Stato corrente del servizio DMS||
 |compute_pool_id|`int`|Identificatore univoco per il pool.|
 

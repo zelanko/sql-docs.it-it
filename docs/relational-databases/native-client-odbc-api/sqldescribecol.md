@@ -32,7 +32,7 @@ ms.locfileid: "73787254"
   
  Per i tipi di dati con valori di grandi dimensioni, il valore restituito in *DataTypePTR* è SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Il valore SQL_SS_LENGTH_UNLIMITED in *ColumnSizePtr* indica che la dimensione è "illimitata".  
   
- I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>Supporto di SQLDescribeCol per le caratteristiche avanzate di data e ora  
  I valori restituiti per i tipi di data/ora sono i seguenti:  
@@ -41,7 +41,7 @@ ms.locfileid: "73787254"
 |-|-------------------|---------------------|------------------------|  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|data|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

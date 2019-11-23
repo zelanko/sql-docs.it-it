@@ -37,7 +37,7 @@ ms.locfileid: "70874443"
 -   Nel caso di un failover manuale, è rilevante solo il tempo richiesto per eseguire il failover del database dopo l'esecuzione del comando di failover.  
   
 ## <a name="error-detection"></a>Rilevamento dell'errore  
- Il tempo necessario al sistema per rilevare un errore dipende dal tipo di errore. ad esempio, un errore di rete viene rilevato quasi immediatamente, mentre si nota che un server che non risponde richiede 10 secondi (con il timeout predefinito).  
+ Il periodo di tempo necessario al sistema per rilevare un errore dipende dal tipo di errore. Ad esempio, un errore di rete viene rilevato quasi istantaneamente, mentre il rilevamento della mancata risposta da parte di un server richiede 10 secondi (con il timeout predefinito).  
   
  Per informazioni sugli errori che possono causare un esito negativo durante una sessione di mirroring del database e sul rilevamento di timeout in modalità a sicurezza elevata con failover automatico, vedere [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874443"
  Il tempo di failover è composto principalmente dal tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda rollforward, più un breve tempo aggiuntivo. Per altre informazioni sulla modalità usata dal server mirror per elaborare i record dei log, vedere [Mirroring di database &#40;SQL Server&#41;](database-mirroring-sql-server.md). Per informazioni sulla stima del tempo di failover, vedere la sezione Stima del tempo di rollforward durante il failover, più avanti in questo argomento.  
   
 > [!IMPORTANT]  
->  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Il failover durante la serie di operazioni seguente, ad esempio, potrebbe aumentare il tempo di failover:  BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Ad esempio, il tempo di failover può aumentare se il failover si verifica durante la serie di operazioni seguente: BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Coda rollforward  
  Il rollforward del database comporta l'applicazione dei record di log presenti nella coda rollforward sul server mirror. La *coda rollforward* contiene i record di log che sono stati scritti su disco nel server mirror ma per i quali non è ancora stato eseguito il rollforward nel database mirror.  

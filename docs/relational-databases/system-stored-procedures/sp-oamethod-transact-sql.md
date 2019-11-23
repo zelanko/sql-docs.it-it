@@ -50,7 +50,7 @@ sp_OAMethod objecttoken , methodname
  **output** di returnValue  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
- Se il metodo restituisce un singolo valore, specificare una variabile locale per *returnValue*, che restituisce il valore restituito del metodo nella variabile locale, oppure non specificare *returnValue*, che restituisce il valore restituito del metodo al client come set di risultati a colonna singola, a riga singola.  
+ Se il metodo restituisce un singolo valore, specificare una variabile locale per *returnValue*, che restituisce il valore restituito del metodo nella variabile locale, oppure non specificare *returnValue*, che restituisce il valore restituito del metodo al client come set di risultati a colonna singola.  
   
  Se il valore restituito del metodo è un oggetto OLE, *returnValue* deve essere una variabile locale di tipo di dati **int**. Un token di oggetto viene archiviato nella variabile locale e questo token dell'oggetto può essere utilizzato con altre stored procedure di automazione OLE.  
   
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Per ottenere il valore restituito di un parametro di output, il *parametro* deve essere una variabile locale del tipo di dati appropriato ed è necessario specificare l' **output** . Se viene specificato un parametro costante o se l' **output** non è specificato, qualsiasi valore restituito da un parametro di output viene ignorato.  
   
- Se specificato, *parameterName* deve corrispondere al nome del parametro denominato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Si noti che **@** _parametername_is non è una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il simbolo di chiocciola ( **@** ) viene rimosso e *parameterName*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
+ Se specificato, *parameterName* deve corrispondere al nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che **@** non _parametername_is una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il simbolo di chiocciola ( **@** ) viene rimosso e *parameterName*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
  *n*  
  Segnaposto che indica la possibilità di specificare più parametri.  
   
 > [!NOTE]
->  *\@parametername* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
+>  *\@parametroname* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
@@ -88,11 +88,11 @@ sp_OAMethod objecttoken , methodname
   
 -   Una matrice bidimensionale viene restituita al client come set di risultati costituito da un numero di colonne pari al numero di elementi della prima dimensione della matrice e un numero di righe pari al numero di elementi della seconda dimensione della matrice. In altri termini, la matrice viene restituita come (colonne, righe).  
   
- Quando un valore restituito da una proprietà o un valore restituito del metodo è una matrice, **sp_OAGetProperty** o **sp_OAMethod** restituisce un set di risultati al client. I parametri di output dei metodi non possono essere rappresentati da matrici. Queste procedure eseguono un'analisi di tutti i valori di dati della matrice per determinare quali sono i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriati e la lunghezza di dati da utilizzare per ogni colonna del set di risultati. Per una colonna specifica queste procedure utilizzano il tipo di dati e la lunghezza necessari per rappresentare tutti i valori di dati della colonna.  
+ Quando un valore restituito da una proprietà o un valore restituito dal metodo è una matrice, **sp_OAGetProperty** o **sp_OAMethod** restituisce un set di risultati al client. I parametri di output dei metodi non possono essere rappresentati da matrici. Queste procedure eseguono un'analisi di tutti i valori di dati della matrice per determinare quali sono i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriati e la lunghezza di dati da utilizzare per ogni colonna del set di risultati. Per una colonna specifica queste procedure utilizzano il tipo di dati e la lunghezza necessari per rappresentare tutti i valori di dati della colonna.  
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se i valori di dati di una colonna sono tipi di dati diversi, il tipo di dati della colonna viene scelto in base allo schema seguente.  
   
-||int|float|money|Datetime|varchar|nvarchar|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. la configurazione `Ole Automation Procedures` deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures` configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-calling-a-method"></a>R. Chiamata di un metodo  
- Nell'esempio seguente viene chiamato il metodo `Connect` dell'oggetto **SqlServer** creato in precedenza.  
+ Nell'esempio seguente viene chiamato il metodo di `Connect` dell'oggetto **SqlServer** creato in precedenza.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,7 +122,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. Recupero di una proprietà  
+### <a name="b-getting-a-property"></a>b. Recupero di una proprietà  
  Nell'esempio seguente viene ottenuta la proprietà `HostName` (dell'oggetto **SqlServer** creato in precedenza) e viene archiviata in una variabile locale.  
   
 ```  
@@ -137,7 +137,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;di automazione OLE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;di automazione OLE  Transact&#41; -SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

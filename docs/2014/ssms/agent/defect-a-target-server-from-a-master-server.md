@@ -24,13 +24,13 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783214"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Escludere un server di destinazione da un server master
-  In questo argomento viene descritto come escludere un server di destinazione da un server master in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects (SMO). Eseguire questa procedura dal server di destinazione.  
+  In questo argomento viene descritto come escludere un server di destinazione da un server master in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects (SMO). Eseguire questa procedura dal server di destinazione.  
   
- **Contenuto dell'articolo**  
+ **Contenuto dell'argomento**  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per escludere un server di destinazione utilizzando:**  
   
@@ -42,12 +42,12 @@ ms.locfileid: "72783214"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire questa stored procedure, è necessario essere un membro del ruolo predefinito del server `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Per escludere un server di destinazione da un server master  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783214"
   
 3.  Fare clic su **Sì** per confermare l'esclusione del server di destinazione da un server master.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Per escludere un server di destinazione da un server master  
   

@@ -21,9 +21,9 @@ ms.locfileid: "73728906"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+  Usare l'**Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="action"></a>Azione  
+## <a name="action"></a>Action  
  Si tratta della pagina introduttiva della procedura guidata. Fare clic su **Avanti** per iniziare il processo di aggiornamento del database.  
   
 ## <a name="upgrade-review"></a>Controllo aggiornamento  

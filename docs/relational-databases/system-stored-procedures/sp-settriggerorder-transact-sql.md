@@ -108,7 +108,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. Impostazione dell'ordine di attivazione per un trigger DML  
+### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>R. Impostazione dell'ordine di attivazione per un trigger DML  
  Nell'esempio seguente il trigger `uSalesOrderHeader` viene definito come primo trigger da attivare dopo l'esecuzione di un'operazione `UPDATE` nella tabella `Sales.SalesOrderHeader`.  
   
 ```  

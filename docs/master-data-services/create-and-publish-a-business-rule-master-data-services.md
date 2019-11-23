@@ -24,14 +24,14 @@ ms.locfileid: "73729447"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola business per garantire l'accuratezza dei dati master. Dopo avere creato una regola, è necessario pubblicarla prima di poterla applicare ai dati.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare una regola business per garantire l'accuratezza dei dati master. Dopo avere creato una regola, è necessario pubblicarla prima di poterla applicare ai dati.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Per creare e pubblicare una regola business  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729447"
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   
-8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola business (facoltativo).  
+8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola di business (facoltativo).  
   
 9. Facoltativamente, selezionare l'opzione **Invia notifiche** e, dall'elenco a discesa, selezionare un utente o un gruppo a cui inviare la notifica di posta elettronica.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73729447"
     > [!TIP]  
     >  È possibile eliminare gli elementi dalla regola di business facendo clic su ognuno di essi con il pulsante destro del mouse e scegliendo **Elimina**.  
   
-15. Aggiungere facoltativamente più condizioni alla regola. Per altre informazioni, vedere [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. Aggiungere facoltativamente più condizioni alla regola. Per altre informazioni, vedere [Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 16. Nel blocco **Then** fare clic su **Aggiungi** . Verrà visualizzato un pannello.  
   
@@ -102,16 +102,16 @@ ms.locfileid: "73729447"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni regola business creata viene aggiunta alla griglia una riga con sei colonne. Di seguito sono elencate le colonne.  
   
-|Crea vista sottoscrizioni|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |Stato|Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che la regola di business è in fase di aggiornamento.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> Se si verificano errori durante la creazione o la modifica di una regola business, viene visualizzata l'immagine seguente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|Crea vista sottoscrizioni|Nome della regola business.|  
+|Name|Nome della regola business.|  
 |Descrizione|Descrizione della regola business.|  
 |Stato della regola di business|Uno degli stati seguenti della regola business: Regola non definita, Attiva, Esclusa, Modifiche in sospeso, Esclusione in sospeso ed Eliminazione in sospeso.|  
 |Esclusione|Specifica se la regola business è esclusa.|  
 |Notification|Specifica l'utente o il gruppo selezionato a cui inviare la notifica tramite posta elettronica.|  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
@@ -122,6 +122,6 @@ ms.locfileid: "73729447"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Aggiungere più condizioni a una regola di business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

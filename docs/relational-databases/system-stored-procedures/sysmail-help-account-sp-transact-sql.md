@@ -62,19 +62,19 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|Nome del server di posta elettronica per l'account.|  
 |**port**|**int**|Numero della porta del server di posta elettronica.|  
 |**username**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
-|**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, Posta elettronica database usa i **\@username** e **\@password** per l'autenticazione nel server SMTP. Se **\@username** e **\@password** sono null, posta elettronica database utilizza l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
+|**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, Posta elettronica database utilizza il **nome utente\@** e la **password di\@** per l'autenticazione nel server SMTP. Se **\@nome utente** e la **password\@** sono null, posta elettronica database utilizza l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
 |**enable_ssl**|**bit**|Specifica l'utilizzo della crittografia mediante SSL (Secure Sockets Layer) da parte di Posta elettronica database. Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di bit e non prevede alcun valore predefinito. 1 indica che le comunicazioni vengono crittografate mediante SSL. 0 indica che i messaggi vengono inviati senza utilizzare la crittografia SSL.|  
   
-## <a name="remarks"></a>Note  
- Quando non viene specificato alcun *account_id* o *account_name* , **sysmail_help_account** elenca le informazioni su tutti gli account posta elettronica database nell'istanza di Microsoft SQL Server.  
+## <a name="remarks"></a>Osservazioni  
+ Quando non viene specificato alcun *account_id* o *account_name* , **sysmail_help_account** elenca le informazioni su tutti gli account di posta elettronica database nell'istanza di Microsoft SQL Server.  
   
  Il stored procedure **sysmail_help_account_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Elenco delle informazioni per tutti gli account @ no__t-0  
+ **A. visualizzazione di un elenco di informazioni per tutti gli account**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per tutti gli account nell'istanza.  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B. Elenco delle informazioni per un account specifico @ no__t-0  
+ **B. visualizzazione di un elenco di informazioni per un account specifico**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni di account per l'account denominato `AdventureWorks Administrator`.  
   
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Creazione di un Account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Stored procedure &#40;di posta elettronica database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

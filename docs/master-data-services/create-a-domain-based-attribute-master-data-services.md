@@ -27,12 +27,12 @@ ms.locfileid: "73728538"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un attributo basato su dominio per popolare i valori di un attributo con i membri di un'entità.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che un'entità esista perché venga utilizzata come origine dei valori di attributo. Ad esempio per creare un attributo basato su dominio che si basa sull'entità Color, è necessario prima creare l'entità Color. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73728538"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") , che indica che l'attributo è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
-|Crea vista sottoscrizioni|Nome dell'attributo.|  
+|Name|Nome dell'attributo.|  
 |Nome visualizzato|Nome visualizzato dell'attributo.|  
 |Descrizione|Descrizione dell'attributo.|  
 |Larghezza in pixel visualizzazione|Larghezza dell'attributo.|  

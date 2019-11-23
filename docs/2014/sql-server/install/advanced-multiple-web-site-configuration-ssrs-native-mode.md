@@ -40,7 +40,7 @@ ms.locfileid: "71952673"
   
 -   **127.0.0.1** : utilizzato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
   
--   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<intestazione >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se si dispone di più schede, verrà visualizzato un indirizzo IP per ognuna. Se si seleziona solo questo valore, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report.  
   

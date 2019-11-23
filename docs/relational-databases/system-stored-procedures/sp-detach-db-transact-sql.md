@@ -51,24 +51,24 @@ sp_detach_db [ @dbname= ] 'database_name'
   
  Per impostazione predefinita, l'istruzione UPDATE STATISTICS viene eseguita per aggiornare le informazioni sui dati nelle tabelle e negli indici. L'esecuzione di UPDATE STATISTICS risulta utile per i database che devono essere spostati su supporti di sola lettura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` specifica che il file di indice full-text associato al database che viene scollegato non verrà eliminato durante l'operazione di scollegamento del database. *Keepfulltextindexfile* è di **tipo nvarchar (10)** e il valore predefinito è **true**. Se *keepfulltextindexfile* è **false**, vengono eliminati tutti i file di indice full-text associati al database e i metadati dell'indice full-text, a meno che il database non sia di sola lettura. Se è NULL o **true**, vengono conservati i metadati correlati a full-text.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato durante l'operazione di scollegamento del database. *Keepfulltextindexfile* è di **tipo nvarchar (10)** e il valore predefinito è **true**. Se *keepfulltextindexfile* è **false**, vengono eliminati tutti i file di indice full-text associati al database e i metadati dell'indice full-text, a meno che il database non sia di sola lettura. Se è NULL o **true**, vengono conservati i metadati correlati a full-text.  
   
 > [!IMPORTANT]
->  Il parametro **\@keepfulltextindexfile** verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
+>  Il **\@parametro keepfulltextindexfile** verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando un database è scollegato, tutti i suoi metadati vengono eliminati. Se il database è il database predefinito di tutti gli account di accesso, **Master** diventa il database predefinito.  
   
 > [!NOTE]  
 >  Per informazioni su come visualizzare il database predefinito di tutti gli account di accesso, vedere [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se si dispone delle autorizzazioni necessarie, è possibile utilizzare [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) per assegnare un nuovo database predefinito a un account di accesso.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Non è possibile scollegare un database se una delle seguenti condizioni è vera:  
   
 -   Il database è attualmente in uso. Per ulteriori informazioni, vedere la sezione "Come ottenere l'accesso esclusivo" di seguito in questo argomento.  
@@ -82,14 +82,14 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Uno snapshot del database esiste nel database.  
   
-     Prima di scollegare il database, è necessari eliminare tutti i relativi snapshot. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)o a un'istanza diversa.  
+     Prima di scollegare il database, è necessari eliminare tutti i relativi snapshot. Per altre informazioni, vedere [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Non è possibile scollegare o collegare uno snapshot del database.  
   
 -   È in corso il mirroring del database.  
   
-     Non è possibile scollegare il database finché non viene terminata la sessione di mirroring del database. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+     Non è possibile scollegare il database finché non viene terminata la sessione di mirroring del database. Per altre informazioni, vedere [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
 -   Il database è sospetto.  
   
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Prima di impostare il database in modalità SINGLE_USER, verificare che l'opzione AUTO_UPDATE_STATISTICS_ASYNC sia impostata su OFF. Se l'opzione è impostata su ON, tramite il thread in background utilizzato per aggiornare le statistiche viene stabilita una connessione con il database che non sarà quindi accessibile in modalità utente singolo. Per altre informazioni, vedere [impostare un database in modalità utente singolo](../databases/set-a-database-to-single-user-mode.md).
 
- Ad esempio, l'istruzione `ALTER DATABASE` seguente consente di ottenere l'accesso esclusivo al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dopo la disconnessione di tutti gli utenti correnti dal database.  
+ Ad esempio, l'istruzione `ALTER DATABASE` seguente consente di ottenere l'accesso esclusivo al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dopo che tutti gli utenti correnti si disconnettono dal database.  
   
 ```  
 USE master;  
@@ -112,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  Per forzare gli utenti correnti dal database immediatamente o entro un numero specificato di secondi, usare anche l'opzione ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER with rollback *rollback_option*. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Per forzare gli utenti correnti dal database immediatamente o entro un numero specificato di secondi, utilizzare anche l'opzione ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Ricollegamento di un database  
  I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE (con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG). È possibile spostare e quindi collegare tali file in un altro server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo **db_owner** del database.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene scollegato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con *skipchecks* impostato su true.  
+ Nell'esempio seguente viene scollegato il database di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con *skipchecks* impostato su true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

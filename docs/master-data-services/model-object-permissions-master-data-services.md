@@ -30,7 +30,7 @@ ms.locfileid: "73727976"
   
  Per determinare la sicurezza assegnata su ogni singolo valore di attributo, le autorizzazioni degli oggetti modello vengono combinate alle autorizzazioni dei membri della gerarchia che determinano i membri ai quali un utente può accedere.  
   
- Per concedere a un utente l'accesso a un'area funzionale diversa da **Visualizzatore**, è necessario che l'utente sia un amministratore del modello, il che implica anche l'assegnazione delle autorizzazioni per gli oggetti modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Per concedere a un utente l'accesso a un'area funzionale diversa da **Visualizzatore**, è necessario che l'utente sia un amministratore del modello, il che implica anche l'assegnazione delle autorizzazioni per gli oggetti modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Le autorizzazioni per gli oggetti modello vengono assegnate nell'area funzionale **autorizzazioni utenti e gruppi** della scheda **modelli** nell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. In questa scheda il modello viene rappresentato come struttura ad albero. Quando si assegna un'autorizzazione a un oggetto dell'albero, tutti gli oggetti sottostanti ereditano tale autorizzazione. Per eseguire l'override dell'ereditarietà, è possibile assegnare autorizzazioni ai singoli oggetti.  
   

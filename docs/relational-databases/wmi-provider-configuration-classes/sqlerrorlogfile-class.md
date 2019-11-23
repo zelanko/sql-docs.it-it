@@ -45,7 +45,7 @@ class SQLErrorLogFile
 |InstanceName|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
 |LastModified|Tipo di dati: **DateTime**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
 |LogFileSize|Tipo di dati: **UInt32**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|Crea vista sottoscrizioni|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|Name|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -82,7 +82,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Per connettersi a un file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite WMI, è necessario disporre delle autorizzazioni seguenti per i computer locali e remoti:  
   
 -   Accesso in lettura allo spazio dei nomi WMI **allo root\Microsoft\SqlServer\ComputerManagement10** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  

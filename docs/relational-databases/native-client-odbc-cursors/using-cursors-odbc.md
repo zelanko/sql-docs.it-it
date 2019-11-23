@@ -41,7 +41,7 @@ ms.locfileid: "73784074"
   
  Di seguito viene presentato un confronto tra il funzionamento dei cursori nelle applicazioni ODBC e negli script [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-|Azione|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |Definire il comportamento del cursore|Specificare tramite parametri DECLARE CURSOR|Impostare gli attributi del cursore utilizzando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
 |Aprire un cursore|DICHIARARE il cursore aperto *cursor_name*|**SQLExecDirect** o **SQLExecute**|  
@@ -51,7 +51,7 @@ ms.locfileid: "73784074"
   
  I cursori server implementati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano la funzionalità del modello del cursore ODBC. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizza cursori server per supportare la funzionalità del cursore dell'API ODBC.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Modalità di implementazione dei cursori](../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   

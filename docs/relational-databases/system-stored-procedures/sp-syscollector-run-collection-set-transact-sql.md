@@ -53,14 +53,14 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il *collection_set_id* o il *nome* deve avere un valore e non può essere null.  
   
- Questa procedura consente di avviare i processi di raccolta e di caricamento per il set di raccolta specificato e avvierà immediatamente il processo dell'agente di raccolta se il set di raccolta ha la **@no__t 1collection_mode** impostata su non memorizzato nella cache (1). Per ulteriori informazioni, vedere [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Questa procedura consente di avviare i processi di raccolta e di caricamento per il set di raccolta specificato e avvierà immediatamente il processo dell'agente di raccolta se il set di raccolta ha la **\@collection_mode** impostata su non memorizzato nella cache (1). Per ulteriori informazioni, vedere [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  È possibile utilizzare sp_sycollector_run_collection_set anche per eseguire un set di raccolta senza una pianificazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database **dc_operator** (con autorizzazione Execute).  
   
 ## <a name="example"></a>Esempio  

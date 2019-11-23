@@ -60,7 +60,7 @@ ms.locfileid: "73778086"
   
      Per un esempio di come chiamare una stored procedure, vedere [elaborare i codici restituiti e i parametri &#40;di&#41;output ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   

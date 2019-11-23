@@ -24,7 +24,7 @@ ms.locfileid: "73785751"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Quando si usa SQLPutData per inviare più di 65.535 byte di dati (per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per un SQL_LONGVARCHAR (**testo**), SQL_WLONGVARCHAR (**ntext**) o SQL_, si applicano le restrizioni seguenti. Colonna LONGVARBINARY (**Image**):  
+  Quando si usa SQLPutData per inviare più di 65.535 byte di dati (per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per una colonna SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) o SQL_LONGVARBINARY (**Image**), si applicano le restrizioni seguenti:  
   
 -   Il parametro a cui si fa riferimento può essere il *insert_Value* in un'istruzione INSERT.  
   

@@ -24,7 +24,7 @@ ms.locfileid: "73729044"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Nel database sono contenute tutte le informazioni per il sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È l'elemento centrale di una distribuzione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
+  Nel database sono contenute tutte le informazioni per il sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. È l'elemento centrale di una distribuzione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
 -   Archivia le impostazioni, gli oggetti di database e i dati necessari per il sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73729044"
   
 -   Fornisce le viste per i sistemi di sottoscrizione per il quali è necessario il recupero di dati dal database.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   

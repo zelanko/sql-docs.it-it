@@ -36,17 +36,17 @@ ms.locfileid: "72797744"
   
 -   Per configurare un accesso alla connessione diverso, è necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
-|Attività|Permissions|  
+|Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per configurare le repliche durante la creazione di un gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare una replica di disponibilità|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per configurare l'accesso su una replica di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -62,9 +62,9 @@ ms.locfileid: "72797744"
     -   Per il ruolo secondario, selezionare un nuovo valore dall'elenco a discesa **Secondario leggibile** , come segue:  
   
          **No**  
-         Non sono consentite connessioni utente ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.  
+         Non sono consentite connessioni utente ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Questa è l'impostazione predefinita.  
   
-         **Solo con finalità di lettura**  
+         **Solo finalità di lettura**  
          Sono consentite solo connessioni in sola lettura ai database secondari di questa replica. Il database o i database secondari sono tutti disponibili per l'accesso in lettura.  
   
          **Sì**  
@@ -73,17 +73,17 @@ ms.locfileid: "72797744"
     -   Per il ruolo primario, selezionare un nuovo valore dall'elenco a discesa **Connessioni nel ruolo primario** , come segue:  
   
          **Consenti tutte le connessioni**  
-         Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
+         Sono consentite tutte le connessioni ai database nella replica primaria. Questa è l'impostazione predefinita.  
   
          **Consenti connessioni in lettura/scrittura**  
          Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **Sola lettura** . In questo modo è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per configurare l'accesso su una replica di disponibilità**  
   
 > [!NOTE]  
->  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
+>  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample), più avanti in questa sezione.  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72797744"
          dove  
   
          No  
-         Non sono consentite connessioni dirette ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.  
+         Non sono consentite connessioni dirette ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Questa è l'impostazione predefinita.  
   
          READ_ONLY  
          Sono consentite solo connessioni in sola lettura ai database secondari di questa replica. Il database o i database secondari sono tutti disponibili per l'accesso in lettura.  
@@ -114,7 +114,7 @@ ms.locfileid: "72797744"
      Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **Sola lettura** .  Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
-     Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
+     Sono consentite tutte le connessioni ai database nella replica primaria. Questa è l'impostazione predefinita.  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  L'esempio seguente aggiunge una replica secondaria a un gruppo di disponibilità denominato *AG2*. Un'istanza del server autonoma, *COMPUTER03\HADR_INSTANCE*, viene specificata per ospitare la nuova replica di disponibilità. Questa replica è configurata per consentire unicamente le connessioni in lettura e scrittura per il ruolo primario e le connessioni con finalità di lettura per il ruolo secondario.  
@@ -132,7 +132,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>Per configurare l'accesso su una replica di disponibilità
   
@@ -143,10 +143,10 @@ GO
   
 2.  Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityReplica`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityReplica`. I parametri pertinenti sono i seguenti:  
   
-    -   Per configurare l'accesso alla connessione per il ruolo secondario, specificare il `ConnectionModeInSecondaryRole`parametro *secondary_role_keyword* , dove *secondary_role_keyword* è uguale a uno dei valori seguenti:  
+    -   Per configurare l'accesso alla connessione per il ruolo secondario, specificare il parametro `ConnectionModeInSecondaryRole`*secondary_role_keyword* , dove *secondary_role_keyword* è uguale a uno dei valori seguenti:  
   
          `AllowNoConnections`  
-         Non è consentita alcuna connessione diretta ai database nella replica secondaria e i database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.  
+         Non è consentita alcuna connessione diretta ai database nella replica secondaria e i database non sono disponibili per l'accesso in lettura. Questa è l'impostazione predefinita.  
   
          `AllowReadIntentConnectionsOnly`  
          Sono consentite solo connessioni ai database nella replica secondaria in cui la proprietà Finalità dell'applicazione è impostata su **Sola lettura**. Per altre informazioni su questa proprietà, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
@@ -160,7 +160,7 @@ GO
          Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su ReadOnly. Se la proprietà Finalità dell'applicazione è impostata su ReadWrite o se tale proprietà non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
          `AllowAllConnections`  
-         Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
+         Sono consentite tutte le connessioni ai database nella replica primaria. Questa è l'impostazione predefinita.  
   
     > [!NOTE]  
     >  Per visualizzare la sintassi di un cmdlet, utilizzare il cmdlet `Get-Help` nell'ambiente [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
@@ -188,8 +188,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||Prerequisiti|Collegamento|  
     |-|------------------|----------|  
-    |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "casella")|Assicurarsi che nel gruppo di disponibilità sia presente un listener.|[Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "casella")|Configurare il routing di sola lettura per il gruppo di disponibilità.|[Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Assicurarsi che nel gruppo di disponibilità sia presente un listener.|[Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configurare il routing di sola lettura per il gruppo di disponibilità.|[Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Fattori che potrebbero influire su trigger e processi dopo un failover**  
   
@@ -233,6 +233,6 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Repliche secondarie attive: repliche &#40;secondarie leggibili gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La richiesta del percorso per una colonna con qualsiasi altro tipo di dati o per un columnthat **varbinary (max)** non dispone dell'attributo di archiviazione FILESTREAM provocherà un errore in fase di compilazione della query.  
   
- *\@Opzione*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. *\@Opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
+ *opzione \@*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. *\@opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Restituisce il nome del server convertito in formato BIOS, ad esempio `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Restituisce il nome del server senza conversione, ad esempio `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando il database appartiene a un gruppo di disponibilità Always On, il valore di *use_replica_computer_name* ha l'effetto seguente sull'output della funzione **pathname** :  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Non specificato.|La funzione restituisce il nome di rete virtuale nel percorso.|  
 |0|La funzione restituisce il nome di rete virtuale nel percorso.|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valore restituito  
  Il valore restituito è il percorso completo logico oppure il percorso NETBIOS dell'oggetto BLOB. PathName non restituisce un indirizzo IP. Quando l'oggetto BLOB FILESTREAM non è stato creato, viene restituito NULL.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La colonna ROWGUID deve essere visibile in tutte le query in cui viene chiamato PathName.  
   
  Un oggetto BLOB FILESTREAM può essere creato solo utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>b. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
  Nell'esempio seguente vengono creati e visualizzati i percorsi di tre oggetti BLOB FILESTREAM.  
   
 ```sql  

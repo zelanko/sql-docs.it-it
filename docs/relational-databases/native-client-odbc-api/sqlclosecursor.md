@@ -27,7 +27,7 @@ ms.locfileid: "73787470"
   **SQLCloseCursor** sostituisce [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) con il valore dell' *opzione* SQL_CLOSE. Alla ricezione di **SQLCloseCursor**, il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client elimina le righe del set di risultati in sospeso. Notare che le associazioni di parametro e colonna dell'istruzione, se presenti, non vengono modificate da **SQLCloseCursor**.  
   
 ## <a name="see-also"></a>Vedere anche  
-   [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)  
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

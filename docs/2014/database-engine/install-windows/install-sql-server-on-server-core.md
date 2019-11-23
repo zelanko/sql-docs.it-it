@@ -22,7 +22,7 @@ ms.locfileid: "73637677"
   
  L'opzione di installazione Server Core per il sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre un ambiente minimo per l'esecuzione di ruoli del server specifici. Ciò consente di ridurre i requisiti di manutenzione e gestione e la superficie di attacco per i ruoli del server in questione. Per ulteriori informazioni su Server Core come implementato in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], vedere [Server Core per Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Per altre informazioni sull'implementazione di Server Core in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) (Server Core per Windows Server 2012).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 |Requisito|Modalità di installazione|  
 |-----------------|--------------------|  
@@ -32,19 +32,19 @@ ms.locfileid: "73637677"
 |Windows Installer 4.5|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
-##  <a name="BK_SupportedFeatures"></a> Funzionalità supportate  
+##  <a name="BK_SupportedFeatures"></a> Supported Features  
  Utilizzare la tabella seguente per identificare le funzionalità supportate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
-|Funzionalità|Supportato|  
+|Funzionalità|Supported|  
 |-------------|---------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Sì|  
-|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Sì|  
-|Ricerca full-text|Sì|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sì|  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Yes|  
+|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Yes|  
+|Ricerca full-text|Yes|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Yes|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No|  
-|Connettività strumenti client|Sì|  
-|Server Integration Services<sup>[1]</sup>|Sì|  
+|Connettività strumenti client|Yes|  
+|Server Integration Services<sup>[1]</sup>|Yes|  
 |Compatibilità con le versioni precedenti di strumenti client.|No|  
 |SDK di strumenti client|No|  
 |Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|  
@@ -52,7 +52,7 @@ ms.locfileid: "73637677"
 |Strumenti di gestione - Completa|Solo remoto<sup>[2]</sup>|  
 |Controller di Riesecuzione distribuita|No|  
 |Distributed Replay Client|Solo remoto<sup>[2]</sup>|  
-|SDK di Connettività SQL Client|Sì|  
+|SDK di Connettività SQL Client|Yes|  
 |Microsoft Sync Framework|Sì<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No|  
@@ -78,7 +78,7 @@ ms.locfileid: "73637677"
 ## <a name="upgrading"></a>Aggiornamento  
  Nelle installazioni Server Core è supportato l'aggiornamento da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-## <a name="installation"></a>Installazione  
+## <a name="installation"></a>Installation  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non supporta l'installazione tramite apposita procedura guidata nel sistema operativo Server Core. In caso di installazione in Server Core, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede il supporto della modalità non interattiva completa tramite il parametro /Q o della modalità non interattiva semplice tramite il parametro /QS. Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
 > [!IMPORTANT]  
@@ -111,7 +111,7 @@ ms.locfileid: "73637677"
 |/FEATURES=SQLEngine|Viene installato solo il [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Installa il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e il componente full-text.|  
 |/FEATURES=SQLEngine,Conn|Vengono installati il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e i componenti di connettività.|  
-|/FEATURES=SQLEngine,AS,IS,Conn|Vengono installati il [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e i componenti di connettività.|  
+|/FEATURES=SQLEngine,AS,IS,Conn|Vengono installati il [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i componenti di connettività.|  
   
 ### <a name="installation-options"></a>Opzione di installazione  
  Il programma di installazione supporta le seguenti opzioni di installazione durante l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un sistema operativo Server Core:  
@@ -258,9 +258,9 @@ ms.locfileid: "73637677"
   
     -   DefaultSetup.ini  
   
-         Se il file DefaultSetup.ini si trova nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , aprirlo e aggiungere il parametro *Features* al file.  
+         Se il file DefaultSetup.ini si trova nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aprirlo e aggiungere il parametro *Features* al file.  
   
-         Se il file DefaultSetup.ini non esiste, è possibile crearlo e copiarlo nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+         Se il file DefaultSetup.ini non esiste, è possibile crearlo e copiarlo nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Configurazione dell'accesso remoto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core  
  Eseguire le azioni descritte di seguito per configurare l'accesso remoto di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in esecuzione in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
@@ -295,7 +295,7 @@ ms.locfileid: "73637677"
   
 2.  Nella scheda **Applicazioni** fare clic su **Nuova attività**.  
   
-3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri**, quindi fare clic su **OK**. Viene aperta la finestra di **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell**.  
+3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri**, quindi fare clic su **OK**. Viene aperta la finestra di **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell** .  
   
 4.  Nella finestra di **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** eseguire lo script seguente per abilitare il protocollo TCP/IP:  
   
@@ -333,6 +333,6 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Server Core Installation Option Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=221422)  (Guida introduttiva alle opzioni di installazione di Server Core)  
- [Configuring a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=221423)   
+ [Configuring a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=221423)  (Configurazione di un'installazione Server Core: Panoramica)  
  [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://go.microsoft.com/fwlink/?LinkId=221419)  (Cmdlet del cluster di failover in Windows PowerShell elencati per attività)  
  [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=221421) (Mapping di comandi Cluster.exe a cmdlet di Windows PowerShell per i cluster di failover)  

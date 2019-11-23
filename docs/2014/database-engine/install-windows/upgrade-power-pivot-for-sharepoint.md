@@ -26,11 +26,11 @@ ms.locfileid: "72783164"
   
 
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Background  
   
 -   Se viene eseguito l'aggiornamento di una farm SharePoint 2010 multiserver in cui sono incluse due o più istanze di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , è necessario eseguire l'aggiornamento completo di ciascun server **prima** di procedere con il server successivo. Un aggiornamento completo include l'esecuzione del programma di installazione di SQL Server per aggiornare i file di programma di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , quindi azioni di aggiornamento di SharePoint per la configurazione dei servizi aggiornati. La disponibilità dei server sarà limitata finché non verranno eseguite le azioni di aggiornamento nello strumento di configurazione PowerPivot appropriato o in Windows PowerShell.  
   
--   Le versioni di tutte le istanze del Servizio di sistema PowerPivot e Analysis Services in una farm SharePoint 2010 devono essere uguali. Per informazioni su come verificare la versione, vedere la sezione [Verify the versions of PowerPivot Components and Services](#bkmk_verify_versions) in questo argomento.  
+-   Le versioni di tutte le istanze del Servizio di sistema PowerPivot e Analysis Services in una farm SharePoint 2010 devono essere uguali. Per informazioni su come verificare la versione, vedere la sezione [Verificare le versioni dei componenti e dei servizi PowerPivot](#bkmk_verify_versions) in questo argomento.  
   
 -   Gli strumenti di configurazione PowerPivot sono una delle funzionalità condivise di SQL Server. Tutte le funzionalità condivise vengono aggiornate contemporaneamente. Se durante un processo di aggiornamento si selezionano altre istanze o funzionalità di SQL Server per le quali è richiesto un aggiornamento della funzionalità condivisa, verrà aggiornato anche lo strumento di configurazione PowerPivot. È possibile che si riscontrino problemi se lo strumento di configurazione PowerPivot viene aggiornato ma non l'istanza di PowerPivot. Per ulteriori informazioni sulle funzionalità condivise di SQL Server, vedere [eseguire l'aggiornamento a SQL Server 2014 mediante &#40;l'&#41;installazione guidata di](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -38,8 +38,8 @@ ms.locfileid: "72783164"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
- **Permissions**  
+##  <a name="bkmk_prereq"></a> Prerequisiti  
+ **Autorizzazioni**  
   
 -   Per aggiornare un'installazione di PowerPivot per SharePoint, è necessario essere un amministratore di farm. Per eseguire il programma di installazione di SQL Server, è necessario essere un amministratore locale.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "72783164"
   
 3.  Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) in ogni server nella farm SharePoint 2013 per installare i provider di dati. Fanno eccezione i server in cui è stata eseguita l'Installazione guidata di SQL Server, che aggiorna anche i provider di dati. Per ulteriori informazioni, vedere [installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Eseguire lo strumento di configurazione PowerPivot per SharePoint 2013** in uno dei server applicazioni SharePoint per configurare la farm di SharePoint con i file di soluzione aggiornati in cui è installato il componente aggiuntivo. Non è possibile utilizzare Amministrazione centrale SharePoint per questo passaggio. Per ulteriori informazioni, vedere quanto segue:  
+4.  **Eseguire lo strumento di configurazione PowerPivot per SharePoint 2013** in uno dei server applicazioni SharePoint per configurare la farm di SharePoint con i file di soluzione aggiornati in cui è installato il componente aggiuntivo. Non è possibile utilizzare Amministrazione centrale SharePoint per questo passaggio. Per altre informazioni, vedere quanto segue:  
   
     1.  Nella pagina iniziale di Windows digitare **PowerPivot** e nei risultati della ricerca fare clic su **PowerPivot per SharePoint 2013 Configuration**. Si noti che la ricerca può restituire entrambe le versioni dello strumento di configurazione.  
   
          ![due strumenti configurazione PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "due strumenti configurazione PowerPivot")  
   
-         e  
+         Oppure  
   
          Dal menu **Start** scegliere **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], fare clic su **strumenti di configurazione**e quindi fare clic su **PowerPivot per SharePoint configurazione 2013**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "72783164"
   
     9. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione ai dati PowerPivot **avranno esito negativo** con errori simili a "**Impossibile aggiornare i dati**" o "**si è verificato un errore durante il tentativo di eseguire l'azione richiesta. Riprovare**". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
   
-     Per ulteriori informazioni, vedere quanto segue:  
+     Per altre informazioni, vedere quanto segue:  
   
     -   [Strumenti di configurazione PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -237,7 +237,7 @@ ms.locfileid: "72783164"
 Get-PowerPivotSystemService  
 ```  
   
- Verificare **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è la versione 12,0. \<major > di compilazione. \<minor compilazione >  
+ Verificare **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è la versione 12,0.\<> di compilazione principale.\<> di compilazione secondaria  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Verificare la versione del servizio Windows Analysis Services  
  Se sono stati aggiornati solo alcuni dei server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] di una farm SharePoint 2010, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nei server non aggiornati sarà meno recente della versione prevista nella farm. Sarà necessario effettuare l'aggiornamento di tutti i server alla stessa versione affinché possano essere utilizzati. Utilizzare uno dei metodi seguenti per verificare la versione del servizio Windows SQL Server Analysis Services (PowerPivot) in ogni computer.  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Scegliere **Dettagli**.  
   
-4.  la versione del file di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve essere 12,00. \<major > di compilazione. \<minor > di compilazione.  
+4.  la versione del file di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve essere 12,00.\<> di compilazione principale.\<> di compilazione secondaria.  
   
 5.  Verificare che il numero sia identico alla versione della soluzione e del Servizio di sistema PowerPivot.  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Fare clic su **Provider di dati attendibili**. Dovrebbe essere visualizzato MSOLAP.5 (Provider OLE DB Microsoft per OLAP Services 11.0). Se è stata aggiornata l'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , sarà anche visualizzato MSOLAP.4 dalla versione precedente.  
   
-4.  Per ulteriori informazioni, vedere [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 viene descritto come provider Microsoft OLE DB per OLAP Services 10.0. Questa versione potrebbe essere quella predefinita per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installata con Excel Services o la versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La versione predefinita installata da SharePoint non supporta l'accesso ai dati PowerPivot. È necessario disporre della versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o successiva per connettersi alle cartelle di lavoro di PowerPivot su SharePoint. Per verificare la disponibilità della versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , utilizzare le istruzioni nella sezione precedente in cui viene illustrato come verificare la versione visualizzando le proprietà del file.  
   
@@ -300,11 +300,11 @@ Get-PowerPivotSystemService
   
 2.  Ordinare per nome di assembly e individuare **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Verificare di avere la versione 12,0. numero \<build >.  
+3.  Verificare di avere la versione 12,0. numero di build\<>.  
   
 
 ##  <a name="geminifarm"></a>Aggiornamento di più server PowerPivot per SharePoint in una farm di SharePoint  
- In una topologia multiserver in cui sono inclusi più server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , la versione di tutti i componenti e di tutte le istanze del server deve essere uguale. Il server che esegue la versione più recente del software imposta il livello per tutti i server nella farm. Se vengono aggiornati solo alcuni server, quelli che eseguono versioni meno recenti del software non saranno più disponibili finché non verranno aggiornati.  
+ In una topologia multiserver in cui sono inclusi più server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], la versione di tutti i componenti e di tutte le istanze del server deve essere uguale. Il server che esegue la versione più recente del software imposta il livello per tutti i server nella farm. Se vengono aggiornati solo alcuni server, quelli che eseguono versioni meno recenti del software non saranno più disponibili finché non verranno aggiornati.  
   
  Dopo l'aggiornamento del primo server, gli altri server che non sono ancora stati aggiornati **non saranno più disponibili**. La disponibilità viene ripristinata quando tutti i server presentano lo stesso livello funzionale.  
   
@@ -350,5 +350,5 @@ Get-PowerPivotSystemService
  Per istruzioni dettagliate che consentono di eseguire tutte le attività di configurazione post-installazione, vedere [ &#40;configurazione iniziale PowerPivot per SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+ [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

@@ -20,12 +20,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797470"
 ---
-# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>forzatura dell'avvio di un cluster WSFC senza quorum
   In questo argomento viene illustrato come forzare l'avvio senza un quorum di un nodo del cluster Windows Server Failover Clustering (WSFC).  Questa operazione potrebbe rivelarsi necessaria negli scenari multi-subnet e in caso di ripristino di emergenza per recuperare i dati e ristabilire completamente la disponibilità elevata per le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
   
--   **Per forzare l'avvio di un cluster senza un quorum usando:**  [Utilizzo di Gestione cluster di failover](#FailoverClusterManagerProcedure), [Utilizzo di Powershell](#PowerShellProcedure), [Utilizzo di Net.exe](#CommandPromptProcedure)  
+-   **Per forzare un avvio senza un quorum del cluster:**  [utilizzando Gestione Cluster di Failover](#FailoverClusterManagerProcedure), [tramite Powershell](#PowerShellProcedure), [utilizzando Net.exe](#CommandPromptProcedure)  
   
 -   **Completamento:**  [Completamento: dopo avere forzato l'avvio senza un quorum di un cluster](#FollowUp)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72797470"
 ###  <a name="Recommendations"></a> Raccomandazioni  
  Salvo esplicita istruzione, le procedure illustrate in questo argomento funzionano se eseguite da qualsiasi nodo del cluster WSFC.  Tuttavia, è possibile ottenere risultati migliori ed evitare problemi di rete eseguendo questi passaggi dal nodo di cui si desidera forzare l'avvio senza un quorum.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> Utilizzo di Gestione cluster di failover  
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Visualizzare eventi e log per un cluster di failover](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
+-   [Visualizzare eventi e registri per un cluster di failover](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   

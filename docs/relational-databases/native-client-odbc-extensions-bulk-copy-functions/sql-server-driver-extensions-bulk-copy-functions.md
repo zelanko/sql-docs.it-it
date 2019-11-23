@@ -34,7 +34,7 @@ ms.locfileid: "73782062"
   
  Un'applicazione in cui vengono utilizzate le chiamate alla funzione API BCP dovrebbe essere collegata alla libreria (con estensione lib) fornita con il driver (con estensione dll) utilizzato dall'applicazione. Un'applicazione BCP non dovrebbe essere collegata a più di una libreria del driver.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)  
   

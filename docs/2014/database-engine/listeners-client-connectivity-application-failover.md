@@ -25,7 +25,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797837"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)
-  In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)] .  
+  In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)].  
   
 > [!NOTE]  
 >  Per la maggior parte delle configurazioni comuni del listener, è possibile creare il listener del primo gruppo di disponibilità tramite cmdlet di PowerShell o istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] . Per ulteriori informazioni, vedere [Attività correlate](#RelatedTasks)più avanti in questo argomento.  
@@ -37,9 +37,9 @@ ms.locfileid: "72797837"
   
  Un listener del gruppo di disponibilità è composto da un nome listener DNS, dal numero di porta e da uno o più indirizzi IP. Solo il protocollo TCP è supportato dal listener del gruppo di disponibilità.  È inoltre necessario che il nome DNS del listener sia univoco nel dominio e in NetBIOS.  Alla sua creazione, il listener del gruppo di disponibilità diventa una risorsa di un cluster con un nome di rete virtuale (VNN) e un indirizzo IP virtuale (VIP) associati, oltre alla dipendenza del gruppo di disponibilità. Un client utilizza il DNS per risolvere il VNN in più indirizzi IP e quindi tenta di connettersi a ogni indirizzo, fino a che una richiesta di connessione riesce o fino a che le richieste di connessione non scadranno.  
   
- Se il routing di sola lettura è configurato per una o più[repliche secondarie leggibili](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), le connessioni client con finalità di lettura alla replica primaria vengono reindirizzate a una replica secondaria leggibile. Inoltre, se la replica primaria viene portata offline su un'istanza di SQL Server e una nuova replica primaria viene portata online su un'altra, il listener del gruppo di disponibilità abilita i client a connettersi alla nuova replica primaria.  
+ Se il routing di sola lettura viene configurato per una o più[repliche secondarie leggibili](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), le connessioni client con finalità di lettura alla replica primaria vengono reindirizzate a una replica secondaria leggibile. Inoltre, se la replica primaria viene portata offline su un'istanza di SQL Server e una nuova replica primaria viene portata online su un'altra, il listener del gruppo di disponibilità abilita i client a connettersi alla nuova replica primaria.  
   
- Per informazioni essenziali sui listener del gruppo di disponibilità, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Per informazioni essenziali sui listener del gruppo di disponibilità, vedere [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  
   
@@ -86,9 +86,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 ##  <a name="ConnectToSecondary"></a> Utilizzo di un listener per connettersi a una replica secondaria di sola lettura (routing di sola lettura)  
  Con*routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di instradare le connessioni in ingresso dirette a un listener del gruppo di disponibilità a una replica secondaria configurata per consentire carichi di lavoro di sola lettura. Una connessione in ingresso che fa riferimento a un nome del listener del gruppo di disponibilità può essere automaticamente indirizzata a una replica in sola lettura qualora sussistano le condizioni seguenti:  
   
--   Almeno una replica secondaria viene impostata sull'accesso di sola lettura e ogni replica secondaria di sola lettura e la replica primaria vengono configurate per supportare il routing di sola lettura. Per altre informazioni, vedere [Per configurare repliche di disponibilità per il routing di sola lettura](#ConfigureARsForROR)più avanti in questa sezione.  
+-   Almeno una replica secondaria viene impostata sull'accesso di sola lettura e ogni replica secondaria di sola lettura e la replica primaria vengono configurate per supportare il routing di sola lettura. Per ulteriori informazioni, vedere [Per configurare repliche di disponibilità per il routing di sola lettura](#ConfigureARsForROR), più avanti in questa sezione.  
   
--   La stringa di connessione fa riferimento a un listener del gruppo di disponibilità e la finalità dell'applicazione della connessione in ingresso è impostata su sola lettura, ad esempio con la parola chiave **Application Intent=ReadOnly** nelle proprietà o negli attributi di connessione oppure nelle stringhe di connessione ODBC o OLEDB. Per altre informazioni, vedere [Finalità dell'applicazione di sola lettura e routing di sola lettura](#ReadOnlyAppIntent)più avanti in questa sezione.  
+-   La stringa di connessione fa riferimento a un listener del gruppo di disponibilità e la finalità dell'applicazione della connessione in ingresso è impostata su sola lettura, ad esempio con la parola chiave **Application Intent=ReadOnly** nelle proprietà o negli attributi di connessione oppure nelle stringhe di connessione ODBC o OLEDB. Per ulteriori informazioni, vedere [Finalità dell'applicazione di sola lettura e routing di sola lettura](#ReadOnlyAppIntent), più avanti in questa sezione.  
   
 ###  <a name="ConfigureARsForROR"></a> Per configurare repliche di disponibilità per il routing di sola lettura  
  Un amministratore del database deve configurare le repliche di disponibilità come segue:  
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Quando si utilizzano le stringhe di connessione per il mirroring del database, il client può utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La stringa di connessione fornita da un client deve specificare almeno il nome di un'istanza del server, ovvero il *nome del partner iniziale*, per identificare l'istanza del server che ospita inizialmente la replica di disponibilità alla quale si desidera connettersi. Facoltativamente, la stringa di connessione può fornire anche il nome di un'altra istanza del server, il *nome del partner di failover*, per identificare l'istanza del server che ospita inizialmente la replica secondaria come nome del partner di failover.  
   
- Per altre informazioni sulle stringhe di connessione per il mirroring del database, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Per altre informazioni sulle stringhe di connessione per il mirroring del database, vedere [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="CCBehaviorOnFailover"></a> Comportamento delle connessioni client al failover  
  Quando si verifica un failover del gruppo di disponibilità, le connessioni persistenti esistenti al gruppo di disponibilità vengono terminate e il client deve stabilire una nuova connessione per poter continuare a utilizzare lo stesso database primario o il database secondario in sola lettura.  Nel corso di un failover sul lato server, la connettività al gruppo di disponibilità potrebbe non essere disponibile, di conseguenza l'applicazione client potrebbe tentare di riconnettersi finché il database primario non viene riportato online.  
@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Per ulteriori informazioni sulla registrazione manuale di un nome SPN per SQL Server, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Per ulteriori informazioni sulla registrazione manuale di un nome SPN per SQL Server, vedere [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -213,7 +213,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Connettività &#40;Client AlwaysOn SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Repliche secondarie attive: repliche &#40;secondarie leggibili gruppi di disponibilità AlwaysOn&#41; ](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

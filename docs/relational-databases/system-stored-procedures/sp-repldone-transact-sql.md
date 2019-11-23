@@ -28,7 +28,7 @@ ms.locfileid: "72798386"
   Aggiorna il record che identifica l'ultima transazione distribuita del server. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!CAUTION]  
->  Se si esegue manualmente **sp_repldone** , è possibile invalidare l'ordine e la coerenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto di replica esperto.  
+>  Se si esegue **sp_repldone** manualmente, è possibile invalidare l'ordine e la coerenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto di replica esperto.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,16 +56,16 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Remarks  
- **sp_repldone** viene utilizzato nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_repldone** viene utilizzata nella replica transazionale.  
   
  **sp_repldone** viene utilizzato dal processo di lettura log per tenere traccia delle transazioni distribuite.  
   
- Con **sp_repldone**è possibile indicare manualmente al server che una transazione è stata replicata (inviata al server di distribuzione). È inoltre possibile cambiare la transazione contrassegnata come transazione successiva in attesa di replica e scorrere l'elenco delle transazioni replicate. Tutte le transazioni che precedono la transazione specificata, inclusa tale transazione, vengono contrassegnate come distribuite.  
+ Con **sp_repldone**, è possibile indicare manualmente al server che una transazione è stata replicata (inviata al server di distribuzione). È inoltre possibile cambiare la transazione contrassegnata come transazione successiva in attesa di replica e scorrere l'elenco delle transazioni replicate. Tutte le transazioni che precedono la transazione specificata, inclusa tale transazione, vengono contrassegnate come distribuite.  
   
  I parametri obbligatori *xactid* e *xact_seqno* possono essere ottenuti utilizzando **sp_repltrans** o **sp_replcmds**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_repldone**.  
   
 ## <a name="examples"></a>Esempi  
@@ -80,6 +80,6 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [ &#40;Transact-SQL&#41; sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)  
- [ &#40;Transact-SQL&#41; sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)  
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

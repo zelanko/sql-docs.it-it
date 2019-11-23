@@ -29,13 +29,13 @@ ms.locfileid: "70911104"
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce i dati di archiviazione e di uso della CPU per un database SQL di Azure. I dati vengono raccolti e aggregati per intervalli di cinque minuti. Per ogni database utente è presente una riga per ogni finestra di report di cinque minuti in cui viene apportata una modifica al consumo delle risorse. I dati restituiti includono l'utilizzo della CPU, la modifica delle dimensioni di archiviazione e la modifica dello SKU del database. I database inattivi senza modifiche potrebbero non avere righe per ogni intervallo di cinque minuti. I dati cronologici vengono mantenuti per circa 14 giorni.  
+  Restituisce i dati di archiviazione e di utilizzo della CPU per un database SQL di Azure. I dati vengono raccolti e aggregati in intervalli di cinque minuti. Per ogni database utente è presente una riga per ogni finestra di report di cinque minuti in cui viene apportata una modifica al consumo delle risorse. I dati restituiti includono l'utilizzo della CPU, la modifica delle dimensioni di archiviazione e la modifica dello SKU del database. I database inattivi senza modifiche potrebbero non avere righe per ogni intervallo di cinque minuti. I dati cronologici vengono mantenuti per circa 14 giorni.  
   
  La vista **sys. resource_stats** ha definizioni diverse a seconda della versione del server di database SQL di Azure a cui è associato il database. Prendere in considerazione queste differenze e le eventuali modifiche richieste dall'applicazione durante l'aggiornamento a una nuova versione del server.  
   
  La tabella seguente descrive le colonne disponibili in un server v12:  
   
-|Colonne|Tipo di dati|Descrizione|  
+|Colonne|tipo di dati|Descrizione|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Ora UTC che indica l'inizio dell'intervallo di Reporting di cinque minuti.|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di Reporting di cinque minuti.|  
@@ -53,20 +53,20 @@ ms.locfileid: "70911104"
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU del database come percentuale del processo di database SQL.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria del database come percentuale del processo di database SQL.|
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|
-|allocated_storage_in_megabytes|**float**|Quantità di spazio file formattato in MB reso disponibile per l'archiviazione dei dati del database. Lo spazio file formattato viene anche definito spazio dati allocato.  Per altre informazioni, vedere: [Gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|Quantità di spazio file formattato in MB reso disponibile per l'archiviazione dei dati del database. Lo spazio file formattato viene anche definito spazio dati allocato.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Per ulteriori informazioni sui limiti e sui livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
     
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per la connessione al database **Master** virtuale.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I dati restituiti da **sys. resource_stats** vengono espressi come percentuale dei limiti massimi consentiti per il livello di servizio o il livello di prestazioni che si sta eseguendo.  
   
  Quando un database è membro di un pool elastico, le statistiche sulle risorse presentate come valori percentuali vengono espresse come percentuale del limite massimo per i database impostati nella configurazione del pool elastico.  
   
- Per una visualizzazione più granulare di questi dati, utilizzare la vista a gestione dinamica **sys. dm _db_resource_stats** in un database utente. Questa vista acquisisce i dati ogni 15 secondi e conserva i dati cronologici per 1 ora.  Per altre informazioni, vedere [sys. dm _Db_resource_stats &#40;&#41;database SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Per una visualizzazione più granulare di questi dati, utilizzare la vista a gestione dinamica **sys. dm_db_resource_stats** in un database utente. Questa vista acquisisce i dati ogni 15 secondi e conserva i dati cronologici per 1 ora.  Per altre informazioni, vedere [sys. Dm_db_resource_stats &#40;database&#41;SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti i database che hanno una media di almeno l'80% di utilizzo del calcolo nell'ultima settimana.  
@@ -84,7 +84,7 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Vedere anche  
- [Livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
+   [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)  
  [Limiti e funzionalità del livello di servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

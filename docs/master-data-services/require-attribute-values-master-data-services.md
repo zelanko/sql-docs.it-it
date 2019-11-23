@@ -29,12 +29,12 @@ ms.locfileid: "73728939"
 > [!NOTE]  
 >  I membri a cui mancano valori di attributo basati su dominio non sono visualizzati nelle gerarchie derivate basate su tali relazioni.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Per richiedere valori di attributo  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73728939"
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   
-8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola business (facoltativo).  
+8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola di business (facoltativo).  
   
 9. Nel blocco **Then** fare clic su **Aggiungi**. Verrà visualizzato un pannello.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73728939"
   
 15. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore nella colonna **Stato della regola di business** è **Attiva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   

@@ -38,25 +38,25 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @credential = *\@credential*  
+ @credential = *credenziali\@*  
  Credenziale con ambito database associata al database locale abilitato per l'estensione.  
   
  @with_copy = *\@with_copy*  
- Specifica se creare una copia dei dati remoti e connettersi alla copia (scelta consigliata). *\@with_copy è di* bit.  
+ Specifica se creare una copia dei dati remoti e connettersi alla copia (scelta consigliata). *\@with_copy* è di bit.  
   
  @azure_servername = *\@azure_servername*  
- Specifica il nome del server di Azure che contiene i dati remoti. *\@azure_servername è di* tipo sysname.  
+ Specifica il nome del server di Azure che contiene i dati remoti. *\@azure_servername* è di tipo sysname.  
   
  @azure_databasename = *\@azure_databasename*  
- Specifica il nome del database di Azure che contiene i dati remoti. *\@azure_databasename è di* tipo sysname.  
+ Specifica il nome del database di Azure che contiene i dati remoti. *\@azure_databasename* è di tipo sysname.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o > 0 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando si esegue [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per riconnettersi al database di Azure remoto, questa operazione Reimposta automaticamente la modalità di query su LOCAL_AND_REMOTE, che rappresenta il comportamento predefinito per Stretch database. Ovvero le query restituiscono i risultati dai dati locali e remoti.  
   
 ## <a name="example"></a>Esempio  
@@ -71,6 +71,6 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Estensione database](../../sql-server/stretch-database/stretch-database.md)  
   
   

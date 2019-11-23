@@ -29,9 +29,9 @@ ms.locfileid: "72782845"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a>Uso del dashboard AlwaysOn  
@@ -49,7 +49,7 @@ ms.locfileid: "72782845"
   
  Per informazioni su come usare il dashboard AlwaysOn, vedere [Utilizzare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Usare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità**  
   
 1.  Spostarsi sulla directory (`cd`) dell'istanza del server che ospita una delle repliche di disponibilità. Per visualizzare informazioni su tutte le repliche di disponibilità di un determinato gruppo, connettersi all'istanza del server che ospita la replica primaria.  
@@ -88,7 +88,7 @@ ms.locfileid: "72782845"
   
      Questi cmdlet accettano le opzioni seguenti:  
   
-    |Opzione|Description|  
+    |Opzione|Descrizione|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Esegue i criteri utente trovati nelle categorie dei criteri AlwaysOn.|  
     |`InputObject`|Raccolta di oggetti che rappresentano gruppi di disponibilità, repliche di disponibilità o stati dei database di disponibilità. Il cmdlet calcolerà l'integrità degli oggetti specificati.|  
@@ -123,7 +123,7 @@ ms.locfileid: "72782845"
 -   [Pagina relativa alla quarta parte riguardante l'integrazione con SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Amministrazione di un gruppo di disponibilità &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

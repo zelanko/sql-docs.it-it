@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532786"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm _exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Restituisce gli errori che si verificano nei nodi di calcolo di base.  
@@ -40,7 +40,7 @@ ms.locfileid: "73532786"
 |origine|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
 |type|`nvarchar(255)`|Tipo di errore.||  
 |create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
-|compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm _exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  
 |spid|`int`|Identificatore della sessione di SQL Server||  
 |thread_id|`int`|Identificatore numerico del thread in cui si è verificato l'errore.||  

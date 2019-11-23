@@ -25,7 +25,7 @@ ms.locfileid: "72797807"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subset di cmdlet del provider, illustrato nella tabella seguente.  
   
-|cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Description|  
+|Cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Descrizione|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Consente di ottenere il nodo corrente.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Consente di modificare il nodo corrente.|  

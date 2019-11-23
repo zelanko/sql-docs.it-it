@@ -20,7 +20,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882243"
 ---
-# <a name="replicate-schema-changes"></a>Replicate Schema Changes
+# <a name="replicate-schema-changes"></a>Replica delle modifiche dello schema
   In questo argomento si illustra come replicare le modifiche dello schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Se si apportano le seguenti modifiche dello schema a un articolo pubblicato, per impostazione predefinita vengono propagate ai Sottoscrittori [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

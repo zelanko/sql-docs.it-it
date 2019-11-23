@@ -105,7 +105,7 @@ CREATE SEQUENCE Test.RangeSeq
 ;  
 ```  
   
-### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Recupero di un intervallo di valori di sequenza  
+### <a name="a-retrieving-a-range-of-sequence-values"></a>R. Recupero di un intervallo di valori di sequenza  
  Nell'istruzione seguente vengono ottenuti quattro numeri di sequenza dall'oggetto sequenza test. RangeSeq e viene restituito all'utente il primo numero di numeri.  
   
 ```  

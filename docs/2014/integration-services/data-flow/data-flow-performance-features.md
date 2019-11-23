@@ -138,7 +138,7 @@ ms.locfileid: "73637829"
 #### <a name="merge-join-transformation"></a>Trasformazione Merge join  
  Non è più necessario configurare il valore della proprietà `MaxBuffersPerInput`, in quanto Microsoft ha apportato modifiche che riducono il rischio di uso di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione  
+#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
  La Configurazione guidata dimensioni a modifica lenta e la trasformazione Dimensione a modifica lenta sono strumenti di uso generale in grado di rispondere alle esigenze della maggior parte degli utenti. Il flusso di dati generato dalla procedura guidata, tuttavia, non è ottimizzato per le prestazioni.  
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  

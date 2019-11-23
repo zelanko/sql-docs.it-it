@@ -35,12 +35,12 @@ ms.locfileid: "71163935"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica la classe dell'elemento per cui esiste l'autorizzazione.<br /><br /> 100 = Server<br /><br /> 101 = Entità server<br /><br /> 105 = Endpoint|  
-|**class_desc**|**nvarchar(60)**|Descrizione della classe per cui esiste l'autorizzazione. Uno dei valori seguenti:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|Descrizione della classe per cui esiste l'autorizzazione. I valori validi sono:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID dell'entità a sicurezza diretta per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. Nella maggior parte dei casi, si tratta semplicemente dell'ID che si applica a ciò che la classe rappresenta. Negli altri casi, l'interpretazione dei possibili valori è la seguente:<br /><br /> 100 = sempre 0|  
 |**minor_id**|**int**|ID secondario dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza.|  
 |**grantee_principal_id**|**int**|ID dell'entità server alla quale vengono concesse le autorizzazioni.|  
 |**grantor_principal_id**|**int**|ID dell'entità server dell'utente che concede queste autorizzazioni.|  
-|**type**|**char(4)**|Tipo di autorizzazione per il server. Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
+|**tipo**|**char(4)**|Tipo di autorizzazione per il server. Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
 |**permission_name**|**nvarchar(128)**|Nome dell'autorizzazione.|  
 |**state**|**char(1)**|Stato dell'autorizzazione:<br /><br /> D = Deny<br /><br /> R = Revoke<br /><br /> G = Grant<br /><br /> W = Grant With Grant Option|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'autorizzazione:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
@@ -70,14 +70,14 @@ ms.locfileid: "71163935"
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
-|CRAC|Creare un gruppo di disponibilità|SERVER|  
+|CRAC|CREATE AVAILABILITY GROUP|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
 |CRHE|CREATE ENDPOINT|SERVER|
 |CRSR|CREATE SERVER ROLE|SERVER|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
 |IAL|IMPERSONATE ANY LOGIN|SERVER|  
-|IM|IMPERSONATE|Account di accesso|  
+|IM|IMPERSONATE|LOGIN|  
 |SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
@@ -88,7 +88,7 @@ ms.locfileid: "71163935"
 |XA|EXTERNAL ACCESS|SERVER|
 |XU|UNSAFE ASSEMBLY|SERVER|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare le proprie autorizzazioni. Per visualizzare le autorizzazioni per altri account di accesso, è richiesta VIEW DEFINITION, ALTER ANY LOGIN o qualsiasi autorizzazione per un account di accesso. Per visualizzare i ruoli del server definiti dall'utente, è richiesta l'autorizzazione ALTER ANY SERVER ROLE o l'appartenenza al ruolo.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

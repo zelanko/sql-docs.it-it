@@ -27,7 +27,7 @@ ms.locfileid: "70154833"
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
+-   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 > [!IMPORTANT]  
 >  È possibile definire un piano di manutenzione database per creare backup di database. Per altre informazioni, vedere [Piani di manutenzione](../maintenance-plans/maintenance-plans.md) e [Usare la Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
@@ -38,12 +38,12 @@ ms.locfileid: "70154833"
 ## <a name="options"></a>Opzioni  
   
 ### <a name="overwrite-media"></a>Sovrascrivi supporti  
- Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato URL (archiviazione di Azure) come destinazione di backup nella pagina generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup utilizzando l'istruzione Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Per ulteriori informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (Archiviazione di Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup utilizzando l'istruzione Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Per ulteriori informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Solo l'opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti** è supportata con le opzioni di crittografia. Se si selezionano le opzioni nella sezione **Esegui backup nel set di supporti esistente**, le opzioni di crittografia nella pagina **Opzioni di backup** saranno disabilitate.  
   
 > [!NOTE]  
->  Per informazioni sui set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Per informazioni sui set di supporti, vedere [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **Esegui backup nel set di supporti esistente**  
  Consente di eseguire il backup del database in un set di supporti esistente. Selezionando questa opzione, vengono attivate tre opzioni.  
@@ -86,7 +86,7 @@ ms.locfileid: "70154833"
  L'operazione di backup deve continuare anche se si verificano errori.  
   
 ### <a name="transaction-log"></a>Log delle transazioni  
- Le opzioni del pannello **Log delle transazioni** controllano il comportamento del backup del log delle transazioni. Tali opzioni sono rilevanti solo nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk. Sono attivate solo se l'opzione **Log delle transazioni** è stata selezionata nel campo **Tipo backup** disponibile nella pagina [Generale](../../integration-services/general-page-of-integration-services-designers-options.md) della finestra di dialogo **Backup database**.  
+ Le opzioni del pannello **Log delle transazioni** controllano il comportamento del backup del log delle transazioni. Tali opzioni sono rilevanti solo nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk. Sono attivate solo se l'opzione **Log delle transazioni** è stata selezionata nel campo **Tipo backup** disponibile nella pagina [Generale](../../integration-services/general-page-of-integration-services-designers-options.md) della finestra di dialogo **Backup database** .  
   
 > [!NOTE]  
 >  Per informazioni sui backup del log delle transazioni, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](transaction-log-backups-sql-server.md).  
@@ -100,7 +100,7 @@ ms.locfileid: "70154833"
  La selezione di questa opzione equivale a specificare l'opzione WITH NO_TRUNCATE, NORECOVERY in un'istruzione [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Unità nastro  
- Le opzioni del pannello **Unità nastro** controllano la gestione dei nastri durante l'operazione di backup. Queste opzioni sono attivate solo se l'opzione **Nastro** è stata selezionata nel campo **Destinazione** disponibile nella pagina [Generale](../../integration-services/general-page-of-integration-services-designers-options.md) della finestra di dialogo **Backup database**.  
+ Le opzioni del pannello **Unità nastro** controllano la gestione dei nastri durante l'operazione di backup. Queste opzioni sono attivate solo se l'opzione **Nastro** è stata selezionata nel campo **Destinazione** disponibile nella pagina [Generale](../../integration-services/general-page-of-integration-services-designers-options.md) della finestra di dialogo **Backup database** .  
   
 > [!NOTE]  
 >  Per informazioni sull'uso dei dispositivi nastro, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
@@ -113,8 +113,8 @@ ms.locfileid: "70154833"
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

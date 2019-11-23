@@ -28,7 +28,7 @@ ms.locfileid: "70154507"
   
  Uno schema di servizio dati di riferimento può contenere una colonna obbligatoria di cui è necessario eseguire il mapping con il dominio appropriato qualora si scegliesse di utilizzare il servizio dati di riferimento. La colonna obbligatoria in uno schema dati di riferimento viene identificata con "(M)" per il nome della colonna. Ad esempio, **AddressLine** è la colonna di schema obbligatoria in **Melissa Data - Address Data** e **CompanyName** è la colonna di schema obbligatoria in **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- In questo argomento si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP** In un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data - Controllo indirizzo**, quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
+ In questo argomento, si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP**in un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data - Controllo indirizzo**, quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70154507"
   
 ###  <a name="Security"></a> Sicurezza  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorizzazioni  
  Per eseguire il mapping dei domini ai dati di riferimento, è necessario disporre del ruolo dqs_kb_editor nel database DQS_MAIN.  
   
 ##  <a name="Map"></a> Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
@@ -48,9 +48,9 @@ ms.locfileid: "70154507"
   
 3.  Nella schermata **Nuova Knowledge Base** digitare un nome per la nuova Knowledge Base, fare clic sull'attività **Gestione dominio** , quindi fare clic su **Crea**.  
   
-4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato** e **CAP**.  
+4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato**e **CAP**.  
   
-5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Fare clic su **OK**.  
+5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Scegliere **OK**.  
   
 6.  Nel riquadro **Dominio** sul lato sinistro selezionare il dominio composito facendo clic su **Verifica indirizzo**, quindi fare clic sulla scheda **Dati di riferimento** sul lato destro.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "70154507"
          ![Finestra di dialogo Catalogo dei provider di dati di riferimento online](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Finestra di dialogo Catalogo dei provider di dati di riferimento online")  
   
         > [!NOTE]  
-        >  -   Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** il nodo DataMarket **Data Quality Services** Mostra tutti i provider del servizio dati di riferimento sottoscritti in Azure Marketplace. Se in DQS sono stati configurati provider del servizio dati di riferimento di terze parti online, essi verranno visualizzati in un altro nodo denominato **Provider online diretti di terzi** (non disponibile ora poiché in DQS non è stato configurato alcun provider del servizio dati di riferimento di terze parti online).  
+        >  -   Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** il nodo **DataMarket Data Quality Services** Mostra tutti i provider del servizio dati di riferimento sottoscritti in Azure Marketplace. Se in DQS sono stati configurati provider del servizio dati di riferimento di terze parti online, essi verranno visualizzati in un altro nodo denominato **Provider online diretti di terzi** (non disponibile ora poiché in DQS non è stato configurato alcun provider del servizio dati di riferimento di terze parti online).  
   
-9. Si tornerà alla scheda **Dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
+9. Si tornerà alla scheda **dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
   
     -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno effettuate automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
   

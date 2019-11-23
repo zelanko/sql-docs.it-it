@@ -36,7 +36,7 @@ ms.locfileid: "73780667"
   
 3.  Fare clic sull'origine dati per cui registrare le prestazioni.  
   
-4.  Fare clic su **Configura**.  
+4.  Fare clic su **configurare**.  
   
 5.  Nella procedura guidata Microsoft SQL Server configurazione DSN, passare alla pagina contenente **le statistiche del driver ODBC di log nel file di log**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73780667"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Per registrare i dati relativi alle prestazioni del driver a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. Esempio:  
+1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. Ad esempio:  
   
     ```  
     "C:\\Odbcperf.log"  

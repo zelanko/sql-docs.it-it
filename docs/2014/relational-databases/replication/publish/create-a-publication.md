@@ -115,14 +115,14 @@ ms.locfileid: "73882328"
     > [!NOTE]  
     >  I nomi delle pubblicazioni non possono includere i caratteri seguenti:  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
-4.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 3 per **\@publication** e le credenziali di Windows usate per l'agente snapshot per **\@snapshot_job_name** e **\@password**. Se l'agente userà l'autenticazione di SQL Server per la connessione al server di pubblicazione, è anche necessario specificare il valore **0** per **\@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **\@publisher_login** e **\@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
+4.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 3 per **\@publication** e le credenziali di Windows usate per l'agente di snapshot per **\@snapshot_job_name** e **\@password**. Se l'agente userà l'autenticazione di SQL Server per la connessione al server di pubblicazione, è anche necessario specificare il valore **0** per **\@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **\@publisher_login** e **\@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
   
     > [!IMPORTANT]  
     >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-5.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+5.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
 6.  Avviare il processo dell'agente snapshot per generare lo snapshot iniziale per la pubblicazione. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -135,14 +135,14 @@ ms.locfileid: "73882328"
     > [!NOTE]  
     >  I nomi delle pubblicazioni non possono includere i caratteri seguenti:  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 2 per **\@publication** e le credenziali di Windows usate per l'agente di snapshot per **\@snapshot_job_name** e **\@password**. Se l'agente userà l'autenticazione di SQL Server per la connessione al server di pubblicazione, è anche necessario specificare il valore **0** per **\@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **\@publisher_login** e **\@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
   
     > [!IMPORTANT]  
     >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-4.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+4.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
 5.  Avviare il processo dell'agente snapshot per generare lo snapshot iniziale per la pubblicazione. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -254,7 +254,7 @@ ms.locfileid: "73882328"
  [Concetti di base relativi a RMO (Replication Management Objects)](../concepts/replication-management-objects-concepts.md)   
  [Definire un articolo](define-an-article.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md)   
- [Configura distribuzione](../configure-distribution.md)   
+ [Configurare la distribuzione](../configure-distribution.md)   
  [Proteggere il database di distribuzione](../security/secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](../security/secure-the-publisher.md)  
   

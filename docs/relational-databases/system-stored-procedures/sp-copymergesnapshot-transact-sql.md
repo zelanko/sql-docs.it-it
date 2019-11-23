@@ -25,9 +25,9 @@ ms.locfileid: "72381705"
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copia la cartella snapshot della pubblicazione specificata nella cartella elencata nel **\@destination_folder**. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Copia la cartella snapshot della pubblicazione specificata nella cartella elencata nel destination_folder di **\@** . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +44,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Remarks  
- **sp_copymergesnapshot** viene utilizzata per la replica di tipo merge. I Sottoscrittori che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0 e versioni precedenti non possono utilizzare la posizione snapshot alternativa.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_copymergesnapshot** viene utilizzata nella replica di tipo merge. I Sottoscrittori che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0 e versioni precedenti non possono utilizzare la posizione snapshot alternativa.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_copymergesnapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  

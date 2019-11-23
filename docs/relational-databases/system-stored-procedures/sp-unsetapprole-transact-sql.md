@@ -39,7 +39,7 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **\@cookie**  
+ **cookie \@**  
  Specifica il cookie creato al momento dell'attivazione del ruolo applicazione. Il cookie viene creato da [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  
@@ -48,18 +48,18 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole**, il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o esegue **sp_unsetapprole**.  
+## <a name="remarks"></a>Osservazioni  
+ Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole**, il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o non esegue **sp_unsetapprole**.  
   
  Per una panoramica dei ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza a **public** e la conoscenza del cookie salvato quando è stato attivato il ruolo applicazione.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>Attivazione di un ruolo applicazione con un cookie e ripristino del contesto precedente  
- Nell'esempio seguente viene attivato il ruolo applicazione `Sales11` con la password `fdsd896#gfdbfdkjgh700mM` e viene creato un cookie. Nell'esempio viene restituito il nome dell'utente corrente, quindi viene ripristinato il contesto originale tramite l'esecuzione di **sp_unsetapprole**.  
+ Nell'esempio seguente viene attivato il ruolo applicazione `Sales11` con la password `fdsd896#gfdbfdkjgh700mM` e viene creato un cookie. Nell'esempio viene restituito il nome dell'utente corrente, quindi viene ripristinato il contesto originale eseguendo **sp_unsetapprole**.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

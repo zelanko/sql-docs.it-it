@@ -37,19 +37,19 @@ ms.locfileid: "72313688"
 |**status**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = creazione destinazione non riuscita<br /><br /> 4 = chiusura in corso|  
 |**status_desc**|**nvarchar(256)**|Stringa che visualizza lo stato del controllo del server:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC dell'ultima modifica dello stato per il controllo.|  
-|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato alla vista del catalogo **sys. dm _xe_sessions. Address** .|  
+|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato alla vista del catalogo **sys. dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Percorso e nome file completo della destinazione del file di controllo attualmente utilizzato. Definito solo per i controlli dei file.|  
 |**audit_file_size**|**bigint**|Dimensioni approssimate in byte del file di controllo. Definito solo per i controlli dei file.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le entità devono disporre dell'autorizzazione **View Server state** e **SELECT** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

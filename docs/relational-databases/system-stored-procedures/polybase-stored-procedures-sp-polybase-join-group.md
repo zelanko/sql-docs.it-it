@@ -41,22 +41,22 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
   
 ## <a name="arguments"></a>Argomenti  
  *\@head_node_address* = n'*head_node_address*'  
- Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. *\@head_node_address è di* tipo nvarchar (255).  
+ Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. *\@head_node_address* è di tipo nvarchar (255).  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
  Porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement servizio. *\@dms_control_channel_port* è un __int16 senza segno. Il valore predefinito è **16450**.  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. *\@head_node_sql_server_instance_name è di* tipo nvarchar (16).  
+ Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. *\@head_node_sql_server_instance_name* è di tipo nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
-## <a name="remarks"></a>Note  
- Dopo aver eseguito il stored procedure, arrestare il motore di base e riavviare il servizio PolyBase Data Movement nel computer. Per verificare, eseguire la DMV seguente sul nodo head: **sys. dm _exec_compute_nodes**.  
+## <a name="remarks"></a>Osservazioni  
+ Dopo aver eseguito il stored procedure, arrestare il motore di base e riavviare il servizio PolyBase Data Movement nel computer. Per verificare, eseguire la DMV seguente sul nodo head: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio viene unito il computer corrente come nodo di calcolo a un gruppo di base.  Il nome del nodo Head è **HST01** e il nome dell'istanza SQL Server nel nodo Head è **MSSQLSERVER**.  
@@ -66,7 +66,7 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

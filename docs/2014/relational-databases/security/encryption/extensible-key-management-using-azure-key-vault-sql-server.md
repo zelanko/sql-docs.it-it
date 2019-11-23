@@ -69,7 +69,7 @@ ms.locfileid: "72798062"
     >  L'importazione della chiave asimmetrica è consigliata per gli scenari di produzione in quanto consente all'amministratore di depositare la chiave in un sistema di deposito delle chiavi. Se la chiave asimmetrica viene creata nell'insieme di credenziali, non potrà essere depositata perché la chiave privata non può mai lasciare l'insieme di credenziali. È consigliabile depositare le chiavi usate per proteggere i dati critici. Se si perde una chiave asimmetrica, non sarà più possibile recuperare i dati.  
   
     > [!IMPORTANT]  
-    >  L'insieme di credenziali delle chiavi supporta più versioni della stessa chiave denominata. È consigliabile non eseguire il controllo delle versioni né il rollback delle chiavi che vengono usate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. Se l'amministratore vuole eseguire il rollback della chiave usata per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sarà necessario creare una nuova chiave con un nome diverso nell'insieme di credenziali e usarla per crittografare la chiave DEK.  
+    >  L'insieme di credenziali delle chiavi supporta più versioni della stessa chiave denominata. È consigliabile non eseguire il controllo delle versioni né il rollback delle chiavi che vengono usate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. Se l'amministratore vuole eseguire il rollback della chiave usata per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], sarà necessario creare una nuova chiave con un nome diverso nell'insieme di credenziali e usarla per crittografare la chiave DEK.  
   
      Per altre informazioni su come importare una chiave nell'insieme di credenziali delle chiavi o creare una chiave nell'insieme di credenziali delle chiavi (non consigliato per un ambiente di produzione), vedere la sezione **Aggiungere una chiave o un segreto nell'insieme di credenziali delle chiavi** in [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72798062"
   
     -   **Entità servizio** per il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** e **SECRET_DBEngine**.  
   
-4.  **Concedere le autorizzazioni per le entità servizio per accedere al Key Vault:** Entrambe le entità **CLIENTID_sysadmin_login** e **CLIENTID_DBEngineService** richiedono le autorizzazioni **Get**, **List**, **wrapKey**e **unwrapKey** nell'insieme di credenziali delle chiavi. Se si intende creare chiavi tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario concedere anche l'autorizzazione **create** nell'insieme di credenziali delle chiavi.  
+4.  **Concedere le autorizzazioni per le entità servizio per accedere al Key Vault:** Per le entità **CLIENTID_sysadmin_login** e **CLIENTID_DBEngineService** sono necessarie le **autorizzazioni Get**, **List**, **wrapKey**e **unwrapKey** nell'insieme di credenziali delle chiavi. Se si intende creare chiavi tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario concedere anche l'autorizzazione **create** nell'insieme di credenziali delle chiavi.  
   
     > [!IMPORTANT]  
     >  Gli utenti devono avere almeno le operazioni **wrapKey** e **unwrapKey** per l'insieme di credenziali delle chiavi.  
@@ -115,7 +115,7 @@ ms.locfileid: "72798062"
   
 ##  <a name="Step3"></a>Passaggio 3: configurare SQL Server per l'uso di un provider EKM per il Key Vault  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per completare l'intero processo è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** . Le azioni specifiche richiedono le autorizzazioni seguenti:  
   
 -   Per creare un provider di crittografia è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** .  
@@ -159,7 +159,7 @@ ms.locfileid: "72798062"
 2.  Configurare le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per un account di accesso di amministratore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per usare l'insieme di credenziali delle chiavi in modo da configurare e gestire gli scenari di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede l' *ID client\<* (senza trattini) e *\<Secret >* essere passati insieme senza uno spazio tra di essi.  
+    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede l' *ID client\<>* (senza trattini) e *\<Secret >* essere passati insieme senza uno spazio tra di essi.  
   
      Nell'esempio seguente l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene immesso con tutti i trattini rimossi come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **Segreto** è rappresentato dalla stringa *SECRET_sysadmin_login*.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "72798062"
 > [!TIP]  
 >  Gli utenti che ricevono l'errore **Non è stato possibile esportare la chiave pubblica dal provider. Codice di errore del provider: 2053.** devono verificare le autorizzazioni **get**, **list**, **wrapKey**e **unwrapKey** nell'insieme di credenziali della chiave.  
   
- Per ulteriori informazioni, vedere quanto segue:  
+ Per altre informazioni, vedere quanto segue:  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
@@ -224,7 +224,7 @@ ms.locfileid: "72798062"
 1.  Creare le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] da usare per l'accesso a EKM con l'insieme di credenziali delle chiavi durante il caricamento del database.  
   
     > [!IMPORTANT]  
-    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede l' *ID client\<* (senza trattini) e *\<Secret >* essere passati insieme senza uno spazio tra di essi.  
+    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede l' *ID client\<>* (senza trattini) e *\<Secret >* essere passati insieme senza uno spazio tra di essi.  
   
      Nell'esempio seguente l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene immesso con tutti i trattini rimossi come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **Segreto** è rappresentato dalla stringa *SECRET_DBEngine*.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "72798062"
     GO  
     ```  
   
-     Per ulteriori informazioni, vedere quanto segue:  
+     Per altre informazioni, vedere quanto segue:  
   
     -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   

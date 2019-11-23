@@ -41,7 +41,7 @@ ms.locfileid: "73758326"
   
  Benché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizzi componenti di Windows DAC (applicazione livello dati), non dipende in modo esplicito da una determinata versione di Windows DAC. È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la versione di Windows DAC (applicazione livello dati) installata con qualsiasi sistema operativo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client.md)  
  Vengono elencate le nuove importanti funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

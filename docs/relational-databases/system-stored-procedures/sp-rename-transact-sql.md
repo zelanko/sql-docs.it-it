@@ -89,7 +89,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-renaming-a-table"></a>A. Ridenominazione di una tabella  
+### <a name="a-renaming-a-table"></a>R. Ridenominazione di una tabella  
  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` .  
   
 ```  

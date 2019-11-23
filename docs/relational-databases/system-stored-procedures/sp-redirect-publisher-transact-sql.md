@@ -50,15 +50,15 @@ sp_redirect_publisher
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_redirect_publisher** viene utilizzato per consentire il reindirizzamento di un server di pubblicazione della replica al database primario corrente di un gruppo di disponibilità always on associando la coppia server di pubblicazione/database al listener di un gruppo di disponibilità. Eseguire **sp_redirect_publisher** dopo che il listener del gruppo di disponibilità è stato configurato per il gruppo di disponibilità che contiene il database pubblicato.  
   
- Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da un gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il parametro *\@redirected_publisher* per rimuovere Reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento del server di pubblicazione quando, vedere [gestione di un database &#40;di pubblicazione&#41;AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da un gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il *\@parametro redirected_publisher* per rimuovere il reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento del server di pubblicazione quando, vedere [gestione di un database &#40;di pubblicazione&#41;AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
- Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** per il database di distribuzione oppure un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -32,7 +32,7 @@ ms.locfileid: "72797668"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per preparare un database secondario tramite:**  
   
@@ -47,20 +47,20 @@ ms.locfileid: "72797668"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica secondaria.  
   
--   È necessario avere già creato un join della replica secondaria al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+-   È necessario avere già creato un join della replica secondaria al gruppo di disponibilità. Per altre informazioni, vedere [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 -   Il database secondario deve essere stato preparato recentemente. Per altre informazioni, vedere [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per creare un join di un database secondario a un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica secondaria ed espandere l'albero del server.  
@@ -73,7 +73,7 @@ ms.locfileid: "72797668"
   
 5.  In questo modo verrà aperta la finestra di dialogo **Creare un join dei database al gruppo di disponibilità** . Verificare il nome del gruppo di disponibilità, visualizzato sulla barra del titolo, e il nome o i nomi dei database visualizzati nella griglia, quindi fare clic su **OK**o su **Annulla**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per creare un join di un database secondario a un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica secondaria.  
@@ -84,7 +84,7 @@ ms.locfileid: "72797668"
   
      dove *database_name* è il nome del database di cui creare il join e *group_name* è il nome del gruppo di disponibilità.  
   
-     Nell'esempio seguente viene creato un join del database secondario, `Db1`, alla replica secondaria locale del gruppo di disponibilità `MyAG` .  
+     Nell'esempio seguente viene creato un join del database secondario, `Db1`, alla replica secondaria locale del gruppo di disponibilità `MyAG`.  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -93,7 +93,7 @@ ms.locfileid: "72797668"
     > [!NOTE]  
     >  Per un esempio di questa istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] impiegata in un contesto, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per creare un join di un database secondario a un gruppo di disponibilità**  
   
 1.  Impostare la directory (`cd`) sull'istanza del server in cui viene ospitata la replica secondaria.  
@@ -121,5 +121,5 @@ ms.locfileid: "72797668"
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Risolvere i problemi &#40;di&#41;configurazione gruppi di disponibilità AlwaysOn SQL Server eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

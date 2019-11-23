@@ -87,7 +87,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Creazione di un'istanza Geometry con un'istanza CircularString vuota  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>R. Creazione di un'istanza Geometry con un'istanza CircularString vuota  
  In questo esempio viene illustrato come creare un'istanza `CircularString` vuota:  
   
 ```sql  
@@ -171,7 +171,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [STNumPoints &#40;geometry Data Type&#41; (STNumPoints &#40;tipo di dati geometry&#41;)](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
  [STIsRing &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
  [STIsClosed &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [STPointOnSurface &#40;tipodi dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [LineString](linestring.md)  
   
   

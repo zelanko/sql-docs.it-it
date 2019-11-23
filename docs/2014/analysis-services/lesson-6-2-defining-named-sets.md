@@ -39,7 +39,7 @@ ms.locfileid: "69493889"
 4.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **prodotto**, espandere **categoria**, espandere `Members`, quindi espandere **tutti i prodotti**.  
   
     > [!NOTE]  
-    >  Se non è possibile visualizzare i metadati nel riquadro **Strumenti di calcolo** , fare clic su **Riconnetti** sulla barra degli strumenti. Se questo sistema non funziona, può essere necessario elaborare il cubo o avviare l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+    >  Se non è possibile visualizzare i metadati nel riquadro **Strumenti di calcolo** , fare clic su **Riconnetti** nella barra degli strumenti. Se questo sistema non funziona, può essere necessario elaborare il cubo o avviare l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 5.  Trascinare **Bikes** nella casella **Espressione** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69493889"
   
 9. Nella Finestra Proprietà impostare la proprietà `DiscretizationMethod` su **automatico**e quindi modificare la proprietà `DiscretizationBucketCount` in `5`. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
+10. Nel menu **Compila** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
   
 11. Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic su **Riconnetti** nella barra degli strumenti della scheda **Calcoli** .  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493889"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>Esplorazione del cubo utilizzando i nuovi set denominati  
   
-1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
+1.  Nel menu **Compila** di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
   
 2.  Al termine delle operazioni di distribuzione, fare clic sulla scheda **Esplorazione** e fare clic su **Riconnetti**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "69493889"
  [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+ [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Creare set denominati](multidimensional-models/create-named-sets.md)  
   
   

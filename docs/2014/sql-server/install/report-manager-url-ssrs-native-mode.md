@@ -38,12 +38,12 @@ ms.locfileid: "71952415"
  **URL**  
  Consente di visualizzare l'URL definito per l'istanza corrente di Gestione report.  
   
- **Advanced**  
+ **Avanzate**  
  Consente di aggiungere un altro URL per l'istanza corrente di Gestione report.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL nei file &#40;di configurazione SSRS&#41;Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [URL nei file &#40;di configurazione SSRS&#41; Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

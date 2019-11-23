@@ -91,11 +91,11 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Confronto tra Invoke-Sqlcmd e l'utilità sqlcmd  
  Il cmdlet**Invoke-Sqlcmd** può essere usato per eseguire molti degli script eseguibili tramite l'utilità **sqlcmd** . Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd** . Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
   
- Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
+ Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
   
  Il cmdlet**Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
   
- Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio  
+ Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio:  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  In un ambiente PowerShell non sono necessari tutti i parametri **sqlcmd** . Windows PowerShell, ad esempio, formatta tutto l'output dei cmdlet, pertanto i parametri **sqlcmd** che specificano le opzioni di formattazione non vengono implementati in **Invoke-Sqlcmd**. Nella tabella seguente viene specificata la relazione tra i parametri di **Invoke-Sqlcmd** e le opzioni **sqlcmd** :  
   
-|Description|Opzione sqlcmd|Parametro Invoke-Sqlcmd|  
+|Descrizione|Opzione sqlcmd|Parametro Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nome server e istanza.|-S|-ServerInstance|  
 |Database iniziale da utilizzare.|-d|-Database|  
 |Esegue la query specificata ed esce.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
-|Definizione della variabile.|-V|-Variable|  
-|Intervallo di timeout della query.|-T|-QueryTimeout|  
+|Definizione della variabile.|-v|-Variable|  
+|Intervallo di timeout della query.|-t|-QueryTimeout|  
 |Arresta l'esecuzione in caso di errore|-b|-AbortOnError|  
 |Connessione amministrativa dedicata.|-a|-DedicatedAdministratorConnection|  
-|Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-X|-DisableCommands|  
-|Disabilita la sostituzione delle variabili.|-X|-DisableVariables|  
+|Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-x|-DisableCommands|  
+|Disabilita la sostituzione delle variabili.|-x|-DisableVariables|  
 |Livello minimo di gravità da segnalare.|-v|-SeverityLevel|  
-|Livello minimo di errore da segnalare.|-M|-ErrorLevel|  
+|Livello minimo di errore da segnalare.|-m|-ErrorLevel|  
 |Intervallo di timeout di accesso.|-l|-ConnectionTimeout|  
-|Nome host.|-H|-HostName|  
+|Nome host.|-h|-HostName|  
 |Consente di modificare la password e di uscire.|-Z|-NewPassword|  
 |File di input che contiene una query.|-i|-InputFile|  
 |Lunghezza massima dell'output di caratteri.|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Visualizza gli errori|Nessun parametro|-OutputSqlErrors|  
 |Esegue l'output dei messaggi in stderr.|-r|Nessun parametro|  
 |Utilizza le impostazioni locali del client|-r|Nessun parametro|  
-|Esegue la query specificata e rimane in esecuzione.|-Q|Nessun parametro|  
+|Esegue la query specificata e rimane in esecuzione.|-q|Nessun parametro|  
 |Tabella codici da utilizzare per i dati di output.|-f|Nessun parametro|  
 |Modifica una password e rimane in esecuzione|-Z|Nessun parametro|  
-|Dimensioni pacchetto|-A|Nessun parametro|  
-|Separatore delle colonne|-S|Nessun parametro|  
+|Dimensioni pacchetto|-a|Nessun parametro|  
+|Separatore delle colonne|-s|Nessun parametro|  
 |Controlla le intestazioni di output|-H|Nessun parametro|  
 |Specifica i caratteri di controllo|-k|Nessun parametro|  
 |Larghezza visualizzazione lunghezza fissa|-y|Nessun parametro|  
-|Larghezza visualizzazione lunghezza variabile|-Y|Nessun parametro|  
+|Larghezza visualizzazione lunghezza variabile|-y|Nessun parametro|  
 |Echo input|-E|Nessun parametro|  
-|Abilita gli identificatori delimitati|-i|Nessun parametro|  
-|Rimuove gli spazi finali|-w|Nessun parametro|  
-|Elenca le istanze|-l|Nessun parametro|  
+|Abilita gli identificatori delimitati|-I|Nessun parametro|  
+|Rimuove gli spazi finali|-W|Nessun parametro|  
+|Elenca le istanze|-L|Nessun parametro|  
 |Imposta il formato dell'output come Unicode|-U|Nessun parametro|  
-|Stampa statistiche|-P|Nessun parametro|  
+|Stampa statistiche|-p|Nessun parametro|  
 |Fine comando|-c|Nessun parametro|  
 |Stabilisce la connessione utilizzando l'autenticazione di Windows|-E|Nessun parametro|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
+ [Utilità sqlcmd](../tools/sqlcmd-utility.md)   
  [Utilizzo dell'utilità sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

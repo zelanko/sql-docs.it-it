@@ -42,13 +42,13 @@ ms.locfileid: "71952175"
 > [!IMPORTANT]  
 >  L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare il collegamento nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare il collegamento nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
  **Backup**  
  Consente di copiare la chiave simmetrica in un file specificato. La chiave simmetrica non viene mai archiviata in testo non crittografato. Per la protezione del file, è necessario digitare una password.  
   
- **Restore**  
+ **Ripristina**  
  Consente di applicare una copia della chiave simmetrica salvata in precedenza al database del server di report. Per sbloccare il file, è necessario specificare la password.  
   
  La copia della chiave simmetrica eseguita in precedenza per l'istanza del server di report a cui si è attualmente connessi viene sovrascritta dalla versione ripristinata. Dopo avere ripristinato la chiave simmetrica, è necessario inizializzare tutti i server di report che utilizzano il database del server di report. Per ulteriori informazioni sull'inizializzazione di server di report, vedere [Initialize &#40;a report&#41;server SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "71952175"
   
  Si noti che la rigenerazione della chiave simmetrica può essere un processo con esecuzione prolungata, se le origini dei dati e le sottoscrizioni sono numerose.  
   
- **Elimina**  
+ **Delete**  
  Consente di eliminare la chiave simmetrica e tutto il contenuto crittografato, incluse le stringhe di connessione e le credenziali archiviate. La chiave simmetrica deve essere eliminata solo se non è possibile ripristinarla.  
   
  Dopo aver eliminato la chiave simmetrica, è necessario immettere di nuovo le stringhe di connessione e le credenziali archiviate nei report, nonché le origini dei dati per cui questi valori non sono più validi. È inoltre necessario aggiornare tutte le sottoscrizioni che utilizzano estensioni per il recapito in cui sono archiviati dati crittografati, incluse l'estensione per il recapito di condivisione dei file e l'estensione per il recapito di terze parti che utilizzano valori crittografati.  
@@ -68,7 +68,7 @@ ms.locfileid: "71952175"
  Non esiste alcun modo per aggiornare automaticamente queste informazioni. Ogni report, sottoscrizione e origine dei dati condivisa che fa uso di credenziali archiviate e stringhe di connessione deve essere aggiornato uno alla volta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Configuration Manager argomenti &#40;della Guida F1 @no__t modalità&#41;nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)-3  
+ [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

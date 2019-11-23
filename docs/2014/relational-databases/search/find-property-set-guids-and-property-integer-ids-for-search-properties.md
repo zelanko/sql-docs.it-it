@@ -42,7 +42,7 @@ ms.locfileid: "73637892"
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autori|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autore o autori di un elemento specificato.|  
 |Tag|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  
-|Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo di file percepito in base al relativo tipo canonico.|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo di file percepito in base al relativo tipo canonico.|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titolo dell'elemento. Ad esempio, il titolo di un documento, l'oggetto di un messaggio, la didascalia di una foto o il nome di un brano musicale.|  
   
  Per favorire la coerenza fra formati di file, Microsoft ha identificato subset di proprietà del documento ad alta priorità e di utilizzo frequente per diverse categorie di documenti, quali comunicazioni, contatti, documenti, file musicali, immagini e video. Per altre informazioni sulle principali proprietà classificate per ogni categoria, vedere la pagina [System-Defined Properties for Custom File Formats](https://go.microsoft.com/fwlink/?LinkId=144336) (Proprietà definite dal sistema per formati di file personalizzati) nella documentazione di Windows Search.  

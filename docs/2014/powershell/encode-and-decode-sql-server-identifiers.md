@@ -17,10 +17,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797765"
 ---
-# <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SLQ Server
+# <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SQL Server
   Gli identificatori delimitati di SQL Server possono contenere caratteri non supportati nei percorsi di Windows PowerShell. È possibile specificare questi caratteri codificando i valori esadecimali.  
   
-1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
 2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [Decodifica di un identificatore](#DecodeIdent)  
   

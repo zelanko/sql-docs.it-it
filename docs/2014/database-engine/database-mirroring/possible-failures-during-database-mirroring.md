@@ -79,7 +79,7 @@ ms.locfileid: "70874507"
   
 -   Errori di rete, ad esempio timeout di collegamenti TCP, pacchetti ignorati, danneggiati o in ordine errato.  
   
--   Un sistema operativo, un server o un database che non risponde.  
+-   Sistema operativo, server o database che non risponde.  
   
 -   Timeout di un server Windows.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "70874507"
   
  Per mantenere aperta una connessione, è necessario che un'istanza del server riceva un ping su tale connessione entro il periodo definito dalla somma del valore del timeout e del tempo necessario per l'invio del ping successivo. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Quando riceve un ping, un'istanza del server reimposta il contatore del timeout su tale connessione.  
   
- Se durante il periodo di timeout non vengono ricevuti ping in una connessione, l'istanza del server considera scaduta la connessione. L'istanza del server chiude la connessione scaduta e gestisce l'evento di timeout a seconda dello stato e della modalità operativa della sessione.  
+ Se durante il periodo di timeout non vengono ricevuti ping in una connessione, un'istanza del server considera scaduta la connessione. L'istanza del server chiude la connessione scaduta e gestisce l'evento di timeout a seconda dello stato e della modalità operativa della sessione.  
   
  Anche se l'altro server funziona correttamente, un timeout viene considerato un errore. Se il valore di timeout per una sessione è troppo breve rispetto alla normale velocità di risposta di uno dei due partner, possono verificarsi falsi errori. Questo tipo di errore si verifica quando un'istanza del server riesce a contattarne un'altra il cui tempo di risposta è troppo breve per consentire la ricezione dei ping prima della scadenza del periodo di timeout.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "70874507"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

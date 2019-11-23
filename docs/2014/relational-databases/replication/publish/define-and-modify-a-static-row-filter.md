@@ -107,11 +107,11 @@ ms.locfileid: "73882301"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per definire un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
-1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Specificare il nome dell'articolo per **\@article**, il nome della pubblicazione per **\@publication**, il nome del filtro per **\@filter_name** e la clausola di filtro per **\@filter_clause** (senza includere `WHERE`).  
   
-3.  Se non è ancora stato definito un filtro di colonna, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article** e la clausola di filtro specificata nel passaggio 2 per **\@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
+3.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article** e la clausola di filtro specificata nel passaggio 2 per **\@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per modificare un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
@@ -133,9 +133,9 @@ ms.locfileid: "73882301"
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Per definire un filtro di riga statico per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare la clausola di filtro per **\@subset_filterclause** (senza includere `WHERE`). Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare la clausola di filtro per **\@subset_filterclause** (senza includere `WHERE`). Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
-2.  Se non è ancora stato definito un filtro di colonna, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md).  
+2.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Per modificare un filtro di riga statico per una pubblicazione di tipo merge  
   
@@ -155,7 +155,7 @@ ms.locfileid: "73882301"
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definire e modificare un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md)   
  [Filtrare i dati pubblicati](filter-published-data.md)   
  [Filtrare i dati pubblicati per la replica di tipo merge](../merge/filter-published-data-for-merge-replication.md)  

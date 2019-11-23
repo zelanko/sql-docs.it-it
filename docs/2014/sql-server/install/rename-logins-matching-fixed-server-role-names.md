@@ -60,7 +60,7 @@ ms.locfileid: "72278210"
   
 2.  Eliminare gli account di accesso.  
   
-3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro **\@sid** per ogni account di accesso corrispondente.  
+3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro **\@SID** per ogni account di accesso corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

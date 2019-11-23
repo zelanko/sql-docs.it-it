@@ -25,7 +25,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882312"
 ---
-# <a name="define-an-article"></a>Definizione di un articolo
+# <a name="define-an-article"></a>Define an Article
   In questo argomento viene descritto come definire un articolo in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  **Contenuto dell'argomento**  
@@ -105,9 +105,9 @@ ms.locfileid: "73882312"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@pubblicazione**, il nome dell'articolo per **\@articolo**, l'oggetto di database da pubblicare per **\@source_object**e tutti gli altri parametri facoltativi. Utilizzare **\@source_owner** per specificare la proprietà dello schema dell'oggetto, se non **dbo**. Se l'articolo non è un articolo di tabella basato su log, specificare il tipo di articolo per **\@tipo**. Per ulteriori informazioni, vedere [impostazione dei tipi &#40;di articolo programmazione&#41;Transact-SQL della replica](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  Per filtrare in senso orizzontale le righe di una tabella o visualizzare un articolo, utilizzare [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) per definire la clausola di filtro. Per altre informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Per filtrare in senso orizzontale le righe di una tabella o visualizzare un articolo, utilizzare [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) per definire la clausola di filtro. Per altre informazioni, vedere [Definizione e modifica di un filtro di riga statico](define-and-modify-a-static-row-filter.md).  
   
-3.  Per filtrare in senso verticale le colonne di una tabella o visualizzare un articolo, utilizzare [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Per altre informazioni, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md).  
+3.  Per filtrare in senso verticale le colonne di una tabella o visualizzare un articolo, utilizzare [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 4.  Eseguire [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) se l'articolo è filtrato.  
   
@@ -120,11 +120,11 @@ ms.locfileid: "73882312"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Per definire un articolo per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione per **\@pubblicazione**, un nome per il nome dell'articolo per **\@articolo**e l'oggetto da pubblicare per **\@source_object**. Per filtrare orizzontalmente le righe della tabella, specificare un valore per **\@subset_filterclause**. Per ulteriori informazioni, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) e [Definizione e modifica di un filtro di riga statico](define-and-modify-a-static-row-filter.md). Se l'articolo non è un articolo di tabella, specificare il tipo di articolo per **\@tipo**. Per altre informazioni, vedere [Specificare i tipi di articolo &#40;programmazione Transact-SQL della replica&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione per **\@pubblicazione**, un nome per il nome dell'articolo per **\@articolo**e l'oggetto da pubblicare per **\@source_object**. Per filtrare orizzontalmente le righe della tabella, specificare un valore per **\@subset_filterclause**. Per ulteriori informazioni, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) e [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md). Se l'articolo non è un articolo di tabella, specificare il tipo di articolo per **\@tipo**. Per altre informazioni, vedere [Specificare i tipi di articolo &#40;programmazione Transact-SQL della replica&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) per definire un filtro di join tra due articoli. Per altre informazioni, vedere [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
-3.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) per filtrare le colonne della tabella. Per altre informazioni, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md).  
+3.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) per filtrare le colonne della tabella. Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio si definisce un articolo basato sulla tabella `Product` per una pubblicazione transazionale, in cui l'articolo è filtrato in senso orizzontale e verticale.  

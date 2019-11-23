@@ -24,17 +24,17 @@ ms.locfileid: "73729580"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una gerarchia derivata quando si desidera una gerarchia basata su livelli tramite cui viene assicurato il posizionamento dei membri al corretto livello. Le gerarchie derivate sono basate sulle relazioni tra attributi basati su dominio che esistono in un modello.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare una gerarchia derivata quando si desidera una gerarchia basata su livelli tramite cui viene assicurato il posizionamento dei membri al corretto livello. Le gerarchie derivate sono basate sulle relazioni tra attributi basati su dominio che esistono in un modello.  
   
 > [!NOTE]  
 >  Se non esiste un valore di attributo basato su dominio per un determinato membro, tale membro non verrà incluso nella gerarchia derivata. Vedere [Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md) per richiedere un valore di attributo basato su dominio per tutti i membri.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-derived-hierarchy"></a>Per creare una gerarchia derivata  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73729580"
   
 2.  Scegliere **Gestisci** dalla barra dei menu e fare clic su **Gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
+3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
   
 4.  Scegliere **Aggiungi**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73729580"
   
 8.  Continuare a trascinare entità o gerarchie fino a che la gerarchia non è completa.  
   
-9. Fare clic **Indietro**.  
+9. Fare clic su **Indietro**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   

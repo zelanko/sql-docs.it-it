@@ -41,32 +41,32 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_name = ] 'profile\_name'`Nome del nuovo profilo. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @profile_name = ] 'profile\_name'` il nome del nuovo profilo. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
  
    > [!NOTE]
    > Il nome del profilo che usa Azure SQL Istanza gestita SQL Agent deve essere chiamato **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Descrizione facoltativa del nuovo profilo. *Description* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
+`[ @description = ] 'description'` la descrizione facoltativa del nuovo profilo. *Description* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Restituisce l'ID del nuovo profilo. *new_profile_id* è di **tipo int**e il valore predefinito è null.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` restituisce l'ID per il nuovo profilo. *new_profile_id* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un profilo di Posta elettronica database include qualsiasi numero di account di Posta elettronica database. Le stored procedure di Posta elettronica database possono far riferimento a un profilo attraverso il nome del profilo o l'ID del profilo generato da questa procedura. Per ulteriori informazioni sull'aggiunta di un account a un profilo, [vedere &#40;SYSMAIL_ADD_PROFILEACCOUNT_SP Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
- Il nome e la descrizione del profilo possono essere modificati con il stored procedure **sysmail_update_profile_sp**, mentre l'ID del profilo rimane costante per la durata del profilo.  
+ Il nome e la descrizione del profilo possono essere modificati con il stored procedure **sysmail_update_profile_sp**, mentre l'ID del profilo rimane costante per tutta la durata del profilo.  
   
  Il nome del profilo deve essere univoco per Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In caso contrario, la stored procedure restituisce un errore.  
   
  Il stored procedure **sysmail_add_profile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Creazione di un nuovo profilo**  
+ **A. creazione di un nuovo profilo**  
   
  Nell'esempio seguente viene creato un nuovo profilo di Posta elettronica database denominato `AdventureWorks Administrator`.  
   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. Creazione di un nuovo profilo, salvataggio dell'ID del profilo in una variabile**  
+ **B. creazione di un nuovo profilo e salvataggio dell'ID del profilo in una variabile**  
   
  Nell'esempio seguente viene creato un nuovo profilo di Posta elettronica database denominato `AdventureWorks Administrator`. Nell'esempio il numero di ID del profilo viene archiviato nella variabile `@profileId` e viene restituito un set di risultati contenente il numero di ID del nuovo profilo.  
   
@@ -93,8 +93,8 @@ SELECT @profileId ;
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Oggetti di configurazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Stored procedure &#40;di posta elettronica database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

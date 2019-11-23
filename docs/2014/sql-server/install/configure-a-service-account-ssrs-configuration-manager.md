@@ -25,7 +25,7 @@ ms.locfileid: "71952577"
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurare un account del servizio (Gestione configurazione SSRS)
   In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il servizio Web Report Server, Gestione report e l'applicazione di elaborazione in background vengono eseguiti all'interno di un singolo servizio. L'account utilizzato per l'esecuzione di tale servizio viene definito durante l'installazione, quando si specifica l'account nella pagina Identità servizio Web, ma è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se si desidera utilizzare un account diverso oppure aggiornare la password.  
   
- Se si dispone di un server di report configurato per utilizzare la modalità integrata SharePoint e si modifica l'account del servizio utilizzando lo strumento di configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario aprire anche Amministrazione centrale SharePoint e utilizzare l' **accesso al Database** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Grant per applicare nuovamente le impostazioni del server di report e dell'istanza. Questo passaggio consentirà al nuovo account del servizio di accedere ai database di SharePoint, necessari per l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+ Se si dispone di un server di report configurato per utilizzare la modalità integrata SharePoint e si modifica l'account del servizio utilizzando lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario aprire anche Amministrazione centrale SharePoint e utilizzare la pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **concedere accesso al database** per applicare nuovamente le impostazioni del server di report e dell'istanza. Questo passaggio consentirà al nuovo account del servizio di accedere ai database di SharePoint, necessari per l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
  Utilizzare sempre lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiornare l'account del servizio in modo da per poter aggiornare simultaneamente anche le impostazioni che dipendono dall'identità del servizio.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71952577"
   
 3.  Se è stato selezionato un account utente di Windows, specificare il nuovo account e la password. Il nome dell'account non può contenere più di 20 caratteri.  
   
-     Se il server di report viene distribuito in una rete che supporta l'autenticazione Kerberos, è necessario registrare il nome dell'entità servizio del server di report con l'account utente di dominio specificato. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
+     Se il server di report viene distribuito in una rete che supporta l'autenticazione Kerberos, è necessario registrare il nome dell'entità servizio del server di report con l'account utente di dominio specificato. Per altre informazioni, vedere [Registrazione di un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
 4.  Fare clic su **Applica**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71952577"
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [&#41;Modalità nativa &#40;di SSRS](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)per l'account del servizio    
+ [&#41; Modalità nativa &#40;di SSRS](../../../2014/sql-server/install/service-account-ssrs-native-mode.md) per l'account del servizio   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -41,7 +41,7 @@ ms.locfileid: "73729207"
   
  Quando si assegnano autorizzazioni a un'area funzionale, si rende visibile un'area dell'interfaccia utente all'utente o al gruppo.  
   
- All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Un utente con le autorizzazioni di utente con privilegi elevati ha l'autorizzazione di amministratore per tutti i modelli e ha anche tutte le altre autorizzazioni per le aree funzionali.  

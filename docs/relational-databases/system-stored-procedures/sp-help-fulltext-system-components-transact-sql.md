@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Se viene specificato un percorso completo, è necessario specificare anche *param* con il percorso completo della dll del componente o viene restituito un messaggio di errore.  
   
-`[ @param = ] param` a seconda del tipo di componente, questo è uno dei seguenti: un identificatore delle impostazioni locali (LCID), l'estensione di file con prefisso ".", il nome completo del componente del gestore di protocollo o il percorso completo della DLL del componente.  
+`[ @param = ] param` a seconda del tipo di componente, questo è uno dei seguenti: un identificatore delle impostazioni locali (LCID), l'estensione del file con prefisso ".", il nome completo del componente del gestore di protocollo o il percorso completo della DLL del componente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -74,17 +74,17 @@ sp_help_fulltext_system_components
 |**version**|**nvarchar(30)**|Versione del componente.|  
 |**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
- Il set di risultati seguente viene restituito solo se esistono uno o più cataloghi full-text che usano *component_type*.  
+ Il set di risultati seguente viene restituito solo se esistono uno o più cataloghi full-text che utilizzano *component_type*.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|ID del database.|  
 |**ftcatid**|**int**|ID del catalogo full-text.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** ; Tuttavia, gli utenti possono visualizzare solo le informazioni sui cataloghi full-text per i quali dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del ruolo predefinito del server **serveradmin** possono visualizzare i valori nella colonna **FullPath** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo è di particolare importanza durante la preparazione per un aggiornamento. Eseguire la stored procedure all'interno di un particolare database e utilizzare l'output per determinare se l'aggiornamento avrà effetti su un particolare catalogo.  
   
 ## <a name="examples"></a>Esempi  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>B. Elenco di word breaker  
+### <a name="b-listing-word-breakers"></a>b. Elenco di word breaker  
  Nell'esempio seguente vengono elencati tutti i word breaker registrati sull'istanza del servizio.  
   
 ```  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare o modificare i Word breaker e i filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Visualizzare o modificare i filtri e i Word breaker registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Stored procedure &#40;per la ricerca full-text e la ricerca semantica Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

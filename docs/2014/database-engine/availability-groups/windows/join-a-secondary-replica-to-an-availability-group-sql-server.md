@@ -30,7 +30,7 @@ ms.locfileid: "72797664"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per preparare un database secondario tramite:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72797664"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   La replica primaria del gruppo di disponibilità deve essere attualmente online.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "72797664"
 > [!IMPORTANT]  
 >  Se nessuno dei prerequisiti viene soddisfatto, l'operazione di join non viene completata. Al termine di un tentativo di join errato, potrebbe essere necessario connettersi all'istanza del server in cui è ospitata la replica primaria per rimuovere e aggiungere nuovamente la replica secondaria, prima di poter creare un join al gruppo di disponibilità. Per altre informazioni, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica secondaria e fare clic sul nome del server per espandere il relativo albero.  
@@ -75,7 +75,7 @@ ms.locfileid: "72797664"
   
 6.  Per creare un join della replica secondaria al gruppo di disponibilità, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica secondaria.  
@@ -95,7 +95,7 @@ ms.locfileid: "72797664"
     > [!NOTE]  
     >  Per un esempio di questa istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] impiegata in un contesto, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
  Nel provider PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -126,5 +126,5 @@ ms.locfileid: "72797664"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Risolvere i problemi &#40;di&#41;configurazione gruppi di disponibilità AlwaysOn SQL Server eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

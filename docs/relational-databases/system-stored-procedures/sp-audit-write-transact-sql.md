@@ -27,7 +27,7 @@ ms.locfileid: "72251976"
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un evento di controllo definito dall'utente a **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
+  Aggiunge un evento di controllo definito dall'utente al **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argomenti  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Un parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. *\@user_defined_event_id è di* tipo **smallint**.  
+ Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. *\@user_defined_event_id* è di tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded` è di **bit**.  
@@ -55,10 +55,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Gli errori sono causati da parametri di input errati o da problemi di scrittura nel log di controllo di destinazione.  
   
-## <a name="remarks"></a>Note  
- Quando **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo del server o a una specifica del controllo del database, l'evento attivato da **sp_audit_write** verrà incluso nel log di controllo.  
+## <a name="remarks"></a>Osservazioni  
+ Quando il **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo del server o a una specifica del controllo del database, l'evento attivato da **sp_audit_write** verrà incluso nel log di controllo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo di database **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>B.  Creazione di un evento di controllo definito dall'utente senza testo informativo  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>b.  Creazione di un evento di controllo definito dall'utente senza testo informativo  
  Nell'esempio seguente viene creato un evento di controllo con ID 27, valore di esito positivo pari a 0 e senza testo informativo o nomi di parametri facoltativi.  
   
 ```  

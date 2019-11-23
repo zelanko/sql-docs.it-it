@@ -23,9 +23,9 @@ ms.locfileid: "71952401"
  Per ulteriori informazioni, vedere [configurare o ripristinare PowerPivot per SharePoint strumento &#40;&#41;di configurazione PowerPivot 2010](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rimuovere un'installazione di SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
+ [Eliminare un'installazione di SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [Installare PowerPivot per SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [Disinstallare un'istanza esistente di SQL Server &#40;Programma di installazione&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
+ [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

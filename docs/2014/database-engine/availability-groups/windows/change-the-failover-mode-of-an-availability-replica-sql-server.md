@@ -35,12 +35,12 @@ ms.locfileid: "72783022"
   
 -   Le istanze del cluster di failover di SQL Server non supportano il failover automatico da gruppi di disponibilità, pertanto le replica di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per modificare la modalità di failover di una replica di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -53,7 +53,7 @@ ms.locfileid: "72783022"
   
 5.  Nella finestra di dialogo **Proprietà replica di disponibilità** utilizzare l'elenco a discesa **Modalità di failover** per modificare la modalità di failover di questa replica.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare la modalità di failover di una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -72,7 +72,7 @@ ms.locfileid: "72783022"
   
      dove  
   
-    -   *nome_gruppo* è il nome del gruppo di disponibilità.  
+    -   *group_name* è il nome del gruppo di disponibilità.  
   
     -   { ' *_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72783022"
          *nome_rete_FCI*  
          Nome di rete utilizzato per accedere a un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui un'istanza del server di destinazione è un partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         *instance_name*  
+         *nome_istanza*  
          Nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica di disponibilità di destinazione. Per un'istanza del server predefinita, *nome_istanza* è facoltativo.  
   
      Per altre informazioni su questi parametri, vedere [ALTER AVAILABILITY GROUP &#40; Transact-SQL &#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
@@ -96,7 +96,7 @@ ms.locfileid: "72783022"
        (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
 
 ### <a name="to-change-the-failover-mode-of-an-availability-replica"></a>Per modificare la modalità di failover di una replica di disponibilità
   
@@ -118,5 +118,5 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [ &#40;Modalità di disponibilità&#41; gruppi di disponibilità AlwaysOn](availability-modes-always-on-availability-groups.md)    
+ [ &#40;Modalità di disponibilità&#41; gruppi di disponibilità AlwaysOn](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità &#40;di failover gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

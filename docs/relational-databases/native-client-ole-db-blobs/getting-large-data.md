@@ -36,7 +36,7 @@ ms.locfileid: "73775503"
   
 -   ICommand::Execute  
   
- Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà del set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al metodo **GetNextRows** Poiché i dati BLOB non vengono memorizzati nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
+ Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà del set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al metodo **GetNextRows** perché i dati BLOB non vengono memorizzati nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
  Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client non recupera dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a quando non viene richiesto dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
@@ -149,7 +149,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

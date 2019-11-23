@@ -27,7 +27,7 @@ ms.locfileid: "72783007"
   
      [Prerequisiti e restrizioni](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per aggiungere una replica mediante:**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "72783007"
   
  Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicurezza  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per aggiungere una replica**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -72,7 +72,7 @@ ms.locfileid: "72783007"
   
          Per aggiungere repliche aggiuntive, ripetere i passaggi precedenti. Dopo avere specificato le repliche, fare clic su **OK** per completare l'operazione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per aggiungere una replica**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica primaria.  
@@ -90,7 +90,7 @@ ms.locfileid: "72783007"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per aggiungere una replica**  
   
 1.  Spostarsi nella directory (`cd`) dell'istanza del server che ospita la replica primaria.  
@@ -126,7 +126,7 @@ ms.locfileid: "72783007"
   
 1.  Connettersi all'istanza del server che ospiterà la nuova replica secondaria.  
   
-2.  Creare un join della nuova replica secondaria al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+2.  Creare un join della nuova replica secondaria al gruppo di disponibilità. Per altre informazioni, vedere [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 3.  Per ogni database nel gruppo di disponibilità, creare un database secondario nell'istanza del server che ospita la replica secondaria. Per altre informazioni, vedere [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -151,9 +151,9 @@ ms.locfileid: "72783007"
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Usare il dashboard &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)    
+ [Usare il dashboard &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

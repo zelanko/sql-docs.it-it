@@ -86,7 +86,7 @@ ms.locfileid: "70175991"
  **Termini e definizioni dei supporti di backup**  
   
  [dispositivo di backup](backup-devices-sql-server.md)  
- Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. SQL Server backup possono anche essere scritti in un servizio di archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio Archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [supporti di backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uno o più nastri o file del disco in cui sono stati scritti uno o più backup.  
@@ -133,7 +133,7 @@ ms.locfileid: "70175991"
   
 -   Se durante l'esecuzione di un'operazione di backup si tenta di creare o eliminare un file di database, l'operazione di creazione o eliminazione non riuscirà.  
   
- Se un'operazione di backup si sovrappone a un'operazione di gestione di file o di compattazione, si verifica un conflitto. Indipendentemente dall'operazione in conflitto avviata per prima, la seconda operazione viene rimandata fino al timeout del blocco richiesto dalla prima operazione. Il periodo di timeout è controllato da un'impostazione relativa al timeout di sessione. Se il blocco viene rilasciato entro il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
+ Se un'operazione di backup si sovrappone a un'operazione di gestione di file o di compattazione, si verifica un conflitto. Indipendentemente dall'operazione in conflitto avviata per prima, la seconda operazione attende il timeout del blocco impostato dalla prima operazione. Il periodo di timeout è controllato da un'impostazione di timeout della sessione. Se il blocco viene rilasciato durante il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per lavorare con i dispositivi di backup e i supporti di backup**  
@@ -154,9 +154,9 @@ ms.locfileid: "70175991"
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: SQL Server backup e ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Per creare un backup**  
   
@@ -165,7 +165,7 @@ ms.locfileid: "70175991"
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
@@ -177,9 +177,9 @@ ms.locfileid: "70175991"
   
 -   [Specifica se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
--   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Usare Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: SQL Server backup e ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   

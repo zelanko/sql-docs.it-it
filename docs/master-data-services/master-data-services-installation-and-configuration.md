@@ -29,12 +29,12 @@ ms.locfileid: "73728064"
 
 Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Per informazioni sulle nuove funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere [Novità in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ Per informazioni sulle nuove funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Informazioni su SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Scarica**  
-> -   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
+> -   Scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]dalla pagina  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Se si ha un account di Azure,  Fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server.  
 > 
 > **Impossibile creare un sito Web di MDS**
@@ -53,7 +53,7 @@ La fase successiva consiste nell'installazione di Internet Information Services 
 Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], è disponibile il file setup.exe nel percorso predefinito, `<drive>`:\SQLServer_13.0_Full.
   
 ## <a name="InstallMDS"></a> Installazione di Master Data Services  
- Per installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usare l'installazione guidata di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]o un prompt dei comandi.  
+ Per installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usare l'installazione guidata di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] o un prompt dei comandi.  
   
  **Per installare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup in un computer Windows Server 2012 R2**  
   
@@ -131,7 +131,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host di un'istanza gestita di database SQL di Azure. Ad esempio, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
+4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Scegliere **Avanti**.
 
     >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], per connettersi all'istanza gestita di database SQL di Azure, usare uno dei seguenti tipi di autenticazione:
     >
@@ -145,7 +145,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Digitare un nome nel campo **Nome database** . Facoltativamente, per selezionare regole di confronto di Windows, deselezionare la casella di controllo **Regole di confronto predefinite di SQL Server** e fare clic su una o più delle opzioni disponibili, ad esempio **Distinzione maiuscole/minuscole**. Fare clic su **Avanti**.
+4.  Digitare un nome nel campo **Nome database** . Facoltativamente, per selezionare regole di confronto di Windows, deselezionare la casella di controllo **Regole di confronto predefinite di SQL Server** e fare clic su una o più delle opzioni disponibili, ad esempio **Distinzione maiuscole/minuscole**. Scegliere **Avanti**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -210,10 +210,10 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- È anche possibile usare [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] per specificare altre impostazioni per le applicazioni e i servizi Web associati al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ad esempio, è possibile specificare la frequenza con cui i dati vengono caricati o quella con cui viene inviata la posta elettronica della convalida. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ È anche possibile usare [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] per specificare altre impostazioni per le applicazioni e i servizi Web associati al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ad esempio, è possibile specificare la frequenza con cui i dati vengono caricati o quella con cui viene inviata la posta elettronica della convalida. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ##  <a name="deploySample"></a> Distribuzione di modelli di esempio e dati  
- I seguenti tre pacchetti di modelli di esempio sono inclusi con  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Questi modelli di esempio includono dati. **Il percorso predefinito dei pacchetti dei modelli di esempio è %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
+ I seguenti tre pacchetti di modelli di esempio sono inclusi con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Questi modelli di esempio includono dati. **Il percorso predefinito dei pacchetti dei modelli di esempio è %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   
@@ -271,7 +271,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
     ```  
   
-     Quando la distribuzione di un modello è stata completata, viene visualizzato il messaggio **Operazione MDSModelDeploy completata** .  
+     Quando la distribuzione di un modello è stata completata, viene visualizzato il messaggio **Operazione MDSModelDeploy completata**.  
   
      L'immagine seguente mostra il comando per la distribuzione del modello di esempio product_en.pkg.  
   

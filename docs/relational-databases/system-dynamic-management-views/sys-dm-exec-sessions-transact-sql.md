@@ -124,7 +124,7 @@ Tutti possono visualizzare le proprie informazioni sulla sessione.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. Individuazione degli utenti connessi al server  
+### <a name="a-finding-users-that-are-connected-to-the-server"></a>R. Individuazione degli utenti connessi al server  
  Nell'esempio seguente vengono individuati gli utenti connessi al server e viene restituito il numero di sessioni per ogni utente.  
   
 ```sql  

@@ -33,8 +33,8 @@ ms.locfileid: "73785740"
 |Parametro|Attributo correlato per i tipi di parametro non con valori di tabella, incluse le colonne di parametri con valori di tabella|Attributo correlato per i parametri con valori di tabella|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*Sottotipo*|Ignorato|Per i record di tipo SQL_DATETIME o SQL_INTERVAL, impostare su SQL_DESC_DATETIME_INTERVAL_CODE.|  
-|*Lunghezza*|SQL_DESC_OCTET_LENGTH|Lunghezza del nome del tipo di parametro con valori di tabella. Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure zero se il nome del tipo di parametro con valori di tabella non è obbligatorio.|  
+|*SubType*|Ignorato|Per i record di tipo SQL_DATETIME o SQL_INTERVAL, impostare su SQL_DESC_DATETIME_INTERVAL_CODE.|  
+|*Length*|SQL_DESC_OCTET_LENGTH|Lunghezza del nome del tipo di parametro con valori di tabella. Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure zero se il nome del tipo di parametro con valori di tabella non è obbligatorio.|  
 |*Precisione*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Scala*|SQL_DESC_SCALE|Non utilizzato. Questo parametro deve essere zero.|  
 |*DataPtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Questo parametro è facoltativo per le chiamate di stored procedure ed è possibile specificare NULL se non è obbligatorio. È necessario specificarlo per istruzioni SQL che non sono chiamate di procedure.<br /><br /> *DataPtr* funge anche da valore univoco che l'applicazione può utilizzare per identificare questo parametro con valori di tabella quando viene utilizzata l'associazione di righe variabile.|  
@@ -46,11 +46,11 @@ ms.locfileid: "73785740"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Supporto di SQLSetDescRec per le caratteristiche avanzate di data e ora  
  I valori consentiti per i tipi di data/ora sono i seguenti:  
   
-||*Tipo*|*Sottotipo*|*Lunghezza*|*Precisione*|*Scala*|  
+||*Tipo*|*SubType*|*Length*|*Precisione*|*Scala*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
@@ -61,7 +61,7 @@ ms.locfileid: "73785740"
  **SQLSetDescRec** supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi &#40;CLR definiti dall'utente di grandi&#41;dimensioni ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-   [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)  
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

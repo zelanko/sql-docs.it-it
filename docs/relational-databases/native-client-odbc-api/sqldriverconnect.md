@@ -42,7 +42,7 @@ ms.locfileid: "73787102"
   
  Se il valore del parametro *DriverCompletion* è SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED e la lingua o il database deriva dalla stringa di connessione e non è valido, **SQLDriverConnect** restituisce SQL_ERROR.  
   
- Se il valore del parametro *DriverCompletion* è SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED e la lingua o il database deriva dalle definizioni delle origini dati ODBC e non è valido, **SQLDriverConnect** utilizza la lingua predefinita o database per l'ID utente specificato e restituisce SQL_SUCCESS_WITH_INFO.  
+ Se il valore del parametro *DriverCompletion* è SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED e la lingua o il database deriva dalle definizioni delle origini dati ODBC e non è valido, **SQLDriverConnect** utilizza la lingua o il database predefinito per l'ID utente specificato e restituisce SQL_SUCCESS_WITH_INFO.  
   
  Se il valore del parametro *DriverCompletion* è SQL_DRIVER_COMPLETE o SQL_DRIVER_PROMPT e se la lingua o il database non è valido, **SQLDriverConnect** Visualizza nuovamente la finestra di dialogo.  
   
@@ -84,6 +84,6 @@ SQLDriverConnect(hdbc, hwnd,
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [IMPOSTA ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

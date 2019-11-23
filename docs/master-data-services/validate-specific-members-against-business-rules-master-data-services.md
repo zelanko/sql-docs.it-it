@@ -24,12 +24,12 @@ ms.locfileid: "73728855"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è opportuno applicare selettivamente regole business quando si desidera aggiornare o convalidare subset di membri rispetto a regole business.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è opportuno applicare selettivamente regole business quando si desidera aggiornare o convalidare subset di membri rispetto a regole business.  
   
 > [!NOTE]  
->  Per applicare le regole di business a tutti i membri in una versione di un modello, vedere [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
+>  Per applicare le regole di business a tutti i membri in una versione di un modello, vedere [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -50,6 +50,6 @@ ms.locfileid: "73728855"
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

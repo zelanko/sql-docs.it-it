@@ -55,9 +55,9 @@ ms.locfileid: "73790634"
   
 -   La lunghezza dei dati presentati da un oggetto di archiviazione implementato dal consumer deve essere nota al provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB quando viene creata la funzione di accesso Row che fa riferimento all'oggetto di archiviazione. Il consumer deve associare un indicatore di lunghezza nella struttura DBBINDING utilizzata per la creazione della funzione di accesso.  
   
--   Se una riga contiene più di un singolo valore di dati di grandi dimensioni e DBPROP_ACCESSORDER non è DBPROPVAL_AO_RANDOM, il consumer deve utilizzare un set di righe supportato dal cursore del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB per recuperare i dati di riga o elaborare tutti i valori di dati di grandi dimensioni prima di recupero di altri valori di riga. Se DBPROP_ACCESSORDER è DBPROPVAL_AO_RANDOM, il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client memorizza nella cache tutti i tipi di dati XML come oggetti binari di grandi dimensioni (BLOB), in modo che sia possibile accedervi in qualsiasi ordine.  
+-   Se una riga contiene più di un singolo valore di dati di grandi dimensioni e DBPROP_ACCESSORDER non è DBPROPVAL_AO_RANDOM, il consumer deve utilizzare un set di righe supportato dal cursore del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB per recuperare i dati di riga o elaborare tutti i valori di dati di grandi dimensioni prima di recuperare altri valori di riga. Se DBPROP_ACCESSORDER è DBPROPVAL_AO_RANDOM, il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client memorizza nella cache tutti i tipi di dati XML come oggetti binari di grandi dimensioni (BLOB), in modo che sia possibile accedervi in qualsiasi ordine.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Recupero di dati di grandi dimensioni](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
   

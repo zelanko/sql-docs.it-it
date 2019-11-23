@@ -45,7 +45,7 @@ ms.locfileid: "72797957"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per sospendere un database tramite:**  
   
@@ -64,20 +64,20 @@ ms.locfileid: "72797957"
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
  Un comando SUSPEND viene restituito non appena è stato accettato dalla replica che ospita il database di destinazione, ma la sospensione effettiva del database avviene in modo asincrono.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza del server che ospita il database che si desidera sospendere. Per sospendere un database primario e i database secondari corrispondenti, connettersi all'istanza del server che ospita la replica primaria. Per sospendere un database secondario lasciando disponibile il database primario, connettersi alla replica secondaria.  
   
 ###  <a name="Recommendations"></a> Raccomandazioni  
  Durante i colli di bottiglia, potrebbe essere utile sospendere brevemente uno o più database secondari per migliorare temporaneamente le prestazioni sulla replica primaria. Finché un database secondario rimane sospeso, il log delle transazioni del database primario corrispondente non può essere troncato. Per questo motivo, i record del log si accumulano sul database primario. È pertanto consigliabile riprendere o rimuovere rapidamente un database secondario sospeso. Per ulteriori informazioni, vedere [Completamento: Come evitare il riempimento del log delle transazioni](#FollowUp), più avanti in questo argomento.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per sospendere un database**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica di disponibilità in cui si desidera sospendere un database ed espandere l'albero del server. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
@@ -95,7 +95,7 @@ ms.locfileid: "72797957"
 > [!NOTE]  
 >  Per sospendere database aggiuntivi in questo percorso di replica, ripetere i passaggi 4 e 5 per ogni database.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per sospendere un database**  
   
 1.  Connettersi all'istanza del server che ospita la replica di cui si desidera sospendere il database. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
@@ -104,7 +104,7 @@ ms.locfileid: "72797957"
   
      ALTER DATABASE *nome_database* SET HADR SUSPEND  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per sospendere un database**  
   
 1.  Spostarsi sulla directory (`cd`) dell'istanza del server che ospita la replica di cui si desidera sospendere il database. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
@@ -131,7 +131,7 @@ ms.locfileid: "72797957"
   
 -   Aggiungere ulteriore spazio di log per il database primario.  
   
--   Riprendere il database secondario prima che il log si riempia. Per ulteriori informazioni, vedere [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
+-   Riprendere il database secondario prima che il log si riempia. Per ulteriori informazioni, vedere [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
 -   Rimuovere il database secondario. Per altre informazioni, vedere [Rimuovere un database secondario da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
@@ -144,5 +144,5 @@ ms.locfileid: "72797957"
 -   [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

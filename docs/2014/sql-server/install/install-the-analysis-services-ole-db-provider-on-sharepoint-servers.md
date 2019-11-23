@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952527"
@@ -101,7 +101,7 @@ ms.locfileid: "71952527"
   
 3.  Scegliere **Dettagli**.  
   
-4.  Visualizzare le informazioni sulla versione del file. La versione deve includere 11,00. \<buildnumber >.  
+4.  Visualizzare le informazioni sulla versione del file. La versione deve includere 11,00.\<> BuildNumber.  
   
 5.  Nella cartella Windows\assembly, verificare che venga elencato Microsoft.AnalysisServices.Xmla.dll, versione 11.0.0.0.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952527"
   
 4.  Se si dispone di altri server nella farm che eseguono solo Excel Services, senza [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nello stesso server, ripetere i passaggi precedenti per installare la versione 2008 R2 del provider nel computer Excel Services.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Passaggio 2: Registrare il file Microsoft. AnalysisServices. ChannelTransport. dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Passaggio 2: Registrare il file Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Utilizzare l'utilità regasm.exe per registrare il file. Se Regasm. exe non è stato eseguito in precedenza, aggiungere la relativa cartella padre, C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0, alla variabile del percorso di sistema.  
+1.  Utilizzare l'utilità regasm.exe per registrare il file. Se Regasm. exe non è stato eseguito in precedenza, aggiungere la relativa cartella padre, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, alla variabile del percorso di sistema.  
   
 2.  Aprire un prompt dei comandi con autorizzazioni di amministratore.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71952527"
   
      Passare a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Fare clic con il pulsante destro del mouse su **msolap100. dll** e selezionare **Proprietà**. Scegliere **Dettagli**.  
   
-     Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50. \<buildnumber >.  
+     Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50.\<> BuildNumber.  
   
   
 ## <a name="see-also"></a>Vedere anche  

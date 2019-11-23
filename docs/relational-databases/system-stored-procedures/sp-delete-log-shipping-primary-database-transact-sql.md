@@ -27,7 +27,7 @@ ms.locfileid: "72909871"
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Questa stored procedure rimuove il log shipping del database primario, compreso il processo di backup, e la cronologia locale e remota. Usare questa stored procedure solo dopo aver rimosso i database secondari con **sp_delete_log_shipping_primary_secondary**.  
+  Questa stored procedure rimuove il log shipping del database primario, compreso il processo di backup, e la cronologia locale e remota. Utilizzare questo stored procedure solo dopo aver rimosso i database secondari utilizzando **sp_delete_log_shipping_primary_secondary**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,26 +46,26 @@ sp_delete_log_shipping_primary_database
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- nessuna.  
+ Nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **sp_delete_log_shipping_primary_database** deve essere eseguito dal database **Master** nel server primario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Elimina il processo di backup per il database primario specificato.  
   
-2.  Rimuove il record di monitoraggio locale in **log_shipping_monitor_primary** nel server primario.  
+2.  Rimuove il record di monitoraggio locale in **log_shipping_monitor_primary** sul server primario.  
   
 3.  Rimuove le voci corrispondenti in **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
   
-4.  Se il server di monitoraggio è diverso dal server primario, rimuove il record di monitoraggio in **log_shipping_monitor_primary** nel server di monitoraggio.  
+4.  Se il server di monitoraggio è diverso dal server primario, rimuove il record di monitoraggio in **log_shipping_monitor_primary** sul server di monitoraggio.  
   
 5.  Rimuove le voci corrispondenti in **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** sul server di monitoraggio.  
   
-6.  Rimuove la voce in **log_shipping_primary_databases** per il database primario.  
+6.  Rimuove la voce **log_shipping_primary_databases** per il database primario.  
   
 7.  Chiama **sp_delete_log_shipping_alert_job** sul server di monitoraggio.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

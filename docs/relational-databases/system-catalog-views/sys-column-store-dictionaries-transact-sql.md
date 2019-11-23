@@ -37,21 +37,21 @@ ms.locfileid: "72304751"
 |**column_id**|**int**|ID della colonna columnstore che inizia con 1. La prima colonna contiene ID = 1, la seconda colonna ha ID = 2 e così via.|  
 |**dictionary_id**|**int**|Possono essere presenti due tipi di dizionari, globale e locale, associati a un segmento di colonna. Un dictionary_id di 0 rappresenta il dizionario globale condiviso tra tutti i segmenti di colonna (uno per ogni gruppo di righe) per la colonna.|  
 |**version**|**int**|Versione del formato del dizionario.|  
-|**type**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**<br /><br /> Per altre informazioni sui dizionari, vedere [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**tipo**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**<br /><br /> Per altre informazioni sui dizionari, vedere [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|L'ultimo ID dati nel dizionario.|  
 |**entry_count**|**bigint**|Numero di voci nel dizionario.|  
 |**on_disc_size**|**bigint**|Dimensioni del dizionario in byte.|  
 |**partition_id**|**bigint**|Indica l'ID della partizione. Valore univoco all'interno di un database.|  
   
-## <a name="permissions"></a>Permissions  
-È richiesta l'autorizzazione `VIEW DEFINITION` per la tabella. Le colonne seguenti restituiscono null a meno che l'utente non disponga anche dell'autorizzazione `SELECT`: last_id, entry_count, data_ptr.  
+## <a name="permissions"></a>Autorizzazioni  
+È richiesta l'autorizzazione `VIEW DEFINITION` per la tabella. Le colonne seguenti restituiscono null a meno che l'utente non disponga anche di `SELECT` autorizzazione: last_id, entry_count data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Domande frequenti sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Domande frequenti sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   

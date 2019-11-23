@@ -47,13 +47,13 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 `[ @job_name = ] 'job_name'` il nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
-> **NOTA:** È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
+> **Nota:** È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
 `[ @step_id = ] step_id` il numero di identificazione del passaggio del processo per cui deve essere eliminato il log dei passaggi di processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono eliminati a meno che non vengano specificati **\@older_than** o **\@larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @step_name = ] 'step_name'` il nome del passaggio del processo per cui deve essere eliminato il log dei passaggi di processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'` il nome del passaggio del processo per il quale è necessario eliminare il log dei passaggi di processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
   
-> **NOTA:** È possibile specificare *step_id* o *step_name* , ma non è possibile specificarli entrambi.  
+> **Nota:** È possibile specificare *step_id* o *step_name* , ma non è possibile specificarli entrambi.  
   
 `[ @older_than = ] 'date'` la data e l'ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia **\@older_than** che **\@larger_than** .  
   
@@ -63,14 +63,14 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_delete_jobsteplog** si trova nel database **msdb** .  
   
  Se non viene specificato alcun argomento eccetto **\@job_id** o **\@job_name** , vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -97,7 +97,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
  Nell'esempio seguente viene rimosso il log relativo al passaggio 2 del processo `Weekly Sales Data Backup`.  
   
 ```  

@@ -25,7 +25,7 @@ ms.locfileid: "73728893"
   
 ## <a name="subscription-view-formats"></a>Formati di vista sottoscrizioni  
   
-|Crea vista sottoscrizioni|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |**Membri foglia**|Contiene i membri foglia e i relativi valori di attributo associati.|  
 |**Cronologia dei membri foglia**|Contiene i dati cronologici dei membri foglia e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  

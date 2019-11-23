@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

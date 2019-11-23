@@ -27,9 +27,9 @@ ms.locfileid: "71952465"
  Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report. Per ulteriori informazioni, vedere [Reporting Services Configuration Manager &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  Il Configuration Manager @ no__t-0 (RSConfigTool. exe) viene installato con un livello di privilegio "highestAvailable". Questo comportamento si verifica per motivi strutturali. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede la comunicazione con le API di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte della comunicazione di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un livello superiore o privilegi amministrativi.  
+>  Il[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) viene installato con un livello di privilegio "highestAvailable". Questo comportamento si verifica per motivi strutturali. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede la comunicazione con le API di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte della comunicazione di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un livello superiore o privilegi amministrativi.  
   
- Se si effettua una connessione al server di report e tutti i collegamenti alle pagine sono visualizzati in grigio, verificare che il servizio del server di report sia stato avviato. **Stato del servizio di report:** Deve essere "Started". Per verificare lo stato del servizio è possibile utilizzare anche l'applicazione console Servizi in Strumenti di amministrazione.  
+ Se si effettua una connessione al server di report e tutti i collegamenti alle pagine sono visualizzati in grigio, verificare che il servizio del server di report sia stato avviato. **Stato del servizio di report:** deve essere "Started". Per verificare lo stato del servizio è possibile utilizzare anche l'applicazione console Servizi in Strumenti di amministrazione.  
   
 ## <a name="options"></a>Opzioni  
  **Istanza di SQL Server**  
@@ -71,8 +71,8 @@ ms.locfileid: "71952465"
  Consente di arrestare il servizio del server di report. L'arresto del servizio causa l'interruzione del funzionamento del server di report. Per ulteriori informazioni, vedere [avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) nella documentazione Online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Configuration Manager argomenti &#40;della Guida F1 @no__t modalità&#41;nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)-3  
- [Reporting Services Configuration Manager &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Reporting Services Configuration Manager &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

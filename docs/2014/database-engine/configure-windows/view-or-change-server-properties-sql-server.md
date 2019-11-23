@@ -25,13 +25,13 @@ ms.locfileid: "72783130"
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare le proprietà di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Gestione configurazione SQL Server.  
   
- **Contenuto dell'articolo**  
+ **Contenuto dell'argomento**  
   
 -   **Prima di iniziare:**  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare o modificare le proprietà del server tramite:**  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72783130"
   
 -   In alcune pagine delle proprietà sono presenti dati ottenuti tramite il servizio Strumentazione gestione Windows (WMI). Per visualizzare queste pagine, è necessario che nel computer che esegue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sia installato il servizio WMI.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
- Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).  
+####  <a name="Permissions"></a> Autorizzazioni  
+ Per altre informazioni, vedere [Ruoli a livello di Server](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  Per impostazione predefinita, le autorizzazioni di esecuzione per `sp_configure` senza parametri o solo con il primo parametro vengono concesse a tutti gli utenti. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Per visualizzare o modificare le proprietà del server  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783130"
   
 2.  Nella finestra di dialogo **Proprietà server** fare clic su una pagina per visualizzare o modificare le relative informazioni del server. Alcune proprietà sono di sola lettura.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Per visualizzare le proprietà del server tramite la funzione predefinita SERVERPROPERTY  
   
@@ -137,9 +137,9 @@ RECONFIGURE;
 GO  
 ```  
   
- Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
+ Per altre informazioni, vedere [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Uso di Gestione configurazione SQL Server  
+##  <a name="PowerShellProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
  È possibile visualizzare o modificare alcune proprietà del server tramite Gestione configurazione SQL Server. Ad esempio, è possibile visualizzare la versione e l'edizione dell'istanza di SQL Server o modificare il percorso in cui sono archiviati i file di log degli errori. È inoltre possibile visualizzare queste proprietà eseguendo query nelle [Funzioni a gestione dinamica e DMV correlate al server](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql).  
   
 #### <a name="to-view-or-change-server-properties"></a>Per visualizzare o modificare le proprietà del server  

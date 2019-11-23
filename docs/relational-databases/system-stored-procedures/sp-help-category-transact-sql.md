@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` la classe in cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**JOB**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` il tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
 |**FUNZIONALITÀ MULTISERVER**|Categoria di processi multiserver.|  
@@ -60,13 +60,13 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @name = ] 'name'` il nome della categoria per la quale vengono richieste informazioni. *Name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @suffix = ] suffix` specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit**e il valore predefinito è **0**. **1** Mostra **category_type** come nome e **0** lo Visualizza come ID.  
+`[ @suffix = ] suffix` specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit**e il valore predefinito è **0**. **1** mostra l' **category_type** come nome e **0** lo Visualizza come ID.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Quando **\@suffix** è **0**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando **\@suffisso** è **0**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuna|  
 |**name**|**sysname**|Nome della categoria|  
   
- Quando **\@suffix** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando **\@suffisso** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -82,12 +82,12 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Tipo di categoria: Uno dei sistemi **locali**, **multiserver**o **None**|  
 |**name**|**sysname**|Nome della categoria|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_category** deve essere eseguito dal database **msdb** .  
   
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. Restituzione di informazioni sugli avvisi  
+### <a name="b-returning-alert-information"></a>b. Restituzione di informazioni sugli avvisi  
  Nell'esempio seguente vengono restituite informazioni sulla categoria di avvisi Replication.  
   
 ```  

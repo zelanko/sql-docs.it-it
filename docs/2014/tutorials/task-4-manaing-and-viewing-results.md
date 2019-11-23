@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4: Mana e visualizzazione dei risultati | Microsoft Docs'
+title: 'Attività 4: mana e visualizzazione dei risultati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313651"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Mana e visualizzazione dei risultati
+# <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
   In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Per ulteriori informazioni, vedere [fase di pulizia interattiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
 1.  Selezionare **Contact email** Domain dall'elenco di domini.  
   
-2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con **\@adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
+2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con **\@Adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
   
-3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con **\@adventure-Works.com** (con ' s').  
+3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con **\@Adventure-Works.com** (con ' s').  
   
      ![Correzioni dalle]correzioni della regola di convalida della posta elettronica(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "dalla regola di convalida della posta elettronica")  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72313651"
   
 5.  Passare alla scheda **nuovo** nel riquadro destro. I valori in questa scheda sono quelli per i quali DQS non dispone ancora di informazioni sufficienti nella Knowledge Base per stabilire se sono corretti. Pertanto, non è possibile apportare o suggerire modifiche ai valori di dominio.  
   
-6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con **\@adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
+6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con **\@Adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
   
 7.  Selezionare il dominio **Country** dall'elenco dei domini.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72313651"
   
      ![Correzione dei nomi dei fornitori](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corretti i nomi dei fornitori")  
   
-    1.  Si noti che a **. Datum Corp.** è stato corretto in a **. Datum Corporation** e il **motivo** è impostato sulla relazione **Term. A. Datum Corporation @ no__t-0 è un valore di dominio noto in DQS perché è stato individuato durante il processo di individuazione delle informazioni. Pertanto, DQS è **sicuro del 100%** sulla correzione.  
+    1.  Si noti che a **. Datum Corp.** è stato corretto in a **. Datum Corporation** e il **motivo** è impostato **sulla relazione basata su termini. A. Datum Corporation** è un valore di dominio noto di DQS perché è stato individuato durante il processo di individuazione delle informazioni. Pertanto, DQS è **sicuro del 100%** sulla correzione.  
   
     2.  Si noti **che Lazy Country Storex è stato** corretto in **Lazy Country Store**, il **livello di confidenza** è impostato su **100%** e il **motivo** è impostato sul **valore di dominio**. Durante il processo di individuazione delle informazioni, impostare **Lazy Country Storex** come errore con **Lazy Country Store** come **correzione**, in modo che DQS sia il **100% di sicurezza** per l'esecuzione di questa correzione.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72313651"
   
 22. Si noti che il pulsante di opzione **approva** è già selezionato per questo elemento nell'elenco. Questo è il comportamento predefinito per gli elementi nella scheda con **correzione** .  
   
-23. Passare alla scheda **suggerito** . Esaminare le modifiche suggerite dal servizio **Melissa Data-Address Check** .  
+23. Passare alla scheda **suggerita** . rivedere le modifiche suggerite dal servizio **Melissa Data-Address Check** .  
   
 24. **Fare clic su approva tutti i termini** sul pulsante della barra degli strumenti e fare clic su **OK** nella finestra di messaggio di **conferma** .  
   
@@ -87,6 +87,6 @@ ms.locfileid: "72313651"
 25. Fare clic su **Avanti** per passare alla pagina **Esporta** .  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Esportazione dei risultati della pulizia in un file di Excel @ no__t-0  
+ [Attività 5: Esportazione dei risultati della pulizia in un file di Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **\@publication =** ] **'***Publication***'**  
+ [ **pubblicazione\@=** ] **'***Publication***'**  
  Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @level = ] level` è il tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
@@ -46,21 +46,21 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valore del livello|Descrizione|  
 |-----------------|-----------------|  
 |**1**|Convalida solo tramite conteggio delle righe.|  
-|**2**|Convalida mediante conteggio delle righe e checksum. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, viene impostato automaticamente su **3**.|  
+|**2**|Convalida mediante conteggio delle righe e checksum. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], questo viene impostato automaticamente su **3**.|  
 |**3**|Questo è il valore consigliato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_validatemergepublication** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_validatemergepublication** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

@@ -20,7 +20,7 @@ ms.locfileid: "72890495"
 
   Nella tabella seguente sono elencate le istruzioni DMX (Data Mining Extensions) che fanno parte del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) per il data mining.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Elimina &#40;DMX&#41;](../dmx/delete-dmx.md)|Cancella da un modello di data mining il contenuto sottoposto a training.|  
 |[Inserisci in &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Esegue il training di un modello di data mining.|  

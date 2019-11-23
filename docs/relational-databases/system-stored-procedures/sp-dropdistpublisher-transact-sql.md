@@ -45,7 +45,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  Se è **0**, la replica verifica che il server di pubblicazione remoto abbia disinstallato il server locale come server di distribuzione. Se il server di pubblicazione è locale, durante la replica viene verificato che nel server locale non siano più presenti oggetti di pubblicazione o di distribuzione.  
   
- Se è **1**, tutti gli oggetti di replica associati al server di pubblicazione di distribuzione vengono eliminati anche se non è possibile raggiungere un server di pubblicazione remoto. Al termine di questa operazione, il server di pubblicazione remoto deve disinstallare la replica usando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) con **\@ignore_distributor** = **1**.  
+ Se è **1**, tutti gli oggetti di replica associati al server di pubblicazione di distribuzione vengono eliminati anche se non è possibile raggiungere un server di pubblicazione remoto. Al termine di questa operazione, il server di pubblicazione remoto deve disinstallare la replica utilizzando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) con **\@ignore_distributor** = **1**.  
   
 `[ @ignore_distributor = ] ignore_distributor` specifica se gli oggetti di distribuzione vengono lasciati nel server di distribuzione quando il server di pubblicazione viene rimosso. *ignore_distributor* è di **bit** . i possibili valori sono i seguenti:  
   
@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropdistpublisher** viene utilizzato in tutti i tipi di replica.  
   
  Quando si elimina un server di pubblicazione Oracle, se non è possibile eliminare il server di pubblicazione **sp_dropdistpublisher** restituisce un errore e gli oggetti del server di distribuzione per il server di pubblicazione vengono rimossi.  
@@ -64,7 +64,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  

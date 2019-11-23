@@ -68,11 +68,11 @@ ms.locfileid: "73637791"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Immagine|  
-|varchar(max)|varchar|varchar|Text|  
+|ntext|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |XML|XML|XML|Ntext|  
 |UDT CLR (> 8Kb)|udt|varbinary|Immagine|  
-|data|data|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  

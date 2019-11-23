@@ -50,7 +50,7 @@ ms.locfileid: "73787773"
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di&#41;tabella ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Supporto di SQLBindParameter per le caratteristiche avanzate di data e ora  
- I valori dei parametri di tipo data/ora vengono convertiti come descritto in [conversioni da C a SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Si noti che i parametri di tipo **Time** e **DateTimeOffset** devono avere un *ValueType* specificato come **SQL_C_DEFAULT** o **SQL_C_BINARY** se le strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **SQL_SS_** Vengono usati TIMESTAMPOFFSET_STRUCT).  
+ I valori dei parametri di tipo data/ora vengono convertiti come descritto in [conversioni da C a SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Si noti che i parametri di tipo **Time** e **DateTimeOffset** devono avere un *ValueType* specificato come **SQL_C_DEFAULT** o **SQL_C_BINARY** se vengono usate le strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
   
  Per ulteriori informazioni, vedere [miglioramenti &#40;di data e ora&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

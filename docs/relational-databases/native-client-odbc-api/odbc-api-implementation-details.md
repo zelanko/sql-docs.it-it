@@ -32,7 +32,7 @@ ms.locfileid: "73787864"
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51. Per un riferimento completo di ODBC 3,51, scaricare Microsoft Data Access Components SDK da [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)oppure visualizzare la documentazione online di [ODBC Programmer ' s Reference](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)  
   

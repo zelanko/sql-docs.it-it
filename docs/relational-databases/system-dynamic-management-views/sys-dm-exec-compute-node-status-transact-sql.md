@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_compute_node_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532756"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm _exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Include informazioni aggiuntive sulle prestazioni e lo stato di tutti i nodi di base. Elenca una riga per nodo.  

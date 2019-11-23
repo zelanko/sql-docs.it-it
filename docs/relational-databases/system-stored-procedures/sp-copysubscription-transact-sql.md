@@ -27,7 +27,7 @@ ms.locfileid: "72304828"
 
     
 > [!IMPORTANT]  
->  La funzionalità di sottoscrizione collegabile è deprecata e verrà rimossa a partire da una delle prossime versioni. Evitare di utilizzare questa funzionalità in un nuovo progetto di sviluppo. Nel caso di pubblicazioni di tipo merge partizionate mediante filtri con parametri, è consigliabile utilizzare la nuove funzionalità degli snapshot partizionati, che semplificano l'inizializzazione di un ampio numero di sottoscrizioni. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Per le pubblicazioni non partizionate, è possibile inizializzare una sottoscrizione con un backup. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+>  La funzionalità di sottoscrizione collegabile è deprecata e verrà rimossa a partire da una delle prossime versioni. Evitare di utilizzare questa funzionalità in un nuovo progetto di sviluppo. Nel caso di pubblicazioni di tipo merge partizionate mediante filtri con parametri, è consigliabile utilizzare la nuove funzionalità degli snapshot partizionati, che semplificano l'inizializzazione di un ampio numero di sottoscrizioni. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Per le pubblicazioni non partizionate, è possibile inizializzare una sottoscrizione con un backup. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  Copia un database di sottoscrizione che include sottoscrizioni pull, ma non push. È possibile copiare solo database a file singolo. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -47,19 +47,19 @@ sp_copysubscription [ @filename = ] 'file_name'
   
 `[ @temp_dir = ] 'temp_dir'` è il nome della directory che contiene i file temporanei. *temp_dir* è di **tipo nvarchar (260)** e il valore predefinito è null. Se è NULL, verrà utilizzata la directory dei dati predefinita [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` è un flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato in **\@filename**. *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da **\@filename**, se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` è un flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato in **\@nomefile**. *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da **\@nome file**, se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_copysubscription** viene utilizzato in tutti i tipi di replica per copiare un database di sottoscrizione in un file come alternativa all'applicazione di uno snapshot nel Sottoscrittore. Il database deve essere configurato in modo che supporti solo le sottoscrizioni pull. Gli utenti che dispongono delle autorizzazioni appropriate possono eseguire copie del database di sottoscrizione e quindi inviare tramite posta elettronica, copiare o trasferire il file ottenuto (con estensione msf) in un altro Sottoscrittore, dove è possibile collegarlo come sottoscrizione.  
   
  Le dimensioni del database di sottoscrizione copiato devono essere inferiori a 2 gigabyte (GB)  
   
- **sp_copysubscription** è supportato solo per i database con sottoscrizioni client e non può essere eseguito quando il database dispone di sottoscrizioni server.  
+ **sp_copysubscription** è supportata solo per i database con sottoscrizioni client e non può essere eseguita quando il database dispone di sottoscrizioni server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

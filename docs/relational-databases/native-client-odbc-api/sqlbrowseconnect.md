@@ -37,18 +37,18 @@ ms.locfileid: "73787667"
   
 |Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sì|No|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
-|UID|No|Sì|ID di accesso dell'utente.|  
+|SERVER|Yes|No|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
+|UID|No|Yes|ID di accesso dell'utente.|  
 |PWD|No|Sì (dipende dall'utente)|Password specificata dall'utente.|  
-|APP|No|Sì|Nome dell'applicazione che chiama **SQLBrowseConnect**.|  
-|WSID|No|Sì|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
+|APP|No|Yes|Nome dell'applicazione che chiama **SQLBrowseConnect**.|  
+|WSID|No|Yes|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
   
 ## <a name="level-3"></a>Livello 3  
   
 |Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Sì|Sì|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Sì|Sì|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DATABASE|Yes|Yes|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|LANGUAGE|Yes|Yes|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignora i valori delle parole chiave del database e della lingua archiviate nelle definizioni dell'origine dati ODBC. Se il database o la lingua specificata nella stringa di connessione passata a **SQLBrowseConnect** non è valida, **SQLBrowseConnect** restituisce SQL_NEED_DATA e gli attributi di connessione di livello 3.  
   

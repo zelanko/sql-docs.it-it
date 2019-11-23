@@ -66,7 +66,7 @@ ms.locfileid: "73637521"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Decision Trees|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
+|Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
 |Linear Regression|Punteggio di interesse|L'algoritmo Linear Regression può utilizzare solo il punteggio di interesse, perché supporta solo colonne continue.|  
   
 ### <a name="scalability-and-performance"></a>Scalabilità e prestazioni  
@@ -149,7 +149,7 @@ ms.locfileid: "73637521"
  *SCORE_METHOD*  
  Determina il metodo utilizzato per calcolare il punteggio di divisione. Sono disponibili le opzioni seguenti:  
   
-|ID|Crea vista sottoscrizioni|  
+|id|Name|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayes con probabilità a priori K2|  
@@ -162,7 +162,7 @@ ms.locfileid: "73637521"
  *SPLIT_METHOD*  
  Determina il metodo utilizzato per la divisione del nodo. Sono disponibili le opzioni seguenti:  
   
-|ID|Crea vista sottoscrizioni|  
+|id|Name|  
 |--------|----------|  
 |1|**Binary:** Indica che l'albero deve essere suddiviso in due rami indipendentemente dal numero effettivo dei valori presenti per l'attributo.|  
 |2|**Complete:** Indica che nell'albero possono essere create tante divisioni quanti sono i valori degli attributi.|  

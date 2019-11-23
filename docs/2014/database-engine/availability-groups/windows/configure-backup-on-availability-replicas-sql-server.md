@@ -37,19 +37,19 @@ ms.locfileid: "72783001"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
-|Attività|Permissions|  
+|Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per configurare il backup delle repliche secondarie in caso di creazione di un gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare un gruppo di disponibilità o una replica di disponibilità|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per configurare il backup delle repliche secondarie**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica primaria e fare clic sul nome del server per espandere il relativo albero.  
@@ -95,20 +95,20 @@ ms.locfileid: "72783001"
   
  **Modalità alternative da accedere alla pagina delle Preferenze di backup**  
   
--   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per configurare il backup delle repliche secondarie**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
   
 2.  Per un nuovo gruppo di disponibilità, usare l'istruzione [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql). Se si modifica un gruppo di disponibilità esistente, usare l'istruzione [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
 
 ### <a name="to-configure-backup-on-secondary-replicas"></a>Per configurare il backup delle repliche secondarie
   
@@ -181,10 +181,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> Per ottenere informazioni sulle impostazioni delle preferenze di backup  
  Gli elementi seguenti sono utili per ottenere informazioni pertinenti per il backup di una replica secondaria.  
   
-|visualizzazione|Informazioni|Colonne pertinenti|  
+|Visualizza|Informazioni|Colonne pertinenti|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Indica se la replica corrente è la replica di backup preferita|Non applicabile.|  
-|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|preferenza di backup automatico|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
+|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|Preferenza di backup automatico|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|Priorità di backup di una determinata replica di disponibilità|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Indica se la replica è locale all'istanza del server<br /><br /> Ruolo corrente<br /><br /> Stato operativo<br /><br /> Stato Connesso<br /><br /> Integrità della sincronizzazione di una replica di disponibilità|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
@@ -195,5 +195,5 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 -   [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Repliche secondarie attive: backup in repliche secondarie (Gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

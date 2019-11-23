@@ -23,7 +23,7 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952267"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
-  Il servizio attestazioni di SharePoint per il servizio token Windows (c2WTS) è necessario con la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se si desidera utilizzare l'autenticazione di Windows per le origini dati esterne alla farm di SharePoint. La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
+  Se si desidera utilizzare l'autenticazione di Windows per le origini dati esterne alla farm di SharePoint, è necessario disporre di SharePoint Claims to Windows Token Service (c2WTS) con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint di. La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
   
  Il servizio c2WTS è necessario anche se l'origine dati si trova nello stesso computer del servizio condiviso, sebbene in questo scenario la delega vincolata non sia richiesta.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "71952267"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
->  Nota: Alcuni dei passaggi di configurazione possono variare o potrebbero non funzionare in determinate topologie della farm. Un'installazione in un server singolo, ad esempio, non supporta i servizi c2WTS di Windows Identity Foundation e di conseguenza gli scenari di delega di attestazioni per il servizio token Windows non sono possibili con questa configurazione della farm.  
+>  Nota: alcuni passaggi della configurazione possono variare o potrebbero non funzionare in determinate topologie farm. Un'installazione in un server singolo, ad esempio, non supporta i servizi c2WTS di Windows Identity Foundation e di conseguenza gli scenari di delega di attestazioni per il servizio token Windows non sono possibili con questa configurazione della farm.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Passaggi di base necessari per configurare c2WTS  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71952267"
   
     2.  Modificare il tipo di avvio in "**automatico**" e avviare il servizio.  
   
-4.  Avviare attestazioni per il servizio token Windows di SharePoint: Avviare Attestazioni per il servizio token Windows tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server**. Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un front-end Web e di un server applicazioni in cui è in esecuzione il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso, è sufficiente avviare c2WTS solo sul server applicazioni. c2WTS non è necessario nel front-end Web.  
+4.  Avviare attestazioni per il servizio token Windows di SharePoint: Avviare Claims nel servizio token Windows tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server** . Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un front-end Web e di un server applicazioni in cui è in esecuzione il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso, è sufficiente avviare c2WTS solo sul server applicazioni. c2WTS non è necessario nel front-end Web.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Claims to Windows Token Service (C2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

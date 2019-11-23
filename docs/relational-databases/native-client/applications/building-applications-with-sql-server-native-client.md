@@ -27,7 +27,7 @@ ms.locfileid: "73761562"
 
   Lo sviluppo di un'applicazione che utilizza la libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client comporta una serie di problemi di cui tenere conto. Negli argomenti di questa sezione vengono illustrati alcuni dei problemi riscontrati, incluso l'aggiornamento da MDAC a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e l'utilizzo dei file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e viene fornita una panoramica delle varie stringhe di connessione che è possibile utilizzare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Installazione di SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  Vengono descritti l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, i percorsi di installazione dei vari componenti e la disinstallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

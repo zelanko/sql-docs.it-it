@@ -51,7 +51,7 @@ ms.locfileid: "73761354"
 |DBTYPE_WSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4,6</sup>|N/D<sup>2</sup>|  
 |DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_STR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4,6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Non supportato|N/D<sup>2</sup>|Non supportato|N/D<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Non supportate|N/D<sup>2</sup>|Non supportate|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73761354"
 #### <a name="the-procedure_parameters-schema-rowset"></a>Set di righe dello schema PROCEDURE_PARAMETERS  
  Al set di righe dello schema PROCEDURE_PARAMETERS sono state effettuate le seguenti aggiunte.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome in tre parti.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome in tre parti.|  
@@ -94,7 +94,7 @@ ms.locfileid: "73761354"
 #### <a name="the-sql_assemblies-schema-rowset"></a>Set di righe dello schema SQL_ASSEMBLIES  
  Il provider di OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client espone un nuovo set di righe dello schema specifico del provider che descrive i tipi definiti dall'utente registrati. Il server ASSEMBLY può essere specificato come DBTYPE_WSTR, ma non è presente nel set di righe. Se non viene specificato, il set di righe imposterà come valore predefinito il server corrente. Il set di righe dello schema SQL_ASSEMBLIES viene definito nella tabella seguente.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nome del catalogo dell'assembly contenente il tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nome dello schema o nome del proprietario dell'assembly contenente il tipo. Sebbene l'ambito degli assembly sia il database e non lo schema, gli assembly dispongono di un proprietario qui rappresentato.|  
@@ -106,7 +106,7 @@ ms.locfileid: "73761354"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Set di righe dello schema SQL_ASSEMBLIES_ DEPENDENCIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client espone un nuovo set di righe dello schema specifico del provider che descrive le dipendenze dell'assembly per un server specificato. ASSEMBLY_SERVER può essere specificato dal chiamante come DBTYPE_WSTR, ma non è presente nel set di righe. Se non viene specificato, il set di righe imposterà come valore predefinito il server corrente. Il set di righe dello schema SQL_ASSEMBLY_DEPENDENCIES viene definito nella tabella seguente.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nome del catalogo dell'assembly contenente il tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nome dello schema o nome del proprietario dell'assembly contenente il tipo. Sebbene l'ambito degli assembly sia il database e non lo schema, gli assembly dispongono di un proprietario qui rappresentato.|  
@@ -116,7 +116,7 @@ ms.locfileid: "73761354"
 #### <a name="the-sql_user_types-schema-rowset"></a>Set di righe dello schema SQL_USER_TYPES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client espone un nuovo set di righe dello schema, SQL_USER_TYPES, che descrive quando vengono aggiunti i tipi definiti dall'utente registrati per un server specificato. UDT_SERVER deve essere specificato dal chiamante come DBTYPE_WSTR, ma non è presente nel set di righe. Il set di righe dello schema SQL_USER_TYPES viene definito nella tabella seguente.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -126,7 +126,7 @@ ms.locfileid: "73761354"
 #### <a name="the-columns-schema-rowset"></a>Set di righe dello schema COLUMNS  
  Le aggiunte al set di righe dello schema COLUMNS includono le colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -139,7 +139,7 @@ ms.locfileid: "73761354"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
  Per supportare i tipi definiti dall'utente tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER che contiene i valori seguenti.  
   
-|Crea vista sottoscrizioni|Tipo|Descrizione|  
+|Name|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome in tre parti.<br /><br /> Per i parametri UDT questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome in tre parti.<br /><br /> Per i parametri UDT questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -150,7 +150,7 @@ ms.locfileid: "73761354"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
  Per supportare la creazione di tabelle nell'interfaccia **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge le tre nuove colonne seguenti al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
   
-|Crea vista sottoscrizioni|Descrizione|Tipo|Descrizione|  
+|Name|Descrizione|Type|Descrizione|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -181,7 +181,7 @@ ms.locfileid: "73761354"
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  Oltre all'interfaccia **ISSCommandWithParameters** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge anche nuovi valori al set di righe restituito dalla chiamata al metodo **IColumnsRowset:: GetColumnRowset** , incluso quanto segue.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome di catalogo del tipo definito dall'utente.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome dello schema del tipo definito dall'utente.|  

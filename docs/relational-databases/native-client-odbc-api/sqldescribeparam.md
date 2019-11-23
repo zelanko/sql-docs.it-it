@@ -26,9 +26,9 @@ ms.locfileid: "73787111"
 
   Per descrivere i parametri di qualsiasi istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client compila ed esegue un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT quando SQLDescribeParam viene chiamato su un handle di istruzione ODBC preparata. I metadati del set di risultati determinano le caratteristiche dei parametri dell'istruzione preparata. SQLDescribeParam può restituire qualsiasi codice di errore che SQLExecute o SQLExecDirect può restituire.  
   
- I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a SQLDescribeParam di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeParam nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a SQLDescribeParam di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeParam nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Inoltre, una novità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* restituisce ora un valore che viene allineato alla definizione per la dimensione, in caratteri, della colonna o dell'espressione del marcatore di parametro corrispondente come definito nella [specifica ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, *ParameterSizePtr* potrebbe essere il valore corrispondente di **SQL_DESC_OCTET_LENGTH** per il tipo o un valore di dimensione della colonna irrilevante fornito a SQLBindParameter per un tipo, il cui valore è. deve essere ignorato (ad esempio**SQL_INTEGER**).  
+ Inoltre, una novità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* restituisce ora un valore che viene allineato alla definizione per la dimensione, in caratteri, della colonna o dell'espressione del marcatore di parametro corrispondente come definito nella [specifica ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, *ParameterSizePtr* potrebbe essere il valore corrispondente di **SQL_DESC_OCTET_LENGTH** per il tipo o un valore di dimensione della colonna irrilevante fornito a SQLBindParameter per un tipo, il cui valore deve essere ignorato (ad esempio,**SQL_INTEGER**).  
   
  Il driver non supporta la chiamata a SQLDescribeParam nelle situazioni seguenti:  
   
@@ -79,7 +79,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|data|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

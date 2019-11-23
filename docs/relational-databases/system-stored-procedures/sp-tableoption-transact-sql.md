@@ -108,7 +108,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-storing-xml-data-out-of-the-row"></a>A. Archiviazione di dati xml all'esterno delle righe  
+### <a name="a-storing-xml-data-out-of-the-row"></a>R. Archiviazione di dati xml all'esterno delle righe  
  Nell'esempio seguente viene specificato che i dati **XML** nella tabella `HumanResources.JobCandidate` essere archiviati all'esterno di righe.  
   
 ```sql  

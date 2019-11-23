@@ -22,7 +22,7 @@ ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88ce0a3899bc637de6d94cce7dad71e47247a67f
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73982627"
@@ -108,7 +108,7 @@ Se l'utente dispone di `VIEW SERVER STATE` autorizzazione per il server, l'utent
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. Ricerca del testo della query per un batch in esecuzione
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>R. Ricerca del testo della query per un batch in esecuzione
 
  Nell'esempio seguente viene eseguita una query su `sys.dm_exec_requests` per trovare la query specifica e copiare `sql_handle` dall'output.  
 

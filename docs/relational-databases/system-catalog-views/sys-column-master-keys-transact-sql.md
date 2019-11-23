@@ -61,7 +61,7 @@ ms.locfileid: "73594526"
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Gestisci chiavi per Always Encrypted con enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Gestire le chiavi per Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   

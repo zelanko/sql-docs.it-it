@@ -38,7 +38,7 @@ ms.locfileid: "70874877"
 |langid|**smallint**|ID di lingua univoco.|  
 |dateformat|**nchar(3)**|Formato di data, ad esempio DMY.|  
 |datefirst|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
-|upgrade|**int**|Riservato per l'utilizzo nel sistema.|  
+|aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
 |name|**sysname**|Nome della lingua ufficiale, ad esempio, Français.|  
 |alias|**sysname**|Nome di lingua alternativo, ad esempio Francese.|  
 |months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
@@ -86,7 +86,7 @@ ms.locfileid: "70874877"
 |Thai|1054|1054|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste &#40;di compatibilità Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Viste &#40;di compatibilità Transact-&#41; SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Mapping di tabelle di sistema a &#40;viste di sistema Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

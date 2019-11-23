@@ -78,13 +78,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  L'assembly è firmato con nome sicuro o dispone di firma Authenticode con un certificato. Questo nome sicuro (o certificato) viene creato all'interno [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come chiave asimmetrica (o certificato) e dispone di un account di accesso corrispondente con autorizzazione **External Access assembly** (per assembly di accesso esterni) o autorizzazione **UNSAFE assembly** (per assembly UNSAFE).  
   
-2.  Il proprietario del database (DBO) dispone dell'autorizzazione **External Access assembly** (per gli assembly di **accesso esterni** ) o dell' **assembly UNSAFE** (per assembly **unsafe** ) e il database dispone della [proprietà di database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) impostata su  **IL**.  
+2.  Il proprietario del database (DBO) dispone dell'autorizzazione **External Access assembly** (per gli assembly di **accesso esterni** ) o dell' **assembly UNSAFE** (per assembly **unsafe** ) e il database dispone della [proprietà di database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) impostata **su on**.  
 
  Le due condizioni elencate in precedenza vengono verificate in fase di caricamento dell'assembly (fase che include l'esecuzione). Per caricare l'assembly, è necessario che si verifichi almeno una delle due condizioni.  
   
  Si consiglia di non impostare la [proprietà di database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) in un database **su on** solo per eseguire il codice Common Language Runtime (CLR) nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. È necessario creare un account di accesso di cui è stato eseguito il mapping a questa chiave asimmetrica e all'account di accesso deve essere concessa l'autorizzazione **External Access assembly** o **UNSAFE assembly** .  
   
- Le seguenti istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] eseguono i passaggi necessari per creare una chiave asimmetrica, eseguire il mapping di un account di accesso a questa chiave e quindi concedere l'autorizzazione **EXTERNAL_ACCESS** all'account di accesso. Prima di eseguire l'istruzione CREATE ASSEMBLY, è necessario eseguire le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguenti.  
+ Le seguenti istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] eseguono i passaggi necessari per creare una chiave asimmetrica, eseguire il mapping di un account di accesso a questa chiave e quindi concedere **EXTERNAL_ACCESS** autorizzazione all'account di accesso. Prima di eseguire l'istruzione CREATE ASSEMBLY, è necessario eseguire le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguenti.  
   
 ```  
 USE master;   

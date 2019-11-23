@@ -27,7 +27,7 @@ ms.locfileid: "73786977"
   Gestione driver ODBC restituisce tutte le stringhe di specifica dell'attributo **SQLDrivers** . Per ulteriori informazioni sulla definizione di stringa e valore dell'attributo, vedere [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173)oppure è possibile visualizzare la documentazione online [di ODBC Programmer ' s Reference](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sqldrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

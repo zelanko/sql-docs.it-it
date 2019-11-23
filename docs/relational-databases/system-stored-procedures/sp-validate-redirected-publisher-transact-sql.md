@@ -44,23 +44,23 @@ ms.locfileid: "72252054"
   
 `[ @publisher_db = ] 'publisher_db'` il nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` la destinazione del reindirizzamento specificato quando **sp_redirect_publisher** è stato chiamato per la coppia server di pubblicazione/database. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @redirected_publisher = ] 'redirected_publisher'` la destinazione del reindirizzamento specificato quando è stato chiamato **sp_redirect_publisher** per la coppia server di pubblicazione/database. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- No.  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione, **sp_validate_redirected_publisher** restituisce null nel parametro di output *\@redirected_publisher*. Se una voce esiste, viene restituita nel parametro di output sia nei casi di esito positivo che di esito negativo.  
   
  Se la convalida ha esito positivo, **sp_validate_redirected_publisher** restituisce un'indicazione di esito positivo.  
   
  Se la convalida non riesce, vengono generati gli errori con la relativa descrizione.  
   
-## <a name="permissions"></a>Permissions  
- Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** per il database di distribuzione oppure un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

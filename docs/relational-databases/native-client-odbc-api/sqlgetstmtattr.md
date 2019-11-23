@@ -34,7 +34,7 @@ ms.locfileid: "73786290"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  L'attributo SQL_SOPT_SS_NOCOUNT_STATUS indica l'impostazione corrente dell'opzione NOCOUNT, che controlla se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnala il numero di righe interessate da un'istruzione quando viene chiamato [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) . Il valore *ValuePtr* è di tipo SQLLEN.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT è OFF. SQLRowCount restituisce il numero di righe interessate.|  
 |SQL_NC_ON|NOCOUNT è ON. Il numero di righe interessate non viene restituito da SQLRowCount e il valore restituito è 0.|  

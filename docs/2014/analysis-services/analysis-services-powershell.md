@@ -39,7 +39,7 @@ ms.locfileid: "72782645"
 
 Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Services riferimenti di PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> Prerequisiti  
  È necessario installare Windows PowerShell 2.0. Questa applicazione è installata per impostazione predefinita nelle versioni più recenti dei sistemi operativi Windows. Per altre informazioni, vedere [installare Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -76,7 +76,7 @@ Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Service
   
  Il parametro-Credential accetta un oggetto PSCredential che specifica un nome utente e una password. In Analysis Services PowerShell, il parametro-Credential è disponibile per i cmdlet che effettuano una richiesta di connessione al Analysis Services, anziché i cmdlet che vengono eseguiti nel contesto di una connessione esistente. I cmdlet che effettuano una richiesta di connessione includono Invoke-ASCmd, Backup-ASDatabase e Restore-ASDatabase. Per questi cmdlet è possibile usare il parametro-Credential, supponendo che siano soddisfatti i criteri seguenti:  
   
-1.  Il server viene configurato per l'accesso HTTP, ovvero in IIS viene gestita la connessione, vengono letti il nome utente e la password e viene rappresentata l'identità di tale utente durante la connessione ad Analysis Services. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
+1.  Il server viene configurato per l'accesso HTTP, ovvero in IIS viene gestita la connessione, vengono letti il nome utente e la password e viene rappresentata l'identità di tale utente durante la connessione ad Analysis Services. Per altre informazioni, vedere [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  La directory virtuale IIS creata per accesso HTTP ad Analysis Services viene configurata per l'autenticazione di base.  
   

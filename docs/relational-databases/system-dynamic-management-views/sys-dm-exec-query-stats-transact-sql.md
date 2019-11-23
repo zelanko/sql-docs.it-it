@@ -133,7 +133,7 @@ Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-finding-the-top-n-queries"></a>A. Ricerca delle prime n query  
+### <a name="a-finding-the-top-n-queries"></a>R. Ricerca delle prime n query  
  Nell'esempio seguente vengono restituite informazioni sulle prime cinque query classificate in base al tempo medio della CPU. Nell'esempio le query vengono aggregate in base al relativo valore hash del piano, in modo da raggruppare le query logicamente equivalenti in base all'utilizzo di risorse cumulativo.  
   
 ```sql  

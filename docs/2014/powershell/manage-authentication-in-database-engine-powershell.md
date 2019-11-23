@@ -20,11 +20,11 @@ ms.locfileid: "72797803"
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gestire l'autenticazione in motore di database PowerShell
   Per impostazione predefinita, i componenti PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'autenticazione di Windows in caso di connessione a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. È possibile utilizzare l'autenticazione di SQL Server definendo un'unità virtuale PowerShell o specificando i parametri `-Username` e `-Password` per `Invoke-Sqlcmd`.  
   
-1.  **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
 2.  **Per impostare l'autenticazione usando**  [un'unità virtuale](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Tutte le azioni eseguibili in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] vengono controllate dalle autorizzazioni concesse alle credenziali di autenticazione utilizzate per connettersi all'istanza. Per impostazione predefinita, il provider e i cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'account di Windows in esecuzione per eseguire una connessione con autenticazione di Windows al [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  Per effettuare una connessione con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessario fornire un ID di accesso per l'autenticazione di SQL Server e una password. Quando si utilizza il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario associare le credenziali di accesso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'unità virtuale e quindi utilizzare il comando di modifica della directory (`cd`) per connettersi a tale unità. In Windows PowerShell le credenziali di sicurezza possono essere associate solo a unità virtuali.  

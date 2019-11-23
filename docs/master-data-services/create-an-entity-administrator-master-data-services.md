@@ -21,17 +21,17 @@ ms.locfileid: "73729540"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un amministratore di entità quando si vuole che un gruppo o un utente abbia tutte le autorizzazioni in una o più entità oppure l'autorizzazione per approvare gli insiemi di modifiche in sospeso.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un amministratore di entità quando si vuole che un gruppo o un utente abbia tutte le autorizzazioni in una o più entità oppure l'autorizzazione per approvare gli insiemi di modifiche in sospeso.  
   
 > [!TIP]  
 >  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore di entità. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso all'area funzionale **Autorizzazioni utenti e gruppi** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="to-create-an-entity-administrator"></a>Per creare un amministratore di entità  
   

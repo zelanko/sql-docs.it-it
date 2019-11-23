@@ -47,13 +47,13 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 `[ @job_name = ] 'job_name'` è il nome del processo da eliminare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  È necessario specificare *job_id* o *job_name*; non è possibile specificare entrambi.  
+>  È necessario specificare *job_id* o *job_name*. non è possibile specificare entrambi.  
   
 `[ @originating_server = ] 'server'` per uso interno.  
   
 `[ @delete_history = ] delete_history` specifica se eliminare la cronologia per il processo. *delete_history* è di **bit**e il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia del processo viene eliminata. Quando *delete_history* è **0**, la cronologia del processo non viene eliminata.  
   
- Si noti che quando un processo viene eliminato e la cronologia non viene eliminata, le informazioni cronologiche per il processo non verranno visualizzate nella cronologia dei processi dell'interfaccia utente grafica dell'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma le informazioni rimarranno comunque nella tabella **sysjobhistory** del **database msdb** database.  
+ Si noti che quando un processo viene eliminato e la cronologia non viene eliminata, le informazioni cronologiche per il processo non verranno visualizzate nella cronologia dei processi dell'interfaccia utente grafica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ma le informazioni rimarranno comunque nella tabella **sysjobhistory** del database **msdb** .  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule` specifica se eliminare le pianificazioni associate a questo processo se non sono associate a un altro processo. *delete_unused_schedule* è di **bit**e il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, le pianificazioni associate a questo processo vengono eliminate se non vi sono altri processi che fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
   
@@ -61,9 +61,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'argomento **\@originating_server** è riservato per uso interno.  
   
  L'argomento **\@delete_unused_schedule** fornisce la compatibilità con le versioni precedenti di SQL Server rimuovendo automaticamente le pianificazioni non associate a un processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere pianificazioni non associate a un processo, è necessario specificare il valore **0** come argomento **\@delete_unused_schedule** .  
@@ -72,7 +72,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Questa stored procedure non può eliminare i piani di manutenzione né i processi facenti parti dei piani di manutenzione. Per eliminare i piani di manutenzione, utilizzare invece [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  

@@ -50,7 +50,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175734"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
-  Usare la procedura guidata **Distribuisci un database di SQL Server in una** macchina virtuale di Azure per distribuire un database [!INCLUDE[ssDE](../../includes/ssde-md.md)] da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza del a in una macchina virtuale (VM) di Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
+  Usare la procedura guidata **Distribuisci un database di SQL Server in una** macchina virtuale di Azure per distribuire un database da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
   
  Non è possibile usare la procedura guidata per i backup differenziali perché non sovrascrive un database esistente avente lo stesso nome di database. Per sostituire un database esistente sulla VM, è innanzitutto necessario eliminare il database esistente o modificare il nome del database. Se si verifica un conflitto di denominazione tra il nome del database per un'operazione di distribuzione in transito e un database esistente sulla VM, la procedura guidata suggerirà un nome di database aggiunto per il database in transito per consentire il completamento dell'operazione.  
   
@@ -82,15 +82,15 @@ ms.locfileid: "70175734"
   
 -   Credenziali dell'amministratore per la macchina virtuale.  
   
--   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine.  
+-   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di origine.  
   
  Per altre informazioni sull'esecuzione di SQL Server in macchine virtuali di Azure, vedere [preparazione della migrazione a SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  Nei computer che eseguono sistemi operativi Windows Server, è necessario usare le seguenti impostazioni di configurazione per eseguire questa procedura guidata:  
   
--   Disabilitare la configurazione della sicurezza avanzata:  Utilizzare Server Manager > server locale per impostare la configurazione della sicurezza avanzata di Internet Explorer (ESC) su **disattivato**.  
+-   Disabilitare la configurazione della sicurezza avanzata: usare Server Manager > Server locale per impostare la configurazione della sicurezza avanzata di Internet Explorer (ESC) su **DISATTIVATO**.  
   
--   Abilita JavaScript:  Internet Explorer > Opzioni Internet > sicurezza > livello cliente > Scripting > scripting attivo: **Abilitare**.  
+-   Abilitare JavaScript: Internet Explorer > Opzioni Internet > Sicurezza > Livello personalizzato > Esecuzione script > Esecuzione script attivo: **Attiva**.  
   
 ###  <a name="limitations"></a> Limitazioni e restrizioni  
  Il limite per le dimensioni del database per questa operazione è di 1 TB.  
@@ -124,7 +124,7 @@ ms.locfileid: "70175734"
   
 -   La funzionalità di distribuzione non permette di distribuire un database abilitato per FILESTREAM in una nuova macchina virtuale. Se FILESTREAM non è abilitato nella macchina virtuale prima di eseguire la procedura guidata, l'operazione di ripristino del database avrà esito negativo e l'operazione della procedura guidata non sarà completata correttamente. Per distribuire correttamente un database che usa FILESTREAM, abilitare FILESTREAM nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella macchina virtuale host prima di avviare la procedura guidata. Per altre informazioni, vedere [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   Se il database usa OLTP in memoria, è possibile distribuirlo in una macchina virtuale di Azure senza apportare alcuna modifica al database. Per altre informazioni, vedere [OLTP in memoria (ottimizzazione per la memoria)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   Se il database usa OLTP in memoria, è possibile distribuirlo in una macchina virtuale di Azure senza apportare alcuna modifica al database. Per altre informazioni, vedere [OLTP in memoria (ottimizzazione in memoria)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Considerazioni sulla distribuzione geografica delle risorse  
  Si noti che le risorse seguenti devono essere collocate nella stessa area geografica:  
@@ -187,9 +187,9 @@ ms.locfileid: "70175734"
   
  **Opzioni**  
   
--   **Non visualizzare più questa pagina** - Selezionare questa casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+-   **Non visualizzare più questa pagina.** - Selezionare questa casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : passa alla pagina **Impostazioni di origine** .  
+-   **Avanti** **Impostazioni di origine**.  
   
 -   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "70175734"
   
  **Opzioni**  
   
--   Fare clic su **Connetti** e quindi specificare i dettagli della connessione per l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di che ospita il database da distribuire.  
+-   Fare clic su **Connetti** e quindi specificare i dettagli della connessione per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database da distribuire.  
   
 -   Usare l'elenco a discesa **Selezione database** per specificare il database da distribuire.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "70175734"
  [Esportazione di un'applicazione livello dati](../data-tier-applications/export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Backup e ripristino del database SQL di Azure.](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Distribuzione SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [SQL Server la distribuzione in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
  [Preparativi per la migrazione a SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

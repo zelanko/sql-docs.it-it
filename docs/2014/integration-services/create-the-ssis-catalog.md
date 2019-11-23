@@ -18,7 +18,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798022"
 ---
 # <a name="create-the-ssis-catalog"></a>Creare il catalogo SSIS
-  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Prima di poter distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in quest'ultimo deve essere incluso il catalogo `SSISDB`. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
+  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Prima di poter distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in quest'ultimo deve essere incluso il catalogo `SSISDB`. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
   
  Il catalogo SSISDB può essere creato in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Il catalogo può essere creato anche a livello di programmazione utilizzando Windows PowerShell.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "72798022"
   
 2.  Connettersi al motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** e quindi fare clic su **Creazione catalogo**.  
+3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** , quindi fare clic su **Creazione catalogo**.  
   
 4.  Fare clic su **Abilitazione integrazione con CLR**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72798022"
   
 6.  Immettere una password quindi fare clic su **Ok**.  
   
-     La password consente di proteggere la chiave del database master utilizzata per crittografare i dati del catalogo. Salvare la password in un percorso sicuro. È consigliabile eseguire inoltre il backup della chiave master del database. Per ulteriori informazioni, vedere [Backup della chiave master di un database](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     La password consente di proteggere la chiave del database master utilizzata per crittografare i dati del catalogo. Salvare la password in un percorso sicuro. È consigliabile eseguire inoltre il backup della chiave master del database. Per altre informazioni, vedere [Backup della chiave master di un database](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Per creare il catalogo SSISDB a livello di programmazione  
   

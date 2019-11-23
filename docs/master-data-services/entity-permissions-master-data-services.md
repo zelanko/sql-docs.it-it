@@ -40,9 +40,9 @@ ms.locfileid: "73728177"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Create**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
 |**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Elimina**|L'utente può eliminare i membri.|  
+|**Delete**|L'utente può eliminare i membri.|  
 |**Nega**|Nega ogni accesso all'entità.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  

@@ -25,7 +25,7 @@ ms.locfileid: "71952323"
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Procedura guidata Modifica credenziali (modalità nativa SSRS)
   In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile la procedura guidata Modifica credenziali, che consente di eseguire in modo semplificato i passaggi necessari per riconfigurare l'account utilizzato dal server di report per la connessione al database del server di report. Quando si modificano le credenziali, Gestione configurazione aggiorna tutte le autorizzazioni e le informazioni sull'account di accesso al database nel server di database per il database del server di report utilizzato attivamente dal server di report.  
   
- Per avviare la procedura guidata, fare clic su **Modifica credenziali** nella pagina Database di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per istruzioni su come avviare il Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Reporting Services Configuration Manager &#40;modalità&#41;nativa](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per avviare la procedura guidata, fare clic su **Modifica credenziali** nella pagina Database di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per istruzioni su come avviare il Configuration Manager di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Reporting Services Configuration Manager &#40;modalità&#41;nativa](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952323"
  Non è possibile specificare credenziali di Windows diverse. Se si desidera connettersi come utente di Windows diverso, accedere utilizzando il nome utente desiderato, quindi avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Credenziali**  
- Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si utilizza un account di Windows, è possibile specificare un account locale ( *\<computername > \\ < username @ no__t-3*) se il server di report e il database si trovano nello stesso computer oppure un account utente di dominio ( *\<domain > \\ < username @ no__t-7*) se si trovano in computer diversi nello stesso dominio.  
+ Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si utilizza un account di Windows, è possibile specificare un account locale ( *\<nomecomputer >\\< nome utente\>* ) se il server di report e il database si trovano nello stesso computer oppure un account utente di dominio (\<dominio >\\< *nome utente\>* ) se si trovano in computer diversi nello stesso dominio.  
   
  Il server di report creerà un account di accesso al database e assegnerà le autorizzazioni per il database all'account specificato.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "71952323"
  Consente di monitorare lo stato di ogni attività.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ &#40;Modalità&#41;nativa di SSRS del database](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [Procedura guidata &#40;modifica database&#41;modalità nativa SSRS](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [  &#40;modalità&#41; nativa di SSRS database](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+ [Procedura guidata &#40;modifica database&#41; modalità nativa SSRS](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services Configuration Manager argomenti &#40;della Guida F1 @no__t modalità&#41;nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)-3  
+ [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

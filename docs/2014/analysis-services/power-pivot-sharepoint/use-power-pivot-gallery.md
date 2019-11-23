@@ -49,14 +49,14 @@ ms.locfileid: "70874478"
 >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
 > Per visualizzare il contenuto della libreria in Microsoft Edge, fare clic sulla scheda **Library** in Power Pivot Gallery, quindi impostare la visualizzazione raccolta documenti su **tutti i documenti**.    
 > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
->  Per ulteriori informazioni sulle funzionalità supportate da Microsoft Edge, vedere il Blog di [Windows, una pausa del passato, parte 2: Si dice addio ad ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Per ulteriori informazioni sulle funzionalità supportate da Microsoft Edge, vedere il Blog di Windows, [una pausa del passato, parte 2: come dire addio a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Per un elenco completo dei prerequisiti, vedere [creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Icone della raccolta PowerPivot  
  Le icone forniscono un indicatore visivo della disponibilità del contenuto e dello stato.  
   
-|Icona|Description|  
+|Icona|Descrizione|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icona clessidra viene visualizzata quando viene generata un'immagine di anteprima di ogni pagina del documento. Aggiornare la pagina per visualizzare l'aggiornamento dell'immagine.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|L'icona pagine viene visualizzata quando una cartella di lavoro o un report contiene più pagine di quante non possano essere visualizzate nella raccolta PowerPivot. Per visualizzare tutte le pagine, è necessario usare un'applicazione client.|  
@@ -69,13 +69,13 @@ ms.locfileid: "70874478"
   
 1.  Salvare il file.  
   
-2.  1.  **Excel 2010:** Scegliere **salva & Invia**dal menu file.  
+2.  1.  **Excel 2010:** nel menu File fare clic su **Salva e invia**.  
   
     2.  Fare clic su **Salva in SharePoint**.  
   
     3.  Fare clic su **Opzioni pubblicazione** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   
-    1.  **Excel 2013:**  Scegliere **Salva**dal menu file.  
+    1.  **Excel 2013:**  nel menu File fare clic su **Salva**.  
   
     2.  Fare clic su **Opzioni visualizzazione browser** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   

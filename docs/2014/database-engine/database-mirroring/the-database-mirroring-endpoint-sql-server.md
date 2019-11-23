@@ -78,15 +78,15 @@ ms.locfileid: "72797898"
   
 -   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Specificare un indirizzo di rete del server &#40;mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)  
   
 -   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Utilizzare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
  **Per visualizzare informazioni sull'endpoint del mirroring del database**  
   
@@ -96,5 +96,5 @@ ms.locfileid: "72797898"
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza del trasporto per il mirroring del &#40;database&#41; e gruppi di disponibilità AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys. dm _hadr_availability_replica_states &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys. dm _db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

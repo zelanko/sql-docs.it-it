@@ -32,7 +32,7 @@ ms.locfileid: "72782839"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint  
   
- Gli oggetti prestazioni sono disponibili in Windows Performance Monitor (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profiling di runtime](https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Gli oggetti prestazioni sono disponibili nel monitor di prestazioni di Windows (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profiling di runtime](https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  **Contenuto dell'argomento:**  
   
@@ -43,11 +43,11 @@ ms.locfileid: "72782839"
 -   [Utilizzare i cmdlet di PowerShell per restituire gli elenchi](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a>Contatori delle prestazioni MSRS 2014 Web Service SharePoint Mode  
- Tramite l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode` vengono monitorate le prestazioni del server di report. Questo oggetto prestazioni include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
+ Tramite l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode` vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
  Nella tabella seguente sono elencati i contatori inclusi con l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive. Tramite questo contatore viene restituito un conteggio cumulativo di tutte le sessioni del browser generate dalle esecuzioni dei report, indipendentemente dal fatto che siano ancora attive o meno.<br /><br /> Quando i record di sessione vengono rimossi, il contatore viene diminuito. Per impostazione predefinita, le sessioni vengono rimosse dopo dieci minuti di inattività.|  
 |`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. Vedere `Total Cache Hits` più avanti in questo argomento.|  
@@ -73,11 +73,11 @@ ms.locfileid: "72782839"
 |`Total Requests`|Numero totale di richieste inviate al server di report dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
   
 ##  <a name="bkmk_windowsservice"></a>Contatori delle prestazioni MSRS 2014 Windows Service SharePoint Mode  
- L'oggetto prestazioni `MSRS 2014 Windows Service SharePoint Mode` consente di monitorare il servizio Windows ReportServer. Questo oggetto prestazioni include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
+ L'oggetto prestazioni `MSRS 2014 Windows Service SharePoint Mode` consente di monitorare il servizio Windows ReportServer. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto prestazioni `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive archiviate nel database del server di report. Questo contatore restituisce un conteggio cumulativo di tutte le sessioni utilizzabili del browser generate dalle sottoscrizioni del report, indipendentemente dal fatto che siano attive o meno.|  
 |`Alerting: event queue length`||  

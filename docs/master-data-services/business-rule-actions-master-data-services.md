@@ -74,6 +74,6 @@ ms.locfileid: "73729741"
 ## <a name="see-also"></a>Vedere anche  
  [Condizioni della regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

@@ -30,7 +30,7 @@ ms.locfileid: "72909323"
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove le righe dalla tabella delle modifiche nel database corrente in base al valore *low_water_mark* specificato. Questa stored procedure è fornita agli utenti che vogliono gestire direttamente il processo di pulizia della tabella delle modifiche. Tuttavia, è necessario fare attenzione poiché la procedura influisce su tutti gli utenti dei dati della tabella delle modifiche.  
+  Rimuove le righe dalla tabella delle modifiche nel database corrente in base al valore di *low_water_mark* specificato. Questa stored procedure è fornita agli utenti che vogliono gestire direttamente il processo di pulizia della tabella delle modifiche. Tuttavia, è necessario fare attenzione poiché la procedura influisce su tutti gli utenti dei dati della tabella delle modifiche.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,12 +48,12 @@ sys.sp_cdc_cleanup_change_table
  [@capture_instance =] '*capture_instance*'  
  Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
- *capture_instance* deve denominare un'istanza di acquisizione esistente nel database corrente.  
+ *capture_instance* necessario assegnare un nome a un'istanza di acquisizione esistente nel database corrente.  
   
  [@low_water_mark =] *low_water_mark*  
  Numero di sequenza del file di log (LSN) che deve essere utilizzato come nuovo limite minimo per l' *istanza di acquisizione*. *low_water_mark* è **binario (10)** e non prevede alcun valore predefinito.  
   
- Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC. LSN _time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
+ Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
   
  Se il valore viene impostato in modo esplicito su NULL, il limite *minimo* corrente per l' *istanza di acquisizione* viene utilizzato per definire il limite superiore per l'operazione di pulizia.  
   
@@ -66,13 +66,13 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  sys.sp_cdc_cleanup_change_table esegue le operazioni seguenti:  
   
 1.  Se il parametro @low_water_mark non è NULL, imposta il valore di start_lsn per l' *istanza di acquisizione* sul nuovo limite *minimo*.  
   
     > [!NOTE]  
-    >  Il nuovo limite minimo potrebbe non essere quello specificato nella chiamata alla stored procedure. Se altre voci nella tabella cdc.lsn_time_mapping condividono la stessa ora di commit, il valore start_lsn più piccolo rappresentato nel gruppo di voci viene selezionato come limite minimo modificato. Se il parametro @low_water_mark è NULL o il limite minimo corrente è maggiore del nuovo LowWatermark, il valore start_lsn per l'istanza di acquisizione viene lasciato invariato.  
+    >  Il nuovo limite minimo potrebbe non essere quello specificato nella chiamata alla stored procedure. Se altre voci nella tabella cdc.lsn_time_mapping condividono la stessa ora di commit, il valore start_lsn più piccolo rappresentato nel gruppo di voci viene selezionato come limite minimo modificato. Se il parametro @low_water_mark è NULL o il limite minimo corrente è maggiore del nuovo LowWatermark, il valore di start_lsn per l'istanza di acquisizione viene lasciato invariato.  
   
 2.  Le voci della tabella delle modifiche con valori __$start_lsn inferiori al limite minimo vengono quindi eliminate. La soglia di eliminazione viene utilizzata per limitare il numero di righe eliminate in una singola transazione. Viene restituito un errore sull'eliminazione delle voci, che però non influisce sulle modifiche apportate al limite minimo dell'istanza di acquisizione in base alla chiamata.  
 
@@ -86,7 +86,7 @@ sys.sp_cdc_cleanup_change_table
   
      Poiché questa stored procedure esegue il processo di pulizia per una singola istanza di acquisizione, è possibile utilizzarla per compilare una strategia di pulizia personalizzata in modo da applicare le regole di pulizia in base alla singola istanza di acquisizione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  

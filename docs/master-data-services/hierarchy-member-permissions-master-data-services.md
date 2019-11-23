@@ -40,9 +40,9 @@ ms.locfileid: "73729233"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|I membri vengono visualizzati.<br /><br /> <br /><br /> Nota: se si assegna l'autorizzazione di **Read** a **Radice**, i membri in **Radice** sono di sola lettura. Nelle gerarchie esplicite e nelle raccolte l'utente può invece spostare i membri in **Radice** e aggiungere nuovi membri a **Radice**.|  
-|**Creare**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
+|**Create**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
 |**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
-|**Elimina**|I membri vengono visualizzati e l'utente può eliminarli.|  
+|**Delete**|I membri vengono visualizzati e l'utente può eliminarli.|  
 |**Nega**|I membri non vengono visualizzati.|  
   
  Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende **dall'impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  

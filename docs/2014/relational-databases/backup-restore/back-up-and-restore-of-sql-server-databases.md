@@ -34,7 +34,7 @@ ms.locfileid: "70176028"
   
  Il componente di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre il rischio di perdita irreversibile dei dati, è necessario eseguire regolarmente il backup dei database per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati causata da vari tipi di guasti e problemi. Il test della strategia mediante il ripristino di un set di backup e il recupero del database assicura una efficace preparazione a reagire in qualsiasi emergenza.  
   
- Oltre all'archiviazione locale per l'archiviazione dei backup, SQL Server supporta anche il backup e il ripristino dal servizio di archiviazione BLOB di Azure. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio Archiviazione BLOB di Azure. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "70176028"
   
     -   Errori hardware, ad esempio un'unità disco danneggiata o la perdita definitiva di un server.  
   
-    -   Calamità naturali o altre emergenze gravi. Usando SQL Server backup nel servizio di archiviazione BLOB di Azure, è possibile creare un backup esterno in un'area diversa rispetto alla posizione locale, da usare in caso di emergenza naturale che interessa la posizione locale.  
+    -   Calamità naturali o altre emergenze gravi. Tramite il backup di SQL Server nel servizio Archiviazione BLOB di Azure, è possibile creare un backup esterno in un'area diversa dalla posizione locale da usare in caso si venga colpiti da una calamità naturale.  
   
 -   I backup di un database risultano inoltre utili per le attività di amministrazione di routine, ad esempio la copia di un database da un server a un altro, l'impostazione di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o del mirroring del database e l'archiviazione.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176028"
  Copia dei dati utilizzabile per il ripristino e il recupero in seguito a un errore. I backup di un database possono essere utilizzati anche per ripristinare una copia del database in una nuova posizione.  
   
  dispositivo di backup  
- Dispositivo disco o nastro nel quale vengono scritti i backup di SQL Server e da cui è possibile eseguirne il ripristino. SQL Server backup possono anche essere scritti in un servizio di archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Dispositivo disco o nastro nel quale vengono scritti i backup di SQL Server e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio Archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  supporti di backup  
  Uno o più nastri o file del disco in cui sono stati scritti uno o più backup.  
@@ -151,7 +151,7 @@ ms.locfileid: "70176028"
      Per altre informazioni, vedere [Stimare le dimensioni di un backup completo del database](#EstimateDbBuSize), più avanti in questa sezione.  
   
 ####  <a name="EstimateDbBuSize"></a>Stima delle dimensioni di un backup completo del database  
- Prima di implementare una strategia di backup e ripristino, stimare quanto spazio su disco verrà utilizzato da un backup del database completo. Con l'operazione di backup i dati contenuti nel database vengono copiati nel file di backup. Poiché il backup include soltanto i dati presenti nel database, ma non lo spazio inutilizzato, le dimensioni del backup risultano di solito inferiori a quelle del database originale. È possibile stimare la dimensione di un backup del database completo tramite la stored procedure di sistema **sp_spaceused**. Per altre informazioni, vedere [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
+ Prima di implementare una strategia di backup e ripristino, stimare quanto spazio su disco verrà utilizzato da un backup del database completo. Con l'operazione di backup i dati contenuti nel database vengono copiati nel file di backup. Poiché il backup include soltanto i dati presenti nel database, ma non lo spazio inutilizzato, le dimensioni del backup risultano di solito inferiori a quelle del database originale. È possibile stimare la dimensione di un backup del database completo tramite la stored procedure di sistema **sp_spaceused** . Per altre informazioni, vedere [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Pianificare le operazioni di backup  
  L'esecuzione di un'operazione di backup ha un effetto minimo sulle transazioni in esecuzione; è possibile quindi eseguire le operazioni di backup durante le operazioni normali. È possibile eseguire un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un effetto minimo sui carichi di lavoro di produzione.  
@@ -172,7 +172,7 @@ ms.locfileid: "70176028"
   
 -   [Creare un piano di manutenzione](../maintenance-plans/create-a-maintenance-plan.md)  
   
--   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
+-   [Creare un processo](../../ssms/agent/create-a-job.md)  
   
 -   [Pianificare un processo](../../ssms/agent/schedule-a-job.md)  
   
@@ -194,7 +194,7 @@ ms.locfileid: "70176028"
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
 ### <a name="creating-backups"></a>Creazione di backup  
   
@@ -205,15 +205,15 @@ ms.locfileid: "70176028"
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
--   [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
+-   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
  **Utilizzo di Transact-SQL**  
   
--   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Usare Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
@@ -228,11 +228,11 @@ ms.locfileid: "70176028"
   
 -   [Ripristinare un backup &#40;del database SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
+-   [Ripristinare un database in un percorso nuovo &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
--   [Ripristinare un backup differenziale del database &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
+-   [Ripristino di un backup differenziale del database &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
--   [Ripristino di file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+-   [Ripristinare file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
  **Utilizzo di Transact-SQL**  
   
@@ -251,15 +251,15 @@ ms.locfileid: "70176028"
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Ripristino di log delle transazioni (modello di recupero con registrazione completa)  
  **Utilizzo di SQL Server Management Studio**  
   
--   [Ripristino di un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  **Utilizzo di Transact-SQL**  
   
--   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
@@ -268,7 +268,7 @@ ms.locfileid: "70176028"
   
 -   [Riavviare un'operazione di ripristino interrotta &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
--   [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
+-   [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
 
   
@@ -279,7 +279,7 @@ ms.locfileid: "70176028"
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Backup e ripristino di indici e cataloghi full-text](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Eseguire il backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  

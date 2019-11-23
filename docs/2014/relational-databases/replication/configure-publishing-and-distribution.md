@@ -72,7 +72,7 @@ ms.locfileid: "73882258"
   
 1.  Eseguire [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) per determinare se il server è già configurato come database di distribuzione.  
   
-    -   Se il valore di **installed** nel set di risultati è **0**, eseguire [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) nel database master del server di distribuzione. Specificare una password complessa per **\@password**. Questa password per l'account **distributor_admin** verrà utilizzata per la connessione del server di pubblicazione al database di distribuzione.  
+    -   Se il valore di **installed** nel set di risultati è **0**, eseguire [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) nel database master del server di distribuzione. Specificare una password complessa per **\@password**. Questa password per l'account **distributor_admin** verrà utilizzata per la connessione del server di pubblicazione al server di distribuzione.  
   
     -   Se il valore di **distribution db installed** nel set di risultati è **0**, eseguire [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) nel database master del server di distribuzione. Specificare il nome del database di distribuzione per **\@database**. Facoltativamente, è possibile specificare il periodo di memorizzazione massimo delle transazioni per **\@max_distretention** e il periodo di memorizzazione della cronologia per **\@history_retention**. Se viene creato un nuovo database, specificare i parametri desiderati per le relative proprietà.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "73882258"
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Configura distribuzione](configure-distribution.md)   
+ [Configurare la distribuzione](configure-distribution.md)   
  [Concetti di base relativi a RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
  [Configurare la replica per &#40;gruppi di disponibilità AlwaysOn SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   

@@ -36,7 +36,7 @@ object.GetNextOrderValue()
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

@@ -35,7 +35,7 @@ ms.locfileid: "70148291"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione di runtime per **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli intervalli di statistiche di runtime precedenti. Per l'intervallo attualmente attivo possono essere presenti più righe che rappresentano le statistiche di runtime per il piano a cui fa riferimento **plan_id**, con il tipo di esecuzione rappresentato da **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altre rappresentano lo stato in memoria. Quindi, per ottenere lo stato effettivo per ogni intervallo è necessario aggregare le metriche, raggruppando per **plan_id**, **execution_type** e **runtime_stats_interval_id**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione di runtime per il **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli intervalli di statistiche di runtime precedenti. Per l'intervallo attualmente attivo possono essere presenti più righe che rappresentano le statistiche di runtime per il piano a cui fa riferimento **plan_id**, con il tipo di esecuzione rappresentato da **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altre rappresentano lo stato in memoria. Quindi, per ottenere lo stato effettivo per ogni intervallo è necessario aggregare le metriche, raggruppando per **plan_id**, **execution_type** e **runtime_stats_interval_id**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**plan_id**|**bigint**|Chiave esterna. Join a [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Join a [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione della query:<br /><br /> 0-esecuzione regolare (completata correttamente)<br /><br /> 3-esecuzione interrotta dal client<br /><br /> 4-esecuzione interrotta eccezione|  
@@ -104,7 +104,7 @@ ms.locfileid: "70148291"
 |**max_page_server_io_reads**|**bigint**|Numero massimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
 |**stdev_page_server_io_reads**|**float**|Il numero di I/O del server di paging legge la deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -115,8 +115,8 @@ ms.locfileid: "70148291"
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Query Store Stored Procedures &#40;Transact-SQL&#41; (Stored procedure di Archivio query - Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

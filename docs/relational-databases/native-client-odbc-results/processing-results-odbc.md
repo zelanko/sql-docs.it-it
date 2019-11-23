@@ -65,7 +65,7 @@ ms.locfileid: "73778976"
   
  Il processo che consente di recuperare le righe dall'origine dati e di restituirle alle applicazioni viene denominato recupero.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Determinazione delle caratteristiche di un set &#40;di risultati ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   

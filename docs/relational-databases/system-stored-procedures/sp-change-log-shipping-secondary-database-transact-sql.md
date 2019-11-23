@@ -75,7 +75,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @threshold_alert = ] 'threshold_alert'` è l'avviso da generare quando viene superata la soglia di ripristino. *threshold_alert* è di **tipo int**e il valore predefinito è 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` specifica se verrà generato un avviso quando viene superato il valore di *restore_threshold*. 1 = abilitato; 0 = disabilitato. *threshold_alert_enabled* è di **bit** e non può essere null.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` specifica se verrà generato un avviso quando viene superato il *restore_threshold*. 1 = abilitato; 0 = disabilitato. *threshold_alert_enabled* è di **bit** e non può essere null.  
   
 `[ @history_retention_period = ] 'history_retention_period'` è l'intervallo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**. Se non è specificato alcun valore, verrà utilizzato il valore 1440.  
   
@@ -85,14 +85,14 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **sp_change_log_shipping_secondary_database** deve essere eseguito dal database **Master** nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
-1.  Modifica le impostazioni nei record **log_shipping_secondary_database** , se necessario.  
+1.  Modifica le impostazioni nei record di **log_shipping_secondary_database** , se necessario.  
   
-2.  Modifica il record di monitoraggio locale in **log_shipping_monitor_secondary** nel server secondario utilizzando gli argomenti specificati, se necessario.  
+2.  Modifica il record di monitoraggio locale in **log_shipping_monitor_secondary** sul server secondario utilizzando gli argomenti specificati, se necessario.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

@@ -42,7 +42,7 @@ ms.locfileid: "70154998"
 -   Leggere gli argomenti della documentazione online relativi al rendering in formato immagine (EMF) per comprendere le modalità di rendering delle pagine nell'anteprima e nell'output di stampa.  
   
 ## <a name="rsprintclient-overview"></a>Cenni preliminari su RSPrintClient  
- Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per stampare il report, il controllo ActiveX **RSPrintClient** usa l'estensione per il rendering delle immagini (EMF). Vengono utilizzate le seguenti informazioni sul dispositivo EMF: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
+ Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per stampare il report, il controllo ActiveX **RSPrintClient** usa l'estensione per il rendering delle immagini (EMF). Vengono utilizzate le informazioni sul dispositivo EMF seguenti: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
   
 ### <a name="language-support"></a>Supporto delle lingue  
  Il controllo include stringhe testo per l'interfaccia utente in diverse lingue e accetta valori di input in vari sistemi di misura. La lingua e il sistema di misura usati vengono determinati dalle proprietà **Culture** e **UICulture**. che accettano entrambe valori LCID. Se si specifica un identificatore LCID per una lingua che è una variante di una lingua supportata, verrà utilizzata la lingua più simile corrispondente. Se si specifica un LCID di una lingua non supportata e per la quale non esiste un LCID simile corrispondente, verrà utilizzato l'inglese (Stati Uniti).  
@@ -65,7 +65,7 @@ ms.locfileid: "70154998"
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Type|LS|Predefinito|Descrizione|  
+|Proprietà|Type|LS|Valore predefinito|Descrizione|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
@@ -73,8 +73,8 @@ ms.locfileid: "70154998"
 |MarginBottom|Double|LS|Impostazione del report|Recupera o imposta il margine inferiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |PageWidth|Double|LS|Impostazione del report|Recupera o imposta la larghezza della pagina. Il valore predefinito è di 215,9 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
 |PageHeight|Double|LS|Impostazione del report|Recupera o imposta l'altezza della pagina. Il valore predefinito è di 279,4 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
-|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Se, ad esempio, un utente `3`digita, il valore verrà misurato in millimetri se la lingua è francese o in pollici se la lingua è l'inglese (Stati Uniti). I valori validi includono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Il testo nella finestra di dialogo stampa è localizzato in queste lingue: Cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi includono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Se, ad esempio, un utente digita `3`, il valore verrà misurato in millimetri se la lingua è francese o in pollici se la lingua è l'inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Per il testo della finestra di dialogo di stampa sono disponibili le lingue seguenti: cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|LS|False|Specifica se il controllo genera un comando GET per il server di report per avviare una sessione per la stampa fuori sessione.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando impostare la proprietà Authenticate  
@@ -93,7 +93,7 @@ ms.locfileid: "70154998"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Quando si esegue il report nel servizio di report SQL di Azure, si usano i valori CLSID seguenti.  
+ Quando si esegue il report in Azure SQL Reporting, utilizzare i valori CLSID seguenti.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -104,7 +104,7 @@ ms.locfileid: "70154998"
   
 |Argomento|I/O|Type|Descrizione|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|Specifica la directory virtuale del server di report, https://adventure-works/reportserver) ad esempio.|  
+|ServerPath|In|String|Specifica la directory virtuale del server di report, ad esempio https://adventure-works/reportserver).|  
 |ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|In|String|Nome breve del report (nell'esempio precedente è Employee Sales Summary) che viene visualizzato nella finestra di dialogo di stampa e nella coda di stampa.|  
   
@@ -143,7 +143,7 @@ ms.locfileid: "70154998"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stampare i report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Stampa di report &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Stampare report &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini](../../image-device-information-settings.md)  
   
   

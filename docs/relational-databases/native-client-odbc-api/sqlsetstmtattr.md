@@ -112,7 +112,7 @@ ms.locfileid: "73785522"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Esempio:  
+ Ad esempio:  
   
  `service=mySSBService;local database=mydb`  
   

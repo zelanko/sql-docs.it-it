@@ -50,14 +50,14 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="properties"></a>Proprietà  
  Vedere [argomenti e proprietà delle stored procedure per gli indici spaziali](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per accedere alla procedura, l'utente deve essere assegnato a un ruolo PUBLIC. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzato `sp_help_spatial_geography_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geography_col2** definito sulla tabella **geography_col** per l'esempio di query specificato in **\@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
+ Nell'esempio seguente viene usato `sp_help_spatial_geography_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geography_col2** definito nella tabella **geography_col** per l'esempio di query specificato in **\@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
  Viene quindi eseguita una [query XQuery](../../xquery/xquery-basics.md) sul set di risultati, restituendo una proprietà specifica.  
   
@@ -69,7 +69,7 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Analogamente a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), questa stored procedure fornisce un accesso più semplice a livello di codice alle proprietà di un indice spaziale **geografico** e segnala il set di risultati in formato XML.  
+ Analogamente a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), questo stored procedure fornisce accesso a livello di codice più semplice alle proprietà di un indice spaziale **geografico** e segnala il set di risultati in formato XML.  
   
  Il rettangolo di delimitazione di una **Geografia** è la terra intera.  
   

@@ -44,25 +44,25 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  Numero di errore del messaggio da modificare da **sys. messages**. *message_number* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @parameter = ] 'write\_to\_log_'` viene utilizzato con **\@parameter_value** per indicare che il messaggio deve essere scritto nel registro applicazioni di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *write_to_log* è di **tipo sysname** e non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o null. Se *write_to_log* è impostato su WITH_LOG o null e il valore di **\@parameter_value** è **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o null e il valore di **\@parameter_value** è **false**, il messaggio non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base alla modalità di generazione dell'errore. Se viene specificato *write_to_log* , è necessario specificare anche il valore per **\@parameter_value** .  
+`[ @parameter = ] 'write\_to\_log_'` viene utilizzato con **\@parameter_value** per indicare che il messaggio deve essere scritto nel registro applicazioni di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *write_to_log* è di **tipo sysname** e non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o null. Se *write_to_log* è impostato su WITH_LOG o null e il valore per **\@parameter_value** è **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o null e il valore per **\@parameter_value** è **false**, il messaggio non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base alla modalità di generazione dell'errore. Se *write_to_log* è specificato, è necessario specificare anche il valore per **\@parameter_value** .  
   
 > [!NOTE]  
 >  Se un messaggio viene scritto nel registro applicazioni di Windows, viene registrato inoltre nel file di log degli errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` viene usato con **\@parameter** per indicare che l'errore deve essere scritto nel registro applicazioni di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *value* è di tipo **varchar (5)** e non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base al modo in cui è stato generato l'errore. Se viene specificato *value* , è necessario specificare anche *write_to_log* per **\@parameter** .  
+`[ @parameter_value = ]'value_'` viene utilizzato con **\@parametro** per indicare che l'errore deve essere scritto nel registro applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *value* è di tipo **varchar (5)** e non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base al modo in cui è stato generato l'errore. Se viene specificato *value* , è necessario specificare anche *write_to_log* per il **parametro\@** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
- L'effetto di **sp_altermessage** con l'opzione WITH_LOG è simile a quello del parametro RAISERROR with log, ad eccezione del fatto che **sp_altermessage** modifica il comportamento di registrazione di un messaggio esistente. I messaggi modificati con l'opzione WITH_LOG vengono sempre scritti nel registro applicazioni di Windows, indipendentemente dalla modalità con cui sono stati generati. Gli errori vengono infatti scritti nel registro applicazioni di Windows anche se RAISERROR viene eseguito senza l'opzione WITH_LOG.  
+## <a name="remarks"></a>Osservazioni  
+ L'effetto di **sp_altermessage** con l'opzione WITH_LOG è simile a quello del parametro RAISERROR with log, ad eccezione del fatto che **sp_altermessage** modificare il comportamento di registrazione di un messaggio esistente. I messaggi modificati con l'opzione WITH_LOG vengono sempre scritti nel registro applicazioni di Windows, indipendentemente dalla modalità con cui sono stati generati. Gli errori vengono infatti scritti nel registro applicazioni di Windows anche se RAISERROR viene eseguito senza l'opzione WITH_LOG.  
   
- È possibile modificare i messaggi di sistema tramite **sp_altermessage**.  
+ È possibile modificare i messaggi di sistema utilizzando **sp_altermessage**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **serveradmin** .  
   
 ## <a name="examples"></a>Esempi  

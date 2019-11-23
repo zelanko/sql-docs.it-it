@@ -33,7 +33,7 @@ ms.locfileid: "71207716"
 
   Consente di forzare un piano specifico per una query specifica.  
   
- Quando un piano è forzato per una query specifica, ogni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volta che rileva la query, tenta di forzare il piano in Query Optimizer. Se l'utilizzo forzato del piano ha esito negativo, viene generato un evento esteso e viene richiesto a Query Optimizer di ottimizzare in modo normale.  
+ Quando si forza un piano per una query specifica, ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileva la query, tenta di forzare il piano in Query Optimizer. Se l'utilizzo forzato del piano ha esito negativo, viene generato un evento esteso e viene richiesto a Query Optimizer di ottimizzare in modo normale.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,16 +44,16 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @query_id = ] query_id`ID della query. *query_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
+`[ @query_id = ] query_id` è l'ID della query. *query_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
   
-`[ @plan_id = ] plan_id`ID del piano di query da forzare. *plan_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
+`[ @plan_id = ] plan_id` è l'ID del piano di query da forzare. *plan_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **ALTER** per il database.
   
 ## <a name="examples"></a>Esempi  
@@ -68,7 +68,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato i query_id e plan_id che si desidera forzare, utilizzare l'esempio seguente per forzare l'utilizzo di un piano da parte della query.  
+ Dopo aver identificato il query_id e plan_id che si desidera forzare, utilizzare l'esempio seguente per forzare l'utilizzo di un piano da parte della query.  
   
 ```sql  
 EXEC sp_query_store_force_plan 3, 3;  

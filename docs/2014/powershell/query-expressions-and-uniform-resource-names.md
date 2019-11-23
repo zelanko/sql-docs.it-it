@@ -98,7 +98,7 @@ ms.locfileid: "72782757"
  not(\<*PropertyExpression*>)  
  Nega il valore della valutazione della *PropertyExpression*, enumerando tutti gli oggetti che non corrispondono alla condizione specificata nella *PropertyExpression*. Ad esempio, not(contains(\@Name, 'xyz')) enumera tutti gli oggetti i cui nomi non contengono la stringa xyz.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le espressioni di query sono stringhe che enumerano i nodi in una gerarchia del modello SMO. Ciascun nodo dispone di un'espressione di filtro che specifica i criteri per determinare quali oggetti in corrispondenza di un dato nodo sono enumerati. Le espressioni di query vengono modellate sul linguaggio delle espressioni XPath. Le espressioni di query implementano un piccolo subset delle espressioni che sono supportate da XPath; inoltre dispongono di alcune estensioni che non si trovano in XPath. Le espressioni XPath sono stringhe che specificano un set di criteri che vengono utilizzati per enumerare uno o più tag in un documento XML. Per altre informazioni su XPath, vedere [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  Le espressioni di query devono iniziare con un riferimento assoluto all'oggetto Server. Le espressioni relative con un carattere "/" iniziale non sono consentite. La sequenza di oggetti che sono specificati in un'espressione di query deve seguire la gerarchia di oggetti Collection nel modello a oggetti associato. Ad esempio, un'espressione di query che fa riferimento a oggetti nello spazio dei nomi Microsoft.SqlServer.Management.Smo deve iniziare con un nodo Server seguito da un nodo Database e così via.  
@@ -114,7 +114,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-enumerating-objects-using-false"></a>A. Enumerazione di oggetti utilizzando false()  
+### <a name="a-enumerating-objects-using-false"></a>R. Enumerazione di oggetti utilizzando false()  
  Questa espressione di query enumera tutti i database il cui attributo **AutoClose** è impostato su False nell'istanza predefinita in **MyComputer**.  
   
 ```  
@@ -158,4 +158,4 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>Vedere anche  
  [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Motore di database&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

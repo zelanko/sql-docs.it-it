@@ -29,10 +29,10 @@ ms.locfileid: "73728053"
 > [!NOTE]  
 >  Quando viene bloccata una versione, gli utenti con privilegi avanzati e gli amministratori del modello possono continuare ad aggiungere, modificare e rimuovere membri. Gli altri utenti con autorizzazione per il modello possono solo visualizzare membri.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Lo stato della versione deve essere **Aperto**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728053"
   
 4.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

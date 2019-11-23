@@ -20,7 +20,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798141"
 ---
-# <a name="sqlps-utility"></a>sqlps - utilità
+# <a name="sqlps-utility"></a>Utilità sqlps
   Tramite l'utilità `sqlps` viene avviata una sessione di Windows PowerShell 2.0 con il provider PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i cmdlet caricati e registrati. È possibile immettere comandi o script di PowerShell che utilizzano componenti di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per utilizzare istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i relativi oggetti.  
   
 > [!IMPORTANT]  
@@ -66,15 +66,15 @@ ms.locfileid: "72798141"
  **-Command-** specifica che l'utilità `sqlps` legge l'input dall'input standard.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. *Script_block* può essere specificato solo quando l'utilità `sqlps` viene chiamata da **PowerShell** o da un'altra `sqlps` sessione di utilità. *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
+ Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. *Script_block* può essere specificato solo quando l'utilità di `sqlps` viene chiamata da **PowerShell** o da un'altra sessione di utilità di `sqlps`. *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
   
  *string* [ *command_parameters* ]  
- Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"& {*`command`*}"**. Le virgolette indicano una stringa e l'operatore Invoke (&) fa sì che l'utilità `sqlps` esegua il comando.  
+ Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"& { *`command`* }"** . Le virgolette indicano una stringa e l'operatore Invoke (&) fa sì che l'utilità `sqlps` esegua il comando.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  Visualizza il riepilogo della sintassi delle opzioni dell'utilità `sqlps`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'utilità `sqlps` avvia l'ambiente PowerShell (PowerShell. exe) e carica il modulo PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il modulo, denominato anche `sqlps`, carica e registra questi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-in PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -101,7 +101,7 @@ ms.locfileid: "72798141"
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-run-the-sqlps-utility-in-default-interactive-mode-without-the-copyright-banner"></a>A. Eseguire l'utilità sqlps in modalità interattiva predefinita senza le informazioni sul copyright
+### <a name="a-run-the-sqlps-utility-in-default-interactive-mode-without-the-copyright-banner"></a>R. Eseguire l'utilità sqlps in modalità interattiva predefinita senza le informazioni sul copyright
   
 ```cmd
 sqlps -NoLogo  

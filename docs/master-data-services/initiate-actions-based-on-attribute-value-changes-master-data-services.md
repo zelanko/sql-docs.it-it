@@ -26,12 +26,12 @@ ms.locfileid: "73729169"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola di business per inizializzare azioni in base alle modifiche dei valori di attributo. Ad esempio, quando un valore di attributo specifico viene modificato, è necessario modificare un valore, inviare una notifica o avviare un flusso di lavoro esterno.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Gli attributi devono essere in un gruppo rilevamento modifiche. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73729169"
   
 17. Nel riquadro **Modifica azione** fare clic su **Salva elemento**.  
   
-18. Fare clic **Indietro**.  
+18. Fare clic su **Indietro**.  
   
 19. Facoltativamente, nella pagina **Manutenzione regola business** per la riga che contiene la regola business fare doppio clic su una cella nella colonna **Nome**, **Descrizione**o **Notifica** per aggiornare il valore.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73729169"
   
 21. Nella finestra di dialogo di conferma fare clic su **OK**. Lo stato della regola viene modificato in **Attiva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
@@ -92,6 +92,6 @@ ms.locfileid: "73729169"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

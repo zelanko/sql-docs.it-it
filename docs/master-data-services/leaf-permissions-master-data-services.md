@@ -40,9 +40,9 @@ ms.locfileid: "73728082"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri foglia e i relativi attributi.|  
-|**Creare**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
+|**Create**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
 |**Update**|L'utente può aggiornare i membri foglia e gli attributi.|  
-|**Elimina**|L'utente può eliminare i membri foglia.|  
+|**Delete**|L'utente può eliminare i membri foglia.|  
 |**Nega**|Negare l'accesso ai membri foglia.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  
@@ -53,15 +53,15 @@ ms.locfileid: "73728082"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere gli attributi.|  
-|**Creare**|L'utente può assegnare valori durante la creazione di membri.|  
+|**Create**|L'utente può assegnare valori durante la creazione di membri.|  
 |**Update**|L'utente può aggiornare gli attributi.|  
-|**Elimina**|Nessun effetto.|  
+|**Delete**|Nessun effetto.|  
 |**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
   
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
   
-|Crea vista sottoscrizioni|codice|Subcategory (Aggiornamento)|  
+|Name|Code|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|Mountain bike {5}|  
 |Mountain-100|BK-M201|Mountain bike {5}|  

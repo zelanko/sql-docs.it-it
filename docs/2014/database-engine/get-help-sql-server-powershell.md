@@ -21,7 +21,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797881"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Visualizzazione della Guida di SQL Server PowerShell
   Vi sono diverse fonti di informazione per l'utilizzo dei cmdlet e del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell. Tra queste è inclusa la Guida disponibile nell'ambiente di Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
@@ -124,4 +124,4 @@ $MyVar | Get-Member -Type Properties
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider PowerShell per SQL Server](../powershell/sql-server-powershell-provider.md)   
- [Usare cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Utilizzo di cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

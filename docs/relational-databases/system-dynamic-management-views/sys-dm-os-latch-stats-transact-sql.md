@@ -31,7 +31,7 @@ ms.locfileid: "72289408"
 Restituisce informazioni relative a tutte le attese di latch organizzate per classe. 
   
 > [!NOTE]  
-> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys. dm _pdw_nodes_os_latch_stats**.  
+> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -41,11 +41,11 @@ Restituisce informazioni relative a tutte le attese di latch organizzate per cla
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
-Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è richiesta l'autorizzazione `VIEW SERVER STATE`.   
-Nei livelli Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è necessaria l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli standard e Basic [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] richiede l'amministratore del **Server** o un account **amministratore Azure Active Directory** .   
+## <a name="permissions"></a>Autorizzazioni  
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
+Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la vista sys.dm_os_latch_stats per identificare l'origine della contesa di latch mediante l'analisi dei numeri di attesa relativi e dei tempi di attesa per le varie classi di latch. In alcune situazioni è possibile risolvere o ridurre la contesa di latch. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 È possibile ripristinare il contenuto di sys.dm_os_latch_stats utilizzando `DBCC SQLPERF` come illustrato di seguito:  
@@ -100,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Utilizzato per sincronizzare le operazioni di backup differenziale con DBCC.|  
 |BACKUP_OPERATION|Utilizzato per la sincronizzazione delle strutture interne di dati all'interno di un'operazione di backup, ad esempio il backup di database, log o file.|  
 |BACKUP_FILE_HANDLE|Utilizzato per sincronizzare le operazioni di apertura di file durante un'operazione di ripristino.|  
-|BUFFER|Utilizzato per sincronizzare l'accesso a breve termine alle pagine di database. È richiesto un latch del buffer prima di leggere o modificare qualsiasi pagina di database. Una contesa di latch del buffer può indicare numerosi problemi, inclusi I/O lenti e pagine utilizzate con maggiore frequenza.<br /><br /> Questa classe di latch copre tutti i possibili utilizzi dei latch di pagina. sys. dm _os_wait_stats fa una differenza tra le attese dei latch di pagina provocate da operazioni di I/O e operazioni di lettura e scrittura nella pagina.|  
+|BUFFER|Utilizzato per sincronizzare l'accesso a breve termine alle pagine di database. È richiesto un latch del buffer prima di leggere o modificare qualsiasi pagina di database. Una contesa di latch del buffer può indicare numerosi problemi, inclusi I/O lenti e pagine utilizzate con maggiore frequenza.<br /><br /> Questa classe di latch copre tutti i possibili utilizzi dei latch di pagina. sys. dm_os_wait_stats fa una differenza tra le attese dei latch di pagina provocate da operazioni di I/O e operazioni di lettura e scrittura nella pagina.|  
 |BUFFER_POOL_GROW|Utilizzato per la sincronizzazione della gestione dei buffer interni durante le operazioni di aumento delle dimensioni del pool di buffer.|  
 |DATABASE_CHECKPOINT|Utilizzato per serializzare i checkpoint all'interno di un database.|  
 |CLR_PROCEDURE_HASHTABLE|Solo per uso interno.|  
@@ -164,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Solo per uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Solo per uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Solo per uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Utilizzato per sincronizzare una mappa a livello di istanza delle code dei camerieri. Esiste una coda per ID database, versione database e tupla ID coda. La contesa sui latch di questa classe può verificarsi quando molte connessioni sono: In uno stato di attesa (ricezione) Wait; chiamata di ASPETTER (RECEIVE); superamento del timeout di attesa; ricezione di un messaggio; esecuzione del commit o del rollback della transazione che contiene l'oggetto ASPETTER (RECEIVE); È possibile ridurre la contesa riducendo il numero di thread in uno stato di attesa (ricezione). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Utilizzato per sincronizzare una mappa a livello di istanza delle code dei camerieri. Esiste una coda per ID database, versione database e tupla ID coda. La contesa sui latch di questa classe può verificarsi quando molte connessioni sono: in uno stato di attesa (ricezione) Wait; chiamata di ASPETTER (RECEIVE); superamento del timeout di attesa; ricezione di un messaggio; esecuzione del commit o del rollback della transazione che contiene l'oggetto ASPETTER (RECEIVE); È possibile ridurre la contesa riducendo il numero di thread in uno stato di attesa (ricezione). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Solo per uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Solo per uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Solo per uso interno.|  
@@ -195,5 +195,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[Viste &#40;a gestione dinamica relative al sistema operativo SQL Server Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server Transact-SQL &#40;&#41; delle viste a gestione dinamica relative al sistema operativo](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Oggetto Latches di SQL Server](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

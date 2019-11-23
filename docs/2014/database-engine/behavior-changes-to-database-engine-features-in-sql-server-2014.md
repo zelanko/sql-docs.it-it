@@ -30,12 +30,12 @@ ms.locfileid: "72278206"
 ## <a name="Denali"></a>Modifiche del comportamento in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Individuazione dei metadati  
- I miglioramenti apportati a [!INCLUDE[ssDE](../includes/ssde-md.md)] che iniziano con [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] consentono a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati all'[!INCLUDE[ssDE](../includes/ssde-md.md)] a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] consentono a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
   
- L'opzione [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) per determinare il formato di una risposta senza eseguire effettivamente la query viene sostituita [con &#40;sp_describe_first_result_set Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40; Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. dm _exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [sys. dm _exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ L'opzione [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) per determinare il formato di una risposta senza eseguire effettivamente la query viene sostituita [con &#40;sp_describe_first_result_set Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [ &#40;sp_describe_undeclared_parameters Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. &#40;dm_exec_describe_first_result_set Transact-&#41;SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifiche al comportamento di script di un'attività di SQL Server Agent  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script da un processo esistente, eliminare manualmente il parametro *\@schedule_uid* , che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro *\@schedule_uid* che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]è ora possibile eseguire l'elaborazione delle costanti in fase di compilazione per i seguenti oggetti CLR definiti dall'utente:  
@@ -84,10 +84,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Tipo di dati XS di origine|Tipo di dati di SQL Server di destinazione|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> numeric|  
-|Decimal|decimal<br /><br /> numeric|  
-|float|real|  
-|Double|float|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> int<br /><br /> bigint<br /><br /> decimal<br /><br /> numeric|  
+|decimal|decimal<br /><br /> numeric|  
+|float|REAL|  
+|double|float|  
   
  Con il nuovo comportamento è possibile migliorare le prestazioni quando la conversione intermedia può essere ignorata. Tuttavia, quando le conversioni del tipo di dati non vengono completate correttamente, vengono visualizzati messaggi di errore diversi rispetto a quelli generati in caso di conversione dal valore xs:string intermedio. Ad esempio, se tramite il metodo value non era stato possibile convertire il valore `int` 100000 in `smallint`, il messaggio di errore precedente era:  
   
@@ -101,12 +101,12 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Se si utilizza sqlcmd. exe con la modalità XML (comando: XML ON) quando si esegue un'istruzione SELECT * from T FOR XML, si verificano modifiche del comportamento.  
   
 ### <a name="dbcc-checkident-revised-message"></a>Revisione del messaggio restituito da DBCC CHECKIDENT  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è "verifica delle informazioni di identità: valore Identity corrente" \<current valore Identity > ". Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è "verifica delle informazioni sull'identità: valore Identity corrente"\<valore Identity corrente > ". Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
   
- Nelle versioni precedenti il messaggio è "verifica delle informazioni di identità: valore Identity corrente" \<current Identity value > ", valore di colonna corrente" \<current Column value > ". Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema". Il messaggio è invariato quando DBCC CHECKIDENT viene specificato con NORESEED, senza un secondo parametro o senza il valore reseed. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Nelle versioni precedenti il messaggio è "verifica delle informazioni di identità: valore Identity corrente"\<valore Identity corrente > ", valore di colonna corrente"\<valore di colonna corrente > ". Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema". Il messaggio è invariato quando DBCC CHECKIDENT viene specificato con NORESEED, senza un secondo parametro o senza il valore reseed. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Modifica del comportamento della funzione exist() nel tipo di dati di XML  
- Il comportamento della funzione **exist()** è cambiato se si confronta un tipo di dati XML con un valore Null a 0 (zero). Si consideri l'esempio descritto di seguito.  
+ Il comportamento della funzione **exist()** è cambiato se si confronta un tipo di dati XML con un valore Null a 0 (zero). Si consideri l'esempio seguente:  
   
 ```xml  
 DECLARE @test XML;  

@@ -39,7 +39,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>Argomenti  
 `[ @agent_type = ] 'agent_type'` è il tipo di agente. *agent_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Agente snapshot.|  
 |**2**|Agente di lettura log.|  
@@ -62,10 +62,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
   
 ## <a name="see-also"></a>Vedere anche  
  [Profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)  
- [sp_change_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)  
- [sp_drop_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)  
- [sp_help_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

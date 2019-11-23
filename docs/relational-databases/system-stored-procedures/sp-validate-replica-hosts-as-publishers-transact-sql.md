@@ -25,7 +25,7 @@ ms.locfileid: "72252104"
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** è un'estensione di **sp_validate_redirected_publisher** che consente la convalida di tutte le repliche secondarie piuttosto che solo la replica primaria corrente. **sp_validate_replicat_hosts_as_publisher** convalida un'intera topologia di replica always on. **sp_validate_replica_hosts_as_publishers** deve essere eseguito direttamente sul server di distribuzione tramite una sessione Desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
+  **sp_validate_replica_hosts_as_publishers** è un'estensione di **sp_validate_redirected_publisher** che consente la convalida di tutte le repliche secondarie piuttosto che solo la replica primaria corrente. **sp_validate_replicat_hosts_as_publisher** convalida un'intera topologia di replica di always on. **sp_validate_replica_hosts_as_publishers** necessario eseguire direttamente sul server di distribuzione utilizzando una sessione Desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +44,15 @@ sp_validate_replica_hosts_as_publishers
   
 `[ @publisher_db = ] 'publisher_db'` il nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` la destinazione del reindirizzamento quando **sp_redirect_publisher** è stato chiamato per la coppia server di pubblicazione originale/database pubblicato. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @redirected_publisher = ] 'redirected_publisher'` la destinazione del reindirizzamento quando è stato chiamato **sp_redirect_publisher** per la coppia server di pubblicazione originale/database pubblicato. *redirected_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- No.  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione, **sp_validate_redirected_publisher** restituisce null per il parametro di output *\@redirected_publisher*. In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
   
  Se la convalida ha esito positivo, **sp_validate_redirected_publisher** restituisce un'indicazione di esito positivo.  
@@ -64,12 +64,12 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Livello 11, Stato 1, Procedura **sp_hadr_verify_subscribers_at_publisher**, Riga 109  
 >   
->  Impossibile eseguire la query sul server di pubblicazione reindirizzato "MyReplicaHostName" per determinare la presenza di voci sysserver per i sottoscrittori del server di pubblicazione originale "MyOriginalPublisher", errore "976", messaggio di errore "Errore 976, Livello 14, Stato 1". Messaggio: Il database di destinazione, "MyPublishedDB", fa parte di un gruppo di disponibilità e non è attualmente accessibile per le query. Lo spostamento dei dati è sospeso o la replica di disponibilità non è abilitata per l'accesso in lettura. Per consentire l'accesso in sola lettura a questo e ad altri database nel gruppo di disponibilità, abilitare l'accesso in lettura a una o più repliche di disponibilità secondarie nel gruppo.  Per altre informazioni, vedere l'istruzione **ALTER AVAILABILITY GROUP** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  La query sul server di pubblicazione reindirizzato 'MyReplicaHostName' per determinare la presenza di voci sysserver per i sottoscrittori del server di pubblicazione originale 'MyOriginalPublisher' non è riuscita restituendo l'errore '976', messaggio di errore 'Errore 976, Livello 14, Stato 1, Messaggio: Il database di destinazione, 'MyPublishedDB', partecipa a un gruppo di disponibilità e non è attualmente accessibile per le query. Lo spostamento dei dati è sospeso o la replica di disponibilità non è abilitata per l'accesso in lettura. Per consentire l'accesso in sola lettura a questo e ad altri database nel gruppo di disponibilità, abilitare l'accesso in lettura a una o più repliche di disponibilità secondarie nel gruppo.  Per altre informazioni, vedere l'istruzione **ALTER AVAILABILITY GROUP** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >   
 >  Sono stati rilevati uno o più errori di convalida del server di pubblicazione per l'host della replica 'MyReplicaHostName'.  
   
-## <a name="permissions"></a>Permissions  
- Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** per il database di distribuzione oppure un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

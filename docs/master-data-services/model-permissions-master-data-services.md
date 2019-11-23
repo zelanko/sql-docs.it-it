@@ -27,14 +27,14 @@ ms.locfileid: "73728971"
   Le autorizzazioni per i modelli si applicano a tutte le entità, alle gerarchie derivate, alle gerarchie esplicite e alle raccolte esistenti all'interno del modello. È possibile eseguire l'override delle autorizzazioni assegnate al modello per qualsiasi singolo oggetto.  
   
 > [!NOTE]  
->  Se un utente è un amministratore di modelli, il modello viene visualizzato in tutte le aree funzionali dell'interfaccia utente. In caso contrario, il modello viene visualizzato solo nell'area funzionale **Visualizzatore** . Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+>  Se un utente è un amministratore di modelli, il modello viene visualizzato in tutte le aree funzionali dell'interfaccia utente. In caso contrario, il modello viene visualizzato solo nell'area funzionale **Visualizzatore**. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Create**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
 |**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Elimina**|L'utente può eliminare i membri|  
+|**Delete**|L'utente può eliminare i membri|  
 |**Nega**|Negare l'accesso al modello|  
 |**Amministrativi**|Autorizzazione dell'amministratore per il modello. L'autorizzazione di amministratore è disponibile solo al livello del modello.|  
   

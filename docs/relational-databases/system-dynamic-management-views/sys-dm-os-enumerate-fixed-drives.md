@@ -1,5 +1,5 @@
 ---
-title: sys. dm _os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342516"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm _os_enumerate_fixed_drives (Transact-SQL)
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -34,11 +34,11 @@ Enumera i volumi montati in lettere di unità come `C:\`.
 |Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|Percorso del volume, ad esempio `C:\`.|  
-|`drive_type`|`int`|Codice per il tipo di unità. Vedere [funzione `GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
-|`drive_type_desc`|`nvarchar(512)`|Descrizione del tipo di unità. Vedere [funzione `GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type`|`int`|Codice per il tipo di unità. Vedere [`GetDriveTypeW` funzione](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type_desc`|`nvarchar(512)`|Descrizione del tipo di unità. Vedere [`GetDriveTypeW` funzione](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Spazio disponibile su disco in byte.|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 L'utente deve disporre dell'autorizzazione `VIEW SERVER STATE` per il server.
 

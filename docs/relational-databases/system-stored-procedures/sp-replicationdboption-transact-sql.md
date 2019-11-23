@@ -54,7 +54,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @value = ] 'value'` indica se abilitare o disabilitare l'opzione del database di replica specificato. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
   
-`[ @ignore_distributor = ] ignore_distributor` indica se questa stored procedure viene eseguita senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
+`[ @ignore_distributor = ] ignore_distributor` indica se il stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

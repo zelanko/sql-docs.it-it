@@ -46,7 +46,7 @@ ms.locfileid: "72797694"
 ###  <a name="Recommendations"></a> Raccomandazioni  
  L'utilizzo di un indirizzo IP statico è consigliato, sebbene non obbligatorio, per più configurazioni di subnet.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
@@ -65,19 +65,19 @@ ms.locfileid: "72797694"
   
 ###  <a name="WinPermissions"></a> Autorizzazioni di Windows  
   
-|Permissions|Collegamento|  
+|Autorizzazioni|Collegamento|  
 |-----------------|----------|  
 |Il nome dell'oggetto cluster WSFC che ospita il gruppo di disponibilità deve avere l'autorizzazione per la **creazione degli oggetti computer** .<br /><br /> Per impostazione predefinita, in Active Directory un nome di oggetto cluster non ha l'autorizzazione per la **creazione degli oggetti computer** assegnata in modo esplicito e può creare 10 oggetti computer virtuali. Dopo aver creato 10 oggetti computer virtuali, la creazione di ulteriori oggetti di questo tipo avrà esito negativo. È possibile evitare questo problema concedendo in modo esplicito l'autorizzazione al nome dell'oggetto cluster WSFC. Si noti che gli oggetti computer virtuali per i gruppi di disponibilità eliminati non vengono rimossi automaticamente da Active Directory e continuano a essere conteggiati ai fini del limite predefinito di 10 oggetti a meno che non vengano eliminati manualmente.<br /><br /> Nota: in alcune organizzazioni i criteri di sicurezza non permettono di concedere l'autorizzazione per la **creazione di oggetti computer** a singoli account utente.|*Passaggi per la configurazione dell'account per chi installa il cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Passaggi per la configurazione pre-installazione dell'account del nome cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
 |Se l'organizzazione richiede la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener, sarà necessaria l'appartenenza al gruppo **Account Operator** o l'assistenza dell'amministratore di dominio.<br /><br /> Suggerimento: in genere, è più semplice non effettuare la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener. Se è possibile, procedere con la creazione e la configurazione automatica dell'account durante l'esecuzione della procedura guidata Disponibilità elevata WSFC.|*Passaggi per la configurazione pre-installazione di un account per un servizio o un'applicazione cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)|  
   
 ###  <a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
   
-|Attività|Permissions|  
+|Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per creare un listener del gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare un listener del gruppo di disponibilità esistente|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 > [!TIP]  
 >  In [Creazione guidata Gruppo di disponibilità](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) è supportata la creazione del listener per un nuovo gruppo di disponibilità.  
@@ -134,7 +134,7 @@ ms.locfileid: "72797694"
  **OK**  
  Fare clic per creare il listener del gruppo di disponibilità specificato.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
 
 ### <a name="to-create-or-configure-an-availability-group-listener"></a>Per creare o configurare un listener del gruppo di disponibilità
   
@@ -150,7 +150,7 @@ ms.locfileid: "72797694"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
 
 ### <a name="to-create-or-configure-an-availability-group-listener"></a>Per creare o configurare un listener del gruppo di disponibilità 
   
@@ -306,7 +306,7 @@ Start-ClusterResource yourAGResource
   
         2.  Usare [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) per avviare la risorsa del nome di rete.  
   
-        3.  Usare [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) per impostare la dipendenza tra la risorsa del nome di rete e la risorsa del gruppo di disponibilità di SQL Server.  
+        3.  Utilizzare [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) per impostare la dipendenza tra la risorsa del nome di rete e la risorsa del gruppo di disponibilità di SQL Server.  
   
          Per informazioni sull'utilizzo di Windows PowerShell per i cluster di failover, vedere [Panoramica dei comandi di Server Manager](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
   
@@ -327,6 +327,6 @@ Start-ClusterResource yourAGResource
 -   [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Clustering su più subnet di SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

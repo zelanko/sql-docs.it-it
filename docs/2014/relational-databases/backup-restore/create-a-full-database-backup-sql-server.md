@@ -28,7 +28,7 @@ ms.locfileid: "72798025"
 > [!NOTE]  
 >  Per informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Azure, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
- **Contenuto dell'articolo**  
+ **Contenuto dell'argomento**  
   
 -   **Prima di iniziare:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72798025"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un backup completo del database utilizzando:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72798025"
   
 -   I backup creati nella versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Per altre informazioni, vedere [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
+-   Per altre informazioni, vedere [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Raccomandazioni  
   
@@ -66,17 +66,17 @@ ms.locfileid: "72798025"
   
 -   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-###  <a name="Security"></a> Security  
- TRUSTWORTHY è impostato su OFF in un backup del database. Per informazioni su come impostare TRUSTWORTHY su ON, vedere [Opzioni ALTER DATABASE SET &#40; Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+###  <a name="Security"></a> Sicurezza  
+ TRUSTWORTHY è impostato su OFF in un backup del database. Per informazioni su come impostare TRUSTWORTHY su ON, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le opzioni `PASSWORD` e `MEDIAPASSWORD` non sono più disponibili per la creazione di backup. È possibile ripristinare backup creati con password.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
- Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
+ Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 > [!NOTE]  
 >  Quando si specifica un'attività di backup utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) corrispondente facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.  
@@ -87,11 +87,11 @@ ms.locfileid: "72798025"
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 4.  Nella casella di riepilogo `Database` verificare il nome del database. È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
-5.  È possibile eseguire il backup di un database per qualsiasi modello di recupero (**FULL**, **BULK_LOGGED**, o **SIMPLE**).  
+5.  È possibile eseguire il backup di un database per qualsiasi modello di recupero (**FULL**, **BULK_LOGGED**o **SIMPLE**).  
   
 6.  Nella casella di riepilogo **Tipo di backup** selezionare **Completo**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72798025"
 7.  Facoltativamente, è possibile selezionare **Copia solo backup** per creare un backup di sola copia. Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
-    >  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
+    >  Quando si seleziona l'opzione **Differenziale**, non è possibile creare un backup di sola copia.  
   
 8.  Per **componente di backup**, fare clic su `Database`.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798025"
   
     -   **Esegui checksum prima della scrittura nei supporti**e, facoltativamente, **Continua in caso di errori checksum**. Per informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-15. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** nella pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
+15. Se si esegue il backup su un'unità nastro (come specificato nella sezione **Destinazione** della pagina **Generale**) l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
     > [!NOTE]  
     >  Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale** .  
@@ -153,24 +153,24 @@ ms.locfileid: "72798025"
   
     -   Per impostare la scadenza del set di backup dopo un numero di giorni specifico, fare clic su **Dopo** (opzione predefinita) e immettere il numero di giorni dopo la creazione del set trascorsi i quali il set scadrà. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.  
   
-         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina delle impostazioni del database). Per accedere alla pagina, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere Proprietà, quindi selezionare la pagina **Impostazioni database** .  
+         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina delle impostazioni del database). Per accedere a questa pagina, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
   
     -   Per impostare una data di scadenza specifica per il set di backup, fare clic su **Il**e immettere la data di scadenza del set.  
   
          Per altre informazioni sulle date di scadenza dei backup, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup**. Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
   
      **Per visualizzare o modificare l'impostazione predefinita corrente della compressione dei backup**  
   
     -   [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-19. Specificare se utilizzare la crittografia per il backup. Selezionare un algoritmo di crittografia da utilizzare per il passaggio di crittografia e specificare un certificato o una chiave asimmetrica da un elenco di chiavi asimmetriche o di certificati esistenti. La crittografia è supportata in SQL Server 2014 o versioni successive. Per altre informazioni sulle opzioni di crittografia, vedere [Eseguire il backup di database &#40;pagina Opzioni di backup&#41;](back-up-database-backup-options-page.md).  
+19. Specificare se utilizzare la crittografia per il backup. Selezionare un algoritmo di crittografia da utilizzare per il passaggio di crittografia e specificare un certificato o una chiave asimmetrica da un elenco di chiavi asimmetriche o di certificati esistenti. La crittografia è supportata in SQL Server 2014 o versioni successive. Per altre informazioni sulle opzioni di crittografia, vedere [Backup database &#40;pagina Opzioni di backup &#41;](back-up-database-backup-options-page.md).  
   
 > [!NOTE]  
 >  In alternativa, è possibile creare i backup di database tramite Creazione guidata piano di manutenzione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-full-database-backup"></a>Per creare un backup completo del database  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72798025"
   
      [ WITH *con_opzioni* [ **,** ...*o* ] ];  
   
-    |Opzione|Description|  
+    |Opzione|Descrizione|  
     |------------|-----------------|  
     |*database*|Corrisponde al database di cui eseguire il backup.|  
     |*backup_device* [ **,** ...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _nome_dispositivo_backup_fisico_<br /><br /> Per altre informazioni, vedere [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
@@ -204,7 +204,7 @@ ms.locfileid: "72798025"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Solo in SQL Server 2014 o versioni successive specificare l'algoritmo di crittografia da utilizzare e il certificato o la chiave asimmetrica da utilizzare per proteggere la crittografia.  
   
-         Descrizione **=** { **' *`text`* '**  |  **@** _text_variable_ }  
+         DESCRIPTION **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          Specifica il testo in formato libero che descrive il set di backup. La stringa può essere composta da un massimo di 255 caratteri.  
   
          NAME **=** { *nome_set_backup* |  **@** _variabile_nome_set_backup_ }  
@@ -224,7 +224,7 @@ ms.locfileid: "72798025"
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>A. Esecuzione del backup su un dispositivo disco  
+#### <a name="a-backing-up-to-a-disk-device"></a>R. Esecuzione del backup su un dispositivo disco  
  Nell'esempio riportato di seguito viene eseguito il backup su disco del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completo, utilizzando `FORMAT` per creare un nuovo set di supporti.  
   
 ```sql  
@@ -270,7 +270,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
   
 1.  Utilizzare il cmdlet `Backup-SqlDatabase`. Per indicare in modo esplicito che si tratta di un backup completo del database, specificare il parametro **-parametro BackupAction** con il valore predefinito `Database`. Questo parametro è facoltativo per i backup completi di database.  
   
@@ -288,17 +288,17 @@ GO
   
 -   [Eseguire il backup di un database (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
--   [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
+-   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 -   [Ripristinare un backup &#40;del database SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Ripristinare un backup del database nel modello di recupero con registrazione minima &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
+-   [Ripristinare un database al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
+-   [Ripristinare un database in un percorso nuovo &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
--   [Usare la Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
+-   [Utilizzare la Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   

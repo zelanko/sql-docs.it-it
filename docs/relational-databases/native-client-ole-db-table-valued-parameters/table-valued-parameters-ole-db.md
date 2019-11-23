@@ -31,7 +31,7 @@ ms.locfileid: "73761642"
   
  I parametri con valori di tabella sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client come OLE DB oggetti **set di righe** . Qualsiasi oggetto **set di righe** può essere fornito dal consumer (ovvero l'applicazione client che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider di OLE DB di Native Client) come segnaposto per i parametri di parametro con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fornisce interfacce per gli schemi, l'associazione, la specifica, l'individuazione e la creazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Creazione di un set di righe di parametri con valori di tabella](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)  
   

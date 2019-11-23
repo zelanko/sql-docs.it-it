@@ -183,7 +183,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Sono stati rilevati uno o più errori di convalida del server di pubblicazione per l'host della replica 'MyReplicaHostName'.  
   
- Tale comportamento è previsto. È necessario verificare la presenza delle voci del Sottoscrittore in questi host della replica secondaria eseguendo una query per le voci sysserver direttamente sull'host.  
+ Si tratta di un comportamento previsto. È necessario verificare la presenza delle voci del Sottoscrittore in questi host della replica secondaria eseguendo una query per le voci sysserver direttamente sull'host.  
   
 ##  <a name="step7"></a> 7. Aggiungere il server di pubblicazione originale a Monitoraggio replica  
  In ogni replica del gruppo di disponibilità aggiungere il server di pubblicazione originale a Monitoraggio replica.  
@@ -199,13 +199,13 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  **Per creare e configurare un gruppo di disponibilità**  
   
--   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utilizzare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [Creare un gruppo di disponibilità &#40; SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Creare un gruppo di disponibilità &#40;PowerShell di SQL Server&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -221,6 +221,6 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>Vedere anche  
  [Prerequisiti, restrizioni e consigli per &#40;gruppi di disponibilità AlwaysOn SQL Server&#41; ](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Gruppi di disponibilità AlwaysOn: interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)  

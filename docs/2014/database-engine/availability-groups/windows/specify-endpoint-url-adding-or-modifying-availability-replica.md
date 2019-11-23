@@ -39,7 +39,7 @@ ms.locfileid: "72797971"
 ##  <a name="SyntaxOfURL"></a> Sintassi per un URL dell'endpoint  
  La sintassi per un URL dell'endpoint è la seguente:  
   
- TCP<strong>://</strong>*\<indirizzo_sistema>*<strong>:</strong>*\<porta>*  
+ TCP<strong>://</strong> *\<indirizzo_sistema>* <strong>:</strong> *\<porta>*  
   
  dove  
   
@@ -47,15 +47,15 @@ ms.locfileid: "72797971"
   
     -   Poiché i nodi del cluster WSFC (Windows Server Failover Clustering) si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[**_<indirizzo_IPv6>_**]**.  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[** _<indirizzo_IPv6>_ **]** .  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
     -   Il funzionamento del nome di dominio completo è garantito. Il nome di dominio completo è costituito da una stringa di indirizzo definita a livello locale che accetta forme diverse a seconda della posizione. Spesso ma non sempre, un nome di dominio completo è un nome composto che include un nome computer e una serie di segmenti di dominio separati da virgole, ad esempio:  
   
-         _nome_computer_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
+         _nome_computer_ **.** _segmento_dominio_[... **.** _segmento_dominio_]  
   
-         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.**_segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[... **.** _segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Per ulteriori informazioni, vedere [Individuazione del nome di dominio completo](#Finding_FQDN), più avanti in questo argomento.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72797971"
   
 ### <a name="examples"></a>Esempi  
   
-#### <a name="a-using-a-system-name"></a>A. Utilizzo di un nome di sistema  
+#### <a name="a-using-a-system-name"></a>R. Utilizzo di un nome di sistema  
  L'URL dell'endpoint seguente specifica un nome di sistema, `SYSTEM46`, e la porta `7022`.  
   
  `TCP://SYSTEM46:7022`  
@@ -128,9 +128,9 @@ ms.locfileid: "72797971"
   
 -   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Specificare un indirizzo di rete del server &#40;mirroring del database&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -152,5 +152,5 @@ ms.locfileid: "72797971"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

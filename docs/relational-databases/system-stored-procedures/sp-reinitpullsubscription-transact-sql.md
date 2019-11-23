@@ -48,21 +48,21 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_reinitpullsubscription** viene utilizzato nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
   
  **sp_reinitpullsubscription** non è supportato per la replica transazionale peer-to-peer.  
   
- **sp_reinitpullsubscription** può essere chiamato dal Sottoscrittore per reinizializzare la sottoscrizione, durante la successiva esecuzione del agente di distribuzione.  
+ **sp_reinitpullsubscription** possibile chiamare dal Sottoscrittore per reinizializzare la sottoscrizione, durante la successiva esecuzione del agente di distribuzione.  
   
- Le sottoscrizioni di pubblicazioni create con un valore **false** per **\@immediate_sync** non possono essere reinizializzate dal Sottoscrittore.  
+ Non è possibile reinizializzare dal Sottoscrittore le sottoscrizioni alle pubblicazioni create con un valore **false** per **\@immediate_sync** .  
   
  È possibile reinizializzare una sottoscrizione pull eseguendo **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

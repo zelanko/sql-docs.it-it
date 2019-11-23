@@ -51,7 +51,7 @@ ms.locfileid: "73787284"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
@@ -62,7 +62,7 @@ ms.locfileid: "73787284"
  **SQLGetDescRec** supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi &#40;CLR definiti dall'utente di grandi&#41;dimensioni ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-   [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)  
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

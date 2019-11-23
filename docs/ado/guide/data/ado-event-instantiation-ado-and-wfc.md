@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di istanze di eventi ADO: ADO e WFC | Microsoft Docs'
+title: "Creazione di istanze dell'evento ADO: ADO e WFC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -62,7 +62,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
   
 ## <a name="see-also"></a>Vedere anche  
  [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Indice della sintassi ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
+   [di indice della sintassi ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)  
  [Parametri evento](../../../ado/guide/data/event-parameters.md)   
- [Interazione tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)   
+ Interazione [tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipi di eventi](../../../ado/guide/data/types-of-events.md)

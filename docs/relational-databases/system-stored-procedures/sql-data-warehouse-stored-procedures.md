@@ -24,7 +24,7 @@ ms.locfileid: "73844358"
 
   in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sono disponibili procedure predefinite che è possibile utilizzare per eseguire operazioni correlate ai ruoli del database. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] include le seguenti procedure di sistema:  
   
-##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL data warehouse&#41; ](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL data warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   

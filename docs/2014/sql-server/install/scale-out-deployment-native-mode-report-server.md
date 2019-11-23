@@ -34,7 +34,7 @@ ms.locfileid: "71952422"
   
  Per configurare una distribuzione con scalabilità orizzontale, iniziare con una o più istanze del server di report tutte connesse allo stesso database del server di report. In seguito all'installazione di tutte le istanze, connettersi al primo server di report e quindi utilizzare la pagina Distribuzione con scalabilità orizzontale aggiungere ogni istanza aggiuntiva. Solo un server di report già inizializzato per l'utilizzo di un database può inizializzare nodi aggiuntivi.  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome SQL Server**  

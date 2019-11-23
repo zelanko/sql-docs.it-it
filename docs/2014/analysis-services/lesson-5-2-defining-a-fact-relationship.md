@@ -69,7 +69,7 @@ ms.locfileid: "69493858"
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   
-17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number` e modificare la proprietà **OrderBy** in **Key**.  
+17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number`e modificare la proprietà **OrderBy** in **Key**.  
   
 18. Nel riquadro **gerarchie** creare una gerarchia utente **Internet Sales Orders** contenente i livelli di `Order Number` e **Descrizione dell'elemento** , in questo ordine.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69493858"
   
      Si noti che per impostazione predefinita la dimensione viene archiviata come una dimensione MOLAP. Sebbene la modifica della modalità di archiviazione in ROLAP consenta di risparmiare tempo di elaborazione e spazio di archiviazione, ciò avviene a discapito delle prestazioni delle query. Ai fini di questa esercitazione, verrà utilizzata la modalità di archiviazione MOLAP.  
   
-20. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, come una dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
+20. Per aggiungere la dimensione appena creata al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial come dimensione del cubo, passare a **Progettazione cubi**. Nella scheda **Struttura cubo** fare clic con il pulsante destro del mouse sul riquadro **Dimensioni** e scegliere **Aggiungi dimensione al cubo**.  
   
 21. Nella finestra di dialogo **Aggiungi dimensione al cubo**selezionare **Internet Sales Order Details** e fare clic su **OK**.  
   

@@ -17,7 +17,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797782"
 ---
-# <a name="troubleshoot-the-sql-server-utility"></a>Attività e funzionalità di Utilità SQL Server
+# <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
   La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sull'attenuazione dei problemi di integrità delle risorse identificati da un punto di controllo dell'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Troubleshoot SQL Server Integrità risorse &#40;&#41;utilità SQL Server](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Operazione di registrazione di un'istanza di SQL Server in Utilità SQL Server non riuscita  
@@ -116,7 +116,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_\<GUID >** e selezionare **Proprietà**.  
   
-    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **GUID di UtilityAgentProxyCredential_\<** Credential.  
+    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **UtilityAgentProxyCredential_\<GUID >** Credential.  
   
     4.  Scegliere **OK** per confermare la modifica.  
   

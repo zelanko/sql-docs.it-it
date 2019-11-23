@@ -25,7 +25,7 @@ ms.locfileid: "70175420"
 # <a name="building-applications-with-sql-server-native-client"></a>Compilazione di applicazioni con SQL Server Native Client
   Lo sviluppo di un'applicazione che utilizza la libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client comporta una serie di problemi di cui tenere conto. Negli argomenti di questa sezione vengono illustrati alcuni dei problemi riscontrati, incluso l'aggiornamento da MDAC a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e l'utilizzo dei file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e viene fornita una panoramica delle varie stringhe di connessione che è possibile utilizzare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Installazione di SQL Server Native Client](installing-sql-server-native-client.md)  
  Vengono descritti l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, i percorsi di installazione dei vari componenti e la disinstallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "70175420"
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione SQL Server Native Client](../sql-server-native-client-programming.md)   
- [Procedure per ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ Procedure [per ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Procedure relative a OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -30,7 +30,7 @@ ms.locfileid: "72782946"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere un database secondario tramite:**  
   
@@ -49,12 +49,12 @@ ms.locfileid: "72782946"
   
 -   Questa attività è supportata solo sulle repliche secondarie. È necessario essere connessi all'istanza del server che ospita la replica secondaria da cui verrà rimosso il database.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per rimuovere un database secondario da un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica secondaria da cui si desidera rimuovere uno o più database secondari ed espandere l'albero del server.  
@@ -65,7 +65,7 @@ ms.locfileid: "72782946"
   
 4.  Questo passaggio dipende dalla scelta di rimuovere uno o più database:  
   
-    -   Per rimuovere più database, utilizzare il riquadro **Dettagli Esplora oggetti** per visualizzare e selezionare tutti i database che si desidera rimuovere. Per altre informazioni, vedere [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   Per rimuovere più database, utilizzare il riquadro **Dettagli Esplora oggetti** per visualizzare e selezionare tutti i database che si desidera rimuovere. Per altre informazioni, vedere [Utilizzare Dettagli Esplora oggetti per monitorare Gruppi di disponibilità &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Per rimuovere un singolo database, selezionarlo nel riquadro **Esplora oggetti** o **Dettagli Esplora oggetti** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72782946"
   
 6.  Nella finestra di dialogo **Rimuovi database dal gruppo di disponibilità** scegliere **OK**per rimuovere tutti i database elencati. Se non si desidera rimuovere tutti i database elencati, fare clic su **Annulla**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per rimuovere un database secondario da un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica secondaria.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782946"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per rimuovere un database secondario da un gruppo di disponibilità**  
   
 1.  Impostare la directory (`cd`) sull'istanza del server in cui viene ospitata la replica secondaria.  
@@ -125,8 +125,8 @@ ms.locfileid: "72782946"
   
 -   Se si desidera accedere a un database secondario dopo che è stato rimosso dal gruppo di disponibilità, è possibile recuperare il database. Tuttavia, se si recupera un database secondario rimosso, saranno online due database indipendenti e divergenti con lo stesso nome. È necessario assicurarsi che i client possano accedere solo al database primario corrente.  
   
-     Per altre informazioni, vedere [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
+     Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Rimuovere un database primario da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  

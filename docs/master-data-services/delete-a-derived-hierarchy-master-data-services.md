@@ -24,17 +24,17 @@ ms.locfileid: "73728370"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare una gerarchia derivata quando si è certi che non è più necessaria.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] eliminare una gerarchia derivata quando si è certi che non è più necessaria.  
   
 > [!NOTE]  
 >  L'eliminazione di una gerarchia derivata non influenza le relazioni tra attributi sulle quali è basata la gerarchia.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>Per eliminare una gerarchia derivata  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728370"
   
 2.  Scegliere **Gestisci** dalla barra dei menu e fare clic su **Gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
+3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
   
 4.  Selezionare la riga relativa alla gerarchia derivata che si desidera eliminare.  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532935"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Include informazioni su tutti i thread di lavoro che completano i passaggi DMS.  
@@ -38,13 +38,13 @@ ms.locfileid: "73532935"
   
 |Nome colonna|tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Eseguire una query su cui il thread di lavoro DMS fa parte di. request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.||  
-|step_index|`int`|Passaggio della query di cui fa parte questo ruolo di lavoro DMS.|Vedere Step index in [sys. dm _exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Eseguire un passaggio nel piano DMS in cui è in esecuzione il thread di lavoro.|Vedere [sys. dm _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere [sys. dm _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|`nvarchar(32)`|Eseguire una query su cui fa parte questo ruolo di lavoro DMS. request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.||  
+|step_index|`int`|Passaggio della query di cui fa parte questo ruolo di lavoro DMS.|Vedere Step index in [sys. dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Eseguire un passaggio nel piano DMS in cui è in esecuzione il thread di lavoro.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
 |type|`nvarcha(32)`|||  
-|status|`nvarchar(32)`|Stato di questo passaggio|' Pending ',' running ',' complete ',' failed ',' UndoFailed ',' PendingCancel ',' annullato ',' Undone ',' Aborted '|  
+|status|`nvarchar(32)`|Stato di questo passaggio|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  

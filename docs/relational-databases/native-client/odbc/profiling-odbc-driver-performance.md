@@ -71,7 +71,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Rete  
   
--   Time  
+-   time  
   
  Nella tabella seguente le descrizioni dei campi per la struttura dei dati SQLPERF vengono applicate anche alle statistiche registrate nel file di log delle prestazioni.  
   

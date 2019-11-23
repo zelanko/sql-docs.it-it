@@ -32,9 +32,9 @@ ms.locfileid: "73729635"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri della raccolta e gli attributi dei membri.|  
-|**Creare**|L'utente può creare i membri della raccolta e assegnare i valori di attributo.|  
+|**Create**|L'utente può creare i membri della raccolta e assegnare i valori di attributo.|  
 |**Update**|L'utente può aggiornare i membri della raccolta, gli attributi e le relazioni.|  
-|**Elimina**|L'utente può eliminare membri della raccolta.|  
+|**Delete**|L'utente può eliminare membri della raccolta.|  
 |**Nega**|L'accesso ai membri della raccolta è negato.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  

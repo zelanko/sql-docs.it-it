@@ -47,7 +47,7 @@ ms.locfileid: "72305020"
 |**srvname**|**sysname**|Nome del Sottoscrittore.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle &#40;di replica Transact-&#41;SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle &#40;di replica Transact-&#41; SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

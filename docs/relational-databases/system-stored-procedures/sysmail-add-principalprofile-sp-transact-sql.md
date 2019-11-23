@@ -41,7 +41,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id` l'ID dell'utente o del ruolo del database nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
+`[ @principal_id = ] principal_id` l'ID dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
 `[ @principal_name = ] 'principal_name'` il nome dell'utente o del ruolo del database nel database **msdb** per l'associazione. *principal_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_name* di **' Public '** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per rendere pubblico un profilo, specificare un **\@principal_id** **0** o un **\@principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
   
  A un utente del database può essere associato un solo profilo predefinito. Quando **\@is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
@@ -63,11 +63,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
  Il stored procedure **sysmail_add_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Creazione di un'associazione, impostazione del profilo predefinito @ no__t-0  
+ **A. creazione di un'associazione, impostazione del profilo predefinito**  
   
  Nell'esempio seguente viene creata un'associazione tra il profilo denominato `AdventureWorks Administrator Profile` e l'utente del database **msdb** `ApplicationUser`. Il profilo è il profilo predefinito per l'utente.  
   
@@ -78,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. Creazione di un profilo come profilo pubblico predefinito @ no__t-0  
+ **B. creazione di un profilo come profilo pubblico predefinito**  
   
- Nell'esempio seguente il profilo viene reso `AdventureWorks Public Profile` il profilo pubblico predefinito per gli utenti nel database **msdb** .  
+ Nell'esempio seguente il profilo viene reso `AdventureWorks Public Profile` profilo pubblico predefinito per gli utenti nel database **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

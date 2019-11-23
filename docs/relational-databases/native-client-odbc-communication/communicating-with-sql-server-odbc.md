@@ -31,7 +31,7 @@ ms.locfileid: "73784997"
   
  È possibile scaricare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esempi ODBC di Native Client dalla pagina [download di SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) su MSDN.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Allocazione di un handle di ambiente](../../relational-databases/native-client-odbc-communication/allocating-an-environment-handle.md)  
   

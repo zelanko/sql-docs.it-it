@@ -22,9 +22,9 @@ ms.locfileid: "70176130"
 
   In questo argomento vengono forniti i dettagli delle funzionalità supportate dalle diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
 
- > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile in una versione di valutazione per un periodo di prova di 180 giorni. Per ulteriori informazioni, vedere il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sito Web di valutazione del software](https://go.microsoft.com/fwlink/?LinkId=190955).  
+ > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile in una versione di valutazione per un periodo di prova di 180 giorni. Per ulteriori informazioni, vedere il [sito Web](https://go.microsoft.com/fwlink/?LinkId=190955)relativo al software di valutazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 > 
-> **NOTA:** Per le funzionalità supportate dalle edizioni Evaluation e Developer, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vedere il set di funzionalità aziendali.  
+> **Nota:** Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere il set di funzionalità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   
  Per passare alla tabella per una tecnologia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic sul relativo collegamento:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "70176130"
   
  [PowerPivot per SharePoint 2013](#PowerPivot)  
   
- [Data mining](#DataMining)  
+ [Data Mining](#DataMining)  
   
  [Reporting Services](#Reporting)  
   
@@ -81,24 +81,24 @@ ms.locfileid: "70176130"
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Capacità di calcolo massima usata da una singola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] motore di database)<sup>1</sup>|Valore massimo del sistema operativo|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
-|Capacità di calcolo massima usata da una singola istanza (Analysis Services, Reporting Services) <sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
-|Memoria massima usata (per ogni istanza del motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Valore massimo del sistema operativo|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|Memoria massima usata (per ogni istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Valore massimo del sistema operativo|Valore massimo del sistema operativo|64 GB|N/D|N/D|N/D|N/D|  
-|Memoria massima usata (per ogni istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Valore massimo del sistema operativo|Valore massimo del sistema operativo|64 GB|64 GB|4 GB|N/D|N/D|  
+|Capacità di calcolo massima usata da una singola istanza (Analysis Services, Reporting Services) <sup>1</sup>|valore massimo del sistema operativo|valore massimo del sistema operativo|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
+|Memoria massima usata (per ogni istanza del motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|valore massimo del sistema operativo|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
+|Memoria massima usata (per ogni istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|valore massimo del sistema operativo|valore massimo del sistema operativo|64 GB|N/D|N/D|N/D|N/D|  
+|Memoria massima usata (per ogni istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|valore massimo del sistema operativo|valore massimo del sistema operativo|64 GB|64 GB|4 GB|N/D|N/D|  
 |Dimensione massima del database relazionale|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] core per istanza. Non sono previsti limiti nel modello di licenza server basato su core. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza. Non sono previsti limiti nel modello di licenza server basato su core. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="High_availability"></a> Disponibilità elevata  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Supporto Server Core<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Log shipping|Yes|Yes|Yes|Yes||||  
+|Log Shipping|Yes|Yes|Yes|Yes||||  
 |Mirroring del database|Yes|Sì (solo protezione FULL)|Sì (solo protezione FULL)|Solo server di controllo|Solo server di controllo|Solo server di controllo|Solo server di controllo|  
 |Compressione backup|Yes|Yes|Yes|||||  
 |Snapshot del database|Yes|||||||  
-|Istanze del cluster di failover AlwaysOn|Sì (supporto del nodo: Valore massimo del sistema operativo|Sì (supporto del nodo: 2)|Sì (supporto del nodo: 2)|||||  
+|Istanze del cluster di failover AlwaysOn|Sì (supporto del nodo: valore massimo del sistema operativo|Sì (supporto del nodo: 2)|Sì (supporto del nodo: 2)|||||  
 |Gruppi di disponibilità AlwaysOn|Sì (fino a 8 repliche secondarie, incluse 2 repliche secondarie sincrone)|||||||  
 |Connection Director|Yes|||||||  
 |Ripristino di pagine e file online|Yes|||||||  
@@ -109,11 +109,11 @@ ms.locfileid: "70176130"
 |Aggiunta di memoria a caldo e CPU<sup>2</sup>|Yes|||||||  
 |Database Recovery Advisor|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Backup crittografato|Yes|Yes|Yes|||||  
-|Backup intelligente|Yes|Yes|Sì|No||||  
+|Backup intelligente|Yes|Yes|Yes|No||||  
   
- <sup>1</sup> Per altre informazioni sull'installazione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di in Server Core, vedere [installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
+ <sup>1</sup> Per altre informazioni sull'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in Server Core, vedere [installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
- <sup>2</sup> Questa funzionalità è disponibile solo per 64 bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>2</sup> Questa funzionalità è disponibile solo per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]a 64 bit.  
   
 ##  <a name="Scalability"></a>Scalabilità e prestazioni  
   
@@ -131,7 +131,7 @@ ms.locfileid: "70176130"
 |OLTP in memoria <sup>1</sup>|Yes|||||||  
 |Durabilità posticipata|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- <sup>1</sup> questa funzionalità è disponibile solo per 64 bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>1</sup> questa funzionalità è disponibile solo per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]a 64 bit.  
   
 ##  <a name="Enterprise_security"></a> Sicurezza  
   
@@ -145,7 +145,7 @@ ms.locfileid: "70176130"
 |Database indipendenti|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Crittografia per backup|Yes|Yes|Yes|||||  
   
-##  <a name="Replication"></a> Replication  
+##  <a name="Replication"></a> Replica  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -157,7 +157,7 @@ ms.locfileid: "70176130"
 |Pubblicazione Oracle|Yes|||||||  
 |Replica transazionale peer-to-peer|Yes|||||||  
   
-##  <a name="Mgmt_Tools"></a> Management Tools  
+##  <a name="Mgmt_Tools"></a> Strumenti di gestione  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -172,10 +172,10 @@ ms.locfileid: "70176130"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
 |Management Pack di Microsoft System Center Operations Manager|Yes|Yes|Yes|Yes||||  
 |Ottimizzazione guidata motore di database (DTA)|Yes|Yes|Sì <sup>3</sup>|Sì <sup>3</sup>||||  
-|Procedura guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] distribuire un database in una macchina virtuale di Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]File di dati in Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Distribuire un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in una procedura guidata per le macchine virtuali di Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file di dati in Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le edizioni [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]Web,, with Tools [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ewith[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Advanced Services possono essere profilate con le edizioni standardedEnterprise.[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con strumenti e [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con servizi avanzati possono essere profilati con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition Standard e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  <sup>3</sup> ottimizzazione abilitata solo sulle funzionalità di Standard Edition.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "70176130"
   
  <sup>1</sup> Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
   
- <sup>2</sup> questa funzionalità è disponibile solo per 64 bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>2</sup> questa funzionalità è disponibile solo per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]a 64 bit.  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
@@ -221,7 +221,7 @@ ms.locfileid: "70176130"
   
  <sup>1</sup> questa funzionalità non è disponibile per la versione a 64 bit di Standard Edition.  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="Programmability"></a> Programmabilità  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -279,7 +279,7 @@ ms.locfileid: "70176130"
   
 |Funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Yes|Yes||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database|Yes|Yes||||||  
 |Applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Yes|Yes||||||  
   
 ##  <a name="Data_warehouse"></a> Data Warehouse  
@@ -320,7 +320,7 @@ ms.locfileid: "70176130"
 |Cubo writeback|Yes|Yes|Yes|||||  
 |Dimensioni writeback|Yes|Yes||||||  
 |Celle writeback|Yes|Yes|Yes|||||  
-|Drill-through|Yes|Yes|Yes|||||  
+|drill-through|Yes|Yes|Yes|||||  
 |Tipi di gerarchia avanzati (padre-figlio, gerarchie incomplete)|Yes|Yes|Yes|||||  
 |Dimensioni avanzate (dimensioni di riferimento, dimensioni molti-a-molti|Yes|Yes|Yes|||||  
 |Dimensioni e misure collegate|Yes|Yes||||||  
@@ -374,13 +374,13 @@ ms.locfileid: "70176130"
 |Strumenti di data mining (procedure guidate, editor, generatori di query)|Yes|Yes|Yes|||||  
 |Convalida incrociata|Yes|Yes||||||  
 |Modelli in base a subset filtrati dei dati della struttura di data mining|Yes|Yes||||||  
-|Serie temporali: Fusione personalizzata tra i metodi ARTXP e ARIMA|Yes|Yes||||||  
-|Serie temporali: Stima con nuovi dati|Yes|Yes||||||  
+|Time Series: combinazione personalizzata tra metodi ARTXP e ARIMA|Yes|Yes||||||  
+|Time Series: stima con nuovi dati|Yes|Yes||||||  
 |Query di data mining simultanee illimitate|Yes|Yes||||||  
 |Configurazione avanzata & opzioni di ottimizzazione per gli algoritmi di data mining|Yes|Yes||||||  
 |Supporto per algoritmi plug-in|Yes|Yes||||||  
 |Elaborazione parallela dei modelli|Yes|Yes||||||  
-|Serie temporali: Stima tra serie|Yes|Yes||||||  
+|Time Series: stima incrociata tra serie|Yes|Yes||||||  
 |Attributi illimitati per Association Rules|Yes|Yes||||||  
 |Stima basata su sequenze|Yes|Yes||||||  
 |Più destinazioni di stima per gli algoritmi Logistic Regression, Neural Network e Naïve Bayes|Yes|Yes||||||  
@@ -417,7 +417,7 @@ ms.locfileid: "70176130"
 |Avvisi<sup>2</sup>|Yes|Yes||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Yes|Yes||||||  
   
- <sup>1</sup> Per altre informazioni sulle origini dati supportate in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], vedere [origini dati supportate da Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ <sup>1</sup> Per ulteriori informazioni sulle origini dati supportate in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], vedere [origini dati supportate da &#40;Reporting Services SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  <sup>2</sup> Richiede [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Per ulteriori informazioni, vedere [Reporting Services installazione &#40;in modalità sharepoint di SharePoint 2010 e&#41;SharePoint 2013](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -433,7 +433,7 @@ ms.locfileid: "70176130"
 |Express with Advanced Services|Express with Advanced Services (solo locale).|  
 |Copia di valutazione|Copia di valutazione|  
   
-##  <a name="BIClients"></a> Client di Business Intelligence  
+##  <a name="BIClients"></a> Business Intelligence Clients  
  Le seguenti applicazioni client del software sono disponibili nell'Area download Microsoft e vengono fornite come supporto per la creazione di documenti di Business Intelligence eseguiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando questi documenti vengono ospitati in un ambiente server, usare un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportata per tale tipo di documento. Nella tabella seguente viene indicata l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contenente le funzionalità del server richieste per ospitare i documenti creati in queste applicazioni client.  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
@@ -444,7 +444,7 @@ ms.locfileid: "70176130"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]è un componente aggiuntivo di Excel e non dipende [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]da. Tuttavia [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] è richiesto per la condivisione e collaborazione con le cartelle di lavoro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in SharePoint e questa funzionalità è disponibile come parte delle edizioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] è un componente aggiuntivo di Excel e non dipende da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tuttavia [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] è richiesto per la condivisione e collaborazione con le cartelle di lavoro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in SharePoint e questa funzionalità è disponibile come parte delle edizioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
 > 2.  La tabella sopra riportata identifica le edizioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richieste per abilitare gli strumenti client; tuttavia le funzionalità possono accedere ai dati ospitati in ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  

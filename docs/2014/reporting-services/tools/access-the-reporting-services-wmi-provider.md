@@ -32,10 +32,10 @@ ms.locfileid: "72783210"
 > [!IMPORTANT]  
 >  A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , il provider WMI è supportato solo per server di report in modalità nativa. I server di report in modalità SharePoint possono essere gestiti con pagine di Amministrazione centrale SharePoint e script di PowerShell.  
   
-|Class|Namespace|Description|  
+|Classe|Spazio dei nomi|Descrizione|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\ RS_ *\<nomeistanzacodificato >* \v11|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\ RS_ *\<nomeistanzacodificato >* \v11\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
   
  Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -70,7 +70,7 @@ Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>Eseguire una query sui metodi e sulle proprietà disponibili  
- Per visualizzare i metodi e le proprietà disponibili in una delle classi WMI per Reporting Services, inviare i risultati da Get-WmiObject al comando Get-Member. Ad esempio  
+ Per visualizzare i metodi e le proprietà disponibili in una delle classi WMI per Reporting Services, inviare i risultati da Get-WmiObject al comando Get-Member. Ad esempio:  
   
 ```powershell
 Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

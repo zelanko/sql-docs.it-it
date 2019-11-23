@@ -32,7 +32,7 @@ ms.locfileid: "73729372"
 > [!NOTE]  
 >  Non è possibile eliminare un membro se viene utilizzato come valore dell'attributo basato su dominio per un altro membro.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  

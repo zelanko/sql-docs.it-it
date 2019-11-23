@@ -31,7 +31,7 @@ ms.locfileid: "72797614"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Questa caratteristica è supportata solo in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] o versioni successive.  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "72797614"
 > [!TIP]  
 >  Se questo aggiornamento rapido non viene installato, gli esempi in questo argomento restituiranno valori vuoti o NULL per NodeWeight.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di Powershell  
@@ -90,7 +90,7 @@ cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Visualizzare eventi e registri per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   

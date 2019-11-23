@@ -29,9 +29,9 @@ ms.locfileid: "72782666"
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Confronta applicazioni livello dati](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="ViewDACContents"></a> Visualizza il contenuto di un'applicazione livello dati  

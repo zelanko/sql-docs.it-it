@@ -24,7 +24,7 @@ ms.locfileid: "72798225"
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   In questo argomento viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
 -   **Per assegnare ad altri utenti la proprietà di un processo usando:**  
   
@@ -43,16 +43,16 @@ ms.locfileid: "72798225"
   
  L'assegnazione di un processo a un altro account di accesso non garantisce che il nuovo proprietario disponga di autorizzazioni sufficienti per eseguire correttamente il processo.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  Per motivi di sicurezza, solo il proprietario del processo o un membro del ruolo **sysadmin** può modificare la definizione del processo. Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare la proprietà di un processo ad altri utenti ed eseguire qualsiasi processo, indipendentemente dal proprietario.  
   
 > [!NOTE]  
->  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] , verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
+>  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)], verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
   
-####  <a name="Permissions"></a> Permissions  
- Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
+####  <a name="Permissions"></a> Autorizzazioni  
+ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProc2"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProc2"></a> Con SQL Server Management Studio  
  **Per assegnare ad altri utenti la proprietà di un processo**  
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
@@ -63,14 +63,14 @@ ms.locfileid: "72798225"
   
      L'assegnazione di un processo a un altro account di accesso non garantisce che il nuovo proprietario disponga di autorizzazioni sufficienti per eseguire correttamente il processo.  
   
-##  <a name="TsqlProc2"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProc2"></a> Con Transact-SQL  
  **Per assegnare ad altri utenti la proprietà di un processo**  
   
 1.  In Esplora oggetti connettersi a un'istanza del motore di database ed espanderla.  
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra query immettere le istruzioni seguenti che usano la stored procedure di [sistema &#40;Transact-SQL&#41; sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
+3.  Nella finestra query immettere le istruzioni seguenti che usano la [sp_manage_jobs_by_login &#40;stored procedure di sistema Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -87,7 +87,7 @@ ms.locfileid: "72798225"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>Per assegnare ad altri utenti la proprietà di un processo
   
-1.  Chiamare la classe `Job` tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per un codice di esempio, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
+1.  Chiamare la classe `Job` tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per un esempio di codice, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)   

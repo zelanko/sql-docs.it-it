@@ -39,7 +39,7 @@ ms.locfileid: "70874719"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Ottenere e installare una versione precedente di NaturalLanguage6.dll, sovrascrivendo la versione corrente del file.|Nessuna azione richiesta.<br /><br /> I valori e le chiavi del Registro di sistema non sono cambiate per questa versione.|  
 |(Altro nome file)|NaturalLanguage6.dll|5|Ottenere e installare una versione precedente di NaturalLanguage6.dll, sovrascrivendo la versione corrente del file.|Modificare un set di voci del Registro di sistema per specificare la versione precedente dei componenti.|  
-|(Altro nome file)|(Altro nome file)|6|Non è necessaria alcuna azione.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono copiate entrambe le versioni precedente e corrente dei componenti nella cartella Binn.|Modificare un set di voci del Registro di sistema per specificare la versione precedente dei componenti.|  
+|(Altro nome file)|(Altro nome file)|6|Nessuna azione richiesta.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono copiate entrambe le versioni precedente e corrente dei componenti nella cartella Binn.|Modificare un set di voci del Registro di sistema per specificare la versione precedente dei componenti.|  
   
 > [!WARNING]  
 >  Se si sostituisce la versione corrente del file NaturalLanguage6.dll con una versione diversa, viene modificato il comportamento di tutte le lingue che utilizzano questo file.  
@@ -56,7 +56,7 @@ ms.locfileid: "70874719"
   
  **Elenco delle lingue interessate**  
   
-|Linguaggio|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
+|Lingua|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengali|ben|1093|  
 |Bulgaro|bgr|1026|  
@@ -127,7 +127,7 @@ ms.locfileid: "70874719"
   
  **Elenco delle lingue interessate**  
   
-|Linguaggio|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
+|Lingua|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
 |--------------|---------------------------------------|----------|  
 |Arabo|ara|1025|  
 |Tedesco|deu|1031|  
@@ -152,7 +152,7 @@ ms.locfileid: "70874719"
     > [!WARNING]  
     >  Questa modifica interessa tutte le lingue che utilizzano NaturalLanguage6.dll sia nella versione corrente che in quella precedente.  
   
-5.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+5.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 6.  Utilizzare i passaggi seguenti per aggiungere nuove chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer precedenti per la lingua selezionata:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874719"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer precedente riportato nella tabella.  
   
-7.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+7.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\\<language_key>** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 8.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker corrente.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874719"
     > [!WARNING]  
     >  Questa modifica interessa tutte le lingue che utilizzano NaturalLanguage6.dll sia nella versione corrente che in quella precedente.  
   
-3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+3.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 4.  Se le chiavi seguenti non esistono, utilizzare i passaggi seguenti per aggiungere nuovi chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer correnti per la lingua selezionata:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874719"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer corrente riportato nella tabella.  
   
-5.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+5.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\\<language_key>** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 6.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker precedente.  
   
@@ -212,8 +212,8 @@ ms.locfileid: "70874719"
 |---------------|------------------|-------------|  
 |CLSID precedente|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID corrente|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nessuna|  
-|Nome file corrente|MSWB7.dll|Nessuna|  
+|CLSID corrente|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nessuno|  
+|Nome file corrente|MSWB7.dll|Nessuno|  
   
  **Tedesco (deu), LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874719"
 |---------------|------------------|-------------|  
 |CLSID precedente|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID corrente|04096682-6ece-4e9e-90c1-52d81f0422ed|Nessuna|  
-|Nome file corrente|MsWb70011.dll|Nessuna|  
+|CLSID corrente|04096682-6ece-4e9e-90c1-52d81f0422ed|Nessuno|  
+|Nome file corrente|MsWb70011.dll|Nessuno|  
   
  **Olandese (nld), LCID 1043**  
   
@@ -256,7 +256,7 @@ ms.locfileid: "70874719"
   
  **Elenco delle lingue interessate**  
   
-|Linguaggio|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
+|Lingua|Abbreviazione<br />utilizzata nel<br />Registro di sistema|LCID|  
 |--------------|---------------------------------------|----------|  
 |Cinese semplificato|chs|2052|  
 |Cinese tradizionale|cht|1028|  
@@ -273,7 +273,7 @@ ms.locfileid: "70874719"
   
 1.  Non rimuovere i file per la versione corrente dei componenti dalla cartella Binn.  
   
-2.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+2.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 3.  Utilizzare i passaggi seguenti per aggiungere nuove chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer precedenti per la lingua selezionata:  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874719"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer precedente riportato nella tabella.  
   
-4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+4.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\\<language_key>** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 5.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker corrente.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "70874719"
   
 1.  Non rimuovere i file per la versione precedente dei componenti dalla cartella Binn.  
   
-2.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+2.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 3.  Se le chiavi seguenti non esistono, utilizzare i passaggi seguenti per aggiungere nuovi chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer correnti per la lingua selezionata:  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874719"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer corrente riportato nella tabella.  
   
-4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+4.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\\<language_key>** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 5.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker precedente.  
   
@@ -346,8 +346,8 @@ ms.locfileid: "70874719"
 |---------------|------------------|-------------|  
 |CLSID precedente|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nome file precedente|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID corrente|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nessuna|  
-|Nome file corrente|MsWb7001e.dll|Nessuna|  
+|CLSID corrente|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nessuno|  
+|Nome file corrente|MsWb7001e.dll|Nessuno|  
   
  **Cinese tradizionale (zh-hk), LCID 3076**  
   
@@ -377,7 +377,7 @@ ms.locfileid: "70874719"
 |Nome file corrente|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Differenze di comportamento nella ricerca full-text](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

@@ -194,22 +194,22 @@ Set oServer = nothing
   
  Per altre informazioni sulla creazione di passaggi di processo eseguiti come pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  
 |**Description**|**Argomento**|  
 |Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Creare un passaggio di processo CmdExec](create-a-cmdexec-job-step.md)|  
 |Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definire le opzioni del passaggio di processo Transact-SQL](define-transact-sql-job-step-options.md)|  
-|Viene descritto come creare un passaggio di processo dello script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Creare un passaggio di processo di Analysis Services](create-an-analysis-services-job-step.md)|  
-|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Creare un passaggio di processo Transact-SQL](create-a-transact-sql-job-step.md)|  
+|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Viene descritto come creare un passaggio di processo dello script ActiveX.|[Creare un passaggio di processo con script ActiveX](create-an-activex-script-job-step.md)|  
+|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo](set-job-step-success-or-failure-flow.md)|  
 |Viene descritto come visualizzare informazioni dettagliate sui passaggi di processo nella finestra di dialogo Proprietà passaggio processo.|[Visualizzare informazioni sui passaggi di processo](view-job-step-information.md)|  
-|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Eliminare il log di un passaggio di processo](delete-a-job-step-log.md)|  
+|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-  [Transact- &#40;SQL&#41; dbo. nella sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
+   [Transact- &#40;SQL&#41; dbo. nella sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Creazione di processi](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

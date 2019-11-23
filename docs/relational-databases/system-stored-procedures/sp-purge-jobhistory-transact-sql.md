@@ -56,15 +56,15 @@ sp_purge_jobhistory
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
- Quando **sp_purge_jobhistory** viene completato correttamente, viene restituito un messaggio.  
+## <a name="remarks"></a>Osservazioni  
+ Quando **sp_purge_jobhistory** viene completata correttamente, viene restituito un messaggio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **SQLAgentOperatorRole** possono eseguire questo stored procedure. I membri di **sysadmin** possono eliminare la cronologia processo per tutti i processi locali e multiserver. I membri di **SQLAgentOperatorRole** possono eliminare la cronologia processo solo per tutti i processi locali.  
   
- Per gli altri utenti, inclusi i membri di **SQLAgentUserRole** e i membri di **SQLAgentReaderRole**, deve essere concessa in modo esplicito l'autorizzazione Execute su **sp_purge_jobhistory**. Dopo la concessione dell'autorizzazione EXECUTE per questa stored procedure, a tali utenti è consentito eliminare solo la cronologia dei processi di cui sono proprietari.  
+ Per gli altri utenti, inclusi i membri di **SQLAgentUserRole** e i membri di **SQLAgentReaderRole**, deve essere concessa in modo esplicito l'autorizzazione Execute per **sp_purge_jobhistory**. Dopo la concessione dell'autorizzazione EXECUTE per questa stored procedure, a tali utenti è consentito eliminare solo la cronologia dei processi di cui sono proprietari.  
   
  I ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** si trovano nel database **msdb** . Per informazioni dettagliate sulle autorizzazioni, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
@@ -82,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>B. Rimozione della cronologia di tutti i processi  
+### <a name="b-remove-history-for-all-jobs"></a>b. Rimozione della cronologia di tutti i processi  
   
 > [!NOTE]  
 >  Solo i membri del ruolo predefinito del server **sysadmin** e i membri di **SQLAgentOperatorRole** possono rimuovere la cronologia per tutti i processi. Quando gli utenti **sysadmin** eseguono questa stored procedure senza parametri, la cronologia processo per tutti i processi locali e multiserver viene eliminata. Quando gli utenti di **SQLAgentOperatorRole** eseguono questa stored procedure senza parametri, viene eliminata solo la cronologia processo per tutti i processi locali.  

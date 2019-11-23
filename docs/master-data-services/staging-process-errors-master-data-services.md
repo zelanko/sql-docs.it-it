@@ -25,7 +25,7 @@ ms.locfileid: "73728917"
 
   Al termine del processo di staging, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di staging. Questi valori sono elencati nella seguente tabella.  
   
-|codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
+|Code|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Lo stesso codice membro è presente più volte nella tabella di staging.|Nel batch di gestione temporanea lo stesso codice membro è presente più volte. Il membro non è stato né creato né aggiornato.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210003|I valori degli attributi fanno riferimento a un membro inesistente o inattivo.|Quando si gestiscono temporaneamente gli attributi basati su dominio, è necessario utilizzare il codice, piuttosto che il nome. Si applica a **ImportType0**, **1**e **2**.|Foglia<br /><br /> Consolidata|  

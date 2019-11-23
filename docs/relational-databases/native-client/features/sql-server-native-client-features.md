@@ -27,7 +27,7 @@ ms.locfileid: "73761318"
 
   Oltre a esporre le funzionalità di Windows (in precedenza Microsoft) Data Access Components (WDAC), in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono implementate anche molte altre funzionalità che consentono di esporre le funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri](../../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
  Viene descritta una modifica del comportamento a partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   

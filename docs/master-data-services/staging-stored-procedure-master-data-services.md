@@ -36,8 +36,8 @@ ms.locfileid: "73727889"
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Required|Il nome della versione. Può supportare o non supportare la distinzione tra maiuscole e minuscole, a seconda dell'impostazione delle regole di confronto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|**LogFlag**<br /><br /> Required|Determina se le transazioni sono registrate durante il processo di gestione temporanea. I valori possibili sono:<br /><br /> **0**: le transazioni non vengono registrate.<br /><br /> **1**: le transazioni vengono registrate.<br /><br /> <br /><br /> Per altre informazioni sulle transazioni, vedere [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Obbligatorio|Il nome della versione. Può supportare o non supportare la distinzione tra maiuscole e minuscole, a seconda dell'impostazione delle regole di confronto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**LogFlag**<br /><br /> Obbligatorio|Determina se le transazioni sono registrate durante il processo di gestione temporanea. I valori possibili sono:<br /><br /> **0**: le transazioni non vengono registrate.<br /><br /> **1**: le transazioni vengono registrate.<br /><br /> <br /><br /> Per altre informazioni sulle transazioni, vedere [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Richiesto, salvo che dal servizio Web|Il valore **BatchTag** come specificato nella tabella di staging.|  
 |**Batch_ID**<br /><br /> Richiesto solo dal servizio Web|Il valore **Batch_ID** come specificato nella tabella di staging.|  
 |**Nome utente**|Parametro facoltativo|  

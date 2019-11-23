@@ -41,7 +41,7 @@ ms.locfileid: "72688912"
   
     -   Direzione della copia: DB_IN dal file alla tabella o alla vista.  
   
-5.  Chiamare [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) per leggere il file di formato che descrive il file di dati che verrà utilizzato dall'operazione di copia bulk.  
+5.  Chiamare [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) per leggere il file di formato che descrive il file di dati che deve essere utilizzato dall'operazione di copia bulk.  
   
 6.  Chiamare [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
   
@@ -184,7 +184,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- Procedure [per la copia bulk con il driver ODBC di SQL Server &#40;procedure&#41; di ODBC](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+ Procedure [per la copia bulk con il driver ODBC di SQL Server &#40;procedure&#41; di ODBC](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Uso di file di dati e file di formato](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -35,9 +35,9 @@ ms.locfileid: "71952542"
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
   
 > [!NOTE]  
->  Se si utilizza [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services, è necessario configurare questo account solo se si fa riferimento a immagini esterne in un report ed è necessaria l'autorizzazione per accedere al file di immagine. In SQL Server Express la connessione all'origine dati in un server remoto non è supportata. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la pagina relativa alle [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Se si utilizza [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services, è necessario configurare questo account solo se si fa riferimento a immagini esterne in un report ed è necessaria l'autorizzazione per accedere al file di immagine. In SQL Server Express la connessione all'origine dati in un server remoto non è supportata. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Account di esecuzione** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Account di esecuzione** nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
  **Specifica account di esecuzione**  
@@ -53,7 +53,7 @@ ms.locfileid: "71952542"
  Immettere nuovamente la password.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Configuration Manager argomenti &#40;della Guida F1 @no__t modalità&#41;nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)-3  
+ [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   

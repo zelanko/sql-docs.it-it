@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Argomenti  
 
-Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` devono specificare parametri denominati, ad esempio `sp_spaceused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
+Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` necessario specificare parametri denominati, ad esempio `sp_spaceused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
 
 `[ @objname = ] 'objname'`
    
@@ -60,7 +60,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
  L'argomento *mode* può includere i valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o del database, inclusi sia la parte locale che la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione solo della parte locale dell'oggetto o del database. Se l'oggetto o il database non è abilitato per l'estensione, restituisce le stesse statistiche di quando @mode = ALL.|  
@@ -70,16 +70,17 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
 `[ @oneresultset = ] oneresultset` indica se restituire un singolo set di risultati. L'argomento *oneresultset* può avere i valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Quando *\@objname* è null o non è specificato, vengono restituiti due set di risultati. Il comportamento predefinito è due set di risultati.|  
 |1|Quando *\@objname* = null o non è specificato, viene restituito un singolo set di risultati.|  
   
  *oneresultset* è di **bit**e il valore predefinito è **0**.  
 
-`[ @include_total_xtp_storage] 'include_total_xtp_storage'` @ no__t-1**si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
+**si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
- Quando @oneresultset = 1, il parametro @include_total_xtp_storage determina se il singolo ResultSet include colonne per l'archiviazione MEMORY_OPTIMIZED_DATA. Il valore predefinito è 0, ovvero, per impostazione predefinita, se il parametro viene omesso, le colonne XTP non vengono incluse nel set di risultati.  
+ Quando @oneresultset= 1, il parametro @include_total_xtp_storage determina se il singolo ResultSet include colonne per MEMORY_OPTIMIZED_DATA archiviazione. Il valore predefinito è 0, ovvero, per impostazione predefinita, se il parametro viene omesso, le colonne XTP non vengono incluse nel set di risultati.  
 
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -116,7 +117,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se il nome dello schema è obbligatorio, utilizzare le viste a gestione dinamica [sys. dm _db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [sys. dm _db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) per ottenere informazioni sulle dimensioni equivalenti.|  
+|**name**|**nvarchar(128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se il nome dello schema è obbligatorio, utilizzare le viste a gestione dinamica [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) per ottenere informazioni sulle dimensioni equivalenti.|  
 |**rows**|**char(20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
 |**reserved**|**varchar(18)**|Quantità totale di spazio riservato per *ObjName*.|  
 |**data**|**varchar(18)**|Quantità totale di spazio utilizzato dai dati in *ObjName*.|  
@@ -128,8 +129,8 @@ Questa è la modalità predefinita, quando non viene specificato alcun parametro
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
-|**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include i file di dati e di log. Se il database dispone di un filegroup MEMORY_OPTIMIZED_DATA, include la dimensione totale su disco di tutti i file del checkpoint nel filegroup.|  
-|**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se il database dispone di un filegroup MEMORY_OPTIMIZED_DATA, include la dimensione totale su disco dei file del checkpoint con stato precreato nel filegroup.|  
+|**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include i file di dati e di log. Se nel database è presente un filegroup MEMORY_OPTIMIZED_DATA, sono incluse le dimensioni totali su disco di tutti i file del checkpoint nel filegroup.|  
+|**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se nel database è presente un filegroup MEMORY_OPTIMIZED_DATA, sono incluse le dimensioni totali su disco dei file del checkpoint con stato precreato nel filegroup.|  
 
 Spazio utilizzato dalle tabelle nel database: (questo set di risultati non riflette le tabelle ottimizzate per la memoria, poiché non esiste un account per tabella per l'utilizzo del disco) 
 
@@ -140,43 +141,43 @@ Spazio utilizzato dalle tabelle nel database: (questo set di risultati non rifle
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
 |**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
 
-Il set di risultati seguente viene restituito **solo se** il database contiene un filegroup MEMORY_OPTIMIZED_DATA con almeno un contenitore: 
+Il set di risultati seguente viene restituito **solo se** il database dispone di un filegroup MEMORY_OPTIMIZED_DATA con almeno un contenitore: 
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stato precreato, in KB. Viene conteggiato per lo spazio non allocato nel database nel suo complesso. [Ad esempio, se sono presenti 600.000 KB di file di checkpoint precreati, questa colonna contiene ' 600000 KB ']|  
 |**xtp_used**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stati in fase di costruzione, ACTIVE e destinazione di MERGE, in KB. Si tratta dello spazio su disco usato attivamente per i dati nelle tabelle ottimizzate per la memoria.|  
-|**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stato WAITING_FOR_LOG_TRUNCATION, in KB. Si tratta dello spazio su disco utilizzato per i file del checkpoint in attesa di pulizia, quando si verifica il troncamento del log.|
+|**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file del checkpoint con WAITING_FOR_LOG_TRUNCATION di stato, in KB. Si tratta dello spazio su disco utilizzato per i file del checkpoint in attesa di pulizia, quando si verifica il troncamento del log.|
 
-Se *ObjName* viene omesso, il valore di oneresultset è 1 e *include_total_xtp_storage* è 1, viene restituito il seguente set di risultati singolo per fornire informazioni sulle dimensioni del database corrente. Se `include_total_xtp_storage` è 0 (impostazione predefinita), le ultime tre colonne vengono omesse. 
+Se *ObjName* viene omesso, il valore di oneresultset è 1 e *include_total_xtp_storage* è 1, viene restituito il seguente set di risultati singolo per fornire informazioni sulle dimensioni correnti del database. Se `include_total_xtp_storage` è 0 (impostazione predefinita), le ultime tre colonne vengono omesse. 
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
-|**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include i file di dati e di log. Se il database dispone di un filegroup MEMORY_OPTIMIZED_DATA, include la dimensione totale su disco di tutti i file del checkpoint nel filegroup.|
-|**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se il database dispone di un filegroup MEMORY_OPTIMIZED_DATA, include la dimensione totale su disco dei file del checkpoint con stato precreato nel filegroup.|  
+|**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include i file di dati e di log. Se nel database è presente un filegroup MEMORY_OPTIMIZED_DATA, sono incluse le dimensioni totali su disco di tutti i file del checkpoint nel filegroup.|
+|**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se nel database è presente un filegroup MEMORY_OPTIMIZED_DATA, sono incluse le dimensioni totali su disco dei file del checkpoint con stato precreato nel filegroup.|  
 |**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
 |**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
 |**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
-|**xtp_precreated**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stato precreato, in KB. Questa operazione viene conteggiata per lo spazio non allocato nel database nel suo complesso. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è inclusa solo se @include_total_xtp_storage = 1*.| 
-|**xtp_used**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stati in fase di costruzione, ACTIVE e destinazione di MERGE, in KB. Si tratta dello spazio su disco usato attivamente per i dati nelle tabelle ottimizzate per la memoria. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è inclusa solo se @include_total_xtp_storage = 1*.| 
-|**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stato WAITING_FOR_LOG_TRUNCATION, in KB. Si tratta dello spazio su disco utilizzato per i file del checkpoint in attesa di pulizia, quando si verifica il troncamento del log. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. Questa colonna è inclusa solo se `@include_total_xtp_storage=1`.|
+|**xtp_precreated**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stato precreato, in KB. Questa operazione viene conteggiata per lo spazio non allocato nel database nel suo complesso. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è inclusa solo se @include_total_xtp_storage= 1*.| 
+|**xtp_used**|**varchar(18)**|Dimensioni totali dei file del checkpoint con stati in fase di costruzione, ACTIVE e destinazione di MERGE, in KB. Si tratta dello spazio su disco usato attivamente per i dati nelle tabelle ottimizzate per la memoria. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è inclusa solo se @include_total_xtp_storage= 1*.| 
+|**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file del checkpoint con WAITING_FOR_LOG_TRUNCATION di stato, in KB. Si tratta dello spazio su disco utilizzato per i file del checkpoint in attesa di pulizia, quando si verifica il troncamento del log. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. Questa colonna è inclusa solo se `@include_total_xtp_storage=1`.|
 
-## <a name="remarks"></a>Note  
- **database_size** è sempre maggiore della somma dello spazio **riservato** +  non**allocato** , perché include le dimensioni dei file di log, ma **riservato** e **unallocated_space** considera solo le pagine di dati.  
+## <a name="remarks"></a>Osservazioni  
+ **database_size** è sempre maggiore della somma di spazio **riservato** + non **allocato** , perché include le dimensioni dei file di log, ma **riservato** e **unallocated_space** considera solo le pagine di dati.  
   
- Le pagine utilizzate da indici XML e indici full-text sono incluse in **index_size** per entrambi i set di risultati. Quando si specifica *ObjName* , le pagine per gli indici XML e gli indici full-text per l'oggetto vengono conteggiate anche nei risultati Total **reserved** e **index_size** .  
+ Le pagine utilizzate da indici XML e indici full-text sono incluse in **index_size** per entrambi i set di risultati. Quando si specifica *ObjName* , le pagine per gli indici XML e gli indici full-text per l'oggetto vengono conteggiate anche nei risultati totali **riservati** e **index_size** .  
   
- Se l'utilizzo dello spazio viene calcolato per un database o un oggetto che dispone di un indice spaziale, le colonne di dimensioni spazi, ad esempio **database_size**, **reserved**e **index_size**, includono le dimensioni dell'indice spaziale.  
+ Se l'utilizzo dello spazio viene calcolato per un database o un oggetto che dispone di un indice spaziale, le colonne di dimensioni dello spazio, ad esempio **database_size**, **riservato**e **index_size**, includono le dimensioni dell'indice spaziale.  
   
- Quando si specifica *UPDATEUSAGE* , il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue l'analisi delle pagine di dati nel database e apporta le eventuali correzioni necessarie alle viste del catalogo **sys. allocation_units** e **sys.** Partitions riguardanti lo spazio di archiviazione utilizzato da ogni tabella. In alcune situazioni, ad esempio dopo l'eliminazione di un indice, le informazioni sullo spazio restituite per la tabella non sono aggiornate. *UPDATEUSAGE* può richiedere del tempo per l'esecuzione in tabelle o database di grandi dimensioni. Utilizzare *UPDATEUSAGE* solo quando si sospetta che vengano restituiti valori non corretti e quando il processo non avrà effetti negativi su altri utenti o processi nel database. Se lo si preferisce, è possibile eseguire l'istruzione DBCC UPDATEUSAGE separatamente.  
+ Quando si specifica *UPDATEUSAGE* , il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] analizza le pagine di dati nel database e apporta le eventuali correzioni necessarie alle viste del catalogo **sys. allocation_units** e **sys.** Partitions riguardanti lo spazio di archiviazione utilizzato da ogni tabella. In alcune situazioni, ad esempio dopo l'eliminazione di un indice, le informazioni sullo spazio restituite per la tabella non sono aggiornate. *UPDATEUSAGE* può richiedere del tempo per l'esecuzione in tabelle o database di grandi dimensioni. Utilizzare *UPDATEUSAGE* solo quando si sospetta che vengano restituiti valori non corretti e quando il processo non avrà effetti negativi su altri utenti o processi nel database. Se lo si preferisce, è possibile eseguire l'istruzione DBCC UPDATEUSAGE separatamente.  
   
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da **sp_spaceused** immediatamente dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non corrispondere allo spazio su disco effettivo disponibile.  
   
-## <a name="permissions"></a>Permissions  
- L'autorizzazione per eseguire **sp_spaceused** è concessa al ruolo **public** . Solo i membri del ruolo predefinito del database **db_owner** possono specificare il parametro **\@updateusage** .  
+## <a name="permissions"></a>Autorizzazioni  
+ L'autorizzazione per eseguire **sp_spaceused** è concessa al ruolo **public** . Solo i membri del ruolo predefinito del database **db_owner** possono specificare il parametro **\@updateusage**.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -190,7 +191,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-### <a name="b-displaying-updated-space-information-about-a-database"></a>B. Visualizzazione di informazioni sullo spazio aggiornate per un database  
+### <a name="b-displaying-updated-space-information-about-a-database"></a>b. Visualizzazione di informazioni sullo spazio aggiornate per un database  
  Nell'esempio seguente viene riepilogato lo spazio utilizzato nel database corrente e viene utilizzato il parametro facoltativo `@updateusage` per garantire la restituzione di valori aggiornati.  
   
 ```sql  
@@ -201,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Visualizzazione delle informazioni sull'utilizzo dello spazio sulla tabella remota associata a una tabella abilitata per l'estensione  
- Nell'esempio seguente viene riepilogato lo spazio usato dalla tabella remota associata a una tabella abilitata per l'estensione usando l'argomento **\@mode** per specificare la destinazione remota. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ Nell'esempio seguente viene riepilogato lo spazio usato dalla tabella remota associata a una tabella abilitata per l'estensione usando l'argomento della **modalità di\@** per specificare la destinazione remota. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -218,8 +219,8 @@ GO
 EXEC sp_spaceused @oneresultset = 1  
 ```  
 
-### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memory_optimized-file-group-in-a-single-result-set"></a>E. Visualizzazione delle informazioni sull'utilizzo dello spazio per un database con almeno un gruppo di file MEMORY_OPTIMIZED in un singolo set di risultati 
- Nell'esempio seguente viene riepilogato l'utilizzo dello spazio per il database corrente con almeno un gruppo di file MEMORY_OPTIMIZED in un unico set di risultati.
+### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memory_optimized-file-group-in-a-single-result-set"></a>E. Visualizzazione delle informazioni sull'utilizzo dello spazio per un database con almeno un gruppo di file di MEMORY_OPTIMIZED in un unico set di risultati 
+ Nell'esempio seguente viene riepilogato l'utilizzo dello spazio per il database corrente con almeno un gruppo di file di MEMORY_OPTIMIZED in un unico set di risultati.
  
 ```sql
 USE WideWorldImporters
@@ -228,8 +229,8 @@ EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @i
 GO
 ``` 
 
-### <a name="f-displaying-space-usage-information-for-a-memory_optimized-table-object-in-a-database"></a>F. Visualizzazione delle informazioni sull'utilizzo dello spazio per un oggetto tabella MEMORY_OPTIMIZED in un database.
- Nell'esempio seguente viene riepilogato l'utilizzo dello spazio per un oggetto tabella MEMORY_OPTIMIZED nel database corrente con almeno un gruppo di file MEMORY_OPTIMIZED.
+### <a name="f-displaying-space-usage-information-for-a-memory_optimized-table-object-in-a-database"></a>F. Visualizzazione delle informazioni sull'utilizzo dello spazio per un oggetto MEMORY_OPTIMIZED tabella in un database.
+ Nell'esempio seguente viene riepilogato l'utilizzo dello spazio per un oggetto MEMORY_OPTIMIZED tabella nel database corrente con almeno un MEMORY_OPTIMIZED filegroup.
  
 ```sql
 USE WideWorldImporters

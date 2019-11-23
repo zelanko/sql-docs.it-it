@@ -23,7 +23,7 @@ ms.locfileid: "73729547"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Usare la finestra di dialogo **Crea account e profilo di Posta elettronica database** per creare un profilo di Posta elettronica database e un account di Posta elettronica database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questo profilo verrà utilizzato per avvisare utenti e gruppi tramite posta elettronica quando la convalida delle regole business ha esito negativo.  
+  Usare la finestra di dialogo **Crea account e profilo di Posta elettronica database** per creare un profilo di Posta elettronica database e un account di Posta elettronica database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Questo profilo verrà utilizzato per avvisare utenti e gruppi tramite posta elettronica quando la convalida delle regole business ha esito negativo.  
   
 ## <a name="database-mail-profile-and-account"></a>Account e profili di Posta elettronica database  
  Un *profilo di Posta elettronica database* è una raccolta di account di Posta elettronica database. Un *account di Posta elettronica database* contiene le informazioni usate da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per inviare messaggi di posta elettronica a un server SMTP. Quando si creano il profilo e l'account in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], l'account viene aggiunto automaticamente al profilo e le informazioni sull'account vengono utilizzate per inviare messaggi di posta elettronica.  
@@ -54,7 +54,7 @@ ms.locfileid: "73729547"
 |------------------|-----------------|  
 |**Autenticazione di Windows con credenziali del servizio Motore di database**|Specificare che Posta elettronica database deve usare le credenziali dell'account del servizio Windows del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per l'autenticazione nel server SMTP.|  
 |**Autenticazione di base**|Specificare che Posta elettronica database deve utilizzare un nome utente e una password specifici per l'autenticazione nel server SMTP. Queste informazioni vengono utilizzate solo per l'autenticazione con il server di posta elettronica e non è necessario che l'account corrisponda a un utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a un utente nel computer che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**Nome utente**|Digitare il nome dell'account utente utilizzato da Posta elettronica database per accedere al server SMTP. È necessario un nome utente quando il server SMTP richiede l'autenticazione di base.|  
+|**User name**|Digitare il nome dell'account utente utilizzato da Posta elettronica database per accedere al server SMTP. È necessario un nome utente quando il server SMTP richiede l'autenticazione di base.|  
 |**Password**|Digitare la password utilizzata da Posta elettronica database per accedere al server SMTP. È necessaria una password quando il server SMTP richiede l'autenticazione di base.|  
 |**Conferma password**|Digitare di nuovo la password per confermarla.|  
 |**Autenticazione anonima**|Specificare che il server SMTP non richiede l'autenticazione. Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.|  

@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983090"
@@ -944,7 +944,7 @@ Questo comando reimposta tutti i contatori su 0.
 |WAIT_XTP_CKPT_CLOSE |Si verifica durante l'attesa del completamento di un checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_CKPT_ENABLED |Si verifica quando il checkpoint è disabilitato e in attesa dell'abilitazione del checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Si verifica durante la sincronizzazione del controllo dello stato del checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
-|WAIT_XTP_COMPILE_WAIT |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
+|WAIT_XTP_COMPILE_WAIT |Solo per uso interno. <br /> **SI APPLICA A**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
 |WAIT_XTP_GUEST |Si verifica quando l'allocatore di memoria del database deve interrompere la ricezione di notifiche a memoria insufficiente. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |WAIT_XTP_HOST_WAIT |Si verifica quando le attese vengono attivate dal motore di database e implementate dall'host. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 

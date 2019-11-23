@@ -94,7 +94,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. Creazione di un'istanza Geometry con un'istanza CompoundCurve vuota  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>R. Creazione di un'istanza Geometry con un'istanza CompoundCurve vuota  
  Nell'esempio seguente viene illustrato come creare un'istanza `CompoundCurve` vuota:  
   
 ```sql  
@@ -193,6 +193,6 @@ Circle Two12.566370...
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [Panoramica dei tipi di dati spaziali](spatial-data-types-overview.md)   
- [Point](point.md)  
+ [Punto](point.md)  
   
   

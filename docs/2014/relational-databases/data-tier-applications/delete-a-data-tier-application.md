@@ -30,9 +30,9 @@ ms.locfileid: "72782739"
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
   È possibile eliminare un'applicazione livello dati utilizzando la procedura guidata Elimina applicazione livello dati o uno script Windows PowerShell. È possibile specificare se il database associato viene mantenuto, scollegato o eliminato.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati (DAC) tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Quando si elimina un'istanza di applicazione livello dati (DAC), è necessario selezionare una tra tre opzioni in cui viene specificata l'azione che verrà eseguita con il database associato all'applicazione livello dati. Tutte e tre le opzioni consentono di eliminare i metadati che definiscono l'applicazione livello dati. Le opzioni differiscono tra loro per le azioni relative al database associato all'applicazione livello dati. Con la procedura guidata non viene eliminato alcun oggetto a livello di istanza associato all'applicazione livello dati o al database, come ad esempio gli account di accesso.  
@@ -55,7 +55,7 @@ ms.locfileid: "72782739"
 > [!WARNING]  
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
@@ -105,7 +105,7 @@ ms.locfileid: "72782739"
   
  **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
- **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
+ **Annulla**: consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per verificare le azioni eseguite dalla procedura guidata in caso di eliminazione dell'istanza di applicazione livello dati.  

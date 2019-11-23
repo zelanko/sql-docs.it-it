@@ -37,7 +37,7 @@ ms.locfileid: "73727941"
   
 -   L'autorizzazioni di accesso è un'unione di tutte le autorizzazioni valide per un gruppo. Se l'autorizzazione per gli oggetti è **Create** da un gruppo e **Update** da altro gruppo, l'autorizzazione valida è **Create** e **Update**.  
   
- Queste regole si applicano a entrambe le schede **Modelli** e **Membri gerarchia** . Le autorizzazioni vengono risolte per ogni scheda e quindi combinate. Per altre informazioni, vedere [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Queste regole si applicano a entrambe le schede **Modelli** e **Membri gerarchia** . Le autorizzazioni vengono risolte per ogni scheda e quindi combinate. Per altre informazioni, vedere [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Nell'interfaccia utente è possibile visualizzare la risoluzione delle autorizzazioni di utenti e gruppi sovrapposte. Nelle schede **Modelli** e **Membri gerarchia** è presente un elenco a discesa da cui è possibile scegliere **Valide** per visualizzare le autorizzazioni valide.  

@@ -46,7 +46,7 @@ sp_delete_firewall_rule [@name =] 'name'
  Nome dell'impostazione del firewall a livello di server che verrà rimossa. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
 ## <a name="remarks"></a>Osservazioni  
- Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database disponga della versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo l'account di accesso dell'entità di livello server creato dal processo di provisioning può eliminare le regole firewall a livello di server. Per eseguire sp_delete_firewall_rule, l'utente deve essere connesso al database master.  

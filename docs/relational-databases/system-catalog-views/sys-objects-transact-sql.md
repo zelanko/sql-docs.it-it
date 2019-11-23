@@ -79,7 +79,7 @@ I subset degli oggetti possono essere visualizzati utilizzando viste di sistema 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>A. Restituzione di tutti gli oggetti modificati negli ultimi N giorni  
+### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>R. Restituzione di tutti gli oggetti modificati negli ultimi N giorni  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<n_days>` con valori validi.  
   
 ```sql  

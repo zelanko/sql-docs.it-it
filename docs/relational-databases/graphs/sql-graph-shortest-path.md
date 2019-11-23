@@ -117,7 +117,7 @@ In alcuni casi, è possibile che vengano generati piani danneggiati per le query
 ## <a name="examples"></a>Esempi 
 Per le query di esempio illustrate di seguito, verrà usato il nodo e le tabelle Edge create in [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Trova il percorso più breve tra due persone
+### <a name="a--find-shortest-path-between-2-people"></a>R.  Trova il percorso più breve tra due persone
  Nell'esempio seguente viene trovato il percorso più breve tra Jacob e Alice. Sono necessari il nodo Person e amica Edge creati dallo script di esempio Graph. 
 
  ```

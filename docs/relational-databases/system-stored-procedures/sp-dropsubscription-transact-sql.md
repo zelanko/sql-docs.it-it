@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è null. Se **tutti**, tutte le sottoscrizioni per tutte le pubblicazioni per il Sottoscrittore specificato vengono annullate. la *pubblicazione* è un parametro obbligatorio.  
+`[ @publication = ] 'publication'` è il nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è null. Se **tutti**, tutte le sottoscrizioni per tutte le pubblicazioni per il Sottoscrittore specificato vengono annullate. la *pubblicazione* è un parametro obbligatorio.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Se **tutte**, le sottoscrizioni di tutti gli articoli per ogni pubblicazione e Sottoscrittore specificati vengono eliminate. Usare **tutti per le** pubblicazioni che consentono l'aggiornamento immediato.  
+`[ @article = ] 'article'` è il nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Se **tutte**, le sottoscrizioni di tutti gli articoli per ogni pubblicazione e Sottoscrittore specificati vengono eliminate. Usare **tutti per le** pubblicazioni che consentono l'aggiornamento immediato.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore per il quale vengono eliminate le sottoscrizioni. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, vengono eliminate tutte le sottoscrizioni per tutti i sottoscrittori.  
+`[ @subscriber = ] 'subscriber'` è il nome del Sottoscrittore in cui vengono eliminate le sottoscrizioni. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, vengono eliminate tutte le sottoscrizioni per tutti i sottoscrittori.  
   
-`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è null. con cui vengono eliminate tutte le sottoscrizioni dal Sottoscrittore specificato.  
+`[ @destination_db = ] 'destination_db'` è il nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è null. con cui vengono eliminate tutte le sottoscrizioni dal Sottoscrittore specificato.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
  Se si elimina la sottoscrizione di un articolo in una pubblicazione a sincronizzazione immediata, non è possibile aggiungerla nuovamente, a meno che le sottoscrizioni di tutti gli articoli della pubblicazione non vengano eliminate e aggiunte nuovamente in una sola operazione.  
@@ -67,11 +67,11 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o dell'utente che ha creato la sottoscrizione possono eseguire **sp_dropsubscription**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È possibile eseguire **sp_dropsubscription**solo i membri del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database o l'utente che ha creato la sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Eliminare una sottoscrizione Push](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

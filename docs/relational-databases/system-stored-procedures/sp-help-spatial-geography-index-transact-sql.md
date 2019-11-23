@@ -47,13 +47,13 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="properties"></a>Proprietà  
  Vedere [argomenti e proprietà delle stored procedure per gli indici spaziali](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per accedere alla procedura, l'utente deve essere assegnato a un ruolo PUBLIC. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzato `sp_help_spatial_geography_index` per esaminare l'indice spaziale **geography** **SIndx_SpatialTable_geography_col2** definito sulla tabella **geography_col** per l'esempio di query specificato in **\@QS**. In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
+ Nell'esempio seguente viene usato `sp_help_spatial_geography_index` per esaminare l'indice spaziale **geography** **SIndx_SpatialTable_geography_col2** definito nella tabella **geography_col** per l'esempio di query specificato in **\@QS**. In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
   
 ```  
 declare @qs geography  

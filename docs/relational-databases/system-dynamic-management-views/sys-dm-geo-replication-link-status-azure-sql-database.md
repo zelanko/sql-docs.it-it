@@ -43,7 +43,7 @@ ms.locfileid: "73843894"
 |ruolo|**tinyint**|Ruolo replica geografica, uno dei seguenti:<br /><br /> 0 = primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = nessuna connessione diretta è consentita al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella REPL secondaria; ication per l'accesso in sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutto|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutte|  
 |last_commit|**datetimeoffset**|Ora dell'ultima transazione di cui è stato eseguito il commit nel database. Se recuperato nel database primario, indica l'ora dell'ultimo commit nel database primario. Se recuperata nel database secondario, indica l'ora dell'ultimo commit nel database secondario. Se viene recuperato nel database secondario quando il collegamento primario del collegamento di replica è inattivo, indica fino a che punto il database secondario non è stato aggiornato.|
   
 > [!NOTE]  

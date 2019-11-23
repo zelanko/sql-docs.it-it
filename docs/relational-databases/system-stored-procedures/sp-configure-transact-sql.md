@@ -72,9 +72,9 @@ RECONFIGURE
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se eseguita senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne e Ordina alfabeticamente le opzioni in ordine crescente, come illustrato nella tabella seguente.  
+ Quando viene eseguito senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne e ordina le opzioni alfabeticamente in ordine crescente, come illustrato nella tabella seguente.  
   
- I valori per **config_value** e **run_value** non sono automaticamente equivalenti. Dopo l'aggiornamento di un'impostazione di configurazione tramite **sp_configure**, l'amministratore di sistema deve aggiornare il valore di configurazione in esecuzione utilizzando riconfigure o RECONFIGURE with override. Per altre informazioni, vedere la sezione Osservazioni.  
+ I valori per **config_value** e **run_value** non sono automaticamente equivalenti. Dopo l'aggiornamento di un'impostazione di configurazione utilizzando **sp_configure**, l'amministratore di sistema deve aggiornare il valore di configurazione in esecuzione utilizzando riconfigure o RECONFIGURE with override. Per altre informazioni, vedere la sezione Osservazioni.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -92,7 +92,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>Aggiornamento del valore di configurazione corrente  
- Quando si specifica un nuovo *valore* per un' *opzione*, il set di risultati Mostra questo valore nella colonna **config_value** . Questo valore inizialmente è diverso dal valore nella colonna **run_value** , che mostra il valore di configurazione correntemente in esecuzione. Per aggiornare il valore di configurazione in esecuzione nella colonna **run_value** , l'amministratore di sistema deve eseguire RECONFIGURE o RECONFIGURE with override.  
+ Quando si specifica un nuovo *valore* per un' *opzione*, il set di risultati Mostra questo valore nella colonna **config_value** . Questo valore inizialmente è diverso dal valore nella colonna **run_value** , che mostra il valore di configurazione attualmente in esecuzione. Per aggiornare il valore di configurazione in esecuzione nella colonna **run_value** , l'amministratore di sistema deve eseguire RECONFIGURE o RECONFIGURE with override.  
   
  Sia RECONFIGURE che RECONFIGURE WITH OVERRIDE funzionano con tutte le opzioni di configurazione. L'istruzione RECONFIGURE, tuttavia, non accetta i valori di opzione che non rientrano in un intervallo ragionevole o che possono causare conflitti tra le opzioni. Riconfigura, ad esempio, genera un errore se il valore dell' **intervallo di recupero** è maggiore di 60 minuti o se il valore della **maschera di affinità** si sovrappone al valore di **affinity i/O mask** . RECONFIGURE WITH OVERRIDE, invece, accetta qualsiasi valore di opzione con il tipo di dati corretto e impone la riconfigurazione utilizzando il valore specificato.  
   
@@ -106,7 +106,7 @@ RECONFIGURE
  La modifica viene inoltre scritta nel log degli errori di SQL Server.
   
 > [!NOTE]  
->  Se un *valore* specificato è troppo elevato per un'opzione, la colonna **run_value** riflette il fatto che la [!INCLUDE[ssDE](../../includes/ssde-md.md)] è stata impostata per impostazione predefinita sulla memoria dinamica invece di usare un'impostazione non valida.  
+>  Se un *valore* specificato è troppo elevato per un'opzione, la colonna **run_value** riflette il fatto che la [!INCLUDE[ssDE](../../includes/ssde-md.md)] è stata impostata automaticamente sulla memoria dinamica invece di usare un'impostazione non valida.  
   
  Per ulteriori informazioni, vedere [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -120,7 +120,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>A. Visualizzazione dell'elenco delle opzioni di configurazione avanzate  
+### <a name="a-listing-the-advanced-configuration-options"></a>R. Visualizzazione dell'elenco delle opzioni di configurazione avanzate  
  Nell'esempio seguente viene illustrato come impostare ed elencare tutte le opzioni di configurazione. Le opzioni di configurazione avanzate vengono visualizzate se innanzitutto si imposta `show advanced option` su `1`. In seguito alla modifica di questa opzione, se si esegue `sp_configure` senza parametri, verranno visualizzate tutte le opzioni di configurazione.  
   
 ```sql  
@@ -138,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>B. Modifica di un'opzione di configurazione  
+### <a name="b-changing-a-configuration-option"></a>b. Modifica di un'opzione di configurazione  
  Nell'esempio seguente viene impostato il valore di `recovery interval` del sistema su `3` minuti.  
   
 ```sql  
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Il risultato restituisce il nome dell'opzione seguito dai valori minimi e massimo per l'opzione. Il valore di **config_value** è il valore che [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizzerà al termine della riconfigurazione. **config_value** è il valore in uso. The **config_value** e **run_value** sono in genere uguali, a meno che il valore non sia in corso di modifica.  
+ Il risultato restituisce il nome dell'opzione seguito dai valori minimi e massimo per l'opzione. Il **config_value** è il valore che [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizzerà al termine della riconfigurazione. **config_value** è il valore in uso. The **config_value** e **run_value** sono in genere uguali, a meno che il valore non sia in corso di modifica.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Elencare le impostazioni di configurazione per un nome di configurazione  
   
@@ -166,7 +166,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Impostare la connettività Hadoop  
- Per impostare la connettività Hadoop sono necessari alcuni passaggi aggiuntivi oltre all'esecuzione di sp_configure. Per la procedura completa, vedere [creare un'origine &#40;dati esterna Transact-&#41;SQL](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Per impostare la connettività Hadoop sono necessari alcuni passaggi aggiuntivi, oltre a eseguire sp_configure. Per la procedura completa, vedere [creare un'origine &#40;dati esterna Transact-&#41;SQL](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

@@ -82,7 +82,7 @@ ms.locfileid: "73729327"
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Esempio:  
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

@@ -22,7 +22,7 @@ ms.locfileid: "63035067"
 # <a name="sqllogship-application"></a>Applicazione sqllogship
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- ![Icona di collegamento all'argomento](../../2014/database-engine/media/topic-link.gif "Icona di collegamento all'argomento") Per le convenzioni della sintassi, vedere Guida di [ &#40;riferimento&#41;all'utilità del prompt dei comandi motore di database](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icona di collegamento all'argomento](../../2014/database-engine/media/topic-link.gif "Icona di collegamento a un argomento") Per le convenzioni della sintassi, vedere Guida di [ &#40;riferimento&#41;all'utilità del prompt dei comandi motore di database](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +55,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
-|level|Description|  
+|Level|Descrizione|  
 |-----------|-----------------|  
 |0|L'output non include messaggi di traccia e di debug.|  
 |1|L'output include messaggi di gestione degli errori.|  
@@ -69,17 +69,17 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-querytimeout** _timeout_value_  
  Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int** _._  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  L'applicazione **sqllogship** , sqllogship. exe, è installata nella directory X:\Programmi\Microsoft Files\Microsoft SQL Server\120\Tools\Binn  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy**oppure **-restore** .  
   
-|Opzione|Accesso alla directory|Permissions|  
+|Opzione|Accesso alla directory|Autorizzazioni|  
 |------------|----------------------|-----------------|  
 |**-backup**|È richiesto l'accesso in lettura/scrittura alla directory di backup.|Sono richieste le stesse autorizzazioni necessarie per l'istruzione BACKUP. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|È richiesto l'accesso in lettura alla directory di backup e l'accesso in scrittura alla directory di copia.|Sono richieste le stesse autorizzazioni necessarie per la stored procedure [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  

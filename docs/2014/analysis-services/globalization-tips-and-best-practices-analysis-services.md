@@ -24,7 +24,7 @@ ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874409"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
+  **[!INCLUDE[applies](../includes/applies-md.md)]**  solo elementi multidimensionali  
   
  Questi suggerimenti e linee guida consentono di aumentare la portabilità delle soluzioni di Business Intelligence e di evitare errori direttamente correlati alle impostazioni relative alla lingua e alle regole di confronto.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "70874409"
   
      In Cina e a Singapore, il supporto tecnico Microsoft tende a usare il cinese semplificato con il pinyin come criterio di ordinamento preferito. Le regole di confronto consigliate sono Chinese_PRC (per SQL Server 2000), Chinese_PRC_90 (per SQL Server 2005) o Chinese_Simplified_Pinyin_100 (per SQL Server 2008 e versioni successive).  
   
-     In Taiwan è più frequente vedere il cinese tradizionale con l'ordinamento consigliato basato sul numero di tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
+     Per Taiwan è più frequente vedere il cinese tradizionale con l'ordinamento consigliato basato sul numero di tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
   
-     Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). In Macao, Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 e versioni successive) viene utilizzato abbastanza spesso.  
+     Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). In Macao, Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 e versioni successive) viene utilizzato abbastanza spesso.  
   
 -   Per il giapponese, il set di regole di confronto usato più di frequente è Japanese_CI_AS. Japanese_XJIS_100 viene usato nelle installazione che supportano [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 viene in genere usato nei progetti di migrazione dei dati, con dati provenienti da piattaforme non Windows o da origini dati diverse dal motore di database relazionale di SQL Server.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "70874409"
   
      Verranno visualizzate le traduzioni francesi dal database di esempio Adventure Works.  
   
-     ![Tabella pivot di Excel con traduzioni in francese](media/ssas-localetest-excel.png "Tabella pivot di Excel con traduzioni in francese")  
+     ![Tabella pivot di Excel con traduzioni in francese](media/ssas-localetest-excel.png "tabella pivot di Excel con traduzioni in francese")  
   
  È possibile poi usare SQL Server Profiler per verificare le impostazioni locali. Fare clic su un evento `Session Initialize` e quindi controllare l'elenco delle proprietà nell'area di testo sottostante per trovare `<localeidentifier>1036</localeidentifier>`.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70874409"
   
 -   Eseguire una query MDX sul database Adventure Works. I risultati della query saranno le traduzioni francesi.  
   
-     ![Query MDX con traduzioni in francese in SSMS](media/ssas-localetest-ssms.png "Query MDX con traduzioni in francese in SSMS")  
+     ![Query MDX con traduzioni in francese nella](media/ssas-localetest-ssms.png "query MDX di SSMS con traduzioni in francese in SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Scrittura di query MDX in una soluzione contenente traduzioni  
  Le traduzioni forniscono informazioni visualizzate relative ai nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma gli identificatori degli oggetti corrispondenti non vengono tradotti. Se possibile, per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è preferibile usare gli identificatori e le chiavi anziché didascalie e nomi tradotti. Per istruzioni e script DMX (Multidimensional Expressions), ad esempio, è consigliabile usare chiavi di membri anziché nomi di membri al fine di assicurare la portabilità in contesti con più lingue.  
@@ -139,13 +139,13 @@ ms.locfileid: "70874409"
   
 3.  **Usare i formati di data ISO per informazioni di data e ora universali**  
   
-     Uno [Analysis Services esperto](http://geekswithblogs.net/darrengosbell/Default.aspx) ha questa raccomandazione: "Si usa sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data passate alle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del client o del server. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
+     Un [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Io uso sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o del client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
      La query MDX seguente, presa in prestito da un post del forum, illustra come usare la funzione Format per restituire le date in un formato specifico, indipendentemente dalle impostazioni internazionali sottostanti.  
   
-     Per il post originale, vedere il [post relativo a SSAS 2012 che genera date non valide nel forum di Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) .  
+     Per il post originale, vedere [SSAS 2012 genera date non valide (post del forum di Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) ).  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  

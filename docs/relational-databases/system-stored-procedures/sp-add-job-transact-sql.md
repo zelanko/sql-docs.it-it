@@ -29,7 +29,7 @@ ms.locfileid: "72381906"
 
   Aggiunge un nuovo processo eseguito dal servizio SQL Agent.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
  > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -73,7 +73,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` un valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|In caso di esito positivo|  
@@ -86,13 +86,13 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_page = ] page_level` un valore che indica quando inviare una pagina al termine del processo. *page_level*è di **tipo int**e il valore predefinito è **0**, che indica Never. *page_level*usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'` il nome di posta elettronica della persona a cui inviare un messaggio di posta elettronica quando viene raggiunto *email_level* . *email_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @notify_email_operator_name = ] 'email_name'` il nome di posta elettronica della persona a cui inviare il messaggio quando viene raggiunta *email_level* . *email_name* è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @notify_netsend_operator_name = ] 'netsend_name'` il nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @notify_page_operator_name = ] 'page_name'` il nome della persona a cui si desidera eseguire il paging al termine del processo. *page_name*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @delete_level = ] delete_level` un valore che indica quando eliminare il processo. *delete_value*è di **tipo int**e il valore predefinito è 0, che indica mai. *delete_level*usa gli stessi valori di *eventlog_level*.  
+`[ @delete_level = ] delete_level` un valore che indica quando eliminare il processo. *delete_value*è di **tipo int**e il valore predefinito è 0, ovvero Never. *delete_level*usa gli stessi valori di *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *delete_level* è **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
@@ -105,16 +105,16 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **\@originating_server** esiste in **sp_add_job,** ma non è elencato in argomenti. **\@originating_server** è riservata per uso interno.  
   
- Dopo l'esecuzione di **sp_add_job** per l'aggiunta di un processo, è possibile usare **sp_add_jobstep** per aggiungere passaggi che eseguono le attività del processo. è possibile utilizzare **sp_add_jobschedule** per creare la pianificazione utilizzata dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il processo. Usare **sp_add_jobserver** per impostare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene eseguito il processo e **sp_delete_jobserver** per rimuovere il processo dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Dopo l'esecuzione di **sp_add_job** per l'aggiunta di un processo, è possibile usare **sp_add_jobstep** per aggiungere passaggi che eseguono le attività del processo. **sp_add_jobschedule** possibile utilizzare per creare la pianificazione utilizzata dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il processo. Utilizzare **sp_add_jobserver** per impostare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene eseguito il processo e **sp_delete_jobserver** rimuovere il processo dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o i gruppi di server di destinazione per il processo. Per rimuovere i processi dai server di destinazione o dai gruppi di server di destinazione, usare **sp_remove_job_from_targets**.  
+ Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o i gruppi di server di destinazione per il processo. Per rimuovere i processi dai server di destinazione o dai gruppi di server di destinazione, utilizzare **sp_remove_job_from_targets**.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** o disporre di uno dei seguenti ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, che risiedono nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -129,7 +129,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-adding-a-job"></a>A. Aggiunta di un processo  
+### <a name="a-adding-a-job"></a>R. Aggiunta di un processo  
  In questo esempio viene aggiunto il nuovo processo denominato `NightlyBackups`.  
   
 ```  
@@ -168,16 +168,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [  &#40;Transact-SQL&#41; sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)  
- [  &#40;Transact-SQL&#41; sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

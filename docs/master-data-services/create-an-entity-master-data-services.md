@@ -24,14 +24,14 @@ ms.locfileid: "73728459"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un'entità in cui siano contenuti i membri e i relativi attributi.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un'entità in cui siano contenuti i membri e i relativi attributi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente un modello. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -60,19 +60,19 @@ ms.locfileid: "73728459"
   
      Per altre informazioni, vedere [Modificare il tipo di log delle transazioni dell'entità &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
-8.  Facoltativa. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
+8.  Facoltativo. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
   
-9. Facoltativa. Selezionare la casella di controllo **Abilita compressione dei dati** . La compressione di riga è attivata per impostazione predefinita. Per altre informazioni, vedere [Compressione dei dati](../relational-databases/data-compression/data-compression.md).  
+9. Facoltativo. Selezionare la casella di controllo **Abilita compressione dei dati** . La compressione di riga è attivata per impostazione predefinita. Per altre informazioni, vedere [Compressione dei dati](../relational-databases/data-compression/data-compression.md).  
   
 10. Fare clic su **Salva**.  
   
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni entità creata, viene aggiunta alla griglia una riga con tredici colonne. Di seguito sono elencate le colonne.  
   
-|Crea vista sottoscrizioni|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ")|  
-|Crea vista sottoscrizioni|Nome dell'entità.|  
+|Name|Nome dell'entità.|  
 |Descrizione|Descrizione dell'entità.|  
 |Tabella di gestione temporanea|Nome di prefisso della tabella usata per l'archiviazione dei dati.|  
 |Tipo di log delle transazioni|Tipo di log delle transazioni dell'entità.|  
@@ -85,7 +85,7 @@ ms.locfileid: "73728459"
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato l'entità.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento dell'entità.|  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Creare un attributo di testo &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

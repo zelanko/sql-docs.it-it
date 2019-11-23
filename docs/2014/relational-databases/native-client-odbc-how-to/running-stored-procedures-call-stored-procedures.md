@@ -40,10 +40,10 @@ ms.locfileid: "72688668"
 >  Se un'applicazione invia una procedura utilizzando la sintassi Transact-SQL EXECUTE, invece della sequenza di escape ODBC CALL, il driver ODBC di SQL Server passa la chiamata di procedura a SQL Server come istruzione SQL anziché come chiamata RPC. Se viene utilizzata l'istruzione Transact-SQL EXECUTE, inoltre, i parametri di output non vengono restituiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Argomenti &#40;sulle procedure per l'esecuzione di stored&#41; procedure ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
- Invio in [batch di chiamate a stored Procedure](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)    
- [Esecuzione di stored procedure](../native-client-odbc-stored-procedures/running-stored-procedures.md)    
- [Chiamata di una stored Procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)    
+ [Argomenti &#40;sulle procedure per l'esecuzione di stored&#41; procedure ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ Invio in [batch di chiamate a stored Procedure](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Esecuzione di stored procedure](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Chiamata di una stored Procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedure](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

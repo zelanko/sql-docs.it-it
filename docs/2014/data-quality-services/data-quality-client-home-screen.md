@@ -38,7 +38,7 @@ ms.locfileid: "70154478"
   
  È possibile aprire una Knowledge Base bloccata e modificarla solo se si è gli autori del blocco. In tal caso, la Knowledge Base verrà aperta nello stato in cui era al momento della chiusura, indicato in parentesi. Se una Knowledge Base è bloccata e non si è gli autori del blocco, è possibile aprirla solo in sola lettura.  
   
-### <a name="data-quality-projects"></a>Progetti Data Quality  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  Un progetto Data Quality è il processo tramite cui viene eseguita la pulizia o la corrispondenza dei dati in DQS, sia attraverso un'attività di correzione dei dati assistita da computer che attraverso la pulizia interattiva dei dati.  
   
  **Nuovo progetto Data Quality**  

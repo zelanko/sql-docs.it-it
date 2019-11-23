@@ -21,7 +21,7 @@ ms.locfileid: "73728682"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile applicare gli script SQL definiti dall'utente come estensione di condizioni e azioni predefinite.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile applicare gli script SQL definiti dall'utente come estensione di condizioni e azioni predefinite.  
   
 > [!NOTE]  
 >  Tutti gli script devono essere definiti nello schema [usr].  
@@ -70,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema.  

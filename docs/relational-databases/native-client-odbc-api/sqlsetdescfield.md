@@ -48,7 +48,7 @@ ms.locfileid: "73785702"
  Per ulteriori informazioni, vedere le [colonne di &#40;tipo&#41;sparse supportano ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-   [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)  
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -69,11 +69,11 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continuous* è valido solo per i processi di acquisizione.  
   
-Numero di secondi `[ @pollinginterval ] = polling_interval_` tra i cicli di analisi del log. *polling_interval* è di tipo **bigint** e il valore predefinito è null, che indica nessuna modifica per questo parametro.  
+`[ @pollinginterval ] = polling_interval_` numero di secondi tra i cicli di analisi del log. *polling_interval* è di tipo **bigint** e il valore predefinito è null, che indica nessuna modifica per questo parametro.  
   
  *polling_interval* è valido solo per i processi di acquisizione quando *Continuous* è impostato su 1.  
   
-`[ @retention ] = retention_` numero di minuti per cui le righe delle modifiche devono essere conservate nelle tabelle delle modifiche. la *conservazione* è di tipo **bigint** e il valore predefinito è null, che indica nessuna modifica per questo parametro. Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
+`[ @retention ] = retention_` numero di minuti per i quali le righe delle modifiche devono essere conservate nelle tabelle delle modifiche. la *conservazione* è di tipo **bigint** e il valore predefinito è null, che indica nessuna modifica per questo parametro. Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
   
  la *conservazione* è valida solo per i processi di pulizia.  
   
@@ -97,8 +97,8 @@ Numero di secondi `[ @pollinginterval ] = polling_interval_` tra i cicli di anal
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-a-capture-job"></a>A. Modifica di un processo di acquisizione  
- Nell'esempio seguente vengono aggiornati i parametri `@job_type`, `@maxscans` e `@maxtrans` di un processo di acquisizione nel database `AdventureWorks2012`. Gli altri parametri validi per un processo di acquisizione, `@continuous` e `@pollinginterval`, sono omessi e i relativi valori non vengono modificati.  
+### <a name="a-changing-a-capture-job"></a>R. Modifica di un processo di acquisizione  
+ Nell'esempio seguente vengono aggiornati i parametri `@job_type`, `@maxscans`e `@maxtrans` di un processo di acquisizione nel database `AdventureWorks2012`. Gli altri parametri validi per un processo di acquisizione, `@continuous` e `@pollinginterval`, sono omessi e i relativi valori non vengono modificati.  
   
 ```  
 USE AdventureWorks2012;  

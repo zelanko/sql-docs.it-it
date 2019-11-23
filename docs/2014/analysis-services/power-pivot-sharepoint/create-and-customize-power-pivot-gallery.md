@@ -26,15 +26,15 @@ ms.locfileid: "70874407"
   
 -   [Panoramica](#overview)  
   
--   [Creazione della raccolta PowerPivot](#createlib)  
+-   [Creare la raccolta PowerPivot](#createlib)  
   
--   [Personalizzare una libreria della raccolta PowerPivot](#customize)  
+-   [Personalizzare una libreria raccolta PowerPivot](#customize)  
   
 -   [Disabilitare o nascondere il pulsante Aggiorna](#bkmk_hide_refresh_button)  
   
 -   [Passare alla vista teatro o alla vista raccolta](#switch)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> Prerequisiti  
   
 -   È necessario disporre di Silverlight. Silverlight può essere scaricato e installato mediante Microsoft Update. Se si visualizza una libreria di Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando un browser che non dispone di Silverlight, fare clic sul collegamento nella pagina per installarlo. Dopo l'installazione, sarà necessario chiudere e riaprire il browser.  
   
@@ -50,18 +50,18 @@ ms.locfileid: "70874407"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non può trovarsi in un sito con restrizioni. Il sito padre che contiene la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve essere aggiunto al sito attendibile o all'area Intranet locale.  
   
--   Per l'applicazione in uso deve essere stata distribuita la soluzione dell'applicazione Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mentre per la raccolta siti deve essere stata attivata la funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per ulteriori informazioni, vedere [distribuire soluzioni PowerPivot in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) e[attivare l'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   Per l'applicazione in uso deve essere stata distribuita la soluzione dell'applicazione Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mentre per la raccolta siti deve essere stata attivata la funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni, vedere [distribuire soluzioni PowerPivot in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) e[attivare integrazione della caratteristica PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Per visualizzare o creare un report Reporting Services basato su una cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , sia la cartella di lavoro sia il report devono trovarsi nella stessa Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il report deve usare una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenente dati incorporati oppure la cartella di lavoro deve contenere al massimo un'origine dati esterna costituita da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Panoramica  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un modello di raccolta disponibile quando si installa [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] in un server SharePoint. La raccolta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di combinare un'anteprima accurata del contenuto dei file e informazioni relative all'origine dei documenti. È possibile dedurre immediatamente l'utente che ha creato il documento e la data dell'ultima modifica. Per creare immagini di anteprima, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa un servizio snapshot in grado di leggere le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e i report di Reporting Services che contengono dati PowerPivot. Se si pubblica un file che il servizio snapshot non è in grado di leggere, nessuna immagine di anteprima sarà disponibile per quel file.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un modello di raccolta disponibile quando si installa [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] in un server SharePoint. La raccolta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di combinare un'anteprima accurata del contenuto dei file e informazioni relative all'origine dei documenti. È possibile dedurre immediatamente l'utente che ha creato il documento e la data dell'ultima modifica. Per creare immagini di anteprima [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] raccolta Usa un servizio snapshot in grado di leggere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartelle di lavoro e report di Reporting Services contenenti dati PowerPivot. Se si pubblica un file che il servizio snapshot non è in grado di leggere, nessuna immagine di anteprima sarà disponibile per quel file.  
   
  Le immagini di anteprima si basano sul modo in cui viene eseguito il rendering della cartella di lavoro mediante Excel Services. La rappresentazione nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve corrispondere a ciò che viene visualizzato quando si apre una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un browser. L'anteprima tuttavia presenta una superficie di attacco limitata. Parti di una cartella di lavoro o di un report potrebbero essere tagliate per adattarsi allo spazio disponibile. Per visualizzare il documento completo potrebbe essere necessario aprire una cartella di lavoro o un report.  
   
- L'aggiornamento dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da origini dati esterne è supportato nella Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma viene richiesta una configurazione aggiuntiva. L'amministratore di una farm o di un servizio deve aggiungere la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come percorso attendibile di Excel Services. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ L'aggiornamento dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da origini dati esterne è supportato nella Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma viene richiesta una configurazione aggiuntiva. L'amministratore di una farm o di un servizio deve aggiungere la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come percorso attendibile di Excel Services. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-##  <a name="createlib"></a>Creazione della raccolta PowerPivot  
+##  <a name="createlib"></a> Creare la raccolta PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene creata durante l'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] tramite l'opzione di installazione Nuovo server. Se è stato aggiunto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una farm esistente o si desidera una raccolta aggiuntiva, è possibile crearne una nuova per l'applicazione o il sito.  
   
 1.  1.  **SharePoint 2010**: fare clic su **Azioni sito** nell'angolo superiore sinistro della home page del sito.  
@@ -86,7 +86,7 @@ ms.locfileid: "70874407"
   
  È possibile creare librerie aggiuntive della Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se si applicano autorizzazioni diverse per raccolte diverse o singoli siti.  
   
-##  <a name="customize"></a>Personalizzare una libreria della raccolta PowerPivot  
+##  <a name="customize"></a> Personalizzare una libreria raccolta PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una raccolta di documenti SharePoint. È pertanto possibile usare strumenti della raccolta standard in SharePoint per modificare le impostazioni della raccolta o usare documenti singoli nella raccolta. Ciascuna raccolta creata può essere personalizzata in modo indipendente per l'utilizzo di una vista o di impostazioni diverse.  
   
  È possibile modificare l'ordinamento e i filtri per modificare la posizione delle cartelle di lavoro nell'elenco. Per impostazione predefinita, i documenti vengono elencati nell'ordine in cui sono stati aggiunti, dove l'ultimo documento pubblicato viene visualizzato alla fine dell'elenco. Una volta pubblicato, un documento mantiene il proprio posto nell'elenco. Con l'aggiornamento e la ripubblicazione, il documento viene aggiornato sul posto nell'elenco.  
@@ -132,7 +132,7 @@ ms.locfileid: "70874407"
   
  Nella tabella seguente vengono descritti i layout diversi per la presentazione di bozze di anteprima di ogni pagina visualizzata in anteprima:  
   
-|visualizzazione|Description|  
+|Visualizza|Descrizione|  
 |----------|-----------------|  
 |Vista Raccolta (impostazione predefinita)|Raccolta è la vista predefinita per una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'anteprima viene visualizzata a sinistra. Le immagini più piccole di ogni foglio di lavoro vengono visualizzate accanto all'anteprima in ordine sequenziale da sinistra a destra.|  
 |Tutti i documenti|Si tratta del layout standard per le raccolte documenti. È possibile scegliere questa vista per gestire singoli documenti o visualizzare il contenuto delle raccolte in un formato elenco.<br /><br /> Utilizzare questa vista per modificare le proprietà ed eliminare o spostare singoli documenti.<br /><br /> Se è stato abilitato il controllo delle versioni, è necessario utilizzare questa vista per archiviare o estrarre i documenti dalla raccolta.|  
@@ -147,9 +147,9 @@ ms.locfileid: "70874407"
 3.  In Gestione visualizzazioni, in Vista corrente, selezionare la vista che si desidera usare dall'elenco. Le viste predefinite includono Raccolta, Teatro e Sequenza video. In alternativa, è possibile scegliere Tutti i documenti se si desidera spostare, eliminare o gestire documenti nella raccolta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi relativi a un'installazione di PowerPivot per SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
- [Utilizzare la raccolta PowerPivot](use-power-pivot-gallery.md)    
- [Creazione di un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
+ [Risolvere i problemi di PowerPivot per SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Usare la raccolta PowerPivot](use-power-pivot-gallery.md)   
+ [Creare un percorso attendibile per siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminare la raccolta PowerPivot](delete-power-pivot-gallery.md)  
   
   

@@ -45,10 +45,10 @@ ms.locfileid: "70154548"
  Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Home page di Azure](http://www.windowsazure.com/)   
+ [Home Page di Azure](http://www.windowsazure.com/)   
  [Centro per sviluppatori di Azure](http://www.windowsazure.com/develop/overview/)   
  [Centro di gestione di Azure](http://www.windowsazure.com/manage/overview/)   
  [Blog del team di Azure](http://www.windowsazure.com/community/blog/)   
- [Opzioni di supporto di Azure](http://www.windowsazure.com/support/contact/)  
+ [Opzioni di supporto tecnico di Azure](http://www.windowsazure.com/support/contact/)  
   
   

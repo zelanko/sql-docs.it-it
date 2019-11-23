@@ -1,5 +1,5 @@
 ---
-title: 'Esempi: Utilizzo di OPENXML | Microsoft Docs'
+title: Esempi d'uso di OPENXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874696"
 ---
-# <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
+# <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 CustomerID ContactName            
@@ -140,7 +140,7 @@ LILAS      Carlos Gonzlez
   
  L'handle del documento restituito da **sp_xml_preparedocument** è valido solo per la durata del batch e non per tutta la sessione.  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Impostazione del parametro ColPattern per il mapping tra le colonne del set di righe e attributi o elementi XML  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>b. Impostazione del parametro ColPattern per il mapping tra le colonne del set di righe e attributi o elementi XML  
  Questo esempio mostra l'impostazione del modello XPath nel parametro facoltativo *ColPattern* per specificare il mapping tra le colonne del set di righe e gli attributi o elementi XML.  
   
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui clienti e sugli ordini in un set di righe che include le colonne **CustomerID**, **OrderDate**, **ProdID** e **Qty**.  
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -281,7 +281,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- A **CustomerID** viene applicato il mapping incentrato sugli attributi. Nell'elemento <`Customer`> non è presente l'attributo **ContactName**, quindi verrà applicato il mapping incentrato sugli elementi.  
+ A **CustomerID** viene applicato il mapping incentrato sugli attributi. Nell'elemento < **> non è presente l'attributo** ContactName`Customer`, quindi verrà applicato il mapping incentrato sugli elementi.  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Impostazione della funzione XPath text() come parametro ColPattern  
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`> e <`Order`>. L'istruzione OPENXML recupera un set di righe composto dall'attributo **oid** dell'elemento <`Order`>, dall'ID dell'elemento padre del nodo identificato da *rowpattern* e dalla stringa del valore foglia del contenuto dell'elemento.  
@@ -292,7 +292,7 @@ LILAS      Carlos Gonzlez
   
 -   Il parametro *rowpattern* (/root/Customer/Order) identifica i nodi <`Order`> da elaborare.  
   
--   Il valore del parametro *flags* è impostato su **1**, per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
+-   Il valore del parametro *flags* è impostato su **1** , per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
   
 -   In *SchemaDeclaration* , nella clausola WITH, i nomi delle colonne del set di righe **oid** e **amount** corrispondono ai nomi degli attributi XML associati. Di conseguenza, il parametro *ColPattern* non viene specificato. Per la colonna **comment** del set di righe, la funzione XPath **text()** viene specificata come parametro *ColPattern*. Questo parametro sovrascrive il mapping incentrato sugli attributi specificato nel parametro *flags*e la colonna contiene la stringa del valore foglia del contenuto dell'elemento.  
   
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 oid   date                        amount  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Esempio:  
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProdID      Qty         OID  
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Impostazione di un documento XML con più nodi di testo  
- Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Esempio:  
+ Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio:  
   
 ```  
 DECLARE @h int  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()** .  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 id  lname   xmlname                   OverFlow  

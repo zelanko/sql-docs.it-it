@@ -32,7 +32,7 @@ ms.locfileid: "72782814"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
   
- Gli oggetti prestazioni sono disponibili in Windows Performance Monitor (**Perfmon.exe**). Per altre informazioni, vedere la documentazione di Windows, [Profilatura di runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Gli oggetti prestazioni sono disponibili nel monitor di prestazioni di Windows (**Perfmon.exe**). Per altre informazioni, vedere la documentazione di Windows, [Profilatura di runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Per informazioni correlate ai contatori delle prestazioni in modalità SharePoint, vedere [contatori delle prestazioni per gli oggetti &#40;&#41;prestazioni MSRS 2014 Web service SharePoint Mode e MSRS 2014 Windows Service SharePoint Mode](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)SharePoint Mode.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "72782814"
 -   [Utilizzare i cmdlet di PowerShell per restituire gli elenchi](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a>Contatori delle prestazioni del servizio Web MSRS 2014  
- Tramite l'oggetto prestazioni `MSRS 2014 Web Service` vengono monitorate le prestazioni del server di report. Questo oggetto prestazioni include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
+ Tramite l'oggetto prestazioni `MSRS 2014 Web Service` vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
  Nella tabella seguente sono elencati i contatori inclusi con l'oggetto prestazioni `MSRS 2014 Web Service`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive. Tramite questo contatore viene restituito un conteggio cumulativo di tutte le sessioni del browser generate dalle esecuzioni dei report, indipendentemente dal fatto che siano ancora attive o meno.<br /><br /> Quando i record di sessione vengono rimossi, il contatore viene diminuito. Per impostazione predefinita, le sessioni vengono rimosse dopo dieci minuti di inattività.|  
 |`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. Vedere `Total Cache Hits` più avanti in questo argomento.|  
@@ -75,11 +75,11 @@ ms.locfileid: "72782814"
 |`Total Requests`|Numero totale di richieste inviate al server di report dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
   
 ##  <a name="bkmk_windowsservice"></a>Contatori delle prestazioni del servizio Windows MSRS 2014  
- Tramite l'oggetto prestazione `MSRS 2014 Windows Service` viene monitorato il servizio Windows ReportServer. Questo oggetto prestazioni include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
+ Tramite l'oggetto prestazione `MSRS 2014 Windows Service` viene monitorato il servizio Windows ReportServer. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto prestazioni `MSRS 2014 Windows Service`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive archiviate nel database del server di report. Questo contatore restituisce un conteggio cumulativo di tutte le sessioni utilizzabili del browser generate dalle sottoscrizioni del report, indipendentemente dal fatto che siano attive o meno.|  
 |`Cache Flushes/Sec`|Numero di scaricamenti della cache al secondo.|  
@@ -129,4 +129,4 @@ Get-Counter -ListSet msr*
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni del server di report](monitoring-report-server-performance.md)   
  [Contatori delle prestazioni per gli oggetti &#40;prestazioni MSRS 2014 Web Service SharePoint Mode e MSRS 2014 Windows Service SharePoint Mode in&#41; modalità SharePoint](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  
+ [Contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

@@ -31,20 +31,20 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176191"
 ---
-# <a name="reporting-services-report-server"></a>Reporting Services Report Server
+# <a name="reporting-services-report-server"></a>Server di report di Reporting Services
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
   
- **Installazione:** Per informazioni sull' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installazione, vedere gli argomenti seguenti:  
+ **Installazione:** per informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere quanto riportato di seguito:  
   
 -   [Installare un server di report in modalità nativa di Reporting Services](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [Installare SQL Server funzionalità di Business Intelligence &#40;con SharePoint PowerPivot e Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Azure**: Per informazioni sull'uso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] di con macchine virtuali di Azure, vedere gli argomenti seguenti:  
+ **Azure**: per informazioni sull'uso di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con macchine virtuali di Azure, vedere gli argomenti seguenti:  
   
 -   [SQL Server Business Intelligence in macchine virtuali di Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Usare PowerShell per creare una VM di Azure con un server di report in modalità nativa](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Usare PowerShell per creare una macchina virtuale di Azure con un server di report in modalità nativa](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70176191"
 |**Estensioni di sicurezza personalizzate**|Yes|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non possono essere distribuite o usate nel server di report. Il server di report include una speciale estensione di sicurezza, che viene usata quando si configura un server di report per l'esecuzione in modalità di integrazione con SharePoint. Tale estensione di sicurezza è un componente interno ed è necessaria per le operazioni in modalità integrata.|  
 |**Gestione configurazione**|Yes|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Yes|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
-|**Report collegati**|Yes|No.|  
+|**Report collegati**|Yes|Numero|  
 |**Report personali**|Yes|No|  
 |**Sottoscrizioni personali** e metodi di invio in batch|Yes|No|  
 |**Avvisi dati**|No|Yes|  
@@ -113,7 +113,7 @@ ms.locfileid: "70176191"
  Sviluppatori di terze parti possono creare estensioni aggiuntive per sostituire o estendere la capacità di elaborazione del server di report. Per altre informazioni sulle interfacce programmatiche disponibili per gli sviluppatori di applicazioni, vedere il [Riferimento tecnico](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a>Modalità nativa con SharePoint Web part  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]in sono disponibili due web part che è possibile installare e registrare in un' [!INCLUDE[winSPServ](../includes/winspserv-md.md)] istanza di 2,0 o versione successiva oppure SharePoint Portal Server 2003 o versione successiva. e che è possibile usare per trovare e visualizzare da un sito di SharePoint report archiviati ed elaborati in un server di report eseguito in modalità nativa. Tali web part sono state introdotte nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce due Web part che è possibile installare e registrare in un'istanza di [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 o versione successiva o SharePoint Portal Server 2003 o versione successiva. e che è possibile usare per trovare e visualizzare da un sito di SharePoint report archiviati ed elaborati in un server di report eseguito in modalità nativa. Tali web part sono state introdotte nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modalità SharePoint  
  In modalità SharePoint è necessario che un server di report venga eseguito all'interno di una server farm di SharePoint. Le funzionalità di elaborazione, rendering e gestione del server di report sono rappresentate da un server applicazioni SharePoint in cui vengono eseguiti il servizio condiviso SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e una o più applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Un sito di SharePoint fornisce l'accesso front-end al contenuto e alle operazioni del server di report.  
@@ -148,14 +148,14 @@ ms.locfileid: "70176191"
 ##  <a name="bkmk_authentication"></a>Autenticazione, rendering, dati ed estensioni per il recapito  
  Il server di report supporta le estensioni per l'autenticazione, l'elaborazione dati, l'elaborazione di report, il rendering e il recapito. Un server di report richiede almeno un'estensione di autenticazione, un'estensione per l'elaborazione dati e un'estensione per il rendering. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o controlli personalizzati.  
   
- In Reporting Services sono disponibili estensioni predefinite che consentono di utilizzare tutte le funzionalità del server senza la necessità di sviluppare componenti personalizzati. Nella tabella seguente sono descritte le estensioni predefinite che concorrono a formare un'istanza del server di report completa con funzionalità immediatamente disponibili per l'utilizzo:  
+ In Reporting Services sono disponibili estensioni predefinite che consentono di usare tutte le funzionalità del server senza la necessità di sviluppare componenti personalizzati. Nella tabella seguente sono descritte le estensioni predefinite che concorrono a formare un'istanza del server di report completa con funzionalità immediatamente disponibili per l'utilizzo:  
   
-|Type|Predefinito|  
+|Type|Valore predefinito|  
 |----------|-------------|  
-|Authentication|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
+|Autenticazione|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
 |Elaborazione dati|In un'istanza del server di report predefinita sono incluse le estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse e ODBC.|  
 |Rendering|In un'istanza del server di report predefinita sono incluse le estensioni per il rendering di file HTML, Excel, CSV, XML, immagine, Word, elenco SharePoint e PDF.|  
-|Recapito|Un'istanza del server di report predefinita include un'estensione per il recapito tramite posta elettronica e un'estensione per il recapito tramite condivisione di file. Se il server di report è configurato per l'integrazione con SharePoint, è possibile utilizzare un'estensione per il recapito tramite cui è possibile salvare report in una raccolta di SharePoint.|  
+|Recapito|Un'istanza del server di report predefinita include un'estensione per il recapito tramite posta elettronica e un'estensione per il recapito tramite condivisione di file. Se il server di report è configurato per l'integrazione con SharePoint, è possibile usare un'estensione per il recapito tramite cui è possibile salvare report in una raccolta di SharePoint.|  
   
 > [!NOTE]  
 >  In Reporting Services è incluso un set completo di strumenti e applicazioni che è possibile usare per amministrare il server, creare contenuto e renderlo disponibile per gli utenti dell'organizzazione.  
@@ -168,7 +168,7 @@ ms.locfileid: "70176191"
 |Verificare i requisiti hardware e software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Installare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.|[Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
-|Gli sviluppatori Web che hanno familiarità con gli stili HTML e fogli di stile CSS possono utilizzare le informazioni in questo argomento per determinare i file che è possibile modificare per personalizzare l'aspetto di Gestione report.|[Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Gli sviluppatori Web che hanno familiarità con gli stili HTML e fogli di stile CSS possono usare le informazioni in questo argomento per determinare i file che è possibile modificare per personalizzare l'aspetto di Gestione report.|[Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Illustra come ottimizzare le impostazioni di memoria per il servizio Web ReportServer e il servizio Windows.|[Configurare la memoria disponibile per applicazioni del server di report](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Vengono illustrati i passaggi consigliati per configurare il server di report per l'amministrazione remota.|[Configurare un server di report per l'amministrazione remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Vengono fornite istruzioni per la configurazione della disponibilità della funzionalità **Report personali** in un'istanza del server di report nativa.|[Abilitare e disabilitare la funzionalità Report personali](report-server/enable-and-disable-my-reports.md)|  

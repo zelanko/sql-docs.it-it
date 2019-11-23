@@ -22,7 +22,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882169"
 ---
-# <a name="specify-schema-options"></a>Impostazione delle opzioni dello schema
+# <a name="specify-schema-options"></a>Specificare le opzioni dello schema
   In questo argomento si illustra come impostare le opzioni dello schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando si pubblica una tabella o una vista, è possibile controllare le opzioni di creazione degli oggetti che vengono replicate per l'oggetto pubblicato. È possibile impostare queste opzioni quando viene creato l'articolo ed è possibile modificarle anche successivamente. Se queste opzioni non vengono specificate in modo esplicito per un articolo, verrà definito un set predefinito di opzioni.  
   
 > [!NOTE]  
@@ -82,11 +82,11 @@ ms.locfileid: "73882169"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@pubblicazione**, il nome dell'articolo per **\@articolo**, l'oggetto di database da pubblicare per **\@source_object**, il tipo di oggetto di database per il **tipo di\@** e il [| (OR bit per bit)](/sql/t-sql/language-elements/bitwise-or-transact-sql) risultato di una o più opzioni dello schema per **\@schema_option**. Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@pubblicazione**, il nome dell'articolo per **\@articolo**, l'oggetto di database da pubblicare per **\@source_object**, il tipo di oggetto di database per il **tipo di\@** e il [| (OR bit per bit)](/sql/t-sql/language-elements/bitwise-or-transact-sql) risultato di una o più opzioni dello schema per **\@schema_option**. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@pubblicazione**, il nome dell'articolo per **\@articolo**, l'oggetto di database da pubblicare per **\@source_object**e il [| (OR bit per bit)](/sql/t-sql/language-elements/bitwise-or-transact-sql) risultato di una o più opzioni dello schema per **\@schema_option**. Per altre informazioni, vedere [Define an Article](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@pubblicazione**, il nome dell'articolo per **\@articolo**, l'oggetto di database da pubblicare per **\@source_object**e il [| (OR bit per bit)](/sql/t-sql/language-elements/bitwise-or-transact-sql) risultato di una o più opzioni dello schema per **\@schema_option**. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Per modificare le opzioni dello schema per un articolo esistente in una pubblicazione snapshot o transazionale  
   

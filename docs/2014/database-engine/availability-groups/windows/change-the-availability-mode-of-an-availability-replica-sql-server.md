@@ -28,16 +28,16 @@ ms.locfileid: "72782887"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per modificare la modalità di disponibilità di un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -50,7 +50,7 @@ ms.locfileid: "72782887"
   
 5.  Nella finestra di dialogo **Proprietà replica di disponibilità** utilizzare l'elenco a discesa **Modalità di disponibilità** per modificare la modalità di disponibilità di questa replica.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare la modalità di disponibilità di un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -82,7 +82,7 @@ ms.locfileid: "72782887"
        WITH (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell
+##  <a name="PowerShellProcedure"></a> Con PowerShell
 
 ### <a name="to-change-the-availability-mode-of-an-availability-group"></a>Per modificare la modalità di disponibilità di un gruppo di disponibilità
   
@@ -103,6 +103,6 @@ ms.locfileid: "72782887"
 Per configurare e usare il provider di SQL Server PowerShell, vedere [provider di SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
- [Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità &#40;di failover gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)  

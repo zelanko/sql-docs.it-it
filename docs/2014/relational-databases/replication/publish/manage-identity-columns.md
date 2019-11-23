@@ -56,7 +56,7 @@ ms.locfileid: "73882296"
   
 5.  Se nel passaggio 4 è stato selezionato **Automatico** o **True** , immettere i valori per le opzioni nella tabella che segue. Per altre informazioni su come usare queste impostazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).  
   
-    |Opzione|Valore|Descrizione|  
+    |Opzione|valore|Descrizione|  
     |------------|-----------|-----------------|  
     |**Dimensioni intervallo server di pubblicazione**|Valore intero per le dimensioni dell'intervallo, ad esempio 20000.|Vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
     |**Dimensioni intervallo Sottoscrittore**|Valore intero per le dimensioni dell'intervallo, ad esempio 10000.|Vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  

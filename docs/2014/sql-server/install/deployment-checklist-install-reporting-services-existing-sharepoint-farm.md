@@ -1,5 +1,5 @@
 ---
-title: 'Elenco di controllo per la distribuzione: Installare Reporting Services in una farm di SharePoint esistente | Microsoft Docs'
+title: 'Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952618"
 ---
-# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Elenco di controllo per la distribuzione: Installare Reporting Services in una farm di SharePoint esistente
+# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente
   È possibile installare i server di report di SharePoint per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint nuova o esistente. In questo argomento vengono descritti i possibili scenari e le procedure consigliate per installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di eseguire il programma di installazione, esaminare le informazioni seguenti:  
   
 |Passaggio|Collegamento|  
@@ -28,14 +28,14 @@ ms.locfileid: "71952618"
 |Creare o identificare gli account utilizzati nella distribuzione di un server di report. È necessario disporre di un account del servizio server di report e di credenziali per la connessione al database del server di report||  
 |Definire un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospiterà il database del server di report. È possibile utilizzare un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile scegliere un'istanza che si trovi in un computer dotato di sufficiente capacità di archiviazione per i report.||  
 |Facoltativo. Se si desidera utilizzare la funzionalità di posta elettronica del server di report per le sottoscrizioni, individuare il nome del server o del gateway SMTP utilizzato per il servizio di posta elettronica nell'organizzazione|[Configurare un server di report per il &#40;recapito tramite posta elettronica Configuration Manager SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Nota: Se si esegue l'aggiornamento di un computer da una versione CTP precedente [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e sono state apportate modifiche personalizzate ai file di configurazione, sarà necessario apportare le stesse modifiche ai file di configurazione, dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I file interessati sono **web.config** e **client.config**.||  
+|Nota: se si esegue l'aggiornamento di un computer da una versione CTP precedente [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e sono state apportate modifiche personalizzate ai file di configurazione, sarà necessario apportare le stesse modifiche ai file di configurazione, dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I file interessati sono **web.config** e **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Scenari di installazione  
- Nella tabella seguente vengono descritti i possibili scenari che si possono presentare durante l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente. la modalità locale consente l'esecuzione del rendering locale dei report dalla raccolta documenti di SharePoint, senza l'integrazione con un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report in modalità connessa nel visualizzatore &#40;di report Reporting Services in modalità&#41;SharePoint ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [dove trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ Nella tabella seguente vengono descritti i possibili scenari che si possono presentare durante l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente. la modalità locale consente l'esecuzione del rendering locale dei report dalla raccolta documenti di SharePoint, senza l'integrazione con un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Per ulteriori informazioni sulla modalità locale, vedere [report in modalità locale e &#40;in modalità connessa nel Visualizzatore di report Reporting Services in modalità&#41; SharePoint](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e in [cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Avvio configurazione|Flusso di lavoro|Fine della configurazione|Commenti|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] in modalità locale|Installazione|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] in modalità locale|Installation|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Modalità con connessione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Aggiornamento sul posto|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Modalità con connessione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Migrazione|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
   
@@ -68,10 +68,10 @@ ms.locfileid: "71952618"
 |Rimuovere l'URL di integrazione nel vecchio server.|Nella pagina **Impostazioni generali dell'applicazione** di Amministrazione centrale SharePoint fare clic su **Integrazione Reporting Services**.|  
 |Se richiesto, disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla vecchia installazione.||  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione &#40;in modalità SharePoint di Reporting Services SharePoint 2010 e&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+ [Installazione &#40;in modalità SharePoint di Reporting Services SharePoint 2010 e&#41; SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [Linee guida per l'uso di SQL Server funzionalità di business intelligence in una farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
  [Combinazioni supportate di SharePoint e Reporting Services server e del componente aggiuntivo &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   

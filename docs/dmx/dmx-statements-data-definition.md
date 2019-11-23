@@ -20,7 +20,7 @@ ms.locfileid: "72890524"
 
   Nella tabella seguente sono elencate le istruzioni DMX (Data Mining Extensions) che fanno parte del linguaggio DDL (Data Definition Language) per il data mining.  
   
-|.|Description|  
+|Istruzione|Descrizione|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Crea una nuova struttura di data mining nel database.|  
 |[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Aggiunge un modello di data mining a una struttura di data mining esistente.|  

@@ -28,7 +28,7 @@ ms.locfileid: "73912813"
   
  Nella tabella seguente vengono descritti i componenti e le connessioni illustrati nella figura.  
   
-## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>A. Utente di Windows utilizzato per l'esecuzione dell'agente di merge  
+## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>R. Utente di Windows utilizzato per l'esecuzione dell'agente di merge  
  Durante la sincronizzazione, l'agente di merge (A) viene avviato come Sottoscrittore. L'agente di merge può essere avviato da un passaggio del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent o da un'applicazione personalizzata autonoma. Se viene avviato da un passaggio del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, l'agente di merge verrà eseguito nel contesto di un utente di Windows specificato. Se non viene specificato un utente di Windows, l'agente di merge verrà eseguito nel contesto dell'account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
   
 |Tipo di account|Posizione in cui viene specificato l'account|  

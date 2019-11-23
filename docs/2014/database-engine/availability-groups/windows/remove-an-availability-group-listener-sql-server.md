@@ -30,7 +30,7 @@ ms.locfileid: "72782862"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere un listener utilizzando:**  
   
@@ -42,19 +42,19 @@ ms.locfileid: "72782862"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
 ###  <a name="Recommendations"></a> Raccomandazioni  
  Prima di eliminare un listener del gruppo di disponibilità, si consiglia di verificare che non sia utilizzato da alcuna applicazione.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per rimuovere un listener del gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica primaria e fare clic sul nome del server per espandere il relativo albero.  
@@ -68,20 +68,20 @@ ms.locfileid: "72782862"
 5.  Verrà aperta la finestra di dialogo **Rimuovi listener dal gruppo disponibilità** . Per ulteriori informazioni, vedere [Rimuovi listener dal gruppo di disponibilità](#AgListenerPropertiesDialog), più avanti in questo argomento.  
   
 ###  <a name="AgListenerPropertiesDialog"></a> Rimuovi listener dal gruppo disponibilità (finestra di dialogo)  
- **nome**  
+ **Nome**  
  Nome del listener da rimuovere.  
   
- **Result**  
+ **Risultato**  
  Viene visualizzato un collegamento, **Esito positivo** o **Errore**, su cui è possibile fare clic per altre informazioni.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per rimuovere un listener del gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
   
 2.  Utilizzare l'istruzione [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) , come indicato di seguito:  
   
-     ALTER AVAILABILITY GROUP *group_name* Remove LISTENER **' *`dns_name`* '**  
+     ALTER AVAILABILITY GROUP *group_name* rimuovere il LISTENER **' *`dns_name`* '**  
   
      dove *group_name* è il nome del gruppo di disponibilità e *dns_name* è il nome DNS del listener del gruppo di disponibilità.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72782862"
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per rimuovere un listener del gruppo di disponibilità**  
   
 1.  Impostare il valore predefinito (`cd`) sull'istanza del server che ospita la replica primaria.  
@@ -112,5 +112,5 @@ ms.locfileid: "72782862"
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  

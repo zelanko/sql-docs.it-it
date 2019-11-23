@@ -47,14 +47,14 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Vedere [argomenti e proprietà delle stored procedure per gli indici spaziali](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per accedere alla procedura, l'utente deve essere assegnato a un ruolo PUBLIC. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzato `sp_help_spatial_geometry_index` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito sulla tabella **geometry_col** per l'esempio di query specificato in **\@QS**. In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
+ Nell'esempio seguente viene usato `sp_help_spatial_geometry_index` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito nella tabella **geometry_col** per l'esempio di query specificato in **\@QS**. In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
   
 ```  
 declare @qs geometry  

@@ -26,18 +26,18 @@ ms.locfileid: "73728477"
 
   Creare una vista sottoscrizioni per esportare dati di Master Data Services nei sistemi di sottoscrizione Si sta creando una vista dei dati nel database di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione**. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>Per creare e modificare una vista sottoscrizioni  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]fare clic su **Gestione integrazione**.  
   
-2.  Dalla barra dei menu, scegliere **Crea viste**.  
+2.  Dalla barra dei menu scegliere **Crea viste**.  
   
 3.  Nella pagina **Viste sottoscrizioni** fare clic su **Aggiungi** per creare una vista o fare clic su **Modifica** per modificare una vista. Viene visualizzato un pannello sulla destra.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "73728477"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva**, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") , che indica che la vista è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di una visualizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
-|Crea vista sottoscrizioni|Nome della vista sottoscrizioni.|  
+|Name|Nome della vista sottoscrizioni.|  
 |Modello|Nome del modello.|  
-|Version|Nome della versione.|  
+|Versione|Nome della versione.|  
 |Flag versione|Nome del flag di versione.|  
 |Gerarchia derivata|Nome della gerarchia derivata.|  
 |Entità|Nome dell'entità.|  

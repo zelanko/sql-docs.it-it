@@ -45,34 +45,34 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'`Classe della categoria da aggiungere. la classe è di *tipo* **varchar (8)** e il valore predefinito è job. i possibili valori sono i seguenti.  
+`[ @class = ] 'class'` la classe della categoria da aggiungere. la classe è di *tipo* **varchar (8)** e il valore predefinito è job. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |JOB|Aggiunge una categoria di processi.|  
 |ALERT|Aggiunge una categoria di avvisi.|  
 |OPERATOR|Aggiunge una categoria di operatori.|  
   
-`[ @type = ] 'type'`Tipo di categoria da aggiungere. il *tipo* è **varchar (12)** e il valore predefinito è **local**. i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` il tipo di categoria da aggiungere. il *tipo* è **varchar (12)** e il valore predefinito è **local**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |LOCAL|Categoria di processi locali.|  
 |FUNZIONALITÀ MULTISERVER|Categoria di processi multiserver.|  
-|Nessuno|Categoria per una classe diversa da JOB **.**|  
+|NONE|Categoria per una classe diversa da JOB **.**|  
   
-`[ @name = ] 'name'`Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` il nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_add_category** deve essere eseguito dal database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_category**.  
   
 ## <a name="examples"></a>Esempi  

@@ -169,7 +169,7 @@ FROM table AS FT_TBL INNER JOIN
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example"></a>A. Esempio semplice  
+### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente viene creata e popolata una semplice tabella di due colonne, che elenca 3 contee e i colori nei rispettivi flag. Consente di creare e popolare un indice e un catalogo full-text nella tabella. Viene quindi illustrata la sintassi **CONTAINSTABLE** . In questo esempio viene illustrata la crescita del valore di rango superiore quando il valore di ricerca viene soddisfatto più volte. Nell'ultima query, Tanzania che contiene sia il verde che il nero hanno un rango superiore rispetto all'Italia, che contiene solo uno dei colori sottoposti a query.  
   
 ```  

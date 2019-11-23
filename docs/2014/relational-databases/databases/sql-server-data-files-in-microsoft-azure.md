@@ -78,7 +78,7 @@ ON
 > [!IMPORTANT]
 > se sono presenti riferimenti attivi ai file di dati in un contenitore, i tentativi di eliminare le credenziali di SQL Server corrispondenti non riescono.  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Security  
  Di seguito sono riportati requisiti e considerazioni sulla sicurezza a cui attenersi durante l'archiviazione di file di dati di SQL Server in Archiviazione di Azure.  
   
 -   Quando si crea un contenitore per il servizio di archiviazione BLOB di Azure, è consigliabile impostare l'accesso su privato. Quando si imposta l'accesso su privato, i dati del contenitore e del BLOB possono essere letti solo dal proprietario dell'account Azure.  

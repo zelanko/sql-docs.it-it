@@ -85,7 +85,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-refreshing-a-user-defined-function"></a>A. Aggiornamento di una funzione definita dall'utente  
+### <a name="a-refreshing-a-user-defined-function"></a>R. Aggiornamento di una funzione definita dall'utente  
  Nell'esempio seguente viene aggiornata una funzione definita dall'utente. Nell'esempio vengono creati il tipo di dati alias `mytype` e la funzione definita dall'utente `to_upper` che utilizza `mytype`. Il tipo di dati `mytype` viene quindi rinominato in `myoldtype` e viene creato un nuovo `mytype` con una diversa definizione. La funzione `dbo.to_upper` viene aggiornata in modo da fare riferimento alla nuova implementazione di `mytype`, anziché alla precedente.  
   
 ```  

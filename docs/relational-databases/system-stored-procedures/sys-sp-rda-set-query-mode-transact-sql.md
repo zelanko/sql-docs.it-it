@@ -39,25 +39,25 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@mode =] *\@mode*  
+ [@mode =] *modalità\@*  
  È uno dei valori seguenti.  
   
 -   **Disabilitato** Tutte le query sulle tabelle abilitate per l'estensione hanno esito negativo.  
   
 -   **LOCAL_ONLY** Le query sulle tabelle abilitate per l'estensione restituiscono solo dati locali.  
   
--   **LOCAL_AND_REMOTE** Le query sulle tabelle abilitate per l'estensione restituiscono dati locali e remoti. Comportamento predefinito.  
+-   **LOCAL_AND_REMOTE** Le query sulle tabelle abilitate per l'estensione restituiscono dati locali e remoti. Questo è il comportamento predefinito.  
   
- [@force =]  *\@force*  
+ [@force =]  *forza\@*  
  È un valore di bit facoltativo che è possibile impostare su 1 se si desidera modificare la modalità query senza convalida.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o > 0 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le stored procedure estese seguenti consentono inoltre di impostare la modalità di query per un database abilitato per l'estensione.  
   
 -   **sp_rda_deauthorize_db**  
@@ -74,6 +74,6 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Estensione database](../../sql-server/stretch-database/stretch-database.md)  
   
   

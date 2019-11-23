@@ -30,7 +30,7 @@ ms.locfileid: "72305133"
   Crea un tipo di dati alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] usare [Create type](../../t-sql/statements/create-type-transact-sql.md) .  
+>  in alternativa, [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] usare [Create type](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="arguments"></a>Argomenti  
 `[ @typename = ] type` è il nome del tipo di dati alias. I nomi dei tipi di dati alias devono rispettare le regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci in ogni database. *Type* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
-`[ @phystype = ] system_data_type` è il tipo di dati fisico o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornito, per il quale è basato il tipo di dati alias. *system_data_type* è di **tipo sysname**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
+`[ @phystype = ] system_data_type` è il tipo di dati fisico, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornito, su cui si basa il tipo di dati alias. *system_data_type* è di **tipo sysname**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
 ||||  
 |-|-|-|  
@@ -79,27 +79,27 @@ sp_addtype [ @typename = ] type,
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ Nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il nome di un tipo di dati alias deve essere univoco all'interno del database, ma è possibile utilizzare la stessa definizione per tipi di dati alias con nomi diversi.  
   
- Eseguendo **sp_addtype** viene creato un tipo di dati alias visualizzato nella vista del catalogo **sys. Types** per un database specifico. Se il tipo di dati alias deve essere disponibile in tutti i nuovi database definiti dall'utente, aggiungerlo al **modello**. Dopo avere creato un tipo di dati alias, è possibile utilizzarlo in un'istruzione CREATE TABLE o ALTER TABLE e associarvi valori predefiniti e regole. Tutti i tipi di dati alias scalari creati tramite **sp_addtype** sono contenuti nello schema **dbo** .  
+ Eseguendo **sp_addtype** viene creato un tipo di dati alias visualizzato nella vista del catalogo **sys. Types** per un database specifico. Se il tipo di dati alias deve essere disponibile in tutti i nuovi database definiti dall'utente, aggiungerlo al **modello**. Dopo avere creato un tipo di dati alias, è possibile utilizzarlo in un'istruzione CREATE TABLE o ALTER TABLE e associarvi valori predefiniti e regole. Tutti i tipi di dati alias scalari creati utilizzando **sp_addtype** sono contenuti nello schema **dbo** .  
   
- I tipi di dati alias ereditano le regole di confronto predefinite del database. Le regole di confronto delle colonne e delle variabili dei tipi alias sono definite nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DECLARE @*local_variable* . Le modifiche apportate alle regole di confronto predefinite del database vengono applicate solo alle nuove colonne e variabili del tipo. Le regole di confronto delle colonne e delle variabili esistenti non vengono modificate.  
+ I tipi di dati alias ereditano le regole di confronto predefinite del database. Le regole di confronto delle colonne e delle variabili dei tipi di alias sono definite nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DECLARE @*local_variable* . Le modifiche apportate alle regole di confronto predefinite del database vengono applicate solo alle nuove colonne e variabili del tipo. Le regole di confronto delle colonne e delle variabili esistenti non vengono modificate.  
   
 > [!IMPORTANT]  
->  Per motivi di compatibilità con le versioni precedenti, al ruolo del database **pubblico** viene concessa automaticamente l'autorizzazione REFERENCES per i tipi di dati alias creati tramite **sp_addtype**. Nota Quando i tipi di dati alias vengono creati usando l'istruzione CREATE TYPE anziché **sp_addtype**, non si verifica tale concessione automatica.  
+>  Per motivi di compatibilità con le versioni precedenti, al ruolo del database **pubblico** viene concessa automaticamente l'autorizzazione REFERENCES per i tipi di dati alias creati utilizzando **sp_addtype**. Nota Quando i tipi di dati alias vengono creati usando l'istruzione CREATE TYPE invece di **sp_addtype**, non viene concessa tale concessione automatica.  
   
- I tipi di dati alias non possono essere definiti utilizzando i tipi di dati **timestamp**, **Table**, **XML**, **varchar (max)** , **nvarchar (max** ) o **varbinary (max** ) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ I tipi di dati alias non possono essere definiti utilizzando i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **Table**, **XML**, **varchar (max)** , **nvarchar (max)** o **varbinary (max)** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** o **db_ddladmin** .  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>R. Creazione di un tipo di dati alias che non consente valori Null  
- Nell'esempio seguente viene creato un tipo di dati alias denominato `ssn` (numero di previdenza sociale) basato sul tipo di dati **varchar** fornito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati `ssn` viene utilizzato per colonne contenenti numeri di previdenza sociale a 11 cifre (999-99-9999). Questa colonna non può contenere valori NULL.  
+ Nell'esempio seguente viene creato un tipo di dati alias denominato `ssn` (Social Security Number) basato sul tipo di dati **varchar** fornito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati `ssn` viene utilizzato per colonne contenenti numeri di previdenza sociale a 11 cifre (999-99-9999). Questa colonna non può contenere valori NULL.  
   
  Si noti che `varchar(11)` è racchiuso tra virgolette singole in quanto contiene segni di punteggiatura (le parentesi).  
   
@@ -110,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. Creazione di un tipo di dati alias che consente valori Null  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>b. Creazione di un tipo di dati alias che consente valori Null  
  Nell'esempio seguente viene creato un tipo di dati alias basato sul tipo di dati `datetime` e denominato `birthday` che consente valori Null.  
   
 ```  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;motore di database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;motore di database Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
