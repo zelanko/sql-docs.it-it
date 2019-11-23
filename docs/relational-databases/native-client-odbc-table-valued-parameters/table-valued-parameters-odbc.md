@@ -40,7 +40,7 @@ ms.locfileid: "73790473"
   
  È possibile creare vincoli e chiavi primarie durante la creazione della variabile di tabella. I vincoli rappresentano un ottimo metodo per assicurarsi che i dati di una tabella soddisfino requisiti specifici.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Usi dei parametri con valori di tabella in ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
  Vengono descritti gli scenari utente principali per i parametri con valori di tabella e ODBC.  
   

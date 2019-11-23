@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729860"

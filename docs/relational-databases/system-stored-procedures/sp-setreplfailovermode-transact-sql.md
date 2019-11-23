@@ -49,23 +49,23 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'` è la modalità di failover per la sottoscrizione. *failover_mode* è di **tipo nvarchar (10)** . i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**immediate** o **Sync**|Per le modifiche apportate ai dati nel Sottoscrittore viene eseguita la copia bulk nel server di pubblicazione a mano a mano che vengono implementate.|  
-|**queued**|Le modifiche dei dati vengono archiviate in una coda [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**queued**|Le modifiche dei dati vengono archiviate in una coda di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
   
 > [!NOTE]  
 >  L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) è deprecato e non è più supportato.  
   
-solo per uso interno `[ @override = ] override`.  
+`[ @override = ] override` solo uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_setreplfailovermode** viene utilizzata per la replica snapshot o transazionale per le quali sono abilitate le sottoscrizioni, per l'aggiornamento in coda con failover all'aggiornamento immediato o per l'aggiornamento immediato con failover all'aggiornamento in coda.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Vedere anche  
