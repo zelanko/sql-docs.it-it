@@ -26,7 +26,7 @@ ms.locfileid: "73594509"
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La procedura guidata Always Encrypted è un potente strumento che consente di impostare la configurazione [Always Encrypted](always-encrypted-database-engine.md) desiderata per le colonne di database selezionate. In base alla configurazione corrente e alla configurazione di destinazione desiderata, la procedura guidata è in grado di crittografare una colonna, rimuovere la crittografia o riapplicarla, ad esempio una nuova chiave di crittografia della colonna o un tipo di crittografia diverso da quello in uso, configurato per la colonna. È possibile configurare più colonne in una singola sessione della procedura guidata.
+La procedura guidata Always Encrypted è un potente strumento che consente di impostare la configurazione [Always Encrypted](always-encrypted-database-engine.md) desiderata per le colonne di database selezionate. In base alla configurazione corrente e alla configurazione di destinazione desiderata, la procedura guidata è in grado di crittografare una colonna, rimuovere la crittografia o riapplicarla, ad esempio usando una nuova chiave di crittografia della colonna o un tipo di crittografia diverso da quello in uso, configurato per la colonna. È possibile configurare più colonne in una singola sessione della procedura guidata.
 
 La procedura guidata consente di crittografare le colonne con chiavi di crittografia della colonna esistenti. In alternativa, si può scegliere di generare una nuova chiave di crittografia della colonna oppure sia una nuova chiave di crittografia della colonna che una nuova chiave master di colonna. 
 
@@ -38,7 +38,7 @@ La procedura guidata funziona spostando i dati all'esterno del database ed esegu
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicuro, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md). Si noti che la procedura guidata non supporta la crittografia sul posto.
+> Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). Si noti che la procedura guidata non supporta la crittografia sul posto.
 
 ::: moniker-end
 

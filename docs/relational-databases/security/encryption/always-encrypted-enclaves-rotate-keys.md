@@ -34,7 +34,7 @@ I passaggi generali seguenti includono collegamenti ad articoli dettagliati, a s
     - Per effettuare il provisioning di una nuova chiave abilitata per l'enclave, vedere [Effettuare il provisioning delle chiavi abilitate per l'enclave](always-encrypted-enclaves-provision-keys.md).
     - Per effettuare il provisioning di una chiave non abilitata per l'enclave, vedere [Effettuare il provisioning di chiavi Always Encrypted usando SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md) ed [ con PowerShell](configure-always-encrypted-keys-using-powershell.md).
 2. Sostituire una chiave esistente con la nuova chiave.
-    - Se si ruota una chiave di crittografia di colonna e sia la chiave di origine che la chiave di destinazione sono abilitate per l'enclave, è possibile eseguire la rotazione (che implica una nuova crittografia dei dati) sul posto. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md).
+    - Se si ruota una chiave di crittografia di colonna e sia la chiave di origine che la chiave di destinazione sono abilitate per l'enclave, è possibile eseguire la rotazione (che implica una nuova crittografia dei dati) sul posto. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md).
     - Per la procedura dettagliata di rotazione delle chiavi, vedere [Ruotare le chiavi Always Encrypted con SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) e [Ruotare le chiavi Always Encrypted con PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
     
