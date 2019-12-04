@@ -333,7 +333,7 @@ Valore predefinito del parametro. Se viene definito un valore *default*, è poss
   
  Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@ *@return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
+ <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select_stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
