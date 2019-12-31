@@ -1,6 +1,5 @@
 ---
-title: Specificando selezione predicati nel percorso (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Imposta predicati di selezione nel percorso (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +16,14 @@ helpviewer_keywords:
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f1a42cd31bce6e650fa83cec90d3552b266f0fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073276"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256004"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Definizione di predicati di selezione nel percorso (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,16 +32,17 @@ ms.locfileid: "68073276"
  XPath consente inoltre l'applicazione di filtri basata sulla posizione. Un'espressione del predicato valutata in numero seleziona il nodo dell'ordinale. Il percorso `Customer[3]`, ad esempio, restituisce il terzo cliente. Predicati numerici di questo tipo non sono supportati. Sono supportate solo le espressioni del predicato che restituiscono un risultato booleano.  
   
 > [!NOTE]  
->  Per informazioni sulle limitazioni di questa implementazione XPath e le differenze tra i dati e la specifica W3C, vedere [Introduzione alle query XPath utilizzando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Per informazioni sulle limitazioni di questa implementazione XPath di XPath e sulle differenze tra it e W3C Specification, vedere [Introduzione all'uso di query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
-## <a name="selection-predicate-example-1"></a>Predicato di selezione: Esempio 1  
- L'espressione XPath seguente (percorso) seleziona dal nodo di contesto corrente tutti i  **\<cliente >** figli che includono il **CustomerID** attributo con valore ALFKI:  
+## <a name="selection-predicate-example-1"></a>Predicato di selezione: esempio 1  
+ L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli **** ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID con valore ALFKI:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In questa query XPath `child` e `attribute` sono nomi di asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<nodo elemento >** , in quanto  **\<elemento >** è il tipo di nodo principale per il `child` asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un attributo del nodo di contesto, in quanto  **\<attributo >** è l'entità tipo di nodo del **attributo** asse).  
+ In questa query XPath `child` e `attribute` sono nomi di asse. `Customer`è il test di nodo (true `Customer` se è un ** \<nodo elemento>**, perché ** \<l'elemento>** è il tipo di nodo `child` principale per l'asse). 
+  `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (true se **CustomerID** è un attributo del nodo di contesto, perché ** \<attribute>** è il tipo di nodo principale dell'asse degli **attributi** ).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -49,14 +50,16 @@ ms.locfileid: "68073276"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>Predicato di selezione: Esempio 2  
- L'espressione XPath seguente (percorso) seleziona dal nodo di contesto corrente tutti i  **\<ordine >** nipoti che includono il **SalesOrderID** attributo con il valore 1:  
+## <a name="selection-predicate-example-2"></a>Predicato di selezione: esempio 2  
+ L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli ** \<ordini>** nipoti con l'attributo **SalesOrderID** con valore 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- In questa espressione XPath `child` e `attribute` sono nomi di asse. `Customer`, `Order` e `SalesOrderID` sono i test di nodo. `attribute::OrderID="1"` è il predicato.  
+ In questa espressione XPath `child` e `attribute` sono nomi di asse. 
+  `Customer`, `Order` e `SalesOrderID` sono i test di nodo. 
+  `attribute::OrderID="1"` è il predicato.  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -64,18 +67,19 @@ ms.locfileid: "68073276"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>Predicato di selezione: Esempio 3  
- L'espressione XPath seguente (percorso) seleziona dal nodo di contesto corrente tutti i  **\<cliente >** figli che includono uno o più  **\<ContactName >** elementi figlio:  
+## <a name="selection-predicate-example-3"></a>Predicato di selezione: esempio 3  
+ L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli elementi figlio del ** \<cliente>** che hanno uno o più ** \<elementi ContactName>** figli:  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- Questo esempio si presuppone che il  **\<ContactName >** è un elemento figlio del  **\<cliente >** elemento nel documento XML, che si intende  *mapping incentrato* in uno schema XSD con annotazione.  
+ In questo esempio si presuppone che il ** \<>ContactName** sia un elemento figlio dell'elemento ** \<Customer>** nel documento XML, denominato *mapping incentrato sugli elementi* in uno schema XSD con annotazioni.  
   
- In questa espressione XPath `child` è il nome dell'asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<elemento >** nodo, in quanto  **\<elemento >** è il tipo di nodo principale per `child` asse). `child::ContactName` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un  **\<elemento >** nodo).  
+ In questa espressione XPath `child` è il nome dell'asse. `Customer`è il test di nodo (true `Customer` se è un ** \<elemento>** nodo, perché ** \<l'elemento>** è il tipo di `child` nodo principale per l'asse). 
+  `child::ContactName` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è un ** \<elemento>** nodo).  
   
- Questa espressione restituisce solo le  **\<cliente >** figli del nodo di contesto che includono  **\<ContactName >** gli elementi figlio.  
+ Questa espressione restituisce solo gli ** \<** elementi figlio del>Customer del nodo di contesto che hanno ** \<gli elementi figlio ContactName>** .  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -83,16 +87,17 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>Predicato di selezione: Esempio 4  
- L'espressione XPath seguente seleziona  **\<cliente >** figli del nodo di contesto che non hanno  **\<ContactName >** gli elementi figlio:  
+## <a name="selection-predicate-example-4"></a>Predicato di selezione: esempio 4  
+ L'espressione XPath seguente seleziona ** \<Customer>** gli elementi figlio del nodo di contesto che non dispongono ** \<di ContactName>** elementi figlio:  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- Questo esempio si presuppone che  **\<ContactName >** è un elemento figlio del  **\<cliente >** elemento nel documento XML e il campo ContactName non sia necessario nel database.  
+ In questo esempio si presuppone che ** \<ContactName>** sia un elemento figlio dell'elemento ** \<Customer>** nel documento XML e che il campo ContactName non sia necessario nel database.  
   
- In questo esempio, `child` è l'asse. `Customer` è il test di nodo (TRUE se `Customer` è un \<elemento > nodo). `not(child::ContactName)` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un \<elemento > nodo).  
+ In questo esempio, `child` è l'asse. `Customer`è il test di nodo (TRUE `Customer` se è \<un elemento> nodo). 
+  `not(child::ContactName)` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è \<un elemento> nodo).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -100,14 +105,15 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>Predicato di selezione: Esempio 5  
- L'espressione XPath seguente seleziona dal nodo di contesto corrente tutti i  **\<cliente >** figli che includono il **CustomerID** attributo:  
+## <a name="selection-predicate-example-5"></a>Predicato di selezione: esempio 5  
+ L'espressione XPath seguente seleziona dal nodo di contesto corrente tutti **** gli ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID:  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- In questo esempio `child` è l'asse e `Customer` è il test di nodo (TRUE se `Customer` è un \<elemento > nodo). `attribute::CustomerID` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il predicato (TRUE se `CustomerID` è un  **\<attributo >** nodo).  
+ In `child` questo esempio è l'asse `Customer` e è il test di nodo (true `Customer` se è \<un elemento> nodo). 
+  `attribute::CustomerID` è il predicato. Nel predicato `attribute` , è l'asse `CustomerID` e è il predicato `CustomerID` (true se è un ** \<attributo>** nodo).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -115,8 +121,9 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>Predicato di selezione: Esempio 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
+## <a name="selection-predicate-example-6"></a>Predicato di selezione: esempio 6  
+ 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -125,7 +132,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  La query seleziona tutti i clienti con un elemento `Order` per cui `OrderDate` è uguale a `ShipDate` di qualsiasi `Order`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Formattazione XML sul lato client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [Formattazione XML sul lato client &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

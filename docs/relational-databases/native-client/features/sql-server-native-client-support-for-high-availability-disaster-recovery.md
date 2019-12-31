@@ -1,5 +1,5 @@
 ---
-title: Supporto SQL Server Native Client per la disponibilità elevata, ripristino di emergenza | Microsoft Docs
+title: Native client, disponibilità elevata, ripristino
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf7313c127be38e72131c604c4880963242ed3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788029"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247405"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "73788029"
   
  Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o nell'istanza del cluster di failover:  
   
--   Usare la proprietà di connessione **MultiSubnetFailover** in caso di connessione a una singola subnet o a più subnet, in modo da migliorare le prestazioni.  
+-   Usare la proprietà di connessione **MultiSubnetFailover** per la connessione a una singola subnet o a più subnet. il miglioramento delle prestazioni per entrambe le cause.  
   
 -   Per eseguire la connessione a un gruppo di disponibilità, specificare il listener del gruppo di disponibilità come server nella stringa di connessione.  
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **MultiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], dall'autenticazione Kerberos, o dall’autenticazione di Windows.  
+-   Il comportamento di un'applicazione che usa la proprietà di connessione **MultiSubnetFailover** non è influenzato dal tipo di autenticazione: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticazione, autenticazione Kerberos o autenticazione di Windows.  
   
 -   È possibile aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73788029"
   
 1.  Se il percorso di replica secondaria non è configurato per accettare le connessioni.  
   
-2.  Se un'applicazione usa **ApplicationIntent=ReadWrite** (vedere di seguito) e il percorso di replica secondaria è configurato per l'accesso in sola lettura.  
+2.  Se un'applicazione usa **ApplicationIntent = ReadWrite** (illustrata di seguito) e il percorso della replica secondaria è configurato per l'accesso in sola lettura.  
   
  Una connessione non riesce se una replica primaria è configurata per rifiutare i carichi di lavoro in sola lettura e la stringa di connessione contiene **ApplicationIntent=ReadOnly**.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "73788029"
   
  Un'applicazione ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può utilizzare, per la connessione, una delle tre funzioni seguenti:  
   
-|Funzione|Descrizione|  
+|Function|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|L'elenco di server restituiti da **SQLBrowseConnect** non includerà i nomi di rete virtuale. Verrà visualizzato solo un elenco di server senza indicazione del fatto che il server sia un server autonomo oppure un server primario o secondario in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se si esegue la connessione a un server e viene restituito un errore, è possibile che sia stata stabilita la connessione a un server e che l'impostazione **ApplicationIntent** non sia compatibile con la configurazione del server.<br /><br /> Poiché **SQLBrowseConnect** non riconosce i server in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la parola chiave della stringa di connessione **MultiSubnetFailover** viene ignorata da **SQLBrowseConnect**.|  
-|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** supporta sia **ApplicationIntent** che **MultiSubnetFailover** tramite un nome origine dati (DSN, Data Source Name) o una proprietà di connessione.|  
-|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** supporta **ApplicationIntent** e **MultiSubnetFailover** tramite parole chiave di stringa di connessione, proprietà di connessione o DSN.|  
+|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** supporta sia **ApplicationIntent** che **MultiSubnetFailover** tramite un nome origine dati (DSN) o proprietà di connessione.|  
+|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** supporta **ApplicationIntent** e **MultiSubnetFailover** tramite parole chiave della stringa di connessione, proprietà di connessione o DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non supporta la parola chiave **MultiSubnetFailover**.  
@@ -105,7 +105,7 @@ ms.locfileid: "73788029"
   
  Per supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è stata aggiunta una parole chiave per la stringa di connessione OLE DB:  
   
--   **Application Intent**  
+-   **Finalità dell'applicazione**  
   
  Per altre informazioni sulle parole chiave della stringa di connessione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -117,16 +117,16 @@ ms.locfileid: "73788029"
   
  Un'applicazione OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può utilizzare, per specificare la finalità dell'applicazione, uno dei metodi seguenti:  
   
- **IDBInitialize::Initialize**  
- **IDBInitialize::Initialize** prevede l'uso del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
+ **IDBInitialize:: Initialize**  
+ **IDBInitialize:: Initialize** usa il set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
   
- **IDataInitialize::GetDataSource**  
- **IDataInitialize::GetDatasource** accetta una stringa di connessione di input che può contenere la parola chiave **Application Intent**.  
+ **IDataInitialize:: GetDataSource**  
+ **IDataInitialize:: GetDataSource** accetta una stringa di connessione di input che può contenere la parola chiave **Application Intent** .  
   
- **IDBProperties:: GetProperties**  
- **IDBProperties::GetProperties** consente di recuperare il valore della proprietà attualmente impostata sull'origine dati.  È possibile recuperare il valore di **Application Intent** tramite la proprietà DBPROP_INIT_PROVIDERSTRING e la proprietà SSPROP_INIT_APPLICATIONINTENT.  
+ **IDBProperties::GetProperties**  
+ **IDBProperties:: GetProperties** Recupera il valore della proprietà attualmente impostata sull'origine dati.  È possibile recuperare il valore di **Application Intent** tramite la proprietà DBPROP_INIT_PROVIDERSTRING e la proprietà SSPROP_INIT_APPLICATIONINTENT.  
   
- **IDBProperties::SetProperties**  
+ **IDBProperties:: seproprietà**  
  Per impostare il valore della proprietà **ApplicationIntent**, chiamare **IDBProperties::SetProperties** passando la proprietà **SSPROP_INIT_APPLICATIONINTENT** con un valore "**ReadWrite**" o "**ReadOnly**" o la proprietà **DBPROP_INIT_PROVIDERSTRING** con un valore contenente "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
  È possibile specificare la finalità dell'applicazione nel campo delle proprietà della finalità dell’applicazione della scheda Tutte nella finestra di dialogo **Proprietà di Data Link**.  
@@ -135,6 +135,6 @@ ms.locfileid: "73788029"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [Utilizzo delle parole chiave della stringa di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

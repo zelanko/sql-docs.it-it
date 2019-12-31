@@ -1,6 +1,5 @@
 ---
-title: Accedere ai dati per le operazioni DQS | Microsoft Docs
-ms.custom: ''
+title: Accedere ai dati per le operazioni DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935230"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254787"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Accedere ai dati per le operazioni DQS
 
@@ -33,7 +32,7 @@ ms.locfileid: "67935230"
   
 -   L'account utente di Windows deve essere un membro del ruolo predefinito del server appropriato (ad esempio securityadmin, serveradmin o sysadmin) nell'istanza del motore di database per concedere/modificare l'accesso all'account di accesso SQL sui database.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Per concedere l'accesso in lettura/scrittura a un utente sul database DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>Per concedere l'accesso in lettura/scrittura a un utente sul database DQS_STAGING_DATA  
   
 1.  Avviare Microsoft SQL Server Management Studio.  
   
@@ -43,11 +42,11 @@ ms.locfileid: "67935230"
   
 4.  Nel riquadro sinistro della finestra di dialogo **Proprietà account di accesso** fare clic su **Mapping utenti** .  
   
-5.  Nel riquadro a destra selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_STAGING_DATA**, quindi selezionare i ruoli seguenti nel riquadro **Appartenenza a ruoli del database per: DQS_STAGING_DATA**:  
+5.  Nel riquadro di destra selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_STAGING_DATA** , quindi selezionare i ruoli seguenti nel riquadro **Appartenenza a ruoli del database per: DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: leggere dati da tabelle e viste.  
+    -   **db_datareader**: leggere i dati da tabelle o viste.  
   
-    -   **db_datawriter**: aggiungere, eliminare o modificare dati nelle tabelle.  
+    -   **db_datawriter**: aggiungere, eliminare o modificare i dati nelle tabelle.  
   
     -   **db_ddladmin**: creare, modificare o eliminare tabelle e viste.  
   

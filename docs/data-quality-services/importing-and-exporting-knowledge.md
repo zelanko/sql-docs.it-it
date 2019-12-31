@@ -1,6 +1,5 @@
 ---
-title: Importazione ed esportazione delle informazioni | Microsoft Docs
-ms.custom: ''
+title: Importazione ed esportazione delle informazioni
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935259"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254815"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importazione ed esportazione delle informazioni
 
@@ -26,24 +25,24 @@ ms.locfileid: "67935259"
 > [!IMPORTANT]  
 >  È possibile esportare contemporaneamente *tutte* le Knowledge Base del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] in un file di backup DQS con estensione DQSB eseguendo il file DQSInstaller.exe dal prompt dei comandi. Analogamente, è possibile importare contemporaneamente *tutte* le Knowledge Base da un file di backup DQS con estensione DQSB nel [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] eseguendo il file DQSInstaller.exe dal prompt dei comandi. Per informazioni su questa operazione, vedere [Esportare e importare le Knowledge Base di DQS utilizzando DQSInstaller.exe](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) nella Guida all'installazione di DQS.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le operazioni di importazione ed esportazione seguenti:  
   
 |||  
 |-|-|  
 |Esportare un dominio di una Knowledge Base in un file di dati DQS|[Esportare un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importare un dominio da un file DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportare una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importare un'intera Knowledge Base in un file di dati DQS|[Importare una Knowledge Base da un file DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportare una Knowledge base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importare un'intera Knowledge Base in un file di dati DQS|[Importare una Knowledge base da un file DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Importare i valori da un file di Excel in un dominio|[Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
-|Importare i domini da un file di Excel in una Knowledge Base|[Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
+|Importare i domini da un file di Excel in una Knowledge Base|[Importare domini da un file di Excel in individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importare i valori di un progetto di pulizia in un dominio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
+|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge base](../data-quality-services/building-a-knowledge-base.md)|  
 |Creazione di un singolo dominio e aggiunta di informazioni al dominio.|[Gestione di un dominio](../data-quality-services/managing-a-domain.md)|  
 |Creazione di un dominio composito e aggiunta di informazioni al dominio.|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  
   

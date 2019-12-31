@@ -1,5 +1,5 @@
 ---
-title: Uso della Knowledge Base predefinita di DQS | Microsoft Docs
+title: Utilizzo della Knowledge Base predefinita di DQS
 ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a07b2c32c205af10c65e42b290dc7187376871ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2696a911edeefecc1dc34efeb77351acbaafc0d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991718"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257740"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilizzo della Knowledge Base predefinita di DQS
 
@@ -23,21 +23,21 @@ ms.locfileid: "67991718"
 
   In questo argomento viene descritta la Knowledge Base predefinita, **DQS Data**, installata con [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Si tratta di una Knowledge Base precompilata che contiene i domini seguenti:  
   
--   **Paese**: contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune usato in elenchi, mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sul nome paese lungo.  
+-   **Paese**: contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune usato in elenchi, su mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sul nome paese lungo.  
   
--   **Paese (tre lettere iniziali)** : contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune usato in elenchi, mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sull'abbreviazione paese di tre lettere.  
+-   **Paese (tre lettere iniziali)**: contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune utilizzato in elenchi, su mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sull'abbreviazione paese di tre lettere.  
   
--   **Paese (due lettere iniziali)** : contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune usato in elenchi, mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sull'abbreviazione paese di due lettere.  
+-   **Paese/area geografica (due lettere iniziali)**: contiene i nomi lunghi (nome ufficiale designato dal paese) e brevi (nome comune usato in elenchi, mappe e così via), abbreviazione di due lettere, abbreviazione di tre lettere e codice di tre cifre per ogni posizione.  Il valore iniziale è impostato sull'abbreviazione paese di due lettere.  
   
--   **US - Counties** (Stati Uniti - Regioni): contiene un elenco di regioni degli Stati Uniti.  
+-   **US-contee**: contiene un elenco di contee statunitensi.  
   
--   **US - Last Name** (Stati Uniti - Cognome): contiene un elenco di cognomi riscontrati più di 100 volte in Census 2000.  
+-   **US-cognome**: contiene un elenco di cognomi che si verificano 100 o più volte nel Census 2000.  
   
--   **US - Places** (Stati Uniti - Luoghi): contiene un elenco di luoghi per i 50 stati, per il District of Columbia e Porto Rico estratti da Census 2010.  
+-   **US-luoghi**: contiene un elenco di luoghi per gli stati 50, il distretto di Columbia e Puerto Rico estratti dal censimento 2010.  
   
--   **US - State** (Stati Uniti - Stati): contiene il nome lungo (ufficiale) convenzionale e l'abbreviazione di due lettere per ogni stato degli Stati Uniti. Il valore iniziale è impostato sul nome stato convenzionale.  
+-   **US-state**: contiene il nome lungo (ufficiale) convenzionale e l'abbreviazione di due lettere per ogni stato negli Stati Uniti. Il valore iniziale è impostato sul nome stato convenzionale.  
   
--   **US - State (2-letter heading)** (Stati Uniti - Stato (intestazione di due lettere)): contiene il nome lungo (ufficiale) convenzionale e l'abbreviazione di due lettere per ogni stato degli Stati Uniti. Il valore iniziale è impostato sull'abbreviazione di due lettere del nome dello stato.  
+-   **US-State (intestazione di 2 lettere)**: contiene il nome lungo (ufficiale) convenzionale e l'abbreviazione di due lettere per ogni stato negli Stati Uniti. Il valore iniziale è impostato sull'abbreviazione di due lettere del nome dello stato.  
   
 ## <a name="using-the-default-knowledge-base"></a>Utilizzo della Knowledge Base predefinita  
  È possibile utilizzare la Knowledge Base DQS predefinita, i dati DQS, nei modi seguenti:  
@@ -51,6 +51,6 @@ ms.locfileid: "67991718"
 -   Utilizzarla in [Componente Pulizia DQS in Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) e nel [componente aggiuntivo Master Data Services per Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Knowledge Base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ [Knowledge base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

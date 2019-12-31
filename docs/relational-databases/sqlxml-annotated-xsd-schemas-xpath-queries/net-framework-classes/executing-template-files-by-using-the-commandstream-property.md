@@ -1,6 +1,5 @@
 ---
-title: Esecuzione di file modello tramite la proprietà CommandStream | Microsoft Docs
-ms.custom: ''
+title: Eseguire i file modello con la proprietà CommandStream
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6d5dbcbbb1fa7d4a71fb6f808bc7b4facac862c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934260"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251472"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Esecuzione di file modello tramite la proprietà CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la proprietà CommandStream dell'oggetto SqlXmlCommand. In questa applicazione, un FileStreamobject viene aperto per un file di comando e il flusso di file viene assegnato come CommandStream che viene eseguito.  
+  Questo esempio illustra il modo in cui è possibile specificare i file modello costituiti da query SQL o XPath usando la proprietà CommandStream dell'oggetto SqlXmlCommand. In questa applicazione viene aperto un FileStreamobject per un file di comando e il flusso di file viene assegnato come CommandStream eseguito.  
   
- Nell'esempio seguente, la proprietà CommandType è specificata come SqlXmlCommandType.Template (non come TemplateFile).  
+ Nell'esempio seguente la proprietà CommandType viene specificata come SqlXmlCommandType. template (non come TemplateFile).  
   
  Di seguito è riportato il modello XML di esempio:  
   
@@ -80,7 +80,7 @@ class Test
    }  
 ```  
   
-### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
+### <a name="to-test-the-application"></a>Per testare l'applicazione  
   
 1.  Salvare il modello XML (TemplateFile.xml) fornito in questo esempio in una cartella.  
   

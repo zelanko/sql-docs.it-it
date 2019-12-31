@@ -1,6 +1,5 @@
 ---
-title: Sicurezza di DQS | Microsoft Docs
-ms.custom: ''
+title: Sicurezza relativa a DQS
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 33d8ecce0aaba4826e20783bbe63aee44f63b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992096"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251633"
 ---
 # <a name="dqs-security"></a>Sicurezza relativa a DQS
 
@@ -34,13 +33,13 @@ ms.locfileid: "67992096"
   
 -   Il **DQS KB Operator** (ruolo dqs_kb_operator) può modificare ed eseguire un progetto. Non può eseguire qualsiasi altro tipo di gestione delle informazioni né creare o modificare una Knowledge Base. Può visualizzare i dati di monitoraggio delle attività, ma non interrompere o arrestare un'attività o eseguire attività amministrative.  
   
-## <a name="user-management"></a>Gestione degli utenti  
+## <a name="user-management"></a>User Management  
  L'amministratore di database (DBA) crea gli utenti di DQS e li associa ai ruoli DQS in SQL Server Management Studio. Il DBA gestisce le autorizzazioni aggiungendo account di accesso SQL come utenti del database DQS_MAIN e associando ogni utente a uno dei ruoli DQS. A ogni ruolo vengono concesse autorizzazioni per un set di stored procedure nel database DQS_MAIN. I tre ruoli DQS non sono disponibili per i database DQS_PROJECTS e DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come creare un utente e assegnare ruoli DQS utilizzando SQL Server Management Studio.|[Gestione di utenti DQS in SSMS](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
+|Viene descritto come creare un utente e assegnare ruoli DQS utilizzando SQL Server Management Studio.|[Gestire gli utenti DQS in SSMS](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
   
   

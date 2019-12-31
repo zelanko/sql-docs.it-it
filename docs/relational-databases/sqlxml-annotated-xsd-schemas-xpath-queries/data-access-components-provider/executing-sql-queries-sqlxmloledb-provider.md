@@ -1,6 +1,5 @@
 ---
-title: Esecuzione di query SQL (Provider SQLXMLOLEDB) | Microsoft Docs
-ms.custom: ''
+title: Esecuzione di query SQL (provider SQLXMLOLEDB)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +15,12 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27dc6c184ba727d55e6bcfe80b33c2ef4762e9df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f716d9e682c3b98fe35ea80dd4b630486d7e836
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995641"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257326"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Esecuzione di query SQL (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +30,12 @@ ms.locfileid: "67995641"
   
 -   xml root  
   
- In questa applicazione di esempio ADO sul lato client viene eseguita una query SQL semplice sul client. Poiché la proprietà ClientSideXML è impostata su True, l'istruzione SELECT senza la clausola FOR XML viene inviato al server. Il server esegue la query e restituisce un set di righe al client. Il client applica quindi la trasformazione FOR XML al set di righe e produce un documento XML.  
+ In questa applicazione di esempio ADO sul lato client viene eseguita una query SQL semplice sul client. Poiché la proprietà ClientSideXML è impostata su true, l'istruzione SELECT senza la clausola FOR XML viene inviata al server. Il server esegue la query e restituisce un set di righe al client. Il client applica quindi la trasformazione FOR XML al set di righe e produce un documento XML.  
   
- La proprietà radice xml fornisce l'elemento radice di primo livello singolo per il documento XML generato.  
+ La proprietà radice XML fornisce il singolo elemento radice di primo livello per il documento XML generato.  
   
 > [!NOTE]  
->  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per altre informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per ulteriori informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

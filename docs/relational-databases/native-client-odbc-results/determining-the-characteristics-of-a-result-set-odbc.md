@@ -1,5 +1,5 @@
 ---
-title: Determinazione delle caratteristiche di un set di risultati (ODBC) | Microsoft Docs
+title: Caratteristiche di un set di risultati (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1319bf3f4004b9fcb398f71099ac738086692b2a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: e580cd7bcb4b84f72d7523cdc57a6424861a589e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73779249"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258508"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinazione delle caratteristiche di un set di risultati (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   I metadati sono dati che descrivono altri dati. I metadati dei set di risultati, ad esempio, descrivono le caratteristiche di un set di risultati, ad esempio il numero di colonne nel set di risultati, i tipi di dati di tali colonne, i nomi, la precisione e il supporto di valori Null.  
   
- ODBC fornisce metadati alle applicazioni tramite le funzioni API di catalogo. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa molte delle funzioni del catalogo delle API ODBC come chiamate a una procedura del catalogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente.  
+ ODBC fornisce metadati alle applicazioni tramite le funzioni API di catalogo. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client implementa molte delle funzioni del catalogo delle API ODBC come chiamate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una procedura di catalogo corrispondente.  
   
  Le applicazioni richiedono metadati per la maggior parte delle operazioni sui set di risultati. L'applicazione, ad esempio, utilizza il tipo di dati di una colonna per determinare il tipo di variabile da associare alla colonna. L'applicazione utilizza la lunghezza in byte di una colonna di tipo carattere per determinare lo spazio necessario per visualizzare dati dalla colonna. Il modo in cui un'applicazione determina i metadati per una colonna dipende dal tipo dell'applicazione.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "73779249"
  Se un'applicazione utilizza un set specifico di metadati più volte, potrà utilizzare in modo proficuo la memorizzazione nella cache delle informazioni nelle variabili private quando tali informazioni vengono ottenute per la prima volta. In questo modo è possibile evitare chiamate alle funzioni di catalogo ODBC per le stesse informazioni, evitando in tal modo l'esecuzione di round trip al server da parte del driver.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei &#40;risultati ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

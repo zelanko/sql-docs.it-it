@@ -1,7 +1,7 @@
 ---
-title: Utilizzare ADO per SQLXML 4.0 di eseguire una query | Documenti di Microsoft
+title: Utilizzo di ADO per eseguire query SQLXML 4.0
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251420"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizzo di ADO per eseguire query SQLXML 4.0
   Nelle versioni precedenti di SQLXML viene fornito il supporto per l'esecuzione di query basate su HTTP mediante le directory virtuali IIS e il filtro ISAPI SQLXML. In SQLXML 4.0 questi componenti sono stati rimossi in quanto simili e, a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è stata fornita una funzionalità sostitutiva con i servizi Web XML nativi.  
@@ -35,9 +35,9 @@ ms.locfileid: "66012152"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>Per creare il file di test della query SQLXML 4.0 utilizzando ADO (VBScript).  
   
-1.  Copiare il codice seguente e incollarlo in un file di testo: Salvare il file come Sqlxml4test.vbs.  
+1.  Copiare il codice VBScript riportato di seguito e incollarlo in un file di testo. Salvare il file come Sqlxml4test.vbs.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -112,16 +112,16 @@ ms.locfileid: "66012152"
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato, come segue:  
   
-    1.  Dal **Start** dal menu **impostazioni**, quindi fare clic su **Pannello di controllo**.  
+    1.  Dal menu **Start** scegliere **Impostazioni**, quindi fare clic su pannello di **controllo**.  
   
-    2.  Nel Pannello di controllo aprire **Installazione applicazioni**  
+    2.  Nel pannello di controllo aprire **Installazione applicazioni**  
   
-    3.  Nell'elenco dei programmi attualmente installati, verificare che **Microsoft SQL Server Native Client** viene visualizzato nell'elenco.  
+    3.  Nell'elenco dei programmi attualmente installati, verificare che **Microsoft SQL Server Native Client** sia visualizzato nell'elenco.  
   
         > [!NOTE]  
-        >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, vedere installazione di [SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verificare che la versione di MDAC installata per il computer client sia 2.6 o successiva. Se è necessario verificare le informazioni sulla versione di MDAC, è possibile utilizzare lo strumento MDAC Component Checker fornito come download gratuito dal sito Web Microsoft (www.microsoft.com). Per ulteriori informazioni, cercare "MDAC Component Checker" sul sito Web Microsoft.  
+2.  Verificare che la versione di MDAC installata per il computer client sia 2.6 o successiva. Se è necessario verificare le informazioni sulla versione di MDAC, è possibile utilizzare lo strumento MDAC Component Checker, fornito come download gratuito dal sito [https://www.microsoft.com/](https://www.microsoft.com/)Web Microsoft. Per ulteriori informazioni, cercare "MDAC Component Checker" sul sito Web Microsoft.  
   
 3.  Eseguire lo script.  
   

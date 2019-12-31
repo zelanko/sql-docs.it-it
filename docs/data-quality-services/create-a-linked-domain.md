@@ -1,6 +1,5 @@
 ---
-title: Creare un dominio collegato | Microsoft Docs
-ms.custom: ''
+title: Creazione di un dominio collegato
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e193aa9cec02e47a98973b6ae1c8381634fdbe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992257"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252249"
 ---
 # <a name="create-a-linked-domain"></a>Creazione di un dominio collegato
 
@@ -34,21 +33,21 @@ ms.locfileid: "67992257"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Controllo del flusso di dati ai domini compositi  
  I domini collegati consentono di controllare il flusso di dati tra campi e domini compositi. È possibile fare distinzione tra quando dati da un campo passano in un dominio composito e quando dati da un altro campo molto simile non vengono trasferiti nel dominio composito. A tale scopo, si specifica quale di due domini collegati fa parte di un dominio composito e quale invece no. Dal punto di vista del dominio, i domini collegati sono identici, in quanto contengono le stesse informazioni. Dal punto di vista di un dominio composito, tuttavia, i domini collegati sono diversi, in quanto uno partecipa al dominio composito, mentre l'altro no.  
   
- Un esempio è un record che contiene i campi seguenti: Nome cliente, Cognome cliente, Nome del padre. Si supponga di eseguire il mapping del nome del cliente e del nome di battesimo del padre a un dominio Nome e di rendere il dominio Nome e il dominio Cognome parte di un dominio composito denominato Nome completo. Il problema è che il nome di battesimo del padre verrà aggiunto al dominio composito senza un cognome. Se tuttavia si collega ognuno dei due campi del nome a un dominio, quindi si collegano i due domini, è possibile aggiungere il dominio Nome cliente al dominio composito Nome completo senza aggiungere il campo Nome di battesimo del padre a tale dominio, evitando con questo l'aggiunta del nome di battesimo del padre al dominio composito.  
+ Un esempio può essere un record che contiene i campi seguenti: Nome cliente, Cognome cliente e Nome di battesimo del padre. Si supponga di eseguire il mapping del nome del cliente e del nome di battesimo del padre a un dominio Nome e di rendere il dominio Nome e il dominio Cognome parte di un dominio composito denominato Nome completo. Il problema è che il nome di battesimo del padre verrà aggiunto al dominio composito senza un cognome. Se tuttavia si collega ognuno dei due campi del nome a un dominio, quindi si collegano i due domini, è possibile aggiungere il dominio Nome cliente al dominio composito Nome completo senza aggiungere il campo Nome di battesimo del padre a tale dominio, evitando con questo l'aggiunta del nome di battesimo del padre al dominio composito.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per creare un dominio collegato, è necessario disporre di una Knowledge Base e di un dominio esistente al quale si desidera effettuare il collegamento.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per creare un dominio collegato, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Create"></a> Creazione di un dominio collegato  
+##  <a name="Create"></a>Creazione di un dominio collegato  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -65,7 +64,7 @@ ms.locfileid: "67992257"
   
 7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="Map"></a> Map two fields to linked domains  
+##  <a name="Map"></a>Eseguire il mapping di due campi a domini collegati  
   
 1.  Aprire una Knowledge Base all'attività di individuazione delle informazioni ed eseguire il mapping della Knowledge Base al database e alla tabella o vista.  
   
@@ -75,10 +74,10 @@ ms.locfileid: "67992257"
   
 4.  Nella finestra di dialogo Crea dominio immettere un nome di dominio e una descrizione, quindi fare clic su OK.  
   
-##  <a name="FollowUp"></a> Completamento: dopo la creazione di un dominio collegato  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di un dominio collegato  
  Dopo avere creato un dominio collegato, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Behavior"></a> Comportamento di un dominio collegato  
+##  <a name="Behavior"></a>Comportamento di un dominio collegato  
  È possibile modificare le impostazioni per un dominio collegato come segue:  
   
 -   È possibile modificare il nome e la descrizione di un dominio collegato.  

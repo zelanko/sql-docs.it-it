@@ -1,6 +1,5 @@
 ---
-title: Oggetto SqlXmlAdapter (classi gestite SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Oggetto SqlXmlAdapter (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 761a3be11c75844d7e7e014339cfa03bc2196ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f1361babe25e8546b120bed352e31c7fa87d133
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119626"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251401"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Classi gestite SQLXML - Oggetto SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Questo oggetto fornisce metodi che facilitano l'interazione con il set di dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per un esempio funzionante, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+  Questo oggetto fornisce metodi che facilitano l'interazione con il set di dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per un esempio funzionante, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
  L'oggetto SqlXmlAdapter supporta questi metodi:  
   
- void Fill (DataSet ds)  
+ Riempimento void (set di dati DS)  
  Inserisce nel set di dati di .NET Framework i dati XML recuperati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- void Update (DataSet ds)  
+ Aggiornamento void (set di dati DS)  
  Applica aggiornamenti ai record in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dai dati del set di dati.  
   
- L'oggetto SqlXmlAdapter supporta questi costruttori:  
+ L'oggetto SqlXmlAdapter supporta i costruttori seguenti:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   

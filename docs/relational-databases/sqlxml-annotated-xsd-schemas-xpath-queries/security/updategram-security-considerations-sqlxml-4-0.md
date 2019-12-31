@@ -1,6 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza degli updategram (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Considerazioni sulla sicurezza degli updategram (SQLXML)
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b337597568f9656fd5c0432e9856a1f74ab65c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a92c9bd13972929cfe15e6da92220fbf73356fc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986534"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252434"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza degli updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "67986534"
 -   Non consentire agli utenti di creare ed eseguire i relativi updategram. È consigliabile che gli updategram vengano forniti come modelli in un server anziché essere creati dinamicamente in applicazioni di tipo ASP, situazione in cui i dati del database potrebbero essere a rischio. Il potenziale rischio può essere eliminato consentendo agli utenti di accedere ai dati solo tramite gli updategram forniti come modelli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di updategram per modificare dati in SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Utilizzo di updategram per modificare i dati in SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
   
   

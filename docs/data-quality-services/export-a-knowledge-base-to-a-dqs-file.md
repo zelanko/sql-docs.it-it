@@ -1,6 +1,5 @@
 ---
-title: Esportare una Knowledge Base in un file DQS | Microsoft Docs
-ms.custom: ''
+title: Esportazione di una Knowledge Base in un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 57f8524cde4404a4380cc58454b348af27b9d094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935285"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251603"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Esportazione di una Knowledge Base in un file DQS
 
@@ -27,19 +26,19 @@ ms.locfileid: "67935285"
   
  Il file di dati DQS creato dal processo di esportazione viene crittografato, pertanto non è possibile visualizzarne i contenuti.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per esportare una Knowledge Base in un file di dati DQS, è necessario avere creato e aperto una Knowledge Base. Non è necessario disporre di un file DQS in cui esportare, in quanto verrà creato automaticamente.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per esportare una Knowledge Base da un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Export"></a> Esportare una knowledge base in un file DQS  
+##  <a name="Export"></a>Esportare una Knowledge base in un file DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire una Knowledge Base nell'attività Gestione dominio.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67935285"
   
 5.  Nella finestra di dialogo **Esporta Knowledge Base** verificare che la riga dello stato indichi che l'esportazione è stata completata. Fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'esportazione di un dominio in un file con estensione dqs  
+##  <a name="FollowUp"></a>Completamento: dopo l'esportazione di un dominio in un file DQS  
  Una volta esportata una Knowledge Base in un file DQS, è possibile importarla nello stesso [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (con un nuovo nome) o in un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]diverso.  
   
   

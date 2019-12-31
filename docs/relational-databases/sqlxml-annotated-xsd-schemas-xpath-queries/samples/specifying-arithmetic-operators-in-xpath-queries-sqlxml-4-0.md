@@ -1,6 +1,5 @@
 ---
-title: Specifica di operatori aritmetici nelle query XPath (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Utilizzare operatori aritmetici nelle query XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907768"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252629"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di &#40;esempio per&#41;gli esempi XPath SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-the--arithmetic-operator"></a>A. Specificare l'operatore aritmetico *  
- Questa query XPath restituisce **\<elementi di > OrderDetail** che soddisfano il predicato specificato:  
+### <a name="a-specify-the--arithmetic-operator"></a>R. Specificare l'operatore aritmetico *  
+ Questa query XPath restituisce ** \<OrderDetail>** gli elementi che soddisfano il predicato specificato:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un **nodo elemento\<** , perché il nodo **\<elemento >** è il nodo primario per l'asse **figlio** ). Per tutti i nodi dell'elemento **\<> OrderDetail** , viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfano la condizione.  
+ Nella query `child` `OrderDetail` è l'asse e è il test di nodo (true se **OrderDetail** è un ** \<nodo elemento>**, perché l' ** \<elemento>** nodo è il nodo primario per l'asse **figlio** ). Per tutti i nodi dell' ** \<elemento>OrderDetail** , viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfano la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  

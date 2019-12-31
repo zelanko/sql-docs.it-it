@@ -1,6 +1,5 @@
 ---
-title: NULL (SQLXML 4.0) gestisce | Documenti di Microsoft
-ms.custom: ''
+title: Gestione dei valori NULL (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43d5235d8e82ff674abcaa00da8c20bdbedffa60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b04802083aa505f963fc1a644d71799b37e13cf7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018508"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252415"
 ---
 # <a name="null-handling-sqlxml-40"></a>Gestione dei valori Null (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Nella sintassi XML il valore Null indica un'assenza. (Ad esempio, se un valore di attributo o elemento è NULL, tale attributo o elemento è assente dal documento XML.) Nelle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, il **updg: NullValue** attributo consente la specifica di NULL per un valore di attributo o elemento.  
+  Nella sintassi XML il valore Null indica un'assenza. Se, ad esempio, il valore di un attributo o di un elemento è NULL, l'attributo o l'elemento è assente dal documento XML. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, l'attributo **attributo updg: NullValue** consente di specificare null per un valore di elemento o attributo.  
   
- Ad esempio, l'updategram seguente verifica che il **Title** valore per un contatto con **ContactID** 64 sia NULL e quindi aggiorna il **titolo** valore di "Mr." per questo contatto.  
+ L'updategram seguente, ad esempio, assicura che il valore del **titolo** per un contatto con **ContactID** di 64 sia null e quindi aggiorni il valore del **titolo** a "Mr." per questo contatto.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -42,9 +42,9 @@ ms.locfileid: "68018508"
 </ROOT>  
 ```  
   
- Quando i parametri vengono passati a un updategram, è possibile passare Null come valore del parametro. Ciò avviene specificando il **nullvalue** attributo il  **\<updg:header >** blocco. Per un esempio, vedere [passaggio di parametri agli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
+ Quando i parametri vengono passati a un updategram, è possibile passare Null come valore del parametro. Questa operazione viene eseguita specificando l'attributo **NullValue** nel blocco ** \<>intestazione attributo updg:** . Per un esempio, vedere [passaggio di parametri agli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

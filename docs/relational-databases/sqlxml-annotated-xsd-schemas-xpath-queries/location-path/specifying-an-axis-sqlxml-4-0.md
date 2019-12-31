@@ -1,6 +1,5 @@
 ---
-title: Specifica un asse (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Specifica di un asse (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,13 +19,14 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29d97b92f6979a7e5bbc67185f6e5a47ff82af68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073278"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253059"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,41 +35,43 @@ ms.locfileid: "68073278"
   
      Contiene l'elemento figlio del nodo di contesto.  
   
-     L'espressione XPath seguente (percorso) seleziona dal nodo di contesto corrente tutti i  **\<cliente >** figli:  
+     L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli elementi figlio del ** \<cliente>** :  
   
     ```  
     child::Customer  
     ```  
   
-     Nella query XPath seguente, `child` è l'asse. `Customer` è il test del nodo.  
+     Nella query XPath seguente, `child` è l'asse. 
+  `Customer` è il test del nodo.  
   
--   **parent**  
+-   **padre**  
   
      Contiene l'elemento padre del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona tutti i  **\<cliente >** padri del  **\<ordine >** figli:  
+     L'espressione XPath seguente seleziona tutti gli ** \<** elementi padre>del cliente dell' ** \<ordine>** figli:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. `Customer` e `Order` sono i test di nodo.  
+     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. 
+  `Customer` e `Order` sono i test di nodo.  
   
--   **attribute**  
+-   **attributo**  
   
      Contiene l'attributo del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona il **CustomerID** attributo del nodo di contesto:  
+     L'espressione XPath seguente seleziona l'attributo **CustomerID** del nodo di contesto:  
   
     ```  
     attribute::CustomerID  
     ```  
   
--   **self**  
+-   **auto**  
   
      Contiene il nodo di contesto stesso.  
   
-     L'espressione XPath seguente seleziona il nodo corrente se è il  **\<ordine >** nodo:  
+     L'espressione XPath seguente seleziona il nodo corrente se si tratta dell' ** \<ordine>** nodo:  
   
     ```  
     self::Order  

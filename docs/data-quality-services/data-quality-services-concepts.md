@@ -1,6 +1,5 @@
 ---
-title: Concetti di Data Quality Services | Microsoft Docs
-ms.custom: ''
+title: Concetti di Data Quality Services
 ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152535"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251717"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
 
@@ -23,18 +22,18 @@ ms.locfileid: "70152535"
 
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
   
-##  <a name="Knowledge"></a> Concetti relativi alla gestione delle informazioni  
+##  <a name="Knowledge"></a>Concetti relativi alla gestione delle informazioni  
  La Knowledge Base DQS è un repository di metadati creati dall'amministratore dei dati o dal personale IT da utilizzare per migliorare la qualità dei dati tramite la pulizia e la corrispondenza dei dati. La gestione delle informazioni DQS include i processi utilizzati per creare e gestire la Knowledge Base, sia in modo computerizzato che in modo interattivo.  
   
  **Individuazione informazioni**  
   
  L'individuazione delle informazioni è un processo computerizzato che analizza esempi di dati dell'organizzazione per compilare le informazioni sui dati. Una volta ottenuti i risultati dell'analisi, è possibile convalidare e migliorare le informazioni, quindi applicarle per eseguire la pulizia dei dati, la corrispondenza e il profiling. Per altre informazioni, vedere [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Gestione dominio**  
+ **Gestione del dominio**  
   
  Il processo di gestione del dominio consente di modificare o aumentare le informazioni generate dal processo di individuazione delle informazioni. È possibile modificare, aggiornare e rivedere in modo interattivo le informazioni in una Knowledge Base. Una Knowledge Base è costituita da domini di dati che contengono i valori di dominio e il relativo stato, le regole di dominio, le relazioni basate su termini e i dati di riferimento. Nella gestione del dominio è possibile modificare le proprietà del dominio, associare i dati di riferimento a un dominio, gestire le regole di dominio, gestire i valori di dominio e immettere le relazioni di dati nonché creare, eliminare, importare o esportare i domini. È inoltre possibile utilizzare domini compositi che aggregano più domini singoli. Per altre informazioni, vedere [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Criteri di abbinamento**  
+ **Criteri di corrispondenza**  
   
  I criteri di corrispondenza contengono le regole di corrispondenza utilizzate per eseguire la deduplicazione dei dati. Il processo dei criteri di corrispondenza consente di creare le regole di corrispondenza, di ottimizzarle in base ai risultati corrispondenti e ai dati di profiling e di aggiungere i criteri alla Knowledge Base. Per altre informazioni, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
@@ -44,22 +43,22 @@ ms.locfileid: "70152535"
   
  Per ulteriori informazioni sulla gestione delle informazioni in DQS, vedere [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="Projects"></a> Concetti relativi ai progetti Data Quality  
+##  <a name="Projects"></a>Concetti relativi ai progetti Data Quality  
  L'amministratore dei dati esegue le operazioni di qualità dei dati (pulizia e corrispondenza) utilizzando un progetto Data Quality nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Pulizia dei dati**  
   
  La pulizia dei dati in DQS viene effettuata in base alle informazioni incluse nella Knowledge Base DQS e prevede un processo in due passaggi:  
   
--   **Pulizia assistita da computer**: DQS usa le informazioni disponibili nella Knowledge Base selezionata per la pulizia, al fine di proporre correzioni e suggerimenti relativi ai valori in un'origine dati.  
+-   **Pulizia assistita da computer**: in DQS vengono utilizzate le informazioni nella Knowledge Base selezionata per il progetto di pulizia per proporre correzioni e suggerimenti ai valori in un'origine dati.  
   
--   **Pulizia interattiva**: l'amministratore dei dati può eseguire il processo di pulizia interattiva per modificare o aumentare le correzioni dei dati proposte dal processo di pulizia dei dati assistito da computer. L'amministratore dei dati esegue questa operazione utilizzando livelli di confidenza e statistiche identificati dal processo di pulizia dei dati o immettendo manualmente le proprie modifiche nel progetto.  
+-   **Pulizia interattiva**: l'amministratore dei dati può eseguire il processo di pulizia interattivo per modificare o aumentare le correzioni dei dati proposte dal processo computerizzato di pulizia dei dati. L'amministratore dei dati esegue questa operazione utilizzando livelli di confidenza e statistiche identificati dal processo di pulizia dei dati o immettendo manualmente le proprie modifiche nel progetto.  
   
  In seguito al processo di pulizia, l'amministratore può esportare i dati elaborati in un database di SQL Server, un file con estensione csv o un file di Excel. Per altre informazioni, vedere [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
- **Corrispondenza di dati**  
+ **Corrispondenza dei dati**  
   
- Con il processo di corrispondenza l'amministratore dei dati può confrontare i dati in modo da poter allineare quelli simili tramite il processo di deduplicazione. La deduplicazione in DQS viene eseguita in base alle regole di corrispondenza contenute nella Knowledge Base. L'amministratore dei dati specifica i parametri per il processo di corrispondenza all'interno di un progetto Data Quality. Per altre informazioni, vedere [Data Matching](../data-quality-services/data-matching.md).  
+ Con il processo di corrispondenza l'amministratore dei dati può confrontare i dati in modo da poter allineare quelli simili tramite il processo di deduplicazione. La deduplicazione in DQS viene eseguita in base alle regole di corrispondenza contenute nella Knowledge Base. L'amministratore dei dati specifica i parametri per il processo di corrispondenza all'interno di un progetto Data Quality. Per altre informazioni, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
  **Profiling e notifiche**  
   
@@ -67,7 +66,7 @@ ms.locfileid: "70152535"
   
  Per altre informazioni sui progetti Data Quality in DQS, vedere [Progetti Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
-##  <a name="Admin"></a> Concetti relativi all'amministrazione della qualità dei dati  
+##  <a name="Admin"></a>Concetti relativi all'amministrazione della qualità dei dati  
  Un amministratore DQS può eseguire numerose attività amministrative mediante l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Monitoraggio attività**  
@@ -86,7 +85,7 @@ ms.locfileid: "70152535"
   
 -   Configurare i livelli di gravità per i file di log DQS a livello di attività o a livello di modulo, che rappresenta la modalità più avanzata. Per altre informazioni, vedere [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
- **Sicurezza relativa a DQS**  
+ **Sicurezza DQS**  
   
  È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS Security](../data-quality-services/dqs-security.md).  
   

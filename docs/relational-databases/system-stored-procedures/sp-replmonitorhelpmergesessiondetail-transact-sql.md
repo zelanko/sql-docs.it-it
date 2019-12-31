@@ -1,6 +1,7 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_replmonitorhelpmergesessiondetail (T-SQL)
+description: Viene descritta la sp_replmonitorhelpmergesessiondetail stored procedure che restituisce informazioni dettagliate a livello di articolo su una specifica sessione di agente di merge di replica.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b1aaa8afdb6ad67f906140c0714f115b64c08bc1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764435"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321621"
 ---
-# <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
+# <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni dettagliate a livello di articolo su una specifica sessione di replica dell'agente di merge, utilizzato per monitorare la replica di tipo merge. Il set di risultati include una riga di dettaglio per ogni articolo sincronizzato durante la sessione, nonché una riga che rappresenta l'inizializzazione della sessione e righe che riepilogano le fasi di caricamento e scaricamento della sessione. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione oppure nel database di sottoscrizione del Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +37,17 @@ ms.locfileid: "68764435"
 sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
 `[ @session_id = ] session_id`Specifica una sessione di Agent. *session_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Fase della sessione di sincronizzazione. I possibili valori sono i seguenti.<br /><br /> **0** = riga di inizializzazione o di riepilogo<br /><br /> **1** = caricamento<br /><br /> **2** = download|  
 |**ArticleName**|**sysname**|Nome dell'articolo in fase di sincronizzazione. **ArticleName** contiene inoltre informazioni di riepilogo per le righe nel set di risultati che non rappresentano i dettagli degli articoli.|  
-|**PercentComplete**|**decimal**|Indica la percentuale delle modifiche totali applicate in una riga di dettaglio dell'articolo per le sessioni in esecuzione e quelle non riuscite.|  
-|**RelativeCost**|**decimal**|Indica il tempo dedicato alla sincronizzazione dell'articolo come percentuale del tempo totale di sincronizzazione per la sessione.|  
+|**PercentComplete**|**decimale**|Indica la percentuale delle modifiche totali applicate in una riga di dettaglio dell'articolo per le sessioni in esecuzione e quelle non riuscite.|  
+|**RelativeCost**|**decimale**|Indica il tempo dedicato alla sincronizzazione dell'articolo come percentuale del tempo totale di sincronizzazione per la sessione.|  
 |**Durata**|**int**|Durata della sessione dell'agente.|  
 |**Inserts**|**int**|Numero di inserimenti in una sessione.|  
 |**Aggiornamenti**|**int**|Numero di aggiornamenti in una sessione.|  
@@ -57,18 +58,18 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**RowType**|**int**|Indica il tipo di informazioni rappresentato da ogni riga nel set di risultati.<br /><br /> **0** = inizializzazione<br /><br /> **1** = Riepilogo del caricamento<br /><br /> **2** = dettagli di caricamento dell'articolo<br /><br /> **3** = Riepilogo download<br /><br /> **4** = dettagli sul download degli articoli|  
 |**SchemaChanges**|**int**|Numero di modifiche dello schema in una sessione.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_replmonitorhelpmergesessiondetail** viene utilizzato per monitorare la replica di tipo merge.  
   
- Quando viene eseguito nel Sottoscrittore, **sp_replmonitorhelpmergesessiondetail** restituisce solo informazioni dettagliate sulle ultime 5 sessioni agente di merge.  
+ Quando viene eseguito nel Sottoscrittore, **sp_replmonitorhelpmergesessiondetail** restituisce solo informazioni dettagliate sulle ultime 5 sessioni di agente di merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp_replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

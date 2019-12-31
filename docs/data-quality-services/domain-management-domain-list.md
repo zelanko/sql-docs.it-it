@@ -1,6 +1,5 @@
 ---
-title: 'Gestione dominio: Elenco di domini | Microsoft Docs'
-ms.custom: ''
+title: 'Gestione dominio: elenco domini'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,26 +9,26 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935337"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251659"
 ---
-# <a name="domain-management-domain-list"></a>Gestione dominio: Elenco di domini
+# <a name="domain-management-domain-list"></a>Gestione dominio: elenco domini
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In questo argomento vengono descritti i controlli dell'elenco Domini nella pagina **Gestione dominio** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilizzare questo riquadro per selezionare un dominio su cui eseguire le operazioni di gestione. Lo stesso riquadro viene utilizzato per tutte le pagine a schede della pagina **Gestione dominio** .  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Options  
   
 ### <a name="domains-list"></a>Elenco domini  
  **Dominio**  
- In questo elenco vengono visualizzati tutti i domini della Knowledge Base. Le operazioni che si eseguono nelle pagine a schede nel riquadro a destra saranno eseguite sul dominio selezionato nell'elenco. Per ulteriori informazioni, vedere  
+ In questo elenco vengono visualizzati tutti i domini della Knowledge Base. Le operazioni che si eseguono nelle pagine a schede nel riquadro a destra saranno eseguite sul dominio selezionato nell'elenco. Per altre informazioni, vedere l'articolo relativo alla  
   
  **Creazione di un dominio composito**  
  Consente di creare un nuovo dominio composito nella Knowledge Base. Con questo comando viene visualizzata la finestra di dialogo **Crea un dominio composito** . Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio o facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Creazione di un dominio composito](../data-quality-services/create-a-composite-domain.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "67935337"
  **Creazione di un dominio**  
  Consente di creare un nuovo dominio nella Knowledge Base. Con questo comando viene visualizzata la finestra di dialogo **Crea dominio** . Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio o facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Creazione di un dominio](../data-quality-services/create-a-domain.md).  
   
- **Crea copia del dominio selezionato**  
+ **Crea una copia del dominio selezionato**  
  Consente di creare una copia esatta del dominio selezionato e di aggiungerla alla Knowledge Base. Il nome sarà il nome del dominio dal quale è stata creata la copia più " - Copy" aggiunto al nome. Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio e quindi facendo clic su **Crea copia**o facendo clic sull'icona sopra l'elenco di domini. Non è disponibile per un dominio composito.  
   
  **Importa dominio da file di dati**  
@@ -51,7 +50,7 @@ ms.locfileid: "67935337"
   
  Un dominio collegato dispone degli stessi valori del dominio al quale è stato collegato. Solo il nome e le proprietà del dominio sono diversi. Se si modificano una regola di dominio, un valore di dominio, un collegamento ai dati di riferimento o una relazione basata su termini nel dominio a cui è stato effettuato il collegamento, si modificheranno anche la regola di dominio, il valore di dominio, il collegamento ai dati di riferimento o la relazione basata su termini nel dominio collegato. Inoltre, se si modifica un valore nel dominio collegato, la modifica sarà apportata anche nel dominio a cui è stato effettuato il collegamento.  
   
- **Esporta Knowledge Base**  
+ **Esporta Knowledge base**  
  Consente di esportare l'intera Knowledge Base in un file DQS. Con questo comando viene visualizzata la finestra di dialogo **Esporta in file di dati** . Questo comando è disponibile facendo clic sull'icona **Esporta dati Knowledge Base** all'inizio della pagina o in **Esporta** nel menu di scelta rapida dei domini nel riquadro dell'elenco di domini. Per altre informazioni, vedere [Esportazione di una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  **Esporta dominio**  

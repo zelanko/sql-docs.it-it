@@ -1,6 +1,5 @@
 ---
-title: Concedere ruoli DQS agli utenti | Microsoft Docs
-ms.custom: ''
+title: Concedere ruoli DQS agli utenti
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: ab6554acd249e119c054754f5b6b6f5196071322
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d5ceef0a129989eedf75d79429e8d38c999f4257
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935211"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254764"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Concedere ruoli DQS agli utenti
 
@@ -41,7 +40,7 @@ ms.locfileid: "67935211"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro destro selezionare la casella di controllo nella colonna **Mappa** per il database **DQS_MAIN** e quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN**, a seconda del livello di accesso necessario per l'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../../data-quality-services/dqs-security.md).  
+6.  Nel riquadro destro selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_MAIN** , quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor**o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN** , a seconda del livello di accesso necessario all'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../../data-quality-services/dqs-security.md).  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   

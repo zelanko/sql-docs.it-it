@@ -1,6 +1,5 @@
 ---
-title: Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,20 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 789887e445ce9b2b6ac72f78051d0cb82c083e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 17151ed7f20070b7db042b0bc7e7af31bc64b80e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935135"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252805"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Dopo aver installato un aggiornamento di SQL Server (patch, hotfix o aggiornamento cumulativo) in un'istanza di DQS configurata precedentemente, potrebbe essere necessario aggiornare lo schema dei database DQS eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgrade**. In caso contrario, potrebbe essere visualizzato l'errore seguente durante il tentativo di connessione al server Data Quality utilizzando il client Data Quality:  
+  Dopo aver installato un aggiornamento di SQL Server (patch, hotfix o aggiornamento cumulativo) in un'istanza di DQS configurata precedentemente, potrebbe essere necessario aggiornare lo schema dei database DQS eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgrade** . In caso contrario, potrebbe essere visualizzato l'errore seguente durante il tentativo di connessione al server Data Quality utilizzando il client Data Quality:  
   
 ```  
 An error occurred in the Microsoft .NET Framework while trying to load assembly id 65581.  
@@ -30,7 +29,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  L'aggiornamento dello schema dei database DQS non influisce sui dati esistenti nei database DQS (Knowledge Base, progetti Data Quality e risultati esportati nel database DQS_STAGING_DATA). Tuttavia, è necessario eseguire il backup dei database DQS prima di aggiornare il relativo schema per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
->  Per la maggior parte degli aggiornamenti di SQL Server è richiesto un aggiornamento allo schema dei database DQS. Per informazioni sugli aggiornamenti di SQL Server per i quali è richiesto un aggiornamento allo schema dei database DQS, vedere il grafico nel passaggio 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
+>  Per la maggior parte degli aggiornamenti di SQL Server è richiesto un aggiornamento allo schema dei database DQS. Per informazioni sugli aggiornamenti di SQL Server per i quali è richiesto un aggiornamento allo schema dei database DQS, vedere il grafico nel passaggio 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
@@ -63,7 +62,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>Passaggi successivi  
  Accedere al server Data Quality aggiornato da un'applicazione client Data Quality.  
   
- Per altre informazioni sull'aggiornamento dello schema dei database DQS in seguito all'installazione degli aggiornamenti di SQL Server e dei relativi passaggi di risoluzione dei problemi, vedere [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
+ Per altre informazioni sull'aggiornamento dello schema dei database DQS in seguito all'installazione degli aggiornamenti di SQL Server e dei relativi passaggi di risoluzione dei problemi, vedere [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

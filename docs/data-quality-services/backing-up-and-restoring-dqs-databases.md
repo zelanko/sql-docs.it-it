@@ -1,6 +1,5 @@
 ---
-title: Backup e ripristino di database DQS | Microsoft Docs
-ms.custom: ''
+title: Backup e ripristino di database DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258853"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992435"
 
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
   
 -   È necessario conoscere o ricordare la password per la chiave master del database fornita durante l'installazione del server DQS.  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992435"
   
 -   Assicurarsi che non vi siano utenti connessi al server DQS.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
   
 -   Per poter effettuare operazioni di backup e ripristino, è necessario che l'account utente di Windows sia membro del ruolo predefinito del server sysadmin nell'istanza di SQL Server in cui è installato.  
   
 -   È necessario disporre del ruolo dqs_administrator sul database DQS_MAIN per interrompere qualsiasi attività in esecuzione o arrestare processi in corso in DQS.  
   
-##  <a name="BackupRestore"></a> Backup e ripristino di database DQS  
+##  <a name="BackupRestore"></a>Eseguire il backup e il ripristino di database DQS  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992435"
   
 10. In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi fare clic su **Nuova query**.  
   
-11. Nella finestra Editor di query copiare le istruzioni SQL seguenti sostituendo *\<PASSWORD>* con la password specificata per la chiave master del database durante l'installazione di DQS:  
+11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire * \<>password* con la password specificata durante l'installazione di DQS per la chiave master del database:  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,7 +72,7 @@ ms.locfileid: "67992435"
   
     ```  
   
-12. Premere F5 per eseguire le istruzioni. Esaminare il riquadro **Risultati** per verificare che le istruzioni siano state eseguite correttamente.  
+12. Premere F5 per eseguire le istruzioni. Controllare il riquadro **risultati** per verificare che le istruzioni siano state eseguite correttamente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire i database DQS](../data-quality-services/manage-dqs-databases.md)  

@@ -1,6 +1,5 @@
 ---
-title: Schema XSD con annotazioni di esempio per gli esempi XPath (SQLXML 4.0) | Documenti di Microsoft
-ms.custom: ''
+title: Schema XSD con annotazioni di esempio per XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,23 +13,24 @@ helpviewer_keywords:
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c786414ee9682091f53c2a91e09bcbd5b636ff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 127e98b36465d196bc20cf6888e56b20a93dad59
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119514"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252636"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Schema XSD con annotazioni di esempio per gli esempi XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Le query Xpath di esempio presenti in questa sezione si riferiscono a uno schema di mapping. Lo schema di mapping è un file XML Schema con annotazioni (XSD). Per altre informazioni sugli schemi di mapping, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  Le query Xpath di esempio presenti in questa sezione si riferiscono a uno schema di mapping. Lo schema di mapping è un file XML Schema con annotazioni (XSD). Per ulteriori informazioni sugli schemi di mapping, vedere [Introduzione agli schemi XSD con Annotazioni &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Per eseguire le query XPath su uno schema XSD con annotazioni, è necessario effettuare le operazioni seguenti:  
   
--   Creare un modello contenente una query XPath. Specificare nel modello lo schema di mapping sul quale eseguire la query XPath. In questo caso, lo schema di mapping deve essere archiviato nella directory (o una delle relative sottodirectory, nel quale caso un percorso relativo viene specificato come valore dei **dello schema di mapping** attributo nel modello) associata al file di modello.  
+-   Creare un modello contenente una query XPath. Specificare nel modello lo schema di mapping sul quale eseguire la query XPath. In questo caso, lo schema di mapping deve essere archiviato nella directory (o in una delle rispettive sottodirectory, nel qual caso viene specificato un percorso relativo come valore dell'attributo **mapping-schema** nel modello) associato al file modello.  
   
--   Creare un'applicazione di test che utilizza le estensioni SQLXML per eseguire le query con ADO. Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Creare un'applicazione di test che utilizza le estensioni SQLXML per eseguire le query con ADO. Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  A scopo illustrativo, in tutti gli esempi presenti in questa sezione le query XPath vengono specificate in un modello che viene eseguito utilizzando ADO. Pertanto, è necessario utilizzare il file dello schema di mapping seguente, SampleSchema1.xml. Salvare questo file nella directory in cui vengono archiviati i modelli.  
   

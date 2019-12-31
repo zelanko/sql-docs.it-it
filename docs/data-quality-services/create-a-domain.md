@@ -1,6 +1,5 @@
 ---
-title: Creare un dominio | Microsoft Docs
-ms.custom: ''
+title: Creazione di un dominio
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992324"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252255"
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
 
@@ -27,19 +26,19 @@ ms.locfileid: "67992324"
   
  Sono disponibili due modi per creare un nuovo dominio. Il primo viene utilizzato durante il passaggio di mapping dell'attività di individuazione delle informazioni, quando è in corso l'analisi di un campione di dati per aggiungere informazioni a una Knowledge Base nuova o esistente. Il secondo viene utilizzato durante l'attività di gestione del dominio, quando anziché modificare un dominio esistente, se ne crea uno nuovo.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per creare un dominio, è necessario avere creato e aperto una Knowledge Base.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per creare un dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Discovery"></a> Creare un dominio nell'attività di individuazione delle informazioni  
+##  <a name="Discovery"></a>Creazione di un dominio nell'attività di individuazione delle informazioni  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992324"
   
 5.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Se non esiste alcun dominio corrispondente, fare clic sull'icona **Crea un dominio** .  
   
-##  <a name="DomainManagement"></a> Creare un dominio nell'attività di gestione del dominio  
+##  <a name="DomainManagement"></a>Creare un dominio nell'attività di gestione del dominio  
   
 1.  Nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67992324"
   
 3.  Nella pagina **Gestione dominio** fare clic sull'icona **Crea un dominio** sopra l'elenco di domini.  
   
-##  <a name="Properties"></a> Impostare le proprietà di un dominio  
+##  <a name="Properties"></a>Impostare le proprietà del dominio  
   
 1.  Nella finestra di dialogo **Crea dominio** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "67992324"
   
 10. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver creato un dominio  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di un dominio  
  Dopo avere creato un dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   

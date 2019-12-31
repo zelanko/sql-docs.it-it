@@ -1,6 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza di carico (SQLXML 4.0) in blocco | Microsoft Docs
-ms.custom: ''
+title: Considerazioni sulla sicurezza del caricamento bulk (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027005"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252531"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza del caricamento bulk (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza il caricamento bulk XML:  
   
--   Quando si specifica che il caricamento Bulk operazione deve essere eseguita come una transazione, usare il **TempFilePath** proprietà per specificare una cartella in cui creare i file temporanei.  
+-   Quando si specifica che l'operazione di caricamento bulk deve essere eseguita come transazione, utilizzare la proprietà **TempFilePath** per specificare una cartella in cui creare i file temporanei.  
   
      Il processo di caricamento bulk crea questi file temporanei con le autorizzazioni seguenti:  
   
@@ -56,6 +56,6 @@ ms.locfileid: "68027005"
 -   Se l'utente imposta un file di log degli errori in cui scrivere gli errori relativi a SQLXML, a ogni esecuzione del caricamento bulk il file verrà sovrascritto con i dati dell'ultimo processo di caricamento bulk.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caricamento Bulk di dati XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Esecuzione del caricamento bulk di dati XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

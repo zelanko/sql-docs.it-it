@@ -1,6 +1,5 @@
 ---
-title: Specifica di predicati con valori booleani nelle query XPath (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Specificare predicati booleani in query XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,21 +17,22 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907724"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252572"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare predicati con valori booleani nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di &#40;esempio per&#41;gli esempi XPath SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare predicati con valori booleani nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-multiple-predicates"></a>A. Specificare più predicati  
+### <a name="a-specify-multiple-predicates"></a>R. Specificare più predicati  
  Nella query XPath seguente vengono utilizzati più predicati per trovare informazioni sull'ordine per un ID ordine e un ID cliente specifici:  
   
 ```  
@@ -90,14 +90,14 @@ ms.locfileid: "72907724"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Specificare predicati successivi e nidificati  
- Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti i **\<Customer >** elementi figlio del nodo di contesto con un attributo **SalesPersonID** con un valore 277 e un attributo **TerritoryID** con valore 3:  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Specificare predicati successivi e nidificati  
+ Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti gli **** **** ** \<** elementi figlio del cliente>del nodo di contesto con un attributo SalesPersonID con valore 277 e un attributo TerritoryID con valore 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La query restituisce gli elementi **\<Customer >** che soddisfano entrambe le condizioni specificate nei predicati.  
+ La query restituisce gli ** \<elementi Customer>** che soddisfano entrambe le condizioni specificate nei predicati.  
   
  È possibile specificare un collegamento all'asse degli **attributi** (@) e, poiché l'asse **figlio** è quello predefinito, può essere omesso dalla query:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "72907724"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. La query restituisce tutti i **\<Customer >** elementi figlio del nodo di contesto che includono **\<order >** elementi figlio con almeno un elemento\<**Order >** con un valore dell'attributo **SalesPersonID** 2.  
+ Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. **** La query restituisce tutti gli ** \<** elementi figlio del cliente>del nodo di contesto che includono ** \<Order>** elementi figlio con almeno un ** \<elemento Order>** con valore di attributo SalesPersonID pari a 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +168,7 @@ ms.locfileid: "72907724"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Specificare un predicato di livello superiore  
- La query seguente restituisce il **\<Customer >** nodi elemento figlio del nodo di contesto che hanno **\<order >** elementi figlio. La query testa il percorso come predicato di livello superiore:  
+ La query seguente restituisce il ** \<cliente>** nodi elemento figlio del nodo di contesto che dispongono ** \<** degli elementi figlio Order>. La query testa il percorso come predicato di livello superiore:  
   
 ```  
 /child::Customer[child::Order]  

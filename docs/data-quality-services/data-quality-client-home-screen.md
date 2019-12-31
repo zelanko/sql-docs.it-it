@@ -1,6 +1,5 @@
 ---
-title: Schermata iniziale di Data Quality Client | Microsoft Docs
-ms.custom: ''
+title: Schermata iniziale del client Data Quality
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152582"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251723"
 ---
 # <a name="data-quality-client-home-screen"></a>Schermata iniziale del client Data Quality
 
@@ -25,15 +24,15 @@ ms.locfileid: "70152582"
 
   Questa schermata consente di accedere alle interfacce utente per ciascuno dei tre gruppi principali di attività [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): gestione della Knowledge Base, progetti Data Quality e amministrazione.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Options  
   
 ### <a name="knowledge-base-management"></a>Gestione Knowledge Base  
  Una Knowledge Base DQS è un repository di metadati utilizzati da DQS per migliorare la qualità dei dati. Questi metadati vengono creati sia dalla piattaforma DQS in un processo computerizzato di individuazione delle informazioni che dall'amministratore dei dati in un processo interattivo di gestione del dominio.  
   
- **Nuova Knowledge Base**  
+ **Nuova Knowledge base**  
  Consente di avviare il processo di creazione di una Knowledge Base da zero o in base ai metadati di una Knowledge Base esistente. Questo comando consente di aprire una pagina nella quale è possibile identificare la Knowledge Base, basarla su una Knowledge Base esistente, selezionare l'attività desiderata relativa alla Knowledge Base, quindi creare la Knowledge Base.  
   
- **Apri Knowledge Base**  
+ **Apri Knowledge base**  
  Consente di aprire una Knowledge Base per gestirne i domini, eseguire l'individuazione delle informazioni o creare criteri di corrispondenza. Se si fa clic sul pulsante **Apri Knowledge Base** , viene visualizzata la pagina **Apri Knowledge Base** che contiene un elenco di Knowledge Base esistenti con le relative proprietà, lo stato corrente e i dettagli dei domini. Selezionare una Knowledge Base e aprirla da **Apri Knowledge Base**.  
   
  **Knowledge Base recente**  
@@ -41,7 +40,7 @@ ms.locfileid: "70152582"
   
  È possibile aprire una Knowledge Base bloccata e modificarla solo se si è gli autori del blocco. In tal caso, la Knowledge Base verrà aperta nello stato in cui era al momento della chiusura, indicato in parentesi. Se una Knowledge Base è bloccata e non si è gli autori del blocco, è possibile aprirla solo in sola lettura.  
   
-### <a name="data-quality-projects"></a>Data Quality Projects  
+### <a name="data-quality-projects"></a>Progetti Data Quality  
  Un progetto Data Quality è il processo tramite cui viene eseguita la pulizia o la corrispondenza dei dati in DQS, sia attraverso un'attività di correzione dei dati assistita da computer che attraverso la pulizia interattiva dei dati.  
   
  **Nuovo progetto Data Quality**  
@@ -53,7 +52,7 @@ ms.locfileid: "70152582"
  **Progetto Data Quality recente**  
  Dall'elenco visualizzato, selezionare un progetto già creato. È possibile aprire un progetto bloccato solo se si è gli autori del blocco. In tal caso, il progetto verrà aperto nello stato in cui era al momento della chiusura, indicato in parentesi. Se il progetto è stato completato, verrà aperto nel passaggio Esporta dell'attività.  
   
-### <a name="administration"></a>Amministrazione  
+### <a name="administration"></a>Administration  
  L'amministrazione DQS consente di monitorare, configurare e gestire DQS.  
   
  **Monitoraggio attività**  
@@ -63,8 +62,8 @@ ms.locfileid: "70152582"
  Visualizzare le proprietà di configurazione per gli account del servizio dati di riferimento (sia tramite Azure Marketplace che direttamente ai servizi dati di riferimento), le impostazioni generali (pulizia interattiva, corrispondenza e profiling) e le impostazioni di gravità del log.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Knowledge Base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Progetti Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Knowledge base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [Progetti Data Quality &#40;&#41;DQS](../data-quality-services/data-quality-projects-dqs.md)   
  [Amministrazione DQS](../data-quality-services/dqs-administration.md)  
   
   

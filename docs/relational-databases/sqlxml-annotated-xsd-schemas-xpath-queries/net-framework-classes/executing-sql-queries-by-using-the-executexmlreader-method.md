@@ -1,6 +1,5 @@
 ---
-title: Esecuzione di query SQL tramite il metodo ExecuteXMLReader | Documenti di Microsoft
-ms.custom: ''
+title: Eseguire query SQL con il metodo ExecuteXMLReader
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f3ae8c26af7d3aa3dd876cbf0f81d4fa269ff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934290"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251523"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Esecuzione di query SQL tramite il metodo ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Anziché utilizzare il metodo ExecuteToStream, è possibile utilizzare il metodo ExecuteXmlReader dell'oggetto SqlXmlCommand per eseguire comandi. Questo metodo restituisce un oggetto XmlReader che può essere utilizzato per un'ulteriore elaborazione del risultato (che in questo esempio la stampa di valori e i nomi di elemento o attributo).  
+  Anziché usare il metodo ExecuteToStream, è possibile usare il metodo ExecuteXmlReader dell'oggetto SqlXmlCommand per eseguire i comandi. Questo metodo restituisce un oggetto XmlReader che può essere utilizzato per un'ulteriore elaborazione del risultato (in questo esempio vengono stampati i nomi degli elementi o degli attributi e i valori).  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

@@ -1,9 +1,8 @@
 ---
-title: dbo.syssessions (Transact-SQL) | Microsoft Docs
+title: dbo. syssessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,29 +18,31 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35b23525dc9762d012948e6eba0b41156b45ac69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056285"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548293"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea una nuova sessione a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza le sessioni per mantenere lo stato dei processi quando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene riavviato o arrestato in modo imprevisto. Ogni riga della **syssessions** tabella contiene informazioni relative a una sessione. Usare la **sysjobactivity** tabella per visualizzare lo stato del processo alla fine di ogni sessione.  
+Crea una nuova sessione a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza le sessioni per mantenere lo stato dei processi quando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene riavviato o arrestato in modo imprevisto. Ogni riga della tabella **syssessions** contiene informazioni su una sessione. Usare la tabella **sysjobactivity** per visualizzare lo stato del processo alla fine di ogni sessione.  
   
- Questa tabella è archiviata nel **msdb** database.  
+ Questa tabella è archiviata nel database **msdb** .  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID di una sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
-|**agent_start_date**|**datetime**|Data e ora di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per la sessione corrente.|  
+|**session_id**|**int**|ID di una sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo session_id non è lo SPID per la sessione, bensì un valore IDENTITY all'interno di questa tabella di sistema.|  
+|**agent_start_date**|**DateTime**|Data e ora di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per la sessione corrente.|  
   
-## <a name="remarks"></a>Note  
- Solo gli utenti che sono membri del **sysadmin** ruolo predefinito del server può accedere a questa tabella.  
+## <a name="remarks"></a>Osservazioni  
+ Solo gli utenti membri del ruolo predefinito del server **sysadmin** possono accedere a questa tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [dbo. sysjobactivity &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

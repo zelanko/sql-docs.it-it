@@ -1,6 +1,5 @@
 ---
-title: 'Creare Valid attributi - SQL: prefix (SQLXML 4.0) di tipo ID, IDREF, IDREFS | Documenti di Microsoft'
-ms.custom: ''
+title: 'Attributi ID validi con SQL: prefix (SQLXML)'
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,19 +21,20 @@ ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad2b357a826a0c8baf8fa98ae69fce4433135998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89864caade618ad4e42890ae3711f3eee50ce231
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126465"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257458"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Creazione di attributi di tipo ID, IDREF e IDREFS validi mediante sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   È possibile specificare un attributo come attributo di tipo ID. Gli attributi specificati come IDREF o IDREFS possono essere quindi utilizzati per fare riferimento agli attributi di tipo ID, in modo da abilitare i collegamenti tra i documenti.  
   
- ID, IDREF e IDREFS corrispondono alle relazioni PK/FK (chiave primaria/chiave esterna) nel database, con poche differenze. In un documento XML i valori degli attributi di tipo ID devono essere distinti. Se **CustomerID** e **OrderID** gli attributi specificati come tipo ID in un documento XML, questi valori devono essere distinti. In un database, tuttavia, le colonne CustomerID e OrderID possono avere gli stessi valori, ad esempio CustomerID = 1 e OrderID = 1.  
+ ID, IDREF e IDREFS corrispondono alle relazioni PK/FK (chiave primaria/chiave esterna) nel database, con poche differenze. In un documento XML i valori degli attributi di tipo ID devono essere distinti. Se gli attributi **CustomerID** e **OrderID** vengono specificati come tipo di ID in un documento XML, questi valori devono essere distinti. In un database, tuttavia, le colonne CustomerID e OrderID possono avere gli stessi valori, ad esempio CustomerID = 1 e OrderID = 1.  
   
  Per specificare attributi ID, IDREF e IDREFS validi:  
   
@@ -44,19 +44,19 @@ ms.locfileid: "68126465"
   
 -   Il valore di un ID, IDREF e IDREFS deve essere un token denominato. Il valore integer 101, ad esempio, non può essere un valore ID.  
   
--   Impossibile eseguire il mapping di attributi di tipo ID, IDREF e IDREFS alle colonne del tipo **testo**, **ntext**, o **immagine** o qualsiasi altro tipo di dati binari (ad esempio **timestamp**).  
+-   Non è possibile eseguire il mapping degli attributi di tipo ID, IDREF e IDREFS a colonne di tipo **Text**, **ntext**o **Image** o qualsiasi altro tipo di dati binario (ad esempio, **timestamp**).  
   
- Se un documento XML contiene più ID, utilizzare il **prefix** annotazione per garantire che i valori siano univoci.  
+ Se un documento XML contiene più ID, utilizzare l'annotazione **SQL: prefix** per assicurarsi che i valori siano univoci.  
   
- Si noti che **prefix** annotazione non può essere utilizzata con attributo fissato XSD.  
+ Si noti che non è possibile usare l'annotazione **SQL: prefix** con l'attributo fixed XSD.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>R. Specifica di tipi ID e IDREFS  
- Nello schema seguente, il  **\<cliente >** elemento è costituito il  **\<ordine >** elemento figlio. Il  **\<ordine >** elemento include anche un elemento figlio, il  **\<OrderDetail >** elemento.  
+ Nello schema seguente l' ** \<elemento Customer>** è costituito dall' ** \<elemento Order>** figlio. L' ** \<elemento Order>** dispone anche di un elemento figlio, l' ** \<elemento>OrderDetail** .  
   
- Il **OrderIDList** attributo del  **\<cliente >** è un attributo di tipo IDREFS che fa riferimento al **OrderID** attributo del  **\< Ordine >** elemento.  
+ L'attributo **OrderID** dell' ** \<>Customer** è un attributo di tipo IDREFS che fa riferimento all'attributo **OrderID** dell'elemento ** \<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "68126465"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Risultato parziale:  
   

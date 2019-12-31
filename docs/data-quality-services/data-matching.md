@@ -1,6 +1,5 @@
 ---
-title: Corrispondenza di dati | Microsoft Docs
-ms.custom: ''
+title: Data Matching
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,16 +7,16 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251752"
 ---
-# <a name="data-matching"></a>Corrispondenza di dati
+# <a name="data-matching"></a>Data Matching
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -41,14 +40,14 @@ ms.locfileid: "67992243"
   
  ![Processo di corrispondenza in DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processo di corrispondenza in DQS")  
   
-##  <a name="How"></a> Come eseguire la corrispondenza di dati  
+##  <a name="How"></a>Come eseguire la corrispondenza dei dati  
  Come per altri processi correlati qualità dei dati in DQS, l'individuazione di corrispondenze tra dati viene eseguita compilando una Knowledge Base ed eseguendo un'attività corrispondente in un progetto di qualità dei dati osservando i passaggi seguenti:  
   
 1.  Creare criteri di corrispondenza nella Knowledge Base  
   
 2.  Eseguire un processo di deduplicazione in un'attività corrispondente che è parte di un progetto di qualità dei dati.  
   
-###  <a name="Policy"></a> Compilazione di criteri di corrispondenza  
+###  <a name="Policy"></a>Compilazione di criteri di corrispondenza  
  Preparare la Knowledge Base per l'esecuzione degli abbinamenti creando criteri di corrispondenza nella Knowledge Base stessa, così da definire la modalità con cui DQS assegna le probabilità di corrispondenza. I criteri di corrispondenza sono costituiti da una o più le regole di corrispondenza che identificano i domini che verranno utilizzati da DQS per la valutazione della corrispondenza tra due record e specificano l'importanza da assegnare a ciascun valore di dominio nella valutazione della corrispondenza stessa. Specificare nelle regole se i valori di dominio devono essere una corrispondenza esatta o se possono essere solo simili e specificare il livello di similitudine. Specificare inoltre se una corrispondenza di dominio è un prerequisito.  
   
  L'attività dei criteri di corrispondenza nella procedura guidata Gestione Knowledge Base analizza i dati di esempio applicando ogni regola di corrispondenza per confrontare record per volta in tutto l'intervallo di record. I record i cui punteggi di corrispondenza sono maggiori di un minimo specificato vengono raggruppati in cluster nei risultati di corrispondenza. Questi risultati di corrispondenza non vengono aggiunti alla Knowledge Base, vengono bensì utilizzati al fine di ottimizzare le regole di corrispondenza. La creazione di criteri di corrispondenza può essere un processo iterativo nel quale si modificano le regole di corrispondenza in base ai risultati di corrispondenza o a statistiche di profiling.  
@@ -62,7 +61,7 @@ ms.locfileid: "67992243"
   
  Al momento della creazione, ogni regola di corrispondenza viene salvata nella Knowledge Base. Tuttavia, una Knowledge Base può essere disponibile per l'uso in un progetto Data Quality solo quando viene pubblicata. Inoltre, fino al momento della pubblicazione della Knowledge Base, le regole di corrispondenza presenti in quest'ultima non possono essere modificate da un utente diverso da quello che l'ha creata.  
   
-###  <a name="Project"></a> Esecuzione di un progetto corrispondente  
+###  <a name="Project"></a>Esecuzione di un progetto corrispondente  
  DQS esegue la deduplicazione dei dati confrontando ogni riga nei dati di origine con tutte le altre righe, utilizzando i criteri di corrispondenza definiti nella Knowledge Base e producendo una probabilità che le righe presentino una corrispondenza. Ciò è possibile in un progetto Data Quality dotato di un tipo di corrispondenza. L'individuazione delle corrispondenze è uno dei passaggi principali in un progetto Data Quality. È opportuno eseguirlo dopo la pulizia dei dati, in modo che il confronto possa avere luogo tra dati privi di errori. Prima di eseguire un processo di corrispondenza, è possibile esportare i risultati del progetto di pulizia in una tabella dati o in un file csv, quindi creare un progetto corrispondente nel quale si esegue il mapping dei risultati della pulizia ai domini del progetto corrispondente.  
   
  Un progetto di corrispondenza dei dati è costituito da un processo computerizzato e da un processo interattivo. Il progetto corrispondente applica le regole di corrispondenza nei criteri di corrispondenza all'origine dati da valutare. Tale processo consente di valutare le probabilità che due righe coincidano tramite un punteggio di corrispondenza. Verranno considerati corrispondenti solo i record con probabilità di corrispondenza maggiori di un valore impostato dall'amministratore dei dati nei criteri di corrispondenza.  
@@ -71,7 +70,7 @@ ms.locfileid: "67992243"
   
  È possibile esportare i risultati del processo di corrispondenza in una tabella di SQL Server o in un file csv. È possibile esportare risultati della corrispondenza in due modi: record corrispondenti e record non corrispondenti, oppure record superstiti che includono solo il record superstite per un cluster nonché i risultati non corrispondenti. Nei record superstiti, se lo stesso record viene identificato come superstite per più cluster, tale record verrà esportato solo una volta.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le attività seguenti in relazione all'individuazione di corrispondenze in DQS:  
   
 |||  

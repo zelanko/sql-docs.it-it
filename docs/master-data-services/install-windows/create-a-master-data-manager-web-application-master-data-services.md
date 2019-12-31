@@ -1,7 +1,7 @@
 ---
-title: Creare un'applicazione Web di Gestione dati master
-ms.custom: ''
-ms.date: 03/01/2017
+title: Creare un'applicazione Web gestione dati master
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729454"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253071"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Creare un'applicazione Web Gestione dati master (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Creare un'applicazione Web gestione dati master (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "73729454"
   
 4.  Nella finestra di dialogo **Crea sito Web** specificare le informazioni per un nuovo sito Web. Per altre informazioni sulle opzioni dell'interfaccia utente nella finestra di dialogo, vedere [Finestra di dialogo Crea sito Web &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md).  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>Per creare un'applicazione Gestione dati master in un sito Web esistente  
  Quando si crea un'applicazione Web in un sito Web esistente, è possibile scegliere il percorso virtuale e l'alias dell'applicazione Web. L'applicazione Web viene aggiunta a un nuovo pool di applicazioni.  
@@ -72,7 +72,7 @@ ms.locfileid: "73729454"
   
 5.  Nella finestra di dialogo **Crea applicazione Web** specificare le informazioni per una nuova applicazione Web. Per altre informazioni sulle opzioni dell'interfaccia utente nella finestra di dialogo, vedere [Finestra di dialogo Crea applicazione Web &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
@@ -81,6 +81,6 @@ ms.locfileid: "73729454"
 -   Facoltativamente, configurare il sito Web in cui è ospitata l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per usare un'associazione HTTPS se si vuole crittografare il contenuto con Secure Sockets Layer (SSL). Per configurare il certificato server per il server Web nonché un'associazione HTTPS e le impostazioni SSL per il sito, è necessario utilizzare uno strumento di Internet Information Services (IIS), ad esempio Gestione IIS. Per altre informazioni, vedere [Rendere sicura un'applicazione Web Gestione dati master](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
+ [Installa Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

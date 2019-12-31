@@ -1,6 +1,5 @@
 ---
-title: Importare una Knowledge Base da un file DQS | Microsoft Docs
-ms.custom: ''
+title: Importazione di una Knowledge Base da un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 807c3f30a23b9629cf8dcbc68555a66176654c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935284"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251568"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importazione di una Knowledge Base da un file DQS
 
@@ -29,19 +28,19 @@ ms.locfileid: "67935284"
   
  Quando si importa una Knowledge Base, è possibile utilizzare lo stesso nome, a meno che il nome della Knowledge Base già esista nell'applicazione client, nel qual caso sarà necessario modificarlo.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per importare una Knowledge Base da un file DQS, è necessario avere già esportato la Knowledge Base nel file DQS.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per importare una Knowledge Base da un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Import"></a> Importare una knowledge base da un file DQS  
+##  <a name="Import"></a>Importare una Knowledge base da un file DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Nuova Knowledge Base**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67935284"
   
 13. Nella pagina iniziale di Data Quality Services, verificare che la Knowledge Base sia elencata in **Knowledge Base recenti**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'importazione di una Knowledge Base da un file con estensione .dqs  
+##  <a name="FollowUp"></a>Completamento: dopo l'importazione di una Knowledge base da un file DQS  
  Dopo avere importato una Knowledge Base da un file DQS, è possibile aggiungervi informazioni o utilizzarla per progetti di pulizia o di individuazione delle corrispondenze, a seconda del suo contenuto. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
   

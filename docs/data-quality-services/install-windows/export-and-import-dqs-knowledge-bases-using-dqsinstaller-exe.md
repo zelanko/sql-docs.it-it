@@ -1,6 +1,5 @@
 ---
-title: Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe | Microsoft Docs
-ms.custom: ''
+title: Esportare e importare le Knowledge Base di DQS utilizzando DQSInstaller.exe
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,16 +7,16 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: eec1b8258d888ef520e996912683b92fb259e1aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bb2f2a1a1e6aa9b63478b95d7f802e3df7cd127c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992035"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254785"
 ---
-# <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe
+# <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Esportare e importare le Knowledge Base di DQS utilizzando DQSInstaller.exe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +24,7 @@ ms.locfileid: "67992035"
   
  Questa funzionalità consente di eseguire un backup di *tutte* le Knowledge Base in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contemporaneamente senza dovere esportare singolarmente ogni Knowledge Base in un file con estensione dqs tramite [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Allo stesso modo, è possibile importare contemporaneamente *tutte* le Knowledge Base dal file di backup in un altro [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] senza dovere importare singolarmente ogni Knowledge Base da un file con estensione dqs tramite [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Tale operazione è particolarmente utile per eseguire il backup e il ripristino delle Knowledge Base quando si disinstalla [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] su un computer e quindi per reinstallarlo su un computer diverso. È possibile esportare facilmente tutte le Knowledge Base presenti in un'installazione esistente di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] in un file di backup (con estensione dqsb) DQS, quindi importare tutte le Knowledge Base dal file di backup dopo avere installato [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] su un computer diverso.  
   
-##  <a name="export"></a> Esportazione delle Knowledge Base nel file con estensione dqsb  
+##  <a name="export"></a>Esportazione di Knowledge base in un file con estensione dqsb  
  È possibile esportare in qualsiasi momento tutte le Knowledge Base nel [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] esistente o durante la disinstallazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
   
 -   Per esportare tutte le Knowledge Base presenti in un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] in un file di backup (con estensione dqsb) DQS, eseguire DQSInstaller.exe con il parametro `exportkbs` dal prompt dei comandi, insieme al percorso completo e al nome file dove si desidera esportare le Knowledge Base. Ad esempio, per esportare tutte le Knowledge Base nel file DQSBackup.dqsb nell'unità C:  
@@ -46,7 +45,7 @@ ms.locfileid: "67992035"
     > [!NOTE]  
     >  Se non si specificano il percorso completo e il nome file del file di backup DQS durante la disinstallazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dal prompt dei comandi utilizzando il parametro `uninstall` , viene visualizzato un messaggio in cui viene segnalato che tutte le Knowledge Base verranno eliminate e che consente di scegliere se proseguire il processo di disinstallazione.  
   
-##  <a name="import"></a> Importazione delle Knowledge Base dal file con estensione dqsb  
+##  <a name="import"></a>Importazione di Knowledge base dal file dqsb  
  È possibile importare tutte le Knowledge Base da un file di backup DQS (con estensione dqsb) dopo aver completato l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Per importare le Knowledge Base, è necessario disporre di un file di backup DQS valido (con estensione dqsb).  
   
  Eseguire il file DQSInstaller.exe con il parametro `importkbs` dal prompt dei comandi, insieme al percorso completo e al nome file da cui si desidera importare le Knowledge Base. Ad esempio, per importare tutte le Knowledge Base dal file DQSBackup.dqsb nell'unità C:  
@@ -58,9 +57,9 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  Se vi sono Knowledge Base in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] con lo stesso nome di quelle che si stanno importando, i nomi delle Knowledge Base importate saranno accodati con un carattere di sottolineatura (_) seguito da un valore intero che inizia con 1. Ad esempio, se il dominio "CompanyName" è duplicato, il nome di dominio importato sarà "CompanyName_1".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Eseguire DQSInstaller. exe per completare l'installazione del server Data Quality](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Esportazione di una Knowledge Base in un file DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Importazione di una Knowledge Base da un file DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Esportare una Knowledge base in un file DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
+ [Importare una Knowledge base da un file DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

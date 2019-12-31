@@ -1,5 +1,5 @@
 ---
-title: Inviare dati BLOB a SQL SERVER utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM | Microsoft Docs
+title: Dati BLOB in SQL, IROWSETFASTLOAD, ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0044cb8f7c7568adc05e669ff288131fcc21b58d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 4142f121736abd897401529b02eaaa261832bfa2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789840"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253394"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73789840"
  Per altre informazioni, vedere [oggetti BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per creare la tabella usata dall'applicazione.  
@@ -45,12 +45,12 @@ ms.locfileid: "73789840"
   
  Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per eliminare la tabella usata dall'applicazione.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -478,7 +478,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

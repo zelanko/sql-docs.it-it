@@ -1,6 +1,5 @@
 ---
-title: Collegare un dominio o un dominio composito ai dati di riferimento | Microsoft Docs
-ms.custom: ''
+title: Collegare un dominio o un dominio composito ai dati di riferimento
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d8aed52e248a61b5d10fc58977854b49837ebfad
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: dbd64575acaf5ddf2f57e99b010a8a3b1555780e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152776"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258868"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
 
@@ -38,17 +37,17 @@ ms.locfileid: "70152776"
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  È necessario avere configurato [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) per utilizzare i servizi dati di riferimento. Vedere [Configurare DQS per l'uso di dati di riferimento](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
 #### <a name="permissions"></a>Autorizzazioni  
  Per eseguire il mapping dei domini ai dati di riferimento, è necessario disporre del ruolo dqs_kb_editor nel database DQS_MAIN.  
   
-##  <a name="Map"></a> Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
+##  <a name="Map"></a>Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] in **Gestione Knowledge Base**fare clic su **Nuova Knowledge Base**.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "70152776"
   
 4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato**e **CAP**.  
   
-5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Scegliere **OK**.  
+5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Fare clic su **OK**.  
   
 6.  Nel riquadro **Dominio** sul lato sinistro selezionare il dominio composito facendo clic su **Verifica indirizzo**, quindi fare clic sulla scheda **Dati di riferimento** sul lato destro.  
   
@@ -77,17 +76,17 @@ ms.locfileid: "70152776"
   
 9. Si tornerà alla scheda **dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
   
-    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno effettuate automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
+    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno eseguite automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
   
-    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare nel servizio dati di riferimento.  
+    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare dal servizio dati di riferimento.  
   
-    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza al di sotto di questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
+    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza inferiore a questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
   
 10. Fare clic su **Fine** per pubblicare la Knowledge Base. Al termine della pubblicazione della Knowledge Base verrà visualizzato un messaggio di conferma.  
   
  È ora possibile usare questa Knowledge base per l'attività di pulizia in un progetto Data Quality per standardizzare e pulire gli indirizzi US nei dati di origine in base alle informazioni fornite da Melissa Data tramite Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'esecuzione del mapping di un dominio ai dati di riferimento  
+##  <a name="FollowUp"></a>Completamento: dopo il mapping di un dominio ai dati di riferimento  
  Creare un progetto Data Quality ed eseguire l'attività di pulizia sui dati di origine che contengono gli indirizzi US confrontandolo con la Knowledge Base creata in questo argomento. Vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Vedere anche  

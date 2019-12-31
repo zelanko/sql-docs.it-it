@@ -1,5 +1,5 @@
 ---
-title: Accesso alle informazioni di diagnostica nel log degli eventi estesi | Microsoft Docs
+title: Informazioni di diagnostica nel log degli eventi estesi
 ms.date: 03/14/2017
 ms.reviewer: ''
 ms.prod: sql
@@ -9,17 +9,17 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15891abf565a6b0c30c7e5b0cf2b3355ff831bc4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8840d746dec7dbcc4fc87d827a85cbe9c3af65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788379"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258731"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client e la traccia di accesso ai dati ([analisi di accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=125805)) sono stati aggiornati per semplificare l'ottenimento di informazioni di diagnostica sugli errori di connessione dal buffer circolare della connettività e dalle prestazioni dell'applicazione informazioni del log degli eventi estesi.  
+  A partire [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native client e la traccia di accesso ai dati ([traccia di accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=125805)) sono stati aggiornati per semplificare l'ottenimento di informazioni di diagnostica sugli errori di connessione dal buffer circolare della connettività e dalle informazioni sulle prestazioni dell'applicazione dal registro eventi estesi.  
   
  Per ulteriori informazioni sulla lettura del log degli eventi estesi, vedere [View Event Session Data](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49) (Visualizzare i dati di una sessione di eventi).  
   

@@ -1,6 +1,5 @@
 ---
-title: Gestione di un dominio | Microsoft Docs
-ms.custom: ''
+title: Gestione di un dominio
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991918"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258446"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
 
@@ -42,24 +41,24 @@ ms.locfileid: "67991918"
   
 -   Se il tipo di dati è una stringa, è possibile specificare che DQS non identifichi errori di sintassi quando si è certi che le stringhe non contengono tali errori.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  L'utilizzo di un dominio consente di effettuare le operazioni seguenti:  
   
 |||  
 |-|-|  
-|Creare una rappresentazione semantica per un campo dati con un tipo di dati specifico, specificare come viene popolato il dominio, e formattare l'output del dominio|[Creare un dominio](../data-quality-services/create-a-domain.md)|  
-|Collegare un dominio a un altro dominio, consentendone la condivisione delle impostazioni e dei valori|[Creare un dominio collegato](../data-quality-services/create-a-linked-domain.md)|  
-|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Collegare un dominio o un dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Creare una rappresentazione semantica per un campo dati con un tipo di dati specifico, specificare come viene popolato il dominio, e formattare l'output del dominio|[Creazione di un dominio](../data-quality-services/create-a-domain.md)|  
+|Collegare un dominio a un altro dominio, consentendone la condivisione delle impostazioni e dei valori|[Creazione di un dominio collegato](../data-quality-services/create-a-linked-domain.md)|  
+|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Connetti dominio o dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Modificare o evidenziare i valori in una Knowledge Base.|[Modificare i valori di dominio](../data-quality-services/change-domain-values.md)|  
 |Utilizzare regole di convalida e di standardizzazione|[Creare una regola di dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../data-quality-services/create-term-based-relations.md)|  
-|Completare, chiudere o annullare l'attività di gestione del dominio|[Termine dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Completare, chiudere o annullare l'attività di gestione del dominio|[Termina l'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
+|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge base](../data-quality-services/building-a-knowledge-base.md)|  
 |Importazione o esportazione di informazioni da una Knowledge Base.|[Importazione ed esportazione delle informazioni](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creazione di un dominio composito e aggiunta di informazioni al dominio.|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  
   

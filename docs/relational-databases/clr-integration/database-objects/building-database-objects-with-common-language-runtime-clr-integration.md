@@ -1,6 +1,7 @@
 ---
-title: Creazione di oggetti di Database con Common Language Runtime (CLR) Integration | Microsoft Docs
-ms.custom: ''
+title: Oggetti di database di compilazione CLR (Common Language Runtime)
+description: Compilare oggetti di database utilizzando l'integrazione di SQL Server con il Common Language Runtime di .NET Framework (CLR).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138674"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258348"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  È possibile compilare oggetti di database utilizzando l'integrazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework. Il codice gestito che viene eseguito all'interno di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definito "routine CLR". Queste routine includono gli elementi seguenti:  
+  È possibile compilare oggetti di database utilizzando l'integrazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework. Il codice gestito in esecuzione all' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interno di viene definito "routine CLR". Queste routine includono gli elementi seguenti:  
   
 -   Funzioni definite dall'utente con valori scalari  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68138674"
  [Restrizioni relative al modello di programmazione dell'integrazione con CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Include informazioni sulle restrizioni del modello di programmazione dell'integrazione CLR.  
   
- [Tipi di dati di SQL Server in .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [SQL Server tipi di dati nell'.NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Panoramica dei tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e degli equivalenti di .NET Framework.  
   
  [Panoramica degli attributi personalizzati dell'integrazione con CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
@@ -62,7 +63,7 @@ ms.locfileid: "68138674"
  [Funzioni CLR definite dall'utente](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Viene descritto come implementare e utilizzare i diversi tipi di funzioni CLR, ovvero le funzioni con valori di tabella, le funzioni scalari e le funzioni di aggregazione definite dall'utente.  
   
- [Tipi definiti dall'utente per CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Viene descritto come implementare e utilizzare i tipi CLR definiti dall'utente.  
   
  [Stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
@@ -72,6 +73,6 @@ ms.locfileid: "68138674"
  Viene descritto come implementare e utilizzare i trigger CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Common Language Runtime &#40;CLR&#41; panoramica dell'integrazione](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Panoramica dell'integrazione di Common Language Runtime &#40;CLR&#41;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

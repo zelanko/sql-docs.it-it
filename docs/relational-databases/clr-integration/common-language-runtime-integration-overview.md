@@ -1,6 +1,7 @@
 ---
-title: Panoramica di Common Language Runtime (CLR) Integration | Microsoft Docs
-ms.custom: ''
+title: Panoramica di Common Language Runtime (CLR)
+description: SQL Server e Istanza gestita di database SQL di Azure consentono di implementare alcune funzionalità utilizzando i linguaggi .NET utilizzando l'integrazione nativa Common Language Runtime (CLR) come SQL Server moduli lato server (procedure, funzioni e trigger).
+ms.custom: seo-lt-2019
 ms.date: 06/20/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,34 +18,37 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 922489d1145204a4ae5d2dcf8e483149f1b11bcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e4e98168841185f8135ea3b2730d8386b75694c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068458"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256184"
 ---
-# <a name="common-language-runtime-integration"></a>Integrazione con Common Language Runtime
+# <a name="common-language-runtime-integration"></a>Integrazione di Common Language Runtime
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [istanza gestita di Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) consentono di implementare alcune delle funzionalità con i linguaggi .net tramite l'integrazione common language runtime (CLR) nativi come moduli Server-side di SQL Server (procedure, funzioni e trigger). CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) consentono di implementare alcune funzionalità utilizzando i linguaggi .NET utilizzando l'integrazione nativa Common Language Runtime (CLR) come SQL Server moduli lato server (procedure, funzioni e trigger). CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
 
 > [!WARNING]
->  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). Gli amministratori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono anche aggiungere assembly a un elenco di assembly, considerato attendibile dal motore di database. Per altre, vedere [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
+>  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. 
+  `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `EXTERNAL_ACCESS` come se fossero contrassegnati `UNSAFE`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). Gli amministratori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono anche aggiungere assembly a un elenco di assembly, considerato attendibile dal motore di database. Per altre, vedere [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
 
 ## <a name="when-to-use-clr-modules"></a>Quando usare i moduli CLR?
 
-Integrazione con CLR consente di implementare funzionalità complesse disponibili in .net Framework, ad esempio espressioni regolari, di codice per l'accesso a risorse esterne (server, servizi web, database), crittografia personalizzata e così via. Alcuni dei vantaggi dell'integrazione CLR sul lato server sono:
+L'integrazione con CLR consente di implementare funzionalità complesse disponibili in .NET Framework, ad esempio espressioni regolari, codice per l'accesso a risorse esterne (server, servizi Web, database), crittografia personalizzata e così via. Di seguito sono elencati alcuni dei vantaggi dell'integrazione con CLR sul lato server:
   
 -   **Un modello di programmazione migliore.** I linguaggi .NET Framework sono sotto molti aspetti più completi di Transact-SQL, in quanto offrono costrutti e funzionalità precedentemente non disponibili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile inoltre sfruttare la potenza della libreria .NET Framework che fornisce una vasta gamma di classi, utilizzabili in modo rapido ed efficiente per risolvere i problemi di programmazione.  
   
--   **Miglioramento della sicurezza e protezione.** Il codice gestito è in esecuzione in un ambiente CLR, ospitato dal motore di database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utilizza per fornire un'alternativa più sicura alle stored procedure estese disponibili in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Miglioramento della sicurezza e della protezione.** Il codice gestito è in esecuzione in un ambiente CLR, ospitato dal motore di database. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utilizza per fornire un'alternativa più sicura alle stored procedure estese disponibili in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Possibilità di definire i tipi di dati e funzioni di aggregazione.** I tipi definiti dall'utente e le funzioni di aggregazione definite dall'utente sono due nuovi oggetti di database gestiti che espandono le capacità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Possibilità di definire tipi di dati e funzioni di aggregazione.** I tipi definiti dall'utente e le funzioni di aggregazione definite dall'utente sono due nuovi oggetti di database gestiti che espandono le capacità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Sviluppo semplificato attraverso un ambiente standardizzato.** Lo sviluppo di database è integrato nelle versioni future dell'ambiente di sviluppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Gli sviluppatori utilizzano per lo sviluppo e il debug degli script e degli oggetti di database gli stessi strumenti impiegati per scrivere componenti e servizi .NET Framework di livello intermedio o di livello client.  
   
--   **Possibilità di migliorare le prestazioni e scalabilità.** In molte situazioni, i modelli di compilazione ed esecuzione del linguaggio .NET Framework consentono di ottenere prestazioni migliori rispetto a Transact-SQL.  
+-   **Possibilità di prestazioni e scalabilità migliori.** In molte situazioni, i modelli di compilazione ed esecuzione del linguaggio .NET Framework consentono di ottenere prestazioni migliori rispetto a Transact-SQL.  
   
  Nella tabella seguente sono elencati gli argomenti inclusi in questa sezione.  
   
@@ -61,7 +65,7 @@ Integrazione con CLR consente di implementare funzionalità complesse disponibil
  Viene illustrato come abilitare l'integrazione con CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo)   
+ [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo)   
  [Prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

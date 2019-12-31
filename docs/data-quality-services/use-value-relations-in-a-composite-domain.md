@@ -1,6 +1,5 @@
 ---
-title: Usare le relazioni di valori in un dominio composito | Microsoft Docs
-ms.custom: ''
+title: Utilizzare le relazioni di valori in un dominio composito
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: f7d0d6982e7757a22126f1d911e72680e4b8dde8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991744"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257758"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utilizzare le relazioni di valori in un dominio composito
 
@@ -25,23 +24,24 @@ ms.locfileid: "67991744"
 
   In questo argomento viene descritto come visualizzare le combinazioni di valori presenti nel dominio composito durante il processo di individuazione delle informazioni in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). In questa pagina viene illustrato il numero di occorrenze delle combinazioni di valori. La gestione dei valori non è supportata per i domini compositi, pertanto non è possibile eseguire alcuna operazione su questi valori.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per visualizzare le relazioni di valori, è necessario avere creato e aperto un dominio composito.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per visualizzare le relazioni di valori in un dominio composito, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Use"></a> Visualizzare le relazioni di valori  
+##  <a name="Use"></a>Visualizza relazioni tra valori  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-3.  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+3.  
+  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
 4.  Fare clic sulla scheda **Relazioni valore** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67991744"
   
 6.  Non è possibile modificare alcun valore nella tabella. Se sono state eseguite le altre operazioni, fare clic su **Fine** per completare l'attività di gestione del dominio. In caso contrario, fare clic su **Annulla**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla visualizzazione delle relazioni di valori  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla visualizzazione delle relazioni tra valori  
  Dopo avere visualizzato le relazioni di valori, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   

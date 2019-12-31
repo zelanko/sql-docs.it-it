@@ -1,6 +1,5 @@
 ---
-title: Importare un dominio da un file DQS | Microsoft Docs
-ms.custom: ''
+title: Importazione di un dominio da un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 73d733cd120e7ce991e092328d1a84a219472c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992059"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251583"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importazione di un dominio da un file DQS
 
@@ -27,19 +26,19 @@ ms.locfileid: "67992059"
   
  Quando si importa un dominio, il nome del dominio corrisponde al nome del dominio esportato originalmente, a meno che il nome esista già, in qual caso DQS aggiungerà il suffisso "_1" al nome. Ciò avviene qualora si importi un dominio composito contenente un dominio singolo con lo stesso nome di un dominio esistente.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per importare un dominio da un file DQS, è necessario avere già esportato un dominio singolo o composito (contenente più domini singoli) nel file DQS. Il file DQS deve contenere solo un dominio. È inoltre necessario avere creato e aperto una Knowledge Base in cui importare il dominio.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per importare un dominio da un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Import"></a> Import a domain from a .dqs file  
+##  <a name="Import"></a>Importare un dominio da un file DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire una Knowledge Base nell'attività Gestione dominio.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "67992059"
   
 6.  Verificare che il dominio importato venga visualizzato nell'elenco **Domini** . Se è stato importato un dominio composito, verificare che sia il dominio composito che i singoli domini in esso contenuti siano visualizzati nell'elenco **Domini** .  
   
-##  <a name="FollowUp"></a> Completamento: dopo aver importato un dominio da un file con estensione dqs  
+##  <a name="FollowUp"></a>Completamento: dopo l'importazione di un dominio da un file DQS  
  Dopo avere importato un dominio da un file DQS, è possibile aggiungere informazioni al dominio o utilizzarlo per progetti di pulizia o di individuazione delle corrispondenze, secondo il contenuto del dominio. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
   

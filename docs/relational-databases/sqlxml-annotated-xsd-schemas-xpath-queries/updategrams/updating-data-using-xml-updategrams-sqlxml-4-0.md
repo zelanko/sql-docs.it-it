@@ -1,6 +1,5 @@
 ---
-title: Aggiornamento di dati mediante updategram XML (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Aggiornamento di dati mediante updategram XML (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,17 +25,18 @@ helpviewer_keywords:
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffaa1f91e117c6d2e244e5b677025c60649b6408
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907926"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255987"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aggiornamento di dati tramite updategram XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando si aggiornano i dati esistenti, è necessario specificare sia il **\<prima di >** che **\<dopo >** blocchi. Gli elementi specificati nel **\<prima >** e **\<dopo** i blocchi > descrivono la modifica desiderata. L'updategram utilizza gli elementi specificati nel **\<prima di >** blocco per identificare i record esistenti nel database di. Gli elementi corrispondenti nell' **\<dopo >** blocco indicano il modo in cui i record devono essere esaminati dopo l'esecuzione dell'operazione di aggiornamento. Da queste informazioni, l'updategram crea un'istruzione SQL che corrisponde al **\<dopo >** blocco. L'updategram utilizza quindi questa istruzione per aggiornare il database.  
+  Quando si aggiornano i dati esistenti, è necessario specificare entrambi i ** \<blocchi before>** e ** \<after>** . Gli elementi specificati in ** \<prima>** e ** \<dopo** i blocchi>descrivono la modifica desiderata. L'updategram utilizza gli elementi specificati nel blocco ** \<before>** per identificare i record esistenti nel database di. Gli elementi corrispondenti nel blocco ** \<after>** indicano la modalità di aspetto dei record dopo l'esecuzione dell'operazione di aggiornamento. Da queste informazioni, l'updategram crea un'istruzione SQL che corrisponde al ** \<blocco after>** . L'updategram utilizza quindi questa istruzione per aggiornare il database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di aggiornamento:  
   
@@ -55,22 +55,22 @@ ms.locfileid: "72907926"
 </ROOT>  
 ```  
   
- **\<attributo updg: prima di >**  
- Gli elementi del **\<prima di >** blocco identificano i record esistenti nelle tabelle di database.  
+ **\<attributo updg: prima di>**  
+ Gli elementi del blocco ** \<before>** identificano i record esistenti nelle tabelle di database.  
   
- **\<attributo updg: dopo >**  
- Gli elementi del **\<dopo** il blocco > descrivono in che modo i record specificati nel **\<prima** del blocco di > devono essere esaminati dopo l'applicazione degli aggiornamenti.  
+ **\<attributo updg: dopo>**  
+ Gli elementi nel blocco ** \<after>** descrivono il modo in cui i record specificati nel blocco ** \<before>** dovrebbero apparire dopo l'applicazione degli aggiornamenti.  
   
- L'attributo **mapping-schema** identifica lo schema di mapping che verrà utilizzato dall'updategram. Se l'updategram specifica uno schema di mapping, i nomi degli elementi e degli attributi specificati nel **\<prima >** e **\<dopo** i blocchi di > devono corrispondere ai nomi nello schema. Lo schema di mapping esegue il mapping di questi nomi degli elementi o degli attributi ai nomi delle tabelle e delle colonne del database.  
+ L'attributo **mapping-schema** identifica lo schema di mapping che verrà utilizzato dall'updategram. Se l'updategram specifica uno schema di mapping, i nomi degli elementi e degli attributi specificati in ** \<prima>** e ** \<dopo** i blocchi di>devono corrispondere ai nomi nello schema. Lo schema di mapping esegue il mapping di questi nomi degli elementi o degli attributi ai nomi delle tabelle e delle colonne del database.  
   
- Se un updategram non specifica uno schema, utilizza il mapping predefinito. Nel mapping predefinito, il **\<elementname >** specificato nell'updategram esegue il mapping alla tabella di database e gli attributi o gli elementi figlio vengono mappati alle colonne del database.  
+ Se un updategram non specifica uno schema, utilizza il mapping predefinito. Nel mapping predefinito, l' ** \<elemento ElementName>** specificato nell'updategram esegue il mapping alla tabella di database e gli attributi o gli elementi figlio vengono mappati alle colonne del database.  
   
- Un elemento del **\<prima di >** blocco deve corrispondere solo a una riga di tabella nel database. Se l'elemento corrisponde a più righe di tabella o non corrisponde ad alcuna riga della tabella, l'updategram restituisce un errore e Annulla l'intero blocco di **> di sincronizzazione\<** .  
+ Un elemento del blocco ** \<before>** deve corrispondere solo a una riga di tabella nel database. Se l'elemento corrisponde a più righe di tabella o non corrisponde ad alcuna riga della tabella, l'updategram restituisce un errore e Annulla l' ** \<** intero blocco>di sincronizzazione.  
   
- Un updategram può includere più blocchi di **> di sincronizzazione\<** . Ogni blocco di **> di sincronizzazione\<** viene considerato come una transazione. Ogni blocco di **> di sincronizzazione\<** può avere più **\<prima >** e **\<dopo >** blocchi. Se ad esempio si stanno aggiornando due dei record esistenti, è possibile specificare due **\<prima >** e **\<dopo >** coppie, una per ogni record da aggiornare.  
+ Un updategram può includere più ** \<** blocchi di>di sincronizzazione. Ogni blocco del ** \<>di sincronizzazione** viene considerato come una transazione. Ogni ** \<** blocco del>di sincronizzazione può avere più ** \<di una prima>** e ** \<dopo>** blocchi. Se ad esempio si stanno aggiornando due dei record esistenti, è possibile specificare due ** \<prima>** e ** \<dopo>** coppie, una per ogni record da aggiornare.  
   
 ## <a name="using-the-updgid-attribute"></a>Utilizzo dell'attributo updg:id  
- Quando si specificano più elementi nel **\<prima di >** e **\<dopo** i blocchi di >, usare l'attributo **attributo updg: ID** per contrassegnare le righe nel **\<prima >** e **\<dopo** i blocchi di >. La logica di elaborazione usa queste informazioni per determinare quale record nel **\<prima di >** le coppie di blocchi con quale record nel **\<dopo >** blocco.  
+ Quando vengono specificati più elementi nella ** \<prima>** e ** \<dopo** i blocchi di>, usare l'attributo **attributo updg: ID** per contrassegnare le righe in ** \<prima del>** e ** \<dopo** i blocchi>. La logica di elaborazione usa queste informazioni per determinare quale record in ** \<prima>** le coppie di blocchi con quale record nel blocco ** \<after>** .  
   
  L'attributo **attributo updg: ID** non è necessario (sebbene consigliato) se si verifica una delle condizioni seguenti:  
   
@@ -78,22 +78,22 @@ ms.locfileid: "72907926"
   
 -   Per i campi chiave nell'updategram vengono forniti uno o più valori specifici.  
   
- In tal caso, l'updategram utilizza le colonne chiave specificate nei **campi SQL: Key** per associare gli elementi del **\<prima >** e **\<dopo** i blocchi >.  
+ In tal caso, l'updategram utilizza le colonne chiave specificate nei **campi SQL: Key** per associare gli elementi del ** \<prima>** e ** \<dopo>** blocchi.  
   
  Se lo schema di mapping non identifica le colonne chiave (tramite **SQL: key-fields**) o se l'updategram sta aggiornando un valore della colonna chiave, è necessario specificare **attributo updg: ID**.  
   
- I record identificati nella **\<prima >** e **\<dopo** i blocchi > non devono essere nello stesso ordine. L'attributo **attributo updg: ID** forza l'associazione tra gli elementi specificati nel **\<prima >** e **\<dopo** i blocchi >.  
+ I record identificati nella ** \<prima>** e ** \<dopo** i blocchi di>non devono essere nello stesso ordine. L'attributo **attributo updg: ID** forza l'associazione tra gli elementi specificati nella ** \<prima>** e ** \<dopo>** blocchi.  
   
- Se si specifica un elemento nel **\<prima di >** blocco e un solo elemento corrispondente nel **\<dopo >** blocco, l'utilizzo di **attributo updg: ID** non è necessario. Tuttavia, è consigliabile specificare **attributo updg: ID** comunque per evitare ambiguità.  
+ Se si specifica un elemento nel blocco ** \<before>** e un solo elemento corrispondente nel blocco ** \<after>** , l'uso di **attributo updg: ID** non è necessario. Tuttavia, è consigliabile specificare **attributo updg: ID** comunque per evitare ambiguità.  
   
 ## <a name="examples"></a>Esempi  
  Prima di utilizzare gli esempi di updategram, tenere presente quanto segue:  
   
--   La maggior parte degli esempi utilizza il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   La maggior parte degli esempi utilizza il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La maggior parte degli esempi utilizza il database di esempio AdventureWorks. Tutti gli aggiornamenti vengono applicati alle tabelle di questo database. È possibile ripristinare il database AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>A. Aggiornamento di un record  
+### <a name="a-updating-a-record"></a>R. Aggiornamento di un record  
  Nell'updategram seguente il cognome del dipendente viene aggiornato a Fuller nella tabella Person.Contact del database AdventureWorks. Poiché l'updategram non specifica alcuno schema di mapping, utilizza il mapping predefinito.  
   
 ```  
@@ -109,9 +109,9 @@ ms.locfileid: "72907926"
 </ROOT>  
 ```  
   
- Il record descritto nel **\<prima** del blocco di > rappresenta il record corrente nel database. L'updategram utilizza tutti i valori di colonna specificati nel **\<prima di >** blocco per la ricerca del record. In questo updategram, il **\<prima** del blocco di > fornisce solo la colonna ContactID. Pertanto, l'updategram utilizza solo il valore per cercare il record. Se si aggiungesse il valore LastName a questo blocco, l'updategram utilizzerebbe sia i valori ContactID e LastName per la ricerca.  
+ Il record descritto nel blocco ** \<before>** rappresenta il record corrente nel database. L'updategram utilizza tutti i valori di colonna specificati nel blocco ** \<before>** per cercare il record. In questo updategram il ** \<blocco before>** fornisce solo la colonna ContactID. Pertanto, l'updategram utilizza solo il valore per cercare il record. Se si aggiungesse il valore LastName a questo blocco, l'updategram utilizzerebbe sia i valori ContactID e LastName per la ricerca.  
   
- In questo updategram, il **\<dopo** il blocco > fornisce solo il valore della colonna LastName perché questo è l'unico valore che viene modificato.  
+ In questo updategram il ** \<blocco after>** fornisce solo il valore della colonna LastName perché questo è l'unico valore che viene modificato.  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -121,14 +121,14 @@ ms.locfileid: "72907926"
 
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Aggiornamento di più record tramite l'attributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Aggiornamento di più record tramite l'attributo updg:id  
  In questo esempio l'updategram esegue due aggiornamenti nella tabella HumanResources.Shift del database AdventureWorks:  
   
 -   L'updategram modifica il nome del turno diurno originale che inizia alle 7.00 da "Day" a "Early Morning".  
   
 -   L'updategram inserisce quindi un nuovo turno denominato "Late Morning" che inizia alle 10.00.  
   
- Nell'updategram, l'attributo **attributo updg: ID** crea associazioni tra gli elementi nel **\<prima >** e **\<dopo** i blocchi >.  
+ Nell'updategram, l'attributo **attributo updg: ID** crea associazioni tra gli elementi in ** \<prima>** e ** \<dopo>** blocchi.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -147,7 +147,7 @@ ms.locfileid: "72907926"
 </ROOT>  
 ```  
   
- Si noti che l'attributo **attributo updg: ID** associa la prima istanza dell'elemento \<HumanResources. Shift > nel **\<prima** del blocco > con la seconda istanza dell'elemento \<HumanResources. Shift > nell' **\<dopo >** blocco.  
+ Si noti il modo in cui l'attributo **attributo updg: ID** associa la \<prima istanza dell'elemento HumanResources. Shift> nella ** \<prima>** blocco con la seconda istanza \<dell'elemento HumanResources. Shift> nel blocco ** \<>after** .  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -157,13 +157,13 @@ ms.locfileid: "72907926"
   
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Specifica di più \<prima > e \<dopo i blocchi >  
- Per evitare ambiguità, è possibile scrivere l'updategram nell'esempio B utilizzando più **\<prima >** e **\<dopo >** coppie di blocchi. La specifica di **\<prima di >** e **\<dopo >** coppie è un modo per specificare più aggiornamenti con un minimo di confusione. Inoltre, se ogni **\<prima di >** e **\<dopo** i blocchi > specificare al massimo un elemento, non è necessario usare l'attributo **attributo updg: ID** .  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Specifica di \<più blocchi before> e \<after>  
+ Per evitare ambiguità, è possibile scrivere l'updategram nell'esempio B utilizzando più ** \<>** e ** \<dopo>** coppie di blocchi. Se si specifica ** \<before>** e ** \<after>** Pairs è possibile specificare più aggiornamenti con un minimo di confusione. Inoltre, se ciascuno dei ** \<>** e ** \<dopo** i blocchi di>specifica al massimo un elemento, non è necessario usare l'attributo **attributo updg: ID** .  
   
 > [!NOTE]  
->  Per formare una coppia, il **\<dopo >** tag deve seguire immediatamente il **\<corrispondente prima** del Tag >.  
+>  Per formare una coppia, il ** \<Tag after>** deve seguire immediatamente il tag corrispondente ** \<prima di>** .  
   
- Nell'updategram seguente, il primo **\<prima di >** e **\<dopo che >** Pair aggiorna il nome dello spostamento per il giorno turno. La seconda coppia inserisce un record per un nuovo turno.  
+ Nell'updategram seguente, il primo ** \<>** e ** \<dopo>** coppia aggiorna il nome dello spostamento per il giorno turno. La seconda coppia inserisce un record per un nuovo turno.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -194,14 +194,14 @@ ms.locfileid: "72907926"
   
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. Specifica di più blocchi > di sincronizzazione \<  
- È possibile specificare più blocchi **> di sincronizzazione\<** in un updategram. Ogni blocco di **> di sincronizzazione\<** specificato è una transazione indipendente.  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. Specifica di \<più blocchi> di sincronizzazione  
+ È possibile specificare più ** \<blocchi>di sincronizzazione** in un updategram. Ogni blocco del ** \<>di sincronizzazione** specificato è una transazione indipendente.  
   
- Nell'updategram seguente il primo blocco **> di sincronizzazione\<** aggiorna un record nella tabella Sales. Customer. Per motivi di semplicità, l'updategram specifica solo i valori di colonna obbligatori, ovvero il valore Identity (CustomerID) e il valore da aggiornare (SalesPersonID).  
+ Nell'updategram seguente il primo ** \<** blocco del>di sincronizzazione aggiorna un record nella tabella Sales. Customer. Per motivi di semplicità, l'updategram specifica solo i valori di colonna obbligatori, ovvero il valore Identity (CustomerID) e il valore da aggiornare (SalesPersonID).  
   
- Il secondo **\<blocco di sincronizzazione >** aggiunge due record alla tabella Sales. SalesOrderHeader. Per questa tabella la colonna SalesOrderID è una colonna di tipo IDENTITY. Pertanto, l'updategram non specifica il valore di SalesOrderID in ogni elemento \<Sales. SalesOrderHeader >.  
+ Il secondo ** \<** blocco del>di sincronizzazione aggiunge due record alla tabella Sales. SalesOrderHeader. Per questa tabella la colonna SalesOrderID è una colonna di tipo IDENTITY. Pertanto, l'updategram non specifica il valore di SalesOrderID in ogni elemento \<Sales. SalesOrderHeader>.  
   
- La specifica di più blocchi **> di sincronizzazione\<** è utile in quanto se il secondo blocco di **> di sincronizzazione\<** (una transazione) non è in grado di aggiungere record alla tabella Sales. SalesOrderHeader, il primo blocco di\<di sincronizzazione **>** può comunque aggiornare il record del cliente nella tabella Sales. Customer.  
+ La specifica ** \<** di più blocchi>di sincronizzazione è utile perché se il secondo ** \<blocco>di sincronizzazione** (una transazione) non è in grado di aggiungere record alla tabella Sales. SalesOrderHeader, il primo ** \<** blocco di>di sincronizzazione può comunque aggiornare il record del cliente nella tabella Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -265,7 +265,7 @@ ms.locfileid: "72907926"
   
  Gli elementi e gli attributi specificati nell'updategram fanno riferimento agli elementi e agli attributi nello schema di mapping.  
   
- Nello schema di mapping XSD seguente sono presenti **\<> dei clienti**, **\<Order >** e **\<od >** elementi che corrispondono alle tabelle Sales. Customer, Sales. SalesOrderHeader e Sales. SalesOrderDetail del database.  
+ Nello schema di mapping XSD seguente ** \< **sono presenti gli elementi Customer>, ** \<Order>** e ** \<od>** con mapping alle tabelle Sales. Customer, Sales. SalesOrderHeader e Sales. SalesOrderDetail del database.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -318,7 +318,7 @@ ms.locfileid: "72907926"
 </xsd:schema>  
 ```  
   
- Questo schema di mapping (UpdategramMappingSchema.xml) viene specificato nell'updategram seguente. L'updategram aggiunge un elemento relativo ai dettagli di un ordine nella tabella Sales.SalesOrderDetail per un ordine specifico. L'updategram include elementi nidificati: un elemento **\<OD >** annidato all'interno di un elemento **\<order >** . La relazione di chiave primaria/chiave esterna tra questi due elementi viene specificata nello schema di mapping.  
+ Questo schema di mapping (UpdategramMappingSchema.xml) viene specificato nell'updategram seguente. L'updategram aggiunge un elemento relativo ai dettagli di un ordine nella tabella Sales.SalesOrderDetail per un ordine specifico. L'updategram include elementi nidificati: ** \<** un elemento>o annidato all'interno di un ** \<elemento Order>** . La relazione di chiave primaria/chiave esterna tra questi due elementi viene specificata nello schema di mapping.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -346,7 +346,7 @@ ms.locfileid: "72907926"
   
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Utilizzo di uno schema di mapping con attributi IDREFS  
  In questo esempio viene illustrato il modo in cui gli attributi IDREFS nello schema di mapping vengono utilizzati dagli updategram per aggiornare record in più tabelle. Nell'esempio si presuppone che il database sia costituito dalle tabelle seguenti:  
@@ -359,7 +359,7 @@ ms.locfileid: "72907926"
   
  Poiché uno studente può iscriversi a molti corsi e un corso può avere molti studenti, la terza tabella, Enrollment, è necessaria per rappresentare questa relazione M:N.  
   
- Nello schema di mapping XSD seguente viene fornita una vista XML delle tabelle tramite il **\<Student >** , il **\<Course >** e **\<** gli elementi > di registrazione. Gli attributi **IDREFS** nello schema di mapping specificano la relazione tra questi elementi. L'attributo **StudentIDList** nell'elemento **\<Course >** è un attributo di tipo **IDREFS** che fa riferimento alla colonna StudentID nella tabella di registrazione. Analogamente, l'attributo di cui è stato eseguito il **rollup** nell'elemento **\<Student >** è un attributo di tipo **IDREFS** che fa riferimento alla colonna CourseID nella tabella di registrazione.  
+ Nello schema di mapping XSD seguente viene fornita una vista XML delle tabelle tramite gli ** \<elementi Student>**, ** \<Course>** e ** \<>di registrazione** . Gli attributi **IDREFS** nello schema di mapping specificano la relazione tra questi elementi. L'attributo **StudentIDList** dell'elemento ** \<Course>** è un attributo di tipo **IDREFS** che fa riferimento alla colonna StudentID nella tabella di registrazione. Analogamente, l'attributo di cui è stato eseguito il **rollup** sull'elemento ** \<Student>** è un attributo di tipo **IDREFS** che fa riferimento alla colonna CourseID nella tabella di registrazione.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -554,9 +554,9 @@ ms.locfileid: "72907926"
 </Schema>  
 ```  
   
- Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni &#40;sulla sicurezza dell'Updategram SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

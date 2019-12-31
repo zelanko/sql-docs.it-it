@@ -1,7 +1,7 @@
 ---
-title: Supporto del tipo di dati per i miglioramenti di data e ora ODBC | Microsoft Docs
+title: Supporto del tipo, data e ora ODBC
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 2b8af68f94a9da2e771074a8a4366417b91f5c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73784004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254843"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,15 +35,16 @@ ms.locfileid: "73784004"
   
  Nella tabella seguente viene illustrato il mapping completo per il tipo di server. Si noti che alcune celle della tabella contengono due voci; in questi casi, la prima è il valore per ODBC 3.0 mentre la seconda è il valore per ODBC 2.0.  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
 |--------------------------|-------------------|-----------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Data|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
+|Ora|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-  
+||||
+
  Nella tabella seguente vengono elencati i tipi ODBC C e le strutture corrispondenti. Poiché ODBC non consente i tipi C definiti dal driver, viene utilizzato SQL_C_BINARY per time e datetimeoffset come strutture binarie.  
   
 |Tipo di dati SQL|Layout in memoria|Tipo di dati C predefinito|Valore (sqlext.h)|  
@@ -52,7 +53,8 @@ ms.locfileid: "73784004"
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
 |SQL_SS_TIME2|SQL_SS_TIME2_STRUCT|SQL_C_SS_TIME2<br /><br /> SQL_C_BINARY (ODBC 3.5 e versioni precedenti)|0x4000 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
 |SQL_SS_TIMESTAMPOFFSET|SQL_SS_TIMESTAMPOFFSET_STRUCT|SQL_C_SS_TIMESTAMPOFFSET<br /><br /> SQL_C_BINARY (ODBC 3.5 e versioni precedenti)|0x4001 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
-  
+|||||
+
  Quando viene specificata l'associazione SQL_C_BINARY, viene eseguito il controllo dell'allineamento e viene segnalato un errore in caso di allineamento non corretto. L'identificativo SQLSTATE per questo errore è IM016, con un messaggio indicante che l'allineamento della struttura non è corretto.  
   
 ## <a name="data-formats-strings-and-literals"></a>Formati di dati: stringhe e valori letterali  
@@ -60,13 +62,15 @@ ms.locfileid: "73784004"
   
 |Tipo di dati di SQL Server|Tipo di dati ODBC|Formato stringa per le conversioni client|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Questo tipo di dati ha un'accuratezza di un minuto. Il componente dei secondi sarà zero nell'output mentre verrà arrotondato dal server nell'input.|  
 |Data|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
+|Ora|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' aaaa-mm-gg hh: mm: SS [. 9999999]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
-  
+||||
+
  Non vi sono modifiche nelle sequenze di escape ODBC per i valori letterali di data/ora.  
   
  I secondi frazionari nei risultati utilizzano sempre il punto (.), anziché i due punti (:).  
@@ -111,7 +115,7 @@ ms.locfileid: "73784004"
 ### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  In questa struttura è possibile aggiungere fino a 12 byte nei sistemi operativi a 32 bit e a 64 bit.  
   
-```  
+```cpp
 typedef struct tagSS_TIME2_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
@@ -122,7 +126,7 @@ typedef struct tagSS_TIME2_STRUCT {
   
 ### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-```  
+```cpp
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
    SQLSMALLINT year;  
    SQLUSMALLINT month;  
@@ -139,6 +143,4 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Se la **timezone_hour** è negativa, il **timezone_minute** deve essere negativo o zero. Se il **timezone_hour** è positivo, il **timezone_minute** deve essere positivo o zero. Se il **timezone_hour** è zero, l' **timezone_minute** può avere un valore compreso nell'intervallo da-59 a + 59.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti &#40;di data e ora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+ [Miglioramenti di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

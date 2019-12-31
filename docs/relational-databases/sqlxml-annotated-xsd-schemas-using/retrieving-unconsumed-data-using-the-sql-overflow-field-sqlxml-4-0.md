@@ -1,6 +1,5 @@
 ---
-title: 'Recupero di dati non utilizzati tramite SQL: overflow-field (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Ottenere dati non utilizzati con SQL: overflow-field (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907172"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257399"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database di utilizzando schemi con annotazioni, è possibile specificare l'attributo **SQL: overflow-field** per identificare la colonna nella tabella in cui sono archiviati i dati di overflow. È possibile specificare l'attributo **SQL: overflow-field** nell' **elemento\<** .  
+  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database di utilizzando schemi con annotazioni, è possibile specificare l'attributo **SQL: overflow-field** per identificare la colonna nella tabella in cui sono archiviati i dati di overflow. È possibile specificare l'attributo **SQL: overflow-field** nell' ** \<elemento>**.  
   
  I dati vengono quindi recuperati nei modi seguenti:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72907172"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Specifica di sql:overflow-field per un elemento  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>R. Specifica di sql:overflow-field per un elemento  
  In questo esempio si presuppone che sia stato eseguito lo script seguente per far sì che una tabella denominata Customers2 esista nel database tempdb:  
   
 ```  

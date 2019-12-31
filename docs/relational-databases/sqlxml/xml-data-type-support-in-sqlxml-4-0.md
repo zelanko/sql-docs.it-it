@@ -1,5 +1,5 @@
 ---
-title: Supporto del tipo di dati in SQLXML 4.0 XML | Microsoft Docs
+title: Supporto del tipo di dati xml in SQLXML 4.0
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,43 +14,43 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd2de6167b646610e8b57898b186accbbc1593d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135286"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252165"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati di **xml** tipo di dati. Questo argomento vengono fornite informazioni sul modo in cui SQLXML 4.0 riconosce istanze del **xml** tipo di dati e implementa il supporto per loro.  
+  A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , supporta i dati tipizzati XML utilizzando il tipo di dati **XML** . In questo argomento vengono fornite informazioni sul modo in cui SQLXML 4,0 riconosce le istanze del tipo di dati **XML** e ne implementa il supporto.  
   
 ## <a name="working-with-xml-data-types"></a>Utilizzo dei tipi di dati xml  
- Per altre informazioni su come usare tabelle SQL che implementano **xml** colonne di tipo di dati vengono forniti gli esempi seguenti:  
+ Per ulteriori informazioni sull'utilizzo delle tabelle SQL che implementano colonne con tipo di dati **XML** , sono disponibili gli esempi seguenti:  
   
 |Attività|Esempio|Argomento|  
 |----------|-------------|-----------|  
-|Come eseguire il mapping e includere un **xml** colonna in una vista XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|Come inserire dati in un' **xml** colonna con updategram|"Inserimento di dati in una colonna con tipo di dati XML"|[Inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|Il caricamento di dati XML in BULK un' **xml** colonna|"Caricamento bulk in colonne con tipo di dati xml"|[Esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|Come eseguire il mapping e includere una colonna **XML** in una visualizzazione XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito di elementi e attributi XSD a tabelle e colonne &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Come inserire dati in una colonna **XML** con updategram|"Inserimento di dati in una colonna con tipo di dati XML"|[Inserimento di dati mediante updategram XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Caricamento bulk di dati XML in una colonna **XML**|"Caricamento bulk in colonne con tipo di dati xml"|[Esempi di caricamento bulk XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>Linee guida e limitazioni  
   
--   **\<XSD: qualsiasi >** non può essere mappato a una colonna che include un' **xml** tipo di dati. Supporto in SQLXML per questo scenario viene fornito tramite il **SQL: overflow-campo** annotazione. Un'altra soluzione alternativa consiste nell'eseguire il mapping di un **xml** campo come elemento di tipo di dati **xsd: anyType**. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
+-   xsd: non è possibile eseguire il mapping di **** **qualsiasi>a una colonna che include un tipo di dati \<** XML. Il supporto in SQLXML per questo scenario viene fornito tramite l'annotazione **SQL: overflow-field** . Un'altra soluzione alternativa consiste nel eseguire il mapping di un campo con tipo di dati **XML** come elemento di **xsd: anyType**. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
   
--   Query XPath nel contenuto di **xml** colonne di tipo di dati non è supportato.  
+-   La query XPath nel contenuto delle colonne con tipo di dati **XML** non è supportata.  
   
--   Usando un **xml** colonna di tipo nelle annotazioni in cui non è supportata (ad esempio **SQL: Relationship** e **SQL: Key-campi**) o consentita restituirà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errori che non verranno intercettati dai componenti di livello intermedio implementano SQLXML 4.0. Questo problema si verifica in quanto SQLXML non richiede informazioni sul tipo SQL. Questo comportamento è simile al comportamento di SQLXML per altri tipi di dati, ad esempio i tipi BLOB e binary.  
+-   Se si utilizza una colonna con tipo di dati **XML** nelle annotazioni in cui non è supportata (ad esempio, **SQL: Relationship** e **SQL: key-fields**) o consentita, verranno generati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errori che non verranno intercettati dai componenti di livello intermedio che implementano SQLXML 4,0. Questo problema si verifica in quanto SQLXML non richiede informazioni sul tipo SQL. Questo comportamento è simile al comportamento di SQLXML per altri tipi di dati, ad esempio i tipi BLOB e binary.  
   
--   Mapping **xml** colonne è supportata solo per gli schemi XSD. Gli schemi XDR non supportano il mapping **xml** colonne.  
+-   Il mapping di colonne **XML** è supportato solo per gli schemi XSD. Gli schemi XDR non supportano il mapping di colonne **XML** .  
   
--   SQLXML 4.0 si basa sul supporto dell'analisi XML disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un' **xml** colonna può eseguire il mapping come XML tipizzato o non tipizzato. In entrambi i casi, SQLXML 4.0 non convalida i dati XML di input.  Se i dati XML di input non sono validi o corretti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo segnala a SQLXML e propaga qualsiasi informazione pertinente sugli errori restituita dal server all'utente.  
+-   SQLXML 4.0 si basa sul supporto dell'analisi XML disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile eseguire il mapping di una colonna **XML** come XML tipizzato o XML non tipizzato. In entrambi i casi, SQLXML 4.0 non convalida i dati XML di input.  Se i dati XML di input non sono validi o corretti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo segnala a SQLXML e propaga qualsiasi informazione pertinente sugli errori restituita dal server all'utente.  
   
--   SQLXML 4.0 si basa sul supporto limitato per i DTD disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente a una definizione DTD interna nei **xml** dati di tipo, che può essere usato per fornire i valori predefiniti e sostituire i riferimenti alle entità con il relativo contenuto espanso. SQLXML passa i dati XML "come sono", inclusa la definizione DTD interna, al server. È possibile convertire definizioni DTD in documenti XSD (XML Schema) utilizzando strumenti di terze parti e caricare i dati con schemi XSD inline nel database.  
+-   SQLXML 4.0 si basa sul supporto limitato per i DTD disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]consente una DTD interna nei dati del tipo di dati **XML** , che può essere utilizzata per fornire valori predefiniti e sostituire i riferimenti alle entità con il relativo contenuto espanso. SQLXML passa i dati XML "come sono", inclusa la definizione DTD interna, al server. È possibile convertire definizioni DTD in documenti XSD (XML Schema) utilizzando strumenti di terze parti e caricare i dati con schemi XSD inline nel database.  
   
--   SQLXML 4.0 non mantiene istruzioni di elaborazione di dichiarazione XML, ad esempio, in base al comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al contrario, la dichiarazione XML viene trattata come una direttiva per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parser XML e i relativi attributi (versione, codifica e autonomi) vengono persi dopo aver convertiti i dati per il **xml** tipo di dati. I dati XML vengono archiviati internamente come UCS-2. Tutte le altre istruzioni di elaborazione nell'istanza XML vengono mantenuti. sono consentite nel **xml** colonna e può essere supportato da SQLXML.  
+-   SQLXML 4,0 non mantiene le istruzioni di elaborazione della dichiarazione XML (ad esempio,) in base al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamento di. Al contrario, la dichiarazione XML viene considerata come una direttiva per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il parser XML e i relativi attributi (versione, codifica e autonoma) vengono persi dopo la conversione dei dati nel tipo di dati **XML** . I dati XML vengono archiviati internamente come UCS-2. Tutte le altre istruzioni di elaborazione nell'istanza XML vengono mantenute. sono consentiti nella colonna **XML** e possono essere supportati da SQLXML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [&#40;di dati XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   
