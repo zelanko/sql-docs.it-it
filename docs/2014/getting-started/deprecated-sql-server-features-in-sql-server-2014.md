@@ -1,5 +1,5 @@
 ---
-title: SQL Server funzionalità deprecate in SQL Server 2014 | Microsoft Docs
+title: Funzionalità di SQL Server deprecate in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089474"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228222"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server deprecate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -23,16 +23,21 @@ ms.locfileid: "66089474"
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Funzionalità non supportate nella prossima versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Le funzionalità riportate di seguito di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] non saranno supportate nella prossima versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate. La colonna Nome funzionalità viene visualizzata negli eventi di traccia come nome dell'oggetto, mentre nei contatori delle prestazioni e in sys.dm_os_performance_counters viene visualizzata come nome dell'istanza. L'ID della funzionalità viene visualizzato negli eventi di traccia come ObjectId.  
   
-|Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
+|Categoria|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Programmabilità dei dati|[sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) o ASP.NET|Servizi Web XML nativi|22|  
-|Programmabilità dei dati|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) o ASP.NET|Servizi Web XML nativi|23|  
+|Programmabilità dei dati|[sys. soap_endpoints &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) o ASP.NET|Servizi Web XML nativi|22|  
+|Programmabilità dei dati|[sys. endpoint_webmethods &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) o ASP.NET|Servizi Web XML nativi|23|  
   
 ### <a name="slipstream-functionality"></a>Funzionalità di integrazione  
- La funzionalità Aggiornamento prodotto sostituisce la funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. I parametri della riga di comando /*PCUSource* e /*CUSource*associati a tale funzionalità non devono pertanto essere più utilizzati. Tali parametri continuano a funzionare, ma potrebbero essere rimossi nelle versioni future del programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il parametro /*UpdateSource* combina la funzionalità dei parametri di integrazione /*PCUSource* e /*CUSource*.  
+ La [funzionalità di aggiornamento del prodotto](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) è stata introdotta in SQL Server 2012 come estensione della funzionalità di integrazione disponibile [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] in PCU1. In SQL Server 2014, la funzionalità di aggiornamento del prodotto è il metodo consigliato da usare per l'integrazione di SQL Server. Pertanto, i parametri della riga di comando,/*PCUSource* e/*CUSOURCE*, associati alla funzionalità di integrazione originale, non devono più essere utilizzati. Questi parametri continueranno a funzionare, ma potrebbero essere rimossi in una versione futura del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] programma di installazione. Il parametro consigliato da usare è/*UpdateSource* che combina la funzionalità dei parametri di integrazione originali,/*PCUSource* e/*CUSOURCE*.  
   
- Per altre informazioni sulla funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vedere [integrare un aggiornamento di SQL Server](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
-  
+ Per ulteriori informazioni sulla funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vedere la pagina relativa all' [installazione integrata di un SQL Server aggiornamento](https://go.microsoft.com/fwlink/?LinkId=219945) (.https://go.microsoft.com/fwlink/?LinkId=219945)  
+ Per informazioni su come usare/*UpdateSource* per integrare SQL Server compilazioni, vedere gli argomenti seguenti:
+ 
+ - [Come applicare la patch SQL Server installazione di 2012 con un pacchetto di installazione aggiornato (usando UpdateSource per ottenere una configurazione intelligente)](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)
+ 
+ - [Il programma di installazione di SQL Server 2012 è diventato più intelligente...](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
+ 
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   

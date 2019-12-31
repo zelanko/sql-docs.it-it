@@ -1,6 +1,7 @@
 ---
-title: Consenti accesso alla rete a un Database di Mirroring Endpoint tramite l'autenticazione di Windows (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Accesso di rete a un endpoint del mirroring del database
+description: Informazioni su come consentire l'accesso alla rete authenticatino di Windows a un endpoint del mirroring del database per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d561c3939a8f13767faf9195102080cc7b73af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807485"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228574"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows (SQL Server)
   L'utilizzo dell'autenticazione di Windows per la connessione degli endpoint del mirroring di database di due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede la configurazione manuale degli account di accesso nelle seguenti condizioni:  
@@ -53,9 +54,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [Endpoint del mirroring del database &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [&#40;SQL Server dell'endpoint del mirroring del database&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

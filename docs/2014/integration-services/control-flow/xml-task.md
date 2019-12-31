@@ -15,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829364"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232732"
 ---
 # <a name="xml-task"></a>Attività XML
   L'attività XML consente di eseguire operazioni su dati in formato XML. Tramite questa attività un pacchetto può recuperare documenti XML, applicare operazioni ai documenti utilizzando fogli di stile XSLT (Extensible Stylesheet Language Transformation) ed espressioni XPath, unire più documenti oppure convalidare, confrontare e salvare i documenti aggiornati in file e variabili.  
@@ -46,19 +46,19 @@ ms.locfileid: "62829364"
   
  Se l'origine è una variabile, la variabile specificata conterrà il percorso del documento XML.  
   
- Se l'origine è una gestione connessione file, le informazioni sull'origine verranno fornite dalla gestione connessione file specificata, configurata separatamente, a cui viene fatto riferimento dall'attività XML. La stringa di connessione della gestione connessione file specifica il percorso del file XML. Per altre informazioni, vedere [File Connection Manager](../connection-manager/file-connection-manager.md).  
+ Se l'origine è una gestione connessione file, le informazioni sull'origine verranno fornite dalla gestione connessione file specificata, configurata separatamente, a cui viene fatto riferimento dall'attività XML. La stringa di connessione della gestione connessione file specifica il percorso del file XML. Per ulteriori informazioni, vedere [gestione connessione file](../connection-manager/file-connection-manager.md).  
   
  L'attività XML può essere configurata in modo da salvare il risultato dell'operazione in una variabile o in un file. Se il risultato viene salvato in un file, l'attività XML utilizzerà una gestione connessione file per accedervi. Anche i risultati del Diffgram generato dall'operazione Diff possono essere salvati in file e variabili.  
   
 ## <a name="predefined-xml-operations"></a>Operazioni XML predefinite  
  L'attività XML include un set predefinito di operazioni applicabili ai documenti XML, descritte nella tabella seguente.  
   
-|Operazione|Descrizione|  
+|Operazione|Description|  
 |---------------|-----------------|  
 |Diff|Consente di confrontare due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Diff esegue un confronto con un secondo documento XML, rileva le differenze e le scrive in un documento Diffgram in formato XML. Questa operazione include proprietà per la personalizzazione del confronto.|  
-|Merge|Consente di unire due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Merge aggiunge il contenuto di un secondo documento al documento di base. L'operazione può specificare una posizione di unione nel documento di base.|  
+|Unione|Consente di unire due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Merge aggiunge il contenuto di un secondo documento al documento di base. L'operazione può specificare una posizione di unione nel documento di base.|  
 |Patch|Applica l'output dell'operazione Diff, detto documento Diffgram, a un documento XML, per creare un nuovo documento padre che include il contenuto del documento Diffgram.|  
-|Convalida|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition).|  
+|Validate|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition).|  
 |XPath|Consente di eseguire valutazioni e query XPath.|  
 |XSLT|Consente di eseguire trasformazioni XSL in documenti XML.|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62829364"
   
  L'operazione Diff include un set di opzioni per la personalizzazione del confronto XML, Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|Valore che specifica se i nodi dei commenti devono essere confrontati.|  
 |**IgnoreNamespaces**|Valore che specifica se l'URI (Uniform Resource Identifier) dello spazio dei nomi di un elemento e i nomi dei suoi attributi devono essere confrontati. Se questa opzione è impostata su `true`, due elementi con lo stesso nome locale e spazio dei nomi diverso verranno considerati identici.|  
@@ -110,7 +110,7 @@ ms.locfileid: "62829364"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività XML  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Descrizione|  
+|Voce di log|Description|  
 |---------------|-----------------|  
 |`XMLOperation`|Fornisce informazioni sull'operazione eseguita dall'attività.|  
   
@@ -119,28 +119,27 @@ ms.locfileid: "62829364"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività XML &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività XML &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [Convalidare XML con l'attività XML](xml-task.md)  
   
--   [Pagina Espressioni](../expressions/expressions-page.md)  
+-   [Pagina espressioni](../expressions/expressions-page.md)  
   
  Per ulteriori informazioni sull'impostazione delle proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configurazione a livello di codice dell'attività XML  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-content"></a>Contenuto correlato  
+## <a name="related-content"></a>Contenuti correlati  
   
 -   Intervento nel blog sul [componente script di destinazione XML](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)sul sito Web agilebi.com  
   
--   Esempio di CodePlex sull' [esempio di elaborazione di pacchetti dati XML](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), su www.codeplex.com  
-  
+-   Esempio di CodePlex sull' [esempio di elaborazione di pacchetti dati XML](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), su www.codeplex.com  
   

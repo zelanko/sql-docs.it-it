@@ -1,5 +1,5 @@
 ---
-title: Coppie di File di monitoraggio e risoluzione dei problemi di Merge per dati e differenziali | Microsoft Docs
+title: Monitoraggio e risoluzione dei problemi di merge per coppie di file di dati e differenziali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62844089"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228176"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Monitoraggio e risoluzione di problemi relativi all'unione di coppie di file di dati e differenziali
   OLTP in memoria utilizza i criteri di unione per unire automaticamente coppie di file di dati e differenziali adiacenti. Non è possibile disabilitare l'attività di unione.  
@@ -24,10 +24,10 @@ ms.locfileid: "62844089"
   
 -   Confrontare le dimensioni di archiviazione in memoria con le dimensioni di archiviazione complessive. Se le dimensioni di archiviazione sono eccessivamente grandi, è probabile che l'unione non venga attivata. Per informazioni  
   
--   Esaminare lo spazio usato nel file di dati e differenziali mediante [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) per vedere se merge non viene attivato quando dovrebbe.  
+-   Esaminare lo spazio utilizzato nei file di dati e differenziali utilizzando [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) per verificare se il merge non viene attivato quando necessario.  
   
 ## <a name="performing-a-manual-merge"></a>Esecuzione di un'unione manuale  
- È possibile usare [Sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql) per eseguire un merge manuale.  
+ È possibile utilizzare [sys. sp_xtp_merge_checkpoint_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql) per eseguire un'operazione di merge manuale.  
   
  Utilizzare la seguente query per recuperare le informazioni sui file di dati e differenziali.  
   
@@ -47,9 +47,8 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Si supponga che le tre coppie di file di dati e differenziali contengano ciascuna 15.836 righe e 5.279 righe eliminate. Dopo l'unione, il nuovo file di dati contiene 31.872 righe e 0 righe eliminate. Le dimensioni del nuovo file di dati possono essere molto maggiori rispetto a quelle inizialmente allocate di 128 MB. Ciò avviene perché l'unione manuale esegue l'override dei criteri di unione e forza l'unione dei file richiesti.  
   
- Il blog [stato di transizione del file di Checkpoint nel database con tabelle ottimizzate per la memoria](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) descrive la transizione di stato di coppie di file di dati e differenziali dall'inizio alla garbage collection.  
+ La [transizione di stato del Blog dei file del checkpoint nei database con tabelle ottimizzate](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) per la memoria descrive la transizione di stato delle coppie di file di dati e differenziali da inizio a Garbage Collection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   

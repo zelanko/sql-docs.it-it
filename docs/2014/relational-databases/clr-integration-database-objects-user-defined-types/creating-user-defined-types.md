@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919617"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232222"
 ---
 # <a name="creating-a-user-defined-type"></a>Creazione di un tipo definito dall'utente
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
@@ -32,7 +32,7 @@ sp_configure 'clr enabled', 1
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Requisiti per i tipi definiti dall'utente](creating-user-defined-types-requirements.md)  
  Vengono descritti i requisiti per la codifica dei tipi definiti dall'utente.  
   
@@ -40,9 +40,9 @@ Reconfigure
  Vengono illustrate le tecniche di codifica coinvolte nella creazione di tipi definiti dall'utente.  
   
 ## <a name="example"></a>Esempio  
- Il listato di codice seguente definisce il punto di tipo definito dall'utente, descritto dettagliatamente nelle [codifica di tipi](creating-user-defined-types-coding.md).  
+ Nel listato di codice seguente viene definito il tipo definito dall'utente Point, descritto in dettaglio in [codifica dei tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
- È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [esempi del motore di Database di SQL Server](http://msftengprodsamples.codeplex.com/).  
+ È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [SQL Server motore di database Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -331,6 +331,5 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi definiti dall'utente per CLR](clr-user-defined-types.md)  
-  
+ [Tipi CLR definiti dall'utente](clr-user-defined-types.md)  
   

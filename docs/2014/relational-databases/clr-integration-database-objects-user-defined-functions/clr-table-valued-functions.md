@@ -1,5 +1,5 @@
 ---
-title: Le funzioni con valori di tabella CLR | Microsoft Docs
+title: Funzioni CLR con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874544"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232286"
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
   Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
@@ -45,7 +45,7 @@ ms.locfileid: "62874544"
  I parametri con valori di tabella sono tipi di tabella definiti dall'utente passati in una procedura o in una funzione che consentono di passare in modo efficiente più righe di dati al server. I parametri con valori di tabella offrono funzionalità simili a quelle delle matrici di parametri, ma garantiscono più flessibilità e una maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Consentono inoltre di ottenere prestazioni potenzialmente migliori. I parametri con valori di tabella aiutano anche a ridurre il numero di round trip al server. Anziché inviare più richieste al server, ad esempio con un elenco di parametri scalari, è possibile inviare i dati al server sotto forma di parametro con valori di tabella. Un tipo di tabella definito dall'utente non può essere passato come parametro con valori di tabella a una stored procedure gestita o a una funzione in esecuzione nel processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], né può essere restituito dalle stesse. Per altre informazioni sui parametri con valori di tabella, vedere [Usare parametri con valori di tabella &#40;motore di database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parametri di output e funzioni con valori di tabella  
- Le funzioni con valori di tabella possono restituire le informazioni tramite parametri di output. Il parametro corrispondente nella funzione con valori di tabella nel codice di implementazione deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta parametri di output nello stesso modo in cui tali parametri sono supportati in Visual C#. È necessario specificare il parametro per riferimento e applicare il \<out () > attributo per rappresentare un parametro di output, come illustrato di seguito:  
+ Le funzioni con valori di tabella possono restituire le informazioni tramite parametri di output. Il parametro corrispondente nella funzione con valori di tabella nel codice di implementazione deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta parametri di output nello stesso modo in cui tali parametri sono supportati in Visual C#. È necessario specificare il parametro per riferimento e applicare l' \<attributo out () > per rappresentare un parametro di output, come nell'esempio seguente:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +76,8 @@ select * from table t cross apply function(t.column);
   
 -   Vengono generate da dati esterni. Una funzione con valori di tabella che legge, ad esempio, il log eventi e lo espone come tabella.  
   
- **Nota** una funzione con valori di tabella può eseguire solo l'accesso ai dati tramite un [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query nella `InitMethod` metodo e non nel `FillRow` (metodo). `InitMethod` deve essere contrassegnato con la proprietà dell'attributo `SqlFunction.DataAccess.Read` se viene eseguita una query [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Nota** Una funzione con valori di tabella può eseguire l'accesso ai dati [!INCLUDE[tsql](../../includes/tsql-md.md)] solo tramite una `InitMethod` query nel metodo e non nel `FillRow` metodo. 
+  `InitMethod` deve essere contrassegnato con la proprietà dell'attributo `SqlFunction.DataAccess.Read` se viene eseguita una query [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>Funzione con valori di tabella di esempio  
  La funzione con valori di tabella seguente restituisce informazioni dal registro eventi di sistema. La funzione accetta un singolo argomento stringa contenente il nome del registro eventi da leggere.  
@@ -174,8 +175,8 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una Query di SQL Server  
- Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una query di SQL Server  
+ Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Per [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) ulteriori informazioni sul download di AdventureWorks, vedere.  
   
  Assegnare al file di codice sorgente il nome FindInvalidEmails.cs o FindInvalidEmails.vb.  
   
@@ -414,5 +415,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

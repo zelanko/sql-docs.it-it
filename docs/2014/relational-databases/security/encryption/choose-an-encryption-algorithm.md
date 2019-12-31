@@ -12,20 +12,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011387"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957255"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Scelta di un algoritmo di crittografia
   La crittografia è una delle molte difese in profondità che gli amministratori possono utilizzare per proteggere un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Gli algoritmi di crittografia definiscono trasformazioni dei dati che non possono essere invertite facilmente dagli utenti non autorizzati. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente ad amministratori e sviluppatori di scegliere tra diversi algoritmi, tra cui DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 a 128 bit, DESX, AES a 128 bit, AES a 192 bit e AES a 256 bit.  
+ Gli algoritmi di crittografia definiscono trasformazioni dei dati che non possono essere facilmente invertite da utenti non autorizzati. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente ad amministratori e sviluppatori di scegliere tra diversi algoritmi, tra cui DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 a 128 bit, DESX, AES a 128 bit, AES a 192 bit e AES a 256 bit.  
   
  Nessun algoritmo è ideale in tutte le situazioni e la valutazione dei vantaggi relativi a ogni algoritmo esula dall'ambito della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sono comunque validi i principi generali seguenti:  
   
@@ -58,18 +59,18 @@ ms.locfileid: "63011387"
   
 -   Le chiavi simmetriche create con ALGORITHM = TRIPLE_DES utilizzano TRIPLE DES con una chiave a 128 bit.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|Crittografia tramite una chiave simmetrica.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Crittografia tramite una chiave asimmetrica.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|Crittografia tramite certificato.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
-|Crittografia dei file di database mediante Transparent Data Encryption.|[Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)|  
-|Come crittografare una colonna di una tabella.|[Crittografia di una colonna di dati](encrypt-a-column-of-data.md)|  
+|Crittografia tramite una chiave simmetrica.|[CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Crittografia tramite una chiave asimmetrica.|[CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Crittografia tramite certificato.|[CREAZIONE di un certificato &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-certificate-transact-sql)|  
+|Crittografia dei file di database mediante Transparent Data Encryption.|[&#41;Transparent Data Encryption &#40;Transparent Data Encryption](transparent-data-encryption.md)|  
+|Come crittografare una colonna di una tabella.|[Crittografare una colonna di dati](encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Crittografia di SQL Server](sql-server-encryption.md)   
+ [Crittografia SQL Server](sql-server-encryption.md)   
  [Gerarchia di crittografia](encryption-hierarchy.md)  
   
   

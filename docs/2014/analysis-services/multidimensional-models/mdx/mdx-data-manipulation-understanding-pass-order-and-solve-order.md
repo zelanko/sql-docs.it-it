@@ -1,5 +1,5 @@
 ---
-title: Informazioni sull'ordine di calcolo e valutazione (MDX) | Microsoft Docs
+title: Informazioni sull'ordine di valutazione e di valutazione (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229427"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Informazioni sull'ordine di calcolo e di valutazione (MDX)
   L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
@@ -37,7 +37,7 @@ ms.locfileid: "66074243"
 ## <a name="solve-order"></a>Ordine di valutazione  
  L'ordine di valutazione determina la priorità di calcolo in presenza di espressioni in conflitto. Nell'ambito di una singola sessione, l'ordine di valutazione determina quanto segue:  
   
--   L'ordine di valutazione applicato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per dimensioni, membri, membri calcolati, rollup personalizzati e celle calcolate.  
+-   Ordine in cui [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengono valutate dimensioni, membri, membri calcolati, rollup personalizzati e celle calcolate.  
   
 -   L'ordine utilizzato da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per calcolare membri personalizzati, membri calcolati, rollup personalizzati e celle calcolate.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66074243"
  Per illustrare le potenziali complessità correlate all'ordine di valutazione, la serie seguente di query MDX inizia con due query che singolarmente non presentano problemi a livello di ordine di valutazione. Queste due query vengono quindi combinate in una singola query, che richiede l'applicazione dell'ordine di valutazione.  
   
 > [!NOTE]  
->  È possibile eseguire queste query MDX sul database multidimensionale di esempio Adventure Works. È possibile scaricare l'esempio relativo ai [modelli multidimensionali di AdventureWorks per SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) dal sito codeplex.  
+>  È possibile eseguire queste query MDX sul database multidimensionale di esempio Adventure Works. È possibile scaricare l'esempio relativo ai [modelli multidimensionali di AdventureWorks per SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) dal sito codeplex.  
   
 ### <a name="query-1-differences-in-income-and-expenses"></a>Query 1-differenze tra reddito e spese  
  Per la prima query MDX, calcolare la differenza tra vendite e costi per ogni anno costruendo una semplice query MDX simile all'esempio seguente:  
@@ -92,9 +92,9 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Year Difference**|($20,160.56)|$2,878.06|  
+|**Differenza anno**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2-percentage-of-income-after-expenses"></a>Query 2-percentuale di reddito al netto delle spese  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Query 2-percentuale di reddito dopo le spese  
  Per la seconda query, calcolare la percentuale di reddito al netto delle spese per ogni anno utilizzando la query MDX seguente:  
   
 ```  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  Le differenze nei set di risultati della prima e della seconda query sono dovute alla diversa posizione del membro calcolato. Nella prima query il membro calcolato fa parte dell'asse ROWS e non dell'asse COLUMNS indicato nella seconda query. Questa differenza di posizione diventa importante nella query successiva, in cui i due membri calcolati vengono combinati in una singola query MDX.  
   
-### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Eseguire una query differenza di combinazione di 3 anni e i calcoli di reddito netto  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Query 3: differenza tra anno combinato e calcolo del reddito netto  
  Nella query finale, in cui vengono combinati entrambi gli esempi precedenti in una singola query MDX, l'ordine di valutazione diventa importante a causa dei calcoli in entrambe le colonne e le righe. Per assicurarsi che i calcoli vengano eseguiti nella sequenza corretta, definire la sequenza di esecuzione dei calcoli tramite la parola chiave `SOLVE_ORDER`.  
   
  La parola chiave `SOLVE_ORDER` consente di specificare l'ordine di valutazione dei membri calcolati in una query MDX o in un comando `CREATE MEMBER`. I valori integer utilizzati con la parola chiave `SOLVE_ORDER` sono relativi e non devono necessariamente iniziare da zero o essere consecutivi. Il valore indica semplicemente al sistema MDX di calcolare un membro in base ai valori derivati dal calcolo dei membri con un valore superiore. Se un membro calcolato viene definito senza la parola chiave `SOLVE_ORDER`, il relativo valore predefinito sarà zero.  
@@ -149,13 +149,14 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin` . Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
+ In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin` . Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
   
 ||Importo vendite Internet|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
+|**Differenza anno**|($20,160.56)|$2,878.06|114.28%|  
   
  Il risultato nella cella condivisa è basato sulla formula per `Profit Margin`. Ciò significa che in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene calcolato il risultato nella cella condivisa con i dati di `Year Difference` , generando la formula seguente (il risultato è arrotondato per maggiore chiarezza):  
   
@@ -163,7 +164,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- oppure  
+ o  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -195,7 +196,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Differenza anno**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Poiché nella query viene usata la formula `Year Difference` con i dati `Profit Margin` , la formula per la cella condivisa assomiglia al calcolo seguente:  
   
@@ -209,13 +210,12 @@ FROM [Adventure Works]
 0.4145 - 0.4160= -0.15  
 ```  
   
-## <a name="additional-considerations"></a>Ulteriori considerazioni  
+## <a name="additional-considerations"></a>Considerazione aggiuntive  
  L'ordine di valutazione può essere un aspetto estremamente complesso da affrontare, soprattutto in cubi con un numero elevato di dimensioni che includono membri calcolati, formule di rollup personalizzato o celle calcolate. Quando in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene valutata una query MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prende in considerazione i valori dell'ordine di valutazione per tutti gli elementi coinvolti in una determinata sessione, incluse le dimensioni del cubo specificate nella query MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
- [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
+ [CalculationCurrentPass &#40;&#41;MDX](/sql/mdx/calculationcurrentpass-mdx)   
+ [CalculationPassValue &#40;&#41;MDX](/sql/mdx/calculationpassvalue-mdx)   
  [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipolazione dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
-  
+ [Manipolazione dei dati &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
   

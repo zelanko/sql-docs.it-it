@@ -1,5 +1,5 @@
 ---
-title: Usare la raccolta PowerPivot | Microsoft Docs
+title: Utilizzare la raccolta PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,30 +10,30 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874478"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229233"
 ---
 # <a name="use-powerpivot-gallery"></a>Usare la raccolta PowerPivot
   La raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una raccolta documenti di SharePoint specifica che consente un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e report di Reporting Services contenenti dati PowerPivot.  
   
 > [!NOTE]  
->  A seconda della configurazione del server, si potrebbero visualizzare avvisi o messaggi di errore nell'area di anteprima per documenti specifici. I messaggi possono essere visualizzati quando una cartella di lavoro di Excel è impostata per aggiornare automaticamente i dati ad ogni apertura. I messaggi di avviso dell'aggiornamento dati vengono visualizzati come immagine di anteprima se Excel Services è configurato per mostrare i messaggi di errore Avvisa in caso di aggiornamento. Gli amministratori di farm o di servizi possono modificare le impostazioni di configurazione per consentire la visualizzazione di un'anteprima del foglio di lavoro effettivo. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  A seconda della configurazione del server, si potrebbero visualizzare avvisi o messaggi di errore nell'area di anteprima per documenti specifici. I messaggi possono essere visualizzati quando una cartella di lavoro di Excel è impostata per aggiornare automaticamente i dati ad ogni apertura. I messaggi di avviso dell'aggiornamento dati vengono visualizzati come immagine di anteprima se Excel Services è configurato per mostrare i messaggi di errore Avvisa in caso di aggiornamento. Gli amministratori di farm o di servizi possono modificare le impostazioni di configurazione per consentire la visualizzazione di un'anteprima del foglio di lavoro effettivo. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-##  <a name="bkmk_top"></a> Contenuto dell'argomento  
+##  <a name="bkmk_top"></a>Contenuto dell'argomento  
   
 -   [Icone della raccolta PowerPivot](#icons)  
   
--   [Salvare una cartella di lavoro di Excel in raccolta PowerPivot](#add)  
+-   [Salvare una cartella di lavoro di Excel nella raccolta PowerPivot](#add)  
   
--   [Creare nuovi report o cartelle di lavoro basati su una cartella di lavoro di PowerPivot pubblicata](#newdocs)  
+-   [Creare nuovi report o cartelle di lavoro in base a una cartella di lavoro di PowerPivot pubblicata](#newdocs)  
   
 -   [Aprire una cartella di lavoro o un report in modalità pagina intera](#view)  
   
--   [Pianificazione dell'aggiornamento dati per cartelle di lavoro di PowerPivot in raccolta PowerPivot](#newdr)  
+-   [Pianificare l'aggiornamento dati per cartelle di lavoro di PowerPivot nella raccolta PowerPivot](#newdr)  
   
 -   [Eliminare una cartella di lavoro o un report nella raccolta PowerPivot](#delete)  
   
@@ -43,20 +43,20 @@ ms.locfileid: "70874478"
   
  [Prerequisiti](#prereq)  
   
-##  <a name="prereq"></a> Prerequisiti  
+##  <a name="prereq"></a>Prerequisiti  
   
 > [!NOTE]  
 >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
 > Per visualizzare il contenuto della libreria in Microsoft Edge, fare clic sulla scheda **Library** in Power Pivot Gallery, quindi impostare la visualizzazione raccolta documenti su **tutti i documenti**.    
 > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
->  Per ulteriori informazioni sulle funzionalità supportate da Microsoft Edge, vedere il Blog di Windows, [una pausa del passato, parte 2: come dire addio a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Per ulteriori informazioni sulle funzionalità supportate da Microsoft Edge, vedere il Blog di Windows, [una pausa del passato, parte 2: come dire addio a ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Per un elenco completo dei prerequisiti, vedere [creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
-##  <a name="icons"></a> Icone della raccolta PowerPivot  
+##  <a name="icons"></a>Icone nella raccolta PowerPivot  
  Le icone forniscono un indicatore visivo della disponibilità del contenuto e dello stato.  
   
-|Icona|Descrizione|  
+|Icona|Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icona clessidra viene visualizzata quando viene generata un'immagine di anteprima di ogni pagina del documento. Aggiornare la pagina per visualizzare l'aggiornamento dell'immagine.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|L'icona pagine viene visualizzata quando una cartella di lavoro o un report contiene più pagine di quante non possano essere visualizzate nella raccolta PowerPivot. Per visualizzare tutte le pagine, è necessario usare un'applicazione client.|  
@@ -64,18 +64,18 @@ ms.locfileid: "70874478"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|L'icona contenuto non disponibile viene visualizzata quando non è possibile eseguire il rendering del documento caricato nella raccolta PowerPivot. I tipi di documento supportati includono cartelle di lavoro e report di PowerPivot creati in Generatore report di SQL Server 2008 R2 Reporting Services.<br /><br /> Questa icona viene visualizzata anche se si ricicla un documento dal Cestino.<br /><br /> Se si ottiene questa icona per un documento che precedentemente disponeva di un'immagine di anteprima valida, è possibile aggiornare l'immagine modificando una proprietà del documento e salvando le modifiche.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|L'icona contenuto bloccato viene visualizzata quando le immagini di anteprima vengono disabilitate intenzionalmente per questo documento. La raccolta PowerPivot non genera immagini di anteprima per le cartelle di lavoro di Excel che non contengono dati PowerPivot o per cartelle di lavoro di PowerPivot o report di Reporting Services che non soddisfano i requisiti per la generazione di snapshot. Per altre informazioni, vedere la sezione Prerequisiti contenuta in questo argomento.|  
   
-##  <a name="add"></a> Salvare una cartella di lavoro di Excel in raccolta PowerPivot  
+##  <a name="add"></a>Salvare una cartella di lavoro di Excel nella raccolta PowerPivot  
  È possibile pubblicare le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella raccolta usando tutte le tecniche di condivisione fornite da Excel 2010. Ad esempio, in Excel 2010 è possibile usare Salva con nome per specificare un percorso di SharePoint di una raccolta o parte di esso.  
   
 1.  Salvare il file.  
   
-2.  1.  **Excel 2010:** nel menu File fare clic su **Salva e invia**.  
+2.  1.  **Excel 2010:** Scegliere **salva & Invia**dal menu file.  
   
     2.  Fare clic su **Salva in SharePoint**.  
   
     3.  Fare clic su **Opzioni pubblicazione** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   
-    1.  **Excel 2013:**  nel menu File fare clic su **Salva**.  
+    1.  **Excel 2013:**  Scegliere **Salva**dal menu file.  
   
     2.  Fare clic su **Opzioni visualizzazione browser** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "70874478"
   
 3.  In **Carica documento**selezionare un'opzione di caricamento, quindi immettere il nome e il percorso del file che si desidera caricare. Le impostazioni della raccolta determinano il punto in cui viene visualizzato il documento. Potrebbe essere necessario aggiornare la finestra del browser per visualizzare l'ultima aggiunta.  
   
-##  <a name="newdocs"></a> Creare nuovi report o cartelle di lavoro basati su una cartella di lavoro di PowerPivot pubblicata  
+##  <a name="newdocs"></a>Creare nuovi report o cartelle di lavoro in base a una cartella di lavoro di PowerPivot pubblicata  
  Per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è possibile creare cartelle di lavoro o report di Reporting Services aggiuntivi che usano la cartella di lavoro pubblicata come origine dati connessa.  
   
 |||  
@@ -113,19 +113,21 @@ ms.locfileid: "70874478"
 #### <a name="open-new-excel-workbook"></a>Apri nuova cartella di lavoro di Excel  
  Per creare una nuova cartella di lavoro di Excel da una esistente, è necessario che Excel e [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] siano già installati nel computer locale. Se si sceglie Apri nuova cartella di lavoro di Excel, viene avviato Excel, viene aperto un file (con estensione xlsx) della cartella di lavoro vuoto e vengono caricati in background i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come origine dati connessa. Nella nuova cartella di lavoro vengono usati solo i dati della finestra di PowerPivot nella cartella di lavoro originale. I grafici o le tabelle pivot della cartella di lavoro originale vengono esclusi. La nuova cartella di lavoro crea collegamenti ai dati nella cartella di lavoro originale. I dati non vengono copiati nella nuova cartella di lavoro.  
   
-##  <a name="view"></a> Aprire una cartella di lavoro o un report in modalità pagina intera  
- Fare clic su qualsiasi immagine di anteprima visibile del documento visualizzato in anteprima per aprirlo in modalità pagina intera indipendentemente dall'anteprima della raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] saranno visualizzate in un browser. I report di Reporting Services verranno aperti nella Web part visualizzatore di report che fa parte di una distribuzione di Reporting Services in un server SharePoint.  
+##  <a name="view"></a>Aprire una cartella di lavoro o un report in modalità pagina intera  
+ Fare clic su qualsiasi immagine di anteprima visibile del documento visualizzato in anteprima per aprirlo in modalità pagina intera indipendentemente dall'anteprima della raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] saranno visualizzate in un browser. I report di Reporting Services verranno aperti nella Web part visualizzatore di report che fa parte di una distribuzione di Reporting Services in un server SharePoint.  
   
  Un modo alternativo per visualizzare la cartella di lavoro in un browser consiste nell'aprirla in Excel in una workstation client. È necessario disporre di Excel 2013 o Excel 2010 e del componente aggiuntivo [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] per visualizzare il file. È possibile usare Excel 2007 per aprire il file, ma non è possibile usarlo per la trasformazione dei dati tramite Pivot. Per questo motivo, Excel 2013 o Excel 2010 è consigliato sia per la visualizzazione sia per la creazione di dati PowerPivot. Se non si dispone delle applicazioni necessarie, è necessario usare un browser per visualizzare la cartella di lavoro da SharePoint.  
   
-##  <a name="newdr"></a> Pianificazione dell'aggiornamento dati per cartelle di lavoro di PowerPivot in raccolta PowerPivot  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una cartella di lavoro di Excel pubblicata a intervalli pianificati.  
+##  <a name="newdr"></a>Pianificare l'aggiornamento dati per cartelle di lavoro di PowerPivot nella raccolta PowerPivot  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una cartella di lavoro di Excel pubblicata a intervalli pianificati.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Fare clic sul pulsante Gestisci aggiornamento dati per creare o visualizzare una pianificazione che recuperi i dati aggiornati dalle origini dati connesse. Per istruzioni su come creare una pianificazione, vedere [pianificare un aggiornamento dei dati &#40;PowerPivot per SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Fare clic sul pulsante Gestisci aggiornamento dati per creare o visualizzare una pianificazione che recuperi i dati aggiornati dalle origini dati connesse. Per istruzioni su come creare una pianificazione, vedere [pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Eliminare una cartella di lavoro o un report nella raccolta PowerPivot  
+##  <a name="delete"></a>Eliminare una cartella di lavoro o un report nella raccolta PowerPivot  
  Per eliminare un documento dalla raccolta, passare innanzitutto alla vista Tutti i documenti.  
   
 1.  In un sito di SharePoint aprire Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -138,7 +140,7 @@ ms.locfileid: "70874478"
   
 5.  In Gestisci in Documenti (File) fare clic sul pulsante **Elimina documento** .  
   
-##  <a name="image"></a> Aggiornare un'immagine di anteprima  
+##  <a name="image"></a>Aggiornare un'immagine di anteprima  
  Usare i passaggi seguenti per rigenerare un'immagine di anteprima per un documento nella raccolta PowerPivot.  
   
 1.  Impostare la raccolta PowerPivot sulla vista Tutti i documenti. A tale scopo, fare clic su **Raccolta** nella barra multifunzione e impostare **Visualizzazione corrente** su **Tutti i documenti**.  
@@ -147,9 +149,9 @@ ms.locfileid: "70874478"
   
 3.  Fare clic sulla freccia in giù visualizzata a destra, quindi selezionare **Modifica proprietà**.  
   
-4.  Fare clic su **Salva**. Il salvataggio del documento forza il servizio snapshot a rigenerare l'immagine di anteprima.  
+4.  Fare clic su **Save**. Il salvataggio del documento forza il servizio snapshot a rigenerare l'immagine di anteprima.  
   
-##  <a name="bkmk_known_issues"></a> Problemi noti  
+##  <a name="bkmk_known_issues"></a>Problemi noti  
   
 ### <a name="document-type-is-not-supported"></a>Tipo di documento non supportato  
  Il tipo di contenuto **Documento raccolta PowerPivot** non è supportato. Se si abilita il tipo di contenuto **Documento raccolta PowerPivot** per una raccolta documenti e si tenta di creare un nuovo documento di tale tipo, verrà visualizzato un messaggio di errore simile a uno dei seguenti:  
@@ -161,9 +163,8 @@ ms.locfileid: "70874478"
  Il tipo di contenuto **Documento raccolta PowerPivot** non viene aggiunto automaticamente alle raccolte documenti. Questo problema non viene riscontrato a meno che non si abiliti manualmente il tipo di contenuto non supportato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un percorso attendibile per siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Eliminare una raccolta PowerPivot](delete-power-pivot-gallery.md)   
+ [Creazione di un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Elimina raccolta PowerPivot](delete-power-pivot-gallery.md)   
  [Creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Pianificare un aggiornamento di dati &#40;PowerPivot per SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
-  
+ [Pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

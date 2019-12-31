@@ -9,19 +9,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978372"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957245"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
 
-In questo argomento viene descritto come creare una chiave master del database `master` nel database [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in [!INCLUDE[tsql](../../../includes/tsql-md.md)]utilizzando.
+In questo argomento viene descritto come creare una chiave master del database `master` nel database [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)].
 
 **Contenuto dell'argomento**
 
@@ -31,22 +31,22 @@ In questo argomento viene descritto come creare una chiave master del database `
 
 - [Per creare una chiave master del database utilizzando Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="BeforeYouBegin"></a>Prima di iniziare
 
-### <a name="Security"></a> Sicurezza
+### <a name="Security"></a>Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="Permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione CONTROL per il database.
 
-## <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL
+## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Per creare la chiave master di un database
 
 1. Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.
-2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
-3. Espandere **database di sistema**, fare clic `master` con il pulsante destro del mouse e quindi scegliere **nuova query**.
-4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.
+2. In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
+3. Espandere **Database di sistema**, fare clic con il pulsante destro del mouse su `master` e quindi scegliere **Nuova query**.
+4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.
 
   ```sql
   -- Creates the master key.

@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154548"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232087"
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
   DLM (Database lifecycle management, gestione del ciclo di vita del database) è un approccio basato su criteri per la gestione dei database e delle risorse dei dati. DLM non è un prodotto, bensì un approccio completo per la gestione dello schema, dei dati e dei metadati del database per un'applicazione di database. L'approccio attento e dinamico a DLM consente a un'organizzazione di gestire le risorse dei dati in base ai livelli appropriati di prestazioni, protezione, disponibilità e costi.  
@@ -45,10 +45,9 @@ ms.locfileid: "70154548"
  Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Home Page di Azure](http://www.windowsazure.com/)   
- [Centro per sviluppatori di Azure](http://www.windowsazure.com/develop/overview/)   
- [Centro di gestione di Azure](http://www.windowsazure.com/manage/overview/)   
- [Blog del team di Azure](http://www.windowsazure.com/community/blog/)   
- [Opzioni di supporto tecnico di Azure](http://www.windowsazure.com/support/contact/)  
-  
+ [Home page di Azure](https://www.windowsazure.com/)   
+ [Centro per sviluppatori di Azure](https://www.windowsazure.com/develop/overview/)   
+ [Centro di gestione di Azure](https://www.windowsazure.com/manage/overview/)   
+ [Blog del team di Azure](https://www.windowsazure.com/community/blog/)   
+ [Opzioni di supporto di Azure](https://www.windowsazure.com/support/contact/)  
   

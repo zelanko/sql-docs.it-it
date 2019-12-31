@@ -10,12 +10,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176038"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228066"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduzione al cloud ibrido di SQL Server 2014
  L'obiettivo della maggior parte delle applicazioni è affrontare alcuni problemi chiave, quali efficienza elevata, valore aziendale, configurazioni hardware complesse, picchi notevoli su richiesta, nonché conformità a norme aziendali e del settore. Le operazioni necessarie per prendere in considerazione tutti questi fattori e sviluppare una tecnologia aziendale possono risultare molto complesse. La strategia Microsoft di un cloud ibrido intende risolvere questi problemi offrendo il supporto per cloud tradizionali e privati, cloud pubblici e ambienti cloud ibridi. 
@@ -27,7 +27,7 @@ ms.locfileid: "70176038"
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure e cloud ibrido 
  Con le tecnologie Microsoft è possibile eseguire il codice sia in locale sia nel cloud, effettuare esecuzioni nel cloud utilizzando i dati locali oppure esecuzioni interamente nel cloud utilizzando più data center. Di conseguenza, è possibile spostare le applicazioni in uso nel cloud quando lo si ritiene opportuno, preservando, nel contempo, il valore degli investimenti in soluzioni IT legacy esistenti. 
  
- Questo articolo è incentrato sugli scenari di cloud ibrido che si estendono da SQL Server locali alle offerte di cloud pubblico di Azure: [SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx) e [archiviazione di Azure](http://www.azure.com/documentation/services/storage/). In particolare, verranno illustrati gli scenari seguenti: 
+ Questo articolo è incentrato sugli scenari di cloud ibrido che si estendono da SQL Server locali alle offerte di cloud pubblico di Azure: [SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx) e [archiviazione di Azure](https://www.azure.com/documentation/services/storage/). In particolare, verranno illustrati gli scenari seguenti: 
  
 -  [Eseguire il backup e il ripristino di database da e verso archiviazione di Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -60,7 +60,7 @@ ms.locfileid: "70176038"
  
 -  La funzionalità di [compressione dei backup (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) consente di creare un backup di dimensioni inferiori rispetto a un backup non compresso degli stessi dati. La compressione di un backup richiede una minore quantità di I/O del dispositivo e pertanto la velocità del backup aumenta in genere in modo significativo. Questo può causare notevoli vantaggi quando si archiviano i file di backup nell'archiviazione di Azure. 
  
--  La funzionalità [SQL Server backup gestito in Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) consente di eseguire il backup automatico dei database di SQL Server in [archiviazione di Azure](http://www.azure.com/documentation/services/storage/). Grazie a questa funzionalità, è possibile configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. 
+-  La funzionalità [SQL Server backup gestito in Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) consente di eseguire il backup automatico dei database di SQL Server in [archiviazione di Azure](https://www.azure.com/documentation/services/storage/). Grazie a questa funzionalità, è possibile configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. 
  
 -  Lo [strumento SQL Server backup in Azure](https://www.microsoft.com/download/details.aspx?id=40740) consente di eseguire il backup nell'archiviazione BLOB di Azure e crittografa e comprime SQL Server backup archiviati localmente o nel cloud. Tramite questo strumento viene abilitata una singola strategia di backup nel cloud in diverse versioni di SQL Server, ad esempio SQL Server 2005, 2008, 2008 R2 e 2014. 
  
@@ -105,12 +105,11 @@ ms.locfileid: "70176038"
  
 -  **Trasferimento dell'intera macchina virtuale:** È possibile importare le proprie macchine virtuali SQL Server in Azure o crearne una usando l'immagine della piattaforma. È quindi possibile caricare e collegare un disco di dati in cui sono già contenuti dati alla macchina virtuale oppure collegare un disco vuoto alla macchina. La presenza di un'istanza di dati SQL Server in macchine virtuali di Azure con dischi dati collegati fornisce un'altra risorsa di archiviazione permanente per i file di dati e i dati dell'applicazione. Per informazioni complete e procedure dettagliate, vedere [distribuzione SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn133141.aspx). 
  
- Se si prevede di spostare i livelli applicazione, ad esempio il livello presentazione, il livello business e il livello database, in macchine virtuali di Azure, è consigliabile esaminare i consigli forniti nei [modelli di applicazione e strategie di sviluppo per SQL Server nell'articolo macchine virtuali di Azure](https://msdn.microsoft.com/library/dn574746.aspx) . L'obiettivo di questo articolo è fornire agli architetti e agli sviluppatori di soluzioni una base per un'architettura e una progettazione ottimali delle applicazioni, che possono seguire durante la migrazione di applicazioni esistenti in Azure e lo sviluppo di nuove applicazioni in Azure. Per ogni criterio applicazione, nell'articolo viene descritto uno scenario locale, la rispettiva soluzione cloud e i consigli tecnici correlati. Inoltre, l'articolo illustra le strategie di sviluppo specifiche di Azure in modo da poter progettare correttamente le applicazioni. 
+ Se si prevede di spostare i livelli applicazione, ad esempio il livello presentazione, il livello business e il livello database, in macchine virtuali di Azure, è consigliabile esaminare i consigli forniti nell'articolo [modelli di applicazione e strategie di sviluppo per SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/dn574746.aspx) . Lo scopo di questo articolo è di fornire agli architetti e agli sviluppatori soluzioni una base solida per l'architettura e il design efficace delle applicazioni, che potranno seguire nella migrazione di applicazioni esistenti in Azure oltre che nello sviluppo di nuove applicazioni in Azure. Per ogni criterio applicazione, nell'articolo viene descritto uno scenario locale, la rispettiva soluzione cloud e i consigli tecnici correlati. L'articolo discute inoltre strategie di sviluppo specifiche di Azure che consentono di progettare correttamente le applicazioni. 
  
 ## <a name="see-also"></a>Vedere anche 
- [Guida al prodotto SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
+ [Guida di SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Serie di Blog sul cloud ibrido Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
- [Migrazione di applicazioni incentrate sui dati in Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
+ [Serie di blog sul cloud ibrido di Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Migrazione di applicazioni incentrate sui dati a Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  

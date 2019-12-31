@@ -3,7 +3,7 @@ title: Eseguire una valutazione della migrazione SQL Server
 titleSuffix: Data Migration Assistant
 description: Informazioni su come usare Data Migration Assistant per valutare una SQL Server locale prima di eseguire la migrazione a un altro SQL Server o al database SQL di Azure
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,22 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056630"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001906"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione SQL Server con Data Migration Assistant
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
 Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione a SQL Server locali, SQL Server in esecuzione in una macchina virtuale di Azure o in un database SQL di Azure, usando Data Migration Assistant.
+
+   > [!NOTE]
+   > Data Migration Assistant v 5.0 introduce il supporto per l'analisi della connettività del database e delle query SQL incorporate nel codice dell'applicazione. Per altre informazioni, vedere il post di Blog relativo [all'uso di Data Migration Assistant per valutare il livello di accesso ai dati di un'applicazione](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 ## <a name="create-an-assessment"></a>Creare una valutazione
 
 1. Selezionare l'icona **nuovo** (+), quindi selezionare il tipo di progetto di **valutazione** .
 
-2. Impostare il tipo di server di origine e di destinazione.
+2. Impostare il tipo di server di origine e destinazione.
 
     Se si sta aggiornando l'istanza di SQL Server locale a un'istanza di SQL Server locale moderna o a SQL Server ospitata in una macchina virtuale di Azure, impostare il tipo di server di origine e di destinazione su **SQL Server**. Se si esegue la migrazione al database SQL di Azure, impostare invece il tipo di server di destinazione sul **database SQL di Azure**.
 
@@ -53,8 +56,8 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
    Quando si valuta l'istanza di SQL Server di origine per la migrazione al database SQL di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
 
-    - **Verifica compatibilità database**
-    - **Verifica parità funzionalità**
+    - **Check database compatibility (Verificare la compatibilità del database)**
+    - **Check feature parity (Verificare la parità di funzionalità)**
 
     ![Selezionare il tipo di report di valutazione per destinazione database SQL](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
@@ -107,11 +110,11 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
         go
     ```
 
-5. Fare clic su **Avanti** per avviare la valutazione.
+5. Fare clic su **Next** (Avanti) per avviare la valutazione.
 
     ![Aggiungere origini e avviare la valutazione](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Visualizzazione dei risultati
+## <a name="view-results"></a>Visualizzare i risultati
 
 La durata della valutazione dipende dal numero di database aggiunti e dalle dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database non appena sono disponibili.
 
@@ -129,21 +132,21 @@ Le raccomandazioni sulle funzionalità coprono diversi tipi di funzionalità, ad
 
 ![Visualizzare le raccomandazioni sulle funzionalità](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Per il database SQL di Azure, le valutazioni forniscono problemi di blocco della migrazione e problemi di parità delle funzionalità. Esaminare i risultati per entrambe le categorie selezionando le opzioni specifiche.
+Per il database SQL di Azure, le valutazioni forniscono problemi di blocco della migrazione e problemi di parità delle funzionalità.Esaminare i risultati per entrambe le categorie selezionando le opzioni specifiche.
 
 - La categoria di **parità delle funzionalità SQL Server** offre un set completo di indicazioni, approcci alternativi disponibili in Azure e procedure di mitigazione. Consente di pianificare questa operazione nei progetti di migrazione.
 
   ![Visualizzare le informazioni per la parità di funzionalità SQL Server](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La categoria **problemi di compatibilità** fornisce funzionalità parzialmente supportate o non supportate che bloccano la migrazione dei database di SQL Server locali ai database SQL di Azure. Fornisce quindi consigli per risolvere tali problemi.
+- La categoria **problemi di compatibilità** fornisce funzionalità parzialmente supportate o non supportate che bloccano la migrazione dei database di SQL Server locali ai database SQL di Azure.Fornisce quindi consigli per risolvere tali problemi.
 
   ![Visualizzare i problemi di compatibilità](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Valutare un patrimonio di dati per la conformità della destinazione
 
-Se si vuole estendere ulteriormente queste valutazioni all'intera proprietà dei dati e trovare la conformità relativa di SQL Server istanze e database per la migrazione al database SQL di Azure, caricare i risultati nell'hub di Azure migrate selezionando **carica per Azure migrate**.
+Se si vuole estendere ulteriormente queste valutazioni all'intera proprietà dei dati e trovare la conformità relativa di SQL Server istanze e database per la migrazione al database SQL di Azure, caricare i risultati nell'hub Azure Migrate selezionando **carica per Azure migrate**.
 
-In questo modo è possibile visualizzare i risultati consolidati nel progetto di hub Azure migrate.
+In questo modo è possibile visualizzare i risultati consolidati nel progetto Hub Azure Migrate.
 
 Istruzioni dettagliate per la valutazione della conformità della destinazione sono disponibili [qui](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
 
@@ -153,4 +156,4 @@ Istruzioni dettagliate per la valutazione della conformità della destinazione s
 
 Al termine della valutazione di tutti i database, selezionare **Esporta report** per esportare i risultati in un file JSON o in un file CSV. È quindi possibile analizzare i dati con la propria praticità.
 
-È possibile eseguire contemporaneamente più valutazioni e visualizzare lo stato delle valutazioni aprendo la pagina **tutte le valutazioni** .
+È possibile eseguire più valutazioni contemporaneamente e visualizzarne lo stato aprendo la pagina **All Assessments** (Tutte le valutazioni).
