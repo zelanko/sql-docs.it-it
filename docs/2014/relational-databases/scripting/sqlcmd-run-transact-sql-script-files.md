@@ -1,6 +1,6 @@
 ---
-title: Eseguire file script Transact-SQL mediante sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Esecuzione di file script Transact-SQL mediante sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063671"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243204"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Esecuzione di file script Transact-SQL mediante sqlcmd
   È possibile utilizzare `sqlcmd` per eseguire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] è un file di testo che può contenere una combinazione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], comandi di `sqlcmd` e variabili di scripting.  
@@ -66,7 +66,7 @@ ms.locfileid: "66063671"
  Nella finestra del prompt dei comandi non verrà restituito alcun output. L'output verrà invece inviato al file EmpAdds.txt. È possibile verificare l'output aprendo il file EmpAdds.txt.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio dell'utilità sqlcmd](sqlcmd-start-the-utility.md)   
+ [Avviare l'utilità sqlcmd](sqlcmd-start-the-utility.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

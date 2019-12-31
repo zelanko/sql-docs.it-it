@@ -1,6 +1,6 @@
 ---
-title: Spostarsi nel codice e nel testo | Microsoft Docs
-ms.custom: ''
+title: Spostamento nel codice e nel testo
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090372"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241997"
 ---
 # <a name="navigate-code-and-text"></a>Spostamento nel codice e nel testo
   È possibile spostarsi nel testo utilizzando:  

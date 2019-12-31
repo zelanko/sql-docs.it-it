@@ -1,6 +1,6 @@
 ---
-title: Gestire la formattazione del codice | Microsoft Docs
-ms.custom: ''
+title: Gestione della formattazione del codice
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090396"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242023"
 ---
 # <a name="manage-code-formatting"></a>Gestione della formattazione del codice
   L'editor consente di formattare il codice con rientri, testo nascosto, URL e così via. È inoltre possibile formattare il codice automaticamente durante la digitazione tramite la funzionalità intelligente per la gestione dei rientri.  
@@ -51,11 +51,11 @@ ms.locfileid: "66090396"
   
 5.  Selezionare una delle opzioni seguenti:  
   
-    -   **None**. Il cursore si porta all'inizio della riga successiva.  
+    -   **Nessuno**. Il cursore si porta all'inizio della riga successiva.  
   
-    -   **Blocco**. Il cursore allinea la riga successiva con quella precedente.  
+    -   **Blocca**. Il cursore allinea la riga successiva con quella precedente.  
   
-    -   **Intelligenti** (impostazione predefinita). Il servizio di linguaggio determina lo stile di rientro appropriato da utilizzare.  
+    -   **Smart** (impostazione predefinita). Il servizio di linguaggio determina lo stile di rientro appropriato da utilizzare.  
   
     > [!NOTE]  
     >  Non tutte le opzioni di rientro sono disponibili per tutti i linguaggi.  

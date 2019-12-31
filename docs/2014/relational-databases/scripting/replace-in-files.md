@@ -1,6 +1,6 @@
 ---
-title: Sostituisci nei file | Microsoft Docs
-ms.custom: ''
+title: Sostituisci nei file
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,22 +12,22 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997df4fb0756bc684c9d2ca3e3d08d074faf8f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2881ed683a067a65b3ccc068223460dd89f3f9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063902"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243675"
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
-  La scheda **Sostituisci nei file** della finestra di dialogo Trova e sostituisci consente di cercare una stringa o un'espressione nel codice di un dato set di file e di modificare alcune o tutte le corrispondenze trovate. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  
+  La scheda **Sostituisci nei file** della finestra Trova e Sostituisci consente di cercare una stringa o un'espressione nel codice di un set di file specificato e di modificare alcune o tutte le corrispondenze trovate. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  
   
  Per visualizzare la finestra di dialogo **Cerca e sostituisci** , sono inoltre disponibili i pulsanti della barra degli strumenti e i tasti di scelta rapida.  
   
 ## <a name="find-what"></a>Trova  
  Questi controlli della scheda **Sostituisci nei file** consentono di specificare la stringa o l'espressione da trovare.  
   
- **Find what**  
+ **Trova**  
  Digitare il testo che si desidera cercare. Nella finestra di dialogo verrà proposto un testo di ricerca probabile, basato sul testo selezionato con il cursore prima dell'apertura della finestra di dialogo oppure sul testo vicino o su quello cercato in precedenza. È possibile riutilizzare una delle 20 stringhe di ricerca più recenti selezionandola dall'elenco a discesa.  
   
  **[stringa con caratteri jolly]**  
@@ -39,16 +39,16 @@ ms.locfileid: "66063902"
  **Generatore di espressioni**  
  Questo pulsante triangolare accanto alla casella **Trova** è disponibile se in **Opzioni di ricerca** è selezionata la casella di controllo **Utilizza**. Fare clic su questo pulsante per visualizzare un elenco di caratteri jolly o di espressioni regolari, a seconda dell'opzione selezionata nella casella **Utilizza** . Selezionando un elemento in questo elenco lo si aggiunge alla stringa specificata nella casella **Trova** .  
   
-## <a name="replace-with"></a>Sostituisci con  
+## <a name="replace-with"></a>Sostituire con  
  Questi controlli consentono di specificare ciò che verrà inserito al posto della stringa o espressione trovata.  
   
- **Replace with**  
+ **Sostituisci con**  
  Per sostituire istanze della stringa specificata nella casella **Trova** con un'altra stringa, immettere la stringa di sostituzione in questo campo. Per eliminare le istanze della stringa specificata nella casella **Trova**, lasciare vuota questa casella. È possibile selezionare uno degli ultimi 20 elementi digitati nell'elenco a discesa. Per includere espressioni regolari nella stringa specificata nella casella **Sostituisci con** , selezionare la casella di controllo **Utilizza** e quindi fare clic sull'opzione **Espressioni regolari** .  
   
  **Generatore di espressioni**  
  Questo pulsante triangolare accanto alla casella **Sostituisci con** diventa disponibile quando è selezionata la casella di controllo **Utilizza** in **Opzioni di ricerca**. Fare clic su questo pulsante per visualizzare un elenco di caratteri jolly o di espressioni regolari, a seconda dell'opzione selezionata nella casella **Utilizza** . Selezionando un elemento nell'elenco lo si aggiunge alla stringa specificata nella casella **Sostituisci con** .  
   
- **Sostituisci**  
+ **Sostituire**  
  Fare clic su questo pulsante per sostituire l'istanza corrente della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con** e per trovare l'istanza successiva nell'ambito specificato nella casella **Cerca in**.  
   
  **Sostituisci tutto**  
@@ -57,18 +57,18 @@ ms.locfileid: "66063902"
 > [!CAUTION]  
 >  Verificare che la casella **Cerca in** sia impostata in modo da includere solo i file che si vuole modificare.  
   
- Viene visualizzato un promemoria che include l'opzione **Non chiudere i file modificati** . Selezionare questa opzione per mantenere l'opzione **Annulla** . **Annulla** è disponibile solo per i file che restano aperti dopo essere stati modificati.  
+ Viene visualizzato un promemoria che include l'opzione **Non chiudere i file modificati** . Selezionare questa opzione per mantenere l'opzione **Annulla** . **Annulla** è disponibile solo nei file che rimangono aperti per la modifica dopo la modifica.  
   
  **Ignora file**  
  Diventa disponibile quando la casella **Cerca in** include più file. Fare clic su questo pulsante se non si desidera cercare nel file corrente o modificare tale file. La ricerca proseguirà nel file successivo dell'elenco **Cerca in**.  
   
 ## <a name="look-in"></a>Cerca in  
- L'opzione selezionata nell'elenco a discesa **Cerca in** determina se la funzione **Sostituisci nei file** eseguirà la ricerca solo nei file attualmente attivi oppure in tutti i file archiviati all'interno di determinate cartelle. Selezionare un ambito di ricerca dall'elenco, digitare il percorso di una cartella oppure fare clic sul pulsante **Sfoglia** per visualizzare la finestra di dialogo **Seleziona cartelle di ricerca** e selezionare un set di cartelle in cui eseguire la ricerca.  
+ L'opzione selezionata nell'elenco a discesa **Cerca in** determina se la funzione **Sostituisci nei file** eseguirà la ricerca solo nei file attualmente attivi oppure in tutti i file archiviati all'interno di determinate cartelle. Selezionare un ambito di ricerca dall'elenco, digitare il percorso di una cartella oppure fare clic sul pulsante **Sfoglia** per visualizzare la finestra di dialogo **Imposta directory personalizzata** e scegliere un set di cartelle in cui eseguire la ricerca.  
   
 > [!NOTE]  
->  Se l'opzione selezionata in **Cerca in** interessa un file estratto dal controllo del codice di sorgente, la ricerca verrà eseguita solo nella versione del file scaricata sul computer locale.  
+>  Se l'opzione selezionata in **Cerca in** interessa un file estratto dal controllo del codice sorgente, la ricerca verrà eseguita solo nella versione del file scaricata sul computer locale.  
   
- **Look in**  
+ **Cerca in**  
  Selezionare un ambito di ricerca predefinito dall'elenco oppure usare la finestra di dialogo **Seleziona cartelle di ricerca** per specificare un set di directory personalizzato.  
   
  **Documento corrente**  
@@ -93,21 +93,21 @@ ms.locfileid: "66063902"
  È possibile espandere o comprimere la sezione **Opzioni di ricerca** . Le opzioni seguenti possono essere selezionate o deselezionate.  
   
  **Maiuscole/minuscole**  
- Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono per il contenuto e per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **MioOggetto** con la casella **Maiuscole/minuscole** selezionata restituirà "MioOggetto" ma non "miooggetto" o "MIOOGGETTO".  
+ Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono per il contenuto e per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **oggetti** con la casella **maiuscole/minuscole** selezionata restituirà "MyObject" ma non "MyObject" o "MyObject".  
   
  **Parola intera**  
  Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono alle parole complete. La ricerca di **MioOggetto** restituirà quindi "MioOggetto", ma non "CMioOggetto" o "MioOggettoC."  
   
- **Utilizza**  
+ **Uso**  
  Indica come interpretare i caratteri speciali immessi nella casella di testo **Trova** o **Sostituisci con** . Sono disponibili le opzioni **Caratteri jolly** ed **Espressioni regolari**.  
   
- **Regular Expressions**  
+ **Espressioni regolari**  
  È possibile definire i modelli del testo di cui si desidera ottenere le corrispondenze utilizzando notazioni speciali. Per un elenco, vedere [Trova con espressioni regolari](search-text-with-regular-expressions.md).  
   
- **Caratteri jolly**  
+ **I caratteri jolly**  
  I caratteri speciali, quali asterischi (`*`) e punti interrogativi(`?`), rappresentano uno o più caratteri. Per un elenco, vedere [Trova con caratteri jolly](search-text-with-wildcards.md).  
   
- **Cerca i seguenti tipi di file**  
+ **Esaminare questi tipi di file**  
  In questo elenco vengono indicati i tipi di file da cercare nelle directory specificate in **Cerca in**. Se questa casella viene lasciata vuota, la ricerca verrà eseguita in tutti i file contenuti nelle directory specificate nella casella **Cerca in** .  
   
 ```  
@@ -131,10 +131,10 @@ ms.locfileid: "66063902"
  **Finestra Risultati ricerca 2**  
  Se questa casella di controllo è selezionata, i risultati della ricerca corrente verranno aggiunti al contenuto della finestra Risultati ricerca 2. Questa finestra viene aperta automaticamente per visualizzare i risultati della ricerca. Per aprirla manualmente, scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic su **Risultati ricerca 2**.  
   
- **Mostra solo nomi file**  
+ **Visualizza solo nomi file**  
  Consente di visualizzare una voce per ogni file contenente una corrispondenza con la stringa anziché una voce per ogni corrispondenza della stringa nella finestra Risultati ricerca 1 o Risultati ricerca 2. Questa opzione non è disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Non chiudere i file modificati con Sostituisci tutto**  
+ **Mantieni i file modificati aperti dopo replace all**  
  Se questa casella di controllo è selezionata, i file in cui sono state eseguite sostituzioni rimangono aperti, in modo che sia possibile annullare o salvare le modifiche. È possibile che la quantità di memoria disponibile limiti il numero di file che possono rimanere aperti dopo un'operazione di sostituzione.  
   
 > [!CAUTION]  
@@ -143,14 +143,14 @@ ms.locfileid: "66063902"
 ## <a name="find-and-replace-views"></a>Menu Visualizza di Trova e sostituisci  
  Nelle schede sulla parte superiore della finestra Trova e sostituisci sono disponibili i menu **Visualizza** , che consentono di scegliere un set di campi da visualizzare nel riquadro attivo. È possibile lasciare la finestra Trova e sostituisci ancorata in una posizione comoda e quindi passare da una scheda all'altra e da una visualizzazione all'altra per eseguire qualsiasi tipo di operazione di ricerca e sostituzione.  
   
- **Passa a Ricerca veloce**  
+ **Passa a ricerca veloce**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Ricerca veloce** .  
   
  **Passa a Cerca nei file**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Cerca nei file** .  
   
- **Passa a Trova simbolo**  
+ **Passa a trova simboli**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Trova simbolo** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Tasti di scelta rapida SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

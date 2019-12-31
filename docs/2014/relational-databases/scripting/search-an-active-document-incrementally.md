@@ -1,6 +1,6 @@
 ---
-title: Ricerca incrementale in un documento attivo | Microsoft Docs
-ms.custom: ''
+title: Ricerca incrementale in un documento attivo
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063826"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243654"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
   È possibile eseguire una ricerca incrementale in un singolo documento o in una singola finestra immettendo il testo. Verrà evidenziato il primo set di caratteri che corrisponde ai caratteri immessi durante la ricerca incrementale nel documento o nella finestra. La ricerca viene estesa automaticamente a tutto il testo all'interno di un documento o di una finestra, fatta eccezione per il testo nascosto.  
@@ -48,9 +48,9 @@ ms.locfileid: "66063826"
 >  Per un elenco completo dei tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](search-and-replace.md)   
- [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
- [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
+ [Cerca e Sostituisci](search-and-replace.md)   
+ [Cerca in modo interattivo i documenti](search-documents-interactively.md)   
+ [Eseguire ricerche nei documenti usando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
  [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   

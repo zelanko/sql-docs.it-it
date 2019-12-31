@@ -1,7 +1,7 @@
 ---
-title: Comportamento del tipo di data e ora migliorato con versioni di SQL Server precedenti (ODBC) | Microsoft Docs
+title: Data e ora nelle versioni SQL (ODBC)
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 500771f384d65f1181dc5a34efccafb677ba2183
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7c25269ccf82749bd3b9260ff1fea6eec48361a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783739"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243816"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento dei tipi di data e ora migliorati con le versioni di SQL Server precedenti (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "73783739"
   
  I metadati dell'istruzione restituiti da SQLDescribeCol, SQLDescribeParam, SQGetDescField e SQLColAttribute restituiranno metadati coerenti con il tipo di livello inferiore, incluso il nome del tipo. Un esempio di un tipo di livello inferiore è **nvarchar**.  
   
- Quando un'applicazione client legacy viene eseguita su un server [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
+ Quando un'applicazione client legacy viene eseguita in un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Server (o versioni successive) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
   
-|Tipo di SQL Server 2005|Tipo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva)|Tipo del client ODBC|Conversione risultati (da SQL a C)|Conversione parametri (da C a SQL)|  
+|Tipo di SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Tipo di  (o versioni successive)|Tipo del client ODBC|Conversione risultati (da SQL a C)|Conversione parametri (da C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|Data|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Data|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campi dell'ora impostati su zero.|OK (2)<br /><br /> Esito negativo se il campo dell'ora è diverso da zero. Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campi della data impostati sulla data corrente.|OK (2)<br /><br /> La data viene ignorata. Esito negativo se i secondi frazionari sono diversi da zero. Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -49,14 +49,16 @@ ms.locfileid: "73783739"
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Campi della data impostati sulla data corrente.|OK (2)<br /><br /> La data viene ignorata. Esito negativo se i secondi frazionari sono diversi da zero.<br /><br /> Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
-  
+|||||
+
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
 |Simbolo|Significato|  
 |------------|-------------|  
 |1|Un funzionamento corretto in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] corrisponde a un corretto funzionamento in una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|Un'applicazione che funziona correttamente in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] potrebbe non essere eseguita correttamente in una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|||
+
  Si noti che sono state prese in considerazione solo le modifiche dello schema comuni, elencate di seguito:  
   
 -   Utilizzo di un nuovo tipo nei casi in cui logicamente un'applicazione richiede solo un valore di data o di ora. Nelle versioni precedenti viene imposto l'utilizzo di datetime o smalldatetime all'applicazione in quanto non sono disponibili tipi di data e ora distinti.  
@@ -68,10 +70,10 @@ ms.locfileid: "73783739"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Metadati di colonna restituiti da SQLColumns, SQLProcedureColumns e SQLSpecialColumns  
  Per i tipi di data/ora vengono restituiti i valori di colonna seguenti:  
   
-|Tipo di colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di colonna|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20.. 32|16|16|38, 42.. 54|52, 56.. 68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -79,15 +81,16 @@ ms.locfileid: "73783739"
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns non restituisce SQL_DATA_TYPE, SQL_DATETIME_SUB, CHAR_OCTET_LENGTH o SS_DATA_TYPE.  
   
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Metadati del tipo di dati restituiti da SQLGetTypeInfo  
  Per i tipi di data/ora vengono restituiti i valori di colonna seguenti:  
   
-|Tipo di colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di colonna|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -99,7 +102,7 @@ ms.locfileid: "73783739"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -107,11 +110,10 @@ ms.locfileid: "73783739"
 |NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## <a name="down-level-server-behavior"></a>Comportamento dei server legacy  
  In caso di connessione a un'istanza del server di una versione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], qualsiasi tentativo di utilizzo di nuovi tipi di server o codici di metadati e campi di descrizione associati provocherà la restituzione di SQL_ERROR. Verrà generato un record di diagnostica con SQLSTATE HY004 e il messaggio "Tipo di dati non valido per la versione del server in connessione" o con 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti &#40;di data e ora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+ [Miglioramenti di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

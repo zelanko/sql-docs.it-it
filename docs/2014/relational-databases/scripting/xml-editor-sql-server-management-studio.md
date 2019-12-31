@@ -1,6 +1,6 @@
 ---
-title: Editor XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor XML
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063194"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242938"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
   Offre una serie di strumenti visivi per utilizzare gli XML Schema, i set di dati ADO.NET e i documenti XML. Progettazione XML supporta il linguaggio XML Schema Definition (XSD) definito dal World Wide Web Consortium (WC3). Lo strumento di progettazione non supporta le definizioni DTD (Document Type Definitions) o altri linguaggi XML Schema, ad esempio XDR (XML-Data Reduced).  
@@ -34,12 +34,12 @@ ms.locfileid: "66063194"
   
  Per consentire di lavorare sui file XML, sugli XML Schema e sui set di dati, Progettazione XML dispone delle tre visualizzazioni (o modalità) seguenti:  
   
-|visualizzazione|Descrizione|Tipi di file supportati|  
+|Visualizza|Description|Tipi di file supportati|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Per la creazione e la modifica in modo visivo degli XML Schema e dei set di dati ADO.NET.|xsd|  
 |**Dati**|Per la modifica in modo visivo dei file di dati XML in una griglia dati strutturata.|xml|  
 |**XML**|Per le modifiche XML, l'editor di origine dispone di codifica a colori e di IntelliSense, che include le funzionalità Completa parola ed Elenca membri.|xml, xsd, xslt, wsdl, web, resx, tdl, wsf, hta, disco, vsdisco e config|  
-|**Showplan**|Consente di visualizzare i piani di query xml creati utilizzando l'opzione SET SHOWPLAN_XML ON.|showplan|  
+|**ShowPlan**|Consente di visualizzare i piani di query xml creati utilizzando l'opzione SET SHOWPLAN_XML ON.|showplan|  
   
 ## <a name="schema-view"></a>Visualizzazione schema  
  La visualizzazione schema offre una rappresentazione visiva degli elementi, degli attributi, dei tipi e così via che compongono gli XML Schema e i set di dati ADO.NET.  
@@ -78,13 +78,13 @@ ms.locfileid: "66063194"
   
 -   Fare clic sull'icona con il segno meno sull'elemento di livello più basso che si desidera visualizzare in Progettazione XML.  
   
-## <a name="data-view"></a>Vista dati  
+## <a name="data-view"></a>Visualizzazione dati  
  La visualizzazione dati dispone di una griglia dati che può essere utilizzata per modificare i file xml. Nella visualizzazione dati è possibile modificare solo il contenuto di un file XML, ma non i tag e la struttura.  
   
  La visualizzazione dati contiene due aree separate: **Tabelle dati** e **Dati**. L'area **Tabelle dati** è un elenco di relazioni definite nel file XML nello stesso ordine di annidamento (dalla più esterna alla più interna). L'area **Dati** è una griglia dati che visualizza i dati sulla base della selezione eseguita nell'area Tabelle dati.  
   
 > [!NOTE]  
->  I file XML appena creati non contengono alcun dato e quindi non possono essere visualizzati nella visualizzazione dati. Esistono inoltre alcuni casi di documenti XML la cui visualizzazione dati non può essere attivata. Benché il codice XML possa essere considerato valido, se non è costituito da dati strutturati, quando si tenta di passare alla visualizzazione dati verrà restituito il messaggio seguente: "Anche se il documento XML ha un formato corretto, contiene una struttura non visualizzabile in Visualizzazione dati".  
+>  I file XML appena creati non contengono alcun dato e quindi non possono essere visualizzati nella visualizzazione dati. Esistono inoltre alcuni casi di documenti XML la cui visualizzazione dati non può essere attivata. Benché il codice XML possa essere considerato valido, se non è strutturato i dati che cercano di passare alla visualizzazione dati genereranno il messaggio seguente: "Anche se il documento XML ha un formato corretto, contiene una struttura non visualizzabile in Visualizzazione dati".  
   
  Nella visualizzazione dati è possibile:  
   
@@ -95,10 +95,11 @@ ms.locfileid: "66063194"
 -   Generare un XML Schema da un documento XML  
   
 ## <a name="xml-view"></a>Visualizzazione XML  
- La visualizzazione XML dispone di un editor per modificare il codice XML non formattato e dispone inoltre di IntelliSense e della codifica a colori. Quando si lavora su file xsd e xml associati a uno schema è disponibile il completamento delle istruzioni. Tipo \< per iniziare è un tag verrà visualizzato un elenco di elementi che sono validi nel percorso specificato. Dopo avere digitato il nome dell'elemento e premuto la barra spaziatrice verrà visualizzato un elenco di attributi supportati dall'elemento.  
+ La visualizzazione XML dispone di un editor per modificare il codice XML non formattato e dispone inoltre di IntelliSense e della codifica a colori. Quando si lavora su file xsd e xml associati a uno schema è disponibile il completamento delle istruzioni. Digitare \< per avviare un tag e verrà visualizzato un elenco di elementi validi in tale posizione. Dopo avere digitato il nome dell'elemento e premuto la barra spaziatrice verrà visualizzato un elenco di attributi supportati dall'elemento.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense non sono disponibili sulla barra degli strumenti. Per accedere alle opzioni, nell'editor XML scegliere **IntelliSense** dal menu **Modifica**.  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense non sono disponibili sulla barra degli strumenti. Per accedere alle opzioni, nell'editor XML scegliere **IntelliSense** dal menu **Modifica**.  
   
 ## <a name="showplan-view"></a>Visualizzazione SHOWPLAN  
  I piani di query possono essere salvati in formato XML quando vengono creati con l'opzione SET SHOWPLAN_XML ON. Per aprire il piano di query, fare doppio clic su un file con estensione showplan.  

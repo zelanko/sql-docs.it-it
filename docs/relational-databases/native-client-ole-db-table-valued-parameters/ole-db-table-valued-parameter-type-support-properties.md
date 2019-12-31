@@ -1,5 +1,5 @@
 ---
-title: Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà) | Microsoft Docs
+title: OLE DB tipo di parametro con valori di tabella (proprietà)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cd11bb70a559c4052e04653eff87c9929c5fdc3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788625"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242773"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73788625"
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
-|ID proprietà|valore|  
+|ID proprietà|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -72,7 +72,8 @@ ms.locfileid: "73788625"
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
 |DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
-  
+|||
+
 ## <a name="property-sets"></a>Set di proprietà  
  I set di proprietà seguenti supportano i parametri con valori di tabella.  
   
@@ -82,7 +83,8 @@ ms.locfileid: "73788625"
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
-  
+|||
+
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters:: GetParameterProperties e impostate dall'utente durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella. tramite ISSCommandWithParameters:: SetParameterProperties.  
   
@@ -95,9 +97,10 @@ ms.locfileid: "73788625"
 |SSPROP_PARAM_TYPE_CATALOGNAME|L/S: Sola lettura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrizione: i consumer utilizzano questa proprietà per ottenere il nome del catalogo del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente. Non è corretto impostare questa proprietà, in quanto i tipi definiti dall'utente devono essere inclusi nello stesso database in cui si trovano i parametri con valori di tabella che li utilizzano.|  
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: i consumer utilizzano questa proprietà per specificare quale set di colonne nel set di righe deve essere considerato quello predefinito. Per tali colonne non verrà inviato alcun valore. Durante il recupero di dati dall'oggetto set di righe del consumer, il provider non richiede un'associazione per tali colonne.<br /><br /> Ogni elemento della matrice deve essere un numero ordinale di una colonna nell'oggetto set di righe. Numeri ordinali non validi producono errori in fase di esecuzione del comando.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: questa proprietà viene utilizzata dal consumer per fornire un hint al server per indicare il tipo di ordinamento dei dati della colonna. Il provider non esegue alcuna convalida e presuppone che il consumer sia conforme alla specifica fornita. Il server utilizza questa proprietà per eseguire ottimizzazioni.<br /><br /> Le informazioni sull'ordine delle colonne per ogni colonna vengono rappresentate da una coppia di elementi nella matrice. Il primo elemento nella coppia è il numero della colonna. Il secondo elemento nella coppia sarà 1 per l'ordine crescente o 2 per l'ordine decrescente.|  
-  
+|||
+
 ## <a name="see-also"></a>Vedere anche  
- [Supporto dei tipi di parametri con valori di tabella OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Supporto del tipo di parametro con valori di tabella OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Utilizzare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

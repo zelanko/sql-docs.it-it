@@ -1,6 +1,7 @@
 ---
-title: Non consentito di tipi e membri in VisualBasic | Microsoft Docs
-ms.custom: ''
+title: Tipi e membri in Microsoft. VisualBasic. dll
+description: Elenca i membri e i tipi dell'assembly Microsoft. VisualBasic. dll i cui valori degli attributi di protezione host non sono consentiti.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f91e4ee829c502eb00c79cea216f74e8d20fc4a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028164"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75240161"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Tipi e membri non consentiti in Microsoft.VisualBasic.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione dell'integrazione (CLR) comuni del linguaggio non consente l'utilizzo di un tipo o membro che dispone di un **HostProtectionAttribute** che specifica un **System.Security.Permissions.HostProtectionResource** con un valore di enumerazione **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **sincronizzazione**, o **Dell'interfaccia utente**. Nella tabella seguente sono elencati i membri e tipi dei **VisualBasic** assembly i cui valori di attributo (protezione Host) non sono consentiti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro con **HostProtectionAttribute** che specifica un'enumerazione **System. Security. Permissions. HostProtectionResource** con il valore **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**o **UI**. Nella tabella seguente sono elencati i membri e i tipi dell'assembly **Microsoft. VisualBasic. dll** i cui valori degli attributi di protezione host non sono consentiti.  
   
 > [!NOTE]  
->  Questo elenco è stato generato dagli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportate](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Questo elenco è stato generato dagli assembly supportati. Per ulteriori informazioni, vedere [supported .NET Framework libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
-|**Tipo o membro**|**Valori di attributo di protezione host**|  
+|**Tipo o membro**|**Valori dell'attributo di protezione host**|  
 |------------------------|------------------------|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture()|ExternalProcessMgmt|  
@@ -60,18 +61,18 @@ ms.locfileid: "68028164"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|Interfaccia utente|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|Interfaccia utente|  
+|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor ()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Sincronizzazione|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
@@ -80,9 +81,9 @@ ms.locfileid: "68028164"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Tipi non consentiti e i membri in mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipi non consentiti e i membri in System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [Tipi non consentiti e i membri in System](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Tipi e membri non consentiti in mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipi e membri non consentiti in System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Tipi e membri non consentiti in System. Data. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Tipi e membri non consentiti in System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

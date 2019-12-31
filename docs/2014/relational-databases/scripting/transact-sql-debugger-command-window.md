@@ -1,6 +1,6 @@
 ---
-title: Finestra di comando | Microsoft Docs
-ms.custom: ''
+title: Finestra di comando
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,32 +12,32 @@ ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a66709cc090f39a41e5bee5b52a779b8d2f6764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243078"
 ---
 # <a name="command-window"></a>Finestra di comando
-  Usare la funzionalità **Finestra di comando** per eseguire comandi, ad esempio i comandi debug o di modifica, sul codice incluso nella finestra dell'editor di query del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di cui è in corso il debug. Per usare la funzionalità **Finestra di comando**, è necessario usare la modalità di debug. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta molti dei comandi supportati anche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Per altre informazioni, vedere [Visual Studio Command Window](https://go.microsoft.com/fwlink/?LinkId=112007)(Finestra di comando di Visual Studio).  
+  Usare **finestra** per eseguire comandi, ad esempio comandi di debug e di modifica, sul codice nella finestra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dell'editor di query di cui è in corso il debug. Per usare la funzionalità **Finestra di comando**, è necessario usare la modalità di debug. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta molti dei comandi supportati anche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Per altre informazioni, vedere [Visual Studio Command Window](https://go.microsoft.com/fwlink/?LinkId=112007)(Finestra di comando di Visual Studio).  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alla funzionalità Finestra di comando**  
+ **Per accedere alla finestra di comando**  
   
--   Scegliere **Avvia debug** dal menu **Debug**.  
+-   Scegliere **Avvia debug**dal menu **debug** .  
   
  **Per stampare il valore di una variabile**  
   
--   In **Finestra di comando** digitare **Debug.Print \<NomeVariabile>** , quindi premere INVIO.  
+-   In **finestra**digitare **debug. Print \<VariableName>**, quindi premere INVIO.  
   
  **Per elencare le informazioni sul thread corrente**  
   
--   Nel **finestra di comando**, tipo `Debug.ListThread`, quindi premere INVIO.  
+-   In **finestra**Digitare `Debug.ListThread`e quindi premere INVIO.  
   
- **Per aggiungere una variabile alla finestra Controllo immediato**  
+ **Per aggiungere una variabile alla finestra controllo immediato**  
   
--   In **Finestra di comando** digitare **Debug.QuickWatch \<NomeVariabile>** , quindi premere INVIO.  
+-   In **finestra**digitare **debug. controllo immediato \<VariableName>**, quindi premere INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)  

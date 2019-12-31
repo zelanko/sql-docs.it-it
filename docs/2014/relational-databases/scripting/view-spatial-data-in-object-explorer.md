@@ -1,6 +1,6 @@
 ---
-title: Visualizzare dati spaziali in Esplora oggetti | Microsoft Docs
-ms.custom: ''
+title: Visualizzazione di dati spaziali in Esplora oggetti
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063213"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242950"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Visualizzazione di dati spaziali in Esplora oggetti
-  La finestra **Risultati spaziali** dell'editor di query fornisce strumenti di mapping visivo per la visualizzazione di risultati di dati spaziali in aggiunta alla visualizzazione dei dati in formato griglia nella finestra **Risultati** . Per visualizzare i dati spaziali nella finestra **Risultati spaziali** , i risultati delle query devono contenere almeno una colonna di dati spaziali con dati geometrici e geografici.  
+  La finestra **Risultati spaziali** dell'editor di query fornisce strumenti di mapping visivo per la visualizzazione dei risultati dei dati spaziali oltre ai dati visualizzati in formato griglia nella finestra **risultati** . Per visualizzare i dati spaziali nella finestra **Risultati spaziali** , i risultati delle query devono contenere almeno una colonna di dati spaziali con dati geometrici e geografici.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>Per visualizzare i dati spaziali nella finestra Risultati spaziali  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66063213"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra Risultati spaziali](spatial-results-window.md)   
- [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Editor di query motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

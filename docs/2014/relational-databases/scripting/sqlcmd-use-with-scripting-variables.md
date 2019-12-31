@@ -1,6 +1,6 @@
 ---
-title: Usare sqlcmd con variabili di scripting | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di sqlcmd con variabili di scripting
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090055"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243171"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utilizzo di sqlcmd con variabili di scripting
   Per variabile di scripting si intende una variabile utilizzata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090055"
   
 3.  Shell dei comandi (**SET X=Y**) impostata al prompt dei comandi prima dell'avvio di **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Per visualizzare le variabili di ambiente, nel **Pannello di controllo**aprire **Sistema**quindi fare clic sulla scheda **Avanzate** .  
@@ -64,7 +64,8 @@ ms.locfileid: "66090055"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  È quindi possibile specificare il nome della colonna che si desidera restituire utilizzando l'opzione `-v` :  
   
@@ -93,7 +94,7 @@ ms.locfileid: "66090055"
 -   Se le virgolette fanno parte del valore della variabile, è necessario utilizzare i caratteri di escape. Ad esempio, :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Linee guida relative ai valori e ai nomi delle variabili definite tramite SET in Cmd.exe  
- Le variabili definite con SET fanno parte dell'ambiente Cmd.exe e **sqlcmd**può farvi riferimento. Tenere presenti le linee guida seguenti:  
+ Le variabili definite con SET fanno parte dell'ambiente Cmd.exe e **sqlcmd**può farvi riferimento. Considerare le linee guida seguenti:  
   
 -   I nomi delle variabili non devono contenere spazi vuoti o virgolette.  
   
@@ -102,7 +103,7 @@ ms.locfileid: "66090055"
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
  Le variabili definite con **sqlcmd** sono note come variabili di scripting. Nella tabella seguente sono elencate le variabili di scripting di **sqlcmd** .  
   
-|Variabile|Opzione correlata|L/S|Impostazione predefinita|  
+|Variabile|Opzione correlata|L/S|Default|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -110,18 +111,18 @@ ms.locfileid: "66090055"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
-|SQLCMDSTATTIMEOUT|-T|L/S|"0" = attesa illimitata|  
-|SQLCMDHEADERS|-H|L/S|"0"|  
-|SQLCMDCOLSEP|-S|L/S|" ".|  
+|SQLCMDSTATTIMEOUT|-t|L/S|"0" = attesa illimitata|  
+|SQLCMDHEADERS|-h|L/S|"0"|  
+|SQLCMDCOLSEP|-s|L/S|" "|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|L/S|"0"|  
-|SQLCMDMAXVARTYPEWIDTH|-y|L/S|"256"|  
-|SQLCMDMAXFIXEDTYPEWIDTH|-y|L/S|"0" = numero illimitato|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|L/S|"0"|  
+|SQLCMDMAXVARTYPEWIDTH|-Y|L/S|"256"|  
+|SQLCMDMAXFIXEDTYPEWIDTH|-Y|L/S|"0" = numero illimitato|  
 |SQLCMDEDITOR||L/S|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* Le variabili SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostate quando viene usato **:Connect** .  
+ \*SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostati quando si usa **: Connect** .  
   
  La lettera L indica che il valore può essere impostato una sola volta durante l'inizializzazione del programma.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "66090055"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Utilizzo del comando setvar in uno script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>R. Utilizzo del comando setvar in uno script  
  Molte opzioni di **sqlcmd** possono essere controllate in uno script usando il comando **setvar** . Nell'esempio seguente viene creato lo script `test.sql` , in cui la variabile `SQLCMDLOGINTIMEOUT` viene impostata su `60` secondi e un'altra variabile di scripting, `server`, viene impostata su `testserver`. Il codice seguente è incluso in `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -341,8 +342,8 @@ ms.locfileid: "66090055"
  `>2 GO`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dell'utilità sqlcmd](sqlcmd-use-the-utility.md)   
+ [Usare l'utilità sqlcmd](sqlcmd-use-the-utility.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

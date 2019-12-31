@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche interattive nei documenti | Microsoft Docs
-ms.custom: ''
+title: Ricerca interattiva all'interno di documenti
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063791"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243286"
 ---
 # <a name="search-documents-interactively"></a>Ricerca interattiva all'interno di documenti
-  La finestra di dialogo **Trova e sostituisci** consente di eseguire una ricerca in uno o più file o finestre aperti e passare da un risultato della ricerca all'altro. Questa tecnica consente di esaminare ogni singola corrispondenza della ricerca contestualmente, ossia nel testo che la precede e la segue. È inoltre possibile eseguire operazioni di ricerca bulk ed esaminare i risultati corrispondenti in formato report usando la finestra di dialogo **Trova e sostituisci** .  
+  Utilizzando la finestra di dialogo **trova e Sostituisci** è possibile eseguire una ricerca in uno o più file o finestre aperti e spostarsi tra le corrispondenze uno alla volta. Questa tecnica consente di esaminare ogni singola corrispondenza della ricerca contestualmente, ossia nel testo che la precede e la segue. È inoltre possibile eseguire operazioni di ricerca bulk ed esaminare i risultati corrispondenti in formato report usando la finestra di dialogo **Trova e sostituisci** .  
   
 ### <a name="to-search-all-open-documents"></a>Per eseguire la ricerca in tutti i documenti aperti  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66063791"
   
 5.  Fare clic su **Sostituisci**e continuare a fare clic su **Sostituisci** fino all'ultima sostituzione nell'ultimo file. Fare clic su **Trova successivo** per ignorare una corrispondenza che non si desidera sostituire.  
   
-     oppure  
+     -Oppure-  
   
      Scegliere **Sostituisci tutto** per sostituire tutte le corrispondenze. Verrà visualizzata una finestra di messaggio con il numero totale di sostituzioni.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "66063791"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca incrementale in un documento attivo](search-an-active-document-incrementally.md)   
- [Ricerca e sostituzione](search-and-replace.md)   
- [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
+ [Cerca e Sostituisci](search-and-replace.md)   
+ [Eseguire ricerche nei documenti usando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
  [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   

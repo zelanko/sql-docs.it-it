@@ -1,6 +1,6 @@
 ---
-title: Stampare codice e risultati | Microsoft Docs
-ms.custom: ''
+title: Stampa di codice e risultati
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,21 +15,21 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18cbed174a5be656079ef232ba70cba3599d2815
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a66d054f3952c1491b88df77f8999e87af65447
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090284"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241966"
 ---
 # <a name="print-code-and-results"></a>Stampa di codice e risultati
   Nella stampa di query o file gli elementi colorati vengono stampati a colori se la stampante supporta questa funzionalità e se quest'ultima è abilitata nell'impostazione della stampante.  
   
- Il tipo di carattere e il colore del testo nell'editor e la modalità di stampa del testo nella stampante possono tuttavia essere diversi. Scegliere **Opzioni** dal menu **Strumenti**. In **Ambiente**selezionare **Tipi di carattere e colori**, quindi selezionare i tipi di caratteri e i colori per gli elementi da visualizzare nell'editor e quelli da applicare per la stampa. Poiché queste impostazioni possono variare, l'output potrebbe essere diverso da quanto visualizzato nell'editor.  
+ Il tipo di carattere e il colore del testo nell'editor e la modalità di stampa del testo nella stampante possono tuttavia essere diversi. Nel menu **Strumenti** selezionare **Opzioni**. In **Ambiente**selezionare **Tipi di carattere e colori**, quindi selezionare i tipi di caratteri e i colori per gli elementi da visualizzare nell'editor e quelli da applicare per la stampa. Poiché queste impostazioni possono variare, l'output potrebbe essere diverso da quanto visualizzato nell'editor.  
   
  Se nell'editor sono abilitati i numeri di riga, per stamparli è necessario selezionare **Includi numeri di riga** nella finestra di dialogo **Stampa** del menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modificare lo stile, le dimensioni e il colore del carattere](change-font-color-size-and-style.md)  
+ [Modificare il colore, le dimensioni e lo stile del carattere](change-font-color-size-and-style.md)  
   
   

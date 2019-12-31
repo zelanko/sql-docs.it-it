@@ -1,6 +1,6 @@
 ---
-title: Specificare un'azione del punto di interruzione | Microsoft Docs
-ms.custom: ''
+title: Impostazione di un'azione del punto di interruzione
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97454a06f4b03b3148984697e0056aa87dff1200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243240"
 ---
 # <a name="specify-a-breakpoint-action"></a>Impostazione di un'azione del punto di interruzione
-  Un'azione **Quando raggiunto** per un punto di interruzione specifica un'attività personalizzata eseguita dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per un punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
+  Un punto di interruzione quando l'azione **hit** specifica un'attività [!INCLUDE[tsql](../../includes/tsql-md.md)] personalizzata eseguita dal debugger per un punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Considerazioni sulle azioni  
+##  <a name="BKMK_ActionConsiderations"></a>Considerazioni sulle azioni  
  L'azione predefinita per un punto di interruzione consiste nell'interrompere l'esecuzione una volta raggiunto il numero di passaggi e soddisfatta la condizione per il punto di interruzione. L'utilizzo principale di un'azione **Quando raggiunto** nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nello stampare informazioni nella finestra **Output** del debugger specificando un messaggio di stampa.  
   
  È possibile specificare un messaggio di stampa nell'opzione **Stampa un messaggio** . Il messaggio di stampa viene specificato come stringa di testo che include espressioni contenenti informazioni ottenute dal debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le espressioni includono gli elementi seguenti:  
@@ -50,7 +50,7 @@ ms.locfileid: "66090146"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Quando raggiunto** dal menu di scelta rapida.  
   
-     oppure  
+     -Oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Quando raggiunto** dal menu di scelta rapida.  
   
@@ -65,5 +65,5 @@ ms.locfileid: "66090146"
 3.  Fare clic su **OK** per implementare le modifiche o su **Annulla** per uscire senza applicare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
- [Specifica di un numero di passaggi](specify-a-hit-count.md)  
+ [Specificare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
+ [Specificare un numero di passaggi](specify-a-hit-count.md)  

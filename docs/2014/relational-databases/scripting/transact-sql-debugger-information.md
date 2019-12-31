@@ -1,6 +1,6 @@
 ---
-title: Informazioni del debugger Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Informazioni del debugger Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063426"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243065"
 ---
 # <a name="transact-sql-debugger-information"></a>Informazioni del debugger Transact-SQL
   Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione.  
@@ -40,11 +40,11 @@ ms.locfileid: "66063426"
 -   Fare clic su **Punti di interruzione** sulla barra degli strumenti **Debug**, quindi selezionare la finestra desiderata.  
   
 ## <a name="transact-sql-expressions"></a>Espressioni di Transact-SQL  
- Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori dei dati attualmente assegnati a espressioni in un massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**.  
+ Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4**.  
   
  La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
   
- Le espressioni incluse in **Controllo immediato** e nelle quattro finestre **Espressione di controllo** non si limitano semplicemente a elencare l'identificatore di una variabile. È possibile specificare un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore singolo, ad esempio l'aggiunta di un numero a una variabile, oppure un'istruzione SELECT che restituisce un valore singolo. Esempi di tali situazioni:  
+ Le espressioni incluse in **Controllo immediato** e nelle quattro finestre **Espressione di controllo** non si limitano semplicemente a elencare l'identificatore di una variabile. È possibile specificare un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore singolo, ad esempio l'aggiunta di un numero a una variabile, oppure un'istruzione SELECT che restituisce un valore singolo. Tra gli esempi sono inclusi:  
   
 -   Nome di una variabile, ad esempio @IntegerCounter.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "66063426"
  In modalità di debug, le schede **Risultati** e **Messaggi** sono ancora attive nell'editor di query. La scheda **Risultati** continua a visualizzare i set dei risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che vengono eseguite durante una sessione di debug. La scheda **Messaggi** continua a visualizzare messaggi di sistema, ad esempio "Righe interessate *xx* " e l'output delle istruzioni PRINT e RAISERROR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [finestra Variabili locali](transact-sql-debugger-locals-window.md)   
- [finestra Espressioni di controllo](transact-sql-debugger-watch-window.md)   
- [Finestra di dialogo Controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Finestra Punti di interruzione](transact-sql-debugger-breakpoints-window.md)   
- [Finestra Stack di chiamate](transact-sql-debugger-call-stack-window.md)   
- [Finestra Thread](transact-sql-debugger-threads-window.md)   
- [Finestra Output](transact-sql-debugger-output-window.md)   
+ [Finestra variabili locali](transact-sql-debugger-locals-window.md)   
+ [Finestra espressioni di controllo](transact-sql-debugger-watch-window.md)   
+ [Finestra di dialogo controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Finestra punti di interruzione](transact-sql-debugger-breakpoints-window.md)   
+ [Finestra stack di chiamate](transact-sql-debugger-call-stack-window.md)   
+ [Finestra thread](transact-sql-debugger-threads-window.md)   
+ [Finestra di output](transact-sql-debugger-output-window.md)   
  [Debugger Transact-SQL](transact-sql-debugger.md)  
   
   

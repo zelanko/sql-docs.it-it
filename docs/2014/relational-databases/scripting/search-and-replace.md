@@ -1,6 +1,6 @@
 ---
-title: Ricerca e sostituzione | Microsoft Docs
-ms.custom: ''
+title: Ricerca e sostituzione
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -28,30 +28,30 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 631b6864529e903516857f68ea421365c144afef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090196"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243297"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
-  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel menu **Modifica** la voce **Trova e sostituisci** offre quattro opzioni: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file** o **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
+  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. L'opzione **Trova e sostituisci** del menu **Modifica** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**e **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
   
  Al momento della ricerca e sostituzione di un testo, è consigliabile tenere presente quanto segue:  
   
 -   Le opzioni impostate nella finestra di dialogo **Trova e sostituisci** influenzano tutte le ricerche. Le opzioni disponibili sono **Maiuscole/minuscole**, **Parola intera**, **Cerca in alto**, **Cerca nel testo nascosto**, **Caratteri jolly**, **Espressioni regolari**, **Tutti i documenti aperti**e **Progetto corrente**. Le opzioni effettivamente disponibili dipendono dalla versione usata della finestra di dialogo **Trova e sostituisci** .  
   
--   L'opzione**Annulla** è disponibile solo per i documenti lasciati aperti dopo un'operazione di sostituzione.  
+-   **Annulla** è disponibile solo per i documenti lasciati aperti dopo un'operazione di sostituzione.  
   
--   L'opzione**Annulla** per un'operazione **Sostituisci tutto** eseguita su più di un file è considerata un'unica azione bulk su tutti i file interessati. Non è quindi possibile annullare la modifica in alcuni file e mantenerla in altri.  
+-   L' **annullamento** di un'operazione **Replace all** che si estende su più di un file viene considerato come un'unica azione bulk su tutti i file interessati. Non è quindi possibile annullare la modifica in alcuni file e mantenerla in altri.  
   
  Non è in genere possibile eseguire ricerche in elementi grafici.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca incrementale in un documento attivo](search-an-active-document-incrementally.md)   
- [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
- [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
+ [Cerca in modo interattivo i documenti](search-documents-interactively.md)   
+ [Eseguire ricerche nei documenti usando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
  [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   

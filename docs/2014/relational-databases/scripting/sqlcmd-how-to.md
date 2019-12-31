@@ -1,6 +1,6 @@
 ---
-title: Procedure per SQLCMD | Microsoft Docs
-ms.custom: ''
+title: Procedure correlate a sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eac85390764c260b9823d53666966c1ee35e9e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fe04985a52876a33840b560464fe7f930e41b1a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063696"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243194"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Procedure correlate a sqlcmd
 
-Visualizzare [sqlcmd procedure](../../database-engine/sqlcmd-how-to-topics.md).
+Vedere procedure [per sqlcmd](../../database-engine/sqlcmd-how-to-topics.md).

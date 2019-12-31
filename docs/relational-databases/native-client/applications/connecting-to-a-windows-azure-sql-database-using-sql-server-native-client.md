@@ -1,5 +1,5 @@
 ---
-title: Connessione a un database SQL di Azure tramite SQL Server Native Client | Microsoft Docs
+title: Native client, connettersi al database SQL di Azure
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 67185f91fa89e84a8733299409b19b2a191fe9bf
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761569"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244210"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connessione a un database SQL di Azure usando SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per un esempio che illustra come connettersi a un [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere procedure [per lo sviluppo (database SQL di Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Per un esempio che illustra come connettersi a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere procedure [per lo sviluppo (database SQL di Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemi noti correlati alla connessione a un database SQL  
  Di seguito sono elencati i problemi noti che si verificano durante la connessione a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

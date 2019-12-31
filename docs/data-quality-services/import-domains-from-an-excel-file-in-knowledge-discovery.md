@@ -1,6 +1,5 @@
 ---
-title: Importare i domini da un file di Excel in Individuazione informazioni | Microsoft Docs
-ms.custom: ''
+title: Importare i domini da un file di Excel in Individuazione informazioni
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,34 +7,34 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 38907f70b5da4d96028833c033a3c41724c47862
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241791"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per altre informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md). L'esportazione in un file di Excel non è supportata.  
+  In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per ulteriori informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) . L'esportazione in un file di Excel non è supportata.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per importare i domini da un file di Excel, è necessario che Excel sia installato nel computer in cui è installato il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . È necessario avere creato un file di Excel con i valori di dominio (vedere [How the import works](#How)). Infine, è necessario avere creato e aperto una Knowledge Base in cui importarvi il dominio.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per importare i domini da un file di Excel, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Import"></a> Importare i domini da un file di Excel in una Knowledge Base  
+##  <a name="Import"></a>Importare i domini da un file di Excel in una Knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] effettuare una delle operazioni seguenti:  
   
@@ -70,10 +69,10 @@ ms.locfileid: "67935261"
   
 14. Verificare che la Knowledge Base sia stata pubblicata, quindi fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'importazione di domini da un file di Excel  
+##  <a name="FollowUp"></a>Completamento: fasi successive all'importazione di domini da un file di Excel  
  Dopo avere importato i domini da un file di Excel, è possibile aggiungere informazioni ai domini o utilizzare i domini per un progetto di pulizia o un progetto corrispondente, a seconda del contenuto dei domini. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> Come funziona l'importazione  
+##  <a name="How"></a>Funzionamento dell'importazione  
  Nell'operazione di importazione di DQS un file di Excel viene interpretato come segue:  
   
 -   Una colonna rappresenta un dominio.  

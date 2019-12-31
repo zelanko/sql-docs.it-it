@@ -1,6 +1,6 @@
 ---
-title: Informazioni parametri (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: Informazioni parametri (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9605062317572bb89e5bd806f2d7babd9d3a09f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b842f35c2852ce6ed607e943199bb322823651b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063923"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242012"
 ---
 # <a name="parameter-info-intellisense"></a>Informazioni parametri (IntelliSense)
-  L'opzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informazione sul parametro **di** IntelliSense consente di aprire un elenco di parametri che include informazioni relative a numero, nomi e tipi dei parametri necessari per una funzione o per una stored procedure. Il parametro in grassetto indica il parametro successivo necessario quando viene digitata una funzione o una stored procedure.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] opzione **informazioni sul parametro** di IntelliSense consente di aprire un elenco di parametri che fornisce informazioni sul numero, i nomi e i tipi dei parametri richiesti da una funzione o stored procedure. Il parametro in grassetto indica il parametro successivo necessario quando viene digitata una funzione o una stored procedure.  
   
  L'elenco dei parametri è visualizzato anche per le funzioni nidificate. Se si digita una funzione come parametro per un'altra funzione, nell'elenco dei parametri verranno visualizzati i parametri per la funzione interna. Quando l'elenco dei parametri della funzione interna è completo, verranno quindi visualizzati i parametri della funzione esterna.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66063923"
   
 2.  Utilizzare i tasti di scelta rapida CTRL+MAIUSC+BARRA SPAZIATRICE.  
   
- Per altre informazioni, vedere [Configurare IntelliSense &#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md).  
+ Per altre informazioni, vedere [Configurazione di IntelliSense &#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md).  
   
 > [!NOTE]  
 >  L'opzione **Informazioni parametri** è disponibile solo per l'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e per l'editor di query XML.  

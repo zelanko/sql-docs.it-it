@@ -1,6 +1,6 @@
 ---
-title: Finestra Output | Microsoft Docs
-ms.custom: ''
+title: Finestra di output
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,21 +13,21 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68ad1919122e2131c548d88edb212302828a15d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063458"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243063"
 ---
-# <a name="output-window"></a>Finestra Output
+# <a name="output-window"></a>Finestra di output
   Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando**del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.  
   
- **Per accedere alla finestra Output**  
+ **Per accedere alla finestra di output**  
   
 -   Scegliere **Altre finestre** dal menu **Visualizza**, quindi fare clic su **Output**.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Options  
  **Elenco dei riquadri di output**  
  Visualizza un elenco dei riquadri di output che è possibile visualizzare. A seconda degli strumenti che usano la finestra **Output** per la visualizzazione di informazioni all'utente, possono essere disponibili diversi riquadri di informazioni.  
   

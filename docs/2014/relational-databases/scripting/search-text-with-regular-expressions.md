@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
-ms.custom: ''
+title: Testo di ricerca con espressioni regolari
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063765"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243316"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
@@ -37,7 +37,7 @@ ms.locfileid: "66063765"
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -50,24 +50,25 @@ ms.locfileid: "66063765"
 |Qualsiasi carattere del set|[]|Consente di ricercare qualsiasi carattere racchiuso tra []. Per specificare un intervallo di caratteri, immettere il carattere iniziale e quello finale separati da un trattino (-), ad esempio [a-z].|  
 |Qualsiasi carattere esterno al set|[^...]|Consente di ricercare qualsiasi carattere non compreso nel set di caratteri che seguono il simbolo ^.|  
 |Oppure|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
-|Carattere speciale di escape|\|Cerca il carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
+|Carattere speciale di escape|\|Corrisponde al carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
 |Espressione tag|{}|Consente di ricercare il testo con tag nell'espressione tra parentesi.|  
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
-|Valore intero|:z|Corrisponde all'espressione ([0-9]+).|  
+|Integer|:z|Corrisponde all'espressione ([0-9]+).|  
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9]^4 consente di ricercare qualsiasi sequenza di quattro cifre.|  
 |Raggruppamento|()|Consente di raggruppare una sottoespressione.|  
 |ennesimo testo con tag|\n|In un'espressione **Trova o Sostituisci** indica il testo corrispondente all'ennesima espressione con tag, dove n è un numero da 1 a 9.<br /><br /> In un'espressione di **sostituzione** \0 inserisce l'intero testo corrispondente.|  
-|Campo giustificato a destra|\\(w,n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
-|Campo giustificato a sinistra|\\(-w,n)|In un'espressione di **sostituzione** giustifica a sinistra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
+|Campo giustificato a destra|\\(w, n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
+|Campo giustificato a sinistra|
+  \\(-w,n)|In un'espressione di **sostituzione** giustifica a sinistra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
 |Impedisci corrispondenza|~(X)|Consente di escludere una corrispondenza quando X si trova nel punto specificato dell'espressione. Ad esempio, real~(tà) corrisponde a "real" in "realmente" e "realistico", ma non a "real" in "realtà".|  
 |Carattere alfanumerico|:a|Corrisponde all'espressione ([a-zA-Z0-9]).|  
 |Carattere alfabetico|:c|Corrisponde all'espressione ([a-zA-Z]).|  
@@ -78,12 +79,12 @@ ms.locfileid: "66063765"
 |Carattere speciale di escape|\e|Carattere Unicode U+001B.|  
 |Campanello|\g|Carattere Unicode U+0007.|  
 |Backspace|\h|Carattere Unicode U+0008.|  
-|Scheda|\t|Consente di ricercare un carattere di tabulazione, Unicode U+0009.|  
+|TAB|\t|Consente di ricercare un carattere di tabulazione, Unicode U+0009.|  
 |carattere Unicode|\x#### oppure \u####|Consente di ricercare un carattere corrispondente a un valore Unicode, dove #### è una cifra esadecimale. È possibile specificare un carattere non incluso nel Basic Multilingual Plane, ovvero un surrogato, tramite il punto di codice ISO 10646 o due punti di codice Unicode che forniscono i valori della coppia surrogato.|  
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -118,12 +119,12 @@ ms.locfileid: "66063765"
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
-|Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
+|Alfa|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  
 |Punteggiatura|:Pu|Consente di ricercare qualsiasi segno di punteggiatura, ad esempio ?, @, ' e così via.|  
-|Spazio|:Wh|Consente di ricercare tutti i tipi di spazi, inclusi gli spazi di impaginazione e quelli ideografici.|  
+|Spazi vuoti|:Wh|Consente di ricercare tutti i tipi di spazi, inclusi gli spazi di impaginazione e quelli ideografici.|  
 |Bidirezionale|:Bi|Consente di ricercare caratteri appartenenti a lingue con scrittura da destra a sinistra, come l'arabo e l'ebraico.|  
 |Hangul|:Ha|Consente di ricercare caratteri Hangul (coreano) e jamo combinati.|  
 |Hiragana|:Hi|Consente di ricercare caratteri hiragana.|  
@@ -131,5 +132,5 @@ ms.locfileid: "66063765"
 |Ideogramma/Han/Kanji|:Id|Consente di ricercare caratteri ideografici, come i caratteri Han e Kanji.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](search-and-replace.md)   
+ [Cerca e Sostituisci](search-and-replace.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)  

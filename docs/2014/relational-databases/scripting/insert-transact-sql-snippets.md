@@ -1,6 +1,6 @@
 ---
-title: Inserire frammenti Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Inserimento di frammenti di Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c47bc6dc82843159f116b62ff6bc68acf981f4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063962"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242084"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserimento di frammenti di Transact-SQL
   Un frammento di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] è un modello che è possibile utilizzare come punto iniziale per la scrittura di nuove istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -27,7 +27,8 @@ ms.locfileid: "66063962"
 ## <a name="inserting-snippets"></a>Inserimento di frammenti  
  È possibile usare il menu **Inserisci frammento** per aprire un elenco di frammenti suddiviso per categorie in cui scegliere.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](complete-transact-sql-snippets.md).  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Inserimento di un frammento tramite il menu Inserisci frammento  
   
@@ -44,6 +45,6 @@ ms.locfileid: "66063962"
 3.  Fare doppio clic sul frammento o selezionare il frammento dalla selezione frammento, quindi premere TAB o INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserimento di frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
+ [Inserire frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
   
   

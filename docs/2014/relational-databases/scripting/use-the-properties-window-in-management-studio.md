@@ -1,6 +1,6 @@
 ---
-title: Usare la finestra Proprietà in Management Studio | Microsoft Docs
-ms.custom: ''
+title: Utilizzo della finestra Proprietà in Management Studio
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063244"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242966"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizzo della finestra Proprietà in Management Studio
   Nella finestra Proprietà è indicato lo stato di un elemento in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio una connessione o un operatore Showplan, e vengono riportate informazioni su oggetti di database come ad esempio tabelle, visualizzazioni e finestre di progettazione.  

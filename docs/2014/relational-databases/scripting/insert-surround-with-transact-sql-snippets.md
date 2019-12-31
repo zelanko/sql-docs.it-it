@@ -1,6 +1,6 @@
 ---
-title: Inserire frammenti Transact-SQL racchiusi | Microsoft Docs
-ms.custom: ''
+title: Inserimento di frammenti Transact-SQL racchiusi
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090343"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242092"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserimento di frammenti Transact-SQL racchiusi
   Uno snippet di inclusione è un modello che è possibile utilizzare come punto iniziale per includere un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in un blocco BEGIN, IF o WHILE.  
@@ -44,6 +44,6 @@ ms.locfileid: "66090343"
 3.  Selezionare il nome del frammento (BEGIN, IF o WHILE) nell'elenco utilizzando il mouse o digitando il nome del frammento e quindi premendo TAB o INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserimento di frammenti di Transact-SQL](insert-transact-sql-snippets.md)  
+ [Inserire frammenti Transact-SQL](insert-transact-sql-snippets.md)  
   
   

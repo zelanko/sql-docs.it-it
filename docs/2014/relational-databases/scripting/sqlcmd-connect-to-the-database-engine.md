@@ -1,6 +1,6 @@
 ---
-title: Connettersi al motore di database tramite sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Connessione al Motore di database tramite sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,21 +18,21 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 441a2ebc1f147e71a0bfa3bce20daf9fd67d09f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090095"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243255"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Connessione al Motore di database tramite sqlcmd
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le comunicazioni client con il protocollo di rete TCP/IP (predefinito) e il protocollo Named Pipes. Se il client si connette a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] nello stesso computer, è inoltre disponibile il protocollo Shared Memory. La selezione del protocollo può essere in genere eseguita in tre modi. Il protocollo usato dall'utilità **sqlcmd** viene determinato nel seguente ordine:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta la comunicazione client con il protocollo di rete TCP/IP (impostazione predefinita) e il protocollo Named Pipes. Se il client si connette a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] nello stesso computer, è inoltre disponibile il protocollo Shared Memory. La selezione del protocollo può essere in genere eseguita in tre modi. Il protocollo usato dall'utilità **sqlcmd** viene determinato nel seguente ordine:  
   
--   **sqlcmd** usa il protocollo specificato nella stringa di connessione come illustrato di seguito.  
+-   **SQLCMD** usa il protocollo specificato come parte della stringa di connessione, come descritto di seguito.  
   
 -   Se nella stringa di connessione non viene specificato alcun protocollo, **sqlcmd** usa il protocollo definito nell'alias con il quale viene stabilita la connessione. Per configurare **sqlcmd** per l'uso di un protocollo di rete specifico creando un alias, vedere [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Se il protocollo non viene specificato in un altro modo, **sqlcmd** usa il protocollo di rete determinato dall'ordine dei protocolli in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Se il protocollo non viene specificato in un altro modo, **sqlcmd** usa il protocollo di rete determinato dall'ordine dei protocolli in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Negli esempi seguenti vengono illustrate diverse modalità di connessione all'istanza predefinita di [!INCLUDE[ssDE](../../includes/ssde-md.md)] sulla porta 1433 e a istanze denominate di [!INCLUDE[ssDE](../../includes/ssde-md.md)] in attesa sulla porta 1691. In alcuni degli esempi viene utilizzato l'indirizzo IP dell'adattatore loopback (127.0.0.1). Eseguire una prova utilizzando l'indirizzo IP della scheda di interfaccia di rete del computer in uso.  
   

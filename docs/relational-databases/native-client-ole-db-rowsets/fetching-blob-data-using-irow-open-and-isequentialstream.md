@@ -1,5 +1,5 @@
 ---
-title: Recupero di dati BLOB con IRow::Open e ISequentialStream | Microsoft Docs
+title: 'BLOB, IRow:: Open, ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5c76342349a0bb1831903c7abe5ab43d52a0580
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761719"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242643"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Recupero di dati BLOB mediante IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **IRow::Open** supporta solo i tipi DBGUID_STREAM e DBGUID_NULL di oggetti da aprire.  
+  **IRow:: Open** supporta solo DBGUID_STREAM e DBGUID_NULL tipo di oggetti da aprire.  
   
  La funzione seguente utilizza **IRow::Open** e **ISequentialStream** per recuperare i dati di grandi dimensioni.  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  

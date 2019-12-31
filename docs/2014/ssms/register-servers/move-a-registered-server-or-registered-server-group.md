@@ -1,6 +1,6 @@
 ---
-title: Spostare un Server registrato o gruppo di Server registrati (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Spostare un server o un gruppo registrato
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298044"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241326"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Spostamento di un server registrato o di un gruppo di server registrati (SQL Server Management Studio)
   In questo argomento viene illustrato come organizzare i server in Server registrati spostando un server registrato o gruppi di server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I gruppi di server possono contenere server registrati o altri gruppi di server. Sia i server che i gruppi di server possono essere spostati da un gruppo di server a un altro.  
@@ -35,7 +35,7 @@ ms.locfileid: "63298044"
 2.  Nella finestra di dialogo **Sposta registrazione server** espandere l'elenco di gruppi di server, fare clic sul nodo in cui si vuole che venga visualizzato il server o il gruppo di server e quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione di server](register-servers.md)   
+ [Registra server](register-servers.md)   
  [Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche di testo con caratteri jolly | Microsoft Docs
-ms.custom: ''
+title: Testo di ricerca con caratteri jolly
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243282"
 ---
 # <a name="search-text-with-wildcards"></a>Testo di ricerca con caratteri jolly
-  Caratteri o cifre nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  Le espressioni seguenti possono sostituire caratteri o cifre nel campo **trova** della finestra di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogo **trova e Sostituisci** .  
   
 #### <a name="to-search-using-wildcards"></a>Per eseguire la ricerca utilizzando caratteri jolly  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66090235"
   
  Nella tabella seguente sono descritti i caratteri jolly disponibili nell' **Elenco riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Un solo carattere|?|Individua un qualsiasi singolo carattere.|  
 |Una sola cifra|#|Individua una qualsiasi singola cifra. Ad esempio, 7# individua i numeri che comprendono 7 seguito da un altro numero. In questo caso potrebbe essere 71 ma non 17.|  
@@ -43,5 +43,5 @@ ms.locfileid: "66090235"
 |Qualsiasi carattere del set|[ ]|Individua qualsiasi carattere specificato nel set.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](search-and-replace.md)   
+ [Cerca e Sostituisci](search-and-replace.md)   
  [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
