@@ -1,6 +1,6 @@
 ---
-title: Editor di query del motore di database (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: editor di query del Motore di database
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064101"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244938"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
   Utilizzare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
@@ -53,10 +53,10 @@ ms.locfileid: "66064101"
 ## <a name="sql-editor-toolbar"></a>Barra degli strumenti Editor SQL  
  Quando l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è aperto, nella barra degli strumenti Editor SQL sono visualizzati i pulsanti seguenti.  
   
- **Connect**  
+ **Connettersi**  
  Consente di aprire la finestra di dialogo **Connetti al server** . Utilizzare questa finestra di dialogo per stabilire una connessione a un server.  
   
- **Disconnetti**  
+ **Disconnettere**  
  Disconnette l'editor di query corrente dal server.  
   
  **Cambia connessione**  
@@ -68,7 +68,7 @@ ms.locfileid: "66064101"
  **Database disponibili**  
  Consente di passare a un database diverso sullo stesso server.  
   
- **Execute**  
+ **Eseguire**  
  Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte del codice, di eseguire tutto il codice incluso nell'editor di query.  
   
  **Debug**  
@@ -77,7 +77,7 @@ ms.locfileid: "66064101"
  **Annulla esecuzione query**  
  Consente di inviare una richiesta di annullamento al server. Alcune query non possono essere annullate immediatamente, ma devono attendere una condizione di annullamento adatta. Quando le transazioni vengono annullate, è possibile che si verifichino ritardi durante il rollback delle transazioni.  
   
- **Analizza**  
+ **Analizzare**  
  Consente di controllare la sintassi del codice selezionato. Se non è selezionata alcuna parte del codice, viene controllata la sintassi di tutto il codice incluso nella finestra dell'editor di query.  
   
  **Visualizza piano di esecuzione stimato**  
@@ -104,7 +104,7 @@ ms.locfileid: "66064101"
  **Risultati in un file**  
  All'esecuzione della query viene visualizzata la finestra di dialogo **Salva risultati** . In **Salva in**selezionare la cartella in cui si desidera salvare il file. In **Nome file**digitare il nome del file e quindi fare clic su **Salva** per salvare i risultati della query come file **Report** con estensione rpt. Per visualizzare le opzioni avanzate, fare clic sulla freccia rivolta verso il basso del pulsante **Salva** e quindi selezionare **Salva con codifica**.  
   
- **Commenta selezione**  
+ **Selezione Commenti**  
  Consente di contrassegnare la riga corrente come commento tramite l'aggiunta di un operatore di commento (--) all'inizio della riga.  
   
  **Rimuovi commento selezione**  
@@ -116,7 +116,7 @@ ms.locfileid: "66064101"
  **Aumenta rientro riga**  
  Consente di spostare a destra il testo della riga aggiungendo spazi vuoti all'inizio della riga.  
   
- **Imposta valori per parametri modello**  
+ **Specificare i valori per i parametri del modello**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare valori per i parametri inclusi in stored procedure e funzioni.  
   
  È anche possibile aggiungere la barra degli strumenti Editor SQL selezionando il menu **Visualizza** , **Barre degli strumenti**, quindi **Editor SQL**. Se la barra degli strumenti Editor SQL viene aggiunta quando non sono aperte finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non è disponibile alcun pulsante.  
@@ -124,7 +124,7 @@ ms.locfileid: "66064101"
 ## <a name="sql-editor-toolbar"></a>Barra degli strumenti Editor SQL  
  Quando è aperta una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , è possibile aggiungere la barra degli strumenti Debug scegliendo **Barre degli strumenti** dal menu **Visualizza**e quindi facendo clic su **Debug**. Se la barra degli strumenti Debug viene aggiunta quando non è aperta alcuna finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non sarà disponibile alcun pulsante.  
   
- **Continue**  
+ **Continuare**  
  Consente di eseguire il codice nella finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] fino a quando non viene rilevato un punto di interruzione.  
   
  **Interrompi tutto**  
@@ -142,13 +142,13 @@ ms.locfileid: "66064101"
  **Esegui istruzione/routine**  
  Viene eseguita l'istruzione successiva. Se l'istruzione richiama una stored procedure, una funzione o un trigger Transact-SQL, il modulo viene eseguito fino alla fine e i risultati vengono restituiti al codice che ha effettuato la chiamata. Se si è certi che non vi siano errori nel modulo, è possibile continuare. L'esecuzione viene sospesa in corrispondenza dell'istruzione che segue la chiamata al modulo.  
   
- **Esci da istruzione/routine**  
+ **Esci da istruzione/uscita**  
  Consente di tornare al successivo livello di chiamata più alto, ad esempio una funzione, una stored procedure o un trigger. L'esecuzione viene sospesa in corrispondenza dell'istruzione che segue la chiamata alla stored procedure, la funzione o il trigger.  
   
  **Windows**  
  Consente di aprire la finestra **Punto di interruzione** o **Controllo immediato** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Tasti di scelta rapida SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

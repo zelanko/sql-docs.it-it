@@ -1,6 +1,6 @@
 ---
-title: Creare o modificare un gruppo di server (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Creare o modificare un gruppo di server
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32c91f7b3186543a5a5a053c1aa410648caf0fb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297595"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244614"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Creare o modificare un gruppo di server (SQL Server Management Studio)
   In questo argomento viene illustrato come organizzare i server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] creando gruppi di server e inserendoli all'interno dei gruppi. È possibile creare gruppi di server in Server registrati in qualsiasi momento oppure quando si esegue la registrazione dei server.  
@@ -45,6 +45,6 @@ ms.locfileid: "63297595"
     >  È anche possibile creare un nuovo gruppo di server nell'ambito della registrazione di un server facendo clic su **Nuovo gruppo**e inserendo le informazioni nella finestra di dialogo **Nuovo gruppo** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione di server](register-servers.md)  
+ [Registra server](register-servers.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Struttura del codice | Microsoft Docs
-ms.custom: ''
+title: Struttura del codice
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090627"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244966"
 ---
 # <a name="code-outlining"></a>Struttura del codice
   La modalità struttura negli editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di nascondere in modo selettivo il codice quando si modificano query. In questo modo è possibile visualizzare più facilmente il codice utilizzato, soprattutto in file di query di dimensioni elevate.  
@@ -42,7 +42,7 @@ ms.locfileid: "66090627"
   
  Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (...), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
   
- ![Codice XML con una descrizione comando che mostra il codice nascosto](../../database-engine/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comando che mostra il codice nascosto")  
+ ![Codice XML con una descrizione comandi in cui è illustrato il codice nascosto](../../database-engine/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comandi in cui è illustrato il codice nascosto")  
   
  Quando si fa clic sul segno meno nella riga \<MiddleTag>, vengono compresse le parti relative a MiddleTag e InnerTag, come illustrato nella figura seguente.  
   

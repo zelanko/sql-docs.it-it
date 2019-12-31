@@ -1,6 +1,5 @@
 ---
-title: Creare un progetto Data Quality | Microsoft Docs
-ms.custom: ''
+title: Creare un progetto Data Quality
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,14 +12,14 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: badc06f5bc8becdb8a948a5740888e7f97be19ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 99b869f153e6dacac799f8630283dbaf8d27660b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935520"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245492"
 ---
 # <a name="create-a-data-quality-project"></a>Creare un progetto Data Quality
 
@@ -28,19 +27,19 @@ ms.locfileid: "67935520"
 
   In questo argomento viene descritto come creare un progetto Data Quality mediante il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un progetto Data Quality viene utilizzato per eseguire l'attività di pulizia o di corrispondenza in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  È necessario disporre di una Knowledge Base pertinente da utilizzare nel progetto Data Quality per l'attività di pulizia e di corrispondenza.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  Per creare un progetto Data Quality, è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
-##  <a name="Create"></a> Creare un progetto Data Quality  
+##  <a name="Create"></a>Creazione di un progetto Data Quality  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Nuovo progetto Data Quality**.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "67935520"
   
         -   **Pulizia**: selezionare questa attività per pulire i dati di origine.  
   
-        -   **Corrispondenza**: selezionare questa attività per eseguire una corrispondenza. Questa attività è disponibile solo se la Knowledge Base selezionata per il progetto Data Quality contiene i criteri di corrispondenza.  
+        -   **Corrispondenza**: selezionare questa attività per eseguire la corrispondenza. Questa attività è disponibile solo se la Knowledge Base selezionata per il progetto Data Quality contiene i criteri di corrispondenza.  
   
 4.  Fare clic su **Crea** per creare un progetto Data Quality.  
   
-##  <a name="FollowUp"></a> Completamento: dopo la creazione di un progetto Data Quality  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di un progetto Data Quality  
  Dopo avere creato un progetto Data Quality, viene visualizzata una procedura guidata che è possibile utilizzare per eseguire l'attività selezionata: pulizia o corrispondenza. Per altre informazioni sulle attività di pulizia e corrispondenza, vedere [Pulizia dei dati](../data-quality-services/data-cleansing.md) e [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
   

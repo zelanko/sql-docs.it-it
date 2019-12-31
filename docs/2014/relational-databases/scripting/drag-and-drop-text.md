@@ -1,6 +1,6 @@
 ---
-title: Trascinamento della selezione | Microsoft Docs
-ms.custom: ''
+title: Trascinamento della selezione
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064134"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244902"
 ---
 # <a name="drag-and-drop-text"></a>Trascinamento della selezione
   Il testo può essere selezionato e quindi trascinato in altre posizioni. È possibile trascinare il testo:  
@@ -44,6 +44,6 @@ ms.locfileid: "66064134"
  Con il trascinamento il testo viene spostato, ovvero viene cancellato dalla posizione precedente e inserito nella nuova posizione. Tenendo premuto CTRL durante il trascinamento, il testo verrà copiato nella nuova posizione senza essere cancellato dalla posizione originaria. Il trascinamento di un oggetto da Esplora oggetti è un'eccezione e non comporta l'eliminazione del nome dell'oggetto da Esplora oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spostamento nel codice e nel testo](navigate-code-and-text.md)  
+ [Esplorare il codice e il testo](navigate-code-and-text.md)  
   
   

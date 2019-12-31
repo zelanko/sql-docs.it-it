@@ -1,19 +1,20 @@
 ---
-title: Configurare PolyBase per l'accesso a dati esterni in Hadoop | Microsoft Docs
+title: 'Accedere ai dati esterni: Hadoop-polibase'
 description: Viene illustrato come configurare la polibase in parallelo data warehouse per connettersi a Hadoop esterni.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227131"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245387"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -48,7 +49,7 @@ Per prima cosa, configurare gli APS per l'uso del provider Hadoop specifico.
 
 2. Riavviare l'area APS usando la pagina stato del servizio nel [Configuration Manager Appliance](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
+## <a id="pushdown"></a>Abilita calcolo distribuzione  
 
 Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   
@@ -226,7 +227,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Creare un'origine dati esterna con [Crea origine dati esterna](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -315,7 +316,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione di dati  
+### <a name="exporting-data"></a>Esportazione dei dati  
 
 La query seguente esporta i dati da APS a Hadoop. Può essere usato per archiviare dati relazionali in Hadoop, mentre è comunque possibile eseguire query su di esso.
 

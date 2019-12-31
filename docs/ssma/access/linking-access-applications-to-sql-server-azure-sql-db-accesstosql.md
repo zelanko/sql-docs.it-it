@@ -23,24 +23,24 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 3bdd11580e1a7e57b72d2d8fe0ce5f54299555db
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632691"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245923"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Collegamento di applicazioni di accesso a SQL Server-database SQL di Azure (AccessToSQL)
-Se si desidera utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile collegare le tabelle di accesso originali alle tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure migrate. Il collegamento consente di modificare il database di Access in modo che nelle query, nei form, nei report e nelle pagine di accesso ai dati vengano utilizzati i dati del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure invece dei dati presenti nel database di Access.  
+Se si desidera utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile collegare le tabelle di accesso originali alle tabelle migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Il collegamento modifica il database di Access in modo che nelle query, nei form, nei report e nelle pagine di accesso ai [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati vengano utilizzati i dati nel database di o SQL Azure anziché i dati nel database di Access.  
   
 > [!NOTE]  
-> Le tabelle di accesso rimangono in accesso, ma non vengono aggiornate insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure aggiornamenti. Dopo aver collegato le tabelle e verificato la funzionalità, potrebbe essere necessario eliminare le tabelle di accesso.  
+> Le tabelle di accesso rimangono in accesso, ma non vengono aggiornate insieme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o SQL Azure aggiornamenti. Dopo aver collegato le tabelle e verificato la funzionalità, potrebbe essere necessario eliminare le tabelle di accesso.  
   
 ## <a name="linking-access-and-sql-server-tables"></a>Collegamento di accesso e tabelle di SQL Server  
-Quando si collega una tabella di accesso a una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, il motore di database Jet archivia le informazioni di connessione e i metadati della tabella, ma i dati vengono archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Questo collegamento consente alle applicazioni di accesso di operare sulle tabelle di accesso anche se le tabelle e i dati effettivi sono in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+Quando si collega una tabella di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabella o SQL Azure, il motore di database Jet archivia le informazioni di connessione e i metadati della tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma i dati vengono archiviati in o SQL Azure. Questo collegamento consente alle applicazioni di accesso di operare sulle tabelle di accesso anche se le tabelle e i dati effettivi sono in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 > [!NOTE]  
-> Se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione, la password viene archiviata in testo non crittografato sulle tabelle di accesso collegato. Si consiglia di usare l'autenticazione di Windows.  
+> Se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, la password viene archiviata in testo non crittografato nelle tabelle di accesso collegato. Si consiglia di usare l'autenticazione di Windows.  
   
 **Per collegare tabelle**  
   
@@ -48,7 +48,7 @@ Quando si collega una tabella di accesso a una tabella [!INCLUDE[ssNoVersion](..
   
 2.  Fare clic con il pulsante destro del mouse su **tabelle**, quindi scegliere **collega**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso esegue il backup della tabella di accesso originale e crea una tabella collegata.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per l'accesso esegue il backup della tabella di accesso originale e crea una tabella collegata.  
   
 Dopo aver collegato le tabelle, le tabelle in SSMA vengono visualizzate con un'icona di collegamento di piccole dimensioni. In Access, le tabelle vengono visualizzate con un'icona "collegata", che è un globo con una freccia che punta a essa.  
   
@@ -56,10 +56,10 @@ Quando si apre una tabella in Access, i dati vengono recuperati utilizzando un c
   
 > [!IMPORTANT]  
 > Per collegare le tabelle di accesso a un database di Azure, è necessario SQL Server Native Client (SNAC) versione 10,5 o successiva.   
-> È possibile ottenere la versione più recente di SNAC da [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=16978).  
+> È possibile ottenere la versione più recente di SNAC da [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
   
 ## <a name="unlinking-access-tables"></a>Scollegamento di tabelle di accesso  
-Quando si scollega una tabella di accesso da una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA ripristina la tabella di accesso originale e i relativi dati.  
+Quando si scollega una tabella di accesso da una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella o SQL Azure, SSMA ripristina la tabella di accesso originale e i relativi dati.  
   
 **Per scollegare le tabelle**  
   
@@ -85,7 +85,7 @@ Se le tabelle di accesso sono state collegate a un'istanza di SQL Server e succe
 6.  Fare clic con il pulsante destro del mouse su **tabelle**, quindi scegliere **collega**.  
   
 ## <a name="updating-linked-tables"></a>Aggiornamento delle tabelle collegate  
-Se vengono modificate le definizioni delle tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile scollegare e quindi ricollegare le tabelle in SSMA utilizzando le procedure illustrate in precedenza in questo argomento. È anche possibile aggiornare le tabelle usando Access.  
+Se le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definizioni di tabella o SQL Azure vengono modificate, è possibile scollegare e quindi collegare nuovamente le tabelle in SSMA utilizzando le procedure illustrate in precedenza in questo argomento. È anche possibile aggiornare le tabelle usando Access.  
   
 **Per aggiornare le tabelle collegate tramite Access**  
   
@@ -98,12 +98,12 @@ Se vengono modificate le definizioni delle tabelle [!INCLUDE[ssNoVersion](../../
 4.  Selezionare la casella di controllo accanto a ogni tabella collegata che si desidera aggiornare, quindi fare clic su **OK**.  
   
 ## <a name="possible-post-migration-issues"></a>Possibili problemi post-migrazione  
-Nelle sezioni seguenti sono elencati i problemi che possono verificarsi nelle applicazioni di accesso esistenti dopo aver eseguito la migrazione dei database da accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure e quindi collegare le tabelle, insieme alle cause e alle risoluzioni.  
+Nelle sezioni seguenti sono elencati i problemi che possono verificarsi nelle applicazioni di accesso esistenti dopo aver eseguito la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrazione dei database dall'accesso a o SQL Azure e quindi collegato alle tabelle, insieme alle cause e alle risoluzioni.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Rallentamento delle prestazioni con le tabelle collegate  
 **Motivo:** Alcune query potrebbero essere lente dopo il ridimensionamento per i motivi seguenti:  
   
--   L'applicazione dipende da funzioni che non esistono in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, che fa in modo che Jet esegua il pull delle tabelle localmente per eseguire una query SELECT.  
+-   L'applicazione dipende da funzioni che non esistono in o SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che fa in modo che Jet esegua il pull delle tabelle localmente per eseguire una query SELECT.  
   
 -   Le query che aggiornano o eliminano molte righe vengono inviate da Jet come una query con parametri per ogni riga.  
   
@@ -125,11 +125,11 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>I nuovi record non sono disponibili  
-**Motivo:** Quando si aggiunge un record a una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure utilizzando VBA, se il campo indice univoco della tabella ha un valore predefinito e non si assegna un valore a tale campo, il nuovo record non viene visualizzato fino a quando non si riapre la tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Se si tenta di ottenere un valore dal nuovo record, viene visualizzato il messaggio di errore seguente:  
+**Motivo:** Quando si aggiunge un record a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella o SQL Azure usando VBA, se il campo indice univoco della tabella ha un valore predefinito e non si assegna un valore a tale campo, il nuovo record non viene visualizzato fino a quando non si riapre la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o SQL Azure. Se si tenta di ottenere un valore dal nuovo record, viene visualizzato il messaggio di errore seguente:  
   
 `Run-time error '3167' Record is deleted.`  
   
-**Risoluzione:** Quando si apre la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure utilizzando il codice VBA, includere l'opzione `dbSeeChanges`, come nell'esempio seguente:  
+**Risoluzione:** Quando si apre la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella o SQL Azure usando il codice VBA, includere l' `dbSeeChanges` opzione, come nell'esempio seguente:  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
@@ -149,7 +149,7 @@ Recordset.LastModified
 **Risoluzione:** Nessuno.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Alcuni tipi di dati SQL Server non sono supportati da Access  
-**Motivo:** Se successivamente si aggiornano le tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure in modo che contengano tipi di dati non supportati da Access, non è possibile aprire la tabella in Access.  
+**Motivo:** Se successivamente si aggiornano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le tabelle o SQL Azure in modo che contengano tipi di dati non supportati da Access, non è possibile aprire la tabella in Access.  
   
 **Risoluzione:** È possibile definire una query di accesso che restituisce solo le righe con i tipi di dati supportati.  
   

@@ -1,5 +1,5 @@
 ---
-title: Linee guida e le limitazioni di DiffGram SQLXML | Documenti di Microsoft
+title: Linee guida e limitazioni per i Diffgram in SQLXML
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f19e8d7b5e67311f21b79c6f36572d9b2240d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eae0b81b3c55a4afe611cd8ed6fdbb495b498c61
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073456"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246603"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>Linee guida e limitazioni per i Diffgram in SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Quando si utilizzano Diffgram con SQLXML 4.0, tenere presenti le considerazioni seguenti:  
   
--   I tipi di oggetto binario di grandi dimensioni (BLOB), ad esempio **text/ntext** e le immagini non devono essere utilizzati nel  **\<diffgr: prima >** bloccare quando si utilizzano DiffGram, perché in questo caso verrà inclusi per l'utilizzo in controllo della concorrenza. Ciò può provocare problemi con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a causa delle limitazioni applicate al confronto per i tipi BLOB. Ad esempio, viene usata la parola chiave LIKE nella clausola WHERE per il confronto tra le colonne del **testo** del tipo di dati; tuttavia, i confronti avrà esito negativo nel caso dei tipi BLOB in cui la dimensione dei dati è maggiore di 8 KB.  
+-   I tipi BLOB (Binary Large Object) come **text/ntext** e images non devono essere usati in ** \<diffgr: before>** Block in quando si lavora con DiffGram, perché verranno inclusi per l'utilizzo nel controllo della concorrenza. Ciò può provocare problemi con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a causa delle limitazioni applicate al confronto per i tipi BLOB. La parola chiave LIKE, ad esempio, viene utilizzata nella clausola WHERE per il confronto tra colonne con tipo di dati **Text** . Tuttavia, i confronti avranno esito negativo in caso di tipi BLOB in cui le dimensioni dei dati sono maggiori di 8K.  
   
--   Caratteri speciali nei **ntext** dati possono causare problemi con SQLXML 4.0 a causa delle limitazioni applicate al confronto per i tipi BLOB. Ad esempio, l'utilizzo di "[Serializable]" nel  **\<diffgr: prima >** blocco di un DiffGram se utilizzato nel controllo della concorrenza di una colonna di **ntext** tipo avrà esito negativo con il provider SQLOLEDB seguente Descrizione dell'errore:  
+-   I caratteri speciali nei dati **ntext** possono causare problemi con SQLXML 4,0 a causa delle limitazioni del confronto per i tipi di BLOB. Ad esempio, l'utilizzo di "[Serializable]" in ** \<diffgr: before>** blocco di un DiffGram se utilizzato nel controllo della concorrenza di una colonna di tipo **ntext** avrà esito negativo con la descrizione di errore SQLOLEDB seguente:  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

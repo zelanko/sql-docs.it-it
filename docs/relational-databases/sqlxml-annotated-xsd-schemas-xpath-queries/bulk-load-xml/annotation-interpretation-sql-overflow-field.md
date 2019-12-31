@@ -1,6 +1,5 @@
 ---
-title: 'SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'SQL: overflow-field (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902226"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246805"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretazione delle annotazioni - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In uno schema è possibile identificare una colonna come colonna di overflow per ricevere tutti i dati non utilizzati dal documento XML. Questa colonna viene specificata nello schema utilizzando il **SQL: overflow-campo** annotazione. È possibile avere più colonne di overflow.  
+  In uno schema è possibile identificare una colonna come colonna di overflow per ricevere tutti i dati non utilizzati dal documento XML. Questa colonna viene specificata nello schema utilizzando l'annotazione **SQL: overflow-field** . È possibile avere più colonne di overflow.  
   
- Ogni volta che un nodo XML (elemento o attributo) per cui è disponibile un' **SQL: overflow-campo** annotazione definita entra nell'ambito, la colonna di overflow viene attivata e riceve dati non utilizzati. Quando il nodo non è più in ambito, la colonna di overflow non è più attiva e il caricamento bulk XML rende attivo il campo di overflow precedente, se presente.  
+ Ogni volta che un nodo XML (elemento o attributo) per il quale è presente un'annotazione **SQL: overflow-field** definito entra nell'ambito, la colonna di overflow viene attivata e riceve dati non utilizzati. Quando il nodo non è più in ambito, la colonna di overflow non è più attiva e il caricamento bulk XML rende attivo il campo di overflow precedente, se presente.  
   
- Archiviazione dei dati nella colonna di overflow, il caricamento Bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per il quale **SQL: overflow-campo** è definito.  
+ Mentre archivia i dati nella colonna di overflow, il caricamento bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per cui è definito **SQL: overflow-field** .  
   
- Ad esempio, lo schema seguente descrive la  **\<Customers >** e  **\<CustOrder >** elementi. Ognuno di questi elementi identifica una colonna di overflow:  
+ Nello schema seguente, ad esempio, vengono descritti gli ** \<elementi Customers>** e ** \<CustOrder>** . Ognuno di questi elementi identifica una colonna di overflow:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +75,9 @@ ms.locfileid: "67902226"
 </xsd:schema>  
 ```  
   
- Nello schema, il  **\<cliente >** elemento viene mappato alla tabella Cust e il  **\<ordine >** elemento viene mappato alla tabella CustOrder.  
+ Nello schema, l' ** \<elemento Customer>** viene mappato alla tabella Cust e l' ** \<elemento Order>** viene mappato alla tabella CustOrder.  
   
- Entrambi i  **\<cliente >** e  **\<ordine >** elementi identificano una colonna di overflow. Di conseguenza, il caricamento Bulk XML Salva tutti gli elementi figlio non utilizzati elementi e attributi con il  **\<cliente >** elemento nella colonna di overflow della tabella Cust e tutti gli elementi figlio non utilizzati attributi e del  **\<Ordine >** elemento nella colonna di overflow della tabella CustOrder.  
+ Gli ** \<elementi Customer>** e ** \<Order>** identificano una colonna di overflow. Pertanto, il caricamento bulk XML salva tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \<Customer>** nella colonna di overflow della tabella Cust e tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \<Order>** nella colonna di overflow della tabella CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   

@@ -1,6 +1,6 @@
 ---
-title: Modificare lo stile, le dimensioni e il colore del carattere | Microsoft Docs
-ms.custom: ''
+title: Modifica dello stile, delle dimensioni e del colore del carattere
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064179"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244993"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifica dello stile, delle dimensioni e del colore del carattere
   È possibile personalizzare la visualizzazione del testo nell'editor e in altre posizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "66064179"
  Le impostazioni per il colore del testo e il tipo di carattere sono globali per tutti i tipi di elemento testo, ad esempio commenti, stringhe e così via.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stampa di codice e risultati](print-code-and-results.md)   
- [Codifica con colori negli editor di query](color-coding-in-query-editors.md)  
+ [Stampare codice e risultati](print-code-and-results.md)   
+ [Codifica a colori negli editor di query](color-coding-in-query-editors.md)  
   
   

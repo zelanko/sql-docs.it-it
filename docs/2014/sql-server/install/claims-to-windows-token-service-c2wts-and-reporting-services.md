@@ -15,15 +15,15 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 81bc6c12720d4b841e21191db5811d583d4c5edc
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952267"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245617"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
-  Se si desidera utilizzare l'autenticazione di Windows per le origini dati esterne alla farm di SharePoint, è necessario disporre di SharePoint Claims to Windows Token Service (c2WTS) con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint di. La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
+  Se si desidera utilizzare l'autenticazione di Windows per le origini dati esterne [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] alla farm di SharePoint, è richiesta la modalità SharePoint Claims to Windows Token Service (C2WTS). La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
   
  Il servizio c2WTS è necessario anche se l'origine dati si trova nello stesso computer del servizio condiviso, sebbene in questo scenario la delega vincolata non sia richiesta.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71952267"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
 > [!NOTE]  
 >  Nota: alcuni passaggi della configurazione possono variare o potrebbero non funzionare in determinate topologie farm. Un'installazione in un server singolo, ad esempio, non supporta i servizi c2WTS di Windows Identity Foundation e di conseguenza gli scenari di delega di attestazioni per il servizio token Windows non sono possibili con questa configurazione della farm.  
@@ -57,7 +57,7 @@ ms.locfileid: "71952267"
     1.  Fare clic con il pulsante destro del mouse su ogni account del servizio e aprire la finestra di dialogo delle proprietà. Nella finestra di dialogo fare clic sulla scheda **Delega** .  
   
         > [!NOTE]  
-        >  Nota: la scheda relativa alla delega è visibile solo se l'oggetto dispone di un nome SPN assegnato. Sebbene c2WTS non richieda un nome SPN per il proprio account, senza tale nome la scheda **Delega** non sarà visibile. Un modo alternativo per configurare la delega vincolata consiste nell'impiego di un'utilità, ad esempio **ADSIEdit**.  
+        >  Nota: la scheda relativa alla delega è visibile solo se l'oggetto dispone di un nome SPN assegnato. c2WTS non richiede un nome SPN per l'account c2WTS, tuttavia, senza un nome SPN, la scheda **delega** non sarà visibile. Un modo alternativo per configurare la delega vincolata consiste nell'impiego di un'utilità, ad esempio **ADSIEdit**.  
   
     2.  Di seguito vengono indicate le opzioni di configurazione principali nella scheda relativa alla delega:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71952267"
   
         -   Selezionare "utilizza un qualsiasi protocollo di autenticazione"  
   
-         Per ulteriori informazioni, vedere la sezione "configurare la delega vincolata Kerberos per computer e account del servizio" della seguente white paper, [configurazione dell'autenticazione Kerberos per prodotti SharePoint 2010 e SQL Server 2008 R2](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Per ulteriori informazioni, vedere la sezione "configurare la delega vincolata Kerberos per computer e account del servizio" della seguente white paper, [configurazione dell'autenticazione Kerberos per prodotti SharePoint 2010 e SQL Server 2008 R2](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
   
 2.  Configurare c2WTS ' AllowedCallers '  
   
@@ -99,7 +99,6 @@ ms.locfileid: "71952267"
 4.  Avviare attestazioni per il servizio token Windows di SharePoint: Avviare Claims nel servizio token Windows tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server** . Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un front-end Web e di un server applicazioni in cui è in esecuzione il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso, è sufficiente avviare c2WTS solo sul server applicazioni. c2WTS non è necessario nel front-end Web.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Claims to Windows Token Service (C2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Panoramica di Claims to Windows Token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
  [Panoramica dell'autenticazione Kerberos per prodotti Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
-  
   

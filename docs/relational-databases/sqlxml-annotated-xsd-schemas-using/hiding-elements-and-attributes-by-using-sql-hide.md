@@ -1,5 +1,5 @@
 ---
-title: 'Nascondere gli elementi e attributi usando SQL: Hide | Microsoft Docs'
+title: Nascondere gli elementi e gli attributi utilizzando sql:hide
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,26 +25,26 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54b338e76e0bb26c2df23871ed24fabfa8aa6c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 670b11e86498116549c395c47364604e72b790a4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067068"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246857"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Nascondere gli elementi e gli attributi utilizzando sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando viene eseguita una query XPath su uno schema XSD, il documento XML risultante presenterà gli elementi e gli attributi specificati nello schema. È possibile specificare che alcuni elementi e attributi essere nascosti nello schema utilizzando il **SQL: hide** annotazione. Ciò si rivela utile quando i criteri di selezione della query richiedono determinati elementi o attributi dello schema, ma non si desidera che vengano restituiti nel documento XML generato.  
+  Quando viene eseguita una query XPath su uno schema XSD, il documento XML risultante presenterà gli elementi e gli attributi specificati nello schema. È possibile specificare che alcuni elementi e attributi siano nascosti nello schema tramite l'annotazione **SQL: Hide** . Ciò si rivela utile quando i criteri di selezione della query richiedono determinati elementi o attributi dello schema, ma non si desidera che vengano restituiti nel documento XML generato.  
   
- Il **SQL: hide** annotazione accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
+ L'annotazione **SQL: Hide** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Specifica di sql:hide in un attributo  
- Lo schema XSD in questo esempio è costituito da un  **\<Person. Contact >** elemento con **ContactID**, **FirstName**, e **LastName** degli attributi.  
+ Lo schema XSD in questo esempio è costituito da una ** \<persona. Contattare>** elemento con gli attributi **ContactID**, **FirstName**e **LastName** .  
   
- Il **\<Person. Contact >** elemento è di tipo complesso e, pertanto, è mappato alla tabella con lo stesso nome (mapping predefinito). Tutti gli attributi del  **\<Person. Contact >** elemento sono di tipo semplice ed eseguire il mapping alle colonne con gli stessi nomi nella Person.Contacttable nel database AdventureWorks. Nello schema, il **SQL: hide** annotazione viene specificata per il **ContactID** attributo. Quando viene specificata una query XPath su questo schema, il **ContactID** non viene restituito nel documento XML.  
+ L' ** \<elemento Person. Contact>** è di tipo complesso e, pertanto, esegue il mapping alla tabella con lo stesso nome (mapping predefinito). Tutti gli attributi di ** \<person. Contact>** elemento sono di tipo semplice ed eseguono il mapping alle colonne con gli stessi nomi in person. contactTable nel database AdventureWorks. Nello schema l'annotazione **SQL: Hide** viene specificata nell'attributo **ContactID** . Quando si specifica una query XPath su questo schema, **ContactID** non viene restituito nel documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -81,7 +81,7 @@ ms.locfileid: "68067068"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Set di risultati:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68067068"
 </ROOT>  
 ```  
   
- Quando **SQL: hide** viene specificato in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Ecco un altro schema XSD in cui **SQL: hide** viene specificata per il  **\<OD >** elemento:  
+ Quando **SQL: Hide** viene specificato in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Di seguito è riportato un altro schema XSD in cui viene specificato ** \<** **SQL: Hide** nell'elemento o>:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -146,7 +146,7 @@ ms.locfileid: "68067068"
 </xsd:schema>  
 ```  
   
- Quando una query XPath (ad esempio `/Customers[@CID="1"]`) viene specificata su questo schema, il documento XML generato non include le  **\<OD >** elemento e i relativi elementi figlio, come illustrato nel risultato parziale:  
+ Quando si specifica una query XPath ( `/Customers[@CID="1"]`ad esempio) su questo schema, il documento XML generato non include l' ** \<elemento od>** e i relativi elementi figlio, come illustrato in questo risultato parziale:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -1,6 +1,6 @@
 ---
-title: Esportare informazioni relative a server registrati (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Esportare informazioni relative ai server registrati
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298104"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244601"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
   In questo argomento viene illustrato come salvare ed esportare le informazioni relative a server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuirle ad altri dipendenti o server. È possibile utilizzare questa funzionalità di esportazione per ottenere un'interfaccia utente coerente su più computer.  
@@ -47,8 +47,8 @@ ms.locfileid: "63298104"
   
      Il gruppo di server visualizza solo i gruppi di server dell'albero di server registrati corrente.  
   
-     **File di esportazione**  
-     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia ( **...** ) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
+     **Esporta file**  
+     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia (**...**) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
   
      **Non includere nomi utente e password nel file di esportazione**  
      Consente di escludere i nomi utente durante l'esportazione del file.  
@@ -57,6 +57,6 @@ ms.locfileid: "63298104"
     >  Sebbene i file di esportazione siano crittografati, se i nomi utente e le password di autenticazione di SQL Server vengono inclusi nel file, sarà opportuno controllare con attenzione l'accesso al file. Per questo motivo i nomi utente e le password vengono esclusi dal file di esportazione per impostazione predefinita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importare le informazioni sul Server registrato &#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [creare un nuovo Server registrato &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [Importa informazioni server registrate &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [creare un nuovo server registrato &#40;SQL Server Management Studio](create-a-new-registered-server-sql-server-management-studio.md)&#41;  
   
   

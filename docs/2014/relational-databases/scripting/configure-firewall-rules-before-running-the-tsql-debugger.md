@@ -1,6 +1,6 @@
 ---
-title: Configurare il Debugger Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Configurazione del debugger Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064186"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245186"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurazione del debugger Transact-SQL
   È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +56,7 @@ ms.locfileid: "66064186"
   
     2.  Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.  
   
-    3.  Nella finestra di dialogo **Programma** selezionare **Percorso programma** e immettere il percorso completo di sqlservr.exe per questa istanza. Per impostazione predefinita, viene installato sqlservr.exe in C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, dove *InstanceName* è MSSQLSERVER per l'istanza predefinita e il nome dell'istanza per qualsiasi istanza denominata.  
+    3.  Nella finestra di dialogo **Programma** selezionare **Percorso programma** e immettere il percorso completo di sqlservr.exe per questa istanza. Per impostazione predefinita, sqlservr. exe è installato in C:\Programmi\Microsoft SQL Server\MSSQL12. *NomeIstanza*\MSSQL\Binn, dove *NomeIstanza* è MSSQLSERVER per l'istanza predefinita e il nome dell'istanza per qualsiasi istanza denominata.  
   
     4.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   
@@ -150,19 +150,20 @@ ms.locfileid: "66064186"
 ## <a name="requirements-for-starting-the-debugger"></a>Requisiti per l'avvio del debugger  
  Qualsiasi tentativo di avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] deve soddisfare anche i requisiti seguenti:  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.  
+* 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.  
   
 * La finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere connessa tramite un account di accesso con autenticazione di Windows o con autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sia membro del ruolo predefinito del server sysadmin.  
   
 * La finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere connessa a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o versione successiva. Non è possibile eseguire il debugger quando la finestra dell'editor di query è connessa a un'istanza che è in modalità utente singolo.
 
-* Il server deve ricomunicare con il client tramite RPC. L'account con cui servizio è in esecuzione SQL Server deve disporre delle autorizzazioni al client di autenticazione.  
+* Il server deve ricomunicare con il client tramite RPC. L'account con cui viene eseguito SQL Server servizio deve disporre delle autorizzazioni di autenticazione per il client.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Esecuzione del debugger Transact-SQL](run-the-transact-sql-debugger.md)   
- [Esecuzione istruzione per istruzione del codice Transact-SQL](step-through-transact-sql-code.md)   
+ [Eseguire il codice Transact-SQL](step-through-transact-sql-code.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Editor di query motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

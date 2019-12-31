@@ -1,5 +1,5 @@
 ---
-title: sys. dm _resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873924"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247314"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm _resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (128 RECS in totale) delle statistiche dei pool di risorse per un database SQL di Azure.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|ID del pool di risorse. Non ammette i valori Null.
-|**name**|sysname|Nome del pool di risorse. Non ammette i valori Null.|
+|**nome**|sysname|Nome del pool di risorse. Non ammette i valori Null.|
 |**snapshot_time**|datetime2|Data/ora dello snapshot delle statistiche del pool di risorse|
 |**duration_ms**|int|Durata tra lo snapshot corrente e quello precedente|
 |**statistics_start_time**|datetime2|Ora di reimpostazione delle statistiche per questo pool. Non ammette i valori Null.|
@@ -84,26 +84,26 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 |**max_vcores**|Decimal (5, 2)|Configurazione corrente per la larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU.  In unità di vcore|
 |**cap_vcores**|Decimal (5, 2)|Limite di utilizzo massimo della larghezza di banda della CPU concesso per tutte le richieste nel pool di risorse.  In unità in vcore|
 |**instance_cpu_count**|int|Numero di CPU configurate per l'istanza|
-|**instance_cpu_percent|Decimal (5, 2)|Percentuale CPU configurata per l'istanza|
+|**instance_cpu_percent**|Decimal (5, 2)|Percentuale CPU configurata per l'istanza|
 |**instance_vcores**|Decimal (5, 2)|Numero di Vcore configurati per l'istanza|
 |**delta_log_bytes_used**|Decimal (5, 2)|Totale generazione log (in byte) a livello di pool dall'ultimo snapshot|
 |**avg_login_rate_percent**|Decimal (5, 2)|Numero di accessi dall'ultimo snapshot rispetto al limite di accesso|
 |**delta_vcores_used**|Decimal (5, 2)|Utilizzo di calcolo nel conteggio di Vcore dall'ultimo snapshot.|
-|**cap_vcores_used_percent**|Decimal (5, 2)|Utilizzo medio del calcolo in percentuale del limite del pool.|
+|**cap_vcores_used_percent**|Decimal (5, 2)|Utilizzo medio del calcolo espresso in percentuale del limite del pool.|
 |**instance_vcores_used_percent**|Decimal (5, 2)|Utilizzo medio del calcolo in percentuale del limite dell'istanza di SQL.|
-|**avg_data_io_percent**|Decimal (5, 2)|Utilizzo medio di I/O in percentuale in base al limite del pool.|
-|**avg_log_write_percent**|Decimal (5, 2)|Utilizzo medio delle risorse di scrittura in percentuale del limite del pool.|
-|**avg_storage_percent**|Decimal (5, 2)|Utilizzo medio dello spazio di archiviazione in percentuale del limite di archiviazione del pool.|
-|**avg_allocated_storage_percent**|Decimal (5, 2)|Percentuale di spazio dati allocato da tutti i database nel pool elastico. Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico. Per ulteriori informazioni, vedere: Gestione dello spazio file nel database SQL|
-|**max_worker_percent**|Decimal (5, 2)|Numero massimo di ruoli di lavoro simultanei (richieste) in percentuale in base al limite del pool.|
-|**max_session_percent**|Decimal (5, 2)|Numero massimo di sessioni simultanee in percentuale in base al limite del pool.|
+|**avg_data_io_percent**|Decimal (5, 2)|Utilizzo I/O medio espresso in percentuale sulla base del limite del pool.|
+|**avg_log_write_percent**|Decimal (5, 2)|Utilizzo delle risorse di scrittura medio espresso in percentuale del limite del pool.|
+|**avg_storage_percent**|Decimal (5, 2)|Utilizzo di spazio di archiviazione medio espresso in percentuale del limite di archiviazione del pool.|
+|**avg_allocated_storage_percent**|Decimal (5, 2)|Percentuale di spazio dati allocato da tutti i database nel pool elastico. Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico. Per ulteriori informazioni, vedere la pagina relativa alla gestione dello spazio file nel database SQL|
+|**max_worker_percent**|Decimal (5, 2)|Numero massimo di ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del pool.|
+|**max_session_percent**|Decimal (5, 2)|Numero massimo di sessioni simultanee espresso in percentuale sulla base del limite del pool.|
 |||
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Questa vista richiede l'autorizzazione VIEW SERVER STATE.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli utenti possono accedere a questa vista a gestione dinamica per monitorare il consumo di risorse quasi in tempo reale per il pool di carico di lavoro degli utenti e per i pool interni di sistema dell'istanza del database SQL di Azure
 
@@ -118,7 +118,7 @@ Nell'esempio seguente vengono restituiti i dati di frequenza massima dei log e i
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-Nell'esempio seguente vengono restituite informazioni simili a sys. elastic_pool_resource_stats senza che sia necessario connettersi al database master logico
+Nell'esempio seguente vengono restituite informazioni simili a sys. elastic_pool_resource_stats senza la necessità di connettersi al database master logico
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,

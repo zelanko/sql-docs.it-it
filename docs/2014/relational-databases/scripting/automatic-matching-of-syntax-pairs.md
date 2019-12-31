@@ -1,6 +1,6 @@
 ---
-title: Corrispondenza automatica di coppie della sintassi | Microsoft Docs
-ms.custom: ''
+title: Corrispondenza automatica di coppie della sintassi
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064144"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244804"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
   La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  
@@ -36,9 +36,9 @@ ms.locfileid: "66064144"
 |Delimitatore iniziale|Delimitatore di chiusura|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**INIZIARE**|**FINE**|  
+|**INIZIA A PROVARE**|**FINE TENTATIVO**|  
+|**AVVIA CATCH**|**FINE CATCH**|  
   
  La corrispondenza tra delimitatori automatica non riconosce i delimitatori per gli identificatori inseriti tra parentesi ([NomeOggetto]) o gli identificatori tra virgolette ("NomeOggetto"). La corrispondenza di coppie non abbina le virgolette singole per i valori letterali stringa ('stringa') perché la codifica dei colori indica già se la stringa è stata delimitata o meno.  
   

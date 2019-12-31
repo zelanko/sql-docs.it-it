@@ -1,6 +1,5 @@
 ---
-title: Creare una regola tra domini | Microsoft Docs
-ms.custom: ''
+title: Creare una regola tra domini
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 45222a4ae99578c40ce14870433fb929c1127f51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992326"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245467"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
 
@@ -28,32 +27,33 @@ ms.locfileid: "67992326"
   
  Le clausole If e Then di una regola tra domini sono definite ognuna per uno dei singoli domini del dominio composito. Ogni clausola deve essere definita per un singolo dominio diverso. Una regola tra domini deve essere correlata a più singoli domini. Non è possibile definire una regola di dominio semplice (solo per un singolo dominio) per un dominio composito. Questa operazione viene effettuata definendo una regola di dominio per un singolo dominio. Le clausole If e Then possono contenere ognuna una o più condizioni.  
   
- Una regola tra domini con condizioni definitive applicherà la logica delle regole ai sinonimi del valore nelle condizioni, oltre ai valori stessi. Le condizioni definitive per le clausole If e Then sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Si supponga ad esempio di avere la seguente regola tra domini per un dominio composito: "Se per 'City' il valore è uguale a 'Los Angeles', per 'State' il valore è uguale a 'CA'. Se 'Los Angeles e 'LA' sono sinonimi, questa regola restituirà un risultato corretto per 'Los Angeles CA' e 'LA CA' ma un risultato in errore per 'Los Angeles WA' e 'LA WA'.  
+ Una regola tra domini con condizioni definitive applicherà la logica delle regole ai sinonimi del valore nelle condizioni, oltre ai valori stessi. Le condizioni definitive per le clausole If e Then sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Si supponga ad esempio di disporre della regola tra domini seguente per un dominio composito: "Se per 'City' il valore è uguale a 'Los Angeles', per 'State' il valore è uguale a 'CA'". Se 'Los Angeles e 'LA' sono sinonimi, questa regola restituirà un risultato corretto per 'Los Angeles CA' e 'LA CA' ma un risultato in errore per 'Los Angeles WA' e 'LA WA'.  
   
  Oltre a indicare la validità di una regola tra domini, la clausola definitiva *Then* in una regola tra domini, **Il valore è uguale a**, corregge anche i dati durante l'attività di pulizia dei dati. Per ulteriori informazioni, vedere [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Le regole tra domini vengono prese in esame dopo tutte le regole semplici applicate solo a un singolo dominio. Solo se un valore supera le singole regole di dominio (se esistono) verrà applicata la regola tra domini. Il dominio composito e i singoli domini su cui viene eseguita una regola devono tutti essere definiti prima dell'esecuzione della regola.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="Prerequisites"></a>Prerequisiti  
  Per creare una regola tra domini, è necessario avere creato e aperto un dominio composito.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="Security"></a>Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a>Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola tra domini.  
   
-##  <a name="Create"></a> Creare le regole tra domini  
+##  <a name="Create"></a>Creazione di regole tra domini  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+3.  
+  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
 4.  Fare clic sulla scheda **Regole CD** .  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67992326"
   
 9. Continuare con la procedura relativa al test descritta di seguito.  
   
-##  <a name="Test"></a> Testare le regole tra domini  
+##  <a name="Test"></a>Testare le regole tra domini  
   
 1.  Testare la regola tra domini come segue:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67992326"
   
 2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola tra domini  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di una regola tra domini  
  Dopo avere creato una regola tra domini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   

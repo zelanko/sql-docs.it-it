@@ -1,6 +1,5 @@
 ---
-title: Utilizzando un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Usare updategram in un'applicazione ASP di esempio (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046544"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246090"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68046544"
   
  L'utente può quindi aggiornare le informazioni di contatto ma non l'ID (poiché ContactID è la chiave primaria). Dopo che l'utente invia le informazioni, viene eseguito un updategram e tutti i parametri del form vengono passati all'updategram.  
   
- Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory che è associato il nome virtuale del **modello** tipo.  
+ Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory associata al nome virtuale del tipo di **modello** .  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +50,7 @@ ms.locfileid: "68046544"
 </root>  
 ```  
   
- Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory che è associato il nome virtuale del **modello** tipo.  
+ Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory associata al nome virtuale del tipo di **modello** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -78,7 +78,7 @@ ms.locfileid: "68046544"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. (Questa radice virtuale non viene creata tramite la gestione di Directory virtuali di IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché Gestione Directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può accedere o identificare le applicazioni ASP.).  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata utilizzando la gestione delle directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'utilità perché la gestione delle directory virtuali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IIS per non può accedere o identificare le applicazioni ASP.  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  
@@ -161,6 +161,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Modificare il nome di un Server registrato o gruppo di Server registrati (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Modificare il nome di un server registrato o di un gruppo di server
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - renaming registered server or server group
 - names [SQL Server], registered server or server group
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7ac049dd49c447925a0205c50691465035abb5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 04b21c85454fc992aac7e2d18b580d440171e93c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150467"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244628"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Modifica del nome di un server registrato o di un gruppo di server registrati (SQL Server Management Studio)
   In questo argomento viene descritto come modificare il nome di un server registrato o un gruppo di server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile modificare il nome in qualunque momento. La modifica del nome di un server nella finestra Server registrati consente solo di modificare il nome visualizzato. Per connettersi a un server diverso, è necessario modificare le proprietà di connessione del server registrato.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-change-the-name-of-a-server"></a>Per modificare il nome di un server  
   
@@ -41,6 +41,6 @@ ms.locfileid: "63150467"
 2.  Nella casella **Nome gruppo di server** immettere il nuovo nome per il gruppo di server e quindi fare clic su **Salva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica della registrazione di un server &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)
+ [Modificare la &#40;di registrazione di un server SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)
   
   

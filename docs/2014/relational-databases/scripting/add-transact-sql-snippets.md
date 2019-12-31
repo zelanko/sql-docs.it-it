@@ -1,6 +1,6 @@
 ---
-title: Aggiungere frammenti Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di frammenti Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064286"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244815"
 ---
 # <a name="add-transact-sql-snippets"></a>Aggiunta di frammenti Transact-SQL
   È possibile aggiungere frammenti di codice Transact-SQL personalizzati al set di frammenti predefiniti incluso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "66064286"
 ## <a name="registering-the-code-snippet"></a>Registrazione del frammento di codice  
  Dopo avere creato il file di frammento, utilizzare Gestione frammenti di codice per registrare il frammento con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile aggiungere una cartella contenente più frammenti oppure importare singoli frammenti nella cartella **Frammenti di codice** .  
   
-## <a name="procedures"></a>Procedure  
+## <a name="procedures"></a>Procedures  
   
 #### <a name="adding-a-snippet-folder"></a>Aggiunta di una cartella per i frammenti  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66064286"
   
 2.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-3.  Fare clic sul pulsante **Aggiungi** .  
+3.  Fare clic sul pulsante **Aggiungi**.  
   
 4.  Passare alla cartella contenente i frammenti di codice e fare clic sul pulsante **Seleziona cartella** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064286"
   
 2.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-3.  Fare clic sul pulsante **Importa** .  
+3.  Fare clic sul pulsante **Importa**.  
   
 4.  Passare alla cartella contenente il frammento, fare clic sul file con estensione snippet e quindi sul pulsante **Apri** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66064286"
   
 3.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-4.  Fare clic sul pulsante **Importa** .  
+4.  Fare clic sul pulsante **Importa**.  
   
 5.  Passare alla cartella contenente il file TryCatch.snippet, fare clic su tale file e quindi sul pulsante **Apri** . Nella cartella **Frammenti di codice** non dovrebbe essere presente un frammento TryCatch.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserimento di frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
+ [Inserire frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Associazione e Trasferimento dati di valori di colonna e parametri con valori di tabella | Microsoft Docs
+title: Trasferimento dati di parametri con valori di tabella
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a03beb8375384660b0e4a9ec18ce38f19db42d5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73778073"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246516"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73778073"
   
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive, sono supportati solo parametri con valori di tabella di input. Qualsiasi tentativo di impostare SQL_DESC_PARAMETER_TYPE su un valore diverso da SQL_PARAM_INPUT restituirà, pertanto, SQL_ERROR con SQLSTATE = HY105 e il messaggio "Tipo di parametro non valido".  
   
- È possibile assegnare valori predefiniti a intere colonne dei parametri con valori di tabella utilizzando l'attributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Ai singoli valori della colonna di parametri con valori di tabella, tuttavia, non è possibile assegnare valori predefiniti utilizzando SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* con SQLBindParameter. I parametri con valori di tabella nel suo complesso non possono essere impostati su un valore predefinito usando SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* con SQLBindParameter. Se queste regole non sono seguite, SQLExecute o SQLExecDirect restituirà SQL_ERROR. Verrà generato un record di diagnostica con SQLSTATE = 07S01 e il messaggio "utilizzo non valido del parametro predefinito per il parametro \<p >", dove \<p > è il numero ordinale di TVP nell'istruzione di query.  
+ È possibile assegnare valori predefiniti a intere colonne dei parametri con valori di tabella utilizzando l'attributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Ai singoli valori della colonna di parametri con valori di tabella, tuttavia, non è possibile assegnare valori predefiniti utilizzando SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* con SQLBindParameter. I parametri con valori di tabella nel suo complesso non possono essere impostati su un valore predefinito usando SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* con SQLBindParameter. Se queste regole non sono seguite, SQLExecute o SQLExecDirect restituirà SQL_ERROR. Verrà generato un record di diagnostica con SQLSTATE = 07S01 e il messaggio "utilizzo non valido del parametro predefinito per \<il parametro p>" \<, dove p> è il numero ordinale di TVP nell'istruzione di query.  
   
  Dopo avere associato il parametro con valori di tabella, dovrà essere associata anche ogni colonna del parametro. A tale scopo, l'applicazione chiama prima SQLSetStmtAttr per impostare SQL_SOPT_SS_PARAM_FOCUS sull'ordinale di un parametro con valori di tabella. Quindi, l'applicazione associa le colonne del parametro con valori di tabella tramite chiamate alle routine seguenti: SQLBindParameter, SQLSetDescRec e SQLSetDescField. Impostando SQL_SOPT_SS_PARAM_FOCUS su 0, viene ripristinato l'effetto consueto di SQLBindParameter, SQLSetDescRec e SQLSetDescField in operando sui parametri di primo livello normali.
  
- Nota: per i driver ODBC Linux e Mac con unixODBC 2.3.1 in 2.3.4, quando si imposta il nome TVP tramite SQLSetDescField con il campo del descrittore SQL_CA_SS_TYPE_NAME, unixODBC non esegue automaticamente la conversione tra le stringhe ANSI e Unicode a seconda dell'esatta funzione chiamata (SQLSetDescFieldA/SQLSetDescFieldW). Per impostare il nome TVP, è necessario usare sempre SQLBindParameter o SQLSetDescFieldW con una stringa Unicode (UTF-16).
+ Nota: per i driver ODBC Linux e Mac con unixODBC 2.3.1 in 2.3.4, quando si imposta il nome TVP tramite SQLSetDescField con il campo del descrittore SQL_CA_SS_TYPE_NAME, unixODBC non esegue automaticamente la conversione tra le stringhe ANSI e Unicode a seconda della funzione esatta chiamata (SQLSetDescFieldA/SQLSetDescFieldW). Per impostare il nome TVP, è necessario usare sempre SQLBindParameter o SQLSetDescFieldW con una stringa Unicode (UTF-16).
   
  La ricezione e l'invio di dati effettivi non riguardano il parametro con valori di tabella stesso ma ognuna delle colonne che lo costituiscono. Poiché il parametro con valori di tabella è una pseudo colonna, i parametri per SQLBindParameter vengono usati per fare riferimento a attributi diversi rispetto ad altri tipi di dati, come indicato di seguito:  
   
@@ -45,7 +45,8 @@ ms.locfileid: "73778073"
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> Questo parametro è facoltativo per le chiamate di stored procedure ed è possibile specificare NULL se non è richiesto. Deve essere specificato per le istruzioni SQL che non sono chiamate di stored procedure.<br /><br /> Questo parametro serve anche come valore univoco utilizzabile dall'applicazione per identificare il parametro con valori di tabella quando viene utilizzata l'associazione variabile di righe. Per ulteriori informazioni, vedere la sezione "Associazione variabile di righe di parametri con valori di tabella" più avanti n questo argomento.<br /><br /> Quando si specifica un nome di tipo di parametro con valori di tabella in una chiamata a SQLBindParameter, è necessario specificarlo come valore Unicode, anche nelle applicazioni compilate come applicazioni ANSI. Il valore utilizzato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS o la lunghezza della stringa del nome moltiplicato per sizeof (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH in APD.|Lunghezza del nome del tipo di parametro con valori di tabella espressa in byte.<br /><br /> Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure 0 se il nome del tipo di parametro con valori di tabella non è richiesto.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD.|SQL_DESC_OCTET_LENGTH_PTR in APD.<br /><br /> Per i parametri con valori di tabella è un conteggio di righe anziché una lunghezza di dati.|  
-  
+||||
+
  Sono supportate due modalità di trasferimento dati per i parametri con valori di tabella: associazione di righe fissa e variabile.  
   
 ## <a name="fixed-table-valued-parameter-row-binding"></a>Associazione fissa di righe di parametri con valori di tabella  
@@ -63,7 +64,7 @@ ms.locfileid: "73778073"
   
 3.  Chiama SQLSetStmtAttr per impostare SQL_SOPT_SS_PARAM_FOCUS su 0. Questa operazione deve essere eseguita prima della chiamata a SQLExecute o SQLExecDirect. In caso contrario, viene restituito SQL_ERROR e vengono generati un record di dati diagnostici con SQLSTATE=HY024 e il messaggio "Valore attributo non valido, SQL_SOPT_SS_PARAM_FOCUS (deve essere zero in fase di esecuzione)."  
   
-4.  Imposta *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR su SQL_DEFAULT_PARAM per un parametro con valori di tabella senza righe o il numero di righe da trasferire alla chiamata successiva di SQLExecute o SQLExecDirect se il parametro con valori di tabella contiene righe. Impossibile impostare *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR su SQL_NULL_DATA per un parametro con valori di tabella perché i parametri con valori di tabella non ammettono i valori null (sebbene le colonne costituenti dei parametri con valori di tabella possano essere nullable). Se questa proprietà è impostata su un valore non valido, SQLExecute o SQLExecDirect restituisce SQL_ERROR e viene generato un record di diagnostica con SQLSTATE = HY090 e il messaggio "lunghezza di stringa o di buffer non valida per il parametro \<p >", dove p è il numero di parametro.  
+4.  Imposta *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR su SQL_DEFAULT_PARAM per un parametro con valori di tabella senza righe o il numero di righe da trasferire alla chiamata successiva di SQLExecute o SQLExecDirect se il parametro con valori di tabella contiene righe. Impossibile impostare *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR su SQL_NULL_DATA per un parametro con valori di tabella perché i parametri con valori di tabella non ammettono i valori null (sebbene le colonne costituenti dei parametri con valori di tabella possano essere nullable). Se questa proprietà è impostata su un valore non valido, SQLExecute o SQLExecDirect restituisce SQL_ERROR e viene generato un record di diagnostica con SQLSTATE = HY090 e il messaggio "lunghezza di stringa o di \<buffer non valida per il parametro p>", dove p è il numero di parametro.  
   
 5.  Chiama SQLExecute o SQLExecDirect.  
   
@@ -93,6 +94,6 @@ ms.locfileid: "73778073"
 6.  Chiama di nuovo SQLParamData. Se sono presenti parametri data-at-execution tra le colonne di parametri con valori di tabella, questi verranno identificati dal valore *ValuePtrPtr* restituito da SQLParamData. Quando sono disponibili tutti i valori di colonna, SQLParamData restituirà nuovamente il valore *ParameterValuePtr* per il parametro con valori di tabella e l'applicazione verrà riavviata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ODBC Parameters &#40;con valori di tabella&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parametri con valori di tabella &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

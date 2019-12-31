@@ -1,6 +1,6 @@
 ---
-title: Modificare la posizione di un punto di interruzione | Microsoft Docs
-ms.custom: ''
+title: Modifica della posizione di un punto di interruzione
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090472"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244891"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifica della posizione di un punto di interruzione
   La posizione del punto di interruzione specifica la riga e il carattere in cui si trova il punto di interruzione in un file di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile modificare la posizione del punto di interruzione per spostare il punto di interruzione in un'altra posizione nello script o in uno script diverso.  
@@ -29,7 +29,7 @@ ms.locfileid: "66090472"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Posizione** dal menu di scelta rapida.  
   
-     oppure  
+     -Oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e quindi scegliere **Posizione** dal menu di scelta rapida.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66090472"
      L'opzione **Il codice sorgente può essere diverso dalla versione originale** non ha effetto nel caso di debug di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specifica di un numero di passaggi](specify-a-hit-count.md)   
- [Impostazione di un'azione del punto di interruzione](specify-a-breakpoint-action.md)   
- [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
- [Impostazione di un filtro per un punto di interruzione](specify-a-breakpoint-filter.md)  
+ [Specificare un numero di passaggi](specify-a-hit-count.md)   
+ [Specificare un'azione del punto di interruzione](specify-a-breakpoint-action.md)   
+ [Specificare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
+ [Specificare un filtro per il punto di interruzione](specify-a-breakpoint-filter.md)  
