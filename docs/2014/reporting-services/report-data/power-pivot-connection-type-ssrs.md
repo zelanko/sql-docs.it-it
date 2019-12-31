@@ -10,31 +10,31 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107186"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200412"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile utilizzare l'estensione di elaborazione dei dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di PowerPivot pubblicata in una raccolta PowerPivot di SharePoint.  
   
- Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  L'origine dati PowerPivot deve essere pubblicata in una raccolta PowerPivot in un sito di SharePoint.  
   
- Per supportare connessioni da Generatore report in una cartella di lavoro di PowerPivot, è necessario che nel computer workstation sia disponibile SQL Server 2008 R2 ADOMD.NET. La libreria client viene installata con PowerPivot per Excel, ma se si utilizza un computer che non dispone di questa applicazione, è necessario scaricare e installare ADOMD.NET dalla pagina relativa a [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
+ Per supportare connessioni da Generatore report in una cartella di lavoro di PowerPivot, è necessario che nel computer workstation sia disponibile SQL Server 2008 R2 ADOMD.NET. La libreria client viene installata con PowerPivot per Excel, ma se si utilizza un computer che non dispone di questa applicazione, è necessario scaricare e installare ADOMD.NET dalla pagina relativa a [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
   
 ## <a name="data-source-type"></a>Tipo di origine dati  
  Utilizzare il tipo di origine dati del report **Microsoft SQL Server Analysis Services**.  
   
-## <a name="connection-string"></a>Stringa di connessione  
- La stringa di connessione è l'URL alla cartella di lavoro di PowerPivot pubblicata in SharePoint nella raccolta PowerPivot o altra libreria, ad esempio, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+## <a name="connection-string"></a>Connection String  
+ La stringa di connessione è l'URL della cartella di lavoro di PowerPivot pubblicata in SharePoint nella raccolta PowerPivot o in un'altra http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxlibreria, ad esempio.  
   
 ## <a name="credentials"></a>Credenziali  
- Specificare le credenziali necessarie per accedere alla cartella di lavoro di PowerPivot e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oppure [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md).  
+ Specificare le credenziali necessarie per accedere alla cartella di lavoro di PowerPivot e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per ulteriori informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
   
 ## <a name="queries"></a>Query  
  Dopo essersi connessi all'origine dati PowerPivot, utilizzare la query in formato grafico MDX per compilare una query visualizzando e selezionando dalle strutture di dati sottostanti. Dopo aver compilato una query, eseguirla per visualizzare dati di esempio nel riquadro dei risultati.  
@@ -47,7 +47,7 @@ ms.locfileid: "66107186"
 ## <a name="parameters"></a>Parametri  
  Nel riquadro Filtri selezionare l'opzione **Parametri** affinché un filtro crei automaticamente un parametro di report con valori disponibili che corrispondono alle selezioni del filtro.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se viene aperto Generatore report dalla cartella di lavoro di PowerPivot in una raccolta PowerPivot, le tabelle pivot, i grafici pivot, i filtri dei dati e altre caratteristiche di layout e analitiche della cartella di lavoro di PowerPivot non vengono ricreati nel report. Al contrario, nel report vuoto è inclusa un'origine dati preconfigurata che punta ai dati della cartella di lavoro di PowerPivot. La progettazione di report basati su una cartella di lavoro di PowerPivot può richiedere molto tempo a seconda del numero di filtri dei dati, di filtri, di tabelle o di grafici che si desidera ricreare nel report. Un approccio migliore consiste nel prevedere la presentazione dei dati desiderati in un report indipendentemente dalla progettazione di PowerPivot.  
   
  I dati di una cartella di lavoro di PowerPivot sono molto compressi, mentre i dati recuperati dalla cartella di lavoro di PowerPivot per un report non sono compressi. Utilizzare Progettazione query per specificare i filtri e i parametri utili per limitare i dati a quelli necessari per il report.  
@@ -63,7 +63,7 @@ ms.locfileid: "66107186"
 -   Nel report sono contenuti solo dati PowerPivot di un'origine dati PowerPivot.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services interfaccia utente di progettazione query MDX &#40;Generatore report&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

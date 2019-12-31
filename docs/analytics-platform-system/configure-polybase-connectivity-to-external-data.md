@@ -1,6 +1,6 @@
 ---
-title: Configurare la connettività di PolyBase - sistema di piattaforma Analitica | Microsoft Docs
-description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse, per connettersi a Hadoop o in Microsoft Azure storage blob origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, inclusi Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.
+title: Configurare la connettività di base
+description: Viene illustrato come configurare la polibase in parallelo data warehouse per connettersi a origini dati BLOB di archiviazione Hadoop o Microsoft Azure esterni. Usare la polibase per eseguire query che integrano i dati da più origini, tra cui Hadoop, archiviazione BLOB di Azure e data warehouse parallele.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,28 +8,29 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961259"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401268"
 ---
 # <a name="what-is-polybase"></a>Che cos'è PolyBase?
-PolyBase consente il sistema di piattaforma Analitica (AP) per elaborare query Transact-SQL che può leggere i dati da e scrivere dati in origini dati esterne. Le stesse query che accedono ai dati esterni possono anche includere tabelle relazioni in punti di accesso. In questo modo è possibile combinare dati provenienti da origini esterne con dati relazionali di alto valore nei database di punti di accesso.
+La polibase consente al sistema di piattaforma di analisi (APS) di elaborare query Transact-SQL in grado di leggere e scrivere dati in origini dati esterne. Le stesse query che accedono a dati esterni possono includere anche tabelle di relazioni nei punti di accesso. In questo modo è possibile combinare dati da origini esterne con dati relazionali di valore elevato nei database APS.
 
-![Logica PolyBase](media/polybase/polybase-logical.png)
+![Logical di base](media/polybase/polybase-logical.png)
 
-PolyBase sui punti di accesso supporta la lettura e scrittura al file system Hadoop (HDFS) e archiviazione Blob di Azure. PolyBase ha anche la possibilità di eseguire il push di un'attività di calcolo in nodi di Hadoop come processi mapreduce per ottimizzare le prestazioni complessive delle query. PolyBase sui punti di accesso può operare su testo delimitato, ORC e Parquet file. Visualizzare [What ' s PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) per una descrizione completa e le relative funzionalità.
+La polibase su APS supporta la lettura e la scrittura in Hadoop (HDFS) file system e nell'archiviazione BLOB di Azure. La funzione polibase è inoltre in grado di eseguire il push di alcuni calcoli nei nodi Hadoop come processi MapReduce per ottimizzare le prestazioni complessive delle query. La funzione di base su APS può funzionare su file di testo, ORC e parquet delimitati. Per una descrizione completa e le relative funzionalità, vedere [che cos'è](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) la funzione di base.
 
 > [!NOTE]
-> I punti di accesso attualmente supporta solo standard utilizzo generico v1 con ridondanza locale (LRS) Azure Blob Storage.
+> APS supporta attualmente solo l'archiviazione BLOB di Azure con ridondanza locale (con ridondanza locale) standard per utilizzo generico.
 
 ## <a name="features-and-limitations"></a>Funzionalità e limitazioni
-Visualizzare [le funzionalità e limitazioni di](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary) per un riepilogo di PolyBase presenta limitazioni note e disponibili per i punti di accesso e altri prodotti di SQL Server.
+Vedere [funzionalità e limitazioni](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary) per un riepilogo delle funzionalità di polibase disponibili e limitazioni note su APS e altri prodotti SQL Server.
 
 > [!NOTE] 
-> Il resto di PolyBase correlati descibe articoli sulla configurazione di PolyBase in APS 2016 (AU6) e versioni successive.
+> Il resto degli articoli correlati alla polibase descibe come configurare la polibase in APS 2016 (AU6) e versioni successive.
 
 ## <a name="see-also"></a>Vedere anche
 - [Hadoop](polybase-configure-hadoop.md)

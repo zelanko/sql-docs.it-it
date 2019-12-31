@@ -1,6 +1,6 @@
 ---
-title: Creare un amministratore di dominio - sistema di piattaforma Analitica | Microsoft Docs
-description: Alcune operazioni richiedono privilegi di amministratore di sistema di piattaforma Analitica dominio. Questo spiega come creare gli amministratori di dominio appliance aggiuntivi.
+title: Creare un amministratore di dominio
+description: Per alcune operazioni è necessario disporre dei privilegi di amministratore di dominio di sistema di Analytics. Viene illustrato come creare altri amministratori di dominio Appliance.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 51ed729cda33b5d68a4d115c71f712e2b81d1a65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401237"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Creare un amministratore di dominio APS
-Alcune operazioni richiedono privilegi di amministratore di sistema di piattaforma Analitica dominio. Questo spiega come creare gli amministratori di dominio appliance aggiuntivi.  
+Per alcune operazioni è necessario disporre dei privilegi di amministratore di dominio di sistema di Analytics. Viene illustrato come creare altri amministratori di dominio Appliance.  
   
-## <a name="create-a-domain-administrator"></a>Creare un amministratore di dominio  
-Disporre delle autorizzazioni sufficienti per configurare tutti i nodi di punti di accesso, l'utente che esegue la **APS Configuration Manager** (`dwconfig.exe`) deve essere un membro del **Domain Admins** gruppo. Per avviare e arrestare i servizi di piattaforma di strumenti analitici, l'utente deve essere un membro del **PdwControlNodeAccess** gruppo.  
+## <a name="create-a-domain-administrator"></a>Creazione di un amministratore di dominio  
+Per disporre di autorizzazioni sufficienti per la configurazione di tutti i nodi APS, l'utente che`dwconfig.exe`esegue il Configuration Manager di **APS** () deve essere un membro del gruppo **Domain Admins** . Per avviare e arrestare i servizi APS, l'utente deve essere membro del gruppo **PdwControlNodeAccess** .  
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Per aggiungere un utente al gruppo Domain Admins  
   
-1.  Accedere al nodo AD attivo **(_appliance\_domain_-AD01** oppure  **_appliance\_dominio_-AD02**) usando un account di amministratore di dominio appliance esistente.  
+1.  Accedere al nodo Active AD **(_Appliance\_Domain_-ad01** o ** _Appliance\_Domain_-ad02**) usando un account di amministratore di dominio del dispositivo esistente.  
   
-2.  Nel menu Start fare clic su **Esegui**. Nel **aperto** , digitare **DSA. msc**. Fare clic su **OK**.  
+2.  Fare clic sul menu Start e scegliere **Esegui**. Nella casella **Apri** Digitare **DSA. msc**. Fare clic su **OK**.  
   
-3.  Nel **Active Directory Users and Computers** programma, fare doppio clic su **utenti**, scegliere **New**e quindi fare clic su **utente**.  
+3.  Nel programma **Active Directory utenti e computer** , fare clic con il pulsante destro del mouse su **utenti**, scegliere **nuovo**, quindi fare clic su **utente**.  
   
-4.  Nel **nuovo oggetto - utente** completare la descrizione del nuovo utente nella finestra di dialogo e quindi fare clic su **successivo**.  
+4.  Nella finestra di dialogo **nuovo oggetto-utente** , completare la descrizione del nuovo utente, quindi fare clic su **Avanti**.  
   
-    Completare la finestra di dialogo password e quindi fare clic su **successivo**.  
+    Completare la finestra di dialogo password e quindi fare clic su **Avanti**.  
   
     > [!WARNING]  
-    > SQL Server PDW non supporta il carattere di segno di dollaro ($) nell'amministratore di dominio o le password di amministratore locale. Una password contenente un segno di dollaro sarà valida e utilizzabile, ma possono bloccare le attività di aggiornamento e manutenzione  
+    > SQL Server PDW non supporta il simbolo di dollaro ($) nelle password di amministratore di dominio o di amministratore locale. Una password contenente un segno di dollaro sarà valida ed utilizzabile, ma può bloccare le attività di aggiornamento e manutenzione  
   
-    Confermare la nuova descrizione utente e quindi fare clic su **fine**.  
+    Confermare la descrizione del nuovo utente, quindi fare clic su **fine**.  
   
-5.  Nell'elenco di utenti, fare doppio clic sul nuovo utente per aprire la finestra di dialogo delle proprietà utente.  
+5.  Nell'elenco di utenti, fare doppio clic sul nuovo utente per aprire la finestra di dialogo Proprietà utente.  
   
-6.  Nel **membro di** scheda, fare clic su **Add**.  
+6.  Nella scheda **Membro di** fare clic su **Aggiungi**.  
   
-    Tipo **Domain Admins; PdwControlNodeAccess** e quindi fare clic su **Controlla nomi**. Fare clic su **OK**.  
+    Digitare **Domain Admins; PdwControlNodeAccess** , quindi fare clic su **Controlla nomi**. Fare clic su **OK**.  
   
-    Verrà aggiunto il nuovo utente per il **Domain Admins** gruppo e il **PdwControlNodeAccess** gruppo. Fare clic su **OK**.  
+    Il nuovo utente verrà aggiunto al gruppo **Domain Admins** e al gruppo **PdwControlNodeAccess** . Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
+[Avviare la piattaforma Configuration Manager &#40;Analytics System&#41;](launch-the-configuration-manager.md)  
   

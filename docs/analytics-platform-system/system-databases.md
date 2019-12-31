@@ -1,6 +1,6 @@
 ---
-title: Database di sistema - Parallel Data Warehouse | Microsoft Docs
-description: Database di sistema in Parallel Data Warehouse (PDW).
+title: Database di sistema
+description: Database di sistema in parallelo data warehouse (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bfcd183804a545f5e170548833246bbedd231a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 720dd70896fe4c30d10214b7102bbd77beab5e48
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960002"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400209"
 ---
-# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Database di sistema in Parallel Data Warehouse (PDW)
-Database di sistema sono i database che utilizza SQL Server PDW per gestire utenti, database e i dati temporanei. SQL Server PDW include i seguenti database di sistema: master e tempdb.  
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Database di sistema in parallelo data warehouse (PDW)
+I database di sistema sono database utilizzati SQL Server PDW per gestire utenti, database e dati temporanei. SQL Server PDW include i database di sistema seguenti: Master e tempdb.  
   
-## <a name="system-database-topics"></a>Argomenti del Database di sistema  
+## <a name="system-database-topics"></a>Argomenti sul database di sistema  
   
 -   [Database master](master-database.md)  
   

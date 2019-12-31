@@ -1,5 +1,5 @@
 ---
-title: Database tempdb-data warehouse paralleli | Microsoft Docs
+title: Database tempdb
 description: Database tempdb in parallelo data warehouse.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810945"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400144"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>database tempdb in parallelo data warehouse
 **tempdb** è un database di sistema SQL Server PDW che archivia le tabelle temporanee locali per i database utente. Le tabelle temporanee vengono spesso utilizzate per migliorare le prestazioni di esecuzione delle query. Ad esempio, è possibile usare una tabella temporanea per modularizzare uno script e riusare i dati calcolati.  
@@ -59,7 +60,7 @@ Limitazioni e restrizioni relative al database di SQL Server PDW**tempdb** . *No
   
 -   Modificare le autorizzazioni per **tempdb** con le istruzioni **Grant**, **Deny**o **Revoke** .  
   
--   Eseguire **DBCC SHRINKLOG** pertempdb tempdb.  
+-   Eseguire **DBCC SHRINKLOG** per **tempdb tempdb.**  
   
 -   Eseguire operazioni DDL su **tempdb**. Sono presenti due eccezioni. Per informazioni dettagliate, vedere l'elenco seguente di limitazioni e restrizioni sulle tabelle temporanee locali.  
   
@@ -78,12 +79,12 @@ Limitazioni e restrizioni sulle tabelle temporanee locali. *Non è possibile:*
 > [!NOTE]  
 > È *possibile* creare e aggiornare le statistiche in una tabella temporanea. È possibile utilizzare **alter index** per ricompilare un indice cluster.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di utilizzarlo, tuttavia questa operazione non è consigliabile poiché in alcune operazioni di routine è richiesto l'utilizzo di tempdb.  
   
 ## <a name="RelatedTasks"></a>Attività correlate  
   
-|Attività|Descrizione|  
+|Attività|Description|  
 |---------|---------------|  
 |Creare una tabella in **tempdb**.|È possibile creare una tabella temporanea dell'utente con il CREATE TABLE e CREATE TABLE come istruzioni SELECT. Per ulteriori informazioni, vedere [Create Table](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [create table come SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Visualizzazione di un elenco di tabelle esistenti in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

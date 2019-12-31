@@ -1,6 +1,6 @@
 ---
-title: Configurare PolyBase per accedere a dati esterni in archiviazione Blob di Azure | Microsoft Docs
-description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse per la connessione a esterna Hadoop.
+title: Usare la polibase per accedere ai dati esterni nell'archivio BLOB di Azure
+description: Viene illustrato come configurare la polibase in parallelo data warehouse per connettersi a Hadoop esterni.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960285"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400720"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per accedere a dati esterni in archiviazione Blob di Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare la polibase per accedere ai dati esterni nell'archivio BLOB di Azure
 
-L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni nell'archiviazione Blob di Azure.
+Questo articolo illustra come usare la polibase su un'istanza di SQL Server per eseguire query sui dati esterni nell'archivio BLOB di Azure.
 
 > [!NOTE]
-> I punti di accesso supporta attualmente solo archiviazione con ridondanza locale (LRS) Blob di Azure di standard utilizzo generico v1.
+> APS supporta attualmente solo l'archiviazione BLOB di Azure con ridondanza locale (con ridondanza locale) standard per utilizzo generico.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
- - Archiviazione Blob di Azure nella sottoscrizione.
- - Un contenitore creato nella risorsa di archiviazione Blob di Azure.
+ - Archiviazione BLOB di Azure nella sottoscrizione.
+ - Un contenitore creato nell'archivio BLOB di Azure.
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Configurare la connettività di archiviazione Blob di Azure
+### <a name="configure-azure-blob-storage-connectivity"></a>Configurare la connettività di archiviazione BLOB di Azure
 
-Innanzitutto, configurare i punti di accesso per usare l'archiviazione Blob di Azure.
+Per prima cosa, configurare gli APS per l'uso dell'archiviazione BLOB di Azure.
 
-1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' impostato su un provider di archiviazione Blob di Azure. Per trovare il valore per i provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con "connettività Hadoop" impostata su un provider di archiviazione BLOB di Azure. Per trovare il valore per i provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,19 +45,19 @@ Innanzitutto, configurare i punti di accesso per usare l'archiviazione Blob di A
    GO
    ```  
 
-2. Riavviare area APS usando pagina stato del servizio sul [Appliance Configuration Manager](launch-the-configuration-manager.md).
+2. Riavviare l'area APS usando la pagina stato del servizio nel [Configuration Manager Appliance](launch-the-configuration-manager.md).
   
 ## <a name="configure-an-external-table"></a>Configurare una tabella esterna
 
-Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario definire una tabella esterna da utilizzare nella query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
+Per eseguire query sui dati nell'archivio BLOB di Azure, è necessario definire una tabella esterna da usare nelle query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
 
-1. Creare una chiave master nel database. È necessario crittografare il segreto della credenziale.
+1. Creare una chiave master nel database. È necessario crittografare il segreto delle credenziali.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Creare una credenziale con ambito database per l'archiviazione Blob di Azure.
+1. Creare credenziali con ambito database per l'archiviazione BLOB di Azure.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -123,7 +124,7 @@ Le query seguenti forniscono esempi con dati fittizi di sensori di auto.
 
 ### <a name="ad-hoc-queries"></a>Query ad hoc  
 
-La seguente query ad hoc join relazionale con i dati nell'archiviazione Blob di Azure. Seleziona i clienti che hanno unità più veloce rispetto a 35 km/h, aggiunta ai dati dei clienti strutturati archiviati in SQL Server con dati dei sensori di auto archiviati in archiviazione Blob di Azure.  
+La query ad hoc seguente unisce i dati relazionali con i dati nell'archiviazione BLOB di Azure. Seleziona i clienti che hanno un ritmo più veloce di 35 mph, associando i dati dei clienti strutturati archiviati in SQL Server con i dati del sensore auto archiviati nell'archivio BLOB di Azure.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -135,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>Importazione di dati  
 
-La query seguente importa i dati esterni in punti di accesso. In questo esempio Importa i dati per i driver veloci in punti di accesso per eseguire un'analisi più dettagliata. Per migliorare le prestazioni, sfrutta la tecnologia Columnstore in punti di accesso.  
+La query seguente importa i dati esterni in APS. In questo esempio vengono importati i dati per i driver veloci in APS per eseguire un'analisi più approfondita. Per migliorare le prestazioni, sfrutta la tecnologia columnstore in APS.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -152,9 +153,9 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione di dati  
+### <a name="exporting-data"></a>Esportazione dei dati  
 
-La query seguente esporta i dati dai punti di accesso all'archiviazione Blob di Azure. Può essere utilizzato per archiviare i dati relazionali in Azure Blob storage mentre si è ancora in grado di eseguire una query.
+La query seguente consente di esportare i dati dagli APS nell'archivio BLOB di Azure. Può essere usato per archiviare dati relazionali nell'archivio BLOB di Azure, pur continuando a eseguire query.
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,11 +171,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Visualizzare gli oggetti PolyBase in SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Visualizzare oggetti di polibase in SSDT  
 
-In SQL Server Data Tools, le tabelle esterne vengono visualizzate in una cartella distinta **le tabelle esterne**. Le origini dati esterne e i formati di file esterni si trovano nelle sottocartelle in **External Resources**.  
+In SQL Server Data Tools, le tabelle esterne vengono visualizzate in una cartella separata **tabelle esterne**. Le origini dati esterne e i formati di file esterni si trovano nelle sottocartelle in **External Resources**.  
   
-![Oggetti PolyBase in SSDT](media/polybase/external-tables-datasource.png)  
+![Oggetti di polibase in SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

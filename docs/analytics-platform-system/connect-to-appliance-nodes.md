@@ -1,6 +1,6 @@
 ---
-title: Connettersi all'appliance nodi - sistema di piattaforma Analitica | Microsoft Docs
-description: Questo articolo illustra vari modi per connettersi a ogni nodo nell'appliance del sistema di piattaforma Analitica.
+title: Connetti ai nodi Appliance
+description: Questo articolo illustra i diversi modi per connettersi a ogni nodo nell'appliance del sistema della piattaforma di analisi.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,45 +8,46 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae40d38768f081ea6c439c40059065d695ebee23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961080"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401239"
 ---
-# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connettersi ai nodi di appliance nel sistema di piattaforma Analitica
-Questo articolo illustra vari modi per connettersi a ogni nodo nell'appliance del sistema di piattaforma Analitica.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connettersi ai nodi Appliance nel sistema della piattaforma Analytics
+Questo articolo illustra i diversi modi per connettersi a ogni nodo nell'appliance del sistema della piattaforma di analisi.  
   
-## <a name="connecting-with-hadoop"></a>La connessione con Hadoop  
-Prima di usare Hadoop con SQL Server PDW, chiedere all'amministratore di appliance per installare l'ambiente di Runtime Java su SQL Server PDW. Per istruzioni, vedere [configurare la connettività di PolyBase ai dati esterni &#40;sistema di piattaforma Analitica&#41; ](configure-polybase-connectivity-to-external-data.md) nella Guida operativa di Appliance.  
+## <a name="connecting-with-hadoop"></a>Connessione con Hadoop  
+Prima di usare Hadoop con SQL Server PDW, richiedere all'amministratore del dispositivo di installare il Java Runtime Environment nel SQL Server PDW. Per istruzioni, vedere [configurare la connettività di base per i dati esterni &#40;sistema della piattaforma di analisi&#41;](configure-polybase-connectivity-to-external-data.md) nella Guida operativa dell'appliance.  
   
-## <a name="ConnectingToIndividualNodes"></a>La connessione ai nodi delle Appliance  
-Ciascuno dei nodi di appliance è possibile accedere direttamente solo in scenari di utilizzo specifico e dai tipi di utente specifico. La tabella seguente elenca ogni nodo di appliance e gli scenari in cui gli utenti si connetteranno direttamente a tale nodo.  
+## <a name="ConnectingToIndividualNodes"></a>Connessione ai nodi Appliance  
+Ogni nodo del dispositivo è accessibile direttamente solo in scenari di utilizzo specifici e in base ai tipi di utente specifici. La tabella seguente elenca ogni nodo del dispositivo e gli scenari in cui gli utenti si connetteranno direttamente al nodo.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
 
 > [!WARNING]  
-> Modificare le impostazioni di database o una tabella nodi di controllo o di calcolo senza il consenso esplicito del Team del prodotto o Team di supporto clienti di APS potrebbe rendere l'appliance APS esplicitamente il supporto.
+> La modifica delle impostazioni del database o della tabella nei nodi di controllo o di calcolo senza consenso esplicito del team del prodotto o del team di supporto clienti di APS può rendere il dispositivo APS non supportato.
   
 |||  
 |-|-|  
-|**Node**|**Scenari di accesso**|  
-|Nodo di controllo|Usare un web browser per accedere alla Console di amministrazione, che viene eseguito nel nodo di controllo. Per altre informazioni, vedere [monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tutti gli strumenti e applicazioni client di connettersi al nodo di controllo, indipendentemente dal fatto che la connessione Usa Ethernet o InfiniBand.<br /><br />Per configurare una connessione Ethernet per il nodo di controllo, usare l'indirizzo IP del Cluster del nodo di controllo e la porta **17001**. Ad esempio, "192.168.0.1,17001".<br /><br />Per configurare una connessione InfiniBand al nodo di controllo, usare  <strong>*appliance_domain*-SQLCTL01</strong> e la porta **17001**. Usando  <strong>*appliance_domain*-SQLCTL01</strong>, il server DNS appliance si connetterà il server alla rete InfiniBand attiva. Per configurare il server non appliance per utilizzare questa opzione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L'amministratore del dispositivo si connette al nodo di controllo per eseguire operazioni di gestione. Ad esempio, l'amministratore del dispositivo esegue le operazioni seguenti dal nodo di controllo:<br /><br />Configurare il sistema di piattaforma Analitica con il **dwconfig.exe** dello strumento di configurazione.|  
-|Nodo di calcolo|Calcolare le connessioni di nodo vengono indirizzate dal nodo di controllo. Gli indirizzi IP dei nodi di calcolo non sono mai inseriti i comandi dell'applicazione come parametri.<br /><br />Per il caricamento, backup, copia di tabelle Remote e Hadoop, SQL Server PDW inviano o ricevono i dati direttamente in parallelo tra i nodi di calcolo e i nodi non di appliance o server. Queste applicazioni connettono con SQL Server PDW effettuando la connessione al nodo di controllo e quindi il nodo di controllo indica a SQL Server PDW per stabilire la comunicazione tra i nodi di calcolo e il server non appliance.<br /><br />Ad esempio, queste operazioni di trasferimento dei dati avvengano in parallelo con le connessioni dirette ai nodi di calcolo:<br /><br />Il caricamento dal server durante il caricamento in SQL Server PDW.<br /><br />Backup di database da SQL Server PDW al server di backup.<br /><br />Ripristino di un database dal server di backup in SQL Server PDW.<br /><br />Eseguire query sui dati Hadoop da SQL Server PDW.<br /><br />Esportazione dei dati da SQL Server PDW in una tabella esterna Hadoop.<br /><br />Copia di una tabella di SQL Server PDW a un database di SQL Server SMP remoto.|  
+|**Nodo**|**Scenari di accesso**|  
+|Nodo di controllo|Usare un Web browser per accedere alla console di amministrazione, che viene eseguita nel nodo di controllo. Per altre informazioni, vedere [monitorare l'appliance usando la console di amministrazione &#40;&#41;di sistema della piattaforma di analisi ](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tutti gli strumenti e le applicazioni client si connettono al nodo di controllo, indipendentemente dal fatto che la connessione utilizzi Ethernet o InfiniBand.<br /><br />Per configurare una connessione Ethernet al nodo di controllo, usare l'indirizzo IP del cluster del nodo di controllo e la porta **17001**. Ad esempio, "192.168.0.1, 17001".<br /><br />Per configurare una connessione InfiniBand al nodo di controllo, usare <strong> *appliance_domain*-SQLCTL01</strong> e la porta **17001**. Con <strong> *appliance_domain*-SQLCTL01</strong>, il server DNS del dispositivo connetterà il server alla rete InfiniBand attiva. Per configurare il server non Appliance per l'uso, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L'amministratore del dispositivo si connette al nodo di controllo per eseguire operazioni di gestione. Ad esempio, l'amministratore dell'Appliance esegue le operazioni seguenti dal nodo di controllo:<br /><br />Configurare il sistema di piattaforma di analisi con lo strumento di configurazione **dwconfig. exe** .|  
+|Nodo di calcolo|Le connessioni del nodo di calcolo vengono indirizzate dal nodo di controllo. Gli indirizzi IP dei nodi di calcolo non vengono mai immessi nei comandi dell'applicazione come parametri.<br /><br />Per il caricamento, il backup, la copia della tabella remota e Hadoop, SQL Server PDW invia o riceve dati direttamente in parallelo tra i nodi di calcolo e i nodi o i server non Appliance. Queste applicazioni si connettono con SQL Server PDW connettendosi al nodo di controllo, quindi il nodo di controllo indirizza SQL Server PDW per stabilire la comunicazione tra i nodi di calcolo e il server non Appliance.<br /><br />Queste operazioni di trasferimento dei dati, ad esempio, si verificano in parallelo con le connessioni dirette ai nodi di calcolo:<br /><br />Caricamento dal server di caricamento a SQL Server PDW.<br /><br />Esecuzione del backup di un database da SQL Server PDW al server di backup.<br /><br />Ripristino di un database dal server di backup per SQL Server PDW.<br /><br />Esecuzione di query sui dati di Hadoop da SQL Server PDW.<br /><br />Esportazione di dati da SQL Server PDW a una tabella Hadoop esterna.<br /><br />Copia di una tabella SQL Server PDW in un database SMP SQL Server remoto.|  
   
-## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>La connessione per le reti Ethernet e InfiniBand  
-I server remoti possono connettersi tramite la rete InfiniBand appliance o attraverso la rete Ethernet. Per motivi di prestazioni, il caricamento di server, server di backup e i server che riceve dati mediante **CREATE REMOTE TABLE AS SELECT** (istruzioni), in genere il trasferimento dei dati attraverso la rete InfiniBand di appliance.  
+## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Connessione alle reti Ethernet e InfiniBand  
+I server remoti possono connettersi tramite la rete InfiniBand dell'appliance o tramite la rete Ethernet. Per motivi di prestazioni, il caricamento di server, server di backup e server che ricevono dati tramite la **creazione di tabelle remote come istruzioni SELECT** , in genere trasferiscono i dati attraverso la rete InfiniBand dell'appliance.  
   
-È possibile configurare i server non appliance per appartengono a un dominio o il proprio gruppo di lavoro dei clienti e quindi usare la propria rete cliente per connettersi a tali server e il trasferimento dei dati a essi. Inoltre, non appliance server connessi all'appliance InfiniBand hanno la possibilità di trasferire dati tra loro attraverso la rete InfiniBand di appliance; Prestare attenzione con questa perché può rallentare le prestazioni di SQL Server PDW.  
+È possibile configurare i server non Appliance in modo che appartengano al proprio gruppo di lavoro o dominio del cliente, quindi usare la propria rete clienti per connettersi a tali server e trasferire loro i dati. Inoltre, i server non Appliance connessi al dispositivo InfiniBand hanno la possibilità di trasferire i dati tra loro tramite la rete InfiniBand dell'appliance; prestare attenzione perché può rallentare le prestazioni di SQL Server PDW.  
   
-Ad esempio, questa istruzione aggiunge le credenziali di rete per eseguire i backup tramite InfiniBand a un server di backup che abbia un indirizzo IP InfiniBand 192.168.0.1. È il dominio di appliance *mypdw*, e l'istruzione viene eseguita dal server di backup. Prima di eseguire questa istruzione, è necessario inserire i propri parametri.  
+Questa istruzione, ad esempio, aggiunge le credenziali di rete per l'esecuzione di backup tramite InfiniBand a un server di backup con un indirizzo IP InfiniBand 192.168.0.1. Il dominio dell'appliance è *mypdw*e l'istruzione viene eseguita dal server di backup. Prima di eseguire questa istruzione, è necessario inserire i propri parametri.  
   
 ```  
 sqlcmd -S "mypdw-sqlctl01,17001" -U sa -P password -I -Q "exec sp_pdw_add_network_credentials '192.168.0.1', 'mypdw\Administrator', 'password'"  
 ```  
   
-Ad esempio, un comando di caricamento verrà avviata con gli elementi seguenti:  
+Ad esempio, un comando di caricamento inizierà con quanto segue:  
   
 ```  
 dwloader -S mypdw-SQLCTL01  

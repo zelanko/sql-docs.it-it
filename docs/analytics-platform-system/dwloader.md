@@ -1,5 +1,5 @@
 ---
-title: Caricatore da riga di comando dwloader-data warehouse paralleli | Microsoft Docs
+title: Caricatore da riga di comando dwloader
 description: dwloader è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente.
 author: mzaman1
 ms.prod: sql
@@ -8,15 +8,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212271"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401171"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
-**dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità*Append* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità*di ricaricamento).  
+**dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità di*Accodamento* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità di ricaricamento*).  
   
 **Processo per il caricamento dei dati**  
   
@@ -115,7 +116,7 @@ dwloader.exe
 }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
 **-h**  
 Visualizza semplici informazioni della guida sull'utilizzo del caricatore. La guida viene visualizzata solo se non vengono specificati altri parametri della riga di comando.  
   
@@ -133,11 +134,11 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-Usare un file di parametri, *parameter_file_name*, al posto dei parametri della riga di comando. *parameter_file_name* può contenere qualsiasi parametro della riga di comando tranne *user_name* e *password*. Se viene specificato un parametro nella riga di comando e nel file dei parametri, la riga di comando esegue l'override del parametro file.  
+Usare un file di parametri, *parameter_file_name*al posto dei parametri della riga di comando. *parameter_file_name* possono contenere parametri della riga di comando tranne *user_name* e *password*. Se viene specificato un parametro nella riga di comando e nel file dei parametri, la riga di comando esegue l'override del parametro file.  
   
 Il file di parametri contiene un parametro, senza **-** prefisso, per riga.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
 `rt=percentage`  
   
@@ -146,7 +147,7 @@ Esempi:
 **-S** *target_appliance*  
 Specifica il SQL Server PDW Appliance che riceverà i dati caricati.  
   
-*Per le connessioni InfiniBand*, *target_appliance* viene specificato come < nome-dispositivo >-SQLCTL01. Per configurare la connessione denominata, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
+*Per le connessioni InfiniBand*, *target_appliance* viene specificato come <nome-Appliance>-SQLCTL01. Per configurare la connessione denominata, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
   
 Per le connessioni Ethernet, *target_appliance* è l'indirizzo IP per il cluster del nodo di controllo.  
   
@@ -168,7 +169,7 @@ Per formattare un file di origine:
   
 -   Ogni riga in un file di origine contiene i dati per una riga di tabella. I dati di origine devono corrispondere allo schema della tabella di destinazione. Anche l'ordine delle colonne e i tipi di dati devono corrispondere. Ogni campo della riga rappresenta una colonna della tabella di destinazione.  
   
--   Per impostazione predefinita, i campi sono a lunghezza variabile e separati da un delimitatore. Per specificare il tipo di delimitatore, utilizzare le opzioni della riga di comando < variable_length_column_options >. Per specificare i campi a lunghezza fissa, utilizzare le opzioni della riga di comando < fixed_width_column_options >.  
+-   Per impostazione predefinita, i campi sono a lunghezza variabile e separati da un delimitatore. Per specificare il tipo di delimitatore, utilizzare le opzioni della riga di comando <variable_length_column_options>. Per specificare campi a lunghezza fissa, utilizzare le opzioni della riga di comando <fixed_width_column_options>.  
   
 Per specificare il percorso dei dati di origine:  
   
@@ -192,11 +193,11 @@ Per caricare più file con un solo comando:
   
 -   Tutti i file verranno concatenati e caricati come se fossero un file e le righe rifiutate verranno indirizzate a un singolo file di rifiuto.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
 -   -i \\\loadserver\loads\daily\\*. gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\loadserver\loads\daily\\*. txt  
   
 -   -i \\\loadserver\loads\daily\monday. *  
   
@@ -205,10 +206,10 @@ Esempi:
 -   -i \\\loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
-Se si verificano errori di caricamento, **dwloader** archivia la riga che non è stato possibile caricare e l'errore Descrizione le informazioni sull'errore in un file denominato *load_failure_file_name*. Se il file esiste già, dwloader sovrascriverà il file esistente. *load_failure_file_name* viene creato quando si verifica il primo errore. Se tutte le righe vengono caricate correttamente, *load_failure_file_name* non viene creato.  
+Se si verificano errori di caricamento, **dwloader** archivia la riga che non è stato possibile caricare e la descrizione dell'errore in un file denominato *load_failure_file_name*. Se il file esiste già, dwloader sovrascriverà il file esistente. *load_failure_file_name* viene creato quando si verifica il primo errore. Se tutte le righe vengono caricate correttamente, *load_failure_file_name* non viene creato.  
   
-**-FH** *number_header_rows*  
-Numero di righe (righe) da ignorare all'inizio di *source_data_file_name*. Il valore predefinito è 0.  
+**-fh** *number_header_rows*  
+Numero di righe (righe) da ignorare all'inizio della *source_data_file_name*. Il valore predefinito è 0.  
   
 <variable_length_column_options>  
 Opzioni per un *source_data_file_name* con colonne a lunghezza variabile delimitate da caratteri. Per impostazione predefinita, *source_data_file_name* contiene caratteri ASCII nelle colonne a lunghezza variabile.  
@@ -221,29 +222,29 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è costituito da uno o più caratteri di escape ASCII o valori esadecimali ASCII.  
   
-|Name|Carattere escape|Carattere esadecimale|  
+|Nome|Escape Character|Carattere esadecimale|  
 |--------|--------------------|-----------------|  
 |TAB|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
-|Avanzamento riga (LF)|\n|0x0a|  
+|Avanzamento riga (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgola|','|0x2c|  
-|Virgoletta doppia|\\"|0x22|  
+|Virgolette doppie|\\"|0x22|  
 |Virgoletta singola|\\'|0x27|  
   
 Per specificare il carattere barra verticale nella riga di comando, racchiuderlo tra virgolette doppie, "|". In questo modo si eviterà un'interpretazione errata da parte del parser della riga di comando. Gli altri caratteri sono racchiusi tra virgolette singole.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
 -t "|"  
   
--t ' '  
+-t''  
   
--t 0x0a  
+-t 0x0A  
   
 -t \t  
   
--t '~|~'  
+-t'~ | ~'  
   
 **-r** *row_delimiter*  
 Delimitatore per ogni riga del file di dati di origine. Il delimitatore di riga è uno o più valori ASCII.  
@@ -266,20 +267,20 @@ Esempi di LF:
   
 -r \n  
   
--r 0x0a  
+-r 0x0A  
   
 Per UNIX è necessario un LF. Per Windows è necessario un CR.  
   
 **-s** *string_delimiter*  
 Delimitatore per il campo con tipo di dati stringa di un file di input delimitato da testo. Il delimitatore di stringa è uno o più valori ASCII.  Può essere specificato come carattere (ad esempio,-s *) o come valore esadecimale, ad esempio-s 0x22 per le virgolette doppie.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
--s *  
+s  
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 Opzioni per un file di dati di origine con colonne a lunghezza fissa. Per impostazione predefinita, *source_data_file_name* contiene caratteri ASCII nelle colonne a lunghezza variabile.  
   
 Le colonne a larghezza fissa non sono supportate quando-e è UTF8.  
@@ -289,15 +290,15 @@ Percorso e nome del file di configurazione che specifica il numero di caratteri 
   
 Questo file deve risiedere nel server di caricamento. Il percorso può essere un percorso UNC, relativo o assoluto. Ogni riga in *fixed_width_config_file* contiene il nome di una colonna e il numero di caratteri per la colonna. È presente una riga per ogni colonna, come indicato di seguito, e l'ordine nel file deve corrispondere all'ordine nella tabella di destinazione:  
   
-=*num_chars* column_name  
+*column_name*=*num_chars*  
   
-=*num_chars* column_name  
+*column_name*=*num_chars*  
   
 Esempio di file di configurazione a larghezza fissa:  
   
-SalesCode=3  
+SalesCode = 3  
   
-SalesID=10  
+SalesID = 10  
   
 Righe di esempio in *source_data_file_name*:  
   
@@ -335,7 +336,7 @@ Esempi di LF:
   
 -r \n  
   
--r 0x0a  
+-r 0x0A  
   
 Per UNIX è necessario un LF. Per Windows è necessario un CR.  
   
@@ -349,7 +350,7 @@ AGM
 È possibile caricare solo l'input formattato come AGM in colonne con tipo di dati DateTime e smalldatetime. Non è possibile caricare valori AGM in una colonna con tipo di dati datetime2, date o DateTimeOffset.  
   
 mdy  
-MDY consente <month>. <space> <day> <comma> <year>  
+<month> <space> <day>MDY consente <comma>. <year>  
   
 Esempi di dati di input di MDY per l'1 gennaio 1975:  
   
@@ -362,13 +363,13 @@ Esempi di dati di input di MDY per l'1 gennaio 1975:
 -   01011975  
   
 myd  
-Esempi di file di input per il 04 marzo 2010: 03-2010-04, 3/2010/4  
+Esempi di file di input per il 04 marzo 2010:03-2010-04, 3/2010/4  
   
 dym  
-Esempi di file di input per il 04 marzo 2010: 04-2010-03, 4/2010/3  
+Esempi di file di input per il 04 marzo 2010:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* è un formato di data personalizzato (ad esempio, mm/gg/aaaa) ed è incluso solo per compatibilità con le versioni precedenti. dwloader non impone il formato di data personalizzato. Al contrario, quando si specifica un formato di data personalizzato, **dwloader** lo convertirà nell'impostazione corrispondente di ymd, AGM, MDY, MYD, DYM o DMY.  
+*custom_date_format* è un formato di data personalizzato (ad esempio, mm/gg/aaaa) e incluso solo per compatibilità con le versioni precedenti. dwloader non impone il formato di data personalizzato. Al contrario, quando si specifica un formato di data personalizzato, **dwloader** lo convertirà nell'impostazione corrispondente di ymd, AGM, MDY, MYD, DYM o DMY.  
   
 Se, ad esempio, si specifica-D MM/gg/aaaa, dwloader prevede che tutti gli input di data vengano ordinati prima con il mese, quindi il giorno e infine l'anno (MDY). Non applica due mesi, i giorni a 2 cifre e gli anni a 4 cifre come specificato dal formato di data personalizzato. Di seguito sono riportati alcuni esempi dei modi in cui le date possono essere formattate nel file di input quando il formato della data è-D MM/gg/aaaa: 01/02/2013, Jan. 02.2013, 1/2/2013  
   
@@ -379,7 +380,7 @@ Ogni formato DateTime viene specificato in un file denominato *datetime_format_f
   
 Ogni riga contiene il nome di una colonna nella tabella di destinazione e il relativo formato DateTime.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
 `LastReceiptDate=ymd`  
   
@@ -425,29 +426,29 @@ Se il tipo di carico è FASTAPPEND, *BatchSize* si applica al caricamento dei da
 <reject_options>  
 Specifica le opzioni per determinare il numero di errori di caricamento consentiti dal caricatore. Se gli errori di caricamento superano la soglia, il caricatore si arresterà e non eseguirà il commit di alcuna riga.  
   
-**-RT** { **value** | percentuale}  
-Specifica se-*reject_value* nell'opzione **-RV** *reject_value* è un numero letterale di righe (valore) o un tasso di errore (percentuale). Il valore predefinito è value.  
+**-RT** { **valore** | percentuale}  
+Specifica se il*reject_value* nell'opzione **-RV** *reject_value* è un numero letterale di righe (valore) o un tasso di errore (percentuale). Il valore predefinito è value.  
   
 L'opzione percentuale è un calcolo in tempo reale che si verifica a intervalli in base all'opzione-RS.  
   
 Se, ad esempio, il caricatore tenta di caricare 100 righe e 25 ha esito negativo e 75 ha esito positivo, la percentuale di errori è pari al 25%.  
   
-**-RV** *reject_value*  
-Specifica il numero o la percentuale di rifiuti di riga da consentire prima di arrestare il carico. L'opzione **-RT** determina se *reject_value* fa riferimento al numero di righe o alla percentuale di righe.  
+**-** *reject_value* RV  
+Specifica il numero o la percentuale di rifiuti di riga da consentire prima di arrestare il carico. L'opzione **-RT** determina se *reject_value* indica il numero di righe o la percentuale di righe.  
   
-Il valore predefinito di *reject_value* è 0.  
+Il *reject_value* predefinito è 0.  
   
-Quando viene usato con il valore-RT, il caricatore interrompe il caricamento quando il numero di righe rifiutate supera reject_value.  
+Quando viene usato con il valore-RT, il caricatore interrompe il caricamento quando il numero di righe rifiutato supera reject_value.  
   
 Quando si usa con la percentuale-RT, il caricatore calcola la percentuale a intervalli (opzione-RS). Pertanto, la percentuale di righe con esito negativo può superare *reject_value*.  
   
-**-RS** *reject_sample_size*  
-Utilizzato con l' `-rt percentage` opzione per specificare i controlli della percentuale incrementale. Se, ad esempio, reject_sample_size è 1000, il caricatore calcolerà la percentuale di righe con esito negativo dopo aver tentato di caricare 1000 righe. Consente di ricalcolare la percentuale di righe con esito negativo dopo il tentativo di caricamento di ogni 1000 righe aggiuntive.  
+**-rs** *reject_sample_size*  
+Utilizzato con l' `-rt percentage` opzione per specificare i controlli della percentuale incrementale. Se ad esempio reject_sample_size è 1000, il caricatore calcolerà la percentuale di righe con esito negativo dopo aver tentato di caricare 1000 righe. Consente di ricalcolare la percentuale di righe con esito negativo dopo il tentativo di caricamento di ogni 1000 righe aggiuntive.  
   
 **-c**  
 Rimuove gli spazi vuoti dal lato sinistro e destro dei campi char, nchar, varchar e nvarchar. Converte in una stringa vuota ogni campo che contiene solo spazi vuoti.  
   
-Esempi:  
+Di seguito sono riportati alcuni esempi.  
   
 '' viene troncato in ''  
   
@@ -480,16 +481,16 @@ Non viene eseguito alcun rollback con la modalità multitransazione, il che sign
 **-N**  
 Verificare che l'appliance di destinazione disponga di un certificato di SQL Server PDW valido da un'autorità attendibile. Questa operazione consente di garantire che i dati non vengano dirottati da un utente malintenzionato e inviati a una posizione non autorizzata. Il certificato deve essere già installato nell'appliance. L'unico modo supportato per installare il certificato è l'amministratore del dispositivo a installarlo utilizzando lo strumento Configuration Manager. Se non si è certi che nel dispositivo sia installato un certificato attendibile, rivolgersi all'amministratore del dispositivo.  
   
-**-se**  
+**-Se**  
 Ignora il caricamento di file vuoti. Questa operazione ignora anche la decompressione di file gzip vuoti.
 
 **-l**  
 Disponibile con l'aggiornamento di CU 7.4, specifica la lunghezza massima della riga (in byte) che può essere caricata. I valori validi sono numeri interi compresi tra 32768 e 33554432. Utilizzare solo quando necessario per caricare righe di grandi dimensioni (maggiori di 32 KB), in quanto verrà allocata una maggiore quantità di memoria nel client e nel server.
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
 0 (esito positivo) o altro valore integer (esito negativo)  
   
-In una finestra di comando o in un file `errorlevel` batch usare per visualizzare il codice restituito. Esempio:  
+In una finestra di comando o in un file `errorlevel` batch usare per visualizzare il codice restituito. Ad esempio:  
   
 ```  
 dwloader  
@@ -500,7 +501,7 @@ if %errorlevel%==0 echo Success
   
 Quando si usa PowerShell, `$LastExitCode`usare.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione LOAD e le autorizzazioni applicabili (INSERT, UPDATE, DELETE) nella tabella di destinazione. È richiesta l'autorizzazione CREATE (per la creazione di una tabella temporanea) nel database di gestione temporanea. Se non viene utilizzato un database di gestione temporanea, è necessario disporre dell'autorizzazione CREATE nel database di destinazione. 
 
 <!-- MISSING LINK
@@ -534,7 +535,7 @@ Quando si caricano più file con un solo comando Load, tutte le righe rifiutate 
 La stringa vuota non deve essere utilizzata come delimitatore. Quando una stringa vuota viene utilizzata come delimitatore di riga, il caricamento avrà esito negativo. Se usato come delimitatore di colonna, il carico ignora il delimitatore e continua a usare il valore predefinito "|" come delimitatore di colonna. Se utilizzato come delimitatore di stringa, la stringa vuota viene ignorata e viene applicato il comportamento predefinito.  
   
 ## <a name="locking-behavior"></a>Comportamento di blocco  
-il comportamento di blocco **dwloader** varia a seconda del *load_mode_option*.  
+il comportamento di blocco di **dwloader** varia a seconda del *load_mode_option*.  
   
 -   **Append** -Append è l'opzione consigliata e più comune. Accoda carica i dati in una tabella di staging. Il blocco viene descritto in dettaglio di seguito.  
   
@@ -553,14 +554,14 @@ La modalità di accodamento consente di caricare i dati in due fasi. La fase 1 c
   
 |Tipo di tabella|Più transazioni<br />Modalità (-m)|Tabella vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Yes|Yes|Yes|Minime|  
-|Heap|Yes|No|Yes|Minime|  
+|Heap|Sì|Sì|Sì|Minime|  
+|Heap|Sì|No|Sì|Minime|  
 |Heap|No|Sì|No|Minime|  
 |Heap|No|No|No|Minime|  
-|Cl|Yes|Sì|No|Minime|  
-|Cl|Yes|No|Yes|Full|  
-|Cl|No|Sì|No|Minime|  
-|Cl|No|No|Yes|Full|  
+|CL|Sì|Sì|No|Minime|  
+|CL|Sì|No|Sì|Completa|  
+|CL|No|Sì|No|Minime|  
+|CL|No|No|Sì|Completa|  
   
 La tabella precedente Mostra **dwloader** usando il caricamento in modalità Accodamento in un heap o una tabella dell'indice cluster (ci), con o senza il flag transazionale, e il caricamento in una tabella vuota o in una tabella non vuota. Nella tabella viene visualizzato il comportamento di blocco e di registrazione di ogni combinazione di carico. Ad esempio, la fase di caricamento (2a) con la modalità di Accodamento in un indice cluster senza modalità transazionale e in una tabella vuota creerà un blocco esclusivo sulla tabella e la registrazione sarà minima. Questo significa che un cliente non sarà in grado di caricare (2a) fase e query simultaneamente in una tabella vuota. Tuttavia, quando si carica con la stessa configurazione in una tabella non vuota, PDW non emette un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, la registrazione completa si verifica, rallentando il processo.  
   
@@ -597,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Caricare i dati in una tabella AdventureWorks  
-L'esempio seguente fa parte di uno script batch che carica i dati in **AdventureWorksPDW2012**.  Per visualizzare lo script completo, aprire il file aw_create. bat fornito con il pacchetto di installazione **AdventureWorksPDW2012** . 
+L'esempio seguente fa parte di uno script batch che carica i dati in **AdventureWorksPDW2012**.  Per visualizzare lo script completo, aprire il file aw_create. bat fornito con il pacchetto di installazione di **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script usa un indirizzo Ethernet. Se utilizza InfiniBand, il server *< >* `-SQLCTL01`appliance_name.  
+Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script usa un indirizzo Ethernet. Se si utilizza InfiniBand, il server verrebbe *<appliance_name>* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +695,7 @@ Descrizione dei parametri della riga di comando:
   
 -   *-r \r\n* specifica che ogni riga in DimAccount. txt termina con un ritorno a capo e un carattere di avanzamento riga.  
   
--   *-U < login_name >-P <password>*  specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
+-   *-U <login_name>-P <password> * specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
   
 
 <!-- MISSING LINK

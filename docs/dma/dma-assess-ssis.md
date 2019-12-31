@@ -14,14 +14,25 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056637"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687162"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Per valutare SQL Server pacchetti di Integration Services (SSIS), è necessario installare i componenti seguenti con Data Migration Assistant:
+
+- SQL Server servizio di integrazione con la stessa versione dei pacchetti SSIS da valutare.
+- Feature Pack di Azure o altri componenti di terze parti se i pacchetti SSIS da valutare hanno questi componenti.  
+
+È necessario eseguire DMA con accesso **amministratore** per valutare i pacchetti SSIS nell'archivio pacchetti.
+
+## <a name="performance-assessments"></a>Valutazioni delle prestazioni
 
 Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione di pacchetti di SQL Server Integration Service (SSIS) a un database SQL di Azure o a un'istanza gestita di database SQL di Azure, usando Data Migration Assistant.
 
@@ -29,7 +40,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
 1. Selezionare l'icona **nuovo** (+), quindi selezionare il tipo di progetto **Assessment** come **Integration Services**.
 
-1. Impostare il tipo di server di origine e di destinazione.
+1. Impostare il tipo di server di origine e destinazione.
 
     Selezionare l'origine come **SQL Server**e impostare il tipo di server di destinazione come **database SQL** di Azure o **istanza gestita di database SQL di Azure**.
 
@@ -51,14 +62,14 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 1. Selezionare i tipi di archiviazione del pacchetto SSIS da valutare e quindi selezionare **Aggiungi**.
 ![Aggiungi origine](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Selezionare **Aggiungi origini** per aprire il menu a comparsa connessione, se è necessario valutare più cartelle.
-1. Fare clic su **Avvia valutazione**.
+1. Fare clic su **Start Assessment** (Avvia valutazione).
   ![Avvia valutazione](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
-## <a name="view-results"></a>Visualizzazione dei risultati
+## <a name="view-results"></a>Visualizzare i risultati
 
 La categoria problemi di compatibilità fornisce funzionalità parzialmente supportate o non supportate che bloccano la migrazione di pacchetti SSIS locali a Azure-SSIS Integration Runtime. Fornisce quindi consigli per risolvere tali problemi.
 
-![Visualizzazione dei risultati](media/dma-assess-ssis/dma-assess-ssis-result.png)
+![Visualizzare i risultati](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

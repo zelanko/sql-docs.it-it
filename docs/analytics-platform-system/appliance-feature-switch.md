@@ -1,6 +1,6 @@
 ---
-title: Opzione della funzionalità (sistema di piattaforma Analitica)
-description: Visualizza le informazioni sulle opzioni di due funzionalità che sono stati introdotti in AU7 sistema di piattaforma Analitica.
+title: Opzione funzionalità
+description: Visualizza informazioni sulle due opzioni di funzionalità introdotte in Analytics Platform System AU7.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,38 +9,38 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961510"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401448"
 ---
-# <a name="appliance-feature-switches"></a>Opzioni di funzionalità delle Appliance
+# <a name="appliance-feature-switches"></a>Opzioni funzionalità dispositivo
 
-Il **opzione della funzionalità** pagina vengono visualizzate informazioni sulle opzioni di funzionalità che sono stati introdotti in AU7 sistema di piattaforma Analitica e versioni successive. Utilizzare questa pagina di configurazione per aggiornare o attivare/disabilitare funzionalità e impostazioni di sistema di piattaforma Analitica.
+La pagina **commutatore funzionalità** Visualizza informazioni sulle opzioni di funzionalità introdotte in AU7 Platform System e versioni successive. Usare questa pagina di configurazione per aggiornare o abilitare/disabilitare le funzionalità e le impostazioni nel sistema di piattaforma di analisi.
 
 > [!NOTE]
-> Modifiche ai valori della funzionalità commutatore richiedono un riavvio del servizio.
+> Per le modifiche ai valori delle opzioni di funzionalità è necessario riavviare il servizio.
 
-![Opzione della funzionalità Appliance DWConfig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "opzione della funzionalità Appliance DWConfig")
+![Opzione della funzionalità Appliance DWConfig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "Opzione della funzionalità Appliance DWConfig")
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-Controlla la funzionalità statistiche automatico. Questa opzione della funzionalità è impostata su true per impostazione predefinita dopo l'aggiornamento a AU7. Qualsiasi database creato dopo l'aggiornamento erediterà la creazione automatica e l'aggiornamento asincrono delle statistiche. Per i database esistenti, gli amministratori di database possono abilitare statistiche automatico con [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Per altre informazioni sulle statistiche, vedere [statistiche](../relational-databases/statistics/statistics.md).
+Controlla la funzionalità di statistiche automatiche. Questa opzione di funzionalità è impostata su true per impostazione predefinita dopo l'aggiornamento a AU7. Qualsiasi database creato dopo l'aggiornamento erediterà la creazione automatica e l'aggiornamento asincrono delle statistiche. Per i database esistenti, gli amministratori di database possono abilitare le statistiche automatiche con [ALTER database (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Per ulteriori informazioni sulle statistiche, vedere [statistiche](../relational-databases/statistics/statistics.md).
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 
-Consente di selezionare le impostazioni maxdop maggiore di 1 per le operazioni insert/select. Opzioni per questa impostazione sono 0, 1, 2 e 4, con valore predefinito è 1.
+Consente di selezionare le impostazioni MAXDOP maggiori di 1 per le operazioni di inserimento/selezione. Le opzioni per questa impostazione sono 0, 1, 2 e 4 e il valore predefinito è 1.
 
 ## <a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
 
-Migliora le prestazioni delle query eliminando lo spostamento dei dati per sottoespressione comuni in query optimizer di SQL. Una descrizione dettagliata di questa funzionalità è reperibile [qui](common-sub-expression-elimination.md).
+Consente di migliorare le prestazioni delle query eliminando lo spostamento dei dati per sottoespressione comune in SQL Query Optimizer. Una spiegazione dettagliata di questa funzionalità è disponibile [qui](common-sub-expression-elimination.md).
 
 ## <a name="usecatalogqueries"></a>UseCatalogQueries
 
-Utilizzando oggetti del catalogo per alcune chiamate di metadati anziché l'utilizzo di SMO è stato illustrato il miglioramento delle prestazioni. Impostato su true per impostazione predefinita in CU7.1, questa opzione controlla questo comportamento.
+L'utilizzo di oggetti del catalogo per alcune chiamate di metadati anziché l'utilizzo di SMO ha mostrato un miglioramento delle prestazioni. Impostare su true per impostazione predefinita in CU 7.1, questa opzione controlla il comportamento.
 
 ## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
 
-Controlla il tempo Data Movement Service (DMS) è in attesa per la sincronizzazione in un sistema occupato all'annullamento di una query che implica lo spostamento dei dati. L'aggiornamento a AU7 imposta questo valore per 900 secondi (15 minuti) per impostazione predefinita. L'intervallo valido è 0 - 3600 secondi.
+Controlla il tempo di attesa del servizio di spostamento dei dati (DMS) per la sincronizzazione in un sistema occupato quando viene annullata una query che interessa lo spostamento dei dati. L'aggiornamento a AU7 imposta questo valore su 900 secondi (15 minuti) per impostazione predefinita. L'intervallo valido è pari a 0-3600 secondi.

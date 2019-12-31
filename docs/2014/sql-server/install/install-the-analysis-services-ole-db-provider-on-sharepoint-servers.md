@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: HT
+ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952527"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200442"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installazione del provider OLE DB di Analysis Services nei server di SharePoint
   Il provider Microsoft OLE DB per Analysis Services (MSOLAP) è un'interfaccia utilizzata dalle applicazioni client per interagire con i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le richieste di connessione ai dati [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono gestite dal provider in un ambiente di SharePoint in cui è installato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "71952527"
   
  Nella tabella seguente vengono descritte le versioni valide.  
   
-|Versione del prodotto|Versione file|Valida per:|  
+|Versione prodotto|Versione file|Valida per:|  
 |---------------------|------------------|----------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|MSOLAP100.dll nel file system<br /><br /> MSOLAP.4 in una stringa di connessione Excel<br /><br /> 10.50.1600 o successiva nei dettagli della versione del file|Utilizzare i modelli di dati creati con la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di PowerPivot per Excel.|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|MSOLAP110.dll nel file system<br /><br /> MSOLAP.5 in una stringa di connessione Excel<br /><br /> 11.0.0000 o successiva nei dettagli della versione del file|Utilizzare i modelli di dati creati con la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel.|  
@@ -49,9 +49,9 @@ ms.locfileid: "71952527"
 ##  <a name="bkmk_why"></a>Perché è necessario installare il provider di OLE DB  
  In due scenari è richiesta l'installazione manuale del provider OLE DB nei server della farm.  
   
- **Lo scenario più comune** si verifica quando si dispone di versioni precedenti e più recenti delle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] salvate nelle raccolte documenti della farm. Se gli analisti dell'organizzazione usano la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e salvano le cartelle di lavoro in un'installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], la cartella di lavoro precedente non funziona. La relativa stringa di connessione farà riferimento a una versione precedente del provider, che non si troverà sul server a meno che non venga installata. L'installazione di entrambe le versioni consentirà l'accesso ai dati per le cartelle di lavoro di PowerPivot create con versioni precedenti e più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Il programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non prevede l'installazione della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider. È pertanto necessario installarla manualmente se si utilizzano cartelle di lavoro di una versione precedente.  
+ **Lo scenario più comune** si verifica quando si dispone di versioni precedenti e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] più recenti delle cartelle di lavoro salvate nelle raccolte documenti della farm. Se gli analisti dell'organizzazione usano la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e salvano le cartelle di lavoro in un'installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], la cartella di lavoro precedente non funziona. La relativa stringa di connessione farà riferimento a una versione precedente del provider, che non si troverà sul server a meno che non venga installata. L'installazione di entrambe le versioni consentirà l'accesso ai dati per le cartelle di lavoro di PowerPivot create con versioni precedenti e più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Il programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non prevede l'installazione della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider. È pertanto necessario installarla manualmente se si utilizzano cartelle di lavoro di una versione precedente.  
   
- **Il secondo scenario** si verifica quando si dispone di un server in una farm di SharePoint in cui viene eseguito Excel Services, ma non [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In questo caso, è necessario aggiornare manualmente il server applicazioni in cui viene eseguito Excel Services per poter utilizzare una versione più recente del provider. Ciò è necessario per la connessione a un'istanza di PowerPivot per SharePoint. Se Excel Services utilizza una versione meno recente del provider, la richiesta di connessione non riuscirà. Si noti che il provider deve essere installato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il pacchetto di installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) per assicurarsi che tutti i componenti necessari per il supporto di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siano installati.  
+ **Il secondo scenario** si verifica quando si dispone di un server in una farm di SharePoint in cui viene eseguito [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]Excel Services, ma non. In questo caso, è necessario aggiornare manualmente il server applicazioni in cui viene eseguito Excel Services per poter utilizzare una versione più recente del provider. Ciò è necessario per la connessione a un'istanza di PowerPivot per SharePoint. Se Excel Services utilizza una versione meno recente del provider, la richiesta di connessione non riuscirà. Si noti che il provider deve essere installato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il pacchetto di installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) per assicurarsi che tutti i componenti necessari per il supporto di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siano installati.  
   
   
 ##  <a name="bkmk_sql11"></a>Installare il provider di OLE DB SQL Server 2012 in un server Excel Services utilizzando SQL Server installazione  
@@ -99,15 +99,15 @@ ms.locfileid: "71952527"
   
 2.  Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**.  
   
-3.  Scegliere **Dettagli**.  
+3.  Fare clic su **Dettagli**.  
   
-4.  Visualizzare le informazioni sulla versione del file. La versione deve includere 11,00.\<> BuildNumber.  
+4.  Visualizzare le informazioni sulla versione del file. La versione deve includere 11,00. \<> BuildNumber.  
   
 5.  Nella cartella Windows\assembly, verificare che venga elencato Microsoft.AnalysisServices.Xmla.dll, versione 11.0.0.0.  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Usare il pacchetto di installazione di PowerPivot per SharePoint (spspPowerPivot. msi) per installare il provider di OLE DB SQL Server 2012  
- Installare il provider di OLE DB [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] in e il server Excel Services utilizzando il pacchetto di installazione [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] **(spspPowerPivot. msi)** .  
+ Installare il [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Provider di OLE DB in e il server Excel Services utilizzando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] il pacchetto di installazione di **(spspPowerPivot. msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
   
@@ -127,7 +127,7 @@ ms.locfileid: "71952527"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Passaggio 1: Scaricare e installare la libreria client  
   
-1.  Nella [pagina SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570)trovare provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2008 R2.  
+1.  Nella [pagina SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)trovare provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2008 R2.  
   
 2.  Scaricare il pacchetto per x64 del programma di installazione `SQLServer2008_ASOLEDB10.msi`. Anche se nel nome file è incluso SQLServer2008, si tratta comunque del file corretto per la versione SQL Server 2008 R2 del provider.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "71952527"
   
 #### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Passaggio 2: Registrare il file Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Utilizzare l'utilità regasm.exe per registrare il file. Se Regasm. exe non è stato eseguito in precedenza, aggiungere la relativa cartella padre, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, alla variabile del percorso di sistema.  
+1.  Utilizzare l'utilità regasm.exe per registrare il file. Se Regasm. exe non è stato eseguito in precedenza, aggiungere la relativa cartella padre\\, C:\Windows\Microsoft.NET\Framework64\v4.0.30319, alla variabile del percorso di sistema.  
   
 2.  Aprire un prompt dei comandi con autorizzazioni di amministratore.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "71952527"
   
 2.  Inoltre, è possibile controllare la versione del file.  
   
-     Passare a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Fare clic con il pulsante destro del mouse su **msolap100. dll** e selezionare **Proprietà**. Scegliere **Dettagli**.  
+     Passare a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Fare clic con il pulsante destro del mouse su **msolap100. dll** e selezionare **Proprietà**. Fare clic su **Dettagli**.  
   
-     Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50.\<> BuildNumber.  
+     Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50. \<> BuildNumber.  
   
   
 ## <a name="see-also"></a>Vedere anche  

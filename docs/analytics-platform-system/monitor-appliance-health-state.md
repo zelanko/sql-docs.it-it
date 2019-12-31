@@ -1,6 +1,6 @@
 ---
-title: Monitoraggio dell'integrità del dispositivo - sistema di piattaforma Analitica
-description: Come monitorare lo stato di un'appliance di sistema di piattaforma Analitica utilizzando la Console di amministrazione o direttamente tramite query le viste a gestione dinamica Parallel Data Warehouse.
+title: Monitorare lo stato dell'appliance
+description: Come monitorare lo stato di un'appliance del sistema della piattaforma di analisi usando la console di amministrazione o eseguendo direttamente una query sulle viste a gestione dinamica data warehouse parallele.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960618"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400996"
 ---
-# <a name="monitor-appliance-health-state"></a>Monitoraggio stato di integrità Appliance
-Questo articolo illustra come monitorare lo stato di un'appliance di sistema di piattaforma Analitica utilizzando la Console di amministrazione o direttamente tramite query le viste a gestione dinamica Parallel Data Warehouse. 
+# <a name="monitor-appliance-health-state"></a>Monitorare lo stato di integrità dell'appliance
+Questo articolo illustra come monitorare lo stato di un'appliance del sistema della piattaforma Analytics usando la console di amministrazione o eseguendo direttamente una query sulle viste a gestione dinamica data warehouse parallele. 
   
-## <a name="to-monitor-the-appliance-state"></a>Per monitorare lo stato del dispositivo  
-Un amministratore di sistema possa utilizzare la Console di amministrazione o viste a gestione dinamica di SQL Server PDW (DMV) per recuperare l'intera gerarchia del software, componenti e i nodi. Il diagramma seguente offre una conoscenza di alto livello dei componenti che consente di monitorare SQL Server PDW.  
+## <a name="to-monitor-the-appliance-state"></a>Per monitorare lo stato dell'appliance  
+Un amministratore di sistema può utilizzare la console di amministrazione o la SQL Server PDW DMV (DMV) per recuperare la gerarchia completa di nodi, componenti e software. Nel diagramma seguente viene illustrata una conoscenza di alto livello dei componenti che SQL Server PDW monitoraggi.  
   
 ![Panoramica del monitoraggio](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-### <a name="monitor-component-status-by-using-the-admin-console"></a>Monitorare lo stato componente usando la Console di amministrazione  
-Per recuperare lo stato del componente usando la Console di amministrazione:  
+### <a name="monitor-component-status-by-using-the-admin-console"></a>Monitorare lo stato dei componenti tramite la console di amministrazione  
+Per recuperare lo stato dei componenti tramite la console di amministrazione:  
   
-1.  Fare clic sui **Appliance stato** scheda.  
+1.  Fare clic sulla scheda **stato Appliance** .  
   
-2.  Nella pagina stato del dispositivo, fare clic su un nodo specifico per visualizzare i dettagli del nodo.  
+2.  Nella pagina stato dell'appliance fare clic su un nodo specifico per visualizzare i dettagli del nodo.  
   
-    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![Stato della console di amministrazione di PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### <a name="monitor-component-status-by-using-system-views"></a>Monitorare lo stato di componente utilizzando viste di sistema  
-Per recuperare lo stato del componente utilizzando viste di sistema, usare [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Ad esempio, la query seguente recupera lo stato per tutti i componenti.  
+### <a name="monitor-component-status-by-using-system-views"></a>Monitorare lo stato dei componenti utilizzando viste di sistema  
+Per recuperare lo stato dei componenti utilizzando le viste di sistema, utilizzare [sys. dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Ad esempio, la query seguente recupera lo stato di tutti i componenti.  
   
 ```sql  
 SELECT   
@@ -66,7 +67,7 @@ ORDER BY
    p.[property_name];  
 ```  
   
-I valori possibili per la proprietà di stati restituiti sono:  
+I valori possibili restituiti per la proprietà Status sono:  
   
 -   OK  
   
@@ -74,22 +75,22 @@ I valori possibili per la proprietà di stati restituiti sono:
   
 -   Critico  
   
--   Sconosciuto  
+-   Unknown  
   
 -   Non supportato  
   
--   Non raggiungibile  
+-   Inaccessibile  
   
--   Errore irreversibile  
+-   Irreversibile  
   
-Per visualizzare tutte le proprietà per tutti i componenti, rimuovere il `WHERE  p.property_name = 'Status'` clausola.  
+Per visualizzare tutte le proprietà di tutti i componenti, rimuovere `WHERE  p.property_name = 'Status'` la clausola.  
   
-Il **[update_time]** colonna indica l'ultima volta il componente è stato eseguito il polling dagli agenti di integrità di SQL Server PDW.  
+La colonna **[update_time]** Mostra l'ultima volta in cui il componente è stato sottoporre a polling dagli agenti di SQL Server PDW Health.  
   
 > [!CAUTION]  
-> Assicurarsi di esaminare il problema quando un componente non è stata polling per 5 minuti o più; potrebbe esserci un avviso che indica un problema con l'heartbeat di software.  
+> Assicurarsi di esaminare il problema quando non è stato eseguito il polling di un componente per 5 minuti o più. potrebbe essere presente un avviso che indica un problema con gli heartbeat software.  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Monitoraggio dell'Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-monitoring.md)  
+[Monitoraggio Appliance &#40;sistema piattaforma di analisi&#41;](appliance-monitoring.md)  
   

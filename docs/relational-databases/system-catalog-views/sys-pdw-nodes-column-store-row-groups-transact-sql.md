@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,49 +12,49 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106715"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399868"
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Fornisce informazioni sull'indice columnstore cluster in base a ogni segmento che aiutano l'amministratore a prendere decisioni sulla gestione in system [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** dispone di una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Uso **sys.pdw_nodes_column_store_row_groups** per determinare quale riga gruppi hanno un'elevata percentuale di righe eliminate e deve essere ricompilati.  
+  Fornisce informazioni sugli indici columnstore cluster in base a ogni segmento, in modo da consentire all'amministratore di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]prendere decisioni di gestione del sistema in. **sys. pdw_nodes_column_store_row_groups** include una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Utilizzare **sys. pdw_nodes_column_store_row_groups** per determinare quali gruppi di righe hanno una percentuale elevata di righe eliminate e devono essere ricompilati.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID della tabella sottostante. Questa è la tabella fisica nel nodo di calcolo, non object_id per la tabella logica nel nodo di controllo. Ad esempio, object_id non corrisponde con object_id in sys. Tables.<br /><br /> Per creare un join con Sys. Tables, usare sys.pdw_index_mappings.|  
-|**index_id**|**int**|ID dell'indice columnstore cluster in *object_id* tabella.|  
-|**partition_number**|**int**|ID di partizione della tabella che contiene il gruppo di righe *row_group_id*. È possibile usare *partition_number* per unire questa vista DMV a Sys. Partitions.|  
+|**object_id**|**int**|ID della tabella sottostante. Si tratta della tabella fisica nel nodo di calcolo, non della object_id per la tabella logica sul nodo di controllo. Ad esempio, object_id non corrisponde al object_id in sys. Tables.<br /><br /> Per eseguire il join con sys. Tables, utilizzare sys. pdw_index_mappings.|  
+|**index_id**|**int**|ID dell'indice columnstore cluster nella tabella *object_id* .|  
+|**partition_number**|**int**|ID della partizione della tabella che include *row_group_id*di gruppi di righe. È possibile utilizzare *partition_number* per aggiungere questa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID di questo gruppo di righe. Univoco all'interno della partizione.|  
-|**dellta_store_hobt_id**|**bigint**|Hobt_id per i gruppi di righe delta o NULL se il tipo del gruppo di righe non è delta. Un gruppo di righe delta è un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe delta ha il **aperto** lo stato. Un gruppo di righe delta presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.|  
-|**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> Aprire - un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CHIUSO - un gruppo di righe che è stato compilato, ma non ancora compresso dal processo tuple-mover.<br /><br /> COMPRESSI - un gruppo di righe riempito e compresso.|  
+|**dellta_store_hobt_id**|**bigint**|Hobt_id per i gruppi di righe delta o NULL se il tipo del gruppo di righe non è delta. Un gruppo di righe delta è un gruppo di righe di lettura/scrittura che accetta nuovi record. Lo stato di un gruppo di righe Delta è **aperto** . Un gruppo di righe delta presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.|  
+|**stato**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar (60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> APRIRE: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe compilato ma non ancora compresso dal processo del motore di Tuple.<br /><br /> COMPRESSO: gruppo di righe che è stato riempito e compresso.|  
 |**total_rows**|**bigint**|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
-|**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe contrassegnate per l'eliminazione.<br /><br /> Sempre 0 per DELTA i gruppi di righe.|  
-|**size_in_bytes**|**int**|Dimensioni combinate, in byte di tutte le pagine di questo gruppo di righe. Questa dimensione non include la dimensione necessaria per archiviare i metadati o i dizionari condivisi.|  
-|**pdw_node_id**|**int**|Id univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
-|**distribution_id**|**int**|Id univoco della distribuzione.|
+|**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe contrassegnate per l'eliminazione.<br /><br /> Sempre 0 per i gruppi di righe DELTA.|  
+|**size_in_bytes**|**int**|Dimensioni combinate, in byte, di tutte le pagine di questo gruppo di righe. Questa dimensione non include le dimensioni necessarie per archiviare i metadati o i dizionari condivisi.|  
+|**pdw_node_id**|**int**|ID univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
+|**distribution_id**|**int**|ID univoco della distribuzione.|
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Restituisce una riga per ogni gruppo di righe columnstore per ogni tabella che dispone di un indice columnstore cluster o non cluster.  
   
- Uso **sys.pdw_nodes_column_store_row_groups** per determinare il numero di righe incluse nel gruppo di righe e le dimensioni del gruppo di righe.  
+ Utilizzare **sys. pdw_nodes_column_store_row_groups** per determinare il numero di righe incluse nel gruppo di righe e le dimensioni del gruppo di righe.  
   
- Quando il numero delle righe eliminate in un gruppo di righe diventa una percentuale elevata delle righe totali, la tabella diventa meno efficiente. Ricompilare l'indice columnstore per ridurre le dimensioni della tabella, riducendo le operazioni di I/O del disco necessarie per leggere la tabella. Per ricompilare l'indice columnstore, utilizzare il **REBUILD** opzione delle **ALTER INDEX** istruzione.  
+ Quando il numero delle righe eliminate in un gruppo di righe diventa una percentuale elevata delle righe totali, la tabella diventa meno efficiente. Ricompilare l'indice columnstore per ridurre le dimensioni della tabella, riducendo le operazioni di I/O del disco necessarie per leggere la tabella. Per ricompilare l'indice columnstore, utilizzare l'opzione **Rebuild** dell'istruzione **alter index** .  
   
- L'indice columnstore aggiornabile inserisce prima nuovi dati in un' **aperto** rowgroup, ovvero in formato rowstore e talvolta anche detta tabella delta.  Quando un rowgroup aperto è pieno, il relativo stato cambia da **CLOSED**. Un gruppo di righe chiuso viene compresso nel formato columnstore per il processo tuple-mover e lo stato diventa **COMPRESSED**.  Il processo tuple-mover è un processo in background che si riattiva periodicamente per verificare se esistano gruppi di righe chiusi pronti per essere compressi in un gruppo di righe columnstore.  Il processo tuple-mover dealloca i gruppi di righe in cui sono state eliminate tutte le righe. Gruppi di righe deallocati vengono contrassegnati come **RITIRATO**. Per eseguire immediatamente processo tuple-mover, utilizzare il **RIORGANIZZA** opzione delle **ALTER INDEX** istruzione.  
+ Il columnstore aggiornabile inserisce prima i nuovi dati in un rowgroup **aperto** , in formato rowstore, ed è anche definito tabella Delta.  Quando un rowgroup aperto è pieno, il relativo stato diventa **chiuso**. Un rowgroup chiuso viene compresso nel formato columnstore dal motore di tuple e lo stato passa a **compresso**.  Il processo tuple-mover è un processo in background che si riattiva periodicamente per verificare se esistano gruppi di righe chiusi pronti per essere compressi in un gruppo di righe columnstore.  Il processo tuple-mover dealloca i gruppi di righe in cui sono state eliminate tutte le righe. RowGroups deallocati sono contrassegnati come **RItirati**. Per eseguire immediatamente il motore di tuple, utilizzare l'opzione **REorganize** dell'istruzione **alter index** .  
   
  Quando un gruppo di righe columnstore risulta riempito, viene compresso e non accetta più nuove righe. Quando vengono eliminate righe da un gruppo compresso, vengono contrassegnate come eliminate, ma risultano ancora presenti. Gli aggiornamenti a un gruppo compresso vengono implementati come un'eliminazione dal gruppo compresso e come un inserimento in un gruppo aperto.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione **VIEW SERVER STATE**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione **View Server state** .  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente unisce il **sys.pdw_nodes_column_store_row_groups** tabella alle altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini di commento davanti alla clausola WHERE e fornire un nome di tabella.  
+ Nell'esempio seguente viene unito la tabella **sys. pdw_nodes_column_store_row_groups** ad altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini dei commenti davanti alla clausola WHERE e specificare un nome di tabella.  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-Nell'esempio [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] esempio conta le righe per partizione per l'istogramma a colonne archivia anche come numero di righe si trovano in gruppi aperto, chiuso o la riga compressa:  
+Nell'esempio [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] seguente vengono conteggiate le righe per partizione per gli archivi di colonne del cluster, nonché il numero di righe in gruppi di righe aperti, chiusi o compressi:  
 
 ```
 SELECT
@@ -105,9 +105,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [CREARE un indice COLUMNStore &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys. pdw_nodes_column_store_segments &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys. pdw_nodes_column_store_dictionaries &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

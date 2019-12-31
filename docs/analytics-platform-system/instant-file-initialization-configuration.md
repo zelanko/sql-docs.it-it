@@ -1,6 +1,6 @@
 ---
-title: Configurare l'inizializzazione immediata dei File - sistema di piattaforma Analitica | Microsoft Docs
-description: Configurare l'inizializzazione immediata dei File nel sistema di piattaforma Analitica. L'inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente.
+title: Configura inizializzazione immediata file
+description: Configurare l'inizializzazione immediata del file nel sistema di piattaforma di analisi. L'inizializzazione immediata dei file è una funzionalità SQL Server che consente l'esecuzione più rapida delle operazioni sui file di dati.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,25 +8,26 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960739"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401109"
 ---
-# <a name="instant-file-initialization-configuration"></a>Configurazione dell'inizializzazione immediata dei File
-L'inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente. Selezionando la casella per attivare l'inizializzazione immediata dei File migliorerà le prestazioni di SQL Server PDW. Tuttavia, se ciò costituisce un rischio per la sicurezza per l'utente business, quindi lasciare deselezionata la casella.  
+# <a name="instant-file-initialization-configuration"></a>Configurazione inizializzazione file immediata
+L'inizializzazione immediata dei file è una funzionalità SQL Server che consente l'esecuzione più rapida delle operazioni sui file di dati. Se si seleziona la casella per attivare l'inizializzazione immediata dei file, le prestazioni di SQL Server PDW migliorano. Tuttavia, se ciò costituisce un rischio per la sicurezza per l'azienda, lasciare la casella deselezionata.  
   
 > [!IMPORTANT]  
-> Quando è abilitata l'inizializzazione immediata dei file, SQL Server non vengono sovrascritte bits eliminato con zeri.  Questo comportamento è stato possibile creare una vulnerabilità di sicurezza se gli utenti non autorizzati ottengono l'accesso ai dati eliminati. Tuttavia, SQL Server PDW questo rischio si riduce, garantendo che il database di SQL Server e i file di backup sono sempre accodati a un'istanza di SQL Server. solo l'account del servizio SQL Server e amministratori locali possono accedere i dati eliminati in SQL Server PDW.  
+> Quando l'inizializzazione immediata dei file è abilitata, SQL Server non sovrascrive i bit eliminati con zeri.  Questo comportamento potrebbe creare una vulnerabilità di sicurezza se utenti non autorizzati ottengono l'accesso ai dati eliminati. Tuttavia, SQL Server PDW attenua questo rischio garantendo che il database di SQL Server e i file di backup siano sempre collegati a un'istanza di SQL Server; solo l'account del servizio SQL Server e l'amministratore locale possono accedere ai dati eliminati SQL Server PDW.  
   
 L'inizializzazione immediata dei file non è disponibile quando è abilitata la crittografia TDE.  
   
-## <a name="add-permission-for-the-backup-account"></a>Aggiungere l'autorizzazione per l'Account di Backup  
-Il processo di backup richiede una credenziale di rete (account utente di Windows) che può accedere al percorso di archiviazione di backup. Si autorizza PDW per l'utilizzo di account usando il [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procedure. Visualizzare [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) per l'intero processo di backup. Per usare l'inizializzazione immediata dei file, l'account di backup deve essere concesse le `Perform volume maintenance tasks` l'autorizzazione.  
+## <a name="add-permission-for-the-backup-account"></a>Aggiungere l'autorizzazione per l'account di backup  
+Il processo di backup richiede una credenziale di rete (account utente di Windows) che può accedere al percorso di archiviazione di backup. Per autorizzare PDW a usare l'account, usare la procedura [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Vedere [backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md) per l'intero processo di backup. Per usare l'inizializzazione immediata dei file, all'account di backup `Perform volume maintenance tasks` deve essere concessa l'autorizzazione.  
   
-1.  Nel server di backup, aprire il **criteri di sicurezza locali** dell'applicazione (`secpol.msc`).  
+1.  Nel server di backup aprire l'applicazione **criteri di sicurezza locali** (`secpol.msc`).  
   
 2.  Nel riquadro sinistro espandere **Criteri locali**, quindi fare clic su **Assegnazione diritti utente**.  
   
@@ -36,22 +37,22 @@ Il processo di backup richiede una credenziale di rete (account utente di Window
   
 5.  Fare clic su **Applica**, quindi chiudere tutte le finestre di dialogo di **Criteri di sicurezza locali** .  
   
-## <a name="to-turn-instant-file-initialization-on-or-off"></a>Per attivare o disattivare la inizializzazione immediata dei File  
+## <a name="to-turn-instant-file-initialization-on-or-off"></a>Per attivare o disattivare l'inizializzazione immediata di file  
   
-1.  Avviare Gestione configurazione. Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
+1.  Avviare il Configuration Manager. Per ulteriori informazioni, vedere [la pagina relativa all'avvio del&#41;di sistema della piattaforma Configuration Manager &#40;Analytics ](launch-the-configuration-manager.md).  
   
-2.  Nel riquadro a sinistra di Configuration Manager, fare clic su **inizializzazione immediata dei File**.  
+2.  Nel riquadro sinistro della Configuration Manager fare clic su **inizializzazione immediata dei file**.  
   
-3.  Per abilitare l'inizializzazione immediata dei file, selezionare la casella accanto a **abilitare inizializzazione immediata dei File in tutti i nodi**. Per disattivare l'inizializzazione immediata dei file, deselezionare la casella accanto a **abilitare inizializzazione immediata dei File in tutti i nodi**.  
+3.  Per attivare l'inizializzazione immediata dei file, selezionare la casella accanto a **Abilita inizializzazione immediata dei file in tutti i nodi**. Per disattivare l'inizializzazione immediata dei file, deselezionare la casella accanto a **Abilita inizializzazione immediata dei file su tutti i nodi**.  
   
     > [!WARNING]  
-    > Quando si disattiva l'inizializzazione immediata dei file, le considerazioni sulla protezione descritte sopra per la funzionalità verranno applicate ai file eliminati se è stata abilitata l'inizializzazione immediata dei file.  
+    > Quando si disattiva l'inizializzazione immediata dei file, è possibile che la considerazione di sicurezza descritta sopra per la funzionalità sia ancora applicabile ai file eliminati mentre è stata abilitata l'inizializzazione immediata dei file.  
   
-4.  Fare clic su **Applica**. La modifica viene propagata attraverso le istanze di SQL Server in SQL Server PDW al successivo che riavvio dei servizi di appliance. Per riavviare i servizi di appliance ora, vedere [stato dei servizi PDW &#40;sistema di piattaforma Analitica&#41;](pdw-services-status.md).  
+4.  Fare clic su **Applica** La modifica verrà propagata attraverso le istanze di SQL Server in SQL Server PDW alla successiva riavvio dei servizi Appliance. Per riavviare ora i servizi Appliance, vedere [lo stato dei servizi PDW &#40;&#41;di sistema della piattaforma di analisi ](pdw-services-status.md).  
   
-5.  È possibile ripetere i passaggi descritti in precedenza come **aggiungere l'autorizzazione per l'Account di Backup** per rimuovere il **eseguire le attività di manutenzione volume** l'autorizzazione.  
+5.  Potrebbe essere necessario ripetere i passaggi descritti in precedenza come **Aggiungi autorizzazione per l'account di backup** per rimuovere l'autorizzazione **Esegui attività di manutenzione volume** .  
   
-![Inizializzazione dei File immediata DWConfig Appliance PDW](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![Inizializzazione file immediata PDW strumento DWConfig](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Per altre informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei File](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
+Per ulteriori informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei file](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

@@ -1,7 +1,7 @@
 ---
 title: Documentazione per gli utenti in SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,18 +13,19 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016181"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684452"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
-  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  
+  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  
   
 ## <a name="the-help-interface"></a>Interfaccia della Guida  
- **Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le altre opzioni sono:  
+ 
+  **Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le altre opzioni sono:  
   
 -   **Ricerca per categorie**  
   
@@ -44,10 +45,10 @@ ms.locfileid: "63016181"
   
      In questo elenco sono archiviati i segnalibri degli argomenti inseriti dall'utente per accedervi facilmente in seguito.  
   
- Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sull'aggiunta dell'insieme uso della Guida all'insieme della documentazione Online, vedere [aggiungere o rimuovere la documentazione di prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sull'aggiunta della Guida relativa alla raccolta di argomenti nella documentazione online di, vedere [aggiungere o rimuovere la documentazione del prodotto per SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
- Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  
+ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile:  
   
 -   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dalla pagina Ricerca per categorie.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "63016181"
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Per accedere alle community dedicate a SQL Server dalla pagina Ricerca per categorie  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?** .  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
   
 2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "63016181"
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Per eseguire ricerche in MSDN Online e nelle community dedicate a SQL Server dalla pagina Cerca  
   
-1.  Scegliere **Cerca** dal menu **?** .  
+1.  Scegliere **Cerca** dal menu **?**.  
   
 2.  Immettere i termini di ricerca nella casella di testo **Cerca** e fare clic su **Cerca**.  
   

@@ -23,25 +23,25 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164928"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542057"
 ---
-# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Restituisce una riga per ogni elemento classificato nel database.
 
-|Nome colonna|Tipo di dati|Descrizione|
+|Nome colonna|Tipo di dati|Description|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifica la classe dell'elemento in cui esiste la classificazione. Avrà sempre il valore 1 (che rappresenta una colonna)|  
-|**class_desc**|**varchar(16)**|Descrizione della classe dell'elemento in cui esiste la classificazione. il valore sarà sempre *OBJECT_OR_COLUMN*|  
+|**classe**|**int**|Identifica la classe dell'elemento in cui esiste la classificazione. Avrà sempre il valore 1 (che rappresenta una colonna)|  
+|**class_desc**|**varchar (16)**|Descrizione della classe dell'elemento in cui esiste la classificazione. il valore sarà sempre *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Rappresenta l'ID della tabella contenente la colonna classificata, corrispondente a sys. all_objects. object_id|  
 |**minor_id**|**int**|Rappresenta l'ID della colonna in cui esiste la classificazione, corrispondente a sys. all_columns. column_id|   
-|**label**|**sysname**|Etichetta (leggibile) assegnata per la classificazione di riservatezza|  
+|**etichetta**|**sysname**|Etichetta (leggibile) assegnata per la classificazione di riservatezza|  
 |**label_id**|**sysname**|ID associato all'etichetta, che può essere usato da un sistema di protezione delle informazioni, ad esempio Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|Tipo di informazioni (leggibile) assegnato per la classificazione di riservatezza|  
 |**information_type_id**|**sysname**|ID associato al tipo di informazioni, che può essere usato da un sistema di protezione delle informazioni, ad esempio Azure Information Protection (AIP)|  
@@ -76,12 +76,14 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ```
 
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Richiede l'autorizzazione **View any Sensitivity Classification** . 
+ 
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="see-also"></a>Vedere anche  
 
-[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[Aggiunta classificazione di RISERVAtezza (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[CLASSIFICAZIONE DROP SENSITIVity (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Introduzione a SQL Information Protection](https://aka.ms/sqlip)

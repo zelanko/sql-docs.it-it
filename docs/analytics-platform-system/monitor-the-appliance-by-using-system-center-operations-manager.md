@@ -1,6 +1,6 @@
 ---
-title: Monitorare con SCOM - sistema di piattaforma Analitica | Microsoft Docs
-description: Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma Analitica (AP).
+title: Monitorare con SCOM
+description: Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma analitica (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,59 +8,60 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960546"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400975"
 ---
-# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitoraggio con System Center Operations Manager - sistema di piattaforma Analitica
-Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma Analitica (AP).
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorare con System Center Operations Manager-Analytics Platform System
+Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma analitica (APS).
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ### <a name="prerequisites"></a>Prerequisiti  
   
-1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 deve essere installato e in esecuzione.  
+1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 devono essere installati e in esecuzione.  
   
-2.  È necessario installare SQL Server 2008 R2 Native Client o SQL Server 2012 Native Client.  
+2.  È necessario installare SQL Server 2008 R2 Native client o SQL Server 2012 Native Client.  
   
-3.  I management pack per monitorare SQL Server PDW devono essere installati, importati e configurati. Usare gli articoli seguenti per le istruzioni per eseguire queste attività.  
+3.  È necessario installare, importare e configurare i Management Pack per il monitoraggio SQL Server PDW. Usare gli articoli seguenti per istruzioni sull'esecuzione di queste attività.  
   
-    -   [Installare i Management Pack SCOM &#40;sistema di piattaforma Analitica&#41;](install-the-scom-management-packs.md)  
+    -   [Installare i Management Pack di SCOM &#40;sistema di piattaforma di analisi&#41;](install-the-scom-management-packs.md)  
   
-    -   [Importare il Management Pack SCOM per PDW &#40;sistema di piattaforma Analitica&#41;](import-the-scom-management-pack-for-pdw.md) 
+    -   [Importare il Management Pack SCOM per il sistema di piattaforma &#40;Analytics per PDW&#41;](import-the-scom-management-pack-for-pdw.md) 
     
-    -   [Configurare SCOM per monitorare il sistema di piattaforma Analitica &#40;sistema di piattaforma Analitica&#41;](configure-scom-to-monitor-analytics-platform-system.md)
+    -   [Configurare SCOM per monitorare il sistema della piattaforma di &#40;Analytics della piattaforma Analytics&#41;](configure-scom-to-monitor-analytics-platform-system.md)
   
 <!-- MISSING LINKS    -   [Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-hdinsight.md)  -->  
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Per monitorare SQL Server PDW con SCOM  
-Dopo aver configurato i Management Pack SCOM, fare clic sul monitoraggio riquadro di SCOM ed eseguire il drill-down **SQL Server Appliance** e quindi **Microsoft SQL Server Parallel Data Warehouse**. Di sotto di Microsoft SQL Server Parallel Data Warehouse, sono disponibili quattro opzioni: Gli avvisi, i dispositivi, diagramma di Appliance e nodi.  
+Dopo aver configurato i Management Pack di SCOM, fare clic sul riquadro Monitoraggio di SCOM ed eseguire il drill-down fino a **SQL Server Appliance** , quindi **Microsoft SQL Server Parallel Data Warehouse**. Sotto Microsoft SQL Server Parallel Data Warehouse sono disponibili quattro opzioni: avvisi, appliance, diagramma di appliance e nodi.  
   
 ### <a name="alerts"></a>Avvisi  
-Gli avvisi sono in cui è possibile trovare gli avvisi correnti per la gestione.  
+Gli avvisi sono la posizione in cui è possibile trovare gli avvisi correnti da gestire.  
   
-![Gli avvisi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Avvisi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Strumenti  
-I dispositivi sono in cui si troverà l'attualmente individuati e monitorati SQL Server PDW Appliance nell'ambiente in uso. Se un dispositivo non vengono visualizzati qui e aver creato la connessione ODBC per tale, può essere presente un problema con il proprio account PDWWatcher. Se vengono visualizzati come "Non monitorato", potrebbe esserci un problema con il proprio account PDWMonitor. Essere paziente poiché SCOM non apporta modifiche in tempo reale, ma periodicamente le nuove Appliance per il monitoraggio e invia periodicamente le query per Appliance per il monitoraggio.  
+Le appliance sono la posizione in cui si troveranno le appliance SQL Server PDW attualmente individuate e monitorate nell'ambiente in uso. Se un dispositivo non viene visualizzato qui ed è stata creata la connessione ODBC, potrebbe essersi verificato un errore con l'account PDWWatcher. Se vengono visualizzati come "non monitorati", potrebbe essersi verificato un errore con l'account PDWMonitor. Essere paziente perché SCOM non modifica in tempo reale, ma verifica periodicamente la presenza di nuove appliance per il monitoraggio e l'invio periodico di query alle appliance per il monitoraggio.  
   
 ![Appliance](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
-### <a name="appliances-diagram"></a>Diagramma strumenti  
-Pagina del diagramma Appliance è dove è possibile ottenere un aspetto dello stato del dispositivo con una visualizzazione albero:  
+### <a name="appliances-diagram"></a>Diagramma Appliance  
+La pagina del diagramma delle appliance è la posizione in cui è possibile esaminare l'integrità del dispositivo con una visualizzazione albero:  
   
-![Diagramma di Appliance](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
+![Diagramma Strumenti](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
 ### <a name="nodes"></a>Nodi  
-Infine, la visualizzazione di nodi consente di visualizzare l'integrità del dispositivo a ogni nodo:  
+Infine, la visualizzazione nodi consente di visualizzare l'integrità dell'appliance tramite ogni nodo:  
   
-![I nodi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Avvisi della Console di amministrazione informazioni sui &#40;sistema di piattaforma Analitica&#41;](understanding-admin-console-alerts.md)  
+[Informazioni sugli avvisi della console di amministrazione &#40;sistema di piattaforma di analisi&#41;](understanding-admin-console-alerts.md)  
   

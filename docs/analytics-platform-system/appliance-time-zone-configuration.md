@@ -1,6 +1,6 @@
 ---
-title: Configurare il fuso orario - sistema di piattaforma Analitica | Microsoft Docs
-description: Pagina fuso orario consente di impostare il fuso orario per tutti i nodi per l'appliance del sistema di piattaforma Analitica (AP).
+title: Configurare il fuso orario
+description: La pagina fuso orario consente di impostare il fuso orario per tutti i nodi nell'appliance del sistema di piattaforma di analisi (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f9997ed26cea5c63d69a7be84b25c247add9b692
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da16790d011a628bc2536de051eb1181f06b8cf
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961447"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401389"
 ---
-# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configurazione del fuso orario Appliance - sistema di piattaforma Analitica
-Il **fuso orario** pagina consente di impostare il fuso orario per tutti i nodi per l'appliance del sistema di piattaforma Analitica (AP).  
+# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configurazione del fuso orario dell'appliance-sistema della piattaforma Analytics
+La pagina **fuso orario** consente di impostare il fuso orario per tutti i nodi nell'appliance del sistema di piattaforma di analisi (APS).  
   
 ## <a name="to-set-the-time-zone"></a>Per impostare il fuso orario  
   
-1.  Avviare Gestione configurazione. Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
+1.  Avviare il Configuration Manager. Per ulteriori informazioni, vedere [la pagina relativa all'avvio del&#41;di sistema della piattaforma Configuration Manager &#40;Analytics ](launch-the-configuration-manager.md).  
   
-2.  Arrestare i servizi di appliance usando il **stato dei servizi** pagina in Gestione configurazione. Visualizzare [stato dei servizi PDW &#40;sistema di piattaforma Analitica&#41; ](pdw-services-status.md) per istruzioni.  
+2.  Arrestare i servizi Appliance usando la pagina **stato Servizi** nella Configuration Manager. Per istruzioni, vedere [lo stato dei servizi PDW &#40;&#41;di sistema della piattaforma di analisi](pdw-services-status.md) .  
   
-3.  Nel riquadro a sinistra di Configuration Manager, fare clic su **fuso orario**. Selezionare il fuso orario desiderato dal **fuso orario** dal menu a discesa. A seconda del punto di accesso, si può anche scegliere di selezionare la casella accanto a **automaticamente le regolazioni dell'orologio dell'ora legale**.  
+3.  Nel riquadro sinistro del Configuration Manager fare clic su **fuso orario**. Selezionare il fuso orario desiderato dal menu a discesa **fuso orario** . A seconda della posizione, è anche possibile scegliere di selezionare la casella accanto a **regola automaticamente orologio per l'ora legale**.  
   
 4.  Fare clic su **applica** per salvare le modifiche.  
   
-5.  Riavviare i servizi di appliance usando il **stato dei servizi** pagina in Gestione configurazione. Se si prevede anche di modificare i privilegi, è possibile farlo prima di riavviare l'appliance.  
+5.  Riavviare i servizi Appliance utilizzando la pagina **stato Servizi** nella Configuration Manager. Se si prevede anche di modificare i privilegi, è possibile eseguire questa operazione prima di riavviare l'appliance.  
   
-![DWConfig Appliance Time](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
+![Ora dello strumento DWConfig](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
+[Avviare la piattaforma Configuration Manager &#40;Analytics System&#41;](launch-the-configuration-manager.md)  
   

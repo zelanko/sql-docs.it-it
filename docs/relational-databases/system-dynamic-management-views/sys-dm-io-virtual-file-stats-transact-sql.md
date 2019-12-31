@@ -1,5 +1,5 @@
 ---
-title: DM io_virtual_file_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900283"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412836"
 ---
-# <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
+# <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Restituisce le statistiche di I/O per i file di log e di dati. Questa vista a gestione dinamica sostituisce il [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) (funzione).  
+  Restituisce le statistiche di I/O per i file di log e di dati. Questa vista a gestione dinamica sostituisce la funzione [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) .  
   
 > [!NOTE]  
->  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], usare il nome **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]da, usare il nome **sys. dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,33 +52,33 @@ sys.dm_io_virtual_file_stats (
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
 
 
  *database_id* | NULL
 
- **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
+ **si applica a:** SQL Server (a partire da 2008), database SQL di Azure
 
- ID del database. *database_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un database o NULL. Se si specifica NULL, vengono restituiti tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ ID del database. *database_id* è di tipo int e non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un database o NULL. Se si specifica NULL, vengono restituiti tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato.  
+ È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md).  
   
 *file_id* | NULL
 
-**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
+**si applica a:** SQL Server (a partire da 2008), database SQL di Azure
  
-ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un file o NULL. Se si specifica NULL, vengono restituiti tutti i file nel database.  
+ID del file. *file_id* è di tipo int e non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un file o NULL. Se si specifica NULL, vengono restituiti tutti i file nel database.  
   
- La funzione predefinita [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) può essere specificata e fa riferimento a un file nel database corrente.  
+ È possibile specificare la funzione predefinita [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) e fa riferimento a un file nel database corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database di tempdb con 13 file. Ogni nodo ha anche un database per ogni distribuzione, e ogni database di distribuzione include 5 file. Ad esempio, se ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per pdw_node_id. 
+|**database_name**|**sysname**|nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni nodo dispone anche di un database per ogni distribuzione e ogni database di distribuzione contiene 5 file. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per ogni pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
-|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati viene **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati **** è int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per through[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Numero di letture eseguite nel file.|  
 |**num_of_bytes_read**|**bigint**|Numero totale di byte letti nel file.|  
 |**io_stall_read_ms**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di lettura nel file.|  
@@ -88,19 +88,21 @@ ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input v
 |**io_stall**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di I/O nel file.|  
 |**size_on_disk_bytes**|**bigint**|Numero di byte utilizzati nel disco per il file. Per i file sparse, questo numero corrisponde al numero effettivo di byte nel disco utilizzati per gli snapshot di database.|  
 |**file_handle**|**varbinary**|Handle di file Windows per il file.|  
-|**io_stall_queued_read_ms**|**bigint**|**Non si applica a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per altre informazioni, vedere [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Non si applica a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
-|**pdw_node_id**|**int**|**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificatore del nodo per la distribuzione.
+|**io_stall_queued_read_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]a.<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]a.<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
+|**pdw_node_id**|**int**|**Si applica a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificatore del nodo per la distribuzione.
  
+## <a name="remarks"></a>Osservazioni
+I contatori vengono inizializzati su Empty ogni volta che viene avviato il servizio SQL Server (MSSQLSERVER).
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione VIEW SERVER STATE. Per altre informazioni, vedere [funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione VIEW SERVER STATE. Per altre informazioni, vedere [viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>R. Restituisce le statistiche per un file di log
 
-**Si applica a:** SQL Server (a partire dalla versione 2008), database SQL di Azure
+**Si applica a:** SQL Server (a partire da 2008), database SQL di Azure
 
  Nell'esempio seguente vengono restituite le statistiche per il file di log nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -109,7 +111,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Restituisce le statistiche per il file nel database tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Restituisce le statistiche per il file in tempdb
 
 **Si applica a:** Azure SQL Data Warehouse
 
@@ -120,10 +122,10 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [I/O funzioni e viste a gestione dinamica relative &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica correlate a I O &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. master_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
 

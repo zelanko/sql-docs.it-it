@@ -1,5 +1,5 @@
 ---
-title: Software antivirus-piattaforma di strumenti analitici | Microsoft Docs
+title: Software antivirus
 description: Se la data center richiede software antivirus, attenersi a queste linee guida per installare il software antivirus in strumenti di piattaforma analitici. Si consiglia di non installare software antivirus a meno che non si tratti di un requisito aziendale per i data center.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176060"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401477"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Software antivirus per il sistema di piattaforma analitica (APS)
 Se la data center richiede software antivirus, usare queste linee guida per installare il software antivirus nel sistema della piattaforma di analisi. Si consiglia di non installare software antivirus a meno che non si tratti di un requisito aziendale per i data center.  
@@ -51,7 +52,7 @@ Per installare il software antivirus nelle macchine virtuali, escludere l'elenco
   
 -   G:\  
   
-**_appliance_domain_-ad01** e  **_appliance_domain_-ad02**  
+**_appliance_domain_-AD01** e ** _appliance_domain_-ad02**  
   
 -   Nessuna restrizione  
   
@@ -65,7 +66,7 @@ Per installare il software antivirus nelle macchine virtuali, escludere l'elenco
   
 -   Nessuna restrizione  
   
-**_appliance_domain_-WDS**  
+**_appliance_domain_WDS**  
   
 -   Nessuna restrizione  
   
@@ -74,5 +75,5 @@ Per installare il software antivirus nelle macchine virtuali, escludere l'elenco
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Vedere anche  
-[Sistema della piattaforma &#40;di analisi delle attività di gestione degli appliance&#41;](appliance-management-tasks.md)  
+[Attività di gestione degli appliance &#40;sistema di piattaforma di analisi&#41;](appliance-management-tasks.md)  
   

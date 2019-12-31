@@ -1,6 +1,6 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,38 +12,38 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401644"
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Restituisce informazioni sullo stato di crittografia di un database e sulle chiavi di crittografia a esso associate. **Sys.dm_pdw_nodes_database_encryption_keys** fornisce queste informazioni per ogni nodo. Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
+  Restituisce informazioni sullo stato di crittografia di un database e sulle chiavi di crittografia a esso associate. **sys. dm_pdw_nodes_database_encryption_keys** fornisce queste informazioni per ogni nodo. Per ulteriori informazioni sulla crittografia del database, vedere [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database fisico in ogni nodo.|  
-|encryption_state|**int**|Indica se il database in questo nodo è crittografato o non crittografato.<br /><br /> 0 = Nessuna chiave di crittografia del database presente, nessuna crittografia<br /><br /> 1 = Non crittografato<br /><br /> 2 = Crittografia in corso<br /><br /> 3 = Crittografato<br /><br /> 4 = Modifica chiave in corso<br /><br /> 5 = Decrittografia in corso<br /><br /> 6 = modifica della protezione in corso (il certificato che crittografa la chiave di crittografia del database viene modificato.)|  
-|create_date|**datetime**|Visualizza la data di creazione della chiave di crittografia.|  
-|regenerate_date|**datetime**|Visualizza la data di rigenerazione della chiave di crittografia.|  
-|modify_date|**datetime**|Visualizza la data di modifica della chiave di crittografia.|  
-|set_date|**datetime**|Visualizza la data di applicazione al database della chiave di crittografia.|  
-|opened_date|**datetime**|Mostra l'ultima apertura della chiave del database.|  
-|key_algorithm|**varchar(?)**|Visualizza l'algoritmo usato per la chiave.|  
+|encryption_state|**int**|Indica se il database in questo nodo è crittografato o non crittografato.<br /><br /> 0 = Nessuna chiave di crittografia del database presente, nessuna crittografia<br /><br /> 1 = Non crittografato<br /><br /> 2 = Crittografia in corso<br /><br /> 3 = Crittografato<br /><br /> 4 = Modifica chiave in corso<br /><br /> 5 = Decrittografia in corso<br /><br /> 6 = modifica della protezione in corso (il certificato che sta crittografando la chiave di crittografia del database è in corso di modifica).|  
+|create_date|**DateTime**|Visualizza la data di creazione della chiave di crittografia.|  
+|regenerate_date|**DateTime**|Visualizza la data di rigenerazione della chiave di crittografia.|  
+|modify_date|**DateTime**|Visualizza la data di modifica della chiave di crittografia.|  
+|set_date|**DateTime**|Visualizza la data di applicazione al database della chiave di crittografia.|  
+|opened_date|**DateTime**|Mostra l'ultima apertura della chiave del database.|  
+|key_algorithm|**varchar (?)**|Visualizza l'algoritmo usato per la chiave.|  
 |key_length|**int**|Visualizza la lunghezza della chiave.|  
 |encryptor_thumbprint|**varbin**|Mostra l'identificazione digitale della crittografia.|  
-|percent_complete|**real**|Percentuale di completamento del cambiamento di stato della crittografia del database. In assenza di un cambiamento di stato il valore sarà 0.|  
-|node_id|**int**|Id numerico univoco associato al nodo.|  
+|percent_complete|**reale**|Percentuale di completamento del cambiamento di stato della crittografia del database. In assenza di un cambiamento di stato il valore sarà 0.|  
+|node_id|**int**|ID numerico univoco associato al nodo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente unisce `sys.dm_pdw_nodes_database_encryption_keys` ad altre tabelle di sistema per indicare lo stato della crittografia per ogni nodo di TDE di un database protetti.  
+ Nell'esempio seguente viene aggiunta `sys.dm_pdw_nodes_database_encryption_keys` ad altre tabelle di sistema per indicare lo stato di crittografia per ogni nodo dei database protetti da Transparent Data Encryption.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -60,8 +60,8 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [CREAZIONE della chiave di crittografia del DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   

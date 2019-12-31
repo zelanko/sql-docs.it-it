@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: HT
+ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798122"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200439"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configurazione iniziale (PowerPivot per SharePoint)
   Seguire i passaggi descritti in questo argomento per configurare un'installazione iniziale di PowerPivot per SharePoint. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di configurazione PowerPivot. Tale strumento consente di eseguire in modo automatico tutti i passaggi di configurazione descritti di seguito.  
@@ -24,7 +24,7 @@ ms.locfileid: "72798122"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il server SharePoint sia stato installato tramite l'opzione per server farm durante l'installazione di SharePoint. Non è supportato un server SharePoint autonomo che utilizza un database predefinito. Per ulteriori informazioni, vedere [linee guida per l'utilizzo di SQL Server funzionalità di business intelligence in una farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -69,13 +69,13 @@ ms.locfileid: "72798122"
   
      Verranno visualizzati due pacchetti della soluzione separati: powerpivotfarm.wsp e powerpivotwebapp.wsp. È necessario che la prima soluzione (powerpivotfarm.wsp) sia già distribuita. Una volta distribuita, non è necessario distribuirla nuovamente. La seconda soluzione (powerpivotwebapp.wsp) viene distribuita per Amministrazione centrale. È tuttavia necessario distribuirla manualmente per ogni applicazione Web di SharePoint in grado di supportare l'accesso ai dati PowerPivot.  
   
-3.  Fare clic su **powerpivotwebapp.wsp**.  
+3.  Fare clic su **powerpivotwebapp. wsp**.  
   
 4.  Fare clic su **Distribuisci soluzione.**  
   
 5.  In **Distribuisci in?** selezionare l'applicazione Web di SharePoint a cui si desidera aggiungere il supporto della funzionalità PowerPivot.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Ripetere l'operazione per le altre applicazioni Web SharePoint che supporteranno l'accesso ai dati PowerPivot.  
   
@@ -103,13 +103,13 @@ ms.locfileid: "72798122"
   
 3.  Selezionare **SQL Server applicazione di servizio PowerPivot**. Se non è presente nell'elenco, PowerPivot per SharePoint non è installato o la soluzione non è distribuita.  
   
-4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è PowerPivotServiceApplication\<numero >. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
+4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è\<PowerPivotServiceApplication Number>. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
   
 5.  In Pool di applicazioni creare un nuovo pool di applicazioni e selezionare un account di sicurezza. L'account utente di dominio è obbligatorio.  
   
 6.  In **server database**scegliere un server di database in cui creare il database dell'applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_\<GUID >. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_\<> GUID. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "72798122"
   
      Se un'applicazione del servizio PowerPivot è già elencata nel gruppo di connessioni predefinito, non aggiungerne una seconda. L'aggiunta di due applicazioni di servizio dello stesso tipo del gruppo di connessioni predefinito non è una configurazione supportata. Per ulteriori informazioni sull'utilizzo di applicazioni di servizio aggiuntive in un gruppo di connessione, vedere [connettere un'applicazione del servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
-10. Scegliere **OK**. Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
+10. Fare clic su **OK**. Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
   
 ##  <a name="ExcelServ"></a>Passaggio 4: abilitare Excel Services  
  PowerPivot per SharePoint richiede Excel Services per il supporto dell'accesso ai dati PowerPivot nella farm. È possibile determinare se Excel Services è già abilitato verificando se l'applicazione Excel Services è presente nell'elenco di applicazioni di servizio in Amministrazione centrale. Se Excel Services non è elencato, effettuare le operazioni seguenti per abilitarlo.  
@@ -136,7 +136,7 @@ ms.locfileid: "72798122"
   
 7.  Mantenere la casella di controllo predefinita per l'aggiunta del proxy dell'applicazione di servizio all'elenco delle connessioni al servizio predefinito.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
 9. Fare clic sull'applicazione Excel Services creata.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "72798122"
   
 13. Deselezionare la casella di controllo **avvisa in caso di aggiornamento dati** per consentire immagini di anteprima dei singoli fogli di dati nella raccolta PowerPivot. Se si sceglie di conservare l'avviso e le impostazioni della cartella di lavoro specificano l'aggiornamento all'apertura, si potrebbe ottenere una singola immagine di anteprima dell'avviso anziché le pagine della cartella di lavoro.  
   
-14. Scegliere **OK**.  
+14. Fare clic su **OK**.  
   
 ##  <a name="SSS"></a>Passaggio 5: abilitare servizio di archiviazione sicura e configurare l'aggiornamento dati  
  PowerPivot per SharePoint richiede il servizio di archiviazione sicura per archiviare le credenziali e l'account di esecuzione automatica per l'aggiornamento dati. È possibile determinare se il servizio di archiviazione sicura è già abilitato verificando se viene visualizzato nell'elenco di applicazioni di servizio.  
@@ -170,7 +170,7 @@ ms.locfileid: "72798122"
   
 5.  In **database**specificare il SQL Server istanza di che ospiterà il database per questa applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_\<GUID >. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_\<> GUID. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 7.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie Autenticazione di SQL Server, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione nella farm in uso.  
   
@@ -190,25 +190,25 @@ ms.locfileid: "72798122"
   
 4.  Immettere e confermare una passphrase. La passphrase verrà utilizzata per aggiungere applicazioni di servizio condivise di archiviazione sicura aggiuntive.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: Configurare l'account di aggiornamento dati automatico PowerPivot  
  La creazione di un account di aggiornamento dati automatico per l'accesso ai dati PowerPivot è spesso richiesta per l'accesso ai dati esterni durante l'aggiornamento dei dati. Ad esempio, se Kerberos non è abilitato, è necessario creare un account automatico che il servizio PowerPivot può utilizzare per connettersi alle origini dati esterne.  
   
- Per istruzioni su come creare l'account di aggiornamento dati automatico PowerPivot o altre credenziali archiviate utilizzate nell'aggiornamento dati, vedere [configurare l'account &#40;di aggiornamento dati automatico PowerPivot&#41; PowerPivot per SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e configurare le [credenziali archiviate per l'aggiornamento &#40;dati PowerPivot PowerPivot per SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Per istruzioni su come creare l'account di aggiornamento dati automatico PowerPivot o altre credenziali archiviate utilizzate nell'aggiornamento dati, vedere [configurare l'account di aggiornamento dati automatico powerpivot &#40;PowerPivot per SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [configurare le credenziali archiviate per l'aggiornamento dati powerpivot &#40;PowerPivot per SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a>Passaggio 6: abilitare la raccolta dei dati di utilizzo  
- PowerPivot per SharePoint utilizza l'infrastruttura della raccolta dati di utilizzo di SharePoint per raggruppare informazioni sull'utilizzo di PowerPivot nell'intera farm. Anche se i dati di utilizzo fanno sempre parte di un'installazione di SharePoint, devono essere abilitati prima di poter essere utilizzati. Per altre informazioni, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
+ PowerPivot per SharePoint utilizza l'infrastruttura della raccolta dati di utilizzo di SharePoint per raggruppare informazioni sull'utilizzo di PowerPivot nell'intera farm. Anche se i dati di utilizzo fanno sempre parte di un'installazione di SharePoint, devono essere abilitati prima di poter essere utilizzati. Per istruzioni, vedere [configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
   
 ##  <a name="Upload"></a>Passaggio 7: aumentare le dimensioni massime di caricamento per le applicazioni Web di SharePoint e Excel Services  
- Poiché le cartelle di lavoro di PowerPivot possono essere di grandi dimensioni, è possibile aumentare le dimensioni massime dei file. Possono essere configurate due impostazioni relative alle dimensioni dei file: Dimensioni massime caricamento per l'applicazione Web e Dimensioni massime cartella di lavoro in Excel Services. Le dimensioni massime dei file devono essere impostate sullo stesso valore in entrambe le applicazioni. Per istruzioni, vedere [configurare le dimensioni &#40;massime di&#41;caricamento dei file PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
+ Poiché le cartelle di lavoro di PowerPivot possono essere di grandi dimensioni, è possibile aumentare le dimensioni massime dei file. Possono essere configurate due impostazioni relative alle dimensioni dei file: Dimensioni massime caricamento per l'applicazione Web e Dimensioni massime cartella di lavoro in Excel Services. Le dimensioni massime dei file devono essere impostate sullo stesso valore in entrambe le applicazioni. Per istruzioni, vedere [configurare le dimensioni massime di caricamento dei File &#40;PowerPivot per SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 ##  <a name="activatePP"></a>Passaggio 8: attivare l'integrazione delle funzionalità di PowerPivot per le raccolte siti  
  L'attivazione di funzionalità a livello di raccolta siti rende disponibile pagine e modelli dell'applicazione nei siti in uso, incluse le pagine di configurazione per l'aggiornamento dati pianificato e le pagine dell'applicazione per la raccolta PowerPivot e le librerie di feed di dati.  
   
 1.  Da un sito di SharePoint scegliere **Azioni sito**.  
   
-     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo http://\<nome computer > per aprire la raccolta siti radice.  
+     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo il nome del computer http://\<> per aprire la raccolta siti radice.  
   
 2.  Fare clic su **Impostazioni sito**.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "72798122"
   
 5.  Fare clic su **Attiva**.  
   
-6.  Ripetere per le raccolte siti aggiuntive aprendo ogni sito e facendo clic su **Azioni sito**.  
+6.  Ripetere l'operazione per raccolte siti aggiuntive aprendo ogni sito e facendo clic su **Azioni sito**.  
   
  Per ulteriori informazioni, vedere [attivazione dell'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72798122"
   
  L'installazione del provider consentirà di garantire che le cartelle di lavoro per le quali viene fatto riferimento a MSOLAP.4 nella stringa di connessione dati funzionino correttamente su un server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. L'installazione del provider OLE DB per SQL Server 2008 R2 rappresenta inoltre un approccio alternativo all'aggiornamento di cartelle di lavoro create in una versione precedente di PowerPivot per Excel.  
   
- È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570). Cercare **microsoft® provider OLE DB Analysis Services per microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto x64 del programma di installazione di `SQLServer2008_ASOLEDB10.msi`.  
+ È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978). Cercare **microsoft® provider OLE DB Analysis Services per microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto per x64 del programma di `SQLServer2008_ASOLEDB10.msi` installazione.  
   
  Per ulteriori informazioni sull'installazione del provider, inclusi i passaggi di verifica, vedere [Install the provider OLE DB Analysis Services on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -236,11 +236,11 @@ ms.locfileid: "72798122"
   
  Per verificare l'integrazione di PowerPivot con un sito di SharePoint, effettuare le operazioni seguenti:  
   
-1.  In un browser aprire l'applicazione Web creata. Se sono stati usati valori predefiniti, è possibile specificare http://\<il nome del computer > nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile\<specificare http://il nome del computer> nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati PowerPivot siano disponibili nell'applicazione. È possibile effettuare questa operazione verificando la presenza di modelli di libreria forniti da PowerPivot:  
   
-    1.  In azioni sito fare clic su **altre opzioni.** ..  
+    1.  In azioni sito fare clic su **altre opzioni.**..  
   
     2.  Nelle librerie dovrebbero essere visualizzate la **libreria di feed di dati** e la **raccolta PowerPivot**. Questi modelli di raccolta vengono forniti dalla funzionalità PowerPivot e saranno visibili nell'elenco delle raccolte se la funzionalità è integrata correttamente.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "72798122"
   
 5.  In Tipo di server selezionare **Analysis Services**.  
   
-6.  In nome server immettere **\<nome-server > \powerpivot**, dove **\<nome-server >** è il nome del computer in cui è presente l'installazione di PowerPivot per SharePoint.  
+6.  In nome server immettere ** \<nome-server> \powerpivot**, dove ** \<Server-Name>** è il nome del computer in cui è installato PowerPivot per SharePoint.  
   
 7.  Fare clic su **Connetti**.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "72798122"
  Raccolta PowerPivot include opzioni di anteprima e presentazione per la visualizzazione delle cartelle di lavoro di PowerPivot su un sito di SharePoint. L'utilizzo di Raccolta PowerPivot per pubblicare e visualizzare le cartelle di lavoro di PowerPivot è consigliato per la sua funzionalità di anteprima. Inoltre, se Reporting Services è stato distribuito nello stesso server SharePoint, Raccolta PowerPivot semplifica le procedure di creazione di report. È possibile avviare Generatore report dall'interno di Raccolta PowerPivot per basare un nuovo report su una cartella di lavoro di PowerPivot pubblicata. Per ulteriori informazioni sulla creazione e sull'utilizzo della libreria, vedere [creare e personalizzare la raccolta PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) e [utilizzare la raccolta PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery).  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Creare siti attendibili aggiuntivi in Excel Services  
- È possibile aggiungere siti attendibili in Excel Services per variare le autorizzazioni e le impostazioni di configurazione nei siti che forniscono cartelle di lavoro di Excel e dati PowerPivot. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration).  
+ È possibile aggiungere siti attendibili in Excel Services per variare le autorizzazioni e le impostazioni di configurazione nei siti che forniscono cartelle di lavoro di Excel e dati PowerPivot. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration).  
   
 ### <a name="tune-configuration-settings"></a>Ottimizzare le impostazioni di configurazione  
  Un'applicazione di servizio PowerPivot viene creata utilizzando valori e proprietà predefiniti. È possibile modificare le impostazioni di configurazione per singole applicazioni di servizio per modificare la metodologia di allocazione delle richieste, impostare timeout del server, modificare le soglie per gli eventi del report di risposta alle query o specificare il periodo di conservazione dei dati di utilizzo. Per ulteriori informazioni sulla configurazione in Amministrazione centrale o sull'utilizzo delle funzionalità PowerPivot nelle applicazioni Web di SharePoint, vedere [amministrazione e configurazione del server PowerPivot in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  

@@ -1,6 +1,6 @@
 ---
-title: I messaggi di errore - Parallel Data Warehouse | Microsoft Docs
-description: I messaggi di errore Parallel Data Warehouse (PDW) segnalano gli errori e problemi rilevati dai componenti PDW e possono includere anche gli errori di SQL Server rilevati tramite PDW. Questi messaggi di errore usano una sintassi coerente per la presentazione di informazioni. La comprensione di questa sintassi verrà consentono di identificare e risolvere i problemi.
+title: messaggi di errore
+description: I messaggi di errore di Parallel data warehouse (PDW) segnalano gli errori e i problemi riscontrati dai componenti di PDW e possono includere anche errori di SQL Server emersi tramite PDW. Questi messaggi di errore utilizzano una sintassi coerente per la presentazione delle informazioni. La comprensione di questa sintassi consente di identificare e correggere i problemi.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,33 +8,34 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960965"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401158"
 ---
-# <a name="error-messages-in-parallel-data-warehouse"></a>Messaggi di errore in Parallel Data Warehouse
+# <a name="error-messages-in-parallel-data-warehouse"></a>Messaggi di errore in parallelo data warehouse
 
-I messaggi di errore Parallel Data Warehouse (PDW) segnalano gli errori e problemi rilevati dai componenti PDW e possono includere anche gli errori di SQL Server rilevati tramite PDW. Questi messaggi di errore usano una sintassi coerente per la presentazione di informazioni. La comprensione di questa sintassi verrà consentono di identificare e risolvere i problemi su SQL Server PDW.  
+I messaggi di errore di Parallel data warehouse (PDW) segnalano gli errori e i problemi riscontrati dai componenti di PDW e possono includere anche errori di SQL Server emersi tramite PDW. Questi messaggi di errore utilizzano una sintassi coerente per la presentazione delle informazioni. La comprensione di questa sintassi consente di identificare e correggere i problemi in SQL Server PDW.  
   
-## <a name="Basics"></a>Nozioni fondamentali di messaggio di errore  
-I messaggi di errore vengono restituiti seguono la stessa sintassi.  
+## <a name="Basics"></a>Nozioni di base sui messaggi di errore  
+I messaggi di errore restituiti seguono la stessa sintassi.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
-Questi sono i possibili valori per ogni campo:  
+Questi sono i valori potenziali per ogni campo:  
   
-|Campo|Descrizione|Esempio|  
+|Campo|Description|Esempio|  
 |---------|---------------|-----------|  
-|*Error_Indicator*|La parola "Errore" o altro testo di avviso all'utente di un problema.|error|  
-|*SQL_State_Code*|Codice di stato di SQL, in base alla specifica ODBC. Il driver genera il codice di stato SQL appropriato ogni volta che viene restituito un messaggio a un'applicazione. Il testo "Microsoft" indica l'origine dell'errore.|42000|  
-|*Driver_Details*|Dettagli driver dipendente, ad esempio il tipo del driver usato.|Driver ODBC SQL Server 2008 R2 Parallel Data Warehouse|  
-|*QueryID*|Identificatore univoco per la query. Utilizzare questo valore per trovare informazioni aggiuntive correlate all'elaborazione della query. Ad esempio, i dettagli di esecuzione di query sono reperibile nella Console di amministrazione usando l'ID di query. Per altre informazioni, vedere [monitorare l'Appliance usando la Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Se un QueryID non è applicabile, il testo "Interno" viene restituito all'utente.|QID2377|  
-|*Message_String*|Descrizione leggibile dell'errore o problema. Quando restituisce errori di SQL Server, questo è il testo del messaggio SQL Server.|Può essere visualizzato solo l'assegnazione uguale nell'elenco di set di un'istruzione UPDATE.|  
+|*Error_Indicator*|La parola "errore" o altro testo che avvisa l'utente di un problema.|ERRORE|  
+|*SQL_State_Code*|Codice di stato SQL, in base alla specifica ODBC. Il driver genera il codice di stato SQL appropriato ogni volta che viene restituito un messaggio a un'applicazione. Il testo "Microsoft" indica l'origine dell'errore.|42000|  
+|*Driver_Details*|Dettagli dipendenti dal driver, ad esempio il tipo di driver utilizzato.|Driver data warehouse parallelo di ODBC SQL Server 2008 R2|  
+|*QueryID*|Identificatore univoco per la query. Utilizzare questo valore per trovare informazioni aggiuntive correlate all'elaborazione della query. Ad esempio, i dettagli sull'esecuzione della query sono disponibili nella console di amministrazione usando l'ID di query. Per altre informazioni, vedere [monitorare l'appliance usando la console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Se un QueryID non è applicabile, viene restituito all'utente il testo "Internal".|QID2377|  
+|*Message_String*|Descrizione leggibile dell'errore o del problema. Quando si restituiscono SQL Server errori, questo è il testo del messaggio di SQL Server.|Nell'elenco set di un'istruzione UPDATE è possibile visualizzare solo l'assegnazione uguale.|  
   
-Questi valori di esempio potrebbero essere presentati all'utente simile al seguente:  
+Questi valori di esempio vengono presentati all'utente come segue:  
   
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
@@ -42,5 +43,5 @@ Questi valori di esempio potrebbero essere presentati all'utente simile al segue
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Informazioni sugli avvisi della Console di amministrazione](understanding-admin-console-alerts.md)  
+[Informazioni sugli avvisi della console di amministrazione](understanding-admin-console-alerts.md)  
   

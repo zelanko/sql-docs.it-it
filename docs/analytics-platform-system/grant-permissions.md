@@ -1,6 +1,6 @@
 ---
-title: Autorizzazioni di T-SQL GRANT - Parallel Data Warehouse | Microsoft Docs
-description: Autorizzazioni GRANT T-SQL per le operazioni di database in Parallel Data Warehouse.
+title: Concedere autorizzazioni T-SQL
+description: Concedere le autorizzazioni T-SQL per le operazioni di database in parallelo data warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,20 +8,21 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960941"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401156"
 ---
-# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Autorizzazioni di T-SQL GRANT per Parallel Data Warehouse
-Autorizzazioni GRANT T-SQL per le operazioni di database in Parallel Data Warehouse.
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Concedere autorizzazioni T-SQL per data warehouse parallele
+Concedere le autorizzazioni T-SQL per le operazioni di database in parallelo data warehouse.
 
-## <a name="grant-permissions-to-submit-database-queries"></a>Concedere le autorizzazioni per inviare le query di Database
-Questa sezione descrive come concedere autorizzazioni ai ruoli del database e agli utenti di eseguire query sui dati nell'appliance di SQL Server PDW.  
+## <a name="grant-permissions-to-submit-database-queries"></a>Concedere le autorizzazioni per l'invio di query sul database
+Questa sezione descrive come concedere le autorizzazioni ai ruoli del database e agli utenti per eseguire query sui dati nell'appliance SQL Server PDW.  
   
-Le istruzioni utilizzate per concedere le autorizzazioni per eseguire query sui dati dipendono dall'ambito di accesso desiderato. Le istruzioni SQL seguenti creano un account di accesso denominato KimAbercrombie in grado di accedere all'appliance, creare un utente del database denominato KimAbercrombie nel **AdventureWorksPDW2012** del database, creare un ruolo del database denominato PDWQueryData aggiunge l'uso KimAbercrombie al ruolo PDWQueryData e quindi Mostra le opzioni per la concessione dell'accesso di query, basato sul fatto che l'accesso viene consentito all'oggetto o a livello di database.  
+Le istruzioni utilizzate per concedere le autorizzazioni per eseguire query sui dati dipendono dall'ambito di accesso desiderato. Le istruzioni SQL seguenti creano un account di accesso denominato KimAbercrombie che può accedere al dispositivo, creare un utente di database denominato KimAbercrombie nel database **AdventureWorksPDW2012** , creare un ruolo del database denominato PDWQueryData, aggiungere il KimAbercrombie di utilizzo al ruolo PDWQueryData e quindi visualizzare le opzioni per concedere l'accesso alle query, a seconda che l'accesso venga concesso a livello di oggetto o di database.  
   
 ```sql  
 USE master;  
@@ -57,12 +58,12 @@ GRANT SELECT ON OBJECT::AdventureWorksPDW2012..DimEmployee TO KimAbercrombie;
 GO  
 ```  
   
-## <a name="grant-permissions-to-use-the-admin-console"></a>Concedere le autorizzazioni per usare la Console di amministrazione
-Questa sezione descrive come concedere autorizzazioni agli account di accesso per usare la Console di amministrazione.  
+## <a name="grant-permissions-to-use-the-admin-console"></a>Concedere le autorizzazioni per l'uso della console di amministrazione
+Questa sezione descrive come concedere autorizzazioni agli account di accesso di per usare la console di amministrazione.  
   
-**Usare la Console di amministrazione**  
+**Usare la console di amministrazione**  
   
-Usare la Console di amministrazione di un account di accesso richiede il livello di server **VIEW SERVER STATE** l'autorizzazione. L'istruzione SQL seguente concede il **VIEW SERVER STATE** autorizzazione all'accesso `KimAbercrombie` Kim è possibile utilizzare la Console di amministrazione per monitorare l'appliance di SQL Server PDW.  
+Per usare la console di amministrazione, un account di accesso richiede l'autorizzazione di **visualizzazione** a livello di server. L'istruzione SQL seguente concede l'autorizzazione **View Server state** per l'account `KimAbercrombie` di accesso in modo che Kim possa usare la console di amministrazione per monitorare il dispositivo SQL Server PDW.  
   
 ```sql  
 USE master;  
@@ -71,18 +72,18 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GO  
 ```  
   
-**Terminare le sessioni**  
+**Elimina sessioni**  
   
-Per concedere l'autorizzazione per terminare le sessioni di un account di accesso, concedere le **ALTER ANY CONNECTION** autorizzazione come indicato di seguito:  
+Per concedere a un account di accesso l'autorizzazione per terminare le sessioni, concedere l'autorizzazione **ALTER ANY Connection** come indicato di seguito:  
   
 ```sql  
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
 ## <a name="grant-permissions-to-load-data"></a>Concedere le autorizzazioni per caricare i dati
-Questa sezione descrive come concedere autorizzazioni ai ruoli predefiniti del database e agli utenti di database per caricare i dati in PDWappliance il Server SQL.  
+Questa sezione descrive come concedere le autorizzazioni ai ruoli del database e agli utenti del database per caricare i dati nel SQL Server PDWappliance.  
   
-Lo script seguente con esattezza quali autorizzazioni sono necessarie per ogni opzione di caricamento. È possibile modificare questa opzione per soddisfare esigenze specifiche.  
+Lo script seguente mostra le autorizzazioni necessarie per ogni opzione di caricamento. È possibile modificarlo in base alle esigenze specifiche.  
   
 ```sql  
 -- Create server login for the examples that follow.  
@@ -122,17 +123,17 @@ EXEC sp_addrolemember 'db_datareader','BI_ETLUser';
 EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';  
 ```  
   
-## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>Concedere le autorizzazioni per copiare i dati all'esterno dell'Appliance
-In questa sezione viene descritto come concedere autorizzazioni a un utente o ruolo del database per copiare i dati fuori dal dispositivo di SQL Server PDW.  
+## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>Concedere le autorizzazioni per Copia dati dal dispositivo
+Questa sezione descrive come concedere le autorizzazioni a un utente o a un ruolo del database per copiare i dati dall'appliance SQL Server PDW.  
   
-Per spostare i dati in un'altra posizione, è necessario **seleziona** autorizzazione per la tabella che contiene i dati da spostare.  
+Per spostare i dati in un altro percorso è necessaria l'autorizzazione **Select** per la tabella contenente i dati da spostare.  
   
-Se la destinazione per i dati è un altro SQL Server PDW, l'utente deve disporre **CREATE TABLE** autorizzazione a livello di destinazione e **ALTER SCHEMA** autorizzazione per lo schema che conterrà la tabella.  
+Se la destinazione per i dati è un'altra SQL Server PDW, l'utente deve disporre dell'autorizzazione **Create Table** per la destinazione e dell'autorizzazione **ALTER schema** per lo schema che conterrà la tabella.  
   
-## <a name="grant-permissions-to-manage-databases"></a>Concedere le autorizzazioni per gestire i database
-In questa sezione viene descritto come concedere autorizzazioni a un utente del database per gestire un database nell'appliance di SQL Server PDW.  
+## <a name="grant-permissions-to-manage-databases"></a>Concedere le autorizzazioni per la gestione dei database
+Questa sezione descrive come concedere le autorizzazioni a un utente del database per gestire un database nel dispositivo SQL Server PDW.  
   
-In alcune situazioni, una società assegna un gestore per un database. La gestione controlla l'accesso di altri account di accesso per il database, nonché i dati e oggetti nel database. Per gestire tutti gli oggetti, ruoli, e gli utenti in un database di concedono all'utente il **controllo** autorizzazione per il database. L'istruzione seguente concede il **controllo** l'autorizzazione per il **AdventureWorksPDW2012** database all'utente `KimAbercrombie`.  
+In alcune situazioni, un'azienda assegna un responsabile per un database. Il Manager controlla l'accesso al database di altri account di accesso, nonché i dati e gli oggetti del database. Per gestire tutti gli oggetti, i ruoli e gli utenti in un database, concedere all'utente l'autorizzazione **Control** per il database. L'istruzione seguente concede all'utente `KimAbercrombie`l'autorizzazione **Control** per il database **AdventureWorksPDW2012** .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -140,17 +141,17 @@ GO
 GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;  
 ```  
   
-Per concedere a un utente l'autorizzazione per controllare tutti i database nell'appliance, concedere le **ALTER ANY DATABASE** autorizzazione nel database master.  
+Per concedere a un utente l'autorizzazione a controllare tutti i database nel dispositivo, concedere l'autorizzazione **ALTER ANY database** nel database master.  
   
-## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Concedere le autorizzazioni per gestire gli account di accesso, utenti e ruoli del Database
-In questa sezione viene descritto come concedere le autorizzazioni per gestire gli account di accesso, gli utenti del database e i ruoli del database.  
+## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Concedere le autorizzazioni per la gestione di account di accesso, utenti e ruoli del database
+In questa sezione viene descritto come concedere autorizzazioni per la gestione di account di accesso, utenti di database e ruoli del database.  
   
 ### <a name="PermsAdminConsole"></a>Concedere le autorizzazioni per gestire gli account di accesso  
-**Aggiungere o gestire gli account di accesso**  
+**Aggiunta o gestione di account di accesso**  
   
-Le istruzioni SQL seguenti creano un account di accesso denominato KimAbercrombie che è possibile creare nuovi account di accesso usando il [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) istruzione e modificare l'account di accesso esistenti tramite il [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) istruzione.  
+Nelle istruzioni SQL seguenti viene creato un account di accesso denominato KimAbercrombie in grado di creare nuovi account di accesso utilizzando l'istruzione [Create Login](../t-sql/statements/create-login-transact-sql.md) e modificare gli account di accesso esistenti utilizzando l'istruzione [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) .  
   
-Il **ALTER ANY LOGIN** autorizzazione concede la possibilità di creare nuovi account di accesso ed eliminare esistente. Una volta creato un account di accesso, l'account di accesso possono essere gestiti dagli account di accesso con il **ALTER ANY LOGIN** autorizzazione o il **ALTER** l'autorizzazione per tale account di accesso. Un account di accesso è possibile modificare il database predefinito e password per il proprio account di accesso.  
+L'autorizzazione **ALTER ANY LOGIN** concede la possibilità di creare nuovi account di accesso ed eliminare esistente. Una volta creato un account di accesso, è possibile gestire l'account di accesso con l'autorizzazione **ALTER ANY LOGIN** o l'autorizzazione **ALTER** per tale account di accesso. Un account di accesso può modificare la password e il database predefinito per il proprio account di accesso.  
   
 ```sql 
 CREATE LOGIN KimAbercrombie   
@@ -162,8 +163,8 @@ GO
 GRANT ALTER ANY LOGIN TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permissions-to-manage-login-sessions"></a>Concedere le autorizzazioni per gestire sessioni di accesso  
-Per avere la possibilità di visualizzare tutte le sessioni nel server, è necessario il **VIEW SERVER STATE** l'autorizzazione. Richiede la possibilità di terminare le sessioni di altri account di accesso di **ALTER ANY CONNECTION** l'autorizzazione. L'esempio seguente usa il `KimAbercrombie` account di accesso creato in precedenza.  
+### <a name="grant-permissions-to-manage-login-sessions"></a>Concedere le autorizzazioni per gestire le sessioni di accesso  
+Per avere la possibilità di visualizzare tutte le sessioni sul server, è necessaria l'autorizzazione **View Server state** . La possibilità di terminare le sessioni di altri account di accesso richiede l'autorizzazione **ALTER ANY Connection** . Nell'esempio seguente viene usato `KimAbercrombie` l'account di accesso creato in precedenza.  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -173,8 +174,8 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permission-to-manage-database-users"></a>Concedere l'autorizzazione per gestire gli utenti del Database  
-Creazione ed eliminazione di utenti del database richiede la **ALTER ANY USER** l'autorizzazione. Richiede la gestione degli utenti esistenti di **ALTER ANY USER** autorizzazione o il **ALTER** dell'autorizzazione per tale utente. L'esempio seguente usa il `KimAbercrombie` account di accesso creato in precedenza.  
+### <a name="grant-permission-to-manage-database-users"></a>Concedere l'autorizzazione per gestire gli utenti del database  
+Per la creazione e l'eliminazione di utenti di database è necessaria l'autorizzazione **ALTER ANY USER** . Per la gestione degli utenti esistenti è necessaria l'autorizzazione **ALTER ANY USER** o l'autorizzazione **ALTER** per tale utente. Nell'esempio seguente viene usato `KimAbercrombie` l'account di accesso creato in precedenza.  
   
 ```sql  
 -- Create a user  
@@ -186,8 +187,8 @@ CREATE USER KimAbercrombie;
 GRANT ALTER ANY USER TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permisson-to-manage-database-roles"></a>Concessione dell'autorizzazione per accedere a gestire i ruoli di Database  
-Creare ed eliminare i ruoli del database definito dall'utente richiede la **ALTER ANY ROLE** l'autorizzazione. L'esempio seguente usa il `KimAbercrombie` account di accesso e utilizzo creato in precedenza.  
+### <a name="grant-permisson-to-manage-database-roles"></a>Concedere a autorizzazione per gestire i ruoli del database  
+Per creare ed eliminare ruoli del database definiti dall'utente è necessaria l'autorizzazione **ALTER ANY ROLE** . Nell'esempio seguente viene usato `KimAbercrombie` l'account di accesso di e viene creato in precedenza.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -196,31 +197,31 @@ GO
 GRANT ALTER ANY ROLE TO KimAbercrombie;  
 ```  
   
-### <a name="login-user-and-role-permission-charts"></a>Account di accesso, utenti e i grafici di autorizzazione di ruolo  
-I grafici seguenti possono generare confusione, ma devono essere visualizzate autorizzazioni levetta come superiori, ad esempio, includono le autorizzazioni più granulari che possono essere concesse separatamente (ad esempio ALTER). È consigliabile concedere sempre la quantità minima di autorizzazioni per un utente di completare le attività necessarie. A tale scopo, concedere le autorizzazioni più specifiche, anziché le autorizzazioni di livello superiore.  
+### <a name="login-user-and-role-permission-charts"></a>Grafici delle autorizzazioni di accesso, utente e ruolo  
+I grafici seguenti possono generare confusione, ma mostrano come le autorizzazioni per le leve più elevate, ad esempio il controllo, includano autorizzazioni più granulari che possono essere concesse separatamente, ad esempio ALTER. È consigliabile concedere sempre il minor numero di autorizzazioni per consentire a un utente di completare le attività necessarie. A tale scopo, concedere autorizzazioni più specifiche, anziché le autorizzazioni di primo livello.  
   
 **Autorizzazioni di accesso:**  
   
-![Le autorizzazioni di accesso di sicurezza APS](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
+![Autorizzazioni di accesso per la sicurezza APS](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
 **Autorizzazioni utente:**  
   
-![Autorizzazioni utente di sicurezza APS](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
+![Autorizzazioni utente per la sicurezza APS](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
-**Autorizzazioni del ruolo:**  
+**Autorizzazioni per i ruoli:**  
   
-![Autorizzazioni ruolo di sicurezza APS](./media/grant-permissions/APS_security_role_perms.png "APS_security_role_perms")  
+![Autorizzazioni dei ruoli di sicurezza APS](./media/grant-permissions/APS_security_role_perms.png "APS_security_role_perms")  
   
 <!-- MISSING LINKS
 For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
   
 -->
 
-## <a name="grant-permissions-to-monitor-the-appliance"></a>Concedere le autorizzazioni per monitorare l'Appliance
-L'appliance di SQL Server PDW può essere monitorato mediante la Console di amministrazione o SQL Server PDW viste di sistema. Gli account di accesso richiedono il livello di server **VIEW SERVER STATE** dell'autorizzazione per monitorare l'appliance. Gli account di accesso richiedono il **ALTER ANY CONNECTION** l'autorizzazione per terminare le connessioni utilizzando la Console di amministrazione o il **KILL** comando. Per informazioni sulle autorizzazioni necessarie per usare la Console di amministrazione, vedere [concedere autorizzazioni per usare la Console di amministrazione &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
+## <a name="grant-permissions-to-monitor-the-appliance"></a>Concedere le autorizzazioni per il monitoraggio dell'appliance
+Il dispositivo SQL Server PDW può essere monitorato tramite la console di amministrazione o SQL Server PDW viste di sistema. Gli account di accesso richiedono l'autorizzazione di **visualizzazione** a livello di server per il monitoraggio dell'appliance. Per gli account di accesso è necessaria l'autorizzazione **ALTER ANY Connection** per terminare le connessioni tramite la console di amministrazione o il comando **Kill** . Per informazioni sulle autorizzazioni necessarie per usare la console di amministrazione, vedere [concedere le autorizzazioni per usare la console di amministrazione &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Concedere l'autorizzazione per monitorare l'Appliance usando le viste di sistema  
-Le istruzioni SQL seguenti creano un account di accesso denominato `monitor_login` e concede il **VIEW SERVER STATE** l'autorizzazione per il `monitor_login` account di accesso.  
+### <a name="PermsAdminConsole"></a>Concedere l'autorizzazione per monitorare l'appliance usando le viste di sistema  
+Nelle istruzioni SQL seguenti viene creato un account `monitor_login` di accesso denominato e viene concessa l'autorizzazione `monitor_login` **View Server state** per l'account di accesso.  
   
 ```sql  
 USE master;  
@@ -230,8 +231,8 @@ GRANT VIEW SERVER STATE TO monitor_login;
 GO  
 ```  
   
-### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Concedere l'autorizzazione per monitorare l'Appliance usando le viste di sistema e per terminare le connessioni  
-Le istruzioni SQL seguenti creano un account di accesso denominato `monitor_and_terminate_login` e concede il **VIEW SERVER STATE** e **ALTER ANY CONNECTION** delle autorizzazioni per il `monitor_and_terminate_login` account di accesso.  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Concedere l'autorizzazione per il monitoraggio dell'appliance usando le viste di sistema e per terminare le connessioni  
+Nelle istruzioni SQL seguenti viene creato un account `monitor_and_terminate_login` di accesso denominato e vengono concesse le autorizzazioni **View Server state** e **ALTER ANY Connection** all' `monitor_and_terminate_login` account di accesso.  
   
 ```sql  
 USE master;  
@@ -242,10 +243,10 @@ GRANT ALTER ANY CONNECTION TO monitor_and_terminate_login;
 GO  
 ```  
   
-Per creare gli account di accesso di amministratore, vedere [ruoli Server fissi](pdw-permissions.md#fixed-server-roles).  
+Per creare account di accesso amministratore, vedere ruoli predefiniti del [Server](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Vedere anche
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREA UTENTE](../t-sql/statements/create-user-transact-sql.md)  
 [CREA RUOLO](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[Carico](load-overview.md)  

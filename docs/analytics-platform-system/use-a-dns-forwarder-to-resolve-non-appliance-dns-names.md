@@ -1,6 +1,6 @@
 ---
-title: Utilizzare un server d'inoltro DNS nel sistema di piattaforma Analitica | Microsoft Docs"
-description: Usare un server d'inoltro DNS per risolvere i nomi DNS non appliance nel sistema di piattaforma Analitica.
+title: Usare un server d'avanzamento DNS
+description: Usare un server d'invio DNS per risolvere i nomi DNS non Appliance nel sistema della piattaforma di analisi.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,40 +8,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959820"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399429"
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usare un server d'inoltro DNS per risolvere i nomi DNS Non Appliance nel sistema di piattaforma Analitica
-Un server d'inoltro DNS può essere configurato nei nodi di servizi di dominio Active Directory ( **_appliance\_domain_-AD01** e  **_appliance\_ dominio_-AD02**) del dispositivo di sistema di piattaforma Analitica per consentire gli script e applicazioni software per accedere ai server esterni.  
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usare un server d'invio DNS per risolvere i nomi DNS non Appliance nel sistema della piattaforma Analytics
+È possibile configurare un server d'autorizzazione DNS nei nodi Active Directory Domain Services (**_Appliance\_Domain_-ad01** e ** _Appliance\_Domain_-ad02**) dell'appliance del sistema della piattaforma di analisi per consentire agli script e alle applicazioni software di accedere ai server esterni.  
   
-## <a name="ResolveDNS"></a>Usando un server d'inoltro DNS  
-L'appliance del sistema di piattaforma Analitica è configurato per impedire la risoluzione dei nomi DNS del server che non sono nell'appliance. Alcuni processi, ad esempio Windows Software Update Services (WSUS), saranno necessario accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo del DNS di sistema di piattaforma Analitica può essere configurato per supportare un server d'inoltro nome esterno che consentirà al sistema di piattaforma Analitica host e macchine virtuali (VM) usare server DNS esterni per la risoluzione dei nomi all'esterno dell'appliance. Configurazione personalizzata dei suffissi DNS non è supportata, ovvero che è necessario utilizzare nomi di dominio completo per risolvere un nome di server non appliance.  
+## <a name="ResolveDNS"></a>Uso di un server d'inoltre DNS  
+L'appliance del sistema della piattaforma Analytics è configurata in modo da impedire la risoluzione dei nomi DNS dei server che non si trovano nell'appliance. Alcuni processi, ad esempio Windows Software Update Services (WSUS), dovranno accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi in modo da supportare un server d'utilità di un nome esterno che consenta agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno dell'appliance. La configurazione personalizzata dei suffissi DNS non è supportata, quindi è necessario usare nomi di dominio completi per risolvere un nome di server non Appliance.  
   
-**Per creare un server d'inoltro DNS con l'interfaccia utente grafica di DNS**  
+**Per creare un server di trasmissione DNS con l'interfaccia utente grafica DNS**  
   
-1.  Eseguire l'accesso di  **_appliance\_domain_-AD01** nodo.  
+1.  Accedere al nodo ** _Domain\__-ad01 del dispositivo** .  
   
-2.  Aprire Gestore DNS (**dnsmgmt. msc**).  
+2.  Aprire il gestore DNS (**dnsmgmt. msc**).  
   
-3.  Fare doppio clic il nome del server e quindi fare clic su **proprietà**.  
+3.  Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Proprietà**.  
   
-4.  Scegliere il **avanzate** scheda, deselezionare il **disabilitare la ricorsione (anche disabilita i server d'inoltro)** opzione e quindi fare clic su **applica**.)  
+4.  Nella scheda **Avanzate** deselezionare l'opzione **Disabilita ricorsione (Disabilita anche i server d'inoltri)** e quindi fare clic su **applica**.  
   
-5.  Scegliere il **i server d'inoltro** scheda e quindi fare clic su **modificare**.  
+5.  Fare clic sulla scheda **server d'avanzamento** e quindi su **modifica**.  
   
-6.  Immettere l'indirizzo IP per il server DNS esterno che fornisce la risoluzione dei nomi. Le macchine virtuali e server (host) nell'appliance si connetterà a server esterni usando nomi di dominio completo.  
+6.  Immettere l'indirizzo IP del server DNS esterno che fornirà la risoluzione dei nomi. Le macchine virtuali e i server (host) nell'appliance si connetteranno a server esterni usando nomi di dominio completi.  
   
-7.  Ripetere i passaggi da 1 a 6 sul  **_appliance\_domain_-AD02** nodo  
+7.  Ripetere i passaggi 1-6 nel nodo ** _dominio Appliance\__-ad02**  
   
-**Per creare un server d'inoltro DNS usando Windows PowerShell**  
+**Per creare un server d'inoltre DNS usando Windows PowerShell**  
   
-1.  Eseguire l'accesso di  **_appliance\_domain_-AD01**nodo.  
+1.  Accedere al nodo ** _Domain\__-ad01 del dispositivo**.  
   
-2.  Eseguire lo script di Windows PowerShell seguente dal  **_appliance\_domain_-AD01** nodo. Prima di eseguire lo script di Windows PowerShell, sostituire gli indirizzi IP con gli indirizzi IP dei server DNS non appliance.  
+2.  Eseguire lo script di Windows PowerShell seguente dal nodo ** _dominio Appliance\__-ad01** . Prima di eseguire lo script di Windows PowerShell, sostituire gli indirizzi IP con gli indirizzi IP dei server DNS non Appliance.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -49,25 +50,25 @@ L'appliance del sistema di piattaforma Analitica è configurato per impedire la 
     $DNS.put()  
     ```  
   
-3.  Eseguire lo stesso comando sul  **_appliance\_domain_-AD02** nodo.  
+3.  Eseguire lo stesso comando nel nodo ** _Domain\__-ad02 del dispositivo** .  
   
-## <a name="configuring-dns-resolution-for-wsus"></a>Configurazione della risoluzione DNS per Windows Server Update Services  
-SQL Server 2012 PDW fornisce la funzionalità dell'applicazione di patch e manutenzione integrata. SQL Server PDW Usa Microsoft Update e altre tecnologie di manutenzione di Microsoft. Per abilitare gli aggiornamenti dell'appliance deve essere in grado di connettersi a un repository azienda di Windows Server Update Services o nel repository di Windows Server Update Services pubblico di Microsoft.  
+## <a name="configuring-dns-resolution-for-wsus"></a>Configurazione della risoluzione DNS per WSUS  
+SQL Server PDW 2012 fornisce funzionalità integrate di manutenzione e applicazione di patch. SQL Server PDW utilizza Microsoft Update e altre tecnologie di manutenzione Microsoft. Per abilitare gli aggiornamenti è necessario che il dispositivo sia in grado di connettersi a un repository WSUS aziendale o al repository WSUS pubblico Microsoft.  
   
-Per i clienti che sceglie di configurare l'appliance per cercare gli aggiornamenti nel repository pubblico Microsoft Windows Server Update Services, le istruzioni seguenti impostare i dettagli di una configurazione appropriata nell'appliance.  
+Per i clienti che scelgono di configurare l'appliance per la ricerca di aggiornamenti nel repository WSUS pubblico Microsoft, le istruzioni seguenti consentono di impostare i dettagli di configurazione appropriati nell'appliance.  
   
 > [!NOTE]  
-> L'amministratore di rete del cliente deve fornire l'indirizzo IP per un server DNS aziendale in grado di risolvere i nomi in **Microsoft.com**.  
+> L'amministratore di rete del cliente deve fornire l'indirizzo IP di un server DNS aziendale in grado di risolvere i nomi in **Microsoft.com**.  
   
-1.  Uso di desktop remoto, accedere a VM di VMM (<fabric domain>- VMM) usando l'account di amministratore di dominio di fabric.  
+1.  Usando desktop remoto, accedere alla VM VMM (<fabric domain>-VMM) usando l'account di amministratore di dominio dell'infrastruttura.  
   
-2.  Aprire il pannello di controllo, fare clic su **rete e Internet**, quindi fare clic su **centro rete e condivisione**.  
+2.  Aprire il pannello di controllo, fare clic su **rete e Internet**e quindi fare clic su **Centro rete e condivisione**.  
   
-3.  Nell'elenco delle connessioni, fare clic su **VMSEthernet**, quindi fare clic su **proprietà**.  
+3.  Nell'elenco connessione fare clic su **VMSEthernet**, quindi su **Proprietà**.  
   
-4.  Selezionare **Internet Protocol versione 4 (TCP/IPv4)** , quindi fare clic su **proprietà**.  
+4.  Selezionare **Protocollo Internet versione 4 (TCP/IPv4)** e quindi fare clic su **Proprietà**.  
   
-5.  Nel **server DNS alternativo** , aggiungere l'indirizzo IP fornito dall'amministratore di rete del cliente.  
+5.  Nella casella **server DNS alternativo** aggiungere l'indirizzo IP fornito dall'amministratore di rete del cliente.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

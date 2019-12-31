@@ -1,6 +1,6 @@
 ---
-title: Avvia Configuration Manager - sistema di piattaforma Analitica | Microsoft Docs
-description: Istruzioni per l'avvio dello strumento Configuration Manager per l'appliance del sistema di piattaforma Analitica.
+title: Avvia Configuration Manager
+description: Istruzioni per l'avvio dello strumento di Configuration Manager per l'appliance del sistema della piattaforma di analisi.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960721"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401049"
 ---
-# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Avviare Gestione configurazione nel sistema di piattaforma Analitica
-Questo argomento fornisce istruzioni per l'avvio di **Configuration Manager** per l'appliance del sistema di piattaforma Analitica.  
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Avviare il Configuration Manager nel sistema della piattaforma Analytics
+Questo argomento fornisce istruzioni per l'avvio del **Configuration Manager** per l'appliance del sistema della piattaforma di analisi.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ### <a name="prerequisites"></a>Prerequisiti  
-Il sistema di piattaforma Analitica**Configuration Manager** può essere eseguito solo dall'amministratore di dominio appliance. Per eseguire questo strumento, necessaria la password per l'amministratore di dominio del dispositivo. Per creare altri amministratori di punti di accesso, vedere [creare un amministratore di dominio APS &#40;punti di accesso&#41;](create-an-aps-domain-administrator-aps.md).  
+Il**Configuration Manager** di sistema della piattaforma Analytics può essere eseguito solo dall'amministratore di dominio dell'appliance. Per eseguire questo strumento, è necessaria la password per l'amministratore di dominio dell'appliance. Per creare amministratori APS aggiuntivi, vedere [creare un amministratore di dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Avviare lo strumento Gestione configurazione  
-Per eseguire Gestione configurazione, usare Desktop remoto per connettersi al nodo di controllo di PDW ( **_PDW_region_-CTL01**), nodo e Accedi come _appliance_domain_ **\Administrator**. Quando si avvia il **Configuration Manager** del programma, utilizzare il **Esegui come amministratore** opzione per assicurarsi che vengano usate le credenziali di amministratore.  
+## <a name="Accessing"></a>Avviare lo strumento di Configuration Manager  
+Per eseguire il Configuration Manager, usare Desktop remoto per connettersi al nodo del nodo di controllo PDW (**_PDW_region_-CTL01**) e accedere come _appliance_domain_**\Administrator**. Quando si avvia il programma di **Configuration Manager** , utilizzare l'opzione **Esegui come amministratore** per assicurarsi che vengano utilizzate le credenziali di amministratore.  
   
-#### <a name="to-launch-from-a-browser-window"></a>Per l'avvio da una finestra del browser  
+#### <a name="to-launch-from-a-browser-window"></a>Per avviare da una finestra del browser  
   
 1.  Aprire un browser e passare alla directory `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-2.  Fare doppio clic su `dwconfig.exe` e quindi fare clic su **Esegui come amministratore**.  
+2.  Fare clic con `dwconfig.exe` il pulsante destro del mouse e quindi scegliere **Esegui come amministratore**.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>Per avviare da un prompt dei comandi  
   
-1.  Sul desktop, aprire il **avviare** menu, fare clic su **programmi**, fare clic su **Accessori**, fare doppio clic su **prompt dei comandi** e quindi fare clic su  **Esegui come amministratore**.  
+1.  Sul desktop, aprire il menu **Start** , fare clic su **programmi**, **Accessori**, fare clic con il pulsante destro del mouse su **prompt dei comandi** e quindi scegliere **Esegui come amministratore**.  
   
-2.  Al prompt dei comandi, immettere il comando seguente per passare alla directory: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`.  
+2.  Al prompt dei comandi, immettere il comando seguente per modificare le directory `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`:.  
   
-3.  Al prompt dei comandi, immettere `dwconfig.exe`.  
+3.  Al prompt dei comandi immettere `dwconfig.exe`.  
   
-Dopo il **Configuration Manager** viene avviato, si noterà tutte le funzionalità disponibili elencate nel riquadro sinistro. Il resto di questa sezione descrive come eseguire le azioni disponibili nello strumento.  
+Una volta avviata la **Configuration Manager** , tutte le funzionalità disponibili vengono elencate nel riquadro sinistro. Nella parte restante di questa sezione viene illustrato come eseguire ogni azione disponibile nello strumento.  
   
-Per chiudere e uscire **Configuration Manager**, fare clic su **uscire** nell'angolo in basso a destra di qualsiasi schermata.  
+Per chiudere e uscire **Configuration Manager**, fare clic su **Esci** nell'angolo in basso a destra della schermata.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Monitorare l'appliance usando la console di amministrazione &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

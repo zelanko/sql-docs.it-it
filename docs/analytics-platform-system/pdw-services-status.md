@@ -1,6 +1,6 @@
 ---
-title: -Stato di servizi PDW sistema di piattaforma Analitica | Microsoft Docs
-description: Parallel Data Warehouse (PDW) dello stato dei servizi di sistema di piattaforma Analitica.
+title: Stato dei servizi PDW
+description: Stato dei servizi di Parallel data warehouse (PDW) per il sistema di piattaforma di analisi.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,23 +8,24 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2789c8b74420a56a32d08a0339d4ee6d3cc112d1
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400849"
 ---
-# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Parallel Data Warehouse lo stato dei servizi per il sistema di piattaforma Analitica
-Parallel Data Warehouse **stato dei servizi** pagina in Gestione configurazione di Microsoft Analitica Platform System Mostra lo stato corrente di tutti i servizi di SQL Server PDW e offre la possibilità di arrestare e avviare i servizi PDW. Questo è l'unico metodo supportato per l'avvio e arresto dei servizi PDW. Si noti che i singoli componenti o servizi non possono essere avviati in modo indipendente.  
+# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Stato dei servizi di data warehouse paralleli per il sistema della piattaforma Analytics
+La pagina stato Parallel data warehouse **Services** nel piattaforma di strumenti analitici Microsoft Configuration Manager Mostra lo stato corrente di tutti i servizi SQL Server PDW e consente di arrestare e avviare i servizi PDW. Questo è l'unico metodo supportato per l'avvio e l'arresto dei servizi PDW. Si noti che i singoli componenti o servizi non possono essere avviati in modo indipendente.  
   
-#### <a name="to-start-or-stop-the-appliance-services"></a>Per avviare o arrestare i servizi di appliance  
+#### <a name="to-start-or-stop-the-appliance-services"></a>Per avviare o arrestare i servizi Appliance  
   
-1.  Per avviare i servizi di appliance, fare clic su **Appliance avviare**.  
+1.  Per avviare i servizi Appliance, fare clic su **Avvia Appliance**.  
   
-2.  Per arrestare i servizi di appliance, fare clic su **arrestare Appliance**.  
+2.  Per arrestare i servizi Appliance, fare clic su **Interrompi Appliance**.  
   
-Non è necessario fare clic su **Apply** durante l'avvio e arresto dei servizi appliance usando **avviare Appliance** e **arrestare Appliance**.  
+Non è necessario fare clic su **applica** quando si avviano e si arrestano i servizi Appliance usando **Avvia Appliance** e **Arresta Appliance**.  
   
 ![Servizi PDW strumento DWConfig](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
   
@@ -32,5 +33,5 @@ Non è necessario fare clic su **Apply** durante l'avvio e arresto dei servizi a
 > L'arresto dell'area PDW interrompe anche l'agente PDW (sqldwagent) nei nodi. L'agente PDW richiede il nodo di controllo PDW per segnalare il monitoraggio dell'integrità.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Accendere l'Appliance APS o spegnere &#40;sistema di piattaforma Analitica&#41;](power-the-aps-appliance-on-or-off.md)  
+[Accendere o disabilitare l'appliance APS &#40;sistema della piattaforma di analisi&#41;](power-the-aps-appliance-on-or-off.md)  
   

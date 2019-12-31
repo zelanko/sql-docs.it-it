@@ -1,5 +1,5 @@
 ---
-title: Documentazione della piattaforma di strumenti analitici Microsoft | Microsoft Docs
+title: Documentazione
 description: La piattaforma di strumenti analitici Microsoft, una piattaforma dati progettata per il data warehousing e l'analisi di Big Data, offre integrazione completa dei dati, elaborazione di query ad alta velocità, archiviazione con scalabilità elevata e manutenzione semplice per le soluzioni di business intelligence end-to-end.
 author: mzaman1
 ms.prod: sql
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153364"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401089"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Piattaforma di strumenti analitici Microsoft
 
 La piattaforma di strumenti analitici Microsoft, una piattaforma dati progettata per il data warehousing e l'analisi di Big Data, offre integrazione completa dei dati, elaborazione di query ad alta velocità, archiviazione con scalabilità elevata e manutenzione semplice per le soluzioni di business intelligence end-to-end.
 
-![Architettura dello strumento](media/architecture-high-level.png "architettura dello strumento")
+![Architettura del dispositivo](media/architecture-high-level.png "architettura del dispositivo")
 
 La piattaforma di strumenti analitici ospita SQL Server Parallel Data Warehouse (PDW), il software che esegue la data warehouse con elaborazione parallela elevata.
 

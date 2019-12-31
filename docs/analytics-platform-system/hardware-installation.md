@@ -1,5 +1,5 @@
 ---
-title: Installazione hardware-sistema di piattaforma analitica (APS) | Microsoft Docs
+title: Installazione hardware
 description: Questo articolo descrive come spostare, decomprimere e installare l'hardware per il dispositivo SQL Server PDW. Questo articolo è esclusivamente informativo e può essere utile per comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che venga riattivato. La partecipazione dei clienti è necessaria per elementi quali l'accesso data center, l'alimentazione elettrica e le connessioni Ethernet.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176147"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401120"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installazione dell'hardware per il dispositivo Analytics Platform System (APS)
 Questo articolo descrive come spostare, decomprimere e installare l'hardware per il dispositivo SQL Server PDW. Questo articolo è esclusivamente informativo e può essere utile per comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che venga riattivato. La partecipazione dei clienti è necessaria per elementi quali l'accesso data center, l'alimentazione elettrica e le connessioni Ethernet.  
@@ -21,7 +22,7 @@ Questo articolo descrive come spostare, decomprimere e installare l'hardware per
 ## <a name="BeforeMoving"></a>Prima di spostare i componenti dal Dock di caricamento  
 Prima di spostare, decomprimere o rack i componenti dell'appliance, eseguire le attività seguenti.  
   
-|Attività|Descrizione|  
+|Attività|Description|  
 |--------|---------------|  
 |Verificare che tutti i componenti siano arrivati|Usare la distinta base (BOM) per verificare che tutti i componenti siano arrivati e che si trovino sui pallet nel Dock di ricezione per la data center.|  
 |Verificare che il data center soddisfi tutti i requisiti per l'appliance|Per avviare questa attività, esaminare le specifiche hardware e i diagrammi di cablaggio fornite da IHV. Nei passaggi successivi vengono fornite informazioni specifiche su spazio rack e requisiti di connettività.|  
@@ -41,7 +42,7 @@ Usare il seguente elenco di controllo per spostare ogni rack dell'appliance dal 
 >   
 > Non tentare mai di sollevare o spostare un nodo del dispositivo o un altro componente pesante senza assistenza o apparecchiature appropriate. Contattare il IHV per informazioni sul peso di ogni componente, in modo da poter determinare in anticipo quali sono gli strumenti, le attrezzature e gli strumenti necessari per gestire ogni componente in modo sicuro e senza causare danni.  
   
-|Attività|Descrizione|  
+|Attività|Description|  
 |--------|---------------|  
 |Verificare che il pallet sia a livello|Prima di iniziare a spostare o decomprimere il pallet, assicurarsi che sia a livello di piano.|  
 |Disbolt di un nodo dal pallet|Iniziando dalla parte superiore del pallet, disbolt il primo nodo dal pallet.|  
@@ -53,7 +54,7 @@ Usare il seguente elenco di controllo per spostare ogni rack dell'appliance dal 
 ## <a name="AfterMoving"></a>Installare componenti aggiuntivi  
 Utilizzare l'elenco di controllo seguente per installare i componenti aggiuntivi.  
   
-|Attività|Descrizione||  
+|Attività|Description||  
 |--------|---------------|-|  
 |Decomprimere e commutatori di rete rack e PDU|Usare i diagrammi rack per inserire i commutatori di rete e PDU nella posizione corretta nel rack.||  
 |Connettere i cavi Infiniband e Ethernet in base alle etichette dei cavi|Vedere il diagramma di cablaggio. Ogni cavo ha un'etichetta a ogni estremità che specifica il punto in cui deve essere connessa.||  

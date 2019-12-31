@@ -1,6 +1,6 @@
 ---
-title: Reimpostazione della password - sistema di piattaforma Analitica | Microsoft Docs
-description: La pagina di reimpostazione della Password consente di modificare la password per gli account amministratore usato dal sistema di piattaforma Analitica.
+title: Reimpostazione delle password
+description: La pagina di reimpostazione della password consente di modificare la password per gli account amministratore usati da Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,52 +8,53 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400899"
 ---
-# <a name="password-reset---analytics-platform-system"></a>Reimpostazione della password - sistema di piattaforma Analitica
-Il **reimpostazione delle Password** pagina consente di modificare la password per gli account amministratore usato dal sistema di piattaforma Analitica.  
+# <a name="password-reset---analytics-platform-system"></a>Reimpostazione password-sistema della piattaforma di analisi
+La pagina di **reimpostazione della password** consente di modificare la password per gli account amministratore usati da Analytics Platform System.  
   
 > [!WARNING]  
-> Usare sempre la **Configuration Manager** per aggiornare la password di amministratore di dominio appliance. Altri metodi di non essere aggiornati tutti i componenti di sistema di piattaforma Analitica e potrebbe causare problemi di accesso dell'appliance.  
+> Usare sempre il **Configuration Manager** per aggiornare la password dell'amministratore di dominio del dispositivo. Altri metodi potrebbero non aggiornare tutti i componenti del sistema di piattaforma di analisi e potrebbero causare problemi di accesso alle appliance.  
   
-Viene fornita la password del sistema di piattaforma Analitica quando viene recapitata all'appliance. Sempre modificare le password per i nuovi valori quando si assumersi la responsabilità per l'appliance. Vi sono tre le password per l'aggiornamento. Le password non sono necessario essere quella di loro.  
+Quando il dispositivo viene recapitato, vengono fornite le password di sistema della piattaforma di analisi. Modificare sempre le password in nuovi valori quando si assume la responsabilità dell'appliance. Sono disponibili tre password da aggiornare. Le password non devono necessariamente essere le stesse.  
   
-**F <*xxxx*> \administrator.**  
-Il **amministratore** del dominio appliance.  
+**F<*xxxx*> \Administrator**  
+**Amministratore** del dominio dell'appliance.  
   
 **.\Administrator**  
-Locale **amministratore** account nei computer che ospitano le macchine virtuali.  
+L'account **amministratore** locale nei computer che ospitano le macchine virtuali.  
   
 > [!IMPORTANT]  
-> Aggiornamento 1, per appliance **Configuration Manager** non correttamente non modifica la password dell'account di amministratore locale in tutto il PDW VM. Se è necessario, contattare il Microsoft per ulteriori istruzioni.  
+> Per l'aggiornamento del dispositivo 1, **Configuration Manager** non modifica correttamente la password degli account amministratore locale in tutte le VM PDW. Se necessario, contattare il servizio supporto tecnico clienti per istruzioni aggiuntive.  
   
-**sa**  
-Il **sa** account di accesso in SQL Server. **SA** è un membro del **sysadmin** ruolo predefinito del server e sia un amministratore di SQL Server. La password del **sa** account di accesso può essere modificato anche tramite il **ALTER LOGIN** istruzione.  
+**SA**  
+Account di accesso **sa** in SQL Server. **sa** è un membro del ruolo predefinito del server **sysadmin** ed è un amministratore SQL Server. Per modificare la password dell'account di accesso **sa** , è inoltre possibile utilizzare l'istruzione **ALTER LOGIN** .  
   
-## <a name="password-requirements"></a>Requisiti delle password  
-Sia le credenziali di amministratore di dominio e le credenziali di amministratore di sistema rispettano i criteri di complessità delle password per ogni tipo di credenziale. Quando si modificano le credenziali di amministratore di dominio, la nuova password viene aggiornata per il dominio in cui è necessaria in SQL Server PDW.  
+## <a name="password-requirements"></a>Requisiti per le password  
+Sia le credenziali di amministratore di dominio sia le credenziali di amministratore di sistema rispettano i criteri di complessità delle password per ogni tipo di credenziale. Quando si modificano le credenziali di amministratore di dominio, la nuova password viene aggiornata nel dominio in cui è necessario in SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW non supporta il carattere di segno di dollaro ( **$** ) nell'amministratore di dominio o le password di amministratore locale. I caratteri **^ % &** sono consentiti nelle password, ma PowerShell considera come caratteri speciali. Se uno di questi caratteri vengono usato per le password per l'amministratore di sistema o SQL Server**sa** account (il **AdminPassword** e **PdwSAPassword** parametri durante programma di installazione) per l'installazione, tra cui INSTALL, UPGRADE, REPLACENODE e l'applicazione di patch, avrà esito negativo. Per garantire una corretta esecuzione dell'aggiornamento quando le password corrente contengono caratteri non supportati, modificare le password in modo che non contengono tali caratteri prima di eseguire l'aggiornamento. Al termine dell'aggiornamento, è possibile impostare le password nuovamente i valori originali. Per altre informazioni sui requisiti della password, vedere [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW non supporta il segno di dollaro (**$**) nelle password di amministratore di dominio o di amministratore locale. I caratteri **^% &** sono consentiti nelle password, tuttavia PowerShell li considera come caratteri speciali. Se uno di questi caratteri viene usato nelle password per l'amministratore di sistema o SQL Server account**sa** (i parametri **AdminPassword** e **PdwSAPassword** durante l'installazione), il programma di installazione, tra cui install, Upgrade, REPLACENODE e patching, avrà esito negativo. Per garantire un aggiornamento corretto quando le password correnti contengono caratteri non supportati, modificare le password in modo che non contengano tali caratteri prima di eseguire l'aggiornamento. Al termine dell'aggiornamento, è possibile impostare di nuovo le password sui valori originali. Per ulteriori informazioni sui requisiti relativi alle password, vedere [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
-## <a name="to-reset-a-password"></a>Per reimpostare una password  
+## <a name="to-reset-a-password"></a>Per reimpostare la password  
   
-1.  Connettersi al nodo di controllo e avviare il **Configuration Manager** (**dwconfig.exe**). Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
+1.  Connettersi al nodo di controllo e avviare il **Configuration Manager** (**dwconfig. exe**). Per ulteriori informazioni, vedere [la pagina relativa all'avvio del&#41;di sistema della piattaforma Configuration Manager &#40;Analytics ](launch-the-configuration-manager.md).  
   
-2.  Nel riquadro sinistro della finestra di **Configuration Manager**, fare clic su **reimpostazione della Password**.  
+2.  Nel riquadro sinistro della **Configuration Manager**fare clic su **reimpostazione password**.  
   
-3.  Selezionare il tipo di amministratore dal **Account** dal menu a discesa e quindi immettere la nuova password nel **Password** e **Conferma Password** caselle. Fare clic su **applica** per salvare le modifiche.  
+3.  Selezionare il tipo di amministratore dal menu a discesa **account** , quindi immettere la nuova password nelle caselle **password** e **Conferma password** . Fare clic su **applica** per salvare le modifiche.  
   
-    Le modifiche apportate a tali account non influiscono le sessioni attualmente attive, ma verranno applicate al successivo tentativo di accesso per ogni utente.  
+    Le modifiche apportate a questi account non influiscono sulle sessioni attualmente attive, ma verranno applicate al successivo tentativo di accesso per ogni utente.  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server - Password DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Impostare la Password di amministratore per l'accesso ai nodi AD in modalità ripristino servizi Directory &#40;modalità ripristino servizi directory&#41; &#40;sistema di piattaforma Analitica&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
+[Impostare la password amministratore per l'accesso ai nodi AD in modalità ripristino servizi directory &#40;il sistema della piattaforma di&#41; &#40;Analytics&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[Avviare la piattaforma Configuration Manager &#40;Analytics System&#41;](launch-the-configuration-manager.md)  
   

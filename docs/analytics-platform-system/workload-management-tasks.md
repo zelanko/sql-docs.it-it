@@ -1,6 +1,6 @@
 ---
-title: Attività di gestione del carico di lavoro - sistema di piattaforma Analitica | Microsoft Docs
-description: Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica.
+title: Attività di gestione del carico di lavoro
+description: Attività di gestione del carico di lavoro nel sistema della piattaforma Analytics.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 88d95eb0a2e0805930cb5f01f5af05b8fc6b3f2e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959751"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399410"
 ---
-# <a name="workload-management-tasks-in-analytics-platform-system"></a>Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica
-Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica.
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Attività di gestione del carico di lavoro nel sistema della piattaforma Analytics
+Attività di gestione del carico di lavoro nel sistema della piattaforma Analytics.
 
-## <a name="view-login-members-of-each-resource-class"></a>Visualizzare i membri di account di accesso di ogni classe di risorse
-Viene descritto come visualizzare i membri di account di accesso di ogni ruolo del server di classe di risorse in SQL Server PDW. Usare questa query per individuare la classe di risorse consentiti per le richieste inviate da ogni account di accesso.  
+## <a name="view-login-members-of-each-resource-class"></a>Visualizzare i membri di accesso di ogni classe di risorse
+Viene descritto come visualizzare i membri di accesso di ogni ruolo del server della classe di risorse in SQL Server PDW. Usare questa query per determinare la classe di risorse consentite per le richieste inviate da ogni account di accesso.  
   
-Per descrizioni classe di risorse, vedere [Workload Management](workload-management.md).  
+Per le descrizioni delle classi di risorse, vedere [gestione del carico di lavoro](workload-management.md).  
   
-Questa query consente di visualizzare l'elenco di appartenenze per ogni classe di risorse. Esistono tre classi di risorse, mediumrc, largerc e xlargerc.  
+Questa query consente di visualizzare l'elenco delle appartenenze per ogni classe di risorse. Sono disponibili tre classi di risorse, mediumrc, largerc e xlargerc.  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -39,18 +40,18 @@ WHERE
   AND r.[name] in ('mediumrc', 'largerc', 'xlargerc');  
 ```  
   
-Se un account di accesso non è inclusa nell'elenco, le relative richieste riceverà le risorse predefinite. Se un account di accesso è un membro di più di una classe di risorse, la classe più grande ha la precedenza.  
+Se un account di accesso non è presente nell'elenco, le relative richieste riceveranno le risorse predefinite. Se un account di accesso è membro di più di una classe di risorse, la classe più grande ha la precedenza.  
   
-Le allocazioni di risorse sono racchiusi [Workload Management](workload-management.md).  
+Le allocazioni di risorse sono elencate in [gestione del carico di lavoro](workload-management.md).  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>Modificare le risorse di sistema allocate a una richiesta
-Viene descritto come individuare la risorsa di classe in cui è in esecuzione una richiesta di SQL Server PDW, quindi come modificare le risorse di sistema per la richiesta. Modifica le risorse per una richiesta richiede la modifica dell'appartenenza di classe di risorse dell'account di accesso di invio della richiesta, tramite il [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) istruzione.  
+Viene descritto come individuare la classe di risorse in cui viene eseguita una richiesta di SQL Server PDW e come modificare le risorse di sistema per la richiesta. Per modificare le risorse per una richiesta, è necessario modificare l'appartenenza alla classe di risorse dell'account di accesso che invia la richiesta, usando l'istruzione [ALTER Server Role](../t-sql/statements/alter-server-role-transact-sql.md) .  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Passaggio 1: Determinare la classe di risorse per l'account di accesso che esegue la richiesta.  
-Questa query consente di visualizzare gli account di accesso che sono membri delle appartenenze al ruolo di server di classe di risorse. Esistono tre classi di risorse, **mediumrc**, **largerc**, e **xlargerc**.  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Passaggio 1: determinare la classe di risorse per l'account di accesso che esegue la richiesta.  
+Questa query consente di visualizzare gli account di accesso che sono membri delle appartenenze ai ruoli del server della classe di risorse. Sono disponibili tre classi di risorse, **mediumrc**, **largerc**e **xlargerc**.  
   
 > [!IMPORTANT]  
-> Questa query deve essere eseguita da un account di accesso che dispone **CONTROL SERVER** l'autorizzazione. Se eseguito da un account di accesso senza **CONTROL SERVER** autorizzazione, questa query restituisce solo le appartenenze al ruolo per l'account di accesso corrente.  
+> Questa query deve essere eseguita da un account di accesso con autorizzazione **Control Server** . Se eseguita da un account di accesso senza autorizzazione **Control Server** , questa query restituisce solo le appartenenze ai ruoli per l'account di accesso corrente.  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -67,26 +68,26 @@ WHERE
 GO  
 ```  
   
-Se non sono presenti Nessun account di accesso che sono membri di un ruolo del server di classe di risorse, la tabella risultante sarà vuota. In questo caso, se la query restituisce un account di accesso denominato Ching, quindi quando Ching invia una richiesta, la richiesta riceverà le risorse di sistema predefinite, che sono inferiori alle risorse di sistema di classe di risorse. Se un account di accesso è un membro di più di una classe di risorse, la classe più grande ha la precedenza.  
+Se non sono presenti account di accesso che sono membri di un ruolo del server della classe di risorse, la tabella risultante sarà vuota. In questo caso, se la query restituisce un account di accesso denominato Ching, quando Ching invia una richiesta, la richiesta riceverà le risorse di sistema predefinite, che sono inferiori alle risorse di sistema della classe di risorse. Se un account di accesso è membro di più di una classe di risorse, la classe più grande ha la precedenza.  
   
-Per un elenco delle allocazioni di risorse per ogni classe di risorse, vedere [Workload Management](workload-management.md).  
+Per un elenco delle allocazioni di risorse per ogni classe di risorse, vedere [gestione del carico di lavoro](workload-management.md).  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Passaggio 2: Eseguire la richiesta con un account di accesso con l'appartenenza alla classe di risorse diverso  
-Esistono due modi per eseguire una richiesta con entrambi risorse di sistema o aumentandone le dimensioni:  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Passaggio 2: eseguire la richiesta con un account di accesso con appartenenza a una classe di risorse diversa  
+Esistono due modi per eseguire una richiesta con risorse di sistema più grandi o più piccole:  
   
--   Eseguire la richiesta con un account di accesso diversi che è un membro di una classe di risorse superiori o inferiori.  
+-   Eseguire la richiesta con un account di accesso diverso che sia membro di una classe di risorse più grande o più piccola.  
   
--   Aggiungere l'account di accesso necessario per uno dei ruoli di classe di risorse. Scegliere questa opzione con cautela. modifica la classe di risorse per l'account di accesso cambierà il livello di risorse di sistema per tutte le richieste inviate dall'account di accesso.  
+-   Aggiungere l'account di accesso necessario a uno dei ruoli della classe di risorse. Scegliere questa opzione con cautela. la modifica della classe di risorse per l'account di accesso modificherà il livello di risorse di sistema per tutte le richieste inviate dall'account di accesso.  
   
-Si supponga che Ching è un membro del ruolo del server largerc. Nell'esempio seguente viene illustrato come aggiungere account di accesso Ching al ruolo del server xlargerc.  
+Si supponga che Ching sia un membro del ruolo del server largerc. Nell'esempio seguente viene illustrato come aggiungere login Ching al ruolo server xlargerc.  
   
 ```sql  
 ALTER SERVER ROLE xlargerc ADD MEMBER Ching;  
 ```  
   
-Ching fa parte di largerc e xlargerc i ruoli del server. Quando Ching invia le richieste, le richieste ricevono le risorse di sistema xlargerc.  
+Ching è ora un membro dei ruoli del server largerc e xlargerc. Quando Ching invia richieste, le richieste riceveranno le risorse di sistema xlargerc.  
   
-Nell'esempio seguente sposta Ching nuovamente al ruolo del server mediumrc.  Per modificare al nuovo ruolo, l'account di accesso deve essere rimosso dal ruolo xlargerc e ruoli del server largerc e aggiunto al ruolo del server mediumrc.  
+Nell'esempio seguente viene spostato di nuovo il ruolo server mediumrc.  Per passare al nuovo ruolo, è necessario rimuovere l'account di accesso dai ruoli del server xlargerc e largerc e aggiungerlo al ruolo del server mediumrc.  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -95,23 +96,23 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching è ora un membro del ruolo del server mediumrc.  L'esempio seguente modifica Ching affinché le risorse di sistema predefinite per le richieste.  
+Ching è ora un membro del ruolo server mediumrc.  Nell'esempio seguente viene modificato Ching in modo da disporre delle risorse di sistema predefinite per le richieste.  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-Per altre informazioni su come modificare l'appartenenza al ruolo di classe di risorse, vedere [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md).  
+Per ulteriori informazioni sulla modifica dell'appartenenza al ruolo della classe di risorse, vedere [ALTER Server Role](../t-sql/statements/alter-server-role-transact-sql.md).  
 
-## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Modificare un account di accesso alle risorse di sistema predefinito per le richieste
-Viene descritto come modificare le allocazioni di risorse di sistema assegnate a un account di accesso di SQL Server PDW per la quantità predefinita. 
+## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Modificare un account di accesso alle risorse di sistema predefinite per le relative richieste
+Viene descritto come modificare le allocazioni delle risorse di sistema assegnate a un SQL Server PDW account di accesso agli importi predefiniti. 
   
-Per descrizioni classe di risorse, vedere [Workload Management](workload-management.md)  
+Per le descrizioni delle classi di risorse, vedere [gestione del carico di lavoro](workload-management.md)  
   
-Quando un account di accesso non è un membro di qualsiasi ruolo di server di classe di risorse, le richieste inviate dall'account di accesso riceveranno la quantità di risorse di sistema predefinita.  
+Quando un account di accesso non è un membro di un ruolo del server della classe di risorse, le richieste inviate dall'account di accesso riceveranno la quantità predefinita di risorse di sistema.  
   
-Si supponga che l'account di accesso Matt è attualmente un membro di tutti i ruoli di server di classe di risorse e vuole ripristinare con le richieste ricevano solo le risorse predefinite.  L'esempio seguente assegna le risorse predefinite per le richieste di Matt eliminando l'appartenenza a da tutti i ruoli del server classe tre risorse.  
+Si supponga che l'account di accesso opaco sia attualmente un membro di tutti i ruoli del server della classe di risorse e che voglia ripristinare le richieste che ricevono solo le risorse predefinite.  Nell'esempio seguente vengono assegnate le risorse predefinite alle richieste di Matt rilasciando l'appartenenza da tutti e tre i ruoli del server della classe di risorse.  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -121,12 +122,12 @@ ALTER SERVER ROLE LargeRC DROP MEMBER Matt;
 ALTER SERVER ROLE MediumRC DROP MEMBER Matt;  
 ```  
   
-## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>Visualizza che il numero di slot di concorrenza necessari per un'attesa richieste
-Viene descritto come determinare il numero di concorrenza sono necessari spazi da una richiesta che è in attesa di esecuzione in SQL Server PDW.  
+## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>Visualizzare il numero di slot di concorrenza necessari per una richiesta in attesa
+Viene descritto come determinare il numero di slot di concorrenza necessari per una richiesta in attesa di essere eseguita in SQL Server PDW.  
   
-Per altre informazioni, vedere [Workload Management](workload-management.md).  
+Per ulteriori informazioni, vedere [gestione del carico di lavoro](workload-management.md).  
   
-Una richiesta potrebbe essere in attesa troppo a lungo senza essere eseguito. Uno dei modi per risolvere i problemi della richiesta è esaminare il numero di slot di concorrenza, che la richiesta è necessario.  Nell'esempio seguente mostra il numero di slot di concorrenza necessari per ogni richiesta in attesa.  
+Una richiesta potrebbe rimanere in attesa troppo A lungo senza essere eseguita. Uno dei modi per risolvere i problemi relativi alla richiesta è esaminare il numero di slot di concorrenza necessari per la richiesta.  Nell'esempio seguente viene illustrato il numero di slot di concorrenza necessari per ogni richiesta in attesa.  
   
 ```sql  
 --Display the number of concurrency slots required   

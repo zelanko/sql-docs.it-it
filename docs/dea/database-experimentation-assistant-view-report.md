@@ -2,7 +2,7 @@
 title: Visualizzare i report di analisi per gli aggiornamenti di SQL Server
 description: Visualizzare i report di analisi in Database Experimentation Assistant
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056659"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317747"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi in Database Experimentation Assistant
 
-Dopo aver [creato il report di analisi](database-experimentation-assistant-create-report.md) in database EXPERIMENTATION Assistant (DEA), completare la procedura descritta in questo articolo per visualizzare il report e ottenere informazioni dettagliate sulle prestazioni fornite dal test a/B.
+Dopo aver usato Database Experimentation Assistant (DEA) per [creare un report di analisi](database-experimentation-assistant-create-report.md), attenersi alla procedura seguente per esaminare il report per ottenere informazioni dettagliate sulle prestazioni in base al test a/B.
 
-## <a name="select-a-server"></a>Selezionare un server
+## <a name="select-a-server"></a>Selezionare un server.
 
 In DEA selezionare l'icona di menu. Nel menu espanso selezionare report di **analisi** accanto all'icona dell'elenco di controllo per aprire la finestra report di analisi.
 
-In **report di analisi**immettere il nome di un computer che esegue SQL Server con un database di analisi. Selezionare **Connetti**. 
+In **report di analisi**immettere il nome di un computer che esegue SQL Server che dispone di un database di analisi e quindi selezionare **Connetti**.
 
 ![Connettersi a un report esistente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Se non sono presenti dipendenze, nella pagina dei **prerequisiti vengono richiesti** i collegamenti per installarli. Installare i prerequisiti, quindi selezionare **Riprova**.
+Se non sono presenti dipendenze, nella pagina dei **prerequisiti vengono richiesti** i collegamenti per installarli. Se necessario, installare i prerequisiti, quindi selezionare **Riprova**.
 
 ![Pagina dei prerequisiti](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ Selezionare una query specifica per aprire un riepilogo di confronto per la quer
 Il report di riepilogo confronto include le sezioni informazioni **sugli errori** espandibili e **informazioni sul piano di query** . Nelle sezioni vengono illustrati gli errori e le informazioni sul piano per entrambe le istanze.
 
 Selezionare la torta di errore (rosso) per visualizzare questi tipi di errori:
+
 - **Errori esistenti**: errori che si sono verificati in un oggetto.
 - **Nuovi errori**: errori che si sono verificati in B.
 - **Errori risolti**: errori che si sono verificati in, ma non in B.
 
 ![Grafici degli errori](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="see-also"></a>Vedere anche
 
 - Per informazioni su come generare un report di analisi da un prompt dei comandi, vedere [Run al prompt dei comandi](database-experimentation-assistant-run-command-prompt.md).
-
-- Per un'introduzione di 19 minuti a DEA e dimostrazione, Guarda il video seguente:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

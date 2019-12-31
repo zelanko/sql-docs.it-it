@@ -1,7 +1,7 @@
 ---
-title: Sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs
+title: sys. pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,25 +12,25 @@ ms.assetid: 639a7475-7c92-41e0-a8ab-ad630eb5aea3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e90ef2298241dd9e59917f2ad6877a6a92b0960
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43974e2ae8becb5ad24daf0c52246a71c890bce2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001093"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822168"
 ---
-# <a name="syspdwtabledistributionproperties-transact-sql"></a>sys.pdw_table_distribution_properties (Transact-SQL)
+# <a name="syspdw_table_distribution_properties-transact-sql"></a>sys. pdw_table_distribution_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene le informazioni di distribuzione per le tabelle.  
+  Include informazioni sulla distribuzione per le tabelle.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|**object_id**|**int**|ID della tabella per cui tre proprietà sono state specificate.||  
-|**distribution_policy**|**tinyint**|0 = NON DEFINITO<br /><br /> 1 = NESSUNO<br /><br /> 2 = HASH<br /><br /> 3 = REPLICA<br /><br /> 4 = ROUND_ROBIN|Eseguire la replica si applica solo ai [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|  
-|**distribution_policy_desc**|**nvarchar(60)**|NON È DEFINITO, HASH, NONE, LA REPLICA, SEGMENTED_HEAP|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Restituisce un HASH o eseguire la replica.|  
+|**object_id**|**int**|ID della tabella per cui sono state specificate le proprietà.||  
+|**distribution_policy**|**tinyint**|0 = NON DEFINITO<br /><br /> 1 = NESSUNA<br /><br /> 2 = HASH<br /><br /> 3 = REPLICA<br /><br /> 4 = ROUND_ROBIN||  
+|**distribution_policy_desc**|**nvarchar (60)**|UNDEFINED, NONE, HASH, REPLICATE, ROUND_ROBIN|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Restituisce HASH, ROUND_ROBIN o REPLICAte.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

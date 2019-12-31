@@ -1,6 +1,6 @@
 ---
-title: Componenti hardware, sistema di piattaforma Analitica | Microsoft Docs
-description: Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo che è possibile acquistare la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Quando si ordinano i punti di accesso, è necessario una combinazione di questi componenti hardware di base.
+title: Componenti hardware
+description: Analytics Platform System (APS) usa componenti scalabili che consentono di acquistare la quantità corretta di elaborazione e archiviazione in base ai requisiti aziendali. Quando si ordinano i punti di APS, sarà necessaria una combinazione di questi componenti hardware di base.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,79 +8,80 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0f7f3bd8f4d5500a59675d40ff7f50d1afd9a199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401139"
 ---
-# <a name="hardware-components-for-analytics-platform-system"></a>Componenti hardware per il sistema di piattaforma Analitica
+# <a name="hardware-components-for-analytics-platform-system"></a>Componenti hardware per il sistema di piattaforma Analytics
 
-Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo che è possibile acquistare la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Quando si ordinano i punti di accesso, è necessario una combinazione di questi componenti hardware di base. I fornitori di hardware specifico potrebbero usare convenzioni di denominazione diverse o i componenti aggiuntivi.  
+Analytics Platform System (APS) usa componenti scalabili che consentono di acquistare la quantità corretta di elaborazione e archiviazione in base ai requisiti aziendali. Quando si ordinano i punti di APS, sarà necessaria una combinazione di questi componenti hardware di base. I fornitori di hardware specifici potrebbero utilizzare convenzioni di denominazione diverse o avere componenti aggiuntivi.  
  
   
 ## <a name="rackandnetwork"></a>Rack e rete 
  
-Tutti i componenti di punti di accesso vengono archiviati in uno o più rack che rientra nel proprio data center. Ogni rack viene fornito con unità di distribuzione dell'alimentazione (PDU), due commutatori InfiniBand e due commutatori Ethernet.  
+I componenti APS sono tutti archiviati in uno o più rack che rientrano nell'data center. Ogni rack è dotato di unità di distribuzione dell'alimentazione (PDU), due commutatori InfiniBand e due commutatori Ethernet.  
   
-![Rete e rack](media/rack-and-network.png "APS su rack e di rete")  
+![Rack e rete](media/rack-and-network.png "Rack e rete APS")  
   
-## <a name="datascaleunit"></a>Unità di scala di dati
+## <a name="datascaleunit"></a>Unità di scala dati
  
-Un'unità di scala di dati contiene l'host di dati e archiviazione diretta (DAS) per l'elaborazione e archiviazione dei dati utente. Per aggiungere capacità aggiungere unità di scala di dati in base alle configurazioni supportate dal fornitore dell'hardware. Man mano che aumenta il numero di unità di scala di dati, è necessario aggiungere ulteriori Rack & componenti di rete, in base alle esigenze, per fornire informazioni di alimentazione, rete e installare in rack dell'infrastruttura.  
+Un'unità di scala dati contiene gli host di dati e l'archiviazione diretta (DAS) per l'elaborazione e l'archiviazione dei dati utente. Per aggiungere capacità, è necessario aggiungere unità di scala dati in base alle configurazioni supportate dal fornitore dell'hardware. Con l'aumentare del numero di unità di scalabilità dei dati, è necessario aggiungere altri componenti di rete & rack, in base alle esigenze, per offrire più potenza, rete e infrastruttura rack.  
   
-### <a name="data-host"></a>Host di dati  
+### <a name="data-host"></a>Host dati  
 
-Un host di dati è un server dedicato all'elaborazione dei dati utente. Parallel Data Warehouse (PDW), un nodo di calcolo viene eseguito in ogni host di dati. Per le Appliance HPE, l'unità di scala di dati dispone di due host di dati. Per le Appliance Dell e quantum, l'unità di scala di dati ha tre dati host.  
+Un host di dati è un server dedicato all'elaborazione dei dati utente. Parallel data warehouse (PDW) esegue un nodo di calcolo in ogni host di dati. Per le appliance HPE, l'unità di scala dei dati dispone di due host di dati. Per le appliance dell e Quantity, l'unità di scala dati ha tre host di dati.  
   
-### <a name="direct-attached-storage"></a>Archiviazione diretta
+### <a name="direct-attached-storage"></a>Archiviazione collegata direttamente
  
-L'archiviazione diretta (DAS) è un pool di dischi connessi agli host dei dati. Tutti gli host dei dati può accedere a tutti i dischi. Come parte di senza condivisione architettura, i nodi di calcolo in esecuzione negli host i dati non condividono singoli dischi. Tuttavia, per la disponibilità elevata, viene condiviso l'accesso all'archiviazione e ognuno degli host dei dati può accedere a tutti i dischi.  
+Il gruppo DAS (Direct Attached Storage) è un pool di dischi connessi agli host di dati. Tutti gli host di dati possono accedere a tutti i dischi. Come parte dell'architettura Shared Nothing, i nodi di calcolo in esecuzione negli host di dati non condividono singoli dischi. Per la disponibilità elevata, tuttavia, l'accesso alla risorsa di archiviazione è condiviso e ogni host di dati può accedere a qualsiasi disco.  
   
-### <a name="data-scale-unit-architecture---dell-and-quanta"></a>Scalabilità unit architettura di dati - DELL e quantum
+### <a name="data-scale-unit-architecture---dell-and-quanta"></a>Architettura di unità di scala dati-DELL e Quantum
   
-![Unità di scalabilità](media/scalability-unit-dell.png "unità di scalabilità di Dell")  
+![Unità di scalabilità](media/scalability-unit-dell.png "Unità di scalabilità dell")  
   
-### <a name="data-scale-unit-architecture---hpe"></a>Architettura di unità di scala Data - HPE 
+### <a name="data-scale-unit-architecture---hpe"></a>Architettura dell'unità di scala dei dati-HPE 
  
-![Unità di scalabilità di HPE](media/scalability-unit-hpe.png "unit HPE scalabilità")  
+![Unità di scalabilità HPE](media/scalability-unit-hpe.png "Unità di scalabilità HPE")  
   
-### <a name="data-scale-unit-description"></a>Descrizione unità di scala dei dati
+### <a name="data-scale-unit-description"></a>Descrizione unità di scala dati
 
-Un'unità di scala di dati dispone di un server (host) per ogni nodo di calcolo e di una matrice di un disco collegato direttamente collegato con SAS Serial Attached SCSI (). Archiviazione file CAB, l'array di dischi è suddivisa in due metà ciascuno con un set di alimentazione ridondanti. Spazi di archiviazione di Windows Server gestisce i dati dell'utente, la duplicazione dei dati tra coppie di dischi con mirroring RAID 1. Nella metà diverse di array di dischi sono archiviati i dischi in ogni coppia di disco.  
+Un'unità di scala dati ha un solo server (host) per ogni nodo di calcolo e un array di dischi collegato direttamente collegato con SAS (Serial Attached SCSI). All'interno del cabinet di archiviazione, l'array di dischi è suddiviso in due metà, ognuna con alimentatori ridondanti. Spazi di archiviazione di Windows Server gestisce i dati degli utenti duplicando i dati tra coppie di dischi con mirroring RAID 1. I dischi in ogni coppia di dischi vengono archiviati in mezze diverse dell'array di dischi.  
   
-L'array di dischi contiene anche dischi di riserva a caldo e un disco del sistema. Se un disco non riesce, spazi di archiviazione Usa la copia dei dati sul disco funzionano per ricompilare una copia duplicata dei dati in una riserva a caldo. Si tratta di un'importante funzionalità di riparazione automatica che consente di proteggere dalla perdita di dati.  
+L'array di dischi contiene anche dischi di riserva a caldo e un disco di sistema. Se si verifica un errore in un disco, spazi di archiviazione usa la copia corretta dei dati sul disco funzionante per ricompilare una copia duplicata dei dati in una riserva a caldo. Si tratta di un'importante funzionalità di correzione automatica che consente di evitare la perdita di dati.  
   
 Il numero totale di dischi per i nodi di calcolo:  
   
--   DELL ha 96 dischi = (3 servers) * (16 dischi per ogni server) \* (2 per i dischi con ridondanza).  
+-   DELL ha 96 dischi = (3 Server) * (16 dischi per Server) \* (2 per i dischi ridondanti).  
   
--   HPE è 64 dischi = (2 Server) * (16 dischi per ogni server) \* (2 per i dischi con ridondanza).  
+-   HPE ha 64 dischi = (2 Server) * (16 dischi per Server) \* (2 per i dischi ridondanti).  
   
--   Inoltre, ogni array di dischi con dischi di riserva a caldo e un disco del sistema.  
+-   Ogni array di dischi dispone inoltre di dischi di riserva a caldo e un disco di sistema.  
   
-**Per la disponibilità elevata**, quando un nodo di calcolo viene eseguito il failover, può continuano a funzionare e accedere ai dati utente tramite altri host nell'unità di scala di dati. Almeno uno degli host fisici collegati direttamente deve funzionare o accesso ai dati nella risorsa di archiviazione viene perso.  
+**Per la disponibilità elevata**, quando viene eseguito il failover di un nodo di calcolo, può comunque funzionare e accedere ai dati utente tramite l'altro host nell'unità di scala dati. Almeno uno degli host fisici collegati direttamente deve funzionare o l'accesso ai dati per l'archiviazione va perso.  
   
-**Per le dimensioni dei dischi**, delle risorse di archiviazione diretta può avere 1, 2 o 3 unità disco di Terabyte. Tutte le unità di scala di dati devono essere dischi della stessa dimensione.  
+**Per le dimensioni dei dischi**, l'archiviazione collegata direttamente può avere unità disco da 1, 2 o 3 terabyte. Tutte le unità di scala dei dati devono avere dischi delle stesse dimensioni.  
   
 ## <a name="basescaleunit"></a>Unità di scala di base 
  
-L'unità di scala di Base contiene il numero minimo di brain power host, gli host di dati e archiviazione collegata direttamente che è necessario per l'appliance. Include i componenti seguenti. 
+L'unità di scala di base contiene il numero minimo di host di sistema cerebrale, host di dati e archiviazione collegata direttamente necessaria per l'appliance. Include i componenti seguenti. 
   
 ### <a name="orchestration-host"></a>Host di orchestrazione  
-Il server esegue il cervello di PDW.
+Questo server esegue i cervelli di PDW.
   
 ### <a name="passive-host"></a>Host passivo  
-Questo server fornisce la disponibilità elevata. Sia online e pronto per l'esecuzione dei processi nel caso in cui si verifica un errore in un host di dati o l'orchestrazione. L'host di orchestrazione, passivo host e i server di unità di scala dei dati sono configurati come cluster di failover Windows. Ogni rack nell'appliance richiede un host passivo.  
+Questo server garantisce un'elevata disponibilità. È online e pronto per l'esecuzione di processi in caso di errore nell'orchestrazione o nell'host di dati. L'host di orchestrazione, l'host passivo e i server di unità scala dati sono configurati come cluster di failover di Windows. Ogni rack nell'appliance richiede un host passivo.  
   
 ### <a name="optional-passive-host"></a>Host passivo facoltativo  
-Per aggiungere un'ulteriore ridondanza, è possibile aggiungere un secondo host passivo per l'unità di scala di Base.  
+Per aggiungere ulteriore ridondanza, è possibile aggiungere un secondo host passivo all'unità di scala di base.  
   
-### <a name="data-scale-unit"></a>Unità di scala di dati  
-L'unità di scala di Base include un'unità di scala di dati che viene posizionata nella parte inferiore del rack.  
+### <a name="data-scale-unit"></a>Unità di scala dati  
+L'unità di scala di base include un'unità di scala dei dati posizionata nella parte inferiore del rack.  
   
-Questo diagramma mostra l'unità di scala di Base oltre il Rack e la rete. Questa è la configurazione minima per un dispositivo di sistema di piattaforma Analitica.  
+Questo diagramma mostra l'unità di scala di base più il rack e la rete. Questa è la configurazione minima per un'appliance del sistema della piattaforma di analisi.  
   
-![Unità di scala di base](media/base-scale-unit.png "unità di scala di Base")  
+![Unità di scala di base](media/base-scale-unit.png "Unità di scala di base")  
  

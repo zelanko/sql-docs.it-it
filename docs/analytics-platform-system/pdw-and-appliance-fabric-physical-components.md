@@ -1,6 +1,6 @@
 ---
-title: Componenti fisici Appliance - sistema di piattaforma Analitica | Microsoft Docs
-description: I nomi e descrizioni per i componenti fisici dell'infrastruttura appliance e PDW.
+title: Componenti fisici dell'appliance
+description: Nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e appliance.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,26 +8,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960423"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400925"
 ---
-# <a name="appliance-physical-components---analytics-platform-system"></a>Componenti fisici Appliance - sistema di piattaforma Analitica
-I nomi e descrizioni per i componenti fisici dell'infrastruttura appliance e PDW. 
+# <a name="appliance-physical-components---analytics-platform-system"></a>Componenti fisici dell'appliance-sistema di piattaforma di analisi
+Nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e appliance. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Diagrammi dei componenti  
-Mostra i nomi dei componenti fisici e in cui si trovano nel primo rack di un'appliance di 6 nodi.  
+## <a name="diagrams"></a>Diagrammi componente  
+Vengono visualizzati i nomi dei componenti fisici e il percorso in cui si trovano nel primo rack di un'appliance a 6 nodi di calcolo.  
   
-![Nomi dei componenti area PDW - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
+![Nomi dei componenti dell'area PDW - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
-Il nome effettivo per i componenti PDW è il nome dell'area PDW, seguito da un trattino, seguito dal nome del componente. Ad esempio, se il nome dell'area PDW PDW123, i nomi effettivi vengono **PDW123 CTL01**, **PDW123-CMP01**e così via.  
+Il nome effettivo per i componenti PDW è il nome dell'area PDW, seguito da un trattino, seguito dal nome del componente. Se, ad esempio, il nome dell'area PDW è PDW123, i nomi effettivi sono **PDW123-CTL01**, **PDW123-CMP01**e così via.  
   
-Analogamente, il nome effettivo per i componenti dell'infrastruttura di appliance è il dominio dell'appliance, seguito da un trattino, seguito dal nome del componente. Ad esempio, se il dominio di appliance è FSW123, l'infrastruttura di appliance le macchine virtuali vengono **FSW123 WDS**, **FSW123 AD01**, **FSW123 VMM**e così via.  
+Analogamente, il nome effettivo per i componenti dell'infrastruttura del dispositivo è il dominio dell'appliance, seguito da un trattino, seguito dal nome del componente. Ad esempio, se il dominio del dispositivo è FSW123, le macchine virtuali dell'infrastruttura Appliance sono **FSW123-WDS**, **FSW123-ad01**, **FSW123-VMM**e così via.  
   
 Ecco una visualizzazione consolidata di un'area PDW con 6 nodi di calcolo.  
   
@@ -37,49 +38,49 @@ Ecco una visualizzazione consolidata di un'area PDW con 6 nodi di calcolo.
 Le macchine virtuali PDW fanno parte dell'area PDW.  
   
 *PDW_region*-CTL01  
-Una macchina virtuale che esegue il nodo di controllo. Ciò viene eseguito su HST01 ed eseguire il failover a HST02.  
+Una macchina virtuale che esegue il nodo di controllo. Questa operazione viene eseguita su HST01 e può eseguire il failover a HST02.  
   
 > [!WARNING]  
-> SQL Server PDW non supporta la creazione di uno snapshot della macchina virtuale CTL01 utilizzando Gestione di Hyper-V. Gli snapshot si basano su archiviazione locale, che causerà errori se la macchina virtuale tenta di eseguire il failover al relativo backup. Creazione di uno snapshot può anche causare problemi di affidabilità con l'altra VM che il failover al server passivo.  
+> SQL Server PDW non supporta la creazione di uno snapshot della macchina virtuale CTL01 tramite la console di gestione di Hyper-V. Gli snapshot si basano sull'archiviazione locale, che causerà errori se la macchina virtuale tenta di eseguire il failover al backup. La creazione di uno snapshot può anche causare problemi di affidabilità con l'altra macchina virtuale che esegue il failover al server passivo.  
   
-*PDW_region*-CMP01 attraverso *PDW_Region*-CMP06  
-Una macchina virtuale che esegue il nodo di calcolo. In questo diagramma di nodo di calcolo di 6, gli host HSA01 tramite HSA06 esecuzione nodo di calcolo CMP01 macchine virtuali tramite CMP06 rispettivamente.  
+*PDW_region*-CMP01 tramite *PDW_Region*-CMP06  
+Una macchina virtuale che esegue il nodo di calcolo. In questo diagramma a 6 nodi di calcolo, gli host HSA01 tramite HSA06 eseguono le VM del nodo di calcolo CMP01 rispettivamente tramite CMP06.  
   
-## <a name="fabric"></a>Componenti dell'infrastruttura di Appliance  
-Questi componenti fanno parte dell'infrastruttura di appliance.  
+## <a name="fabric"></a>Componenti dell'infrastruttura Appliance  
+Questi componenti fanno parte dell'infrastruttura dell'appliance.  
   
 ### <a name="virtual-machines"></a>Macchine virtuali  
-*appliance_domain*-WDS  
-In questo host di macchine virtuali Windows Deployment Services (WDS), che usa il sistema di piattaforma Analitica distribuire sistemi operativi Windows in rete appliance. Ospita anche il servizio DHCP, che consente agli host l'accessorio alla rete appliance senza la necessità di un indirizzo IP configurato in precedenza.  
+*appliance_domain*WDS  
+Questa macchina virtuale ospita servizi di distribuzione Windows (WDS), che il sistema di piattaforma di analisi usa per distribuire sistemi operativi Windows tramite la rete Appliance. Ospita anche il servizio DHCP, che consente agli host del dispositivo di aggiungersi alla rete Appliance senza avere un indirizzo IP preconfigurato.  
   
-Il *appliance_domain*macchina virtuale - servizi di distribuzione Windows viene eseguito su HST01 ed eseguire il failover a HST02. La macchina virtuale di servizi di distribuzione Windows e la macchina virtuale VMM, distribuire Windows in host fisici durante l'installazione di appliance. Durante il ciclo di vita di appliance, WDS e VMM eseguire operazioni come la sostituzione di un host.  
+La macchina virtuale *appliance_domain*-WDS viene eseguita in HST01 ed è in grado di eseguire il failover in HST02. La macchina virtuale WDS e la macchina virtuale VMM distribuiscono Windows negli host fisici durante l'installazione dell'appliance. Durante il ciclo di vita dell'appliance, WDS e VMM eseguono operazioni come la sostituzione di un host.  
   
 *appliance_domain*-VMM  
-Virtual Machine Manager (VMM) viene eseguito in una macchina virtuale ed eseguire il failover a HST02. VMM ospita System Center per distribuire il sistema operativo negli host fisici. VMM fornisce anche Windows Server Update Services (WSUS) per applicare o rimuovere gli aggiornamenti di Windows in tutti gli host e macchine virtuali.  
+Il Virtual Machine Manager (VMM) viene eseguito in una macchina virtuale ed è in grado di eseguire il failover a HST02. VMM ospita System Center per distribuire il sistema operativo negli host fisici. VMM fornisce inoltre Windows Server Update Services (WSUS) per applicare o rimuovere gli aggiornamenti di Windows in tutti gli host e le macchine virtuali.  
   
-*appliance_domain*-AD01, *appliance_domain*-AD02  
-Active Directory Domain Services, che contiene il sistema DNS (Domain Name), viene eseguito in una macchina virtuale sia HST01 HST02. Per la disponibilità elevata dell'appliance AD01 e AD02 sono controller di dominio replicato e avviene il failover. Se uno ha esito negativo, l'altro è già disponibile con i dati corretti.  
+*appliance_domain*-AD01, *appliance_domain*-ad02  
+Active Directory Domain Services, che contiene il Domain Name System (DNS), viene eseguito in una macchina virtuale sia in HST01 che in HST02. Per la disponibilità elevata del dispositivo, AD01 e AD02 sono controller di dominio replicati e non eseguono il failover. Se si verifica un errore, l'altro è già disponibile con i dati corretti.  
   
 *appliance_domain*-ISCSI01  
-Una macchina virtuale ISCSI viene eseguito in ognuno degli host con archiviazione collegata (HSA01 HSA06). Questa macchina virtuale non esegue il failover.  
+Una macchina virtuale ISCSI viene eseguita in ogni host con archiviazione collegata (HSA01-HSA06). Questa macchina virtuale non esegue il failover.  
   
-### <a name="hosts"></a>Host  
-*appliance_domain*-HST01 attraverso *appliance_domain*-HST06  
-Gli host per controllo PDW appliance e nodo fabric macchine virtuali. HST03 è host passivo facoltativo.  
+### <a name="hosts"></a>Hosts  
+*appliance_domain*-HST01 tramite *appliance_domain*-HST06  
+Gli host per le macchine virtuali del nodo di controllo PDW e dell'infrastruttura Appliance. HST03 è un host passivo facoltativo.  
   
-*appliance_domain*-HSA01 attraverso *appliance_domain*-HSA08  
-Gli host con archiviazione collegata (HSA). Ogni HAS host viene eseguito un nodo di calcolo della macchina virtuale e una VM ISCSI.  
+*appliance_domain*-HSA01 tramite *appliance_domain*-HSA08  
+Host con archiviazione collegata (HSA). Ogni ha un host che esegue una macchina virtuale del nodo di calcolo e una VM ISCSI.  
   
 ### <a name="cluster-for-pdw"></a>Cluster per PDW  
 *appliance_domain*-WFOHST01  
-Il cluster PDW è denominato WFOHST01. Gestisce tutti gli host fisici e macchine virtuali che appartengono a PDW.  
+Il cluster PDW è denominato WFOHST01. Gestisce tutti gli host fisici e le macchine virtuali che appartengono a PDW.  
   
-### <a name="direct-attached-storage"></a>Direct Attached Storage  
-*appliance_domain*-DAS01 attraverso *appliance_domain*-DAS03  
-Questo è l'archiviazione collegata direttamente connesso ai nodi di calcolo. HP è uno DAS per ogni due nodi di calcolo. Dell e quantum hanno uno DAS per ogni tre nodi di calcolo.  
+### <a name="direct-attached-storage"></a>Archiviazione collegata direttamente  
+*appliance_domain*-DAS01 tramite *appliance_domain*-DAS03  
+Si tratta dell'archiviazione collegata direttamente connessa ai nodi di calcolo. HP ha una DAS per ogni due nodi di calcolo. Dell e Quantity hanno una DAS per ogni tre nodi di calcolo.  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[La configurazione dell'Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-configuration.md)  
-[Attività di gestione di Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-management-tasks.md)  
+[Configurazione Appliance &#40;sistema della piattaforma di analisi&#41;](appliance-configuration.md)  
+[Attività di gestione degli appliance &#40;sistema di piattaforma di analisi&#41;](appliance-management-tasks.md)  
   

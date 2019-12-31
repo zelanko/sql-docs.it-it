@@ -41,30 +41,30 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199390"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479319"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
   Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
   
 |Oggetto di database|Replica snapshot e replica transazionale|Replica di tipo merge|  
 |---------------------|--------------------------------------------------------|-----------------------|  
-|Tabelle|x|x|  
-|Tabelle partizionate|x|x|  
-|Stored procedure - definizione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|x|x|  
-|Stored procedure - esecuzione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|x|no|  
-|Visualizzazioni|x|x|  
-|Viste indicizzate|x|x|  
-|Viste indicizzate come tabelle|x|no|  
-|Tipi definiti dall'utente (CLR)|x|x|  
-|Funzioni definite dall'utente ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR).|x|x|  
-|Tipi di dati alias|x|x|  
-|Indici full-text|x|x|  
-|Oggetti dello schema (vincoli, indici, trigger DML dell'utente, proprietà estese e regole di confronto)|x|x|  
+|Tabelle|X|X|  
+|Tabelle partizionate|X|X|  
+|Stored procedure - definizione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
+|Stored procedure - esecuzione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|no|  
+|Visualizzazioni|X|X|  
+|Viste indicizzate|X|X|  
+|Viste indicizzate come tabelle|X|no|  
+|Tipi definiti dall'utente (CLR)|X|X|  
+|Funzioni definite dall'utente ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR).|X|X|  
+|Tipi di dati alias|X|X|  
+|Indici full-text|X|X|  
+|Oggetti dello schema (vincoli, indici, trigger DML dell'utente, proprietà estese e regole di confronto)|X|X|  
   
 ## <a name="creating-publications"></a>Creazione di pubblicazioni  
  Per creare una pubblicazione, si specificano le informazioni seguenti:  
@@ -89,9 +89,9 @@ ms.locfileid: "68199390"
   
  Per informazioni sull'utilizzo di pubblicazioni, vedere gli argomenti seguenti:  
   
--   [Create a Publication](create-a-publication.md)  
+-   [Creazione di una pubblicazione](create-a-publication.md)  
   
--   [Define an Article](define-an-article.md)  
+-   [Definire un articolo](define-an-article.md)  
   
 -   [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md)  
   
@@ -109,17 +109,17 @@ ms.locfileid: "68199390"
   
 -   [Filtrare i dati pubblicati](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
+-   [Opzioni degli articoli per la replica transazionale](../transactional/article-options-for-transactional-replication.md)  
   
--   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
+-   [Opzioni degli articoli per la replica di tipo merge](../merge/article-options-for-merge-replication.md)  
   
--   [Replicare colonne Identity](replicate-identity-columns.md)  
+-   [Replica colonne Identity](replicate-identity-columns.md)  
   
  Quando si pubblica una tabella per la replica, è possibile specificare gli oggetti dello schema da copiare nel Sottoscrittore, ad esempio l'integrità referenziale dichiarata (vincoli di chiave primaria, di riferimento o UNIQUE), indici, trigger DML dell'utente (i trigger DDL non possono essere replicati), proprietà estese e regole di confronto. Le proprietà estese vengono replicate solo nella sincronizzazione iniziale tra il server di pubblicazione e il Sottoscrittore. Se si aggiungono o si modificano proprietà estese dopo la sincronizzazione iniziale, le modifiche apportate non vengono replicate.  
   
  Per specificare le opzioni dello schema, vedere [Specificare le opzioni dello schema](specify-schema-options.md) oppure <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
+### <a name="partitioned-tables-and-indexes"></a>Tabelle e indici partizionati  
  La replica supporta la pubblicazione di tabelle e indici partizionati. Il livello di supporto dipende dal tipo di replica utilizzato, nonché dalle opzioni specificate per la pubblicazione e dagli articoli associati alle tabelle partizionate. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Pubblicazione di stored procedure  
@@ -130,7 +130,7 @@ ms.locfileid: "68199390"
 ## <a name="publishing-views"></a>Pubblicazione di viste  
  Tutti i tipi di replica consentono di replicare viste. È possibile copiare la vista e l'indice associato, in caso di vista indicizzata, nel Sottoscrittore, ma è inoltre necessario replicare la tabella di base.  
   
- Per le viste indicizzate, la replica transazionale consente inoltre di replicare la vista indicizzata come tabella anziché come vista, eliminando così l'esigenza di replicare anche la tabella di base. A tale scopo, specificare una delle opzioni "indexed view logbased" per il parametro *@type* di [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Per altre informazioni sull'uso di **sp_addarticle**, vedere [Definire un articolo](define-an-article.md).  
+ Per le viste indicizzate, la replica transazionale consente inoltre di replicare la vista indicizzata come tabella anziché come vista, eliminando così l'esigenza di replicare anche la tabella di base. A tale scopo, specificare una delle opzioni "indexed view logbased" per il * \@parametro Type* di [sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Per altre informazioni sull'uso di **sp_addarticle**, vedere [Definire un articolo](define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Pubblicazione di funzioni definite dall'utente  
  Le istruzioni CREATE FUNCTION per funzioni CLR e [!INCLUDE[tsql](../../../includes/tsql-md.md)] vengono copiate in ogni Sottoscrittore. In caso di funzioni CLR, viene inoltre copiato l'assembly associato. Le modifiche apportate alle funzioni vengono replicate nei Sottoscrittori, mentre non vengono replicate le modifiche agli assembly associati.  
@@ -146,7 +146,7 @@ ms.locfileid: "68199390"
 ## <a name="making-schema-changes-to-published-objects"></a>Modifiche dello schema in oggetti pubblicati  
  La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche dello schema seguenti nell'oggetto pubblicato appropriato nel server di pubblicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tale modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   ALTER TABLE  
+-   MODIFICA TABELLA  
   
 -   ALTER VIEW  
   
@@ -168,9 +168,9 @@ ms.locfileid: "68199390"
 -   Se si pubblica un oggetto di database che dipende da uno o più oggetti di database diversi, è necessario pubblicare tutti gli oggetti a cui si fa riferimento. Se ad esempio si pubblica una vista che dipende da una tabella, sarà necessario pubblicare anche la tabella.  
   
     > [!NOTE]  
-    >  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione dei due articoli tramite il parametro **@processing_order** di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare un valore **1** per il parametro **@processing_order** di **sp_addmergearticle**e un valore **2** per il parametro **@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **@article** . Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, a condizione che il numero della funzione sia inferiore al numero della tabella.  
+    >  Se si aggiunge un articolo a una pubblicazione di tipo merge e un articolo esistente dipende dal nuovo articolo, è necessario specificare un ordine di elaborazione per entrambi gli articoli ** \@** utilizzando il parametro processing_order di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, a condizione che il numero della funzione sia inferiore al numero della tabella.  
   
--   I nomi delle pubblicazioni non possono includere i caratteri seguenti: % * [ ] | : " ? \ / \< >.  
+-   I nomi delle pubblicazioni non possono includere i caratteri seguenti: % * [ ] | : " ? \/ \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitazioni relative alla pubblicazione di oggetti  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68199390"
   
 -   I valori predefiniti associati creati con [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) non vengono replicati. I valori predefiniti associati sono deprecati e sono stati sostituiti dai valori predefiniti creati con la parola chiave DEFAULT di ALTER TABLE o CREATE TABLE.  
   
--   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e consegnare lo script usando il *@post_snapshot_script* parametro `sp_addpublication`.  
+-   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e recapitare lo script * \@* utilizzando il parametro `sp_addpublication`post_snapshot_script di.  
   
 ### <a name="schemas-and-object-ownership"></a>Schemi e proprietà degli oggetti  
  In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  
@@ -208,9 +208,9 @@ ms.locfileid: "68199390"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Pubblicazione di tabelle in più pubblicazioni  
  La replica supporta la pubblicazione di articoli in più pubblicazioni, nonché la ripubblicazione di dati, con le restrizioni seguenti:  
   
--   Se un articolo viene pubblicato in una pubblicazione transazionale o di tipo merge, verificare che la proprietà *@published_in_tran_pub* sia impostata su TRUE per l'articolo di merge. Per altre informazioni sull'impostazione delle proprietà, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md) e [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md).  
+-   Se un articolo viene pubblicato in una pubblicazione transazionale e in una pubblicazione di tipo merge, * \@* verificare che la proprietà published_in_tran_pub sia impostata su true per l'articolo di merge. Per altre informazioni sull'impostazione delle proprietà, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md) e [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md).  
   
-     È inoltre necessario impostare la proprietà *@published_in_tran_pub* se un articolo che fa parte di una sottoscrizione transazionale viene incluso in una pubblicazione di tipo merge. In questo caso, è importante tenere presente che, per impostazione predefinita, la replica transazionale prevede che le tabelle nel Sottoscrittore siano considerate di sola lettura. La modifica dei dati di una tabella in una sottoscrizione transazionale durante la replica di tipo merge potrebbe pertanto impedire la convergenza dei dati. Per evitare questa eventualità, è consigliabile specificare queste tabelle come di solo download nella pubblicazione di tipo merge. In tal modo si impedisce al Sottoscrittore di tipo merge di caricare le modifiche ai dati nella tabella. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     È inoltre necessario impostare la * \@proprietà published_in_tran_pub* se un articolo fa parte di una sottoscrizione transazionale ed è incluso in una pubblicazione di tipo merge. In questo caso, è importante tenere presente che, per impostazione predefinita, la replica transazionale prevede che le tabelle nel Sottoscrittore siano considerate di sola lettura. La modifica dei dati di una tabella in una sottoscrizione transazionale durante la replica di tipo merge potrebbe pertanto impedire la convergenza dei dati. Per evitare questa eventualità, è consigliabile specificare queste tabelle come di solo download nella pubblicazione di tipo merge. In tal modo si impedisce al Sottoscrittore di tipo merge di caricare le modifiche ai dati nella tabella. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Un articolo non può essere pubblicato sia in una pubblicazione di tipo merge che in una pubblicazione transazionale con sottoscrizioni ad aggiornamento in coda.  
   
@@ -220,10 +220,10 @@ ms.locfileid: "68199390"
   
     |Proprietà|Parametro di sp_addarticle|  
     |--------------|---------------------------------|  
-    |Gestione intervalli di valori Identity|**@auto_identity_range** (deprecato) e **@identityrangemangementoption**|  
-    |Intervallo di valori Identity del server di pubblicazione|**@pub_identity_range**|  
-    |Intervallo di valori Identity|**@identity_range**|  
-    |Soglia dell'intervallo di valori Identity|**@threshold**|  
+    |Gestione intervalli di valori Identity|auto_identity_range (deprecato) e identityrangemangementoption ** \@** ** \@**|  
+    |Intervallo di valori Identity del server di pubblicazione|**\@pub_identity_range**|  
+    |Intervallo di valori Identity|**\@identity_range**|  
+    |Soglia dell'intervallo di valori Identity|**\@soglia**|  
   
      Per altre informazioni su questi parametri, vedere [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -231,30 +231,30 @@ ms.locfileid: "68199390"
   
     |Proprietà|Parametro di sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Rilevamento a livello di colonna|**@column_tracking**|  
-    |Opzioni schema|**@schema_option**|  
-    |Applicazioni filtri alle colonne|**@vertical_partition**|  
-    |Opzioni di caricamento Sottoscrittore|**@subscriber_upload_options**|  
-    |Rilevamento eliminazioni condizionale|**@delete_tracking**|  
-    |Compensazione errori|**@compensate_for_errors**|  
-    |Gestione intervalli di valori Identity|**@auto_identity_range** (deprecato) e **@identityrangemangementoption**|  
-    |Intervallo di valori Identity del server di pubblicazione|**@pub_identity_range**|  
-    |Intervallo di valori Identity|**@identity_range**|  
-    |Soglia dell'intervallo di valori Identity|**@threshold**|  
-    |Opzioni partizioni|**@partition_options**|  
-    |Flusso colonne BLOB|**@stream_blob_columns**|  
-    |Tipo filtro|**@filter_type** (parametro in **sp_addmergefilter**)|  
+    |Rilevamento a livello di colonna|**\@column_tracking**|  
+    |Opzioni schema|**\@schema_option**|  
+    |Applicazioni filtri alle colonne|**\@vertical_partition**|  
+    |Opzioni di caricamento Sottoscrittore|**\@subscriber_upload_options**|  
+    |Rilevamento eliminazioni condizionale|**\@delete_tracking**|  
+    |Compensazione errori|**\@compensate_for_errors**|  
+    |Gestione intervalli di valori Identity|auto_identity_range (deprecato) e identityrangemangementoption ** \@** ** \@**|  
+    |Intervallo di valori Identity del server di pubblicazione|**\@pub_identity_range**|  
+    |Intervallo di valori Identity|**\@identity_range**|  
+    |Soglia dell'intervallo di valori Identity|**\@soglia**|  
+    |Opzioni partizioni|**\@partition_options**|  
+    |Flusso colonne BLOB|**\@stream_blob_columns**|  
+    |Tipo di filtro|filter_type (parametro in **sp_addmergefilter**) ** \@**|  
   
      Per altre informazioni su questi parametri, vedere [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
--   La replica transazionale e la replica di tipo merge non filtrata supportano la pubblicazione di una tabella in più pubblicazioni e quindi la sottoscrizione all'interno di una singola tabella del database di sottoscrizione, in base allo scenario comunemente denominato di rollup. Il rollup viene frequentemente utilizzato per aggregare subset di dati da più posizioni all'interno di una tabella in un Sottoscrittore centrale. Le pubblicazioni di tipo merge filtrate non supportano lo scenario con Sottoscrittore centrale. Per la replica di tipo merge, il rollup viene in genere implementato tramite una singola pubblicazione con filtri di riga con parametri. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   La replica transazionale e la replica di tipo merge non filtrata supportano la pubblicazione di una tabella in più pubblicazioni e quindi la sottoscrizione all'interno di una singola tabella del database di sottoscrizione, in base allo scenario comunemente denominato di rollup. Il rollup viene frequentemente utilizzato per aggregare subset di dati da più posizioni all'interno di una tabella in un Sottoscrittore centrale. Le pubblicazioni di tipo merge filtrate non supportano lo scenario con Sottoscrittore centrale. Per la replica di tipo merge, il rollup viene in genere implementato tramite una singola pubblicazione con filtri di riga con parametri. Per altre informazioni, vedere [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configura distribuzione](../configure-distribution.md)   
+ [Configurare la distribuzione](../configure-distribution.md)   
  [Inizializzare una sottoscrizione](../initialize-a-subscription.md)   
- [Creazione di script di replica](../scripting-replication.md)   
+ [Creazione di script per la replica](../scripting-replication.md)   
  [Proteggere il server di pubblicazione](../security/secure-the-publisher.md)   
- [Sottoscrizione delle pubblicazioni](../subscribe-to-publications.md)  
+ [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md)  
   
   

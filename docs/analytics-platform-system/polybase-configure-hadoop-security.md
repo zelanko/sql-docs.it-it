@@ -1,6 +1,6 @@
 ---
-title: Configurare la sicurezza PolyBase Hadoop nel sistema di piattaforma Analitica | Microsoft Docs
-description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse per la connessione a esterna Hadoop.
+title: Configurare la sicurezza Hadoop di base
+description: Viene illustrato come configurare la polibase in parallelo data warehouse per connettersi a Hadoop esterni.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,28 +8,29 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1aebac3f63a105f0276e676ccc807aaebdbf097d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960291"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400659"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
 
-Questo articolo fornisce un riferimento per varie impostazioni di configurazione che influiscono sulla connettività di PolyBase APS per Hadoop. Per una procedura dettagliata sulle novità di PolyBase, vedere [What ' s PolyBase](configure-polybase-connectivity-to-external-data.md).
+Questo articolo fornisce un riferimento per le varie impostazioni di configurazione che influiscono sulla connettività di base di APS per Hadoop. Per una procedura dettagliata sull'aspetto di polibase, vedere [che cos'è](configure-polybase-connectivity-to-external-data.md)la funzionalità di base.
 
 > [!NOTE]
-> Sui punti di accesso, sono necessarie modifiche nel file XML in tutti i nodi di calcolo e di controllo.
+> In APS le modifiche ai file XML sono necessarie in tutti i nodi di calcolo e il nodo di controllo.
 > 
-> Prestare particolare attenzione quando si modificano i file XML nei punti di accesso. Qualsiasi tag mancanti o i caratteri indesiderati possono invalidare il file xml che impediscono il usablilty della funzionalità.
-> File di configurazione Hadoop si trovano nel percorso seguente:  
+> Prestare particolare attenzione quando si modificano i file XML in APS. Eventuali tag mancanti o caratteri indesiderati possono invalidare il file XML che ostacola il usablilty della funzionalità.
+> I file di configurazione Hadoop si trovano nel percorso seguente:  
 > ```  
 > C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf 
 > ``` 
-> Qualsiasi modifica ai file xml richiede un riavvio del servizio per essere efficace.
+> Per le modifiche ai file XML è necessario riavviare il servizio per essere efficace.
 
-## <a id="rpcprotection"></a> Impostazione Hadoop.RPC.Protection
+## <a id="rpcprotection"></a>Impostazione di Hadoop. RPC. Protection
 
 Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificare la configurazione di hadoop.rpc.protection impostandola su "Privacy" o "Integrity". Per impostazione predefinita, PolyBase presuppone che la configurazione sia impostata su "Authenticate". Per eseguire l'override di questa impostazione predefinita, aggiungere la proprietà seguente al file core-site.xml. La modifica di questa configurazione consente il trasferimento sicuro dei dati tra i nodi Hadoop nonché la connessione SSL a SQL Server.
 
@@ -41,13 +42,13 @@ Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificar
    </property> 
 ```
 
-## <a id="kerberossettings"></a> Configurazione di Kerberos  
+## <a id="kerberossettings"></a>Configurazione di Kerberos  
 
 Si noti che se PolyBase esegue l'autenticazione in un cluster protetto con Kerberos, il parametro hadoop.rpc.protection deve essere impostato su 'Authenticate' per impostazione predefinita. La comunicazione dei dati tra i nodi Hadoop rimane non crittografata. Per usare le impostazioni 'Privacy' o 'Integrity' per hadoop.rpc.protection, aggiornare il file core-site.xml sul server PolyBase. Per altre informazioni, vedere la sezione precedente [Connessione a un cluster Hadoop con l'impostazione hadoop.rpc.protection](#rpcprotection).
 
-Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessarie le seguenti modifiche in tutti i punti di accesso cluster nodi di calcolo e del nodo di controllo:
+Per connettersi a un cluster Hadoop protetto con Kerberos usando il KDC MIT, sono necessarie le modifiche seguenti in tutti i nodi di calcolo e nel nodo di controllo di APS:
 
-1. Trovare le directory di configurazione Hadoop nel percorso di installazione di punti di accesso. In genere il percorso è:  
+1. Trovare le directory di configurazione di Hadoop nel percorso di installazione di APS. In genere il percorso è:  
 
    ```  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf  
@@ -60,11 +61,11 @@ Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessari
    |**#**|**File di configurazione**|**Chiave di configurazione**|**Azione**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Specificare il nome host KDC. Ad esempio: kerberos.area-di-autenticazione.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio:  AREA-DI-AUTENTICAZIONE.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: KERBEROS<br></br>**Nota sulla sicurezza:** è necessario scrivere KERBEROS in maiuscolo. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
+   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio: AREA-DI-AUTENTICAZIONE.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: KERBEROS<br></br>**Nota sulla sicurezza:** KERBEROS deve essere scritto in lettere maiuscole. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio:  10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: yarn/_HOST@YOUR-REALM.COM|  
 
 **core-site.xml**
@@ -113,8 +114,8 @@ Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessari
 
 4. Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
-## <a id="encryptionzone"></a> Programma di installazione di Hadoop crittografia zona
-Se si usa Hadoop zona crittografia modificare core-Site. XML e hdfs-Site. XML come indicato di seguito. Specificare l'indirizzo ip in cui il servizio KMS è in esecuzione con il numero di porta corrispondente. La porta predefinita per KMS in CDH è 16000.
+## <a id="encryptionzone"></a>Impostazione della zona di crittografia Hadoop
+Se si usa la zona di crittografia Hadoop, modificare Core-site. XML e HDFS-site. XML come segue. Fornire l'indirizzo IP in cui è in esecuzione il servizio KMS con il numero di porta corrispondente. La porta predefinita per il servizio di gestione delle chiavi in CDH è 16000.
 
 **core-site.xml**
 ```xml

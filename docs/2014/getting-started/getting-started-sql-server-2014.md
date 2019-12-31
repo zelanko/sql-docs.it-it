@@ -1,7 +1,7 @@
 ---
 title: Introduzione (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
@@ -10,12 +10,12 @@ ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772377"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683494"
 ---
 # <a name="getting-started-sql-server-2014"></a>Introduzione (SQL Server 2014)
   Sono disponibili fonti di informazioni, requisiti di sistema, istruzioni per l'installazione e altro ancora su [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
@@ -28,14 +28,14 @@ ms.locfileid: "62772377"
   
  [Guida introduttiva all'installazione di SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [Introduzione a documentazione del prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Introduzione alla documentazione del prodotto per SQL Server](../2014-toc/index.yml)  
   
- [Assistenza su &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
+ [Ottenere assistenza &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   
  [Compatibilità con le versioni precedenti](backward-compatibility.md)  
   
- [Informazioni sulle condizioni di licenza di SQL Server](about-the-sql-server-license-terms.md)  
+ [Informazioni sulle condizioni di licenza SQL Server](about-the-sql-server-license-terms.md)  
   
- [Informativa sulla privacy di Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
+ [Microsoft SQL Server informativa sulla privacy](microsoft-sql-server-privacy-statement.md)  
   
   

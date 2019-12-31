@@ -1,6 +1,6 @@
 ---
-title: Configurare SCOM per monitorare il sistema di piattaforma Analitica | Microsoft Docs
-description: Seguire questi passaggi per configurare il management pack di System Center Operations Manager (SCOM) per il sistema di piattaforma Analitica. I Management Pack sono necessari per monitorare il sistema di piattaforma Analitica da SCOM.
+title: Monitorare con SCOM
+description: Attenersi alla seguente procedura per configurare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma di analisi. I Management Pack sono necessari per monitorare il sistema di piattaforma di analisi da SCOM.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,110 +8,111 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ec495b3dd321f712aed54fb3b337efe85719be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961233"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401307"
 ---
-# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurare System Center Operations Manager (SCOM) per monitorare il sistema di piattaforma Analitica
-Seguire questi passaggi per configurare il Management Pack di System Center Operations Manager (SCOM) per il sistema di piattaforma Analitica. I Management Pack sono necessari per monitorare il sistema di piattaforma Analitica da SCOM.  
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurare System Center Operations Manager (SCOM) per monitorare il sistema della piattaforma di analisi
+Attenersi alla seguente procedura per configurare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma di analisi. I Management Pack sono necessari per monitorare il sistema di piattaforma di analisi da SCOM.  
   
 ## <a name="BeforeBegin"></a>Prima di iniziare  
 **Prerequisiti**  
   
 System Center Operations Manager 2007 R2 deve essere installato e in esecuzione.  
   
-I management pack deve essere installato e configurato. Visualizzare [installa i Management Pack SCOM &#40;sistema di piattaforma Analitica&#41; ](install-the-scom-management-packs.md) e [importare il Management Pack SCOM per PDW &#40;il sistema di piattaforma Analitica&#41;](import-the-scom-management-pack-for-pdw.md).  
+I Management Pack devono essere installati e configurati. Vedere [Install the SCOM management packs &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md) e [importare il Management Pack di SCOM per PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Configurare profilo runas in System Center  
-Per configurare System Center, è necessario eseguire la procedura seguente:  
+## <a name="ConfigureRunAsProfile"></a>Configurare il profilo RunAs in System Center  
+Per configurare System Center, è necessario eseguire le operazioni seguenti:  
   
--   Creare account RunAs per il **APS Watcher** utente di dominio e mapparlo al **Account Watcher piattaforma di strumenti analitici Microsoft.**  
+-   Creare un account RunAs per l'utente di dominio **APS Watcher** ed eseguirne il mapping all' **account Microsoft APS Watcher.**  
   
--   Creare account RunAs per il **monitoring_user** utente APS e mapparlo al **Account azione di piattaforma di strumenti analitici Microsoft**.  
+-   Creare un account RunAs per l'utente di **monitoring_user** APS ed eseguirne il mapping all' **account azione Microsoft APS**.  
   
-Di seguito sono istruzioni dettagliate su come eseguire le attività:  
+Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:  
   
-1.  Creare il **APS Watcher** account RunAs con **Windows** per tipo di account il **Watcher APS** utente di dominio.  
+1.  Creare l'account RunAs del controllo **APS** con il tipo di account di **Windows** per l'utente di dominio **APS Watcher** .  
   
-    1.  Passare al **Administration** pulsante destro del mouse sul riquadro **configurazione runas** -> **account** e selezionare **crea Account runas...**  
+    1.  Passare al riquadro **Amministrazione** , fare clic con il pulsante destro del mouse su -> **account** di **Configurazione RunAs**e selezionare **Crea account RunAs.**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  Il **Creazione guidata Account runas** della finestra verrà aperta. Nel **Introduction** pagina, fare clic su **successivo**.  
+    2.  Verrà visualizzata la finestra di dialogo Creazione **guidata account RunAs** . Nella pagina **Introduzione** fare clic su **Avanti**.  
   
-    3.  Nel **delle proprietà generali** pagina, selezionare **Windows** da **tipo Account runas** e specificare "APS Watcher" come il **nome visualizzato**.  
+    3.  Nella pagina delle **proprietà generale** selezionare **Windows** dal **tipo di account RunAs** e specificare "APS Watcher" come **nome visualizzato**.  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
-    4.  Nel **credenziali** pagina ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+    4.  Nella pagina **credenziali** , ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
-    5.  Nel **sicurezza della distribuzione** pagina, selezionare **meno sicuro** e fare clic sui **crea** per terminare.  
+    5.  Nella pagina **sicurezza distribuzione** selezionare **meno sicuro** e fare clic sul pulsante **Crea** per terminare.  
   
         ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  Se si decide di usare la **più sicuro** opzione, è necessario specificare manualmente i computer in cui le credenziali verranno distribuite. A tale scopo, dopo aver creato l'account RunAs, fare doppio clic su di esso e selezionare **proprietà**.  
+        1.  Se si decide di utilizzare l'opzione **più sicura** , è necessario specificare manualmente i computer a cui verranno distribuite le credenziali. A tale scopo, dopo aver creato l'account RunAs, fare clic con il pulsante destro del mouse su di esso e scegliere **Proprietà**.  
   
-        2.  Passare al **distribuzione** scheda e **Add** computer desiderato.  
+        2.  Passare alla scheda **distribuzione** e **aggiungere** i computer desiderati.  
   
             ![RunAsAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "RunAsAccountProperties")  
   
-2.  Impostare il **Account Watcher piattaforma di strumenti analitici Microsoft** profilo da utilizzare **Watcher APS** account RunAs.  
+2.  Impostare il profilo dell' **account Microsoft APS Watcher** per l'uso dell'account RunAs del controllo **APS** .  
   
-    1.  Passare a **Administration** -> **configurazione runas** -> **profili**.  
+    1.  Passare ad **Amministrazione** -> **Esegui come profili di configurazione** -> ****.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
-    2.  Fare clic con il pulsante destro sul **Account di Microsoft APS Watcher** dall'elenco e selezionare **proprietà**.  
+    2.  Fare clic con il pulsante destro del mouse sull' **account Microsoft APS Watcher** dall'elenco e scegliere **Proprietà**.  
   
         ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   
-    3.  Il **guidata profilo runas** della finestra verrà aperta. Ignora la **Introduction** , facendo clic su **successivo**.  
+    3.  Verrà visualizzata la finestra **di dialogo Creazione guidata profilo RunAs** . Fare clic su **Avanti**per ignorare la pagina **introduttiva** .  
   
-    4.  Nel **delle proprietà generali** pagina, fare clic su **successivo**.  
+    4.  Nella pagina **Proprietà generali** fare clic su **Avanti**.  
   
-    5.  Nel **account RunAs** pagina, fare clic su di **Aggiungi...**  e selezionare creato in precedenza **Watcher APS** account RunAs.  
+    5.  Nella pagina **account RunAs** fare clic sul pulsante **Aggiungi...** e selezionare l'account RunAs del controllo **APS** creato in precedenza.  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
-    6.  Fare clic su **salvare** per completare l'assegnazione del profilo.  
+    6.  Fare clic su **Salva** per completare l'assegnazione del profilo.  
   
-3.  Attendere fino al completamento dell'individuazione di Appliance APS.  
+3.  Attendere il completamento dell'individuazione degli appliance APS.  
   
-    1.  Passare al **Monitoring** riquadro e aprire il **Appliance di SQL Server** -> **sistema di piattaforma Analitica Microsoft**  ->   **Appliance** vista stato.  
+    1.  Passare al riquadro **monitoraggio** e aprire il **SQL Server Appliance** -> **piattaforma di strumenti analitici Microsoft** -> visualizzazione stato**Appliance** .  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
-    2.  Attendere che il dispositivo viene visualizzato nell'elenco. Il nome dell'appliance deve essere uguale a quello specificato nel Registro di sistema. Al termine dell'individuazione dovrebbe essere tutte le Appliance elencati, ma non monitorato. Per abilitare il monitoraggio, seguire i passaggi successivi.  
+    2.  Attendere che l'appliance venga visualizzata nell'elenco. Il nome dell'appliance deve essere uguale a uno specificato nel registro di sistema. Al termine dell'individuazione, verranno visualizzati tutti i dispositivi elencati ma non monitorati. Per abilitare il monitoraggio, attenersi alla procedura successiva.  
   
     > [!NOTE]  
-    > Mentre si è in attesa per l'individuazione iniziale appliance alla fine, è possono eseguire i passaggi successivi in parallelo.  
+    > I passaggi successivi possono essere completati in parallelo mentre si è in attesa del completamento dell'individuazione dell'appliance iniziale.  
   
-4.  Creare un altro nuovo account RunAs per eseguire query dei punti di accesso per il recupero dei dati di integrità.  
+4.  Creare un altro nuovo account RunAs per eseguire query su APS per il recupero dei dati di integrità.  
   
-    1.  Iniziare a creare un nuovo account RunAs, come descritto nel passaggio 1.  
+    1.  Iniziare a creare un nuovo account RunAs come descritto nel passaggio 1.  
   
-    2.  Nel **delle proprietà generali** pagina, selezionare **l'autenticazione di base** tipo di account.  
+    2.  Nella pagina delle **proprietà generale** selezionare tipo di account **autenticazione di base** .  
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  Nel **credenziali** pagina, fornire credenziali valide per accedere allo stato di integrità APS viste a gestione dinamica.  
+    3.  Nella pagina **credenziali** specificare credenziali valide per accedere allo stato di integrità di APS DMV.  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
-5.  Configurare il **Account di azione di piattaforma di strumenti analitici Microsoft** profilo da utilizzare per l'account RunAs appena creato per l'istanza di punti di accesso.  
+5.  Configurare il profilo dell' **account azione APS Microsoft** per usare l'account RunAs appena creato per l'istanza di APS.  
   
-    1.  Passare al **Account di azione di piattaforma di strumenti analitici Microsoft** proprietà come descritto nel passaggio 2.  
+    1.  Passare alle proprietà dell' **account azione di Microsoft APS** come descritto nel passaggio 2.  
   
-    2.  Nel **account RunAs** pagina, fare clic su **Aggiungi...**  e 
+    2.  Nella pagina **account RunAs** fare clic su **Aggiungi...** e 
     3.  Selezionare l'account RunAs appena creato.  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>Passaggio successivo  
-Ora che è stato configurato il Management Pack, si è pronti per avviare il monitoraggio dell'appliance. Per altre informazioni, vedere [monitorare l'Appliance tramite System Center Operations Manager &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+## <a name="next-step"></a>passaggio successivo  
+Ora che sono stati configurati i Management Pack, si è pronti per avviare il monitoraggio dell'appliance. Per altre informazioni, vedere [monitorare l'appliance usando System Center Operations Manager&#41;di sistema della piattaforma &#40;Analytics ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -1,6 +1,6 @@
 ---
-title: Le autorizzazioni in Parallel Data Warehouse | Microsoft Docs
-description: Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per Parallel Data Warehouse.
+title: Autorizzazioni
+description: Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per data warehouse parallele.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,127 +8,128 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2284c6b39693363de262e4ea307b0de45a0b6f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960390"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400876"
 ---
-# <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in Parallel Data Warehouse
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in parallelo data warehouse
 Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.  
   
-## <a name="BackupRestoreBasics"></a>Nozioni di base dell'autorizzazione di database del motore  
-Autorizzazioni del motore di database in SQL Server PDW sono gestite a livello di server tramite gli account di accesso e a livello di database tramite gli utenti del database e i ruoli di database definiti dall'utente.  
+## <a name="BackupRestoreBasics"></a>Nozioni di base sulle autorizzazioni motore di database  
+Motore di database autorizzazioni per SQL Server PDW vengono gestite a livello di server tramite gli account di accesso e a livello di database tramite gli utenti del database e i ruoli del database definiti dall'utente.  
   
-**Account di accesso**  
-Gli account di accesso sono account utente singoli per l'accesso a SQL Server PDW. SQL Server PDW supporta gli account di accesso usando l'autenticazione di SQL Server e l'autenticazione di Windows.  Accesso con autenticazione di Windows può essere utenti di Windows o i gruppi di Windows di qualsiasi dominio che è considerato attendibile da SQL Server PDW. Gli account di accesso di autenticazione di SQL Server sono definiti e autenticati da SQL Server PDW e devono essere create specificando una password.  
+**Account**  
+Gli account di accesso sono account utente singoli per accedere al SQL Server PDW. SQL Server PDW supporta gli account di accesso che utilizzano l'autenticazione di Windows e l'autenticazione SQL Server.  Gli account di accesso con autenticazione di Windows possono essere utenti di Windows o gruppi di Windows di qualsiasi dominio ritenuto attendibile da SQL Server PDW. Gli account di accesso con autenticazione SQL Server vengono definiti e autenticati da SQL Server PDW e devono essere creati specificando una password.  
   
-I membri del **sysadmin** ruolo predefinito del server (ad esempio il **sa** account di accesso) può connettersi a un database senza che sia in corso il mapping a un utente del database. Queste vengono mappate al **dbo** utente. Il proprietario del database è mappato anche come il **dbo** utente.  
+I membri del ruolo predefinito del server **sysadmin** , ad esempio l'account di accesso **sa** , possono connettersi a un database senza che sia stato eseguito il mapping a un utente del database. Viene eseguito il mapping all'utente **dbo** . Anche il proprietario del database viene mappato come utente **dbo** .  
   
 **Ruoli del server**  
-Esistono quattro ruoli di server speciale con un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di server. Il **sysadmin**, **MediumRC**, **LargeRC**, e **XLargeRCfixed** ruoli del server sono i ruoli del server solo attualmente implementati in SQL Server PDW. Il **sa** account di accesso è l'unico membro del **sysadmin** ruolo predefinito del server e altri account di accesso non è possibile aggiungere per il **sysadmin** ruolo. Gli account di accesso possono essere concesse le **CONTROL SERVER** autorizzazione, che è simile, ma non identiche, per il **sysadmin** ruolo predefinito del server. Uso [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) per aggiungere membri ai ruoli del server. SQL Server PDW non supporta i ruoli server definiti dall'utente.  
+Sono disponibili quattro ruoli server speciali con un set di ruoli preconfigurati che forniscono un gruppo di autorizzazioni a livello di server appropriato. I ruoli del server **sysadmin**, **MediumRC**, **LargeRC**e **XLargeRCfixed** sono gli unici ruoli server attualmente implementati in SQL Server PDW. L'account di accesso **sa** è l'unico membro del ruolo predefinito del server **sysadmin** e non è possibile aggiungere altri account di accesso al ruolo **sysadmin** . Agli account di accesso è possibile concedere l'autorizzazione **Control Server** , che è simile, ma non identica, al ruolo predefinito del server **sysadmin** . Utilizzare [ALTER Server Role](../t-sql/statements/alter-server-role-transact-sql.md) per aggiungere membri agli altri ruoli del server. SQL Server PDW non supporta i ruoli del server definiti dall'utente.  
   
 **Utenti del database**  
-Gli account di accesso viene concesso l'accesso a un database tramite la creazione di un utente del database in un database e il mapping di tale utente del database a un account di accesso. In genere, il nome utente di database è identico al nome dell'account di accesso, anche se non è necessario. Ogni utente di database esegue il mapping a un singolo account di accesso. Il mapping di un account di accesso può essere eseguito a un solo utente in un database, ma può essere eseguito come utente di database in diversi database.  
+Agli account di accesso viene concesso l'accesso a un database mediante la creazione di un utente di database in un database e il mapping dell'utente del database a un account di accesso. In genere, il nome utente di database è identico al nome dell'account di accesso, anche se non è necessario. Ogni utente di database esegue il mapping a un singolo account di accesso. Il mapping di un account di accesso può essere eseguito a un solo utente in un database, ma può essere eseguito come utente di database in diversi database.  
   
-**Ruoli predefiniti del Database**  
-Ruoli predefiniti del database sono un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di database. Gli utenti del database e i ruoli del database definito dall'utente possono essere aggiunti ai ruoli predefiniti del database usando il [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) procedure. Per altre informazioni sui ruoli predefiniti del database, vedere [ruoli di Database predefiniti](#fixed-database-roles).  
+**Ruoli predefiniti del database**  
+I ruoli predefiniti del database sono un set di ruoli preconfigurati che forniscono un comodo gruppo di autorizzazioni a livello di database. Gli utenti del database e i ruoli del database definiti dall'utente possono essere aggiunti ai ruoli predefiniti del database utilizzando la procedura [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) . Per ulteriori informazioni sui ruoli predefiniti del database, vedere ruoli predefiniti del [database](#fixed-database-roles).  
   
-**Ruoli predefiniti del Database definito dall'utente**  
-Gli utenti con il **CREATE ROLE** autorizzazione possa creare nuovi ruoli del database definito dall'utente per rappresentare i gruppi di utenti con autorizzazioni comuni. In genere, le autorizzazioni vengono concesse o negate per l'intero ruolo, semplificando la gestione e il monitoraggio delle autorizzazioni.  
+**Ruoli del database definiti dall'utente**  
+Gli utenti con l'autorizzazione **Crea ruolo** possono creare nuovi ruoli del database definiti dall'utente per rappresentare gruppi di utenti con autorizzazioni comuni. In genere, le autorizzazioni vengono concesse o negate per l'intero ruolo, semplificando la gestione e il monitoraggio delle autorizzazioni.  
   
-Le autorizzazioni vengono concesse alle entità di sicurezza (account di accesso, utenti e ruoli) usando il **Concedi** istruzione. Le autorizzazioni vengono negate in modo esplicito tramite il **DENY** comando. Un oggetto precedentemente concessa o negata l'autorizzazione viene rimosso usando il **revocare** istruzione. Le autorizzazioni sono cumulative, con l'utente che riceve tutte le autorizzazioni concesse all'utente, all'account di accesso e a qualsiasi appartenenza a un gruppo. Tuttavia, la negazione di un'autorizzazione prevale su tutte le concessioni. <!-- MISSING LINKS (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  -->  
+Le autorizzazioni vengono concesse alle entità di sicurezza (account di accesso, utenti e ruoli) utilizzando l'istruzione **Grant** . Le autorizzazioni vengono negate in modo esplicito tramite il comando **Deny** . Un'autorizzazione precedentemente concessa o negata viene rimossa utilizzando l'istruzione **Revoke** . Le autorizzazioni sono cumulative, con l'utente che riceve tutte le autorizzazioni concesse all'utente, all'account di accesso e a qualsiasi appartenenza a un gruppo. Tuttavia, la negazione di un'autorizzazione prevale su tutte le concessioni. <!-- MISSING LINKS (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  -->  
   
 L'esempio seguente rappresenta un metodo comune e consigliato di configurazione delle autorizzazioni.  
   
-1.  Se si usa l'autenticazione di Windows, creare un account di accesso per ogni utente di Windows o un gruppo di Windows che si connetterà a SQL Server PDW. Se si usa l'autenticazione di SQL Server, creare un account di accesso per ogni persona che si connetterà a SQL Server PDW.  
+1.  Se si usa l'autenticazione di Windows, creare un account di accesso per ogni utente di Windows o gruppo di Windows che si connetterà a SQL Server PDW. Se si usa l'autenticazione SQL Server, creare un account di accesso per ogni persona che si connetterà al SQL Server PDW.  
   
 2.  Creare un utente di database per ogni account di accesso in tutti i database necessari.  
   
-3.  Creare uno o più ruoli di database definiti dall'utente, ognuno dei quali rappresenta una funzione simile. ad esempio analista finanziario e analista vendite.  
+3.  Creare uno o più ruoli del database definiti dall'utente, ognuno dei quali rappresenta una funzione simile. ad esempio analista finanziario e analista vendite.  
   
-4.  Aggiungere gli utenti del database a uno o più ruoli di database definiti dall'utente.  
+4.  Aggiungere utenti di database a uno o più ruoli del database definiti dall'utente.  
   
 5.  Concedere le autorizzazioni ai ruoli del database definiti dall'utente.  
   
-Gli account di accesso sono oggetti a livello di server e possono essere elencati visualizzando [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Solo le autorizzazioni a livello di server possono essere concesse alle entità del server.  
+Gli account di accesso sono oggetti a livello di server e possono essere elencati visualizzando [sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Alle entità server è possibile concedere solo autorizzazioni a livello di server.  
   
-Gli utenti e ruoli del database sono oggetti a livello di database e possono essere elencati visualizzando [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Le autorizzazioni a livello di database possono essere concesso solo alle entità di database.  
+Gli utenti e i ruoli del database sono oggetti a livello di database e possono essere elencati visualizzando [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Alle entità di database è possibile concedere solo autorizzazioni a livello di database.  
   
 ## <a name="BackupTypes"></a>Autorizzazioni predefinite  
 L'elenco seguente descrive le autorizzazioni predefinite:  
   
--   Quando viene creato un account di accesso per le direttive using **CREATE LOGIN** istruzione, l'account di accesso riceve il **CONNECT SQL** autorizzazione che consente l'accesso per connettersi a SQL Server PDW.  
+-   Quando viene creato un account di accesso tramite l'istruzione **Create Login** , l'account di accesso riceve l'autorizzazione **Connect SQL** che consente all'account di accesso di connettersi al SQL Server PDW.  
   
--   Quando un utente del database viene creato usando il **CREATE USER** istruzione, l'utente riceve il **CONNECT ON DATABASE::** _< database_name >_ autorizzazione, che consente la account di accesso per connettersi al database come un utente.  
+-   Quando un utente del database viene creato utilizzando l'istruzione **Create User** , l'utente riceve l'autorizzazione **Connect on database::** _<database_name>_ , consentendo all'account di accesso di connettersi al database come utente.  
   
--   Tutte le entità, tra cui il ruolo PUBLIC, non avere alcuna autorizzazione esplicite o implicite per impostazione predefinita, poiché le autorizzazioni implicite vengono ereditate dalle autorizzazioni esplicite. Pertanto, quando non sono presente alcuna autorizzazione esplicitare, non può anche essere presente alcuna autorizzazione implicite.  
+-   Per impostazione predefinita, tutte le entità, incluso il ruolo PUBLIC, non dispongono di autorizzazioni esplicite o implicite perché le autorizzazioni implicite vengono ereditate dalle autorizzazioni esplicite. Pertanto, quando non è presente alcuna autorizzazione esplicita, non possono essere presenti autorizzazioni implicite.  
   
--   Quando un account di accesso diventa il proprietario di un oggetto o un database, l'account di accesso dispone di tutte le autorizzazioni per l'oggetto o il database. Le autorizzazioni di proprietà non sono visibili come autorizzazioni esplicite. Il **concessione**, **REVOKE**, e **DENY** istruzioni non hanno alcun effetto sulle autorizzazioni per la proprietà. La proprietà può essere modificata usando il [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md) istruzione.  
+-   Quando un account di accesso diventa il proprietario di un oggetto o di un database, l'account di accesso dispone sempre di tutte le autorizzazioni per l'oggetto o il database. Le autorizzazioni di proprietà non sono visibili come autorizzazioni esplicite. Le istruzioni **Grant**, **Revoke**e **Deny** non hanno effetto sulle autorizzazioni di proprietà. La proprietà può essere modificata tramite l'istruzione [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md) .  
   
--   L'account di accesso sa ha tutte le autorizzazioni nell'appliance. Simile alle autorizzazioni di proprietà e le autorizzazioni di amministratore di sistema non possono essere modificate e non sono visibili come autorizzazioni esplicite. Il **concessione**, **REVOKE**, e **DENY** istruzioni non hanno alcun effetto sulle autorizzazioni di amministratore di sistema.  
+-   L'account di accesso sa ha tutte le autorizzazioni nell'appliance. Analogamente alle autorizzazioni di proprietà, le autorizzazioni sa non possono essere modificate e non sono visibili come autorizzazioni esplicite. Le istruzioni **Grant**, **Revoke**e **Deny** non hanno effetto sulle autorizzazioni SA.  
   
--   Ruolo del server PUBLIC non riceve alcuna autorizzazione per impostazione predefinita e non eredita le autorizzazioni da altri ruoli del server. Ruolo del server PUBLIC possa essere concesse le autorizzazioni esplicite con le **concessione**, **REVOKE**, e **DENY** istruzioni.  
+-   Per impostazione predefinita, il ruolo server pubblico non riceve alcuna autorizzazione e non eredita le autorizzazioni da altri ruoli del server. Al ruolo server pubblico possono essere concesse autorizzazioni esplicite con le istruzioni **Grant**, **Revoke**e **Deny** .  
   
--   Le transazioni non richiedono le autorizzazioni. Tutte le entità possono eseguire la **BEGIN TRANSACTION**, **COMMIT**, e **ROLLBACK** i comandi della transazione. Tuttavia, un'entità deve disporre delle autorizzazioni appropriate per eseguire ogni istruzione all'interno della transazione.  
+-   Le transazioni non richiedono autorizzazioni. Tutte le entità possono eseguire i comandi **BEGIN TRANSACTION**, **commit**e **rollback** Transaction. Tuttavia, un'entità deve disporre delle autorizzazioni appropriate per eseguire ogni istruzione all'interno della transazione.  
   
--   L'istruzione **USE** non richiede autorizzazioni. Tutte le entità può essere eseguito il **utilizzare** istruzione in qualsiasi database, tuttavia per accedere a un database devono avere un'entità utente nel database o l'utente guest deve essere abilitato.  
+-   L'istruzione **USE** non richiede autorizzazioni. Tutte le entità possono eseguire l'istruzione **use** in qualsiasi database, tuttavia per accedere a un database è necessario che sia presente un'entità utente nel database o che l'utente Guest sia abilitato.  
   
-### <a name="the-public-role"></a>Il ruolo PUBLIC  
-Tutti i nuovi account di accesso appliance automaticamente appartenere al ruolo PUBLIC. Ruolo del server PUBLIC ha le caratteristiche seguenti:  
+### <a name="the-public-role"></a>Ruolo PUBLIC  
+Tutti i nuovi account di accesso di appliance appartengono automaticamente al ruolo PUBLIC. Il ruolo del server PUBLIC presenta le caratteristiche seguenti:  
   
--   Ruolo del server PUBLIC non dispone di autorizzazioni per impostazione predefinita.  
+-   Per impostazione predefinita, il ruolo del server PUBLIC non dispone di alcuna autorizzazione.  
   
--   Tutte le entità sono membri del ruolo del server PUBLIC e ruolo del server PUBLIC non è un membro di un altro ruolo del server.  
+-   Tutte le entità sono membri del ruolo del server PUBLIC e il ruolo del server PUBLIC non è un membro di un altro ruolo del server.  
   
--   Ruolo del server PUBLIC non può ereditare autorizzazioni implicite. Le autorizzazioni concesse al ruolo PUBLIC devono essere concessa esplicitamente.  
+-   Il ruolo del server PUBLIC non può ereditare le autorizzazioni implicite. È necessario concedere in modo esplicito tutte le autorizzazioni concesse al ruolo PUBLIC.  
   
-## <a name="BackupProc"></a>Determinare le autorizzazioni  
-Se un account di accesso è autorizzato a eseguire un'azione specifica dipende dalle autorizzazioni concesse o negate all'account di accesso, utenti e ruoli di che utente è membro. Le autorizzazioni a livello di server (ad esempio **CREATE LOGIN** e **VIEW SERVER STATE**) sono disponibili per le entità a livello di server (accessi). Le autorizzazioni a livello di database (ad esempio **selezionate** da una tabella o **EXECUTE** una stored procedure) sono disponibili per le entità a livello di database (utenti e ruoli del database).  
+## <a name="BackupProc"></a>Determinazione delle autorizzazioni  
+Il fatto che un account di accesso disponga o meno dell'autorizzazione per eseguire un'azione specifica dipende dalle autorizzazioni concesse o negate per l'accesso, l'utente e i ruoli di cui l'utente è membro. Le autorizzazioni a livello di server, ad esempio **Crea account di accesso** e **Visualizza stato del server**, sono disponibili per le entità a livello di server (account di accesso). Le autorizzazioni a livello di database, ad esempio la **selezione** di una tabella o l' **esecuzione** di una procedura, sono disponibili per le entità a livello di database (utenti e ruoli del database).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Autorizzazioni implicite ed esplicite  
-Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**. Sono elencate le autorizzazioni a livello di database nel [Sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) visualizzazione. Sono elencate le autorizzazioni a livello di server nel [Sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) visualizzazione.  
+Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**. Le autorizzazioni a livello di database sono elencate nella vista [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Le autorizzazioni a livello di server sono elencate nella vista [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .  
   
-Un' *autorizzazione implicita* è un **GRANT** oppure **DENY** autorizzazione che un'entità di sicurezza (ruolo del server o account di accesso) ha ereditato. Un'autorizzazione può essere ereditata nei modi seguenti.  
+Un' *autorizzazione implicita* è un'autorizzazione **Grant** o **Deny** che è stata ereditata da un'entità (account di accesso o ruolo del server). Un'autorizzazione può essere ereditata nei modi seguenti.  
   
--   Un'entità può ereditare un'autorizzazione da un ruolo se l'entità è un membro del ruolo, anche se l'entità non dispone di un'esplicita **concessione** oppure **DENY** l'autorizzazione.  
+-   Un'entità può ereditare un'autorizzazione da un ruolo se l'entità è un membro del ruolo anche se l'entità non dispone di un'autorizzazione esplicita **Grant** o **Deny** .  
   
--   Un'entità può ereditare un'autorizzazione su un oggetto subordinato, quale una tabella, se l'entità ha un'autorizzazione su uno degli ambiti padre oggetti (ad esempio, lo schema della tabella o l'autorizzazione per l'intero database).  
+-   Un'entità può ereditare un'autorizzazione per un oggetto subordinato, ad esempio una tabella, se l'entità dispone di un'autorizzazione per uno degli ambiti padre degli oggetti, ad esempio lo schema della tabella o l'autorizzazione per l'intero database.  
   
--   Un'entità può ereditare un'autorizzazione facendo in modo che un'autorizzazione che include un'autorizzazione subordinata. Ad esempio la **ALTER ANY USER** autorizzazione include entrambi gli le **CREATE USER** e il **ALTER ON USER::** _<name>_ autorizzazioni.  
+-   Un'entità può ereditare un'autorizzazione disponendo di un'autorizzazione che include un'autorizzazione subordinata. L'autorizzazione **ALTER ANY USER** , ad esempio, include sia **l'utente create** sia l' **istruzione ALTER on User::** _<name>_ Permissions.  
   
-### <a name="determining-permissions-when-performing-actions"></a>Determinare le autorizzazioni per eseguire le azioni  
-Il processo volto a determinare l'autorizzazione per assegnare a un'entità è complesso. La complessità si verifica durante la determinazione delle autorizzazioni implicite in quanto le entità possono essere membri di più ruoli e autorizzazioni possono essere passate attraverso più livelli nella gerarchia dei ruoli.  
+### <a name="determining-permissions-when-performing-actions"></a>Determinazione delle autorizzazioni durante l'esecuzione delle azioni  
+Il processo di determinazione dell'autorizzazione da assegnare a un'entità è complesso. La complessità si verifica quando si determinano le autorizzazioni implicite perché le entità possono essere membri di più ruoli e le autorizzazioni possono essere passate a più livelli nella gerarchia dei ruoli.  
   
-L'elenco seguente descrive le regole generali per determinare le autorizzazioni:  
+Nell'elenco seguente vengono descritte le regole generali per determinare le autorizzazioni:  
   
 -   La proprietà implica l'autorizzazione.  
   
-    Proprietario di un oggetto dispone di tutte le autorizzazioni sull'oggetto. Analogamente, un proprietario del database dispone di tutte le autorizzazioni per il database e tutte le autorizzazioni per gli oggetti nel database. Queste autorizzazioni non possono essere modificate.  
+    Il proprietario di un oggetto dispone di tutte le autorizzazioni per l'oggetto. Analogamente, un proprietario del database dispone di tutte le autorizzazioni per il database e tutte le autorizzazioni per gli oggetti nel database. Queste autorizzazioni non possono essere modificate.  
   
--   Le autorizzazioni possono essere ereditate attraverso più livelli nella gerarchia delle appartenenze a un ruolo server.  
+-   Le autorizzazioni possono essere ereditate in più livelli nella gerarchia delle appartenenze ai ruoli del server.  
   
-    Ad esempio, si supponga la situazione seguente:  
+    Si supponga, ad esempio, che si verifichi la situazione seguente:  
   
-    -   Account di accesso David è un membro del ruolo predefinito del database PerfAnalysts.  
+    -   Login David è un membro del ruolo del database PerfAnalysts.  
   
-    -   PerfAnalysts è un membro del ruolo predefinito del database ambiente di produzione.  
+    -   PerfAnalysts è un membro del ruolo di database Production.  
   
-    -   David e PerfAnalysts non hanno alcuna **seleziona** l'autorizzazione per la tabella Customer. L'autorizzazione è stata mai esplicitamente concesso o revocato.  
+    -   David e PerfAnalysts non dispongono dell'autorizzazione **Select** per la tabella Customer. L'autorizzazione è stata revocata o non è mai stata concessa in modo esplicito.  
   
-    -   Ambiente di produzione ha **seleziona** l'autorizzazione per la tabella Customer.  
+    -   Produzione dispone dell'autorizzazione **Select** per la tabella Customer.  
   
-    In questo caso, erediterà PerfAnalysts **concessione** erediterà l'autorizzazione per la tabella Customer dalla produzione e David **Concedi** autorizzazione per la tabella dei clienti dall'ambiente di produzione.  
+    In questo caso, PerfAnalysts erediterà l'autorizzazione **Grant** per la tabella Customer dalla produzione e David erediterà l'autorizzazione **Grant** per la tabella Customer dalla produzione.  
   
--   **DENY** esegue l'override **concessione** le autorizzazioni sono in conflitto.  
+-   **Nega** override **Concedi** quando le autorizzazioni sono in conflitto.  
   
-    Si supponga ad esempio account di accesso David non dispone delle autorizzazioni per la tabella Customer e sia un membro di due ruoli predefiniti del database-dbgroup1, che ha **DENY** autorizzazione per la tabella Customer e dbgroup2, che ha **Concedi** autorizzazione per la tabella Customer. In questo caso, David erediteranno le **DENY** l'autorizzazione per la tabella Customer. Questo è il caso se i ruoli ottenuto le autorizzazioni in modo esplicito o implicito.  
+    Si supponga, ad esempio, che login David non disponga delle autorizzazioni per la tabella Customer ed è membro di due ruoli del database: dbgroup1, che dispone dell'autorizzazione **Deny** per la tabella Customer e dbgroup2, che dispone dell'autorizzazione **Grant** per la tabella Customer. In questo caso Davide erediterà l'autorizzazione **Deny** per la tabella Customer. Questo è il caso se i ruoli hanno acquisito le autorizzazioni in modo esplicito o implicito.  
   
-### <a name="auditing-permissions"></a>Il controllo delle autorizzazioni  
-Per identificare le autorizzazioni di un utente, verificare quanto segue.  
+### <a name="auditing-permissions"></a>Controllo delle autorizzazioni  
+Per ricercare le autorizzazioni di un utente, controllare quanto segue.  
   
--   Eseguire la query seguente per determinare quali account di accesso sono gli amministratori di sistema.  
+-   Eseguire la query seguente per determinare gli account di accesso che sono amministratori di sistema.  
   
     ```sql  
     SELECT SPLogins.name, 'is a member of ', SPRoles.name   
@@ -139,7 +140,7 @@ Per identificare le autorizzazioni di un utente, verificare quanto segue.
         ON SRM.member_principal_id = SPLogins.principal_id;  
     ```  
   
--   Eseguire la query seguente per determinare quali account sono state concesse autorizzazioni esplicite.  
+-   Eseguire la query seguente per determinare gli account di accesso a cui sono state concesse autorizzazioni esplicite.  
   
     ```sql  
     SELECT name, 'has the ', state_desc , permission_name, ' permission'  
@@ -148,7 +149,7 @@ Per identificare le autorizzazioni di un utente, verificare quanto segue.
         ON SP.grantee_principal_id = SPRoles.principal_id;  
     ```  
   
--   Eseguire la query seguente in un database utente per determinare gli utenti di database che sono membri di un ruolo del database.  
+-   Eseguire la query seguente in un database utente per determinare gli utenti del database che sono membri di un ruolo del database.  
   
     ```sql  
     SELECT DPUsers.name, 'is a member of ', DPRoles.name    
@@ -159,7 +160,7 @@ Per identificare le autorizzazioni di un utente, verificare quanto segue.
         ON DRM.member_principal_id = DPUsers.principal_id;  
     ```  
   
--   Eseguire la query seguente in un database utente per determinare quali utenti e ruoli concessi o negati autorizzazioni specifiche. Dovrai le visualizzazioni di query aggiuntive, ad esempio Sys. Objects e Sys. Schemas per identificare gli elementi descritti, con la major_id.  
+-   Eseguire la query seguente in un database utente per determinare a quali utenti e ruoli del database sono state concesse o negate autorizzazioni specifiche. Sarà necessario eseguire una query su viste aggiuntive, ad esempio sys. Objects e sys. schemas, per identificare gli elementi descritti con la major_id.  
   
     ```sql  
     SELECT DPUsers.name, 'has the ', permission_name,   
@@ -169,20 +170,20 @@ Per identificare le autorizzazioni di un utente, verificare quanto segue.
         ON DP.grantee_principal_id = DPUsers.principal_id;  
     ```  
   
-## <a name="RestoreProc"></a>Procedure consigliate per le autorizzazioni di database  
+## <a name="RestoreProc"></a>Procedure consigliate per le autorizzazioni del database  
   
--   Concedere le autorizzazioni di livello più granulare risulta più comodo. Concedono autorizzazioni nella tabella o le autorizzazioni a livello di visualizzazione può diventare difficile da gestire. Ma potrebbe essere troppo permissive concedono autorizzazioni a livello di database. Se il database è progettato con gli schemi per definire i limiti di lavoro, ad esempio la concessione di un'autorizzazione per lo schema è un compromesso tra il livello di tabella e il livello di database appropriato.  
+-   Concedere le autorizzazioni a un livello più granulare pratico. La concessione delle autorizzazioni a livello di tabella o di visualizzazione potrebbe diventare non gestibile. Tuttavia, la concessione di autorizzazioni a livello di database potrebbe essere troppo permissiva. Se il database è progettato con schemi per definire i limiti di lavoro, è possibile che l'autorizzazione concessa allo schema sia un compromesso appropriato tra il livello di tabella e il livello del database.  
   
--   Concedere autorizzazioni ai ruoli anziché agli utenti o account di accesso. La gestione dei diritti usando ruoli anziché agli utenti semplifica rapidamente concedere o revocare un set di autorizzazioni per un utente o un account di accesso per lo spostamento da e verso il ruolo. Quando una funzione passa da una persona a altra, a livello di ruolo durante le modifiche di appartenenza al ruolo le autorizzazioni possono rimangono invariate.  
+-   Concedere autorizzazioni ai ruoli, anziché a utenti o account di accesso. La gestione dei diritti tramite ruoli anziché utenti semplifica la concessione o la revoca rapida di un set di autorizzazioni per un utente o un account di accesso, spostando tali autorizzazioni all'interno o all'esterno del ruolo. Quando una funzione passa da una persona all'altra, le autorizzazioni possono rimanere intatte a livello di ruolo mentre l'appartenenza al ruolo viene modificata.  
   
--   Concedere autorizzazioni ai ruoli in base a mansione e su ruoli dei gruppi di livello superiore che consentono di combinare i ruoli di funzione di processo basati sul gruppo di società eseguendo le azioni.  
+-   Concedere le autorizzazioni ai ruoli in base alla funzione job e ai ruoli del gruppo di livello superiore che combinano i ruoli della funzione job in base al gruppo aziendale che esegue le azioni.  
   
--   Ogni utente finale deve avere un account di accesso univoco. Non consentono agli utenti di condividere gli account di accesso. Fornire un account di accesso per ogni utente garantisce un audit trail e semplifica la gestione delle autorizzazioni.  
+-   Ogni utente finale deve avere un account di accesso univoco. Non consentire agli utenti di condividere gli account di accesso. La fornitura di un account di accesso per ogni utente garantisce una audit trail e semplifica la gestione delle autorizzazioni.  
   
 ## <a name="fixed-database-roles"></a>Ruoli predefiniti del database
-SQL Server fornisce ruoli a livello di database (predefiniti) preconfigurati che consentono di gestire le autorizzazioni su un server. I ruoli configurati in precedenza vengono corretti in quanto non è possibile modificare le autorizzazioni assegnate. Inoltre è possibile creare ruoli del database definito dall'utente. È possibile modificare le autorizzazioni assegnate ai ruoli predefiniti del database definito dall'utente.  
+SQL Server fornisce ruoli a livello di database preconfigurati (fissi) per semplificare la gestione delle autorizzazioni in un server. I ruoli preconfigurati sono corretti in quanto non è possibile modificare le autorizzazioni assegnate. È anche possibile creare ruoli del database definiti dall'utente. È possibile modificare le autorizzazioni assegnate ai ruoli del database definiti dall'utente.  
   
-I ruoli sono entità di sicurezza che raggruppano altre entità. Ruoli predefiniti del database sono a livello di database nel proprio ambito di autorizzazioni. Gli utenti del database e altri ruoli del database possono essere aggiunti come membri dei ruoli predefiniti del database. Non è possibile aggiungere i ruoli predefiniti del database tra loro. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
+I ruoli sono entità di sicurezza che raggruppano altre entità. I ruoli del database sono a livello di database nell'ambito delle autorizzazioni. Gli utenti del database e altri ruoli del database possono essere aggiunti come membri dei ruoli del database. I ruoli predefiniti del database non possono essere aggiunti tra loro. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
   
 Sono presenti 9 ruoli predefiniti del database.  
   
@@ -204,21 +205,21 @@ Sono presenti 9 ruoli predefiniti del database.
   
 -   **db_denydatareader**  
   
-### <a name="permissions-of-the-fixed-database-roles"></a>Autorizzazioni dei ruoli predefiniti del Database  
-Il sistema dei ruoli predefiniti del server e ruoli predefiniti del database è un sistema legacy ha avuto origine in anni ' 80. Ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti alcuni utenti e alle esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema più dettagliato della concessione di autorizzazione. Questo nuovo sistema è più granulare, che fornisce molte più opzioni per la concessione e la negazione di autorizzazioni. La complessità aggiuntiva del sistema più granulare rende più difficile per ulteriori informazioni, ma la maggior parte dei sistemi aziendali devono concedere le autorizzazioni anziché utilizzare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->Il grafico seguente mostra le autorizzazioni associate a ogni ruolo predefinito del database. Tutte le autorizzazioni in questa immagine di SQL Server non sono disponibili (o necessario) in punti di accesso.  
+### <a name="permissions-of-the-fixed-database-roles"></a>Autorizzazioni dei ruoli predefiniti del database  
+Il sistema dei ruoli predefiniti del server e dei ruoli predefiniti del database è un sistema legacy originato nel 1980. I ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti pochi utenti e le esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema più dettagliato di concessione dell'autorizzazione. Questo nuovo sistema è più granulare e offre molte più opzioni per la concessione e la negazione delle autorizzazioni. La complessità aggiuntiva del sistema più granulare rende più difficile l'apprendimento, ma la maggior parte dei sistemi aziendali dovrebbe concedere le autorizzazioni invece di usare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->Nel grafico seguente vengono illustrate le autorizzazioni associate a ogni ruolo predefinito del database. Tutte le autorizzazioni in questa SQL Server grafica non sono disponibili (o necessarie) in APS.  
   
 ![Ruoli predefiniti del database per la sicurezza APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
-### <a name="related-content"></a>Contenuto correlato  
+### <a name="related-content"></a>Contenuti correlati  
   
--   Per creare i ruoli definiti dall'utente, vedere [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md).  
+-   Per creare ruoli definiti dall'utente, vedere [creare un ruolo](../t-sql/statements/create-role-transact-sql.md).  
   
   
 ## <a name="fixed-server-roles"></a>Ruoli predefiniti del server
-Ruoli predefiniti del server vengono creati automaticamente da SQL Server. SQL Server PDW è un'implementazione limitata di ruoli predefiniti del server di SQL Server. Solo le **sysadmin** e **pubblico** includere account di accesso utente come membri. Il **setupadmin** e **dbcreator** vengono utilizzati internamente da SQL Server PDW. Membri aggiuntivi non possono essere aggiunto o rimosso da alcun ruolo.  
+I ruoli predefiniti del server vengono creati automaticamente da SQL Server. SQL Server PDW dispone di un'implementazione limitata di SQL Server ruoli predefiniti del server. Solo i membri del **ruolo sysadmin** e **public** dispongono di account di accesso utente. I ruoli **setupadmin** e **dbcreator** vengono usati internamente da SQL Server PDW. Non è possibile aggiungere o rimuovere membri aggiuntivi da alcun ruolo.  
   
-### <a name="sysadmin-fixed-server-role"></a>sysadmin ruolo Server predefinito  
-I membri del ruolo predefinito del server **sysadmin** possono eseguire qualsiasi attività nel server. Il **sa** account di accesso è l'unico membro delle **sysadmin** ruolo predefinito del server. Non è possibile aggiungere altri account di accesso per il **sysadmin** ruolo predefinito del server. La concessione dell'autorizzazione **CONTROL SERVER** è simile all'appartenenza al ruolo predefinito del server **sysadmin**. Nell'esempio seguente viene concessa di **CONTROL SERVER** dell'autorizzazione per un account di accesso denominato Fay.  
+### <a name="sysadmin-fixed-server-role"></a>Ruolo predefinito del server sysadmin  
+I membri del ruolo predefinito del server **sysadmin** possono eseguire qualsiasi attività nel server. L'account di accesso **sa** è l'unico membro del ruolo predefinito del server **sysadmin** . Non è possibile aggiungere altri account di accesso al ruolo predefinito del server **sysadmin** . La concessione dell'autorizzazione **CONTROL SERVER** è simile all'appartenenza al ruolo predefinito del server **sysadmin**. Nell'esempio seguente viene concessa l'autorizzazione **Control Server** a un account di accesso denominato Fay.  
   
 ```sql  
 USE master;  
@@ -227,20 +228,20 @@ GRANT CONTROL SERVER TO Fay;
 ```  
   
 > [!IMPORTANT]  
-> Il **CONTROL SERVER** autorizzazione fornisce il controllo quasi completo di SQL Server PDW. Quando possibile, specificare invece autorizzazioni più granulari agli account di accesso. Ad esempio, provare a concedere il **VIEW SERVER STATE**, **ALTER ANY LOGIN**, **VIEW ANY DATABASE**, oppure **CREATE ANY DATABASE** autorizzazioni.  
+> L'autorizzazione **Control Server** fornisce un controllo quasi completo dei SQL Server PDW. Laddove possibile, fornire autorizzazioni più granulari per gli account di accesso. Si consideri, ad esempio, la concessione delle autorizzazioni **View Server state**, **ALTER ANY LOGIN**, **View any database**o **create any database** .  
   
-### <a name="public-server-role"></a>Ruolo Server Public  
-Ogni account di accesso che possono connettersi a SQL Server PDW è un membro del **pubblica** ruolo del server. Tutti gli accessi ereditano le autorizzazioni concesse al **pubblica** su qualsiasi oggetto. Assegnare solo **pubblica** le autorizzazioni per un oggetto quando si desidera che l'oggetto sia disponibile per tutti gli utenti. Non è possibile modificare l'appartenenza di **pubblica** ruolo.  
+### <a name="public-server-role"></a>Ruolo server public  
+Ogni account di accesso che può connettersi a SQL Server PDW è un membro del ruolo del server **public** . Tutti gli account di accesso ereditano le autorizzazioni concesse a **public** su qualsiasi oggetto. Assegnare autorizzazioni **pubbliche** a un oggetto solo quando si desidera che l'oggetto sia disponibile per tutti gli utenti. Non è possibile modificare l'appartenenza al ruolo **public** .  
   
 > [!NOTE]  
-> **Pubblica** viene implementato in modo diverso rispetto agli altri ruoli. Poiché tutte le entità server sono membri di pubblico, l'appartenenza del **pubbliche** ruolo non è elencato nel **Sys. server_role_members** DMV.  
+> **public** viene implementato in modo diverso rispetto agli altri ruoli. Poiché tutte le entità server sono membri di Public, l'appartenenza al ruolo **public** non viene elencata nella DMV **sys. server_role_members** .  
   
-### <a name="fixed-server-roles-vs-granting-permissions"></a>Visual Studio i ruoli del Server predefinito. Concessione di autorizzazioni  
-Il sistema dei ruoli predefiniti del server e ruoli predefiniti del database è un sistema legacy ha avuto origine in anni ' 80. Ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti alcuni utenti e alle esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema più dettagliato della concessione di autorizzazione. Questo nuovo sistema è più granulare, che fornisce molte più opzioni per la concessione e la negazione di autorizzazioni. La complessità aggiuntiva del sistema più granulare rende più difficile per ulteriori informazioni, ma la maggior parte dei sistemi aziendali devono concedere le autorizzazioni anziché utilizzare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->  
+### <a name="fixed-server-roles-vs-granting-permissions"></a>Ruoli predefiniti del server rispetto alla concessione di autorizzazioni  
+Il sistema dei ruoli predefiniti del server e dei ruoli predefiniti del database è un sistema legacy originato nel 1980. I ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti pochi utenti e le esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema più dettagliato di concessione dell'autorizzazione. Questo nuovo sistema è più granulare e offre molte più opzioni per la concessione e la negazione delle autorizzazioni. La complessità aggiuntiva del sistema più granulare rende più difficile l'apprendimento, ma la maggior parte dei sistemi aziendali dovrebbe concedere le autorizzazioni invece di usare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-- [Concedere autorizzazioni](grant-permissions.md)
+- [Concedi autorizzazioni](grant-permissions.md)
 
 <!-- MISSING LINKS
 ## See Also  

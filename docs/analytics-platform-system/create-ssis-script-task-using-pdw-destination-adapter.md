@@ -1,5 +1,5 @@
 ---
-title: Creare un'attività script con l'adattatore di destinazione PDW SSIS | Microsoft Docs
+title: Creare un'attività script con l'adattatore di destinazione di SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961062"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401225"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Creare un'attività script che utilizza l'adattatore di destinazione di SSIS Parallel Data Warehouse
-Questo codice di script del pacchetto SSIS è un esempio di codice per usare l'adattatore di destinazione PDW SSIS.  L'attività Script di Integration Services consente di eseguire praticamente qualsiasi operazione che può essere eseguita in un'applicazione .net all'interno del contesto di un flusso di controllo SSIS. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Creazione di un'attività script che utilizza l'adapter di destinazione data warehouse parallelo SSIS
+Questo codice script del pacchetto SSIS è un esempio di codice per l'uso dell'adapter di destinazione di SSIS PDW.  L'attività script di Integration Services consente di eseguire praticamente qualsiasi operazione che può essere eseguita in un'applicazione .NET all'interno del contesto di un flusso di controllo SSIS. 
   
 ## <a name="sample-code"></a>Codice di esempio  
   
-1.  Creare un'attività Script vuoto in SSIS.  
+1.  Creare un'attività script vuota in SSIS.  
   
-2.  Aprire l'attività nel **Editor attività Script**, fare clic su **modifica Script**.  
+2.  Aprire l'attività in **Editor attività script**, quindi fare clic su **Modifica script**.  
   
-3.  Modificare lo script per usare il codice riportato di seguito. Personalizzare lo script nell'ambiente apportando le modifiche seguenti:  
+3.  Modificare lo script in modo da usare il codice riportato di seguito. Personalizzare lo script nell'ambiente apportando le modifiche seguenti:  
   
-    -   È necessario conservare lo spazio dei nomi dello script creati dall'attività script. Prendere nota del nome dello spazio dei nomi `namespace ST_<GUID>` e modificare lo script seguente, modificando *ST_<GUID>*  originale *GUID* dell'attività script.  
+    -   È necessario mantenere lo spazio dei nomi dello script creato dall'attività script. Annotare il nome dello `namespace ST_<GUID>` spazio dei nomi e modificare lo script seguente, modificando *ST_<GUID> * al *GUID* originale dell'attività script.  
   
-    -   Sostituire le quattro occorrenze del valore del segnaposto *XXXXXXXX* con i valori appropriati per l'azione di ambiente e sono destinate.  
+    -   Sostituire quattro occorrenze del valore del segnaposto *xxxxxxxx* con i valori appropriati per l'ambiente e l'azione desiderata.  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -264,7 +265,7 @@ Questo codice di script del pacchetto SSIS è un esempio di codice per usare l'a
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Caricare dati con Integration Services](load-with-ssis.md)  
+[Caricare i dati con Integration Services](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

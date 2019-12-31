@@ -1,6 +1,6 @@
 ---
-title: Statistiche automatiche (sistema di piattaforma Analitica)
-description: Vengono descritte funzionalità statistiche automatico introdotta in AU7 sistema di piattaforma Analitica.
+title: Statistiche automatiche
+description: Descrive la funzionalità di statistiche automatiche introdotta nel sistema di piattaforma di analisi AU7.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,43 +8,44 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961275"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401278"
 ---
-# <a name="configure-auto-statistics"></a>Configurare automaticamente le statistiche
+# <a name="configure-auto-statistics"></a>Configurare le statistiche automatiche
 
-Informazioni su come configurare Parallel Data Warehouse per l'uso automatico statistiche per creare e aggiornare automaticamente le statistiche.  Usare questa funzionalità per migliorare i piani di query e pertanto migliorare le prestazioni delle query.
+Informazioni su come configurare la data warehouse parallela per l'utilizzo delle statistiche automatiche per la creazione e l'aggiornamento automatico delle statistiche.  Usare questa funzionalità per migliorare i piani di query e migliorare quindi le prestazioni di esecuzione delle query.
 
-**Si applica a:** AP (a partire da 2016 AU7)
+**Si applica a:** APS (a partire da 2016-AU7)
 
-## <a name="what-are-statistics"></a>Quali sono le statistiche?
-Le statistiche di ottimizzazione delle query sono oggetti che contengono informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella. Query optimizer Usa queste statistiche per stimare la cardinalità o numero di righe, nella query. Queste stime della cardinalità consentono a query optimizer creare un piano di query di alta qualità. Ad esempio, in punti di accesso, la MPP query optimizer Usa le stime della cardinalità per scegliere di riprodurre in modo casuale o replicare il meno elevato tra due tabelle utilizzate in una clausola join e in questo modo le prestazioni delle query.  Per altre informazioni, vedere [statistiche](../relational-databases/statistics/statistics.md) e [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+## <a name="what-are-statistics"></a>Informazioni sulle statistiche
+Le statistiche per l'ottimizzazione delle query sono oggetti contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella. In Query Optimizer queste statistiche vengono utilizzate per effettuare la stima della cardinalità o del numero di righe nel risultato della query. Queste stime della cardinalità consentono a Query Optimizer di creare un piano di query di alta qualità. Ad esempio, in APS, il Query Optimizer MPP utilizza le stime della cardinalità per scegliere di eseguire il shuffle o replicare il più piccolo di due tabelle utilizzate in una clausola join e di migliorare le prestazioni di esecuzione delle query.  Per ulteriori informazioni, vedere [statistiche](../relational-databases/statistics/statistics.md) e [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
-## <a name="what-are-auto-statistics"></a>Quali sono le statistiche automatico?
-Statistiche automatiche sono statistiche che query optimizer vengono create e aggiornate automaticamente per migliorare il piano di query. Le statistiche possono diventare non aggiornate dopo il caricamento, lo inserisce, aggiornano e le operazioni di eliminazione. Senza statistiche automatico, è necessario eseguire la propria analisi per comprendere le colonne necessarie statistiche e quando le statistiche dovranno essere aggiornati.
+## <a name="what-are-auto-statistics"></a>Che cosa sono le statistiche automatiche?
+Le statistiche automatiche sono statistiche che la Query Optimizer crea e aggiorna automaticamente per migliorare il piano di query. Le statistiche possono diventare obsolete dopo le operazioni di caricamento, inserimento, aggiornamento ed eliminazione. Senza statistiche automatiche, è necessario eseguire un'analisi personalizzata per comprendere quali colonne necessitano di statistiche e quando le statistiche devono essere aggiornate.
 
-Statistiche automatico includono le tre impostazioni seguenti: 
+Le statistiche automatiche includono le tre impostazioni seguenti: 
 
-### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
+### <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS
 Quando l'opzione per la creazione automatica delle statistiche, AUTO_CREATE_STATISTICS, è impostata su ON, Query Optimizer crea le statistiche necessarie per colonne singole nel predicato di query, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non dispongono di un istogramma in un oggetto statistiche esistente.
 
-### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
+### <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS 
 Quando l'opzione per l'aggiornamento automatico delle statistiche, AUTO_UPDATE_STATISTICS, è impostata su ON, Query Optimizer determina se le statistiche potrebbero non essere aggiornate, quindi ne esegue l'aggiornamento qualora vengano utilizzate tramite una query. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.
 
-### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC
-L'opzione relativa all'aggiornamento asincrono delle statistiche, AUTO_UPDATE_STATISTICS_ASYNC, determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. Per i punti di accesso, l'opzione relativa all'aggiornamento asincrono delle statistiche è impostata su ON per impostazione predefinita e Query Optimizer Aggiorna le statistiche in modo asincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione CREATE STATISTICS.
+### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC
+L'opzione relativa all'aggiornamento asincrono delle statistiche, AUTO_UPDATE_STATISTICS_ASYNC, determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. Per APS, l'opzione di aggiornamento asincrono delle statistiche è abilitata per impostazione predefinita e Query Optimizer aggiorna le statistiche in modo asincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione CREATE STATISTICS.
 
 ## <a name="configuration-settings-for-system-administrators"></a>Impostazioni di configurazione per gli amministratori di sistema
-Dopo l'aggiornamento a AU7 APS, statistiche automatico sono abilitata per impostazione predefinita. L'amministratore di sistema può abilitare o disabilitare le statistiche automatico con il [opzione della funzionalità](appliance-feature-switch.md) opzione in Gestione configurazione di Appliance.  Una volta abilitata, gli utenti possono modificare le impostazioni delle statistiche per ogni database.
-La modifica dei valori di parametro funzionalità richiede un riavvio del servizio sui punti di accesso.
+Dopo l'aggiornamento a APS AU7, le statistiche automatiche sono abilitate per impostazione predefinita. L'amministratore di sistema può abilitare o disabilitare le statistiche automatiche con l'opzione relativa alle opzioni della [funzionalità](appliance-feature-switch.md) nel Configuration Manager Appliance.  Una volta abilitata, gli utenti possono modificare le impostazioni delle statistiche per ogni database.
+Per modificare i valori delle opzioni di funzionalità è necessario riavviare il servizio su punti di ripristino.
 
-## <a name="change-auto-statistics-settings-on-a-database"></a>Modificare le impostazioni delle statistiche automatico in un database
-Quando le statistiche automatico sono abilitata dall'amministratore di sistema, è possibile usare [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) per modificare le impostazioni delle statistiche in un database. Se l'opzione della funzionalità delle statistiche automatico è abilitato dall'amministratore di sistema, i nuovi database creati dopo l'aggiornamento a AU7 avrà statistiche automatico abilitate. Tutti i database esistenti prima dell'aggiornamento a AU7 presentano statistiche automatico disabilitate. L'esempio seguente Abilita le statistiche automatiche per myPDW il database esistente.
+## <a name="change-auto-statistics-settings-on-a-database"></a>Modificare le impostazioni delle statistiche automatiche in un database
+Quando le statistiche automatiche sono abilitate dall'amministratore di sistema, è possibile utilizzare [ALTER database (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) per modificare le impostazioni delle statistiche in un database. Se l'opzione relativa alla funzionalità auto Statistics è abilitata dall'amministratore di sistema, per tutti i nuovi database creati dopo l'aggiornamento a AU7 sarà abilitata l'opzione auto Statistics. Per tutti i database esistenti prima dell'aggiornamento a AU7 sono state disabilitate le statistiche automatiche. Nell'esempio seguente vengono abilitate le statistiche automatiche sul database esistente myPDW.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -52,16 +53,16 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS ON
 ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 ```
  
-Opzione AUTO_UPDATE STATISTICS_ASYNC funziona solo se la proprietà AUTO_UPDATE_STATISTICS è impostata su ON.  Di conseguenza, le statistiche non vengono aggiornate quando AUTO_UPDATE_STATISTICS è impostata su OFF e AUTO_UPDATE_STATISTICS_ASYNC è ON. 
+AUTO_UPDATE opzione STATISTICS_ASYNC funziona solo se AUTO_UPDATE_STATISTICS è ON.  Pertanto, le statistiche non vengono aggiornate quando AUTO_UPDATE_STATISTICS è disattivato e AUTO_UPDATE_STATISTICS_ASYNC è ON. 
 
 ### <a name="error-messages"></a>messaggi di errore
-Si potrebbe ricevere il messaggio di errore "questa opzione non è supportata in PDW".  Questo errore si verifica quando l'amministratore di sistema non ha abilitato le statistiche automatiche, e si tenta di impostare uno qualsiasi dei automatica opzioni relative alle statistiche in ALTER DATABASE. 
+È possibile che venga visualizzato il messaggio di errore "questa opzione non è supportata in PDW".  Questo errore si verifica quando l'amministratore di sistema non ha abilitato le statistiche automatiche e si tenta di impostare le opzioni relative alle statistiche automatiche in ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
-Statistiche automatico non funziona per le tabelle esterne. 
+Le statistiche automatiche non sono compatibili con le tabelle esterne. 
 
 ### <a name="check-the-current-values"></a>Controllare i valori correnti
-La query seguente restituisce i valori correnti delle impostazioni delle statistiche automatico per tutti i database.
+La query seguente restituisce i valori correnti delle impostazioni di statistiche automatiche per tutti i database.
 
 ```sql
 SELECT NAME
@@ -72,7 +73,7 @@ FROM
     sys.databases;
 ```
 
-È un valore restituito pari a 1 indica che le impostazioni di in e 0 indica che l'impostazione è disattivata. 
+Il valore restituito 1 indica che l'impostazione è impostata su on e 0 indica che l'impostazione è disattivata. 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per prestazioni delle query, vedere [monitoraggio delle query attive](monitoring-active-queries.md)
+Per informazioni sulle prestazioni delle query, vedere [monitoraggio delle query attive](monitoring-active-queries.md)

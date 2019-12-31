@@ -1,6 +1,6 @@
 ---
-title: Impostare la password di Active Directory - sistema di piattaforma Analitica | Microsoft Docs
-description: Imposta password di accesso amministratore di Active Directory i nodi in modalità ripristino servizi Directory nel sistema di piattaforma Analitica (AP).
+title: Imposta Active Directory password
+description: Impostare Active Directory la password di accesso dell'amministratore in modalità ripristino servizi directory in strumenti di piattaforma analitica (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,36 +8,37 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960061"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400328"
 ---
-# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Impostare la Password amministratore per l'accesso ai nodi AD in servizi di Directory modalità (DSRM) - sistema di piattaforma Analitica di ripristino
-La modalità ripristino servizi directory (DSRM) è una modalità di avvio per il ripristino o il ripristino di Active Directory Domain Services (AD DS). Viene utilizzato per accedere ai nodi di appliance AD dopo Active Directory Domain Services non è riuscita oppure quando è necessario ripristinare Active Directory Domain Services. La password modalità ripristino servizi directory è stata inizializzata durante la configurazione di appliance presso il sito del fornitore di hardware e debba essere modificata dall'amministratore del dispositivo. Sistema di piattaforma Analitica ha due Active Directory Domain Services (controller di dominio).  **_appliance_domain_-AD01** e  **_appliance_domain_-AD02**. Per ogni nodo di appliance Active Directory, modificare la password modalità ripristino servizi directory usando la procedura seguente.  
+# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Impostare la password amministratore per l'accesso ai nodi AD in modalità ripristino servizi directory-sistema di piattaforma Analytics
+La modalità ripristino servizi directory è una modalità di avvio per il ripristino o il recupero di Active Directory Domain Services (AD DS). Viene usato per accedere ai nodi AD dell'appliance dopo che servizi di dominio Active Directory ha avuto esito negativo o quando è necessario ripristinare servizi di dominio Active Directory. La password per la modalità ripristino servizi directory è stata inizializzata durante la configurazione dell'appliance nel sito del fornitore dell'hardware e deve essere modificata dall'amministratore dell'appliance. Il sistema di piattaforma di analisi dispone di due servizi di dominio Active Directory (Domain Controller); ** _appliance_domain_-ad01** e ** _appliance_domain_-ad02**. Per ogni nodo AD dell'appliance, modificare la password della modalità ripristino servizi directory usando la procedura seguente.  
   
 ## <a name="HowToDSRM"></a>Per reimpostare la password dell'amministratore  
   
-1.  Aprire una finestra del prompt dei comandi in un nodo AD appliance  <strong>_appliance_domain_-AD_xx_</strong>macchina virtuale.  
+1.  Aprire una finestra del prompt dei comandi in un nodo AD del dispositivo <strong> _appliance_domain_AD_xx_</strong>macchina virtuale.  
   
 2.  Al prompt dei comandi digitare `ntdsutil`.  
   
-3.  Nel **ntdsutil** digitare `set dsrm password`.  
+3.  Al prompt di **Ntdsutil** Digitare `set dsrm password`.  
   
-4.  Nel **Reimposta Password amministratore:** digitare `reset password on server null`.  
+4.  Alla richiesta di **reimpostazione della password amministratore:** Digitare `reset password on server null`.  
   
-5.  Al prompt, digitare la nuova password.  
+5.  Al prompt dei comandi digitare la nuova password.  
   
-6.  Ripetere i passaggi 1-5 in precedenza per ogni macchina virtuale appliance AD.  
+6.  Ripetere i passaggi 1-5 precedenti per ogni appliance macchina virtuale AD.  
   
     > [!WARNING]  
-    > Sistema di piattaforma Analitica non supporta il carattere di segno di dollaro ($) nell'amministratore di dominio o le password di amministratore locale. Una password contenente un segno di dollaro verrà convalidato e verrà essere utilizzabile ma possa bloccare le attività di aggiornamento e manutenzione.  
+    > Analytics Platform System non supporta il simbolo di dollaro ($) nelle password di amministratore di dominio o di amministratore locale. Una password contenente un segno di dollaro verrà convalidata e sarà utilizzabile, ma potrà bloccare le attività di aggiornamento e di manutenzione.  
   
 > [!NOTE]  
-> Se i servizi di dominio Active Directory o la macchina virtuale viene danneggiata per una macchina virtuale AD specifica, in esecuzione **ReplaceVM** per interessato AD macchina virtuale è l'azione correttiva consigliata. Contatto CSS per ottenere assistenza.  
+> Se la Active Directory Domain Services o la macchina virtuale viene danneggiata per una macchina virtuale AD specifica, l'esecuzione di **ReplaceVM** per la macchina virtuale di Active Directory interessata è l'azione di correzione consigliata. Per assistenza, contattare il servizio CSS.  
   
 ## <a name="see-also"></a>Vedere anche  
-[La reimpostazione della password &#40;sistema di piattaforma Analitica&#41;](password-reset.md)  
+[Reimpostazione della password &#40;sistema della piattaforma di analisi&#41;](password-reset.md)  
   
