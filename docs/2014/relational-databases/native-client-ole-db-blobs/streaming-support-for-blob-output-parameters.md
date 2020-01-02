@@ -1,5 +1,5 @@
 ---
-title: Supporto del flusso per il BLOB dei parametri di Output | Microsoft Docs
+title: Supporto dello streaming per i parametri di output BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -508,6 +508,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BLOB e oggetti OLE](blobs-and-ole-objects.md)  
+ [Oggetti BLOB e OLE](blobs-and-ole-objects.md)  
   
   
