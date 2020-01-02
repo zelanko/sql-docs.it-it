@@ -1,5 +1,7 @@
 ---
-title: Importare i domini da un file di Excel in Individuazione informazioni
+title: Importare domini da un file di Excel in individuazione informazioni
+description: Informazioni su come importare domini da un file di Excel durante l'individuazione delle informazioni per SQL Server Data Quality Services (DQS)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 38907f70b5da4d96028833c033a3c41724c47862
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241791"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557957"
 ---
-# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>Importare domini da un file di Excel in individuazione informazioni-Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

@@ -1,5 +1,7 @@
 ---
-title: Apertura di progetti di Integration Services nel client Data Quality
+title: Apertura di progetti Integration Services (SSIS) in Data Quality Client
+description: Informazioni su come aprire un progetto di SQL Server Integration Services (SSIS) usando il Data Quality Client per SQL Server Data Quality Services.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a3430f8f8a9964211a01474c1d9c8a258011aeb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245976"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557846"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Apertura di progetti di Integration Services nel client Data Quality
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Il componente DQS Cleansing in Integration Services consente di eseguire un progetto di pulizia in modalità batch. È tuttavia talvolta necessario rivedere i risultati della pulizia in un pacchetto di Integration Services in modo simile a quello utilizzato per rivedere i risultati della pulizia nella scheda **Gestisci e visualizza risultati** di un'attività di pulizia in un progetto Data Quality di DQS. DQS consente di aprire progetti di Integration Services in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nello stesso modo in cui si apre qualsiasi altro progetto Data Quality dalla finestra di dialogo **Apri progetto** e di eseguire attività interattive sui risultati della pulizia in un progetto di Integration Services.  
+  Il componente di pulizia DQS in Integration Services consente di eseguire un progetto di pulizia in modalità batch. È tuttavia talvolta necessario rivedere i risultati della pulizia in un pacchetto di Integration Services in modo simile a quello utilizzato per rivedere i risultati della pulizia nella scheda **Gestisci e visualizza risultati** di un'attività di pulizia in un progetto Data Quality di DQS. DQS consente di aprire progetti di Integration Services in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nello stesso modo in cui si apre qualsiasi altro progetto Data Quality dalla finestra di dialogo **Apri progetto** e di eseguire attività interattive sui risultati della pulizia in un progetto di Integration Services.  
   
 ##  <a name="BeforeYouBegin"></a>Prima di iniziare  
   

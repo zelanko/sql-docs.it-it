@@ -1,5 +1,7 @@
 ---
-title: Aprire, sbloccare, rinominare ed eliminare un progetto Data Quality
+title: Apertura, sblocco, ridenominazione ed eliminazione di un progetto Data Quality
+description: Informazioni su come aprire, sbloccare, rinominare ed eliminare un progetto Data Quality utilizzando SQL Server Data Quality Services.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -16,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245967"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557805"
 ---
-# <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Aprire, sbloccare, rinominare ed eliminare un progetto Data Quality
+# <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Apertura, sblocco, ridenominazione ed eliminazione di un progetto Data Quality-Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
