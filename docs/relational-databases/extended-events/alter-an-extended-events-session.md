@@ -1,6 +1,5 @@
 ---
-title: Modificare una sessione Eventi estesi | Microsoft Docs
-ms.custom: ''
+title: Modificare una sessione Eventi estesi
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3c0b3584edd804768bbbe94bdc570448ab6e653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a57c46cebb17df257f2002c25ab5f1d7107379
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021932"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255767"
 ---
 # <a name="alter-an-extended-events-session"></a>Modificare una sessione Eventi estesi
 
@@ -24,7 +23,7 @@ ms.locfileid: "68021932"
 
   Dopo avere creato una sessione Eventi estesi, è possibile modificarla secondo necessità utilizzando la **Creazione guidata Eventi estesi di SQL Server**.  
   
-## <a name="before-you-begin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a>Operazioni preliminari  
  Non è possibile modificare una destinazione per sessioni attive e inattive né modificare le configurazioni delle proprietà avanzate per una sessione attiva.  
   
  È possibile apportare le modifiche seguenti alle sessioni di eventi attive e inattive:  

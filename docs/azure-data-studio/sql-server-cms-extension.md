@@ -2,22 +2,23 @@
 title: Estensione Server di gestione centrale di SQL Server
 titleSuffix: Azure Data Studio
 description: Installare e usare l'estensione Server di gestione centrale di SQL Server (anteprima) per Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959208"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957025"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Estensione Server di gestione centrale di SQL Server (anteprima)
+
 L'estensione Server di gestione centrale consente agli utenti di archiviare un elenco di istanze di SQL Server organizzato in uno o più gruppi. Le azioni eseguite tramite un gruppo di server di gestione centrale hanno effetto su tutti i server del gruppo.
 
 Questa funzionalità è attualmente disponibile in versione di anteprima iniziale. Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).

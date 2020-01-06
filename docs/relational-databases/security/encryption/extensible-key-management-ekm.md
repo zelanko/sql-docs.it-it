@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148789"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957399"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

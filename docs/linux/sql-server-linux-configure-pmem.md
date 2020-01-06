@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531297"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243600"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente per SQL Server in Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   Dopo che il dispositivo è stato configurato con ndctl, formattato e montato, è possibile inserire file di database all'interno di esso. È anche possibile creare un nuovo database 
 
-1. Poiché i dispositivi con memoria persistente sono protetti da O_DIRECT, abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Questo è un flag di traccia di avvio e come tale deve essere abilitato tramite l'utilità mssql-conf. Si noti che questa è una modifica della configurazione a livello di server e che questo flag di traccia non deve essere usato se sono presenti dispositivi non conformi a O_DIRECT che richiedono il meccanismo di scaricamento forzato per garantire l'integrità dei dati. Per ulteriori informazioni, vedere https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
+1. Poiché i dispositivi con memoria persistente sono protetti da O_DIRECT, abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Questo è un flag di traccia di avvio e come tale deve essere abilitato tramite l'utilità mssql-conf. Si noti che questa è una modifica della configurazione a livello di server e che questo flag di traccia non deve essere usato se sono presenti dispositivi non conformi a O_DIRECT che richiedono il meccanismo di scaricamento forzato per garantire l'integrità dei dati. Per ulteriori informazioni, vedere https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Riavviare SQL Server.
 

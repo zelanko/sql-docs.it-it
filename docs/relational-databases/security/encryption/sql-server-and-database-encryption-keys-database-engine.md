@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b035af17631253ea01e6ca79ba7702a378df1df9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111576"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957346"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ La chiave master del servizio può essere aperta solo dall'account di servizio W
 -   Aggiunta o rimozione di un'istanza del server da una distribuzione del server con scalabilità orizzontale in cui più server condividono sia un unico database sia la chiave che consente la crittografia reversibile per quel database.  
   
 ## <a name="important-security-information"></a>Importanti informazioni relative alla sicurezza  
- L'accesso a oggetti protetti dalla chiave master del servizio richiede l'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per creare la chiave o l'account del computer. In altre parole, il computer è legato al sistema sul quale la chiave è stata creata. È possibile modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *o* l'account del computer senza perdere l'accesso alla chiave. Tuttavia, se si modificano entrambi, si perderà l'accesso alla chiave master del servizio. Se si verifica tale perdita senza disporre di uno di questi due elementi, non sarà possibile decrittografare i dati e gli oggetti crittografati usando la chiave originale.  
+ L'accesso a oggetti protetti dalla chiave master del servizio richiede l'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per creare la chiave o l'account del computer. In altre parole, il computer è legato al sistema sul quale la chiave è stata creata. È possibile modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*o* l'account del computer senza perdere l'accesso alla chiave. Tuttavia, se si modificano entrambi, si perderà l'accesso alla chiave master del servizio. Se si verifica tale perdita senza disporre di uno di questi due elementi, non sarà possibile decrittografare i dati e gli oggetti crittografati usando la chiave originale.  
   
  Non è possibile ripristinare connessioni protette con la chiave master del servizio se non si dispone della stessa.  
   
@@ -67,14 +67,14 @@ La chiave master del servizio può essere aperta solo dall'account di servizio W
 >  Se si perde ogni accesso alle chiavi descritte in precedenza, si perderà l'accesso agli oggetti, alle connessioni e ai dati protetti da quelle chiavi. È possibile ripristinare la chiave master del servizio, come viene descritto nei collegamenti qui riportati, oppure è possibile ritornare al sistema di crittografa originale per recuperare l'accesso. Non è possibile recuperare l'accesso in altro modo.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Chiave master del servizio](../../../relational-databases/security/encryption/service-master-key.md)  
  Viene fornita una breve spiegazione della chiave master del servizio e delle procedure consigliate.  
   
  [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Viene illustrata la modalità di utilizzo dei sistemi di gestione delle chiavi di terze parti con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Backup della chiave master del servizio](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
+ [Eseguire il backup della chiave master del servizio](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Ripristino della chiave master del servizio](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
   
@@ -88,7 +88,7 @@ La chiave master del servizio può essere aperta solo dall'account di servizio W
   
  [Abilitare TDE in SQL Server con EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
- [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [Crittografia di una colonna di dati](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   

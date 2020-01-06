@@ -1,8 +1,8 @@
 ---
-title: Installare SQL Server con PowerShell Desired State Configuration (DSC) | Microsoft Docs
+title: 'Installare: PowerShell Desired State Configuration'
 description: Informazioni su come installare SQL Server con PowerShell Desired State Configuration (DSC).
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041064"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258978"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Installare SQL Server con PowerShell Desired State Configuration (DSC)
 
@@ -143,7 +143,7 @@ Configuration SQLInstall
 }
 ```
 
-## <a name="build-and-deploy"></a>Compilare e distribuire
+## <a name="build-and-deploy"></a>Eseguire la compilazione e la distribuzione
 
 ### <a name="compile-the-configuration"></a>Compilare la configurazione
 
@@ -165,7 +165,7 @@ Nella directory di lavoro viene creata una directory denominata **SQLInstall**, 
 
 Per iniziare la distribuzione DSC di SQL Server, chiamare il cmdlet **Start-DscConfiguration**. Al cmdlet vengono forniti i parametri seguenti:
 
-- **Path**. Percorso della cartella contenente i documenti MOF da distribuire, ad esempio `C:\SQLInstall`.
+- **Path**. Percorso della cartella contenente i documenti MOF da distribuire, Un esempio è `C:\SQLInstall`.
 - **Wait**. Attendere il completamento del processo di configurazione.
 - **Force**. Eseguire l'override di tutte le configurazioni DSC esistenti.
 - **Verbose**. Visualizzare l'output dettagliato. Utile quando si effettua il push di una configurazione per la prima volta per agevolare la risoluzione dei problemi.
