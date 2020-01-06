@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Abilitare il widget di esempio per le cinque query più lente'
+title: Abilitare il widget di esempio per le cinque query più lente
 titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come abilitare il widget di esempio per le cinque query più lente nel dashboard del database.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810917"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957045"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il widget di esempio per le *cinque query più lente* al dashboard del database
 
@@ -127,7 +127,7 @@ Per aggiungere il *widget per le query lente* al dashboard, modificare l'imposta
 
 2. Dal *widget per le query lente*: per visualizzare informazioni aggiuntive per un widget di informazioni dettagliate, fare clic sui puntini di sospensione ( **...** ) in alto a destra e selezionare **Esegui query**.
 
-    ![Esegui query](media/tutorial-qds-sql-server/run-query.png)
+    ![Eseguire la query](media/tutorial-qds-sql-server/run-query.png)
 
 3. A questo punto dovrebbe essere visualizzata una nuova finestra di query con i risultati.
 

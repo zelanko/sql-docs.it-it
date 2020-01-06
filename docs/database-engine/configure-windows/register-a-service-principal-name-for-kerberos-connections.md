@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892437"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257514"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non ha l'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
   
 > [!NOTE]  
->  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, l'Account dei servizi gestiti non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'Account dei servizi gestiti.  
-  
- Per altre informazioni su come concedere l'autorizzazione di lettura o scrittura per un nome SPN a un account diverso da quello di amministratore di dominio, vedere l'articolo della Knowledge Base [Utilizzo dell'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723).  
+>  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, l'Account dei servizi gestiti non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'Account dei servizi gestiti.
   
  Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
   

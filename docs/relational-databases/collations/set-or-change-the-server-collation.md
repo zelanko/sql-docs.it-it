@@ -1,7 +1,7 @@
 ---
 title: Impostare o modificare le regole di confronto del server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140844"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901910"
 ---
 # <a name="set-or-change-the-server-collation"></a>Impostazione o modifica di regole di confronto del server
 
@@ -41,9 +41,9 @@ ms.locfileid: "68140844"
   
 - Eliminare tutti i database utente.  
   
-- Ricompilare il database master specificando le nuove regole di confronto nella proprietà SQLCOLLATION del comando **setup** . Esempio:  
+- Ricompilare il database master specificando le nuove regole di confronto nella proprietà SQLCOLLATION del comando **setup** . Ad esempio:  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,13 +59,12 @@ ms.locfileid: "68140844"
 > Anziché modificare le regole di confronto predefinite di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare regole di confronto predefinite per ogni nuovo database creato.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Impostazione delle regole di confronto del server in Istanza gestita
-
 È possibile specificare regole di confronto a livello di server in Istanza gestita di database SQL di Azure durante la creazione dell'istanza, ma non è possibile cambiarle in seguito. È possibile impostare regole di confronto a livello di server tramite il [portale di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o tramite [PowerShell e il modello di Resource Manager ](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) durante la creazione dell'istanza. Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode e nuove regole di confronto UTF-8 a livello di server non possono essere specificate come regole di confronto a livello di server.
 Se si sta eseguendo la migrazione di database da SQL Server a Istanza gestita, controllare le regole di confronto del server nel database SQL Server di origine tramite la funzione `SERVERPROPERTY(N'Collation')` e creare un'Istanza gestita che corrisponda alle regole di confronto di SQL Server. La migrazione di un database da SQL Server a Istanza gestita con regole di confronto a livello di server non corrispondenti può causare diversi errori imprevisti nell'esecuzione di query. Non è possibile modificare le regole di confronto a livello di server nell'Istanza gestita esistente.
 
 ## <a name="see-also"></a>Vedere anche
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Impostare o modificare le regole di confronto del database](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Impostare o modificare le regole di confronto delle colonne](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Ricompilare database di sistema](../../relational-databases/databases/rebuild-system-databases.md)  

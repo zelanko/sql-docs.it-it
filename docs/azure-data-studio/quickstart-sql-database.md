@@ -1,21 +1,21 @@
 ---
-title: 'Avvio rapido: Connettersi ed eseguire query nel database SQL di Azure'
+title: Connettersi ed eseguire query nel database SQL di Azure
 titleSuffix: Azure Data Studio
 description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi a un database SQL ed eseguire una query
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959431"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957075"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query nel database SQL di Azure
 
@@ -44,11 +44,11 @@ Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una conn
 
 2. Questo articolo usa le credenziali di accesso SQL, ma supporta anche l'autenticazione di Windows. Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al server SQL di Azure:
 
-   | Impostazione       | Valore suggerito | Descrizione |
+   | Impostazione       | Valore consigliato | Descrizione |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server | Ad esempio: **servername.database.windows.net**. |
-   | **Autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
-   | **User name** | Nome utente dell'account amministratore del server | Nome utente dell'account usato per creare il server. |
+   | **autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
+   | **Nome utente** | Nome utente dell'account amministratore del server | Nome utente dell'account usato per creare il server. |
    | **Password (account di accesso SQL)** | Password dell'account amministratore del server | Password dell'account usato per creare il server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere ogni volta la password, selezionare **Sì**. |
    | **Nome database** | *lasciare vuoto* | Questa opzione consente esclusivamente di effettuare la connessione al server. |

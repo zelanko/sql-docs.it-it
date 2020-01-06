@@ -1,7 +1,7 @@
 ---
 title: "Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale | Microsoft Docs"
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592336"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258323"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +33,7 @@ Questa esercitazione è la continuazione di [Esercitazione: Introduzione ad Alwa
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Passaggio 1: Abilitare il ripristino accelerato del database nel database
 
-Microsoft consiglia di abilitare il ripristino accelerato del database nel database prima di creare il primo indice su una colonna abilitata per l'enclave con la crittografia casuale. Vedere la sezione [Ripristino del database](./encryption/always-encrypted-enclaves.md##database-recovery) in [Always Encrypted con enclave sicuri](./encryption/always-encrypted-enclaves.md).
+Microsoft consiglia di abilitare il ripristino accelerato del database nel database prima di creare il primo indice su una colonna abilitata per l'enclave con la crittografia casuale. Vedere la sezione [Ripristino del database](./encryption/always-encrypted-enclaves.md#database-recovery) in [Always Encrypted con enclave sicuri](./encryption/always-encrypted-enclaves.md).
 
 1. Chiudere tutte le istanze di SSMS che sono state usate nell'esercitazione precedente. Verranno chiuse le connessioni di database che sono state aperte, come richiesto per abilitare il ripristino accelerato del database.
 1. Aprire una nuova istanza di SSMS e connettersi all'istanza di SQL Server come sysadmin **senza** Always Encrypted abilitato per la connessione di database.
@@ -64,7 +64,7 @@ In questo passaggio verrà creato e testato un indice su una colonna crittografa
    2. Selezionare **Opzioni**.
    3. Passare a **Esecuzione query** > **SQL Server** > **Avanzata**.
    4. Assicurarsi che l'opzione **Abilita parametrizzazione per Always Encrypted** sia selezionata.
-   5. Fare clic su **OK**.
+   5. Selezionare **OK**.
 1. Aprire una finestra di query ed eseguire le istruzioni seguenti per crittografare la colonna **LastName** nella tabella **Employees**. Verrà creato e usato un indice su tale colonna nei passaggi successivi.
 
    ```sql

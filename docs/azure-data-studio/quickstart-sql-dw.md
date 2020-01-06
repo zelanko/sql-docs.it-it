@@ -1,21 +1,21 @@
 ---
-title: 'Avvio rapido: Connettersi ed eseguire query in Azure SQL Data Warehouse'
+title: Connettersi ed eseguire query in Azure SQL Data Warehouse
 titleSuffix: Azure Data Studio
 description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi ad Azure SQL Data Warehouse ed eseguire una query
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959401"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957108"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati di Azure SQL Data Warehouse
 
@@ -41,11 +41,11 @@ Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una conn
 
 2. Questo articolo usa l'account di *accesso SQL*, ma è supportata anche l'*autenticazione di Windows*. Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al *server SQL di Azure*:
 
-   | Impostazione       | Valore suggerito | Descrizione |
+   | Impostazione       | Valore consigliato | Descrizione |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server | Il nome deve essere simile a: **sqldwsample.database.windows.net** |
-   | **Autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
-   | **User name** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
+   | **autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
+   | **Nome utente** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere la password ogni volta, selezionare Sì. |
    | **Nome database** | *lasciare vuoto* | Il nome del database a cui si effettua la connessione. |

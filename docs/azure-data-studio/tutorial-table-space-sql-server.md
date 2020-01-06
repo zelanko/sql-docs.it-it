@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle'
+title: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle
 titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle nel dashboard del database Azure Data Studio.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878638"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957015"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -1,10 +1,8 @@
 ---
 title: Ripristino accelerato del database | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130540"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245257"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Gestire il ripristino accelerato del database
 
@@ -84,10 +83,10 @@ Il processo di modifica della posizione dell'archivio versioni permanente preved
    Per poter attivare il ripristino accelerato del database con una nuova posizione per l'archivio versioni permanente, è necessario prima di tutto assicurarsi che tutte le informazioni sulle versioni siano state eliminate dalla posizione dell'archivio versioni permanente precedente. Per forzare tale pulizia, eseguire il comando:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   La stored procedure `sys.sp_persistent_version_store_cleanup` è sincrona, ovvero non verrà completata fino a quando non vengono eliminate tutte le informazioni sulle versioni dall'archivio versioni permanente corrente.  Dopo il completamento, è possibile verificare che le informazioni sulle versioni siano state effettivamente rimosse eseguendo una query sulla DMV `sys.dm_persistent_version_store_stats` ed esaminando il valore di `persistent_version_store_size_kb`.
+   La stored procedure `sys.sp_persistent_version_cleanup` è sincrona, ovvero non verrà completata fino a quando non vengono eliminate tutte le informazioni sulle versioni dall'archivio versioni permanente corrente.  Dopo il completamento, è possibile verificare che le informazioni sulle versioni siano state effettivamente rimosse eseguendo una query sulla DMV `sys.dm_persistent_version_store_stats` ed esaminando il valore di `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 
@@ -103,7 +102,7 @@ Il processo di modifica della posizione dell'archivio versioni permanente preved
    (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
    ```
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Eseguire una query su `sys.dm_tran_persistent_version_store_stats` per controllare le dimensioni dell'archivio versioni permanente.
 

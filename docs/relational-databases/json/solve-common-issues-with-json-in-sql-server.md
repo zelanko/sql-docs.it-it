@@ -12,12 +12,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74096108"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325416"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Risolvere i problemi comuni di JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -96,7 +96,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Input di OPENJSON e JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Restituire l'oggetto secondario JSON nidificato dal testo JSON con OPENJSON  
- **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come gli oggetti JSON?  
+ **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come oggetti JSON?  
   
  **Risposta.** Se si desidera restituire un oggetto o una matrice come colonna, usare l'opzione AS JSON nella definizione di colonna, come illustrato nell'esempio seguente.  
   
@@ -141,7 +141,7 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>Aggiungere il riferimento alle chiavi che contengono caratteri non alfanumerici nel testo JSON  
  **Domanda.** Le chiavi del testo JSON contengono caratteri non alfanumerici. Come è possibile aggiungere un riferimento a queste proprietà?  
   
- **Risposta.** È necessario racchiuderle tra virgolette nei percorsi JSON. Ad esempio, `JSON_VALUE(@json, '$."$info"."First Name".value')`.
+ **Risposta.** È necessario racchiuderle tra virgolette nei percorsi JSON. Ad esempio: `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Altre informazioni su JSON in SQL Server e nel database SQL di Azure  
   

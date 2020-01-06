@@ -1,6 +1,5 @@
 ---
-title: Usare il provider PowerShell per eventi estesi | Microsoft Docs
-ms.custom: ''
+title: Utilizzare il provider PowerShell per eventi estesi
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009320"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242891"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
 
@@ -41,7 +40,7 @@ ms.locfileid: "68009320"
   
  Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Per visualizzare, ad esempio, gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*\Sessions> digitare **cd system_health\events**, premere INVIO, digitare **dir**, quindi premere INVIO.  
   
- Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
+ Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti notare quanto segue:  

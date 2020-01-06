@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020815"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228240"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020815"
  Per utilizzare un listener del gruppo di disponibilità per connettersi alla replica primaria per l'accesso in lettura e scrittura, nella stringa di connessione è necessario specificare il nome DNS del listener del gruppo di disponibilità.  Se una nuova replica diventa la replica primaria del gruppo di disponibilità, le connessioni esistenti che utilizzano il nome di rete del listener del gruppo di disponibilità vengono interrotte.  Le nuove connessioni al listener del gruppo di disponibilità vengono quindi indirizzate alla nuova replica primaria. Di seguito è riportato un esempio di una stringa di connessione di base per il provider ADO.NET (System.Data.SqlClient).  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  È ancora possibile scegliere di fare riferimento direttamente all'istanza del nome SQL Server della replica primaria o delle repliche secondarie anziché utilizzare il nome server del listener del gruppo di disponibilità, tuttavia se si sceglie di procedere in questo modo le nuove connessioni non verranno indirizzate automaticamente alla replica primaria corrente, perdendo così un notevole vantaggio.  Verranno meno anche i vantaggi derivanti dal routing in sola lettura.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Di seguito è riportato un esempio di una stringa di connessione per il provider ADO.NET (System.Data.SqlClient) che specifica la finalità dell'applicazione in sola lettura.  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  In questo esempio il client tenta di connettersi al database AdventureWorks tramite un listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. È possibile omettere la porta se il listener del gruppo di disponibilità è in ascolto sulla porta 1433.  La stringa di connessione contiene la proprietà **ApplicationIntent** impostata su **ReadOnly**ed è quindi una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Di seguito è riportato un esempio di una stringa di connessione per il provider ADO.NET (System.Data.SqlClient) che consente il failover su più subnet:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  L'opzione di connessione **MultiSubnetFailover** deve essere impostata su **True** anche se il gruppo di disponibilità si estende su una sola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  L'opzione di connessione **MultiSubnetFailover** non è obbligatoria, ma permette di accelerare il failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
@@ -207,11 +207,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (Introduzione al listener del gruppo di disponibilità), nel blog del team di SQL Server Always On  
   
--   [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907094"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190795"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ PROSE analizza i modelli di dati nel file di input per dedurre nomi di colonne, 
 
 Per comprendere meglio il miglioramento dell'esperienza utente della procedura guidata Importa file flat, vedere questo video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisites
 Questa funzionalità è disponibile solo in SQL Server Management Studio (SSMS) v17.3 o versioni successive. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -41,7 +41,7 @@ Questa funzionalità è disponibile solo in SQL Server Management Studio (SSMS) 
 Per accedere alla procedura guidata per l'importazione di file flat, procedere come segue:
 
 1. Aprire **SQL Server Management Studio**.
-2. Connettersi a un'istanza del motore di database di Microsoft SQL Server o localhost.
+2. Connettersi a un'istanza del motore di database di SQL Server o a localhost.
 3. Espandere **Database**, fare clic con il pulsante destro del mouse su un database (vedere l'esempio seguente), scegliere **Attività** e fare clic su **Importa file flat** sopra a Importa dati.
 
 ![Menu della procedura guidata](media/import-flat-file-wizard/importffmenu.png)
@@ -79,7 +79,7 @@ Quando si è pronti, proseguire.
 
 ![Finestra di modifica della procedura guidata](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>Passaggio 5: Riepilogo
+### <a name="step-5-summary"></a>Passaggio 5: Summary
 Si tratta semplicemente di una pagina di riepilogo che visualizza la configurazione corrente. Se sono presenti problemi, è possibile tornare alle sezioni precedenti. In caso contrario, fare clic su Fine per tentare il processo di importazione.
 
 ![Riepilogo della procedura guidata](media/import-flat-file-wizard/importffsummary.png)

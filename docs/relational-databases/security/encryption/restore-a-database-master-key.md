@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fc215f3ea8746c8bb3e4150b41079656df6f1f9d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908413"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957369"
 ---
 # <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

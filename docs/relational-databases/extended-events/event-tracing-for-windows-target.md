@@ -1,6 +1,5 @@
 ---
-title: Destinazione di Event Tracing for Windows| Microsoft Docs
-ms.custom: ''
+title: destinazione di Event Tracing for Windows
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021858"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234657"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
 
@@ -58,7 +57,7 @@ ms.locfileid: "68021858"
 |default_etw_session_logfile_path|Qualsiasi stringa contenente fino a 256 caratteri. Questo valore è facoltativo.|Percorso del file di log per la sessione di Eventi estesi. Per impostazione predefinita è %TEMP%\ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del file di log, in megabyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 20 MB.|  
 |default_etw_session_buffer_size_kb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del buffer in memoria, in kilobyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 128 MB.|  
-|tentativi|Qualsiasi valore intero senza segno.|Numero di tentativi di pubblicazione dell'evento al sottosistema ETW prima di eliminare l'evento. Il valore predefinito è 0.|  
+|retries|Qualsiasi valore intero senza segno.|Numero di tentativi di pubblicazione dell'evento al sottosistema ETW prima di eliminare l'evento. Il valore predefinito è 0.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  La configurazione di queste impostazioni è facoltativa. La destinazione ETW utilizza valori predefiniti per queste impostazioni.  

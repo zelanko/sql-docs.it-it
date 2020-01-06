@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559464"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257667"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,19 +175,19 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 ## <a name="query-profiling-infrastruture-usage-guidance"></a>Linee guida per l'utilizzo dell'infrastruttura di profilatura di query
 La tabella seguente riepiloga le azioni per abilitare la profilatura standard o la profilatura leggera, sia a livello globale (a livello di server) che in una singola sessione. Include anche la versione minima per cui è disponibile l'azione. 
 
-|Ambito|Profilatura standard|Profilatura leggera|
+|Scope|Profilatura standard|Profilatura leggera|
 |---------------|---------------|---------------|
 |Global|Sessione xEvent con `query_post_execution_showplan` XE; a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Flag di traccia 7412; a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
 |Global|Traccia SQL e SQL Server Profiler con l'evento di traccia `Showplan XML`; a partire da SQL Server 2000|Sessione xEvent con `query_thread_profile` XE; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
 |Global|-|Sessione xEvent con `query_post_execution_plan_profile` XE; a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Sessione|Usare `SET STATISTICS XML ON`; a partire da SQL Server 2000|Usare l'hint per la query `QUERY_PLAN_PROFILE` insieme a una sessione xEvent con `query_plan_profile` XE; a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
-|Sessione|Usare `SET STATISTICS PROFILE ON`; a partire da SQL Server 2000|-|
-|Sessione|Fare clic sul pulsante [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md) in SSMS; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
+|sessione|Usare `SET STATISTICS XML ON`; a partire da SQL Server 2000|Usare l'hint per la query `QUERY_PLAN_PROFILE` insieme a una sessione xEvent con `query_plan_profile` XE; a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|sessione|Usare `SET STATISTICS PROFILE ON`; a partire da SQL Server 2000|-|
+|sessione|Fare clic sul pulsante [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md) in SSMS; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 > [!IMPORTANT]
-> A causa di un possibile AV casuale, durante l'esecuzione di una stored procedure di monitoraggio che fa riferimento a [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), assicurarsi che sia installato [KB 4078596](http://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> A causa di un possibile AV casuale, durante l'esecuzione di una stored procedure di monitoraggio che fa riferimento a [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), assicurarsi che sia installato [KB 4078596](https://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 A partire dalla profilatura lightweight v2 con overhead ridotto, qualsiasi server che non è già basato su CPU può eseguire la profilatura lightweight **in modo continuo** e consentire ai professionisti di database di inserirsi in qualsiasi esecuzione in corso in qualsiasi momento, ad esempio usando Monitoraggio attività o eseguendo direttamente una query in `sys.dm_exec_query_profiles` e ottenere il piano di query con le statistiche di runtime.
 
@@ -209,4 +209,3 @@ Per altre informazioni sull'overhead delle prestazioni della profilatura di quer
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque)

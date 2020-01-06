@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296070"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257067"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base con SSIS
 
@@ -35,7 +35,7 @@ Questa esercitazione si basa su Microsoft SQL Server Data Tools, un set di pacch
   
 * Per scaricare tutti i pacchetti di lezioni di questa esercitazione:
 
-    1.  Passare alla pagina [Integration Services tutorial files](https://www.microsoft.com/en-us/download/details.aspx?id=56827) (File dell'esercitazione su Integration Services).
+    1.  Passare alla pagina [Integration Services tutorial files](https://www.microsoft.com/download/details.aspx?id=56827) (File dell'esercitazione su Integration Services).
 
     2.  Selezionare il pulsante **DOWNLOAD** (Scarica).
 
@@ -66,22 +66,22 @@ Quando si usano dati di origine file flat, è importante capire in che modo Gest
 ## <a name="look-at-the-destination-data"></a>Esaminare i dati di destinazione
 La destinazione dei dati di origine è una copia della tabella dei fatti **FactCurrencyRate** in **AdventureWorksDW**. La tabella **FactCurrencyRate** presenta quattro colonne ed ha relazioni con due tabelle delle dimensioni, come illustrato nella tabella seguente.  
   
-|Nome colonna|Tipo di dati|Tabella di ricerca|Colonna di ricerca|  
+|Nome colonna|Tipo di dati|Tabella di ricerca|colonna di ricerca|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|float|nessuno|nessuno|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|float|nessuno|nessuno|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>Eseguire il mapping dei dati di origine alla destinazione  
 L'analisi dei formati dei dati di origine e di destinazione indica che per i valori **CurrencyKey** e **DateKey** sono necessarie ricerche. Le trasformazioni che eseguono queste ricerche ottengono tali valori tramite le chiavi alternative derivate dalle tabelle delle dimensioni **DimCurrency** e **DimDate**.  
   
 |Colonna file flat|Nome tabella|Nome colonna|Tipo di dati|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|FLOAT|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Data|  
-|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  

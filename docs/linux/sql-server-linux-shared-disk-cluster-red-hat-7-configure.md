@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809784"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252236"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
 
@@ -138,7 +138,7 @@ Nel server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modificare `/etc/exports` per esportare la directory che si vuole condividere. Per ogni condivisione desiderata è necessaria una riga. Esempio: 
+1.  Modificare `/etc/exports` per esportare la directory che si vuole condividere. Per ogni condivisione desiderata è necessaria una riga. Ad esempio: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -202,7 +202,7 @@ Per altre informazioni sull'uso di NFS, vedere le risorse seguenti:
 
 * [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld) (Firewall e server NFS | Stack Exchange)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html) (Montaggio di un volume NFS | Guida per gli amministratori di rete Linux)
-* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) (Configurazione del server NFS | Red Hat Customer Portal)
+* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) (Configurazione del server NFS | Red Hat Customer Portal)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare la directory dei file di database in modo che punti alla risorsa di archiviazione condivisa
 

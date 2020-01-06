@@ -13,15 +13,15 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902976"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957417"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "72902976"
   
 - È necessario disporre di un'autorizzazione per la chiave e che non venga negata l'autorizzazione VIEW DEFINITION.  
   
-## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a>Uso di Transact-SQL  
 
 Per usare gli esempi seguenti è necessaria una chiave master di database. Se il database in uso non contiene una chiave master, crearne una eseguendo l'istruzione riportata di seguito specificando la propria password:
 
@@ -166,7 +166,7 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
     GO  
     ```  
   
- Per ulteriori informazioni, vedere quanto segue:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

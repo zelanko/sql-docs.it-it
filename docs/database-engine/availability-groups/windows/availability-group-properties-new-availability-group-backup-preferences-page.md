@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di backup)'
+title: 'Proprietà del gruppo di disponibilità: Pagina Preferenze di backup'
 description: Descrizione delle varie proprietà disponibili nella pagina "Preferenze di backup" della procedura guidata "Nuovo gruppo di disponibilità" in SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5dd782fc153829fcaa1105d37421963a8884bb0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cebacaf07ca7e678095a661267b02fe04d8513d9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991483"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822478"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "67991483"
   
 ## <a name="where-should-backups-occur"></a>Destinazione dei backup  
  **Preferisco secondario**  
- Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Si tratta dell'opzione predefinita.  
+ Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Questa è l'opzione predefinita.  
   
  **Solo secondaria**  
  Specifica che i backup non devono mai essere eseguiti sulla replica primaria. Se la replica primaria è l'unica replica online, il backup non viene eseguito.  
   
- **Primaria**  
+ **Server/istanza primaria**  
  Specifica che i backup devono essere sempre eseguiti sulla replica primaria. Questa opzione è utile se sono necessarie funzionalità di backup, ad esempio la creazione di backup differenziali, che non sono supportate quando il backup viene eseguito su una replica secondaria.  
   
  **Qualsiasi replica**  

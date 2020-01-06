@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545064"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542198"
 ---
 # <a name="oracle-source"></a>Origine Oracle
 
@@ -52,11 +52,11 @@ Di seguito sono elencate le proprietà personalizzate dell'origine Oracle. Tutte
 |Nome proprietà|Tipo di dati|Descrizione|
 |:-|:-|:-|
 |AccessMode|Integer (enumerazione)|Modalità utilizzata per accedere al database. I valori possibili sono **Table Name** e **SQL Command**. Il valore predefinito è **Table Name**.|
-|BatchSize|Valore intero|Dimensioni del batch per il caricamento bulk. Corrisponde al numero di record estratti come matrice. <br>Questa proprietà è impostata solo da **Editor avanzato**|
-|DefaultCodePage|Valore intero|Tabella codici da usare quando l'origine dati non dispone di informazioni sulla tabella codici. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
-|PreFetchCount|Valore intero|Numero di righe pre-recuperate. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
-|SqlCommand|String|Comando SQL da eseguire quando la proprietà AccessMode è impostata su SQL Command.|
-|TableName|String|Nome della tabella con i dati da usare quando la proprietà AccessMode è impostata su Table Name.|
+|BatchSize|Integer|Dimensioni del batch per il caricamento bulk. Corrisponde al numero di record estratti come matrice. <br>Questa proprietà è impostata solo da **Editor avanzato**|
+|DefaultCodePage|Integer|Tabella codici da usare quando l'origine dati non dispone di informazioni sulla tabella codici. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
+|PreFetchCount|Integer|Numero di righe pre-recuperate. <br>Questa proprietà è impostata solo da **Editor avanzato**.|
+|SqlCommand|string|Comando SQL da eseguire quando la proprietà AccessMode è impostata su SQL Command.|
+|TableName|string|Nome della tabella con i dati da usare quando la proprietà AccessMode è impostata su Table Name.|
 
 ## <a name="configuring-the-oracle-source"></a>Configurazione dell'origine Oracle
 
@@ -95,7 +95,7 @@ La pagina **Gestione connessione** della finestra di dialogo **Editor origine Or
 
 Consente di selezionare una gestione connessione esistente nell'elenco o di creare una nuova gestione connessione Oracle facendo clic su **Nuovo**.
 
-**Nuova**
+**Nuovo**
 
 Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Configura gestione connessione Oracle**, in cui è possibile creare una nuova gestione connessione.
 
@@ -161,7 +161,7 @@ Usare la pagina **Output degli errori** della finestra di dialogo **Editor origi
 **Comportamento in caso di errore**
 
 Consente di selezionare il modo in cui l'origine Oracle deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.
-**Sezione correlata**: [Gestione degli errori nei dati](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Sezione correlata**: [Gestione degli errori nei dati](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Troncamento**
 

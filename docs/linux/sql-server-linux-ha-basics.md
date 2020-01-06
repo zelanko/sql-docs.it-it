@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586759"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243592"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 
@@ -57,7 +57,7 @@ Questa sezione illustra le attività comuni a tutte le distribuzioni di [!INCLUD
 Copiare i file da un server a un altro è un'attività che chiunque usi [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux dovrebbe riuscire a eseguire. Questa attività è molto importante per le configurazioni dei gruppo di disponibilità.
 
 Sia in Linux che nelle installazioni basate su Windows possono verificarsi problemi relativi alle autorizzazioni. Tuttavia, chi ha familiarità con la copia da server a server in Windows potrebbe non averne con la stessa operazione in Linux. Un metodo comune prevede l'uso dell'utilità della riga di comando `scp`, che è l'acronimo di secure copy (copia sicura). In background `scp` usa OpenSSH. SSH è l'acronimo di Secure Shell. A seconda della distribuzione Linux, OpenSSH potrebbe non essere installato. Se non lo è, è necessario installare prima OpenSSH. Per altre informazioni sulla configurazione di OpenSSH, fare clic sui collegamenti seguenti a seconda della distribuzione in uso:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Si possono usare anche condivisioni SMB basate su Windows. Non è necessario che
 ### <a name="configure-the-firewall"></a>Configurare il firewall
 Analogamente a Windows, le distribuzioni Linux includono un firewall predefinito. Se la società usa un firewall esterno ai server, la disabilitazione dei firewall in Linux può essere accettabile. Tuttavia, indipendentemente dalla posizione in cui è abilitato il firewall, è necessario aprire le porte. La tabella seguente elenca le porte comuni necessarie per le distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] a disponibilità elevata in Linux.
 
-| Numero di porta | Tipo     | Descrizione                                                                                                                 |
+| Numero della porta | Type     | Descrizione                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usato): mapper di endpoint                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentazione dei firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installare i pacchetti [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per la disponibilità
@@ -160,7 +160,7 @@ Per altre informazioni sull'intero stack, vedere anche la [pagina della document
 ### <a name="pacemaker-concepts-and-terminology"></a>Concetti e terminologia di Pacemaker
 Questa sezione illustra la terminologia e i concetti comuni per un'implementazione di Pacemaker.
 
-#### <a name="node"></a>Node
+#### <a name="node"></a>Nodo
 Un nodo è un server che partecipa al cluster. Un cluster Pacemaker supporta a livello nativo un massimo di 16 nodi. Questo numero può essere superato se Corosync non è in esecuzione in altri nodi, ma Corosync è obbligatorio per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], quindi il numero massimo di nodi che un cluster può avere per qualsiasi configurazione basata su [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] è 16. Questo è il limite di Pacemaker ed è completamente diverso dalle limitazioni massime per i gruppi di disponibilità e le istanze del cluster di failover imposte da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
 #### <a name="resource"></a>Risorsa
@@ -215,7 +215,7 @@ Per informazioni più specifiche, vedere:
 -   Documentazione di Hyper-V: [Uso del clustering guest per la disponibilità elevata](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   White paper (scritto per le distribuzioni basate su Windows, ma la maggior parte dei concetti è ugualmente valida): [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf) (Pianificazione di distribuzioni di SQL Server strategiche a disponibilità elevata con VMware vSphere)
 
-### <a name="networking"></a>Funzionalità di rete
+### <a name="networking"></a>Rete
 Diversamente da un cluster WSFC, Pacemaker non richiede un nome dedicato o nemmeno un indirizzo IP dedicato per il cluster Pacemaker in sé. I gruppi di disponibilità e le istanze del cluster di failover richiedono gli indirizzi IP (per altre informazioni, vedere la documentazione specifica), ma non i nomi, perché non sono disponibili risorse nome della rete. SLES consente la configurazione di un indirizzo IP per finalità amministrative, ma non è obbligatorio, come illustrato in [Creare il cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
 Analogamente a un cluster WSFC, Pacemaker preferisce la rete ridondante, ovvero schede di rete distinte (schede di interfaccia di rete o schede di interfaccia di rete fisica per l'ambiente fisico) con indirizzi IP singoli. Per quanto riguarda la configurazione del cluster, ogni indirizzo IP avrà il cosiddetto anello specifico. Tuttavia, come avviene attualmente per i cluster WSFC, molte implementazioni sono virtualizzate o si trovano nel cloud pubblico, dove al server viene presentata una singola scheda di interfaccia di rete virtualizzata. Se tutte le schede di interfaccia di rete fisica e le schede di interfaccia di rete virtualizzata sono connesse allo stesso commutatore fisico o virtuale, non esiste una vera ridondanza a livello di rete, quindi la configurazione di più schede di interfaccia di rete è un po' illusoria per la macchina virtuale. La ridondanza di rete è in genere integrata nell'hypervisor per le distribuzioni virtualizzate ed è sicuramente integrata nel cloud pubblico.
