@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215570"
----
 ## <a name="prerequisites"></a>Prerequisites
 
 Prima di creare il gruppo di disponibilità, è necessario:
