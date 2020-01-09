@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215624"
----
 3. In tutti i nodi del cluster aprire le porte del firewall di Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
 
    ```bash

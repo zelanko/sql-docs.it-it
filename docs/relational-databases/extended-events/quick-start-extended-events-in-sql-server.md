@@ -1,6 +1,5 @@
 ---
-title: 'Avvio rapido: Eventi estesi in SQL Server | Microsoft Docs'
-ms.custom: ''
+title: 'Avvio rapido: Eventi estesi in SQL Server'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798425"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242916"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 
@@ -80,8 +79,8 @@ I passaggi sono comprensibili anche se si decide di non eseguirli. La dimostrazi
 
 - Generale
 - Eventi
-- Archiviazione dei dati
-- Advanced
+- Archiviazione dati
+- Avanzate
 
 
 Il testo e le schermate di supporto possono presentare leggere imprecisioni a causa delle modifiche apportate all'interfaccia utente nel corso di mesi o anni. Le schermate restano tuttavia valide ai fini della spiegazione se le discrepanze sono di minore entità.
@@ -424,14 +423,14 @@ Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei
 La tabella seguente elenca i termini usati per gli eventi estesi e ne descrive i significati.
 
 
-| Nome | Descrizione |
+| Termine | Descrizione |
 | :--- | :---------- |
 | sessione eventi | Un costrutto incentrato su uno o più eventi, oltre a elementi di supporto quali azioni e destinazioni. L'istruzione CREATE EVENT SESSION viene costruita a ogni sessione eventi. È possibile modificare una sessione eventi in modo da avviarla e arrestarla in base alle proprie esigenze. <br/> <br/> Una sessione eventi viene a volte indicata semplicemente come *sessione*, quando il dal contesto si evince che indica la *sessione eventi*. <br/> <br/> Altre informazioni sulle sessioni eventi sono disponibili in: [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | evento | Un'occorrenza specifica del sistema che viene controllata da una sessione eventi attiva. <br/> <br/> Ad esempio, l'evento *sql_statement_completed* rappresenta il momento in cui viene completata un'istruzione T-SQL. L'evento può segnalare la durata e altri dati. |
 | target | Un elemento che riceve i dati di output da un evento acquisito. La destinazione visualizza i dati all'utente. <br/> <br/> Gli esempi includono *event_file*e la memoria *ring_buffer*, che rappresenta una versione più pratica e leggera della destinazione event_file. La destinazione *histogram* esegue alcune operazioni di elaborazione dei dati prima di visualizzarli. <br/> <br/> Qualsiasi destinazione può essere usata per qualsiasi sessione eventi. Per informazioni dettagliate, vedere [Destinazioni per gli eventi estesi in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Un campo noto all'evento. I dati del campo vengono inviati alla destinazione. Il campo azione è strettamente correlato al *filtro predicato*. |
 | filtro predicato | Test di dati in un campo evento, usato in modo che solo un subset interessante di occorrenze dell'evento venga inviato alla destinazione. <br/> <br/> Ad esempio, un filtro può includere solo le occorrenze dell'evento *sql_statement_completed* in cui l'istruzione T-SQL conteneva la stringa *HAVING*. |
-| pacchetto | Un qualificatore del nome associato a ogni elemento in un set di elementi incentrato su un core di eventi. <br/> <br/> Ad esempio, un pacchetto potrebbe avere eventi sul testo T-SQL, un evento potrebbe riguardare T-SQL in un batch delimitato da GO, un evento più circoscritto potrebbe riguardare le singole istruzioni T-SQL. Inoltre, per qualsiasi istruzione T-SQL sono disponibili gli eventi iniziali e completati. <br/> <br/> Anche i campi appropriati per gli eventi sono inclusi nel pacchetto con gli eventi. La maggior parte delle destinazioni si trova in *package0* e viene usata con gli eventi di molti altri pacchetti. |
+| Pacchetto | Un qualificatore del nome associato a ogni elemento in un set di elementi incentrato su un core di eventi. <br/> <br/> Ad esempio, un pacchetto potrebbe avere eventi sul testo T-SQL, un evento potrebbe riguardare T-SQL in un batch delimitato da GO, un evento più circoscritto potrebbe riguardare le singole istruzioni T-SQL. Inoltre, per qualsiasi istruzione T-SQL sono disponibili gli eventi iniziali e completati. <br/> <br/> Anche i campi appropriati per gli eventi sono inclusi nel pacchetto con gli eventi. La maggior parte delle destinazioni si trova in *package0* e viene usata con gli eventi di molti altri pacchetti. |
 
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>Come individuare gli eventi disponibili nei pacchetti
