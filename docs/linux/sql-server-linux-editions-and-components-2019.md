@@ -1,6 +1,6 @@
 ---
 title: Edizioni e funzionalità supportate di SQL Server 2019 - Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954993"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776551"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
 
@@ -94,23 +94,23 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
   
 |Funzionalità|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Log shipping|Sì|Sì|Sì|no|  
-|Compressione backup|Sì|Sì|no|no| 
-|Snapshot del database|Sì|no|no|no|
-|Istanza del cluster di failover Always On<sup>1</sup>|Sì|Sì|no|no| 
-|Gruppi di disponibilità AlwaysOn<sup>2</sup>|Sì|no|no|no|
-|Gruppi di disponibilità di base<sup>3</sup>|no|Sì|no|no|
-|Gruppo di disponibilità con commit di un numero minimo di repliche|Sì|Sì|no|no|
-|Gruppo di disponibilità senza cluster|Sì|Sì|no|no|
-|Ripristino di pagine e file online|Sì|no|no|no|
-|Indicizzazione online|Sì|no|no|no|
-|Ricompilazioni degli indici online ripristinabili|Sì|no|no|no|
-|Modifica dello schema online|Sì|no|no|no|
-|Recupero rapido|Sì|no|no|no|
-|Backup con mirroring|Sì|no|no|no|
-|Aggiunta di memoria a caldo e CPU|Sì|no|no|no|
-|Backup crittografato|Sì|Sì|no|no|
-|Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|no|no|
+|Log shipping|Sì|Sì|Sì|No|  
+|Compressione backup|Sì|Sì|No|No| 
+|Snapshot del database|Sì|No|No|No|
+|Istanza del cluster di failover Always On<sup>1</sup>|Sì|Sì|No|No| 
+|Gruppi di disponibilità AlwaysOn<sup>2</sup>|Sì|No|No|No|
+|Gruppi di disponibilità di base<sup>3</sup>|No|Sì|No|No|
+|Gruppo di disponibilità con commit di un numero minimo di repliche|Sì|Sì|No|No|
+|Gruppo di disponibilità senza cluster|Sì|Sì|No|No|
+|Ripristino di pagine e file online|Sì|No|No|No|
+|Indicizzazione online|Sì|No|No|No|
+|Ricompilazioni degli indici online ripristinabili|Sì|No|No|No|
+|Modifica dello schema online|Sì|No|No|No|
+|Recupero rapido|Sì|No|No|No|
+|Backup con mirroring|Sì|No|No|No|
+|Aggiunta di memoria a caldo e CPU|Sì|No|No|No|
+|Backup crittografato|Sì|Sì|No|No|
+|Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|No|No|
   
 <sup>1</sup> In Enterprise Edition il numero di nodi corrisponde al valore massimo del sistema operativo. Nella versione Standard Edition è disponibile il supporto per due nodi. 
 
@@ -124,19 +124,19 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Sì|Sì|Sì|Sì|  
 |File binari di oggetti di grandi dimensioni in indici columnstore cluster|Sì|Sì|Sì|Sì|  
-|Ricompilazione degli indici columnstore non cluster online|Sì|no|no|no|
+|Ricompilazione degli indici columnstore non cluster online|Sì|No|No|No|
 |OLTP in memoria <sup>1</sup>|Sì|Sì|Sì|Sì|
 |Memoria principale persistente|Sì|Sì|Sì|Sì|
 |Partizionamento di tabelle e indici|Sì|Sì|Sì|Sì|  
-|Compressione dati|Sì|Sì|Sì|Sì|
-|Resource Governor|Sì|no|no|no|  
-|Parallelismo della tabella partizionata|Sì|no|no|no|
-|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|no|no|no|
-|Governance delle risorse di I/O|Sì|no|no|no|  
+|Compressione dei dati|Sì|Sì|Sì|Sì|
+|Resource Governor|Sì|No|No|No|  
+|Parallelismo della tabella partizionata|Sì|No|No|No|
+|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No|No|No|
+|Governance delle risorse di I/O|Sì|No|No|No|  
 |Durabilità posticipata|Sì|Sì|Sì|Sì|
-|Ottimizzazione automatica|Sì|no|no|no|
-|Join adattivi in modalità batch|Sì|no|no|no|
-|Feedback delle concessioni di memoria in modalità batch|Sì|no|no|no|
+|Ottimizzazione automatica|Sì|No|No|No|
+|Join adattivi in modalità batch|Sì|No|No|No|
+|Feedback delle concessioni di memoria in modalità batch|Sì|No|No|No|
 |Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Sì|Sì|Sì|Sì|
 |Miglioramenti dell'inserimento bulk|Sì|Sì|Sì|Sì|
 
@@ -148,14 +148,14 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Funzionalità|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Sicurezza a livello di riga|Sì|Sì|Sì|Sì|  
-|Crittografia sempre attiva|Sì|Sì|Sì|Sì| 
-|Mascheramento dati dinamici|Sì|Sì|Sì|Sì|   
+|Always Encrypted|Sì|Sì|Sì|Sì| 
+|Maschera dati dinamica|Sì|Sì|Sì|Sì|   
 |Controllo di base|Sì|Sì|Sì|Sì| 
 |Controllo con granularità fine|Sì|Sì|Sì|Sì| 
-|Crittografia trasparente del database|Sì|no|no|no|   
+|Crittografia trasparente del database|Sì|No|No|No|   
 |Ruoli definiti dall'utente|Sì|Sì|Sì|Sì| 
 |Database indipendenti|Sì|Sì|Sì|Sì| 
-|Crittografia per backup|Sì|Sì|no|no|  
+|Crittografia per backup|Sì|Sì|No|No|  
 
 ##  <a name="RDBMSM"></a> Gestione RDBMS  
   
@@ -164,17 +164,17 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Connessione amministrativa dedicata|Sì|Sì|Sì|Sì, con flag di traccia|   
 |Supporto per script di PowerShell|Sì|Sì|Sì|Sì| 
 |Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Sì|Sì|Sì|Sì| 
-|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|no|  
-|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|no|
-|Report di prestazioni standard|Sì|Sì|Sì|no|
-|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|no| 
+|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|No|  
+|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|No|
+|Report di prestazioni standard|Sì|Sì|Sì|No|
+|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|No| 
 |Query diretta di viste indicizzate (tramite hint NOEXPAND)|Sì|Sì|Sì|Sì| 
-|Gestione automatica viste indicizzate|Sì|Sì|Sì|no|
-|Viste partizionate distribuite|Sì|no|no|no| 
-|Operazioni indicizzate parallele|Sì|no|no|no|  
-|Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|no|no|no| 
-|Verifica di coerenza parallela|Sì|no|no|no| 
-|Punto di controllo dell'Utilità SQL Server|Sì|no|no|no|    
+|Gestione automatica viste indicizzate|Sì|Sì|Sì|No|
+|Viste partizionate distribuite|Sì|No|No|No| 
+|Operazioni indicizzate parallele|Sì|No|No|No|  
+|Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|No|No|No| 
+|Verifica di coerenza parallela|Sì|No|No|No| 
+|Punto di controllo dell'Utilità SQL Server|Sì|No|No|No|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -191,7 +191,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Ricerca full-text e semantica|Sì|Sì|Sì|Sì|
 |Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|
 |Service Broker (messaggistica)|Sì|Sì|No (solo client)|No (solo client)|
-|Transact-SQL - endpoint|Sì|Sì|Sì|no|
+|Transact-SQL - endpoint|Sì|Sì|Sì|No|
 |Grafico|Sì|Sì|Sì|Sì|  
 
 
@@ -212,7 +212,7 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 
 ## <a name="Unsupported"></a> Funzionalità e servizi non supportati
 
-Le funzionalità e i servizi seguenti non sono disponibili in SQL Server 2019 in Linux. Il supporto di queste funzionalità aumenterà nel corso del tempo.
+Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 in Linux. Il supporto di queste funzionalità aumenterà nel corso del tempo.
 
 | Area | Funzionalità o servizio non supportato |
 |-----|-----|
@@ -228,7 +228,7 @@ Le funzionalità e i servizi seguenti non sono disponibili in SQL Server 2019 in
 | &nbsp; | Avvisi |
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
-| **Security** | Extensible Key Management |
+| **Sicurezza** | Extensible Key Management |
 | &nbsp; | Autenticazione AD per i server collegati | 
 | &nbsp; | Autenticazione AD per i gruppi di disponibilità | 
 | **Services** | SQL Server Browser |

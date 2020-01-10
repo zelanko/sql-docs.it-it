@@ -23,19 +23,19 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903027"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776395"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Questo argomento illustra come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="Background"></a> Informazioni preliminari  
+##  <a name="Background"></a> Background  
  Un accesso è un'entità di sicurezza o un'entità che può essere autenticata da un sistema sicuro. Per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], gli utenti necessitano di un account di accesso. È possibile creare un account di accesso basato su un'entità di Windows (quale un utente del dominio o un gruppo del dominio Windows) o è possibile creare un account di accesso che non è basato su un'entità di Windows (ad esempio, un accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > **NOTA** Per utilizzare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve utilizzare l'autenticazione a modalità mista. Per altre informazioni, vedere [Scegliere una modalità di autenticazione](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "72903027"
   
 > **NOTA** Quando un account di accesso si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'identità viene convalidata nel database master. Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] a livello di database. Quando si usano gli utenti di database indipendente, non è necessario un account di accesso. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicurezza  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede l'autorizzazione **ALTER ANY LOGIN** o **ALTER LOGIN** per il server.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72903027"
   
 5.  Per creare un account di accesso salvato in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server**.  
   
-    1.  Nella casella **Password** , immettere una password per il nuovo utente. Immettere nuovamente quella password nella casella **Conferma password** .  
+    1.  Nella casella **Password** digitare una password per il nuovo utente. Digitare di nuovo la password nella casella **Conferma password** .  
   
     2.  In caso di modifica di una password esistente, selezionare **Specifica vecchia password**e quindi digitare la password precedente nella casella **Vecchia password** .  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72903027"
  Nella pagina **Mapping utenti** sono elencati tutti i possibili database e le appartenenze al ruolo dei database che possono essere applicati all'account di accesso. I database selezionati determinano le appartenenze al ruolo che sono disponibili per l'account di accesso. In questa pagina sono disponibili le opzioni seguenti.  
   
  **Utenti di cui è stato eseguito il mapping all'account di accesso seguente**  
- Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** _database_name_ .  
+ Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** _database_name_.  
   
  **Mappa**  
  Consente all'account di accesso di accedere al database sotto indicato.  
@@ -148,10 +148,10 @@ ms.locfileid: "72903027"
  **Schema predefinito**  
  Consente di specificare lo schema predefinito dell'utente. Lo schema predefinito dei nuovi utenti creati è **dbo**. È possibile specificare uno schema predefinito non ancora creato. Non è possibile specificare uno schema predefinito per un utente del quale è stato eseguito il mapping a un gruppo di Windows, un certificato o una chiave asimmetrica.  
   
- **Guest account enabled for:**  _database_name_  
+ **Account Guest abilitato per:** _database_name_  
  Attributo di sola lettura che indica se l'account Guest è abilitato nel database selezionato. Utilizzare la pagina **Stato** della finestra di dialogo **Proprietà account di accesso** dell'account Guest per abilitare o disabilitare tale account.  
   
- **Database role membership for:**  _database_name_  
+ **Appartenenza a ruoli del database per:** _database_name_  
  Consente di selezionare i ruoli per l'utente nel database specificato. Tutti gli utenti sono membri del ruolo **public** in ogni database e non possono essere eliminati. Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Entità a protezione diretta  
@@ -216,14 +216,14 @@ ms.locfileid: "72903027"
   
  Selezionare **Concedi** per concedere l'autorizzazione CONNECT SQL all'account di accesso. Selezionare **Nega** per negare l'autorizzazione CONNECT SQL all'account di accesso.  
   
- **Account di accesso**  
+ **Accesso**  
  Quando si utilizza questa impostazione, è consigliabile pensare all'account di accesso selezionato come a un record in una tabella. Le modifiche ai valori elencati qui verranno applicate al record.  
   
  Un account di accesso che è stato disabilitato continua a esistere come record. Se tuttavia tenta di connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'account di accesso non viene autenticato.  
   
  Selezionare questa opzione per abilitare o disabilitare l'account di accesso. Questa opzione utilizza l'istruzione ALTER LOGIN insieme all'opzione ENABLE o DISABLE.  
   
- **SQL Server Authentication**  
+ **Autenticazione di SQL Server**  
  La casella di controllo **Account di accesso bloccato** è disponibile solo se l'account di accesso selezionato si connette utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Creare un account di accesso usando l'autenticazione di Windows con T-SQL  
@@ -243,7 +243,7 @@ ms.locfileid: "72903027"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Creare un account di accesso usando l'autenticazione di SQL Server con SSMS  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Creare un account di accesso usando l'autenticazione di SQL Server con T-SQL
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -273,6 +273,6 @@ ms.locfileid: "72903027"
 -   Per concedere un'autorizzazione a un account di accesso, vedere [Concedere un'autorizzazione a un'entità](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

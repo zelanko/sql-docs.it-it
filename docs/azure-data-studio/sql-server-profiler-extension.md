@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959110"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776512"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Estensione SQL Server Profiler (anteprima)
 
-L'estensione SQL Server Profiler (anteprima) costituisce una semplice soluzione di analisi per SQL Server e offre funzionalità analoghe al profiler di SQL Server Management Studio (SSMS), ad eccezione della compilazione con XEvent. SQL Server Profiler è molto facile da usare e offre valori predefiniti per le più comuni configurazioni di analisi. L'esperienza utente è ottimizzata per la ricerca di eventi e la visualizzazione del testo Transact-SQL (T-SQL) associato. SQL Server Profiler per Azure Data Studio prevede anche valori predefiniti per la raccolta di attività di esecuzione di T-SQL tramite un'esperienza utente di facile utilizzo. Questa estensione è attualmente disponibile in anteprima.
+L'estensione SQL Server Profiler (anteprima) offre una semplice soluzione di analisi per SQL Server con funzionalità analoghe al profiler di SQL Server Management Studio (SSMS), ma realizzate con eventi estesi. SQL Server Profiler è molto facile da usare e offre valori predefiniti per le più comuni configurazioni di analisi. L'esperienza utente è ottimizzata per la ricerca di eventi e la visualizzazione del testo Transact-SQL (T-SQL) associato. SQL Server Profiler per Azure Data Studio prevede anche valori predefiniti per la raccolta di attività di esecuzione di T-SQL tramite un'esperienza utente di facile utilizzo. Questa estensione è attualmente disponibile in anteprima.
 
 **Casi d'uso comuni di SQL Profiler:**
 

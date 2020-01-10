@@ -3,28 +3,28 @@ title: Configurare i repository Linux per SQL Server 2017 e 2019
 description: Selezionare e configurare i repository di origine per SQL Server 2019 e SQL Server 2017 in Linux. Il repository di origine influisce sulla versione di SQL Server che viene applicata durante l'installazione e l'aggiornamento.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531326"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776378"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare i repository per l'installazione e l'aggiornamento di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **Red Hat (RHEL)**.
+Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **SUSE (SLES)**.
+Questo articolo descrive come configurare il repository corretto per le installazioni e gli aggiornamenti di SQL Server 2017 e SQL Server 2019 in Linux. Nella parte superiore, la selezione corrente è **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -50,7 +50,7 @@ Quando si installa SQL Server in Linux, è necessario configurare un repository 
 
 È importante sottolineare che esistono due tipi principali di repository per ogni distribuzione:
 
-- **Aggiornamenti cumulativi (CU)**: il repository degli aggiornamenti cumulativi (CU) contiene pacchetti per la versione di base di SQL Server e le eventuali correzioni di bug o i miglioramenti apportati successivamente al rilascio. Gli aggiornamenti cumulativi sono specifici di una versione finale, ad esempio SQL Server 2019. Vengono rilasciati a cadenza regolare.
+- **Aggiornamenti cumulativi (CU)** : il repository degli aggiornamenti cumulativi (CU) contiene pacchetti per la versione di base di SQL Server e le eventuali correzioni di bug o i miglioramenti apportati successivamente al rilascio. Gli aggiornamenti cumulativi sono specifici di una versione finale, ad esempio SQL Server 2019. Vengono rilasciati a cadenza regolare.
 
 - **GDR**: il repository GDR contiene i pacchetti per la versione di base di SQL Server e solo le correzioni critiche e gli aggiornamenti della sicurezza a partire da tale versione. Questi aggiornamenti vengono aggiunti anche alla versione CU successiva.
 
@@ -173,10 +173,15 @@ Se necessario, rimuovere il repository precedente. Usare uno dei comandi seguent
 ::: zone pivot="ld2-rhel"
 Configurare il nuovo repository da usare per le installazioni e gli aggiornamenti di SQL Server. Usare uno dei comandi seguenti per configurare il repository scelto.
 
+> [!NOTE]
+> I comandi seguenti per SQL Server 2019 puntano al repository RHEL 8. RHEL 8 non viene preinstallato con python2, richiesto per SQL Server. Per altre informazioni, vedere il blog seguente sull'installazione di python2 e sulla relativa configurazione come interprete predefinito: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Se si usa RHEL 7, modificare il percorso riportato di seguito sostituendo `/rhel/8` con `/rhel/7`.
+
 | Archivio | Versione | Comando |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
