@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295889"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924979"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati in SQL Server o nel [database SQL di Azure](/azure/sql-database/). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
 
@@ -30,7 +28,6 @@ Questo articolo illustra come eseguire le operazioni seguenti:
 * Creare un nuovo progetto di Integration Services in Visual Studio.
 * Progettare un pacchetto SSIS che carica i dati dall'origine nella destinazione.
 * Eseguire il pacchetto SSIS per caricare i dati.
-
 
 ## <a name="basic-concepts"></a>Concetti fondamentali
 
@@ -60,7 +57,7 @@ Per eseguire questa esercitazione, sono necessari:
 3. **SQL Server Data Tools per Visual Studio (SSDT)** . Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. In questa esercitazione ci si connette a un'istanza di SQL Server o del database SQL e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati nelle seguenti destinazioni:
    - **Un database SQL di Azure**. Per altre informazioni, vedere [Database SQL di Azure](/azure/sql-database/).  
-      o Gestione configurazione
+      o
    - **Un'istanza di SQL Server**. SQL Server può essere eseguito in locale o in una macchina virtuale di Azure. Per scaricare una versione di valutazione gratuita o un'edizione per sviluppatori di SQL Server, vedere [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 5. **Dati di esempio**. Questa esercitazione usa come dati di origine i dati di esempio archiviati in SQL Server, nel database di esempio AdventureWorks. Per ottenere il database di esempio AdventureWorks, vedere [Database di esempio AdventureWorks][AdventureWorks 2014 Sample Databases].
@@ -140,8 +137,8 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
    2. In **Nome server** immettere il nome del server SQL Server o del server di database SQL.
    3. Nella sezione **Accesso al server** selezionare **Usa autenticazione di SQL Server** e immettere le informazioni di autenticazione.
    4. Nella sezione **Connessione al database** selezionare un database SQL esistente.
-    A. Fare clic su **Test connessione**.
-    B. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
+    a. Fare clic su **Test connessione**.
+    b. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
     c. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
 5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor destinazione ADO.NET**.
 6. Nell'**Editor destinazione ADO.NET** fare clic su **Nuovo** accanto all'elenco **Tabella o vista** per visualizzare la finestra di dialogo **Crea tabella** per creare una nuova tabella di destinazione con un elenco di colonne che corrisponde alla tabella di origine.

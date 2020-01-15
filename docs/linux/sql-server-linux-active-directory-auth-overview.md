@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329963"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831821"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticazione di Azure Active Directory per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo offre una panoramica dell'autenticazione di Active Directory (AD) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. L'autenticazione di AD in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è nota anche come autenticazione integrata. 
+Questo articolo offre una panoramica dell'autenticazione di Active Directory (AD) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. L'autenticazione di AD in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è nota anche come autenticazione integrata.
 
 ## <a name="ad-authentication-overview"></a>Panoramica dell'autenticazione di AD
 
@@ -30,10 +30,10 @@ L'autenticazione di AD consente ai client aggiunti a un dominio in Windows o Lin
 
 Rispetto all'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'autenticazione di AD presenta i vantaggi seguenti:
 
-- Gli utenti eseguono l'autenticazione tramite Single Sign-On e non devono specificare la password.   
+- Gli utenti eseguono l'autenticazione tramite Single Sign-On e non devono specificare la password.
 - Creando account di accesso per i gruppi AD, è possibile gestire l'accesso e le autorizzazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite le appartenenze a tali gruppi.  
 - Ogni utente ha un'unica identità in tutta l'organizzazione. Non è quindi necessario tenere traccia della corrispondenza tra gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e ciascun utente.   
-- AD consente di applicare criteri centralizzati per le password in tutta l'organizzazione.   
+- AD consente di applicare criteri centralizzati per le password in tutta l'organizzazione.
 
 ## <a name="configuration-steps"></a>Passaggi di configurazione
 
