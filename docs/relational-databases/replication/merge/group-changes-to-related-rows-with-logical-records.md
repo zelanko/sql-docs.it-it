@@ -1,6 +1,7 @@
 ---
-title: Raggruppare modifiche alle righe correlate con record logici | Microsoft Docs
-ms.custom: ''
+title: Raggruppare modifiche alle righe correlate con record logici
+description: Di seguito viene descritto come apportare modifiche alle righe correlate in un'unica soluzione con la replica di tipo merge in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033252"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321488"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Raggruppamento di modifiche alla righe correlate con record logici
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68033252"
   
  Si considerino le tre tabelle correlate seguenti:  
   
- ![Record logico per tre tabelle solo con nomi di colonna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Record logico per tre tabelle solo con nomi di colonna")  
+ ![Record logico per tre tabelle con solo i nomi di colonna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Record logico per tre tabelle con solo i nomi di colonna")  
   
  La tabella **Customers** è la tabella padre in questa relazione e presenta una colonna chiave primaria **CustID**. La tabella **Orders** ha una colonna chiave primaria **OrderID**, con un vincolo di chiave esterna nella colonna **CustID** che fa riferimento alla colonna **CustID** nella tabella **Customers** . Analogamente, la tabella **OrderItems** ha una colonna chiave primaria **OrderItemID**, con un vincolo di chiave esterna nella colonna **OrderID** che fa riferimento alla colonna **OrderID** nella tabella **Orders** .  
   

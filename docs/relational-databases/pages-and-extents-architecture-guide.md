@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586772"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325493"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ Nella tabella seguente vengono elencati i tipi di pagina utilizzati nei file di 
 > [!NOTE]
 > I file di log non includono pagine, ma solo una serie di record di log.
 
-Le righe di dati vengono inserite in sequenza nella pagina iniziando immediatamente dopo l'intestazione. Una tabella dell'offset delle righe inizia alla fine della pagina. Ogni tabella dell'offset delle righe include una voce per ogni riga della pagina e in ogni voce viene registrata la distanza del primo byte della riga dall'inizio della pagina. Le voci della tabella dell'offset delle righe sono in sequenza inversa rispetto a quella delle righe della pagina.
+Le righe di dati vengono inserite in sequenza nella pagina iniziando immediatamente dopo l'intestazione. Una tabella dell'offset delle righe inizia alla fine della pagina. Ogni tabella dell'offset delle righe include una voce per ogni riga della pagina e in ogni voce di offset riga viene registrata la distanza del primo byte della riga dall'inizio della pagina. La funzione della tabella dell'offset delle righe è quindi quella di aiutare SQL Server a trovare rapidamente le righe in una pagina. Le voci della tabella dell'offset delle righe sono in sequenza inversa rispetto a quella delle righe della pagina.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ Questa operazione viene eseguita ogni volta che un aggiornamento o un inseriment
 
 ##### <a name="row-overflow-considerations"></a>Considerazioni sull'overflow della riga 
 
-Quando si combinano colonne di tipo varchar, nvarchar, varbinary, sql_variant o CLR definito dall'utente che superano gli 8.060 byte per riga, tenere presente quanto segue: 
+Come indicato in precedenza, una riga non può risiedere su più pagine e può eseguire l'overflow se la dimensione combinata dei campi di tipo di dati a lunghezza variabile supera il limite di 8060 byte. Ad esempio è possibile creare una tabella con due colonne: una varchar(7000) e un'altra varchar(2000). Se considerata individualmente, nessuna delle due colonne supera il limite di 8060 byte, ma questo può accadere se le colonne vengono combinate e viene riempita l'intera larghezza di ogni colonna. SQL Server potrebbe spostare in modo dinamico la colonna di lunghezza variabile varchar(7000) a pagine dell'unità di allocazione ROW_OVERFLOW_DATA. Quando si combinano colonne di tipo varchar, nvarchar, varbinary, sql_variant o CLR definito dall'utente che superano gli 8.060 byte per riga, tenere presente quanto segue:
 -  Lo spostamento di record di grandi dimensioni in un'altra pagina avviene dinamicamente in quanto la lunghezza dei record dipende dalle operazioni di aggiornamento. In seguito a operazioni di aggiornamento che comportano una diminuzione della lunghezza dei record, i record possono venire spostati di nuovo nella pagina originale nell'unità di allocazione IN_ROW_DATA. L'esecuzione di query e di altre operazioni di selezione, ad esempio ordinamenti o join in record di grandi dimensioni contenenti dati di overflow della riga, rallenta i tempi di esecuzione perché questi record vengono elaborati in modo sincrono anziché asincrono.   
    Quando si progetta una tabella con più colonne di tipo varchar, nvarchar, varbinary, sql_variant o CLR definito dall'utente valutare quindi la percentuale di righe in cui probabilmente si verificherà un overflow e la frequenza con cui potrebbero venire eseguite query su questi dati di overflow. Se è probabile che verranno eseguite di frequente query su molte righe di dati di overflow della riga, valutare la possibilità di normalizzare la tabella in modo che alcune colonne vengano spostate in un'altra tabella. Sarà quindi possibile eseguire query in un'operazione JOIN asincrona. 
 -  La lunghezza delle singole colonne deve comunque rientrare nel limite di 8.000 byte per le colonne di tipo varchar, nvarchar, varbinary, sql_variant e CLR definito dall'utente. Solo le lunghezze combinate possono superare il limite di 8.060 byte per riga.
@@ -98,7 +98,7 @@ Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, [!INCLUDE[ssNoVer
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestione delle allocazioni di extent e dello spazio libero 
 
-Le strutture di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che consentono di gestire le allocazioni degli extent e di tenere traccia dello spazio su disco sono organizzate in modo relativamente semplice. Tali strutture offrono i vantaggi seguenti: 
+Le strutture di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che consentono di gestire le allocazioni degli extent e di tenere traccia dello spazio su disco sono organizzate in modo relativamente semplice. Ciò offre i vantaggi seguenti: 
 
 * Le informazioni relative allo spazio libero sono compresse al massimo e occupano pertanto un numero ridotto di pagine.   
   Questa caratteristica comporta un aumento della velocità a causa della riduzione della quantità di letture su disco necessarie per recuperare le informazioni sull'allocazione. In questo modo, aumenta inoltre la probabilità che le pagine di allocazione vengano mantenute nella memoria e non richiedano ulteriori letture. 
@@ -136,7 +136,7 @@ Le pagine **PFS (Page Free Space, Spazio libero nella pagina)** consentono di ri
 
 Dopo che un extent è stato allocato a un oggetto, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine PFS per registrare le pagine dell'extent allocate e quelle disponibili. Queste informazioni vengono utilizzate quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deve allocare una nuova pagina. La quantità di spazio libero in una pagina viene mantenuta solo per le pagine heap e text/image. Questo spazio viene utilizzato quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deve trovare una pagina con spazio libero disponibile per includere una nuova riga inserita. Per gli indici non è necessario tenere traccia dello spazio libero nella pagina, in quanto il punto di inserimento di una nuova riga viene impostato dai valori delle chiavi di indice.
 
-Una pagina PFS è la prima pagina dopo la pagina dell'intestazione di un file di dati (con ID pagina 1). Questa pagina è seguita da una pagina GAM (ID pagina 2) e quindi da una pagina SGAM (ID pagina 3). Esistono una nuova pagina PFS circa 8.000 pagine dopo la prima pagina PFS e altre pagine PFS a intervalli di 8.000 pagine successive. È presente un'altra pagina GAM 64.000 extent dopo la prima pagina GAM a pagina 2 e un'altra pagina SGAM 64.000 extent dopo la prima pagina SGAM a pagina 3 e altre pagine GAM e SGAM a intervalli successivi di 64.000 extent. Nella figura seguente viene illustrata la sequenza di pagine utilizzata da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per allocare e gestire gli extent.
+Viene aggiunta una nuova pagina PFS, GAM o SGAM al file di dati per ogni intervallo aggiuntivo di cui tiene traccia. Pertanto è presente una nuova pagina PFS 8.088 pagine dopo la prima pagina PFS e altre pagine PFS a intervalli successivi di 8.088 pagine. Ad esempio l'ID pagina 1 è una pagina PFS, l'ID pagina 8088 è una pagina PFS, l'ID pagina 16176 è una pagina PFS e così via. Una nuova pagina GAM è presente 64.000 extent dopo la prima pagina GAM e tiene traccia di 64.000 extent successivi; la sequenza continua a intervalli di 64.000 extent. In modo analogo, è presente una nuova pagina SGAM 64.000 extent dopo la prima pagina SGAM e sono presenti altre pagine SGAM a intervalli di 64.000 extent successivi. Nella figura seguente viene illustrata la sequenza di pagine utilizzata da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per allocare e gestire gli extent.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 

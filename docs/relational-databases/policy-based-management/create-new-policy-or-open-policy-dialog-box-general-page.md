@@ -1,6 +1,7 @@
 ---
-title: Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo "Crea nuovi criteri" o "Apri criteri", pagina Generale
+descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae5b12473756d6ca5c5a20b188b3c282205d9bd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50334a6b64319a280d34df9fbd4907aa82e82111
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137897"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558306"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68137897"
  **Nome**  
  In caso di criteri nuovi digitare il relativo nome. In caso di criteri esistenti, il nome è già visualizzato.  
   
- **Abilitata**  
+ **Enabled**  
  Selezionare la casella di controllo **Abilitato** per abilitare i criteri. Deselezionare la casella di controllo **Abilitato** per disabilitarli. La casella **Abilitato** si applica all'automazione dei criteri. Consente di creare o rimuovere il sistema di automazione per i criteri. Per l'automazione vengono utilizzati i meccanismi seguenti:  
   
  **Su modifica: impedisci esecuzione**  
@@ -64,7 +65,7 @@ ms.locfileid: "68137897"
  **Su modifica: impedisci esecuzione**  
  Quando l'utente tenta di apportare modifiche, questa opzione impedisce le modifiche che violerebbero i criteri.  
   
- **Pianificazione**  
+ **Pianificare**  
  Questa opzione viene visualizzata quando è selezionata la modalità di valutazione **Su pianificazione** . Digitare il nome della pianificazione, fare clic su **Seleziona** per effettuare una selezione da un elenco oppure scegliere **Nuova** per creare una nuova pianificazione. Per abilitare l'area di pianificazione, è necessario che l'opzione **Su pianificazione** sia selezionata.  
   
  **Restrizione server**  

@@ -1,21 +1,20 @@
 ---
-title: Introduzione a SQL Server in Ubuntu
-titleSuffix: SQL Server
+title: 'Ubuntu: Installare SQL Server in Linux'
 description: Questa guida di avvio rapido illustra come installare SQL Server 2017 o SQL Server 2019 in Ubuntu e quindi come creare ed eseguire query su un database con sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sqlfreshmay19
+ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531354"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558423"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Avvio rapido: Installare SQL Server e creare un database in Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -44,7 +43,7 @@ In questa guida di avvio rapido si installerà SQL Server 2019 in Ubuntu 16.04. 
 Per installare Ubuntu 16,04 nel computer in uso, passare a [http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/). È anche possibile creare macchine virtuali Ubuntu in Azure. Vedere [Creare e gestire VM Linux con l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Attualmente il [Sottosistema Windows per Linux](https://msdn.microsoft.com/commandline/wsl/about) per Windows 10 non è supportato come destinazione dell'installazione.
+> Attualmente il [sottosistema Windows per Linux](https://msdn.microsoft.com/commandline/wsl/about) per Windows 10 non è supportato come destinazione dell'installazione.
 
 Per altri requisiti di sistema, vedere [Requisiti di sistema per SQL Server su Linux](sql-server-linux-setup.md#system).
 

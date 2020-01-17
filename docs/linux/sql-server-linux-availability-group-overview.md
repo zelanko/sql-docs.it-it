@@ -1,6 +1,7 @@
 ---
-title: Gruppi di disponibilità Always On per SQL Server in Linux
-description: ''
+title: Gruppi di disponibilità per SQL Server in Linux
+description: Informazioni sulle caratteristiche dei gruppi di disponibilità Always On per SQL Server in Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794988"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558634"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Gruppi di disponibilità Always On in Linux
 
@@ -146,7 +147,7 @@ In un gruppo di disponibilità con un tipo di cluster NONE le repliche possono t
 
 ![Cluster ibrido di tipo None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Anche un gruppo di disponibilità distribuito può essere basato su più sistemi operativi. I gruppi di disponibilità sottostanti sono vincolati dalle regole definite per la configurazione. Ad esempio, un gruppo può essere configurato con un tipo di cluster External solo Linux, mentre il gruppo a cui viene aggiunto può essere configurato con un cluster WSFC. Si consideri l'esempio descritto di seguito.
+Anche un gruppo di disponibilità distribuito può essere basato su più sistemi operativi. I gruppi di disponibilità sottostanti sono vincolati dalle regole definite per la configurazione. Ad esempio, un gruppo può essere configurato con un tipo di cluster External solo Linux, mentre il gruppo a cui viene aggiunto può essere configurato con un cluster WSFC. Prendere in considerazione gli esempi seguenti:
 
 ![Gruppo di disponibilità ibrido distribuito](./media/sql-server-linux-availability-group-overview/image2.png)
 

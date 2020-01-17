@@ -1,6 +1,5 @@
 ---
-title: Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server | Microsoft Docs
-ms.custom: ''
+title: Istruzioni SELECT e JOIN da viste di sistema per eventi estesi
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903448"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242896"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-In questo articolo vengono spiegati i due set di viste di sistema correlate agli eventi estesi in Microsoft SQL Server e nel servizio cloud del database SQL di Azure. L'articolo illustra:
+Questo articolo illustra i due set di viste di sistema correlate agli eventi estesi in SQL Server e nel database SQL di Azure. L'articolo illustra:
 
 - Come unire diverse viste di sistema con l'istruzione JOIN.
 - Come selezionare tipi particolari di informazioni di viste di sistema con l'istruzione SELECT.
@@ -34,7 +34,7 @@ La maggior parte degli esempi è scritta per SQL Server ma con qualche semplice 
 
 
 
-## <a name="a-foundational-information"></a>A. Informazioni di base
+## <a name="a-foundational-information"></a>R. Informazioni di base
 
 
 Per gli eventi estesi sono disponibili due set di viste di sistema:
@@ -55,7 +55,7 @@ Per gli eventi estesi sono disponibili due set di viste di sistema:
 
 - Archiviano informazioni relative all' *attività corrente* di sessioni evento in esecuzione. Queste DMV, tuttavia, hanno poche informazioni sulla definizione delle sessioni.
     - Anche se tutte le sessioni evento sono arrestate, un'istruzione SELECT dalla vista *sys.dm_xe_packages* restituirebbe comunque un certo numero di righe, perché all'avvio del server nella memoria attiva vengono caricati diversi pacchetti.
-    - Per lo stesso motivo anche *sys.dm_xe_objects* *sys.dm_xe_object_columns* restituirebbe un certo numero di righe.
+    - Per lo stesso motivo anche *sys.dm_xe_objects* *sys.dm_xe_object_columns* restituirebbe delle righe.
 
 
 - Prefisso nome per DMV di eventi estesi:
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* e campi evento
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* e campi evento
 
 
 L'istruzione SELECT seguente inserisce una clausola JOIN in una vista complessa, *sys.dm_xe_map_values*.
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 Istruzione SELECT di DMV con cast della colonna target_data in XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 Istruzione SELECT di DMV con cast della colonna target_data in XML
 
 
 Questa istruzione SELECT di DMV restituisce righe di dati provenienti dalla destinazione della sessione evento attiva. Viene eseguito il cast dei dati in XML. In questo modo è possibile fare clic sulla cella restituita per visualizzarla in modo semplice in SSMS.
@@ -854,7 +854,7 @@ Quando si fa clic sulla cella XML-Cast, compare la visualizzazione abbellita seg
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 Istruzione SELECT da una funzione che recupera dati event_file dall'unità disco
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 Istruzione SELECT da una funzione che recupera dati event_file dall'unità disco
 
 
 Si supponga che la sessione evento abbia raccolto alcuni dati e in seguito sia stata arrestata. Se la definizione della sessione prevede l'uso della destinazione event_file, è comunque possibile recuperare i dati chiamando la funzione *sys.fn_xe_target_read_file*.

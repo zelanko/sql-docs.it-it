@@ -3,17 +3,17 @@ title: Note sulla versione di SQL Server 2017 in Linux
 description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2017 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/10/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930483"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258406"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -46,6 +46,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 23/05/2019   |
@@ -79,9 +80,49 @@ Se si aggiornano pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU18"></a> CU18 (dicembre 2019)
+
+Questa è la versione Cumulative Update 18 (CU18) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3257.3. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i pacchetti RPM e Debian con le informazioni riportate nella tabella seguente:
+
+| Pacchetto | Versione pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.3257.3-13 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto SLES RPM | 14.0.3257.3-13 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
+| Pacchetto Ubuntu 16.04 Debian | 14.0.3257.3-13 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="remarks"></a>Osservazioni
+
+I contenitori di SQL Server 2017 ora hanno un nuovo modello di assegnazione di tag, come descritto di seguito con esempi.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
+
+  Verrà eseguito il pull dell'immagine del contenitore con la combinazione descritta nel tag.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
+
+    Verrà eseguito il pull della versione più recente di SQL Server nella versione più recente di Ubuntu supportata.
+
+**Esempi:**
+
+`mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
+
+Verrà eseguito il pull di SQL Server 2017 CU18 in base al contenitore Ubuntu 16.04.
+
+`mcr.microsoft.com/mssql/server:2017-latest`
+
+Verrà eseguito il pull della versione più recente di SQL Server 2017 (CU18 al momento della stesura di questo articolo) in base al contenitore Ubuntu 16.04.
+
+> [!NOTE]
+> In futuro non saranno più pubblicati contenitori con altri modelli di assegnazione di tag per i contenitori di SQL Server 2017.
+
+
 ## <a id="CU17"></a> CU17 (ottobre 2019)
 
-Questa è la versione Cumulative Update 17 (CU17) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3238.1. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579).
+Questa è la versione Cumulative Update 17 (CU17) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3238.1. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -95,7 +136,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a id="CU16"></a> CU16 (agosto 2019)
 
-Questa è la versione Cumulative Update 16 (CU16) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3223.3. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218).
+Questa è la versione Cumulative Update 16 (CU16) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3223.3. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218).
 
 ### <a name="whats-new"></a>Novità
 
@@ -115,7 +156,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a id="CU15"></a> CU15 (maggio 2019)
 
-Questa è la versione Cumulative Update 15 (CU15) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3162.1. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+Questa è la versione Cumulative Update 15 (CU15) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3162.1. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -459,7 +500,7 @@ Le sezioni seguenti descrivono i problemi noti della versione disponibile a live
 
 - L'autorizzazione utente **AMMINISTRAZIONE OPERAZIONI BULK** per il momento non è supportata in Linux.
 
-#### <a name="networking"></a>Funzionalità di rete
+#### <a name="networking"></a>Rete
 
 Le funzionalità che coinvolgono le connessioni TCP in uscita dal processo sqlservr, ad esempio i server collegati o i gruppi di disponibilità, potrebbero non funzionare se vengono soddisfatte entrambe le condizioni seguenti:
 

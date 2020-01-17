@@ -1,7 +1,7 @@
 ---
 title: Performance Dashboard | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -14,17 +14,17 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
+ms.sourcegitcommit: 68751257feec99109edf88a5b89c0ec2ee72276f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041174"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728562"
 ---
 # <a name="performance-dashboard"></a>Performance Dashboard
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versione 17.2 e successive includono Performance Dashboard. Il dashboard è stato progettato per consentire di visualizzare rapidamente informazioni dettagliate sullo stato delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versione 17.2 e successive includono Performance Dashboard. Il dashboard è stato progettato per consentire di visualizzare rapidamente informazioni dettagliate sullo stato delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] di Istanza gestita di database SQL di Azure. 
 
 Performance Dashboard consente di comprendere rapidamente se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] sta riscontrando un collo di bottiglia delle prestazioni. E se questo viene trovato, acquisisce facilmente dati di diagnostica aggiuntivi che potrebbero essere necessari per risolvere il problema. Alcuni dei problemi di prestazioni comuni che Performance Dashboard può contribuire a identificare includono:
 -  Colli di bottiglia della CPU (e quali query stanno utilizzando la maggior parte di CPU)
@@ -43,7 +43,7 @@ Performance Dashboard è suddiviso nelle sezioni e nei sottoreport seguenti:
    -  Sessioni utente
    -  Percentuale riscontri cache
 -  Informazioni cronologiche
-   -  Attese
+   -  In attesa
    -  Latch
    -  Statistiche di I/O
    -  Query dispendiose
@@ -60,25 +60,25 @@ Performance Dashboard è suddiviso nelle sezioni e nei sottoreport seguenti:
   
 Per visualizzare Performance Dashboard fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Esplora oggetti, selezionare **Report**, **Report standard** e fare clic su **Performance Dashboard**.  
   
-![Performance Dashboard nel menu](../../relational-databases/performance/media/perf_dashboard_ssms.png "Performance Dashboard nel menu")  
+![Performance Dashboard in menu](../../relational-databases/performance/media/perf_dashboard_ssms.png "Performance Dashboard in menu")  
   
 Performance Dashboard verrà visualizzato in una nuova scheda. Di seguito è riportato un esempio in cui è chiaramente presente un collo di bottiglia della CPU:  
   
 ![Schermata principale di Performance Dashboard](../../relational-databases/performance/media/perf_dashboard.png "Schermata principale di Performance Dashboard")  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Il report **Indici mancanti** segnala gli indici potenzialmente mancanti che Query Optimizer ha identificato durante la compilazione della query. Queste raccomandazioni devono essere tuttavia recepite con cautela. Microsoft consiglia di valutare la creazione di indici con un punteggio maggiore di 100.000 perché tali indici hanno il miglioramento massimo previsto per le query utente. 
 
 > [!TIP]
 > Valutare sempre se il suggerimento di un nuovo indice sia confrontabile a un indice esistente nella stessa tabella, in cui gli stessi risultati pratici possono essere ottenuti modificando semplicemente un indice esistente anziché crearne uno nuovo. Se ad esempio si ha un nuovo indice suggerito nelle colonne C1, C2 e C3, è consigliabile valutare prima di tutto se è presente un indice nelle colonne C1 e C2. In caso affermativo potrebbe essere preferibile aggiungere semplicemente la colonna C3 all'indice esistente, mantenendo l'ordine delle colonne preesistenti, per evitare di creare un nuovo indice.
 > Per altre informazioni, vedere [Architettura e guida per la progettazione degli indici](../../relational-databases/sql-server-index-design-guide.md).
 
-Il report **Attese** filtra tutte le attese di inattività e sospensione. Per altre informazioni sulle attese, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e il [documento relativo all'ottimizzazione delle prestazioni di SQL Server 2005 tramite l'uso di attese e code](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
+Il report **Attese** filtra tutte le attese di inattività e sospensione. Per altre informazioni sulle attese, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e il [documento relativo all'ottimizzazione delle prestazioni di SQL Server 2005 tramite l'uso di attese e code](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
 I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato perché i dati nella DMV sottostante sono stati cancellati. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], informazioni dettagliate sulle query dispendiose sono reperibili in Query Store. 
 
 > [!NOTE]
-> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni `VIEW SERVER STATE` e `ALTER TRACE`. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.

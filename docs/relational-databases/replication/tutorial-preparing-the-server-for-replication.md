@@ -1,6 +1,7 @@
 ---
-title: 'Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore | Microsoft Docs'
-ms.custom: ''
+title: 'Esercitazione: Preparare per la replica'
+description: In questa esercitazione si apprenderà come preparare il server di pubblicazione, il server di distribuzione e il sottoscrittore per la replica creando account di Windows, preparando la cartella snapshot e configurando la distribuzione.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653829"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320448"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +62,10 @@ Per completare questa esercitazione, sono necessari SQL Server, SQL Server Manag
 ## <a name="create-windows-accounts-for-replication"></a>Creare account di Windows per la replica
 In questa sezione vengono creati gli account di Windows per l'esecuzione degli agenti di replica. Verrà creato un account di Windows separato nel server locale per gli agenti seguenti:  
   
-|Agent|Percorso|Nome account|  
+|Agente|Location|Nome account|  
 |---------|------------|----------------|  
-|agente snapshot|Server di pubblicazione|<*nome_computer*>\repl_snapshot|  
-|Agente di lettura log|Server di pubblicazione|<*nome_computer*>\repl_logreader|  
+|agente snapshot|Editore|<*nome_computer*>\repl_snapshot|  
+|Agente di lettura log|Editore|<*nome_computer*>\repl_logreader|  
 |Agente di distribuzione|Server di pubblicazione e sottoscrittore|<*nome_computer*>\repl_distribution|  
 |Agente di merge|Server di pubblicazione e sottoscrittore|<*nome_computer*>\repl_merge|  
   
@@ -116,9 +117,9 @@ In questa sezione viene configurata la cartella usata per la creazione e l'archi
   
 3. Fare clic con il pulsante destro del mouse su questa cartella e selezionare **Proprietà**.  
   
-   A. Nella scheda **Condivisione** della finestra di dialogo **Proprietà di repldata** selezionare **Condivisione avanzata**.  
+   a. Nella scheda **Condivisione** della finestra di dialogo **Proprietà di repldata** selezionare **Condivisione avanzata**.  
   
-   B. Nella finestra di dialogo **Condivisione avanzata** selezionare **Condividi cartella** e quindi selezionare **Autorizzazioni**.  
+   b. Nella finestra di dialogo **Condivisione avanzata** selezionare **Condividi cartella** e quindi selezionare **Autorizzazioni**.  
 
    ![Selezioni per la condivisione della cartella repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -188,7 +189,7 @@ In questa esercitazione non è prevista la configurazione del server di pubblica
 
    ![Opzione perché il server funga da server di distribuzione per se stesso](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in esecuzione, nella pagina Avvio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent selezionare** Configura il servizio  **Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'avvio automatico**. Fare clic su **Avanti**.  
+4. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in esecuzione, nella pagina **Avvio Agent** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionare **Configura il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'avvio automatico**. Selezionare **Avanti**.  
 
      
 5. Immettere il percorso \\\\<*Nome_server_pubblicazione*> **\repldata** nella casella di testo **Cartella snapshot** e quindi selezionare **Avanti**. Questo percorso deve corrispondere a quanto visto in precedenza in **Percorso di rete** nella cartella delle proprietà di repldata dopo la configurazione delle proprietà della condivisione. 

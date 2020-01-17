@@ -1,8 +1,8 @@
 ---
-title: Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux
-titleSuffix: SQL Server
-description: Informazioni sulla creazione di un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux.
+title: Configurare un gruppo di disponibilità per SQL Server in Linux
+description: Informazioni su come creare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030301"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558395"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux
 
@@ -67,7 +67,7 @@ I passaggi da seguire per creare un gruppo di disponibilità sui server Linux pe
 
 ## <a name="create-the-ag"></a>Creare il gruppo di disponibilità
 
-Gli esempi riportati in questa sezione illustrano come creare il gruppo di disponibilità con Transact-SQL. È anche possibile usare la Creazione guidata Gruppo di disponibilità di SQL Server Management Studio. Quando si crea un gruppo di disponibilità con la procedura guidata e si aggiungono le repliche al gruppo di disponibilità, viene restituito un errore. Per risolvere questo problema, concedere le autorizzazioni `ALTER` `CONTROL` e `VIEW DEFINITIONS` a Pacemaker sul gruppo di disponibilità in tutte le repliche. Una volta concesse le autorizzazioni nella replica primaria, aggiungere i nodi al gruppo di disponibilità tramite la procedura guidata, ma per il corretto funzionamento della disponibilità elevata, concedere le autorizzazioni su tutte le repliche.
+Gli esempi riportati in questa sezione illustrano come creare il gruppo di disponibilità con Transact-SQL. È anche possibile usare la Creazione guidata Gruppo di disponibilità di SQL Server Management Studio. Quando si crea un gruppo di disponibilità con la procedura guidata e si aggiungono le repliche al gruppo di disponibilità, viene restituito un errore. Per risolvere questo problema, concedere le autorizzazioni `ALTER``CONTROL` e `VIEW DEFINITIONS` a Pacemaker sul gruppo di disponibilità in tutte le repliche. Una volta concesse le autorizzazioni nella replica primaria, aggiungere i nodi al gruppo di disponibilità tramite la procedura guidata, ma per il corretto funzionamento della disponibilità elevata, concedere le autorizzazioni su tutte le repliche.
 
 Per una configurazione a disponibilità elevata che garantisca il failover automatico, il gruppo di disponibilità richiede almeno tre repliche. Per il supporto della disponibilità elevata è necessaria una delle configurazioni seguenti:
 

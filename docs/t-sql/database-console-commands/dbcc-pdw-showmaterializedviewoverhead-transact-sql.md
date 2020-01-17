@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729881"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401629"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729881"
 
 Visualizza il numero di modifiche incrementali nelle tabelle di base che vengono mantenute per le viste materializzate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il rapporto di overhead viene calcolato come TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Nome della vista materializzata.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per mantenere aggiornate le viste materializzate in base alle modifiche ai dati nelle tabelle di base, il motore del data warehouse aggiunge righe di rilevamento a ogni vista interessata per riflettere le modifiche. La selezione da una vista materializzata include l'analisi dell'indice columnstore cluster della vista e l'applicazione di modifiche incrementali.  Le righe di rilevamento (TOTAL_ROWS - BASE_VIEW_ROWS) non vengono eliminate finché gli utenti non ricompilano la vista materializzata.  
 
@@ -54,7 +54,7 @@ Il rapporto di overhead viene calcolato come TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS). 
 
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Questo esempio restituisce il rapporto di overhead di una vista materializzata.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>R. Questo esempio restituisce il rapporto di overhead di una vista materializzata.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )

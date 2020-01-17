@@ -1,6 +1,5 @@
 ---
-title: Motore degli eventi estesi di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Motore degli eventi estesi di SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009397"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242958"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motore degli eventi estesi di SQL Server
 
@@ -38,9 +37,9 @@ ms.locfileid: "68009397"
   
  Nell'illustrazione seguente è mostrata una vista semplificata di una sessione degli eventi estesi. Per altre informazioni, vedere [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Architettura dettagliata degli eventi estesi](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Architettura dettagliata degli eventi estesi")  
+ ![Architettura dettagliata di eventi estesi](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Architettura dettagliata di eventi estesi")  
   
- Si noti quanto segue:  
+ Tenere presente quanto segue:  
   
 -   Ogni processo di Windows può avere uno o più moduli (**processo Win32**, **modulo Win32**). Questi sono anche noti come *binari* o *moduli eseguibili*.  
   

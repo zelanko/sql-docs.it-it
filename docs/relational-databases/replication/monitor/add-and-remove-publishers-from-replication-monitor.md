@@ -1,6 +1,7 @@
 ---
-title: Aggiungere e rimuovere server di pubblicazione da Monitoraggio replica | Microsoft Docs
-ms.custom: ''
+title: Aggiungere e rimuovere server di pubblicazione da Monitoraggio replica (SSMS)
+description: Informazioni su come aggiungere e rimuovere server di pubblicazione da Monitoraggio replica in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770695"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320770"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Aggiunta e rimozione di server di pubblicazione da Monitoraggio replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

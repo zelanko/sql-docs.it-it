@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594546"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822142"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Note sulla versione di SQL Server 2019 in Linux
 
@@ -93,7 +93,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 Le sezioni seguenti descrivono i problemi noti della versione GA (General Availability) di SQL Server 2019 (15.x) in Linux.
 
-#### <a name="general"></a>Generale
+### <a name="general"></a>Generale
 
 - La lunghezza del nome host in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è installato non deve superare i 15 caratteri. 
 
@@ -113,7 +113,11 @@ Le sezioni seguenti descrivono i problemi noti della versione GA (General Availa
 
     - **Soluzione**: Cambiare la lingua dell'account di accesso **sa** con l'istruzione **ALTER LOGIN**.
 
-#### <a name="databases"></a>Database
+- Il provider OLEDB registra l'avviso seguente: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **Soluzione**: Non è richiesta alcuna azione. Il provider OLEDB viene firmato con SHA256. Il motore di database di SQL Server non convalida correttamente il file .dll firmato.
+
+### <a name="databases"></a>Database
 
 - Non è possibile spostare il database master con l'utilità mssql-conf. È possibile spostare altri database di sistema con mssql-conf.
 
@@ -143,7 +147,7 @@ Le sezioni seguenti descrivono i problemi noti della versione GA (General Availa
 
 - L'autorizzazione utente **AMMINISTRAZIONE OPERAZIONI BULK** per il momento non è supportata in Linux.
 
-#### <a name="networking"></a>Funzionalità di rete
+### <a name="networking"></a>Rete
 
 Le funzionalità che coinvolgono le connessioni TCP in uscita dal processo sqlservr, ad esempio i server collegati o i gruppi di disponibilità, potrebbero non funzionare se vengono soddisfatte entrambe le condizioni seguenti:
 
@@ -170,7 +174,7 @@ Se si usano condivisioni di rete **NFS (Network File System, file system di rete
 - Individuare solo le directory **/var/opt/mssql** nel montaggio NFS. Gli altri file, ad esempio i file binari di sistema di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], non sono supportati.
 - Assicurarsi che i client NFS usino l'opzione "nolock" per il montaggio della condivisione remota.
 
-#### <a name="localization"></a>Localizzazione
+### <a name="localization"></a>Localizzazione
 
 - Se le impostazioni locali non sono in inglese (en_us) durante l'installazione, è necessario usare la codifica UTF-8 nella sessione/terminale Bash. Se si usa la codifica ASCII, potrebbe essere visualizzato un errore simile al seguente:
 
@@ -190,7 +194,7 @@ Se si usano condivisioni di rete **NFS (Network File System, file system di rete
 
 - Non tutti i filtri sono disponibili con questa versione, inclusi i filtri per i documenti di Office. Per un elenco di filtri supportati, vedere [Installare la ricerca full-text di SQL Server in Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - In questa versione il pacchetto **mssql-server-is** non è supportato in SUSE. È attualmente supportato in Ubuntu e in Red Hat Enterprise Linux (RHEL).
 
@@ -214,7 +218,7 @@ Per altre informazioni su SSIS in Linux, vedere gli articoli seguenti:
 -   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
 -   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 Le limitazioni seguenti si applicano a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in Windows connesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux.
 

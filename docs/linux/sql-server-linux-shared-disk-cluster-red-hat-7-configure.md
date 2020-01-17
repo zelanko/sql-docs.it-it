@@ -1,6 +1,7 @@
 ---
-title: Configurare il cluster condiviso Red Hat Enterprise Linux per SQL Server
-description: Implementare la disponibilità elevata configurando il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server.
+title: Configurare un'istanza del cluster di failover RHEL per SQL Server in Linux
+description: Informazioni su come configurare un'istanza del cluster di failover di dischi condivisi di Red Hat Enterprise Linux (RHEL) per SQL Server in Linux per disponibilità elevata.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252236"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656628"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configurare un cluster dell'istanza del cluster di failover RHEL per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa guida fornisce istruzioni per la creazione di un cluster di dischi condivisi a due nodi per SQL Server in Red Hat Enterprise Linux. Il livello di clustering si basa sul [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) di Red Hat Enterprise Linux (RHEL), basato a sua volta su [Pacemaker](https://clusterlabs.org/). L'istanza di SQL Server è attiva in un nodo o nell'altro.
+Questa guida contiene istruzioni per la creazione di un cluster di failover di dischi condivisi a due nodi per SQL Server in Red Hat Enterprise Linux. Il livello di clustering si basa sul [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) di Red Hat Enterprise Linux (RHEL), basato a sua volta su [Pacemaker](https://clusterlabs.org/). L'istanza di SQL Server è attiva in un nodo o nell'altro.
 
 > [!NOTE] 
 > Per accedere al componente aggiuntivo a disponibilità elevata e alla documentazione di Red Hat, è richiesta una sottoscrizione. 
@@ -202,7 +203,7 @@ Per altre informazioni sull'uso di NFS, vedere le risorse seguenti:
 
 * [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld) (Firewall e server NFS | Stack Exchange)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html) (Montaggio di un volume NFS | Guida per gli amministratori di rete Linux)
-* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) (Configurazione del server NFS | Red Hat Customer Portal)
+* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) (Configurazione del server NFS | Red Hat Customer Portal)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare la directory dei file di database in modo che punti alla risorsa di archiviazione condivisa
 

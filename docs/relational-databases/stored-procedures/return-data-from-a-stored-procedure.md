@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136658"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307987"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Sono disponibili tre modalità per la restituzione di dati da una procedura a un programma chiamante: i set di risultati, i parametri di output e i codici restituiti. Questo argomento offre informazioni sui tre approcci.  
   
-  ## <a name="returning-data-using-result-sets"></a>Restituzione di dati tramite i set di risultati
- Se si include nel corpo di una stored procedure un'istruzione SELECT (ma non un'istruzione SELECT... INTO o INSERT... SELECT), le righe specificate dall'istruzione SELECT vengono inviate direttamente al client.  Per set di risultati di grandi dimensioni, l'esecuzione della stored procedure non passa all'istruzione successiva fino a quando l'intero set di risultati non è stato inviato al client.  Per set di risultati di piccole dimensioni, i risultati vengono sottoposti a spooling per la restituzione al client e nel frattempo l'esecuzione continua.  Se durante l'esecuzione della stored procedure vengono eseguite più istruzioni SELECT di questo tipo, vengono inviati al client più set di risultati.  Questo comportamento si applica anche ai batch TSQL nidificati, alle stored procedure nidificate e ai batch TSQL di primo livello.
+## <a name="returning-data-using-result-sets"></a>Restituzione di dati tramite i set di risultati
+Se si include nel corpo di una stored procedure un'istruzione SELECT (ma non un'istruzione SELECT... INTO o INSERT... SELECT), le righe specificate dall'istruzione SELECT vengono inviate direttamente al client.  Per set di risultati di grandi dimensioni, l'esecuzione della stored procedure non passa all'istruzione successiva fino a quando l'intero set di risultati non è stato inviato al client.  Per set di risultati di piccole dimensioni, i risultati vengono sottoposti a spooling per la restituzione al client e nel frattempo l'esecuzione continua.  Se durante l'esecuzione della stored procedure vengono eseguite più istruzioni SELECT di questo tipo, vengono inviati al client più set di risultati.  Questo comportamento si applica anche ai batch TSQL nidificati, alle stored procedure nidificate e ai batch TSQL di primo livello.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Esempi di restituzione di dati tramite un set di risultati 

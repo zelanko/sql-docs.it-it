@@ -1,7 +1,7 @@
 ---
 title: STDistance (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042293"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200502"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,12 @@ ms.locfileid: "68042293"
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- STDistance() restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
+## <a name="remarks"></a>Osservazioni  
+ Il risultato viene espresso nell'unità di misura definita dall'[identificatore SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) dei dati spaziali.
+STDistance() restituisce sempre *Null* se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 > [!NOTE]  
->  I metodi nel tipo di dati **geography** che calcolano un'area o una distanza restituiscono risultati diversi a seconda dell'identificatore SRID dell'istanza usato nel metodo.   Per altre informazioni sugli identificatori SRID, vedere [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) (Identificatori SRID).  
+>  I metodi nel tipo di dati **geography** che calcolano un'area o una distanza restituiscono risultati diversi a seconda dell'identificatore SRID dell'istanza usato nel metodo. Per altre informazioni sugli identificatori SRID, vedere [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) (Identificatori SRID).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene trovata la distanza tra due istanze **geography**.  

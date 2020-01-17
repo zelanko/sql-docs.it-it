@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000589"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245295"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Tipo di dati che espone numeri binari univoci generati automaticamente all'interno di un database. **rowversion** viene in genere usato come meccanismo per contrassegnare le righe di tabella con il numero della versione. Le dimensioni di archiviazione sono di 8 byte. Il tipo di dati **rowversion** rappresenta un numero incrementale e non mantiene una data o un orario. Per registrare una data o un orario, usare il tipo di dati **datetime2**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Ogni database include un contatore che viene incrementato a ogni operazione di inserimento o aggiornamento eseguita su una tabella contenente una colonna di tipo **rowversion** all'interno del database. Questo contatore è il valore rowversion relativo al database che tiene traccia del tempo relativo all'interno di un database e non del tempo effettivo che può essere associato a un orologio. Ogni tabella può includere una sola colonna di tipo **rowversion**. A ogni modifica o inserimento di una riga in una colonna di tipo **rowversion**, il valore rowversion incrementato relativo al database viene inserito nella colonna di tipo **rowversion**. Questa caratteristica rende la colonna **rowversion** non adatta per le chiavi, in particolare per le chiavi primarie. Gli aggiornamenti eseguiti sulla riga modificano il valore rowversion, con la conseguente modifica del valore della chiave. Se la colonna è una chiave primaria, il valore di chiave precedente non è più valido, come non sono più valide le chiavi esterne che fanno riferimento al valore precedente. Se un cursore dinamico include riferimenti alla tabella, tutti gli aggiornamenti modificano la posizione delle righe all'interno del cursore. Se la colonna è una chiave indice, tutti gli aggiornamenti alle righe di dati comportano l'aggiornamento dell'indice.  Il valore di tipo **rowversion** viene incrementato con qualsiasi istruzione di aggiornamento, anche se i valori di riga non vengono modificati. Ad esempio, se un valore di colonna è 5 e un'istruzione di aggiornamento imposta il valore su 5, questa azione viene considerata un aggiornamento anche se non è presente alcuna modifica e **rowversion** viene incrementato.
   
 **timestamp** è il sinonimo del tipo di dati **rowversion** ed è conforme al comportamento dei sinonimi dei tipi di dati. Nelle istruzioni DDL usare **rowversion** anziché **timestamp** laddove possibile. Per altre informazioni, vedere [Sinonimi dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
@@ -65,7 +65,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **binary(8)** . Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **varbinary(8)** .
   
-È possibile usare la colonna di tipo **rowversion** di una riga per stabilire con facilità se per la riga è stata eseguita un'istruzione di aggiornamento dall'ultima volta in cui è stata letta. Se è stata eseguita un'istruzione di aggiornamento per la riga, il valore rowversion viene aggiornato. Se invece non è stata eseguita alcuna istruzione di aggiornamento per la riga, il valore rowversion rimane invariato rispetto alla lettura precedente. Per restituire il valore rowversion corrente per un database, usare [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+È possibile usare la colonna di tipo **rowversion** di una riga per stabilire con facilità se per la riga è stata eseguita un'istruzione di aggiornamento dall'ultima volta in cui è stata letta. Se viene eseguita un'istruzione di aggiornamento per la riga, il valore rowversion viene aggiornato. Se invece non viene eseguita alcuna istruzione di aggiornamento per la riga, il valore rowversion rimane invariato rispetto alla lettura precedente. Per restituire il valore rowversion corrente per un database, usare [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
 È possibile aggiungere una colonna **rowversion** a una tabella per consentire la gestione dell'integrità del database quando più utenti eseguono contemporaneamente l'aggiornamento di righe. Potrebbe essere necessario, inoltre, conoscere le righe aggiornate e il relativo numero senza eseguire nuovamente una query nella tabella.
   

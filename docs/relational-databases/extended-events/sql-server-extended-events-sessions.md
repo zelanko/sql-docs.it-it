@@ -1,6 +1,5 @@
 ---
-title: Sessioni degli eventi estesi di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Sessioni Eventi estesi di SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009336"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242907"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
 
@@ -41,10 +40,10 @@ ms.locfileid: "68009336"
   
 |Etichetta di illustrazione|Istruzione DDL|Descrizione|  
 |------------------------|-------------------|-----------------|  
-|Crea|CREATE EVENT SESSION|Il processo host consente di creare un oggetto di sessione contenente i metadati forniti da CREATE EVENT SESSION. Il processo host convalida la definizione di sessione, convalida il livello di autorizzazione dell'utente e archivia i metadati nel database master. A questo punto, la sessione non è attiva.|  
+|Create|CREATE EVENT SESSION|Il processo host consente di creare un oggetto di sessione contenente i metadati forniti da CREATE EVENT SESSION. Il processo host convalida la definizione di sessione, convalida il livello di autorizzazione dell'utente e archivia i metadati nel database master. A questo punto, la sessione non è attiva.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Il processo host avvia la sessione. Il processo host legge i metadati archiviati, convalida la definizione di sezione, verifica il livello di autorizzazione dell'utente e crea la sessione. Gli oggetti di sessione, ad esempio eventi e destinazioni, sono caricati e la gestione degli eventi è attiva.|  
 |Alter|ALTER EVENT SESSION, STATE=STOP|Il processo host arresta la sessione attiva ma conserva i metadati.|  
-|Drop|DROP EVENT SESSION|A seconda che la sessione sia attiva o meno, Drop (DROP SESSION) elimina i metadati e chiude la sessione attiva oppure elimina i metadati della sessione.|  
+|Rilascia|DROP EVENT SESSION|A seconda che la sessione sia attiva o meno, Drop (DROP SESSION) elimina i metadati e chiude la sessione attiva oppure elimina i metadati della sessione.|  
   
 > [!NOTE]  
 >  Sia ALTER EVENT SESSION che DROP EVENT SESSION possono essere applicati ai metadati o a una sessione attiva e ai metadati.  
@@ -54,7 +53,7 @@ ms.locfileid: "68009336"
   
  Nella figura seguente viene illustrato il contenuto di una sessione e la relazione tra pacchetti e sessioni.  
   
- ![Coesistenza e condivisione di oggetti nelle sessioni.](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
+ ![Coesistenza e condivisione di oggetti nelle sessioni](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
   
  Con riferimento all'illustrazione precedente, si noti che:  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907891"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190124"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907891"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Distribuire più volte lo stesso pacchetto di applicazione livello dati 
  È possibile distribuire più volte lo stesso pacchetto di applicazione livello dati in una sola istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], ma le distribuzioni devono essere eseguite una alla volta. Il nome dell'istanza di applicazione livello dati specificato per ogni distribuzione deve essere univoco all'interno dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Se si distribuisce un'applicazione livello dati in un'istanza del motore di database, l'applicazione livello dati distribuita viene incorporata in **Utilità SQL Server** al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ Se si distribuisce un'applicazione livello dati in un'istanza del motore di database, l'applicazione livello dati distribuita viene incorporata in **Utilità SQL Server** al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** e segnalata nella pagina dei dettagli **Deployed Data-tier Applications** (Applicazioni livello dati distribuite).  
   
 ###  <a name="database-options-and-settings"></a>Opzioni e impostazioni del database  
  Per impostazione predefinita, il database creato durante la distribuzione disporrà di tutte le impostazioni predefinite incluse nell'istruzione CREATE DATABASE, fatta eccezione per le seguenti:  
@@ -81,7 +81,7 @@ Di seguito sono disponibili altre informazioni su alcune delle pagine della proc
   
  **Versione** casella di sola lettura in cui viene visualizzata la versione assegnata durante la creazione o l'estrazione dell'applicazione livello dati da un database.  
   
- **Descrizione** : casella di sola lettura in cui viene visualizzata la descrizione immessa durante la creazione o l'estrazione dell'applicazione livello dati da un database.  
+ **Descrizione**: casella di sola lettura in cui viene visualizzata la descrizione immessa durante la creazione o l'estrazione dell'applicazione livello dati da un database.  
   
 ### <a name="validating-the-dac-package"></a>Convalida del pacchetto di applicazione livello dati  
  Viene visualizzato un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati. Se il pacchetto di applicazione livello dati viene convalidato, la procedura guidata continua con la versione finale della pagina **Seleziona pacchetto** in cui è possibile controllare il risultato della convalida. Se il file non è un pacchetto di applicazione livello dati valido, rimane visualizzata la pagina **Selezione pacchetto di applicazione livello dati**. Selezionare un altro pacchetto di applicazione livello dati valido o annullare la procedura guidata e generare un nuovo pacchetto di applicazione livello dati.  
@@ -145,6 +145,10 @@ Di seguito sono disponibili altre informazioni su alcune delle pagine della proc
 
 Nel seguente esempio viene distribuita un'applicazione livello dati denominata MyApplication su un'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando una definizione dell'applicazione livello dati in un pacchetto MyApplication.dacpac.  
   
+## <a name="powershell-examples"></a>Esempi di PowerShell  
+
+Nel seguente esempio viene distribuita un'applicazione livello dati denominata MyApplication su un'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando una definizione dell'applicazione livello dati in un pacchetto MyApplication.dacpac.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

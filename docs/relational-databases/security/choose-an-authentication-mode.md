@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903140"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721356"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903140"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Svantaggi dell'autenticazione di SQL Server  
   
--   Se l'utente è un utente di dominio Windows con un account di accesso e una password per Windows, deve comunque fornire un altro account di accesso ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un'altra password per connettersi. Tenere traccia di più nomi e password è un'operazione problematica per molti utenti. La necessità di fornire le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni volta che ci si connette al database può risultare fastidiosa.  
+-   Se l'utente è un utente di dominio Windows con un account di accesso e una password per Windows, deve comunque specificare un altro account di accesso ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un'altra password per connettersi. Tenere traccia di più nomi e password è un'operazione problematica per molti utenti. La necessità di fornire le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni volta che ci si connette al database può risultare fastidiosa.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione non supporta l'utilizzo del protocollo di sicurezza Kerberos.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72903140"
   
 -   Consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di supportare ambienti con sistemi operativi misti, in cui tutti gli utenti non sono autenticati da un dominio Windows.  
   
--   Consente agli utenti di effettuare la connessione da domini sconosciuti o non trusted: ad esempio un'applicazione in cui clienti specifici si connettono con account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegnati per verificare lo stato dei loro ordini.  
+-   Consente agli utenti di connettersi da domini sconosciuti o non attendibili. ad esempio un'applicazione in cui clienti specifici si connettono con account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegnati per verificare lo stato dei loro ordini.  
   
 -   Consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di supportare applicazioni Web in cui gli utenti creano le proprie identità.  
   

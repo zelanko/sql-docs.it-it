@@ -1,6 +1,7 @@
 ---
-title: 'Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale) | Microsoft Docs'
-ms.custom: ''
+title: 'Esercitazione: Configurare la replica transazionale'
+description: Questa esercitazione illustra come configurare la replica transazionale tra due server SQL completamente connessi.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907709"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321928"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ In questa sezione viene creata una pubblicazione transazionale usando [!INCLUDE[
 
    ![Pagina "Tipo di pubblicazione" con il tipo di pubblicazione selezionato](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
-5. Nella pagina **Articoli** espandere il nodo **Tabelle** e selezionare la casella di controllo **Product**. Espandere quindi **Product** e deselezionare le caselle di controllo accanto a **ListPrice** e a **StandardCost**. Fare clic su **Avanti**.  
+5. Nella pagina **Articoli** espandere il nodo **Tabelle** e selezionare la casella di controllo **Product**. Espandere quindi **Product** e deselezionare le caselle di controllo accanto a **ListPrice** e a **StandardCost**. Selezionare **Avanti**.  
 
    ![Pagina "Articoli" con gli articoli selezionati per la pubblicazione](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
@@ -93,7 +94,7 @@ In questa sezione viene creata una pubblicazione transazionale usando [!INCLUDE[
   
    ![Pagina "Filtro righe tabella" e finestra di dialogo "Aggiungi filtro"](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
-8. Selezionare **OK**e quindi selezionare **Avanti**.  
+8. Selezionare **OK**, quindi **Avanti**.  
   
 9. Selezionare la casella di controllo **Crea uno snapshot immediatamente e mantieni lo snapshot disponibile per l'inizializzazione delle sottoscrizioni** e selezionare **Avanti**:  
 
@@ -105,7 +106,7 @@ In questa sezione viene creata una pubblicazione transazionale usando [!INCLUDE[
 
     ![Pagina "Sicurezza agente" e finestra di dialogo "Sicurezza agente snapshot"](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Ripetere il passaggio precedente per impostare <*Nome_server_pubblicazione*> **\repl_logreader** come account di processo per l'agente di lettura log e quindi selezionare **OK**.  
+12. Ripetere il passaggio precedente per impostare <*Nome_server_pubblicazione*> **\repl_logreader** come account di processo per l'agente di lettura log Selezionare **OK**.  
 
     ![Finestra di dialogo "Sicurezza agente di lettura log" e pagina "Sicurezza agente"](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -144,8 +145,8 @@ Se a questo punto viene visualizzato un errore, vedere [Troubleshooting Snapshot
   
 2. Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse su **AdvWorksProductTrans** e quindi selezionare **Proprietà**.  Verrà visualizzata la finestra di dialogo **Proprietà pubblicazione**.    
   
-   A. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**.  
-   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_distribution** e selezionare **OK**.
+   a. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**.  
+   b. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_distribution** e selezionare **OK**.
    
    ![Selezioni per l'aggiunta di un account di accesso all'elenco di accesso alla pubblicazione](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -191,9 +192,9 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
   
 1. Connettersi al sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso** e quindi scegliere **Nuovo account accesso**.     
   
-   A. Nella pagina **Generale**, in **Nome account di accesso**, selezionare **Cerca** e aggiungere l'account di accesso per <*Nome_computer_sottoscrittore*> **\repl_distribution**.
+   a. Nella pagina **Generale**, in **Nome account di accesso**, selezionare **Cerca** e aggiungere l'account di accesso per <*Nome_computer_sottoscrittore*> **\repl_distribution**.
 
-   B. Nella pagina **Mapping utenti** concedere all'account di accesso **db_owner** l'appartenenza per il database **ProductReplica**. 
+   b. Nella pagina **Mapping utenti** concedere all'account di accesso **db_owner** l'appartenenza per il database **ProductReplica**. 
 
    ![Selezioni per la configurazione dell'accesso nel sottoscrittore](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -223,8 +224,8 @@ In questa sezione vengono usati token di traccia per verificare che le modifiche
 
 2. Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere l'istanza del server di pubblicazione e quindi selezionare la pubblicazione **AdvWorksProductTrans**.  
   
-   A. Selezionare la scheda **Token di traccia**.  
-   B. Selezionare **Inserisci utilità di traccia**.    
+   a. Selezionare la scheda **Token di traccia**.  
+   b. Selezionare **Inserisci utilità di traccia**.    
    c. Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto il punto specificato.
 
    ![Informazioni per il token di traccia](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)

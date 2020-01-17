@@ -1,6 +1,7 @@
 ---
-title: Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate | Microsoft Docs
-ms.custom: ''
+title: Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate (sottoscrizioni merge)
+description: Informazioni su come usare le partizioni pre-calcolate per ottimizzare le prestazioni dei filtri con parametri per le pubblicazioni di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018691"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321465"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtri con parametri - Ottimizzare per le partizioni pre-calcolate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68018691"
   
  Quando viene eseguita la sincronizzazione tra un Sottoscrittore e un server di pubblicazione, quest'ultimo deve valutare i filtri del Sottoscrittore per stabilire quali righe appartengono alla partizione o al set di dati di tale Sottoscrittore. Questo processo di determinazione dell'appartenenza alla partizione delle modifiche del server di pubblicazione per ogni Sottoscrittore che riceve un set di dati filtrato viene definita *valutazione della partizione*. In assenza di partizioni pre-calcolate, la valutazione della partizione deve essere eseguita per ogni modifica apportata a una colonna filtrata nel server di pubblicazione dall'ultima esecuzione dell'agente di merge per uno specifico Sottoscrittore e questo processo deve essere ripetuto per ogni Sottoscrittore sincronizzato con il server di pubblicazione.  
   
- Se tuttavia il server di pubblicazione e il Sottoscrittore vengono eseguiti su [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva e si utilizzano partizioni pre-calcolate, l'appartenenza alla partizione per tutte le modifiche sul server di pubblicazione viene pre-calcolata e mantenuta durante l'inserimento delle modifiche. Di conseguenza, quando un Sottoscrittore viene sincronizzato con il server di pubblicazione, può iniziare immediatamente a scaricare le modifiche relative alla propria partizione senza essere sottoposto al processo di valutazione della partizione. In questo modo è possibile ottenere significativi miglioramenti delle prestazioni quando una pubblicazione presenta un numero elevato di modifiche, Sottoscrittori o articoli.  
+ Se tuttavia il server di pubblicazione e il Sottoscrittore vengono eseguiti su [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva e si usano partizioni pre-calcolate, l'appartenenza alla partizione per tutte le modifiche sul server di pubblicazione viene pre-calcolata e mantenuta durante l'inserimento delle modifiche. Di conseguenza, quando un Sottoscrittore viene sincronizzato con il server di pubblicazione, può iniziare immediatamente a scaricare le modifiche relative alla propria partizione senza essere sottoposto al processo di valutazione della partizione. In questo modo è possibile ottenere significativi miglioramenti delle prestazioni quando una pubblicazione presenta un numero elevato di modifiche, Sottoscrittori o articoli.  
   
  Oltre a utilizzare partizioni pre-calcolate, creare snapshot preliminari e/o consentire ai Sottoscrittori di richiedere la generazione e l'applicazione di snapshot alla prima sincronizzazione. Utilizzare una o entrambe le opzioni per generare snapshot per le pubblicazioni che utilizzando filtri con parametri. Se non si specifica alcuna opzione, le sottoscrizioni vengono inizializzate tramite una serie di istruzioni SELECT e INSERT, anziché tramite l'utilità **bcp** . Questo processo risulta decisamente più lento. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68018691"
   
 -   I filtri join non devono contenere funzioni dinamiche, ovvero funzioni come HOST_NAME() e SUSER_SNAME() che restituiscono un valore diverso a seconda del Sottoscrittore in fase di sincronizzazione. Solo i filtri di riga con parametri devono contenere funzioni dinamiche.  
   
--   Non è possibile utilizzare funzioni non deterministiche in una clausola di filtro. Per ulteriori informazioni sulle funzioni non deterministiche, vedere [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+-   Non è possibile utilizzare funzioni non deterministiche in una clausola di filtro. Per altre informazioni sulle funzioni non deterministiche, vedere [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 -   Le viste a cui viene fatto riferimento nelle clausole relative ai filtri join o ai filtri con parametri non devono contenere funzioni dinamiche.  
   

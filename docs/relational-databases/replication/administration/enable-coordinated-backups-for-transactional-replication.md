@@ -1,6 +1,7 @@
 ---
-title: Abilitare backup coordinati per la replica transazionale | Microsoft Docs
-ms.custom: ''
+title: Abilitare backup coordinati (transazionali)
+description: Informazioni su come attivare il backup coordinato nel database di distribuzione in modo che il log delle transazioni per il database di pubblicazione di replica transazionale venga troncato solo in seguito al backup delle transazioni propagate al server di distribuzione.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a436351752045c742d21892c304b0ecad7b8f591
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 96fa2e96021f0390fcc1cf15eb3aba2fd6b55e42
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661258"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322053"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Abilitare backup coordinati per la replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

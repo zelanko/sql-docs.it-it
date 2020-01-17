@@ -31,19 +31,19 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816828"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550212"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=. Se il tipo di dati degli argomenti non è stringa di caratteri, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo converte automaticamente nel tipo stringa di caratteri, se possibile.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -82,7 +82,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valore restituito  
  LIKE restituisce TRUE se *match_expression* corrisponde all'argomento *pattern* specificato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se si esegue un confronto di stringhe usando LIKE, tutti i caratteri nella stringa modello sono significativi, compresi gli spazi iniziali e finali. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc ' (abc seguito da uno spazio), una riga il cui valore per la colonna è abc (abc non seguito da alcuno spazio) non viene restituita. Gli spazi vuoti finali vengono tuttavia ignorati nell'espressione corrispondente al modello. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc' (abc non seguito da alcuno spazio), vengono restituite tutte le righe che iniziano con abc seguito da zero o più spazi vuoti finali.  
   
  Un confronto tra stringhe con l'operatore LIKE basato su un modello che contiene dati di tipo **char** e **varchar** potrebbe avere esito negativo a causa della modalità di archiviazione dei dati per ogni tipo di dati. Nell'esempio seguente una variabile **char** locale viene passata a una stored procedure e quindi vengono usati criteri di ricerca per trovare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
@@ -128,8 +128,8 @@ David          Barber               Snohomish
 (2 row(s) affected)  
 ```
 
-## <a name="pattern-matching-by-using-like"></a>Criteri di ricerca con operatore LIKE  
- LIKE supporta criteri di ricerca ASCII e Unicode. Quando tutti gli argomenti (*match_expression*, *pattern* e *escape_character*, se presente) sono tipi di dati carattere ASCII, viene eseguita una ricerca ASCII. Se il tipo di dati di uno degli argomenti è Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si usano dati Unicode (tipi di dati **nchar** o **nvarchar**) con l'operatore LIKE, gli spazi vuoti finali sono significativi, mentre per i dati non Unicode non lo sono. L'operatore LIKE per Unicode è compatibile con lo standard ISO. L'operatore LIKE per ASCII è compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="pattern-matching-by-using-like"></a>Ricerche con l'operatore LIKE basate su modello  
+ LIKE supporta ricerche ASCII e ricerche Unicode. Quando tutti gli argomenti (*match_expression*, *pattern* e *escape_character*, se presente) sono tipi di dati carattere ASCII, viene eseguita una ricerca ASCII. Se il tipo di dati di uno degli argomenti è Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si usano dati Unicode (tipi di dati **nchar** o **nvarchar**) con l'operatore LIKE, gli spazi vuoti finali sono significativi, mentre per i dati non Unicode non lo sono. L'operatore LIKE per Unicode è compatibile con lo standard ISO. L'operatore LIKE per ASCII è compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Negli esempi seguenti vengono illustrate le differenze tra le righe restituite da ricerche LIKE per ASCII e per Unicode.  
   
@@ -200,7 +200,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-like-with-the--wildcard-character"></a>A. Utilizzo dell'operatore LIKE con il carattere jolly %  
+### <a name="a-using-like-with-the--wildcard-character"></a>R. Utilizzo dell'operatore LIKE con il carattere jolly %  
  Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici con prefisso `415` nella tabella `PersonPhone`.  
   
 ```sql  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilizzo dell'operatore NOT LIKE con il carattere jolly %  
+ Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici nella tabella `PersonPhone` il cui prefisso è diverso da `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. Utilizzo della clausola ESCAPE  
+ Nell'esempio seguente vengono usati la clausola `ESCAPE` e il carattere di escape per cercare la stringa di caratteri esatta `10-15%` nella colonna `c1` della tabella `mytbl2`.  
   
 ```sql
 USE tempdb;  

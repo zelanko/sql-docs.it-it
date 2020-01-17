@@ -1,6 +1,7 @@
 ---
-title: Creare un controllo del server e una specifica del controllo del database | Microsoft Docs
-ms.custom: ''
+title: Creare un controllo del server e di una specifica del controllo del database
+description: Informazioni su come creare un controllo SQL Server e una specifica del controllo del database usando SQL Server Management Studio o Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903871"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557876"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "72903871"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un controllo del server e una specifica del controllo del database utilizzando:**  
   

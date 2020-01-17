@@ -1,6 +1,7 @@
 ---
-title: Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste
+title: DMV - Statistiche d'uso e prestazioni delle viste
 description: Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986667"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165894"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste
 Questo articolo illustra la metodologia e gli script usati per ottenere informazioni sulle **prestazioni delle query che usano viste**. La finalità di questi script è fornire indicatori dell'uso e delle prestazioni delle varie viste disponibili all'interno di un database. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 La vista DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) espone le statistiche sulle ottimizzazioni eseguite da Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi valori sono cumulativi e la registrazione inizia all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni su Query Optimizer, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md).   
 
 L'espressione di tabella comune (CTE, common_table_expression) seguente usa questa DMV per fornire informazioni sul carico di lavoro, ad esempio la percentuale di query che fanno riferimento a una vista. I risultati restituiti da questa query non indicano un problema di prestazioni da soli, ma possono esporre problemi sottostanti in combinazione con i reclami degli utenti per query lente. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 La query finale offre informazioni sulle viste inutilizzate usando la DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). Tuttavia, la cache dei piani di esecuzione è dinamica e i risultati possono variare. Di conseguenza, usare questa query nel tempo per determinare se una vista viene effettivamente usata. 
 
 ```sql

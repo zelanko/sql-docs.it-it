@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Ripristino in linea di un file di sola lettura (modello di recupero con registrazione minima) | Microsoft Docs'
+title: 'Ripristino online: file di sola lettura (modello di recupero con registrazione minima)'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4756dca201870e501645865518115ce6b48267d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4a3f311cc870331db030b5caf7191c9b6f91a28
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140179"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243723"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Esempio: Ripristino online di un file di sola lettura (modello di recupero con registrazione minima)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

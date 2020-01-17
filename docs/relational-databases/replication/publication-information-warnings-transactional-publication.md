@@ -1,6 +1,7 @@
 ---
-title: Informazioni sulla pubblicazione, Avvisi (pubblicazione transazionale) | Microsoft Docs
-ms.custom: ''
+title: Avvisi (informazioni sulla pubblicazione transazionale)
+description: Viene descritta la scheda "Avvisi" della finestra di dialogo delle informazioni sulla pubblicazione transazionale.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6efff6deabc18db61ab8390d912ef6918d42b2e3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769959"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321305"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione transazionale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,10 +57,10 @@ ms.locfileid: "68769959"
  Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. Gli avvisi vengono definiti facendo clic su **Configura avvisi** e specificando le informazioni appropriate nella finestra di dialogo **Configura avvisi di replica** .  
   
 ## <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare un avviso e specificare un valore soglia.  
   
- **Avviso**  
+ **Warning**  
  Descrizione dell'avviso associato al valore soglia.  
   
  **Soglia**  

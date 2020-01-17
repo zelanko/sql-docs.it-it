@@ -1,6 +1,7 @@
 ---
-title: Configurare la risorsa di archiviazione iSCSI per un'istanza del cluster di failover - SQL Server in Linux
-description: ''
+title: Configurare una risorsa di archiviazione per un'istanza del cluster di failover iSCSI - SQL Server in Linux
+description: Informazioni su come configurare un'istanza del cluster di failover usando iSCSI per SQL Server in Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032399"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558584"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - iSCSI - SQL Server in Linux
 
@@ -30,7 +31,7 @@ Anche se in questa sezione non verrà illustrato come configurare una destinazio
 Se si usa una destinazione iSCSI basata su Linux, la destinazione non deve mai essere configurata in nessuno dei nodi dell'istanza del cluster di failover. Per quanto riguarda prestazioni e disponibilità, le reti iSCSI devono essere separate da quelle usate dal normale traffico di rete sia nel server di origine che in quello client. Le reti usate per iSCSI dovrebbero essere veloci. Tenere presente che la rete utilizza parte della larghezza di banda del processore. Se quindi si usa un server normale, pianificare di conseguenza.
 L'aspetto più importante da verificare nella destinazione è che ai dischi creati siano assegnate le autorizzazioni appropriate, in modo che solo i server che partecipano all'istanza del cluster di failover possano accedervi. Un esempio è quello della destinazione iSCSI Microsoft, illustrato sotto, dove linuxnodes1 è il nome creato e, in questo caso, vengono assegnati gli indirizzi IP dei nodi in modo che possano visualizzare NewFCIDisk1.vhdx.
 
-![Initiator][1]
+![Iniziatore][1]
 
 ### <a name="instructions"></a>Istruzioni
 
@@ -297,7 +298,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     chown mssql <FolderName>
     ```
 
-    \<FolderName> è il nome della cartella creata. Di seguito è riportato un esempio.
+    \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     chown mssql <FolderName>
     ```
 
-    \<FolderName> è il nome della cartella creata. Di seguito è riportato un esempio.
+    \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> è l'elenco dei gruppi di volumi dell'output del passaggio 20 che non verranno usati dall'istanza del cluster di failover. Inserirli ognuno tra virgolette e separarli con una virgola. Di seguito è riportato un esempio.
+    \<ListOfVGsNotUsedByPacemaker> è l'elenco dei gruppi di volumi dell'output del passaggio 20 che non verranno usati dall'istanza del cluster di failover. Inserirli ognuno tra virgolette e separarli con una virgola. Di seguito è illustrato un esempio.
 
     ![55-ListOfVGs][11]
  

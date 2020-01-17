@@ -1,6 +1,7 @@
 ---
-title: Finestra di dialogo Proprietà server di distribuzione di replica di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Proprietà server di distribuzione - finestra di dialogo
+description: Descrizione delle pagine della finestra di dialogo "Proprietà server di distribuzione" in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768578"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321760"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Finestra di dialogo Proprietà server di distribuzione di replica di SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ La pagina **Generale** della finestra di dialogo **Proprietà server di distribu
   
  Fare clic sul pulsante delle proprietà **...** nella griglia delle proprietà **Database** per aprire la finestra di dialogo **Proprietà database di distribuzione** .  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per creare un nuovo database di distribuzione.  
   
  **Elimina**  
@@ -46,13 +47,13 @@ La pagina **Generale** della finestra di dialogo **Proprietà server di distribu
  **Impostazioni predefinite profili**  
  Fare clic su questo pulsante per accedere ai profili dell'agente di replica nella finestra di dialogo **Profili agenti** . Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
 
-## <a name="publishers"></a>Server di pubblicazione
+## <a name="publishers"></a>Autori
 La pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione** consente di abilitare l'utilizzo del server di distribuzione corrente da parte dei server di pubblicazione. È inoltre possibile impostare le proprietà associate a tali server di pubblicazione. Tenere presente che, se si abilita un server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, il server non diventerà un server di pubblicazione. È infatti necessario connettersi al server di pubblicazione, configurarlo per la pubblicazione e selezionare questo server come server di distribuzione. Utilizzando la Creazione guidata nuova pubblicazione è possibile configurare il server di pubblicazione e selezionare un server di distribuzione.  
   
  **Server di pubblicazione**  
  Consente di selezionare i server autorizzati all'utilizzo del server di distribuzione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un server di pubblicazione.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Se il server desiderato non è incluso nell'elenco, fare clic su **Aggiungi** per aggiungere un server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Oracle all'elenco dei server di pubblicazione disponibili. Se il server aggiunto è il primo server a utilizzare il server di distribuzione corrente come server di distribuzione remoto, viene richiesto di digitare una password per il collegamento amministrativo.  
   
  **Password per collegamento amministrativo**  

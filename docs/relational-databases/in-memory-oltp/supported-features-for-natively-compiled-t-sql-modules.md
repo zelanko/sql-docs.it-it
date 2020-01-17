@@ -1,6 +1,6 @@
 ---
-title: Funzionalità supportate per i moduli T-SQL compilati in modo nativo | Microsoft Docs
-ms.custom: ''
+title: Funzionalità per i moduli T-SQL compilati in modo nativo
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025078"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412516"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025078"
 Sono supportati i costrutti delle query indicati di seguito:  
 
 Espressione CASE: L'espressione CASE può essere utilizzata in qualsiasi istruzione o clausola che consenta un'espressione valida.
-   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+   - **Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le istruzioni CASE sono supportate per i moduli T-SQL compilati in modo nativo.
 
 Clausola SELECT:  
@@ -58,7 +58,7 @@ Clausola SELECT:
 
 -   Sottoquery scalari
     - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le istruzioni scalari sono supportate per i moduli compilati in modo nativo.
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 

@@ -1,7 +1,7 @@
 ---
-title: Recupero di database correlati che contengono transazioni contrassegnate | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Recuperare database correlati con transazioni contrassegnate
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31ef04cc1aa02985fe699b0192c25bfbc4e88ca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033518"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238886"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Per informazioni sull'inserimento di un contrassegno in una transazione che si estende su più database, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
- Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
+ Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Usare la clausola WITH STOPATMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
+-   Usare la clausola WITH STOPATMARK = **'** _<nome_contrassegno>_ **'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Usare la clausola WITH STOPBEFOREMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
+-   Usare la clausola WITH STOPBEFOREMARK = **'** _<nome_contrassegno>_ **'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   
@@ -117,7 +117,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Pianificare ed eseguire sequenze di ripristino &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

@@ -1,24 +1,30 @@
 ---
-title: Virtualizzare i dati esterni in SQL Server 2019 | Microsoft Docs
+title: Virtualizzare i dati esterni
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per le origini dati relazionali
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710591"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227508"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 
 Uno degli scenari chiave per SQL Server 2019 è la possibilità di virtualizzare i dati. Questo processo consente di mantenere i dati nella posizione originale. È possibile *virtualizzare* i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come in qualsiasi altra tabella in SQL Server. Questo processo riduce al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Per eseguire il processo è necessario l'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere [Get started with PolyBase](polybase-guide.md) (Introduzione a PolyBase).
+
+Questo video è un'introduzione alla virtualizzazione dei dati:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna
 
@@ -66,7 +72,7 @@ Nella pagina successiva selezionare le tabelle per cui si vuole creare viste est
 > [!IMPORTANT]
 >Il tipo foto non è supportato dallo strumento Tabella esterna. Se si crea una vista esterna con un tipo foto, viene visualizzato un errore dopo aver creato la tabella. La tabella viene comunque creata.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo passaggio visualizza un riepilogo delle selezioni. Indica il nome delle credenziali con ambito database e gli oggetti origine dati esterna creati nel database di destinazione. Selezionare **Genera script** per creare lo script in T-SQL, la sintassi usata per creare l'origine dati esterna. Selezionare **Crea** per creare l'oggetto origine dati esterna.
 

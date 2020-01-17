@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531338"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721559"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore di SQL Server in Docker
 
@@ -35,7 +35,12 @@ Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubu
 > Questo articolo è incentrato nello specifico sull'uso dell'immagine mssql-server-linux. L'immagine di Windows non è qui trattata, ma è possibile ottenere informazioni su di essa nella [pagina mssql-server-windows di Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
-> Prima di scegliere di eseguire un contenitore SQL Server per i casi d'uso di produzione, vedere i [criteri di supporto per i contenitori SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) per assicurarsi che l'esecuzione avvenga in una configurazione supportata.
+> Prima di scegliere di eseguire un contenitore SQL Server per i casi d'uso di produzione, vedere i [criteri di supporto per i contenitori SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) per assicurarsi che l'esecuzione avvenga in una configurazione supportata.
+
+Questo video di 6 minuti offre un'introduzione relativa all'esecuzione di SQL Server nei contenitori:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Effettuare il pull ed eseguire l'immagine del contenitore
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Questa tecnica consente anche di condividere e visualizzare i file nell'host all'esterno di Docker.
 
 > [!IMPORTANT]
-> Il mapping del volume host per Docker su Mac con l'immagine di SQL Server in Linux non è attualmente supportato. Usare invece i contenitori di volumi di dati. Questa restrizione è specifica per la directory `/var/opt/mssql`. La lettura da una directory montata funziona correttamente. Ad esempio, è possibile montare una directory host usando -v in Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
+> Il mapping del volume host per **Docker in Windows** non supporta attualmente il mapping della directory `/var/opt/mssql` completa. È tuttavia possibile eseguire il mapping di una sottodirectory, ad esempio `/var/opt/mssql/data` al computer host.
+
+> [!IMPORTANT]
+> Il mapping del volume host per **Docker su Mac** con l'immagine di SQL Server in Linux non è attualmente supportato. Usare invece i contenitori di volumi di dati. Questa restrizione è specifica per la directory `/var/opt/mssql`. La lettura da una directory montata funziona correttamente. Ad esempio, è possibile montare una directory host usando -v in Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
 
 ### <a name="use-data-volume-containers"></a>Usare i contenitori di volumi di dati
 
@@ -615,7 +623,7 @@ Se SQL Server non ha accesso ai file di database persistenti, eseguire uno dei c
 Concedere le autorizzazioni per il gruppo radice alle directory seguenti in modo che il contenitore di SQL Server non radice abbia accesso ai file di database.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 
@@ -662,7 +670,7 @@ In Windows assicurarsi di avviare PowerShell o il prompt dei comandi come ammini
 
 Se non è possibile eseguire il contenitore di SQL Server, provare i test seguenti:
 
-- Se si riceve un errore del tipo **'Non è stato possibile creare l'endpoint NOME_CONTENITORE nel bridge di rete. Errore durante l'avvio del proxy: listen tcp 0.0.0.0:1433 bind: indirizzo già in uso.'**, si sta tentando di eseguire il mapping della porta del contenitore 1433 a una porta già in uso. Questo problema può verificarsi se si esegue SQL Server localmente nel computer host. Può verificarsi anche se si avviano due contenitori di SQL Server e si tenta di eseguirne il mapping per entrambi alla stessa porta host. In tal caso, usare il parametro `-p` per eseguire il mapping della porta del contenitore 1433 a una porta host diversa. Esempio: 
+- Se si riceve un errore del tipo **'Non è stato possibile creare l'endpoint NOME_CONTENITORE nel bridge di rete. Errore durante l'avvio del proxy: listen tcp 0.0.0.0:1433 bind: indirizzo già in uso.'** , si sta tentando di eseguire il mapping della porta del contenitore 1433 a una porta già in uso. Questo problema può verificarsi se si esegue SQL Server localmente nel computer host. Può verificarsi anche se si avviano due contenitori di SQL Server e si tenta di eseguirne il mapping per entrambi alla stessa porta host. In tal caso, usare il parametro `-p` per eseguire il mapping della porta del contenitore 1433 a una porta host diversa. Ad esempio: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

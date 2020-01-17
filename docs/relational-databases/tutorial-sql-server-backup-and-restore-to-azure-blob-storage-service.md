@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure'
+title: 'Avvio rapido: Backup e ripristino nel servizio Archiviazione BLOB di Azure'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095483"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165519"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Per creare un contenitore, seguire questa procedura:
 1. Selezionare l'account di archiviazione e scorrere verso il basso fino a **Servizi BLOB**.
 1. Selezionare **BLOB** e quindi selezionare **+ Contenitore** per aggiungere un nuovo contenitore. 
 1. Immettere il nome del contenitore e prendere nota del nome specificato. Queste informazioni vengono usate nell'URL (percorso del file di backup) nelle istruzioni T-SQL più avanti in questa guida di avvio rapido. 
-1. Fare clic su **OK**. 
+1. Selezionare **OK**. 
     
     ![Nuovo contenitore](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 

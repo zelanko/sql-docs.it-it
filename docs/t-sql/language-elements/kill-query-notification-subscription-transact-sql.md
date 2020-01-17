@@ -1,6 +1,8 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: KILL QUERY NOTIFICATION SUBSCRIPTION
+description: Rimuovere le sottoscrizioni di notifica delle query da un'istanza. Questa istruzione può rimuovere una sottoscrizione specifica oppure tutte le sottoscrizioni.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -20,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f70759864eaf2c91a0b5bf2bf59461bec09937b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122296"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251064"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove le sottoscrizioni di notifica delle query dall'istanza. Questa istruzione può rimuovere una sottoscrizione specifica oppure tutte le sottoscrizioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +51,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  *subscription_id*  
  Rimuove la sottoscrizione associata all'ID sottoscrizione definito da *subscription_id*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione KILL QUERY NOTIFICATION SUBSCRIPTION rimuove le sottoscrizioni di notifica delle query senza generare un messaggio di notifica.  
   
  *subscription_id* corrisponde all'ID della sottoscrizione visualizzato nella vista a gestione dinamica [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
@@ -61,7 +63,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>A. Rimozione di tutte le sottoscrizioni di notifica delle query nell'istanza  
+### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>R. Rimozione di tutte le sottoscrizioni di notifica delle query nell'istanza  
  Nell'esempio seguente vengono rimosse tutte le sottoscrizioni di notifica delle query nell'istanza.  
   
 ```  

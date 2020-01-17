@@ -1,6 +1,7 @@
 ---
-title: Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge | Microsoft Docs
-ms.custom: ''
+title: Implementare un sistema di risoluzione dei conflitti personalizzato (sottoscrizioni merge)
+description: Informazioni su come implementare un sistema di risoluzione dei conflitti personalizzato per una pubblicazione di tipo merge in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905121"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322160"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "72905121"
  È possibile scrivere un sistema di risoluzione dei conflitti personalizzato come stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] in ogni server di pubblicazione. Durante la sincronizzazione, questa stored procedure viene richiamata quando vengono rilevati conflitti in un articolo per il quale il sistema di risoluzione è stato registrato. Le informazioni sulla riga con conflitti vengono passate dall'agente di merge ai parametri obbligatori della procedura. I sistemi di risoluzione dei conflitti personalizzati basati su stored procedure vengono sempre creati nel server di pubblicazione.  
   
 > [!NOTE]  
->  I sistemi di risoluzione delle stored procedure di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono richiamati solo per gestire i conflitti causati da modifiche apportate alle righe. Non possono essere usati per gestire altri tipi di conflitti, ad esempio errori di inserimento dovuti a violazioni di PRIMARY KEY o del vincolo di indice univoco.
+>  I sistemi di risoluzione delle stored procedure di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono chiamati solo per gestire i conflitti causati da modifiche apportate alle righe. Non possono essere usati per gestire altri tipi di conflitti, ad esempio errori di inserimento dovuti a violazioni di PRIMARY KEY o del vincolo di indice univoco.
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Per creare un sistema di risoluzione dei conflitti personalizzato basato su stored procedure  
   
@@ -70,7 +71,7 @@ ms.locfileid: "72905121"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Per utilizzare un sistema di risoluzione dei conflitti personalizzato con un articolo di tabella esistente  
   
-1.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **\@publication**, **\@article**, il valore **article_resolver** per **\@property** e il valore di **Sistema di risoluzione delle stored procedure** di **MicrosoftSQL** per **\@value**.  
+1.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **\@publication**, **\@article**, un valore **article_resolver** per **\@property** e un valore di **Sistema di risoluzione delle stored procedure** **di MicrosoftSQL Server** per **\@value**.  
   
 2.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **\@publication**, **\@article**, il valore **resolver_info** per **\@property** e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per **\@value**.  
   

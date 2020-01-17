@@ -1,20 +1,21 @@
 ---
 title: Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server in Linux
 description: Descrive come i dati di diagnostica e utilizzo del cliente di SQL Server vengono raccolti e configurati in Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531293"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558550"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server in Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

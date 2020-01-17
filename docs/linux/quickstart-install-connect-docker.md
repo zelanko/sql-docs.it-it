@@ -1,7 +1,7 @@
 ---
-title: Introduzione ai contenitori di SQL Server Linux in Docker
-titleSuffix: SQL Server
+title: 'Docker: Installare i contenitori per SQL Server in Linux'
 description: Questa guida di avvio rapido illustra come usare Docker per eseguire immagini di contenitori di SQL Server 2017 e 2019. Si userà quindi sqlcmd per creare un database ed eseguire query su di esso.
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531382"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558676"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire immagini del contenitore di SQL Server con Docker
 
@@ -424,7 +423,7 @@ A questo punto, eseguire una query per restituire i dati dalla tabella `Inventor
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-2. Eseguire il comando:
+2. Eseguire il comando seguente:
 
    ```sql
    GO

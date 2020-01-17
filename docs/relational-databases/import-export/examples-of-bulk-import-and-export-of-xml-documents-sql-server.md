@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056023"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401583"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Osservazioni  
  L'utilizzo di SINGLE_BLOB in questo caso consente di evitare una mancata corrispondenza tra la codifica del documento XML (come specificata dalla dichiarazione di codifica XML) e la tabella codici della stringa implicita del server.  
   
  Se si utilizzano tipi di dati NCLOB o CLOB e si verifica un conflitto di tabella codici o di codifica, è necessario eseguire una delle operazioni seguenti:  
@@ -253,7 +253,7 @@ GO
  [&#91;Torna all'inizio&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Esportazione bulk di dati XML  
- Nell'esempio seguente viene utilizzata l'utilità `bcp` per l'esportazione bulk di dati XML dalla tabella creata nell'esempio precedente tramite lo stesso file di formato XML. Nel comando `bcp` seguente, `<server_name>` e `<instance_name>` rappresentano segnaposto da sostituire con valori appropriati:  
+ Nell'esempio seguente viene usata l'utilità [bcp](../../tools/bcp-utility.md) per l'esportazione bulk di dati XML dalla tabella creata nell'esempio precedente usando lo stesso file di formato XML. Nel comando `bcp` seguente, `<server_name>` e `<instance_name>` rappresentano segnaposto da sostituire con valori appropriati:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

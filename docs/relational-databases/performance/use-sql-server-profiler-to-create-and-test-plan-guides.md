@@ -1,6 +1,8 @@
 ---
-title: Usare SQL Server Profiler per creare e testare guide di piano | Microsoft Docs
-ms.custom: ''
+title: Creare e sottoporre a test le guide di piano
+titleSuffix: SQL Server Profiler
+description: Creazione e test delle guide di piano in SQL Server Profiler.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -21,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305083"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165932"
 ---
-# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e sottoporre a test le guide di piano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide** . Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
   
@@ -80,7 +82,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Test della guida di piano tramite SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Test delle guide di piano tramite SQL Server Profiler  
  Per verificare la corrispondenza tra una guida di piano e una query, eseguire la procedura seguente:  
   
 1.  Avviare una traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verificando che sia selezionato il tipo di evento **Showplan XML** , disponibile nel nodo **Performance** .  

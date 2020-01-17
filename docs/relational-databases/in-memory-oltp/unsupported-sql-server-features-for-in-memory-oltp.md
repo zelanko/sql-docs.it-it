@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di SQL Server non supportate per OLTP in memoria | Microsoft Docs
+title: Funzionalità non supportate - OLTP in memoria
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912130"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412510"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in
 Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella tabella seguente vengono descritti i casi supportati e le relative restrizioni. Vedere anche [Query tra database](../../relational-databases/in-memory-oltp/cross-database-queries.md).  
 
 
-|Database|Allowed|Descrizione|  
+|Database|Consentito|Descrizione|  
 |---------------|-------------|-----------------|  
-| Database utente, **modello** e **msdb**. | no | Nella maggior parte dei casi, query e transazioni tra database *non* sono supportate.<br /><br />Una query non è in grado di accedere ad altri database se usa una tabella ottimizzata per la memoria o una stored procedure compilata in modo nativo. Questa restrizione si applica sia alle transazioni che alle query.<br /><br />Le eccezioni sono i database di sistema **tempdb** e **master**. In questo caso il database **master** è disponibile per l'accesso in sola lettura. |
+| Database utente, **modello** e **msdb**. | No | Nella maggior parte dei casi, query e transazioni tra database *non* sono supportate.<br /><br />Una query non è in grado di accedere ad altri database se usa una tabella ottimizzata per la memoria o una stored procedure compilata in modo nativo. Questa restrizione si applica sia alle transazioni che alle query.<br /><br />Le eccezioni sono i database di sistema **tempdb** e **master**. In questo caso il database **master** è disponibile per l'accesso in sola lettura. |
 | Database delle **risorse**, **tempdb** | Sì | In una transazione che coinvolge gli oggetti di OLTP In memoria, i database di sistema **risorse** e **tempdb** possono essere usati senza alcuna restrizione aggiuntiva.
 
 

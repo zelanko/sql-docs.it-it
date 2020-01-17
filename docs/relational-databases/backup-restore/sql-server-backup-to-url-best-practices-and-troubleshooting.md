@@ -1,7 +1,7 @@
 ---
-title: Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Procedure consigliate e risoluzione dei problemi per il backup nell'URL
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245435"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In questo argomento sono inclusi i suggerimenti per la risoluzione dei problemi e le procedure consigliate relativi al backup e ripristino di SQL Server nel servizio BLOB di Azure.  
@@ -28,7 +29,7 @@ ms.locfileid: "72717234"
   
 -   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>Gestione dei backup  
+## <a name="managing-backups-mb1"></a> Gestione dei backup  
  Nell'elenco seguente sono inclusi i consigli generali sulla gestione dei backup:  
   
 -   Per evitare la sovrascrittura accidentale dei BLOB, è consigliabile l'utilizzo di un nome file univoco per ogni backup.  
@@ -47,7 +48,7 @@ ms.locfileid: "72717234"
   
 -   Nell'operazione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono usati più thread per ottimizzare il trasferimento dei dati ai servizi di archiviazione BLOB di Azure.  Le prestazioni, tuttavia, dipendono da vari fattori, ad esempio la larghezza di banda del fornitore di software indipendente e le dimensioni del database. Se si intende eseguire il backup di database o filegroup di grandi dimensioni da un database di SQL Server locale, si consiglia di eseguire innanzitutto alcuni test della velocità effettiva. I [contratti di servizio della risorsa di archiviazione](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) di Azure presentano tempi di elaborazione massimi per i BLOB che è possibile prendere in considerazione.  
   
--   L'uso dell'opzione `WITH COMPRESSION` come consigliato nella sezione [Gestione dei backup](##managing-backups) è molto importante quando si esegue il backup di file di grandi dimensioni.  
+-   L'uso dell'opzione `WITH COMPRESSION` come consigliato nella sezione [Gestione dei backup](#managing-backups-mb1) è molto importante quando si esegue il backup di file di grandi dimensioni.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Risoluzione dei problemi di backup nell'URL e di ripristino dallo stesso  
  Di seguito sono elencate alcune modalità rapide per la risoluzione di errori durante l'esecuzione del backup nel servizio di archiviazione BLOB di Azure o del ripristino dallo stesso.  
@@ -92,7 +93,7 @@ ms.locfileid: "72717234"
 
     -   Prendere in considerazione COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE e più argomenti di URL per il backup di database di grandi dimensioni.  Vedere [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/) (Backup di un VLDB in Archiviazione BLOB di Azure)
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +134,11 @@ ms.locfileid: "72717234"
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server. Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +146,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

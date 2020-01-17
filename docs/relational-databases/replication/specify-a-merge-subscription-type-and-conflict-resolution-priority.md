@@ -1,6 +1,7 @@
 ---
-title: Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti | Microsoft Docs
-ms.custom: ''
+title: Specificare il tipo e la priorità per la risoluzione dei conflitti (sottoscrizioni merge)
+description: Informazioni su come specificare il tipo e i criteri di risoluzione dei conflitti usati da una sottoscrizione di tipo merge per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fe64a74b85aca2ff02308c384dce89b9be540a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a988935a1d0a614f1b7b336cc95ed82ce2a36214
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907615"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321738"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

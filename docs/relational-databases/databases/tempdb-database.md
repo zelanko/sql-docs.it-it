@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909544"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190146"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -31,7 +31,7 @@ ms.locfileid: "72909544"
 Il database di sistema **TempDB** è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL. Tempdb viene usato per contenere:  
   
 - **Oggetti utente** temporanei creati in modo esplicito, ad esempio tabelle e indici temporanei globali o locali, stored procedure temporanee, variabili di tabella, tabelle restituite in funzioni con valori di tabella o cursori.  
-- **Oggetti interni** creati dal motore di database. tra cui:
+- **Oggetti interni** creati dal motore di database. incluse le seguenti:
   - Tabelle di lavoro in cui archiviare i risultati intermedi di operazioni di spooling e di ordinamento e cursori, nonché in cui archiviare LOB (Large Object) temporanei.
   - File di lavoro per operazioni hash join o hash aggregate.
   - Risultati intermedi dell'ordinamento per operazioni quali la creazione o la ricompilazione di indici (se SORT_IN_TEMPDB è specificato) o per alcune query GROUP BY, ORDER BY o UNION.
@@ -79,29 +79,29 @@ Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni 
 |ANSI_PADDING|OFF|Sì|  
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|no|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|no|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
 |CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|MIXED_PAGE_ALLOCATION|OFF|no|  
+|DB_CHAINING|ATTIVA|No|  
+|ENCRYPTION|OFF|No|  
+|MIXED_PAGE_ALLOCATION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
 |QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|no|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SEMPLICE|No|  
 |RECURSIVE_TRIGGERS|OFF|Sì|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
-|TRUSTWORTHY|OFF|no|  
+|TRUSTWORTHY|OFF|No|  
   
 Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
@@ -111,7 +111,7 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 
 |SLO|Dimensioni massime file di dati TempDB (GB)|N. di file di dati TempDB|Dimensioni massime dei dati TempDB (GB)|
 |---|---:|---:|---:|
-|Standard|13|1|13|
+|Basic|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -137,7 +137,7 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 
 Vedere [Limiti delle risorse basati su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Restrizioni
 
 Di seguito sono riportate le operazioni che non è possibile eseguire nel database **TempDB**:  
   
@@ -214,7 +214,14 @@ Per altre informazioni sui miglioramenti delle prestazioni in TempDB, vedere l'a
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB - File, flag di traccia e aggiornamenti)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadati tempdb ottimizzati per la memoria
-La contesa tra metadati TempDB è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati TempDB ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro TempDB eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Per accettare questa nuova funzionalità, usare lo script seguente:
+La contesa tra metadati TempDB è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati TempDB ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro TempDB eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch.
+
+Guardare questo video di 7 minuti per una panoramica su come e quando usare i metadati TempDB ottimizzati per la memoria:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+Per accettare questa nuova funzionalità, usare lo script seguente:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

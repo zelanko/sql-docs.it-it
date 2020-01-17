@@ -1,6 +1,7 @@
 ---
-title: Aprire Monitoraggio attività (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Aprire Monitoraggio attività (SSMS)
+description: Come aprire Monitoraggio attività in SQL Server Management Studio (SSMS).
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907224"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165534"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Aprire Monitoraggio attività (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Aprire Monitoraggio attività in SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Monitoraggio attività esegue query sull'istanza monitorata per ottenere informazioni per i riquadri di visualizzazione di Monitoraggio attività. Quando l'intervallo di aggiornamento viene impostato su un valore inferiore a 10 secondi, il tempo utilizzato per eseguire queste query può ridurre le prestazioni del server  
@@ -36,7 +37,7 @@ ms.locfileid: "72907224"
   
 ## <a name="open-activity-monitor"></a>Aprire Monitoraggio attività  
 
-### <a name="keyboard-shortcut"></a>Scelta rapida da tastiera  
+### <a name="keyboard-shortcut"></a>Tasto di scelta rapida  
  - Digitare **CTRL+ALT+A** per aprire Monitoraggio attività in qualsiasi momento.
 
  >**Hint.** Passare il mouse su un'icona di SQL Server Management Studio per ottenere informazioni su che cos'è e sulla scelta rapida da tastiera che la attiva.

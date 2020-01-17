@@ -1,6 +1,6 @@
 ---
-title: Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo | Microsoft Docs
-ms.custom: ''
+title: Tabella con ottimizzazione per la memoria e stored procedure compilata in modo nativo
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a1e096d09865693661659a91875728baefdf92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8793d5fc14401cbe800604accc6642a424fbbe
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915317"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412735"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo
 

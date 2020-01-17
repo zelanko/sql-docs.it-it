@@ -1,6 +1,5 @@
 ---
-title: Requisiti e limitazioni per le raccolte di XML Schema nel server | Microsoft Docs
-ms.custom: ''
+title: Requisiti e limitazioni (raccolte XML Schema) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093189"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257626"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "68093189"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Spiegazione delle forme canoniche e delle restrizioni di pattern.|  
+|[Forme canoniche e restrizioni di pattern](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Spiegazione delle forme canoniche e delle restrizioni di pattern.|  
 |[Componenti jolly e convalida del contenuto](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Descrizione delle limitazioni dell'utilizzo di Elementi dei caratteri jolly, della convalida lax e dell'anyType con le raccolte di XML Schema.|  
 |[Elemento &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md)|Viene illustrata la limitazione all'uso dell'elemento \<xsd:redefine> e viene descritta una soluzione alternativa.|  
-|[Xs:Tipo QName](../../relational-databases/xml/the-xs-qname-type.md)|Descrizione del limite relativo al tipo xs:QName.|  
+|[Tipo xs:QName](../../relational-databases/xml/the-xs-qname-type.md)|Descrizione del limite relativo al tipo xs:QName.|  
 |[Valori per dichiarazioni &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|Vengono descritte le limitazioni applicate alle dichiarazioni \<xsd:simpleType>.|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|Descrizione della limitazione relativa ai facet dell'enumerazione.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|Descrizione del limite relativo alla restrizione di un tipo misto a un contenuto semplice.|  
+|[Facet di enumerazione](../../relational-databases/xml/enumeration-facets.md)|Descrizione della limitazione relativa ai facet dell'enumerazione.|  
+|[Tipo misto e contenuto semplice](../../relational-databases/xml/mixed-type-and-simple-content.md)|Descrizione del limite relativo alla restrizione di un tipo misto a un contenuto semplice.|  
 |[Raccolte di XML Schema di grandi dimensioni e condizioni di memoria insufficiente](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Indicazione delle soluzioni per la condizione di memoria insufficiente che qualche volta si verifica con le raccolte di schemi di grandi dimensioni.|  
 |[Modelli di contenuto non deterministici](../../relational-databases/xml/non-deterministic-content-models.md)|Descrizione dei limiti relativi ai modelli di contenuto non deterministici.|  
   

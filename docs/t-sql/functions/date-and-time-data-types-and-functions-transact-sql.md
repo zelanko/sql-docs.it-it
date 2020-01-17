@@ -1,6 +1,8 @@
 ---
-title: Funzioni e tipi di dati di data e ora (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Funzioni e tipi di dati di data e ora
+description: Collegamenti a funzioni e tipi di dati di data e ora.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982961"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256086"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Funzioni e tipi di dati di data e ora (Transact-SQL)
 
@@ -47,17 +49,17 @@ Le sezioni in questo argomento trattano tutti i tipi di dati e le funzioni di da
 ##  <a name="DateandTimeDataTypes"></a> Tipi di dati di data e ora
 I tipi di dati di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)] sono elencati nella tabella seguente:
   
-|Tipo di dati|Formato|Intervallo|Accuratezza|Dimensioni dello spazio di archiviazione (in byte)|Precisione in secondi frazionari definita dall'utente|Differenza di fuso orario|  
+|Tipo di dati|Format|Range|Accuratezza|Dimensioni dello spazio di archiviazione (in byte)|Precisione in secondi frazionari definita dall'utente|Differenza di fuso orario|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|da 00.00.00.0000000 a 23.59.59.9999999|100 nanosecondi|da 3 a 5|Sì|no|  
-|[data](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|Da 01-01-0001 a 31-12-9999|1 giorno|3|no|no|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|AAAAA-MM-GG hh.mm.ss|da 01-01-1900 a 06-06-2079|1 minuto|4|no|no|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnn]|da 01-01-1753 a 31-12-9999|0,00333 secondi|8|no|no|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|da 01-01-0001 00.00.00.0000000 a 31-12-9999 23.59.59.9999999|100 nanosecondi|da 6 a 8|Sì|no|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|da 00.00.00.0000000 a 23.59.59.9999999|100 nanosecondi|da 3 a 5|Sì|No|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|Da 01-01-0001 a 31-12-9999|1 giorno|3|No|No|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|AAAAA-MM-GG hh.mm.ss|da 01-01-1900 a 06-06-2079|1 minuto|4|No|No|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnn]|da 01-01-1753 a 31-12-9999|0,00333 secondi|8|No|No|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|da 01-01-0001 00.00.00.0000000 a 31-12-9999 23.59.59.9999999|100 nanosecondi|da 6 a 8|Sì|No|  
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|da 0001-01-01 00:00:00.0000000 a 9999-12-31 23:59:59.9999999 (in UTC)|100 nanosecondi|da 8 a 10|Sì|Sì|  
   
 > [!NOTE]  
->  Il tipo di dati [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] non è relativo a data e ora. **timestamp** è un sinonimo deprecato per **rowversion**.  
+>  Il tipo di dati di [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) non è relativo a data e ora. **timestamp** è un sinonimo deprecato per **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Funzioni di data e ora  
 Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni sul determinismo, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
@@ -96,7 +98,7 @@ Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../inc
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
-|[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Restituisce un valore di tipo **date** per l'anno, il mese e il giorno specificati.|**data**|Deterministico|  
+|[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Restituisce un valore di tipo **date** per l'anno, il mese e il giorno specificati.|**date**|Deterministico|  
 |[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Restituisce un valore **datetime2** per la data e l'ora specificate, con la precisione indicata.|**datetime2(** _precision_ **)**|Deterministico|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Restituisce un valore di tipo **datetime** per la data e l'ora specificate.|**datetime**|Deterministico|  
 |[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Restituisce un valore **datetimeoffset** per la data e l'ora specificate, con gli offset e la precisione indicati.|**datetimeoffset(** _precision_ **)**|Deterministico|  

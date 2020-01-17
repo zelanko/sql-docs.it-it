@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419597"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721926"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Questa funzione restituisce uno schema di bit **varbinary** che indica le colonne inserite o aggiornate in una tabella o vista. Usare `COLUMNS_UPDATED` in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `COLUMNS_UPDATED` controlla l'esecuzione delle operazioni UPDATE o INSERT in più colonne. Per controllare i tentativi di esecuzione delle operazioni UPDATE o INSERT in una colonna, usare [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 `COLUMNS_UPDATED` restituisce uno o più byte ordinati da sinistra a destra. Il bit più a destra di ogni byte è il bit meno significativo. Il bit più a destra del byte più a sinistra rappresenta la prima colonna della tabella, il bit successivo a sinistra rappresenta la seconda colonna e così via. `COLUMNS_UPDATED` restituisce più byte se la tabella in cui viene creato il trigger include più di otto colonne. Il byte più a sinistra è il meno significativo. `COLUMNS_UPDATED` restituisce TRUE per tutte le colonne nelle azioni INSERT in quanto nelle colonne vengono inseriti valori espliciti o impliciti (NULL).
@@ -74,7 +74,7 @@ Quando un set di colonne è definito in una tabella, il comportamento della funz
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Utilizzo di COLUMNS_UPDATED per controllare le prime 8 colonne di una tabella  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>R. Utilizzo di COLUMNS_UPDATED per controllare le prime 8 colonne di una tabella  
 Nell'esempio seguente vengono create due tabelle: `employeeData` e `auditEmployeeData`. La tabella `employeeData` include informazioni riservate sulle retribuzioni dei dipendenti e può essere modificata dai membri dell'ufficio del personale. Se il numero di codice fiscale, lo stipendio annuale o il numero di conto corrente bancario relativi a un dipendente cambiano, nella tabella di controllo `auditEmployeeData` viene generato e inserito un record di controllo.
   
 Con la funzione `COLUMNS_UPDATED()`, è possibile verificare rapidamente eventuali modifiche apportate a colonne contenenti informazioni riservate sui dipendenti. Se si usa `COLUMNS_UPDATED()` ciò funziona solo quando si tenta di rilevare le modifiche alle prime otto colonne della tabella.
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

@@ -1,6 +1,6 @@
 ---
-title: Implementazione di un'espressione CASE in una stored procedure compilata in modo nativo | Microsoft Docs
-ms.custom: ''
+title: Espressione CASE in una stored procedure compilata in modo nativo
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,17 +11,17 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3819201a24318c7bd48a78757a1284b5548be95b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c26cd8424000926030d37302606cece6a570668
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050393"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412653"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementazione di un'espressione CASE in una stored procedure compilata in modo nativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**Si applica a:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**Si applica a**: [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 Le espressioni CASE sono supportate nei moduli T-SQL compilati in modo nativo. Nell'esempio seguente viene illustrato come usare l'espressione CASE in una query. 
 
@@ -44,7 +44,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   Le espressioni CASE *non* sono supportate nei moduli T-SQL compilati in modo nativo. L'esempio seguente illustra una modalità di implementazione della funzionalità di un'espressione CASE in una stored procedure compilata in modo nativo.  
   

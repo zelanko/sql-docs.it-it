@@ -1,6 +1,5 @@
 ---
-title: Specificare percorsi e hint di ottimizzazione per indici XML selettivi | Microsoft Docs
-ms.custom: ''
+title: Percorsi e hint di ottimizzazione per indici XML selettivi | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905239"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257607"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "72905239"
   
  Specificare contemporaneamente i percorsi del nodo e gli hint di ottimizzazione in una delle istruzioni seguenti:  
   
--   Nella clausola **FOR** di un'istruzione **CREATE**. Per altre informazioni, vedere [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+-   Nella clausola **FOR** di un'istruzione **CREATE** . Per altre informazioni, vedere [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   Nella clausola **ADD** di un'istruzione **ALTER**. Per altre informazioni, vedere [ALTER INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
+-   Nella clausola **ADD** di un'istruzione **ALTER** . Per altre informazioni, vedere [ALTER INDEX &#40;indici XML selettivi&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  Per altre informazioni sugli indici XML selettivi, vedere [Indici XML selettivi &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -150,7 +150,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   **xs:day**  
   
--   **xs:decimal**  
+-   **xs: decimal**  
   
 -   **xs:double**  
   
@@ -355,10 +355,10 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>Vantaggi degli hint di ottimizzazione  
  Nella tabella seguente vengono identificati gli hint di ottimizzazione che supportano livelli più efficienti di prestazioni e archiviazione.  
   
-|Hint di ottimizzazione|Archiviazione più efficiente|Miglioramento delle prestazioni|  
+|Hint di ottimizzazione|Archiviazione più efficiente|prestazioni migliorate|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Sì|no|  
-|**SINGLETON**|no|Sì|  
+|**node()**|Sì|No|  
+|**SINGLETON**|No|Sì|  
 |**DATA TYPE**|Sì|Sì|  
 |**MAXLENGTH**|Sì|Sì|  
   
@@ -367,17 +367,17 @@ WHERE T.xmldata.exist('
   
 |Hint di ottimizzazione|Tipi di dati XQuery|Tipi di dati SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Sì|no|  
+|**node()**|Sì|No|  
 |**SINGLETON**|Sì|Sì|  
-|**DATA TYPE**|Sì|no|  
-|**MAXLENGTH**|Sì|no|  
+|**DATA TYPE**|Sì|No|  
+|**MAXLENGTH**|Sì|No|  
   
 ### <a name="node-optimization-hint"></a>hint di ottimizzazione node()  
  Si applica a: Tipi di dati XQuery  
   
  È possibile utilizzare l'ottimizzazione node() per specificare un nodo il cui valore non è necessario per valutare la query tipica. Questo hint riduce i requisiti di archiviazione se la query tipica deve esclusivamente valutare l'esistenza del nodo. Per impostazione predefinita, un indice XML selettivo archivia il valore per tutti i nodi promossi, ad eccezione dei tipi di nodi complessi.  
   
- Si consideri l'esempio descritto di seguito.  
+ Prendere in considerazione gli esempi seguenti:  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  

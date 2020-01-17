@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento di database mediante l'Assistente ottimizzazione query | Microsoft Docs
-ms.custom: ''
+title: Aggiornare i database tramite l'Assistente ottimizzazione query
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163898"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165680"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e per tutte le nu
 
 Questa funzionalità di collegamento offerta dal livello di compatibilità del database in combinazione con Query Store offre un livello ottimale di controllo delle prestazioni delle query nel processo di aggiornamento, se l'aggiornamento segue il flusso di lavoro consigliato illustrato di seguito. Per altre informazioni sul flusso di lavoro consigliato per l'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare il Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
-![Flusso di lavoro del processo di aggiornamento consigliato con Query Store](../../relational-databases/performance/media/query-store-usage-5.png "Flusso di lavoro del processo di aggiornamento consigliato con Query Store") 
+![Flusso di lavoro del processo di aggiornamento del database consigliato con Query Store](../../relational-databases/performance/media/query-store-usage-5.png "Flusso di lavoro del processo di aggiornamento del database consigliato con Query Store") 
 
 Questo controllo sugli aggiornamenti è stato migliorato ulteriormente in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] con l'introduzione di [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md) e consente di automatizzare l'ultimo passaggio del flusso di lavoro consigliato visualizzato sopra.
 
@@ -56,7 +56,7 @@ Per altre informazioni sul collegamento di un database, vedere [Collegamento e s
 
 Vedere di seguito come l'Assistente ottimizzazione query di fatto cambia solo gli ultimi passaggi del flusso di lavoro consigliato per aggiornare il livello di compatibilità mediante Query Store illustrato sopra. Invece di offrire la possibilità di scegliere tra il piano di esecuzione che attualmente risulta inefficiente e l'ultimo piano di esecuzione ottimale, l'Assistente ottimizzazione query offre opzioni di regolazione specifiche per le query regredite selezionate, al fine di creare un nuovo stato migliorato con i piani di esecuzione ottimizzati.
 
-![Flusso di lavoro del processo di aggiornamento consigliato con l'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-usage.png "Flusso di lavoro del processo di aggiornamento consigliato con l'Assistente ottimizzazione query")
+![Flusso di lavoro del processo di aggiornamento del database consigliato l'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-usage.png "Flusso di lavoro del processo di aggiornamento del database consigliato con l'Assistente ottimizzazione query")
 
 ### <a name="qta-tuning-internal-search-space"></a>Spazio di ricerca interno per l'ottimizzazione dell'Assistente ottimizzazione query
 L'Assistente ottimizzazione query prende in esame solo le query `SELECT` che possono essere eseguite da Query Store. Le query con parametri sono idonee se il parametro compilato è noto. Le query che dipendono da costrutti di runtime, ad esempio tabelle temporanee o variabili di tabella, non sono idonee in questa fase. 
@@ -89,14 +89,14 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
         -  Impostare il livello di compatibilità del database di destinazione previsto per il database utente al termine il flusso di lavoro l'Assistente ottimizzazione query.
         Al termine, fare clic su **Avanti**.
     
-       ![Finestra di configurazione nuova sessione di aggiornamento del database](../../relational-databases/performance/media/qta-new-session-setup.png "Finestra di configurazione nuova sessione di aggiornamento del database")  
+       ![Finestra di configurazione della sessione di aggiornamento del nuovo database](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
   
     2.  Nella finestra **Impostazioni** due colonne indicano lo stato **Corrente** di Query Store nel database di destinazione, nonché le impostazioni **Consigliate**. 
         -  Le impostazioni consigliate sono selezionate per impostazione predefinita, ma, se si fa clic sul pulsante di opzione sopra la colonna Corrente, si accettano le impostazioni correnti ed è anche possibile ottimizzare la configurazione corrente di Query Store. 
         -  L'impostazione *Soglia per query non aggiornate* è pari al doppio della durata in giorni prevista per il carico di lavoro. Questo dipende dal fatto che Query Store dovrà conservare informazioni sul carico di lavoro baseline e sul carico di lavoro successivo all'aggiornamento del database.
         Al termine, fare clic su **Avanti**.
 
-       ![Finestra nuove impostazioni di aggiornamento del database](../../relational-databases/performance/media/qta-new-session-settings.png "Finestra nuove impostazioni di aggiornamento del database")
+       ![Finestra delle impostazioni di aggiornamento del nuovo database](../../relational-databases/performance/media/qta-new-session-settings.png "Finestra delle impostazioni di aggiornamento del nuovo database")
 
        > [!IMPORTANT]
        > Il valore *Dimensioni massime* proposto è un valore arbitrario, che può essere adatto a un carico di lavoro di breve durata.   
@@ -105,7 +105,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 
 4.  La finestra **Regolazione** completa la configurazione della sessione e indica i passaggi successivi per aprire e svolgere la sessione. Al termine fare clic su **Fine**.
 
-    ![Finestra regolazione aggiornamento nuovo database](../../relational-databases/performance/media/qta-new-session-tuning.png "Finestra regolazione aggiornamento nuovo database")
+    ![Finestra della regolazione di aggiornamento del nuovo database](../../relational-databases/performance/media/qta-new-session-tuning.png "Finestra della regolazione di aggiornamento del nuovo database")
 
 > [!NOTE]
 > Un possibile scenario alternativo inizia con il ripristino di un backup di database dal server di produzione (in cui il database è già stato sottoposto al flusso di lavoro di aggiornamento del livello di compatibilità del database consigliato) a un server di test.
@@ -145,19 +145,19 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
         > [!NOTE]
         > La finestra dell'Assistente ottimizzazione query può essere chiusa mentre il carico di lavoro è in esecuzione. Se in un secondo momento si torna alla sessione che rimane in stato attivo, questa verrà ripresa dallo stesso passaggio in cui è stata interrotta. 
 
-        ![Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 1](../../relational-databases/performance/media/qta-step2-substep1.png "Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 1")
+        ![Passaggio secondario 1 del passaggio 2 dell'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-step2-substep1.png "Passaggio secondario 1 del passaggio 2 dell'Assistente ottimizzazione query")
 
     2.  **Aggiornamento del database** richiederà l'autorizzazione per aggiornare il livello di compatibilità del database al livello desiderato. Per procedere con il passaggio secondario successivo, fare clic su **Sì**.
 
-        ![Assistente ottimizzazione query- Passaggio 2 Passaggio secondario 2: aggiornamento del livello di compatibilità del database](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 2: aggiornamento del livello di compatibilità del database")
+        ![Passaggio secondario 2 del passaggio 2 dell'Assistente ottimizzazione query - Non è stato possibile aggiornare il livello di compatibilità del database](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "Passaggio secondario 2 del passaggio 2 dell'Assistente ottimizzazione query - Non è stato possibile aggiornare il livello di compatibilità del database")
 
         La pagina seguente conferma che il livello di compatibilità del database è stato aggiornato correttamente.
 
-        ![Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 2](../../relational-databases/performance/media/qta-step2-substep2.png "Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 2")
+        ![Passaggio secondario 2 del passaggio 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
 
     3.  **Raccolta dati osservati** richiede all'utente di eseguire nuovamente il ciclo del carico di lavoro rappresentativo, per consentire a Query Store di acquisire una baseline di confronto che verrà usata per la ricerca di opportunità di ottimizzazione. Durante l'esecuzione del carico di lavoro, usare il pulsante **Aggiorna** per aggiornare l'elenco delle query regredite, se presenti. Modificare il valore **Query da mostrare** per limitare il numero di query visualizzate. L'ordine dell'elenco è influenzato dai valori **Metrica** (Durata o CpuTime) e **Aggregazione** (il valore predefinito è Media). Selezionare anche un valore per **Query da mostrare**. Dopo il completamento del carico di lavoro, selezionare **Esecuzione del carico di lavoro completata** e fare clic su **Avanti**.
 
-        ![Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 3](../../relational-databases/performance/media/qta-step2-substep3.png "Assistente ottimizzazione query - Passaggio 2 Passaggio secondario 3")
+        ![Passaggio secondario 3 del passaggio 2](../../relational-databases/performance/media/qta-step2-substep3.png "Passaggio secondario 3 del passaggio 2 dell'Assistente ottimizzazione query")
 
         L'elenco contiene le informazioni seguenti:
         -  **ID query** 
@@ -177,7 +177,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     > Un messaggio informa che quando l'Assistente ottimizzazione query passa alla fase di sperimentazione, non sarà possibile tornare alla pagina Visualizzazione analisi.   
     > Se non si selezionano tutte le query idonee prima di passare alla fase di sperimentazione, sarà necessario creare una nuova sessione in un secondo momento e ripetere il flusso di lavoro. Questo richiede la reimpostazione del livello di compatibilità del database sul valore precedente.
 
-    ![Assistente ottimizzazione query - Passaggio 3](../../relational-databases/performance/media/qta-step3.png "Assistente ottimizzazione query - Passaggio 3")
+    ![Passaggio 3 dell'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-step3.png "Passaggio 3 dell'Assistente ottimizzazione query")
 
 5.  **Visualizzazione risultati** consente di selezionare le query a cui distribuire l'ottimizzazione proposta come guida di piano. 
 
@@ -191,15 +191,15 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     -  **Opzione di query**: collegamento all'hint proposto che migliora la metrica di esecuzione di query.
     -  **È possibile distribuire**: *True* o *False* a seconda che l'ottimizzazione della query proposta possa essere o meno distribuita come guida di piano.
 
-    ![Assistente ottimizzazione query - Passaggio 4](../../relational-databases/performance/media/qta-step4.png "Assistente ottimizzazione query - Passaggio 4")
+    ![Passaggio 4 dell'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-step4.png "Passaggio 4 dell'Assistente ottimizzazione query")
 
 6.  **Verifica** Mostra lo stato di distribuzione delle query selezionate in precedenza per questa sessione. L'elenco in questa pagina è diverso da quello della pagina precedente, perché l'opzione **È possibile distribuire** qui è **È possibile eseguire il rollback**. Questa colonna può essere *True* o *False* a seconda che sia possibile o meno eseguire il rollback dell'ottimizzazione delle query distribuite e rimuovere la guida di piano.
 
-    ![Assistente ottimizzazione query - Passaggio 5](../../relational-databases/performance/media/qta-step5.png "Assistente ottimizzazione query - Passaggio 5")
+    ![Passaggio 5 dell'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-step5.png "Passaggio 5 dell'Assistente ottimizzazione query")
 
     Se in un secondo momento è necessario eseguire il rollback su un'ottimizzazione proposta, selezionare la query corrispondente e fare clic su **Rollback**. La guida di piano della query viene rimossa e l'elenco viene aggiornato per rimuovere la query di cui è stato eseguito il rollback. Si noti che nell'immagine seguente è stata rimossa la query 8.
 
-    ![Assistente ottimizzazione query - Passaggio 5 - Rollback](../../relational-databases/performance/media/qta-step5-rollback.png "Assistente ottimizzazione query - Passaggio 5 - Rollback") 
+    ![Passaggio 5 dell'Assistente ottimizzazione query - Rollback](../../relational-databases/performance/media/qta-step5-rollback.png "Passaggio 5 dell'Assistente ottimizzazione query - Rollback") 
 
     > [!NOTE]
     > L'eliminazione di una sessione chiusa **non** elimina le guide di piano distribuite in precedenza.   

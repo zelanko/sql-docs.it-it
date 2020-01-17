@@ -1,7 +1,8 @@
 ---
-title: Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Evitare conflitti - Operazioni del database FILESTREAM | Microsoft Docs
+description: Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 22c0c0771c3e4566ba2f3f1cef6e2dd4d921f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b347a140c07436553945555e52d212e4751fcc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018867"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255584"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +28,9 @@ ms.locfileid: "68018867"
   
 |istruzioni Transact-SQL|Aperte per l'accesso in lettura|Aperte per l'accesso in scrittura|  
 |------------------------------|---------------------|----------------------|  
-|Istruzioni DDL che funzionano con i metadati del database, ad esempio CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Allowed|Bloccate ed errore di timeout.|  
-|Istruzioni DML che funzionano con i dati archiviati nel database, ad esempio UPDATE, DELETE e INSERT.|Allowed|Negate|  
-|SELECT|Allowed|Allowed|  
+|Istruzioni DDL che funzionano con i metadati del database, ad esempio CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Consentito|Bloccate ed errore di timeout.|  
+|Istruzioni DML che funzionano con i dati archiviati nel database, ad esempio UPDATE, DELETE e INSERT.|Consentito|Negate|  
+|SELECT|Consentito|Consentito|  
 |COMMIT TRANSACTION|Negate*|Negate*|  
 |SAVE TRANSACTION|Negate*|Negate*|  
 |ROLLBACK|Consentite*|Consentite*|  
@@ -39,7 +40,7 @@ ms.locfileid: "68018867"
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano come le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e l'accesso Win32 FILESTREAM possano creare conflitti.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>R. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
  Nell'esempio seguente viene mostrato l'effetto dell'apertura di un file per il solo accesso in scrittura.  
   
 ```  

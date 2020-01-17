@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119210"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191080"
 ---
 # <a name="select-examples-transact-sql"></a>Esempi di istruzioni SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Questo argomento include alcuni esempi relativi all'uso dell'istruzione [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne  
+## <a name="a-using-select-to-retrieve-rows-and-columns"></a>R. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne  
  Nell'esempio seguente vengono illustrati tre blocchi di codice. Nel primo esempio di codice vengono restituite tutte le righe (clausola WHERE omessa) e tutte le colonne (utilizzando `*`) della tabella `Product` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
@@ -81,7 +81,7 @@ ms.locfileid: "74119210"
 ## <a name="e-using-correlated-subqueries"></a>E. Utilizzo di sottoquery correlate
 Una query correlata è una query i cui valori dipendono dalla query esterna. Questa query può essere eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna.
 
- Nell'esempio seguente vengono illustrate query semanticamente equivalenti e viene evidenziata la differenza tra la parola chiave `EXISTS` e la parola chiave `IN`. Entrambi sono esempi di sottoquery valide che recuperano un'istanza del nome di ogni prodotto del modello "Long-sleeve logo jersey" e con valori `ProductModelID` uguali nelle tabelle `Product` e `ProductModel`.  
+Nel primo esempio vengono illustrate query semanticamente equivalenti per evidenziare la differenza tra l'uso della parola chiave `EXISTS` e della parola chiave `IN`. Entrambi sono esempi di sottoquery valide che recuperano un'istanza del nome di ogni prodotto del modello "Long-sleeve logo jersey" e con valori `ProductModelID` uguali nelle tabelle `Product` e `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Se si desidera che nei calcoli siano inclusi solo i prodotti per cui sono stati venduti almeno 1500 articoli, utilizzare la clausola `HAVING COUNT(*) > 1500` per eliminare i prodotti per cui sono stati venduti meno di `1500` articoli. La query è la seguente:  
+ Se si desidera che nei calcoli siano inclusi solo i prodotti per cui sono stati venduti almeno 1500 articoli, utilizzare la clausola `HAVING COUNT(*) > 1500` per eliminare i prodotti per cui sono stati venduti meno di `1500` articoli. La query appare come la seguente:  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

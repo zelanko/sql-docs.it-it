@@ -20,19 +20,19 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5260e1204f834b3ccb89703dba94be4dec760d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762871"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il numero di errore per l'ultima istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68094593"
 ## <a name="return-types"></a>Tipi restituiti  
  integer  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce 0 se nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] precedente non è stato rilevato alcun errore.  
   
  Restituisce un numero di errore se nell'istruzione precedente è stato rilevato un errore. Se l'errore rilevato è descritto nella vista del catalogo sys.messages, la funzione @@ERROR include il valore riportato nella colonna sys.messages.message_id per tale errore. È possibile esaminare il testo associato a un numero di errore @@ERROR in sys.messages.  
@@ -54,7 +54,7 @@ ms.locfileid: "68094593"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. Uso di @@ERROR per trovare un errore specifico  
+### <a name="a-using-error-to-detect-a-specific-error"></a>R. Uso di @@ERROR per trovare un errore specifico  
  Nell'esempio seguente si utilizza `@@ERROR` per rilevare una violazione di vincolo CHECK (errore numero 547) in un'istruzione `UPDATE`.  
   
 ```sql  
@@ -63,8 +63,10 @@ GO
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
     WHERE BusinessEntityID = 1;  
-IF @@ERROR = 547  
-    PRINT N'A check constraint violation occurred.';  
+IF @@ERROR = 547
+    BEGIN
+    PRINT N'A check constraint violation occurred.';
+    END
 GO  
 ```  
   

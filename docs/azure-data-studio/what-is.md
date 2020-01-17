@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545059"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241754"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
 Azure Data Studio è uno strumento di database multipiattaforma per professionisti della gestione di dati che usano la famiglia Microsoft di piattaforme dati locali e cloud in Windows, MacOS e Linux.
 
-Precedentemente rilasciato con il nome di anteprima di SQL Operations Studio, Azure Data Studio offre un'esperienza di modifica moderna per la gestione dei dati tra più origini con funzionalità IntelliSense, frammenti di codice, integrazione del controllo del codice sorgente e un terminale integrato. Azure Data Studio è stato progettato in base alle esigenze dell'utente della piattaforma dati, con grafici predefiniti di set di risultati delle query e dashboard personalizzabili.
+Azure Data Studio offre un'esperienza di modifica moderna per la gestione dei dati tra più origini con funzionalità IntelliSense, frammenti di codice, integrazione del controllo del codice sorgente e un terminale integrato. Azure Data Studio è stato progettato in base alle esigenze dell'utente della piattaforma dati, con grafici predefiniti di set di risultati delle query e dashboard personalizzabili.
 
 Il codice sorgente per Azure Data Studio e i relativi provider di dati è disponibile in GitHub in base a un contratto di licenza che fornisce il diritto di modificare e usare il software, ma non di ridistribuirlo o ospitarlo in un servizio cloud. Per altre informazioni, vedere [Domande frequenti - Azure Data Studio](faq.md).
 
 **[Scaricare e installare [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor di codice SQL con IntelliSense
 
@@ -37,7 +36,6 @@ Il codice sorgente per Azure Data Studio e i relativi provider di dati è dispon
 I frammenti di codice SQL generano la sintassi SQL appropriata per creare database, tabelle, viste, stored procedure, utenti, accessi, ruoli e così via, nonché aggiornare gli oggetti di database esistenti. Usare i frammenti di codice intelligenti per creare rapidamente copie del database a scopo di sviluppo o test e per generare ed eseguire script di creazione e inserimento.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce anche funzionalità per la creazione di frammenti di codice SQL personalizzati. Per altre informazioni, vedere [Creare e usare frammenti di codice](code-snippets.md).
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>Dashboard di server e database personalizzabili
 
@@ -61,6 +59,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Confronto delle funzionalità con Server Management Studio (SSMS)
 
 **Usare Azure Data Studio se:**
+
 - L'ambiente di esecuzione è macOS o Linux
 - Ci si connette a un cluster Big Data di SQL Server 2019
 - Si dedica la maggior parte del tempo alla modifica o all'esecuzione di query
@@ -68,9 +67,9 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 - Si può eseguire la maggior parte delle attività amministrative tramite il terminale integrato usando sqlcmd o PowerShell
 - Si ha una necessità minima di esperienze di tipo procedura guidata
 - Non è necessario eseguire una configurazione amministrativa completa
-- Lo si vuole 
 
 **Usare SQL Server Management Studio se:**
+
 - Si dedica la maggior parte del tempo ad attività di amministrazione di database
 - Si esegue una configurazione amministrativa completa
 - Ci si occupa di gestione della sicurezza, incluse gestione degli utenti, valutazione della vulnerabilità e configurazione delle funzionalità di sicurezza
@@ -101,8 +100,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Proprietà degli oggetti||Sì|
 |Progettazione tabelle||Sì|
 
-
-### <a name="query-editor"></a>Editor query
+### <a name="query-editor"></a>Editor di query
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -118,7 +116,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Risultati in formato testo||Sì|
 |Visualizzatore spaziale||Sì|
 |SQLCMD||Sì|
-|Blocchi appunti|Sì||
+|Notebooks|Sì||
 |Salvare una query come frammento di codice|Sì||
 
 ### <a name="operating-system-support"></a>Supporto nei sistemi operativi
@@ -135,7 +133,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |:---|:---|:---|
 |Procedura guidata di creazione tabella esterna|Anteprima||
 |Integrazione HDFS|Anteprima||
-|Blocchi appunti|Anteprima||
+|Notebooks|Anteprima||
 
 ### <a name="database-administration"></a>Amministrazione del database
 
@@ -147,7 +145,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |SQL Agent|Anteprima|Sì|
 |SQL Profiler|Anteprima|Sì|
 |Always On||Sì|
-|Crittografia sempre attiva||Sì|
+|Always Encrypted||Sì|
 |Procedura guidata Copia dati||Sì|
 |Ottimizzazione guidata dati||Sì|
 |Visualizzatore log degli errori||Sì|
@@ -159,7 +157,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Server registrati||Sì|
 |Replica||Sì|
 |Gestione della sicurezza||Sì|
-|Service Broker||Sì|
+|Broker di servizio||Sì|
 |SQL Mail||Sì|
 |Esplora modelli||Sì|
 |Valutazione della vulnerabilità||Sì|

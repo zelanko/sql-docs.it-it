@@ -1,6 +1,7 @@
 ---
-title: Impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali | Microsoft Docs
-ms.custom: ''
+title: Impostare il metodo di propagazione per le modifiche agli articoli (sottoscrizioni transazionali)
+description: Informazioni su come eseguire il test del metodo di propagazione per le modifiche ai dati negli articoli transazionali per la replica transazionale tramite SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 446855f89b924cb41462df67d02926f3b7b1ebe9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904988"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321191"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -162,6 +163,6 @@ ms.locfileid: "72904988"
   
 ## <a name="see-also"></a>Vedere anche  
  [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

@@ -1,19 +1,20 @@
 ---
-title: Installazione automatica per SQL Server in Red Hat Enterprise Linux
+title: Installazione automatica per SQL Server in RHEL
 titleSuffix: SQL Server
-description: Esempio di script di SQL Server - Installazione automatica in Red Hat Enterprise Linux
+description: Esempio di script di SQL Server - Installazione automatica in Red Hat Enterprise Linux (RHEL)
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910443"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558646"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Esempio: Script di installazione automatica di SQL Server per Red Hat Enterprise Linux
 

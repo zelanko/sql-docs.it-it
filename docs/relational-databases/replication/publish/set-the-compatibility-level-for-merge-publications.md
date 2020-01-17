@@ -1,6 +1,7 @@
 ---
-title: Impostare il livello di compatibilità per le pubblicazioni di tipo merge | Microsoft Docs
-ms.custom: ''
+title: Impostare il livello di compatibilità per le pubblicazioni di tipo merge
+description: Informazioni su come impostare il livello di compatibilità per le pubblicazioni di tipo merge usando SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904905"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321218"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Impostazione del livello di compatibilità per le pubblicazioni di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

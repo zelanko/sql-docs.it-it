@@ -1,6 +1,7 @@
 ---
 title: Configurare un'istanza del cluster di failover - SQL Server in Linux (RHEL)
-description: ''
+description: Informazioni su come configurare un'istanza del cluster di failover in Red Hat Enterprise Linux (RHEL) per SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032305"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558326"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare un'istanza del cluster di failover - SQL Server in Linux (RHEL)
 
@@ -278,7 +279,7 @@ Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGr
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 -->
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa esercitazione sono state completate le attività seguenti.
 

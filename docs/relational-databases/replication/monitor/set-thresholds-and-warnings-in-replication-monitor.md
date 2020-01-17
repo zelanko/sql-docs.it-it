@@ -1,6 +1,7 @@
 ---
-title: Impostare valori di soglia e avvisi in Monitoraggio replica | Microsoft Docs
-ms.custom: ''
+title: Impostare valori di soglia e avvisi (Monitoraggio replica)
+description: Informazioni su come abilitare avvisi per diverse condizioni che possono verificarsi con la replica tramite Monitoraggio replica in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf3d9ba88f433619a79c9f4453823e81589b4ee3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767601"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322273"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
+  Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] visualizza informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
   
  Quando si attiva un avviso, si specifica una soglia. Quando tale soglia viene soddisfatta o superata, viene visualizzato un avviso, a meno che non sia necessario visualizzare un problema con una priorità più elevata. Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. È possibile abilitare avvisi per le seguenti condizioni:  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68767601"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="Merge"></a> Impostare valore soglia e avvisi per una pubblicazione di tipo merge  
   
@@ -129,7 +130,7 @@ ms.locfileid: "68767601"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
   
@@ -161,7 +162,7 @@ ms.locfileid: "68767601"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)  

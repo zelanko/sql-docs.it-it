@@ -1,22 +1,22 @@
 ---
-title: 'Avvio rapido: Eseguire il backup e il ripristino di un database di SQL Server in locale'
+title: 'Avvio rapido: Eseguire il backup e il ripristino del database'
 titleSuffix: SQL Server
-description: Questa guida di avvio rapido illustra come eseguire SQL Server in Linux in un cloud a scelta.
+description: Questa avvio rapido illustra come eseguire il backup e il ripristino di un database di SQL Server in locale.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033626"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258638"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Avvio rapido: Eseguire il backup e il ripristino di un database di SQL Server in locale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Per una procedura più dettagliata, vedere [Creare un backup completo del databa
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa guida di avvio rapido sono necessari: 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>Creare un database di test 

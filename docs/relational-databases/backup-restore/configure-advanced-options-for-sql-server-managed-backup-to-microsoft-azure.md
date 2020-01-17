@@ -1,7 +1,8 @@
 ---
-title: Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/05/2017
+title: Backup gestito - configurare le opzioni avanzate
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908973"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242567"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +111,7 @@ ms.locfileid: "72908973"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver configurato le opzioni avanzate e le pianificazioni personalizzate, è necessario abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nel database di destinazione o nell'istanza di SQL Server. Per altre informazioni, vedere [Abilitare il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Vedere anche  

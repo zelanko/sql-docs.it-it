@@ -1,6 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva ELEMENT e della codifica di entità | Microsoft Docs'
-ms.custom: ''
+title: Specificare la direttiva ELEMENT e la codifica di entità | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ec0ad5a21100a99b80cca9df20e4b12bbfb58548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88294326610ac44a1166897fb3256d39e9015ee5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006736"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246584"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Esempio: Specifica della direttiva ELEMENT e della codifica di entità
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,6 +94,6 @@ FOR XML EXPLICIT
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

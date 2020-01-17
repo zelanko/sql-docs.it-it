@@ -1,7 +1,7 @@
 ---
-title: Pianificare ed eseguire sequenze di ripristino (modello di recupero con registrazione completa) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Sequenze di ripristino (modello di recupero con registrazione completa) | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033680"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258664"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Pianificare ed eseguire sequenze di ripristino (Modello di recupero con registrazione completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "68033680"
   
 3.  Eseguire il rollforward del database ripristinando in sequenza i backup del log e terminando con il backup che include il punto di recupero. L'applicazione o meno di tutti i backup del log dipende dal backup del log che contiene il punto di recupero previsto, come descritto di seguito:  
   
-    -   Se il punto di recupero corrisponde al punto in cui si è verificato un errore, è necessario ripristinare tutti i backup del log creati dopo l'ultimo backup dei dati completo o differenziale ripristinato. Per altre informazioni, vedere [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+    -   Se il punto di recupero corrisponde al punto in cui si è verificato un errore, è necessario ripristinare tutti i backup del log creati dopo l'ultimo backup dei dati completo o differenziale ripristinato. Per altre informazioni, vedere [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-    -   Nel caso di un ripristino temporizzato, i backup del log più recenti potrebbero non essere necessari. Se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tramite Database Recovery Advisor viene assicurato che vengano selezionati solo i backup necessari per eseguire il ripristino alla temporizzazione specificata. Questi backup costituiscono il piano di ripristino consigliato per il ripristino temporizzato. Per altre informazioni, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+    -   Nel caso di un ripristino temporizzato, i backup del log più recenti potrebbero non essere necessari. Se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tramite Database Recovery Advisor viene assicurato che vengano selezionati solo i backup necessari per eseguire il ripristino alla temporizzazione specificata. Questi backup costituiscono il piano di ripristino consigliato per il ripristino temporizzato. Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ## <a name="restarting-a-restore-sequence"></a>Riavvio di una sequenza di ripristino  
  Se l'esito di una sequenza di ripristino viene compromesso da un problema, è possibile interrompere la sequenza e riavviarla dall'inizio. Se, ad esempio, si ripristina per errore un numero eccessivo di backup del log e si supera il punto di recupero desiderato, è necessario riavviare la sequenza di ripristino fino al backup del log che contiene il punto di recupero previsto.  
@@ -67,9 +67,9 @@ ms.locfileid: "68033680"
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
+ [Ripristino online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [Ripristino di pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

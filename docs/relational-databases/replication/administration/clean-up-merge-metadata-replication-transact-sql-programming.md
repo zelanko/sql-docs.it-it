@@ -1,6 +1,7 @@
 ---
-title: Eseguire la pulizia dei metadati di merge (programmazione Transact-SQL della replica) | Microsoft Docs
-ms.custom: ''
+title: Pulizia dei metadati di merge (SP di replica)
+description: Rimuovere i dati nelle tabelle di replica di tipo merge a livello di programmazione usando le stored procedure di replica
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 972e250e97e8f94b3de3a453137c21cc9fc099c2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 50a5b71edd908c3c676f036e7f61197835e49360
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710441"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322088"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Pulizia dei metadati di merge (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71710441"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md).  
   
-2.  (Facoltativo) Tenere presente il numero di righe rimosse nel passaggio 1 dalle tabelle di sistema [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)e [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md). Tali valori sono restituiti rispettivamente nei parametri di output `@num_genhistory_rows` `@num_contents_rows` e `@num_tombstone_rows`.  
+2.  (Facoltativo) Tenere presente il numero di righe rimosse nel passaggio 1 dalle tabelle di sistema [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)e [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md). Tali valori sono restituiti rispettivamente nei parametri di output `@num_genhistory_rows``@num_contents_rows` e `@num_tombstone_rows`.  
   
 3.  Ripetere i passaggi 1 e 2 nel Sottoscrittore per eseguire la pulizia dei metadati nel database di sottoscrizione.  
   

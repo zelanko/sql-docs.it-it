@@ -1,6 +1,7 @@
 ---
-title: Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (pubblicazione di tipo merge) | Microsoft Docs
-ms.custom: ''
+title: Scheda Elenco verifica sottoscrizioni (merge - SSMS)
+description: Informazioni sulla scheda "Elenco verifica sottoscrizioni" di Monitoraggio replica in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710789"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320632"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (pubblicazione di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "71710789"
  **Mostra**  
  Consente di selezionare gli stati della sottoscrizione da visualizzare per il tipo di sottoscrizione selezionato. Ad esempio, è possibile scegliere di visualizzare solo le sottoscrizioni con errori.  
   
- **Stato**  
+ **Status**  
  Stato di ogni sottoscrizione, determinato dallo stato dell'agente di merge.  
   
  Per impostazione predefinita, la griglia contenente le informazioni sulla sottoscrizione viene ordinata in base alla colonna **Stato** e quindi ordinata in base alla colonna **Prestazioni** per le sottoscrizioni che hanno lo stesso stato. Nell'elenco seguente vengono indicati i valori di stato possibili e l'ordinamento di tali valori, ad esempio gli errori vengono sempre visualizzati nella parte superiore della griglia.  
@@ -102,10 +103,10 @@ ms.locfileid: "71710789"
  **Ultima sincronizzazione**  
  Ora dell'ultima esecuzione dell'agente di merge. Durante tale sincronizzazione le modifiche potrebbero essere state elaborate o meno. Se la sincronizzazione è in corso viene visualizzato un valore di percentuale di completamento.  
   
- **Durata**  
+ **Duration**  
  Tempo di esecuzione dell'agente di merge durante l'ultima sincronizzazione. Il valore di durata rappresenta il tempo trascorso se l'agente di merge è ancora in sincronizzazione e la durata totale se l'agente di merge ha eseguito la sincronizzazione in precedenza.  
   
- **Connessione**  
+ **Connection**  
  Tipo di connessione tra il Sottoscrittore e il server di pubblicazione. I valori possibili sono **LAN**, **Remota**e **Internet**. Il valore **Internet** viene visualizzato se la sottoscrizione utilizza la sincronizzazione tramite il Web.  
   
 ## <a name="see-also"></a>Vedere anche  

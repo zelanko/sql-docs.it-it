@@ -1,6 +1,6 @@
 ---
-title: Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria | Microsoft Docs
-ms.custom: ''
+title: Ottimizzazione della memoria per tabella temporanea e variabile di tabella più rapide
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412684"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713256"
   
 Se si usano tabelle temporanee, variabili di tabella o parametri con valori di tabella, è possibile convertirli per usufruire delle tabelle e delle variabili di tabella ottimizzata per la memoria per migliorare le prestazioni. Le modifiche al codice sono in genere limitate.  
   
-Questo articolo descrive:  
+L'articolo illustra:  
   
 - Scenari a sostegno della conversione in elementi in memoria.  
 - Passaggi tecnici per l'implementazione della conversione in elementi in memoria.  
@@ -32,7 +32,7 @@ Questo articolo descrive:
 - Un esempio di codice che evidenzia i vantaggi in termini di prestazioni dell'ottimizzazione per la memoria
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Introduzione alle variabili di tabella ottimizzata per la memoria  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>R. Introduzione alle variabili di tabella ottimizzata per la memoria  
   
 Una variabile di tabella ottimizzata per la memoria offre una maggiore efficienza grazie all'uso dello stesso algoritmo e delle stesse strutture di dati ottimizzati per la memoria usati dalle tabelle ottimizzate per la memoria. L'efficienza è particolarmente evidente quando viene eseguito l'accesso alla variabile di tabella dall'interno di un modulo compilato in modo nativo.  
   
@@ -48,16 +48,16 @@ Una variabile di tabella ottimizzata per la memoria:
 
   
   
-#### <a name="object-types"></a>Tipi di oggetti  
+#### <a name="object-types"></a>Tipi di oggetto  
   
 OLTP in memoria offre gli oggetti seguenti che possono essere usati per l'ottimizzazione per la memoria di tabelle temporanee e variabili di tabella:  
   
-- Tabelle con ottimizzazione per la memoria  
+- Tabelle ottimizzate per la memoria  
   - Durability = SCHEMA_ONLY  
 - Variabili di tabella con ottimizzazione per la memoria  
   - Devono essere dichiarate in due passaggi (anziché inline):  
     - `CREATE TYPE my_type AS TABLE ...;` , quindi  
-    - `DECLARE @mytablevariable my_type;`(Indici per tabelle con ottimizzazione per la memoria).  
+    - `DECLARE @mytablevariable my_type;`.  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Scenario: sostituire la &#x23;&#x23;tabella tempdb globale  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Creare prima di tutto la funzione con valori di tabella seguente per applicare un filtro in **@@spid** . La funzione potrà essere usata da tutte le tabelle SCHEMA_ONLY convertite da tabelle temporanee di sessione.  
+Per prima cosa creare la seguente funzione con valori di tabella per applicare un filtro in **\@\@spid**. La funzione potrà essere usata da tutte le tabelle SCHEMA_ONLY convertite da tabelle temporanee di sessione.  
   
   
   

@@ -1,6 +1,7 @@
 ---
-title: Copiare lo stato di un facet della gestione basata su criteri in un file XML | Microsoft Docs
-ms.custom: ''
+title: Copiare lo stato di un facet della gestione basata su criteri in un file XML
+description: Descrive come copiare lo stato di un facet della gestione basata su criteri in un file XML usando SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0e3d197f8cb6b7b5bd05ed037fd32e938b5ad4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa0ee70601b11af3341483aff177ef6a7a389ba6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109731"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558192"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>Copiare lo stato di un facet della gestione basata su criteri in un file XML
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68109731"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per copiare lo stato di un facet in un file XML tramite:**  
   

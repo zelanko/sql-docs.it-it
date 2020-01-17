@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531190"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721816"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Docker per Linux
 
@@ -84,8 +84,8 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
 
    Questo comando crea un contenitore di SQL Server 2017 con l'edizione Developer (impostazione predefinita). La porta **1433** di SQL Server è esposta nell'host come porta **1401**. Il parametro facoltativo `-v sql1data:/var/opt/mssql` crea un contenitore del volume di dati denominato **sql1ddata**, che viene usato per salvare in modo permanente i dati creati da SQL Server.
 
-   > [!NOTE]
-   > Il processo di esecuzione delle edizioni di SQL Server di produzione nei contenitori è leggermente diverso. Per altre informazioni, vedere [Run production container images](sql-server-linux-configure-docker.md#production) (Eseguire immagini del contenitore di produzione). Se si usano gli stessi nomi di contenitore e le stesse porte, il resto di questa procedura dettagliata funziona comunque con i contenitori di produzione.
+   > [!IMPORTANT]
+   > Questo esempio usa un contenitore di volumi di dati all'interno di Docker. Se invece si sceglie di eseguire il mapping di una directory host, si noti che esistono limitazioni per questo approccio in Docker per Mac e Windows. Per altre informazioni, vedere [Configurare immagini dei contenitori SQL Server in Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 

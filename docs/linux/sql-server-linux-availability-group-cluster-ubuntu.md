@@ -1,7 +1,8 @@
 ---
-title: Configurare un cluster Ubuntu per un gruppo di disponibilità di SQL Server
-titleSuffix: SQL Server
-description: Informazioni sulla creazione di cluster per un gruppo di disponibilità in Ubuntu
+title: Configurare un cluster Ubuntu per un gruppo di disponibilità
+titleSuffix: SQL Server on Linux
+description: Informazioni su come creare un cluster a tre nodi in Ubuntu e come aggiungere al cluster una risorsa del gruppo di disponibilità creata in precedenza.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027316"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558487"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare un cluster Ubuntu e una risorsa del gruppo di disponibilità
 
@@ -42,8 +43,10 @@ I passaggi da seguire per creare un gruppo di disponibilità sui server Linux pe
 
    >[!IMPORTANT]
    >Per la disponibilità elevata, negli ambienti di produzione è necessario un agente di isolamento, ad esempio STONITH. Nelle dimostrazioni di questa documentazione non vengono usati agenti di isolamento. Le dimostrazioni sono riportate solo a scopo di test e convalida. 
-   
+   >
    >Un cluster Linux usa l'isolamento per ripristinare uno stato noto del cluster. La modalità di configurazione dell'isolamento dipende dalla distribuzione e dall'ambiente. Attualmente l'isolamento non è disponibile in alcuni ambienti cloud. Per altre informazioni, vedere [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (Criteri di supporto per il cluster RHEL a disponibilità elevata - Piattaforme di virtualizzazione).
+   >
+   >L'isolamento viene in genere implementato nel sistema operativo e dipende dall'ambiente. Per istruzioni sull'isolamento nel sistema operativo, vedere la documentazione relativa al server di distribuzione.
 
 5.  [Aggiungere il gruppo di disponibilità come risorsa nel cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
@@ -143,7 +146,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata. Tenere presente che al momento non sono disponibili agenti di isolamento per ambienti cloud (incluso Azure) o Hyper-V. Di conseguenza, il fornitore del cluster non offre supporto per l'esecuzione di cluster di produzione in questi ambienti. 
+>La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata. Contattare il fornitore del sistema operativo per informazioni sugli agenti di isolamento per una distribuzione specifica. 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare la proprietà del cluster cluster-recheck-interval
 

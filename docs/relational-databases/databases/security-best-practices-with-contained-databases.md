@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127213"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246134"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Procedure consigliate per la sicurezza in database indipendenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127213"
   I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce è correlata al processo di autenticazione **USER WITH PASSWORD** , che sposta il limite di autenticazione dal livello [!INCLUDE[ssDE](../../includes/ssde-md.md)] al livello di database.  
   
 ## <a name="threats-related-to-users"></a>Minacce correlate agli utenti  
- Gli utenti di un database indipendente che hanno l'autorizzazione **ALTER ANY USER** , ad esempio i membri dei ruoli predefiniti del database **db_owner** e **db_securityadmin** , possono concedere l'accesso al database senza che l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sia a conoscenza o abbia concesso l'autorizzazione. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che gli amministratori comprendano le implicazioni di questa delega del controllo di accesso e concedano con cautela l'autorizzazione **ALTER ANY USER** agli utenti del database indipendente. Tutti i proprietari del database hanno l'autorizzazione **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
+ Gli utenti di un database indipendente che hanno l'autorizzazione **ALTER ANY USER**, ad esempio i membri dei ruoli predefiniti del database **db_owner** e **db_accessadmin**, possono concedere l'accesso al database senza che l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sia a conoscenza o abbia concesso l'autorizzazione. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che gli amministratori comprendano le implicazioni di questa delega del controllo di accesso e concedano con cautela l'autorizzazione **ALTER ANY USER** agli utenti del database indipendente. Tutti i proprietari del database hanno l'autorizzazione **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Accesso ad altri database con l'account Guest  
  Proprietari e utenti di database con l'autorizzazione **ALTER ANY USER** possono creare utenti del database indipendente. Dopo la connessione a un database indipendente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente di questo database può accedere ad altri database del [!INCLUDE[ssDE](../../includes/ssde-md.md)], se in questi database è abilitato l'account **Guest** .  
@@ -84,11 +84,11 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>Escape di un database indipendente  
  Se un database è parzialmente indipendente, gli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovranno controllare periodicamente le funzionalità di utenti e moduli nei database indipendenti.  
   
-## <a name="denial-of-service-through-autoclose"></a>Denial of Service tramite AUTO_CLOSE  
+## <a name="denial-of-service-through-auto_close"></a>Denial of Service tramite AUTO_CLOSE  
  Evitare di configurare la chiusura automatica di database indipendenti. Se viene chiuso, l'apertura del database per autenticare un utente utilizza risorse aggiuntive e potrebbe contribuire a un attacco Denial of Service.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
- [Migrazione in un database parzialmente indipendente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
+ [Eseguire la migrazione in un database parzialmente indipendente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   
   

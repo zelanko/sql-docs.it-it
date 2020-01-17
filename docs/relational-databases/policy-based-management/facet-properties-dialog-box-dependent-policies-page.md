@@ -1,6 +1,7 @@
 ---
-title: Finestra di dialogo Proprietà facet, pagina Criteri dipendenti | Microsoft Docs
-ms.custom: ''
+title: Pagina "Criteri dipendenti" della finestra di dialogo "Proprietà facet"
+description: Descrive la pagina "Criteri dipendenti" della finestra di dialogo "Proprietà facet" per la gestione basata su criteri in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087299"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557986"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Finestra di dialogo Proprietà facet, pagina Criteri dipendenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "68087299"
  **Nome**  
  Indica il nome dei criteri che fanno riferimento al facet corrente.  
   
- **Abilitata**  
+ **Enabled**  
  Un segno di spunta indica che i criteri sono attualmente abilitati. Se i criteri non sono abilitati, questo campo è vuoto.  
   
- **Cronologia**  
+ **History**  
  Fare clic sul collegamento ipertestuale **Visualizza cronologia** per visualizzare il report della cronologia di esecuzione.  
   
- **Data creazione**  
+ **Creato**  
  Data di creazione dei criteri.  
   
 ## <a name="see-also"></a>Vedere anche  

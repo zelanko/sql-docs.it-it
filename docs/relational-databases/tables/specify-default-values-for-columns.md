@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909878"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200493"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per specificare un valore predefinito che verrà immesso nella colonna della tabella. Si può usare Esplora oggetti nell'interfaccia utente oppure il controllo generale per l'invio di [!INCLUDE[tsql](../../includes/tsql-md.md)].
+È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per specificare un valore predefinito che verrà immesso nella colonna della tabella. È possibile impostare un valore predefinito usando la funzionalità Esplora oggetti dell'interfaccia utente o inoltrando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 Se non si assegna un valore predefinito alla colonna e l'utente lascia la colonna vuota, si verificherà quanto segue:
 
@@ -64,7 +64,7 @@ Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER 
    > [!NOTE]
    > Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.
 
-4. Scegliere **Salva** _nome tabella_ dal menu **File**.
+4. Nel menu **File** fare clic su **Salva** _nome tabella_.
 
 ## <a name="TsqlProcedure"></a> Usare Transact-SQL per specificare un valore predefinito
 

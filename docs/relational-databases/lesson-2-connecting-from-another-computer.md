@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909708"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546557"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ Se si intende effettuare la connessione a [!INCLUDE[ssDE](../includes/ssde-md.md
     > Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows. Il nome del file contiene un numero che rappresenta il numero di versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per aprire Gestione configurazione tramite il comando Esegui, sono elencati di seguito i percorsi per le ultime quattro versioni con Windows installato nell'unità C.  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 2.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, quindi fare clic su **Protocolli per** _<InstanceName>_ .  
   
@@ -102,7 +102,7 @@ Dopo aver configurato [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'utilizzo di
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Porta**, quindi fare clic su **Avanti**.  
   
-4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **Porte locali specifiche**e quindi digitare il numero di porta dell'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digitare 1433 per l'istanza predefinita. Digitare **49172** se si sta configurando un'istanza denominata ed è stata configurata una porta fissa nell'attività precedente. Scegliere **Avanti**.  
+4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **Porte locali specifiche**e quindi digitare il numero di porta dell'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digitare 1433 per l'istanza predefinita. Digitare **49172** se si sta configurando un'istanza denominata ed è stata configurata una porta fissa nell'attività precedente. Fare clic su **Avanti**.  
   
 5.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   
@@ -126,7 +126,7 @@ Se il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser è
 3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:** _<nome_computer>_ . In questo esempio di istanza denominata digitare **tcp:** _<nome_computer>_ **,49172**.  
   
     > [!NOTE]  
-    > Se si omette **tcp:** nella casella **Nome server**, il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
+    > Se si omette **tcp:** nella casella **Nome server** , il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
   
 4.  Nella casella **Autenticazione** confermare l'opzione **Autenticazione di Windows**e quindi fare clic su **Connetti**.  
   

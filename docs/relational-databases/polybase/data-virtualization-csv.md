@@ -1,28 +1,29 @@
 ---
-title: Virtualizzare i dati esterni in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: 'Virtualizzare dati esterni: valori separati da virgole (csv)'
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per un file CSV
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710605"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256173"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usare la procedura guidata di creazione di una tabella esterna per i file CSV
 
 SQL Server 2019 offre inoltre la possibilità di virtualizzare i dati da un file CSV in HDFS.  Questo processo consente ai dati di rimanere nella posizione originale, ma è possibile **virtualizzare** i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come per qualsiasi altra tabella in SQL Server. Con questa funzionalità sarà possibile ridurre al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Ciò è possibile grazie all'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere il documento [Introduzione a PolyBase](polybase-guide.md).
 
-## <a name="prerequisite"></a>Prerequisiti
+## <a name="prerequisite"></a>Prerequisito
 
-A partire da CTP 2.4, le origini dati esterne del pool di dati e del pool di archiviazione non vengono più create per impostazione predefinita nel cluster Big Data. Prima di usare la procedura guidata, creare l'origine dati esterna **SqlStoragePool** predefinita nel database di destinazione con la query Transact-SQL seguente. Verificare di aver prima cambiato il contesto della query sul database di destinazione.
+Le origini dati esterne del pool di dati e del pool di archiviazione non vengono create in un database per impostazione predefinita nel cluster Big Data. Prima di usare la procedura guidata, creare l'origine dati esterna **SqlStoragePool** predefinita nel database di destinazione con la query Transact-SQL seguente. Verificare di aver prima cambiato il contesto della query sul database di destinazione.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster
@@ -74,7 +75,7 @@ Nella finestra successiva sarà possibile modificare le colonne della tabella es
 ![Credenziali dell'origine dati esterna](media/data-virtualization/csv-modify-columns.png)
 
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo passaggio visualizza un riepilogo delle selezioni. Indica l'istanza principale di SQL e informazioni sulla tabella esterna proposta. In questo passaggio è possibile scegliere **"Genera script"** per generare uno script con sintassi T-SQL per creare l'origine dati esterna o **Crea** per creare l'oggetto origine dati esterna.
 

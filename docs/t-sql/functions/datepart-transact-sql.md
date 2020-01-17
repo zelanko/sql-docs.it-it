@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255810"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,13 +72,13 @@ Parte specifica dell'argomento *date* per cui `DATEPART` restituirà un **intero
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**, **isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**, **isoww**|  
   
-*data*  
+*date*  
 Espressione che si risolve in uno dei tipi di dati seguenti: 
 
-+ **data**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -95,7 +95,7 @@ Ogni elemento *datepart* e le relative abbreviazioni restituiscono lo stesso val
   
 Il valore restituito dipende dalla lingua impostata tramite [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e in [Configurare l'opzione di configurazione del server default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) dell'account di accesso. Il valore restituito dipende da [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* è un valore letterale stringa di alcuni formati. SET DATEFORMAT non modifica il valore restituito quando la data è un'espressione della colonna di un tipo di dati ora e data.
   
-Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valori restituiti, per l'istruzione `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L'argomento *date* ha un tipo di dati **datetimeoffset(7)**. Le ultime due posizioni del valore restituito di *datepart* **nanosecond** sono sempre `00` e questo valore ha una scala di 9:
+Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valori restituiti, per l'istruzione `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L'argomento *date* ha un tipo di dati **datetimeoffset(7)** . Le ultime due posizioni del valore restituito di **nanosecond** *datepart* sono sempre `00` e questo valore ha una scala di 9:
 
 **.123456700**
   
@@ -106,26 +106,27 @@ Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valor
 |**month, mm, m**|10|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
-|**week, wk, ww**|45|  
-|**weekday, dw**|1|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|3|  
 |**hour, hh**|12|  
 |**minute, n**|15|  
 |**second, ss, s**|32|  
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**tzoffset, tz**|310|  
+|**iso_week, isowk, isoww**|44|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>Argomenti datepart per settimana e giorno feriale
-Per un argomento *datepart* **week** (**wk**, **ww**) o **weekday** (**dw**), il valore restituito `DATEPART` dipende dal valore impostato da [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Per un argomento *datepart***week** (**wk**, **ww**) o **weekday** (**dw**), il valore restituito `DATEPART` dipende dal valore impostato da [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week** _datepart_. Esempio:
+Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week** _datepart_. Ad esempio:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 dove *xxxx* è un anno.
   
-Nella tabella seguente è riportato il valore restituito per **week** e **weekday** *datepart* per '2007-04-21' per ogni argomento SET DATEFIRST. L'1 gennaio 2007 cade di lunedì. Il 21 aprile 2007 cade di sabato. Per l'inglese Stati Uniti,
+Nella tabella seguente è riportato il valore restituito per **week** e **weekday** *datepart* per "2007-04-21" per ogni argomento SET DATEFIRST. L'1 gennaio 2007 cade di lunedì. Il 21 aprile 2007 cade di sabato. Per l'inglese Stati Uniti,
 
 `SET DATEFIRST 7 -- ( Sunday )`
 
@@ -146,7 +147,7 @@ funge da valore predefinito. Dopo avere impostato DATEFIRST, usare questa istruz
 ## <a name="year-month-and-day-datepart-arguments"></a>Argomenti datepart per anno, mese e giorno  
 I valori restituiti per DATEPART (**year**, *date*), DATEPART (**month**, *date*) e DATEPART (**day**, *date*) corrispondono a quelli restituiti rispettivamente dalle funzioni [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) e [DAY](../../t-sql/functions/day-transact-sql.md).
   
-## <a name="iso_week-datepart"></a>datepart ISO_WEEK  
+## <a name="iso_week-datepart"></a>iso_week datepart  
 ISO 8601 include il sistema settimana-relativo alla data ISO, un sistema di numerazione per settimane. Ogni settimana è associata all'anno che inizia con un giovedì. Ad esempio, la settimana 1 del 2004 (2004W01) ha coperto il periodo da lunedì 29 dicembre 2003 a domenica 4 gennaio 2004. I paesi e le aree geografiche europei usano in genere questo stile di numerazione. I paesi e le aree geografiche non europei in genere non lo usano.
 
 Nota: il numero massimo di settimane in un anno può essere 52 o 53.
@@ -155,27 +156,27 @@ I sistemi di numerazione dei diversi paesi potrebbero non essere conformi allo s
   
 |Primo giorno della settimana|Prima settimana dell'anno|Settimane assegnate due volte|Utilizzato da/in|  
 |---|---|---|---|
-|Domenica|1 gennaio,<br /><br /> Primo sabato,<br /><br /> 1-7 giorni dell'anno|Sì|United States|  
-|Lunedì|1 gennaio,<br /><br /> Prima domenica,<br /><br /> 1-7 giorni dell'anno|Sì|La maggior parte di Europa e Regno Unito|  
-|Lunedì|4 gennaio,<br /><br /> Primo giovedì,<br /><br /> 4-7 giorni dell'anno|no|ISO 8601, Norvegia e Svezia|  
-|Lunedì|7 gennaio,<br /><br /> Primo lunedì,<br /><br /> 7 giorni dell'anno|no||  
-|Mercoledì|1 gennaio,<br /><br /> Primo martedì,<br /><br /> 1-7 giorni dell'anno|Sì||  
+|Sunday|1 gennaio,<br /><br /> Primo sabato,<br /><br /> 1-7 giorni dell'anno|Sì|Stati Uniti|  
+|Monday|1 gennaio,<br /><br /> Prima domenica,<br /><br /> 1-7 giorni dell'anno|Sì|La maggior parte di Europa e Regno Unito|  
+|Monday|4 gennaio,<br /><br /> Primo giovedì,<br /><br /> 4-7 giorni dell'anno|No|ISO 8601, Norvegia e Svezia|  
+|Monday|7 gennaio,<br /><br /> Primo lunedì,<br /><br /> 7 giorni dell'anno|No||  
+|Wednesday|1 gennaio,<br /><br /> Primo martedì,<br /><br /> 1-7 giorni dell'anno|Sì||  
 |Sabato|1 gennaio,<br /><br /> Primo venerdì,<br /><br /> 1-7 giorni dell'anno|Sì||  
   
-## <a name="tzoffset"></a>TZoffset  
-`DATEPART` restituisce il valore **TZoffset** (**tz**) come numero di minuti (firmato). Questa istruzione restituisce una differenza di fuso orario di 310 minuti:
+## <a name="tzoffset"></a>tzoffset  
+`DATEPART` restituisce il valore **tzoffset** (**tz**) come numero di minuti (firmato). Questa istruzione restituisce una differenza di fuso orario di 310 minuti:
   
 ```sql
-SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
+SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-`DATEPART` rende il valore TZoffset come segue:
-- Per datetimeoffset e datetime2, TZoffset restituisce la differenza di orario in minuti, in cui l'offset per datetime2 è sempre 0 minuti.
+`DATEPART` esegue il rendering del valore tzoffset come segue:
+- Per datetimeoffset e datetime2, tzoffset restituisce la differenza di orario in minuti, in cui l'offset per datetime2 è sempre 0 minuti.
 - Per i tipi di dati che possono essere convertiti in modo implicito in **datetimeoffset** o **datetime2**, `DATEPART` restituisce la differenza oraria in minuti. Eccezione: altri tipi di dati date/time.
 - I parametri di tutti gli altri tipi generano un errore.
   
   
 ## <a name="smalldatetime-date-argument"></a>Argomento date smalldatetime  
-Per un valore *date* [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), `DATEPART` restituisce i secondi come 00.
+Per un valore [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) *date*, `DATEPART` restituisce i secondi come 00.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>Valore predefinito restituito per un datepart non incluso nell'argomento date  
 Se per il tipo di dati dell'argomento *date* non viene specificato *datepart*, `DATEPART` restituirà il valore predefinito per *datepart* solo se è stato specificato un valore letterale per *date*.
@@ -206,7 +207,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `DATEPART` può essere usato nelle clausole select list, WHERE, HAVING, GROUP BY e ORDER BY.
   
 DATEPART consente di eseguire in modo implicito il cast di valori letterali stringa in un tipo **datetime2** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pertanto, DATENAME non supporta il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.

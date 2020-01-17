@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6fd7bb2b8be38becc87c4dc8cb353594459a8dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220186"
----
 
 <!--
 ### Code examples for Azure cloud differ slightly from on-premises
@@ -15,8 +7,8 @@ ms.locfileid: "68220186"
 
 Alcuni esempi di codice Transact-SQL scritti per SQL Server locale richiedono qualche piccola modifica per funzionare nel servizio database SQL di Azure nel cloud. Una categoria di tali esempi di codice prevede viste di sistema i cui prefissi dei nomi differiscono leggermente tra i due sistemi di database:
 
-- **server\_** &nbsp; - &nbsp; _prefisso locale_
-- **database\_** &nbsp; - &nbsp; _prefisso per il servizio database SQL di Azure nel cloud_
+- **server\_** &nbsp; - &nbsp; _prefisso per locale_
+- **database\_** &nbsp; - &nbsp;_prefisso per il servizio database SQL di Azure nel cloud_
 
 Come riferimento visivo, la tabella seguente elenca e confronta due subset delle viste di sistema. Per brevità, i subset sono limitati ai nomi di vista che contengono anche la stringa `_event`. I subset hanno prefissi di nome diversi perché derivano dai due diversi sistemi di database.
 

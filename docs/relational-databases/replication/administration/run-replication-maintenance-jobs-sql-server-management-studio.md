@@ -1,6 +1,7 @@
 ---
-title: Eseguire processi di manutenzione della replica (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Eseguire processi di manutenzione della replica (SSMS)
+description: Informazioni su come avviare e arrestare i processi di manutenzione della replica in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e7d5764e3cfdaf88ebfa23cedd61884f3c4f347e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a84af3482d7c0b30010b474be8d9f93e4c468e00
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768767"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322004"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Esecuzione di processi di manutenzione della replica (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

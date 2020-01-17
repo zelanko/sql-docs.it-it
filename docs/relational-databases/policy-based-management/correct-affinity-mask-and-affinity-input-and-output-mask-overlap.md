@@ -1,6 +1,7 @@
 ---
-title: Correggere la sovrapposizione delle opzioni affinity mask e affinity I/O mask | Microsoft Docs
-ms.custom: ''
+title: Criteri di correzione della sovrapposizione delle opzioni affinity mask e affinity I/O mask
+description: Informazioni su come abilitare criteri che controllano se a un'istanza di SQL Server sono assegnati uno o più processori per l'uso con entrambe le opzioni affinity mask e affinity I/O mask per la gestione basata su criteri in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4864bd6c5f1f34843c9e44c3cf3c2e72777f13b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b225710aaadf3ea605e3cffd91a5a4fea2a51e62
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109757"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557796"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correggere la sovrapposizione delle opzioni affinity mask e affinity I/O mask
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

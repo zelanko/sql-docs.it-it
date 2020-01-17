@@ -1,6 +1,7 @@
 ---
-title: "Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale | Microsoft Docs"
-ms.custom: ''
+title: Indici sulle colonne abilitate per l'enclave con la crittografia casuale (esercitazione)
+description: Questa esercitazione illustra come creare e usare gli indici sulle colonne abilitate per l'enclave tramite la crittografia casuale supportata in Always Encrypted con enclave sicuri per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258323"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557769"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

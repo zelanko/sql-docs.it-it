@@ -1,6 +1,7 @@
 ---
-title: Inizializzare una sottoscrizione transazionale da un backup | Microsoft Docs
-ms.custom: ''
+title: Inizializzare una sottoscrizione da un backup (transazionale)
+description: Informazioni su come usare le stored procedure di replica per inizializzare una pubblicazione transazionale da un backup in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710296"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320478"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inizializzare una sottoscrizione transazionale da un backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Anche se una sottoscrizione di una pubblicazione transazionale viene in genere inizializzata con uno snapshot, è possibile inizializzarla da un backup utilizzando le stored procedure di replica. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+  Anche se una sottoscrizione di una pubblicazione transazionale viene in genere inizializzata con uno snapshot, è possibile inizializzarla da un backup utilizzando le stored procedure di replica. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="to-initialize-a-transactional-subscriber-from-a-backup"></a>Per inizializzare un Sottoscrittore transazionale da un backup  
   

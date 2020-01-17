@@ -13,12 +13,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086136"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325483"
 ---
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,6 +31,9 @@ Una variabile Transact-SQL locale è un oggetto che può contenere un solo valor
 
 > [!NOTE]
 > Il nome di alcune funzioni di sistema Transact-SQL inizia con due simboli di *chiocciola* (\@\@). Benché nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le funzioni \@\@ vengano denominate variabili globali, non si tratta in realtà di variabili e non funzionano come le variabili. Le funzioni \@\@ sono in effetti funzioni di sistema e la relativa sintassi segue le regole previste per le funzioni.
+
+> [!NOTE]
+> Le variabili non possono essere usate nelle viste.
 
 Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo script utilizza una variabile per eseguire tre operazioni: 
 
@@ -146,7 +149,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Esempio:  
+Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Ad esempio:  
 
 ```sql
 USE AdventureWorks2014;

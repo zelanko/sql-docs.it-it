@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041358"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245433"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] consente di gestire e automatizzare i backup di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure. È possibile consentire a SQL Server di stabilire la pianificazione del backup in base al carico di lavoro della transazione nel database. In alternativa, è possibile usare le opzioni avanzate per definire una pianificazione. Le impostazioni di conservazione specificano per quanto tempo i backup vengono conservati nel servizio di archiviazione BLOB di Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supporta il ripristino temporizzato per il periodo di memorizzazione specificato.  
   
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sono state modificate le procedure e il comportamento sottostante di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] . Per altre informazioni, vedere [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sono state modificate le procedure e il comportamento sottostante di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] . Per altre informazioni, vedere [Migrare le impostazioni di backup gestito di SQL Server 2014 a SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è consigliato per le istanze di SQL Server in esecuzione in macchine virtuali di Microsoft Azure.  
@@ -37,15 +37,15 @@ ms.locfileid: "68041358"
 ##  <a name="Prereqs"></a> Prerequisiti  
  Archiviazione di Microsoft Azure è usata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'archiviazione dei file di backup. Sono richiesti i prerequisiti seguenti:  
   
-|Prerequisiti|Descrizione|  
+|Prerequisito|Descrizione|  
 |------------------|-----------------|  
-|**Account di Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).|  
-|**Account di archiviazione di Microsoft Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Account Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).|  
+|**Account di archiviazione di Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Contenitore BLOB**|I BLOB sono organizzati in contenitori. L'utente specifica il contenitore di destinazione per i file di backup. È possibile creare un contenitore nel [portale di gestione di Azure](https://manage.windowsazure.com/)oppure con il comando di **Azure PowerShell**[New-AzureStorageContainer](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
 |**Firma di accesso condiviso**|L'accesso al contenitore di destinazione è controllato da una firma di accesso condiviso (SAS, Shared Access Signature). Per una panoramica su SAS, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). È possibile creare un token della firma di accesso condiviso nel codice o con il comando di PowerShell **New-AzureStorageContainerSASToken** . Per un esempio di script di PowerShell che semplifica questo processo, vedere [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Semplificazione della creazione di credenziali SQL con i token della firma di accesso condiviso in Archiviazione di Azure con Powershell). Il token della firma di accesso condiviso può essere archiviato in **Credenziali SQL** ed essere usato con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|Per il corretto funzionamento di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessario che il servizio SQL Server Agent sia in esecuzione. È consigliabile impostare l'opzione per l'avvio automatico.|  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componenti  
  Transact-SQL è l'interfaccia principale per interagire con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le stored procedure di sistema vengono utilizzate per l'abilitazione, la configurazione e il monitoraggio di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le funzioni di sistema vengono utilizzate per recuperare le informazioni sui file di backup, i valori dei parametri e le impostazioni di configurazione esistenti. Gli eventi estesi vengono utilizzati per esporre errori e avvisi. I meccanismi di avviso sono abilitati tramite i processi di SQL Agent e la gestione basata su criteri di SQL Server. Di seguito sono riportati un elenco di oggetti e una descrizione della relativa funzionalità rispetto a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Per configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]sono disponibili anche i cmdlet di PowerShell. SQL Server Management Studio supporta il ripristino dei backup creati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] tramite l'attività **Ripristina database** .  

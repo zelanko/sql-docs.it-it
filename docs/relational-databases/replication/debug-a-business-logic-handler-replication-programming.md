@@ -1,6 +1,7 @@
 ---
-title: Eseguire il debug di un gestore della logica di business (programmazione della replica)| Microsoft Docs
-ms.custom: ''
+title: Eseguire il debug di un gestore della logica di business (programmazione della replica)
+description: Informazioni su come usare un gestore della logica di business per chiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063078"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321778"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

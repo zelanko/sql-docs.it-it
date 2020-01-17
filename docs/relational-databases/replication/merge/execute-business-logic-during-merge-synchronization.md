@@ -1,6 +1,7 @@
 ---
-title: Eseguire logiche di business durante la sincronizzazione di tipo merge | Microsoft Docs
-ms.custom: ''
+title: Logica di business per la sincronizzazione di tipo merge
+description: Informazioni sulla scrittura di codice assembly gestito per la logica di business usata per la sincronizzazione nella replica di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033308"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321487"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Esecuzione di logiche di business durante la sincronizzazione di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,6 +95,6 @@ ms.locfileid: "68033308"
  [Replica di tipo merge](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Sincronizzare i dati](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Sincronizzazione Web per la replica di tipo merge](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

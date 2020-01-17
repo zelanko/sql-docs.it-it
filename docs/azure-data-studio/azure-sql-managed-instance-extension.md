@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594016"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75883990"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard dell'istanza gestita di database SQL di Azure per Azure Data Studio (anteprima)
 
@@ -39,7 +39,7 @@ Con l'estensione installata, in Azure Data Studio sarà disponibile una scheda *
 
 L'estensione mostra le caratteristiche tecniche dell'istanza gestita e l'utilizzo di alcune risorse.
 
-[![Proprietà dell'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Proprietà dell'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 Il riquadro superiore mostra i dettagli seguenti:
 
@@ -48,11 +48,11 @@ Il riquadro superiore mostra i dettagli seguenti:
 - **Archiviazione Premium di Azure**. Se si ha il livello di servizio Utilizzo generico, i file di database di sistema e dell'utente vengono inseriti nell'archiviazione Premium di Azure. In questa sezione è possibile visualizzare la quantità di dati usati, il numero di file e lo spazio di archiviazione disponibile. Al livello di servizio Business Critical questa sezione è vuota.
 - **Utilizzo delle risorse**. Mostra la percentuale di spazio di archiviazione e CPU usati dall'istanza gestita nelle due ore precedenti. In questo modo, è possibile aumentare le dimensioni dell'istanza, se si avvicina al limite.
 
-## <a name="recommendations"></a>Indicazioni
+## <a name="recommendations"></a>Consigli
 
 Nel secondo riquadro nella scheda **Istanza gestita** compaiono suggerimenti e avvisi che consentono di ottimizzare l'istanza gestita.
 
-[ ![Raccomandazioni sull'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[![ Raccomandazioni sull'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 
@@ -97,7 +97,6 @@ Per altre informazioni, vedere le [Domande frequenti sul codice di comportamento
 
 Per altre informazioni, visitare il [progetto GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

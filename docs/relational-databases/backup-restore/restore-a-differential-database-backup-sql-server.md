@@ -1,7 +1,7 @@
 ---
-title: Ripristinare un backup differenziale di database (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Ripristinare il database: differenziale'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937503"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253486"
 ---
-# <a name="restore-a-differential-database-backup-sql-server"></a>Ripristino di un backup differenziale di database (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Ripristinare un backup differenziale di database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto il ripristino di un backup differenziale del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "67937503"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un backup differenziale di database utilizzando:**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67937503"
   
 6.  Nella griglia **Selezionare i set di backup da ripristinare** selezionare i backup che si desidera ripristinare dal backup differenziale.  
   
-     Per informazioni sulle colonne nella griglia **Set di backup da ripristinare**, vedere [Ripristina database&#40;(pagina Generale)&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Per informazioni sulle colonne nella griglia **Selezionare i set di backup da ripristinare** , vedere [Ripristina database &#40;pagina Generale&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
 7.  Nella pagina **Opzioni** del pannello **Opzioni di ripristino** è possibile selezionare una qualsiasi delle opzioni seguenti, in base alla situazione:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "67937503"
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   
-#### <a name="a-restoring-a-differential-database-backup"></a>A. Ripristino di un backup differenziale del database  
+#### <a name="a-restoring-a-differential-database-backup"></a>R. Ripristino di un backup differenziale del database  
  Nell'esempio seguente vengono ripristinati un backup del database e un backup differenziale del database `MyAdvWorks` .  
   
 ```sql  

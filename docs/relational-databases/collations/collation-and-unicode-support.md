@@ -1,7 +1,7 @@
 ---
 title: Supporto Unicode e delle regole di confronto | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982816"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901948"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -463,7 +463,7 @@ Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INC
 > [!NOTE]
 > Per i tipi di dati Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può rappresentare un massimo di 65.535 caratteri con UCS-2 o l'intera gamma Unicode (1.114.111 caratteri), se vengono usati caratteri supplementari. Per altre informazioni sull'abilitazione dei caratteri supplementari, vedere [Caratteri supplementari](#Supplementary_Characters).
 
-In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8), i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode (UTF-16) esistenti in precedenza (**nchar**, **nvarchar** e **ntext**). Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
+In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8) i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode che usano la codifica UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode esistenti in precedenza (**nchar**, **nvarchar** e **ntext**), che continuano a usare la codifica UCS-2 o UTF-16. Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Considerazioni su Unicode
 Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Usando Unicode è possibile ottenere prestazioni migliori, in quanto richiede un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
@@ -516,7 +516,7 @@ L'Unicode Consortium ha tuttavia stabilito 16 "piani" aggiuntivi di caratteri, o
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tipi di dati come **nchar** e **nvarchar** per archiviare i dati Unicode nell'intervallo BMP (000000-00FFFF), che viene codificato da [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tramite UCS-2. 
 
-In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è stata introdotta una nuova famiglia di regole di confronto per caratteri supplementari (\_SC) utilizzabili con i tipi di dati **nchar**, **nvarchar** e **sql_variant** per rappresentare l'intera gamma di caratteri Unicode (000000-10FFFF). Esempio: **Latin1_General_100_CI_AS_SC** o, se si usano regole di confronto per il giapponese, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
+In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è stata introdotta una nuova famiglia di regole di confronto per caratteri supplementari (\_SC) utilizzabili con i tipi di dati **nchar**, **nvarchar** e **sql_variant** per rappresentare l'intera gamma di caratteri Unicode (000000-10FFFF). Ad esempio: **Latin1_General_100_CI_AS_SC** o, se si usano regole di confronto per il giapponese, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende il supporto dei caratteri supplementari ai tipi di dati **char** e **varchar** con le nuove regole di confronto abilitate per UTF-8 ([\_UTF8](#utf8)). Questi tipi di dati sono inoltre in grado di rappresentare l'intera gamma di caratteri Unicode.   
 
@@ -622,12 +622,23 @@ Prima di scegliere se usare la codifica UTF-8 o UTF-16 per un database o una col
 
 Per altre considerazioni, vedere [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
+### <a name="converting"></a> Conversione a UTF-8
+Dato che in [CHAR (*n*) e VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) o in [NCHAR (*n*) e NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) il segnaposto *n* definisce le dimensioni di archiviazione in byte e non il numero di caratteri che è possibile archiviare, è importante determinare le dimensioni del tipo di dati in cui è necessario eseguire la conversione, per evitare il troncamento dei dati. 
+
+Si consideri ad esempio una colonna definita come **NVARCHAR(100)** che archivia 180 byte di caratteri giapponesi. In questo esempio i dati della colonna sono attualmente codificati con UCS-2 o UTF-16, che usa 2 byte per carattere. La conversione del tipo di colonna in **VARCHAR(200)** non è sufficiente per impedire il troncamento dei dati, perché il nuovo tipo di dati può archiviare solo 200 byte, ma i caratteri giapponesi richiedono 3 byte quando sono codificati in UTF-8. Pertanto la colonna deve essere definita come **VARCHAR(270)** per evitare la perdita di dati a causa del troncamento.
+
+Di conseguenza è necessario conoscere in anticipo le dimensioni in byte previste per la definizione della colonna, prima di convertire i dati esistenti in UTF-8 e modificare di conseguenza le nuove dimensioni del tipo di dati. Vedere lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] o il notebook SQL in [Data Samples GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), che usa la funzione [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) e l'istruzione [COLLATE](../../t-sql/statements/collations.md) per determinare i requisiti di lunghezza dati corretti per le operazioni di conversione UTF-8 in un database esistente.
+
+Per modificare le regole di confronto e il tipo di dati delle colonne in una tabella esistente, usare uno dei metodi descritti in [Impostare o modificare le regole di confronto delle colonne](../../relational-databases/collations/set-or-change-the-column-collation.md).
+
+Per modificare le regole di confronto del database consentendo a nuovi oggetti di ereditarle per impostazione predefinita o per modificare le regole di confronto del server consentendo ai nuovi database di ereditare le regole di confronto di sistema per impostazione predefinita, vedere la sezione [Attività correlate](#Related_Tasks) di questo articolo. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |Attività|Argomento|    
 |----------|-----------|    
-|Viene descritto come impostare o modificare le regole di confronto dell'istanza di SQL Server|[Impostazione o modifica di regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Viene descritto come impostare o modificare le regole di confronto di un database utente|[Impostare o modificare le regole di confronto del database](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Viene descritto come impostare o modificare le regole di confronto dell'istanza di SQL Server. Si noti che la modifica delle regole di confronto del server non comporta la modifica delle regole di confronto dei database esistenti.|[Impostazione o modifica di regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Viene descritto come impostare o modificare le regole di confronto di un database utente. Si noti che la modifica delle regole di confronto di un database non comporta la modifica delle regole di confronto delle colonne di tabella esistenti.|[Impostare o modificare le regole di confronto del database](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Viene descritto come impostare o modificare le regole di confronto di una colonna nel database|[Impostare o modificare le regole di confronto delle colonne](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Viene descritto come restituire informazioni sulle regole di confronto a livello di server, di database o di colonna|[Visualizzazione di informazioni sulle regole di confronto](../../relational-databases/collations/view-collation-information.md)|    
 |Viene descritto come scrivere istruzioni Transact-SQL più portabili da un linguaggio a un altro o in grado di supportare più linguaggi con maggiore facilità|[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -649,6 +660,6 @@ Per altre informazioni, vedere i seguenti contenuti correlati:
 ## <a name="see-also"></a>Vedere anche    
 [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md)     
 [Scelta di una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Set di caratteri a byte singolo e multibyte](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

@@ -1,6 +1,5 @@
 ---
-title: Pacchetti degli eventi estesi di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Pacchetti degli eventi estesi di SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009392"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242933"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
 
@@ -52,12 +51,12 @@ ms.locfileid: "68009392"
   
 -   Mappe  
   
- Oggetti da pacchetti diversi possono essere combinati in una sessione dell'evento. Per altre informazioni, vedere [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
+ Oggetti da pacchetti diversi possono essere combinati in una sessione dell'evento. Per altre informazioni, vedere [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
 ## <a name="package-contents"></a>Contenuti del pacchetto  
  Nella figura seguente si illustrano gli oggetti che possono essere presenti nei pacchetti, che sono contenuti in un modulo. Un modulo può essere un file eseguibile o una libreria a collegamento dinamico (DLL).  
   
- ![Relazione tra modulo, pacchetti e oggetti](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relazione tra modulo, pacchetti e oggetti")  
+ ![Relazione tra un modulo, pacchetti e un oggetto](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relazione tra un modulo, pacchetti e un oggetto")  
   
 ### <a name="events"></a>Eventi  
  Gli eventi monitorano i punti di interesse nel percorso di esecuzione di un programma, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La generazione di un evento implica che il punto di interesse è stato raggiunto e fornisce informazioni sullo stato derivanti dall'ora in cui l'evento è stato generato.  
@@ -78,7 +77,7 @@ ms.locfileid: "68009392"
   
  Un canale identifica il pubblico per un evento. Questi canali sono descritti nella tabella seguente.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |Amministrativi|Gli eventi amministrativi sono indirizzati principalmente agli utenti finali, agli 'amministratori e al supporto. Gli eventi trovati nei canali amministrativi indicano un problema con una soluzione ben definita sul quale può agire un amministratore. Un esempio di evento amministrativo è quando un'applicazione non riesce a connettersi a una stampante. Questi eventi sono ben documentati oppure hanno un messaggio ad essi associato che comunica a chi legge che cosa fare per risolvere il problema.|  
 |Operativo|Gli eventi operativi sono utilizzati per l'analisi e la diagnostica di un problema o di un'occorrenza. Possono essere utilizzati per attivare strumenti o attività basate su un problema o un'occorrenza. Un esempio di un evento operativo è quando una stampante viene aggiunta o rimossa da un sistema.|  
@@ -151,7 +150,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   Tipo  
+-   type  
   
  Per altre informazioni, vedere [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -220,6 +219,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Vedere anche  
  [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Sottoscrizione, Cronologia server di pubblicazione - database di distribuzione (sottoscrizione transazionale) | Microsoft Docs
-ms.custom: ''
+title: Cronologia server di pubblicazione - server di distribuzione (pubblicazione transazionale - SSMS)
+description: Viene descritta la scheda Cronologia server di pubblicazione - server di distribuzione per una pubblicazione transazionale in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 350866a6a574469ef87586cd10f932bfcc201859
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768308"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322185"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di pubblicazione - server di distribuzione (sottoscrizione transazionale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "68768308"
  **Visualizza**  
  Selezionare le sessioni dell'agente di lettura log da visualizzare. L'agente di lettura log in genere viene eseguito in modo continuo, pertanto potrebbe essere disponibile una sola sessione da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di lettura log. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Completato  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68768308"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo durante il quale l'agente di lettura log è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

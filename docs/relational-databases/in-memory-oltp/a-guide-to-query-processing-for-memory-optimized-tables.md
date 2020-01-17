@@ -1,6 +1,6 @@
 ---
-title: Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom: ''
+title: Elaborazione delle query per le tabelle con ottimizzazione per la memoria
+ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908729"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412823"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Il piano di esecuzione stimato visualizzato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è illustrato di seguito:  
   
- ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Piano di query per il join di tabelle basate su disco.")  
+ ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
 Piano di query per il join di tabelle basate su disco.  
   
  Informazioni su questo piano di query:  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Il piano stimato per la query è il seguente:  
   
- ![Piano di query per un hash join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Piano di query per un hash join di tabelle basate su disco.")  
+ ![Piano di query per un hash join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
 Piano di query per un hash join di tabelle basate su disco.  
   
  In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. L'operatore fisico **Hash Match** viene ora usato per l'operatore **Inner Join**. L'indice cluster di Order non è ordinato in base a CustomerID, quindi per un operatore **Merge Join** sarebbe necessario un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore **Hash Match** (75%) rispetto al costo dell'operatore **Merge Join** nell'esempio precedente (46%). In Query Optimizer l'operatore **Hash Match** è stato preso in considerazione anche nell'esempio precedente, con la conclusione, tuttavia, che l'operatore **Merge Join** avrebbe offerto prestazioni migliori.  
@@ -100,7 +100,7 @@ Piano di query per un hash join di tabelle basate su disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Elaborazione delle query per tabelle basate su disco  
  Nel diagramma seguente viene illustrato il flusso di elaborazione delle query ad hoc in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- ![Pipeline di elaborazione delle query di SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline di elaborazione delle query di SQL Server.")  
+ ![Pipeline di elaborazione delle query di SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
 Pipeline di elaborazione delle query di SQL Server.  
   
  In questo scenario:  
@@ -220,7 +220,7 @@ Compilazione nativa delle stored procedure.
   
  La chiamata di una stored procedure compilata in modo nativo viene convertita in chiamata a una funzione nella DLL.  
   
- ![Esecuzione di stored procedure compilate in modo nativo.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Esecuzione di stored procedure compilate in modo nativo.")  
+ ![Esecuzione di stored procedure compilate in modo nativo.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
 Esecuzione di stored procedure compilate in modo nativo.  
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  
@@ -239,10 +239,10 @@ Esecuzione di stored procedure compilate in modo nativo.
   
  Le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate vengono compilate alla prima esecuzione, contrariamente alle stored procedure compilate in modo nativo che vengono compilate al momento della creazione. Quando le stored procedure interpretate vengono compilate al momento della chiamata, i valori dei parametri forniti per la chiamata vengono utilizzati da Query Optimizer durante la generazione del piano di esecuzione. Questo utilizzo dei parametri durante la compilazione viene chiamato sniffing dei parametri.  
   
- Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, anche le stored procedure compilate in modo nativo supportano l'hint **OPTIMIZE FOR**. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, anche le stored procedure compilate in modo nativo supportano l'hint **OPTIMIZE FOR** . Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recupero di un piano di esecuzione di query per le stored procedure compilate in modo nativo  
- Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempio:  
+ Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Dopo aver eliminato tutte le righe tranne una nella tabella Customer:  
   
- ![Statistiche di colonna e join.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiche di colonna e join.")  
+ ![Statistiche di colonna e join.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
   
  Rispetto a questo piano di query:  
   
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   L'analisi completa dell'indice su IX_CustomerID è stata sostituita con una ricerca nell'indice. In questo modo sono state analizzate 5 righe, anziché le 830 righe richieste per l'analisi completa dell'indice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

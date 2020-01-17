@@ -16,19 +16,21 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632131"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720818"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Concatena i valori delle espressioni della stringa e inserisce i valori dei separatori tra di essi. Il separatore non viene aggiunto alla fine della stringa.
+Concatena i valori delle espressioni della stringa e inserisce i valori dei separatori tra di essi. Il separatore non viene aggiunto alla fine della stringa. 
+
+Opzione introdotta in SQL Server 2017.
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +71,7 @@ Il tipo restituito dipende dal primo argomento (espressione). Se l'argomento di 
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 `STRING_AGG` è una funzione di aggregazione che accetta tutte le espressioni dalle righe e le concatena in una stringa singola. I valori delle espressioni vengono convertiti in modo implicito nei tipi di stringa e successivamente concatenati. Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per altre informazioni sulle conversioni dei tipi di dati, vedere [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -81,7 +83,7 @@ I valori Null vengono ignorati e il separatore corrispondente non viene aggiunto
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generare l'elenco di nomi separati in nuove righe
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>R. Generare l'elenco di nomi separati in nuove righe
 
 Nell'esempio seguente viene generato un elenco di nomi in una cella di risultato singola, separati con ritorno a capo.
 ```sql
@@ -165,7 +167,7 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|città |messaggi di posta elettronica |
+|città |emails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
@@ -183,7 +185,7 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|città |messaggi di posta elettronica |
+|città |emails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |

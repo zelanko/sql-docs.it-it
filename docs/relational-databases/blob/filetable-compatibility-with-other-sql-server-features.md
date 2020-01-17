@@ -1,7 +1,8 @@
 ---
-title: Compatibilità di FileTable con altre funzionalità di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/26/2016
+title: Compatibilità di FileTable | Microsoft Docs
+description: Compatibilità di FileTable con altre funzionalità di SQL Server
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 62b418a5876c6bc6e562fdce8557223a40dbf144
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252705"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68116183"
   
 -   La funzionalità FileTable è supportata parzialmente dai [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Dopo un failover, i dati FileTable sono accessibili nella replica primaria, ma non nelle repliche secondarie leggibili.  
   
-    > **NOTA:**  Si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
+    > **NOTA**  Si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
   
 -   Le funzioni FILESTREAM e FileTable accettano o restituiscono nomi di rete virtuale anziché nomi computer. Per altre informazioni su queste funzioni, vedere [Funzioni FileStream e FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -80,14 +81,14 @@ ms.locfileid: "68116183"
 -   L'arresto anomalo di handle Win32, ad esempio la terminazione esplicita di handle Win32 effettuata da un amministratore OPPURE a causa di un arresto del database, provocherà la mancata esecuzione dei trigger utente durante le operazioni di recupero, anche qualora il contenuto di FILESTREAM sia stato modificato dall'applicazione Win32 arrestata in modo anomalo.  
   
 ##  <a name="OtherViews"></a> Viste e tabelle FileTable  
- **Viste**  
+ **Visualizzazioni**  
  È possibile creare una vista in una tabella FileTable come in qualsiasi altra tabella. A una vista creata in una tabella FileTable, tuttavia, si applicano le considerazioni seguenti:  
   
 -   Nella vista non sarà disponibile alcuna semantica FileTable, ad esempio il comportamento delle colonne nella vista, incluse le colonne degli attributi dei file, sarà quello di normali colonne della vista senza alcuna semantica speciale. Lo stesso vale per le righe che rappresentano file/directory.  
   
 -   La vista potrebbe essere aggiornabile in base alla semantica delle viste aggiornabili, ma i vincoli di tabella sottostanti possono rifiutare gli aggiornamenti come nella tabella.  
   
--   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Esempio:  
+-   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Ad esempio:  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

@@ -2,20 +2,20 @@
 title: Usare l'autenticazione di Active Directory (Kerberos)
 titleSuffix: Azure Data Studio
 description: Informazioni su come abilitare Kerberos per l'uso dell'autenticazione di Active Directory per Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959662"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957065"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettere [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server usando l'autenticazione di Windows - Kerberos 
 
@@ -26,7 +26,7 @@ Per usare l'autenticazione integrata (autenticazione di Windows) in macOS o Linu
 ## <a name="prerequisites"></a>Prerequisites
 
 - Accesso a un computer aggiunto a un dominio di Windows per eseguire una query sul controller di dominio Kerberos.
-- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su UNIX, l'autenticazione integrata è supportata solo con Kerberos. Altre informazioni sulla configurazione di SQL Server per l'autenticazione tramite Kerberos sono disponibili [qui.](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server) Devono essere presenti SPN registrati per ogni istanza di SQL Server a cui si intende eseguire la connessione. Informazioni dettagliate sul formato dei nomi SPN di SQL Server sono disponibili [qui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su UNIX, l'autenticazione integrata è supportata solo con Kerberos. Per altre informazioni, vedere [Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Devono essere presenti SPN registrati per ogni istanza di SQL Server a cui si intende eseguire la connessione. Per altre informazioni, vedere [Registrazione di un nome SPN](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verificare se SQL Server è configurato per Kerberos
@@ -59,7 +59,7 @@ Copiare il nome DC che corrisponde al valore di configurazione di KDC necessario
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come dns-nameserver. Esempio: 
+Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come dns-nameserver. Ad esempio: 
 
 ```/etc/network/interfaces
 <...>

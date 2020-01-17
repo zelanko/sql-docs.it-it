@@ -1,6 +1,5 @@
 ---
-title: Introduzione a SQL Server in SUSE Linux Enterprise Server
-titleSuffix: SQL Server
+title: 'SUSE: Installare SQL Server in Linux'
 description: Questa guida di avvio rapido illustra come installare SQL Server 2017 o SQL Server 2019 in SUSE Linux Enterprise Server, quindi creare ed eseguire query su un database con sqlcmd.
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594538"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558633"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Avvio rapido: Installare SQL Server e creare un database in SUSE Linux Enterprise Server
 

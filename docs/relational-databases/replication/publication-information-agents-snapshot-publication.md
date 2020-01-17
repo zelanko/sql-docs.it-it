@@ -1,6 +1,7 @@
 ---
-title: Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot) | Microsoft Docs
-ms.custom: ''
+title: Agenti (snapshot - SSMS)
+description: Descrive la scheda "Agenti" della pagina Agente snapshot in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 47b334cf08e126308544ec2126c96f7da0bed932
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9dd77881ddcc235966333c95e4a5a18180926f8c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770022"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321878"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68770022"
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente snapshot. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -46,15 +47,15 @@ ms.locfileid: "68770022"
   
 -   Non in esecuzione  
   
--   Completato  
+-   Completi  
   
- **Agente**  
+ **Agent**  
  Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione snapshot. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  

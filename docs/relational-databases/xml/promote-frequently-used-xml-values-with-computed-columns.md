@@ -1,6 +1,5 @@
 ---
-title: Promuovere i valori XML di uso frequente mediante colonne calcolate | Microsoft Docs
-ms.custom: ''
+title: Promuovere i valori XML frequenti tramite colonne calcolate | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905523"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257631"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "72905523"
  La colonna promossa può essere una colonna calcolata nella stessa tabella oppure una colonna separata e gestita dall'utente in un'altra tabella. Ciò è sufficiente quando i valori singleton vengono promossi da ogni istanza XML. Per le proprietà multivalore, invece, è necessario creare una tabella separata per la proprietà, come illustrato nella sezione seguente.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonna calcolata basata sul tipo di dati xml  
- Per creare una colonna calcolata è possibile usare una funzione definita dall'utente che richiama metodi per il tipo di dati **xml** . Il tipo della colonna calcolata può essere qualsiasi tipo SQL, incluso il tipo XML, come illustrato nell'esempio seguente.  
+ Per creare una colonna calcolata è possibile usare una funzione definita dall'utente che richiama metodi per il tipo di dati **xml** . Il tipo della colonna calcolata può essere qualsiasi tipo SQL, incluso il tipo XML, Questo è illustrato nell'esempio seguente.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Esempio: Colonna calcolata basata su un metodo per il tipo di dati xml  
  Creare la funzione definita dall'utente per il codice ISBN di un libro:  
@@ -156,7 +156,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Esempio: Cercare istanze XML i cui autori hanno lo stesso nome  
- È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Esempio:  
+ È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Ad esempio:  
   
 ```  
 SELECT xCol   
@@ -255,6 +255,6 @@ as
  Il trigger di eliminazione è identico alla versione non CLR, mentre nel trigger di inserimento viene semplicemente sostituita la funzione udf_XML2Table() con la funzione CLR_udf_XML2Table().  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo del codice XML nelle colonne calcolate](../../relational-databases/xml/use-xml-in-computed-columns.md)  
+ [Usare codice XML nelle colonne calcolate](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

@@ -18,18 +18,18 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769867"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542063"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle seguenti modifiche dello schema nell'oggetto pubblicato appropriato nel server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tale modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   ALTER TABLE  
+-   MODIFICA TABELLA  
   
 -   ALTER TABLE SET LOCK ESCALATION non deve essere usato se la replica della modifica dello schema è abilitata e una topologia include sottoscrittori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)].
 
@@ -41,7 +41,7 @@ ms.locfileid: "68769867"
   
 -   ALTER TRIGGER  
   
-     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] (Data Definition Language).  
+     È possibile utilizzare ALTER TRIGGER solo per trigger [DML]\ (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] \(Data Definition Language).  
   
 > [!IMPORTANT]  
 >  È necessario apportare le modifiche dello schema nelle tabelle tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche dello schema in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tenta di eliminare e ricreare la tabella. Poiché non è possibile eliminare gli oggetti pubblicati, la modifica dello schema ha esito negativo.  
@@ -73,7 +73,7 @@ ms.locfileid: "68769867"
   
 -   È necessario che il nome e il proprietario di tutti gli oggetti nel Sottoscrittore a cui si fa riferimento quando si aggiunge una chiave esterna siano gli stessi dell'oggetto corrispondente nel server di pubblicazione.  
   
--   L'aggiunta, la rimozione e la modifica di indici in modo esplicito non sono supportate. Gli indici creati in modo implicito per i vincoli, ad esempio un vincolo di chiave primaria, sono supportati.  
+-   L'aggiunta, l'eliminazione o la modifica esplicita degli indici non viene replicata e tutte le modifiche che interessano un indice esplicito dovranno essere eseguite singolarmente per ogni set di repliche. Gli indici creati in modo implicito per i vincoli, ad esempio un vincolo di chiave primaria, sono supportati.  
   
 -   La modifica o l'eliminazione di colonne Identity gestite dalla replica non è supportata. Per altre informazioni sulla gestione automatica di colonne Identity, vedere [Replicare colonne Identity](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68769867"
   
 -   La colonna da eliminare non può essere utilizzata nelle clausole di filtro degli articoli contenuti nelle pubblicazioni del database.  
   
--   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Esempio:  
+-   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Ad esempio:  
   
     -   Non è possibile eliminare le colonne utilizzate in una chiave primaria dagli articoli nelle pubblicazioni transazionali, in quanto vengono utilizzate dalla replica.  
   

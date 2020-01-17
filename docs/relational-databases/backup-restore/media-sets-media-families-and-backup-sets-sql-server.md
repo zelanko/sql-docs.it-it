@@ -1,8 +1,7 @@
 ---
-title: Set di supporti, gruppi di supporti e set di backup (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
-ms.prod: sql
+title: Set di supporti, gruppi di supporti e set di backup
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
@@ -23,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155576"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258686"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **In questo argomento viene presentata la terminologia di base relativa ai supporti per le procedure di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è rivolto ai nuovi utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
@@ -56,7 +56,7 @@ ms.locfileid: "70155576"
   
  Per creare un set di supporti nei supporti di backup durante un'operazione di backup, formattare i supporti di backup. Per altre informazioni, vedere [Creazione di un nuovo set di supporti](#CreatingMediaSet)più avanti in questo argomento. Dopo la formattazione, ogni file o nastro include un'intestazione supporto per il set di supporti ed è pronto per la ricezione di contenuto di backup. Dopo la creazione dell'intestazione, l'operazione di backup continua e in tutti i dispositivi di backup specificati per l'operazione viene eseguito il backup dei dati specificati nel supporto di backup.  
   
-> **NOTA** È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> **NOTA** È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  Non è possibile effettuare contemporaneamente backup compressi e non compressi in un set di supporti. Qualsiasi edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o successiva è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -71,7 +71,7 @@ In un set di supporti viene eseguito il mirroring di ogni gruppo di supporti. Ad
 ## <a name="the-media-header"></a>Intestazione supporto  
  Ogni volume di supporti di backup, ovvero file su disco o nastro, contiene un'intestazione supporto, creata dalla prima operazione di backup che usano il nastro o il disco. L'intestazione non subisce alcuna modifica, fino a quando il supporto non viene riformattato.  
   
- L'intestazione supporto include tutte le informazioni necessarie per identificare il supporto, ovvero file su disco o nastro, e la relativa posizione nel gruppo di supporti a cui appartiene. In queste informazioni sono inclusi gli elementi seguenti:  
+ L'intestazione supporto include tutte le informazioni necessarie per identificare il supporto, ovvero file su disco o nastro, e la relativa posizione nel gruppo di supporti a cui appartiene. Sono incluse le informazioni seguenti:  
   
 -   Nome del supporto.  
   

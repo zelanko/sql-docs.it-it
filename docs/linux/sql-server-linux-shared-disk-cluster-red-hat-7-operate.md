@@ -1,6 +1,7 @@
 ---
-title: Usare il cluster condiviso Red Hat Enterprise Linux per SQL Server
-description: Implementare la disponibilità elevata configurando il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server.
+title: Usare un'istanza del cluster di failover RHEL per SQL Server in Linux
+description: Informazioni su come gestire un'istanza del cluster di failover di dischi condivisi di Red Hat Enterprise Linux (RHEL) per SQL Server per disponibilità elevata, ad esempio failover manuale dell'istanza del cluster di failover, aggiunta o rimozione di nodi nel cluster.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032237"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558526"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Usare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Gestire un'istanza del cluster di failover RHEL per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

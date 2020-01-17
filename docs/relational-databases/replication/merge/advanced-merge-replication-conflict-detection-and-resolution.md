@@ -1,6 +1,7 @@
 ---
-title: Rilevamento e risoluzione dei conflitti nella replica di tipo merge avanzata| Microsoft Docs
-ms.custom: ''
+title: Rilevamento e risoluzione avanzata di conflitti (sottoscrizioni merge)
+description: Informazioni sui metodi avanzati di rilevamento e risoluzione dei conflitti nella replica di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874867"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321598"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ Risolvere i conflitti della replica di tipo merge
   
 -   Un sistema di risoluzione personalizzato basato sul modello COM  
   
-     La replica di tipo merge utilizza un'API per la creazione di sistemi di risoluzione come oggetti COM in linguaggi quali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Per altre informazioni, vedere [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replica di tipo merge usa un'API per creare sistemi di risoluzione come oggetti COM in linguaggi quali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Per altre informazioni, vedere [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un sistema di risoluzione basato sul modello COM implementato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   

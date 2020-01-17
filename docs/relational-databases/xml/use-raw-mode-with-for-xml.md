@@ -1,6 +1,5 @@
 ---
 title: Usare la modalità RAW con FOR XML | Microsoft Docs
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016156"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245242"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
 
@@ -36,13 +36,13 @@ Nella modalità RAW ogni riga del set di risultati della query viene trasformata
  Per restituire i dati binari nel formato con codifica Base64, è necessario specificare l'opzione BINARY BASE64 nella clausola FOR XML. Se si recuperano dati binari nella modalità RAW senza specificare l'opzione BINARY BASE64, verrà generato un errore.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- In questa sezione sono disponibili gli esempi seguenti:  
+ Questa sezione contiene gli esempi seguenti:  
   
 -   [Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [Esempio: Specifica di XSINIL con la direttiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Esempio: Richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Richiedere schemi come risultati con XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Esempio: Recupero di dati binari](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

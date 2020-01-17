@@ -1,7 +1,7 @@
 ---
-title: 'Backup e ripristino: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'Backup e ripristino: interoperabilità delle funzionalità'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940875"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247446"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento vengono fornite alcune considerazioni sul backup e il ripristino di alcune funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tra cui ripristino dei file e avvio del database, ripristino online e indici disabilitati, mirroring del database, ripristino a fasi e indici full-text.  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Ripristino dei file e avvio del database](#FileRestoreAndDbStartup)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67940875"
  Le informazioni contenute in questa sezione sono rilevanti solo per i database basati sul modello di recupero con registrazione completa che includono più filegroup.  
   
 > [!NOTE]  
->  La funzionalità del mirroring di database verrà rimossa in una delle prossime versioni di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  La funzionalità del mirroring di database verrà rimossa in una delle prossime versioni di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Usare invece [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Il mirroring del database è una soluzione per aumentare la disponibilità del database. Il mirroring viene implementato a livello di singolo database e funziona solo con database che utilizzano il modello di recupero con registrazione completa. Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940875"
 >  Per distribuire le copie di un subset dei filegroup in un database, è necessario replicare solo gli oggetti dei filegroup che si desidera copiare in altri server. Per altre informazioni sulla replica, vedere [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
- Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md),  
+ Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  È possibile creare il database mirror utilizzando una sequenza di ripristino a fasi, se supportata. Non è tuttavia possibile avviare l'esecuzione del mirroring fino a quando non sono stati ripristinati tutti i filegroup e, in genere, fino a quando non sono stati ripristinati i backup del log necessari per portare il database mirror a un punto nel tempo sufficientemente vicino al database principale. Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   

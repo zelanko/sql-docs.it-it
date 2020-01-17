@@ -1,7 +1,8 @@
 ---
-title: Abilitare il backup gestito di SQL Server in Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 10/03/2016
+title: Usare il backup gestito in Azure"
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238738"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257948"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Abilitare il backup gestito di SQL Server in Azure
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento descrive come abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le impostazioni predefinite a livello di database e di istanza. Viene descritta anche la procedura per abilitare le notifiche tramite posta elettronica e monitorare l'attività di backup.  
   
  In questa esercitazione viene usato Azure PowerShell. Prima di iniziare l'esercitazione, [scaricare e installare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Per abilitare anche le opzioni avanzate o usare una pianificazione personalizzata, configurare tali impostazioni prima di abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [Configurare le opzioni avanzate per il backup gestito di SQL Server in Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Per abilitare anche le opzioni avanzate o usare una pianificazione personalizzata, configurare tali impostazioni prima di abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="create-the-azure-blob-container"></a>Creare il contenitore BLOB di Azure
 
@@ -104,7 +106,7 @@ Se l'URL è incluso, separarlo dal token della firma di accesso condiviso in cor
 |**Token della firma di accesso condiviso**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per la creazione di una credenziale SQL. Per altre informazioni sulla firma di accesso condiviso, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per la creazione di una credenziale SQL. Per altre informazioni su SAS, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Abilitare il backup gestito in Azure
   
@@ -146,7 +148,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
      Verificare che gli eventi dei canali amministrativo, operativo e analitico siano abilitati per impostazione predefinita e che non possano essere disabilitati. Questa verifica dovrebbe essere sufficiente per monitorare gli eventi per i quali è richiesto un intervento manuale.  È possibile abilitare eventi di debug, ma nei canali di debug sono inclusi eventi informativi e di debug utilizzati dal [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per rilevare eventuali problemi e risolverli.  
   
-6.  **Abilitare e configurare notifiche per lo stato di integrità** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] contiene una stored procedure che consente di creare un processo dell'agente per inviare notifiche tramite posta elettronica di errori o avvisi che potrebbero richiedere attenzione. Nei passaggi seguenti viene illustrato il processo per abilitare e configurare le notifiche tramite posta elettronica:  
+6.  **Abilitare e configurare notifiche per lo stato di integrità:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] contiene una stored procedure che consente di creare un processo dell'agente per inviare notifiche via posta elettronica di errori o avvisi che potrebbero richiedere attenzione. Nei passaggi seguenti viene illustrato il processo per abilitare e configurare le notifiche tramite posta elettronica:  
   
     1.  Configurare Posta elettronica database se non è già abilitato nell'istanza. Per altre informazioni, vedere [Configurare Posta elettronica database](../../relational-databases/database-mail/configure-database-mail.md).  
   

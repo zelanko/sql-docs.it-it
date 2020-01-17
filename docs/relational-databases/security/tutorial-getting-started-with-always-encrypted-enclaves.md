@@ -1,6 +1,7 @@
 ---
-title: 'Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS | Microsoft Docs'
-ms.custom: ''
+title: 'Esercitazione: Always Encrypted con enclave sicuri usando SSMS'
+description: Questa esercitazione illustra come creare un ambiente di base Always Encrypted con enclave sicuri, come crittografare i dati sul posto ed eseguire query avanzate su colonne crittografate usando SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592340"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557491"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Always Encrypted con enclave sicuri usando SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Questa esercitazione illustra come iniziare a usare [Always Encrypted con enclave sicuri](encryption/always-encrypted-enclaves.md). L'esercitazione spiega:
@@ -186,7 +187,7 @@ In questo passaggio si abilita la funzionalità Always Encrypted con enclave sic
 
     La query deve restituire il risultato seguente:  
 
-    | NAME                           | Valore | value_in_use |
+    | name                           | Valore | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -265,7 +266,7 @@ In questo passaggio si crea una chiave master della colonna e una chiave di crit
     4. Selezionare **Consenti calcoli enclave**.
     5. Se si seleziona Azure Key Vault, accedere ad Azure e selezionare l'insieme di credenziali delle chiavi. Per altre informazioni su come creare un insieme di credenziali delle chiavi per Always Encrypted, vedere [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Gestire gli insiemi di credenziali delle chiavi dal portale di Azure).
     6. Selezionare il certificato o la chiave di Azure Key Vault se esiste già oppure fare clic sul pulsante **Genera certificato** per crearne uno nuovo.
-    7. Fare clic su **OK**.
+    7. Selezionare **OK**.
 
         ![Consenti calcoli enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -274,7 +275,7 @@ In questo passaggio si crea una chiave master della colonna e una chiave di crit
     1. Fare clic con il pulsante destro del mouse su **Chiavi Always Encrypted** e scegliere **Nuova chiave di crittografia della colonna**.
     2. Immettere un nome per la nuova chiave di crittografia della colonna: **CEK1**.
     3. Nell'elenco a discesa **Chiave master della colonna** selezionare la chiave master della colonna creata nei passaggi precedenti.
-    4. Fare clic su **OK**.
+    4. Selezionare **OK**.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>Passaggio 6: Crittografare alcune colonne sul posto
 
@@ -327,7 +328,7 @@ Ora è possibile eseguire query avanzate sulle colonne crittografate. Vengono es
     2. Selezionare **Opzioni**.
     3. Passare a **Esecuzione query** > **SQL Server** > **Avanzata**.
     4. Assicurarsi che l'opzione **Abilita parametrizzazione per Always Encrypted** sia selezionata.
-    5. Fare clic su **OK**.
+    5. Selezionare **OK**.
 2. Aprire una nuova finestra di query, incollare ed eseguire la query seguente. La query restituisce valori di testo non crittografato e righe che soddisfano i criteri di ricerca specificati.
 
     ```sql
@@ -339,7 +340,7 @@ Ora è possibile eseguire query avanzate sulle colonne crittografate. Vengono es
 
 3. Riprovare la stessa query nell'istanza di SSMS senza Always Encrypted abilitato e notare l'errore che si verifica.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 Al termine dell'esercitazione, è possibile passare a una delle esercitazioni seguenti:
 - [Esercitazione: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

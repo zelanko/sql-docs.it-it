@@ -1,6 +1,7 @@
 ---
-title: Visualizzare e usare l'output di Ottimizzazione guidata motore di database | Microsoft Docs
-ms.custom: ''
+title: Output di DTA
+description: Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA).
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907033"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165477"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se implementare le indicazioni o continuare l'ottimizzazione fino a migliorare le prestazioni di esecuzione delle query come necessario per l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile usare i riepiloghi, i consigli e i report per determinare se implementare le indicazioni o continuare l'ottimizzazione fino a migliorare le prestazioni di esecuzione delle query come necessario per l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Visualizzazione output di ottimizzazione  
  Nelle procedure indicate di seguito viene illustrata la visualizzazione di indicazioni, riepiloghi, report e log di ottimizzazione tramite l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database. Per ulteriori informazioni sulle opzioni dell'interfaccia utente, vedere [Descrizioni dell'interfaccia utente](#UI) più avanti in questo argomento.  
@@ -168,7 +170,7 @@ ms.locfileid: "72907033"
   
 4.  Salvare il file di input con l'estensione **xml** .  
   
-5.  Convalidare il file di input XML salvato nel passaggio 4 in base all'XML Schema di Ottimizzazione guidata motore di database. Durante l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questo schema viene installato nella posizione seguente:  
+5.  Convalidare il file di input XML salvato nel passaggio 4 in base all'XML Schema di Ottimizzazione guidata motore di database. Durante l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questo schema viene installato nel percorso seguente:  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -183,7 +185,7 @@ ms.locfileid: "72907033"
 7.  Ripetere i passaggi 6 e 7 fino a creare la configurazione ipotetica che consente di ottenere i miglioramenti delle prestazioni di esecuzione delle query desiderati. È quindi possibile implementare la nuova configurazione. Per ulteriori informazioni, vedere [Implementazione delle indicazioni relative all'ottimizzazione](#Implement) più indietro in questo argomento.  
   
 ##  <a name="ReviewEvaluateClone"></a> Verifica, valutazione e clonazione delle sessioni di ottimizzazione  
- Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione ogni volta che si avvia l'analisi dell'effetto di un carico di lavoro sul database o sui database. È possibile utilizzare il riquadro **Monitoraggio sessione** della GUI di Ottimizzazione guidata motore di database per visualizzare o ricaricare tutte le sessioni di ottimizzazione eseguite su una data istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La visualizzazione di tutte le sessioni di ottimizzazione esistenti per la verifica contribuisce a semplificare la clonazione di sessioni in base alle sessioni esistenti, la modifica di indicazioni esistenti sull'ottimizzazione e quindi l'utilizzo di Ottimizzazione guidata motore di database per valutare la sessione modificata oppure l'esecuzione dell'ottimizzazione a intervalli regolari per monitorare la struttura fisica dei database. Ad esempio, è possibile pianificare l'ottimizzazione dei database su base mensile.  
+ Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione ogni volta che si avvia l'analisi dell'effetto di un carico di lavoro sul database o sui database. È possibile usare il riquadro **Monitoraggio sessione** della GUI di Ottimizzazione guidata motore di database per visualizzare o ricaricare tutte le sessioni di ottimizzazione eseguite su un'istanza specifica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La visualizzazione di tutte le sessioni di ottimizzazione esistenti per la verifica contribuisce a semplificare la clonazione di sessioni in base alle sessioni esistenti, la modifica di indicazioni esistenti sull'ottimizzazione e quindi l'utilizzo di Ottimizzazione guidata motore di database per valutare la sessione modificata oppure l'esecuzione dell'ottimizzazione a intervalli regolari per monitorare la struttura fisica dei database. Ad esempio, è possibile pianificare l'ottimizzazione dei database su base mensile.  
   
  Prima di verificare le sessioni di ottimizzazione per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario creare sessioni di ottimizzazione sull'istanza del server, ottimizzando i carichi di lavoro tramite Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -270,7 +272,7 @@ ms.locfileid: "72907033"
  Definizione di **Destinazione indicazione**. Fare clic sulla colonna per aprire la finestra di dialogo Anteprima script SQL, contenente uno script per l'azione consigliata.  
   
 ##### <a name="index-recommendations"></a>Indicazioni relative agli indici  
- **Database Name**  
+ **Nome database**  
  Database contenente gli oggetti che è consigliabile modificare.  
   
  **nome oggetto**  

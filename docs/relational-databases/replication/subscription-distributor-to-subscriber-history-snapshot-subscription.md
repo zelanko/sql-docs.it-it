@@ -1,6 +1,7 @@
 ---
-title: Sottoscrizione, Cronologia database di distribuzione - Sottoscrittore (sottoscrizione snapshot) | Microsoft Docs
-ms.custom: ''
+title: Cronologia server di distribuzione - Sottoscrittore (snapshot)
+description: Viene descritta la scheda "Cronologia server di distribuzione - Sottoscrittore" di Monitoraggio replica per una pubblicazione snapshot all'interno di SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768327"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321680"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (sottoscrizione snapshot)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "68768327"
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente di distribuzione da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di distribuzione. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Completato  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68768327"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo durante il quale l'agente di distribuzione è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

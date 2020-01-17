@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711074"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542280"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -40,7 +40,7 @@ Include tutte le informazioni di connessione necessarie per l'accesso remoto ai 
 
 `OPENROWSET` supporta anche le operazioni bulk tramite un provider BULK predefinito che consente di leggere i dati da un file e restituirli come set di righe.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -96,7 +96,7 @@ OPENROWSET
 BULK usa il provider BULK di set di righe per OPENROWSET per leggere i dati da un file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET è in grado di leggere da un file di dati senza caricare i dati in una tabella di destinazione. Ciò consente di utilizzare OPENROWSET con un'istruzione SELECT semplice.
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 Gli argomenti dell'opzione BULK consentono un controllo significativo su dove iniziare e terminare la lettura dei dati, come gestire gli errori e come interpretare i dati. È ad esempio possibile specificare che il file di dati deve essere letto come riga singola, set di righe a colonna singola di tipo **varbinary**, **varchar** o **nvarchar**. Il comportamento predefinito viene illustrato nelle descrizioni degli argomenti seguenti.
 
@@ -112,7 +112,7 @@ Per informazioni sulla preparazione dei dati per le operazioni di importazione b
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archivio BLOB di Azure. Per alcuni esempi, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 \<bulk_options> specifica uno o più argomenti per l'opzione BULK.
 
@@ -198,7 +198,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, for
 FIELDQUOTE **=** 'field_quote' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifica il carattere da usare come carattere virgolette nel file CSV. Se non viene specificato alcun carattere, viene usato il carattere virgolette (") in base alla definizione dello standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 È possibile usare `OPENROWSET` per accedere ai dati remoti da origini dati OLE DB solo se l'opzione del Registro di sistema **DisallowAdhocAccess** è impostata esplicitamente su 0 per il provider specificato e l'opzione di configurazione avanzata Ad Hoc Distributed Queries è abilitata. Quando queste opzioni non vengono impostate, il comportamento predefinito non consente l'accesso ad hoc.
 
@@ -256,7 +256,7 @@ Le autorizzazioni `OPENROWSET` sono determinate dalle autorizzazioni del nome ut
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Utilizzo di OPENROWSET con SELECT e il provider OLE DB di SQL Server Native Client
+### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>R. Utilizzo di OPENROWSET con SELECT e il provider OLE DB di SQL Server Native Client
 
 L'esempio seguente usa il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per accedere alla tabella `HumanResources.Department` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server remoto `Seattle1`. (L'utilizzo di SQLNCLI e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reindirizza alla versione più recente del provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Viene usata un'istruzione `SELECT` per definire il set di righe restituito. La stringa del provider contiene le parole chiave `Server` e `Trusted_Connection`. Queste parole chiave sono riconosciute dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
@@ -283,11 +283,11 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. Utilizzo di OPENROWSET e di un'altra tabella in un INNER JOIN
 
-L'esempio seguente seleziona tutti i dati della tabella `Customers` dell'istanza locale del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` e della tabella `Orders` del database `Northwind` di Access archiviato nello stesso computer.
+Nell'esempio seguente vengono selezionati tutti i dati della tabella `Customers` dell'istanza locale del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` e della tabella `Orders` del database `Northwind` di Access archiviato nello stesso computer.
 
 > [!NOTE]
 > Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.
@@ -304,7 +304,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta la lettura da file di Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Utilizzo di OPENROWSET per eseguire un inserimento bulk dei dati del file in una colonna varbinary(max).
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Utilizzo del provider OPENROWSET BULK con un file di formato per recuperare le righe da un file di testo
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Indicazione di un file di formato e di una tabella codici
 
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta la lettura da file di Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Accesso ai dati da un file CSV senza un file di formato
 
@@ -401,7 +401,7 @@ from openrowset
 > [!IMPORTANT]
 >
 > - Il driver ODBC deve essere a 64 bit. Per verificare che questo requisito sia soddisfatto, aprire la scheda **Driver** dell'applicazione [Origini dati ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) in Windows. È presente un `Microsoft Text Driver (*.txt, *.csv)` a 32 bit che non funziona con una versione a 64 bit di sqlservr.exe.
-> - Il database SQL di Azure non supporta la lettura da file di Windows.
+> - Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Accesso ai dati da un file archiviato nell'archiviazione BLOB di Azure
 
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="additional-examples"></a>Esempi aggiuntivi
 
@@ -459,7 +459,7 @@ Per esempi aggiuntivi relativi all'uso di `INSERT...SELECT * FROM OPENROWSET(BUL
 
 - [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
 - [Mantenere i valori Identity durante l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)
-- [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)
+- [Mantenimento dei valori Null o uso dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)
 - [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)
 - [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
 - [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
@@ -474,7 +474,6 @@ Per esempi aggiuntivi relativi all'uso di `INSERT...SELECT * FROM OPENROWSET(BUL
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [Funzioni per i set di righe &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

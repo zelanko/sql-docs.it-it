@@ -1,6 +1,7 @@
 ---
-title: Rilevamento e risoluzione dei conflitti nei record logici | Microsoft Docs
-ms.custom: ''
+title: Rilevare e risolvere i conflitti nei record logici (sottoscrizioni merge)
+description: Informazioni sulle varie combinazioni di metodi possibili per il rilevamento e la risoluzione dei conflitti durante l'uso di record logici con la replica di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033326"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321578"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflitti nella replica di tipo merge avanzata - Risoluzione nel record logico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "68033326"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante l'elaborazione della replica.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-06.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-06.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Rilevamento a livello di riga, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -90,7 +91,7 @@ ms.locfileid: "68033326"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-07.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-07.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Rilevamento a livello di record logico, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -103,7 +104,7 @@ ms.locfileid: "68033326"
   
  Dato che i conflitti vengono ugualmente risolti a livello dei record logici, la modifica confermata apportata nel server di pubblicazione sostituisce la modifica inserita nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-08.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-08.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raggruppare modifiche alle righe correlate con record logici](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

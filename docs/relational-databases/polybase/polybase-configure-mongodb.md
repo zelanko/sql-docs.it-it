@@ -1,6 +1,7 @@
 ---
-title: Configurare PolyBase per l'accesso a dati esterni in MongoDB | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Accedere ai dati esterni: MongoDB - PolyBase'
+ms.date: 12/13/2019
+ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9b343327b73a8e682a76b94757982f20fde81e7c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710610"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255426"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
@@ -113,11 +114,11 @@ Le valutazioni della matrice vengono appiattite come indicato di seguito:
 
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
-|1393804800000 |Un |2|
-|1378857600000|Un |6|
-|135898560000 |Un |10|
-|1322006400000|Un |9|
-|1299715200000 |B |14|
+|1393804800000 |Una |2|
+|1378857600000|Una |6|
+|135898560000 |Una |10|
+|1322006400000|Una |9|
+|1299715200000 |b |14|
 
 ## <a name="cosmos-db-connection"></a>Connessione Cosmos DB
 

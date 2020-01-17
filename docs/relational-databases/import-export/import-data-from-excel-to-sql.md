@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708147"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245267"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
 
@@ -49,15 +49,15 @@ Se SQL Server non è installato o è installato senza SQL Server Management Stud
 
 È possibile importare i dati direttamente dai file di Excel scorrendo le pagine dell'Importazione/Esportazione guidata SQL Server. Facoltativamente, salvare le impostazioni come pacchetto di SQL Server Integration Services (SSIS) che è possibile personalizzare e riusare in seguito.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. Espandere **Database**.
 3. Fare clic con il pulsante destro del mouse su un database.
 4. Scegliere **Attività**.
 5. Fare clic su una delle opzioni seguenti.
 
-  - **Importare dati**
-  - **Esportare dati**
+  - **Importazione dei dati**
+  - **Esportazione dei dati**
 
     ![Avviare la procedura guidata da SQL Server Management Studio](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
 
@@ -251,7 +251,7 @@ Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessari
 
 Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti:
 
-- [Copia guidata di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [Copia guidata di data factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Azure Data Factory
@@ -275,7 +275,7 @@ Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0" non è stato registrato
 
-Questo errore si verifica perché non è installato il provider OLE DB. Installarlo da [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Assicurarsi di installare la versione a 64 bit se Windows e SQL Server sono entrambi a 64 bit.
+Questo errore si verifica perché non è installato il provider OLE DB. Installarlo da [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Assicurarsi di installare la versione a 64 bit se Windows e SQL Server sono entrambi a 64 bit.
 
 Testo dell'errore completo:
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile creare un'istanza del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)"
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossibile creare un'istanza del provider OLE DB "Microsoft.ACE.OLEDB.12.0" per il server collegato "(null)"
 
 Indica che Microsoft OLE DB non è stato configurato correttamente. Eseguire il codice Transact-SQL seguente per risolvere il problema:
 

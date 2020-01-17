@@ -1,6 +1,6 @@
 ---
-title: 'Sondaggio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL | Microsoft Docs'
-ms.custom: ''
+title: OLTP in memoria per l'ottimizzazione delle prestazioni di T-SQL
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412495"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 
@@ -122,7 +122,7 @@ Una sequenza di accurati post di blog spiega in modo elegante gli indici columns
 Funzionalità principali di OLTP in memoria.  
   
   
-#### <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
+#### <a name="memory-optimized-tables"></a>Tabelle ottimizzate per la memoria  
   
 La parola chiave MEMORY_OPTIMIZED di T-SQL nell'istruzione CREATE TABLE indica come viene creata una tabella nella memoria attiva, invece che sul disco.  
   
@@ -426,7 +426,7 @@ Gli[indici delle tabelle con ottimizzazione per la memoria](../../relational-dat
   
 È necessario eseguire una pianificazione per garantire una quantità di memoria attiva sufficiente per la tabella ottimizzata per la memoria pianificata e i relativi indici. Vedere:  
   
-- [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+- [Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
 Una tabella ottimizzata per la memoria può essere dichiarata con DURABILITY = SCHEMA_ONLY:  
   
@@ -475,7 +475,7 @@ Vedere gli articoli seguenti che presentano alcune considerazioni particolari re
   - Usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) per eseguire la migrazione della tabella di database basata su disco a OLTP in memoria.   
 - [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - Lo spazio di archiviazione usato dalle tabelle ottimizzate per la memoria può essere di gran lunga superiore rispetto alle relative dimensioni in memoria e influisce sulle dimensioni del backup del database.  
-- [Transazioni in tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
+- [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Include informazioni sulla logica di riesecuzione in T-SQL, per le transazioni in tabelle ottimizzate per la memoria.  
 - [Supporto di Transact-SQL per OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Tipi di dati e istruzioni T-SQL supportati e non supportati per le tabelle ottimizzate per la memoria e le procedure native.  
@@ -493,7 +493,7 @@ Il seguente articolo e gli articoli correlati indicati nel sommario spiegano in 
   
 ## <a name="related-links"></a>Collegamenti correlati  
   
-- Articolo iniziale: [OLTP in memoria (ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Articolo iniziale: [OLTP in memoria (ottimizzazione in memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Gli articoli seguenti offrono codice per dimostrare il miglioramento delle prestazioni che è possibile raggiungere tramite OLTP in memoria:  
   

@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082928"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257663"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ Per ottenere questo identificatore, è possibile utilizzare un'istruzione SELECT
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
- **Esempi**  
+ **esempi**  
   
  Nell'esempio seguente viene restituito l'identificatore della colonna chiave full-text o NULL. NULL indica che è in uso un nome di indice non valido, il nome dell'indice non corrisponde alla tabella, la tabella non esiste e così via.  
   
@@ -179,7 +179,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 Per creare un indice full-text in una colonna **varbinary(max)** , il motore di ricerca full-text deve accedere alle estensioni file dei documenti nella colonna **varbinary(max)** . Queste informazioni devono essere archiviate in una colonna di tabella, denominata colonna del tipo, che deve essere associata alla colonna **varbinary(max)** nell'indice full-text. Quando si esegue l'indicizzazione di un documento, il motore di ricerca full-text utilizza l'estensione del file nella colonna del tipo per identificare il filtro da utilizzare.  
    
 ### <a name="index-xml-data"></a>Indicizzare dati xml  
- In una colonna del tipo di dati **xml** vengono archiviati esclusivamente documenti e frammenti XML e per i documenti viene usato solo il filtro XML. Una colonna del tipo non è pertanto necessaria. Nelle colonne **xml** , l'indice full-text indicizza il contenuto degli elementi XML, ma ignora il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag elemento sono utilizzati come limiti del token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
+ In una colonna del tipo di dati **xml** vengono archiviati esclusivamente documenti e frammenti XML e per i documenti viene usato solo il filtro XML. Una colonna del tipo non è pertanto necessaria. Nelle colonne **xml** , l'indice full-text indicizza il contenuto degli elementi XML, ma ignora il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag degli elementi vengono utilizzati come limiti dei token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
   
  Per altre informazioni sull'indicizzazione e l'esecuzione di query su una colonna **xml** , vedere [Usare la ricerca full-text con colonne XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   

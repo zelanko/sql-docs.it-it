@@ -1,7 +1,7 @@
 ---
-title: Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
+title: 'SUSE: Configurare un gruppo di disponibilità per SQL Server in Linux'
 titleSuffix: SQL Server
-description: Informazioni su come creare cluster di un gruppo di disponibilità per SQL Server in SUSE Linux Enterprise Server (SLES)
+description: Informazioni su come creare cluster di un gruppo di disponibilità per SQL Server in SUSE Linux Enterprise Server (SLES).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809821"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558446"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 
@@ -118,9 +118,9 @@ Nei server Linux configurare il gruppo di disponibilità e quindi le risorse clu
 
 3. Per configurare il livello di comunicazione del cluster (Corosync): 
 
-   A. Immettere un indirizzo di rete con cui stabilire l'associazione. Per impostazione predefinita, lo script propone l'indirizzo di rete eth0. In alternativa, immettere un indirizzo di rete diverso, ad esempio bond0. 
+   a. Immettere un indirizzo di rete con cui stabilire l'associazione. Per impostazione predefinita, lo script propone l'indirizzo di rete eth0. In alternativa, immettere un indirizzo di rete diverso, ad esempio bond0. 
 
-   B. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile usare come predefinito. 
+   b. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile usare come predefinito. 
 
    c. Immettere una porta multicast. Lo script propone 5405 come numero di porta predefinito. 
 

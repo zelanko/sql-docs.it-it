@@ -1,6 +1,8 @@
 ---
-title: '[ ] (Caratteri jolly per la corrispondenza) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[ ] Carattere jolly per la corrispondenza dei caratteri'
+description: Usare un carattere jolly per trovare una corrispondenza con uno o più caratteri.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +23,12 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000327"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257038"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Caratteri jolly per la corrispondenza) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,8 +82,8 @@ EmployeeID      FirstName      LastName      PostalCode
 ## <a name="see-also"></a>Vedere anche  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% &#40;Wildcard - Character&#40;s&#41; to Match&#41; (Carattere jolly - Corrispondente/i a) &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [% &#40;caratteri jolly per la corrispondenza&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
  [&#91;^&#93; &#40;Wildcard - Character&#40;s&#41; Not to Match&#41; (Carattere jolly - Non corrispondente/i a) &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_ &#40;Carattere jolly per corrispondenze di singoli caratteri&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [\_ &#40;carattere jolly per corrispondenze di singoli caratteri&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

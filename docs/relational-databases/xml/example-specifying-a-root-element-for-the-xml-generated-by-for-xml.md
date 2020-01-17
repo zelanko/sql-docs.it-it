@@ -1,6 +1,5 @@
 ---
-title: 'Esempio: Specifica di un elemento radice per codice XML generato da FOR XML | Microsoft Docs'
-ms.custom: ''
+title: Specificare un elemento radice da usare con FOR XML | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e10bddac8a320f7fcbc76c0b58fda4023d347246
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 6ce63dc5a35b9359e24bc410be2a0d53f80cfc99
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227206"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246903"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Esempio: Specifica di un elemento radice per codice XML generato da FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

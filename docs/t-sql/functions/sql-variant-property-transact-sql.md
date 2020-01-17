@@ -19,19 +19,19 @@ ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caadacbe6ad9eb1841a2646f39cdedea17ac58aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907031"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550191"
 ---
-# <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
+# <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il tipo di dati di base e altre informazioni su un valore di tipo **sql_variant**.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,9 +48,9 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 |valore|Descrizione|Tipo di base di sql_variant restituito|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **data**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Input non valido.|  
-|**Precisione**|Numero di cifre del tipo di dati numerici di base:<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) e **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Tutti gli altri tipi = 0|**int**<br /><br /> NULL = Input non valido.|  
-|**Scala**|Numero di cifre a destra del separatore decimale con tipo di base numerico:<br /><br /> **decimal** (p,s) e **numeric** (p,s) = s<br /><br /> **money** e **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> Tutti gli altri tipi = 0|**int**<br /><br /> NULL = Input non valido.|  
+|**BaseType**|Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Input non valido.|  
+|**Precisione**|Numero di cifre del tipo di dati numerici di base:<br /><br /> **datetime** = 23<br /><br />**datetime2** = 27<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) e **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Tutti gli altri tipi = 0|**int**<br /><br /> NULL = Input non valido.|  
+|**Ridimensionare**|Numero di cifre a destra del separatore decimale con tipo di base numerico:<br /><br /> **decimal** (p,s) e **numeric** (p,s) = s<br /><br /> **money** e **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br />**datetime2** = 7<br /><br /> Tutti gli altri tipi = 0|**int**<br /><br /> NULL = Input non valido.|  
 |**TotalBytes**|Numero di byte necessari per l'archiviazione sia dei metadati che dei dati del valore. Questo valore risulta utile per verificare le dimensioni massime dei dati in una colonna **sql_variant**. Se il valore è maggiore di 900, la creazione dell'indice genera un errore.|**int**<br /><br /> NULL = Input non valido.|  
 |**Regole di confronto**|Regole di confronto del valore di tipo **sql_variant** specifico.|**sysname**<br /><br /> NULL = Input non valido.|  
 |**MaxLength**|Lunghezza massima del tipo di dati espressa in byte. Ad esempio, **MaxLength** di **nvarchar(** 50 **)** è 100, **MaxLength** di **int** è 4.|**int**<br /><br /> NULL = Input non valido.|  
@@ -59,8 +59,8 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant**  
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Uso di un tipo sql_variant in una tabella  
- Nell'esempio seguente vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` relative al valore `colA` `46279.1`, dove `colB` =`1689`, dato che `tableA` include `colA` di tipo `sql_variant` e `colB`.  
+### <a name="a-using-a-sql_variant-in-a-table"></a>R. Uso di un tipo sql_variant in una tabella  
+ Nell'esempio seguente vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` relative al valore `colA``46279.1`, dove `colB` =`1689`, dato che `tableA` include `colA` di tipo `sql_variant` e `colB`.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -82,7 +82,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Uso di un tipo sql_variant come variabile   
+### <a name="b-using-a-sql_variant-as-a-variable"></a>B. Uso di un tipo sql_variant come variabile   
  Nell'esempio seguente vengono recuperate informazioni `SQL_VARIANT_PROPERTY` su una variabile con nome @v1.  
   
 ```sql    

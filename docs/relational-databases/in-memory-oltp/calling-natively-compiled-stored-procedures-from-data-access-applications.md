@@ -1,6 +1,6 @@
 ---
-title: Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati | Microsoft Docs
-ms.custom: ''
+title: Stored procedure compilate in modo nativo - applicazioni di accesso ai dati
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951081"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412774"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
 
@@ -48,7 +48,7 @@ In questo argomento vengono fornite informazioni aggiuntive per chiamare stored 
 
 I suggerimenti seguenti si applicano alle chiamate di stored procedure compilate in modo nativo tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
-*Chiamare una volta:* Il metodo più efficace per chiamare una volta una stored procedure consiste nell'inviare una chiamata RPC diretta usando **SQLExecDirect** e clausole ODBC CALL. Non usare l'istruzione **EXECUTE** [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.
+*Chiamare una volta:* Il metodo più efficace per chiamare una volta una stored procedure consiste nell'inviare una chiamata RPC diretta usando **SQLExecDirect** e clausole ODBC CALL. Non usare l'istruzione di [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.
 
 *Chiamare più volte:* Il metodo più efficace per chiamare una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] più di una volta consiste nell'utilizzare chiamate di procedure RPC preparate. Le chiamate RPC preparate vengono eseguite come indicato di seguito utilizzando il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:
 

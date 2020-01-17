@@ -1,6 +1,7 @@
 ---
-title: Aggiungere ed eliminare articoli in pubblicazioni esistenti | Microsoft Docs
-ms.custom: ''
+title: Aggiungere o rimuovere articoli (pubblicazione esistente)
+description: Informazioni su come aggiungere ed eliminare articoli in pubblicazioni esistenti per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907793"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321329"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72907793"
   
     -   [Aggiungere ed eliminare articoli in una pubblicazione &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md)  
   
-    -   [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md)  
+    -   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 2.  Dopo avere aggiunto un articolo a una pubblicazione, è necessario creare un nuovo snapshot per la pubblicazione. Nel caso si tratti di una pubblicazione di tipo merge con filtri con parametri, sarà necessario creare tutte le partizioni. Tramite l'agente di distribuzione o l'agente di merge vengono quindi copiati lo schema e i dati per il nuovo articolo nel Sottoscrittore, senza reinizializzare l'intera pubblicazione.  
   
@@ -51,9 +52,9 @@ ms.locfileid: "72907793"
   
 3.  Dopo la creazione dello snapshot, sincronizzare la sottoscrizione per copiare lo schema e i dati per il nuovo articolo.  
 
-    -   Per sincronizzare una sottoscrizione push, vedere [Sincronizzare una sottoscrizione push](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
+    -   Per sincronizzazione di una sottoscrizione push, vedere [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-    -   Per sincronizzare una sottoscrizione pull, vedere [Sincronizzare una sottoscrizione pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   Per sincronizzazione di una sottoscrizione pull, vedere [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>rimozione di articoli  
  Gli articoli possono essere eliminati da una pubblicazione in qualsiasi momento, ma è necessario tenere in considerazione i comportamenti seguenti:  

@@ -1,20 +1,20 @@
 ---
-title: Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
+title: Distribuire un contenitore SQL Server con il servizio Azure Kubernetes
 description: Questa esercitazione illustra come distribuire una soluzione SQL Server a disponibilità elevata con Kubernetes nel servizio Azure Kubernetes.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653700"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558348"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
 
@@ -315,7 +315,7 @@ Per verificare l'errore e il ripristino, è possibile eliminare il pod. Eseguire
 
 Kubernetes ricrea automaticamente il pod per ripristinare un'istanza di SQL Server e connettersi alla risorsa di archiviazione permanente. Usare `kubectl get pods` per verificare che venga distribuito un nuovo pod. Usare `kubectl get services` per verificare che l'indirizzo IP del nuovo contenitore sia lo stesso. 
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa esercitazione si è appreso come distribuire contenitori di SQL Server in un cluster di Kubernetes per la disponibilità elevata. 
 

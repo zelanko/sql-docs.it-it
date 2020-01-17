@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981736"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564804"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Per altre informazioni sulla sintassi, vedere [CREATE TABLE &#40;Transact-SQL&#4
 *collation_definition*  
 Regole di confronto della colonna costituite da impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e stile di confronto, impostazioni locali di Windows e notazione binaria oppure regole di confronto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si specifica *collation_definition*, la colonna eredita le regole di confronto del database corrente. Se invece viene specificata come tipo CLR (Common Language Runtime) definito dall'utente, la colonna eredita le regole di confronto del tipo definito dall'utente.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Nella clausola FROM di un batch, alle variabili di tipo **table** viene fatto riferimento in base al nome, come illustrato nell'esempio seguente:
   
 ```sql
@@ -100,6 +100,10 @@ Le variabili di tipo **table** non includono statistiche di distribuzione e non 
 Le variabili di tipo **table** non sono supportate nel modello di ragionamento basato sui costi dell'utilità di ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È quindi consigliabile non usarle quando sono necessarie scelte basate sui costi per ottenere un piano di query efficiente. È preferibile utilizzare le tabelle temporanee quando sono necessarie scelte basate sui costi, Tale piano include in genere query con join, decisioni di parallelismo e scelte di selezione degli indici.
   
 Per le query che modificano le variabili di tipo **table** non vengono generati piani di esecuzione di query parallele. La modifica di variabili di tipo **table** di grandi dimensioni o di variabili di tipo **table** in query complesse può influire sulle prestazioni. Nei casi in cui le variabili di tipo **table** vengono modificate, valutare la possibilità di usare invece tabelle temporanee. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Le query che leggono le variabili di tipo **table** senza modificarle possono comunque essere eseguite in parallelo.
+
+> [!IMPORTANT]
+> Il livello di compatibilità del database 150 migliora le prestazioni delle variabili di tabella grazie all'introduzione della **compilazione posticipata delle variabili di tabella**.  Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 Non è possibile creare indici in modo esplicito su variabili di tipo **table** e per le variabili di tipo **table** non vengono mantenute statistiche. A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è stata introdotta una nuova sintassi che consente di creare determinati tipi di indice inline con la definizione della tabella.  Usando questa nuova sintassi, è possibile creare indici su variabili **tabella** come parte della definizione della tabella. In alcuni casi, è possibile ottenere un miglioramento delle prestazioni usando tabelle temporanee, che offrono statistiche e supporto completo per l'indice. Per altre informazioni sulle tabelle temporanee e la creazione di indici inline, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -110,65 +114,10 @@ L'operazione di assegnazione tra variabili di tipo **table** non è supportata.
 Dato che hanno ambito limitato e non fanno parte del database permanente, le variabili di tipo **table** non sono interessate dalle operazioni di rollback di transazioni.
   
 Le variabili di tabella non possono essere modificate dopo la creazione.
-
-## <a name="table-variable-deferred-compilation"></a>Compilazione posticipata delle variabili di tabella
-**La compilazione posticipata delle variabili di tabella** migliora la qualità del piano e le prestazioni generali per le query che fanno riferimento a variabili di tabella. Durante l'ottimizzazione e la compilazione iniziale del piano, questa funzionalità propagherà le stime della cardinalità basate sui conteggi effettivi delle righe di variabili di tabella. Queste informazioni esatte sui conteggi delle righe verranno quindi usate per ottimizzare le operazioni del piano a valle.
-
-> [!NOTE]
-> La compilazione posticipata delle variabili di tabella è una funzionalità di anteprima pubblica in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
-
-Con la compilazione posticipata delle variabili di tabella, la compilazione di un'istruzione che fa riferimento a una variabile di tabella viene posticipata fino alla prima esecuzione effettiva dell'istruzione. Questo comportamento della compilazione posticipata è identico a quello delle tabelle temporanee. Questo cambiamento determina l'uso della cardinalità effettiva invece dell'ipotesi originale di una sola riga. 
-
-Per abilitare l'anteprima pubblica della compilazione posticipata delle variabili di tabella, abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
-
-La compilazione posticipata delle variabili di tabella **non** modifica altre caratteristiche delle variabili di tabella. Ad esempio, questa funzionalità non aggiunge statistiche di colonna alle variabili di tabella.
-
-La compilazione posticipata delle variabili di tabella **non aumenta la frequenza di ricompilazione**. Piuttosto, sposta la posizione di esecuzione della compilazione iniziale. Il piano memorizzato nella cache risultante viene generato in base al conteggio delle righe delle variabili di tabella della compilazione posticipata iniziale. Il piano memorizzato nella cache viene riusato da query consecutive, fino a quando non viene rimosso o ricompilato. 
-
-Il conteggio delle righe delle variabili di tabella usato per la compilazione del piano iniziale rappresenta un valore tipico e potrebbe essere diverso da un'ipotesi di conteggio di righe fisso. Se è diverso, è un vantaggio per le operazioni a valle. Se il conteggio delle righe delle variabili di tabella varia notevolmente tra le esecuzioni, questa funzionalità potrebbe non migliorare le prestazioni.
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Disabilitazione della compilazione posticipata delle variabili di tabella senza modificare il livello di compatibilità
-Disabilitare la compilazione posticipata delle variabili di tabella nell'ambito del database o dell'istruzione mantenendo comunque un livello di compatibilità del database 150 o superiore. Per disabilitare la compilazione posticipata delle variabili di tabella per tutte le esecuzioni di query originate dal database, eseguire questo esempio nel contesto del database applicabile:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-Per riabilitare la compilazione posticipata delle variabili di tabella per tutte le esecuzioni di query originate dal database, eseguire questo esempio nel contesto del database applicabile:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-È anche possibile disabilitare la compilazione posticipata delle variabili di tabella per una query specifica assegnando DISABLE_DEFERRED_COMPILATION_TV come hint per la query USE HINT.  Esempio:
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-declaring-a-variable-of-type-table"></a>A. Dichiarazione di una variabile di tipo table  
+### <a name="a-declaring-a-variable-of-type-table"></a>R. Dichiarazione di una variabile di tipo table  
 Nell'esempio seguente viene creata una variabile di tipo `table` in cui vengono archiviati i valori specificati nella clausola OUTPUT dell'istruzione UPDATE. Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`. I risultati nella colonna `INSERTED.ModifiedDate` sono diversi rispetto ai valori nella colonna `ModifiedDate` della tabella `Employee`. Questa differenza è causata dalla definizione nella tabella `Employee` del trigger `AFTER UPDATE`, che aggiorna il valore di `ModifiedDate` alla data corrente. Le colonne restituite da `OUTPUT`, tuttavia, riflettono i dati prima dell'attivazione dei trigger. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
 ```sql

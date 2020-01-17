@@ -1,7 +1,7 @@
 ---
-title: Recuperare un database senza ripristino dei dati (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 10/23/2019
+title: Recuperare un database - nessun ripristino (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 1d5c0fbb11b7ec3aaed4ac48a7334f790f3fd9b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916047"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255847"
 ---
-# <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recupero di un database senza ripristino dei dati (Transact-SQL)
+# <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperare un database senza ripristino dei dati (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Generalmente, tutti i dati in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono ripristinati prima che venga recuperato il database. È tuttavia possibile che un'operazione di ripristino recuperi il database senza ripristinare effettivamente un backup, ad esempio nel caso di recupero di un file di sola lettura compatibile con il database. Questa operazione viene definita *ripristino con solo recupero*. Quando i dati offline sono già compatibili con il database è necessario solo renderli disponibili; un'operazione di ripristino con solo recupero completa il recupero del database e porta i dati online.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72916047"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> La clausola FROM **=** \<*DispositivoBackup>* non viene usata per i ripristini con solo recupero perché il backup non è necessario.  
+> La clausola FROM **=** \<*dispositivo_backup>* non viene usata per i ripristini con solo recupero perché il backup non è necessario.  
   
  **Esempio**  
   

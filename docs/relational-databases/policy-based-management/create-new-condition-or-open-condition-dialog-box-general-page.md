@@ -1,6 +1,7 @@
 ---
-title: Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Generale | Microsoft Docs
-ms.custom: ''
+title: Pagina "Generale" della finestra di dialogo "Crea nuova condizione" o "Apri condizione"
+description: Descrive la pagina "Generale" della finestra di dialogo "Crea nuova condizione" o "Apri condizione" per la gestione basata su criteri in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137906"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558137"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Generale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68137906"
  **Operatore**  
  Selezionare un operatore di confronto per l'espressione. Gli operatori sono i seguenti: =! = >, >= <, <=, [NOT]LIKE, [NOT]IN. Per alcune proprietà non sono disponibili tutti gli operatori.  
   
- **Value**  
+ **Valore**  
  Impostazione del valore per l'espressione. I valori consentiti dipendono dal facet. I valori possono essere TRUE/FALSE, di tipo stringa o numerico. I valori stringa devono essere racchiusi tra virgolette singole, ad esempio: **'AdventureWorks'** . Per alcune proprietà non sono disponibili tutti gli operatori.  
   
 ## <a name="group-clauses"></a>Raggruppa clausole  

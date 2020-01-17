@@ -1,6 +1,7 @@
 ---
-title: Creare una sottoscrizione per un Sottoscrittore non SQL Server | Microsoft Docs
-ms.custom: ''
+title: Creare una sottoscrizione per un sottoscrittore non SQL
+description: Informazioni su come creare una sottoscrizione per un sottoscrittore non SQL Server in SQL Server tramite SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710435"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322015"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

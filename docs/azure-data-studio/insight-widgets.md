@@ -1,8 +1,8 @@
 ---
-title: Usare i widget di informazioni dettagliate in Azure Data Studio per monitorare i server e i database
+title: Usare i widget di informazioni dettagliate per monitorare i server e i database
 titleSuffix: Azure Data Studio
 description: Informazioni sui widget di informazioni dettagliate in Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959529"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957055"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di informazioni dettagliate in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ Le informazioni dettagliate sono rappresentate in grafici personalizzabili che v
 
 ![Dashboard del database](media/insight-widgets/database-dashboard.png)
 
-
 Per iniziare a creare diversi tipi di widget di informazioni dettagliate, seguire le esercitazioni seguenti:
 
 - [Creare un widget di informazioni dettagliate personalizzato](tutorial-build-custom-insight-sql-server.md)
 - *Abilitare i widget di informazioni dettagliate predefiniti*
   - [Abilitare le informazioni dettagliate sul monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
   - [Abilitare il widget sullo spazio usato dalle tabelle](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>Query SQL
 
@@ -50,7 +48,7 @@ Una query del widget di informazioni dettagliate definisce un set di dati che re
 
 L'idea di base è quella di scrivere una query T-SQL in modo che possa essere usata come set di dati di un widget di conteggio o di grafico. 
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 La query T-SQL e il set di risultati determinano il comportamento del widget di informazioni dettagliate. Per creare un widget di informazioni dettagliate efficace è fondamentale saper scrivere una query per un tipo di grafico o eseguire il mapping del tipo di grafico appropriato per una query esistente.
 

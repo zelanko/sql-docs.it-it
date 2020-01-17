@@ -1,6 +1,6 @@
 ---
-title: Ripristino a fasi di database con tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom: ''
+title: Ripristino a fasi di database con tabelle con ottimizzazione per la memoria
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1305f3239f40fa6d699243e0512ce774da5109c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100222"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412582"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Ripristino a fasi di database con tabelle con ottimizzazione per la memoria
 
@@ -110,7 +110,7 @@ BACKUP database imoltp
     with init;
 ```
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
  Nell'esempio seguente viene illustrato come ripristinare insieme il filegroup primario e quello ottimizzato per la memoria.  
 
 ```sql

@@ -1,6 +1,6 @@
 ---
-title: Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs
-ms.custom: ''
+title: "Pianificare l'adozione delle funzionalità OLTP in memoria "
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021815"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412554"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ In questo articolo vengono descritte i modi in cui l'adozione delle funzionalit�
 
 
 
-## <a name="a-adoption-of-in-memory-oltp-features"></a>A. Adozione delle funzionalità OLTP in memoria
+## <a name="a-adoption-of-in-memory-oltp-features"></a>R. Adozione delle funzionalità OLTP in memoria
 
 
 Le sottosezioni seguenti illustrano i fattori da tenere in considerazione quando si intende adottare e implementare le funzionalità In-Memory. Molte altre informazioni esplicative sono disponibili in:
@@ -41,7 +41,7 @@ Uno dei prerequisiti per l'uso di funzionalità In-Memory può implicare l'edizi
 
 - [Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [Suggerimenti sul livello dei prezzi di database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [Indicazioni sui livelli di prezzo del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Prevedere la quantità di memoria attiva
@@ -54,12 +54,12 @@ Una tabella ottimizzata per la memoria che contiene 200 GB di dati richiede più
 
 - [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### <a name="azure-sql-database"></a>Database SQL di Azure
+#### <a name="azure-sql-database"></a>database SQL di Azure
 
 Per un database ospitato nel servizio cloud del database SQL di Azure, il livello di servizio scelto influisce sulla quantità di memoria attiva che il database può usare. È consigliabile monitorare l'utilizzo della memoria del database tramite un avviso. Per informazioni dettagliate, vedere:
 
 - Esaminare i limiti di archiviazione di OLTP in memoria per il [piano tariffario](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
-- [Monitorare l'archiviazione di OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- [Monitorare l'archiviazione OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
 
@@ -96,7 +96,7 @@ Un modo per convertire la tabella basata su disco in una tabella ottimizzata per
 Lo strumento Ottimizzazione guidata per la memoria può generare uno script per supportare l'implementazione della conversione di una tabella basata su disco in una tabella ottimizzata per la memoria. Lo strumento è disponibile nell'installazione di SQL Server Data Tools (SSDT).
 
 - [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Scaricare la versione più recente di SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>file DACPAC
@@ -113,7 +113,7 @@ Si usano file con estensione DACPAC nel contesto di un progetto di Visual Studio
 
 Per le linee guida per verificare se le funzionalità di OLTP in memoria possono migliorare le prestazioni di un'applicazione specifica, vedere:
 
-- [OLTP in memoria (ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [OLTP in memoria (ottimizzazione in memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 
 
@@ -213,9 +213,9 @@ Per una panoramica degli indici in tabelle ottimizzate per la memoria, vedere:
 
 #### <a name="hash-indexes"></a>Indici hash
 
-Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore '**=**'.
+Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore ' **=** '.
 
-- Gli operatori non precisi, ad esempio '**! =**','**>**' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
+- Gli operatori non precisi, ad esempio ' **! =** ',' **>** ' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
 
 - Un indice hash potrebbe non essere la scelta migliore se la velocità di duplicazione del valore chiave diventa troppo elevata.
 
@@ -225,7 +225,7 @@ Gli indici hash possono rappresentare il formato più veloce per l'accesso a una
 
 #### <a name="nonclustered-columnstore-indexes"></a>Indici columnstore non cluster
 
-Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)*. Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
+Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)* . Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
 
 
 - Un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) può essere compilato in una tabella basata su disco, anche come indice cluster. Ma in una tabella ottimizzata per la memoria, un indice columnstore non può essere raggruppato in cluster.
@@ -302,6 +302,6 @@ In SQL Server 2016:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [OLTP in memoria (ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [OLTP in memoria (ottimizzazione in memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 

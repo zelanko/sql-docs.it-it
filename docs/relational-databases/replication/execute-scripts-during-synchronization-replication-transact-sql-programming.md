@@ -1,6 +1,7 @@
 ---
-title: Eseguire script durante la sincronizzazione (programmazione Transact-SQL della replica) | Microsoft Docs
-ms.custom: ''
+title: Eseguire script durante la sincronizzazione (SP di replica)
+description: Informazioni su come usare le stored procedure di replica per eseguire script su richiesta durante il processo di sincronizzazione di una pubblicazione transazionale o di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d1027e969c12f5b5234f05bfeef12c7b93e3de84
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710274"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321721"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Esecuzione di script durante la sincronizzazione (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

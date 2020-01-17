@@ -1,6 +1,7 @@
 ---
-title: Configurare le impostazioni di SQL Server con variabili di ambiente
+title: Configurare le variabili di ambiente per SQL Server in Linux
 description: Questo articolo descrive come usare variabili di ambiente per configurare impostazioni di SQL Server 2017 specifiche in Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531316"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558373"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con variabili di ambiente in Linux
 
@@ -47,7 +48,7 @@ Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di
 |-----|-----|
 | **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
 | **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
-| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
+| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili sono: </br></br>**Versione di valutazione**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
 | **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
 | **MSSQL_COLLATION** | Imposta le regole di confronto per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) per le regole di confronto. |
 | **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server può usare. Per impostazione predefinita, corrisponde all'80% della memoria fisica totale. |
@@ -71,7 +72,7 @@ Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di
 |-----|-----|
 | **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
 | **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
-| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
+| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili sono: </br></br>**Versione di valutazione**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
 | **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
 | **MSSQL_COLLATION** | Imposta le regole di confronto per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) per le regole di confronto. |
 | **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server può usare. Per impostazione predefinita, corrisponde all'80% della memoria fisica totale. |

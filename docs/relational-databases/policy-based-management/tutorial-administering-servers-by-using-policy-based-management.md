@@ -1,6 +1,7 @@
 ---
-title: 'Esercitazione: Amministrazione di server tramite la gestione basata su criteri | Microsoft Docs'
-ms.custom: ''
+title: 'Esercitazione: Gestione di server tramite la gestione basata su criteri'
+description: Questa esercitazione illustra come creare e applicare criteri disattivati per impostazione predefinita e criteri per gli standard di denominazione.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021495"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558232"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Esercitazione: Amministrazione di server tramite la gestione basata su criteri
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Esercitazione: Gestione di server tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Questa esercitazione sull'amministrazione di server tramite criteri della gestione basata su criteri è destinata agli utenti che hanno familiarità con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma che non conoscono i concetti relativi alla gestione basata su criteri.  
   

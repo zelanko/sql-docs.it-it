@@ -1,7 +1,7 @@
 ---
-title: Informazioni sulla cronologia e sull'intestazione del backup (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: Intestazione e cronologia del backup | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081459"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242594"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

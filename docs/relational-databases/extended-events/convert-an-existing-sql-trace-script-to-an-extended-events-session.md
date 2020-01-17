@@ -1,6 +1,5 @@
 ---
-title: Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi | Microsoft Docs
-ms.custom: ''
+title: Convertire uno script di Traccia SQL in una sessione Eventi estesi
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9763f3c25edeb68a7a2b06f3664aae6b79b7d38
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b41947e50cd2cdd283af77a8d3ee4168f208f57e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909405"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255748"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
 
@@ -252,6 +252,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

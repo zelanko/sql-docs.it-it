@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123507"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325513"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 
@@ -54,19 +54,19 @@ La valutazione di una stessa espressione può produrre risultati diversi nel [!I
 Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET specificate nella tabella seguente devono essere impostate sui valori indicati nella colonna **Valore obbligatorio** quando si verificano le seguenti condizioni:
 
 - Vengono creati la vista e gli indici successivi nella vista.
-- Le tabelle di base a cui viene fatto riferimento nella vista quando viene creata la tabella.
+- Le tabelle di base a cui si fa riferimento nella vista quando viene creata la vista stessa.
 - Quando viene eseguita un'operazione di inserimento, aggiornamento o eliminazione su una qualsiasi tabella usata nella vista indicizzata, incluse operazioni quali la copia bulk, la replica e le query distribuite.
 - Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.
 
-|Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|
+|Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|
+|ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|
+|ANSI_WARNINGS<sup>1</sup>|ATTIVA|ATTIVA|ATTIVA|OFF|
+|ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> L'impostazione di `ANSI_WARNINGS` su ON imposta in modo implicito `ARITHABORT` su ON.
@@ -97,7 +97,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 - Le funzioni CLR (Common Language Runtime) possono essere incluse solo nell'elenco SELECT della vista ma non possono fare parte della definizione della chiave di indice cluster. Le funzioni CLR non possono essere incluse nella clausola WHERE della vista o nella clausola ON di un'operazione JOIN nella vista.
 - Le proprietà delle funzioni CLR e dei metodi di tipi CLR definiti dall'utente usati nella definizione della vista devono essere impostate come illustrato nella tabella seguente.
 
-   |Proprietà|Nota|
+   |Proprietà|Note|
    |--------------|----------|
    |DETERMINISTIC = TRUE|Deve essere dichiarata in modo esplicito come attributo del metodo di Microsoft .NET Framework.|
    |PRECISE = TRUE|Deve essere dichiarata in modo esplicito come attributo del metodo di .NET Framework.|
