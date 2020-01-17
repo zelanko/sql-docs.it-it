@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75246947"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755846"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connettore Microsoft per Oracle
 
@@ -27,7 +27,7 @@ Connettore Microsoft per Oracle consente di esportare e caricare i dati in un'or
 I prodotti Microsoft SQL Server seguenti sono supportati da Connettore Microsoft per Oracle:
 
 - A partire da SQL Server 2019
-- SQL Server Data Tools (SSDT)
+- SQL Server Data Tools (SSDT) dalla versione 15.9.3
 
 Sono supportate le origini dati delle versioni seguenti di Oracle Database:
 
@@ -39,32 +39,24 @@ Sono supportate le origini dati delle versioni seguenti di Oracle Database:
 Oracle Database è supportato in tutti i sistemi operativi e le piattaforme.
 > [!NOTE]
 >
-> Il client Oracle non è necessario per Connettore Microsoft per Oracle Database in SQL Server 2019.
+> Il client Oracle non è necessario per Connettore Microsoft per database Oracle in SQL Server 2019.
 
 ## <a name="installation"></a>Installazione
 
-Se è necessario eseguire il pacchetto in SQL Server, è possibile ottenere il programma di installazione di Connettore Microsoft per Oracle Database da [qui](https://www.microsoft.com/download/details.aspx?id=58228). Quindi, seguire le indicazioni nell'installazione guidata.
+Per installare il connettore per database Oracle, scaricare ed eseguire il programma di installazione dalla [versione più recente di Connettore Microsoft per Oracle](https://www.microsoft.com/download/details.aspx?id=58228). Quindi, seguire le indicazioni nell'installazione guidata.
 
 Dopo aver installato il connettore, è necessario riavviare il servizio SQL Server Integration Services per assicurarsi che l'origine e la destinazione Oracle funzionino correttamente.
 
-Se è necessario progettare il pacchetto con il connettore, non è necessario scaricare il connettore. È incluso in SQL Server Data Tools (SSDT) a partire dalla versione 15.9.0.
-
-## <a name="uninstallation"></a>Disinstallazione
-
-È possibile eseguire la disinstallazione guidata per rimuovere Connettore Microsoft per Oracle Database da SQL Server.
-
-## <a name="design-ssis-package-with-previous-version"></a>Progettare un pacchetto SSIS con la versione precedente
-
-A partire dalla versione 15.9.0, SSDT include già Connettore Microsoft per Oracle Database, pertanto non è necessaria alcuna installazione per la progettazione di pacchetti SSIS destinati a SQL Server 2019.
-
-Per progettare un pacchetto SSIS destinato a SQL Server 2017 e versioni precedenti, è necessario installare il connettore per Oracle di Attunity per la versione corrispondente.
-
-**Collegamenti per il download:**
+Per eseguire un pacchetto SSIS destinato a SQL Server 2017 e versioni precedenti, oltre a **Connettore Microsoft per Oracle** è necessario installare il **client Oracle** e il **connettore Microsoft per Oracle di Attunity** con la versione corrispondente dai collegamenti seguenti:
 
 - [SQL Server 2017: Connettore Microsoft versione 5.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Connettore Microsoft versione 4.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Connettore Microsoft versione 3.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Connettore Microsoft versione 2.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="uninstallation"></a>Disinstallazione
+
+È possibile eseguire la disinstallazione guidata per rimuovere Connettore Microsoft per database Oracle da SQL Server.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
