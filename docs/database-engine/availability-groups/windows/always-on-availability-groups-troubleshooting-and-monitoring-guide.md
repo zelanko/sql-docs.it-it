@@ -1,7 +1,7 @@
 ---
-title: Riferimento per il monitoraggio e la risoluzione dei problemi dei gruppi di disponibilità Always On
-description: Questa guida funge da pagina di riferimento e consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolverne alcuni problemi comuni.
-ms.custom: ag-guide, seodec18
+title: Guida al monitoraggio e alla risoluzione dei problemi dei gruppi di disponibilità
+description: Indice dei contenuti per iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolverne alcuni problemi comuni.
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991574"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822042"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
+# <a name="monitor-and-troubleshoot-availability-groups"></a>Monitoraggio e risoluzione dei problemi dei gruppi di disponibilità
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 
  
  Poiché i gruppi di disponibilità sono una tecnologia integrata, molti problemi riscontrati potrebbero essere sintomi di altri problemi nel sistema di database. Alcuni problemi sono causati dalle impostazioni del gruppo di disponibilità, ad esempio la sospensione di un database di disponibilità. Altri problemi possono riguardare altri aspetti di SQL Server, ad esempio le impostazioni di SQL Server, le distribuzioni dei file di database e i problemi di prestazioni del sistema non legati alla disponibilità. Inoltre, possono esistere altri problemi al di fuori di SQL Server legati, ad esempio all'I/O di rete, a TCP/IP, ad Active Directory e a WSFC. I problemi che emergono in un gruppo di disponibilità, in una replica o in un database richiedono spesso l'analisi di varie tecnologie in cui cercare la causa principale.  
@@ -32,10 +32,10 @@ ms.locfileid: "67991574"
 |[Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità Always On&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configurazione|Un'operazione di aggiunta file ha causato la sospensione del database secondario e l'attivazione dello stato NON IN SINCRONIZZAZIONE.|  
 |[Impossibile connettersi al listener del gruppo di disponibilità in un ambiente con più subnet](https://support.microsoft.com/kb/2792139/en-us)|Connettività client|Dopo aver configurato il listener del gruppo di disponibilità non si riesce a effettuare il ping del listener o a connettersi a esso da un'applicazione.|  
 |[Risoluzione dei problemi dei failover automatici non riusciti](https://support.microsoft.com/kb/2833707)|Failover|Un failover automatico non è stato completato correttamente.|  
-|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Prestazioni|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
-|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Prestazioni|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
-|[Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Prestazioni|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
-|[Risoluzione dei problemi: Tipo di attesa HADR_SYNC_COMMIT elevato con i con gruppi di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Prestazioni|Se HADR_SYNC_COMMIT richiede dei tempi insolitamente lunghi, esiste un problema di prestazioni nel flusso di spostamento dei dati o nella protezione avanzata del log di replica secondaria.|  
+|[Risolvere i problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Prestazioni|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
+|[Risolvere i problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Prestazioni|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
+|[Risolvere i problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Prestazioni|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
+|[Risolvere i problemi: Tipo di attesa HADR_SYNC_COMMIT elevato con i con gruppi di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Prestazioni|Se HADR_SYNC_COMMIT richiede dei tempi insolitamente lunghi, esiste un problema di prestazioni nel flusso di spostamento dei dati o nella protezione avanzata del log di replica secondaria.|  
 
 ##  <a name="BKMK_TOOLS"></a> Strumenti utili per la risoluzione dei problemi  
  In fase di configurazione o di esecuzione dei gruppi di disponibilità, vari strumenti possono aiutare a diagnosticare diversi tipi di problemi. Nella tabella seguente vengono forniti collegamenti a informazioni utili su tali strumenti.  
@@ -45,9 +45,9 @@ ms.locfileid: "67991574"
 |[Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Visibilità immediata dell'integrità del gruppo di disponibilità in un'interfaccia intuitiva.|  
 |[Criteri Always On](always-on-policies.md)|Usati dalla dashboard Always On.|  
 |[Log degli errori di SQL Server &#40;gruppi di disponibilità Always On&#41;](sql-server-error-log-always-on-availability-groups.md)|Registra gli eventi di transizione dello stato di gruppi di disponibilità, repliche e database, lo stato di altri componenti Always On e gli errori Always On.|  
-|[CLUSTER.LOG &#40;Gruppi di disponibilità Always On&#41;](cluster-log-always-on-availability-groups.md)|Registra gli eventi cluster, comprese le transizioni di stato della risorsa del gruppo di disponibilità, nonché gli eventi e gli errori dalla DLL risorse SQL Server.|  
+|[CLUSTER.LOG &#40;gruppi di disponibilità Always On&#41;](cluster-log-always-on-availability-groups.md)|Registra gli eventi cluster, comprese le transizioni di stato della risorsa del gruppo di disponibilità, nonché gli eventi e gli errori dalla DLL risorse SQL Server.|  
 |[Log di diagnostica dell'integrità Always On](always-on-health-diagnostics-log.md)|Registra la diagnostica dell'integrità di SQL Server segnalata nel cluster WSFC (DLL risorse SQL Server) da [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).|  
-|[DMV e viste catalogo di sistema &#40;Gruppi di disponibilità Always On &#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Riporta informazioni sui gruppi di disponibilità, ad esempio configurazione, stato di integrità e metriche delle prestazioni.|  
+|[DMV e viste del catalogo di sistema &#40;gruppi di disponibilità Always On&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Riporta informazioni sui gruppi di disponibilità, ad esempio configurazione, stato di integrità e metriche delle prestazioni.|  
 |[Eventi estesi Always On](always-on-extended-events.md)|Fornisce dati diagnostici dettagliati sui gruppi di disponibilità utili per l'analisi causa principale.|  
 |[Tipi di attesa Always On](always-on-wait-types.md)|Fornisce statistiche relative alle attese specifiche ai gruppi di disponibilità e utili per ottimizzare le prestazioni.|  
 |Contatori delle prestazioni Always On|Consentono di monitorare le attività dei gruppi di disponibilità, sono riportati in Monitor di sistema e sono utili per ottimizzare le prestazioni. Per altre informazioni, vedere [Replica di disponibilità di SQL Server](~/relational-databases/performance-monitor/sql-server-availability-replica.md) e [Replica di database di SQL Server](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  

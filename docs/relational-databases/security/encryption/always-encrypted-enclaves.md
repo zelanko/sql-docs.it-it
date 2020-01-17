@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted con enclave sicuri | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted con enclave sicuri
+description: Informazioni su Always Encrypted con enclave sicure per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594049"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558034"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -86,7 +87,7 @@ Per altre informazioni sui tipi di crittografia, vedere [Crittografia Always Enc
 
 La tabella seguente riepiloga le funzionalità disponibili per le colonne crittografate, a seconda che le colonne usino le chiavi di crittografia di colonna abilitate per l'enclave e un tipo di crittografia.
 
-| **Operazione**| **La colonna NON è abilitata per l'enclave** |**La colonna NON è abilitata per l'enclave**| **La colonna è abilitata per l'enclave**  |**La colonna è abilitata per l'enclave** |
+| **operazione**| **La colonna NON è abilitata per l'enclave** |**La colonna NON è abilitata per l'enclave**| **La colonna è abilitata per l'enclave**  |**La colonna è abilitata per l'enclave** |
 |:---|:---|:---|:---|:---|
 | | **Crittografia casuale**  | **Crittografia deterministica**     | **Crittografia casuale**      | **Crittografia deterministica**     |
 | **Crittografia sul posto** | Non supportato  | Non supportato   | Supportato         | Supportato    |
@@ -130,7 +131,7 @@ Con il [tradizionale processo di ripristino del database](https://docs.microsoft
 
 Un indice su una colonna con crittografia deterministica è ordinato in base al testo crittografato (non al testo non crittografato), indipendentemente dal fatto che la colonna sia abilitata per l'enclave o meno.
 
-## <a name="security-considerations"></a>Considerazioni sulla sicurezza
+## <a name="security-considerations"></a>Considerazioni relative alla sicurezza
 
 Le considerazioni sulla sicurezza seguenti si applicano ad Always Encrypted con enclave sicuri.
 

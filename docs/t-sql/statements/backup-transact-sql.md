@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982854"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249733"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -361,7 +361,7 @@ EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } specifica la data 
 - Come **smalldatetime**
 - Come variabile **datetime**
 
-Esempio:
+Ad esempio:
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -690,7 +690,7 @@ Non è possibile utilizzare l'istruzione BACKUP in una transazione esplicita o i
 
 È possibile eseguire operazioni di backup tra piattaforme diverse e anche tra tipi di processore diversi, a condizione che le regole di confronto del database siano supportate dal sistema operativo.
 
-Quando viene usata la compressione dei backup con i database con [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) con un singolo file di dati, è consigliabile usare un'impostazione `MAXTRANSFERSIZE` **maggiore di 65536 (64 KB)** .
+Quando viene usata la compressione dei backup con i database con [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) con un singolo file di dati, è consigliabile usare un'impostazione `MAXTRANSFERSIZE`**maggiore di 65536 (64 KB)** .
 A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'impostazione abilita un algoritmo di compressione ottimizzato per i database con crittografia TDE che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se viene usata `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compressione dei backup per i database con TDE).
 
 > [!NOTE]
@@ -739,9 +739,9 @@ Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisi
 
 ## <a name="examples"></a> Esempi
 
-In questa sezione sono disponibili gli esempi seguenti:
+Questa sezione contiene gli esempi seguenti:
 
-- A. [Backup di un database completo](#backing_up_db)
+- R. [Backup di un database completo](#backing_up_db)
 - B. [Backup del database e del log](#backing_up_db_and_log)
 - C. [Creazione di un backup completo dei filegroup secondari](#full_file_backup)
 - D. [Creazione di un backup differenziale dei filegroup secondari](#differential_file_backup)
@@ -932,11 +932,11 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL\*_** &nbsp;|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL \*_** &nbsp;|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
+## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
 
 Esegue il backup di un database SQL posizionato/ospitato in un'istanza gestita di database SQL di Azure. Un'[istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) di database SQL ha backup automatici e consente agli utenti di creare backup `COPY_ONLY` dei database completi. I backup differenziali, del log e di snapshot di file non sono supportati.
 
@@ -1176,7 +1176,7 @@ Questo nome viene archiviato nei metadati e verrà visualizzato quando l'intesta
 
 DIFFERENTIAL specifica di eseguire un backup differenziale di un database utente. Se omesso, il valore predefinito è un backup completo del database. Il nome del backup differenziale non deve necessariamente corrispondere al nome del backup completo. Per tenere traccia del backup differenziale e del backup completo corrispondente, può essere utile usare lo stesso nome con l'aggiunta di 'compl' o 'diff'.
 
-Esempio:
+Ad esempio:
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 
@@ -1250,7 +1250,7 @@ Queste DMV contengono informazioni su tutte le operazioni di backup, ripristino 
 
 Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue prima il backup dei metadati e quindi esegue un backup parallelo dei dati di database archiviati nei nodi di calcolo. I dati vengono copiati direttamente da ogni nodo di calcolo nella directory di backup. Per ottenere le migliori prestazioni per lo spostamento dei dati dai nodi di calcolo alla directory di backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controlla il numero di nodi di calcolo che copiano i dati contemporaneamente.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Acquisisce un blocco ExclusiveUpdate nell'oggetto DATABASE.
 
@@ -1260,7 +1260,7 @@ I backup di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non vengono archiviati
 
 **Gestire le credenziali di rete**
 
-L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file di Windows standard. Prima di eseguire un backup, è necessario creare o impostare un account di Windows che verrà usato per l'autenticazione di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nella directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.
+L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file del sistema operativo standard. Prima di eseguire un backup, è necessario creare o impostare un account di Windows che verrà usato per l'autenticazione di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nella directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.
 
 > [!IMPORTANT]
 > Per ridurre i rischi di sicurezza dei dati, è consigliabile impostare un account di Windows dedicato esclusivamente all'esecuzione delle operazioni di backup e ripristino. Concedere all'account le autorizzazioni solo per il percorso di backup.
@@ -1273,7 +1273,7 @@ Per visualizzare un elenco di tutte le credenziali di rete archiviate in [!INCLU
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Aggiungere le credenziali di rete per il percorso di backup
+### <a name="a-add-network-credentials-for-the-backup-location"></a>R. Aggiungere le credenziali di rete per il percorso di backup
 
 Per creare un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] deve avere l'autorizzazione di lettura/scrittura per la directory di backup. L'esempio seguente illustra come aggiungere le credenziali per un utente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] memorizzerà queste credenziali che verranno usate per le operazioni di backup e ripristino.
 

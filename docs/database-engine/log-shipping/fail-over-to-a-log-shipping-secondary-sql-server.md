@@ -1,6 +1,7 @@
 ---
-title: Failover su un database secondario per il log shipping (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Failover su un database secondario per il log shipping
+description: Istruzioni su come effettuare il failover su un database secondario per il log shipping di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 76ab259ef9f87e9b2cc10eb616e1511d087d1fe6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057864"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822422"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover su un database secondario per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

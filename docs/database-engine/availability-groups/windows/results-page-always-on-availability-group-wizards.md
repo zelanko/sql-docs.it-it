@@ -1,5 +1,6 @@
 ---
-title: Pagina Risultati (procedure guidate gruppi di disponibilità Always On) | Microsoft Docs
+title: Pagina Risultati (procedure guidate gruppi di disponibilità Always On)
+description: Descrive le opzioni disponibili nella pagina "Risultati" della creazione guidata gruppo di disponibilità Always On nell'interfaccia utente grafica di SQL Server Management Studio.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235452"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "68014243"
  **Nome**  
  Visualizza una frase che descrive un'operazione specifica.  
   
- **Result**  
+ **Risultato**  
  Per ogni passaggio completato, viene visualizzato uno dei seguenti testi di collegamenti ipertestuali.  
   
 |Risultato|Descrizione|  
 |------------|-----------------|  
-|**Errore**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
-|**Esito positivo**|Indica che il passaggio di convalida è riuscito.|  
+|**Error (Errore) (Error (Errore)e)**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
+|**Success**|Indica che il passaggio di convalida è riuscito.|  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   

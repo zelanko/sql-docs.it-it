@@ -1,6 +1,7 @@
 ---
-title: Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Modificare i ruoli di log shipping primario e secondario
+description: Informazioni su come configurare il database secondario in modo che funga da primario per la soluzione di log shipping SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008453"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258999"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

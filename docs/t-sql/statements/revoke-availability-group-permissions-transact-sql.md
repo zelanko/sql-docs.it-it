@@ -1,6 +1,8 @@
 ---
-title: REVOKE, autorizzazioni del gruppo di disponibilità (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorizzazioni per un gruppo di disponibilità
+description: Revocare le autorizzazioni per un gruppo di disponibilità Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082347"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242610"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE, autorizzazioni del gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Revoca le autorizzazioni su un gruppo di disponibilità AlwaysOn. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile revocare autorizzazioni nell'ambito del server solo se il database corrente è il database **master**.  
   
  Le informazioni sui gruppi di disponibilità sono visibili nella vista del catalogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -104,8 +106,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. Revoca dell'autorizzazione VIEW DEFINITION per un gruppo di disponibilità  
- Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` sul gruppo di disponibilità `MyAg` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>R. Revoca dell'autorizzazione VIEW DEFINITION per un gruppo di disponibilità  
+ Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` sul gruppo di disponibilità `MyAg` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -114,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
- Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` sul gruppo di disponibilità `MyAg` per l'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` e da tutte le entità di sicurezza a cui `PKomosinski` ha concesso l'autorizzazione TAKE OWNERSHIP per MyAg.  
+ Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` sul gruppo di disponibilità `MyAg` per l'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` e da tutte le entità di sicurezza a cui `PKomosinski` ha concesso l'autorizzazione TAKE OWNERSHIP per MyAg.  
   
 ```  
 USE master;  

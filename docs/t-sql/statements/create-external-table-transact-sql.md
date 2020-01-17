@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057659"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656638"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[Database SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -107,9 +107,9 @@ In questo esempio, se LOCATION='/webdata/', una query PolyBase restituisce le ri
 
 ![Dati ricorsivi per tabelle esterne](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dati ricorsivi per tabelle esterne")
 
-Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *external_data_source_name* specifica il nome dell'origine dati esterna che contiene il percorso dei dati esterni. Questo percorso è un cluster Hadoop o un'archiviazione BLOB di Azure. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *external_data_source_name* specifica il nome dell'origine dati esterna che contiene il percorso dei dati esterni. Questo percorso è un file system Hadoop (HDFS), un contenitore BLOB del servizio di archiviazione di Azure o Azure Data Lake Store. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name* specifica il nome dell'oggetto formato di file esterno che contiene il tipo di file e il metodo di compressione per i dati esterni. Per creare un formato di file esterno, usare [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -149,8 +149,6 @@ Questo esempio illustra come le tre opzioni REJECT interagiscono tra loro. Ad es
 - PolyBase tenta di caricare le 100 righe successive: questa volta 25 righe hanno esito positivo e 75 righe hanno esito negativo.
 - Percentuale di righe con esito negativo viene ricalcolata come 50%. La percentuale di righe con esito negativo ha superato il valore di rifiuto del 30%.
 - La query PolyBase ha esito negativo con il 50% di righe rifiutate dopo aver tentato di restituire le prime 200 righe. Si noti che le righe corrispondenti vengono restituite prima che la query PolyBase rilevi che è stata superata la soglia di rifiuto.
-
-DATA_SOURCE Origine dati esterna, ad esempio i dati archiviati in un file system Hadoop, in Archiviazione BLOB di Azure o in un [gestore mappe partizioni](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME La clausola SCHEMA_NAME consente di eseguire il mapping della definizione di tabella esterna a una tabella in uno schema diverso nel database remoto. Usare questa clausola per evitare ambiguità tra gli schemi che esistono sia nei database locali che in quelli remoti.
 
@@ -212,7 +210,7 @@ Limitazioni della larghezza della tabella:
 
 PolyBase in SQL Server 2016 ha un limite di larghezza di riga di 32 KB, in base alla dimensione massima di una singola riga valida secondo la definizione della tabella. Se la somma dello schema di colonne è maggiore di 32 KB, PolyBase non sarà in grado di eseguire query sui dati.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Blocco condiviso per l'oggetto SCHEMARESOLUTION.
 
@@ -222,7 +220,7 @@ I file di dati per una tabella esterna vengono archiviati in Hadoop o nell'archi
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. Creare una tabella esterna con dati in formato di testo delimitato
+### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>R. Creare una tabella esterna con dati in formato di testo delimitato
 
 Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati in file di testo delimitato. Definisce un'origine dati esterna *mydatasource* e un formato di file esterno *myfileformat*. A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -578,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Panoramica: Database SQL di Azure
+## <a name="overview-azure-sql-database"></a>Panoramica: database SQL di Azure
 
 Nel database SQL di Azure crea una tabella esterna per [query elastiche](/azure/sql-database/sql-database-elastic-query-overview/) (in anteprima).
 
@@ -621,30 +619,21 @@ Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono
 
 Opzioni per la tabella esterna partizionata
 
-Specifica l'origine dati esterna (un'origine dati non SQL Server) e un metodo di distribuzione per la [query di database elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Specifica l'origine dati esterna (un'origine dati non SQL Server) e un metodo di distribuzione per la [query elastica](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
-DATA_SOURCE Origine dati esterna, ad esempio i dati archiviati in un file system Hadoop, in Archiviazione BLOB di Azure o in un [gestore mappe partizioni](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
+DATA_SOURCE La clausola DATA_SOURCE definisce l'origine dati esterna (una mappa partizioni) usata per la tabella esterna. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME La clausola SCHEMA_NAME consente di eseguire il mapping della definizione di tabella esterna a una tabella in uno schema diverso nel database remoto. Usare questa clausola per evitare ambiguità tra gli schemi che esistono sia nei database locali che in quelli remoti.
+SCHEMA_NAME e OBJECT_NAME Le clausole SCHEMA_NAME e OBJECT_NAME eseguono il mapping della definizione della tabella esterna a una tabella in uno schema diverso. Se queste clausole vengono omesse, si presupporrà che lo schema dell'oggetto remoto sia "dbo" e che il relativo nome sia identico al nome della tabella esterna in fase di definizione. Questo è utile se il nome della tabella remota è già in uso nel database in cui si vuole creare la tabella esterna. Ad esempio, si vuole definire una tabella esterna per ottenere una visualizzazione aggregata delle viste del catalogo o delle viste a gestione dinamica (DMV) nel livello dati con scalabilità orizzontale. Poiché le viste del catalogo e le DMV esistono già localmente, non sarà possibile usare i rispettivi nomi per la definizione della tabella esterna. Usare invece un nome diverso e usare il nome della vista del catalogo o della vista DMV nelle clausole SCHEMA_NAME e/o OBJECT_NAME. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-OBJECT_NAME La clausola OBJECT_NAME consente di eseguire il mapping della definizione di tabella esterna a una tabella con un nome diverso nel database remoto. Usare questa clausola per evitare ambiguità tra i nomi oggetto che esistono sia nei database locali che in quelli remoti.
+DISTRIBUTION La clausola DISTRIBUTION specifica la distribuzione dei dati usata per questa tabella. Query Processor utilizza le informazioni fornite nella clausola DISTRIBUTION per generare i piani di query più efficienti.
 
-DISTRIBUTION Facoltativo. Questo argomento è obbligatorio solo per i database di tipo SHARD_MAP_MANAGER. Questo argomento verifica se una tabella viene trattata come una tabella partizionata o una tabella replicata. Con le tabelle **SHARDED** (*nome colonna*), i dati provenienti da tabelle diverse non si sovrappongono. **REPLICATED** specifica che le tabelle devono avere gli stessi dati in ogni partizione. **ROUND_ROBIN** indica che viene usato un metodo specifico di un'applicazione per distribuire i dati.
+- SHARDED indica che i dati sono partizionati orizzontalmente tra i database. La chiave di partizionamento per la distribuzione dei dati è il parametro <sharding_column_name>.
+- REPLICATED indica che in ogni database sono presenti copie identiche della tabella. Sarà quindi necessario assicurarsi che le repliche siano identiche in tutti i database.
+- ROUND_ROBIN indica che la tabella è partizionata orizzontalmente con un metodo di distribuzione dipendente dall'applicazione.
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Richiede queste autorizzazioni utente:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Si noti che l'account di accesso che crea l'origine dati esterna deve avere le autorizzazioni necessarie per leggere e scrivere nell'origine dati esterna, che si trova in Hadoop o nell'archiviazione BLOB di Azure.
-
-> [!IMPORTANT]
-> L'autorizzazione ALTER ANY EXTERNAL DATA SOURCE concede a qualsiasi entità di sicurezza la possibilità di creare e modificare qualsiasi oggetto origine dati esterna e, di conseguenza, la possibilità di accedere a tutte le credenziali con ambito database nel database. Questa autorizzazione deve essere considerata con privilegi elevati e quindi essere concessa solo a entità attendibili nel sistema.
+Gli utenti con accesso alla tabella esterna ottengono automaticamente l'accesso alle tabelle remote sottostanti con le credenziali specificate nella definizione dell'origine dati esterna. Evitare l'elevazione dei privilegi indesiderata mediante le credenziali dell'origine dati esterna. Usare GRANT o REVOKE per la tabella esterna, come se fosse una tabella comune. Dopo aver definito l'origine dati esterna e le tabelle esterne, è ora possibile usare la sintassi T-SQL completa sulle tabelle esterne.
 
 ## <a name="error-handling"></a>Gestione degli errori
 
@@ -674,7 +663,7 @@ Costrutti e operazioni non supportati:
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
 
-Solo i predicati letterali definiti in una query possono essere propagati nell'origine dati esterna. Questo rappresenta una differenza rispetto ai server collegati e all'accesso a posizioni in cui è possibile usare predicati determinati durante l'esecuzione di query, ad esempio in combinazione con un ciclo annidato in un piano di query. Ciò porta spesso alla copia in locale dell'intera tabella esterna e quindi al join della tabella stessa.    
+Solo i predicati letterali definiti in una query possono essere propagati nell'origine dati esterna. Questo rappresenta una differenza rispetto ai server collegati e all'accesso a posizioni in cui è possibile usare predicati determinati durante l'esecuzione di query, ad esempio in combinazione con un ciclo annidato in un piano di query. Ciò porta spesso alla copia in locale dell'intera tabella esterna e quindi al join della tabella stessa.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -692,13 +681,13 @@ L'uso di tabelle esterne impedisce l'uso del parallelismo nel piano di query.
 
 Le tabelle esterne vengono implementate come query remote e, di conseguenza, il numero stimato di righe restituite è in genere pari a 1000. Esistono altre regole basate sul tipo di predicato usato per filtrare la tabella esterna. Si tratta di stime basate su regole anziché di stime basate sui dati effettivi della tabella esterna. Lo strumento di ottimizzazione non accede all'origine dati remota per ottenere una stima più accurata.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Blocco condiviso per l'oggetto SCHEMARESOLUTION.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-create-external-table-for-azure-sql-database"></a>A. Creare una tabella esterna per il database SQL di Azure
+### <a name="a-create-external-table-for-azure-sql-database"></a>R. Creare una tabella esterna per il database SQL di Azure
 
 ```sql
 CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>Vedere anche
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Panoramica delle query elastiche del database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Creazione di report tra database cloud con scalabilità orizzontale](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Introduzione alle query tra database (partizionamento verticale)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -780,7 +771,7 @@ In questo esempio, se LOCATION='/webdata/', una query PolyBase restituisce le ri
 
 ![Dati ricorsivi per tabelle esterne](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dati ricorsivi per tabelle esterne")
 
-Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *external_data_source_name* specifica il nome dell'origine dati esterna che contiene il percorso dei dati esterni. Questo percorso è in Azure Data Lake. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -884,13 +875,13 @@ Limitazioni della larghezza della tabella:
 
 PolyBase in Azure Data Warehouse ha un limite di larghezza di riga di 1 MB, in base alla dimensione massima di una singola riga valida secondo la definizione della tabella. Se la somma dello schema di colonne è maggiore di 1 MB, PolyBase non sarà in grado di eseguire query sui dati.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Blocco condiviso per l'oggetto SCHEMARESOLUTION.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. Importazione di dati da ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>R. Importazione di dati da ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 
@@ -1005,7 +996,7 @@ In questo esempio, se LOCATION='/webdata/', una query PolyBase restituisce le ri
 
 ![Dati ricorsivi per tabelle esterne](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dati ricorsivi per tabelle esterne")
 
-Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Per modificare l'impostazione predefinita e leggere solo dalla directory radice, impostare l'attributo \<polybase.recursive.traversal > su 'false' nel file di configurazione core-site.xml. Questo file si trova in `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Ad esempio: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *external_data_source_name* specifica il nome dell'origine dati esterna che contiene il percorso dei dati esterni. Questo percorso è un cluster Hadoop o un'archiviazione BLOB di Azure. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -1104,7 +1095,7 @@ PolyBase in SQL Server 2016 ha un limite di larghezza di riga di 32 KB, in base 
 
 In SQL Data Warehouse questa limitazione è stata aumentata a 1 MB.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Blocco condiviso per l'oggetto SCHEMARESOLUTION.
 
@@ -1114,7 +1105,7 @@ I file di dati per una tabella esterna vengono archiviati in Hadoop o nell'archi
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>A. Unire i dati HDFS ai dati della piattaforma di strumenti analitici
+### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>R. Unire i dati HDFS ai dati della piattaforma di strumenti analitici
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs

@@ -1,29 +1,30 @@
 ---
-title: Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault | Microsoft Docs
-description: Risolvere i problemi relativi a Transparent Data Encryption (TDE) con una configurazione di Azure Key Vault.
+title: Errori comuni con le chiavi gestite dal cliente in Azure Key Vault
+description: Risoluzione degli errori comuni relativi a Transparent Data Encryption (TDE) e alle chiavi gestite dal cliente in Azure Key Vault.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727771"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558466"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Questo articolo descrive come identificare e risolvere problemi di accesso alle chiavi di Azure Key Vault che hanno reso inaccessibile un database configurato per l'uso di [Transparent Data Encryption (TDE) con chiavi gestite dai clienti in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql).
+Questo articolo descrive come identificare e risolvere problemi di accesso alle chiavi di Azure Key Vault che hanno reso inaccessibile un database configurato per l'uso di [Transparent Data Encryption (TDE) con chiavi gestite dai clienti in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## <a name="introduction"></a>Introduzione
 Quando la tecnologia TDE è configurata per l'uso di una chiave gestita dal cliente in Azure Key Vault, per mantenere online il database è necessario disporre dell'accesso continuo alla protezione TDE.  Se il server SQL logico non ha più accesso alla protezione TDE gestita dal cliente in Azure Key Vault, un database inizierà a negare tutte le connessioni con il messaggio di errore appropriato e cambierà lo stato in *Inaccessibile* nel portale di Azure.
@@ -83,7 +84,7 @@ Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi pa
  1. Usare il pulsante **Aggiungi nuovo** per aggiungere l'AppId per il server creato nel passaggio precedente. 
  1. Assegnare le autorizzazioni seguenti: Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave 
 
-Per altre informazioni, vedere [Assegnare un'identità Azure AD al server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Per altre informazioni, vedere [Assegnare un'identità Azure AD al server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Se l'istanza di SQL Server logica è stata spostata in un nuovo tenant dopo la configurazione iniziale di TDE con Azure Key Vault, è necessario ripetere il passaggio di configurazione dell'identità di Azure AD per creare il nuovo AppId. Aggiungere quindi l'AppId all'insieme di credenziali delle chiavi e assegnare le autorizzazioni corrette alla chiave. 
@@ -229,7 +230,7 @@ Descrizione: il ripristino dell'accesso del database alla chiave di Azure Key Va
 
 Nome evento: MakeDatabaseAccessible 
 
-Stato: Non riuscito 
+Stato: Operazione non riuscita 
 
 Descrizione: il ripristino dell'accesso del database alla chiave di Azure Key Vault non è riuscito. 
 

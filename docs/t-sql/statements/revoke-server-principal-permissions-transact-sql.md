@@ -1,6 +1,8 @@
 ---
-title: Autorizzazioni per entità server REVOKE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorizzazioni per entità server
+description: Revocare le autorizzazioni per un account di accesso di SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914228"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255793"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Revoca le autorizzazioni concesse o negate per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -95,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I ruoli del server e gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono entità a protezione diretta a livello di server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un ruolo del server o account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del ruolo del server o dell'account di accesso di SQL Server|Autorizzazione del ruolo del server o dell'account di accesso di SQL Server in cui è inclusa|Autorizzazione del server in cui è inclusa|  
@@ -112,7 +114,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Revoca dell'autorizzazione IMPERSONATE per un account di accesso  
+### <a name="a-revoking-impersonate-permission-on-a-login"></a>R. Revoca dell'autorizzazione IMPERSONATE per un account di accesso  
  Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'account di accesso `WanidaBenshoof` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
@@ -122,7 +124,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Revoca dell'autorizzazione VIEW DEFINITION con CASCADE  
- Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà revocata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
+ Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà revocata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
   
 ```  
 USE master;  

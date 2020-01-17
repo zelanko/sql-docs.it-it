@@ -1,7 +1,9 @@
 ---
-title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/04/2017
+title: CREATE DATABASE AUDIT SPECIFICATION
+description: Creare un oggetto specifica controllo database usando la funzionalità SQL Server Audit.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060990"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656648"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un oggetto specifica controllo database utilizzando la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -82,7 +84,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH ( STATE = { ON | OFF } )  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Quando una specifica del controllo del database viene creata, il relativo stato è disabilitato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -92,8 +94,8 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="examples"></a>Esempi
 
-### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Eseguire il controllo di SELECT e INSERT in una tabella per qualsiasi entità di database 
- Nell'esempio seguente vengono creati un controllo server denominato `Payrole_Security_Audit` e una specifica di controllo database denominata `Payrole_Security_Audit` che controlla le istruzioni `SELECT` e `INSERT` per qualsiasi utente (`public`) per la tabella `HumanResources.EmployeePayHistory` nel database `AdventureWorks2012`.  
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>R. Eseguire il controllo di SELECT e INSERT in una tabella per qualsiasi entità di database 
+ L'esempio seguente crea un controllo server denominato `Payrole_Security_Audit` e una specifica controllo database denominata `Payrole_Security_Audit` che controlla le istruzioni `SELECT` e `INSERT` per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` nel database `AdventureWorks2012`.  
   
 ```  
 USE master ;  
@@ -119,7 +121,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Eseguire il controllo di eventuali DML (INSERT, UPDATE o DELETE) su _tutti_ gli oggetti dello schema _sales_ per un ruolo di database specifico  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Eseguire il controllo di eventuali DML (INSERT, UPDATE o DELETE) su _tutti_ gli oggetti dello schema _sales_ per un ruolo di database specifico  
  Nell'esempio seguente vengono creati un controllo server denominato `DataModification_Security_Audit` e una specifica di controllo database denominata `Audit_Data_Modification_On_All_Sales_Tables` che controlla le istruzioni `INSERT`, `UPDATE` e `DELETE` degli utenti con un nuovo ruolo di database `SalesUK`, per tutti gli oggetti dello schema `Sales` nel database `AdventureWorks2012`.  
   
 ```  

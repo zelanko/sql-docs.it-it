@@ -1,6 +1,7 @@
 ---
-title: Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Uso del dashboard del gruppo di disponibilità in SSMS
+description: Descrive come usare il dashboard del gruppo di disponibilità Always On per monitorare l'integrità di un gruppo di disponibilità in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013528"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822669"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +171,7 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  **1**. In sospeso    
  **2**. Online    
  **3**. Offline   
- **4**. Non riuscito    
+ **4**. Operazione non riuscita    
  **5**. Errore, nessun quorum  
   
  **NULL**. La replica non è locale.  
@@ -237,7 +238,7 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
     > [!CAUTION]  
     >  Quando un database si trova nello stato INITIALIZING, il failover forzato sulla replica secondaria lascerà sempre il database in uno stato in cui non può essere avviato.  
   
- **Failover Readiness**  
+ **Conformità failover**  
  Indica per quale replica di disponibilità è possibile eseguire il failover con o senza la potenziale perdita di dati. Questa colonna viene visualizzata per impostazione predefinita. I valori possibili sono:  
   
 -   **Perdita di dati**   

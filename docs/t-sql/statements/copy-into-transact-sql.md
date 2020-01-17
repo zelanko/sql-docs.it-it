@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (anteprima)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055139"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321835"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -65,7 +65,7 @@ WITH
 Argomento facoltativo se lo schema predefinito per l'utente che esegue l'operazione corrisponde allo schema della tabella specificata. Se non si specifica *schema* e lo schema predefinito dell'utente che esegue l'operazione COPY è diverso dalla tabella specificata, l'operazione COPY viene annullata e viene restituito un messaggio di errore.  
 
 *table_name*  
-Nome della tabella in cui copiare i dati con l'istruzione COPY. La tabella di destinazione può essere una tabella temporanea o permanente.
+Nome della tabella in cui copiare i dati con l'istruzione COPY. La tabella di destinazione può essere temporanea o permanente e deve già esistere nel database. 
 
 *(column_list)*  
 Elenco facoltativo di una o più colonne usate per eseguire il mapping dei campi dati di origine alle colonne della tabella di destinazione per il caricamento dei dati. Il valore di *column_list* deve essere racchiuso tra parentesi e delimitato da virgole. L'elenco di colonne ha il formato seguente:
@@ -131,7 +131,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
 
 - Autenticazione con firme di accesso condiviso (SAS) *IDENTITY: costante con valore ‘Shared Access Signature’* 
-  *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
+  *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
   Autorizzazioni minime richieste: READ e LIST
 
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Se per ERRORFILE viene definito il percorso completo dell'account di archiviazio
   
 - Autenticazione con firme di accesso condiviso (SAS)
   - *IDENTITY: costante con valore ‘Shared Access Signature’*
-  - *SECRET: la* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce l'accesso delegato alle risorse nell'account di archiviazione.*
+  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
   - Autorizzazioni minime richieste: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -214,13 +214,13 @@ Se questo parametro non è specificato, il comando COPY rileva automaticamente i
 > Ai caratteri FIELDQUOTE viene applicata una sequenza di escape nelle colonne stringa in cui è presente un oggetto FIELDQUOTE (delimitatore) doppio. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione del campo che verrà usato nel file CSV. Il carattere di terminazione del campo può essere costituito da più caratteri. Il carattere di terminazione del campo predefinito è una virgola (,).
+*FIELDTERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione del campo che verrà usato nel file CSV. Il carattere di terminazione del campo può essere specificato usando la notazione esadecimale. Il carattere di terminazione del campo può essere costituito da più caratteri. Il carattere di terminazione del campo predefinito è una virgola (,).
 Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione della riga che verrà usato nel file CSV. Il carattere di terminazione della riga può essere costituito da più caratteri. Per impostazione predefinita, il carattere di terminazione della riga è \r\n. 
+*ROW TERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione della riga che verrà usato nel file CSV. Il carattere di terminazione della riga può essere specificato usando la notazione esadecimale. Il carattere di terminazione della riga può essere costituito da più caratteri. Per impostazione predefinita, il carattere di terminazione della riga è \r\n. 
 
-Il comando COPY aggiunge come prefisso il carattere \r quando si specifica \n (nuova riga), quindi il risultato è \r\n. Per specificare solo il carattere \n, usare il valore esadecimale (0x0A). Quando si specificano caratteri di terminazione della riga costituiti da più caratteri in formato esadecimale, non specificare 0x tra i singoli caratteri.
+Il comando COPY aggiunge come prefisso il carattere \r quando si specifica \n (nuova riga), quindi il risultato è \r\n. Per specificare solo il carattere \n, usare la notazione esadecimale (0x0A). Quando si specificano caratteri di terminazione della riga costituiti da più caratteri in formato esadecimale, non specificare 0x tra i singoli caratteri.
 
 Per altre informazioni su come specificare i caratteri di terminazione della riga, vedere la [documentazione](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) seguente.
 
@@ -254,12 +254,12 @@ Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. In Azure 
 
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-load-from-a-public-storage-account"></a>A. Eseguire il caricamento da un account di archiviazione pubblico
+### <a name="a-load-from-a-public-storage-account"></a>R. Eseguire il caricamento da un account di archiviazione pubblico
 
 L'esempio seguente mostra la forma più semplice del comando COPY, che carica i dati da un account di archiviazione pubblico. Per questo esempio, le impostazioni predefinite dell'istruzione COPY corrispondono al formato del file CSV di lineitem.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 I valori predefiniti del comando COPY sono i seguenti:
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>Domande frequenti
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Quali sono le prestazioni del comando COPY rispetto a PolyBase?
+Il comando COPY avrà prestazioni migliori nel momento in cui la funzionalità è disponibile a livello generale. Per ottimizzare le prestazioni durante l'anteprima pubblica, è consigliabile dividere l'input in più file durante il caricamento del file CSV. COPY presenta attualmente le stesse prestazioni di PolyBase quando si usa INSERT SELECT. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica i file CSV?
+Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. Non è necessario dividere i file non compressi quando il comando COPY è disponibile a livello generale. 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1\.000  |    120     |
+|  1\.500  |    180     |
+|  2\.000  |    240     |
+|  2\.500  |    300     |
+|  3,000  |    360     |
+|  5\.000  |    600     |
+|  6000  |    720     |
+|  7\.500  |    900     |
+| 10,000  |    1200    |
+| 15.000  |    1800    |
+| 30.000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica file Parquet o ORC?
+Non è necessario dividere i file Parquet e ORC perché il comando COPY dividerà automaticamente i file. Per ottenere prestazioni ottimali, i file Parquet e ORC nell'account di archiviazione di Azure devono avere dimensioni minime pari a 256 MB. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>Quando sarà disponibile a livello generale il comando COPY?
+Il comando COPY sarà disponibile a livello generale all'inizio del prossimo anno di calendario (2020). 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>Esistono problemi noti del comando COPY?
+
+- Il supporto LOB, ad esempio (n)varchar(max), non è disponibile nell'istruzione COPY. Sarà disponibile all'inizio del prossimo anno.
+
+Inviare feedback o problemi alla lista di distribuzione seguente: sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Vedere anche  
 

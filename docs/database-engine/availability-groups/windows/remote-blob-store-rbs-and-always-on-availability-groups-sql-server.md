@@ -1,5 +1,5 @@
 ---
-title: Usare Archivio BLOB remoto (RBS) con i gruppi di disponibilità
+title: Archivio BLOB remoto (RBS) con i gruppi di disponibilità
 description: "Descrizione dell'uso di Archivio BLOB remoto (RBS) con i database che fanno parte di un gruppo di disponibilità Always On. "
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d98c64e94904ddf883f5f7f1a4ce22d3f81c88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014434"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822487"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Usare Archivio BLOB remoto (RBS) con i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68014434"
 |Stesso database in cui sono contenuti i metadati di RBS (archiviato utilizzando un provider FILESTREAM remoto di RBS)|Sì|  
 |Database diverso nella stessa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (archiviato utilizzando un provider FILESTREAM remoto di RBS)|Sì<br /><br /> È consigliabile inserire questo database nello stesso gruppo di disponibilità del database in cui sono contenuti i metadati di RBS.|  
 |Database diverso in un'istanza differente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (archiviato utilizzando un provider FILESTREAM remoto di RBS)|Sì<br /><br /> Questo database deve trovarsi in un gruppo di disponibilità separato.|  
-|Archivio BLOB di terze parti|no<br /><br /> Per proteggere questi dati BLOB, utilizzare i meccanismi di disponibilità elevata del provider dell'archivio BLOB.|  
+|Archivio BLOB di terze parti|No<br /><br /> Per proteggere questi dati BLOB, utilizzare i meccanismi di disponibilità elevata del provider dell'archivio BLOB.|  
   
 ##  <a name="Limitations"></a> Limitazioni  
   

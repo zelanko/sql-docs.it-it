@@ -1,7 +1,9 @@
 ---
-title: Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2016 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2016
+title: 'Motore di database: Modifiche che causano interruzioni | Microsoft Docs'
+titleSuffix: SQL Server 2016
+description: Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2016
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 875e78cee077ec902dc1f845a330148e93f9edb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013344"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244716"
 ---
-# <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2016
+# <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2016
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Questo argomento descrive le modifiche di rilievo apportate al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
+  Questo argomento descrive le modifiche che causano interruzioni apportate al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
   
 ##  <a name="SQL15"></a> Modifiche di rilievo in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   

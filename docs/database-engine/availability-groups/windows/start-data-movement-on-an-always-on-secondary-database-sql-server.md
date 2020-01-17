@@ -1,6 +1,7 @@
 ---
-title: Avviare lo spostamento dati su un database secondario AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Avviare lo spostamento dei dati su un database secondario
+description: Informazioni su come avviare lo spostamento dei dati per un database secondario che fa parte di un gruppo di disponibilità Always On in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db3c0311bc45c0969e1b6f34882b0b5fc61021a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251239"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Avviare lo spostamento dati su un database secondario AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68013907"
   
     -   Ripristinare manualmente un backup recente del database primario utilizzando RESTORE WITH NORECOVERY, quindi ripristinare ogni successivo backup del log utilizzando RESTORE WITH NORECOVERY. Eseguire questa sequenza di ripristino in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità.  
   
-         **Per ulteriori informazioni:**  
+         **Per altre informazioni:**  
   
          [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -41,7 +42,7 @@ ms.locfileid: "68013907"
         > [!NOTE]  
         >  Dopo aver creato tutti i database secondari per il gruppo di disponibilità, se si desidera eseguire backup nelle repliche secondarie, sarà necessario configurare nuovamente le preferenze di backup automatico del gruppo di disponibilità.  
   
-         **Per ulteriori informazioni:**  
+         **Per altre informazioni:**  
   
          [Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68013907"
   
 2.  Creare al più presto un join di ogni database secondario appena preparato al gruppo di disponibilità.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
      [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

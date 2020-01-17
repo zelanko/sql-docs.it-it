@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Abilitare diverse impostazioni di configurazione del database a livello di singolo database.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240701"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258127"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -52,7 +54,7 @@ Questa istruzione abilita diverse impostazioni di configurazione del database a 
 - Abilita l'equivalente dell'ultimo piano di esecuzione effettivo in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specificare il numero di minuti dopo i quali un'operazione sugli indici ripristinabile sospesa deve essere arrestata automaticamente dal motore di SQL Server.
 
-![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -142,7 +144,7 @@ Consente di impostare il modello di stima della cardinalità di Query Optimizer 
 
 > [!TIP]
 > Per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** anziché usare il flag di traccia.
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** invece di usare il flag di traccia.
 
 PRIMARY
 
@@ -430,7 +432,7 @@ La vista di sistema [database_scoped_configurations &#40;Transact-SQL&#41; ](../
 
 In questi esempi viene illustrato l'uso di ALTER DATABASE SCOPED CONFIGURATION
 
-### <a name="a-grant-permission"></a>A. Concedere un'autorizzazione
+### <a name="a-grant-permission"></a>R. Concessione dell'autorizzazione
 
 In questo esempio viene concessa all'utente Joe l'autorizzazione necessaria per eseguire ALTER DATABASE SCOPED CONFIGURATION.
 
@@ -574,7 +576,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ### <a name="legacy_cardinality_estimation-resources"></a>Risorse di LEGACY_CARDINALITY_ESTIMATION
 
 - [Stima della cardinalità (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
+- [Ottimizzazione dei piani di query con la funzionalità di stima di cardinalità di SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parameter_sniffing-resources"></a>Risorse di PARAMETER_SNIFFING
 

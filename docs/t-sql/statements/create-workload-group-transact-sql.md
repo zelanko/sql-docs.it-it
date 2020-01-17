@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: bed396bf39b4b621c5b333a7b13218998264675a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982661"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165904"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Verr
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -152,10 +152,10 @@ Il gruppo del carico di lavoro può specificare un pool di risorse esterne. È p
 - Un pool di risorse per i carichi di lavoro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le query
 - Un pool di risorse esterne per i processi esterni. Per altre informazioni, vedere [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Quando si usa `REQUEST_MEMORY_GRANT_PERCENT`, per la creazione dell'indice è possibile usare più memoria dell'area di lavoro di quella concessa inizialmente, al fine di migliorare le prestazioni. Tale gestione particolare è supportata da Resource Governor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La concessione iniziale, così come qualsiasi concessione supplementare, è tuttavia limitata dalle impostazioni del pool di risorse e del gruppo di carico di lavoro.
 
-Il limite `MAX_DOP` viene impostato per [attività](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Non è un limite per [richiesta](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o per limite di query. Ciò significa che durante l'esecuzione di query parallele una singola richiesta può generare più attività che vengono assegnate a un'[utilità di pianificazione](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
+Il limite `MAX_DOP` viene impostato per [attività](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Non è un limite per [richiesta](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o per query. Ciò significa che durante l'esecuzione di query parallele una singola richiesta può generare più attività che vengono assegnate a un'[utilità di pianificazione](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
 
 Se si usa `MAX_DOP` e una query viene contrassegnata come seriale in fase di compilazione, in fase di esecuzione non può tornare parallela, indipendentemente dal gruppo di carico di lavoro o dall'impostazione della configurazione server. Dopo che è stato configurato, il valore `MAX_DOP` può essere diminuito solo in caso di utilizzo elevato della memoria. La riconfigurazione del gruppo di carico di lavoro non è visibile durante l'attesa nella coda della memoria concessa.
 
@@ -194,9 +194,9 @@ GO
 
 &nbsp;
 
-## <a name="sql-data-warehouse"></a>SQL Data Warehouse 
+## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse (anteprima)
 
-CREATE WORKLOAD GROUP (Transact-SQL) (anteprima) crea un gruppo di carico di lavoro.  I gruppi di carico di lavoro sono contenitori per un set di richieste e su di essi si basa la configurazione della gestione del carico di lavoro in un sistema.  I gruppi di carico di lavoro consentono di riservare risorse per l'isolamento del carico di lavoro, contengono risorse, definiscono le risorse per ogni richiesta e rispettano le regole di esecuzione.  Al termine dell'esecuzione dell'istruzione, le impostazioni sono attive.
+Crea un gruppo di carico di lavoro.  I gruppi di carico di lavoro sono contenitori per un set di richieste e su di essi si basa la configurazione della gestione del carico di lavoro in un sistema.  I gruppi di carico di lavoro consentono di riservare risorse per l'isolamento del carico di lavoro, contengono risorse, definiscono le risorse per ogni richiesta e rispettano le regole di esecuzione.  Al termine dell'esecuzione dell'istruzione, le impostazioni sono attive.
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -216,15 +216,15 @@ CREATE WORKLOAD GROUP group_name
 Specifica il nome con cui viene identificato il gruppo del carico di lavoro.  group_name è un sysname.  Può essere composto da un massimo di 128 caratteri e deve essere univoco all'interno dell'istanza.
 
 *MIN_PERCENTAGE_RESOURCE* = valore</br>
-Specifica un'allocazione delle risorse minima garantita per questo gruppo di carico di lavoro non condiviso con altri gruppi di carico di lavoro.  Il valore è un numero intero compreso tra 0 e 100.  La somma di min_percentage_resource in tutti i gruppi di carico di lavoro non può essere superiore a 100.  Il valore di min_percentage_resource non può essere maggiore di cap_percentage_resource.  Sono consentiti valori minimi effettivi per ogni livello di servizio.  Per altre informazioni dettagliate, vedere Valori effettivi<link>.
+Specifica un'allocazione delle risorse minima garantita per questo gruppo di carico di lavoro non condiviso con altri gruppi di carico di lavoro.  Il valore è un numero intero compreso tra 0 e 100.  La somma di min_percentage_resource in tutti i gruppi di carico di lavoro non può essere superiore a 100.  Il valore di min_percentage_resource non può essere maggiore di cap_percentage_resource.  Sono consentiti valori minimi effettivi per ogni livello di servizio.  Per altre informazioni dettagliate, vedere [Valori effettivi](#effective-values).
 
 *CAP_PERCENTAGE_RESOURCE* = valore</br>
-Specifica l'utilizzo massimo delle risorse per tutte le richieste in un gruppo di carico di lavoro.  L'intervallo consentito per il valore è compreso tra 1 e 100.  Il valore di cap_percentage_resource deve essere maggiore di min_percentage_resource.  Il valore effettivo per cap_percentage_resource può essere ridotto se min_percentage_resource è impostato su un valore maggiore di zero in altri gruppi di carico di lavoro.
+Specifica l'utilizzo massimo delle risorse per tutte le richieste in un gruppo di carico di lavoro.  L'intervallo di numeri interi consentito per il valore è compreso tra 1 e 100.  Il valore di cap_percentage_resource deve essere maggiore di min_percentage_resource.  Il valore effettivo per cap_percentage_resource può essere ridotto se min_percentage_resource è impostato su un valore maggiore di zero in altri gruppi di carico di lavoro.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = valore</br>
-Imposta la quantità minima di risorse allocate per ogni richiesta.  Il valore è un parametro obbligatorio con un intervallo decimale compreso tra 0,75 e 100,00.  Il valore di request_min_resource_grant_percent deve essere un multiplo di 0,25, deve essere un fattore di min_percentage_resource ed essere minore di cap_percentage_resource.  Sono consentiti valori minimi effettivi per ogni livello di servizio.  Per altre informazioni dettagliate, vedere Valori effettivi<link>.
+Imposta la quantità minima di risorse allocate per ogni richiesta.  Il valore è un parametro obbligatorio con un intervallo decimale compreso tra 0,75 e 100,00.  Il valore di request_min_resource_grant_percent deve essere un multiplo di 0,25, deve essere un fattore di min_percentage_resource ed essere minore di cap_percentage_resource.  Sono consentiti valori minimi effettivi per ogni livello di servizio.  Per altre informazioni dettagliate, vedere [Valori effettivi](#effective-values).
 
-Esempio:
+Ad esempio:
 
 ```sql
 CREATE WORKLOAD GROUP wgSample WITH  
@@ -244,7 +244,7 @@ Si considerino i valori usati per le classi di risorse come linee guida per requ
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = valore</br>
-Imposta la quantità massima di risorse allocate per ogni richiesta.  Il valore è un parametro facoltativo con un valore predefinito uguale a request_min_resource_grant_percent.  Il valore deve essere maggiore o uguale a request_min_resource_grant_percent.  Quando il valore di request_max_resource_grant_percent è maggiore di request_min_resource_grant_percent e sono disponibili risorse di sistema, vengono allocate risorse aggiuntive a una richiesta.
+Imposta la quantità massima di risorse allocate per ogni richiesta.  Il valore è un parametro decimale facoltativo con un valore predefinito uguale a request_min_resource_grant_percent.  Il valore deve essere maggiore o uguale a request_min_resource_grant_percent.  Quando il valore di request_max_resource_grant_percent è maggiore di request_min_resource_grant_percent e sono disponibili risorse di sistema, vengono allocate risorse aggiuntive a una richiesta.
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Specifica l'importanza predefinita di una richiesta per il gruppo del carico di lavoro.  L'importanza è compresa fra le seguenti, NORMAL è l'impostazione predefinita:
@@ -257,48 +257,54 @@ Specifica l'importanza predefinita di una richiesta per il gruppo del carico di 
 L'importanza impostata nel gruppo di carico di lavoro è un'importanza predefinita per tutte le richieste nel gruppo di carico di lavoro.  Un utente può anche impostare l'importanza a livello di classificatore, eseguendo in questo modo l'override dell'impostazione dell'importanza del gruppo di carico di lavoro,  che consente di differenziare l'importanza permettendo alle richieste di accedere più rapidamente alle risorse non riservate.  Quando la somma di min_percentage_resource tra gruppi di carico di lavoro è inferiore a 100, sono presenti risorse non riservate che vengono assegnate in base all'importanza.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = valore</br>
-Specifica il tempo massimo di esecuzione di una query, in secondi, prima che venga annullata.  Il valore deve essere 0 o un valore intero positivo.  L'impostazione predefinita per il valore è 0, ovvero un valore illimitato.  Il tempo di attesa nella coda delle richieste non viene conteggiato per l'esecuzione della query.
+Specifica il tempo massimo di esecuzione di una query, in secondi, prima che venga annullata.  Il valore deve essere 0 o un valore intero positivo.  L'impostazione predefinita per il valore è 0, indicante che la query non raggiunge mai il timeout.  QUERY_EXECUTION_TIMEOUT_SEC inizia il conteggio una volta che la query è in esecuzione, non quando la query viene accodata.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 I gruppi di carico di lavoro corrispondenti alle classi di risorse vengono creati automaticamente per la compatibilità con le versioni precedenti.  Non è possibile eliminare questi gruppi di carico di lavoro definiti dal sistema.  È possibile creare altri 8 gruppi di carico di lavoro definiti dall'utente.
+
+Se viene creato un gruppo di carico di lavoro con min_percentage_resource maggiore di zero, l'istruzione `CREATE WORKLOAD GROUP` verrà accodata finché non sono disponibili risorse sufficienti per creare il gruppo di carico di lavoro.
 
 ## <a name="effective-values"></a>Valori effettivi
 
 I parametri min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent e request_max_resource_grant_percent hanno valori effettivi che vengono modificati nel contesto del livello di servizio corrente e della configurazione di altri gruppi di carico di lavoro.
 
-La concorrenza supportata per ogni livello di servizio rimane invariata quando le classi di risorse sono state usate per definire le concessioni di risorse per ogni query. Di conseguenza i valori supportati per request_min_resource_grant_percent dipendono dal livello di servizio su cui è impostata l'istanza.  Al livello di servizio più basso, DW100c, è supportata la concorrenza 4.  Il valore effettivo di request_min_resource_grant_percent per un gruppo di carico di lavoro configurato può essere pari o superiore al 25%.  Vedere la tabella seguente per altri dettagli.
+La concorrenza supportata per ogni livello di servizio rimane invariata quando le classi di risorse sono state usate per definire le concessioni di risorse per ogni query. Di conseguenza i valori supportati per request_min_resource_grant_percent dipendono dal livello di servizio su cui è impostata l'istanza.  Al livello di servizio più basso, DW100c, è necessario almeno il 25% di risorse per richiesta.  Al livello DW100c, il valore effettivo di request_min_resource_grant_percent per un gruppo di carico di lavoro configurato può essere pari o superiore al 25%.  Per altri dettagli su come vengono derivati i valori effettivi, vedere la tabella seguente.
 
-|Livello di servizio|Numero massimo di query simultanee|% min supportata per REQUEST_MIN_RESOURCE_GRANT_PERCENT e MIN_PERCENTAGE_RESOURCE|
+|Livello di servizio|Valore effettivo mio per REQUEST_MIN_RESOURCE_GRANT_PERCENT|Numero massimo di query simultanee|
 |---|---|---|
-|DW100c|4|25%|
-|DW200c|8|12,5%|
-|DW300c|12|8%|
-|DW400c|16|6,25%|
-|DW500c|20|5%|
-|DW1000c|32|3%|
-|DW1500c|32|3%|
-|DW2000c|48|2%|
-|DW2500c|48|2%|
-|DW3000c|64|1,5%|
-|DW5000c|64|1,5%|
-|DW6000c|128|0,75%|
-|DW7500c|128|0,75%|
-|DW10000c|128|0,75%|
-|DW15000c|128|0,75%|
-|DW30000c|128|0,75%|
+|DW100c|25%|4|
+|DW200c|12,5%|8|
+|DW300c|8%|12|
+|DW400c|6,25%|16|
+|DW500c|5%|20|
+|DW1000c|3%|32|
+|DW1500c|3%|32|
+|DW2000c|2%|48|
+|DW2500c|2%|48|
+|DW3000c|1,5%|64|
+|DW5000c|1,5%|64|
+|DW6000c|0,75%|128|
+|DW7500c|0,75%|128|
+|DW10000c|0,75%|128|
+|DW15000c|0,75%|128|
+|DW30000c|0,75%|128|
 ||||
 
 Analogamente, request_min_resource_grant_percent, min_percentage_resource devono essere maggiori o uguali al valore effettivo di request_min_resource_grant_percent.  Il valore di un gruppo di carico di lavoro con min_percentage_resource inferiore al valore effettivo di min_percentage_resource viene impostato su zero in fase di esecuzione.  In questo caso, le risorse configurate per min_percentage_resource sono condivisibili in tutti i gruppi di carico di lavoro.  Ad esempio, il gruppo di carico di lavoro wgAdHoc con min_percentage_resource del 10% in esecuzione in DW1000c avrà un valore min_percentage_resource corrente del 10% (3,25% è il valore minimo supportato in DW1000c).  wgAdhoc in DW100c avrà un valore min_percentage_resource effettivo dello 0%.  Il 10% configurato per wgAdhoc verrà condiviso tra tutti i gruppi di carico di lavoro.
 
 Anche cap_percentage_resource ha un valore effettivo.  Se un gruppo di carico di lavoro wgAdhoc è configurato con cap_percentage_resource pari al 100% e viene creato un altro gruppo di carico di lavoro wgDashboards con min_percentage_resource pari al 25%, il valore effettivo di cap_percentage_resource per wgAdhoc diventa il 75%.
 
-Il modo più semplice per conoscere i valori della fase di esecuzione per i gruppi di carico di lavoro consiste nell'eseguire una query sulla vista di sistema [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+Il modo più semplice per conoscere i valori di runtime per i gruppi di carico di lavoro consiste nell'eseguire una query sulla vista di sistema [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
+
 
 ## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione CONTROL DATABASE
 
 ## <a name="see-also"></a>Vedere anche
-[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+Avvio rapido per creare e usare un [gruppo di carico di lavoro](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

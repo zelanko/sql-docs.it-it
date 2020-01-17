@@ -1,7 +1,7 @@
 ---
-title: Installare SQL Server 2016 dall'Installazione guidata (programma di installazione) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: Installare tramite l'interfaccia utente grafica
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962367"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259036"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962367"
 
 In questo articolo viene descritto come installare SQL Server con l'Installazione guidata. Si applica a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-Questo articolo fornisce istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché nell'Installazione guidata è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è necessario installarli singolarmente. Per installare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singolarmente, vedere [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+Questo articolo fornisce istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché nell'Installazione guidata è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è necessario installarli singolarmente. Per installare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singolarmente, vedere [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Per altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere:  
 
@@ -83,7 +83,7 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 1. Se questa è la prima installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer, il programma di installazione salta la pagina **Tipo di installazione** e passa direttamente alla pagina **Selezione funzionalità**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è già installato nel sistema, è possibile usare la pagina **Tipo di installazione** per scegliere di eseguire una nuova installazione o aggiungere funzionalità a un'installazione esistente. Per continuare, selezionare **Avanti**.
   
-1. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione. Per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], ad esempio, selezionare **Servizi motore di database**.
+1. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione. Ad esempio, per installare una nuova istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)], selezionare **Servizi motore di database**.
 
     Una volta selezionato il nome della funzionalità desiderata, nel riquadro **Descrizione funzionalità** viene visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) o [Edizioni e componenti di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -249,7 +249,7 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 1. Se questa è la prima installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer, il programma di installazione salta la pagina **Tipo di installazione** e passa direttamente alla pagina **Selezione funzionalità**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è già installato nel sistema, è possibile usare la pagina **Tipo di installazione** per scegliere di eseguire una nuova installazione o aggiungere funzionalità a un'installazione esistente. Per continuare, selezionare **Avanti**.
   
-1. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione. Per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], ad esempio, selezionare **Servizi motore di database**.
+1. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione. Ad esempio, per installare una nuova istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)], selezionare **Servizi motore di database**.
 
     Una volta selezionato il nome della funzionalità desiderata, nel riquadro **Descrizione funzionalità** viene visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) o [Edizioni e componenti di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   

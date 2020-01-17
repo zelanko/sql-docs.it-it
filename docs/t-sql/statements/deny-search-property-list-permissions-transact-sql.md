@@ -1,6 +1,8 @@
 ---
-title: Autorizzazioni per l'elenco delle proprietà di ricerca DENY (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY - Autorizzazioni per elenco di proprietà di ricerca
+description: Negare le autorizzazioni per un elenco di proprietà di ricerca.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8be5b497f3046afb4ed9d56ccde0f6f00ede919a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114806"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244552"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "68114806"
   Nega le autorizzazioni per un elenco di proprietà di ricerca.  
  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +48,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
-ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Specifica l'elenco delle proprietà di ricerca per cui viene negata l'autorizzazione. Il qualificatore di ambito :: è obbligatorio.  
   
 *database_principal*  
@@ -76,7 +78,7 @@ CASCADE
 -   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="search-property-list-permissions"></a>Autorizzazioni SEARCH PROPERTY LIST  
  Un elenco di proprietà di ricerca è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un elenco di proprietà di ricerca, insieme alle autorizzazioni più generali che le includono in modo implicito.  

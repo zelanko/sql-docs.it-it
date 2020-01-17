@@ -1,6 +1,7 @@
 ---
-title: Aggiungere o sostituire un server di controllo del mirroring del database (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere o sostituire un server di controllo del mirroring (SSMS)
+description: Informazioni su come aggiungere o sostituire un server di controllo del mirroring del database con SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947967"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247500"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "67947967"
   
 6.  Nella finestra di dialogo **Aggiunta server di controllo del mirroring** fare clic su **Sì**e quindi su **Avanti**.  
   
-7.  Nella finestra di dialogo **Selezione dei server da configurare** viene automaticamente selezionata la casella di controllo **Istanza server di controllo del mirroring** . Scegliere **Avanti**.  
+7.  Nella finestra di dialogo **Selezione dei server da configurare** viene automaticamente selezionata la casella di controllo **Istanza server di controllo del mirroring** . Fare clic su **Avanti**.  
   
-8.  Nella finestra di dialogo **Istanza server principale** mantenere la porta e l'endpoint esistenti. Scegliere **Avanti**.  
+8.  Nella finestra di dialogo **Istanza server principale** mantenere la porta e l'endpoint esistenti. Fare clic su **Avanti**.  
   
 9. Nella finestra di dialogo **Istanza server di controllo del mirroring** fare clic su **Connetti**.  
   
 10. Nella finestra di dialogo **Connetti al server** specificare l'istanza del server di controllo del mirroring nel campo **Nome server** e usare l'autenticazione di Windows (impostazione predefinita). Fare clic su **Connetti**.  
   
-11. Dopo avere stabilito la connessione, nella finestra di dialogo **Istanza server di controllo del mirroring** vengono visualizzati la porta di attesa e l'endpoint del mirroring del database dell'istanza del server di controllo del mirroring. Scegliere **Avanti**.  
+11. Dopo avere stabilito la connessione, nella finestra di dialogo **Istanza server di controllo del mirroring** vengono visualizzati la porta di attesa e l'endpoint del mirroring del database dell'istanza del server di controllo del mirroring. Fare clic su **Avanti**.  
   
 12. Nella finestra di dialogo **Account di servizio** sono contenuti i campi per gli account di servizio del dominio delle istanze dei server principale, mirror e di controllo del mirroring.  
   
@@ -57,11 +58,11 @@ ms.locfileid: "67947967"
   
     -   Se l'istanza del server di controllo del mirroring usa un account di servizio diverso da uno degli altri partner, immettere il nome dell'account nei campi **Server principale**, **Server mirror**e **Server di controllo del mirroring** :  
   
-         *DOMAINNAME* **\\** *nome utente*  
+         *NOMEDOMINIO* **\\** *nomeutente*  
   
          Il nome del dominio deve essere scritto in lettere maiuscole.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 13. Nella schermata di riepilogo **Completare la procedura guidata** verificare, facoltativamente, la configurazione del server di controllo del mirroring e quindi fare clic su **Fine**.  
   

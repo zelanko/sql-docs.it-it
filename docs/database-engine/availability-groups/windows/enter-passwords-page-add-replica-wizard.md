@@ -1,7 +1,7 @@
 ---
-title: Pagina Immetti password (Aggiungi replica) per i gruppi di disponibilità
+title: 'Procedura guidata Aggiungi replica: Pagina Immetti password per i gruppi di disponibilità'
 description: Descrizione delle proprietà disponibili nella pagina Immetti password della procedura guidata Aggiungi replica di SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008446"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822212"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Pagina Immetti password (Aggiungi replica) per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68008446"
  **Dimensione**  
  Visualizza la dimensione del database, se è disponibile per la procedura guidata.  
   
- **Stato**  
+ **Status**  
  Indica **Password obbligatoria** per i database con una chiave master del database. Dopo avere immesso la password per le chiavi master di database nella colonna **Password** , fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna **Stato** visualizza **Password immessa**.  
   
  Se il database non ha una chiave master di database, la colonna **Stato** visualizza **Password non obbligatoria**.  

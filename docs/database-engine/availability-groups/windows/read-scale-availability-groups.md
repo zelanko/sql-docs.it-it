@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014465"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720842"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usare gruppi di disponibilità Always On con scalabilità in lettura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Un gruppo di disponibilità è una soluzione completa che offre funzionalità a disponibilità elevata per SQL Server e anche soluzioni di scalabilità integrate. In un'applicazione di database tipica, diversi client eseguono vari tipi di carichi di lavoro. In alcuni casi a causa dei vincoli di risorse possono verificarsi dei colli di bottiglia. È possibile liberare risorse e ottenere una velocità effettiva maggiore per il carico di lavoro OLTP. È anche possibile offrire migliori prestazioni e maggior scalabilità per i carichi di lavoro di sola lettura. Sfruttare la tecnologia di replica più veloce per SQL Server, creando un gruppo di database replicati per allocare i carichi di lavoro di creazione report e analisi alle repliche di sola lettura.
+Un gruppo di disponibilità è una soluzione completa che offre funzionalità a disponibilità elevata per SQL Server e anche soluzioni di scalabilità integrate. In un'applicazione di database tipica, diversi client eseguono vari tipi di carichi di lavoro. In alcuni casi a causa dei vincoli di risorse possono verificarsi dei colli di bottiglia. 
+
+Nel contesto di un gruppo di disponibilità, per scalabilità in lettura si intende la ripartizione dei carichi di lavoro di lettura alle repliche secondarie. È possibile liberare risorse e ottenere una velocità effettiva maggiore per il carico di lavoro OLTP. È anche possibile offrire migliori prestazioni e maggior scalabilità per i carichi di lavoro di sola lettura. Sfruttare la tecnologia di replica più veloce per SQL Server, creando un gruppo di database replicati per allocare i carichi di lavoro di creazione report e analisi alle repliche di sola lettura.
 
 Con i gruppi di disponibilità è possibile configurare una o più repliche secondarie per supportare l'accesso in sola lettura ai database secondari.
 

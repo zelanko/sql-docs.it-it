@@ -1,7 +1,7 @@
 ---
-title: Finestra di dialogo "Aggiungi indirizzo IP" in Nuovo listener gruppo di disponibilità
+title: 'Creazione guidata Gruppo di disponibilità: Aggiungi indirizzo IP'
 description: 'Descrive le opzioni della finestra di dialogo "Aggiungi indirizzo IP" trovate nella pagina "Specifica repliche nella "Creazione guidata gruppo di disponibilità" di SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 48b61a0f85d695f143f04f86387761170293a3b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935029"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822098"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Finestra di dialogo Aggiungi indirizzo IP (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

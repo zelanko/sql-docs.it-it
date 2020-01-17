@@ -1,6 +1,7 @@
 ---
-title: Disponibilità Always On per il mirroring dei database con sicurezza del trasporto | Microsoft Docs
-ms.custom: ''
+title: 'Sicurezza del trasporto: Gruppi di disponibilità e mirroring del database'
+description: Informazioni su come proteggere il trasporto dei messaggi scambiati tra database che fanno parte di un gruppo di disponibilità Always On o di una sessione di mirroring del database ospitata in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047985"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252744"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Disponibilità Always On per il mirroring dei database con sicurezza del trasporto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68047985"
   
  **Contenuto dell'argomento**  
   
--   [Autenticazione](#Authentication)  
+-   [autenticazione](#Authentication)  
   
 -   [Crittografia dei dati](#DataEncryption)  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68047985"
 ### <a name="certificates"></a>Certificati  
  In alcuni casi, ad esempio quando le istanze del server non si trovano in domini di tipo trusted oppure quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione come servizio locale, l'autenticazione di Windows non è disponibile. In tali casi al posto delle credenziali utente per l'autenticazione delle richieste di connessione sono necessari certificati. L'endpoint del mirroring di ogni istanza del server deve essere configurato con il proprio certificato creato localmente.  
   
- Il metodo di crittografia viene stabilito al momento della creazione del certificato. Per altre informazioni, vedere [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Prestare attenzione nella gestione dei certificati utilizzati.  
+ Il metodo di crittografia viene stabilito al momento della creazione del certificato. Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Prestare attenzione nella gestione dei certificati utilizzati.  
   
  In un'istanza del server viene utilizzata la chiave privata del proprio certificato per stabilire la propria identità durante la configurazione di una connessione. Nell'istanza del server che riceve la richiesta di connessione viene utilizzata la chiave pubblica del certificato del mittente per autenticare l'identità del mittente. Considerare, ad esempio, due istanze del server, Server_A e Server_B. In Server_A viene utilizzata la propria chiave privata per crittografare l'intestazione di connessione prima di inviare una richiesta di connessione a Server_B. Server_B utilizza la chiave pubblica del certificato di Server_A per decrittografare l'intestazione di connessione. Se l'intestazione decrittografata è corretta, Server_B sa che l'intestazione è stata crittografata da Server_A e la connessione viene autenticata. Se l'intestazione decrittografata non è corretta, Server_B sa che la richiesta di connessione non è autentica e rifiuta la connessione.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68047985"
   
 |Valore di ALGORITHM|Descrizione|  
 |---------------------|-----------------|  
-|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Impostazione predefinita.<br /><br /> <strong>\*\* Avviso \*\*</strong> L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
+|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è la modalità predefinita.<br /><br /> <strong>\*\* Avviso \*\*</strong> L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
 |AES|Specifica che l'endpoint deve utilizzare l'algoritmo AES.|  
 |AES RC4|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo AES.|  
 |RC4 AES|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo RC4.|  
@@ -108,6 +109,6 @@ ms.locfileid: "68047985"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

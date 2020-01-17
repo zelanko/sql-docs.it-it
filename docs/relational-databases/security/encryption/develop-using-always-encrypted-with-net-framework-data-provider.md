@@ -1,6 +1,7 @@
 ---
-title: Uso di Always Encrypted con il provider di dati .NET Framework per SQL Server | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted con il provider di dati .NET Framework
+description: Informazioni su come sviluppare applicazioni .NET usando la funzionalità Always Encrypted per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594455"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558075"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Using Always Encrypted with .NET Framework Data Provider for SQL Server (Uso di Always Encrypted con il provider di dati .NET Framework per SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 ### <a name="inserting-data-example"></a>Esempio di inserimento di dati
 
-Questo esempio illustra come inserire una riga nella tabella Patients. Si noti quanto segue:
+Questo esempio illustra come inserire una riga nella tabella Patients. Tenere presente quanto segue:
 - Il codice di esempio non contiene alcun elemento specifico per la crittografia. Il provider di dati .NET Framework per SQL Server rileva automaticamente e crittografa i parametri *paramSSN* e *paramBirthdate* destinati alle colonne crittografate. In questo modo la crittografia diventa trasparente per l'applicazione. 
 - I valori inseriti nelle colonne di database, incluse quelle crittografate, vengono passati come oggetti [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . L'uso di **SqlParameter** è facoltativo quando si inviano i valori alle colonne non crittografate (è tuttavia consigliabile usarlo perché consente di impedire attacchi SQL injection), mentre è necessario per i valori destinati alle colonne crittografate. Se i valori inseriti nelle colonne SSN o BirthDate sono stati passati come valori letterali incorporati nell'istruzione della query, la query avrà esito negativo perché il provider di dati .NET Framework per SQL Server non riesce a determinare i valori delle colonne di destinazione crittografate e quindi non crittograferà i valori. Di conseguenza, il server li rifiuterà come incompatibili con le colonne crittografate.
 - Il tipo di dati del parametro destinato alla colonna SSN è impostato su una stringa ANSI (non Unicode), che esegue il mapping al tipo di dati di SQL Server char/varchar. Se il tipo del parametro è stato impostato su una stringa Unicode (stringa), che esegue il mapping a nchar/nvarchar, la query avrà esito negativo perché Always Encrypted non supporta le conversioni da valori nchar/nvarchar crittografati a valori char/varchar crittografati. Vedere [Mapping dei tipi di dati SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) per informazioni sui mapping dei tipi di dati.
@@ -160,7 +161,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 ### <a name="retrieving-plaintext-data-example"></a>Esempio di recupero di dati di testo non crittografato
 
-L'esempio seguente illustra come filtrare i dati in base ai valori crittografati e recuperare i dati in testo non crittografato dalle colonne crittografate. Si noti quanto segue:
+L'esempio seguente illustra come filtrare i dati in base ai valori crittografati e recuperare i dati in testo non crittografato dalle colonne crittografate. Tenere presente quanto segue:
 - Il valore usato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando SqlParameter, in modo che il provider di dati .NET Framework per SQL Server possibile codificarli in modo trasparente prima dell'invio al database.
 - Tutti i valori stampati dal programma saranno in testo non crittografato perché il provider di dati .NET Framework per SQL Server decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
 
@@ -198,7 +199,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 Se Always Encrypted non è abilitato, una query può comunque recuperare dati dalle colonne crittografate, a condizione che non presenti parametri destinati alle colonne crittografate.
 
-L'esempio seguente illustra come recuperare i dati crittografati binari dalle colonne crittografate. Si noti quanto segue:
+L'esempio seguente illustra come recuperare i dati crittografati binari dalle colonne crittografate. Tenere presente quanto segue:
 
 - Considerato che Always Encrypted non è abilitato nella stringa di connessione, la query restituirà i valori crittografati di SSN e BirthDate come matrici di byte (il programma converte i valori in stringhe).
 - Una query che recupera dati dalle colonne crittografate con Always Encrypted disabilitato può avere parametri, a condizione che nessuno dei parametri sia destinato a una colonna crittografata. La query precedente filtra in base alla colonna LastName, non è crittografata nel database. Se la query avesse filtrato per SSN o data di nascita, avrebbe avuto esito negativo.
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>Copia dei dati crittografati mediante SqlBulkCopy
 
-Con SqlBulkCopy, è possibile copiare dati, che sono già crittografati e archiviati in una tabella, in un'altra tabella, senza la decrittografia dei dati. Per eseguire questa operazione:
+Con SqlBulkCopy, è possibile copiare dati, che sono già crittografati e archiviati in una tabella, in un'altra tabella, senza la decrittografia dei dati. A tale scopo, eseguire queste operazioni:
 
 - Assicurarsi che la configurazione di crittografia della tabella di destinazione sia identica alla configurazione della tabella di origine. In particolare, entrambe le tabelle devono avere le stesse colonne crittografate e le colonne devono essere crittografate usando gli stessi tipi di crittografia e le stesse chiavi di crittografia. Nota: se una o più colonne di destinazione sono crittografate in modo diverso dalla relativa colonna di origine corrispondente, non sarà possibile decrittografare i dati nella tabella di destinazione dopo l'operazione di copia. I dati risulteranno danneggiati.
 - Configurare entrambe le connessioni di database, per la tabella di origine e la tabella di destinazione, senza Always Encrypted abilitato. 
@@ -584,7 +585,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sulla Crittografia sempre attiva](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Esercitazione su database SQL: Proteggere i dati sensibili con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

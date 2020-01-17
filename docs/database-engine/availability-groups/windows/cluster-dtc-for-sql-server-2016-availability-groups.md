@@ -1,7 +1,7 @@
 ---
-title: Come inserire in cluster il servizio DTC per un gruppo di disponibilità
+title: Inserire in cluster il servizio DTC per un gruppo di disponibilità
 description: 'Descrive i requisiti e i passaggi per il clustering del servizio Microsoft Distributed Transaction Coordinator (DTC) per un gruppo di disponibilità Always On. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 450ea18f977f720b742a9fba28f6d24d01d5373d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988565"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244393"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Come inserire in cluster il servizio DTC per un gruppo di disponibilità Always On
 

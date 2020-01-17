@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014589"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822490"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Un failover manuale pianificato è supportato solo quando la replica principale 
 > [!NOTE]  
 >  Se la replica primaria e le repliche secondarie sono configurate per la modalità di failover automatico, dopo la sincronizzazione, la replica secondaria può anche fungere da destinazione per un failover automatico. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
    
-##  <a name="BeforeYouBegin"></a> Operazioni preliminari 
+##  <a name="BeforeYouBegin"></a> Prima di iniziare 
 
 >[!IMPORTANT]
 >Esistono procedure specifiche per eseguire il failover di un gruppo di disponibilità per la scalabilità in lettura senza usare uno strumento di gestione cluster. Quando un gruppo di disponibilità contiene CLUSTER_TYPE = NONE, seguire le procedure descritte in [Eseguire il failover di una replica primaria in un gruppo di disponibilità per scalabilità in lettura](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
@@ -50,7 +50,7 @@ Un failover manuale pianificato è supportato solo quando la replica principale 
 -   La replica secondaria di destinazione deve essere attualmente sincronizzata con la replica primaria. Per tutti i database secondari della replica secondaria deve esser creato un join al gruppo di disponibilità. Devono essere sincronizzati anche con i database primari corrispondenti (ovvero i database secondari locali devono essere SINCRONIZZATI). 
   
     > [!TIP] 
-    >  Per determinare la conformità del failover di una replica secondaria, eseguire una query della colonna **is_failover_ready** nella DMV [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Oppure è possibile esaminare la colonna **Conformità Failover** del [dashboard del gruppo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  Per determinare la conformità del failover di una replica secondaria, eseguire una query della colonna **is_failover_ready** nella DMV [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Oppure è possibile esaminare la colonna **Conformità Failover** del [dashboard del gruppo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Questa attività è supportata solo nella replica secondaria di destinazione. È necessario essere connessi all'istanza del server che ospita la replica secondaria di destinazione. 
   
 ###  <a name="Security"></a> Sicurezza 

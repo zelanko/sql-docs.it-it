@@ -1,6 +1,8 @@
 ---
-title: REVOKE - autorizzazioni per entità di database (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorizzazioni per entità di database
+description: Revocare le autorizzazioni per un utente di database, un ruolo del database o un ruolo applicazione.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982914"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243336"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="database-user-permissions"></a>Autorizzazioni per utenti di database  
  Un utente di database è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un utente di database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
@@ -158,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Revoca dell'autorizzazione CONTROL per un utente a un altro utente  
+### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>R. Revoca dell'autorizzazione CONTROL per un utente a un altro utente  
  Nell'esempio seguente viene revocata l'autorizzazione `CONTROL` per l'utente [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del database `Wanida` all'utente `RolandX`.  
   
 ```  

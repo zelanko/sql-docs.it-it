@@ -1,6 +1,7 @@
 ---
-title: 'Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO (SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: Il gruppo di disponibilità ha superato la soglia RPO
+description: Problemi comuni e soluzioni per i casi in cui il gruppo di disponibilità Always On supera l'obiettivo del punto di ripristino (RPO)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013744"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822188"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disco fisici: tutti i contatori**  
   
--   **Disco fisico: Microsec. secondi/trasf. disco**  
+-   **Disco fisico: Avg. secondi/trasf. disco**  
   
 -   **SQL Server: Database > Tempo di attesa scaricamento log**  
   

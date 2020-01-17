@@ -1,6 +1,7 @@
 ---
-title: Opzione di failover di rilevamento dell'integrità del database | Documenti Microsoft
-ms.custom: ''
+title: Rilevamento dell'integrità a livello di database
+description: Informazioni sulla funzionalità di rilevamento dell'integrità a livello di database per i gruppi di disponibilità Always On di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013972"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251260"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ Il rilevamento dell'integrità a livello di database implementa criteri di failo
 
 ## <a name="managing-and-monitoring-database-level-health-detection"></a>Gestione e monitoraggio del rilevamento dell'integrità a livello di database
 
-### <a name="dynamic-management-views"></a>DMV
+### <a name="dynamic-management-views"></a>DMV (Dynamic Management View)
 
 La DMV di sistema sys.availability_groups mostra una colonna db_failover che indica se l'opzione di rilevamento dell'integrità a livello di database è disattivata (0) o attivata (1).
 
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 Output di esempio della dmv:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ Ad esempio, questo estratto del log degli errori mostra che la scrittura del log
 >
 >2016-04-25 12:20:21.21 spid75      Lo stato della replica di disponibilità locale nel gruppo di disponibilità 'ag' è cambiato da 'PRIMARY_NORMAL' a 'RESOLVING_NORMAL'.  Lo stato è cambiato perché il gruppo di disponibilità sta per passare offline.  La replica passerà offline perché il gruppo di disponibilità associato è stato eliminato, l'utente ha portato offline il gruppo di disponibilità associato nella console di gestione di Windows Server Failover Clustering (WSFC) o il gruppo di disponibilità sta effettuando il failover in un'altra istanza di SQL Server.  Per altre informazioni, vedere il log degli errori di SQL Server, la console di gestione di Windows Server Failover Clustering (WSFC) o il log WSFC.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Evento esteso sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Evento esteso sqlserver.availability_replica_database_fault_reporting
 
 È stato definito un nuovo evento esteso a partire da SQL Server 2016 che viene attivato dal rilevamento dell'integrità a livello di database.  Il nome dell'evento è **sqlserver.availability_replica_database_fault_reporting**
 
@@ -160,7 +161,7 @@ Descrizione dei campi:
 |database_name |Nome del database che segnala l'errore.|
 |database_replica_id |ID del database della replica di disponibilità.|
 |failover_ready_replicas |Numero di repliche secondarie per il failover automatico sincronizzate.|
-|fault_type  | ID errore segnalato. I valori possibili sono:  <br/> 0: nessuno <br/>1: sconosciuto<br/>2: arresto|
+|fault_type  | ID errore segnalato. Valori possibili:  <br/> 0: nessuno <br/>1: sconosciuto<br/>2: arresto|
 |is_critical | Questo valore deve sempre restituire true per l'XEvent a partire da SQL Server 2016.|
 
 

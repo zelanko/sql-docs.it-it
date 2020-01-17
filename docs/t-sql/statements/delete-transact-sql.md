@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,14 +25,15 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983243"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548277"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Rimuove una o più righe da una tabella o vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -228,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione DELETE tramite la sintassi minima richiesta.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>A. Utilizzo di DELETE senza una clausola WHERE  
+#### <a name="a-using-delete-with-no-where-clause"></a>R. Utilizzo di DELETE senza una clausola WHERE  
  Nell'esempio seguente vengono eliminate tutte le righe dalla tabella `SalesPersonQuotaHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] perché una clausola WHERE non è utilizzata per limitare il numero di righe eliminate.  
   
 ```sql
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Utilizzo di un cursore per determinare la riga da eliminare  
- Nell'esempio seguente viene eliminata una riga dalla tabella `EmployeePayHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] utilizzando un cursore denominato `my_cursor`. L'operazione di eliminazione interessa unicamente la riga attualmente recuperata dal cursore.  
+ Nell'esempio seguente viene eliminata una riga dalla tabella `EmployeePayHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] usando un cursore denominato `complex_cursor`. L'operazione di eliminazione interessa unicamente la riga attualmente recuperata dal cursore.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Eliminazione di dati da una tabella remota tramite una funzione OPENQUERY  
- Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) . Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. Eliminare usando una clausola WHERE
+
+Questa query mostra come eliminare usando la clausola WHERE e non una clausola FROM.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

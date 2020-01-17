@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981859"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001983"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "73981859"
   
 -   Immediatamente dopo l'impostazione dell'opzione e l'esecuzione dell'istruzione **RECONFIGURE** oppure, in determinati casi, dell'istruzione **RECONFIGURE WITH OVERRIDE**. La riconfigurazione di alcune opzioni invalida i piani nella cache dei piani, richiedendo la compilazione di nuovi piani. Per altre informazioni, vedere [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
   
-     oppure  
+     -oppure-  
   
 -   Dopo l'esecuzione delle azioni precedenti e il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -69,7 +69,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
   
 -   SC = opzioni a configurazione automatica.  
   
-    |Opzione di configurazione|Valore minimo|Valore massimo|Default|  
+    |Opzione di configurazione|Valore minimo|Valore massimo|Predefinito|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -114,7 +114,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 è il valore massimo consigliato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|0<br /><br /> Il valore 0 consente di configurare automaticamente il numero massimo di thread di lavoro in base al numero di processori, secondo la formula (256+( *\<processori>* -4) * 8) per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit e (512 + ( *\<processori>* - 4) * 8) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 è il valore massimo consigliato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|0<br /><br /> Il valore 0 consente di configurare automaticamente il numero massimo di thread di lavoro in base al numero di processori, secondo la formula (256+(*\<processori>* -4) * 8) per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit e (512 + (*\<processori>* - 4) * 8) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -124,6 +124,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

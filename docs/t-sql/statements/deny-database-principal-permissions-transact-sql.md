@@ -1,6 +1,8 @@
 ---
-title: DENY - autorizzazioni per entità di database (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY - Autorizzazioni per entità di database
+description: Negare le autorizzazioni per un utente di database, un ruolo del database o un ruolo applicazione.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982519"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244577"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +114,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="database-user-permissions"></a>Autorizzazioni per utenti di database  
  Un utente di database è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un utente di database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
@@ -150,7 +152,7 @@ DENY permission [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. Negazione dell'autorizzazione CONTROL per un utente a un altro utente  
+### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>R. Negazione dell'autorizzazione CONTROL per un utente a un altro utente  
  Nell'esempio seguente viene negata l'autorizzazione `CONTROL` per l'utente [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `Wanida` all'utente `RolandX`.  
   
 ```  

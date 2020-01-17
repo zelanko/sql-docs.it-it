@@ -1,6 +1,7 @@
 ---
-title: Autorizzazioni GRANT-DENY-REVOKE - Azure SQL Data Warehouse e Parallel Data Warehouse | Microsoft Docs
-ms.custom: ''
+title: Autorizzazioni GRANT-DENY-REVOKE
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095582"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255471"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "74095582"
   
 -   **REVOKE** rimuove le autorizzazioni **GRANT** o **DENY** esistenti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -210,7 +211,7 @@ REVOKE
   
 -   CREATE SCHEMA  
   
--   CREATE TABLE  
+-   CREA TABELLA  
   
 -   CREATE VIEW  
   
@@ -241,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Grafico delle autorizzazioni  
  Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN**.  
   
- ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza APS")  
+ ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
   
  Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica ad **apsdoc\@microsoft.com**).  
   
@@ -264,7 +265,7 @@ REVOKE
   
 ##  <a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Concessione di un'autorizzazione a livello di server a un account di accesso  
+### <a name="a-granting-a-server-level-permission-to-a-login"></a>R. Concessione di un'autorizzazione a livello di server a un account di accesso  
  Le due istruzioni seguenti concedono un'autorizzazione a livello di server a un account di accesso.  
   
 ```  

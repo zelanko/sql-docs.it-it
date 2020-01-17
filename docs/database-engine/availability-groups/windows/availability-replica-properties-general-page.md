@@ -1,7 +1,7 @@
 ---
-title: Proprietà della replica di disponibilità (pagina Generale) per i gruppi di disponibilità
+title: Pagina Generale (Proprietà replica di disponibilità)
 description: Descrizione delle varie proprietà disponibili nella pagina "Generale" delle "Proprietà replica di disponibilità" in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988664"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241743"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Proprietà della replica di disponibilità (pagina Generale) per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67988664"
 ## <a name="task-list"></a>Elenco attività  
  **Per visualizzare le proprietà della replica di disponibilità**  
   
--   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
+-   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -38,10 +38,10 @@ ms.locfileid: "67988664"
  Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.  
   
  **Ruolo**  
- **Primaria**  
+ **Server/istanza primaria**  
  Attualmente la replica primaria.  
   
- **Secondari**  
+ **Server/istanza secondaria**  
  Attualmente una replica secondaria.  
   
  **Risoluzione**  

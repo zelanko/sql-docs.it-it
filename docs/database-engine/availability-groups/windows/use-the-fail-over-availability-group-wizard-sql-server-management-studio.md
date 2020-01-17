@@ -1,6 +1,7 @@
 ---
-title: Usare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Failover di un gruppo di disponibilità
+description: Descrive come eseguire il failover pianificato o il failover manuale forzato di un gruppo di disponibilità Always On con SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013525"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821942"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,8 +140,8 @@ ms.locfileid: "68013525"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Automatic**|Una replica secondaria configurata per il failover automatico supporta inoltre il failover manuale pianificato quando la replica secondaria viene sincronizzata con la replica primaria.|  
-|**Manual**|Sono disponibili due tipi di failover manuale: pianificato (con perdita di dati) e forzato (con possibile perdita di dati). Per una determinata replica secondaria è supportato solo uno di questi tipi, a seconda della modalità di disponibilità e, per la modalità commit sincrono, dello stato di sincronizzazione della replica secondaria. Per determinare quale forma di failover manuale è supportata attualmente da una replica secondaria specificata, vedere la colonna **Conformità failover** di questa griglia.|  
+|**Automatico**|Una replica secondaria configurata per il failover automatico supporta inoltre il failover manuale pianificato quando la replica secondaria viene sincronizzata con la replica primaria.|  
+|**Manuale**|Sono disponibili due tipi di failover manuale: pianificato (con perdita di dati) e forzato (con possibile perdita di dati). Per una determinata replica secondaria è supportato solo uno di questi tipi, a seconda della modalità di disponibilità e, per la modalità commit sincrono, dello stato di sincronizzazione della replica secondaria. Per determinare quale forma di failover manuale è supportata attualmente da una replica secondaria specificata, vedere la colonna **Conformità failover** di questa griglia.|  
   
  Per altre informazioni, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -181,7 +182,7 @@ ms.locfileid: "68013525"
  **Connesso come**  
  Visualizza l'account connesso all'istanza del server, dopo che è stata stabilita la connessione. Se in questa colonna viene visualizzato "**Non connesso**" per un'istanza del server specificata, sarà necessario fare clic sul pulsante **Connetti** .  
   
- **Connect**  
+ **Connettere**  
  Fare clic su questo pulsante se l'istanza del server viene eseguita con un account diverso rispetto ad altre istanze del server a cui è necessario connettersi.  
   
  **Annulla**  

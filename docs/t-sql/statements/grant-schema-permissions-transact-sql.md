@@ -18,19 +18,19 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050814"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762656"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede autorizzazioni per uno schema.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,10 +75,10 @@ AS *granting_principal*
 -   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
->  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Esempio: un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.  
+>  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Ad esempio: un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.  
   
  Uno schema è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per uno schema, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  L'utente U1 dispone dell'autorizzazione CREATE SYNONYM per il database e dell'autorizzazione SELECT per lo schema S1. L'utente U1 può pertanto creare un sinonimo nello schema S1 per l'oggetto negato T1 e quindi accedere a tale oggetto utilizzando il sinonimo.  
   
- L'utente U1 dispone dell'autorizzazione CREATE VIEW per il database e dell'autorizzazione SELECT per lo schema S1. L'utente U1 può pertanto creare una vista nello schema S1 per eseguire una query sui dati dall'oggetto negato T1 e quindi accedere a tale oggetto utilizzando la vista.  
-  
- Per ulteriori informazioni, vedere l'articolo della Knowledge Base 914847.  
+ L'utente U1 dispone dell'autorizzazione CREATE VIEW per il database e dell'autorizzazione SELECT per lo schema S1. L'utente U1 può pertanto creare una vista nello schema S1 per eseguire una query sui dati dall'oggetto negato T1 e quindi accedere a tale oggetto utilizzando la vista.
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
@@ -132,7 +130,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>A. Concessione dell'autorizzazione INSERT per lo schema HumanResources a guest  
+### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>R. Concessione dell'autorizzazione INSERT per lo schema HumanResources a guest  
   
 ```  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  

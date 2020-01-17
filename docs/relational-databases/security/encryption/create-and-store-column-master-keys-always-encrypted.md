@@ -1,6 +1,7 @@
 ---
-title: Creare e archiviare chiavi master della colonna per Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Creare e archiviare chiavi master della colonna per Always Encrypted
+description: Informazioni su come selezionare un archivio chiavi e creare chiavi master della colonna per SQL Server Always Encrypted.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594431"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557836"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creare e archiviare chiavi master della colonna per Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -186,7 +187,7 @@ $cngAlgorithm = New-Object System.Security.Cryptography.CngAlgorithm($cngAlgorit
 $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyName, $cngKeyParams)
 ```
 
-#### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+#### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio
 
 Vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
@@ -220,10 +221,10 @@ Vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Man
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi CNG a utenti e applicazioni
 Vedere la documentazione per il modulo di protezione hardware e il provider del servizio di crittografia per informazioni su come configurare il provider del servizio di crittografia in un computer e su come concedere l'accesso al modulo di protezione hardware a utenti e applicazioni.
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 - [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Effettuare il provisioning di chiavi Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
 ## <a name="see-also"></a>Vedere anche 
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

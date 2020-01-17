@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 3f2e37aaba72b4c76545b79f68c614e21278228e
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929717"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957358"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 2016 | [Visual C++ Redistributable per Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte 1: Configurare un'entità servizio di Azure Active Directory  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte I: Configurare un'entità servizio di Azure Active Directory  
  Per concedere le autorizzazioni di accesso di SQL Server all'insieme di credenziali delle chiavi di Azure, è necessario un account dell'entità servizio in Azure Active Directory (AAD).  
   
 1.  Andare al [portale di Azure ](https://ms.portal.azure.com/) ed eseguire l'accesso.  
@@ -57,7 +57,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Parte 2: Creare un insieme di credenziali delle chiavi e una chiave  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Parte II: Creare un insieme di credenziali delle chiavi e una chiave  
  L'insieme di credenziali delle chiavi e la chiave creata in questo passaggio verranno usate dal motore di database di SQL Server per la protezione della chiave di crittografia.  
   
 > [!IMPORTANT]  
@@ -175,7 +175,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
  
     1. Creare la chiave di crittografia in locale in un dispositivo HSM locale. Verificare che si tratti di una chiave RSA 2048 asimmetrica, in modo che sia supportata da SQL Server.
     2. Importare la chiave di crittografia nell'insieme di credenziali delle chiavi di Azure. Vedere i passaggi seguenti per informazioni su come eseguire questa operazione.
-    3. Prima di usare la chiave nell'insieme di credenziali delle chiavi di Azure per la prima volta, eseguire un backup di questa chiave. Altre informazioni sul comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
+    3. Prima di usare la chiave nell'insieme di credenziali delle chiavi di Azure per la prima volta, eseguire un backup di questa chiave. Altre informazioni sul comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
     4. Ogni volta che vengono apportate modifiche alla chiave, ad esempio si aggiungono elenchi di controllo di accesso, tag o attributi chiave, assicurarsi di eseguire un altro backup della chiave di Azure Key Vault.
 
         > [!NOTE]  
@@ -354,7 +354,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
   
 Ora che è stata completata la configurazione di base, vedere come [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
   

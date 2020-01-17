@@ -1,6 +1,7 @@
 ---
-title: Informazioni di riferimento sugli oggetti di sistema per i gruppi di disponibilità Always On | Microsoft Docs
-ms.custom: ''
+title: Informazioni di riferimento sugli oggetti di sistema per i gruppi di disponibilità
+description: Riferimento per i vari oggetti di sistema che possono essere usati quando si lavora con i gruppi di disponibilità Always On.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991387"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822460"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Informazioni di riferimento sugli oggetti di sistema per i gruppi di disponibilità Always On
 

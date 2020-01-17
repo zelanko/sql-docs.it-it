@@ -1,6 +1,7 @@
 ---
-title: Cambio di ruolo durante una sessione di mirroring del database (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Scambiare i ruoli di mirroring del database
+description: Informazioni su come scambiare i ruoli di mirroring del database.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025279"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252790"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68025279"
   
      Il failover manuale è disponibile a scopo di amministrazione. Per altre informazioni, vedere [Failover manuale](#ManualFailover)più avanti in questo argomento.  
   
--   **Failover automatico**  
+-   **Automatic failover**  
   
      In presenza di un server di controllo del mirroring, con la modalità a sicurezza elevata è supportato il failover automatico. Il failover automatico si verifica solo in caso di perdita del server principale se il server di controllo del mirroring e il server mirror sono ancora connessi tra loro e il database è già sincronizzato. Per altre informazioni, vedere [Failover automatico](#AutomaticFailover)più avanti in questo argomento.  
   
@@ -68,9 +69,9 @@ ms.locfileid: "68025279"
   
 ||Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Failover automatico|no|no|Sì|  
-|Failover manuale|no|Sì|Sì|  
-|Servizio forzato|Sì|Sì|no|  
+|Failover automatico|No|No|Sì|  
+|Failover manuale|No|Sì|Sì|  
+|Servizio forzato|Sì|Sì|No|  
   
  Dopo un cambio di ruolo è necessario che alcuni metadati siano disponibili su entrambi i partner per garantire che tutti gli utenti del database possano accedere al nuovo database principale. È inoltre necessario che i processi di backup vengano creati sul nuovo server principale per garantire che i backup del database continuino regolarmente in base alla pianificazione. Per altre informazioni, vedere [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -91,11 +92,11 @@ ms.locfileid: "68025279"
  L'amministratore del database può utilizzare il failover manuale per aggiornare l'hardware o il software senza ridurre la disponibilità. Per eseguire aggiornamenti del software mediante il mirroring del database, è necessario che il server mirror e/o il sistema ricevano precedentemente gli aggiornamenti.  
   
 > [!NOTE]  
->  Il mirroring del database dovrebbe consentire l'esecuzione di un aggiornamento in sequenza. Questo non è tuttavia garantito poiché le modifiche future non sono ancora note. Per altre informazioni, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).  
+>  Il mirroring del database dovrebbe consentire l'esecuzione di un aggiornamento in sequenza. Questo non è tuttavia garantito poiché le modifiche future non sono ancora note. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
  Nella figura seguente è illustrato un esempio di utilizzo del failover manuale per mantenere la disponibilità del database mentre si aggiorna un'istanza del server di database. Al termine dell'aggiornamento, un amministratore può eseguire facoltativamente il failover all'istanza del server originale. Questa operazione è utile se l'amministratore desidera arrestare la sessione di mirroring e utilizzare il server mirror in un'altra posizione. In questo modo, è possibile utilizzare ripetutamente una singola istanza del server per aggiornare una serie di istanze del server di database.  
   
- ![Failover manuale pianificato](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Failover manuale pianificato")  
+ ![Failover manuale pianificato](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
   
 ###  <a name="ConditionsForManualFo"></a> Condizioni necessarie per un failover manuale  
  Per il failover manuale, è necessario che il livello di protezione delle transazioni sia impostato su FULL (ovvero in modalità a protezione elevata). Se i partner sono connessi e il database è già sincronizzato, è supportato il failover manuale.  
@@ -124,7 +125,7 @@ ms.locfileid: "68025279"
     > [!NOTE]  
     >  Nell'istante stesso in cui il nuovo server mirror ha ristabilito la sincronizzazione dei database, il failover è nuovamente possibile, stavolta nella direzione inversa.  
   
- Dopo il failover, i client devono riconnettersi al database principale corrente. Per altre informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Dopo il failover, i client devono riconnettersi al database principale corrente. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **Per iniziare il failover manuale**  
   
@@ -182,11 +183,11 @@ ms.locfileid: "68025279"
   
  Nella figura seguente viene illustrata una singola istanza di failover automatico.  
   
- ![Failover automatico](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "Failover automatico")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
   
  La sessione ha inizialmente un quorum completo, ovvero tutti e tre i server sono connessi. **Partner_A** è il server principale e **Partner_B** il server mirror. **Partner_A** , o il database principale del **Partner_A**, diventa non disponibile. Sia il server di controllo del mirroring che **Partner_B** rilevano che il server principale non è più disponibile e la sessione mantiene il quorum. **Partner_B** diviene il server principale e rende disponibile la propria copia del database come nuovo database principale. Quando si riconnette alla sessione, **Partner_A** individua che **Partner_B** detiene ora il ruolo di server principale. **Partner_A** assume quindi il ruolo di server mirror.  
   
- Dopo il failover, i client devono riconnettersi al database principale corrente. Per altre informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Dopo il failover, i client devono riconnettersi al database principale corrente. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  Le transazioni che sono state preparate utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator, ma di cui non è stato ancora eseguito il commit nel momento in cui si verifica un failover, vengono considerate interrotte dopo il failover del database.  
@@ -303,7 +304,7 @@ ms.locfileid: "68025279"
   
  **Per creare un nuovo database mirror**  
   
- [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+ [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
  **Per avviare il mirroring del database**  
   

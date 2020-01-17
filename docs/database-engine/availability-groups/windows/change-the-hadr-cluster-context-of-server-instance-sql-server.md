@@ -1,7 +1,7 @@
 ---
-title: Cambiare il cluster che gestisce i metadati per le repliche in un gruppo di disponibilità
+title: 'Modificare i metadati: Migrazione di gruppi di disponibilità tra cluster'
 description: Quando si esegue una migrazione tra cluster, cambiare il cluster che gestisce i metadati per le repliche di disponibilità all'interno di un gruppo di disponibilità Always On cambiando il contesto del cluster HADR di un'istanza di SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988571"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241812"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Cambiare il cluster che gestisce i metadati per le repliche in un gruppo di disponibilità Always On
 
@@ -50,7 +50,7 @@ ms.locfileid: "67988571"
   
      Se nell'istanza del server sono presenti repliche di disponibilità, prima di poter cambiare il contesto del cluster HADR è necessario eseguire una delle operazioni indicate di seguito:  
   
-    |Ruolo di replica|Azione|Collegamento|  
+    |Ruolo della replica|Azione|Collegamento|  
     |------------------|------------|----------|  
     |Primaria|Gruppo di disponibilità offline.|[Portare un gruppo di disponibilità offline &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)|  
     |Secondari|Rimozione della replica dal gruppo di disponibilità|[Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -89,7 +89,7 @@ ms.locfileid: "67988571"
   
 2.  Usare la clausola SET HADR CLUSTER CONTEXT dell'istruzione [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) , come segue:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'** _windows\_cluster_ **'** | LOCAL }  
   
      dove  
   
@@ -147,10 +147,10 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On Team Blog (Blog di SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   

@@ -1,8 +1,7 @@
 ---
-title: Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità
-description: È possibile usare il seeding automatico per inizializzare le repliche secondarie come parte di un gruppo di disponibilità Always On con SQL 2016 e versioni successive.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Seeding automatico per le repliche secondarie
+description: Informazioni su come il seeding automatico può inizializzare le repliche secondarie come parte di un gruppo di disponibilità Always On con SQL 2016 e versioni successive.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934923"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254098"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ Se per la replica secondaria è stato usato il seeding automatico quando è stat
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Modificare la modalità di seeding di una replica
 
-La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Esempio:
+La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Ad esempio:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -180,7 +179,7 @@ Sono disponibili quattro modi per monitorare e risolvere i problemi del seeding 
 * [Tabelle di cronologia di backup](#backup-history-tables)
 * [Eventi estesi](#extended-events)
 
-### <a name="dynamic-management-views"></a>DMV
+### <a name="dynamic-management-views"></a>DMV (Dynamic Management View)
 
 Sono disponibili due viste a gestione dinamica (DMV) per il monitoraggio del seeding: `sys.dm_hadr_automatic_seeding` e `sys.dm_hadr_physical_seeding_stats`.
 
@@ -231,7 +230,7 @@ GO
 
 La tabella seguente elenca gli eventi estesi correlati al seeding automatico.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Messaggio di richiesta di seeding.|
 |hadr_physical_seeding_backup_state_change|Modifica dello stato lato backup del seed fisico.|

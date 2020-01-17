@@ -1,7 +1,7 @@
 ---
-title: Funzionamento del timeout lease e controllo integrità del gruppo di disponibilità
+title: Timeout lease e controllo integrità del gruppo di disponibilità
 description: Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874366"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254063"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Impostazione di timeout | Scopo | Compreso tra | Utilizzi | IsAlive e LooksAlive | Cause | Risultato 
+ | Impostazione di timeout | Scopo | tra le | Utilizzi | IsAlive e LooksAlive | Cause | Risultato 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Timeout lease </br> **Impostazione predefinita: 20000** | Impedire lo split brain | Da primaria a cluster </br> (HADR) | [Oggetti evento di Windows](/windows/desktop/Sync/event-objects)| Usati in entrambi | Mancata risposta del sistema operativo, memoria virtuale insufficiente, paging del working set, generazione di dump, massimo utilizzo della CPU, WSFC inattivo (perdita di quorum) | Risorsa del gruppo di disponibilità offline-online, failover |  
  | Timeout sessione </br> **Impostazione predefinita: 10000** | Informare del problema di comunicazione tra replica primaria e secondaria | Da secondaria a primaria </br> (HADR) | [Socket TCP (messaggi inviati tramite l'endpoint di mirroring del database)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usati in nessuna delle due | Comunicazione di rete, </br> Problemi nella replica secondaria - inattiva, mancata risposta del sistema operativo, contesa di risorse | Secondaria - DISCONNESSA | 

@@ -1,7 +1,7 @@
 ---
-title: Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità
+title: Ripartire il carico di lavoro alla replica secondaria di un gruppo di disponibilità
 description: Informazioni sulla ripartizione di query e report di sola lettura in replica secondaria di un gruppo di disponibilità Always On in SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991665"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822406"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67991665"
   
 -   Nei carichi di lavoro di sola lettura per le tabelle basate su disco viene usato il controllo delle versioni delle righe per rimuovere la contesa di blocco nei database secondari. Viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito. Tutti gli hint di blocco vengono ignorati. In questo modo si elimina la contesa lettore/writer.  
   
--   I carichi di lavoro di sola lettura per le tabelle durevoli con ottimizzazione per la memoria accedono ai dati esattamente nello stesso modo in cui sono accessibili nel database primario, usando stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento della transazione (vedere [Livelli di isolamento nel motore di database](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
+-   I carichi di lavoro di sola lettura per le tabelle ottimizzate per la memoria durevoli accedono ai dati esattamente nello stesso modo in cui si accede nel database primario, tramite le stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento delle transazioni (vedere [Livelli di isolamento nel motore di database](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
   
--   Le operazioni DML sono consentite nelle variabili di tabella sia per i tipi di tabella basati su disco che per quelli con ottimizzazione per la memoria nella replica secondaria.  
+-   Le operazioni DML sono consentite nelle variabili di tabella sia per i tipi di tabella basati su disco che per quelli ottimizzati per la memoria nella replica secondaria.  
   
 ##  <a name="bkmk_Prerequisites"></a> Prerequisiti per il gruppo di disponibilità  
   
@@ -90,9 +90,9 @@ ms.locfileid: "67991665"
 -   Non appena una replica leggibile viene abilitata per la lettura, può iniziare ad accettare connessioni ai relativi database secondari. Tuttavia, se in un database primario è presente una transazione attiva, le versioni di riga non saranno completamente disponibili nel database secondario corrispondente. È necessario eseguire il commit o il rollback di tutte le transazioni attive presenti nella replica primaria al momento della configurazione della replica secondaria. Fino a quando questo processo non viene completato, il mapping del livello di isolamento delle transazioni nel database secondario non è completo e le query sono temporaneamente bloccate.  
   
     > [!WARNING]  
-    >  L'esecuzione di transazioni prolungate ha un impatto sul numero di righe con versione mantenute, sia per le tabelle basate su disco che per quelle con ottimizzazione per la memoria.  
+    >  L'esecuzione di transazioni prolungate ha un impatto sul numero di righe con versione mantenute, sia per le tabelle basate su disco che per quelle ottimizzate per la memoria.  
   
--   In un database secondario con tabelle con ottimizzazione per la memoria, anche se le versioni di riga vengono generate sempre per le tabelle con ottimizzazione per la memoria, le query vengono bloccate finché non vengono completate tutte le transazioni attive presenti nella replica primaria quando la replica secondaria è stata abilitata per la lettura. In questo modo si garantisce che sia le tabelle basate su disco che quelle con ottimizzazione per la memoria siano disponibili contemporaneamente per il carico di lavoro di report e per le query di sola lettura.  
+-   In un database secondario con tabelle con ottimizzazione per la memoria, anche se le versioni di riga vengono generate sempre per le tabelle con ottimizzazione per la memoria, le query vengono bloccate finché non vengono completate tutte le transazioni attive presenti nella replica primaria quando la replica secondaria è stata abilitata per la lettura. In questo modo si garantisce che sia le tabelle basate su disco che quelle ottimizzate per la memoria siano disponibili contemporaneamente per il carico di lavoro di report e per le query di sola lettura.  
   
 -   Le funzionalità di rilevamento delle modifiche e Change Data Capture non sono supportate nei database secondari che appartengono a una replica secondaria leggibile:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67991665"
  Ciò significa che si verifica della latenza, in genere solo pochi secondi, tra la replica primaria e quella secondaria. In rari casi, tuttavia, ad esempio se problemi di rete compromettono la velocità effettiva, la latenza può diventare significativa. La latenza aumenta quando si verificano colli di bottiglia I/O e quando viene sospeso lo spostamento dati. Per monitorare lo spostamento dati sospeso, è possibile usare il [dashboard Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latenza dei dati nei database con tabelle ottimizzate per la memoria  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive, vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle ottimizzate per la memoria. La latenza dei dati prevista per le tabelle con ottimizzazione per la memoria è paragonabile a quella per le tabelle basate su disco.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive, vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle ottimizzate per la memoria. La latenza dei dati prevista per le tabelle ottimizzate per la memoria è paragonabile a quella per le tabelle basate su disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Impatto sui carichi di lavoro di sola lettura  
  Quando si configura una replica secondaria per l'accesso di sola lettura, nei carichi di lavoro di sola lettura dei database secondari si usano le risorse di sistema, ad esempio CPU e I/O (per le tabella basate su disco) dai thread della fase di rollforward, soprattutto se i carichi di lavoro di sola lettura nelle tabelle basate su disco prevedono l'esecuzione di molte operazioni di I/O. Non esiste alcun impatto I/O quando si accede alle tabelle con ottimizzazione per la memoria perché tutte le righe si trovano in memoria.  
@@ -183,10 +183,10 @@ ms.locfileid: "67991665"
   
 -   Poiché le statistiche temporanee sono archiviate in **tempdb**, un riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta l'indisponibilità di tutte le statistiche temporanee.  
   
--   Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è possibile usare questo suffisso quando si creano statistiche in un database primario. Per altre informazioni, vedere [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è possibile usare questo suffisso quando si creano statistiche in un database primario. Per altre informazioni, vedere l'articolo relativo alle [statistiche](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
- Con le tabelle con ottimizzazione per la memoria in una replica secondaria possono essere usati gli stessi livelli di isolamento delle transazioni usati nella replica primaria. È consigliabile impostare il livello di isolamento a livello di sessione su READ COMMITTED e l'opzione a livello di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. Esempio:  
+ Con le tabelle ottimizzate per la memoria in una replica secondaria possono essere usati gli stessi livelli di isolamento delle transazioni usati nella replica primaria. È consigliabile impostare il livello di isolamento a livello di sessione su READ COMMITTED e l'opzione a livello di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. Ad esempio:  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -215,9 +215,9 @@ GO
   
     |Replica secondaria leggibile?|L'isolamento dello snapshot o l'isolamento dello snapshot Read Committed è abilitato?|Database primario|Database secondario|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |no|no|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
-    |no|Sì|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
-    |Sì|no|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
+    |No|No|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
+    |No|Sì|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
+    |Sì|No|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
     |Sì|Sì|Versioni di riga e overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Attività correlate  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

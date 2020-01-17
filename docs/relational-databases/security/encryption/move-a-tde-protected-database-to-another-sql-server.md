@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b995753ba255c835979fb3bb868a62a8d801bbb2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594311"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957402"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database **master** del server o una chiave asimmetrica protetta da un modulo EKM.   
+  Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE esegue la crittografia e la decrittografia delle operazioni di I/O di file di dati e log in tempo reale. La crittografia usa una chiave di crittografia del database (DEK) che viene archiviata nel record di avvio del database per la disponibilità durante il ripristino. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database **master** del server o una chiave asimmetrica protetta da un modulo EKM.   
    
 ##  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -148,7 +148,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  
   
-     **Database Name**  
+     **Nome database**  
      Consente di visualizzare il nome del database da scollegare.  
   
      **Interrompi connessioni**  
@@ -163,10 +163,10 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      **Mantieni cataloghi full-text**  
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
   
-     **Message**  
+     **Messaggio**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
@@ -202,7 +202,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      **Percorso file MDF**  
      Consente di visualizzare il percorso e il nome del file MDF selezionato.  
   
-     **Database Name**  
+     **Nome database**  
      Consente di visualizzare il nome del database.  
   
      **Collega come**  
@@ -211,28 +211,28 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      **Proprietario**  
      Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
     |----------|-----------------|-----------------|  
     |(Nessuna icona)|(Nessun testo)|L'operazione di collegamento non è stata avviata o può essere sospesa per questo oggetto. È il valore predefinito all'apertura della finestra di dialogo.|  
     |Triangolo verde che punta a destra|In corso|L'operazione di collegamento è stata avviata ma non ancora completata.|  
-    |Segno di spunta verde|Esito positivo|L'oggetto è stato collegato.|  
+    |Segno di spunta verde|Operazione completata|L'oggetto è stato collegato.|  
     |Cerchio rosso con croce bianca|Errore|Si è verificato un errore durante l'operazione. Il collegamento non è stato completato.|  
-    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Stopped|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
+    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
-     **Message**  
+     **Messaggio**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale "Impossibile trovare il file".  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Consente di individuare i file principali del database necessari. Se l'utente seleziona un file con estensione mdf, le informazioni appropriate vengono inserite automaticamente nei rispettivi campi della griglia **Database da collegare** .  
   
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **"** _<database_name>_ **" dettagli database**  
+     **"** _<nome_database>_ **" dettagli database**  
      Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
@@ -247,7 +247,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      **Percorso file corrente**  
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
-     **Message**  
+     **Messaggio**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
 ###  <a name="TsqlMove"></a> Uso di Transact-SQL  

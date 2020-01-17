@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252017"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249845"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252017"
 
 Importa un file di dati in una tabella o una vista di database in un formato specificato dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -89,7 +89,7 @@ BULK INSERT
 
 **'** _data_file_ **'** è il percorso completo del file contenente i dati da importare nella tabella o nella vista specificata. L'istruzione BULK INSERT consente di importare dati da un disco o da Archiviazione BLOB di Azure, ad esempio unità di rete, dischi floppy, dischi rigidi e così via.
 
-*data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Esempio:
+*data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Ad esempio:
 
 ```sql
 BULK INSERT Sales.Orders
@@ -100,7 +100,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archiviazione BLOB di Azure. In tal caso, è necessario specificare l'opzione **data_source_name**. Per un esempio, vedere [Importazione di dati da un file nell'archiviazione BLOB di Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 **'** _data_source_name_ **'** 
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e database SQL di Azure.
@@ -177,7 +177,7 @@ KEEPNULLS specifica che durante l'operazione di importazione bulk le colonne vuo
 
 KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ specifica il numero approssimativo di kilobyte (KB) di dati per ogni batch come *kilobytes_per_batch*. Per impostazione predefinita, il valore KILOBYTES_PER_BATCH è sconosciuto. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.
 
-LASTROW **=** _last_row_ Specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0, che indica l'ultima riga nel file di dati specificato.
+LASTROW **=** _last_row_ specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0, che indica l'ultima riga nel file di dati specificato.
 
 MAXERRORS **=** _max_errors_ specifica il numero massimo di errori di sintassi consentiti nei dati prima dell'annullamento dell'operazione di importazione bulk. Ogni riga che non è possibile importare tramite l'operazione di importazione bulk viene ignorata e considerata come errore. Se non si specifica *max_errors*, il valore predefinito è 10.
 
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows, ma può leggere da Archiviazione BLOB di Azure.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipi di dati per l'esportazione o l'importazione bulk di documenti SQLXML
 
@@ -354,7 +354,7 @@ Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. Nel datab
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. Utilizzo di barre verticali per l'importazione di dati da un file
+### <a name="a-using-pipes-to-import-data-from-a-file"></a>R. Utilizzo di barre verticali per l'importazione di dati da un file
 
 Nell'esempio seguente vengono importate informazioni dettagliate sugli ordini nella tabella `AdventureWorks2012.Sales.SalesOrderDetail` dal file di dati specificato, utilizzando una barra verticale (`|`) come carattere di terminazione del campo e la combinazione `|\n` come carattere di terminazione della riga.
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Utilizzo dell'argomento FIRE_TRIGGERS
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Utilizzo del carattere di avanzamento riga come carattere di terminazione della riga
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > A causa della modalità di gestione dei file di testo in Microsoft Windows, **(\n** viene automaticamente sostituito con **\r\n)** .
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="d-specifying-a-code-page"></a>D. Definizione di una tabella codici
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importazione di dati da un file CSV
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importazione di dati da un file nell'archiviazione BLOB di Azure
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Il database SQL di Azure non supporta la lettura da file di Windows.
+> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importazione di dati da un file nell'archiviazione BLOB di Azure e specifica di un file degli errori
 
@@ -497,10 +497,10 @@ Per esempi di `BULK INSERT` completi che includono la configurazione di credenzi
 - [Mantenimento dei valori Null o uso dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)
 - [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)
 - [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)
-- [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
+- [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
 - [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)
 - [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
-- [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)
+- [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)
 - [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 

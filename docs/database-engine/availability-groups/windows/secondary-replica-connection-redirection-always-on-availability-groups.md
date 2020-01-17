@@ -1,6 +1,7 @@
 ---
-title: Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Reindirizzare le connessioni in lettura/scrittura alla replica primaria
+description: Informazioni su come reindirizzare sempre le connessioni in lettura/scrittura alla replica primaria di un gruppo di disponibilità Always On, indipendentemente dal server di destinazione specificato nella stringa di connessione.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014206"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235199"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
@@ -34,7 +35,7 @@ Ad esempio la stringa di connessione può avere come destinazione una replica se
 
 ## <a name="use-cases"></a>Casi d'uso
 
-Nelle versioni precedenti a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] il listener del gruppo di disponibilità e la risorsa cluster corrispondente reindirizzano il traffico utente alla replica primaria per garantire la riconnessione dopo il failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continua a supportare la funzionalità listener del gruppo di disponibilità e aggiunge il reindirizzamento della connessione di replica per gli scenari che non possono includere un listener. Esempio:
+Nelle versioni precedenti a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] il listener del gruppo di disponibilità e la risorsa cluster corrispondente reindirizzano il traffico utente alla replica primaria per garantire la riconnessione dopo il failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continua a supportare la funzionalità listener del gruppo di disponibilità e aggiunge il reindirizzamento della connessione di replica per gli scenari che non possono includere un listener. Ad esempio:
 
 * La tecnologia cluster con cui si integrano i gruppi di disponibilità SQL Server non offre una funzionalità di tipo listener 
 * Una configurazione con più subnet come nel cloud o un IP variabile per più subnet, dove le configurazioni diventano complesse, soggette a errori e con una risoluzione dei problemi impegnativa a causa del numero di componenti attivi
@@ -47,7 +48,7 @@ Affinché una replica secondaria reindirizzi le richieste di connessione in lett
 * La specifica della replica `PRIMARY_ROLE` deve includere `READ_WRITE_ROUTING_URL`.
 * La stringa di connessione deve definire `ApplicationIntent` come `ReadWrite`. Questa è l'impostazione predefinita.
 
-## <a name="set-readwriteroutingurl-option"></a>Impostare l'opzione READ_WRITE_ROUTING_URL
+## <a name="set-read_write_routing_url-option"></a>Impostare l'opzione READ_WRITE_ROUTING_URL
 
 Per configurare il reindirizzamento della connessione di lettura/scrittura, impostare `READ_WRITE_ROUTING_URL` per la replica primaria quando si crea il gruppo di disponibilità. 
 
@@ -57,24 +58,24 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] l'elemento `READ_WR
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non impostato (impostazione predefinita) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non impostato (impostazione predefinita) 
 
 Per impostazione predefinita il reindirizzamento della connessione di replica di lettura/scrittura non è impostato per una replica. Il modo in cui una replica secondaria gestisce le richieste di connessione dipende dal fatto che la replica secondaria sia impostata o meno per consentire le connessioni e dall'impostazione `ApplicationIntent` nella stringa di connessione. La tabella seguente illustra come una replica secondaria gestisce le connessioni in base a `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> Default|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo<br/>Le operazioni di lettura hanno esito positivo<br/>Le operazioni di scrittura hanno esito negativo|
+|`ApplicationIntent=ReadWrite`<br/> Predefinito|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo<br/>Le operazioni di lettura hanno esito positivo<br/>Le operazioni di scrittura hanno esito negativo|
 |`ApplicationIntent=ReadOnly`|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo|Le connessioni hanno esito positivo
 
 La tabella precedente illustra il comportamento predefinito, analogo a quello delle versioni di SQL Server precedenti a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) impostato 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) impostato 
 
 Dopo l'impostazione del reindirizzamento della connessione di lettura/scrittura, la modalità con cui la replica gestisce le richieste di connessione cambia. Il comportamento delle connessioni dipende comunque dalle impostazioni `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`. La tabella seguente illustra come una replica secondaria con `READ_WRITE_ROUTING` impostato gestisce le connessioni in base a `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>Default|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni vengono instradate alla replica primaria|
+|`ApplicationIntent=ReadWrite`<br/>Predefinito|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni vengono instradate alla replica primaria|
 |`ApplicationIntent=ReadOnly`|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo|Le connessioni hanno esito positivo
 
 La tabella precedente evidenzia che quando per la replica primaria è impostato `READ_WRITE_ROUTING_URL`, la replica secondaria reindirizza le connessioni alla replica primaria se `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)` e la connessione specifica `ReadWrite`.
@@ -84,7 +85,7 @@ La tabella precedente evidenzia che quando per la replica primaria è impostato 
 In questo esempio un gruppo di disponibilità ha tre repliche:
 * Una replica primaria in COMPUTER01
 * Una replica secondaria sincrona in COMPUTER02
-* Una replica secondaria sincrona in COMPUTER03
+* Una replica secondaria asincrona in COMPUTER03
 
 L'immagine seguente rappresenta il gruppo di disponibilità.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -136,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - Dominio e dominio di primo livello del nome di dominio completo. Ad esempio, `corporation.com`.
+      - Dominio e dominio di primo livello del nome di dominio completo. Ad esempio: `corporation.com`.
 
 
 ### <a name="connection-behaviors"></a>Comportamenti di connessione

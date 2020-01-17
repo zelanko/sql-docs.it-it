@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729844"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226740"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -88,13 +88,13 @@ Sono supportate solo le distribuzioni HASH e ROUND_ROBIN.
 *select_statement*   
 L'elenco SELECT nella definizione della vista materializzata deve soddisfare almeno uno di questi due criteri:
 - L'elenco SELECT contiene una funzione di aggregazione.
-- Viene usata l'istruzione GROUP BY nella definizione della vista materializzata e tutte le colonne in GROUP BY vengono incluse nell'elenco SELECT.  
+- Viene usata l'istruzione GROUP BY nella definizione della vista materializzata e tutte le colonne in GROUP BY vengono incluse nell'elenco SELECT.  Nella clausola GROUP BY si possono usare fino a 32 colonne.
 
 Sono necessarie funzioni di aggregazione nell'elenco SELECT della definizione della vista materializzata.  Le aggregazioni supportate includono MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
 Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della vista materializzata, si applicano i requisiti seguenti:
  
-- FOR_APPEND è obbligatorio.  Esempio:
+- FOR_APPEND è obbligatorio.  Ad esempio:
   ```sql 
   CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
@@ -106,7 +106,7 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
 
 - La vista materializzata verrà disabilitata quando si verifica un'operazione UPDATE o DELETE nelle tabelle di base a cui viene fatto riferimento.  Questa restrizione non si applica alle operazioni INSERT.  Per abilitare nuovamente la vista materializzata, eseguire ALTER MATERIALIZED INDEX con REBUILD.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Una vista materializzata nel data warehouse di Azure è molto simile a una vista indicizzata in SQL Server.  Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   Ecco altre considerazioni per la vista materializzata.  
  
@@ -118,7 +118,7 @@ Una vista materializzata non può fare riferimento ad altre viste.
  
 Le operazioni ALTER TABLE SWITCH non sono supportate sulle tabelle a cui fanno riferimento le viste materializzate. Disabilitare o eliminare le viste materializzate prima di usare ALTER TABLE SWITCH. Negli scenari seguenti la creazione della vista materializzata richiede l'aggiunta di nuove colonne alla vista materializzata:
 
-|Scenario|Nuove colonne da aggiungere alla vista materializzata|Commento|  
+|Scenario|Nuove colonne da aggiungere alla vista materializzata|Comment|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() non è presente nell'elenco SELECT di una definizione di vista materializzata| COUNT_BIG (*) |Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
 |La funzione SUM(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione che ammette i valori Null. |COUNT_BIG (a) |Gli utenti devono aggiungere l'espressione 'a' manualmente nella definizione della vista materializzata.|

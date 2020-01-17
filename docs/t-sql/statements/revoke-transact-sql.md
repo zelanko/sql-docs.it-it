@@ -29,12 +29,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef120c0899a14669d8f7f92f42da72d139599aa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982885"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909033"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,11 +136,11 @@ REVOKE
 >  La revoca propagata di un'autorizzazione concessa con WITH GRANT OPTION comporterà la revoca sia delle autorizzazioni GRANT che delle autorizzazioni DENY per tale autorizzazione.  
   
  AS *principal*  
- Usare la clausola AS principal per indicare che si sta revocando un'autorizzazione che è stata concessa da un'altra entità. Si supponga ad esempio che l'utente Mary sia principal_id 12 e l'utente Raul sia principal 15. Sia Mary sia Raul concedono all'utente Steven la stessa autorizzazione. La tabella sys.database_permissions indica l'autorizzazione due volte con valori grantor_principal_id diversi. Mary può revocare l'autorizzazione usando la clausola `AS RAUL` per rimuovere la concessione dell'autorizzazione di Raul.
+ Usare la clausola AS principal per indicare che si sta revocando un'autorizzazione che è stata concessa da un'altra entità. Si supponga ad esempio che l'utente Mary sia principal_id 12 e l'utente Raul sia principal_id 15. Sia Mary sia Raul concedono all'utente Steven la stessa autorizzazione. La tabella sys.database_permissions indica l'autorizzazione due volte con valori grantor_principal_id diversi. Mary può revocare l'autorizzazione usando la clausola `AS RAUL` per rimuovere la concessione dell'autorizzazione di Raul.
  
 L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La sintassi completa dell'istruzione REVOKE è complessa. Il diagramma della sintassi precedente è stato semplificato per evidenziarne la struttura. La sintassi completa per la revoca di autorizzazioni per entità a protezione diretta specifiche è descritta negli argomenti della sezione [Sintassi specifica delle entità a protezione diretta](#securable) di seguito in questo argomento.  
   
  È possibile utilizzare l'istruzione REVOKE per rimuovere le autorizzazioni concesse e l'istruzione DENY per negare un'autorizzazione specifica a un'entità anche in caso di esecuzione di un'istruzione GRANT.  
@@ -176,25 +176,25 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 |Catalogo full-text|[REVOKE - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Elenco di parole non significative full-text|[REVOKE - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Funzione|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Account di accesso|[REVOKE - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Login|[REVOKE - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |Tipo di messaggio|[REVOKE - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Object|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Oggetto|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Coda|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Associazione al servizio remoto|[REVOKE - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Role|[REVOKE - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Ruolo|[REVOKE - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |Route|[REVOKE - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|schema|[REVOKE - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
+|SCHEMA|[REVOKE - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |Elenco delle proprietà di ricerca|[REVOKE - Autorizzazioni per l'elenco delle proprietà di ricerca &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
 |Server|[REVOKE - Autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
-|Servizio|[REVOKE - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Stored procedure|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Service|[REVOKE - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Stored Procedure|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Chiave simmetrica|[GRANT - Autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
 |Sinonimo|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Oggetti di sistema|[REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
 |Tabella|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Tipo|[REVOKE - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|Type|[REVOKE - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |Utente|[REVOKE - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Vista|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Visualizza|[REVOKE - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Raccolta di XML Schema|[REVOKE - Autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

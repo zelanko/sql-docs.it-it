@@ -1,7 +1,7 @@
 ---
-title: Riferimento per l'amministrazione di un gruppo di disponibilità
-description: Pagina di riferimento che illustra le nozioni di base per l'amministrazione di un gruppo di disponibilità Always On, ad esempio la modifica delle proprietà, l'aggiunta o la rimozione di repliche, l'aggiunta o la rimozione di database, il failover, la configurazione di listener e così via.
-ms.custom: seodec18
+title: Amministrazione di un gruppo di disponibilità (indice dei contenuti)
+description: Indice di riferimento con collegamenti ad articoli contenenti le nozioni di base per l'amministrazione di un gruppo di disponibilità Always On, ad esempio la modifica delle proprietà, l'aggiunta o la rimozione di repliche, l'aggiunta o la rimozione di database, il failover, la configurazione di listener e così via.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014847"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241975"
 ---
 # <a name="administration-of-an-availability-group"></a>Amministrazione di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "68014847"
   
 -   **Blog:**  
   
-     [SQL Server Always On Team Blogs (Blog del team di SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)    
+     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)   (Blog del team di SQL Server Always On - Blog ufficiale)  
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Video:**  

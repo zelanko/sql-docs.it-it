@@ -1,7 +1,7 @@
 ---
-title: Modificare il livello di compatibilità del database e usare Query Store | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: Usare Query Store dopo l'aggiornamento
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982131"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251543"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 
@@ -45,7 +45,7 @@ Il processo di aggiornamento per abilitare nuove funzionalità di Query Processo
   
 Il flusso di lavoro consigliato per aggiornare Query Processor alla versione più recente del codice è documentato nella [sezione Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server in Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), come illustrato di seguito.  
   
-![utilizzo archivio query 5](../../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5") 
+![utilizzo archivio query 5](../../relational-databases/performance/media/query-store-usage-5.png "|::ref1::|") 
 
 A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, gli utenti possono essere guidati nel flusso di lavoro consigliato con l'Assistente ottimizzazione query. Per altre informazioni, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

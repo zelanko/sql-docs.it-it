@@ -1,7 +1,7 @@
 ---
-title: Usare il seeding automatico per inizializzare un gruppo di disponibilità
-description: Creare automaticamente le repliche secondarie per ogni database di un gruppo di disponibilità Always On usando il seeding automatico.
-ms.custom: seodec18
+title: Inizializzare un gruppo di disponibilità con il seeding automatico
+description: Usare il seeding automatico per creare automaticamente le repliche secondarie per ogni database di un gruppo di disponibilità Always On senza dover eseguire manualmente il backup e il ripristino.
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991577"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254094"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Le viste di sistema seguenti indicano lo stato del seeding automatico di SQL Ser
 
 **sys.dm_hadr_automatic_seeding** 
 
-Nella replica primaria eseguire una query su `sys.dm_hadr_automatic_seeding` per controllare lo stato del processo di seeding automatico. La vista restituisce una riga per ogni processo di seeding. Esempio:
+Nella replica primaria eseguire una query su `sys.dm_hadr_automatic_seeding` per controllare lo stato del processo di seeding automatico. La vista restituisce una riga per ogni processo di seeding. Ad esempio:
 
 ```sql
 SELECT start_time, 
@@ -216,7 +216,7 @@ GO
 
 La tabella seguente elenca gli eventi estesi correlati al seeding automatico: 
 
-| nome | Descrizione|
+| Nome | Descrizione|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Messaggio di richiesta di seeding.
 |hadr_physical_seeding_backup_state_change |    Modifica dello stato lato backup del seed fisico.
@@ -237,7 +237,7 @@ La tabella seguente elenca gli eventi estesi correlati al seeding automatico:
 
 **Monitorare il seeding automatico**
 
-Eseguire una query `sys.dm_hadr_physical_seeding_stats` per il processo di seeding automatico in esecuzione. La vista restituisce una riga per ogni database. Esempio:
+Eseguire una query `sys.dm_hadr_physical_seeding_stats` per il processo di seeding automatico in esecuzione. La vista restituisce una riga per ogni database. Ad esempio:
 
 ```sql
 SELECT local_database_name, 

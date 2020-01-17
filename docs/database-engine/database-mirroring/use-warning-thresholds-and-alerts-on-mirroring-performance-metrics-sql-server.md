@@ -1,6 +1,7 @@
 ---
-title: Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring | Microsoft Docs
-ms.custom: ''
+title: Configurare avvisi per le metriche delle prestazioni di mirroring del database
+description: 'Linee guida per la configurazione di avvisi e valori soglia degli avvisi per le metriche delle prestazioni usate dal mirroring del database. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050605"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820900"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050605"
   
  Dopo aver stabilito il monitoraggio per un database con mirroring, un amministratore di sistema può configurare soglie di avviso su alcune metriche chiave delle prestazioni. Un amministratore può inoltre configurare avvisi su questi e altri eventi di mirroring del database.  
   
- **Contenuto dell'argomento:**  
-  
--   [Misurazioni delle prestazioni e delle soglie di avviso](#PerfMetricsAndWarningThresholds)  
-  
--   [Impostazione e gestione delle soglie di avviso](#SetUpManageWarningThresholds)  
-  
--   [Utilizzo di avvisi per un database con mirroring](#UseAlerts)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Misurazioni delle prestazioni e delle soglie di avviso  
  Nella tabella seguente vengono elencate le misurazioni delle prestazioni per cui è possibile configurare avvisi, vengono descritte le soglie di avviso corrispondenti ed elencate le etichette di Monitoraggio mirroring del database corrispondenti.  

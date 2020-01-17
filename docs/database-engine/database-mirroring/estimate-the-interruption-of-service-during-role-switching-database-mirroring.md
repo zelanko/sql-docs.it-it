@@ -1,6 +1,7 @@
 ---
-title: Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database) | Microsoft Docs
-ms.custom: ''
+title: Stimare l'interruzione del servizio durante il failover del mirror
+description: Stimare l'interruzione del servizio durante il failover di un database mirror dal ruolo primario a quello secondario.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874185"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253575"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

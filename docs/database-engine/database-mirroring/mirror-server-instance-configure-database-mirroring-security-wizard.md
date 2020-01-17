@@ -1,6 +1,7 @@
 ---
-title: Istanza server mirror (Configurazione guidata sicurezza mirroring del database) | Microsoft Docs
-ms.custom: ''
+title: 'Configurazione guidata sicurezza: Istanza server mirror'
+description: Descrive la pagina "Istanza server mirror" della "Configurazione guidata sicurezza mirroring del database" in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045632"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822389"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server mirror (Configurazione guidata sicurezza mirroring del database)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>Configurazione guidata sicurezza mirroring del database: Istanza server mirror
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilizzare questa pagina per specificare le informazioni relative all'istanza del server del database mirror.  
   
@@ -38,15 +39,15 @@ ms.locfileid: "68045632"
   
  In caso contrario, immettere il nome dell'istanza del server mirror. Si noti che l'istanza del server mirror non può essere la stessa istanza del server principale.  
   
- **Connect**  
- Se non è stata specificata un'istanza del server mirror, fare clic su **Connetti**. Verrà visualizzata la finestra di dialogo **Connetti al server** nella quale è possibile specificare l'istanza del server e stabilire una connessione.  
+ **Connettere**  
+ Se non è stata specificata un'istanza del server mirror, fare clic su **Connetti**. Verrà visualizzata la finestra di dialogo **Connetti al server** tramite la quale è possibile specificare l'istanza del server e stabilire una connessione.  
   
  Se è stata specificata l'istanza, ma non è disponibile una connessione con autorizzazioni sufficienti per il controllo dell'esistenza dell'endpoint, fare clic su **Connetti**. Verrà visualizzata la finestra di dialogo **Connetti al server** in cui l'istanza del server risulterà selezionata automaticamente e non sarà possibile modificarla. Specificare un account di dominio dotato di autorizzazioni sufficienti e connettersi all'istanza del server.  
   
 > [!NOTE]  
 >  Quando viene stabilita la connessione all'istanza del server, la Configurazione guidata sicurezza mirroring del database usa le credenziali della finestra di dialogo **Connetti al server** . Queste credenziali sono diverse da quelle di una sessione di mirroring, che utilizza le credenziali dell'account di avvio con il quale l'istanza del server è in esecuzione come servizio.  
   
- **Porta di attesa**  
+ **Listener Port** (Porta listener)  
  Il funzionamento di questa opzione dipende dalla presenza dell'endpoint di mirroring per l'istanza del server corrente, come illustrato di seguito:  
   
 -   Se non esiste una porta di attesa per l'istanza del server, nella casella di testo **Porta** verrà visualizzato il numero di porta 5022. È possibile utilizzare qualsiasi numero di porta disponibile, ad esempio 7022.  

@@ -1,6 +1,8 @@
 ---
-title: GRANT - autorizzazioni per entità di database (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT - Autorizzazioni per entità di database
+description: Concedere le autorizzazioni per un utente di database, un ruolo del database o un ruolo applicazione.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982239"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246156"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +115,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le informazioni sulle entità di database sono visibili nella vista del catalogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Le informazioni sulle autorizzazioni a livello di database sono visibili nella vista del catalogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Autorizzazioni per utenti di database  
@@ -167,7 +169,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Concessione a un altro utente dell'autorizzazione CONTROL per un utente  
+### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>R. Concessione a un altro utente dell'autorizzazione CONTROL per un utente  
  Nell'esempio seguente viene concessa l'autorizzazione `CONTROL` per l'utente `AdventureWorks2012` del database `Wanida` all'utente `RolandX`.  
   
 ```  

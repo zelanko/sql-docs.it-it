@@ -1,5 +1,5 @@
 ---
-title: Abilitare il failover avanzato del database per un gruppo di disponibilità
+title: Failover avanzato per un gruppo di disponibilità
 description: Procedura per l'abilitazione del failover avanzato del database, che attiva un failover, se un database in un gruppo di disponibilità Always On non è più in grado di scrivere transazioni.
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947952"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822239"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Abilitare il failover avanzato del database per un database in un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Questo scenario prevede la stessa configurazione del gruppo di disponibilità de
 
 Viene configurato un gruppo di disponibilità tra l'istanza A e l'istanza B che contiene due database: DB1 e DB2. La modalità di disponibilità è impostata su commit sincrono con failover automatico ed è abilitato il failover avanzato del database. Viene perso l'accesso al disco contenente i dati di DB2 e i file di log delle transazioni. Quando viene rilevato il problema, il gruppo di disponibilità effettuerà automaticamente il failover nell'istanza B.
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurare e visualizzare l'opzione di failover avanzato del database
+## <a name="configure-enhanced-failover"></a>Configurare il failover avanzato
 
 Il failover avanzato del database può essere configurato con SQL Server Management Studio o Transact-SQL. I cmdlet di PowerShell non prevedono attualmente questa possibilità. Per impostazione predefinita, il failover avanzato del database è disabilitato.
 

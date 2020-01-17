@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981879"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681782"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -114,7 +114,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
 Specifica le opzioni aggiuntive quando si esegue la connessione a un'origine dati esterna tramite `ODBC`.
 
-Il nome del driver è un requisito minimo, ma sono disponibili altre opzioni, ad esempio `APP='<your_application_name>'` o `ApplicationIntent= ReadOnly|ReadWrite`, che sono utili anche per impostare e possono essere usate per la risoluzione dei problemi.
+Il nome del driver è un requisito minimo, ma sono disponibili altre opzioni, ad esempio `APP='<your_application_name>'` o `ApplicationIntent= ReadOnly|ReadWrite`, che può essere utile impostare e possono essere usate per la risoluzione dei problemi.
 
 Vedere la documentazione del prodotto `ODBC` per un elenco di valori consentiti per [CONNECTION_OPTIONS][connection_options]
 
@@ -138,7 +138,7 @@ Note aggiuntive e indicazioni utili per la creazione delle credenziali:
   - Disporre almeno dell'autorizzazione di lettura per il file da caricare, ad esempio `srt=o&sp=r`
   - Usare un periodo di scadenza valido (tutte le date sono espresse in formato UTC).
 
-Per un esempio d'uso di `CREDENTIAL` con `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, vedere [Creare un'origine dati esterna per eseguire operazioni bulk e recuperare dati da Archiviazione BLOB di Azure nel database SQL](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Per un esempio d'uso di `CREDENTIAL` con `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, vedere [Creare un'origine dati esterna per eseguire operazioni bulk e recuperare dati da Archiviazione BLOB di Azure nel database SQL](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -185,7 +185,7 @@ In [Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown
 
 Richiede l'autorizzazione CONTROL nel database in SQL Server.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Acquisisce un blocco condiviso sull'oggetto EXTERNAL DATA SOURCE.  
 
@@ -201,7 +201,7 @@ Il token di firma di accesso condiviso di tipo `HADOOP` non è attualmente suppo
 
 ## <a name="examples-sql-server-2016"></a>Esempi: SQL Server (2016 e versioni successive)
 
-### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. Creare un'origine dati esterna in SQL 2019 per fare riferimento a Oracle
+### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>R. Creare un'origine dati esterna in SQL 2019 per fare riferimento a Oracle
 
 Per creare un'origine dati esterna che fa riferimento a Oracle, assicurarsi di disporre di credenziali con ambito database. È anche possibile abilitare o disabilitare il pushdown del calcolo su questa origine dati.
 
@@ -311,12 +311,36 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Creare un'origine dati esterna per fare riferimento a un'istanza denominata di SQL Server tramite la connettività PolyBase (SQL 2019)
+
+Per creare un'origine dati esterna che faccia riferimento a un'istanza denominata di SQL Server, è possibile usare CONNECTION_OPTIONS per specificare il nome dell'istanza. Nell'esempio seguente WINSQL2019 è il nome host e SQL2019 è il nome dell'istanza.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+In alternativa, è possibile usare una porta per connettersi a un'istanza di SQL Server.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>Esempi: Operazioni bulk
 
 > [!NOTE]
 > Non inserire un carattere **/** iniziale, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION` quando si configura un'origine dati esterne per le operazioni bulk.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati dall'archiviazione BLOB di Azure
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati dall'archiviazione BLOB di Azure
 
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
@@ -384,7 +408,7 @@ Per visualizzare l'esempio di utilizzo, vedere [BULK INSERT][bulk_insert_example
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Panoramica: Database SQL di Azure
+## <a name="overview-azure-sql-database"></a>Panoramica: database SQL di Azure
 
 Crea un'origine dati esterna per le query elastiche. Le origini dati esterne vengono usate per stabilire la connettività e supportano questi casi d'uso principali:
 
@@ -419,8 +443,8 @@ Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 | Origine dati esterna   | Prefisso della posizione | Percorso                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | Operazioni bulk        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Query elastica (partizione)  | Non obbligatorio    | `<shard_map_server_name>.database.windows.net`        |
-| Query elastica (remoto) | Non obbligatorio    | `<remote_server_name>.database.windows.net`           |
+| Query elastica (partizione)  | Facoltativo    | `<shard_map_server_name>.database.windows.net`        |
+| Query elastica (remoto) | Facoltativo    | `<remote_server_name>.database.windows.net`           |
 
 Percorso:
 
@@ -480,13 +504,13 @@ Per un esempio relativo alla creazione di un'origine dati esterna in cui `TYPE` 
 
 Richiede l'autorizzazione CONTROL nel database nel database SQL.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Acquisisce un blocco condiviso sull'oggetto EXTERNAL DATA SOURCE.  
 
 ## <a name="examples"></a>Esempi:
 
-### <a name="a-create-a-shard-map-manager-external-data-source"></a>A. Creare un'origine dati esterna del gestore mappe partizioni
+### <a name="a-create-a-shard-map-manager-external-data-source"></a>R. Creare un'origine dati esterna del gestore mappe partizioni
 
 Per creare un'origine dati esterna per fare riferimento a SHARD_MAP_MANAGER, specificare il nome del server di database SQL che ospita il gestore mappe partizioni nel database SQL in un database di SQL Server in una macchina virtuale.
 
@@ -653,7 +677,7 @@ Percorso:
 
 Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
-- L'opzione predefinita consiste nell'abilitare le connessioni SSL sicure quando si esegue il provisioning di Azure Data Lake Storage Gen 2. Quando questa opzione è abilitata, è necessario usare `abfss` quando viene selezionata una connessione SSL sicura. Si noti che `abfss` funziona anche per le connessioni SSL non sicure. 
+- L'opzione predefinita consiste nell'usare `enable secure SSL connections` quando si effettua il provisioning di Azure Data Lake Storage Gen 2. Quando questa opzione è abilitata, è necessario usare `abfss` quando viene selezionata una connessione SSL sicura. Si noti che `abfss` funziona anche per le connessioni SSL non sicure. 
 - Il motore di SQL Data Warehouse non verifica l'esistenza dell'origine dati esterna quando viene creato l'oggetto. Per eseguire la convalida, creare una tabella esterna usando l'origine dati esterna.
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
 - `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
@@ -684,7 +708,7 @@ Per un esempio d'uso di `TYPE` = `HADOOP` per caricare i dati da Archiviazione B
 
 Richiede l'autorizzazione CONTROL nel database in SQL Data Warehouse.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Acquisisce un blocco condiviso sull'oggetto EXTERNAL DATA SOURCE.  
 
@@ -700,7 +724,7 @@ Il token di firma di accesso condiviso di tipo `HADOOP` non è attualmente suppo
 
 ## <a name="examples"></a>Esempi:
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. Creare un'origine dati esterna per fare riferimento all'archiviazione BLOB di Azure
+### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>R. Creare un'origine dati esterna per fare riferimento all'archiviazione BLOB di Azure
 
 In questo esempio, l'origine dati esterna è un contenitore dell'archiviazione BLOB di Azure denominato `daily` incluso nell'account di archiviazione di Azure denominato `logs`. L'origine dati esterna dell'archiviazione di Azure è destinata al solo trasferimento dei dati e non supporta il pushdown dei predicati.
 
@@ -966,7 +990,7 @@ Richiede l'autorizzazione CONTROL nel database nella piattaforma di strumenti an
 > [!NOTE]
 > Nelle versioni precedenti di PDW creare le autorizzazioni ALTER ANY EXTERNAL DATA SOURCE richieste dell'origine dati esterna.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 Acquisisce un blocco condiviso sull'oggetto EXTERNAL DATA SOURCE.  
 
@@ -980,7 +1004,7 @@ Il token di firma di accesso condiviso di tipo `HADOOP` non è attualmente suppo
 
 ## <a name="examples"></a>Esempi:
 
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Creare un'origine dati esterna per fare riferimento a Hadoop
+### <a name="a-create-external-data-source-to-reference-hadoop"></a>R. Creare un'origine dati esterna per fare riferimento a Hadoop
 
 Per creare un'origine dati esterna per fare riferimento al cluster Hortonworks o Cloudera Hadoop, specificare il nome del computer o l'indirizzo IP di `Namenode` Hadoop e la porta. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 

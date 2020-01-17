@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012109"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761197"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68012109"
   
  Un metodo per ottenere nuovamente l'accesso consiste nel reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel collegare tutti i database alla nuova istanza. Questa soluzione richiede molto tempo. Per recuperare gli account di accesso, inoltre, può essere necessario ripristinare il database master da un backup. Se il backup del database master è meno recente, potrebbe non contenere tutte le informazioni. Se il backup del database master è più recente, potrebbe includere gli stessi account di accesso dell'istanza precedente e, pertanto, gli amministratori possono risultare ancora bloccati.  
   
-## <a name="resolution"></a>Soluzione  
+## <a name="resolution"></a>Risoluzione  
  Avviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo usando l'opzione **-m** o **-f** . Qualsiasi membro del gruppo Administrators locale del computer potrà quindi connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come membro del ruolo predefinito del server sysadmin.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ ms.locfileid: "68012109"
     > [!NOTE]  
     >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere i caratteri `;-m` aggiunti in precedenza e fare clic su **OK**.  
   
-12. Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
+12. Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**. Assicurarsi di avviare di nuovo SQL Server Agent.
   
  A questo punto è possibile connettersi normalmente con uno degli account che fa parte del ruolo predefinito del server **sysadmin** .  
   

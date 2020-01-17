@@ -1,6 +1,7 @@
 ---
-title: Pagina Riepilogo (procedure guidate gruppi di disponibilità Always On) | Microsoft Docs
-ms.custom: ''
+title: 'Creazione guidata Gruppo di disponibilità: Pagina Riepilogo'
+description: Descrive le opzioni nella pagina "Riepilogo" della Creazione guidata Gruppo di disponibilità in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892258"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822553"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68892258"
  Una volta completate le scelte, fare clic per passare alla creazione guidata del gruppo di disponibilità.  
   
  **Annulla**  
- Fare clic per annullare la procedura guidata. Se si sceglie di annullare la procedura guidata nella pagina **Riepilogo** , la procedura guidata verrà chiusa senza eseguire alcuna azione.  
+ Fare clic per annullare la procedura guidata. Se si sceglie di annullare la procedura guidata nella pagina **Riepilogo**, la procedura guidata verrà chiusa senza eseguire alcuna azione.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
   

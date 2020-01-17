@@ -1,6 +1,7 @@
 ---
-title: Aggiungere un database secondario a una configurazione per il log shipping (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere un database secondario per il log shipping
+description: Descrive come aggiungere un database secondario a una configurazione per il log shipping esistente.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,30 +15,17 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1a2f3c2149a089b4fe62564fae1278690ba4420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057900"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822157"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Aggiungere un database secondario a una configurazione per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene illustrata la procedura per l'aggiunta di un database secondario a una configurazione per il log shipping esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'articolo**  
-  
--   **Prima di iniziare:**  
-  
-     [Security](#Security)  
-  
--   **Per aggiungere un database secondario per il log shipping utilizzando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   

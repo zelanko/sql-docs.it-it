@@ -1,7 +1,7 @@
 ---
-title: Modificare il periodo di timeout della sessione per una replica all'interno di un gruppo di disponibilità
+title: Modificare il timeout della sessione per una replica del gruppo di disponibilità
 description: Illustra come configurare il periodo di timeout della sessione di una replica all'interno di un gruppo di disponibilità Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0c75e9264187ed6a351c162276253ff58be45a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991314"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822436"
 ---
-# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Modificare il periodo di timeout della sessione per una replica all'interno di un gruppo di disponibilità Always On
+# <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Modificare il periodo di timeout della sessione per una replica del gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come configurare il periodo di timeout della sessione di una replica di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Il periodo di timeout della sessione è una proprietà della replica che determina i secondi di attesa di una replica di disponibilità per una risposta del ping da una replica connessa prima di considerare la connessione non riuscita. Per impostazione predefinita, l'attesa di una replica è di 10 secondi per una risposta del ping. Questa proprietà della replica si applica solo alla connessione tra una determinata replica secondaria e la replica primaria del gruppo di disponibilità. Per altre informazioni sul periodo di timeout della sessione, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
    
@@ -41,7 +41,7 @@ ms.locfileid: "67991314"
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
   
 3.  Fare clic sul gruppo di disponibilità di cui si desidera configurare la replica di disponibilità.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67991314"
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per modificare il periodo di timeout della sessione per una replica di disponibilità**  
   
-1.  Spostarsi nella directory (**cd**) dell'istanza del server che ospita la replica primaria.  
+1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  
   
 2.  Usare il cmdlet **Set-SqlAvailabilityReplica** con il parametro **SessionTimeout** per modificare il numero di secondi per il periodo di timeout della sessione su una replica di disponibilità specificata.  
   

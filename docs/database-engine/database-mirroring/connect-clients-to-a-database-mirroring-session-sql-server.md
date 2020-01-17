@@ -1,6 +1,7 @@
 ---
-title: Connessione di client a una sessione di mirroring del database (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Connettere client a un mirroring del database
+description: Configurare i client per la connessione a un mirroring del database tramite Native Client o il provider .NET Framework per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258885"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +88,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attributo Server  
  La stringa di connessione deve includere un attributo **Server** indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>* [ **\\** _<nome_istanza_SQL_Server>_ ]. Esempio:  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>* [ **\\** _<nome_istanza_SQL_Server>_ ]. Ad esempio:  
   
  `Server=Partner_A;`  
   
- o Gestione configurazione  
+ o  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -172,9 +173,9 @@ Server=123.34.45.56,4724;
   
  Dove *PreviousRetryTime* è inizialmente pari a 0.  
   
- Ad esempio, se per l'accesso si usa il periodo di timeout predefinito di 15 secondi, *TimeoutAccesso* *= 15*. In questo caso, i tempi di riesecuzione dei tentativi stabiliti nei primi tre cicli sono i seguenti:  
+ Ad esempio, se per l'accesso si usa il periodo di timeout predefinito di 15 secondi, *LoginTimeout* *= 15*. In questo caso, i tempi di riesecuzione dei tentativi stabiliti nei primi tre cicli sono i seguenti:  
   
-|Arrotondamento|Calcolo*RetryTime*|Tempo di riesecuzione per tentativo|  
+|Round|Calcolo*RetryTime*|Tempo di riesecuzione per tentativo|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondi|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondi|  

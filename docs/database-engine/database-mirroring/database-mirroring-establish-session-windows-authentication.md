@@ -1,6 +1,7 @@
 ---
-title: 'Mirroring del database: stabilire una sessione - Autenticazione di Windows | Microsoft Docs'
-ms.custom: ''
+title: Configurare il mirroring del database
+description: Procedura per configurare una relazione di mirroring del database tra un principale e un mirror usando l'autenticazione di Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006435"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822297"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Mirroring del database: stabilire una sessione - Autenticazione di Windows
+# <a name="configure-database-mirroring"></a>Configurare il mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  

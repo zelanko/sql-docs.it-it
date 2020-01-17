@@ -1,6 +1,7 @@
 ---
-title: Caricamento bulk di dati crittografati in colonne tramite Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Caricamento bulk di dati crittografati in colonne tramite Always Encrypted
+description: Informazioni su come eseguire il caricamento bulk dei dati nelle colonne usando Always Encrypted con SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594161"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558204"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Caricamento bulk di dati crittografati in colonne tramite Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ La tabella seguente mostra le impostazioni consigliate appropriate per diversi s
 ## <a name="bulk-loading-of-encrypted-data"></a>Caricamento bulk di dati crittografati  
 Usare la seguente procedura per caricare dati crittografati.  
 
-1.  Impostare l'opzione su ON per l'utente nel database di destinazione dell'operazione di copia bulk. Esempio:  
+1.  Impostare l'opzione su ON per l'utente nel database di destinazione dell'operazione di copia bulk. Ad esempio:  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -44,7 +45,7 @@ Usare la seguente procedura per caricare dati crittografati.
 
 2.  Eseguire l'applicazione o lo strumento di copia bulk connettendosi con le credenziali di quell'utente. Se l'applicazione usa un driver client con Always Encrypted, verificare che la stringa di connessione per l'origine dati non contenga **column encryption setting=enabled** per garantire che i dati recuperati dalle colonne crittografate rimangano crittografati. Per altre informazioni, vedere [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md).  
   
-3.  Impostare di nuovo l'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su OFF. Esempio:  
+3.  Impostare di nuovo l'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su OFF. Ad esempio:  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
@@ -71,12 +72,12 @@ Per applicazioni o strumenti di copia bulk con esecuzione breve che richiedono d
  
 Evitare l'uso di questa opzione per sviluppare nuove applicazioni. Usare invece un driver client che offra un'API per la disattivazione dei controlli dei metadati crittografici per una singola sessione, ad esempio l'opzione AllowEncryptedValueModifications nel provider di dati .NET Framework per SQL Server. Vedere [Copia dei dati crittografati mediante SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Vedere anche  
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   

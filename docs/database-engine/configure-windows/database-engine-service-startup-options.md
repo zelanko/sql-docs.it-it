@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252865"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 
@@ -53,9 +53,9 @@ Le opzioni di avvio consentono di designare determinati percorsi di file necessa
 
 |Opzioni|Descrizione|  
 |-----------------------------|-----------------|  
-|**-d**  *master_file_path*|Percorso completo del file del database master (in genere, C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
-|**-e**  *error_log_path*|Percorso completo del file di log degli errori, in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
-|**-l**  *master_log_path*|Percorso completo del file di log del database master (in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Se non si specifica questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
+|**-d**  *percorso_file_master*|Percorso completo del file del database master (in genere, C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
+|**-e**  *percorso_log_errori*|Percorso completo del file di log degli errori, in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
+|**-l**  *percorso_log_master*|Percorso completo del file di log del database master (in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Se non si specifica questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
   
 ### <a name="other-startup-options"></a>Altre opzioni di avvio   
 
@@ -63,7 +63,7 @@ Le opzioni di avvio consentono di designare determinati percorsi di file necessa
 |---------------------------|-----------------|  
 |**-c**|Riduce i tempi necessari per l'avvio quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene in genere avviato come servizio chiamando Gestione controllo servizi. Considerato che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non viene avviato come servizio quando viene eseguito l'avvio dal prompt dei comandi, usare **-c** per ignorare questo passaggio.|  
 |**-f**|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configurazione minima. È utile nel caso in cui l'impostazione di un valore di configurazione, ad esempio un'allocazione eccessiva di memoria, abbia impedito l'avvio del server. L'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configurazione minima comporta l'attivazione della modalità utente singolo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere la descrizione di **-m** di seguito.|  
-|**-kDecimalNumber**| Questo parametro di avvio limita il numero di richieste I/O al secondo del checkpoint. **DecimalNumber** rappresenta la velocità del checkpoint in MB al secondo.  La modifica di questo valore può influire sulla velocità dell'esecuzione di backup o processi di ripristino, pertanto procedere con cautela. Per altre informazioni su questo parametro di avvio, vedere la correzione rapida in cui è stato introdotto il [parametro -k](https://support.microsoft.com/en-us/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus).| 
+|**-kDecimalNumber**| Questo parametro di avvio limita il numero di richieste I/O al secondo del checkpoint. **DecimalNumber** rappresenta la velocità del checkpoint in MB al secondo.  La modifica di questo valore può influire sulla velocità dell'esecuzione di backup o processi di ripristino, pertanto procedere con cautela. Per altre informazioni su questo parametro di avvio, vedere la correzione rapida in cui è stato introdotto il [parametro -k](https://support.microsoft.com/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus).| 
 |**-m**|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo. Quando si avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, la connessione è consentita a un solo utente e il processo CHECKPOINT non viene avviato. CHECKPOINT assicura la regolare scrittura delle transazioni completate dalla cache del disco al database. Questa opzione viene in genere utilizzata per la risoluzione di problemi che richiedono interventi nei database di sistema Abilita l'opzione sp_configure allow updates. Per impostazione predefinita, l'opzione allow updates è disabilitata. L'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo consente a qualsiasi membro del gruppo Administrators locale del computer di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come membro del ruolo predefinito del server sysadmin. Per altre informazioni, vedere [Connettersi a SQL Server se gli amministratori di sistema sono bloccati](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). Per altre informazioni sulla modalità utente singolo, vedere [Avvio di SQL Server in modalità utente singolo](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).|  
 |**-m nome dell'applicazione client**|Limita le connessioni a un'applicazione client specificata. Ad esempio, `-mSQLCMD`  limita le connessioni a una singola connessione, che deve identificarsi come programma client SQLCMD. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Usare `"Microsoft SQL Server Management Studio - Query"` per connettersi con l'editor di query SSMS. L'opzione dell'editor di query SSMS non può essere configurata tramite Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] perché include il trattino che è invece rifiutato dallo strumento.<br /><br /> Al nome dell'applicazione client viene applicata la distinzione maiuscole/minuscole. Sono necessarie le virgolette doppie se il nome dell'applicazione contiene spazi o caratteri speciali.<br /><br />**Esempi di avvio dalla riga di comando:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **Nota sulla sicurezza:** Non utilizzare tale opzione come caratteristica di sicurezza. L'applicazione client fornisce il nome dell'applicazione client stessa e può indicare un nome falso come parte della stringa di connessione.|  
 |**-n**|Disattiva l'utilizzo del registro applicazioni di Windows per la registrazione degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata con **-n**, è consigliabile usare anche l'opzione di avvio **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verranno registrati.|  
@@ -92,6 +92,6 @@ Per le opzioni che sono state rimosse dalle versioni precedenti, vedere [Applica
   
 ## <a name="see-also"></a>Vedere anche  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [Applicazione sqlservr](../../tools/sqlservr-application.md)  
+ [sqlservr](../../tools/sqlservr-application.md)  
   
   

@@ -1,6 +1,8 @@
 ---
-title: Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: File e filegroup ALTER DATABASE
+description: Aggiornare i file e i filegroup di un database usando Transact-SQL.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982843"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244433"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -63,7 +65,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -141,13 +143,13 @@ REMOVE FILE *logical_file_name* rimuove la descrizione del file logico da un'ist
 
 MODIFY FILE specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.
 
-Per modificare il nome logico di un file di dati o di un file di log, specificare il nome del file logico da rinominare nella clausola `NAME` e specificare il nuovo nome logico per il file nella clausola `NEWNAME`. Esempio:
+Per modificare il nome logico di un file di dati o di un file di log, specificare il nome del file logico da rinominare nella clausola `NAME` e specificare il nuovo nome logico per il file nella clausola `NEWNAME`. Ad esempio:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-Per spostare un file di dati o un file di log in una nuova posizione, specificare il nome di file logico corrente nella clausola `NAME` e specificare il nuovo percorso e il nome del file nel sistema operativo nella clausola `FILENAME`. Esempio:
+Per spostare un file di dati o un file di log in una nuova posizione, specificare il nome di file logico corrente nella clausola `NAME` e specificare il nuovo percorso e il nome del file nel sistema operativo nella clausola `FILENAME`. Ad esempio:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -286,7 +288,7 @@ NAME = *new_filegroup_name* cambia il nome del filegroup in *new_filegroup_name*
 
 AUTOGROW_SINGLE_FILE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
-Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Impostazione predefinita.
+Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Questa è la modalità predefinita.
 
 AUTOGROW_ALL_FILES
 
@@ -310,7 +312,7 @@ I database di sola lettura non consentono modifiche dei dati e pertanto:
 - Non vengono attivati blocchi nei database di sola lettura e ciò può portare a migliori prestazioni di esecuzione delle query.
 
 > [!NOTE]
-> La parola chiave `READONLY` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'utilizzo di `READONLY` un nuovo progetto di sviluppo e prevedere interventi di modifica per le applicazioni in cui `READONLY` è utilizzato. In alternativa, usare `READ_ONLY` .
+> La parola chiave `READONLY` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'utilizzo di `READONLY` un nuovo progetto di sviluppo e prevedere interventi di modifica per le applicazioni in cui `READONLY` è utilizzato. Usare invece `READ_ONLY`.
 
 READ_WRITE | READWRITE specifica che il filegroup è di lettura/scrittura. Sono consentiti aggiornamenti degli oggetti contenuti nel filegroup. Per modificare questo stato, è necessario disporre dell'accesso esclusivo al database. Per altre informazioni, vedere la clausola SINGLE_USER.
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE specifica che il filegroup è di lettura/scrittura. Sono 
 > [!TIP]
 > Per determinare lo stato di queste opzioni, è possibile esaminare la colonna **is_read_only** nella vista del catalogo  **sys.databases** oppure la proprietà **Updateability** della funzione `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -336,7 +338,7 @@ Non è possibile impostare i parametri SIZE, MAXSIZE e FILEGROWTH se è specific
 
 I parametri SIZE e FILEGROWTH non possono essere impostati per i filegroup con ottimizzazione per la memoria.
 
-La parola chiave `READONLY` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'utilizzo di `READONLY` un nuovo progetto di sviluppo e prevedere interventi di modifica per le applicazioni in cui READONLY è utilizzato. In alternativa, usare `READ_ONLY` .
+La parola chiave `READONLY` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'utilizzo di `READONLY` un nuovo progetto di sviluppo e prevedere interventi di modifica per le applicazioni in cui READONLY è utilizzato. Usare invece `READ_ONLY`.
 
 La parola chiave `READWRITE` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'uso di `READWRITE` in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente usata la parola chiave `READWRITE`. Usare al suo posto la parola chiave `READ_WRITE`.
 
@@ -354,12 +356,12 @@ Per altre informazioni, vedere [Spostare file del database](../../relational-dat
 
 Per impostazione predefinita, i file di dati e di log vengono inizializzati tramite il riempimento con zeri quando si esegue una delle operazioni seguenti:
 
-- Creazione di un database.
+- Creare un database.
 - Aggiunta di file a un database esistente.
 - Aumento delle dimensioni di un file esistente.
 - Ripristino di un database o un filegroup.
 
-I file di dati possono essere inizializzati immediatamente. Ciò consente l'esecuzione rapida di queste operazioni sui file. Per ulteriori informazioni, vedere [Inizializzazione di file di database](../../relational-databases/databases/database-instant-file-initialization.md).
+I file di dati possono essere inizializzati immediatamente. Ciò consente l'esecuzione rapida di queste operazioni sui file. Per altre informazioni, vedere [Inizializzazione di file di database](../../relational-databases/databases/database-instant-file-initialization.md).
 
 ## <a name="removing-a-filestream-container"></a> Rimozione di un contenitore FILESTREAM
 
@@ -375,7 +377,7 @@ Anche se il contenitore FILESTREAM potrebbe essere stato svuotato mediante l'ope
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Aggiunta di un file a un database
+### <a name="a-adding-a-file-to-a-database"></a>R. Aggiunta di un file a un database
 
 Nell'esempio seguente viene aggiunto un file di dati da 5 MB al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 
@@ -685,7 +687,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
+## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
 
 Usare questa istruzione con un database nell'istanza gestita di database SQL di Azure.
 
@@ -819,7 +821,7 @@ NAME = *new_filegroup_name* cambia il nome del filegroup in *new_filegroup_name*
 
 AUTOGROW_SINGLE_FILE
 
-Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Impostazione predefinita.
+Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Questa è la modalità predefinita.
 
 AUTOGROW_ALL_FILES
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE specifica che il filegroup è di lettura/scrittura. Sono 
 
 Per determinare lo stato di queste opzioni, è possibile esaminare la colonna **is_read_only** nella vista del catalogo  **sys.databases** oppure la proprietà **Updateability** della funzione `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -857,7 +859,7 @@ Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 fi
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Aggiunta di un file a un database
+### <a name="a-adding-a-file-to-a-database"></a>R. Aggiunta di un file a un database
 
 Nell'esempio seguente viene aggiunto un file di dati da 5 MB al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 

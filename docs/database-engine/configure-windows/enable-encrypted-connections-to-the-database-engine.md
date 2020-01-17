@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708515"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252854"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitazione di connessioni crittografate al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ Il livello di crittografia usato da TLS, a 40 bit o a 128 bit, varia a seconda d
 > L'uso del livello di crittografia a 40 bit non è considerato sicuro.
 
 > [!WARNING]
-> Le connessioni TLS crittografate con un certificato autofirmato non offrono un livello di sicurezza elevato. Sono infatti soggette ad attacchi di tipo man-in-the-middle. Non è consigliabile affidarsi a TLS usando certificati autofirmati in un ambiente di produzione o su server connessi a Internet.
+> Le connessioni TLS crittografate con un certificato autofirmato non offrono un livello di sicurezza elevato. Sono infatti suscettibili ad attacchi man-in-the-middle. Non è consigliabile affidarsi a TLS usando certificati autofirmati in un ambiente di produzione o su server connessi a Internet.
 
 L'abilitazione della crittografia TLS contribuisce alla sicurezza del traffico di dati in rete tra le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le applicazioni. Tuttavia, quando tutto il traffico tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un'applicazione client è crittografato con TLS, sono necessarie le operazioni di elaborazione aggiuntive seguenti:
 -  Al momento della connessione è necessario un ulteriore round trip in rete.
 -  I pacchetti inviati dall'applicazione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere crittografati dallo stack TLS del client e decrittografati dallo stack TLS del server.
 -  I pacchetti inviati dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'applicazione devono essere crittografati dallo stack TLS del server e decrittografati dallo stack TLS del client.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
  Il certificato deve essere emesso per l'opzione **Autenticazione server**. Il nome del certificato deve essere il nome di dominio completo (FQDN) del computer.  
   
  I certificati per gli utenti vengono archiviati nel computer locale. Per installare un certificato per l'uso da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager con un account che dispone di privilegi di amministratore locale.
@@ -82,7 +82,7 @@ Affinché un certificato TLS venga caricato da [!INCLUDE[ssNoVersion](../../incl
 
 - La proprietà **Soggetto** del certificato deve specificare che il nome comune (CN, Common Name) corrisponde al nome host oppure al nome di dominio completo (FQDN, Fully Qualified Domain Name) del server. Quando si usa il nome host, nel certificato deve essere specificato il suffisso DNS. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un cluster di failover, è necessario che il nome comune corrisponda al nome host oppure al nome di dominio completo del server virtuale e che sia stato eseguito il provisioning dei certificati in tutti i nodi del cluster di failover.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) supportano i certificati con caratteri jolly. SNAC è stato deprecato e sostituito con [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). È possibile che altri client non supportino i certificati con caratteri jolly. Per altre informazioni, vedere la documentazione del client e [KB 258858](http://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) supportano i certificati con caratteri jolly. SNAC è stato deprecato e sostituito con [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). È possibile che altri client non supportino i certificati con caratteri jolly. Per altre informazioni, vedere la documentazione del client e [KB 258858](https://support.microsoft.com/kb/258858).       
   Non è possibile selezionare il certificato con caratteri jolly usando Gestione configurazione SQL Server. Per usare un certificato con caratteri jolly, è necessario modificare la chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e immettere l'identificazione personale del certificato, senza spazi, nel valore **Certificato**.  
 
   > [!WARNING]  
@@ -120,7 +120,7 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
 
 ## <a name="to-export-the-server-certificate"></a>Per esportare il certificato del server  
   
-1. Nello snap-in **Certificati** individuare il certificato nella cartella **Certificati** / **Personale**, fare clic con il pulsante destro del mouse su **Certificato**, scegliere **Tutte le attività** e quindi fare clic su **Esporta**.  
+1. Nello snap-in **Certificati** individuare il certificato nella cartella **Certificati** / **Personale** , fare clic con il pulsante destro del mouse su **Certificato**, scegliere **Tutte le attività**e quindi fare clic su **Esporta**.  
   
 2. Completare l' **Esportazione guidata certificati**e archiviare il file di certificato in una posizione appropriata.  
   
@@ -129,7 +129,7 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
 > [!IMPORTANT]
 > L'account del servizio SQL Server deve avere le autorizzazioni di lettura per il certificato usato per forzare la crittografia in SQL Server. Per un account del servizio senza privilegi, sarà necessario aggiungere le autorizzazioni di lettura al certificato. In caso contrario, il riavvio del servizio SQL Server potrebbe non riuscire.
   
-1. In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
+1. In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere**Proprietà**.  
   
 2. Nella scheda **Certificato** della finestra di dialogo **Proprietà** - **Protocolli per** _\<nome istanza>_ selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
   
@@ -164,4 +164,3 @@ Per crittografare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 ## <a name="see-also"></a>Vedere anche
 [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)

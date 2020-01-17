@@ -1,8 +1,8 @@
 ---
-title: 'Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Generale)'
+title: Pagina Generale (finestre di dialogo Nuovo gruppo di disponibilità e Proprietà)
 titleSuffix: SQL Server
-description: Descrizione delle varie proprietà disponibili nella pagina "Generale" della procedura guidata "Nuovo gruppo di disponibilità" in SQL Server Management Studio.
-ms.custom: seodec18
+description: Descrizione delle varie proprietà disponibili nella pagina "Generale" delle finestre di dialogo "Nuovo gruppo di disponibilità" e "Proprietà gruppo di disponibilità" in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934876"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254085"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "67934876"
  Nome del gruppo di disponibilità. Si tratta di un nome specificato dall'utente che deve essere univoco all'interno del cluster di failover di Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Database di disponibilità  
- **Database Name**  
+ **Nome database**  
  Nome di un database aggiunto al gruppo di disponibilità.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere un database al gruppo di disponibilità.  
   
  **Rimuovi**  
@@ -49,10 +49,10 @@ ms.locfileid: "67934876"
  Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.  
   
  **Ruolo**  
- **Primaria**  
+ **Server/istanza primaria**  
  Attualmente la replica primaria.  
   
- **Secondari**  
+ **Server/istanza secondaria**  
  Attualmente una replica secondaria.  
   
  **Risoluzione**  
@@ -105,7 +105,7 @@ ms.locfileid: "67934876"
  **URL endpoint**  
  URL dell'endpoint. Per informazioni sul formato di questi URL, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere una replica secondaria al gruppo di disponibilità.  
   
  **Rimuovi**  

@@ -1,6 +1,7 @@
 ---
-title: 'Transazioni: gruppi di disponibilità Always On e mirroring del database | Microsoft Docs'
-ms.custom: ''
+title: 'Transazioni: gruppi di disponibilità e mirroring del database'
+descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
+ms.custom: seo-lt-2019
 ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9664605fc2008549fdd8da9a66172e4d1ebc61f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013819"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251229"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transazioni: gruppi di disponibilità Always On e mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,6 +91,6 @@ Una nuova funzionalità di SQL Server 2016 consente di usare le transazioni dist
 >  Non è supportato l'uso del mirroring del database con DTC o di gruppi di disponibilità con DTC in modi non approvati in questo articolo.  Ciò non implica che gli aspetti del prodotto non correlati a DTC non siano supportati. Tuttavia, eventuali problemi causati dall'uso improprio delle transazioni distribuite non sono supportati.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Gruppi di disponibilità AlwaysOn: Interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Gruppi di disponibilità Always On: Interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
