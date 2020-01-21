@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281544"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947173"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
 
@@ -27,7 +27,7 @@ Visual Studio Code è un editor di codice per Windows, macOS e Linux che support
 ## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare, assicurarsi di aver installato la versione più recente di Visual Studio Code e caricato l'estensione `mssql`. Per scaricare questi strumenti, vedere le pagine seguenti:
--   [Scaricare il codice per Visual Studio](https://code.visualstudio.com/Download)
+-   [Download di Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
@@ -50,6 +50,10 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, impostare la modali
  
 3. Nel menu a discesa **Seleziona modalità linguaggio** visualizzato selezionare o immettere **SQL** e quindi premere **INVIO** per impostare la modalità del linguaggio su SQL. 
 
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportato
+
+Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Connettersi al database del catalogo SSIS
 
 Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
@@ -62,12 +66,12 @@ Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
 
 4. Seguire le istruzioni per specificare le proprietà di connessione per il nuovo profilo di connessione. Dopo aver specificato ogni valore, premere **INVIO** per continuare. 
 
-   | Impostazione       | Valore suggerito | Altre informazioni |
+   | Impostazione       | Valore consigliato | Altre informazioni |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server |  |
    | **Nome database** | **SSISDB** | Il nome del database a cui si effettua la connessione. |
-   | **Autenticazione** | Account di accesso SQL | |
-   | **User name** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **autenticazione** | Account di accesso SQL | |
+   | **Nome utente** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere la password ogni volta, selezionare Sì. |
    | **Immettere un nome per questo profilo** | Un nome di profilo, ad esempio **mySSISServer** | Se si salva un nome di profilo, gli accessi successivi saranno più rapidi. | 

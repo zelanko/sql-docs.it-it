@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281680"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947113"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
 
@@ -30,7 +30,7 @@ Prima di iniziare, verificare di avere l'ultima versione di SQL Server Managemen
 
 La convalida descritta in questo articolo per la distribuzione al database SQL di Azure richiede SQL Server Data Tools (SSDT) 17.4 o versione successiva. Per scaricare la versione più recente di SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -46,12 +46,12 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
-## <a name="wizard_auth"></a> Metodi di autenticazione della Distribuzione guidata
+## <a name="authentication-methods-for-deployment"></a>Metodi di autenticazione per la distribuzione
 
 Se si esegue la distribuzione a un server SQL Server con la Distribuzione guidata, è necessario usare l'autenticazione di Windows. Non è possibile usare l'autenticazione di SQL Server.
 
@@ -65,12 +65,12 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 
 2. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Altre informazioni | 
+   | Impostazione       | Valore consigliato | Altre informazioni | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
+   | **Tipo di server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Se si sta eseguendo la connessione a un server di database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`. |
-   | **Autenticazione** | autenticazione di SQL Server | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo. |
-   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **autenticazione** | Autenticazione di SQL Server | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Vedere [Metodi di autenticazione per la distribuzione](#authentication-methods-for-deployment) in questo articolo. |
+   | **Accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
 3. Fare clic su **Connetti**. In SSMS si apre la finestra Esplora oggetti. 
@@ -94,7 +94,7 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
-    -   Specificare le informazioni di autenticazione e quindi selezionare **Connetti**. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo.
+    -   Specificare le informazioni di autenticazione e selezionare **Connetti**. Vedere [Metodi di autenticazione per la distribuzione](#authentication-methods-for-deployment) in questo articolo.
     -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
     -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
   

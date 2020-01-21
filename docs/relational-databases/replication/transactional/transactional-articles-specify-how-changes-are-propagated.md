@@ -1,6 +1,7 @@
 ---
-title: Specificare la modalità di propagazione delle modifiche per gli articoli transazionali | Microsoft Docs
-ms.custom: ''
+title: Specificare la modalità di propagazione delle modifiche (transazionale)
+description: Informazioni su come specificare la modalità di propagazione delle modifiche per una pubblicazione transazionale in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769337"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321388"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "68769337"
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
   
--   **sp_MSins_\<** *NomeTabella* **>** , per la gestione degli inserimenti.  
+-   **sp_MSins_\<** *tablename***>**, per la gestione degli inserimenti.  
   
--   **sp_MSupd_\<** *NomeTabella* **>** , per la gestione degli aggiornamenti.  
+-   **sp_MSupd_\<** *tablename***>**, per la gestione degli aggiornamenti.  
   
--   **sp_MSdel_\<** *NomeTabella* **>** , per la gestione delle eliminazioni.  
+-   **sp_MSdel_\<** *tablename***>**, per la gestione delle eliminazioni.  
   
- Il **\<** _tablename_ **>** utilizzato nella procedura dipende dalla modalità impiegata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome, ma di un proprietario diverso.  
+ Il **\<**_tablename_**>** utilizzato nella procedura dipende dalla modalità impiegata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome, ma di un proprietario diverso.  
   
  Ognuna di queste procedure può essere sostituita da una procedura personalizzata che viene specificata durante l'aggiunta di un articolo a una pubblicazione. Le procedure personalizzate vengono utilizzate se un'applicazione richiede una logica personalizzata, ad esempio l'inserimento di dati in una tabella di controllo quando una riga viene aggiornata in un Sottoscrittore. Per ulteriori informazioni sulla definizione di stored procedure personalizzate, vedere l'elenco delle procedure riportato sopra.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68769337"
   
 -   Se si apportano modifiche allo schema in una tabella pubblicata, è necessario rigenerare le procedure personalizzate. Per altre informazioni, vedere [Rigenerare procedure transazionali personalizzate per riflettere le modifiche dello schema](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Esempio:  
+-   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -118,7 +119,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>Sintassi SCALL  
  Stored procedure UPDATE  
- Alle stored procedure che gestiscono istruzioni UPDATE vengono passati i valori aggiornati solo per le colonne che sono state modificate, seguiti dai valori originali per le colonne di chiavi primarie e da un parametro di maschera di bit (**binary(n)** ) che indica le colonne modificate. Nell'esempio seguente la colonna 2 (c2) non è stata modificata:  
+ Alle stored procedure che gestiscono istruzioni UPDATE vengono passati i valori aggiornati solo per le colonne che sono state modificate, seguiti dai valori originali per le colonne di chiavi primarie e da un parametro di maschera di bit (**binary(n)**) che indica le colonne modificate. Nell'esempio seguente la colonna 2 (c2) non è stata modificata:  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +127,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>Sintassi MCALL  
  Stored procedure UPDATE  
- Alle stored procedure che gestiscono istruzioni UPDATE vengono passati i valori aggiornati per tutte le colonne definite nell'articolo, seguiti dai valori originali per le colonne di chiavi primarie e da un parametro di maschera di bit (**binary(n)** ) che indica le colonne modificate:  
+ Alle stored procedure che gestiscono istruzioni UPDATE vengono passati i valori aggiornati per tutte le colonne definite nell'articolo, seguiti dai valori originali per le colonne di chiavi primarie e da un parametro di maschera di bit (**binary(n)**) che indica le colonne modificate:  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

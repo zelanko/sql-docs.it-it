@@ -1,6 +1,7 @@
 ---
-title: Alcune repliche di disponibilità sono disconnesse | Microsoft Docs
-ms.custom: ''
+title: Alcune repliche di disponibilità sono disconnesse
+description: Possibili cause e soluzioni nei casi in cui la replica del gruppo di disponibilità sia disconnessa per un gruppo di disponibilità Always On di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bac7bdcc3961b3f6996be91062bea5382e11ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90caaa83f17eb532db0747c62f473ba77f7ebdb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014112"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242596"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Alcune repliche di disponibilità sono disconnesse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68014112"
 |-|-|  
 |**Nome criteri**|Stato di connessione delle repliche di disponibilità|  
 |**Problema**|Alcune repliche di disponibilità sono disconnesse.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Warning**|  
 |**Facet**|gruppo di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
@@ -45,7 +46,7 @@ ms.locfileid: "68014112"
  Utilizzare lo stato dei criteri della replica di disponibilità per trovare quella disconnessa e risolvere il problema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

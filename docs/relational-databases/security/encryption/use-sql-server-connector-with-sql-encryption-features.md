@@ -1,6 +1,7 @@
 ---
-title: Usare Connettore SQL Server con le funzionalità di crittografia SQL | Microsoft Docs
-ms.custom: ''
+title: Usare la crittografia del Connettore SQL Server con Azure Key Vault
+description: Informazioni su come usare il Connettore SQL Server con le funzionalità di crittografia comuni, ad esempio Transparent Data Encryption, la crittografia dei backup e la crittografia a livello di colonna con Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929741"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558511"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +196,7 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
   
 3.  **Eseguire il backup del database**  
   
-     Eseguire il backup del database specificando la crittografia con la chiave simmetrica archiviata nell'insieme di credenziali delle chiavi.
+     Eseguire il backup del database specificando la crittografia con la chiave asimmetrica archiviata nell'insieme di credenziali delle chiavi.
      
      Nell'esempio seguente si noti che se il database è stato già crittografato con TDE e la chiave asimmetrica `CONTOSO_KEY_BACKUP` è diversa dalla chiave asimmetrica TDE, il backup verrà crittografato sia con la chiave asimmetrica TDE che con `CONTOSO_KEY_BACKUP`. L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione dovrà disporre di entrambe le chiavi per decrittografare il backup.
   
@@ -282,6 +283,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

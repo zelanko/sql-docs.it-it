@@ -1,6 +1,7 @@
 ---
-title: Replicare dati in colonne crittografate (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Replicare colonne crittografate (SSMS)
+description: Informazioni su come replicare i dati nelle colonne crittografate usando SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,18 +16,18 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907433"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321648"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica consente di pubblicare dati di colonna crittografati. Per decrittografare e utilizzare tali dati nel Sottoscrittore, la chiave utilizzata per crittografare i dati nel server di pubblicazione deve essere presente anche nel Sottoscrittore. La replica non rappresenta un meccanismo protetto per il trasporto di chiavi di crittografia. La chiave di crittografia deve essere ricreata manualmente nel Sottoscrittore. In questo argomento verrà illustrato come crittografare una colonna nel server di pubblicazione e garantire che la chiave di crittografia sia disponibile nel Sottoscrittore.  
   
- I passaggi principali sono i seguenti:  
+ I passaggi di base sono i seguenti:  
   
 1.  Creare la chiave simmetrica nel server di pubblicazione.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "72907433"
   
 6.  Sottoscrivere la pubblicazione. Per altre informazioni, vedere [Creare una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md) o [Creare una sottoscrizione push](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-7.  Inizializzare la sottoscrizione. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+7.  Inizializzare la sottoscrizione. Per altre informazioni, vedere [Creazione e applicazione dello snapshot iniziale](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 8.  Nel Sottoscrittore eseguire [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) utilizzando i valori del passaggio 1 per ALGORITHM, KEY_SOURCE e IDENTITY_VALUE. È possibile specificare un valore diverso per ENCRYPTION BY.  
   

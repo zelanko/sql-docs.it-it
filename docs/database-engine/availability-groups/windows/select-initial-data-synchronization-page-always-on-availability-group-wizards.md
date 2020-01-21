@@ -1,6 +1,7 @@
 ---
-title: Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità Always On) | Microsoft Docs
-ms.custom: ''
+title: Pagina Seleziona sincronizzazione dati iniziale (procedura guidata gruppi di disponibilità)
+description: Descrizione della pagina "Seleziona sincronizzazione dati iniziale" della creazione guidata gruppo di disponibilità Always On in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014182"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235335"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,14 +84,14 @@ ms.locfileid: "68014182"
  Selezionare questa opzione se si desidera eseguire backup personalizzati del database e del log di ogni database primario e ripristinarli in ogni istanza del server che ospita una replica secondaria. Dopo la chiusura della procedura guidata, sarà quindi necessario creare un join di ogni database secondario in ogni replica secondaria.  
   
 > [!NOTE]  
->  Per ulteriori informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> Per preparare i database secondari manualmente  
  Per preparare i database secondari senza utilizzare alcuna procedura guidata [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , è possibile adottare uno degli approcci seguenti:  
   
 -   Ripristinare manualmente un backup recente del database primario utilizzando RESTORE WITH NORECOVERY, quindi ripristinare ogni successivo backup del log utilizzando RESTORE WITH NORECOVERY. Se i percorsi di file del database primario e del database secondario sono diversi, è necessario utilizzare l'opzione WITH MOVE. Eseguire questa sequenza di ripristino in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità.  È possibile utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per eseguire tali operazioni di backup e ripristino.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
      [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -99,7 +100,7 @@ ms.locfileid: "68014182"
     > [!NOTE]  
     >  Dopo aver creato tutti i database secondari per il gruppo di disponibilità, se si desidera eseguire backup nelle repliche secondarie, sarà necessario configurare nuovamente le preferenze di backup automatico del gruppo di disponibilità.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
      [Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -117,9 +118,9 @@ ms.locfileid: "68014182"
   
 -   [Usare la procedura guidata Aggiungi database a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
--   [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+-   [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
 -   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

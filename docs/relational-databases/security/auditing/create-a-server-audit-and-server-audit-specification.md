@@ -1,6 +1,7 @@
 ---
-title: Creare un controllo del server e una specifica del controllo del server | Microsoft Docs
-ms.custom: ''
+title: Creare un controllo server e una specifica di controllo server
+description: Informazioni su come creare un controllo server e una specifica di controllo server di SQL Server usando SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517981"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952472"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Contenuto dell'articolo**  
   
@@ -34,7 +35,7 @@ ms.locfileid: "72517981"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un controllo del server e una specifica del controllo del server utilizzando:**  
   
@@ -66,7 +67,7 @@ ms.locfileid: "72517981"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...** .  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**.  
   
      Nella pagina **Generale** della finestra di dialogo **Crea controllo** sono disponibili le opzioni indicate di seguito.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "72517981"
      Indica la quantità di tempo in millisecondi che può trascorrere prima che venga forzata l'elaborazione delle azioni di controllo.  Il valore 0 indica un recapito sincrono. Il valore minimo predefinito è **1000** (1 secondo). Il valore massimo è 2.147.483.647 (2.147.483,647 secondi o 24 giorni, 20 ore, 31 minuti e 23,647 secondi).  
   
      **In caso di errore del log di controllo:**  
-     **Continue**  
+     **Continua**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le operazioni di SQL Server continuano. I record di controllo non vengono mantenuti. Il controllo consente di continuare il tentativo di registrazione di eventi e verrà ripreso se viene risolta la condizione di errore. Selezionando l'opzione **Continua** si potrà consentire un'attività non certificata che potrebbe violare i criteri di sicurezza. Selezionare questa opzione quando il funzionamento del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] è più importante della gestione di un controllo completo. Si tratta della selezione predefinita.  
   
      **Arresta server**  
@@ -96,7 +97,7 @@ ms.locfileid: "72517981"
      Indica il percorso della cartella in cui vengono scritti i dati del controllo quando in **Destinazione controllo** è specificato un file.  
   
      **Puntini di sospensione (...)**  
-     Apre la finestra di dialogo **Trova cartella -** _nome\_server_ per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
+     Apre la finestra di dialogo **Trova cartella -**_nome\_server_ per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
   
      **Limite massimo di file di controllo:**  
      **Numero massimo file di rollover**  
@@ -125,7 +126,7 @@ ms.locfileid: "72517981"
   
 1.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...** .  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...**.  
   
      Nella finestra di dialogo **Crea specifica controllo server** sono disponibili le opzioni indicate di seguito.  
   
@@ -153,7 +154,7 @@ ms.locfileid: "72517981"
      **Puntini di sospensione (...)**  
      Viene visualizzata la finestra di dialogo **Seleziona oggetti** per eseguire la ricerca e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto**specificata.  
   
-3.  Al termine dell'operazione scegliere **OK**.  
+3.  Al termine, fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

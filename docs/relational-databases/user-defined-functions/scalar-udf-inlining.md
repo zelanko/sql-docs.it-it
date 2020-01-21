@@ -2,7 +2,7 @@
 title: Inlining di funzioni definite dall'utente scalari nei database SQL di Microsoft | Microsoft Docs
 description: Funzionalità di inlining di funzioni definite dall'utente scalari per migliorare le prestazioni delle query che richiamano funzioni definite dall'utente scalari in SQL Server (a partire da SQL Server 2019) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926044"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831774"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -40,7 +40,7 @@ Le funzioni definite dall'utente scalari offrono in genere prestazioni scarse pe
 
 - **Esecuzione interpretata:** Le funzioni definite dall'utente vengono valutate come batch di istruzioni e vengono eseguite istruzione per istruzione. Ogni istruzione viene compilata e il piano compilato viene memorizzato nella cache. Questa strategia di memorizzazione nella cache consente di risparmiare tempo perché consente di evitare le ricompilazioni, ma ogni istruzione viene eseguita in modo isolato. Non vengono eseguite ottimizzazioni tra istruzioni diverse.
 
-- **Esecuzione seriale:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente il parallelismo interno per le query che richiamano funzioni definite dall'utente. 
+- **Esecuzione seriale:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente il parallelismo interno alla query nelle query che richiamano funzioni definite dall'utente. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Inlining automatico di funzioni definite dall'utente scalari
 L'obiettivo della funzionalità di inlining delle funzioni definite dall'utente scalari è di migliorare le prestazioni delle query che chiamano funzioni definite dall'utente scalari T-SQL, in cui il collo di bottiglia principale è costituito dall'esecuzione di funzioni definite dall'utente.
@@ -154,8 +154,9 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 - La funzione definita dall'utente non fa riferimento a tipi definiti dall'utente.
 - Non sono state aggiunte firme alla funzione definita dall'utente.
 - La funzione definita dall'utente non è una funzione di partizione.
+- La funzione definita dall'utente non contiene riferimenti a espressioni di tabella comuni (CTE)
 
-<sup>1</sup> L'istruzione `SELECT` con accumulo/aggregazione di variabili (ad esempio, `SELECT @val += col1 FROM table1`) non è supportata per l'inlining.
+<sup>1</sup> `SELECT` con accumulo/aggregazione di variabili (ad esempio, `SELECT @val += col1 FROM table1`) non è supportata per l'inlining.
 
 <sup>2</sup> L'inlining delle funzioni definite dall'utente ricorsive viene eseguito solo fino a una determinata profondità.
 
@@ -188,7 +189,7 @@ Se vengono soddisfatte tutte le condizioni preliminari e [!INCLUDE[ssNoVersion](
 - Vengono generati XEvents specifici.
 
 ## <a name="enabling-scalar-udf-inlining"></a>Abilitazione dell'inlining di funzioni definite dall'utente scalari
-È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database. Questa opzione è impostabile con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempio:  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database. Questa opzione è impostabile con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -209,7 +210,7 @@ Per riabilitare l'inlining di funzioni definite dall'utente scalari per il datab
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-Se attiva, questa impostazione viene visualizzata come abilitata in [`sys.database_scoped_configurations` ](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una query specifica designando `DISABLE_TSQL_SCALAR_UDF_INLINING` come hint per la query `USE HINT`. Esempio:
+Se attiva, questa impostazione viene visualizzata come abilitata in [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una query specifica designando `DISABLE_TSQL_SCALAR_UDF_INLINING` come hint per la query `USE HINT`. Ad esempio:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -223,7 +224,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 Un hint per la query `USE HINT` ha la precedenza sulla configurazione con ambito database o sull'impostazione del livello di compatibilità.
 
 È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una funzione definita dall'utente specifica tramite la clausola INLINE nell'istruzione `CREATE FUNCTION` o `ALTER FUNCTION`.
-Esempio:
+Ad esempio:
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

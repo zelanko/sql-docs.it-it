@@ -1,6 +1,7 @@
 ---
-title: Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download | Microsoft Docs
-ms.custom: ''
+title: Ottimizzare le prestazioni degli articoli di solo download (merge)
+description: Descrive come ottimizzare le prestazioni degli articoli di solo download usati dalla replica di tipo merge.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2e5ba71eab133751b9ae58d912b933b6821178d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018725"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321456"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

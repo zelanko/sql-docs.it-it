@@ -1,6 +1,7 @@
 ---
-title: 'Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge) | Microsoft Docs'
-ms.custom: ''
+title: 'Esercitazione: Configurare la replica di tipo merge'
+description: Questa esercitazione illustra come configurare la replica di tipo merge tra un'istanza di SQL Server e un client per dispositivi mobili.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517972"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321854"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
   
 ### <a name="create-merge-publication-and-define-articles"></a>Creare una pubblicazione di tipo merge e definire articoli  
   
-1. Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi espandere il nodo del server.  
+1. Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi espandere il nodo server.  
   
 2. Avviare SQL Server Agent facendo clic con il pulsante destro del mouse su di esso in Esplora oggetti e selezionando **Avvia**. Se con questa operazione l'agente non si avvia, è necessario avviarlo manualmente da Gestione configurazione SQL Server.  
 3. Espandere la cartella **Replica**, fare clic con il pulsante destro del mouse su **Pubblicazioni locali** e quindi scegliere **Nuova Pubblicazione**. Verrà avviata la Creazione guidata nuova pubblicazione:  
@@ -81,7 +82,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
     ![Pagine "Tipo di pubblicazione" e "Tipi di Sottoscrittore"](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. Nella pagina **Articoli** espandere il nodo **Tabelle**. Selezionare le tre tabelle seguenti: **Employee**, **SalesOrderHeader** e **SalesOrderDetail**. Fare clic su **Avanti**.  
+6. Nella pagina **Articoli** espandere il nodo **Tabelle**. Selezionare le tre tabelle seguenti: **Employee**, **SalesOrderHeader** e **SalesOrderDetail**. Selezionare **Avanti**.  
 
    ![Selezioni delle tabelle nella pagina "Articoli"](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -109,28 +110,28 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
   
 10. Nella pagina **Filtro righe tabella** selezionare **Employee (Human Resources)** , selezionare **Aggiungi** e quindi **Aggiungi join per estendere il filtro selezionato**.  
   
-    A. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderHeader** in **Tabella unita in join**. Selezionare **L'istruzione per il join verrà scritta manualmente** e completare l'istruzione per il join come indicato di seguito:  
+    a. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderHeader** in **Tabella unita in join**. Selezionare **L'istruzione per il join verrà scritta manualmente** e completare l'istruzione per il join come indicato di seguito:  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**.
+    b. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**.
 
     ![Selezioni per aggiungere un join al filtro](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. Nella pagina **Filtro righe tabella** selezionare **SalesOrderHeader**, selezionare **Aggiungi** e quindi **Aggiungi join per estendere il filtro selezionato**.  
   
-    A. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderDetail** in **Tabella unita in join**.    
-    B. Selezionare **Per creare l'istruzione verrà utilizzato il compilatore**.  
+    a. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderDetail** in **Tabella unita in join**.    
+    b. Selezionare **Per creare l'istruzione verrà utilizzato il compilatore**.  
     c. Nella casella **Anteprima** verificare che l'istruzione join sia come segue:  
   
     ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**. Fare clic su **Avanti**. 
+    d. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**. Selezionare **Avanti**. 
 
     ![Selezioni per aggiungere un altro join per gli ordini di vendita](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
@@ -138,7 +139,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
 
     ![Selezione per creare uno snapshot immediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Nella pagina **Sicurezza agente** selezionare **Impostazioni di sicurezza**. Immettere <*Nome_server_pubblicazione*> **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**. Fare clic su **Avanti**.  
+22. Nella pagina **Sicurezza agente** selezionare **Impostazioni di sicurezza**. Immettere <*Nome_server_pubblicazione*> **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**. Selezionare **Avanti**.  
 
     ![Selezioni per impostare la sicurezza dell'agente di snapshot](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -164,9 +165,9 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
   
 2. Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse su **AdvWorksSalesOrdersMerge** e quindi selezionare **Proprietà**.  
   
-   A. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**. 
+   a. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**. 
   
-   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_merge** e selezionare **OK**. Selezionare di nuovo **OK**. 
+   b. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_merge** e selezionare **OK**. Selezionare di nuovo **OK**. 
 
    ![Selezioni per aggiungere l'account di accesso dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -200,7 +201,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
   
 6. Nella pagina **Sottoscrittori** selezionare il nome di istanza del server sottoscrittore. In **Database di sottoscrizione** selezionare **Nuovo database** dall'elenco.  
   
-   Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database**. Selezionare **OK**e quindi selezionare **Avanti**. 
+   Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database**. Selezionare **OK**, quindi **Avanti**. 
 
    ![Selezioni per aggiungere un database al sottoscrittore](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
@@ -208,7 +209,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
 
    ![Selezioni per la sicurezza dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
-9. Nella pagina **Pianificazione della sincronizzazione** impostare **Pianificazione agente** su **Esecuzione solo su richiesta**. Fare clic su **Avanti**.  
+9. Nella pagina **Pianificazione della sincronizzazione** impostare **Pianificazione agente** su **Esecuzione solo su richiesta**. Selezionare **Avanti**.  
 
    ![Selezione "Esecuzione solo su richiesta" per l'agente](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
@@ -230,7 +231,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
     
    ![Selezioni per impostare l'account di accesso](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
-1. Nella pagina **Mapping utenti** selezionare il database **SalesOrdersReplica** e selezionare il ruolo **db_owner**. Nella pagina **Entità a protezione diretta** concedere l'autorizzazione **Esplicita** a **Modifica traccia**. Fare clic su **OK**.
+1. Nella pagina **Mapping utenti** selezionare il database **SalesOrdersReplica** e selezionare il ruolo **db_owner**. Nella pagina **Entità a protezione diretta** concedere l'autorizzazione **Esplicita** a **Modifica traccia**. Selezionare **OK**.
 
    ![Pagine "Mapping utente" ed "Entità a protezione diretta"](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
@@ -240,8 +241,8 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
   
 2. Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse sulla pubblicazione **AdvWorksSalesOrdersMerge** e quindi selezionare **Proprietà**.  
    
-   A. Selezionare la pagina **Partizioni dati** e selezionare **Aggiungi**.   
-   B. Nella finestra di dialogo **Aggiungi partizione dati** immettere **adventure-works\pamela0** nella casella **Valore HOST_NAME** e quindi selezionare **OK**.  
+   a. Selezionare la pagina **Partizioni dati** e selezionare **Aggiungi**.   
+   b. Nella finestra di dialogo **Aggiungi partizione dati** immettere **adventure-works\pamela0** nella casella **Valore HOST_NAME** e quindi selezionare **OK**.  
    c. Selezionare la partizione appena aggiunta, selezionare **Genera gli snapshot selezionati adesso** e quindi **OK**. 
 
    ![Selezioni per aggiungere una partizione](media/tutorial-replicating-data-with-mobile-clients/partition.png)

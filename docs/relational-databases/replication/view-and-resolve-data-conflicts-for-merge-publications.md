@@ -1,6 +1,7 @@
 ---
-title: Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge | Microsoft Docs
-ms.custom: ''
+title: Visualizzare e risolvere i conflitti di dati (merge)
+description: Informazioni su come visualizzare e risolvere i conflitti di dati per una pubblicazioni di tipo merge per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907785"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321888"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Risoluzione dei conflitti per la replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "72907785"
  Per impostazione predefinita, le informazioni sui conflitti vengono archiviate:    
 -   Nel server di pubblicazione e nel Sottoscrittore se il livello di compatibilità della pubblicazione è pari a 90RTM o superiore.   
 -   Nel server di pubblicazione se il livello di compatibilità della pubblicazione è inferiore a 80RTM.   
--   Nel server di pubblicazione se i Sottoscrittori eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)]. I dati in conflitto non possono essere archiviati nei Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
+-   Nel server di pubblicazione se i Sottoscrittori eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)]. I dati in conflitto non possono essere archiviati nei sottoscrittori di [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
  L'archivio delle informazioni sui conflitti viene controllato dalla proprietà **conflict_logging** della pubblicazione. Per altre informazioni, vedere [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) e [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
@@ -42,7 +43,7 @@ ms.locfileid: "72907785"
   
 ## <a name="resolve-conflicts"></a>Risolvere i conflitti  
   
-1.  Connettersi al server di pubblicazione, o al Sottoscrittore se appropriato, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione, o al Sottoscrittore se appropriato, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
   

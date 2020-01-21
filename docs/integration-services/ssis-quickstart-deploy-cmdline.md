@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 182dcae5867cd05d508357160aecb5c46d1d5e82
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281772"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947161"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 
@@ -28,7 +28,7 @@ Per altre informazioni sulla procedura, vedere [Distribuzione guidata Integratio
 
 La convalida descritta in questo articolo per la distribuzione al database SQL di Azure richiede SQL Server Data Tools (SSDT) 17.4 o versione successiva. Per scaricare la versione più recente di SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -44,23 +44,21 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
-## <a name="wizard_auth"></a> Metodi di autenticazione della Distribuzione guidata
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportato
 
-Se si esegue la distribuzione a un server SQL Server con la Distribuzione guidata, è necessario usare l'autenticazione di Windows. Non è possibile usare l'autenticazione di SQL Server.
-
-Se si esegue la distribuzione a un server di database SQL di Azure, è necessario usare l'autenticazione di SQL Server o l'autenticazione di Azure Active Directory. Non è possibile usare l'autenticazione di Windows.
+Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Avviare la Distribuzione guidata Integration Services
-1. Aprire la finestra del prompt dei comandi.
+1. Aprire una finestra del prompt dei comandi.
 
 2. Eseguire `ISDeploymentWizard.exe`. Si apre la Distribuzione guidata Integration Services.
 
-    Se la cartella che contiene `ISDeploymentWizard.exe` non si trova nella variabile di ambiente `path`, può essere necessario usare il comando `cd` per passare alla directory corrispondente. Per SQL Server 2017, questa cartella è in genere `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+    Se la cartella che contiene `ISDeploymentWizard.exe` non si trova nella variabile di ambiente `path`, può essere necessario usare il comando `cd` per passare alla directory corrispondente. Per SQL Server 2017 questa cartella è in genere `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Distribuire un progetto con la procedura guidata
 1. Nella pagina **Introduzione** della procedura guidata leggere l'introduzione. Fare clic su **Avanti** per aprire la pagina **Seleziona origine**.
@@ -72,7 +70,7 @@ Se si esegue la distribuzione a un server di database SQL di Azure, è necessari
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
-    -   Specificare le informazioni di autenticazione e quindi selezionare **Connetti**. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo.
+    -   Specificare le informazioni di autenticazione e selezionare **Connetti**. Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment) in questo articolo.
     -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
     -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
 

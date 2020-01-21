@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982865"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871121"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -100,7 +100,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Rende il certificato disponibile per un initiator di una conversazione di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La chiave privata deve corrispondere alla chiave pubblica specificata da *certificate_name*.  
   
  La clausola DECRYPTION BY PASSWORD può essere omessa se la password nel file è protetta con un valore di password Null.  
@@ -123,7 +123,7 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-removing-the-private-key-of-a-certificate"></a>A. Rimozione della chiave privata di un certificato  
+### <a name="a-removing-the-private-key-of-a-certificate"></a>R. Rimozione della chiave privata di un certificato  
   
 ```  
 ALTER CERTIFICATE Shipping04   

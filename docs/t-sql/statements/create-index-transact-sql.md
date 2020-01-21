@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b09ea4349a710bad0ed228e6f16637878047e9bc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982205"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924915"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -245,25 +245,25 @@ Se non diversamente specificato, il tipo di indice predefinito è NONCLUSTERED.
  Nome dell'indice. I nomi di indice devono essere univoci all'interno di una tabella o di una vista, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
 *column*      
- La o le colonne sulle quali è basato l'indice. Specificare due o più nomi di colonna per creare un indice composto sui valori combinati delle colonne specificate. Elencare le colonne da includere nell'indice composto, in base alla priorità di ordinamento, tra parentesi dopo *table_or_view_name*.
+ Una o più colonne su cui è basato l'indice. Specificare due o più nomi di colonna per creare un indice composto sui valori combinati delle colonne specificate. Elencare le colonne da includere nell'indice composto, in base alla priorità di ordinamento, tra parentesi dopo *table_or_view_name*.
 
 In una singola chiave di indice composto è possibile combinare al massimo 32 colonne. Tutte le colonne di una chiave di indice composto devono appartenere alla stessa tabella o vista. La dimensione massima consentita dei valori combinati dell'indice è 900 byte per un indice cluster o 1700 per un indice non cluster. I limiti sono 16 colonne e 900 byte per le versioni precedenti a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
-Le colonne con tipo di dati LOB (Large Object) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image** non possono essere specificate come colonne chiave di un indice. Inoltre, una definizione di vista non può includere colonne di tipo **ntext**, **text** o **image** anche se non vi viene fatto riferimento nell'istruzione CREATE INDEX.
+Le colonne con tipo di dati LOB (Large Object) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** o **image** non possono essere specificate come colonne chiave di un indice. Inoltre, una definizione di vista non può includere colonne di tipo **ntext**, **text** o **image** anche se non vi viene fatto riferimento nell'istruzione CREATE INDEX.
 
 È possibile creare indici su colonne di tipo CLR definito dall'utente se il tipo supporta l'ordinamento binario. È inoltre possibile creare indici su colonne calcolate definite come chiamate di metodo da una colonna con tipo definito dall'utente, a condizione che i metodi siano contrassegnati come deterministici e non eseguano operazioni di accesso ai dati. Per altre informazioni sull'indicizzazione di colonne di tipo CLR definito dall'utente, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
 [ **ASC** | DESC ]      
 Determina se il tipo di ordinamento della colonna di indice specificata è crescente o decrescente. Il valore predefinito è ASC.
 
-INCLUDE **(** _column_ [ **,** ... *n* ] **)**       
+INCLUDE **(**_column_ [ **,**... *n* ] **)**      
 Specifica le colonne non chiave da aggiungere al livello foglia dell'indice non cluster. L'indice non cluster può essere univoco o non univoco.
 
 I nomi di colonna non possono essere ripetuti nell'elenco INCLUDE e non possono essere utilizzati contemporaneamente per colonne chiave e non chiave. Gli indici non cluster contengono sempre le colonne dell'indice cluster se nella tabella è definito un indice cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-È possibile usare qualsiasi tipo di dati, ad eccezione di **text**, **ntext**e **image**. L'indice dovrà essere creato o ricompilato offline (ONLINE = OFF) se una delle colonne non chiave specificate è di tipo **varchar(max)** , **nvarchar(max)** o **varbinary(max)** .
+È possibile usare qualsiasi tipo di dati, ad eccezione di **text**, **ntext**e **image**. L'indice dovrà essere creato o ricompilato offline (ONLINE = OFF) se una delle colonne non chiave specificate è di tipo **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.
 
-Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere incluse in colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna inclusa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).
+Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere incluse in colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna inclusa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 Per informazioni sulla creazione di un indice XML, vedere [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
@@ -312,7 +312,7 @@ ON **"** default **"**
 
 Crea l'indice specificato nello stesso filegroup o schema di partizione della tabella o della vista.
 
-In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]** . Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 > [!NOTE]
 > "default" non indica il filegroup predefinito del database nel contesto di CREATE INDEX, a differenza di CREATE TABLE dove "default" individua la tabella nel filegroup predefinito del database.
@@ -344,7 +344,7 @@ Nome del database.
 Nome dello schema a cui appartiene la tabella o la vista.
 
 *table_or_view_name*      
-Nome della tabella o della vista che si vuole indicizzare.
+Nome della tabella o della vista che si desidera indicizzare.
 
 Per poter creare un indice per una vista, è necessario che la vista sia definita con l'opzione SCHEMABINDING. Prima di creare qualsiasi indice non cluster per una vista, è necessario creare un indice cluster univoco. Per ulteriori informazioni sulle viste indicizzate, vedere la sezione Osservazioni.
 
@@ -352,7 +352,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] l'oggetto può es
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta il formato del nome in tre parti _database_name_.[_schema_name_]._object_name_ quando *database_name* è il database corrente o _database_name_ è `tempdb`e _object_name_ inizia con #.
 
-**\<relational_index_option\>::=**       
+**\<relational_index_option\>::=**      
 Specifica le opzioni da usare quando si crea l'indice.
 
 PAD_INDEX = { ON | **OFF** }      
@@ -361,7 +361,7 @@ PAD_INDEX = { ON | **OFF** }
 
 Specifica il riempimento dell'indice. Il valore predefinito è OFF.
 
-ON      
+ATTIVA      
 La percentuale di spazio disponibile specificata da *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.
 
 OFF o _fillfactor_ non è specificato      
@@ -371,7 +371,7 @@ L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto
 
 Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH PAD_INDEX equivale a WITH PAD_INDEX = ON.
 
-FILLFACTOR **=** _fillfactor_      
+FILLFACTOR **=**_fillfactor_      
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -390,7 +390,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF, tranne per il database SQL di Azure con servizio Hyperscale. Per tutte le operazioni di compilazione dell'indice in Hyperscale, SORT_IN_TEMPDB è sempre ON, indipendentemente dall'opzione specificata, a meno che non venga usata la ricompilazione dell'indice ripristinabile.
 
-ON      
+ATTIVA      
 I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.
 
 OFF      
@@ -403,7 +403,7 @@ Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH SOR
 IGNORE_DUP_KEY = { ON | **OFF** }      
 Specifica l'errore restituito quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. L'opzione non ha alcun effetto se si esegue [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). Il valore predefinito è OFF.
 
-ON      
+ATTIVA      
 Viene visualizzato un messaggio di avviso quando i valori di chiave duplicati vengono inseriti in un indice univoco. Avranno esito negativo solo le righe che violano il vincolo di unicità.
 
 OFF      
@@ -418,7 +418,7 @@ Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH IGN
 STATISTICS_NORECOMPUTE = { ON | **OFF**}      
 Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.
 
-ON      
+ATTIVA      
 Le statistiche non aggiornate non vengono ricalcolate automaticamente.
 
 OFF      
@@ -450,7 +450,7 @@ Se le statistiche per partizione non sono supportate, l'opzione viene ignorata e
 DROP_EXISTING = { ON | **OFF** }      
 Consente di eliminare e ricompilare l'indice cluster o non cluster esistente con le specifiche colonne modificate e di mantenere lo stesso nome per l'indice. Il valore predefinito è OFF.
 
-ON      
+ATTIVA      
 Specifica che l'indice esistente deve essere eliminato e ricompilato e che deve avere lo stesso nome del parametro *index_name*.
 
 OFF      
@@ -473,7 +473,7 @@ Specifica se le tabelle sottostanti e gli indici associati sono disponibili per 
 > [!IMPORTANT]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-ON      
+ATTIVA      
 I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.
 
 OFF      
@@ -489,7 +489,7 @@ Per altre informazioni, vedere [Perform Index Operations Online](../../relationa
 - Indici cluster disabilitati
 - Indici columnstore
 - Indice cluster, se la tabella sottostante contiene tipi di dati LOB (**image**, **ntext**, **text**) e tipi spaziali
-- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)** , è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
+- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)**, è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
 
 Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -499,7 +499,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  Specifica se un'operazione sull'indice online è ripristinabile.
 
- ON      
+ ATTIVA      
 L'operazione sull'indice è ripristinabile.
 
  OFF      
@@ -522,7 +522,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
 
 Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.
 
-ON      
+ATTIVA      
 I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.
 
 OFF      
@@ -533,14 +533,14 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
 
 Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.
 
-ON      
+ATTIVA      
 I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.
 
 OFF      
 I blocchi a livello di pagina non vengono utilizzati.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](#sequential-keys).
 
@@ -563,10 +563,10 @@ Utilizza il numero effettivo di processori o un numero inferiore in base al cari
  Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) ed [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) ed [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 DATA_COMPRESSION      
-Specifica l'opzione di compressione dei dati per l'indice, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:
+Specifica l'opzione di compressione dei dati per l'indice, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:
 
 Nessuno      
 L'indice o le partizioni specificate non vengono compressi.
@@ -579,7 +579,7 @@ L'indice o le partizioni specificate vengono compressi utilizzando la compressio
 
 Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**      
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. Se l'indice non è partizionato, l'argomento ON PARTITIONS genererà un errore. Se la clausola ON PARTITIONS non viene fornita, l'opzione DATA_COMPRESSION si applica a tutte le partizioni di un indice partizionato.
@@ -603,7 +603,7 @@ REBUILD WITH
 );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 L'istruzione CREATE INDEX viene ottimizzata come qualsiasi altra query. Al fine di limitare le operazioni di I/O, è possibile che Query Processor scelga di sottoporre ad analisi un altro indice anziché eseguire un'analisi di tabella. In alcune situazioni è possibile che l'operazione di ordinamento venga eliminata. Nei computer multiprocessore l'istruzione CREATE INDEX può utilizzare più processori per eseguire le operazioni di analisi e ordinamento associate alla creazione dell'indice, in modo identico alle altre query. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 L'operazione di creazione dell'indice può essere sottoposta a una registrazione minima se è impostato il modello di recupero del database con registrazione minima o con registrazione minima delle operazioni bulk.
@@ -652,15 +652,15 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 - I dati di un indice filtrato vengono modificati tramite un'operazione INSERT, UPDATE, DELETE o MERGE.
 - L'indice filtrato viene usato da Query Optimizer per generare il piano di query.
 
-    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|
+    |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-    |ANSI_NULLS|ON|ON|ON|OFF|
-    |ANSI_PADDING|ON|ON|ON|OFF|
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|
-    |ARITHABORT|ON|ON|OFF|OFF|
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+    |ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|
+    |ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|
+    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ATTIVA|OFF|
+    |ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|
+    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|
   
      * Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.
 
@@ -698,7 +698,7 @@ Le colonne calcolate persistenti richiedono l'impostazione delle seguenti opzion
 
 Il vincolo UNIQUE o PRIMARY KEY può includere una colonna calcolata a condizione che vengano soddisfatte tutte le condizioni per l'indicizzazione. In particolare, la colonna calcolata deve essere deterministica e precisa oppure deterministica e persistente. Per altre informazioni sul determinismo, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
-Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere indicizzate come colonne chiave o colonne non chiave incluse purché il tipo di dati della colonna calcolata sia consentito come colonna chiave o colonna non chiave dell'indice. Ad esempio, non è possibile creare un indice XML primario per una colonna **xml** calcolata. Se la dimensione della chiave di indice supera i 900 byte, viene visualizzato un messaggio di avviso.
+Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere indicizzate come colonne chiave o colonne non chiave incluse purché il tipo di dati della colonna calcolata sia consentito come colonna chiave o colonna non chiave dell'indice. Ad esempio, non è possibile creare un indice XML primario per una colonna **xml** calcolata. Se la dimensione della chiave di indice supera i 900 byte, viene visualizzato un messaggio di avviso.
 
 La creazione di un indice su una colonna calcolata può impedire l'esecuzione di un'operazione di inserimento o di aggiornamento che in precedenza veniva eseguita correttamente. Questo problema si può verificare quando la colonna calcolata genera un errore aritmetico. Nella tabella seguente, ad esempio, nonostante la colonna calcolata `c` generi un errore aritmetico, l'istruzione INSERT viene eseguita correttamente.
 
@@ -721,11 +721,11 @@ Per altre informazioni, vedere [Indici per le colonne calcolate](../../relationa
 È possibile aggiungere colonne non chiave, o incluse, al livello foglia di un indice non cluster per migliorare le prestazioni di esecuzione delle query tramite la copertura della query. Questo significa che tutte le colonne a cui la query fa riferimento sono incluse nell'indice come colonne chiave o non chiave. In questo modo, per individuare tutte le informazioni necessarie, in Query Optimizer verrà eseguita un'analisi dell'indice, senza necessità di accedere ai dati della tabella o dell'indice cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md) e [Architettura e guida per la progettazione degli indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="specifying-index-options"></a>Impostazione di opzioni per gli indici
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name> **= ON )** . Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti:
+In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name> **= ON )**. Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti:
 
-- Le nuove opzioni per gli indici possono essere specificate solo usando WITH ( **_option\_name_ = ON | OFF**).
+- Le nuove opzioni per gli indici possono essere specificate solo usando WITH (**_option\_name_ = ON | OFF**).
 - Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Se ad esempio si specifica WITH (**DROP_EXISTING, ONLINE = ON**), l'istruzione avrà esito negativo.
-- Quando si crea un indice XML le opzioni devono essere specificate usando WITH ( **_option_name_= ON | OFF**).
+- Quando si crea un indice XML le opzioni devono essere specificate usando WITH (**_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Clausola DROP_EXISTING
 È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.
@@ -794,7 +794,7 @@ Se `ALLOW_ROW_LOCKS = ON` e `ALLOW_PAGE_LOCK = ON`, i blocchi a livello di riga,
 Se `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, è consentito solo un blocco a livello di tabella quando si accede all'indice.
 
 ## <a name="sequential-keys"></a>Chiavi sequenziali
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La contesa di inserimento dell'ultima pagina è un problema di prestazioni comune che si verifica quando un numero elevato di thread simultanei tenta di inserire righe in un indice con una chiave sequenziale. Un indice viene considerato sequenziale quando la colonna chiave iniziale contiene valori che sono sempre crescenti o decrescenti, ad esempio una colonna Identity o una data che per impostazione predefinita è la data/ora corrente. Poiché le chiavi da inserire sono sequenziali, tutte le nuove righe verranno inserite alla fine della struttura dell'indice (in altre parole, nella stessa pagina). Questo comporta una contesa per la pagina in memoria, che si manifesta come diversi thread in attesa di PAGELATCH_EX per la pagina in questione.
 
@@ -837,7 +837,7 @@ Per visualizzare informazioni sugli indici esistenti, è possibile eseguire una 
 
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Esempi: tutte le versioni. Usa il database AdventureWorks.
 
-### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. Creare un indice rowstore non cluster semplice
+### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>R. Creare un indice rowstore non cluster semplice
 Negli esempi che seguono viene creato un indice non cluster per la colonna `VendorID` della tabella `Purchasing.ProductVendor`.
 
 ```sql

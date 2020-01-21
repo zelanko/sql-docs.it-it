@@ -1,6 +1,7 @@
 ---
-title: Informazioni sulla pubblicazione, Avvisi (pubblicazione di tipo merge, SQL Server 2005 e versioni successive) | Microsoft Docs
-ms.custom: ''
+title: Avvisi (Informazioni sulla pubblicazione di tipo merge)
+description: Viene descritta la scheda "Avvisi" della pagina Informazioni sulla pubblicazione della replica di tipo merge in SQL Server Management Studio su SQL Server 2005 e versioni successive.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120294"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321343"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione di tipo merge, SQL Server 2005 e versioni successive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "68120294"
  Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. Gli avvisi vengono definiti facendo clic su **Configura avvisi** e specificando le informazioni appropriate nella finestra di dialogo **Configura avvisi di replica** .  
   
 ## <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare un avviso e specificare un valore soglia.  
   
  **Avviso**  
  Selezionare questa opzione per abilitare l'impostazione di avvisi per un determinato avviso di replica.  
   
- **Avviso**  
+ **Warning**  
  Descrizione dell'avviso associato al valore soglia.  
   
  **Soglia**  

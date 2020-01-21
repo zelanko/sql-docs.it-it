@@ -1,6 +1,7 @@
 ---
-title: 'Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server | Microsoft Docs'
-ms.custom: ''
+title: Trovare errori con la replica transazionale
+description: Viene descritto come individuare e identificare gli errori con la replica transazionale, nonché la metodologia di risoluzione dei problemi per risolvere i problemi relativi alla replica.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907284"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321940"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,17 +57,17 @@ L'agente di snapshot genera lo snapshot e lo scrive nella cartella degli snapsho
 
 1. Visualizzare lo stato dell'agente di snapshot:
 
-    A. In Esplora oggetti espandere il nodo **Pubblicazione locale** in **Replica**.
+    a. In Esplora oggetti espandere il nodo **Pubblicazione locale** in **Replica**.
 
-    B. Fare clic con il pulsante destro del mouse sulla pubblicazione **AdvWorksProductTrans** > **Visualizza stato agente snapshot**. 
+    b. Fare clic con il pulsante destro del mouse sulla pubblicazione **AdvWorksProductTrans** > **Visualizza stato agente snapshot**. 
 
     ![Comando "Visualizza stato agente snapshot "del menu di scelta rapida](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. Se nello stato dell'agente di snapshot viene segnalato un errore, è possibile trovare altri dettagli nella cronologia processo dell'agente di snapshot:
 
-    A. Espandere **SQL Server Agent** in Esplora oggetti e aprire Monitoraggio attività processi. 
+    a. Espandere **SQL Server Agent** in Esplora oggetti e aprire Monitoraggio attività processi. 
 
-    B. Ordinare per **Categoria** e identificare l'agente di snapshot in base alla categoria **REPL-Snapshot**.
+    b. Ordinare per **Categoria** e identificare l'agente di snapshot in base alla categoria **REPL-Snapshot**.
 
     c. Fare clic con il pulsante destro del mouse sull'agente di snapshot e quindi scegliere **Visualizza cronologia**. 
 
@@ -114,9 +115,9 @@ L'agente di lettura log si connette al database del server di pubblicazione e an
 
 6. L'errore si verifica in genere quando il proprietario del server di pubblicazione non è impostato correttamente. Questa situazione può verificarsi quando un database viene ripristinato. Per verificare ciò:
 
-    A. Espandere **Database** in Esplora oggetti.
+    a. Espandere **Database** in Esplora oggetti.
 
-    B. Fare clic con il pulsante destro del mouse su **AdventureWorks2012** > **Proprietà**. 
+    b. Fare clic con il pulsante destro del mouse su **AdventureWorks2012** > **Proprietà**. 
 
     c. Verificare l'esistenza di un proprietario nella pagina **File**. Se questa casella è vuota, questa è la causa probabile del problema. 
 
@@ -133,9 +134,9 @@ L'agente di lettura log si connette al database del server di pubblicazione e an
 
 8. Potrebbe essere necessario riavviare l'agente di lettura log:
 
-    A. Espandere il nodo **SQL Server Agent** in Esplora oggetti e aprire Monitoraggio attività processi.
+    a. Espandere il nodo **SQL Server Agent** in Esplora oggetti e aprire Monitoraggio attività processi.
 
-    B. Ordinare per **Categoria** e identificare l'agente di lettura log in base alla categoria **REPL-LogReader**. 
+    b. Ordinare per **Categoria** e identificare l'agente di lettura log in base alla categoria **REPL-LogReader**. 
 
     c. Fare clic con il pulsante destro del mouse sul processo dell'**agente di lettura log** e scegliere **Inizia processo al passaggio**. 
 
@@ -163,9 +164,9 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
 
 3. L'errore indica che l'agente di distribuzione esegue nuovi tentativi. Per trovare altre informazioni, controllare la cronologia processo dell'agente di distribuzione: 
 
-    A. Espandere **SQL Server Agent** in Esplora oggetti > **Monitoraggio attività processi**. 
+    a. Espandere **SQL Server Agent** in Esplora oggetti > **Monitoraggio attività processi**. 
     
-    B. Ordinare i processi per **Categoria**. 
+    b. Ordinare i processi per **Categoria**. 
 
     c. Identificare l'agente di distribuzione in base alla categoria **REPL-Distribution**. Fare clic con il pulsante destro del mouse sull'agente e scegliere **Visualizza cronologia**.
 
@@ -180,9 +181,9 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
 
 6. Questo errore indica che la password usata dall'agente di distribuzione non è corretta. Per risolvere questo errore:
 
-    A. Espandere il nodo **Replica** in Esplora oggetti.
+    a. Espandere il nodo **Replica** in Esplora oggetti.
     
-    B. Fare clic con il pulsante destro del mouse sulla sottoscrizione > **Proprietà**.
+    b. Fare clic con il pulsante destro del mouse sulla sottoscrizione > **Proprietà**.
     
     c. Selezionare i puntini di sospensione (...) accanto ad **Account processo agente** e modificare la password.
 

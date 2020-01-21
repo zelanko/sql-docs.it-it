@@ -1,6 +1,7 @@
 ---
-title: Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (sottoscrizione transazionale) | Microsoft Docs
-ms.custom: ''
+title: Cronologia server di distribuzione - Sottoscrittore
+description: Descrive le opzioni nella scheda "Cronologia server di distribuzione - Sottoscrittore" in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 88199fd5a84fbfbc04f4dacf32d5694bb2f9323b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 56ecf351e60237e099b4c498ba56ae1a956d142a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769451"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321695"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (Sottoscrizione transazionale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "68769451"
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente di distribuzione da visualizzare. L'esecuzione dell'agente di distribuzione è in genere continua. Potrebbe pertanto essere presente una sola sessione.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di distribuzione. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Completato  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68769451"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo durante il quale l'agente di distribuzione è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

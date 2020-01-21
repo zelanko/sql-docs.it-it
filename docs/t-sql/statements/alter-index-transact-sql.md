@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517933"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924958"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ALTER INDEX { index_name | ALL }
   
  Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supporta il formato del nome in tre parti database_name.[schema_name].table_or_view_name, dove database_name è il database corrente o tempdb e table_or_view_name inizia con #.  
   
- REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
+ REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -246,7 +246,7 @@ PARTITION
   
  Numero di partizioni di un indice partizionato da ricompilare o riorganizzare. *partition_number* è un'espressione costante che può fare riferimento a variabili, incluse variabili o funzioni con tipo definito dall'utente (UDT) e funzioni definite dall'utente, ma non a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È necessario che *partition_number* esista o l'istruzione avrà esito negativo.  
   
- WITH **(** \<single_partition_rebuild_index_option> **)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -306,7 +306,7 @@ COMPRESS_ALL_ROW_GROUPS consente di forzare i rowgroup differenziali OPEN o CLOS
 
 Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<set_index option> [ **,** ... *n*] **)**  
+SET **(** \<set_index option> [ **,**... *n*] **)**  
  Specifica alcune opzioni per l'indice senza ricompilare né riorganizzare l'indice. La parola chiave SET non può essere specificata per un indice disabilitato.  
   
 PAD_INDEX = { ON | OFF }  
@@ -315,7 +315,7 @@ PAD_INDEX = { ON | OFF }
 
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  La percentuale di spazio disponibile specificata in FILLFACTOR viene applicata alle pagine di livello intermedio dell'indice. Se l'opzione FILLFACTOR non viene specificata e l'opzione PAD_INDEX è impostata su ON, viene usato il valore del fattore di riempimento archiviato in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  OFF o *fillfactor* non è specificato  
@@ -342,7 +342,7 @@ FILLFACTOR = *fillfactor*
   
  Specifica se i risultati dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF, tranne per il database SQL di Azure con servizio Hyperscale. Per tutte le operazioni di ricompilazione dell'indice in Hyperscale, SORT_IN_TEMPDB è sempre ON, indipendentemente dall'opzione specificata, a meno che non venga usata la ricompilazione dell'indice ripristinabile.  
   
- ON  
+ ATTIVA  
  I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. Se **tempdb** si trova in un set di dischi diverso rispetto al database utente, il tempo necessario per creare un indice potrebbe essere minore. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  IGNORE_DUP_KEY **=** { ON | OFF }  
  Specifica l'errore restituito quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  Viene visualizzato un messaggio di avviso quando i valori di chiave duplicati vengono inseriti in un indice univoco. Avranno esito negativo solo le righe che violano il vincolo di unicità.  
   
  OFF  
@@ -370,7 +370,7 @@ FILLFACTOR = *fillfactor*
  STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  Le statistiche non aggiornate non vengono ricalcolate automaticamente.  
   
  OFF  
@@ -405,7 +405,7 @@ Se è specificato **ON**, le statistiche create sono statistiche per partizione.
 > [!IMPORTANT]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
- ON  
+ ATTIVA  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. In questo modo, le query o gli aggiornamenti relativi alla tabella e agli indici sottostanti possono continuare. All'inizio dell'operazione viene mantenuto brevemente un blocco condiviso (S) sull'oggetto di origine. Al termine dell'operazione, se è in corso la creazione di un indice non cluster, viene mantenuto un blocco S sull'origine per un periodo di tempo molto breve. Se è in corso la creazione o l'eliminazione online di un indice cluster o la ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.  
   
  OFF  
@@ -419,7 +419,7 @@ Per altre informazioni, vedere [Perform Index Operations Online](../../relationa
 - Indice cluster univoco iniziale su una vista
 - Indici columnstore
 - Indice cluster, se la tabella sottostante contiene tipi di dati LOB (**image**, **ntext**, **text**) e tipi spaziali
-- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)** , è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
+- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)**, è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
 
 Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -451,7 +451,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ON  
+ ATTIVA  
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF  
@@ -463,7 +463,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ON  
+ ATTIVA  
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](./create-index-transact-sql.md#sequential-keys) della pagina CREATE INDEX.
 
@@ -515,7 +515,7 @@ Il valore predefinito è 0 minuti.
  Per indicazioni su quando usare COMPRESSION_DELAY, vedere l'[introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
  DATA_COMPRESSION  
- Specifica l'opzione di compressione dei dati per l'indice, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:  
+ Specifica l'opzione di compressione dei dati per l'indice, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:  
   
  Nessuno  
  L'indice o le partizioni specificate non vengono compressi. Non si applica agli indici columnstore.  
@@ -540,7 +540,7 @@ Il valore predefinito è 0 minuti.
   
  Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
@@ -568,7 +568,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  ONLINE **=** { ON  | **OFF** } \< <come si applica a single_partition_rebuild_index_option  
  Specifica se un indice o una partizione di indice di una tabella sottostante può essere ricompilata online o offline. Se **REBUILD** viene eseguito online (**ON**), i dati nella tabella sono disponibili per le query e le modifiche durante l'operazione sull'indice.  Il valore predefinito è **OFF**.  
   
- ON  
+ ATTIVA  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. È necessario un blocco S sulla tabella all'inizio della ricompilazione dell'indice e un blocco Sch-M sulla tabella alla fine della ricompilazione dell'indice online. Sebbene entrambi i blocchi siano blocchi di metadati brevi, soprattutto il blocco Sch-M deve attendere il completamento di tutte le transazioni bloccanti. Durante il tempo di attesa il blocco Sch-M impedisce tutte le altre transazioni in attesa dietro il blocco stesso per l'accesso alla stessa tabella.  
   
 > [!NOTE]
@@ -632,7 +632,7 @@ ABORT
 
 Interrompe un'operazione sull'indice in esecuzione o sospesa, dichiarata ripristinabile. È necessario eseguire in modo esplicito un comando **ABORT** per terminare un'operazione di ricompilazione dell'indice ripristinabile. L'errore o la sospensione di un'operazione sull'indice ripristinabile non termina l'esecuzione. Lascia invece l'operazione in uno stato di sospensione indefinito.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione ALTER INDEX non può essere utilizzata per ripartizionare un indice o spostarlo in un filegroup diverso né per modificare la definizione dell'indice, ad esempio per aggiungere o eliminare colonne oppure per modificarne l'ordine. Per eseguire queste operazioni, utilizzare CREATE INDEX con la clausola DROP_EXISTING.  
   
 Quando un'opzione non viene specificata in modo esplicito, viene applicata l'impostazione corrente. Se, ad esempio, non viene specificata un'impostazione per FILLFACTOR nella clausola REBUILD, verrà utilizzato il valore del fattore di riempimento archiviato nel catalogo di sistema durante il processo di ricompilazione. Per visualizzare le impostazioni correnti delle opzioni per gli indici, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -751,7 +751,7 @@ Agli indici partizionati vengono applicate le restrizioni seguenti:
   
 -   Quando si utilizza ALTER INDEX ALL ... non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.  
 -   La sintassi ALTER INDEX \<index> ... La sintassi REBUILD PARTITION ricompila la partizione specificata dell'indice.  
--   La sintassi ALTER INDEX \<index> ... REBUILD WITH ... consente di ricompilare tutte le partizioni dell'indice.  
+-   La sintassi ALTER INDEX \<index> ... La sintassi REBUILD WITH ricompila tutte le partizioni dell'indice.  
   
 ## <a name="statistics"></a>Statistiche  
  Quando si esegue **ALTER INDEX ALL ...** su una tabella, vengono aggiornate solo le statistiche associate agli indici. Le statistiche automatiche o manuali create sulla tabella, anziché su un indice, non vengono aggiornate.  
@@ -763,7 +763,7 @@ Agli indici partizionati vengono applicate le restrizioni seguenti:
   
 -  Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] non usa le opzioni filegroup e FileStream.  
 -  Gli indici columnstore non sono disponibili nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
--  Le operazioni sugli indici ripristinabili sono disponibili a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+-  Le operazioni sugli indici ripristinabili sono disponibili a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
   
 ## <a name="basic-syntax-example"></a>Esempio della sintassi di base:   
   
@@ -775,10 +775,10 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;  
 ```
 
-## <a name="examples-columnstore-indexes"></a>Esempi: Indici columnstore  
+## <a name="examples-columnstore-indexes"></a>Esempi: Indici Columnstore  
  Questi esempio si applicano agli indici columnstore.  
   
-### <a name="a-reorganize-demo"></a>A. Demo di REORGANIZE  
+### <a name="a-reorganize-demo"></a>R. Demo di REORGANIZE  
  In questo esempio viene illustrato il funzionamento del comando ALTER INDEX REORGANIZE.  Viene creata una tabella con più rowgroup e viene illustrata l'unione dei rowgroup tramite REORGANIZE.  
   
 ```sql  
@@ -984,7 +984,7 @@ GO
   
 ## <a name="examples-rowstore-indexes"></a>Esempi: Indici rowstore  
   
-### <a name="a-rebuilding-an-index"></a>A. Ricompilazione di un indice  
+### <a name="a-rebuilding-an-index"></a>R. Ricompilazione di un indice  
  Nell'esempio seguente viene ricompilato un singolo indice della tabella `Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

@@ -1,6 +1,6 @@
 ---
-title: Configurare PolyBase per l'accesso a dati esterni in Hadoop
-ms.date: 04/23/2019
+title: 'Accedere ai dati esterni: Hadoop - PolyBase'
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83fb16a5c55d1f2f169268be6463d9735ce4e55c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659557"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255438"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -22,7 +22,7 @@ ms.locfileid: "73659557"
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in Hadoop.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
 
@@ -64,7 +64,7 @@ Configurare prima di tutto SQL Server PolyBase per usare il provider di Hadoop s
    - Servizio spostamento dati di PolyBase per SQL Server  
    - Motore di PolyBase per SQL Server  
   
-   ![arrestare e avviare servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrestare e avviare servizi PolyBase in services.msc")  
+   ![arrestare e avviare servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "|::ref1::|")  
   
 ## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
 

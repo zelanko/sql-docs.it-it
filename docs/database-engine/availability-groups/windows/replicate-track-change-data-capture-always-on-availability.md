@@ -1,6 +1,7 @@
 ---
-title: Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità | Microsoft Docs
-ms.custom: ''
+title: Replica, rilevamento modifiche, Change Data Capture e gruppi di disponibilità
+description: Informazioni sull'interoperabilità della replica, il rilevamento delle modifiche e Change Data Capture quando vengono usati con i gruppi di disponibilità Always On di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251958"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235386"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +178,7 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
     - Rimuovere il database da tutte le istanze di replica secondaria del gruppo di disponibilità e aggiungerlo alle istanze di replica del gruppo di disponibilità con seeding automatico o manuale
   
 ###  <a name="CT"></a> Rilevamento delle modifiche  
- Un database abilitato per il rilevamento delle modifiche (CT) può far parte di un gruppo di disponibilità AlwaysOn. Non è richiesta alcuna operazione di configurazione aggiuntiva. Le applicazioni client di rilevamento delle modifiche in cui vengono usate le funzioni con valori di tabella CDC per accedere ai dati delle modifiche devono poter essere in grado di individuare la replica primaria dopo il failover. Se l'applicazione client viene connessa tramite il nome del listener del gruppo di disponibilità, le richieste di connessione verranno sempre indirizzate in modo appropriato alla replica primaria corrente.  
+ Un database abilitato per il rilevamento delle modifiche (CT) può far parte di un gruppo di disponibilità AlwaysOn. Non è necessaria alcuna configurazione aggiuntiva. Le applicazioni client di rilevamento delle modifiche in cui vengono usate le funzioni con valori di tabella CDC per accedere ai dati delle modifiche devono poter essere in grado di individuare la replica primaria dopo il failover. Se l'applicazione client viene connessa tramite il nome del listener del gruppo di disponibilità, le richieste di connessione verranno sempre indirizzate in modo appropriato alla replica primaria corrente.  
   
 > [!NOTE]  
 >  I dati del rilevamento modifiche devono sempre essere ottenuti dalla replica primaria. Un tentativo di accedere ai dati delle modifiche da una replica secondaria comporterà l'errore seguente:  
@@ -201,22 +202,22 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
 -   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrizioni  
  Combinazioni supportate di replica in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
-||**Server di pubblicazione**|**Database di distribuzione**|**Sottoscrittore**|  
+||**Autore**|**Database di distribuzione**|**Sottoscrittore**|  
 |**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|Sì| 
-|**P2P**|no|no|no|  
-|**Merge**|Sì|no|no|  
-|**Snapshot**|Sì|no|Sì|
+|**P2P**|No|No|No|  
+|**Merge**|Sì|No|No|  
+|**Snapshot**|Sì|No|Sì|
   
  **Non è supportato l'uso del database di distribuzione con il mirroring del database.  
   
 ### <a name="considerations"></a>Considerazioni  
   
--   Non è supportato l'utilizzo del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database. La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, usare un cluster di failover di SQL Server. Per altre informazioni, vedere [Istanze del cluster di failover AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Non è supportato l'utilizzo del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database. La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, usare un cluster di failover di SQL Server. Per altre informazioni, vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Il failover del Sottoscrittore in un database secondario, se supportato, è una procedura manuale per Sottoscrittori della replica di tipo merge. La procedura è essenzialmente identica al metodo usato per il failover a un database sottoscrittore con mirroring. I Sottoscrittori della replica transazionale non necessitano di una gestione speciale durante la partecipazione a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. È necessario che nei Sottoscrittori sia in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva perché possano fare parte di un gruppo di disponibilità.  Per altre informazioni, vedere [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md).
   
@@ -237,7 +238,7 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
 -   [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
--   [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+-   [Usare i dati delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
  **Change tracking**  
   
@@ -256,7 +257,7 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

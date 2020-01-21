@@ -1,6 +1,7 @@
 ---
-title: Aggiornare gli script di replica (programmazione Transact-SQL della replica) | Microsoft Docs
-ms.custom: ''
+title: Aggiornare gli script di replica (stored procedure di replica)
+description: Informazioni su come usare le stored procedure di replica per aggiornare gli script usati per configurare una topologia di replica a livello di programmazione.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710367"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320044"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aggiornamento di script di replica (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "71710367"
   
     -   Nel caso di una sottoscrizione pull, aggiornare l'esecuzione di [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in modo da specificare le credenziali di Windows usate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per `@job_name` e `@job_password`. Tale operazione viene effettuata dopo l'esecuzione di [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Per una sottoscrizione push, eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare `@subscriber`, `@subscriber_db`, `@publication`, le credenziali di Windows usate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per `@job_name` e `@job_password`, oltre a una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Per altre informazioni, vedere [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Per una sottoscrizione push, eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare `@subscriber`, `@subscriber_db`, `@publication`, le credenziali di Windows usate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per `@job_name` e `@job_password`, oltre a una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>Per aggiornare gli script di configurazione di una pubblicazione di tipo merge  
   

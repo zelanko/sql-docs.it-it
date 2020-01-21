@@ -1,6 +1,7 @@
 ---
-title: Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri | Microsoft Docs
-ms.custom: ''
+title: Monitorare e applicare le procedure consigliate usando la gestione basata su criteri
+description: La gestione basata su criteri offre un set di file di criteri che è possibile importare per le procedure consigliate e valuta i criteri rispetto a un set di destinazione che include istanze, oggetti, database e oggetti di database.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087092"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557668"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ ms.locfileid: "68087092"
 |Lightweight Pooling SQL Server|[Disabilitazione di lightweight pooling](../../relational-databases/policy-based-management/disable-lightweight-pooling.md)|  
 |Modalità di accesso SQL Server|[Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md)|  
 |Massimo grado parallelismo SQL Server|[Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
-|Numero massimo thread di lavoro di SQL Server per SQL Server 2000 a 32 bit|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro di SQL Server per SQL Server 2000 a 32 bit|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Numero massimo thread di lavoro SQL Server per SQL Server 2000 a 64 bit|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|Numero massimo thread di lavoro SQL Server per SQL Server 2005 e versioni successive|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro SQL Server per SQL Server 2005 e versioni successive|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Dimensioni pacchetto di rete SQL Server|[Valore massimo per le dimensioni del pacchetto di rete impostato su 8060 byte](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |Scadenza password SQL Server|[Scadenza della password di accesso di SQL server](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  
 |Criteri password SQL Server|[Livello di complessità delle password di accesso di SQL Server](../../relational-databases/policy-based-management/sql-server-login-password-strength.md)|  

@@ -1,7 +1,7 @@
 ---
 title: DMV e viste del catalogo di sistema per i gruppi di disponibilità
 description: Una raccolta di DMV e viste del catalogo che consente di monitorare e diagnosticare l'integrità di un gruppo di disponibilità Always On.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000183"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822337"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>DMV e viste del catalogo di sistema (Gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Configurare il processo del set di transazioni per un server di pubblicazione Oracle | Microsoft Docs
-ms.custom: ''
+title: Configurare il processo del set di transazioni (server di pubblicazione Oracle)
+description: Informazioni su come configurare il processo del set di transazioni per un server di pubblicazione Oracle in un Sottoscrittore SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2a38f122dd4a0f184ab4fd3e564c143d0e24a924
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 8f25f3d9c9a69d3a8f87e8a4eb1886f31092940f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275748"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322054"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>Configurare il processo del set di transazioni per un server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +60,6 @@ ms.locfileid: "70275748"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione delle prestazioni per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)   
- [Concetti di base relativi alle stored procedure del sistema di replica](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

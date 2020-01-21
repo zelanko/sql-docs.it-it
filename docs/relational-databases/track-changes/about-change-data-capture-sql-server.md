@@ -1,10 +1,10 @@
 ---
 title: Informazioni su Change Data Capture
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095326"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952463"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> CDC è ora supportato per SQL Server 2017 in Linux a partire da CU18 e SQL Server 2019 in Linux.
+
   Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
   
  Un buon esempio di consumer di dati cui questa tecnologia è destinata è un'applicazione ETL di estrazione, trasformazione e caricamento. Un'applicazione di questo tipo carica incrementalmente dati delle modifiche dalle tabelle di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un data warehouse oppure in un data mart. Anche se la rappresentazione delle tabelle di origine all'interno del data warehouse deve riflettere le modifiche in tali tabelle, una tecnologia end-to-end che aggiorna una replica dell'origine non è appropriata. È necessario invece un flusso affidabile di dati delle modifiche strutturato in modo che i consumer possano applicarlo a rappresentazioni di destinazione dei dati diverse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture fornisce questa tecnologia.  
@@ -30,7 +34,7 @@ ms.locfileid: "74095326"
 ## <a name="change-data-capture-data-flow"></a>Flusso di dati di Change Data Capture  
  Nella figura seguente viene illustrato il flusso di dati principale per Change Data Capture.  
   
- ![Flusso di dati di Change Data Capture](../../relational-databases/track-changes/media/cdcdataflow.gif "Flusso di dati di Change Data Capture")  
+ ![Flusso di dati di Change Data Capture](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  L'origine dei dati delle modifiche per la funzionalità Change Data Capture è data dal log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Man mano che alle tabelle di origine con rilevamento vengono applicati inserimenti, aggiornamenti ed eliminazioni, le voci che descrivono tali modifiche vengono aggiunte al log. Il log viene utilizzato come input per il processo di acquisizione Il log viene letto e le informazioni relative alle modifiche vengono aggiunte alla tabella delle modifiche associata alla tabella con rilevamento. Per enumerare le modifiche visualizzate nelle tabelle delle modifiche in un intervallo specificato, sono disponibili diverse funzioni che restituiscono le informazioni in un set di risultati filtrato. Tale set di risultati viene utilizzato in genere da un processo dell'applicazione per aggiornare una rappresentazione dell'origine in alcuni ambienti esterni.  
   
@@ -136,7 +140,7 @@ CREATE TABLE T1(
 ## <a name="see-also"></a>Vedere anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
+ [Usare Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

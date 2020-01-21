@@ -1,6 +1,7 @@
 ---
-title: Riprendere un database di disponibilità (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Riprendere un database di gruppo di disponibilità
+description: Procedura per riprendere un database messo in pausa all'interno di un gruppo di disponibilità Always On usando SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517953"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822600"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Riprendere un database di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

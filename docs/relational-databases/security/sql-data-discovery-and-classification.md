@@ -11,26 +11,27 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929793"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548382"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-La funzionalità Individuazione dati e classificazione costituisce un nuovo strumento incorporato in SQL Server Management Studio (SSMS) per **l'individuazione**, **la classificazione**, **l'assegnazione di etichette** & **la creazione di report** di dati sensibili nei database.
+La funzionalità Individuazione dati e classificazione costituisce un nuovo strumento incorporato in [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) per l'**individuazione**, la **classificazione**, l'**assegnazione di etichette** & **la creazione di report** di dati sensibili nei database.
 L'individuazione e la classificazione dei dati più sensibili, come i dati aziendali, finanziari, medici e così via, può avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione. Possono costituire l'infrastruttura per:
 * Contribuire a soddisfare gli standard per la privacy dei dati.
 * Controllare l'accesso e rafforzare la sicurezza di database o colonne contenenti dati altamente sensibili.
 
 > [!NOTE]
-> Individuazione dati e classificazione è una funzionalità **supportata per SQL Server 2008 e versioni successive e può essere usata con SSMS 17.5 o versioni successive**. Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](https://go.microsoft.com/fwlink/?linkid=866265).
+> Individuazione dati e classificazione è una funzionalità **supportata per SQL Server 2012 e versioni successive e può essere usata con [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o versioni successive**. Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a id="subheading-1"></a>Panoramica
 Individuazione dati e classificazione introduce un set di servizi avanzati, che costituisce un nuovo paradigma di Information Protection per SQL per proteggere i dati, non solo il database:
+
 * **Individuazione e consigli**: il motore di classificazione esegue l'analisi del database e identifica le colonne che contengono dati potenzialmente sensibili. In seguito offre un modo semplice per verificare e applicare i consigli di classificazione appropriati, nonché per classificare manualmente le colonne.
 * **Assegnazione di etichette**: è possibile contrassegnare le colonne con etichette di classificazione di riservatezza in modo permanente.
 * **Visibilità**: è possibile visualizzare lo stato di classificazione del database in un report dettagliato che può essere stampato o esportato a scopo di controllo e conformità, nonché per altre esigenze.
@@ -46,9 +47,9 @@ La classificazione include due attributi di metadati:
 
 1. in SQL Server Management Studio (SSMS) connettersi a SQL Server.
 
-2. In Esplora oggetti di SSMS fare clic con il pulsante destro del mouse sul database che si vuole classificare e scegliere **Attività** > **Classifica dati**.
+2. In Esplora oggetti di SSMS fare clic con il pulsante destro del mouse sul database che si vuole classificare e scegliere **Attività** > **Individuazione dati e classificazione** > **Classifica dati**.
 
-    ![Riquadro di spostamento][1]
+   ![Riquadro di spostamento][0]
 
 3. Il motore di classificazione esegue l'analisi del database per identificare le colonne che contengono dati potenzialmente sensibili e specifica un elenco di **classificazioni di colonne consigliate**:
 
@@ -84,22 +85,63 @@ La classificazione include due attributi di metadati:
     ![Riquadro di spostamento][8]
 
 
-6. Per generare un report con un riepilogo completo dello stato di classificazione del database, fare clic su **Visualizza Report** nel menu superiore della finestra.
+6. Per generare un report con un riepilogo completo dello stato di classificazione del database, fare clic su **Visualizza Report** nel menu superiore della finestra. È anche possibile generare un report usando SSMS. Fare clic con il pulsante destro del mouse sul database in cui si vuole generare il report e scegliere **Attività** > **Individuazione dati e classificazione** > **Genera report**.
 
     ![Riquadro di spostamento][9]
 
     ![Riquadro di spostamento][10]
 
+## <a id="subheading-3"></a>Gestire i criteri di Information Protection con SSMS
 
-## <a id="subheading-3"></a>Accesso ai metadati di classificazione
+[SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o versione successiva consente di gestire i criteri di Information Protection:
 
-I metadati di classificazione per i *tipi di informazioni* e le *etichette Riservatezza* sono archiviati nelle seguenti Proprietà estese: 
-* sys_information_type_name
-* sys_sensitivity_label_name
+1. in SQL Server Management Studio (SSMS) connettersi a SQL Server.
 
-I metadati sono accessibili tramite la vista del catalogo Proprietà estese [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+2. In Esplora oggetti di SSMS fare clic con il pulsante destro del mouse su uno dei database e scegliere **Attività** > **Individuazione dati e classificazione**.
 
-Per SQL Server 2017, l'esempio di codice seguente restituisce tutte le colonne classificate e le classificazioni corrispondenti:
+   Le seguenti opzioni di menu consentono di gestire i criteri di Information Protection:
+
+* **Imposta file dei criteri di Information Protection**: usa i criteri di Information Protection come definito nel file JSON selezionato.
+
+* **Esporta criteri di Information Protection**: esporta i criteri di Information Protection in un file JSON.
+
+* **Ripristina criteri di Information Protection**: reimposta i criteri di Information Protection sui criteri predefiniti di Information Protection.
+
+> [!IMPORTANT]
+> Il file dei criteri di Information Protection non è archiviato in SQL Server.
+> SSMS usa i criteri di Information Protection predefiniti. Se un criterio di Information Protection personalizzato non riesce, SSMS non è in grado di usare il criterio predefinito. La classificazione dei dati ha esito negativo. Per risolvere il problema, fare clic su **Ripristina criteri di Information Protection** per usare i criteri predefiniti e riabilitare la classificazione dei dati.
+
+## <a id="subheading-4"></a>Accesso ai metadati di classificazione
+
+SQL Server 2019 introduce la [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) vista del catalogo di sistema. Questa vista restituisce i tipi di informazioni e le etichette di riservatezza. 
+
+> [!NOTE]
+> Richiede l'autorizzazione **VIEW ANY SENSITIVITY CLASSIFICATION**. Per altre informazioni, vedere [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+
+Per le istanze di SQL Server 2019, eseguire una query su `sys.sensitivity_classifications` per esaminare tutte le colonne classificate e le classificazioni corrispondenti. Ad esempio: 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+Prima di SQL 2019 i metadati di classificazione per i tipi di informazioni e le etichette di riservatezza sono archiviati nelle seguenti Proprietà estese: 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+I metadati sono accessibili usando la vista del catalogo Proprietà estese [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
+
+Per le istanze di SQL Server 2017 e versioni precedenti, l'esempio seguente restituisce tutte le colonne classificate e le classificazioni corrispondenti:
 
 ```sql
 SELECT
@@ -141,22 +183,25 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-In SQL Server 2019:
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-    label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-    JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-5"></a>Gestire le classificazioni
 
-## <a id="subheading-4"></a>Passaggi successivi
+# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+È possibile utilizzare T-SQL per aggiungere o rimuovere le classificazioni di colonna, nonché recuperare tutte le classificazioni per l'intero database.
+
+- Aggiungere o aggiornare la classificazione di una o più colonne: [AGGIUNGI CLASSIFICAZIONE DI RISERVATEZZA](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- Rimuovere la classificazione da una o più colonne: [ELIMINA CLASSIFICAZIONE DI RISERVATEZZA](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# <a name="powershell-cmdlettabsql-powelshell"></a>[Cmdlet di PowerShell](#tab/sql-powelshell)
+È possibile utilizzare un cmdlet di PowerShell per aggiungere o rimuovere le classificazioni di colonna, nonché recuperare tutte le classificazioni e ottenere le raccomandazioni per l'intero database.
+
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+
+---
+
+## <a id="subheading-6"></a>Passaggi successivi
 
 Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -168,17 +213,20 @@ Potrebbe essere consigliabile proteggere le colonne sensibili applicando meccani
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage information protection policy with SSMS]: #subheading-3
+[Accessing the classification metadata]: #subheading-4
+[Manage classifications]: #subheading-5
+[Next Steps]: #subheading-6
 
 <!--Image references-->
-[1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

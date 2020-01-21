@@ -1,6 +1,7 @@
 ---
-title: Controllare il comportamento di trigger e vincoli nella sincronizzazione | Microsoft Docs
-ms.custom: ''
+title: Controllare il comportamento di trigger e vincoli nella sincronizzazione
+description: Informazioni su come impedire l'esecuzione dei trigger o l'applicazione dei vincoli durante la sincronizzazione di un pubblicazione di replica  di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 076a28e4fac4c8c64c44e0df3c10fbc8e075eafb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 816bda09c547345f5d05cd511d51c72135f15029
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768604"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321804"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>Controllare il comportamento di trigger e vincoli nella sincronizzazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,6 +44,6 @@ ms.locfileid: "68768604"
 1.  Quando si crea un nuovo vincolo CHECK o FOREIGN KEY, specificare l'opzione CHECK NOT FOR REPLICATION nella definizione del vincolo di [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md)  
+ [Creare tabelle &#40;motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md)  
   
   

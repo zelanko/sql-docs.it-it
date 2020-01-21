@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096941"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866078"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -420,7 +420,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un pool di
 I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono i componenti principali seguenti: 
 
 - **Piano di esecuzione della query**     
-  La parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere usata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
+  La parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere utilizzata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
 - **Contesto di esecuzione**     
   Ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture di dati del contesto di esecuzione vengono riutilizzate. Se un utente esegue una query e una delle strutture non è in uso, questa viene reinizializzata con il contesto del nuovo utente. 
 
@@ -483,7 +483,7 @@ Alcune modifiche in un database possono provocare un piano di esecuzione ineffic
 
 La maggior parte delle ricompilazioni è necessaria per garantire la correttezza dell'istruzione o per ottenere piani di esecuzione della query potenzialmente più veloci.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 ogni volta che un'istruzione di un batch provoca la ricompilazione, viene ricompilato l'intero batch, indipendentemente dal fatto che sia stato inviato tramite una stored procedure, un trigger, un batch ad hoc o un'istruzione preparata. A partire da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], viene ricompilata solo l'istruzione all'interno del batch che ha provocato la ricompilazione. A causa di questa differenza, i conteggi delle ricompilazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 e versioni successive non possono essere confrontati. In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e versioni successive sono inoltre presenti più tipi di ricompilazioni, in quanto il set di caratteristiche è più ampio.
+Nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti alla 2005 ogni volta che un'istruzione di un batch provoca la ricompilazione, viene ricompilato l'intero batch, indipendentemente dal fatto che sia stato inviato usando una stored procedure, un trigger, un batch ad hoc o un'istruzione preparata. A partire da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], viene ricompilata solo l'istruzione all'interno del batch che ha attivato la ricompilazione. In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e versioni successive sono inoltre presenti altri tipi di ricompilazione perché il set di funzionalità è più ampio.
 
 La ricompilazione a livello di istruzione consente di migliorare le prestazioni in quanto, nella maggior parte dei casi, le ricompilazioni e gli svantaggi associati, in termini di blocchi e tempo della CPU, sono dovuti a un piccolo numero di istruzioni. Questi svantaggi possono pertanto venire evitati per le altre istruzioni nel batch che non devono essere ricompilate.
 
@@ -507,7 +507,7 @@ La colonna `recompile_cause` dell'XEvent `sql_statement_recompile` contiene un c
 > La colonna *EventSubClass* di `SP:Recompile` e `SQL:StmtRecompile` contiene un codice integer che indica il motivo della ricompilazione. I codici sono descritti [qui](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
-> Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è impostata su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è impostata su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inerite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
+> Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è impostata su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è impostata su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti alla 2005, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inserite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
 
 ### <a name="PlanReuse"></a> Parametri e riutilizzo del piano di esecuzione
 
@@ -585,7 +585,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'uso di parametri o d
 > [!WARNING] 
 > L'uso di parametri o marcatori di parametro per includere i valori digitati dagli utenti offre una protezione maggiore rispetto alla concatenazione dei valori in una stringa eseguita usando un metodo API di accesso ai dati, l'istruzione `EXECUTE` o la stored procedure `sp_executesql` .
 
-Se un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] viene eseguita senza parametri, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'istruzione viene parametrizzata a livello interno per aumentare la possibilità di trovare una corrispondenza con un piano di esecuzione esistente. Questo processo viene definito parametrizzazione semplice. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 il processo è definito parametrizzazione automatica.
+Se un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] viene eseguita senza parametri, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'istruzione viene parametrizzata a livello interno per aumentare la possibilità di trovare una corrispondenza con un piano di esecuzione esistente. Questo processo viene definito parametrizzazione semplice. Nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti alla 2005 il processo è definito parametrizzazione automatica.
 
 Si consideri l'istruzione seguente:
 
@@ -917,17 +917,17 @@ Singole istruzioni `CREATE TABLE` o `ALTER TABLE` possono avere più vincoli che
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per fare riferimento a origini dati OLE DB eterogenee nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nomi di server collegati  
-  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], è possibile usare nomi in quattro parti. Ad esempio, se si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione seguente fa riferimento a una tabella in tale server: 
+  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], è possibile utilizzare nomi in quattro parti. Ad esempio, se si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione seguente fa riferimento a una tabella in tale server: 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   È anche possibile specificare il nome del server collegato in un'istruzione `OPENQUERY` per aprire un set di righe dall'origine dei dati OLE DB. Successivamente, è possibile inserire i riferimenti a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità usate per i riferimenti a una tabella. 
+   È anche possibile specificare il nome del server collegato in un'istruzione `OPENQUERY` per aprire un set di righe dall'origine dei dati OLE DB. Successivamente, è possibile inserire i riferimenti a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità utilizzate per i riferimenti a una tabella. 
 
 * Nomi di connettore ad hoc  
-  Nel caso di un numero limitato di riferimenti a un'origine dei dati, nella funzione `OPENROWSET` o `OPENDATASOURCE` vengono specificate le informazioni necessarie per la connessione al server collegato. In seguito, sarà possibile fare riferimento a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità usate per i riferimenti a una tabella: 
+  Nel caso di un numero limitato di riferimenti a un'origine dei dati, nella funzione `OPENROWSET` o `OPENDATASOURCE` vengono specificate le informazioni necessarie per la connessione al server collegato. In seguito, sarà possibile fare riferimento a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità utilizzate per i riferimenti a una tabella: 
   
   ```sql
   SELECT *
@@ -936,13 +936,13 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due me
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione dalle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione nelle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Il motore relazionale utilizza l'API OLE DB per aprire i set di righe nei server collegati, recuperare le righe e gestire le transazioni.
 
-Per ogni origine dei dati OLE DB accessibile come server collegato, è necessario un provider OLE DB nel server che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il set di operazioni [!INCLUDE[tsql](../includes/tsql-md.md)] che è possibile usare per un'origine dei dati OLE DB specifica dipende dalle funzionalità del provider OLE DB.
+Per ogni origine dei dati OLE DB accessibile come server collegato, è necessario un provider OLE DB nel server che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La serie di operazioni [!INCLUDE[tsql](../includes/tsql-md.md)] che è possibile utilizzare per un'origine dei dati OLE DB specifica dipende dalle funzionalità del provider OLE DB.
 
-Per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i membri del ruolo predefinito del server `sysadmin` possono abilitare o disabilitare l'uso di nomi di connettore ad hoc per un provider OLE DB tramite la proprietà `DisallowAdhocAccess` di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando l'accesso ad-hoc è abilitato, qualsiasi utente connesso a quella istanza può eseguire istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] contenenti nomi di connettore ad hoc che fanno riferimento a qualsiasi origine dati in rete accessibile tramite il provider OLE DB. Per controllare l'accesso alle origini dei dati, i membri del ruolo `sysadmin` possono disabilitare l'accesso ad hoc per i provider OLE DB corrispondenti, limitando in tal modo l'accesso da parte degli utenti alle sole origini dei dati a cui viene fatto riferimento dai nomi dei server collegati definiti dagli amministratori. Per impostazione predefinita, l'accesso ad hoc è abilitato per il provider OLE DB di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e disabilitato per tutti gli altri provider OLE DB.
+Per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i membri del ruolo predefinito del server `sysadmin` possono abilitare o disabilitare l'uso di nomi di connettore ad hoc per un provider OLE DB usando la proprietà di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]`DisallowAdhocAccess`. Quando l'accesso ad-hoc è abilitato, qualsiasi utente connesso a quella istanza può eseguire istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] contenenti nomi di connettore ad hoc che fanno riferimento a qualsiasi origine dati in rete accessibile tramite il provider OLE DB. Per controllare l'accesso alle origini dei dati, i membri del ruolo `sysadmin` possono disabilitare l'accesso ad hoc per i provider OLE DB corrispondenti, limitando in tal modo l'accesso da parte degli utenti alle sole origini dei dati a cui viene fatto riferimento dai nomi dei server collegati definiti dagli amministratori. Per impostazione predefinita, l'accesso ad hoc è abilitato per il provider OLE DB di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e disabilitato per tutti gli altri provider OLE DB.
 
 Le query distribuite consentono agli utenti di accedere a un'altra origine dati (ad esempio file, origini dati non relazionali come Active Directory e così via) tramite il contesto di sicurezza dell'account di Microsoft Windows usato per l'esecuzione del servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rappresenta l'account di accesso appropriato nel caso degli account di accesso di Windows, ma non per gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In tal modo modo, è possibile che l'utente di una query distribuita acceda a un'altra origine dei dati per cui non dispone delle autorizzazioni necessarie, ma l'account utilizzato per l'esecuzione del servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di tali autorizzazioni. Per definire gli account di accesso specifici autorizzati per l'accesso al server collegato corrispondente, usare la stored procedure `sp_addlinkedsrvlogin` . Poiché tale controllo non è disponibile per i nomi ad hoc, prestare attenzione quando si attiva l'accesso ad hoc in un provider OLE DB.
 
@@ -983,7 +983,7 @@ Nell'illustrazione seguente è riportata una rappresentazione logica dell'operaz
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Visualizzazione di informazioni sul partizionamento nei piani di esecuzione delle query
 
-È possibile esaminare i piani di esecuzione delle query su tabelle e indici partizionati usando le istruzioni `SET` di [!INCLUDE[tsql](../includes/tsql-md.md)] `SET SHOWPLAN_XML` o `SET STATISTICS XML` oppure l'output del piano di esecuzione grafico in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. È ad esempio possibile visualizzare il piano di esecuzione della fase di compilazione facendo clic su *Visualizza piano di esecuzione stimato* sulla barra degli strumenti dell'editor di query e il piano della fase di esecuzione facendo clic su *Includi piano di esecuzione effettivo*. 
+È possibile esaminare i piani di esecuzione delle query su tabelle e indici partizionati usando le istruzioni di [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` `SET SHOWPLAN_XML` o `SET STATISTICS XML` oppure l'output del piano di esecuzione grafico in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. È ad esempio possibile visualizzare il piano di esecuzione della fase di compilazione facendo clic su *Visualizza piano di esecuzione stimato* sulla barra degli strumenti dell'editor di query e il piano della fase di esecuzione facendo clic su *Includi piano di esecuzione effettivo*. 
 
 Questi strumenti consentono di verificare le informazioni seguenti:
 

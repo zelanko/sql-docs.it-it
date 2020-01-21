@@ -1,6 +1,7 @@
 ---
-title: Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Aggiornare repliche del gruppo di disponibilità
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910789"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822193"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
 ## <a name="rolling-upgrade-process"></a>Processo di aggiornamento in sequenza  
  Il processo effettivo dipende da fattori quali la topologia di distribuzione dei gruppi di disponibilità e la modalità di commit di ogni replica. Nello scenario più semplice, l'aggiornamento in sequenza è articolato in un processo a più fasi che nella sua forma essenziale prevede i passaggi seguenti:  
   
- ![Aggiornamento del gruppo di disponibilità in uno scenario HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Aggiornamento del gruppo di disponibilità in uno scenario HADR")  
+ ![Aggiornamento del gruppo di disponibilità in uno scenario di disponibilità elevata e ripristino di emergenza](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Aggiornamento del gruppo di disponibilità in uno scenario di disponibilità elevata e ripristino di emergenza")  
   
 1.  Rimuovere il failover automatico in tutte le repliche con commit sincrono  
   
@@ -100,7 +101,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
 ## <a name="ag-with-one-remote-secondary-replica"></a>Gruppo di disponibilità con una replica secondaria remota  
  Se è stato distribuito un gruppo di disponibilità solo a fini di ripristino di emergenza potrebbe essere necessario eseguirne il failover su una replica secondaria con commit asincrono. Questo tipo di configurazione è illustrato nella figura seguente:  
   
- ![Aggiornamento del gruppo di disponibilità in uno scenario DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Aggiornamento del gruppo di disponibilità in uno scenario DR")  
+ ![Aggiornamento del gruppo di disponibilità in uno scenario di ripristino di emergenza](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Aggiornamento del gruppo di disponibilità in uno scenario di ripristino di emergenza")  
   
  In questo caso è necessario eseguire il failover del gruppo di disponibilità su una replica secondaria con commit asincrono durante l'aggiornamento in sequenza. Per evitare perdite di dati, modificare la modalità di commit impostando il commit sincrono e attendere che venga completata la sincronizzazione della replica secondaria prima di eseguire il failover del gruppo di disponibilità. Il processo di aggiornamento in sequenza può quindi avvenire come segue:  
   
@@ -127,7 +128,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>Gruppo di disponibilità con nodi di istanze del cluster di failover  
  Se in un gruppo di disponibilità sono contenuti nodi di istanze del cluster di failover, è consigliabile aggiornare i nodi inattivi prima di quelli attivi. Nella figura seguente è illustrato uno scenario comune di gruppi di disponibilità con istanze del cluster di failover per la disponibilità elevata locale e il commit asincrono tra le istanze stesse ai fini del ripristino di emergenza remoto ed è indicata la relativa sequenza di aggiornamento.  
   
- ![Aggiornamento del gruppo di disponibilità con istanze del cluster di failover](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Aggiornamento del gruppo di disponibilità con istanze del cluster di failover")  
+ ![Aggiornamento del gruppo di disponibilità con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Aggiornamento del gruppo di disponibilità con FCI")  
   
 1.  Aggiornare REMOTE2  
   
@@ -144,7 +145,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
 ## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>Aggiornare le istanze di SQL Server con più gruppi di disponibilità  
  Se si eseguono più gruppi di disponibilità con repliche primarie su nodi server distinti (configurazione Attiva/Attiva), il percorso di aggiornamento prevede altri passaggi di failover per preservare la disponibilità elevata durante il processo. Si supponga di avere tre gruppi di disponibilità in tre nodi server con tutte le repliche in modalità commit sincrono come illustrato nella tabella seguente:  
   
-|Gruppo di disponibilità|Nodo1|Nodo2|Nodo3|  
+|AG|Nodo1|Nodo2|Nodo3|  
 |------------------------|-----------|-----------|-----------|  
 |AG1|Primaria|||  
 |AG2||Primaria||  
@@ -168,7 +169,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
   
  Questa sequenza di aggiornamento implica un tempo di inattività medio inferiore alla durata di due failover per gruppo di disponibilità. La configurazione risultante è illustrata nella tabella seguente.  
   
-|Gruppo di disponibilità|Nodo1|Nodo2|Nodo3|  
+|AG|Nodo1|Nodo2|Nodo3|  
 |------------------------|-----------|-----------|-----------|  
 |AG1||Primaria||  
 |AG2|Primaria|||  

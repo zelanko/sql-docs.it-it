@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810815"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884056"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -35,7 +35,7 @@ Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti s
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
 
-1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
 
 2. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene visualizzata la pagina di **introduzione**. Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione**. Selezionare **Nuova connessione** per aprire il riquadro **Connessione**:
 
@@ -43,11 +43,11 @@ Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti s
 
 3. Questo articolo usa l'account di *accesso SQL*, ma è supportata anche l'*autenticazione di Windows*. Compilare i campi come indicato di seguito:
 
-- **Nome server:** immettere qui il nome del server. Ad esempio localhost.
+- **Nome server:** Immettere il nome del server qui. Ad esempio localhost.
 - **Tipo di autenticazione:** Account di accesso SQL
 - **Nome utente:** Nome utente di SQL Server
 - **Password:** Password di SQL Server
-- **Nome database:** lasciare vuoto questo campo
+- **Nome del database:** \<Valore predefinito\>
 - **Gruppo di server:** \<Valore predefinito\>
 
    ![Nuova schermata di connessione](media/quickstart-sql-server/new-connection-screen.png)
@@ -77,7 +77,7 @@ Questa procedura consente di creare un database denominato **TutorialDB**:
 
 Dopo il completamento della query, nell'elenco di database viene incluso anche il nuovo database **TutorialDB**. Se il database non è visualizzato, fare clic con il pulsante destro del mouse sul nodo **Database** e selezionare **Aggiorna**.
 
-   ![Create database](media/quickstart-sql-server/create-database.png)
+   ![Creazione del database](media/quickstart-sql-server/create-database.png)
 
 ## <a name="create-a-table"></a>Creare una tabella
 

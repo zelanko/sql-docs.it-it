@@ -1,6 +1,7 @@
 ---
-title: Verificare i problemi di ritardo di I/O nel sottosistema di I/O del disco | Microsoft Docs
-ms.custom: ''
+title: Verifica dei problemi di ritardo di I/O nel sottosistema di I/O del disco
+description: Informazioni su come abilitare i criteri per verificare nel sottosistema di IO del disco la presenza di problemi di ritardo di I/O controllando nel registro eventi il messaggio di errore 833 per la gestione basata su criteri con SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 269ab9f9028ad1ff4ec4b336e45e9ecbb87bc0f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109892"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558176"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>Verifica dei problemi di ritardo di I/O nel sottosistema di I/O del disco
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: Usare Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: 'Limitare il carico della CPU: usare Resource Governor per la compressione dei backup'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041305"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245407"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ GO
   
  **Per configurare Resource Governor (SQL Server Management Studio)**  
   
--   [Configurare Resource Governor utilizzando un modello](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)  
+-   [Configurare Resource Governor usando un modello](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)  
   
 -   [Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   

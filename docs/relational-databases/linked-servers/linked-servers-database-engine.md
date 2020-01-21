@@ -1,6 +1,6 @@
 ---
-title: Server collegati
-ms.date: 05/29/2019
+title: Server collegati (motore di database) | Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094772"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165337"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
 
@@ -64,16 +64,19 @@ Il provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCL
 ## <a name="linked-server-details"></a>Dettagli relativi ai server collegati  
  Nella figura seguente vengono illustrati i componenti di base di una configurazione con server collegati.  
   
- ![Livello client, livello server e livello server di database](../../relational-databases/linked-servers/media/lsvr.gif "Livello client, livello server e livello server di database")  
+ ![Livello client, livello server e livello server di database](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 I server collegati vengono in genere utilizzati per la gestione delle query distribuite. Quando un'applicazione client esegue una query distribuita tramite un server collegato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analizza il comando e invia le richieste a OLE DB. È possibile richiedere l'esecuzione di una query sul provider o l'apertura di una tabella di base dal provider.  
-  
+
 > [!NOTE]
 > Un'origine dei dati può restituire dati tramite un server collegato solo se il relativo provider OLE DB (DLL) è presente nello stesso server dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!IMPORTANT] 
-> Quando viene usato un provider OLE DB, l'account con cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere autorizzazioni di lettura ed esecuzione per la directory, e tutte le sottodirectory, in cui è installato il provider. Sono inclusi il provider rilasciato da Microsoft ed eventuali provider di terze parti. 
-  
+ 
+> [!IMPORTANT]
+> Quando viene usato un provider OLE DB, l'account con cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere autorizzazioni di lettura ed esecuzione per la directory, e tutte le sottodirectory, in cui è installato il provider. Sono inclusi il provider rilasciato da Microsoft ed eventuali provider di terze parti.
+
+> [!NOTE]
+> I server collegati supportano l'autenticazione pass-through di Active Directory quando si usa la delega completa. A partire da SQL Server 2017 CU17 è supportata anche l'autenticazione pass-through con la delega vincolata. Tuttavia, la [delega vincolata basata sulle risorse](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) non è supportata.
+
 ## <a name="managing-providers"></a>Gestione dei provider  
 È disponibile un set di opzioni che consente di controllare la modalità con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica e utilizza i provider OLE DB specificati nel Registro di sistema.  
   
@@ -90,7 +93,7 @@ Per gestire le definizioni dei server collegati è possibile utilizzare stored p
   
 Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
- Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_ **.** _schema_ **.** _nome\_oggetto_.  
+ Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_**.**_schema_**.**_nome\_oggetto_.  
   
 > [!NOTE]  
 > È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  
