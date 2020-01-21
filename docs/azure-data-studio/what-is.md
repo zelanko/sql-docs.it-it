@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241754"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952407"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
@@ -33,7 +33,7 @@ Il codice sorgente per Azure Data Studio e i relativi provider di dati è dispon
 
 ## <a name="smart-sql-code-snippets"></a>Frammenti di codice SQL intelligenti
 
-I frammenti di codice SQL generano la sintassi SQL appropriata per creare database, tabelle, viste, stored procedure, utenti, accessi, ruoli e così via, nonché aggiornare gli oggetti di database esistenti. Usare i frammenti di codice intelligenti per creare rapidamente copie del database a scopo di sviluppo o test e per generare ed eseguire script di creazione e inserimento.
+I frammenti di codice SQL generano la sintassi SQL appropriata per creare database, tabelle, viste, stored procedure, utenti, accessi e ruoli, nonché aggiornare gli oggetti di database esistenti. Usare i frammenti di codice intelligenti per creare rapidamente copie del database a scopo di sviluppo o test e per generare ed eseguire script di creazione e inserimento.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce anche funzionalità per la creazione di frammenti di codice SQL personalizzati. Per altre informazioni, vedere [Creare e usare frammenti di codice](code-snippets.md).
 
@@ -96,7 +96,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Modalità scura|Sì||
 |Azure Resource Explorer|Anteprima||
 |Procedura guidata Genera script||Sì|
-|Importazione\esportazione DACPAC||Sì|
+|Pacchetto di applicazione livello dati di importazione/esportazione||Sì|
 |Proprietà degli oggetti||Sì|
 |Progettazione tabelle||Sì|
 
@@ -116,10 +116,10 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Risultati in formato testo||Sì|
 |Visualizzatore spaziale||Sì|
 |SQLCMD||Sì|
-|Notebooks|Sì||
+|Notebook|Sì||
 |Salvare una query come frammento di codice|Sì||
 
-### <a name="operating-system-support"></a>Supporto nei sistemi operativi
+### <a name="operating-system-support"></a>Supporto dei sistemi operativi
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -131,9 +131,9 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Procedura guidata di creazione tabella esterna|Anteprima||
-|Integrazione HDFS|Anteprima||
-|Notebooks|Anteprima||
+|Procedura guidata di creazione tabella esterna|Sì||
+|Integrazione HDFS|Sì||
+|Notebook|Sì||
 
 ### <a name="database-administration"></a>Amministrazione del database
 
@@ -147,7 +147,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Always On||Sì|
 |Always Encrypted||Sì|
 |Procedura guidata Copia dati||Sì|
-|Ottimizzazione guidata dati||Sì|
+|Database Engine Tuning Advisor||Sì|
 |Visualizzatore log degli errori||Sì|
 |Piani di manutenzione||Sì|
 |Query multiserver||Sì|

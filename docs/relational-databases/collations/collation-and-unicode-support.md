@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901948"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831819"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Quando si spostano dati da un server a un client, le regole di confronto del ser
 Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
  
 -   Il flag UTF8 può essere applicato a:    
-    -   Regole di confronto versione 90 
-        > [!NOTE]
-        > Solo quando esistono già regole di confronto che riconoscono i caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS) in questa versione.
-    -   Regole di confronto versione 100    
-    -   Regole di confronto versione 140   
+    -   Regole di confronto linguistiche che supportano già caratteri supplementari (\_SC) o riconoscono la distinzione tra selettori di variazione (\_VSS)
     -   Regole di confronto BIN2<sup>1</sup>
     
 -   Il flag UTF8 non può essere applicato a:    
-    -   Regole di confronto versione 90 che non supportano caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS)    
-    -   Regole di confronto binarie BIN o BIN2<sup>2</sup>    
+    -   Regole di confronto linguistiche che non supportano caratteri supplementari (\_SC) o non riconoscono la distinzione tra selettori di variazione (\_VSS)
+    -   Regole di confronto binarie BIN o BIN2<sup>2</sup>
     -   Regole di confronto di SQL\_*  
     
 <sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 le regole di confronto **UTF8_BIN2** sono state sostituite con **Latin1_General_100_BIN2_UTF8**.        
@@ -528,8 +524,6 @@ Se si utilizzano caratteri supplementari:
 -   I caratteri supplementari possono essere usati in operazioni di ordinamento e confronto solo con le versioni delle regole di confronto 90 o successive.    
 -   Tutte le regole di confronto versione 100 supportano l'ordinamento linguistico con caratteri supplementari.    
 -   L'uso dei caratteri supplementari in metadati, ad esempio in nomi di oggetti di database, non è supportato.    
--   I database che usano le regole di confronto con caratteri supplementari (\_SC) non possono essere abilitati per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo perché alcune delle tabelle di sistema e delle stored procedure create per la replica usano il tipo di dati legacy **ntext**, che non supporta i caratteri supplementari.  
-
 -   Il flag SC può essere applicato a:    
     -   Regole di confronto versione 90    
     -   Regole di confronto versione 100    

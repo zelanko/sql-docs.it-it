@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558496"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884030"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare un cluster RHEL per un gruppo di disponibilità di SQL Server
 
@@ -163,7 +163,10 @@ Per creare la risorsa del gruppo di disponibilità, usare il comando `pcs resour
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> Con la disponibilità di **RHEL 8**, la sintassi CREATE è cambiata. Se si usa **RHEL 8**, il termine `master` è stato modificato in `promotable`. Usare il comando di creazione seguente anziché il comando precedente: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ In un cluster Pacemaker, è possibile modificare le decisioni del cluster applic
 
 Per assicurarsi che la replica primaria e la risorsa IP virtuale vengano eseguite nello stesso host, definire un vincolo di condivisione percorso con punteggio INFINITY. Per aggiungere un vincolo di condivisione percorso, eseguire il comando seguente in un nodo.
 
+### <a name="rhel-7"></a>RHEL 7
+
+Quando si crea la risorsa `ag_cluster` in RHEL 7, viene creata come `ag_cluster-master`. Usare il comando seguente per RHEL 7:
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+Quando si crea la risorsa `ag_cluster` in RHEL 8, viene creata come `ag_cluster-clone`. Usare il comando seguente per RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>Aggiungere un vincolo di ordinamento
@@ -209,8 +224,16 @@ Per evitare che l'indirizzo IP punti temporaneamente al nodo con la replica seco
 
 Per aggiungere un vincolo di ordinamento, eseguire il comando seguente in un nodo:
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

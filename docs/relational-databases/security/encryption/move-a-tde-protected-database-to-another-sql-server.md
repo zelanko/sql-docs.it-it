@@ -1,6 +1,7 @@
 ---
-title: Spostare un database protetto da TDE in un'altra istanza di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Spostare un database protetto da TDE in un'altra istanza di SQL Server
+description: Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di SQL Server usando SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: b995753ba255c835979fb3bb868a62a8d801bbb2
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74957402"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558512"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
