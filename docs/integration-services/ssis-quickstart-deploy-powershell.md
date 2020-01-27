@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ba62b4908c73b018ae4cdda1a9b2bda3098f1ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281771"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947111"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Distribuire un progetto SSIS con PowerShell
 
@@ -24,7 +24,7 @@ Questa guida introduttiva illustra come usare uno script di PowerShell per conne
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -46,6 +46,10 @@ Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 5. Fare clic su **Mostra stringhe di connessione del database**.
 6. Esaminare l'intera stringa di connessione **ADO.NET**.
+
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportata
+
+Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Provider PowerShell per SSIS
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per distribuire il progetto SSIS.

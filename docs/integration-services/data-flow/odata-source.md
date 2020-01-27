@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298223"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546533"
 ---
 # <a name="odata-source"></a>Origine OData
 
@@ -41,13 +41,15 @@ Il componente supporta i protocolli OData v3 e v4.
 
 L'origine OData include il supporto per le origini dati seguenti:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
--   Elenchi SharePoint Per visualizzare tutti gli elenchi in un server SharePoint, usare l'URL seguente: https://\<server>/_vti_bin/ListData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Elenchi SharePoint Per visualizzare tutti gli elenchi in un server SharePoint, usare l'URL seguente: `https://<server>/_vti_bin/ListData.svc`. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Tipi di dati supportati
 
 L'origine OData supporta i seguenti tipi di dati semplici: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string e TimeSpan.
 
 Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina `https://<OData feed endpoint>/$metadata`.
+
+Per il tipo di dati **Decimale**, la precisione e la scala vengono determinate dai metadati di origine. Se nei metadati di origine non sono specificate le proprietà **Precisione** e **Scala**, è possibile che i dati risultino troncati.
 
 > [!IMPORTANT]
 > Il componente origine OData non supporta tipi complessi, ad esempio gli elementi a scelta multipla, in elenchi di SharePoint.
@@ -77,7 +79,7 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
   
  Dopo aver selezionato o creato una gestione connessione, la finestra di dialogo mostra la versione del protocollo OData che la gestione connessione sta usando.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione OData** .  
   
  **Usa percorso risorsa o raccolta**  
@@ -85,7 +87,7 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|Collection|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
+|Raccolta|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
 |Percorso risorsa|Recuperare i dati dall'origine OData utilizzando un percorso della risorsa.|  
   
  **Opzioni query**  
@@ -100,12 +102,12 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
 ### <a name="dynamic-options"></a>Opzioni dinamiche  
   
 #### <a name="use-collection-or-resource-path--collection"></a>Usa percorso risorsa o raccolta = Raccolta  
- **Collection**  
+ **Raccolta**  
  Selezionare una raccolta dall'elenco a discesa.  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usa percorso risorsa o raccolta = Percorso risorsa  
  **Resource path**  
- Digitare un percorso della risorsa. Esempio: Employees  
+ Digitare un percorso della risorsa. Ad esempio: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor origine OData (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OData** per selezionare le colonne esterne (di origine) da includere nell'output ed eseguirne il mapping alle colonne di output.  
@@ -130,7 +132,7 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
  **Colonna**  
  Vengono visualizzate le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine OData** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

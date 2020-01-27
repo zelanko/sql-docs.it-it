@@ -1,7 +1,7 @@
 ---
 title: Origine Power Query | Microsoft Docs
 description: Informazioni su come configurare l'origine Power Query nel flusso di dati di SQL Server Integration Services
-ms.date: 02/12/2019
+ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
@@ -16,23 +16,21 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034400"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501920"
 ---
 # <a name="power-query-source-preview"></a>Origine Power Query (anteprima)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-
 Questo articolo descrive come configurare le proprietà dell'origine Power Query nel flusso di dati di SQL Server Integration Services (SSIS). Power Query è una tecnologia che consente di connettersi a diverse origini dati e trasformare dati tramite Excel o Power BI Desktop. Per altre informazioni, vedere l'articolo [Panoramica e formazione su Power Query](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Lo script generato da Power Query può essere copiato e incollato nell'origine Power Query nel flusso di dati SSIS per configurarlo.
   
 > [!NOTE]
-> Per la versione di anteprima corrente, per facilitare la raccolta rapida di commenti e suggerimenti oltre all'introduzione di miglioramenti frequenti per le funzionalità, l'origine Power Query può essere usata solo in SQL Server Data Tools (SSDT) e Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF). È possibile scaricare l'ultima versione di SSDT che supporta l'origine Power Query da [qui](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017). Per eseguire il provisioning di Azure-SSIS IR, vedere l'articolo [Eseguire il provisioning del runtime di integrazione SSIS di Azure in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+> Per la versione di anteprima corrente, l'origine Power Query può essere usata solo in SQL Server 2017/2019 e Azure-SSIS Integration Runtime (IR) solo in Azure Data Factory (ADF). È possibile scaricare e installare l'origine Power Query più recente per SQL Server 2017/2019 da [qui](https://www.microsoft.com/download/details.aspx?id=100619). L'origine Power Query per Azure-SSIS IR è già preinstallata. Per eseguire il provisioning di Azure-SSIS IR, vedere l'articolo [Eseguire il provisioning del runtime di integrazione SSIS di Azure in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="configure-the-power-query-source"></a>Configurare l'origine Power Query
 
@@ -84,7 +82,7 @@ Infine, per **Authentication Kind** (Tipo di autenticazione), è possibile selez
 
 ### <a name="current-limitations"></a>Limitazioni correnti
 
--   Non è attualmente possibile usare l'origine dati **Oracle** perché il driver Oracle ADO.NET non può essere installato in Azure-SSIS IR. Per il momento, quindi, installare il driver ODBC Oracle e usare l'origine dati **ODBC** per connettersi a Oracle. Vedere l'esempio **ORACLE STANDARD ODBC** nell'articolo [Personalizzare l'installazione del runtime di integrazione Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+-   Non è attualmente possibile usare l'origine dati **Oracle** in Azure-SSIS IR, perché il driver Oracle ADO.NET non può essere installato in questo ambiente. Per il momento, quindi, installare il driver ODBC Oracle e usare l'origine dati **ODBC** per connettersi a Oracle. Vedere l'esempio **ORACLE STANDARD ODBC** nell'articolo [Personalizzare l'installazione del runtime di integrazione Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 -   Non è attualmente possibile usare l'origine dati **Web** in Azure-SSIS IR con una configurazione personalizzata. Per il momento quindi, usare l'origine dati Azure-SSIS IR senza configurazione personalizzata.
 

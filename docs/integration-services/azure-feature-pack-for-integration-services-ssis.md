@@ -1,7 +1,7 @@
 ---
 title: Feature Pack di Integration Services (SSIS) per Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659583"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329953"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
 
@@ -100,7 +100,7 @@ Per usare TLS 1.2, aggiungere un valore `REG_DWORD` denominato `SchUseStrongCryp
 
 ## <a name="dependency-on-java"></a>Dipendenza da Java
 
-Java è necessario per usare i formati di file ORC/Parquet con i connettori per file flat di Azure Data Lake Store.  
+Java è necessario per usare i formati di file ORC/Parquet con i connettori di File flessibili/Azure Data Lake Store.  
 L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
 Sono state sottoposte a test le build di Java seguenti.
 
@@ -119,6 +119,13 @@ Sono state sottoposte a test le build di Java seguenti.
 7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
 8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
 9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
+
+> [!TIP]
+> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere una variabile di ambiente *`_JAVA_OPTIONS`* per modificare le dimensioni dell'heap min/max per JVM.
+>
+>![heap JVM](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Esempio: impostare la variabile *`_JAVA_OPTIONS`* con il valore *`-Xms256m -Xmx16g`* . Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`* . Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configurare OpenJDK di Zulu in Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ Come punto di ingresso, `main.cmd` attiva l'esecuzione dello script di PowerShel
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere comando in *`main.cmd`* per modificare le dimensioni dell'heap min/max per JVM. Esempio:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`* . Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
 
 **install_openjdk.ps1**
 

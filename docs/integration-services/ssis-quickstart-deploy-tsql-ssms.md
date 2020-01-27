@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281495"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947093"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Distribuire un progetto SSIS da SSMS con Transact-SQL
 
@@ -39,6 +39,10 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 
 Non è possibile usare le informazioni di questa guida introduttiva per distribuire un pacchetto SSIS a SQL Server in Linux. Per altre informazioni sull'esecuzione di pacchetti in Linux, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportata
+
+Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Connettersi al database del catalogo SSIS
 
 Usare SQL Server Management Studio per stabilire una connessione al catalogo SSIS. 
@@ -47,17 +51,18 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 
 2. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Altre informazioni | 
+   | Impostazione       | Valore consigliato | Altre informazioni | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
+   | **Tipo di server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server |  |
-   | **Autenticazione** | autenticazione di SQL Server | |
-   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **autenticazione** | Autenticazione di SQL Server | |
+   | **Accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
 3. Fare clic su **Connetti**. In SSMS si apre la finestra Esplora oggetti. 
 
 4. In Esplora oggetti espandere **Cataloghi di Integration Services** e quindi espandere **SSISDB** per visualizzare gli oggetti nel database del catalogo SSIS.
+
 
 ## <a name="run-the-t-sql-code"></a>Eseguire il codice T-SQL
 Eseguire il codice Transact-SQL seguente per distribuire un progetto SSIS.

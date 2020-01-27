@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285709"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308009"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati SQL Server (Importazione/Esportazione guidata SQL Server)
 
@@ -34,7 +34,8 @@ Dopo aver selezionato **Provider di dati .NET Framework per SQL Server** nella p
 
 |Informazioni obbligatorie|Proprietà Provider di dati .NET Framework per SQL Server|
 |---|---|
-|Nome server|**Data Source**|
+|Authentication|**NotSpecified** come valore predefinito per "Sicurezza integrata". In alternativa, è possibile scegliere un'altra modalità di autenticazione. Non è supportato il valore "Autenticazione interattiva di Active Directory". |
+|Nome server|**Origine dati**|
 |Informazioni di autenticazione (accesso)|**Sicurezza integrata** oppure **ID utente** e **Password**<br/>Per visualizzare un elenco a discesa dei database nel server, è necessario innanzitutto specificare informazioni di accesso valide.|
 |Nome database|**Catalogo iniziale**|
 
@@ -45,7 +46,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per SQL Server** nella p
 > [!NOTE]
 > Le opzioni di connessione per il provider di dati sono le stesse sia nel caso in cui SQL Server rappresenti l'origine sia nel caso in cui rappresenti la destinazione. Ovvero, le opzioni visualizzate sono le stesse in entrambe le pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.
 
-**Data Source**  
+**Origine dati**  
  Immettere il nome o l'indirizzo IP del server di origine o destinazione oppure selezionare un server dall'elenco a discesa.  
  
  Per specificare una porta TCP non standard, digitare una virgola dopo il nome o l'indirizzo IP del server e quindi digitare il numero di porta.
@@ -126,5 +127,5 @@ Per informazioni su come connettersi a SQL Server con un provider di dati non el
 
 ## <a name="see-also"></a>Vedere anche
 [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

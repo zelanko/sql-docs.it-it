@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294004"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542296"
 ---
 # <a name="script-task"></a>Attività Script
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  
+  L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  
   
  È possibile utilizzare l'attività Script per gli scopi seguenti:  
   
@@ -47,14 +47,14 @@ ms.locfileid: "71294004"
  Una volta stabilito che l'attività Script è la scelta più appropriata per il pacchetto, è necessario sia sviluppare lo script utilizzato dall'attività sia configurare l'attività stessa.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>Scrittura ed esecuzione di script utilizzati dall'attività  
- L'attività Script usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente in cui scrivere gli script e come motore in cui eseguirli.  
+ L'attività Script usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente in cui scrivere gli script e come motore in cui eseguirli.  
   
  In VSTA sono disponibili tutte le funzionalità standard dell'ambiente [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], come l'editor di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] contraddistinto dal colore, la tecnologia IntelliSense ed **Esplora oggetti**. VSTA utilizza anche lo stesso debugger usato da altri strumenti di sviluppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] . I punti di interruzione degli script si integrano completamente con quelli delle attività e dei contenitori di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA supporta i linguaggi di programmazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- Per eseguire uno script, VSTA deve essere pertanto installato nel computer in cui viene eseguito il pacchetto. Durante l'esecuzione di un pacchetto l'attività carica il motore di scripting ed esegue lo script. È possibile accedere ad assembly .NET esterni dagli script aggiungendo i riferimenti a tali assembly nel progetto.  
+ Per eseguire uno script, VSTA deve essere pertanto installato nel computer in cui viene eseguito il pacchetto. Durante l'esecuzione di un pacchetto l'attività carica il motore di scripting ed esegue lo script. È possibile accedere ad assembly .NET esterni dagli script aggiungendo i riferimenti a tali assembly nel progetto. Attualmente non sono supportati riferimenti ad assembly .NET Core e .NET Standard.  
   
 > [!NOTE]  
->  A differenza delle versioni precedenti in cui è possibile indicare se gli script fossero precompilati o meno, in [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e versioni successive tutti gli script sono precompilati. Se uno script è precompilato, il motore del linguaggio non verrà caricato in fase di esecuzione e il pacchetto verrà eseguito molto più rapidamente. I file binari precompilati occupano tuttavia una notevole quantità di spazio su disco.  
+>  A differenza delle versioni precedenti in cui era possibile indicare se gli script erano precompilati o meno, in [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e versioni successive tutti gli script sono precompilati. Se uno script è precompilato, il motore del linguaggio non verrà caricato in fase di esecuzione e il pacchetto verrà eseguito molto più rapidamente. I file binari precompilati occupano tuttavia una notevole quantità di spazio su disco.  
   
 ## <a name="configuring-the-script-task"></a>Configurazione dell'attività Script  
  Per configurare l'attività Script, procedere nel modo seguente:  

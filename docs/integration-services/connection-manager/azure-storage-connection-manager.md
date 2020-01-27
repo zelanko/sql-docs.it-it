@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294455"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687198"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestione connessione di Archiviazione di Azure
 
@@ -64,6 +64,9 @@ Configurare quindi l'autenticazione identità gestita per la gestione connession
 
 > [!NOTE]
 >  Per configurare l'autenticazione identità gestita nei pacchetti esistenti, il modo migliore consiste nel ricompilare almeno una volta il progetto SSIS con la [versione più recente di Progettazione SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Ridistribuire il progetto SSIS in Azure-SSIS Integration Runtime, in modo che la nuova proprietà di gestione connessione `ConnectUsingManagedIdentity` venga aggiunta automaticamente a tutte le gestioni connessione di Archiviazione di Azure nel progetto SSIS. In alternativa, è possibile usare direttamente un override di proprietà con il percorso della proprietà **\Package.Connections[{nome della gestione connessione}].Properties[ConnectUsingManagedIdentity]** in fase di esecuzione.
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>Proteggere il traffico di rete verso l'account di archiviazione
+Azure Data Factory è ora un [servizio Microsoft attendibile](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) per Archiviazione di Azure. Se si usa l'autenticazione identità gestita, è possibile proteggere l'account di archiviazione [limitando l'accesso alle reti selezionate](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) ma consentendo comunque al data factory di accedere all'account di archiviazione. Per istruzioni, vedere [Gestione delle eccezioni](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions).
 
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)

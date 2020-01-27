@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298453"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542179"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298453"
   
 Per l'accesso anonimo, selezionare l'opzione Autenticazione di Windows.  
 
-Per connettersi a Microsoft Dynamics AX Online o a Microsoft Dynamics CRM Online, non è possibile usare l'opzione di autenticazione **Microsoft Online Services**. Non è neanche possibile usare opzioni configurate per l'autenticazione a più fattori.
+Per connettersi a Microsoft Dynamics AX Online o a Microsoft Dynamics CRM Online, non è possibile usare l'opzione di autenticazione **Microsoft Online Services**. Non è neanche possibile usare opzioni configurate per l'autenticazione a più fattori. L'autenticazione moderna non è attualmente supportata. 
   
 ### <a name="specifying-and-securing-credentials"></a>Specifica e protezione delle credenziali  
  Se il servizio OData richiede l'autenticazione di base, è possibile specificare un nome utente e una password in [Editor gestione connessione OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). I valori immessi nell'editor sono persistenti nel pacchetto. Il valore della password è crittografato in base al livello di protezione del pacchetto.  
@@ -79,7 +79,7 @@ Per connettersi a Microsoft Dynamics AX Online o a Microsoft Dynamics CRM Online
  **Percorso documento di servizio**  
  URL del servizio OData. Ad esempio: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
- **Autenticazione**  
+ **autenticazione**  
 Selezionare una delle opzioni seguenti:
 -   **Autenticazione di Windows**. Selezionare questa opzione per l'accesso anonimo.
 -   **Autenticazione di base** 
