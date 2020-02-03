@@ -16,10 +16,10 @@ ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc6050bfbd2ba444e59b57209355d663b9f1f7ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954364"
 ---
 # <a name="getarray-method-javalangstring"></a>Metodo getArray (java.lang.String)
@@ -45,7 +45,7 @@ public java.sql.Array getArray(java.lang.String sCol)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getArray viene specificato dal metodo getArray nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

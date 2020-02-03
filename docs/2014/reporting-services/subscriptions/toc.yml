@@ -42,5 +42,5 @@
       href: pause-and-resume-shared-schedules.md
     - name: Modificare i fusi orari e le impostazioni dell'orologio in un server di report
       href: change-time-zones-and-clock-settings-on-a-report-server.md
-    - name: Gestire un processo in esecuzione
+    - name: Manage a Running Process
       href: manage-a-running-process.md

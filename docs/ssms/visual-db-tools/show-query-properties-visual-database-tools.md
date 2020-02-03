@@ -1,10 +1,9 @@
 ---
-title: Visualizzare le proprietà di una query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Visualizzare le proprietà di una query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0bdda3fbe3da2f5abda7c1d808b0366ab8ff70d5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 261173961bf20b6d11324ae7d2ef06a5e540c6fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255047"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Mostra proprietà di query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

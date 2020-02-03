@@ -11,10 +11,10 @@ ms.assetid: 75117d76-6396-493e-862a-0e9a6de26bfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbab452653b201c94e80c8f990a2e8026b48698c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992535"
 ---
 # <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Passaggio 2: Creare un database SQL per lo sviluppo Python con pymssql

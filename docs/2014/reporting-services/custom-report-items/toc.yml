@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
       href: creating-a-custom-report-item-design-time-component.md
-    - name: 'Procedura: Distribuire un elemento del report personalizzato'
+    - name: 'Procedura: Distribuzione di un elemento del report personalizzato'
       href: how-to-deploy-a-custom-report-item.md
     - name: Librerie di classi dell'elemento del report personalizzato
       href: custom-report-item-class-libraries.md

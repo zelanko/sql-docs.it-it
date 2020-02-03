@@ -16,13 +16,13 @@ ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb89253cea8feac0b4255984b30aa7fd74216d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571112"
 ---
-# <a name="msreportserverinstance-methods"></a>Metodi MSReportServer_Instance
+# <a name="msreportserver_instance-methods"></a>Metodi MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  
   
 ## <a name="public-methods"></a>Metodi pubblici  

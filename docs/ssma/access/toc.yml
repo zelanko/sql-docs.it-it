@@ -1,0 +1,128 @@
+- name: Accesso
+  href: sql-server-migration-assistant-for-access-accesstosql.md
+- name: Installare SSMA
+  href: installing-sql-server-migration-assistant-for-access-accesstosql.md
+- name: Introduzione
+  href: getting-started-with-ssma-for-access-console-accesstosql.md
+- name: Novità
+  href: what-s-new-in-ssma-for-access-accesstosql.md
+- name: Preparazione dei database di Access
+  href: preparing-access-databases-for-migration-accesstosql.md
+- name: Funzionalità di Access non compatibili
+  href: incompatible-access-features-accesstosql.md
+- name: Nuove funzionalità dell'interfaccia utente grafica di SSMA
+  href: new-gui-features-in-ssma-for-access-to-sql.md
+- name: Schemi di inventario di Access
+  href: access-inventory-schemas-accesstosql.md
+- name: Salvare i metadati
+  href: save-metadata-accesstosql.md
+- name: Connessione a SQL Server
+  href: connecting-to-sql-server-accesstosql.md
+- name: Migrazione dei dati di accesso nel database SQL di Azure
+  href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
+- name: Creazione e gestione di un progetto
+  href: creating-and-managing-projects-accesstosql.md
+- name: Utilizzo della console di SSMA per Access
+  href: working-with-ssma-for-access-console-accesstosql.md
+- name: Aggiunta e rimozione di file di database
+  href: adding-and-removing-access-database-files-accesstosql.md
+- name: Conversione di oggetti di database di Access
+  href: converting-access-database-objects-accesstosql.md
+- name: Note legali
+  href: legal-notice-ssma-for-access.md
+- name: Connessione a SQL Server
+  href: connect-to-sql-server-accesstosql.md
+- name: Impostazioni globali
+  href: global-settings-output-window-accesstosql.md
+- name: Nuovo progetto (SSMA)
+  href: new-project-ssma-accesstosql.md
+- name: Opzioni della riga di comando nella console SSMA
+  href: command-line-options-in-ssma-console-accesstosql.md
+- name: Connettersi al database SQL di Azure
+  href: connect-to-azure-sql-db-accesstosql.md
+- name: Report di valutazione
+  href: assessment-report-accesstosql.md
+- name: Mapping dei tipi di dati di origine e di destinazione
+  href: mapping-source-and-target-data-types-accesstosql.md
+- name: Gestione delle password
+  href: managing-passwords-accesstosql.md
+- name: Report di migrazione dati
+  href: data-migration-report-accesstosql.md
+- name: Guida di riferimento all'interfaccia utente
+  href: user-interface-reference-accesstosql.md
+- name: Utilizzo dei file script di esempio della console
+  href: working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
+- name: Generazione di report
+  href: generating-reports-accesstosql.md
+- name: Esecuzione della console SSMA
+  href: executing-the-ssma-console-accesstosql.md
+- name: Valutazione degli oggetti di database di Access per la conversione
+  href: assessing-access-database-objects-for-conversion-accesstosql.md
+- name: Creazione dei file di connessione del server
+  href: creating-the-server-connection-files-accesstosql.md
+- name: Collegamento delle applicazioni di Access al database SQL di Azure
+  href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
+- name: Creazione di file di valori di variabile
+  href: creating-variable-value-files-accesstosql.md
+- name: Modificare il mapping dei tipi
+  href: edit-type-mapping-accesstosql.md
+- name: Esportazione di un inventario di Access
+  href: exporting-an-access-inventory-accesstosql.md
+- name: Migrazione di database di Access al database SQL di Azure
+  href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
+- name: Mapping dei database di origine e di destinazione
+  href: mapping-source-and-target-databases-accesstosql.md
+- name: Creazione di file di script
+  href: creating-script-files-accesstosql.md
+- name: Procedura guidata per la ricerca di database (verifica selezione)
+  href: find-databases-wizard-verify-selection-accesstosql.md
+- name: Migrazione guidata
+  href: migration-wizard-accesstosql.md
+- name: 'Convertire, caricare ed eseguire la migrazione'
+  href: convert-load-and-migrate-accesstosql.md
+- name: Caricamento di oggetti di database convertiti in SQL Server
+  href: loading-converted-database-objects-into-sql-server-accesstosql.md
+- name: Selezione avanzata di oggetti
+  href: advanced-object-selection-accesstosql.md
+- name: Introduzione a SQL Server Migration Assistant
+  href: getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
+- name: Eseguire l'aggiornamento dal database
+  href: refresh-from-database-accesstosql.md
+- name: Procedura guidata per la ricerca di database (selezione file)
+  href: find-databases-wizard-select-files-accesstosql.md
+- name: Tasti di scelta rapida
+  href: shortcut-keys-accesstosql.md
+- name: Connessione al database SQL di Azure
+  href: connecting-to-azure-sql-db-accesstosql.md
+- name: Impostazione delle opzioni di conversione e migrazione
+  href: setting-conversion-and-migration-options-accesstosql.md
+- name: risoluzione dei problemi
+  href: troubleshooting-accesstosql.md
+- name: Comandi di menu e tasti di scelta rapida
+  href: menu-commands-and-other-shortcut-keys-accesstosql.md
+- name: Procedura guidata per la ricerca di database (selezione percorsi)
+  href: find-databases-wizard-select-locations-accesstosql.md
+- name: Appendice - 1
+  href: appendix-1-accesstosql.md
+- name: Impostazioni progetto
+  items:
+    - name: Migrazione
+      href: project-settings-migration-accesstosql.md
+    - name: Interfaccia utente grafica
+      href: project-settings-gui-accesstosql.md
+    - name: Conversione
+      href: project-settings-conversion-accesstosql.md
+    - name: Database SQL di Azure
+      href: project-settings-azure-sql-db-accesstosql.md
+    - name: Mapping dei tipi
+      href: project-settings-type-mapping-accesstosql.md
+    - name: Caricamento di oggetti
+      href: project-settings-loading-objects-accesstosql.md
+- name: Impostazioni globali
+  items:
+    - name: Finestre di dialogo
+      href: global-settings-dialogs-accesstosql.md
+    - name: Registrazione
+      href: global-settings-logging-accesstosql.md
+    - name: Editor
+      href: global-settings-editor-accesstosql.md

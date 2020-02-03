@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Modificare una tabella esistente tramite query | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Modificare una tabella esistente tramite query
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929601"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241409"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedura: Modificare una tabella esistente tramite query
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedura: Modifica di una tabella esistente tramite query
+
 È possibile modificare la definizione di una tabella o dei relativi dati scrivendo una query Transact\-SQL. Per visualizzare o immettere dati in una tabella in modo visivo, usare l'editor dei dati come descritto in [Sviluppo del database connesso](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  

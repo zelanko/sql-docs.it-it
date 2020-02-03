@@ -53,7 +53,7 @@
       href: ../analytics-platform-system/monitoring-active-queries.md
     - name: Eliminazione di sottoespressioni comuni
       href: ../analytics-platform-system/common-sub-expression-elimination.md
-- name: Load
+- name: Caricamento
   items:
     - name: Panoramica
       href: ../analytics-platform-system/load-overview.md
@@ -82,9 +82,9 @@
     - name: Autorizzazioni PDW
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: Concedi autorizzazioni
+        - name: Concedere le autorizzazioni
           href: ../analytics-platform-system/grant-permissions.md
-    - name: Messaggi di errore
+    - name: messaggi di errore
       href: ../analytics-platform-system/error-messages.md
     - name: Comportamento di blocco
       href: ../analytics-platform-system/locking-behavior.md

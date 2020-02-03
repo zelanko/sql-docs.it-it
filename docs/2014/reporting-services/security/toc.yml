@@ -44,14 +44,14 @@
           href: secure-my-reports.md
         - name: Creare RSExecRole
           href: create-the-rsexecrole.md
-        - name: Definizioni di ruolo
+        - name: Definizioni dei ruoli
           href: role-definitions.md
           items:
             - name: 'Creare, eliminare o modificare un ruolo'
               href: role-definitions-create-delete-or-modify.md
             - name: Predefined Roles
               href: role-definitions-predefined-roles.md
-        - name: Assegnazioni di ruolo
+        - name: Assegnazioni di ruoli
           href: role-assignments.md
           items:
             - name: Modifica o eliminare un'assegnazione di ruolo

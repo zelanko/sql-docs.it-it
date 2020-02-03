@@ -28,11 +28,11 @@
   items:
     - name: CursorClose - classe di evento
       href: cursorclose-event-class.md
-    - name: Classe di evento CursorExecute
+    - name: CursorExecute - classe di evento
       href: cursorexecute-event-class.md
-    - name: Classe di evento CursorImplicitConversion
+    - name: CursorImplicitConversion - classe di evento
       href: cursorimplicitconversion-event-class.md
-    - name: Classe di evento CursorOpen
+    - name: CursorOpen - classe di evento
       href: cursoropen-event-class.md
     - name: CursorPrepare - classe di evento
       href: cursorprepare-event-class.md
@@ -84,17 +84,17 @@
       href: database-suspect-data-page-event-class.md
     - name: ErrorLog - classe di evento
       href: errorlog-event-class.md
-    - name: Classe di evento EventLog
+    - name: EventLog - classe di evento
       href: eventlog-event-class.md
     - name: Exception - classe di evento
       href: exception-event-class.md
     - name: Exchange Spill - classe di evento
       href: exchange-spill-event-class.md
-    - name: Classe di evento Execution Warnings
+    - name: Execution Warnings - classe di evento
       href: execution-warnings-event-class.md
     - name: Hash Warning - classe di evento
       href: hash-warning-event-class.md
-    - name: Classe di evento Missing Column Statistics
+    - name: Missing Column Statistics - classe di evento
       href: missing-column-statistics-event-class.md
     - name: Missing Join Predicate - classe di evento
       href: missing-join-predicate-event-class.md
@@ -146,11 +146,11 @@
   items:
     - name: OLEDB Call - classe di evento
       href: oledb-call-event-class.md
-    - name: Classe di evento OLEDB DataRead
+    - name: OLEDB DataRead - classe di evento
       href: oledb-dataread-event-class.md
-    - name: Classe di evento OLEDB Errors
+    - name: OLEDB Errors - classe di evento
       href: oledb-errors-event-class.md
-    - name: Classe di evento OLEDB Provider Information
+    - name: OLEDB Provider Information - classe di evento
       href: oledb-provider-information-event-class.md
     - name: OLEDB QueryInterface - classe di evento
       href: oledb-queryinterface-event-class.md
@@ -165,7 +165,7 @@
       href: performance-statistics-event-class.md
     - name: Showplan All - classe di evento
       href: showplan-all-event-class.md
-    - name: Classe di evento Showplan All for Query Compile
+    - name: Showplan All for Query Compile - classe di evento
       href: showplan-all-for-query-compile-event-class.md
     - name: Showplan Statistics Profile - classe di evento
       href: showplan-statistics-profile-event-class.md
@@ -177,7 +177,7 @@
       href: showplan-xml-event-class.md
     - name: Showplan XML For Query Compile - classe di evento
       href: showplan-xml-for-query-compile-event-class.md
-    - name: Classe di evento Showplan XML Statistics Profile
+    - name: Showplan XML Statistics Profile - classe di evento
       href: showplan-xml-statistics-profile-event-class.md
     - name: 'SQL:FullTextQuery - classe di evento'
       href: sql-fulltextquery-event-class.md
@@ -188,7 +188,7 @@
 - name: Categoria di eventi Report di stato
   href: progress-report-event-category.md
   items:
-    - name: 'Report di stato: Classe di evento Online Index Operation'
+    - name: 'Classe di evento Progress Report: Online Index Operation'
       href: progress-report-online-index-operation-event-class.md
 - name: Categoria di eventi di notifica delle query
   href: query-notifications-event-category.md
@@ -221,7 +221,7 @@
       href: audit-add-role-event-class.md
     - name: Audit Addlogin - classe di evento
       href: audit-addlogin-event-class.md
-    - name: Classe di evento Audit App Role Change Password
+    - name: Audit App Role Change Password - classe di evento
       href: audit-app-role-change-password-event-class.md
     - name: Classe di evento Audit Backup/Restore
       href: audit-backup-and-restore-event-class.md
@@ -231,7 +231,7 @@
       href: audit-broker-login-event-class.md
     - name: Audit Change Audit - classe di evento
       href: audit-change-audit-event-class.md
-    - name: Classe di evento Audit Change Database Owner
+    - name: Audit Change Database Owner - classe di evento
       href: audit-change-database-owner-event-class.md
     - name: Audit Database Management - classe di evento
       href: audit-database-management-event-class.md
@@ -241,9 +241,9 @@
       href: audit-database-object-access-event-class.md
     - name: Audit Database Object GDR - classe di evento
       href: audit-database-object-gdr-event-class.md
-    - name: Classe di evento Audit Database Object Management
+    - name: Audit Database Object Management - classe di evento
       href: audit-database-object-management-event-class.md
-    - name: Classe di evento Audit Database Object Take Ownership
+    - name: Audit Database Object Take Ownership - classe di evento
       href: audit-database-object-take-ownership-event-class.md
     - name: Audit Database Operation - classe di evento
       href: audit-database-operation-event-class.md
@@ -269,7 +269,7 @@
       href: audit-login-gdr-event-class.md
     - name: Audit Logout - classe di evento
       href: audit-logout-event-class.md
-    - name: Classe di evento Audit Object Derived Permission
+    - name: Audit Object Derived Permission - classe di evento
       href: audit-object-derived-permission-event-class.md
     - name: Audit Schema Object Access - classe di evento
       href: audit-schema-object-access-event-class.md
@@ -295,7 +295,7 @@
       href: audit-server-principal-management-event-class.md
     - name: Audit Server Scope GDR - classe di evento
       href: audit-server-scope-gdr-event-class.md
-    - name: Classe di evento Audit Server Starts and Stops
+    - name: Audit Server Starts and Stops - classe di evento
       href: audit-server-starts-and-stops-event-class.md
     - name: Audit Statement Permission - classe di evento
       href: audit-statement-permission-event-class.md
@@ -322,17 +322,17 @@
       href: preconnect-starting-event-class.md
     - name: 'RPC:Completed - classe di evento'
       href: rpc-completed-event-class.md
-    - name: Classe di evento RPC Output Parameter
+    - name: RPC Output Parameter - classe di evento
       href: rpc-output-parameter-event-class.md
     - name: 'RPC:Starting - classe di evento'
       href: rpc-starting-event-class.md
-    - name: 'Classe di evento SP:CacheHit'
+    - name: 'SP:CacheHit - classe di evento'
       href: sp-cachehit-event-class.md
     - name: 'SP:CacheInsert - classe di evento'
       href: sp-cacheinsert-event-class.md
     - name: 'SP:CacheMiss - classe di evento'
       href: sp-cachemiss-event-class.md
-    - name: 'Classe di evento SP:CacheRemove'
+    - name: 'SP:CacheRemove - classe di evento'
       href: sp-cacheremove-event-class.md
     - name: 'SP:Completed - classe di evento'
       href: sp-completed-event-class.md
@@ -378,17 +378,17 @@
   items:
     - name: Exec Prepared SQL - classe di evento
       href: exec-prepared-sql-event-class.md
-    - name: Classe di evento Prepare SQL
+    - name: Prepare SQL - classe di evento
       href: prepare-sql-event-class.md
-    - name: 'Classe di evento SQL:BatchCompleted'
+    - name: 'SQL:BatchCompleted - classe di evento'
       href: sql-batchcompleted-event-class.md
-    - name: 'Classe di evento SQL:BatchStarting'
+    - name: 'SQL:BatchStarting - classe di evento'
       href: sql-batchstarting-event-class.md
-    - name: 'Classe di evento SQL:StmtCompleted'
+    - name: 'SQL:StmtCompleted - classe di evento'
       href: sql-stmtcompleted-event-class.md
     - name: 'SQL:StmtRecompile - classe di evento'
       href: sql-stmtrecompile-event-class.md
-    - name: 'Classe di evento SQL:StmtStarting'
+    - name: 'SQL:StmtStarting - classe di evento'
       href: sql-stmtstarting-event-class.md
     - name: Unprepare SQL - classe di evento
       href: unprepare-sql-event-class.md

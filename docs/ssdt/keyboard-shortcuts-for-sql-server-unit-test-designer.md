@@ -1,23 +1,24 @@
 ---
-title: Tasti di scelta rapida per la finestra di progettazione unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Tasti di scelta rapida per la finestra di progettazione unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: eab27b8ece9e15fddf9f397533d1a272fcd617b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037217"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246413"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Tasti di scelta rapida per la finestra di progettazione unit test di SQL Server
+
 È possibile usare i tasti di scelta rapida seguenti per spostarsi all'interno della finestra di progettazione unit test di SQL Server.  
   
 |||  
@@ -26,7 +27,7 @@ ms.locfileid: "68037217"
 |Passare dall'editor Transact\-SQL alla barra di spostamento.|CTRL + F2|  
 |Spostarsi avanti tra gli elementi della barra di navigazione.|TAB|  
 |Spostarsi indietro tra gli elementi della barra di navigazione.|MAIUSC+TAB|  
-|Spostarsi tra i diversi riquadri nella finestra di progettazione unit test del database.<br /><br />**NOTA** questo tasto di scelta rapida non funzionerà se alla prima apertura di Visual Studio è stato specificato C# per il profilo di sviluppo.|F6/MAIUSC+F6|  
+|Spostarsi tra i diversi riquadri nella finestra di progettazione unit test del database.<br /><br />**NOTA:** questo tasto di scelta rapida non funzionerà se alla prima apertura di Visual Studio è stato specificato C# per il profilo di sviluppo.|F6/MAIUSC+F6|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

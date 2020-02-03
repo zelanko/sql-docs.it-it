@@ -1,6 +1,6 @@
 - name: Esercitazioni di SQL Server 2014
   href: tutorials-for-sql-server-2014.md
-- name: 'Esercitazione: Scrittura di istruzioni Transact-SQL'
+- name: 'Esercitazione: Scrittura di istruzioni Transact-SQL +'
   href: ../t-sql/tutorial-writing-transact-sql-statements.md
 - name: Esercitazioni sul data mining
   href: ../analysis-services/data-mining-tutorials-analysis-services.md
@@ -17,7 +17,7 @@
               href: creating-a-data-source-basic-data-mining-tutorial.md
             - name: Creazione di una vista origine dati
               href: creating-a-data-source-view-basic-data-mining-tutorial.md
-        - name: 'Lezione 2: Creazione di una struttura di mailing diretto'
+        - name: 'Lezione 2: Compilazione di una struttura di mailing diretto'
           href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
           items:
             - name: Creazione di una struttura del modello di data mining Targeted Mailing
@@ -49,7 +49,7 @@
               href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
             - name: Test di un modello filtrato
               href: testing-a-filtered-model-basic-data-mining-tutorial.md
-        - name: 'Lezione 6: Creazione e uso di stime'
+        - name: 'Lezione 6: Creazione e utilizzo di stime'
           href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
           items:
             - name: Creazione di stime
@@ -64,7 +64,7 @@
           items:
             - name: Creazione di una soluzione e di un'origine dati
               href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: 'Lezione 2: Creazione di uno scenario di previsione'
+        - name: 'Lezione 2: Compilazione di uno scenario di previsione'
           href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: Aggiunta di una vista origine dati per la previsione
@@ -90,7 +90,7 @@
                   href: time-series-predictions-replacement-data-intermediate-data-mining.md
             - name: Confronto delle stime per i modelli di previsione
               href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
-        - name: 'Lezione 3: Creazione di uno scenario Market Basket'
+        - name: 'Lezione 3: Compilazione di uno scenario Market Basket'
           href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: Aggiunta di una vista origine dati con tabelle nidificate
@@ -105,7 +105,7 @@
               href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
             - name: Stima delle associazioni
               href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: 'Lezione 4: Creazione di uno scenario di clustering delle sequenze'
+        - name: 'Lezione 4: Compilazione di uno scenario di clustering delle sequenze'
           href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
           items:
             - name: Creazione di una struttura del modello di data mining Sequence Clustering
@@ -118,7 +118,7 @@
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: Creazione di stime su un modello Sequence Clustering
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: 'Lezione 5: Creazione dei modelli di rete neurale e di regressione logistica'
+        - name: 'Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica'
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md
           items:
             - name: Aggiunta di una vista origine dati i dati del call center.
@@ -131,7 +131,7 @@
               href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
             - name: Creazione di stime per i modelli Call Center (Esercitazione intermedia sul data mining)
               href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'Creazione ed esecuzione di query sui modelli di data mining con DMX: Esercitazioni'
+    - name: 'Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni'
       href: create-query-data-mining-models-dmx-tutorials.md
       items:
         - name: Esercitazione su DMX per Bike Buyer
@@ -167,7 +167,7 @@
               href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
             - name: 'Lezione 3: Elaborazione di strutture e modelli Time Series'
               href: lesson-3-processing-the-time-series-structure-and-models.md
-            - name: 'Lezione 4: Creazione di stime basate su serie temporali con DMX'
+            - name: 'Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX'
               href: lesson-4-creating-time-series-predictions-using-dmx.md
             - name: 'Lezione 5: Estensione del modello Time Series'
               href: lesson-5-extending-the-time-series-model.md
@@ -177,7 +177,7 @@
     - name: Creare un report tabella semplice (esercitazione su SSRS)
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
-        - name: 'Lezione 1: Creazione di un progetto server di report'
+        - name: 'Lezione 1: Creazione di un progetto server report'
           href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
         - name: 'Lezione 2: Specifica delle informazioni di connessione'
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
@@ -185,18 +185,18 @@
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
         - name: 'Lezione 4: Aggiunta di una tabella al report'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lezione 5: Formattazione di un report'
+        - name: 'Lesson 5: Formatting a Report'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lezione 6: Aggiunta di raggruppamenti e totali'
+        - name: 'Lesson 6: Adding Grouping and Totals'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
         - name: 'Lezione 1: Creazione di un database di esempio del Sottoscrittore'
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 'Lezione 2: Modifica delle proprietà dell''origine dati del report'
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati'
+        - name: 'Lesson 3: Defining a Data-Driven Subscription'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -217,7 +217,7 @@
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: 'Lezione 8: Creare un filtro di dati'
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 'Lezione 9: Compilare ed eseguire l''applicazione'
+        - name: 'Lesson 9: Build and Run the Application'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 'Accesso al servizio Web ReportServer con Visual Basic o Visual C# (esercitazione SSRS)'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
@@ -233,17 +233,17 @@
     - name: Aggiornamento dei report mediante le classi generate dallo schema RDL (esercitazione SSRS)
       href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
       items:
-        - name: 'Lezione 1: Creare il progetto di Visual Studio per lo schema RDL'
+        - name: 'Lezione 1: Creazione del progetto di Visual Studio per lo schema RDL'
           href: lesson-1-create-the-rdl-schema-visual-studio-project.md
-        - name: 'Lezione 2: Generare classi dallo schema RDL con lo strumento xsd'
+        - name: 'Lezione 2: Generazione delle classi dallo schema RDL mediante lo strumento xsd'
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
-        - name: 'Lezione 3: Caricare la definizione di un report dal server di report'
+        - name: 'Lezione 3: Caricamento della definizione di un report dal Server report'
           href: lesson-3-load-a-report-definition-from-the-report-server.md
-        - name: 'Lezione 4: Aggiornare la definizione del report a livello di programmazione'
+        - name: 'Lezione 4: Aggiornamento della definizione del report a livello di programmazione'
           href: lesson-4-update-the-report-definition-programmatically.md
-        - name: 'Lezione 5: Pubblicare la definizione del report nel server di report'
+        - name: 'Lezione 5: Pubblicazione della definizione del report nel Server report'
           href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: 'Lezione 6: Eseguire l''applicazione dello schema RDL (VB/C#)'
+        - name: 'Lezione 6: Esecuzione dell''applicazione dello schema RDL (VB/C#)'
           href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
     - name: esercitazioni (Generatore report)
       href: ../reporting-services/report-builder-tutorials.md
@@ -252,13 +252,13 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Modalità alternative di acquisizione di una connessione dati (Generatore report)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Esercitazione: Creazione di un report tabella di base'
+        - name: 'Esercitazione: Creazione di un report tabella semplice'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report matrice'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report in formato libero'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Esercitazione: Formattazione del testo (Generatore report)'
+        - name: 'Esercitazione: Formattazione di testo (Generatore report)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
         - name: 'Esercitazione: Aggiungere un istogramma al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
@@ -268,7 +268,7 @@
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: 'Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Esercitazione: Aggiunta di un indicatore KPI al report'
+        - name: 'Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
         - name: 'Esercitazione: Report mappa'
           href: ../reporting-services/tutorial-map-report-report-builder.md
@@ -284,7 +284,7 @@
     - name: 'Gestione di informazioni aziendali tramite l''utilizzo combinato di SSIS, MDS e DQS [Esercitazione]'
       href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
       items:
-        - name: 'Lezione 1: Creazione di una Knowledge Base DQS Suppliers'
+        - name: 'Lezione 1: Creazione di una Knowledge Base DQS Suppliers.'
           href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
           items:
             - name: 'Attività 1: Creazione di una Knowledge Base e dei domini'
@@ -299,19 +299,19 @@
               href: task-5-setting-term-based-relationships.md
             - name: 'Attività 6: Impostazione di sinonimi'
               href: task-6-setting-synonyms.md
-            - name: 'Attività 7: Creazione di un dominio composito'
+            - name: 'Attività 7: Creazione di una regola per un dominio composito'
               href: task-7-creating-a-composite-domain.md
             - name: 'Attività 8: Creazione di una regola per un dominio composito'
               href: task-8-creating-a-composite-domain-rule.md
             - name: 'Attività 9: Configurazione di un servizio dati di riferimento'
               href: task-9-configuring-a-reference-data-service.md
-            - name: 'Attività 10: Configurazione del dominio composito per usare il servizio dati di riferimento'
+            - name: 'Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento'
               href: task-10-configuring-composite-domain-to-use-reference-data-service.md
             - name: 'Attività 11: Pubblicazione della Knowledge Base'
               href: task-11-publishing-the-knowledge-base.md
             - name: 'Attività 12: Individuazione delle informazioni (Individuazione informazioni)'
               href: task-12-discovering-knowledge-knowledge-discovery.md
-        - name: 'Lezione 2: Pulizia dei dati fornitore tramite la Knowledge Base Suppliers'
+        - name: 'Lezione 2: Pulizia dei dati fornitore mediante la Knowledge Base Suppliers'
           href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
           items:
             - name: 'Attività 1: Creazione di un progetto Data Quality'
@@ -342,7 +342,7 @@
           items:
             - name: 'Attività 1: Creazione del modello Supplier tramite Gestione dati master'
               href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: 'Attività 2: Caricamento dei dati fornitore in MDS tramite il componente aggiuntivo MDS per Excel'
+            - name: 'Attività 2: Caricamento dei dati fornitore in MDS utilizzando il componente aggiuntivo MDS per excel'
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
             - name: 'Attività 3: Verifica dei dati in Gestione dati master'
               href: task-3-verifying-the-data-in-master-data-manager.md
@@ -356,9 +356,9 @@
               href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
             - name: 'Attività 8: Aggiunta di un nuovo valore per l''entità State in Excel'
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
-            - name: 'Attività 9: Creazione di una gerarchia derivata tramite Gestione dati master'
+            - name: 'Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master'
               href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
-        - name: 'Lezione 5: Automazione della pulizia e della corrispondenza tramite SSIS'
+        - name: 'Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS'
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
             - name: 'Attività 1 (prerequisito): Rimozione dei dati fornitore in MDS'
@@ -375,7 +375,7 @@
               href: task-6-adding-excel-source-to-the-data-flow.md
             - name: 'Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati'
               href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: 'Attività 8: Aggiunta della trasformazione Suddivisione condizionale all''output di pulizia della suddivisione'
+            - name: 'Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell''output di pulizia della suddivisione'
               href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
             - name: 'Attività 9: Aggiunta della trasformazione Unione input multipli a Combina record corretti e con correzione'
               href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
@@ -387,7 +387,7 @@
               href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
             - name: 'Attività 13: Aggiunta di Destinazione OLE DB a Scrivi dati fornitore nella tabella di gestione temporanea MDS'
               href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: 'Attività 14: Attività dell''attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS'
+            - name: 'Attività 14: Aggiunta dell''Attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS'
               href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
             - name: 'Attività 15: Compilazione ed esecuzione del progetto SSIS'
               href: task-15-building-and-running-the-ssis-project.md

@@ -28,7 +28,7 @@
       href: ../../native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md
     - name: Oggetti origine dati persistenti
       href: ../../native-client-ole-db-data-source-objects/persisted-data-source-objects.md
-- name: Comandi
+- name: 'Comandi:'
   href: ../../native-client-ole-db-commands/commands.md
   items:
     - name: Sintassi dei comandi
@@ -179,7 +179,7 @@
       href: ../../native-client-ole-db-transactions/supporting-distributed-transactions.md
     - name: Livelli di isolamento (OLE DB)
       href: ../../native-client-ole-db-transactions/isolation-levels-ole-db.md
-- name: Errori
+- name: Errors
   href: ../../native-client-ole-db-errors/errors.md
   items:
     - name: Codici restituiti

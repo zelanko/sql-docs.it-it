@@ -185,7 +185,7 @@
           href: select-a-package.md
     - name: Notifica operatori - attività
       href: notify-operator-task.md
-    - name: Attività Ricompila indice
+    - name: Ricompila indice - attività
       href: rebuild-index-task.md
     - name: Attività Riorganizza indice
       href: reorganize-index-task.md

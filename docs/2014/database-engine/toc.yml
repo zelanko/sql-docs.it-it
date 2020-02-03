@@ -100,7 +100,7 @@
       href: configure-windows/remote-servers.md
     - name: Panoramica di Monitoraggio SQL Server
       href: configure-windows/sql-server-monitor-overview.md
-    - name: Service Broker
+    - name: Broker di servizio
       href: configure-windows/sql-server-service-broker.md
     - name: Estensione pool di buffer
       href: configure-windows/buffer-pool-extension.md

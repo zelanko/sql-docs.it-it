@@ -76,7 +76,7 @@
 - name: Modelli
   href: models-master-data-services.md
   items:
-    - name: Creare un modello
+    - name: Creare il modello
       href: create-a-model-master-data-services.md
     - name: Modificare il nome di un modello
       href: change-a-model-name-master-data-services.md
@@ -93,7 +93,7 @@
       href: edit-an-entity-master-data-services.md
     - name: Eliminare un'entità
       href: delete-an-entity-master-data-services.md
-- name: Attributi
+- name: Attributes
   href: attributes-master-data-services.md
   items:
     - name: Creare un attributo di testo
@@ -146,7 +146,7 @@
       href: staging-process-errors-master-data-services.md
     - name: Stati di importazione
       href: import-statuses-master-data-services.md
-- name: Membri
+- name: Members
   href: members-master-data-services.md
   items:
     - name: Creare un membro foglia
@@ -194,7 +194,7 @@
       href: business-rule-conditions-master-data-services.md
     - name: Azioni Regola business
       href: business-rule-actions-master-data-services.md
-- name: Rilevamento delle modifiche
+- name: Rilevamento modifiche
   href: change-tracking-master-data-services.md
   items:
     - name: Aggiungere attributi ad un gruppo rilevamento modifiche
@@ -204,14 +204,14 @@
 - name: Notifiche
   href: notifications-master-data-services.md
   items:
-    - name: Configurare notifiche di posta elettronica
+    - name: Configurare le notifiche tramite posta elettronica
       href: configure-email-notifications-master-data-services.md
 - name: Transazioni
   href: transactions-master-data-services.md
   items:
     - name: Invertire una transazione
       href: reverse-a-transaction-master-data-services.md
-- name: Annotazioni
+- name: annotazioni
   href: annotations-master-data-services.md
   items:
     - name: Annotare una transazione
@@ -320,7 +320,7 @@
 - name: Utenti e gruppi
   href: users-and-groups-master-data-services.md
   items:
-    - name: Aggiungere un utente
+    - name: Aggiungi un utente
       href: add-a-user-master-data-services.md
     - name: Aggiungere un gruppo
       href: add-a-group-master-data-services.md

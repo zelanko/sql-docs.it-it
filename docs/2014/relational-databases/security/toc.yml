@@ -78,7 +78,7 @@
           href: sql-server-certificates-and-asymmetric-keys.md
     - name: Accesso per l'autenticazione
       items:
-        - name: Entità
+        - name: Principals
           href: authentication-access/principals-database-engine.md
         - name: Ruoli a livello di server
           href: authentication-access/server-level-roles.md

@@ -385,7 +385,7 @@
   items:
     - name: Installare e disinstallare il componente di origine OData
       href: ../install-and-uninstall-odata-source-component.md
-    - name: 'Esercitazione: uso dell''origine OData'
+    - name: 'Esercitazione: utilizzo dell''origine OData'
       href: tutorial-using-the-odata-source.md
     - name: Modificare la query di origine OData in fase di esecuzione
       href: modify-odata-source-query-at-runtime.md

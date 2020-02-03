@@ -1,6 +1,6 @@
 ---
-title: Guida sensibile al contesto delle pagine Segnalibri | Microsoft Docs
-ms.custom: ''
+title: Guida sensibile al contesto delle pagine Segnalibri
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,17 +15,17 @@ ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51eebf67e51b5d2eaa25e251914a50bc203521fd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 444c17fa090578f7dc1ce22db84e9c0d84e63b24
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264846"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246438"
 ---
 # <a name="bookmarks-f1-help"></a>Guida sensibile al contesto delle pagine Segnalibri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   In questa sezione è inclusa la Guida sensibile al contesto per le pagine **Segnalibri** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Gestione di segnalibri](../../relational-databases/scripting/manage-bookmarks.md)  
+ [Gestire i segnalibri](../../relational-databases/scripting/manage-bookmarks.md)  
   
   

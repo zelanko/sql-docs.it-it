@@ -17,13 +17,13 @@ ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992833"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Restituisce informazioni circa la connessione e lo stack client.  
@@ -43,7 +43,7 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
   
 **Per PHP per SQL Server versione 3.2 e 3.1**:  
   
-|Key|Descrizione|  
+|Chiave|Descrizione|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  
@@ -52,7 +52,7 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
   
 **Per PHP per SQL Server versione 3.0 e 2.0**:  
   
-|Key|Descrizione|  
+|Chiave|Descrizione|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  

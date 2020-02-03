@@ -221,7 +221,7 @@
       items:
         - name: Proprietà replica di disponibilità (Pagina Generale)
           href: availability-replica-properties-general-page.md
-        - name: 'Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di backup)'
+        - name: 'Proprietà dei gruppi di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di backup)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: Creazione guidata Gruppo di disponibilità
       items:

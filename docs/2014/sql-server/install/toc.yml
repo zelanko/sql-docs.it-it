@@ -27,17 +27,17 @@
 - name: Procedure per Preparazione aggiornamento
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Procedura: Installare Gestione spazio aggiornamenti'
+    - name: 'Procedura: Installazione di Preparazione aggiornamento'
       href: how-to-install-upgrade-advisor.md
-    - name: 'Procedura: Avviare Gestione spazio aggiornamenti'
+    - name: 'Procedura: Avvio di Preparazione aggiornamento'
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Procedura: Eseguire l''analisi guidata di Gestione spazio aggiornamenti'
+    - name: 'Procedura: Esecuzione dell''Analisi guidata di Preparazione aggiornamento'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Procedura: Visualizzare un report di Gestione spazio aggiornamenti'
+    - name: 'Procedura: Visualizzazione di un report di Preparazione aggiornamento'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Procedura: Filtrare i report'
+    - name: 'Procedura: Filtraggio di report'
       href: how-to-filter-reports.md
-    - name: 'Procedura: Export Reports'
+    - name: 'Procedura: Esportazione di report'
       href: how-to-export-reports.md
 - name: Guida di riferimento all'interfaccia utente
   href: upgrade-advisor-user-interface-reference.md
@@ -335,7 +335,7 @@
       href: failover-cluster-report.md
     - name: Esame caratteristiche
       href: feature-review.md
-    - name: Regole di installazione
+    - name: Installation Rules
       href: installation-rules.md
     - name: Regole delle funzionalità
       href: feature-rules.md
@@ -355,7 +355,7 @@
       href: installation-progress.md
     - name: Tipo di installazione
       href: installation-type.md
-    - name: Configurazione dell'istanza
+    - name: Configurazione istanza
       href: instance-configuration.md
     - name: Selezione istanza (disinstallazione)
       href: instance-selection-uninstall.md
@@ -424,11 +424,11 @@
   items:
     - name: Installazione degli aggiornamenti dal prompt dei comandi
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 'Procedura: Verificare la corretta installazione di un aggiornamento di SQL Server'
+    - name: 'Procedura: Convalida della corretta installazione di un aggiornamento di SQL Server'
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Panoramica sull'installazione dei servizi SQL Server
       href: overview-of-sql-server-servicing-installation.md
-    - name: Procedura guidata
+    - name: Schermata iniziale
       href: welcome.md
     - name: Condizioni di licenza
       href: license-terms.md

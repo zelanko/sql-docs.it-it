@@ -9,10 +9,10 @@ ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581965"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Aggiungere o eliminare un gruppo in un grafico (Generatore report e SSRS)
@@ -41,7 +41,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
 1.  Nell'area di progettazione del report fare clic in un punto qualsiasi del grafico per selezionarlo. Viene visualizzato il riquadro **Dati grafico** .  
   
-2.  Fare clic con il pulsante destro del mouse sul gruppo nell'area **Gruppi di serie** e quindi su **Proprietà gruppo serie**.  
+2.  Fare clic con il pulsante destro del mouse sul gruppo nell'area **Gruppi di serie** e quindi scegliere **Proprietà gruppo serie**.  
   
 3.  Aggiungere o rimuovere espressioni di raggruppamento, filtri, espressioni di ordinamento e variabili di gruppo.  
   

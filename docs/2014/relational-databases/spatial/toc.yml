@@ -3,7 +3,7 @@
   items:
     - name: Panoramica dei tipi di dati spaziali
       href: spatial-data-types-overview.md
-    - name: Punto
+    - name: Point
       href: point.md
     - name: LineString
       href: linestring.md
@@ -11,7 +11,7 @@
       href: circularstring.md
     - name: CompoundCurve
       href: compoundcurve.md
-    - name: Poligono
+    - name: Polygon
       href: polygon.md
     - name: CurvePolygon
       href: curvepolygon.md

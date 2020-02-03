@@ -43,7 +43,7 @@
       items:
         - name: RSReportServer Configuration File
           href: report-server/rsreportserver-config-configuration-file.md
-        - name: File di configurazione ReportingServicesService
+        - name: ReportingServicesService - file di configurazione
           href: report-server/reportingservicesservice-configuration-file.md
         - name: RSReportDesigner - file di configurazione
           href: report-server/rsreportdesigner-configuration-file.md

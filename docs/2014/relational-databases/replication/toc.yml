@@ -54,7 +54,7 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: Parametri del prompt dei comandi
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: Monitoraggio
+    - name: Monitorare
       href: monitoring-replication.md
       items:
         - name: Monitoraggio replica
@@ -128,7 +128,7 @@
               href: publish/set-the-expiration-period-for-subscriptions.md
             - name: Specificare opzioni dello schema
               href: publish/specify-schema-options.md
-            - name: Replica modifiche dello schema
+            - name: Replicare le modifiche dello schema
               href: publish/replicate-schema-changes.md
             - name: Gestire le colonne Identity
               href: publish/manage-identity-columns.md
@@ -215,7 +215,7 @@
       items:
         - name: Database di distribuzione
           href: security/secure-the-distributor.md
-        - name: Server di pubblicazione
+        - name: Editore
           href: security/secure-the-publisher.md
         - name: Sottoscrittore
           href: security/secure-the-subscriber.md
@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: Oggetti creati
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: Risoluzione dei problemi
+                - name: risoluzione dei problemi
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: Sottoscrittori non SQL
           href: non-sql/non-sql-server-subscribers.md
@@ -540,7 +540,7 @@
               href: snapshot-folder.md
             - name: Database di distribuzione
               href: distribution-database.md
-            - name: Server di pubblicazione
+            - name: Autori
               href: publishers.md
             - name: Password server di distribuzione
               href: distributor-password.md

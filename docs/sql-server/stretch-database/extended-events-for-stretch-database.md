@@ -9,17 +9,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844576"
 ---
 # <a name="extended-events-for-stretch-database"></a>Eventi estesi per Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-Estensione database offre un set di eventi estesi per la risoluzione dei problemi.  
+Stretch Database offre un set di eventi estesi per la risoluzione dei problemi.  
   
 Per altre informazioni, vedere [Eventi estesi](../../relational-databases/extended-events/extended-events.md). Per informazioni su come avviare una sessione di eventi estesi per la risoluzione dei problemi, vedere [Creare una sessione Eventi estesi](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
@@ -81,5 +81,5 @@ stretch_table_validation_error|Segnala il completamento della convalida per una 
 stretch_unprovision_table_start|Segnala l'avvio dell'annullamento del provisioning di una tabella estesa  
   
 ## <a name="see-also"></a>Vedere anche  
-[Gestione e risoluzione dei problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Gestire e risolvere i problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

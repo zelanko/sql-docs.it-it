@@ -22,9 +22,9 @@
     - name: Distribuzione di un'estensione per l'elaborazione dati
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: 'Procedura: Distribuire un''estensione per l''elaborazione dati in un server di report'
+        - name: 'Procedura: Distribuzione di un''estensione per l''elaborazione dati in un server di report'
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: 'Procedura: Distribuire un''estensione per l''elaborazione dati in Progettazione report'
+        - name: 'Procedura: Distribuzione di un''estensione per l''elaborazione dati in Progettazione report'
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: Debug del codice di un'estensione per l'elaborazione dati
       href: data-processing/debugging-data-processing-extension-code.md

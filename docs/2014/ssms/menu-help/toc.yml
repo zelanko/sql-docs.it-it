@@ -23,7 +23,7 @@
   items:
     - name: Opzioni (pagina Ambiente/Generale)
       href: options-environment-general-page.md
-    - name: 'Opzioni (pagina Ambiente: Tipi di carattere e colori)'
+    - name: Opzioni (pagina Ambiente/Tipi di carattere e colori)
       href: options-environment-fonts-and-colors-page.md
     - name: Opzioni (pagina Ambiente/Tastiera)
       href: options-environment-keyboard-page.md

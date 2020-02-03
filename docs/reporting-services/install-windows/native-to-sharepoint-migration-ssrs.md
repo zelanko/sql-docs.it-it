@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570718"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
@@ -41,15 +41,15 @@ ms.locfileid: "65570718"
   
  Nella tabella seguente vengono riepilogati gli oggetti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di cui è possibile eseguire la migrazione con gli script:  
   
-|Object|Esecuzione dello script|Commenti|  
+|Oggetto|Esecuzione dello script|Commenti|  
 |------------|---------------------|--------------|  
 |Report|Sì|Al termine della migrazione immettere nuovamente le password per le origini dati.|  
-|Origini dati|Sì|Al termine della migrazione collegare nuovamente i report alle origini dati.|  
+|Datasources|Sì|Al termine della migrazione collegare nuovamente i report alle origini dati.|  
 |Modelli|Sì||  
 |Set di dati|Sì||  
 |Parti del report||Al termine della migrazione verificare o aggiornare il percorso alle parti del report.|  
 |Pianificazioni|Sì|Vedere il metodo ListSchedules in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Sottoscrizioni|Sì|Vedere il metodo ListSubscriptions in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e il metodo <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
+|Sottoscrizioni|sì|Vedere il metodo ListSubscriptions in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e il metodo <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Snapshot|||
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

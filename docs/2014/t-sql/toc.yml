@@ -27,7 +27,7 @@
           href: lesson-2-4-granting-access-to-a-database-object.md
         - name: 'Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database'
           href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
-    - name: 'Lezione 3: Eliminazione degli oggetti di database'
+    - name: 'Lezione 3: Eliminazione di oggetti di database'
       href: lesson-3-1-deleting-database-objects.md
       items:
         - name: Eliminazione degli oggetti di database

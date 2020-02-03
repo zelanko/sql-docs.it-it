@@ -1,6 +1,6 @@
 ---
-title: Finestre degli strumenti in SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Finestre degli strumenti in SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266712"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243887"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Finestre degli strumenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68266712"
 |[Esplora modelli](../ssms/template/template-explorer.md)|Creare query basate sui modelli esistenti. È inoltre possibile creare query personalizzate o modificare i modelli esistenti per renderli più adeguati alle proprie esigenze. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Guida dinamica](../ssms/user-assistance-in-sql-server-management-studio.md)|Visualizzare un elenco di argomenti correlati della Guida quando si fa clic su un componente o si digita un codice.|  
   
-Gli strumenti presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] interagiscono tra loro. È ad esempio possibile:  
+Gli strumenti presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] interagiscono tra loro. Ad esempio, è possibile:  
   
 -   Registrare un server con Esplora oggetti.  
   

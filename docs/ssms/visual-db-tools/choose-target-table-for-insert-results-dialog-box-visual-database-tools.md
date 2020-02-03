@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Scegliere la tabella di destinazione per Accodamento | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Scegliere la tabella di destinazione per Accodamento
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bdda9fd3bea6454e899031c8adf706a6c1dea94f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9cca772265de6ebf3596f05f8711fef66e86cb64
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263635"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255548"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Finestra di dialogo Scegliere la tabella di destinazione per Accodamento (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,5 +33,5 @@ Selezionare nell'elenco il nome della tabella a cui aggiungere righe. È possibi
 > Per cambiare la tabella in cui si intende inserire righe, è possibile usare la finestra **Proprietà** .  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di query di accodamento &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
+[Creare query di accodamento &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
   
