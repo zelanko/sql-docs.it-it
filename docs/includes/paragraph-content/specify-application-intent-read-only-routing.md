@@ -1,6 +1,6 @@
 ---
-title: includere file
-description: includere file
+title: File di inclusione
+description: File di inclusione
 services: sql-database
 author: MightyPen
 ms.service: sql-database
@@ -9,10 +9,10 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213538"
 ---
 ## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione

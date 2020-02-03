@@ -1,6 +1,6 @@
 ---
-title: Aggiungere frammenti Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di frammenti Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246466"
 ---
 # <a name="add-transact-sql-snippets"></a>Aggiunta di frammenti Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68256875"
   
 2.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-3.  Fare clic sul pulsante **Aggiungi** .  
+3.  Fare clic su **Add** .  
   
 4.  Passare alla cartella contenente i frammenti di codice e fare clic sul pulsante **Seleziona cartella** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68256875"
   
 2.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-3.  Fare clic sul pulsante **Importa** .  
+3.  Fare clic sul pulsante **Import** (Importa).  
   
 4.  Passare alla cartella contenente il frammento, fare clic sul file con estensione snippet e quindi sul pulsante **Apri** .  
   
@@ -108,11 +108,11 @@ ms.locfileid: "68256875"
   
 3.  Scegliere **Gestione frammenti di codice** dal menu **Strumenti**.  
   
-4.  Fare clic sul pulsante **Importa** .  
+4.  Fare clic sul pulsante **Import** (Importa).  
   
 5.  Passare alla cartella contenente il file TryCatch.snippet, fare clic su tale file e quindi sul pulsante **Apri** . Nella cartella **Frammenti di codice** non dovrebbe essere presente un frammento TryCatch.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserimento di frammenti Transact-SQL racchiusi](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
+ [Inserire frammenti Transact-SQL racchiusi](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

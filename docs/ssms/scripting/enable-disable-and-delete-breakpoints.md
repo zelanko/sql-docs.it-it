@@ -1,26 +1,31 @@
 ---
-title: Abilitare, disabilitare ed eliminare punti di interruzione | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Abilitazione, disabilitazione ed eliminazione di punti di interruzione
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b90c950a3240d415a3792f15963ee2e3dcef35ae
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253917"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Abilitazione, disabilitazione ed eliminazione di punti di interruzione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Per visualizzare e gestire tutti i punti di interruzione impostati, è possibile utilizzare la finestra **Punti di interruzione** . Utilizzare questa finestra per visualizzare informazioni sui punti di interruzione e per effettuare azioni quali l'eliminazione, la disabilitazione o l'abilitazione di punti di interruzione.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Per visualizzare e gestire tutti i punti di interruzione impostati, è possibile utilizzare la finestra **Punti di interruzione** . Utilizzare questa finestra per visualizzare informazioni sui punti di interruzione e per effettuare azioni quali l'eliminazione, la disabilitazione o l'abilitazione di punti di interruzione.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Finestra Punti di interruzione  
  Nella finestra **Punti di interruzione** vengono elencate informazioni quali la riga di codice sulla quale è impostato il punto di interruzione. Nella finestra **Punti di interruzione** è inoltre possibile eliminare, disabilitare e abilitare punti di interruzione. Per ulteriori informazioni sulla finestra **Punti di interruzione** , vedere [Punti di interruzione Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  

@@ -1,6 +1,6 @@
 ---
-title: Impostazioni filtro (Esplora oggetti ed Esplora utilità) | Microsoft Docs
-ms.custom: ''
+title: Impostazioni filtro (Esplora oggetti ed Esplora utilità)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264115"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257178"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Impostazioni filtro (Esplora oggetti ed Esplora utilità)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Utilizzare questa finestra di dialogo per specificare un filtro. Un filtro conse
 **Proprietà**  
 Consente di visualizzare la proprietà in base a cui applicare il filtro.  
   
-**Operatoree**  
+**Operatore**  
 Consente di selezionare il modo in cui il valore viene applicato alla proprietà dal filtro. Sono disponibili le opzioni seguenti:  
   
 -   **Uguale a**  
@@ -67,7 +67,7 @@ Consente di selezionare il modo in cui il valore viene applicato alla proprietà
   
     Questo operatore è disponibile per le date e visualizza gli elementi la cui data è precedente o successiva alle due date immesse. Per aggiungere un'altra riga che consenta l'immissione della seconda data selezionare **Non compreso tra** e premere TAB per uscire dalla colonna **Operatore** .  
   
-**Value**  
+**Valore**  
 Consente di digitare il valore da confrontare con la proprietà. Fare clic sulla freccia a discesa per visualizzare un calendario che consente di selezionare la data.  
   
 **Cancella filtro**  

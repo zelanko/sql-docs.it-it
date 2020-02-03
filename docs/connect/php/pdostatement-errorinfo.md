@@ -11,10 +11,10 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993074"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
@@ -40,7 +40,7 @@ Una matrice di informazioni sugli errori dell'ultima operazione dell'handle di i
   
 Se non si verificano errori o se SQLSTATE non è impostata, i campi specifici del driver saranno NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   
 ## <a name="example"></a>Esempio  

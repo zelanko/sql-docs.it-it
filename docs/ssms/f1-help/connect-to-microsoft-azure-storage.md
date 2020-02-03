@@ -1,6 +1,6 @@
 ---
-title: Connettersi al servizio di archiviazione Microsoft Azure | Microsoft Docs
-ms.custom: ''
+title: Connetti ad Archiviazione di Microsoft Azure
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155675"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245018"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Connetti ad Archiviazione di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Specificare le informazioni seguenti sull'account di Azure e fare clic su **Avan
    >
    >  Il valore per una delle intestazioni HTTP non è nel formato corretto. (Microsoft.SqlServer.StorageClient).
    >
-   >  Errore del server remoto: (400) Richiesta errata. (Sistema)
+   >  Il server remoto ha restituito un errore: richiesta non valida (400). (Sistema)
 
 2.  **Chiave account** - specificare la chiave account per l'account di archiviazione specificato.  
   

@@ -1,10 +1,7 @@
 ---
-title: Disconnettersi da un server registrato (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Disconnettersi da un server registrato
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,25 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a829bebd0f7831d04d040ad1bd5fa6c0bc4be48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 1a2e2721dcdeffd55cc166fc94230c9a29768664
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264771"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246540"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Disconnessione da un server registrato (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In questo argomento viene descritto come disconnettere Esplora oggetti da un server in qualsiasi momento in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La disconnessione di Esplora oggetti non comporta quella di altri componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ad esempio Editor SQL.  
-  
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-disconnect-from-a-registered-server"></a>Per eseguire la disconnessione da un server registrato  
-  
--   In Esplora oggetti fare clic con il pulsante destro del mouse su un server e quindi scegliere **Disconnetti** oppure fare clic sull'icona **Disconnetti** sulla barra degli strumenti di Esplora oggetti.  
-  
-  
+
+In questo argomento viene descritto come disconnettere Esplora oggetti da un server in qualsiasi momento in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La disconnessione di Esplora oggetti non comporta quella di altri componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ad esempio Editor SQL.  
+
+## <a name="SSMSProcedure"></a>
+
+### <a name="to-disconnect-from-a-registered-server"></a>Per eseguire la disconnessione da un server registrato
+
+- In Esplora oggetti fare clic con il pulsante destro del mouse su un server e quindi scegliere **Disconnetti** oppure fare clic sull'icona **Disconnetti** sulla barra degli strumenti di Esplora oggetti.

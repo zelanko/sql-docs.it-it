@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658830"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Tipi di dati Java e SQL Server supportati
@@ -23,32 +23,32 @@ In questo articolo viene eseguito il mapping di tipi di dati SQL Server a tipi d
 
 Sono attualmente supportati i tipi di dati SQL e Java seguenti per i set di dati di input/output e i parametri di input/output.
 
-| Tipo di dati SQL        | Tipo di dati Java | Commento | |
+| Tipo di dati SQL        | Tipo di dati Java | Comment | |
 | ------------- |-------------|-|-|
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
 | Int | INT      | | |
-| Real | FLOAT      | | |
+| Real | float      | | |
 | Bigint | long      | | |
-| FLOAT | double      | | |
-| nchar(n) | String      | | |
-| nvarchar(n) | String      | | |
+| float | double      | | |
+| nchar(n) | string      | | |
+| nvarchar(n) | string      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
-| nvarchar(max) | String      | | |
+| nvarchar(max) | string      | | |
 | varbinary(max) | byte[]      | | |
-| UNIQUEIDENTIFIER | String | | |
-| char(n) | String | Sono supportate solo stringhe UTF8 | |
-| varchar(n) | String | Sono supportate solo stringhe UTF8 | |
-| ntext | String | Sono supportate solo stringhe UTF8 | |
+| UNIQUEIDENTIFIER | string | | |
+| char(n) | string | Sono supportate solo stringhe UTF8 | |
+| varchar(n) | string | Sono supportate solo stringhe UTF8 | |
+| ntext | string | Sono supportate solo stringhe UTF8 | |
 | Data | java.sql.date  | | |
 | NUMERIC | java.math.BigDecimal  | | |
-| Decimal | java.math.BigDecimal  | | |
+| decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
 | SMALLMONEY | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
+| Datetime | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 

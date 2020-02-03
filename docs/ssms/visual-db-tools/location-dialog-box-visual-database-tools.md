@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Percorso (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Percorso
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cd2e40972e790068b6ce0c19f8d85bcc0e4fa805
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224646"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Finestra di dialogo Percorso (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +26,7 @@ Utilizzare questa finestra di dialogo per individuare e selezionare la cartella 
   
 -   Scegliere **Nuovo** dal menu **File** , quindi selezionare **Progetto**. Quando viene visualizzata la finestra di dialogo **Nuovo progetto** , scegliere **Sfoglia**. Viene visualizzata la finestra di dialogo **Percorso** con il titolo **Percorso progetto**.  
   
-**Cerca in**  
+**Look in**  
 Utilizzare questo elenco per individuare la cartella desiderata. Vengono visualizzate le sottocartelle della cartella selezionata.  
   
 ## <a name="my-places-bar"></a>Barra Risorse personali  
@@ -42,7 +43,7 @@ Consente di visualizzare il contenuto del disco floppy, del disco rigido e dell'
 **Nome cartella**  
 Consente di visualizzare il percorso della cartella selezionata.  
   
-**Aprire**  
+**Apri**  
 Restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata nel campo **Nome cartella** .  
   
 ## <a name="toolbar"></a>Barra degli strumenti  

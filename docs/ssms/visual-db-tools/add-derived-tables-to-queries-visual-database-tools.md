@@ -1,10 +1,7 @@
 ---
-title: Aggiungere tabelle derivate a query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Aggiungere tabelle derivate a query
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da76d9e2f82f832e5426522047caa01d76262e39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b36b4774386343ee691cfa455787cf093639ce07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263353"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253445"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle derivate a query (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Le tabelle derivate sono set di risultati utilizzati come origini di tabella in una query. È possibile aggiungere una tabella derivata a una query nel **riquadro Diagramma**.  
   
@@ -37,6 +39,6 @@ Le tabelle derivate sono set di risultati utilizzati come origini di tabella in 
 ## <a name="see-also"></a>Vedere anche  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Creare query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Aprire query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
+[Apertura di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
 [SELECT (Transact-SQL)](https://msdn.microsoft.com/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
   

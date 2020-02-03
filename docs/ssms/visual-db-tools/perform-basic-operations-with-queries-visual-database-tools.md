@@ -1,10 +1,9 @@
 ---
-title: Eseguire operazioni di base con le query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Eseguire operazioni di base con le query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,25 +12,27 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01fd079810c59cd1b7f17d3c5503ed5083ee6998
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7fc8c17fc24ee9567e355a42dfae875d30335e49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266348"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255399"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Esecuzione di operazioni di base con le query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Le seguenti operazioni fondamentali sono applicabili a quasi tutte le query.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
-[Creazione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Creare query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 Viene descritta la procedura per creare nuove query.  
   
 [Apertura di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
 Viene descritta la procedura per aprire query esistenti.  
   
-[Esecuzione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Eseguire query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 Viene descritta la procedura per eseguire le query.  
   
 [Arrestare una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
@@ -99,13 +100,13 @@ Vengono descritte le proprietà disponibili per le query.
 [Tipi di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 Vengono elencati gli argomenti relativi alle query che possono essere utilizzate in Progettazione query e Progettazione viste.  
   
-[Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Vengono elencati gli argomenti relativi alle procedure per la creazione di query che restituiscono set di risultati specifici.  
   
 [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 Vengono elencati gli argomenti relativi alle procedure per la creazione di query che restituiscono set di risultati organizzati come desiderato.  
   
-[Riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 Vengono elencati gli argomenti relativi alle procedure per la creazione di query che riepilogano i risultati delle tabelle e degli oggetti con valori di tabella coinvolti.  
   
 [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -1,6 +1,6 @@
 ---
-title: Aprire e configurare Esplora oggetti | Microsoft Docs
-ms.custom: ''
+title: Aprire e configurare Esplora oggetti
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264049"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257127"
 ---
 # <a name="open-and-configure-object-explorer"></a>Aprire e configurare Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Esplora oggetti è visualizzato in [!INCLUDE[ssManStudio](../../includes/ssmanst
 Per configurare le impostazioni di Esplora oggetti, scegliere **Opzioni** dal menu **Strumenti**, quindi fare clic su **Esplora oggetti di SQL Server**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Visualizza](../../ssms/object/object-explorer.md)  
+[Esplora oggetti](../../ssms/object/object-explorer.md)  
 [Connettersi a un'istanza da Esplora oggetti](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Gestire oggetti tramite Esplora oggetti](../../ssms/object/manage-objects-by-using-object-explorer.md)  
 [Riquadro Dettagli di Esplora oggetti](../../ssms/object/object-explorer-details-pane.md)  

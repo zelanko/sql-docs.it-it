@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Imposta pagina | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Imposta pagina
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,18 +11,20 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bc09dffbff93e45ded3ed3fa4689ad88eb780f46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263274"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252117"
 ---
 # <a name="page-setup-dialog-box"></a>Finestra di dialogo Imposta pagina
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 È possibile personalizzare la progettazione della pagina selezionando le opzioni presenti nella finestra di dialogo **Imposta pagina** . Le opzioni disponibili dipendono dalle lingue installate e abilitate per le operazioni di modifica.  
   
-## <a name="paper"></a>Foglio  
+## <a name="paper"></a>Documento  
 **Dimensione**  
 Selezionare una dimensione dall'elenco.  
   
@@ -50,7 +51,7 @@ Imposta la distanza tra la parte superiore della pagina e la parte superiore del
 In basso  
 Imposta la distanza tra la parte inferiore della pagina e la parte inferiore dell'ultima riga nella pagina.  
   
-## <a name="other"></a>Altro  
+## <a name="other"></a>Altri  
 **Anteprima**  
 L'anteprima mostra gli effetti delle impostazioni selezionate.  
   

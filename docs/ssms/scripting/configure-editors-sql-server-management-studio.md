@@ -1,6 +1,6 @@
 ---
-title: Configurare gli editor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Configurazione di editor (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfc2f81c95b25397da77aa046ba80edeecaaa7a7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253957"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurazione di editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "68256465"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come specificare che un editor deve essere aperto facendo doppio clic su un file con un'estensione specificata in Esplora risorse.|[Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|Descrive come personalizzare i tipi di carattere per rendere più leggibili codice e testo.|[Modifica dello stile, delle dimensioni e del colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|Descrive come visualizzare le proprietà.|[Utilizzo della finestra Proprietà in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
+|Descrive come specificare che un editor deve essere aperto facendo doppio clic su un file con un'estensione specificata in Esplora risorse.|[Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
+|Descrive come personalizzare i tipi di carattere per rendere più leggibili codice e testo.|[Modificare lo stile, le dimensioni e il colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
+|Descrive come visualizzare le proprietà.|[Usare la finestra Proprietà in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
 |Percorso delle pagine della Guida per le finestre di dialogo delle opzioni degli editor.|[Guida sensibile al contesto relativa alle pagine di Opzioni query](https://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   

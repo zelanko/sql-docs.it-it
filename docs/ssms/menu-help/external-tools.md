@@ -1,6 +1,6 @@
 ---
-title: Strumenti esterni | Microsoft Docs
-ms.custom: ''
+title: Strumenti esterni
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257725"
 ---
 # <a name="external-tools"></a>Strumenti esterni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,16 +33,16 @@ Sposta lo strumento selezionato più in alto nell'elenco degli strumenti visuali
 **Sposta giù**  
 Sposta lo strumento selezionato più in basso nell'elenco degli strumenti visualizzati nel menu **Strumenti** .  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di cancellare il contenuto delle caselle di testo e quindi di specificare un nuovo strumento.  
   
 **Elimina**  
 Rimuove lo strumento o il comando dall'elenco **Contenuto menu** e dal menu **Strumenti** .  
   
-**Title**  
+**Titolo**  
 Nome dello strumento o del comando che verrà visualizzato nel sottomenu **Strumenti esterni** del menu **Strumenti** . Nel nome dello strumento inserire una "e" commerciale prima della lettera che si desidera utilizzare come tasto di scelta rapida per lo strumento. Ad esempio, specificando `&Spy++` , nel menu **Strumenti** verrà visualizzato **Spy++** .  
   
-**Command**  
+**Comando**  
 Consente di specificare il percorso del file con estensione exe, com, pif, bat, cmd o di altro tipo che si desidera avviare. L'output generato da file `.bat`, `.com`e file con altre estensioni potrà essere visualizzato nella finestra di output se si seleziona la casella di controllo **Usa finestra di output** .  
   
 **Argomenti**  
